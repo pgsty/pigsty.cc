@@ -139,7 +139,7 @@ hide_feedback: true
 - 创建一套现有 PostgreSQL 集群的延迟备份集群
 - 监控一个已有的 postgres 实例？
 - 使用逻辑复制从外部 PostgreSQL 迁移至 Pigsty 托管的 PostgreSQL 实例？
-- 使用 MinIO 作为集中的 pgBackRest 备份仓库。
+- 使用 Silo 作为集中的 pgBackRest 备份仓库。
 - 使用专门的 etcd 集群作为 PostgreSQL / Patroni 的 DCS？
 - 使用专用的 haproxy 负载均衡器集群对外暴露 PostgreSQL 服务。
 - 使用 pg-meta CMDB 替代 pigsty.yml 作为配置清单源。

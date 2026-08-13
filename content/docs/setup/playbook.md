@@ -140,7 +140,7 @@ Ansible 剧本（Playbook）是包含要执行的一系列任务定义的可执�
 ./node.yml  -t node_pkg      # 安装节点包
 ./pgsql.yml -t pg_install    # 安装 PG 包和扩展
 ./etcd.yml  -t etcd_config   # 重新渲染 ETCD 配置
-./minio.yml -t minio_alias   # 写入 MinIO CLI 配置
+./minio.yml -t minio_alias   # 写入 mcli 客户端别名
 ```
 
 要运行多个任务，指定多个标签并用逗号分隔 `-t tag1,tag2`：
@@ -226,35 +226,35 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 
 以下是 Pigsty 中的 [**内置剧本**](/docs/ref/playbook)，您也轻松添加自己的剧本，或者按需定制修改剧本的实现逻辑。
 
-|                  模块                  | Playbook                                                                                   | 功能                            |
-|:------------------------------------:|--------------------------------------------------------------------------------------------|-------------------------------|
-|  [**INFRA**](/docs/infra/playbook/)  | [**`deploy.yml`**](https://github.com/pgsty/pigsty/blob/main/deploy.yml)                   | 在当前节点上一键部署 Pigsty             |
-|  [**INFRA**](/docs/infra/playbook/)  | [**`infra.yml`**](https://github.com/pgsty/pigsty/blob/main/infra.yml)                     | 在基础设施节点上初始化 Pigsty 基础设施       |
-|  [**INFRA**](/docs/infra/playbook/)  | [**`infra-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/infra-rm.yml)               | 从基础设施节点移除基础设施组件               |
-|  [**INFRA**](/docs/infra/playbook/)  | [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml)                     | 从目标节点制作离线安装包                  |
-|  [**INFRA**](/docs/infra/playbook/)  | [**`cert.yml`**](https://github.com/pgsty/pigsty/blob/main/cert.yml)                       | 使用 Pigsty 自签名 CA 颁发证书         |
-|   [**NODE**](/docs/node/playbook/)   | [**`node.yml`**](https://github.com/pgsty/pigsty/blob/main/node.yml)                       | 初始化节点，将节点调整到所需状态              |
-|   [**NODE**](/docs/node/playbook/)   | [**`node-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/node-rm.yml)                 | 从 Pigsty 移除节点                 |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql.yml)                     | 初始化 HA PostgreSQL 集群，或添加新副本   |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-rm.yml)               | 移除 PostgreSQL 集群，或移除副本        |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-db.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-db.yml)               | 向现有 PostgreSQL 集群添加新业务数据库     |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-user.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-user.yml)           | 向现有 PostgreSQL 集群添加新业务用户      |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-pitr.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-pitr.yml)           | 在现有 PostgreSQL 集群上执行时间点恢复     |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-monitor.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-monitor.yml)     | 使用本地导出器监控远程 PostgreSQL 实例     |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-migration.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-migration.yml) | 为现有 PostgreSQL 生成迁移手册和脚本      |
-|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`slim.yml`**](https://github.com/pgsty/pigsty/blob/main/slim.yml)                       | 安装最小组件的 Pigsty                |
-|  [**REDIS**](/docs/redis/playbook/)  | [**`redis.yml`**](https://github.com/pgsty/pigsty/blob/main/redis.yml)                     | 初始化 Redis 集群/节点/实例            |
-|  [**REDIS**](/docs/redis/playbook/)  | [**`redis-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/redis-rm.yml)               | 移除 Redis 集群/节点/实例             |
-|   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd.yml)                       | 初始化 ETCD 集群，或扩容新成员            |
-|   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd-rm.yml)                 | 移除 ETCD 集群与数据，或移除现有成员缩容       |
-|  [**MINIO**](/docs/minio/playbook/)  | [**`minio.yml`**](https://github.com/pgsty/pigsty/blob/main/minio.yml)                     | 初始化 Silo、MinIO 或 RustFS 对象存储后端 |
-|  [**MINIO**](/docs/minio/playbook/)  | [**`minio-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml)               | 移除所选对象存储后端、配置与可选数据          |
-| [**DOCKER**](/docs/docker/playbook/) | [**`docker.yml`**](https://github.com/pgsty/pigsty/blob/main/docker.yml)                   | 在节点上安装 Docker                 |
-| [**DOCKER**](/docs/docker/playbook/) | [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)                         | 使用 Docker Compose 安装应用程序      |
-|  [**JUICE**](/docs/juice/playbook/)  | [**`juice.yml`**](https://github.com/pgsty/pigsty/blob/main/juice.yml)                     | 安装与配置 JuiceFS                  |
-|   [**VIBE**](/docs/vibe/playbook/)   | [**`vibe.yml`**](https://github.com/pgsty/pigsty/blob/main/vibe.yml)                       | 安装 Vibe 编码环境                  |
+|                  模块                  | Playbook                                                                                   | 功能                           |
+|:------------------------------------:|--------------------------------------------------------------------------------------------|------------------------------|
+|  [**INFRA**](/docs/infra/playbook/)  | [**`deploy.yml`**](https://github.com/pgsty/pigsty/blob/main/deploy.yml)                   | 在当前节点上一键部署 Pigsty            |
+|  [**INFRA**](/docs/infra/playbook/)  | [**`infra.yml`**](https://github.com/pgsty/pigsty/blob/main/infra.yml)                     | 在基础设施节点上初始化 Pigsty 基础设施      |
+|  [**INFRA**](/docs/infra/playbook/)  | [**`infra-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/infra-rm.yml)               | 从基础设施节点移除基础设施组件              |
+|  [**INFRA**](/docs/infra/playbook/)  | [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml)                     | 从目标节点制作离线安装包                 |
+|  [**INFRA**](/docs/infra/playbook/)  | [**`cert.yml`**](https://github.com/pgsty/pigsty/blob/main/cert.yml)                       | 使用 Pigsty 自签名 CA 颁发证书        |
+|   [**NODE**](/docs/node/playbook/)   | [**`node.yml`**](https://github.com/pgsty/pigsty/blob/main/node.yml)                       | 初始化节点，将节点调整到所需状态             |
+|   [**NODE**](/docs/node/playbook/)   | [**`node-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/node-rm.yml)                 | 从 Pigsty 移除节点                |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql.yml)                     | 初始化 HA PostgreSQL 集群，或添加新副本  |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-rm.yml)               | 移除 PostgreSQL 集群，或移除副本       |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-db.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-db.yml)               | 向现有 PostgreSQL 集群添加新业务数据库    |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-user.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-user.yml)           | 向现有 PostgreSQL 集群添加新业务用户     |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-pitr.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-pitr.yml)           | 在现有 PostgreSQL 集群上执行时间点恢复    |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-monitor.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-monitor.yml)     | 使用本地导出器监控远程 PostgreSQL 实例    |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`pgsql-migration.yml`**](https://github.com/pgsty/pigsty/blob/main/pgsql-migration.yml) | 为现有 PostgreSQL 生成迁移手册和脚本     |
+|  [**PGSQL**](/docs/pgsql/playbook/)  | [**`slim.yml`**](https://github.com/pgsty/pigsty/blob/main/slim.yml)                       | 安装最小组件的 Pigsty               |
+|  [**REDIS**](/docs/redis/playbook/)  | [**`redis.yml`**](https://github.com/pgsty/pigsty/blob/main/redis.yml)                     | 初始化 Redis 集群/节点/实例           |
+|  [**REDIS**](/docs/redis/playbook/)  | [**`redis-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/redis-rm.yml)               | 移除 Redis 集群/节点/实例            |
+|   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd.yml)                       | 初始化 ETCD 集群，或扩容新成员           |
+|   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd-rm.yml)                 | 移除 ETCD 集群与数据，或移除现有成员缩容      |
+|  [**MINIO**](/docs/minio/playbook/)  | [**`minio.yml`**](https://github.com/pgsty/pigsty/blob/main/minio.yml)                     | 初始化 Silo 对象存储集群              |
+|  [**MINIO**](/docs/minio/playbook/)  | [**`minio-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml)               | 移除 Silo、配置与可选数据              |
+| [**DOCKER**](/docs/docker/playbook/) | [**`docker.yml`**](https://github.com/pgsty/pigsty/blob/main/docker.yml)                   | 在节点上安装 Docker                |
+| [**DOCKER**](/docs/docker/playbook/) | [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)                         | 使用 Docker Compose 安装应用程序     |
+|  [**JUICE**](/docs/juice/playbook/)  | [**`juice.yml`**](https://github.com/pgsty/pigsty/blob/main/juice.yml)                     | 安装与配置 JuiceFS                |
+|   [**VIBE**](/docs/vibe/playbook/)   | [**`vibe.yml`**](https://github.com/pgsty/pigsty/blob/main/vibe.yml)                       | 安装 Vibe 编码环境                 |
 |  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka.yml)                     | 创建或收敛 Kafka dynamic KRaft 集群 |
 |  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml)               | 移除 Kafka 集群或成员               |
-| **MYSQL（试点）** | [**`mysql.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql.yml)                         | 部署原生 MySQL 8.4 单节点或三节点集群    |
-| **MYSQL（试点）** | [**`mysql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml)                   | 停止并退役原生 MySQL，保留本地状态        |
+|            **MYSQL（试点）**             | [**`mysql.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql.yml)                     | 部署原生 MySQL 8.4 单节点或三节点集群     |
+|            **MYSQL（试点）**             | [**`mysql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml)               | 停止并退役原生 MySQL，保留本地状态         |
 {.full-width}

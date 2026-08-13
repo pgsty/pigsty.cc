@@ -113,7 +113,7 @@ Pigsty 源于超大规模 PostgreSQL 自动化管理的需求，但已针对易�
 
 Pigsty 专注于整合 PostgreSQL 生态，提供 PostgreSQL 的最佳实践，但同时也支持一系列与 PostgreSQL 配合良好的开源软件。例如：
 
-- Etcd, Redis, MinIO, DuckDB, Prometheus
+- Etcd, Redis, Silo, DuckDB, Prometheus
 - FerretDB, Babelfish, IvorySQL, PolarDB, OrioleDB
 - OpenHalo, Supabase, Greenplum, Dify, Odoo, ...
 

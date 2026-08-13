@@ -53,7 +53,7 @@ categories: [参考]
 **关键特性**：
 - **全扩展安装**：安装 PostgreSQL 18 的所有分类扩展包
 - **多版本软件源**：本地软件源包含 PostgreSQL 14-18 全部五个大版本
-- **完整组件栈**：包含 MinIO 备份、Docker 应用、VIP 等功能
+- **完整组件栈**：包含 Silo 备份、Docker 应用、VIP 等功能
 - **企业级组件**：包含 Kafka、PolarDB、IvorySQL、TigerBeetle 等
 
 **软件源内容**：

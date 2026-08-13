@@ -25,7 +25,7 @@ categories: [参考]
 ./configure -c ha/safe -g [-i <primary_ip>]
 ```
 
-`-g` 只能随机化配置向导识别的凭据。生成后仍需手工替换 MinIO 用户、pgBackRest `cipher_pass` 和其他模板示例值。
+`-g` 只能随机化配置向导识别的凭据。生成后仍需手工替换 Silo 用户、pgBackRest `cipher_pass` 和其他模板示例值。
 
 
 --------
@@ -40,7 +40,7 @@ categories: [参考]
 | 口令检查 | 在 `pg_libs` 中预加载 `passwordcheck` | 只影响新设置或修改的口令 |
 | 用户有效期 | 内置用户和示例业务用户设置 `expire_in: 7300` | 20 年不是轮换策略，应按组织要求缩短 |
 | 监听地址 | PostgreSQL 收敛到 `${ip},${vip},${lo}` | 仍需配合防火墙和 HBA |
-| 备份 | 使用 MinIO，启用 AES-256-CBC | `pgBR.${pg_cluster}` 是可预测示例值，必须替换 |
+| 备份 | 使用 Silo，启用 AES-256-CBC | `pgBR.${pg_cluster}` 是可预测示例值，必须替换 |
 | PostgreSQL 参数 | `pg-meta` 使用 `crit.yml` | 严格同步模式可能在无同步副本时阻塞写入 |
 | 日志 | CRIT 记录连接和断开事件 | SQL 细粒度审计需另行启用 `pgaudit` |
 | 安全扩展 | 安装 `passwordcheck`、`credcheck`、`pgaudit` 等软件包 | 安装不等于预加载、创建或配置 |

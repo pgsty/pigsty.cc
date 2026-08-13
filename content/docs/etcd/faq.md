@@ -16,7 +16,7 @@ etcd 是一个分布式的、可靠的键-值存储，用于存放系统中最�
 
 Patroni 将通过 etcd，实现集群故障检测、自动故障转移、主从切换，集群配置管理等功能。
 
-etcd 对于 PostgreSQL 集群的高可用至关重要，而 etcd 本身的可用性与容灾，是通过使用多个分布式的节点来保证的。
+etcd 对 PostgreSQL 集群的高可用至关重要；其自身的可用性取决于多数派成员持续可达。生产环境通常把成员分散到独立故障域，并采用 3 或 5 个投票成员。
 
 
 
@@ -57,11 +57,11 @@ etcd 故障期间，PostgreSQL 高可用将无法实现自动故障转移，您�
 
 ## etcd集群中存储着什么数据？
 
-在 Pigsty 中，etcd 仅用于 PostgreSQL 高可用，并不会用于存储任何其他配置或状态数据。
+在 Pigsty 的默认用途里，etcd 用作 Patroni 的 DCS，保存 PostgreSQL 高可用所需的领导者租约、成员状态与动态配置等协调数据；Pigsty 本身不会再把业务数据存入其中。
 
-而 PG 高可用组件 Patroni 会自动生成并管理 etcd 中的数据，当这些数据在 etcd 中丢失时，Patroni 会自动重建。
+这些 DCS 数据由 Patroni 生成和管理。在受控维护中，Patroni 通常可以依据仍然健康的 PostgreSQL 集群重新建立协调状态，但这并不等于 etcd 没有状态，也不能把直接删除 DCS 数据视作无风险操作。
 
-因此默认情况下，Pigsty 中的 **etcd** 可以视作 “无状态服务”，可以进行销毁与重建，这为维护工作带来了极大的便利。
+重建 etcd 会中断自动故障转移和 `patronictl` 管理能力，并清除当时的 DCS 状态。操作前应先核对 Patroni 拓扑、当前主库、剩余仲裁与近期备份，在维护窗口内按明确的恢复步骤执行。
 
 如果您将 etcd 用于其他目的，例如作为 Kubernetes 的元数据存储，或自行存储其他数据，那么您需要自行备份 etcd 数据，并在 etcd 集群恢复后进行数据恢复。
 
@@ -72,7 +72,7 @@ etcd 故障期间，PostgreSQL 高可用将无法实现自动故障转移，您�
 
 ## 如何从etcd故障中恢复？
 
-因为 Pigsty 中的 etcd 只用于 PostgreSQL 高可用，本质上是可销毁、可重建的 “无状态服务”，因此在出现故障时，您可以通过 “重启” / “重置” 来进行快速止血。
+Pigsty 默认只把 etcd 用作 Patroni DCS。服务重启与整簇重建是两种风险完全不同的操作：前者保留 DCS 数据，后者会清除协调状态，并在恢复前使 PostgreSQL 高可用失去 DCS 仲裁。因此应优先诊断并恢复现有成员；只有在确认拓扑、备份和恢复路径后，才考虑整簇重建。
 
 要 **重启** etcd 集群，您可以使用以下 Ansible 命令：
 
@@ -80,11 +80,12 @@ etcd 故障期间，PostgreSQL 高可用将无法实现自动故障转移，您�
 ./etcd.yml -t etcd_launch
 ```
 
-要 **重置/重建** etcd 集群，建议先清理再重建：
+确需 **重置/重建** etcd 集群时，应在维护窗口内先清理再重建，并在完成后核对 `etcdctl endpoint health`、`etcdctl member list` 与 `patronictl list`：
 
 ```bash
-./etcd-rm.yml  # 清理 etcd 集群（默认删除数据）
-./etcd.yml     # 按清单重新部署 etcd 集群
+./etcd-rm.yml -l etcd --check  # 先预演完整目标；真实运行默认删除数据
+./etcd-rm.yml -l etcd          # 核对备份和目标后清理集群
+./etcd.yml -l etcd             # 按清单重新部署 etcd 集群
 ```
 
 如果您自行使用 etcd 存储了其他数据，那么通常需要备份 etcd 数据，并在 etcd 集群恢复后进行数据恢复。
@@ -236,12 +237,11 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 **手动方式：**
 
 ```bash
-./etcd-rm.yml -l <ins_ip>                    # 使用专用移除剧本
-etcdctl member remove <etcd_server_id>       # 从集群中踢出成员
-./etcd-rm.yml -l <ins_ip>                    # 清理实例
+./etcd-rm.yml -l <ins_ip> --check            # 对精确目标先预演
+./etcd-rm.yml -l <ins_ip>                    # 退群、停服并默认清理本机数据
 ```
 
-`etcd-rm.yml` 已经包含 `etcdctl member remove` 步骤。
+`etcd-rm.yml` 已经包含 `etcdctl member remove` 步骤，不要在正常流程中前后重复执行。只有排障时才手工 `member remove`；之后仍可在目标尚存于清单时运行一次移除剧本完成本机停服、注销和清理，并核对剩余仲裁。
 
 
 

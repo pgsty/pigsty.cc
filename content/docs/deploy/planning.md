@@ -47,8 +47,8 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 ## 利弊权衡
 
 - 若要使用 Pigsty 的监控系统，则至少需要 **1** 个 INFRA 节点，生产部署通常使用 **2** 个，大规模部署 **3** 个。
-- 若要启用 PG 高可用，则至少需要 **1** 个 ETCD 节点，生产部署通常使用 **3** 个，大规模环境中 **5** 个，须奇数个。
-- 若要启用对象存储（MinIO），则至少需要 **1** 个 [**MINIO 节点**](/docs/minio/config#单机单盘)，严肃使用时通常使用 4+ 节点部署 [**MNMD**](/docs/minio/config#多机多盘) 集群。
+- 若要启用 PG 高可用，则至少需要 **1** 个 ETCD 节点；生产部署通常使用 **3** 个，大规模环境中使用 **5** 个。偶数成员也能运行，但不会比少一个成员的奇数集群提高故障容忍数，因此应优先采用奇数规模。
+- 若要启用 MINIO 模块的 Silo 对象存储，则至少需要 **1** 个 [**MINIO 节点**](/docs/minio/config#单机单盘)，严肃使用时通常使用 4+ 节点部署 [**MNMD**](/docs/minio/config#多机多盘) 集群。
 - PG 生产集群通常至少为两节点主从配置；严肃场景通常使用 3 节点；高只读负载可以有更多从库（几十个）
 - 此外对于 PostgreSQL 来说，您还可以按需使用 离线实例，同步实例，备份集群，延迟集群等等高级配置。
 
@@ -69,7 +69,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 
 单节点配置有多种变体：
 
-- **充血版**（[**`rich`**](/docs/conf/rich)）：生产版本的单机部署模版，带有本地 MinIO 对象存储，使用本地软件仓库，下载所有 PG 扩展。
+- **充血版**（[**`rich`**](/docs/conf/rich)）：生产版本的单机部署模版，带有本地 Silo 对象存储，使用本地软件仓库，下载所有 PG 扩展。
 - **瘦身版**（[**`slim`**](/docs/conf/slim)）：只安装 [**PGSQL**](/docs/pgsql/) 和 [**ETCD**](/docs/etcd/)，不安装监控设施 —— [**精简安装**](/docs/setup/slim) 也可以扩充为 [**多节点高可用部署**](/docs/setup/slim#高可用集群)
 - **监控版**（[**`infra`**](/docs/conf/infra)）：与 `slim` 相反，只安装 [**INFRA**](/docs/infra/) 监控基础设施，不安装数据库服务，只用来监控其他实例。
 - **内核替换**：用衍生分支 [**`pgsql`**](/docs/conf/pgsql/)、[**`mssql`**](/docs/conf/mssql/)、[**`polar`**](/docs/conf/polar/)、[**`ivory`**](/docs/conf/ivory/)、[**`mysql`**](/docs/conf/mysql/)、[**`pgtde`**](/docs/conf/pgtde/)、[**`oriole`**](/docs/conf/oriole/)、[**`agens`**](/docs/conf/agens/)、[**`pgedge`**](/docs/conf/pgedge/) 替换原生 PG

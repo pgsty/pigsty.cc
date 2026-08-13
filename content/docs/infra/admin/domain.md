@@ -53,7 +53,7 @@ Pigsty 预定义了以下默认域名：
 | 域名         | 服务              | 端口      | 用途              |
 |------------|-----------------|---------|-----------------|
 | `i.pigsty` | Nginx           | 80/443  | 默认首页、本地仓库与统一入口  |
-| `m.pigsty` | MinIO           | 9001    | 对象存储控制台         |
+| `m.pigsty` | Silo            | 9001    | 对象存储控制台         |
 {.full-width}
 
 Grafana、VictoriaMetrics、Alertmanager 默认通过 `i.pigsty` 下的 `/ui/`、`/vmetrics/`、`/alertmgr/` 子路径访问。若需要 `g.pigsty`、`p.pigsty`、`a.pigsty` 这类独立域名，请在 [`infra_portal`](/docs/infra/param#infra_portal) 与 [`dns_records`](/docs/infra/param#dns_records) 中显式配置。
@@ -164,7 +164,7 @@ Pigsty 管理被纳管节点的 DNS 配置。
 ```yaml
 node_etc_hosts:
   - "${admin_ip} i.pigsty"
-  - "${admin_ip} sss.pigsty"      # 可选：MinIO S3 接入域名
+  - "${admin_ip} sss.pigsty"      # 可选：Silo S3 接入域名
   - "10.10.10.20 db.example.com"
 ```
 

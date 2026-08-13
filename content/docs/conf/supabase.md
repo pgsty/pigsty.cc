@@ -53,7 +53,7 @@ categories: [参考]
 **架构组成**：
 - **PostgreSQL**：Pigsty 托管的生产级 PostgreSQL（支持高可用）
 - **Docker 容器**：Supabase 无状态服务（Auth、Storage、Realtime、Edge Functions 等）
-- **MinIO**：S3 兼容的对象存储，用于文件存储和 PostgreSQL 备份
+- **Silo**：由 MINIO 模块部署的 S3 兼容对象存储，用于文件存储和 PostgreSQL 备份
 - **Nginx**：反向代理和 HTTPS 终止
 
 **关键特性**：
@@ -61,7 +61,7 @@ categories: [参考]
 - 支持 PostgreSQL 高可用（可扩展为三节点集群）
 - 安装全部 Supabase 所需扩展（pg_net、pgjwt、pg_graphql、vector 等）
 - 使用独立的 `_supabase` 数据库存储内部日志分析数据，并由 `supa-kick` 定时推进处理
-- 集成 MinIO 对象存储用于文件上传和备份
+- 集成 Silo 对象存储用于文件上传和备份
 - 支持 HTTPS 和 Let's Encrypt 自动证书
 
 **部署步骤**：
@@ -69,7 +69,7 @@ categories: [参考]
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase                   # 使用 supabase 配置模板
-./deploy.yml                              # 安装 Pigsty、PostgreSQL、MinIO
+./deploy.yml                              # 安装 Pigsty、PostgreSQL、Silo
 ./docker.yml                              # 安装 Docker
 ./app.yml                                 # 启动 Supabase 容器
 ```

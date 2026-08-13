@@ -7,7 +7,7 @@ categories: [任务]
 ---
 
 
-Pigsty 的 REPO 角色会下载所需软件包，并在 `/www/pigsty` 创建可由 Nginx 提供服务的本地 YUM/APT 仓库。当前源码统一使用 **SOW 0.2.0** 生成两类仓库元数据，不再分别调用 `createrepo_c`、`modifyrepo_c` 或 `dpkg-scanpackages`。
+Pigsty 的 REPO 角色会下载所需软件包，并在 `/www/pigsty` 创建可由 Nginx 提供服务的本地 YUM/APT 仓库。当前候选软件包版本为 **SOW 0.3.0**，源码统一使用 SOW 生成两类仓库元数据，不再分别调用 `createrepo_c`、`modifyrepo_c` 或 `dpkg-scanpackages`。
 
 
 ----------------
@@ -40,7 +40,7 @@ Pigsty 的 REPO 角色会下载所需软件包，并在 `/www/pigsty` 创建可�
 
 `repo_create` 与 `cache_create` 都要求目标节点上已经安装 `sow`。全新在线构建会把 `infra` 自动加入 [`repo_modules`](/docs/infra/param#repo_modules)，从 Pigsty INFRA 上游仓库安装 SOW。
 
-早于此次改造的离线包或本地仓库可能不含 SOW。使用旧介质重建前，应先刷新离线包/本地仓库，或从 Pigsty INFRA 仓库安装 SOW 0.2.0；不能假定旧环境仍可回退到 `createrepo_c`。
+早于此次改造的离线包或本地仓库可能不含 SOW。使用旧介质重建前，应先刷新离线包/本地仓库，或从 Pigsty INFRA 仓库安装当前候选的 SOW 0.3.0；不能假定旧环境仍可回退到 `createrepo_c`。
 
 全新安装时，如果 `/www` 不存在，角色会创建 `/data/nginx` 并令 `/www` 指向它；已经存在的目录或符号链接会被保留，不会被强制替换。
 

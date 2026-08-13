@@ -24,7 +24,7 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 - 希望支持国产信创操作系统/国产信创 ARM 芯片架构，提供中文/本地化界面支持。
 - 建设基于 Victoria / Grafana 技术栈的可观测性体系，数据大盘，可视化应用。
 - 下云并寻求 RDS for PostgreSQL 的开源替代 —— 云中立，无供应商锁定的解决方案。
-- 希望获取关于 Redis / ETCD / MinIO，以及 TimescaleDB / Citus 等扩展的专业支持。
+- 希望获取关于 Redis / ETCD / Silo，以及 TimescaleDB / Citus 等扩展的专业支持。
 - 希望将 Pigsty 作为 SaaS / PaaS / DBaaS 对外销售，或基于此发行版提供技术服务/云服务。
 
 
@@ -43,9 +43,9 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 <p><b>架构支持：x86_64，Arm64</b></p>
 <p><b>OS 支持：三系最新小版本</b><p>
 <ul>
-<li>EL 9.7 / 10.1</li>
-<li>Debian 12.14 / 13.6</li>
-<li>Ubuntu 26.04.0 / 24.04.4 / 22.04.5</li>
+<li>EL 9.8 / 10.2</li>
+<li>Debian 12.15 / 13.6</li>
+<li>Ubuntu 22.04.5 / 24.04.4 / 26.04.0</li>
 </ul>
 <p><b>功能：<a href="/docs/ref/module#核心模块">核心模块</a></b></p>
 <p><b>SLA：无 SLA 承诺</b></p>
@@ -136,8 +136,8 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 
 Pigsty 开源版使用 [**Apache-2.0**](/docs/about/license) 许可证， 提供了完整核心功能，无需任何费用，但也不承诺任何质保服务。如果您发现了 Pigsty 的缺陷，我们非常欢迎您在 Github 上提出 [Issue](https://github.com/pgsty/pigsty/issues/)。
 
-Pigsty 开源软件支持七个当前验证基线：EL 9.7 / 10.1、Debian 12.14 / 13.6、Ubuntu 26.04.0 / 24.04.4 / 22.04.5，并覆盖 `x86_64` 与 `aarch64`。
-社区版在 GitHub 公开发布 EL 10.1、Debian 13.6、Ubuntu 24.04.4 的双架构离线包，共 6 个制品；其余基线的预制离线包通过商业版提供，详见 [离线安装说明](/docs/setup/offline/)。
+Pigsty 开源软件支持七个当前验证基线：EL 9.8 / 10.2、Debian 12.15 / 13.6、Ubuntu 22.04.5 / 24.04.4 / 26.04.0，并覆盖 `x86_64` 与 `aarch64`。
+`v4.4.0` 社区版历史制品基于 EL 10.1、Debian 13.6、Ubuntu 24.04.4 发布双架构离线包，共 6 个制品；历史制品的制作基线不等同于当前推荐操作系统，详见 [离线安装说明](/docs/setup/offline/)。
 
 使用 Pigsty 开源版本，可以让初级研发工程师 / 运维工程师拥有专业 DBA **70%+** 的能力，在缺少数据库专家的情况下，也能够轻松搭建一个高可用，高性能，易维护，安全可靠的 PostgreSQL 数据库集群。
 
@@ -246,7 +246,7 @@ Pigsty 专业版/企业版相比开源版本，包含以下额外功能：
 - **扩展支持能力**：针对 {{< param pgext_count >}} 个可用 PG Extension，提供 PG 14-18 在主流操作系统上开箱即用的安装能力。
 - **完整功能模块**：提供所有功能模块：
     - [**Supabase**](/docs/pgsql/kernel/supabase)：可靠地自建生产级开源 Firebase
-    - [**MinIO**](/docs/minio)：企业 PB 级对象存储规划与自建
+    - [**Silo**](/docs/minio)：企业 PB 级对象存储规划与自建
     - [**DuckDB**](/docs/pilot/duckdb)：提供完善的 DuckDB 支持，以及 PostgreSQL + DuckDB OLAP 扩展插件支持
     - [**Kafka**](/docs/kafka)：提供高可用的 Kafka 集群部署与监控
     - Kubernetes, VictoriaMetrics & VictoriaLogs

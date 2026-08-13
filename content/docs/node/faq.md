@@ -89,7 +89,7 @@ pg-test:
 您可以在配置中中使用 [`haproxy_services`](/docs/node/param#haproxy_services)
 来暴露服务，并使用 `node.yml -t haproxy_config,haproxy_reload` 来更新配置。
 
-以下是使用它暴露 MinIO 服务的示例：[暴露MinIO服务](/docs/minio/config#服务接入)
+以下是使用它暴露 Silo 服务的示例：[Silo 服务接入](/docs/minio/config#服务接入)
 
 
 

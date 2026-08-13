@@ -43,7 +43,7 @@ categories: [参考]
 
 **架构组成**：
 - 2 节点高可用 INFRA（监控/告警/Nginx/DNS）
-- 5 节点高可用 ETCD 和 MinIO（多磁盘）
+- 5 节点高可用 ETCD 和 MINIO（Silo，多磁盘）
 - 2 节点 Proxy（HAProxy + Keepalived VIP）
 - 多套 PostgreSQL 集群：
   - pg-meta：2 节点高可用

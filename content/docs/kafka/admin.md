@@ -22,17 +22,17 @@ KAFKA 模块把 Kafka 安装在 `/opt/kafka`，使用 Systemd 管理服务，并
 
 ## 速查手册
 
-| 操作                        | 命令                                 | 说明                                |
-|:--------------------------|:-----------------------------------|:----------------------------------|
-| [**创建集群**](/docs/kafka/start) | `./kafka.yml -l <cls>`             | 创建或收敛 Kafka 集群，裸跑处理全部集群 |
-| [**扩容集群**](#扩容集群)      | `./kafka.yml -l <cls>`             | 声明新成员后收敛：Broker 准入，Controller 加入 |
-| [**缩容集群**](#缩容集群)      | `./kafka-rm.yml -l <ip>`           | 退役成员：摘除 Voter 条目与 Broker 注册     |
-| [**销毁集群**](/docs/kafka/playbook#集群下线) | `./kafka-rm.yml -l <cls>` | 下线整个集群，默认删除数据            |
-| [**替换故障节点**](#替换故障节点) | 退役 → 纳管 → 重入                   | 三条命令补换死节点，自动继承副本分配      |
-| [**配置集群**](#配置集群)      | `./kafka.yml -l <cls>`             | 修改清单后在门禁保护下滚动生效           |
-| [**管理 Topic**](#管理-topic)  | `./kafka.yml -l <cls>`             | 声明式创建 Topic、扩分区、改配置          |
-| [**管理用户**](#管理用户与权限) | `./kafka.yml -l <cls>`             | 声明式收敛用户、ACL 与 Quota            |
-| [**轮换密钥证书**](#轮换密钥与证书) | `./kafka.yml -e kafka_rotate_...` | 受保护的内部凭据 / 证书轮换             |
+| 操作                                    | 命令                                | 说明                               |
+|:--------------------------------------|:----------------------------------|:---------------------------------|
+| [**创建集群**](/docs/kafka/start)         | `./kafka.yml -l <cls>`            | 创建或收敛 Kafka 集群，裸跑处理全部集群          |
+| [**扩容集群**](#扩容集群)                     | `./kafka.yml -l <cls>`            | 声明新成员后收敛：Broker 准入，Controller 加入 |
+| [**缩容集群**](#缩容集群)                     | `./kafka-rm.yml -l <ip>`          | 退役成员：摘除 Voter 条目与 Broker 注册      |
+| [**销毁集群**](/docs/kafka/playbook#集群下线) | `./kafka-rm.yml -l <cls>`         | 下线整个集群，默认删除数据                    |
+| [**替换故障节点**](#替换故障节点)                 | 退役 → 纳管 → 重入                      | 三条命令补换死节点，自动继承副本分配               |
+| [**配置集群**](#配置集群)                     | `./kafka.yml -l <cls>`            | 修改清单后在门禁保护下滚动生效                  |
+| [**管理 Topic**](#管理-topic)             | `./kafka.yml -l <cls>`            | 声明式创建 Topic、扩分区、改配置              |
+| [**管理用户**](#管理用户与权限)                  | `./kafka.yml -l <cls>`            | 声明式收敛用户、ACL 与 Quota              |
+| [**轮换密钥证书**](#轮换密钥与证书)                | `./kafka.yml -e kafka_rotate_...` | 受保护的内部凭据 / 证书轮换                  |
 {.full-width}
 
 集群定义与参数详见 [**集群配置**](/docs/kafka/config)，剧本语义详见 [**预置剧本**](/docs/kafka/playbook)，监控排障详见 [**监控告警**](/docs/kafka/monitor)。
@@ -294,10 +294,11 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 用 `kafka-rm.yml` 选择集群的 **真子集** 即为成员退役（选择整个集群则是 [**集群下线**](/docs/kafka/playbook#集群下线)）。退役会通过一台幸存成员，自动从现场元数据中摘除该节点：
 
 ```bash
+./kafka-rm.yml -l 10.10.10.13 --check  # 先以完全相同的成员目标预演
 ./kafka-rm.yml -l 10.10.10.13     # 退役单个成员：摘除 Voter 条目、注销 Broker、清理本机
 ```
 
-执行内容依次为：注销监控 Target → 停止服务 → `remove-controller` 摘除 KRaft Voter 条目（若该成员是 Voter；多成员退役时严格串行）→ `kafka-cluster.sh unregister` 注销 Broker → 清理本机配置与数据（受 `kafka_rm_data` 控制）。完成后从 `pigsty.yml` 中删除该成员条目。
+执行内容依次为：注销监控 Target → 停止服务 → `remove-controller` 摘除 KRaft Voter 条目（若该成员是 Voter；多成员退役时严格串行）→ `kafka-cluster.sh unregister` 注销 Broker → 清理本机配置与数据（受 `kafka_rm_data` 控制）。Broker 注销步骤容忍失败，以便重入与处理已失联成员；只有在核对现场 Quorum、Broker 注册、副本健康以及目标本机状态后，才从 `pigsty.yml` 删除该成员条目。
 
 退役前请自行确认：剩余 Controller 仍构成多数派、保持奇数个 Controller、剩余 Broker 数不低于现有 Topic 的最大 RF。如果被退役 Broker 上仍有 Partition 副本，角色会打印警告：这些 Partition 将保持副本不足，直到同 `kafka_seq` 的替换节点重新加入（自动继承副本分配并补数据），或你显式执行 Reassignment 将副本迁走。**计划内缩容应当先 Reassignment 排空、再退役**。
 

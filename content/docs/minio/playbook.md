@@ -1,7 +1,7 @@
 ---
 title: 预置剧本
 weight: 3640
-description: 使用预置 Ansible 剧本部署或移除 Silo、MinIO 与 RustFS 对象存储集群。
+description: 使用预置 Ansible 剧本部署或移除 Silo 对象存储集群。
 icon: fa-solid fa-scroll
 module: [MINIO]
 categories: [任务]
@@ -10,8 +10,8 @@ categories: [任务]
 
 MINIO 模块提供两个内置剧本：
 
-- [`minio.yml`](#minioyml)：安装并配置 `minio_type` 选中的对象存储引擎
-- [`minio-rm.yml`](#minio-rmyml)：移除所选引擎、配置和可选数据
+- [`minio.yml`](#minioyml)：安装并配置 Silo
+- [`minio-rm.yml`](#minio-rmyml)：移除 Silo、配置和可选数据
 
 
 --------
@@ -22,23 +22,23 @@ MINIO 模块提供两个内置剧本：
 
 - `minio_cluster` 已定义且非空
 - `minio_seq` 已定义且为非负整数
-- `minio_type` 是 `silo`、`minio`、`rustfs` 之一
+- `minio_type` 必须等于 `silo`
 
 因此，`minio_cluster` 是模块成员门控，而 `minio_seq` 与 `minio_type` 的错误会让身份校验明确失败。不要在 `all.vars` 中定义 `minio_cluster`。
 
 主要任务标签如下：
 
 - `minio-id`：校验身份，并按 `minio_cluster` 从整个清单计算实际成员、节点名与卷参数
-- `minio_install`：创建 `minio` OS 用户，安装所选引擎与 `mcli`，准备数据目录
+- `minio_install`：创建 `minio` OS 用户，安装 Silo 与 `mcli`，准备数据目录
   - `minio_os_user`
   - `minio_pkg`
   - `minio_dir`
-- `minio_config`：渲染 `/etc/default/<minio_type>`、`/etc/systemd/system/<minio_type>.service`、证书和 DNS
+- `minio_config`：渲染 `/etc/default/silo`、`/etc/systemd/system/silo.service`、证书和 DNS
   - `minio_conf`
   - `minio_cert`
   - `minio_dns`
-- `minio_launch`：启动或重启所选 systemd 服务
-- `minio_register`：写入 VictoriaMetrics FileSD 目标；RustFS 同时注册就绪探测
+- `minio_launch`：启动或重启 `silo.service`
+- `minio_register`：写入 VictoriaMetrics FileSD 目标
 - `minio_provision`：由集群首个成员执行一次 `mcli` 别名、存储桶与用户置备
 
 重新执行 `minio.yml` 可能重启正在运行的对象存储服务，但不会主动重建数据。生产环境应按集群故障预算安排执行窗口。
@@ -53,15 +53,15 @@ MINIO 模块提供两个内置剧本：
 - `minio_safeguard`：防误删检查，默认 `false`
 - `minio_pause`：暂停 3 秒，允许 Ctrl+C 中止
 - `minio_deregister`：删除 VictoriaMetrics 目标与 DNS 记录
-- `minio_svc`：停止并禁用 `minio_type` 对应的服务
+- `minio_svc`：停止并禁用 Silo 服务
 - `minio_data`：按 [`minio_rm_data`](/docs/minio/param#minio_rm_data) 删除数据与配置
-- `minio_pkg`：按 [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg) 卸载所选引擎与 `mcli`
+- `minio_pkg`：按 [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg) 卸载 Silo 与 `mcli`
 
 {{% alert title="危险操作" color="danger" %}}
-`minio_rm_data` 默认为 `true`。完整执行移除剧本会删除展开后的所有 `minio_data` 目录；运行前必须核对 `minio_cluster`、`minio_seq`、`minio_type` 与磁盘挂载路径。只想退役服务并保留数据时，请显式设置 `-e minio_rm_data=false`。
+`minio_rm_data` 默认为 `true`。完整执行移除剧本会删除展开后的所有 `minio_data` 目录；运行前必须核对 `minio_cluster`、`minio_seq`、`minio_type: silo` 与磁盘挂载路径。只想退役服务并保留数据时，请显式设置 `-e minio_rm_data=false`。
 {{% /alert %}}
 
-部署角色默认 `minio_type: silo`，但移除角色刻意没有引擎默认值。清单若省略了 `minio_type`，运行移除剧本时必须补充 `-e minio_type=silo`、`minio` 或 `rustfs`；这项显式确认用于防止清理错误的软件包、服务和证书目录。
+部署角色默认 `minio_type: silo`，但移除角色刻意没有后端默认值。清单若省略了 `minio_type`，运行移除剧本时必须补充 `-e minio_type=silo`；其他取值会被拒绝。这项显式确认用于防止清理错误的软件包、服务和证书目录。
 
 
 ----------------
@@ -70,9 +70,9 @@ MINIO 模块提供两个内置剧本：
 
 ```bash
 ./minio.yml -l <group>                         # 部署该限域内具有 minio_cluster 身份的成员
-./minio.yml -l minio -t minio_install         # 安装所选引擎与 mcli，准备目录
+./minio.yml -l minio -t minio_install         # 安装 Silo 与 mcli，准备目录
 ./minio.yml -l minio -t minio_config          # 重新渲染配置、证书和 DNS
-./minio.yml -l minio -t minio_launch          # 重启所选对象存储服务
+./minio.yml -l minio -t minio_launch          # 重启 Silo 服务
 ./minio.yml -l minio -t minio_register        # 刷新监控目标
 ./minio.yml -l minio -t minio_provision       # 重新置备别名、存储桶和用户
 

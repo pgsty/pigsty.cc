@@ -61,7 +61,7 @@ categories: [参考]
 - 默认安装 PostgreSQL 18，带有 `postgis` 和 `pgvector` 扩展
 - 包含完整的可观测基础设施（Grafana、VictoriaMetrics、VictoriaLogs 等）
 - 预置 Docker 与 pgAdmin 应用示例
-- MinIO 备份存储默认禁用，可按需启用
+- Silo 备份存储默认禁用，可按需启用
 
 **注意事项**：
 - 默认密码为示例密码，生产环境 **务必修改**

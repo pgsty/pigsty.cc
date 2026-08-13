@@ -1,24 +1,24 @@
 ---
 title: MINIO 集群模型
 weight: 1103
-description: 介绍 Pigsty 对象存储模块中 Silo、MinIO 与 RustFS 共用的集群、实例、节点身份模型。
+description: 介绍 Pigsty MINIO 模块部署 Silo 时使用的集群、实例与节点身份模型。
 icon: fa-solid fa-boxes-stacked
 module: [MINIO]
 categories: [概念]
 ---
 
 
-MINIO 是 Pigsty 的对象存储兼容模块名。模块通过 [`minio_type`](/docs/minio/param#minio_type) 部署 Silo、MinIO 或 RustFS，并以 **集群** 组织一组同后端的对象存储 **实例**。
+MINIO 是 Pigsty 的对象存储兼容模块名。v4.5.0 当前源码通过 [`minio_type: silo`](/docs/minio/param#minio_type) 部署 Silo，并以 **集群** 组织一组对象存储 **实例**。
 
 每个集群都是一个 **自治** 的 S3 兼容对象存储单元，由至少一个实例组成，通过 S3 API 端口对外提供服务。
 
-在 Pigsty 的 MinIO 模块中有三种核心实体：
+MINIO 模块中有三种核心实体：
 
 - **集群**（Cluster）：自治的对象存储服务单元，用作其他实体的顶级命名空间。
-- **实例**（Instance）：单个 Silo、MinIO 或 RustFS 服务器进程，在节点上运行并管理本地磁盘。
+- **实例**（Instance）：单个 Silo 服务器进程，在节点上运行并管理本地磁盘。
 - **节点**（Node）：运行 Linux + Systemd 环境的硬件资源抽象，隐含式声明。
 
-此外，MinIO/Silo 还有 [**存储池**](/docs/minio/config#多池部署)（Pool）的概念，用于扩容。RustFS 是否支持相同的在线扩缩容语义，应按实际使用版本单独核验。
+此外，Silo 保留 [**存储池**](/docs/minio/config#多池部署)（Pool）概念，用于扩容。
 
 
 
@@ -26,7 +26,7 @@ MINIO 是 Pigsty 的对象存储兼容模块名。模块通过 [`minio_type`](/d
 
 ## 部署模式
 
-三种引擎共用 Pigsty 的三类清单部署模式：
+Silo 支持 Pigsty 的三类清单部署模式：
 
 |                 模式                  |    代号    | 说明                   | 适用场景       |
 |:-----------------------------------:|:--------:|:---------------------|:-----------|
@@ -35,7 +35,7 @@ MINIO 是 Pigsty 的对象存储兼容模块名。模块通过 [`minio_type`](/d
 | [**多机多盘**](/docs/minio/config#多机多盘) | **MNMD** | 多节点，每节点多块磁盘          | **生产环境推荐** |
 {.full-width}
 
-单机单盘模式可以使用普通目录快速体验。Silo/MinIO 的多盘模式应使用真实磁盘挂载点，否则服务会拒绝启动；RustFS 的磁盘与目录约束应按所用版本单独核验。
+单机单盘模式可以使用普通目录快速体验。Silo 多盘模式应使用真实磁盘挂载点，否则服务会拒绝启动。
 
 
 
@@ -81,12 +81,12 @@ minio:
 
 ## 身份参数
 
-Pigsty 使用 [**`MINIO`**](/docs/minio/param#minio) 参数组为 MinIO 模块的每个实体赋予确定的身份。以下两项为必选参数：
+Pigsty 使用 [**`MINIO`**](/docs/minio/param#minio) 参数组为对象存储实体赋予确定身份。以下两项为必选参数：
 
-| 参数                                                     |    类型    | 级别 | 说明                | 形式                  |
-|:-------------------------------------------------------|:--------:|:--:|:------------------|:--------------------|
-| [**`minio_cluster`**](/docs/minio/param#minio_cluster) | `string` | 集群 | 对象存储集群名称，必选身份参数   | 有效且非空的名称，无默认值       |
-| [**`minio_seq`**](/docs/minio/param#minio_seq)         |  `int`   | 实例 | MinIO 实例编号，必选身份参数 | 自然数，从 1 开始分配，集群内不重复 |
+| 参数                                                     |    类型    | 级别 | 说明              | 形式                   |
+|:-------------------------------------------------------|:--------:|:--:|:----------------|:---------------------|
+| [**`minio_cluster`**](/docs/minio/param#minio_cluster) | `string` | 集群 | 对象存储集群名称，必选身份参数 | 有效且非空的名称，无默认值        |
+| [**`minio_seq`**](/docs/minio/param#minio_seq)         |  `int`   | 实例 | 对象存储实例编号，必选身份参数 | 非负整数，建议从 1 开始，集群内不重复 |
 {.full-width}
 
 只要在集群层面定义了集群名称，实例层面分配了实例编号，Pigsty 就能自动根据规则为每个实体生成唯一标识符。
@@ -97,26 +97,26 @@ Pigsty 使用 [**`MINIO`**](/docs/minio/param#minio) 参数组为 MinIO 模块�
 {.full-width}
 
 MINIO 模块不会为主机节点赋予额外的身份标识，节点使用其原有的主机名或 IP 地址进行标识。
-[**`minio_node`**](/docs/minio/param#minio_node) 参数用于生成 MinIO 集群内部的节点名称（写入 `/etc/hosts` 供集群发现使用），而非主机节点的身份。
+[**`minio_node`**](/docs/minio/param#minio_node) 用于生成 Silo 集群内部的节点名称（写入 `/etc/hosts` 供集群发现使用），而非主机节点身份。
 
-角色在整个清单中按 `minio_cluster` 查找实际成员，Ansible Group 名称不必与集群名称一致。`minio_type` 是引擎选择参数，默认 `silo`，同一逻辑集群中的成员必须保持一致。
+角色在整个清单中按 `minio_cluster` 查找实际成员，Ansible Group 名称不必与集群名称一致。`minio_type` 是保留的后端选择器，当前必须为 `silo`。
 
 
 ----------------
 
 ## 核心配置参数
 
-除身份参数外，以下参数对 MinIO 集群配置至关重要：
+除身份参数外，以下参数对 Silo 集群配置至关重要：
 
-| 参数                                                   |    类型    | 说明                 |
-|:-----------------------------------------------------|:--------:|:-------------------|
-| [**`minio_type`**](/docs/minio/param#minio_type)     |  `enum`  | 服务端引擎，默认 `silo`    |
+| 参数                                                   |    类型    | 说明                     |
+|:-----------------------------------------------------|:--------:|:-----------------------|
+| [**`minio_type`**](/docs/minio/param#minio_type)     |  `enum`  | 保留选择器，当前只接受 `silo`     |
 | [**`minio_data`**](/docs/minio/param#minio_data)     |  `path`  | 数据目录，使用 `{x...y}` 指定多盘 |
-| [**`minio_node`**](/docs/minio/param#minio_node)     | `string` | 节点名模式，用于多节点部署      |
-| [**`minio_domain`**](/docs/minio/param#minio_domain) | `string` | 服务域名，默认为 `sss.pigsty` |
+| [**`minio_node`**](/docs/minio/param#minio_node)     | `string` | 节点名模式，用于多节点部署          |
+| [**`minio_domain`**](/docs/minio/param#minio_domain) | `string` | 服务域名，默认为 `sss.pigsty`  |
 {.full-width}
 
-这些参数共同决定统一的 `minio_volumes`，再由角色写入 `MINIO_VOLUMES` 或 `RUSTFS_VOLUMES`：
+这些参数共同决定 `minio_volumes`，再由角色写入 Silo 的 `MINIO_VOLUMES`：
 
 - **单机单盘**：直接使用 `minio_data` 的值，如 `/data/minio`
 - **单机多盘**：使用 `minio_data` 展开的多个目录，如 `/data{1...4}`
@@ -137,14 +137,14 @@ MINIO 模块不会为主机节点赋予额外的身份标识，节点使用其�
 
 MINIO 模块默认启用 HTTPS 加密通信（由 [**`minio_https`**](/docs/minio/param#minio_https) 控制）。按默认 pgBackRest S3 仓库配置使用时应保持 HTTPS，并正确安装 Pigsty CA。
 
-多节点 MinIO 集群可以通过访问 **任意一个节点** 来访问其服务。最佳实践是使用负载均衡器（如 HAProxy + VIP）统一接入点。
+多节点 Silo 集群可以通过访问 **任意一个节点** 来访问其服务。最佳实践是使用负载均衡器（如 HAProxy + VIP）提供统一接入点。
 
 
 ----------------
 
 ## 资源置备
 
-MinIO 集群部署后，Pigsty 会自动创建以下资源（由 [**`minio_provision`**](/docs/minio/param#minio_provision) 控制）：
+Silo 集群部署后，Pigsty 会自动创建以下资源（由 [**`minio_provision`**](/docs/minio/param#minio_provision) 控制）：
 
 **默认存储桶**（由 [**`minio_buckets`**](/docs/minio/param#minio_buckets) 定义）：
 
@@ -174,7 +174,7 @@ MinIO 集群部署后，Pigsty 会自动创建以下资源（由 [**`minio_provi
 
 ## 监控标签体系
 
-Pigsty 使用上面的 [**身份参数**](#身份参数) 标识对象存储实体。Silo/MinIO 的可用性序列示例如下：
+Pigsty 使用上面的 [**身份参数**](#身份参数) 标识对象存储实体。Silo 可用性序列示例如下：
 
 ```text
 minio_up{cls="minio", ins="minio-1", ip="10.10.10.10", job="minio"}
@@ -183,6 +183,4 @@ minio_up{cls="minio", ins="minio-3", ip="10.10.10.12", job="minio"}
 minio_up{cls="minio", ins="minio-4", ip="10.10.10.13", job="minio"}
 ```
 
-其中 `cls`、`ins`、`ip` 分别对应集群名、实例名与节点 IP。三种引擎的 `job` 均固定为 `minio`，并用 `flavor=silo|minio|rustfs` 区分实际后端。
-
-RustFS 的应用指标使用 `rustfs_*` 原生名称；独立就绪探测通过记录规则生成 `rustfs_up`，而不是 `minio_up`。详细接口见 [**指标列表**](/docs/minio/metric)。
+其中 `cls`、`ins`、`ip` 分别对应集群名、实例名与节点 IP。兼容监控命名保持 `job=minio`，当前后端标签为 `flavor=silo`。详细接口见 [**指标列表**](/docs/minio/metric)。

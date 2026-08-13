@@ -58,7 +58,7 @@ all:                  # 顶级对象：all
 
 ## 集群定义
 
-每个 Ansible 组可能代表一个集群，可以是节点集群、PostgreSQL 集群、Redis 集群、Etcd 集群或 MinIO 集群等…
+每个 Ansible 组可能代表一个集群，可以是节点集群、PostgreSQL 集群、Redis 集群、Etcd 集群或 Silo 集群等…
 
 集群定义由两部分组成：**集群成员** （**`hosts`**）与 **集群参数**（**`vars`**）。
 您可以在 `<cls>.hosts` 中定义集群成员，并在 `<cls>.vars` 中使用 [**配置参数**](/docs/concept/iac/parameter) 描述集群。

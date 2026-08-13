@@ -47,6 +47,6 @@ categories: [参考]
 - 对象存储跨越全部八个节点，并通过 Keepalived VIP `10.10.10.9` 与 HAProxy `9002` 暴露 `sss.pigsty`。当前默认引擎是 Silo，但模块和变量继续使用 `minio_*` 兼容命名。
 - `pg-meta` 每天做一次全量备份；`pg-test` 每周全量、其余日期增量备份，统一写入加密的 S3 pgBackRest 仓库。
 - `repo_enabled: false` 的两个 INFRA 副本不会构建本地仓库；所有节点仍从首节点的 `local` 仓库安装软件包。
-- 模板末尾的数据库、Grafana、Patroni、HAProxy、MinIO 与 etcd 密码只适合一次性仿真，真实环境必须全部轮换。
+- 模板末尾的数据库、Grafana、Patroni、HAProxy、Silo 与 etcd 密码只适合一次性仿真，真实环境必须全部轮换。
 
 如只需要常规最小高可用部署，优先使用 [ha/trio](/docs/conf/trio/)；需要更大规模的全场景仿真，参见 [ha/simu](/docs/conf/simu/)。

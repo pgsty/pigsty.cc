@@ -14,12 +14,12 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 
 | 参数组                               | 功能说明                               |
 |:----------------------------------|:-----------------------------------|
-| [`META`](#meta)                   | Pigsty 元信息：版本、管理 IP、区域、语言、代理        |
+| [`META`](#meta)                   | Pigsty 元信息：版本、管理 IP、区域、语言、代理       |
 | [`CA`](#ca)                       | 自签名 CA 证书管理                        |
 | [`INFRA_ID`](#infra_id)           | 基础设施节点身份标识与服务门户                    |
 | [`REPO`](#repo)                   | 本地软件仓库配置                           |
 | [`INFRA_PACKAGE`](#infra_package) | 基础设施节点软件包安装                        |
-| [`NGINX`](#nginx)                 | Nginx Web 服务器与反向代理配置                |
+| [`NGINX`](#nginx)                 | Nginx Web 服务器与反向代理配置               |
 | [`DNS`](#dns)                     | DNSMasq 域名解析服务配置                   |
 | [`VICTORIA`](#victoria)           | VictoriaMetrics/Logs/Traces 可观测性套件 |
 | [`PROMETHEUS`](#prometheus)       | Alertmanager 与 Blackbox Exporter   |
@@ -46,7 +46,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 
 | 参数                                |     类型     | 级别  | 说明                     |
 |:----------------------------------|:----------:|:---:|:-----------------------|
-| [`ca_create`](#ca_create)         |   `bool`   | `G` | 私钥缺失时是否允许创建？默认为 true  |
+| [`ca_create`](#ca_create)         |   `bool`   | `G` | 私钥缺失时是否允许创建？默认为 true   |
 | [`ca_cn`](#ca_cn)                 |  `string`  | `G` | CA CN 名称，固定为 pigsty-ca |
 | [`cert_validity`](#cert_validity) | `interval` | `G` | 证书有效期，默认为 20 年         |
 {.full-width}
@@ -67,7 +67,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | 参数                                            |      类型      |   级别    | 说明                      |
 |:----------------------------------------------|:------------:|:-------:|:------------------------|
 | [`repo_enabled`](#repo_enabled)               |    `bool`    |  `G/I`  | 在此基础设施节点上创建软件仓库？        |
-| [`repo_home`](#repo_home)                     |    `path`    |   `G`   | 软件仓库主目录，默认为 `/www`       |
+| [`repo_home`](#repo_home)                     |    `path`    |   `G`   | 软件仓库主目录，默认为 `/www`      |
 | [`repo_name`](#repo_name)                     |   `string`   |   `G`   | 软件仓库名称，默认为 pigsty       |
 | [`repo_endpoint`](#repo_endpoint)             |    `url`     |   `G`   | 仓库的访问点：域名或 `ip:port` 格式 |
 | [`repo_remove`](#repo_remove)                 |    `bool`    |  `G/A`  | 构建本地仓库时是否移除现有上游仓库源定义文件？ |
@@ -263,7 +263,7 @@ Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头�
 
 ```yaml
 proxy_env:
-  no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.aliyuncs.com,mirrors.tuna.tsinghua.edu.cn,mirrors.zju.edu.cn"
+  no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.myqcloud.com,*.tsinghua.edu.cn"
   #http_proxy: 'http://username:password@proxy.address.com'
   #https_proxy: 'http://username:password@proxy.address.com'
   #all_proxy: 'http://username:password@proxy.address.com'
@@ -495,7 +495,7 @@ infra_extra_services:
 
 在初始化过程中，Pigsty 会从互联网上游仓库（由 [`repo_upstream`](#repo_upstream) 指定）下载所有软件包及其依赖项（由 [`repo_packages`](#repo_packages) 指定）到 [`{{ nginx_home }}`](#nginx_home) / [`{{ repo_name }}`](#repo_name) （默认为 `/www/pigsty`），所有软件及其依赖的总大小约为 1GB 左右。
 
-当前源码使用 SOW 0.2.0 统一生成 RPM/APT 元数据。创建成功后，仓库目录中的 `repo_complete` 同时是 SHA-256 校验清单与完成标记；检测到该文件时，Pigsty 默认跳过下载和重建，直接使用已有仓库。强制重建需要执行 `./infra.yml -t repo_build -e repo_build=true`。
+当前候选软件包版本为 SOW 0.3.0，源码使用 SOW 统一生成 RPM/APT 元数据。创建成功后，仓库目录中的 `repo_complete` 同时是 SHA-256 校验清单与完成标记；检测到该文件时，Pigsty 默认跳过下载和重建，直接使用已有仓库。强制重建需要执行 `./infra.yml -t repo_build -e repo_build=true`。
 
 `repo_create` 与 `cache_create` 都直接调用 `sow create --pigsty`，不再回退到 `createrepo_c` 或 `dpkg-scanpackages`。旧离线包或旧本地仓库若不含 SOW，必须先刷新介质或从 Pigsty INFRA 仓库安装 SOW。
 
@@ -1030,7 +1030,7 @@ dns_records:
 常见的域名用途：
 
 - `i.pigsty`：Pigsty 首页
-- `m.pigsty`：常用于 MinIO 控制台（可选）
+- `m.pigsty`：常用于 Silo 控制台（可选）
 - `p.pigsty`：常用于 VictoriaMetrics Web UI（当在 `infra_portal` 中显式配置时）
 - `api.pigsty`：API 服务
 - `adm.pigsty`：管理服务

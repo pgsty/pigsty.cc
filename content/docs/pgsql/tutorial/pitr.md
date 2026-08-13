@@ -8,7 +8,7 @@ categories: [任务]
 
 
 您可以使用 `pgsql-pitr.yml` 剧本执行 PITR，但在某些情况下，您可能希望手动执行 PITR，直接使用 pgbackrest 原语实现精细的控制。
-我们将使用带有 MinIO 备份仓库的 [**四节点沙箱**](/docs/deploy/sandbox) 集群来演示该过程。
+我们将使用带有 Silo 备份仓库的 [**四节点沙箱**](/docs/deploy/sandbox) 集群来演示该过程。
 
 ![pigsty-sandbox](/img/pigsty/sandbox.png)
 

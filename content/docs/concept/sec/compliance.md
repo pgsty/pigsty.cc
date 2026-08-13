@@ -36,7 +36,7 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 | 对象存储备份与示例业务用户                               | `S3User.Backup`、`S3User.Meta`、`S3User.Data`       |       是        |
 | 示例数据库用户                                     | `DBUser.Meta`、`DBUser.Supa`、`Vibe.Coding`         |       是        |
 | pgBackRest 加密口令                             | `cipher_pass: pgBackRest`                         |     **否**      |
-| `ha/safe` 中的 MinIO 用户与 `pgBR.${pg_cluster}` | 模板示例值                                             |     **否**      |
+| `ha/safe` 中的 Silo 用户与 `pgBR.${pg_cluster}`  | 模板示例值                                             |     **否**      |
 | 用户自行添加的凭据                                   | 自定义值                                              |     **否**      |
 {.full-width}
 

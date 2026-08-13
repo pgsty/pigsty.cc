@@ -29,7 +29,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 5. **infra**：初始化 Nginx、DNS、VictoriaMetrics、Grafana 等
 6. **node-monitor**：初始化 node-exporter、vector
 7. **etcd**：初始化 etcd（PostgreSQL 高可用必需）
-8. **minio**：初始化 MinIO（可选）
+8. **minio**：初始化 Silo（可选）
 9. **pgsql**：初始化 PostgreSQL 集群并配置 PostgreSQL 监控
 
 该剧本等效于依次执行以下五个剧本：
@@ -38,7 +38,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 ./infra.yml -l infra    # 在 infra 分组上部署基础设施
 ./node.yml              # 在所有节点上初始化节点
 ./etcd.yml              # 初始化 etcd 集群
-./minio.yml             # 初始化 MinIO 集群（可选）
+./minio.yml             # 初始化 MINIO（Silo）集群（可选）
 ./pgsql.yml             # 初始化 PostgreSQL 集群
 ```
 

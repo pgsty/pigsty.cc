@@ -219,4 +219,4 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 `kafka.yml` 永远不执行清理，删除动作只在独立的 `kafka-rm.yml` 中：`-l` 选中整个集群（或裸跑选中全部集群）即为集群下线，选中真子集则是成员退役。默认 `kafka_rm_data=true` 会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；`kafka_rm_data=false` 保留数据与恢复状态，`kafka_safeguard=true` 中止一切删除。
 
-该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。
+该剧本没有确认字符串等额外闸门。执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态，并先用完全相同的目标执行 `--check`。成员退役中的 Broker 注销命令会容忍失败，真实运行后还必须核对 Quorum、Broker 注册与副本健康。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。

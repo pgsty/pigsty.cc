@@ -24,7 +24,7 @@ REDIS 模块提供了两个剧本，用于部署/移除 Redis 集群/节点/实�
 
 ```bash
 redis_node        : 初始化redis节点
-  - redis_install : 安装 Redis 与 `redis-exporter` 软件包
+  - redis_install : 按 `redis_type` 安装 Redis 或 Valkey，并安装 `redis-exporter`
   - redis_user    : 创建操作系统用户 redis
   - redis_dir     : 配置 redis的FHS目录结构
 redis_exporter    : 配置 redis_exporter 监控
@@ -260,15 +260,22 @@ redis_pkg        : 卸载所选引擎与 redis-exporter（当 redis_rm_pkg=true�
 使用示例：
 
 ```bash
+# 先以完全相同的目标预演；默认真实运行会删除 RDB/AOF 数据目录
+./redis-rm.yml -l redis-ms --check
+
 # 移除集群但保留数据目录
 ./redis-rm.yml -l redis-ms -e redis_rm_data=false
 
 # 移除集群并卸载软件包
 ./redis-rm.yml -l redis-ms -e redis_rm_pkg=true
 
-# 绕过安全保险强制移除
+# 仅在清单已启用保险且已核对备份与目标后覆盖
 ./redis-rm.yml -l redis-ms -e redis_safeguard=false
 ```
+
+{{% alert title="危险操作" color="danger" %}}
+`redis_safeguard` 默认是 `false`，`redis_rm_data` 默认是 `true`。移除剧本还会容忍多项停服、注销、删数据和卸包错误；真实运行后必须检查目标进程、数据目录与监控注册，不能只凭剧本返回状态判定完成。
+{{% /alert %}}
 
 
 ### 安全保险机制

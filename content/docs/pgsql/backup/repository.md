@@ -1,7 +1,7 @@
 ---
 title: 备份仓库
 weight: 1703
-description: 配置备份存储仓库：本地磁盘、MinIO 与 S3 对象存储，保留策略、加密、版本控制与对象锁定。
+description: 配置备份存储仓库：本地磁盘、Silo 与外部 S3 对象存储，保留策略、加密、版本控制与对象锁定。
 icon: fa-solid fa-box-archive
 categories: [任务]
 ---
@@ -19,7 +19,7 @@ categories: [任务]
 Pigsty 预置了两个仓库定义：`local` 与 `minio`。
 
 - `local`：**默认选项**，使用本地 `/pg/backup` 目录（软链接指向 [**`pg_fs_backup`**](/docs/pgsql/param/#pg_fs_backup)：`/data/backups`）
-- `minio`：使用专用 MinIO 集群或任意 S3 兼容对象存储（Pigsty 支持，默认不启用）
+- `minio`：使用 MINIO 模块部署的 Silo 或任意 S3 兼容对象存储（Pigsty 支持，默认不启用）
 
 ```yaml
 pgbackrest_method: local          # 选择备份仓库方法：`local`、`minio` 或其他自定义仓库
@@ -75,9 +75,9 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 
 --------
 
-## 使用 MinIO 仓库
+## 使用 Silo 仓库
 
-[**MINIO 模块**](/docs/minio) 可部署 Silo、MinIO 或 RustFS S3 兼容对象存储。
+[**MINIO 模块**](/docs/minio) 当前部署 Silo S3 兼容对象存储。
 作为集中备份仓库时，它为备份提供独立于数据库主机的故障域。部署对象存储集群后，将备份方法切换为 `minio`：
 
 ```yaml
@@ -93,6 +93,8 @@ Pigsty 的 `minio` 仓库预设通过域名（默认 `sss.pigsty`）和 HTTPS �
 默认的 `pgsql` 桶与 `pgbackrest` 访问用户在 MINIO 模块初始化时自动创建。
 
 对于严肃的生产部署，建议使用经过验证的多节点对象存储集群（MNMD，纠删码容错），参阅 [**MINIO 配置**](/docs/minio/config)。
+
+`pgbackrest_method: minio` 是 Pigsty 的 S3 兼容仓库预设名，并不要求服务端必须由 MINIO 模块管理。独立部署和管理的 MinIO、RustFS 或其他 S3 兼容服务也可以使用该预设，但其安装、升级、证书和数据生命周期不在当前 MINIO 角色的支持范围内。
 
 
 --------
@@ -170,7 +172,7 @@ minio_buckets:
 
 ## 仓库锁定
 
-部分对象存储（S3、MinIO 等）支持 **对象锁定**（Object Lock / WORM）：对对象版本配置保留模式与期限后，
+部分对象存储（Silo、MinIO、S3 等）支持 **对象锁定**（Object Lock / WORM）：对对象版本配置保留模式与期限后，
 锁定版本在保留期内不可修改、不可永久删除。这是对抗勒索攻击的重要防线，但普通删除仍可能写入 Delete Marker，
 暂时隐藏当前对象；恢复时需要保留版本与版本管理能力。
 
@@ -186,7 +188,7 @@ minio_buckets:
   - { name: data }
 ```
 
-这一步还没有给新对象设置 WORM 保留期。您还需要在 MinIO 中使用 `mcli retention set` 或控制台配置默认的
+这一步还没有给新对象设置 WORM 保留期。您还需要在 Silo / MinIO 中使用 `mcli retention set` 或控制台配置默认的
 `GOVERNANCE` / `COMPLIANCE` 模式与期限，并用 `mcli retention info` 验证。`GOVERNANCE` 可以被拥有 bypass 权限的主体绕过；
 `COMPLIANCE` 在期限内连 root 用户也不能解除。
 

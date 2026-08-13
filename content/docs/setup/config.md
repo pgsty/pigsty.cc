@@ -338,15 +338,15 @@ Redis 高可用设置需要使用集群模式或哨兵模式，详情请参阅 [
 
 --------
 
-## 部署 MinIO 集群
+## 部署 Silo 对象存储集群
 
-Pigsty 提供了可选的开源对象存储，S3 替代 —— [**MinIO**](/docs/minio) 支持，可作为 PostgreSQL 的 [**备份存储仓库**](/docs/pgsql/backup/repository)。
+Pigsty 的 [**MINIO 模块**](/docs/minio) 当前部署 Silo S3 兼容对象存储，可作为 PostgreSQL 的 [**备份存储仓库**](/docs/pgsql/backup/repository)。模块、清单分组与剧本继续沿用 `minio` 兼容名称。
 
 ```bash
 ./minio.yml -l minio
 ```
 
-严肃的生产环境 MinIO 部署通常需要至少 4 个节点，每个节点配备 4 块硬盘（4N/16D）。
+严肃的生产环境 Silo 部署通常需要至少 4 个节点，每个节点配备 4 块硬盘（4N/16D）。
 
 
 --------

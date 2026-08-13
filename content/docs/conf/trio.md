@@ -48,7 +48,7 @@ categories: [参考]
 - 三节点 INFRA：VictoriaMetrics/Grafana/Nginx 分布式部署
 - 三节点 ETCD：DCS 多数派选举，容忍单点故障
 - 三节点 PostgreSQL：一主两从，自动故障转移
-- 单节点 MinIO：可按需扩展为多节点
+- 单节点 Silo：可按需扩展为多节点
 
 **高可用保障**：
 - ETCD 三节点可容忍一节点故障，保持多数派

@@ -43,7 +43,7 @@ Pigsty 将使用 **`/data`** 作为默认数据目录，如果您有专用的主
 | [**`etcd_data`**](/docs/etcd/param#etcd_data)          | ETCD 数据目录  | `/data/etcd`     |
 | [**`infra_data`**](/docs/infra/param#infra_data)       | Infra 数据目录 | `/data/infra`    |
 | [**`nginx_data`**](/docs/infra/param#nginx_data)       | Nginx 数据目录 | `/data/nginx`    |
-| [**`minio_data`**](/docs/minio/param#minio_data)       | MinIO 数据目录 | `/data/minio`    |
+| [**`minio_data`**](/docs/minio/param#minio_data)       | Silo 数据目录  | `/data/minio`    |
 | [**`redis_fs_main`**](/docs/redis/param#redis_fs_main) | Redis 数据目录 | `/data/redis`    |
 | [**`kafka_data`**](/docs/kafka/param#kafka_data)       | Kafka 数据目录 | `/data/kafka`    |
 {.full-width}
@@ -56,7 +56,7 @@ Pigsty 将使用 **`/data`** 作为默认数据目录，如果您有专用的主
 
 您可以使用任何支持的 Linux 文件系统来格式化数据磁盘，但对于生产环境部署，我们建议使用 **`xfs`**。
 
-`xfs` 是 linux 的标配之一，提供了最佳的性能，便利的 CoW 机制，允许你瞬间克隆大型数据库集群。使用 MinIO 时，必须使用 `xfs` 文件系统。
+`xfs` 是 Linux 的标配之一，提供了最佳的性能与便利的 CoW 机制，允许你瞬间克隆大型数据库集群。使用 Silo 多盘部署时，必须使用 `xfs` 文件系统。
 `ext4` 是另一个可用的选择，但缺乏 CoW 功能，但有着更为丰富的数据恢复工具生态。`zfs` 可以提供 RAID，快照功能，但性能折损较大且需要单独安装。
 我们推荐您在这三种文件系统中按需权衡，择一使用。
 
@@ -137,9 +137,9 @@ Pigsty 默认使用一个本地静态域名 `i.pigsty` 来访问 WebUI，这是�
 
 ## Linux
 
-Pigsty 运行在 **Linux** 操作系统上，它支持 **16** 种主流 Linux 发行版：[**兼容操作系统列表**](/docs/ref/linux/)
+Pigsty 运行在 **Linux** 操作系统上，支持 8 个发行版大版本在双架构上的 **16** 个当前平台目标：[**兼容操作系统列表**](/docs/ref/linux/)
 
-我们推荐使用 **RockyLinux 10.1**、**Debian 13.6** 或 **Ubuntu 26.04.0 / 24.04.4** 作为默认操作系统选项。
+我们推荐使用 **Rocky Linux 9.8 / 10.2**、**Debian 12.15 / 13.6**，或 **Ubuntu 22.04.5 / 24.04.4 / 26.04.0** 作为默认操作系统选项。
 
 在 MacOS 和 Windows 上，您可以用各种虚拟机软件或者 Docker systemd 镜像来安装 Pigsty。
 

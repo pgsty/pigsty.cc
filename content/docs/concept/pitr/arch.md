@@ -27,7 +27,7 @@ pgBackRest 是 PostgreSQL 生态中事实上的标准备份工具，Pigsty 用�
 * **并行**：备份、归档、恢复都支持多进程并行，吞吐可以随核数扩展。
 * **增量**：支持差异/增量备份与 **块级增量**（block incremental），只传输文件内部变化的块。
 * **压缩与加密**：内置 zstd 压缩与 AES-256-CBC 加密，密文落盘，仓库泄露不等于数据泄露。
-* **多种仓库**：本地磁盘、S3 兼容对象存储（MinIO、云厂商 OSS）、Azure、GCS、SFTP 皆可作为后端。
+* **多种仓库**：本地磁盘、S3 兼容对象存储（Silo、MinIO、云厂商 OSS）、Azure、GCS、SFTP 皆可作为后端。
 * **打包**：`bundle` 特性将海量小文件合并为大对象存储，避免对象存储的小文件惩罚。
 
 在仓库内部，pgBackRest 使用 **stanza**（节）隔离不同集群的备份。Pigsty 将 stanza 直接映射为集群名
@@ -59,12 +59,12 @@ pgbackrest_repo:                  # 仓库定义：https://pgbackrest.org/config
     path: /pg/backup              # 备份目录，默认挂在主数据盘上
     retention_full_type: count    # 按份数保留全量备份
     retention_full: 2             # 保留最近 2 个全量备份（清理前最多 3 个）
-  minio:                          # 可选仓库：MinIO / S3 兼容对象存储
-    type: s3                      # MinIO 走 S3 兼容协议
-    s3_endpoint: sss.pigsty       # MinIO 服务端点（负载均衡域名）
+  minio:                          # 可选仓库：Silo / S3 兼容对象存储
+    type: s3                      # 使用 S3 兼容协议
+    s3_endpoint: sss.pigsty       # 对象存储服务端点（负载均衡域名）
     s3_bucket: pgsql              # 桶名称
     s3_key: pgbackrest            # 访问密钥
-    s3_key_secret: S3User.Backup  # MinIO 用户密钥
+    s3_key_secret: S3User.Backup  # 对象存储用户密钥
     storage_ca_file: /etc/pki/ca.crt  # 使用 Pigsty 自签名 CA 验证 HTTPS
     block: y                      # 启用块级增量备份
     bundle: y                     # 小文件打包存储
@@ -75,7 +75,7 @@ pgbackrest_repo:                  # 仓库定义：https://pgbackrest.org/config
 ```
 
 注意两套预置仓库的策略差异：**本地仓库** 追求简单直接 —— 不加密、不打包、按份数保留；
-**MinIO 仓库** 面向生产 —— 加密、打包、块级增量、按时间保留两周。
+**`minio` 远程仓库预设** 面向生产 —— 加密、打包、块级增量、按时间保留两周。
 这不是随意的默认值，而是对两种使用场景的判断：本地仓库与数据同生共死，重点是快；
 远程仓库承担容灾职责，重点是安全与可追溯。
 
@@ -99,7 +99,7 @@ s3:    # 自定义仓库 ------> /etc/pgbackrest/pgbackrest.conf
   retention_full: 90              # ----> repo1-retention-full=90
 ```
 
-各类仓库的完整配置方法（MinIO、阿里云 OSS、AWS S3、版本控制与对象锁定）请参阅 [**备份仓库**](/docs/pgsql/backup/repository/)。
+各类仓库的完整配置方法（Silo、外部 MinIO、阿里云 OSS、AWS S3、版本控制与对象锁定）请参阅 [**备份仓库**](/docs/pgsql/backup/repository/)。
 
 
 ----------------
@@ -152,7 +152,7 @@ pgBackRest 安装在集群的 **所有** 节点上，但任何时刻只有 **当
 | 备份/归档并行度 | 约 1/4 核数（2～4 进程）  | 备份不与生产负载争抢 CPU                |
 | 恢复并行度    | 核数（至多 8 进程）       | 恢复时争分夺秒，资源全开                  |
 | 异步归档     | `archive-async=y` | 经 `/pg/spool` 假脱机批量推送，归档不阻塞写入 |
-| 归档队列上限   | 4 GiB             | 未归档 WAL 积压超限时丢弃归档，保护主库磁盘不被写满 |
+| 归档队列上限   | 4 GiB             | 未归档 WAL 积压超限时丢弃归档，保护主库磁盘不被写满  |
 | 快速启动     | `start-fast=y`    | 备份开始时立即执行检查点，不等常规检查点周期        |
 | 增量恢复     | `delta=y`         | 恢复时复用数据目录中未变化的文件，大幅缩短 RTO     |
 {.full-width}

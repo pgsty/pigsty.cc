@@ -62,7 +62,7 @@ categories: [参考]
 **不包含组件**：
 - PostgreSQL 数据库集群
 - etcd 分布式协调服务
-- MinIO 对象存储
+- Silo 对象存储
 
 **监控外部实例**：
 配置完成后，可通过 `pgsql-monitor.yml` 剧本添加外部 PostgreSQL 实例的监控：

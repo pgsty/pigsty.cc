@@ -1,7 +1,7 @@
 ---
 title: 管理预案
 weight: 3650
-description: Silo、MinIO 与 RustFS 对象存储集群的创建、销毁、升级与故障处理；区分引擎升级和数据迁移。
+description: Silo 对象存储集群的创建、销毁、升级、扩缩容与故障处理。
 icon: fa-solid fa-building-columns
 module: [MINIO]
 categories: [任务]
@@ -21,7 +21,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 例如，上面的配置定义了一个 SNSD [单机单盘](/docs/minio/config#单机单盘) Silo 集群，使用以下命令即可创建所选对象存储集群：
 
 ```bash
-./minio.yml -l minio  # 在 minio 分组上安装 MINIO 模块所选引擎
+./minio.yml -l minio  # 在 minio 分组上安装 Silo
 ```
 
 
@@ -32,23 +32,26 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 要销毁一个集群，执行专用的 [`minio-rm.yml`](/docs/minio/playbook#minio-rmyml) 剧本即可：
 
 ```bash
+./minio-rm.yml -l minio --check -e minio_type=silo                 # 先以完全相同的目标预演
 ./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
-./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据与配置
 ./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_pkg=true    # 移除集群并卸载软件包
 ```
 
-删除角色不为 `minio_type` 提供默认值。若清单中未显式定义实际引擎，必须像上例一样通过 `-e minio_type=silo|minio|rustfs` 指定；该值必须与目标集群实际使用的后端一致。
+删除角色不为 `minio_type` 提供默认值。若清单中未显式定义，必须像上例一样通过 `-e minio_type=silo` 指定；当前其他取值会被拒绝。
 
 {{% alert title="架构变更：Pigsty v3.6+" color="info" %}}
 从 Pigsty v3.6 开始，集群移除操作已从 `minio.yml` 剧本迁移至专用的 `minio-rm.yml` 剧本。旧的 `minio_clean` 任务已被弃用。
 {{% /alert %}}
 
-移除剧本会自动完成以下操作：
+移除剧本会依次尝试以下操作：
 - 从 VictoriaMetrics 监控系统中注销对象存储目标
 - 从 INFRA 节点的 DNS 服务中移除记录
-- 停止并禁用 `minio_type` 对应的 systemd 服务
-- 删除数据目录和所选引擎的配置（由 `minio_rm_data` 控制，默认执行）
-- 卸载所选引擎与 `mcli` 软件包（由 `minio_rm_pkg` 控制，默认不执行）
+- 停止并禁用 `silo.service`
+- 删除数据目录和 Silo 配置（由 `minio_rm_data` 控制，默认执行）
+- 卸载 Silo 与 `mcli` 软件包（由 `minio_rm_pkg` 控制，默认不执行）
+
+该剧本启用了错误容忍，返回状态不能单独证明服务、数据、DNS 与监控目标已经全部按预期处理；真实运行后应逐项核对现场。
 
 
 
@@ -56,13 +59,13 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 
 ## 集群扩容
 
-本节的存储池扩容、缩容、故障盘恢复命令面向 MinIO/Silo 兼容行为。RustFS 使用独立实现与数据格式，执行同类操作前必须以所用版本的上游文档和专项演练为准。
+本节使用 Silo 保留的 MinIO 兼容管理接口。生产操作前必须按实际 Silo 版本核对上游约束并完成专项演练。
 
 - [集群扩容教程](https://min.io/docs/minio/linux/operations/install-deploy-manage/expand-minio-deployment.html)
 
-MinIO 无法在节点/磁盘级别上扩容，但可以在存储池（多个节点）层次上进行扩容。
+Silo 不能直接改变既有存储池的节点或磁盘数量，但可以通过新增存储池扩容。
 
-现在假设您有 [这样一个](/docs/minio/config#多机多盘) 四节点的 MinIO 集群，希望扩容一倍，新增一个四节点的存储池。
+假设您有 [这样一个](/docs/minio/config#多机多盘) 四节点 Silo 集群，希望通过新增四节点存储池将容量扩展一倍。
 
 ```yaml
 minio:
@@ -104,7 +107,7 @@ minio:
           - { name: minio-4 ,ip: 10.10.10.13 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
 
-首先，修改 MinIO 集群定义，新增四台节点，按顺序分配序列号 5 到 8。
+首先，修改 Silo 集群定义，新增四台节点，按顺序分配序列号 5 到 8。
 这里的关键一步是修改 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，将新的四个节点指定为一个新的 **存储池**。
 
 ```yaml
@@ -134,13 +137,13 @@ minio:
 ./node.yml -l 10.10.10.14,10.10.10.15,10.10.10.16,10.10.10.17
 ```
 
-第三步，在新节点上，使用 Ansible [剧本](/docs/minio/playbook/) 安装并准备 MinIO 软件：
+第三步，在新节点上使用 Ansible [剧本](/docs/minio/playbook/) 安装并准备 Silo：
 
 ```bash
 ./minio.yml -l 10.10.10.14,10.10.10.15,10.10.10.16,10.10.10.17 -t minio_install
 ```
 
-第四步，在 **整个集群** 上，使用 Ansible [剧本](/docs/minio/playbook/) 重新配置 MinIO 集群：
+第四步，在 **整个集群** 上使用 Ansible [剧本](/docs/minio/playbook/) 重新配置 Silo：
 
 ```bash
 ./minio.yml -l minio -t minio_config
@@ -148,10 +151,10 @@ minio:
 
 > 这一步会更新现有四个节点的 `MINIO_VOLUMES` 配置
 
-第五步，一次性重启整个 MinIO 集群（请注意，不要滚动重启！）：
+第五步，一次性重启整个 Silo 集群（请注意，不要滚动重启！）：
 
 ```bash
-./minio.yml -l minio -t minio_launch -f 10   # 8并发数，确保同时重启
+./minio.yml -l minio -t minio_launch -f 10   # 最多 10 并发，确保 8 个节点同时重启
 ```
 
 第六步（可选）：如果您使用了负载均衡，那么请确保负载均衡器的配置也已经更新。例如，将新的四个节点加入到负载均衡器的配置中：
@@ -196,7 +199,7 @@ haproxy_services:
 
 ## 集群缩容
 
-MinIO 无法在节点/磁盘级别上缩容，但可以在存储池（多个节点）层次上进行退役 —— 新增一个新存储池，将旧存储池排干迁移到新存储池，然后将旧存储池退役。
+Silo 不能直接缩减既有存储池的节点或磁盘数量，但可以在存储池层次退役：先新增存储池，将旧池数据排干迁移，再退役旧池。
 
 - [集群缩容教程](https://min.io/docs/minio/linux/operations/install-deploy-manage/decommission-server-pool.html)
 
@@ -210,30 +213,26 @@ MinIO 无法在节点/磁盘级别上缩容，但可以在存储池（多个节�
 
 - [集群升级教程](https://min.io/docs/minio/linux/operations/install-deploy-manage/upgrade-minio-deployment.html)
 
-首先，将所选引擎的新软件包下载至 INFRA 节点的本地软件仓库，然后使用 SOW 重建仓库索引：
-
-Silo、MinIO、RustFS 与 `mcli` 均从 Pigsty INFRA 软件源获取。同步到本地仓库后重建元数据：
+首先，将新版 `silo` 与 `mcli` 软件包下载至 INFRA 节点的本地软件仓库，然后使用 SOW 重建仓库索引：
 
 ```bash
 ./infra.yml -t repo_create
 ```
 
-其次，只升级清单中实际选择的软件包与 `mcli`。以下三条服务端命令三选一：
+其次，升级 Silo 服务端与 `mcli` 兼容客户端：
 
 ```bash
-ansible minio -m package -b -a 'name=silo state=latest'    # minio_type: silo
-ansible minio -m package -b -a 'name=minio state=latest'   # minio_type: minio
-ansible minio -m package -b -a 'name=rustfs state=latest'  # minio_type: rustfs
-ansible minio -m package -b -a 'name=mcli state=latest'    # 通用客户端
+ansible minio -m package -b -a 'name=silo state=latest'  # 服务端
+ansible minio -m package -b -a 'name=mcli state=latest'  # 兼容客户端
 ```
 
-最后，使用角色按所选引擎重启完整集群：
+最后，使用角色重启完整 Silo 集群：
 
 ```bash
 ./minio.yml -l minio -t minio_config,minio_launch
 ```
 
-软件包升级与引擎迁移是两件事。升级期间不要顺便修改 `minio_type`；任何 MinIO → Silo 或 MinIO/Silo → RustFS 切换都需要独立的数据验证、停机窗口与回滚方案。
+软件包升级与从旧 MinIO 迁移到 Silo 是两件事。前者针对已经运行 Silo 的集群；后者必须另行完成数据兼容性验证、备份、停机窗口与回滚演练，不能直接套用本节的升级命令。
 
 
 
@@ -247,13 +246,13 @@ ansible minio -m package -b -a 'name=mcli state=latest'    # 通用客户端
 # 1. 从集群中下线故障节点
 bin/node-rm <your_old_node_ip>
 
-# 2. 替换故障节点，使用原来的节点名称（如果IP变化，您需要修改 MinIO 集群定义）
+# 2. 替换故障节点，保留原节点名称（如果 IP 变化，需要修改 Silo 集群定义）
 bin/node-add <your_new_node_ip>
 
-# 3. 在新节点上安装配置 MinIO
+# 3. 在新节点上安装配置 Silo
 ./minio.yml -l <your_new_node_ip>
 
-# 4. 指示 MinIO 执行恢复动作
+# 4. 指示 Silo 执行恢复动作
 mcli admin heal
 ```
 
@@ -279,16 +278,16 @@ vi /etc/fstab
 # 4. 重新挂载
 mount -a
 
-# 5. 指示 MinIO 执行恢复动作
+# 5. 指示 Silo 执行恢复动作
 mcli admin heal
 ```
 
 
 --------
 
-## 管理 MinIO 密码
+## 管理 Silo 密码
 
-[**`minio_secret_key`**](/docs/minio/param#minio_secret_key)（默认 `S3User.MinIO`）是对象存储 root 用户密码，渲染到 `/etc/default/<minio_type>`，例如 `/etc/default/silo`。
+[**`minio_secret_key`**](/docs/minio/param#minio_secret_key)（默认 `S3User.MinIO`）是 Silo root 用户密码，渲染到 `/etc/default/silo`。
 
 修改密码后，使用以下命令刷新配置并重启服务（需同时重启整个集群）：
 
@@ -296,7 +295,7 @@ mcli admin heal
 ./minio.yml -l minio -t minio_config,minio_launch,minio_alias -f 30  # 重新渲染配置文件，写入 Alias
 ```
 
-如果要修改 MinIO 普通用户的密码，例如 `pgbackrest` 用户的密码，请在可以访问 MinIO 的节点上（比如管理节点的管理用户）：
+如果要修改 Silo 普通用户的密码，例如 `pgbackrest`，请在可以访问 Silo 的节点上执行：
 
 ```bash
 set +o history
@@ -304,7 +303,7 @@ mcli admin user passwd sss pgbackrest <YOUR_NEW_PASSWORD>
 set -o history
 ```
 
-然后，你还需要修改引用该用户密码的所有配置，例如，当你的 pgBackRest 使用 MinIO 作为备份仓库时（[**`pgbackrest_method`**](/docs/pgsql/param#pgbackrest_method) 设置为 `minio`），需要更新 pgBackRest 的 MinIO 访问密钥密码：
+然后还要修改引用该用户密码的所有配置。例如，当 pgBackRest 使用 `minio` S3 兼容仓库预设时，需要同步更新访问密钥密码：
 
 ```bash
 ./pgsql.yml -t pgbackrest_config

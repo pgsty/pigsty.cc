@@ -1,13 +1,13 @@
 ---
 title: 集群配置
 weight: 3620
-description: 选择 Silo、MinIO 或 RustFS，并按单机、多盘、多节点模式配置可靠的 S3 对象存储接入。
+description: 使用 MINIO 模块部署 Silo，并按单机、多盘、多节点模式配置可靠的 S3 对象存储接入。
 icon: fa-solid fa-code
 module: [MINIO]
 categories: [参考]
 ---
 
-在部署 MINIO 模块之前，需要在 [配置清单](/docs/setup/config) 中定义对象存储集群，并用 [`minio_type`](/docs/minio/param#minio_type) 选择服务端。三种引擎共用以下清单部署模式：
+在部署 MINIO 模块之前，需要在 [配置清单](/docs/setup/config) 中定义 Silo 对象存储集群。v4.5.0 当前源码要求 [`minio_type: silo`](/docs/minio/param#minio_type)，支持以下清单部署模式：
 
 - [单机单盘：SNSD](#单机单盘)：单机单盘模式，可以使用任意目录作为数据盘，仅作为开发、测试、演示使用。
 - [单机多盘：SNMD](#单机多盘)：折中模式，在单台服务器上使用多块磁盘 (>=2)，仅当资源极为有限时使用。
@@ -15,29 +15,22 @@ categories: [参考]
 
 通常我们建议使用 SNSD 与 MNMD 这两种模式，前者用于开发测试，后者用于生产部署，SNMD 仅在资源有限（只有一台服务器）的情况下使用。
 
-此外，MinIO/Silo 可以使用 [多池部署](#多池部署) 扩容，或直接部署 [多套集群](#多套集群)。RustFS 的存储池变更能力应以实际使用版本的上游文档与迁移测试为准。
+此外，Silo 可以使用 [多池部署](#多池部署) 扩容，或直接部署 [多套集群](#多套集群)。
 
 使用多节点集群时，访问任意成员都可以获取 S3 服务，因此最佳实践是在集群前使用负载均衡与 [高可用服务接入机制](#服务接入)。
 
 
 ----------------
 
-## 引擎选择
+## 后端选择
 
 ```yaml
-minio_type: silo   # silo（当前源码默认）、minio 或 rustfs
+minio_type: silo   # v4.5.0 当前唯一合法值
 ```
 
-| 值 | 软件包与服务 | 配置和证书 |
-|:---|:---|:---|
-| `silo` | `silo` / `silo.service` | `/etc/default/silo`、`~/.minio/certs/` |
-| `minio` | `minio` / `minio.service` | `/etc/default/minio`、`~/.minio/certs/` |
-| `rustfs` | `rustfs` / `rustfs.service` | `/etc/default/rustfs`、`~/.rustfs/certs/` |
-{.full-width}
+`minio_type` 是为后续扩展保留的选择器，但当前部署与移除角色都只接受 `silo`。它对应 `silo` 软件包、`silo.service`、`/etc/default/silo` 与 `~/.minio/certs/`。为支持原地迁移，`silo.service` 会先读取旧的 `/etc/default/minio`，再读取优先级更高的 `/etc/default/silo`，并与旧 `minio.service` 冲突；新部署只应维护 Silo 配置文件。
 
-`minio_type` 只选择角色行为，不执行数据迁移。已有 MinIO 集群升级时应显式保留 `minio_type: minio`；切换到 Silo 或 RustFS 前必须独立验证数据、升级和回滚路径。
-
-下文部分拓扑片段为简洁起见省略 `minio_type`，按当前源码会部署默认的 Silo；文中引用的 MinIO 拓扑术语和上游链接用于说明 Silo/MinIO 兼容行为，并不表示角色仍默认安装 `minio` 软件包。
+旧清单中的 `minio_type: minio` 或 `minio_type: rustfs` 会在身份检查阶段失败。升级已有 MinIO 部署前，应先验证 MinIO → Silo 的数据兼容性、备份与回滚路径。下文引用 MinIO 上游拓扑术语和链接，是因为 Silo 保留对应兼容接口，并不表示当前角色仍安装 `minio` 软件包。
 
 
 
@@ -45,34 +38,34 @@ minio_type: silo   # silo（当前源码默认）、minio 或 rustfs
 
 ## 核心参数
 
-Pigsty 使用 [`minio_volumes`](/docs/minio/param#minio_volumes) 统一描述成员与磁盘。它会渲染为 Silo/MinIO 的 `MINIO_VOLUMES`，或 RustFS 的 `RUSTFS_VOLUMES`。角色会根据清单自动生成该值，也允许显式覆盖。
+Pigsty 使用 [`minio_volumes`](/docs/minio/param#minio_volumes) 描述成员与磁盘，并将其渲染为 Silo 的 `MINIO_VOLUMES`。角色会根据清单自动生成该值，也允许显式覆盖。
 
 - 单机单盘：`minio_volumes` 指向本机上的普通目录，默认由 [`minio_data`](/docs/minio/param#minio_data) 生成，默认位置为 `/data/minio`。
 - 单机多盘：`minio_volumes` 指向本机上的序列挂载点，同样由 `minio_data` 生成，例如 `/data{1...4}`。
 - 多机多盘：`minio_volumes` 指向多台服务器上的序列挂载点，由以下两部分自动组合生成：
   - 首先要使用 [`minio_data`](/docs/minio/param#minio_data) 指定集群每个成员的磁盘挂载点序列 `/data{1...4}`，
   - 还需要使用 [`minio_node`](/docs/minio/param#minio_node) 指定节点的命名模式 `${minio_cluster}-${minio_seq}.pigsty`
-- 多池部署：对 MinIO/Silo，需要显式指定 `minio_volumes` 来分配每个存储池的节点；RustFS 应以所用版本的上游能力为准。
+- 多池部署：需要显式指定 `minio_volumes` 来分配每个存储池的节点。
 
 
 ----------------
 
 ## 单机单盘
 
-SNSD 模式，部署参考教程：[MinIO 单机单盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html)
+SNSD 模式，兼容拓扑参考：[MinIO 单机单盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html)
 
-在 Pigsty 中，定义一个单例 MinIO 实例非常简单：
+在 Pigsty 中，定义一个单例 Silo 实例非常简单：
 
 ```yaml
 # 1 节点 1 数据目录
 minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio, minio_type: silo } }
 ```
 
-单机模式下，唯一必要的参数是 [`minio_seq`](/docs/minio/param#minio_seq) 和 [`minio_cluster`](/docs/minio/param#minio_cluster)，它们会唯一标识每一个 MinIO 实例。
+单机模式下，必要的身份参数是 [`minio_seq`](/docs/minio/param#minio_seq) 和 [`minio_cluster`](/docs/minio/param#minio_cluster)，它们会唯一标识每一个对象存储实例。
 
 单节点单磁盘模式仅用于开发目的，因此您可以使用一个普通的目录作为数据目录，该目录由参数 [`minio_data`](/docs/minio/param#minio_data) 默认为 `/data/minio`。
 
-在您使用 MinIO 时，强烈建议您通过静态解析的域名记录访问 MinIO，例如，假设 [`minio_domain`](/docs/minio/param#minio_domain) 设置的内部服务域名使用了默认的 `sss.pigsty`，
+使用 Silo 时，强烈建议通过静态解析的域名记录访问服务。例如，假设 [`minio_domain`](/docs/minio/param#minio_domain) 使用默认的 `sss.pigsty`，
 那么您可以在所有节点上添加一个静态解析，便于其他节点访问此服务。
 
 ```yaml
@@ -90,7 +83,7 @@ node_etc_hosts: ["10.10.10.10 sss.pigsty"] # domain name to access minio from al
 
 ## 单机多盘
 
-SNMD 模式，部署参考教程：[MinIO 单机多盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-multi-drive.html)
+SNMD 模式，兼容拓扑参考：[MinIO 单机多盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-multi-drive.html)
 
 要在单节点上使用多块磁盘，所需的操作与 [单机单盘](#单机单盘) 基本一致，但用户需要以 `{{ prefix }}{x...y}` 的特定格式指定 [`minio_data`](/docs/minio/param#minio_data)，该格式定义了序列磁盘挂载点。
 
@@ -103,12 +96,12 @@ minio:
 ```
 
 {{% alert title="请使用真实磁盘挂载点" color="warning" %}}
-请注意，SNMD 模式不支持使用普通目录作为数据目录。如果您使用 SNMD 模式拉起 MinIO，但数据目录不是有效的磁盘挂载点，MinIO 将拒绝启动。请确保使用 XFS 格式化的真实磁盘。
+请注意，SNMD 模式不支持使用普通目录作为数据目录。如果数据目录不是有效的磁盘挂载点，Silo 将拒绝启动。请确保使用 XFS 格式化的真实磁盘。
 {{% /alert %}}
 
 
 
-例如 Vagrant MinIO [沙箱](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) 定义了一个带有4块磁盘的单节点 MinIO 集群：`/data1`、`/data2`、`/data3` 和 `/data4`。启动 MinIO 之前，你需要正确地挂载它们（请务必使用 `xfs` 格式化磁盘）：
+例如 Vagrant 对象存储 [沙箱](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) 定义了一个带有 4 块磁盘的单节点 Silo 集群：`/data1`、`/data2`、`/data3` 和 `/data4`。启动 Silo 前，需要正确挂载并使用 `xfs` 格式化这些磁盘：
 
 ```bash
 mkfs.xfs /dev/vdb; mkdir /data1; mount -t xfs /dev/vdb /data1;   # 挂载第1块盘……
@@ -138,11 +131,11 @@ SNMD 模式可以利用单机上的多块磁盘，提供更高的性能和容量
 
 ## 多机多盘
 
-MNMD 模式，部署参考教程：[MinIO 多机多盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html)
+MNMD 模式，兼容拓扑参考：[MinIO 多机多盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html)
 
-除了需要 [单机多盘](#单机多盘) 模式中的 [`minio_data`](/docs/minio/param#minio_data) 指定磁盘驱动器，使用 MinIO 多节点部署需要使用一个额外的 [`minio_node`](/docs/minio/param#minio_node) 参数。
+除了使用 [单机多盘](#单机多盘) 模式中的 [`minio_data`](/docs/minio/param#minio_data) 指定磁盘，还需要使用 [`minio_node`](/docs/minio/param#minio_node) 指定多节点名称模式。
 
-例如，以下配置定义了一个 MinIO 集群，其中有四个节点，每个节点有四块磁盘：
+例如，以下配置定义了一个 Silo 集群，其中有四个节点，每个节点有四块磁盘：
 
 ```yaml
 minio:
@@ -157,12 +150,12 @@ minio:
     minio_node: '${minio_cluster}-${minio_seq}.pigsty' # minio 节点名称规则
 ```
 
-[`minio_node`](/docs/minio/param#minio_node)  参数指定了 MinIO 节点名称的模式，用于生成每个节点的唯一名称。
+[`minio_node`](/docs/minio/param#minio_node) 参数指定 MINIO 模块内部的节点名称模式，用于生成每个节点的唯一名称。
 默认情况下，节点名称是 `${minio_cluster}-${minio_seq}.pigsty`，其中 `${minio_cluster}` 是集群名称，`${minio_seq}` 是节点序号。
-MinIO 实例的名称非常重要，会自动写入到 MinIO 节点的 `/etc/hosts` 中进行静态解析。MinIO 依靠这些名称来识别并访问集群中的其他节点。
+实例名称会自动写入各 Silo 节点的 `/etc/hosts` 中进行静态解析，供集群成员互相识别和访问。
 
-在这种情况下，派生的 `minio_volumes` 为 `https://minio-{1...4}.pigsty:9000/data{1...4}`，以标识四个节点上的四块盘；角色再按引擎写入相应环境变量。
-您可以直接在 MinIO 集群中指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，来覆盖自动根据规则生成的值。
+在这种情况下，派生的 `minio_volumes` 为 `https://minio-{1...4}.pigsty:9000/data{1...4}`，以标识四个节点上的四块盘；角色再将其写入 Silo 使用的兼容环境变量。
+您可以直接在对象存储集群中指定 [`minio_volumes`](/docs/minio/param#minio_volumes)，覆盖自动生成的值。
 但通常不需要这样做，因为 Pigsty 会自动根据配置清单生成它。
 
 
@@ -173,9 +166,9 @@ MinIO 实例的名称非常重要，会自动写入到 MinIO 节点的 `/etc/hos
 
 ## 多池部署
 
-MinIO 的架构允许通过添加新的存储池来扩容。在 Pigsty 中，您可以通过显式指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数来分配每个存储池的节点，从而实现集群扩容。
+Silo 保留通过添加新存储池扩容的兼容能力。在 Pigsty 中，可以显式指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 为每个存储池分配节点。
 
-例如，假设您已经创建了 [多机多盘](#多机多盘) 样例中定义的 MinIO 集群，现在您想要添加一个新的存储池，同样由四个节点构成。
+例如，假设您已经创建了 [多机多盘](#多机多盘) 样例中的 Silo 集群，现在需要添加一个同样由四个节点构成的新存储池。
 
 那么，你需要直接覆盖指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数：
 
@@ -198,7 +191,7 @@ minio:
     minio_volumes: 'https://minio-{1...4}.pigsty:9000/data{1...4} https://minio-{5...8}.pigsty:9000/data{1...4}'
 ```
 
-在这里，空格分割的两个参数分别代表两个存储池，每个存储池有四个节点，每个节点有四块磁盘。更多关于存储池的信息请参考 [管理预案：MinIO集群扩容](/docs/minio/admin/)
+在这里，空格分隔的两个参数分别代表两个存储池，每个存储池有四个节点，每个节点有四块磁盘。更多信息见 [管理预案：集群扩容](/docs/minio/admin/)。
 
 
 
@@ -206,7 +199,7 @@ minio:
 
 ## 多套集群
 
-您可以将新的 MinIO 节点部署为一个全新的 MinIO 集群，使用不同的集群名称定义一个新的分组即可，以下配置声明了两个独立的 MinIO 集群：
+您可以将新节点部署为独立的 Silo 集群。以下配置使用不同身份声明两套对象存储集群：
 
 ```yaml
 minio1:
@@ -242,7 +235,7 @@ minio2:
 
 ## 服务接入
 
-所选对象存储引擎默认使用 `9000` 端口提供 S3 服务。多节点集群可以通过访问 **任意一个成员** 来访问服务。
+Silo 默认使用 `9000` 端口提供 S3 服务。多节点集群可以通过访问 **任意一个成员** 来访问服务。
 
 服务接入属于 [NODE](/docs/node) 模块的功能范畴，这里仅做基本介绍。
 
@@ -288,14 +281,14 @@ minio:
           - { name: minio-4 ,ip: 10.10.10.13 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
 
-例如，上面的配置块为 MinIO 集群的所有节点上启用了 HAProxy，在 9002 端口上暴露 MinIO 服务，同时为集群绑定了一个二层 VIP。
-当使用时，用户应当将 `sss.pigsty` 域名解析指向 VIP 地址 `10.10.10.9`，并使用 `9002` 端口访问 MinIO 服务。这样当任意一个节点发生故障时，VIP 会自动切换到另一个节点，保证服务的高可用性。
+例如，上面的配置块在 Silo 集群的所有节点上启用 HAProxy，通过 9002 端口暴露 S3 服务，并为集群绑定一个二层 VIP。
+使用时应将 `sss.pigsty` 解析到 VIP `10.10.10.9`，并通过 `9002` 端口访问。任意节点故障时，VIP 会切换到其他节点。
 
-在这种情况下，您通常还需要在全局修改域名解析的目的地，以及 [`minio_endpoint`](/docs/minio/param#minio_endpoint) 参数，修改写入管理节点 MinIO Alias 对应的端点地址：
+在这种情况下，还需要修改全局域名解析以及 [`minio_endpoint`](/docs/minio/param#minio_endpoint)，更新写入管理节点的 `mcli` Alias 端点：
 
 ```yaml
 minio_endpoint: https://sss.pigsty:9002   # 覆盖默认值： https://sss.pigsty:9000
-node_etc_hosts: ["10.10.10.9 sss.pigsty"] # 其他节点将使用 sss.pigsty 域名来访问 MinIO
+node_etc_hosts: ["10.10.10.9 sss.pigsty"] # 其他节点使用 sss.pigsty 访问 Silo
 ```
 
 
@@ -328,7 +321,7 @@ proxy:
           - { name: minio-5 ,ip: 10.10.10.25 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
 
-在这种情况下，您通常还需要在全局修改 MinIO 域名的解析，将 `sss.pigsty` 指向负载均衡器的地址，并修改 [`minio_endpoint`](/docs/minio/param#minio_endpoint) 参数，修改写入管理节点 MinIO Alias 对应的端点地址：
+在这种情况下，还需要将 `sss.pigsty` 指向负载均衡器，并修改 [`minio_endpoint`](/docs/minio/param#minio_endpoint)，更新管理节点上的 `mcli` Alias 端点：
 
 ```yaml
 minio_endpoint: https://sss.pigsty:9002    # overwrite the defaults: https://sss.pigsty:9000
@@ -342,16 +335,16 @@ node_etc_hosts: ["10.10.10.20 sss.pigsty"] # domain name to access minio from al
 
 ## 访问服务
 
-如果您想要访问上面通过 HAProxy 暴露的 MinIO，以 PGSQL 备份配置为例，可以修改 [`pgbackrest_repo`](/docs/pgsql/param#pgbackrest_repo) 中的配置，添加新的备份仓库定义：
+如果要从 PGSQL 访问上面通过 HAProxy 暴露的 Silo，可以在 [`pgbackrest_repo`](/docs/pgsql/param#pgbackrest_repo) 中添加新的备份仓库定义：
 
 ```yaml
-# 这是新添加的 HA MinIO Repo 定义，使用此配置代替之前的单机 MinIO 配置
+# 新增的 HA S3 Repo 定义，替代之前的单机配置
 minio_ha:
   type: s3
   s3_endpoint: minio-1.pigsty   # s3_endpoint 可以是任何一个负载均衡器：10.10.10.1{0,1,2}，或指向任意 3 个节点的域名
   s3_region: us-east-1          # 你可以使用外部域名：sss.pigsty，该域名指向任一成员（`minio_domain`）
   s3_bucket: pgsql              # 你可使用实例名和节点名：minio-1.pigsty minio-1.pigsty minio-1.pigsty minio-1 minio-2 minio-3
-  s3_key: pgbackrest            # 最好为 MinIO 的 pgbackrest 用户使用专门的密码
+  s3_key: pgbackrest            # 为 Silo 的 pgbackrest 用户使用专用密码
   s3_key_secret: S3User.SomeNewPassWord
   s3_uri_style: path
   path: /pgbackrest
@@ -370,9 +363,9 @@ minio_ha:
 
 ## 暴露管控
 
-所选对象存储引擎默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 指定）提供 Web 管控界面；RustFS 控制台位于该端口的 `/rustfs/console/`。
+Silo 默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 指定）提供 Web 管控界面。
 
-将后台管理界面暴露给外部可能存在安全隐患。如果你希望这样做，请将 MinIO 添加到 [`infra_portal`](/docs/infra/param#infra_portal) 并刷新 Nginx 配置。
+将后台管理界面暴露给外部可能存在安全隐患。如果确实需要，请将 Silo 添加到 [`infra_portal`](/docs/infra/param#infra_portal) 并刷新 Nginx 配置。
 
 ```yaml  
 # ./infra.yml -t nginx
@@ -394,6 +387,6 @@ infra_portal:
 
 请 **不要** 在生产环境中暴露未加密的对象存储管控页面。
 
-这意味着，您通常需要在您的 DNS 服务器，或者本机 `/etc/hosts` 中添加 `m.pigsty` 的解析记录，以便访问 MinIO 管控页面。
+这意味着，通常需要在 DNS 服务器或本机 `/etc/hosts` 中添加 `m.pigsty` 解析记录，以便访问 Silo 管控页面。
 
 与此同时，如果您使用的是 Pigsty 自签名的 CA 而不是一个正规的公共 CA，通常您还需要手工信任该 CA 或证书，才能跳过浏览器中的 “不安全” 提示信息。

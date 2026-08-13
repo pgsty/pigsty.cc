@@ -27,7 +27,7 @@ Pigsty 的默认凭据公开记录在源码和文档中，不能直接用于生�
 `configure -g` 不会替换以下内容：
 
 - pgBackRest 的 `cipher_pass`；
-- `ha/safe` 中的 MinIO 用户和部分示例口令；
+- `ha/safe` 中的 Silo 用户和部分示例口令；
 - 用户自行添加的数据库、对象存储或应用凭据。
 
 生成完成后，应检查 `pigsty.yml`，逐项替换未覆盖的凭据。配置向导会在终端输出生成的密码，因此终端记录和自动化日志也应按敏感信息保护。
@@ -41,12 +41,12 @@ Pigsty 的默认凭据公开记录在源码和文档中，不能直接用于生�
 
 [**`node_firewall_mode`**](/docs/node/param#node_firewall_mode) 默认为 `zone`，信任 [**`node_firewall_intranet`**](/docs/node/param#node_firewall_intranet) 定义的内网，并限制公网放行端口。
 
-| 端口 | 服务 | 默认公网状态 |
-|:---:|:---|:---|
-| `22` | SSH | 放行 |
-| `80` | Nginx HTTP | 放行 |
-| `443` | Nginx HTTPS | 放行 |
-| `5432` | PostgreSQL | 基础默认值不放行；演示配置 `pigsty.yml` 额外放行 |
+|   端口   | 服务          | 默认公网状态                          |
+|:------:|:------------|:--------------------------------|
+|  `22`  | SSH         | 放行                              |
+|  `80`  | Nginx HTTP  | 放行                              |
+| `443`  | Nginx HTTPS | 放行                              |
+| `5432` | PostgreSQL  | 基础默认值不放行；演示配置 `pigsty.yml` 额外放行 |
 {.full-width}
 
 生产部署通常应从演示配置中移除 `5432`。如果业务需要直接连接数据库，应在云安全组、防火墙和 HBA 中同时限制来源地址。

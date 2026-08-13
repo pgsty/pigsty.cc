@@ -88,7 +88,7 @@ redis-test: # redis 原生集群： 3主 x 3从
 
 * 一个节点只能属于一个 Redis 集群，这意味着您不能将一个节点同时分配给两个不同的 Redis 集群。
 * 在每个 Redis 节点上，您需要为 Redis 实例 分配唯一的端口号，避免端口冲突。
-* 通常同一个 Reids 集群会使用同一个密码，但一个 Redis 节点上的多个 Redis 实例无法设置不同的密码（因为 redis_exporter 只允许使用一个密码）
+* 通常同一个 Redis 集群会使用同一个密码，但一个 Redis 节点上的多个 Redis 实例无法设置不同的密码（因为 redis_exporter 只允许使用一个密码）
 * Redis Cluster 自带高可用，而 Redis 主从的高可用需要在 Sentinel 中额外进行手工配置：因为我们不知道您是否会部署 Sentinel。
 * 好在配置 Redis 主从实例的高可用非常简单，可以通过 Sentinel 进行配置，详情请参考 [管理-设置Redis主从高可用](/docs/redis/admin#设置redis主从高可用)
 

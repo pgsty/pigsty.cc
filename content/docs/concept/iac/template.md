@@ -27,7 +27,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ```bash
 ./configure                     # 默认使用 meta.yml 配置模板
 ./configure -c meta             # 显式指定使用 meta.yml 单节点模板
-./configure -c rich             # 使用包含全部扩展与 MinIO 的富功能模板
+./configure -c rich             # 使用包含全部扩展与 Silo 的富功能模板
 ./configure -c slim             # 使用最小化的单节点模板
 
 # 使用不同的数据库内核
@@ -64,7 +64,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | 模板                                 | 说明                            |
 |------------------------------------|-------------------------------|
 | [**`meta.yml`**](/docs/conf/meta/) | **默认模板**，单节点 PostgreSQL 在线安装  |
-| [**`rich.yml`**](/docs/conf/rich/) | 富功能模板，包含本地软件源、MinIO 及更多示例     |
+| [**`rich.yml`**](/docs/conf/rich/) | 富功能模板，包含本地软件源、Silo 及更多示例      |
 | [**`slim.yml`**](/docs/conf/slim/) | 精简模板，仅安装 PostgreSQL，不含监控与基础设施 |
 {.full-width}
 
@@ -142,7 +142,6 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                          |
 | **`redis.yml`**                        | Redis 集群示例配置                                           |
 | [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
-| [**`rustfs.yml`**](/docs/conf/rustfs/) | 4 节点 RustFS 分布式对象存储示例                                  |
 | [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
 | [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
 | [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件           |

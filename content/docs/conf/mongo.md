@@ -74,7 +74,7 @@ apps:
   ferretdb:
     conf:
       FERRETDB_IMAGE: ghcr.io/ferretdb/ferretdb:2.7.0
-      FERRETDB_POSTGRESQL_URL: 'postgres://mongod:DBUser.Mongo@host.docker.internal:5436/postgres'
+      FERRETDB_POSTGRESQL_URL: 'postgres://mongod:DBUser.Mongo@host.docker.internal:5436/postgres?pool_min_conns=1&pool_max_conns=20'
       FERRETDB_BIND_ADDR: 127.0.0.1
       FERRETDB_PORT: 27017
       FERRETDB_AUTH: true

@@ -38,7 +38,7 @@ categories: [参考]
 - 配置 SSL 证书和自定义域名（如 `pigsty.cc`）
 - 下载并安装 PostgreSQL 18 所有可用扩展
 - 启用 Docker 并配置镜像加速
-- 部署 MinIO 对象存储
+- 部署 Silo 对象存储
 - 预置多个业务数据库和用户
 - 添加 Redis 主从实例示例
 - 添加 Kafka 样例集群

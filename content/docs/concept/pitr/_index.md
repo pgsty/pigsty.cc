@@ -63,12 +63,12 @@ pg-meta:
   hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
   vars:
     pg_cluster: pg-meta
-    pgbackrest_method: minio       # 备份写入 MinIO 对象存储仓库（默认为 local 本地仓库）
+    pgbackrest_method: minio       # 备份写入 Silo / S3 兼容对象存储（默认为 local 本地仓库）
     pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ]  # 每天凌晨一点执行全量备份
 ```
 
 默认使用主库本地磁盘作为备份仓库（`/pg/backup`），保留最近两个全量备份；每日全备时，恢复窗口约为 24～48 小时。
-切换到专用 [**MinIO**](/docs/minio) 集群或 S3 对象存储后，备份获得独立于数据库主机的故障域与 AES-256 加密；
+切换到专用 [**Silo**](/docs/minio) 集群或外部 S3 对象存储后，备份获得独立于数据库主机的故障域与 AES-256 加密；
 按时间保留十四天并每周全备时，恢复窗口约为 14～21 天。只要存储管够，恢复窗口丰俭由人。
 
 恢复同样是声明式的：指定恢复目标，剧本完成停库、还原、重放与重建高可用，业务数据由人验证。

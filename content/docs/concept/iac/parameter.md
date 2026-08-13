@@ -14,7 +14,7 @@ categories: [概念]
 
 ## 参数列表
 
-按照当前源码与参数参考页对账，Pigsty 的 10 个正式模块共有 **379** 个公开参数，用于精细控制系统的各个方面；完整列表见 [**参考-参数列表**](/docs/ref/param)。原生 MySQL 8.4 试点模块的 10 个公开参数单列，不计入该合计。
+按照当前源码与参数参考页对账，Pigsty 的 10 个正式模块共有 **373** 个公开参数，用于精细控制系统的各个方面；完整列表见 [**参考-参数列表**](/docs/ref/param)。原生 MySQL 8.4 试点模块的 13 个公开参数单列，不计入该合计。
 
 | 模块                               | 参数组 | 参数数 | 说明                                   |
 |:---------------------------------|:---:|:---:|:-------------------------------------|
@@ -22,7 +22,7 @@ categories: [概念]
 | [**INFRA**](/docs/infra/param)   | 10  | 73  | 软件仓库与 Victoria 可观测基础设施               |
 | [**NODE**](/docs/node/param)     | 11  | 73  | 节点初始化、系统调优与运维基线                      |
 | [**ETCD**](/docs/etcd/param)     |  2  | 13  | ETCD 集群与移除保护参数                       |
-| [**MINIO**](/docs/minio/param)   |  2  | 28  | Silo、MinIO、RustFS 部署、观测与移除参数         |
+| [**MINIO**](/docs/minio/param)   |  2  | 22  | Silo 部署、观测与移除参数                      |
 | [**REDIS**](/docs/redis/param)   |  2  | 22  | Redis/Valkey 部署与移除参数                 |
 | [**DOCKER**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                          |
 | [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                      |

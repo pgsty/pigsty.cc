@@ -38,7 +38,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 {.full-width}
 
 如果用类比来形容，[PostgreSQL](#postgresql) 数据库内核就是 CPU，而整个 PGSQL 模块将其封装为一台完整的计算机。
-[Patroni](#patroni) 与 [Etcd](#etcd) 组成 [高可用子系统](#高可用子系统)，[pgBackRest](#pgbackrest) 与 MinIO 组成 [备份恢复子系统](#备份恢复子系统)。
+[Patroni](#patroni) 与 [Etcd](#etcd) 组成 [高可用子系统](#高可用子系统)，[pgBackRest](#pgbackrest) 与可选的 Silo 组成 [备份恢复子系统](#备份恢复子系统)。
 [HAProxy](#haproxy) 与 [Pgbouncer](#pgbouncer)、[vip-manager](#vip-manager) 组成 [接入子系统](#服务接入子系统)。
 各种 Exporter 与 [Vector](#vector) 构成 [可观测性子系统](#可观测性子系统)；
 最后还可以替换不同的 [**内核 CPU**](/docs/pgsql/kernel) 与 [**扩展卡**](/docs/pgsql/ext)。
@@ -50,7 +50,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 |:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
 | [**高可用子系统**](#高可用子系统)   | [Patroni](#patroni) + [etcd](#etcd)                                                                                                       | 故障检测、自动切换、配置管理      |
 | [**接入子系统**](#服务接入子系统)   | [HAProxy](#haproxy) + [Pgbouncer](#pgbouncer) + [vip-manager](#vip-manager)                                                               | 服务暴露、负载均衡、连接池、VIP   |
-| [**备份恢复子系统**](#备份恢复子系统) | [pgBackRest](#pgbackrest)（+ MinIO）                                                                                                        | 全量/增量备份、WAL 归档、PITR |
+| [**备份恢复子系统**](#备份恢复子系统) | [pgBackRest](#pgbackrest)（+ Silo）                                                                                                         | 全量/增量备份、WAL 归档、PITR |
 | [**可观测性子系统**](#可观测性子系统) | [pg_exporter](#pg_exporter) / [pgbouncer_exporter](#pgbouncer_exporter) / [pgbackrest_exporter](#pgbackrest_exporter) + [Vector](#vector) | 指标采集、日志收集           |
 {.full-width}
 
@@ -86,7 +86,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 - [**pgbouncer_exporter**](#pgbouncer_exporter) 在端口 9631 暴露 [pgbouncer](#pgbouncer) 指标
 - [**pgBackRest**](#pgbackrest) 默认使用本地备份仓库 （`pgbackrest_method` = `local`）
     - 如果使用 `local`（默认）作为备份仓库，[pgBackRest](#pgbackrest) 将在主库节点的 [`pg_fs_backup`](/docs/pgsql/param#pg_fs_backup) 下创建本地仓库
-    - 如果使用 `minio` 作为备份仓库，[pgBackRest](#pgbackrest) 将在专用的 MinIO 集群上创建备份仓库
+    - 如果使用 `minio` 作为备份仓库，[pgBackRest](#pgbackrest) 将在专用的 Silo 或外部 S3 服务上创建备份仓库
 - [**Vector**](#vector) 负责收集 Postgres 相关日志（postgres, pgbouncer, patroni, pgbackrest）
     - [vector](#vector) 监听 9598 端口，也对 infra 节点上的 VictoriaMetrics 暴露自身的监控指标
     - [vector](#vector) 将日志发送至 infra 节点上的 VictoriaLogs
@@ -143,7 +143,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 
 ## 备份恢复子系统
 
-备份恢复子系统由 [**pgBackRest**](#pgbackrest) 组成（可选配 **MinIO** 作为远程仓库），负责数据备份与时间点恢复（[**PITR**](/docs/concept/pitr)）。
+备份恢复子系统由 [**pgBackRest**](#pgbackrest) 组成（可选配 **Silo** 或外部 S3 作为远程仓库），负责数据备份与时间点恢复（[**PITR**](/docs/concept/pitr)）。
 
 **备份类型**：
 - **全量备份**：完整的数据库副本
@@ -251,7 +251,7 @@ Pigsty 使用 pgBackRest 实现 PostgreSQL 的 [**PITR**](/docs/concept/pitr) �
 您可以在备份保留的时间窗口内，将集群回滚到任意时间点。
 
 **pgBackRest** 与 [**PostgreSQL**](#postgresql) 配合，在主库上创建备份仓库，执行备份与归档任务。
-默认使用本地备份仓库（[**`pgbackrest_method`**](/docs/pgsql/param#pgbackrest_method) = `local`），也可配置为 MinIO 等对象存储，实现集中化备份管理。
+默认使用本地备份仓库（[**`pgbackrest_method`**](/docs/pgsql/param#pgbackrest_method) = `local`），也可配置为 Silo 或外部 S3 对象存储，实现集中化备份管理。
 
 初始化完成后可通过 [**`pgbackrest_init_backup`**](/docs/pgsql/param#pgbackrest_init_backup) 自动发起首次全量备份。
 恢复过程与 [**Patroni**](#patroni) 集成，支持将副本引导为新的主库或备库。

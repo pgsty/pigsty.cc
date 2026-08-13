@@ -60,6 +60,10 @@ Etcd 模块提供了两个核心剧本：[`etcd.yml`](#etcdyml) 用于安装与�
 - [`etcd_rm_data`](/docs/etcd/param#etcd_rm_data)：控制是否删除 ETCD 数据（默认：`true`）
 - [`etcd_rm_pkg`](/docs/etcd/param#etcd_rm_pkg)：控制是否卸载 ETCD 软件包（默认：`false`）
 
+{{% alert title="危险操作" color="danger" %}}
+`etcd_safeguard` 默认是 `false`，`etcd_rm_data` 默认是 `true`。因此，完整执行 `etcd-rm.yml` 会尝试将目标退群、注销并停服，随后删除本机 Etcd 数据、配置、单元和客户端环境文件。剧本会忽略部分退群与清理错误，也不会证明剩余成员仍有仲裁；每次都应使用精确的 `-l`，先以同一目标执行 `--check`，再核对近期备份、成员列表与剩余仲裁。
+{{% /alert %}}
+
 
 
 --------
@@ -87,11 +91,12 @@ Etcd 模块提供了两个核心剧本：[`etcd.yml`](#etcdyml) 用于安装与�
 **Etcd 移除与清理：**
 
 ```bash
-./etcd-rm.yml                                   # 移除整个 etcd 集群
-./etcd-rm.yml -l 10.10.10.12                    # 移除单个 etcd 成员
-./etcd-rm.yml -e etcd_safeguard=false           # 覆盖防误删保险强制移除
-./etcd-rm.yml -e etcd_rm_data=false             # 仅停止服务，保留数据
-./etcd-rm.yml -e etcd_rm_pkg=true               # 同时卸载 etcd 软件包
+./etcd-rm.yml -l 10.10.10.12 --check             # 先预演同一个精确成员
+./etcd-rm.yml -l 10.10.10.12                     # 退群、注销、停服并默认删除本机数据
+./etcd-rm.yml -l 10.10.10.12 -e etcd_rm_data=false # 退群、注销并停服，保留本机数据与配置
+./etcd-rm.yml -l 10.10.10.12 -e etcd_rm_pkg=true # 同时卸载 etcd 软件包
+./etcd-rm.yml -l etcd --check                    # 销毁整簇前先预演完整目标
+./etcd-rm.yml -l etcd                            # 销毁整个 etcd 集群及其本机数据
 ```
 
 **便捷脚本：**
@@ -126,7 +131,7 @@ etcd:
 当 `etcd_safeguard` 设置为 `true` 时，`etcd-rm.yml` 会在任何注销、退群、停服或删除动作前直接中止；它是布尔保护开关，并不探测实例是否存活。您可以使用命令行参数来覆盖这一行为：
 
 ```bash
-./etcd-rm.yml -e etcd_safeguard=false  # 强制覆盖防误删保险
+./etcd-rm.yml -l <exact-target> -e etcd_safeguard=false  # 仅在确认目标与备份后覆盖保险
 ```
 
-除非您清楚地知道自己在做什么，我们并不建议用户随意清理 Etcd 集群。
+无论保护开关取值如何，真实运行后都要重新检查 `etcdctl member list`、端点健康和剩余仲裁；任务返回成功不能替代这些运行态验收。

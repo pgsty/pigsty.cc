@@ -4,9 +4,10 @@ weight: 1040
 description: 四节点 x 四盘位的高可用 S3 对象存储集群演示；当前源码默认使用 Silo。
 icon: fa-solid fa-box-archive
 categories: [参考]
+aliases: [/docs/conf/rustfs/]
 ---
 
-`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，但没有覆盖 `minio_type`，因此当前源码会部署默认的 **Silo**；如需旧 MinIO 或 RustFS，应分别显式设置 `minio_type: minio` 或 `minio_type: rustfs`。移除角色没有引擎默认值，使用原样模板执行 `minio-rm.yml` 时还必须显式传入 `-e minio_type=silo`。
+`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，并显式设置 `minio_type: silo`；v4.5.0 当前源码只接受这一取值。移除角色没有引擎默认值，执行 `minio-rm.yml` 时仍必须保留或显式传入 `-e minio_type=silo`。
 
 更多教程，请参考 **[MINIO](/docs/minio/)** 模块文档。
 

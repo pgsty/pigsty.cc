@@ -27,8 +27,8 @@ cd app/wiki ; docker-compose up -d
 ```
 
 ```bash
-bin/createuser pg-meta dbuser_wiki
-bin/createdb   pg-meta wiki
+bin/pgsql-user pg-meta dbuser_wiki
+bin/pgsql-db   pg-meta wiki
 ```
 
 ## 容器配置

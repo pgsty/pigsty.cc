@@ -56,7 +56,7 @@ pg-meta:
 | 服务端 TLS                                           | PostgreSQL 服务器证书就位并启用 `ssl`，可以接受 TLS 连接                                 | -                                                                |
 | 本地 CA                                             | 自动创建自签名 CA，为受管组件签发证书                                                    | [`ca_create`](/docs/infra/param#ca_create)                       |
 | [**etcd**](/docs/concept/model/etcd) 加密认证         | 客户端与对等通信 TLS，RBAC 密码认证                                                  | [`etcd_root_password`](/docs/etcd/param#etcd_root_password)      |
-| [**MINIO 对象存储**](/docs/concept/model/minio) HTTPS | Silo、MinIO 或 RustFS 备份流量默认走 HTTPS                                       | [`minio_https`](/docs/minio/param#minio_https)                   |
+| [**MINIO 对象存储**](/docs/concept/model/minio) HTTPS | Silo 备份流量默认走 HTTPS                                                      | [`minio_https`](/docs/minio/param#minio_https)                   |
 | [**Nginx**](/docs/concept/arch/infra#nginx) HTTPS | Web 入口默认同时监听 80、443                                                     | [`nginx_sslmode`](/docs/infra/param#nginx_sslmode)               |
 | HBA 规则集                                           | 分层放行：本地 ident，内网口令，公网管理员强制 SSL                                          | [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules) |
 | 角色与权限                                             | 四层角色模型与默认权限模板，提供最小权限基线                                                  | [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)         |
@@ -72,11 +72,11 @@ pg-meta:
 
 默认配置面向运行在受信内网中的部署，一部分安全能力需要显式启用 —— 它们或有性能与兼容性代价，或需要用户提供额外的决策：
 
-- 默认配置与示例模板包含 **文档公开的默认密码**，方便快速上手与本地测试。生产部署应先用 `./configure -g` 随机化其支持的凭据，再检查 pgBackRest 加密口令、`ha/safe` 中的 MinIO 用户和自定义值。
+- 默认配置与示例模板包含 **文档公开的默认密码**，方便快速上手与本地测试。生产部署应先用 `./configure -g` 随机化其支持的凭据，再检查 pgBackRest 加密口令、`ha/safe` 中的 Silo 用户和自定义值。
 - [**Patroni REST API**](/docs/concept/arch/pgsql#patroni) 与 [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer) 的 TLS 默认未启用（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)、[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)），可以使用已经签发的证书显式开启。
 - **密码强度检查**（[**`passwordcheck`**](/ext/e/passwordcheck/)）与 **审计扩展**（[**`pgaudit`**](/ext/e/pgaudit/)）默认未启用；使用前应确认软件包可用，再完成预加载与策略配置。
 - **SELinux** 默认处于 `permissive` 模式；演示配置的防火墙额外放行了 `5432` 端口，生产环境应当移除。
-- 本地备份仓库默认 **不加密**；MinIO 备份仓库默认启用 AES-256 加密，但需要修改默认加密口令。
+- 本地备份仓库默认 **不加密**；远程 `minio` 仓库预设默认启用 AES-256 加密，但需要修改默认加密口令。
 
 安全加固模板 [**`ha/safe`**](/docs/conf/safe) 将 TLS、证书认证、密码检查和备份加密等配置组合在一起，
 并配合面向一致性优先业务的 [**CRIT 参数模板**](/docs/pgsql/template/crit) 给出一份可直接修改的示例。模板中的公开凭据、审计扩展与故障模型仍需逐项确认。

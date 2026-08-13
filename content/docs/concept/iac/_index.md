@@ -87,7 +87,7 @@ bin/pgsql-add pg-test   # 创建 pg-test 集群
 ![pigsty-iac.jpg](/img/pigsty/iac.jpg)
 
 你可以使用不同的实例角色，例如 [**主库**](/docs/pgsql/config/cluster#读写主库)（primary），[**从库**](/docs/pgsql/config/cluster#只读从库)（replica），[**离线从库**](/docs/pgsql/config/cluster#离线从库)（offline），[**延迟从库**](/docs/pgsql/config/cluster#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config/cluster#同步备库)（sync standby）；
-以及不同的集群：例如 [**备份集群**](/docs/pgsql/config/cluster#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config/cluster#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
+以及不同的集群：例如 [**备份集群**](/docs/pgsql/config/cluster#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config/cluster#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MINIO（Silo）**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
 
 
 -----------------
@@ -338,7 +338,7 @@ etcd: # dcs service for postgres/patroni ha consensus
   hosts:  # 1 node for testing, 3 or 5 for production
     10.10.10.10: { etcd_seq: 1 }  # etcd_seq required
     10.10.10.11: { etcd_seq: 2 }  # assign from 1 ~ n
-    10.10.10.12: { etcd_seq: 3 }  # odd number please
+    10.10.10.12: { etcd_seq: 3 }  # three-member cluster keeps an odd voter count
   vars: # cluster level parameter override roles/etcd
     etcd_cluster: etcd  # mark etcd cluster name etcd
     etcd_safeguard: false # safeguard against purging
@@ -348,9 +348,9 @@ etcd: # dcs service for postgres/patroni ha consensus
 
 ----------------
 
-## MinIO 集群
+## MINIO（Silo）集群
 
-下面给出了一个三节点的 MinIO 集群声明式配置样例：
+下面给出了一个三节点 Silo 集群的声明式配置样例。清单分组与参数继续沿用 MINIO 模块的兼容命名：
 
 ```yaml
 minio:
@@ -360,6 +360,7 @@ minio:
     10.10.10.12: { minio_seq: 3 }
   vars:
     minio_cluster: minio
+    minio_type: silo
     minio_data: '/data{1...2}'          # 每个节点使用两块磁盘
     minio_node: '${minio_cluster}-${minio_seq}.pigsty' # 节点名称的模式
     haproxy_services:

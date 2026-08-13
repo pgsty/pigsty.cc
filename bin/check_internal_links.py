@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate rendered Silo routes, assets, fragments, and canonical targets.
+"""Validate rendered Pigsty Chinese-site routes, assets, fragments, and canonical targets.
 
 Run this after Hugo has built the site. External hosts are deliberately not
 requested: this gate proves the site's own link contract without making a local
@@ -17,7 +17,7 @@ import sys
 import urllib.parse
 
 
-SITE_HOSTS = {"silo.pgsty.com", "www.silo.pgsty.com"}
+SITE_HOSTS = {"pigsty.cc", "www.pigsty.cc"}
 LINK_ATTRIBUTES = {"href", "src"}
 SKIP_SCHEMES = {"data", "javascript", "mailto", "tel", "blob"}
 
@@ -49,6 +49,11 @@ def parse_document(path: pathlib.Path) -> DocumentParser:
     parser.feed(path.read_text(encoding="utf-8", errors="replace"))
     parser.close()
     return parser
+
+
+def file_key(path: pathlib.Path) -> tuple[str, int, int]:
+    stat = path.stat()
+    return str(path.resolve()), stat.st_mtime_ns, stat.st_size
 
 
 def route_for_file(public: pathlib.Path, path: pathlib.Path) -> str:
@@ -83,7 +88,7 @@ def resolve_internal_url(source_route: str, raw_url: str) -> tuple[str, str] | N
     if parsed.scheme and parsed.scheme not in {"http", "https"}:
         return None
 
-    base = f"https://silo.pgsty.com{source_route}"
+    base = f"https://pigsty.cc{source_route}"
     absolute = urllib.parse.urlsplit(urllib.parse.urljoin(base, raw_url))
     if absolute.hostname and absolute.hostname not in SITE_HOSTS:
         return None
@@ -99,14 +104,27 @@ def main() -> int:
         argument_parser.error(f"rendered site directory does not exist: {public}")
 
     html_files = sorted(public.rglob("*.html"))
-    documents: dict[pathlib.Path, DocumentParser] = {
-        path.resolve(): parse_document(path) for path in html_files
-    }
+    # Printed aggregate pages repeat the same documents and make eager parsing
+    # unnecessarily expensive. Parse source pages on demand and cache them by
+    # path, modification time, and size.
+    documents: dict[tuple[str, int, int], DocumentParser] = {}
+
+    def document_for(path: pathlib.Path) -> DocumentParser:
+        key = file_key(path)
+        document = documents.get(key)
+        if document is None:
+            document = parse_document(path)
+            documents[key] = document
+        return document
 
     failures: dict[str, list[str]] = collections.defaultdict(list)
     checked = 0
-    for source_path, document in documents.items():
+    for source_path in html_files:
+        source_path = source_path.resolve()
+        document = document_for(source_path)
         source_route = route_for_file(public, source_path)
+        if source_route.startswith("/_print/"):
+            continue
         for raw_url in document.links:
             target = resolve_internal_url(source_route, raw_url)
             if target is None:
@@ -119,10 +137,7 @@ def main() -> int:
                 failures[f"missing target {route}"].append(source_route)
                 continue
             if existing.suffix.lower() == ".html":
-                target_document = documents.get(existing)
-                if target_document is None:
-                    target_document = parse_document(existing)
-                    documents[existing] = target_document
+                target_document = document_for(existing)
                 if target_document.redirect_target:
                     failures[
                         f"non-canonical redirect target {route} -> {target_document.redirect_target}"

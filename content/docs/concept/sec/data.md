@@ -39,10 +39,10 @@ Pigsty 默认启用 [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest)（[`pg
 
 备份仓库由 [`pgbackrest_method`](/docs/pgsql/param#pgbackrest_method) 选择：
 
-| 仓库          | 位置                                               | 默认保留策略     | 加密          |
-|:------------|:-------------------------------------------------|:-----------|:------------|
-| `local`（默认） | 本地 `/pg/backup` 目录                               | 最近 2 份全量备份 | 无           |
-| `minio`     | [**MinIO**](/docs/concept/model/minio) 或 S3 对象存储 | 14 天       | AES-256-CBC |
+| 仓库          | 位置                                                | 默认保留策略     | 加密          |
+|:------------|:--------------------------------------------------|:-----------|:------------|
+| `local`（默认） | 本地 `/pg/backup` 目录                                | 最近 2 份全量备份 | 无           |
+| `minio`     | [**Silo**](/docs/concept/model/minio) 或外部 S3 对象存储 | 14 天       | AES-256-CBC |
 {.full-width}
 
 对于防误删场景，还有两项辅助机制：
@@ -59,7 +59,7 @@ Pigsty 默认启用 [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest)（[`pg
 
 静态数据的保密性分三层展开：
 
-**备份加密**。`pgbackrest_method: minio` 表示 S3 兼容对象存储仓库（可由 Silo、MinIO、RustFS 或外部 S3 提供），默认启用 AES-256-CBC 加密；默认加密口令 `pgBackRest` 是公开值，生产环境必须修改。
+**备份加密**。`pgbackrest_method: minio` 表示 S3 兼容对象存储仓库，可由 MINIO 模块部署的 Silo，或独立管理的 MinIO、RustFS 与外部 S3 服务提供；该预设默认启用 AES-256-CBC 加密。默认加密口令 `pgBackRest` 是公开值，生产环境必须修改。
 [**`ha/safe`**](/docs/conf/safe) 模板按集群名称区分加密口令：
 
 ```yaml
@@ -73,7 +73,7 @@ pgbackrest_repo:
 
 本地备份仓库默认不加密。加密可以降低备份文件被单独复制或介质被盗时的泄露风险，但如果密钥与备份位于同一主机，保护效果仍会受到限制。
 
-**传输加密**。备份上传 MinIO 走 HTTPS，PostgreSQL 客户端与流复制可以通过 HBA 强制 SSL。客户端还应验证服务端证书，详见 [**加密通信**](/docs/concept/sec/ca#客户端验证服务端)。
+**传输加密**。备份上传 Silo 或外部 S3 服务时走 HTTPS，PostgreSQL 客户端与流复制可以通过 HBA 强制 SSL。客户端还应验证服务端证书，详见 [**加密通信**](/docs/concept/sec/ca#客户端验证服务端)。
 
 **静态加密**。PostgreSQL 上游内核目前没有通用的内置透明数据加密（TDE），Pigsty 提供两条现实路径：
 使用 Percona PostgreSQL 内核的 `pg_tde` 扩展实现表级透明加密（参见 [**pgtde 配置模板**](/docs/conf/pgtde)）；

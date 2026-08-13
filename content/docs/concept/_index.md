@@ -35,7 +35,7 @@ Pigsty 为您提供：
 
 - **完整的时间点恢复能力**
 
-  基于 pgBackRest 与可选的 MinIO 集群，提供开箱即用的 [**PITR 时间点恢复**](/docs/concept/pitr) 能力。让您可以回到恢复窗口内的任意时间点，为软件缺陷与人为删库兜底。
+  基于 pgBackRest 与可选的 Silo 对象存储集群，提供开箱即用的 [**PITR 时间点恢复**](/docs/concept/pitr) 能力。让您可以回到恢复窗口内的任意时间点，为软件缺陷与人为删库兜底。
 
 - **灵活的服务接入与流量管理**
 
@@ -51,7 +51,7 @@ Pigsty 为您提供：
 
 - **模块化的架构设计**
 
-  采用模块化 [**架构**](/docs/concept/arch) 设计，可自由组合以适应不同场景。除了核心的 PostgreSQL 模块外，还提供 Redis、MinIO、Etcd 等可选模块，以及对多种 PG 兼容内核与模式的支持。
+  采用模块化 [**架构**](/docs/concept/arch) 设计，可自由组合以适应不同场景。除了核心的 PostgreSQL 模块外，还提供 Redis、MINIO（Silo）、Etcd 等可选模块，以及对多种 PG 兼容内核与模式的支持。
 
 - [**扎实的安全最佳实践**](/docs/concept/sec/)
 
@@ -72,7 +72,7 @@ Pigsty 并不是传统的、包罗万象的 PaaS（平台即服务）系统。
 
 - **Pigsty 不是容器编排系统**。它直接运行在操作系统之上，不需要 Kubernetes 或 Docker 作为基础设施。当然，它可以与这些系统共存，并提供 Docker 模块来运行无状态应用。
 
-- **Pigsty 不是通用的数据库管理工具**。它专注于 PostgreSQL 及其生态，虽然也支持 Redis、Etcd、MinIO 等周边组件，但核心始终是围绕 PostgreSQL 构建的。
+- **Pigsty 不是通用的数据库管理工具**。它专注于 PostgreSQL 及其生态，虽然也支持 Redis、Etcd、Silo 等周边组件，但核心始终是围绕 PostgreSQL 构建的。
 
 - **Pigsty 不会锁定您**。它基于开源组件构建，不修改 PostgreSQL 内核，不引入专有协议。您随时可以脱离 Pigsty 继续使用管理好的 PostgreSQL 集群。
 

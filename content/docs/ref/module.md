@@ -18,7 +18,7 @@ categories: [参考]
 |  [**`INFRA`**](/docs/infra)  | **核心** |  GA  | `/docs/infra`  | 本地软件仓库 + VictoriaMetrics/Logs/Traces + Grafana 等基础设施。               |
 |   [**`NODE`**](/docs/node)   | **核心** |  GA  |  `/docs/node`  | 节点初始化与收敛：系统调优、管理员、HAProxy、Vector、Keepalived 等。                      |
 |   [**`ETCD`**](/docs/etcd)   | **核心** |  GA  |  `/docs/etcd`  | PostgreSQL 高可用 DCS（服务发现、配置、选主元数据）。                                  |
-|  [**`MINIO`**](/docs/minio)  |   扩展   |  GA  | `/docs/minio`  | 统一部署 Silo（默认）、或 RustFS 的 S3 兼容对象存储，可作为 PostgreSQL 备份仓库。             |
+|  [**`MINIO`**](/docs/minio)  |   扩展   |  GA  | `/docs/minio`  | 部署 Silo S3 兼容对象存储，可作为 PostgreSQL 备份仓库。                               |
 |  [**`REDIS`**](/docs/redis)  |   扩展   |  GA  | `/docs/redis`  | Redis（默认）或 Valkey 的独立/哨兵/集群模式部署与监控。                                 |
 | [**`DOCKER`**](/docs/docker) |   扩展   |  GA  | `/docs/docker` | Docker Daemon 及容器化应用运行基础能力。                                         |
 |  [**`JUICE`**](/docs/juice)  |   扩展   | BETA | `/docs/juice`  | JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎。                              |
@@ -47,7 +47,7 @@ Pigsty 提供了四个 <span class="text-primary"><b>基础</b></span> 功能模
 
 Pigsty 提供了六个 <span class="text-secondary"><b>扩展</b></span> 功能模块，它们对于核心功能来说并非必须，但可以用于增强 PostgreSQL 的能力：
 
-- [**`MINIO`**](/docs/minio)：S3 兼容对象存储模块，通过统一清单部署 Silo、RustFS，可作为 PostgreSQL 备份仓库并提供对应监控。
+- [**`MINIO`**](/docs/minio)：S3 兼容对象存储模块，通过统一清单部署 Silo，可作为 PostgreSQL 备份仓库并提供对应监控。
 - [**`REDIS`**](/docs/redis)：Redis 服务器，高性能数据结构服务器，支持独立主从、哨兵、集群模式生产部署，并带有完善的监控支持。
 - [**`DOCKER`**](/docs/docker)：Docker Daemon 服务，允许用户一键拉起容器化的无状态软件工具模板，为 Pigsty 加装各种功能！
 - [**`JUICE`**](/docs/juice)：JuiceFS 分布式文件系统模块，以 PostgreSQL 作为元数据引擎，提供可共享的 POSIX 存储能力。

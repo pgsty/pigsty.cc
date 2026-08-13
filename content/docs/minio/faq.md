@@ -12,22 +12,23 @@ categories: [参考]
 
 ## MINIO 模块默认部署哪个引擎？
 
-当前源码默认 `minio_type: silo`，也可显式选择 `minio` 或 `rustfs`。MINIO 是兼容模块名，不表示一定运行 MinIO 服务端。
+v4.5.0 当前源码部署并且只部署 Silo，`minio_type` 唯一合法值是 `silo`。MINIO 是兼容模块名，不表示运行 MinIO 服务端。
 
-- 新建集群建议显式写出 `minio_type`，锁定升级语义。
-- 已有 MinIO 集群升级时应设置 `minio_type: minio`，避免默认值变化触发换包与换服务名。
-- RustFS 使用独立数据格式，不能直接复用 MinIO/Silo 数据目录。
+- 新建集群建议显式写出 `minio_type: silo`。
+- `minio_type: minio` 与 `minio_type: rustfs` 都会在身份检查阶段失败。
+- 外部 MinIO、RustFS 或其他 S3 服务仍可作为 pgBackRest 仓库，但不由当前 MINIO 角色管理。
+- 升级由旧版本管理的 MinIO 集群前，必须先验证 MinIO → Silo 的数据兼容性、备份和回滚流程。
 
 
 ----------------
 
-## 兼容的 MinIO 后端是什么版本？
+## Pigsty 仓库为什么仍有 MinIO 或 RustFS 软件包？
 
-MinIO 于 2025-12-03 宣布进入 **维护模式**，不再发布新的功能版本，只会发布安全补丁与维护版本，并且在 2025-10-15 停止发布二进制 RPM/DEB。
-所以 Pigsty fork 了自己的 [MinIO](https://github.com/pgsty/minio)，并使用 [`minio/pkger`](https://github.com/minio/pkger) 制作了最新的 2025-12-03 版本。
+MinIO 上游在 [2025-10-15 改为仅分发源码](https://github.com/minio/minio/commit/9e49d5e)，在 [2025-12-03 将代码库标记为维护模式](https://github.com/minio/minio/commit/27742d4)，并于 [2026-04-25 归档仓库](https://github.com/minio/minio)。这里的“仅分发源码”是停止提供新的社区预编译二进制，而不只是停止 RPM/DEB。
 
-这一版本修复了 MinIO [**CVE-2025-62506**](https://nvd.nist.gov/vuln/detail/CVE-2025-62506) 安全漏洞，确保 Pigsty 用户的 MinIO 部署安全可靠。
-您可以在 Pigsty Infra 仓库中找到 RPM/DEB 包以及构建使用的脚本。
+Pigsty 因此曾维护自己的 [MinIO 分支](https://github.com/pgsty/minio) 与软件包。MinIO [**CVE-2025-62506**](https://nvd.nist.gov/vuln/detail/CVE-2025-62506) 影响 `RELEASE.2025-10-15T17-29-55Z` 之前的版本，并在该版本修复；Pigsty 后续 MinIO 分支和当前 Silo 代码都包含这一修复。
+
+您仍可以在 Pigsty Infra 仓库中找到 MinIO/RustFS 的 RPM/DEB 包以及构建脚本，但“仓库提供软件包”不等于“v4.5 MINIO 模块支持该后端”。当前角色只接受 Silo；其他服务需要自行部署和维护。
 
 
 ----------------
@@ -39,7 +40,7 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
 
 ----------------
 
-## 从容器中访问 MinIO 提示证书无效？
+## 从容器中访问 Silo 提示证书无效？
 
 对象存储服务端证书默认由 Pigsty 私有 CA 签发；它不是服务端自签名证书，但容器镜像通常不信任这套私有 CA，因此 `mcli`、rclone、AWS CLI 等客户端会提示证书链无效。
 
@@ -52,27 +53,27 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
       - /etc/pki/ca.crt:/etc/pki/ca.crt:ro
 ```
 
-当然，如果您的 MinIO 没有用作 pgbackrest 备份仓库的话，您也可以选择关闭 MinIO 的 HTTPS 支持，改用 HTTP 协议访问。
+如果 Silo 没有用作 pgBackRest 备份仓库，也可以选择关闭 HTTPS、改用 HTTP；同时应评估明文传输风险。
 
 
 ----------------
 
-## 启动多节点/多盘 MinIO 集群失败怎么办？
+## 启动多节点/多盘 Silo 集群失败怎么办？
 
-在 [**单机多盘**](/docs/minio/config#单机多盘) 或 [**多机多盘**](/docs/minio/config#多机多盘) 模式下，如果数据目录不是有效的磁盘挂载点，MinIO 会拒绝启动。
-请使用已挂载的磁盘作为 MinIO 的数据目录，而不是普通目录。您只能在 [**单机单盘**](/docs/minio/config#单机单盘) 模式下使用普通目录作为 MinIO 的数据目录，仅可用于开发测试或非关键场合。
+在 [**单机多盘**](/docs/minio/config#单机多盘) 或 [**多机多盘**](/docs/minio/config#多机多盘) 模式下，如果数据目录不是有效的磁盘挂载点，Silo 会拒绝启动。
+请使用已挂载的磁盘作为数据目录，而不是普通目录。只有 [**单机单盘**](/docs/minio/config#单机单盘) 模式可以使用普通目录，且仅适用于开发测试或非关键场合。
 
 
 
 ----------------
 
-## 如何向已有的 MinIO 集群中添加新的成员？
+## 如何向已有的 Silo 集群中添加新的成员？
 
-> 在部署之前，您最好规划 MinIO 集群容量，因为新增成员需要全局重启。
+> 在部署之前应规划好 Silo 集群容量，因为新增存储池需要全局重启。
 
-您可以通过向现有集群中添加新的服务器节点，打造一个新的存储池的方式，实现 MinIO 扩容。
+可以通过为现有集群增加一组服务器节点，创建新的存储池来扩容。
 
-请注意，MinIO 一旦部署，你无法修改现有集群的节点数量与磁盘数量！只能通过添加新的存储池来扩容。
+不能直接修改既有存储池的节点数与磁盘数，只能通过添加新存储池扩容。
 
 详细步骤请参考 Pigsty 文档：[**集群扩容**](/docs/minio/admin#集群扩容)，以及 MinIO 官方文档：[**扩展 MinIO 部署**](https://min.io/docs/minio/linux/operations/install-deploy-manage/expand-minio-deployment.html)
 
@@ -80,16 +81,19 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
 
 ----------------
 
-## 如何移除 MinIO 集群？
+## 如何移除 Silo 集群？
 
 从 Pigsty v3.6 开始，移除 MinIO 集群需要使用专用的 `minio-rm.yml` 剧本：
 
 ```bash
+./minio-rm.yml -l minio --check -e minio_type=silo                 # 先以完全相同的目标预演
 ./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
-./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据与配置
 ```
 
-删除角色没有 `minio_type` 默认值；如果清单中未定义它，必须在命令行显式指定目标实际使用的 `silo`、`minio` 或 `rustfs`。
+删除角色没有 `minio_type` 默认值；如果清单中未定义，必须在命令行显式指定 `silo`。其他取值会被拒绝。
+
+`minio_rm_data` 默认为 `true`，而移除角色会容忍部分清理错误。真实执行前应核对精确的 `-l` 目标和近期备份，执行后再检查服务、数据目录、DNS 与监控目标，不能只凭剧本返回状态判断清理完成。
 
 如果您启用了 [`minio_safeguard`](/docs/minio/param#minio_safeguard) 保护，需要显式覆盖才能执行移除：
 
@@ -103,20 +107,20 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
 
 ## mcli 命令与 mc 命令有什么区别？
 
-`mcli` 是 MinIO 官方客户端 `mc` 的重命名版本。在 Pigsty 中，我们使用 `mcli` 而不是 `mc`，以避免与 Midnight Commander（一个常见的文件管理器，也使用 `mc` 命令）产生冲突。
+Pigsty 将兼容的 MinIO 客户端以 `mcli` 命令和软件包名交付，而不是使用上游的 `mc` 名称，从而避免与同名的 Midnight Commander 文件管理器冲突。
 
-两者功能完全相同，只是命令名称不同。您可以在 [MinIO 客户端文档](https://min.io/docs/minio/linux/reference/minio-mc.html) 中找到完整的命令参考。
+`mcli` 是 Pigsty 对兼容客户端的交付名称，CLI 接口沿用 `mc`；具体版本仍可能随 Pigsty 打包更新。您可以在 [MinIO 客户端文档](https://min.io/docs/minio/linux/reference/minio-mc.html) 中查阅命令参考。
 
 
 
 ----------------
 
-## 如何监控 MinIO 集群状态？
+## 如何监控 Silo 集群状态？
 
-Pigsty 为 MinIO 提供了开箱即用的监控能力：
+Pigsty 为 Silo 提供了开箱即用的监控能力；面板与指标仍保留 MinIO 兼容命名：
 
 - **Grafana 面板**：[MinIO Overview](https://demo.pigsty.cc/d/minio-overview) 和 [MinIO Instance](https://demo.pigsty.cc/d/minio-instance)
 - **告警规则**：包括 MinIO 宕机、节点离线、磁盘离线等告警
-- **MinIO 内置控制台**：通过 `https://<minio-ip>:9001` 访问
+- **Silo 内置控制台**：通过 `https://<minio-ip>:9001` 访问
 
 详情请参阅 [监控告警](/docs/minio/monitor) 文档

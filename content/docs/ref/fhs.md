@@ -390,17 +390,17 @@ Pgbouncer 使用与 `{{ pg_dbsu }}`（默认为 `postgres`）相同的用户运�
 
 ## Object Storage FHS
 
-MINIO 模块根据 `minio_type` 渲染 Silo、MinIO 或 RustFS。以下 `<engine>` 表示 `silo`、`minio` 或 `rustfs`：
+MINIO 模块当前只部署 Silo，但继续使用 `minio_*` 参数与目录命名保持兼容：
 
 ```bash
-/etc/default/<engine>                         # root:minio 0640，服务环境变量
-/etc/systemd/system/<engine>.service          # root:root 0644，Pigsty 渲染的单元
+/etc/default/silo                             # root:minio 0640，服务环境变量
+/etc/systemd/system/silo.service              # root:root 0644，Pigsty 渲染的单元
 /data/minio/                                  # minio:minio 0750，默认数据目录
 /infra/targets/minio/<cluster>-<seq>.yml      # victoria:infra 0640，FileSD 目标
 /home/minio/.mcli/config.json                 # mcli 客户端别名（执行用户家目录亦会写入）
 ```
 
-Silo/MinIO 的证书位于 `/home/minio/.minio/certs/`；RustFS 的证书位于 `/home/minio/.rustfs/certs/`。角色参数仍使用 `minio_*` 兼容前缀，实际服务文件则跟随所选引擎。
+Silo 的证书位于 `/home/minio/.minio/certs/`。模块名、角色参数、数据目录和 FileSD 路径仍使用 `MINIO` / `minio_*` 兼容命名。
 
 
 ----------------

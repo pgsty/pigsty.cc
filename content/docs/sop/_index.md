@@ -48,14 +48,14 @@ categories: [教程, 参考]
 | 做 PITR 时间点恢复     | [**时间点恢复**](/docs/concept/pitr/)                                                                       | [**恢复操作**](/docs/pgsql/backup/restore/)                                            |
 | 误删数据、表、库         | [**误删处理**](/docs/pgsql/tutorial/drop/)                                                                 | [**手工恢复**](/docs/pgsql/tutorial/pitr/)                                             |
 | 克隆恢复集群           | [**克隆数据库集群**](/docs/pgsql/backup/cluster/)                                                             | [**Fork 实例**](/docs/pgsql/tutorial/pg-fork/)                                       |
-| 使用 MinIO 存备份     | [**MINIO 模块**](/docs/minio/)                                                                           | [**MinIO 配置**](/docs/minio/config/)，[**备份仓库**](/docs/pgsql/backup/repository/)     |
+| 使用 Silo 存备份      | [**MINIO 模块**](/docs/minio/)                                                                           | [**Silo 配置**](/docs/minio/config/)，[**备份仓库**](/docs/pgsql/backup/repository/)      |
 | 查看监控告警           | [**监控系统**](/docs/concept/monitor/)                                                                     | [**PGSQL 监控**](/docs/pgsql/monitor/)，[**PGSQL 仪表盘**](/docs/pgsql/dashboard/)       |
 | 排查数据库故障          | [**PGSQL 常见问题**](/docs/pgsql/faq/)                                                                     | [**故障排查**](/docs/pgsql/tutorial/failure/)，[**组件管理**](/docs/pgsql/admin/component/) |
 | 扩容、缩容 PG 集群      | [**集群实例配置**](/docs/pgsql/config/cluster/)                                                              | [**集群管理**](/docs/pgsql/admin/cluster/)                                             |
 | 升级 PostgreSQL    | [**版本升级**](/docs/pgsql/admin/upgrade/)                                                                 | [**内核版本**](/docs/pgsql/config/kernel/)                                             |
 | 安装或启用扩展          | [**扩展插件**](/docs/pgsql/ext/)                                                                           | [**扩展管理**](/docs/pgsql/admin/ext/)                                                 |
 | 迁移已有数据库          | [**数据迁移**](/docs/pgsql/migration/)                                                                     | [**迁移剧本**](/docs/pgsql/playbook/#pgsql-migrationyml)                               |
-| 做安全加固            | [**安全考量**](/docs/deploy/security/)                                                                     | [**访问控制**](/docs/concept/sec/ac)，[**CA 与证书**](/docs/concept/sec/ca)                 |
+| 做安全加固            | [**安全考量**](/docs/deploy/security/)                                                                     | [**访问控制**](/docs/concept/sec/ac)，[**CA 与证书**](/docs/concept/sec/ca)                |
 | 管理域名与 Web 入口     | [**域名管理**](/docs/infra/admin/domain/)                                                                  | [**Nginx 管理**](/docs/infra/admin/portal/)                                          |
 | 维护基础设施           | [**INFRA 管理预案**](/docs/infra/admin/)                                                                   | `infra.yml`，`infra-rm.yml`                                                         |
 | 维护 Etcd          | [**ETCD 配置**](/docs/etcd/config/)                                                                      | [**ETCD 管理**](/docs/etcd/admin/)，[**ETCD FAQ**](/docs/etcd/faq/)                   |
@@ -105,7 +105,7 @@ categories: [教程, 参考]
 | 查看 HA 状态、切换、重启、重做从库                      | [**Patroni 管理**](/docs/pgsql/admin/patroni/)                              |
 | 管理连接池                                    | [**Pgbouncer 管理**](/docs/pgsql/admin/pgbouncer/)                          |
 | 启停 PostgreSQL、Patroni、Pgbouncer、Exporter | [**组件管理**](/docs/pgsql/admin/component/)                                  |
-| 管理备份、校验、清理、恢复                            | [**备份恢复**](/docs/pgsql/backup/)                                         |
+| 管理备份、校验、清理、恢复                            | [**备份恢复**](/docs/pgsql/backup/)                                           |
 | 配置备份、Vacuum、Analyze 等定时任务                | [**定时任务**](/docs/pgsql/admin/crontab/)                                    |
 | 升级版本与扩展                                  | [**版本升级**](/docs/pgsql/admin/upgrade/)，[**扩展管理**](/docs/pgsql/admin/ext/) |
 

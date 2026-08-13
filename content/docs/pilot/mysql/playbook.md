@@ -7,7 +7,7 @@ module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 模块提供两个剧本：[`mysql.yml`](https://github.com/pgsty/pigsty/blob/main/mysql.yml) 负责部署与收敛，[`mysql-rm.yml`](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml) 负责退役与下线。两者都是收敛式设计：描述期望状态，重复执行安全。
+MYSQL 模块提供两个剧本：[`mysql.yml`](https://github.com/pgsty/pigsty/blob/main/mysql.yml) 负责部署与收敛，[`mysql-rm.yml`](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml) 负责受保护的退役与下线。前者重复执行会向声明状态收敛；后者是独立的生命周期操作，每次真实执行前都必须重新核对范围、备份与精确确认值。
 
 
 --------
@@ -96,7 +96,7 @@ mysql
 | 完全停机 | 不自动重建仲裁，报错给出手工恢复指引 |
 {.full-width}
 
-这些护栏意味着：**任何单次误操作都不应造成数据丢失**。绕过护栏的每个动作（删标记、清数据目录）都必须是显式的人工决定。
+这些护栏能显著降低误操作风险，但不构成“绝不丢数据”的保证。绕过护栏的每个动作（如删除标记或清理数据目录）都必须是经过备份验证与精确范围确认的人工决定。
 
 
 --------

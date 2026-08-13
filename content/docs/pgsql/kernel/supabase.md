@@ -30,7 +30,7 @@ Pigsty 为您提供完整的 Supabase 一键自建方案。自建的 Supabase �
 
 Pigsty 默认提供的 [`supabase.yml`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml) 配置模板定义了一套单节点 Supabase。
 
-首先，使用 Pigsty [标准安装流程](/docs/setup/install) 安装 Supabase 所需的 MinIO 与 PostgreSQL 实例：
+首先，使用 Pigsty [标准安装流程](/docs/setup/install) 安装 Supabase 所需的 Silo 与 PostgreSQL 实例：
 
 ```bash
  curl -fsSL https://repo.pigsty.io/get | bash

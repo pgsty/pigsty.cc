@@ -69,17 +69,17 @@ psql "host=pg-meta dbname=postgres user=dbuser_dba sslmode=verify-full sslrootce
 
 本地 CA 为下列组件签发证书，构成统一的信任链：
 
-| 组件                                                    | 证书身份（CN）            | 部署路径                         | 加密状态                                                                           |
-|:------------------------------------------------------|:--------------------|:-----------------------------|:-------------------------------------------------------------------------------|
-| [**PostgreSQL**](/docs/concept/arch/pgsql#postgresql) | `<集群>-<序号>`         | `/pg/cert/server.{crt,key}`  | 服务端 SSL 默认启用；是否强制由 HBA 决定                                                      |
-| [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer)   | 复用 PostgreSQL 证书    | `/pg/cert/`                  | TLS 默认关闭（[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)）           |
-| [**Patroni**](/docs/concept/arch/pgsql#patroni)       | 复用 PostgreSQL 证书    | `/pg/cert/`                  | API HTTPS 默认关闭（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)） |
-| [**etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}` | 客户端与对等通信使用 TLS                                                                 |
-| [**对象存储**](/docs/concept/model/minio)                | `<节点名>`             | Silo/MinIO：`~minio/.minio/certs/`；RustFS：`~minio/.rustfs/certs/` | HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                     |
-| [**Kafka**](/docs/kafka/)                            | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`  | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                         |
-| [**MySQL**](/docs/pilot/mysql/)                      | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                        |
-| [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名） | `/etc/nginx/conf.d/cert/`    | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
-| [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点名>`             | `/etc/pki/infra.{crt,key}`   | 供基础设施组件使用                                                                      |
+| 组件                                                    | 证书身份（CN）            | 部署路径                              | 加密状态                                                                           |
+|:------------------------------------------------------|:--------------------|:----------------------------------|:-------------------------------------------------------------------------------|
+| [**PostgreSQL**](/docs/concept/arch/pgsql#postgresql) | `<集群>-<序号>`         | `/pg/cert/server.{crt,key}`       | 服务端 SSL 默认启用；是否强制由 HBA 决定                                                      |
+| [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer)   | 复用 PostgreSQL 证书    | `/pg/cert/`                       | TLS 默认关闭（[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)）           |
+| [**Patroni**](/docs/concept/arch/pgsql#patroni)       | 复用 PostgreSQL 证书    | `/pg/cert/`                       | API HTTPS 默认关闭（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)） |
+| [**Etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}`      | 客户端与对等通信使用 TLS                                                                 |
+| [**Silo**](/docs/concept/model/minio)                 | `<节点名>`             | `~minio/.minio/certs/`            | Silo HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                |
+| [**Kafka**](/docs/kafka/)                             | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`        | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                        |
+| [**MySQL**](/docs/pilot/mysql/)                       | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                            |
+| [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名） | `/etc/nginx/conf.d/cert/`         | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
+| [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点名>`             | `/etc/pki/infra.{crt,key}`        | 供基础设施组件使用                                                                      |
 {.full-width}
 
 表中的“加密状态”一列如实反映了默认配置的取舍：

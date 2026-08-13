@@ -1,7 +1,7 @@
 ---
 title: ha/full
 weight: 620
-description: 四节点完整功能演示环境，带有两套 PostgreSQL 集群、MinIO、Redis 等组件示例
+description: 四节点完整功能演示环境，带有两套 PostgreSQL 集群、Silo、Redis 等组件示例
 icon: fa-solid fa-dice-four
 categories: [参考]
 ---
@@ -17,7 +17,7 @@ Pigsty 大部分教程和示例都基于此模板的沙箱环境。
 
 - 配置名称： `ha/full`
 - 节点数量： 四节点
-- 配置说明：四节点完整功能演示环境，带有两套 PostgreSQL 集群、MinIO、Redis 等组件示例
+- 配置说明：四节点完整功能演示环境，带有两套 PostgreSQL 集群、Silo、Redis 等组件示例
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`ha/trio`](/docs/conf/trio/)，[`ha/safe`](/docs/conf/safe/)，[`demo/demo`](/docs/conf/demo/)
@@ -52,7 +52,7 @@ Pigsty 大部分教程和示例都基于此模板的沙箱环境。
 |:--|:--|:--|
 | INFRA | 节点1 | 监控/告警/Nginx/DNS |
 | ETCD | 节点1 | DCS 服务 |
-| MinIO | 节点1 | S3 兼容存储 |
+| Silo | 节点1 | S3 兼容存储 |
 | pg-meta | 节点1 | 单节点 PostgreSQL |
 | pg-test | 节点2-4 | 三节点高可用 PostgreSQL |
 | redis-ms | 节点1 | Redis 主从模式 |

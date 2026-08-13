@@ -499,7 +499,7 @@ uv 虚拟环境路径，默认值为：`/data/venv`。设置为空字符串 `''`
 
 当此参数非空时，Pigsty 会在节点上使用 `uv venv` 命令创建 Python 虚拟环境，并根据 [`node_pip_packages`](#node_pip_packages) 安装指定的 pip 包。
 
-在中国区域（`region: china`）时，会自动配置 `/etc/uv/uv.toml` 使用阿里云 PyPI 镜像加速下载。
+在中国区域（`region: china`）时，会自动配置 `/etc/uv/uv.toml` 使用腾讯云 PyPI 镜像 `https://mirrors.cloud.tencent.com/pypi/simple/` 加速下载。
 
 
 
@@ -1363,6 +1363,8 @@ haproxy_services:                   # list of haproxy service
 ```
 
 每个服务定义会被渲染为 `/etc/haproxy/conf.d/<service.name>.cfg` 配置文件，并在 HAProxy 重载后生效；主配置固定为 `/etc/haproxy/haproxy.cfg`。
+
+Pigsty 将 HAProxy 单元写入 `/etc/systemd/system/haproxy.service`。可选的环境文件为 `/etc/default/haproxy`，其中仅识别 `EXTRAOPTS`；不要在这里重复传入 `-f`，否则会与单元中固定的主配置和配置目录冲突。若覆盖 `EXTRAOPTS`，请保留默认的 `-S /run/haproxy-master.sock`，以免破坏无缝重载；修改后需要重启服务才能生效。
 
 
 

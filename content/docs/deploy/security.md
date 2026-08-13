@@ -36,7 +36,7 @@ Pigsty 默认配置面向受信内网中的开发、测试和演示。生产部�
 ./configure -g
 ```
 
-该选项不会替换 pgBackRest `cipher_pass`、`ha/safe` 中的全部 MinIO 示例凭据，也不会处理用户自定义值。应按照 [**默认凭据**](/docs/concept/sec/compliance#默认凭据) 复核生成结果。
+该选项不会替换 pgBackRest `cipher_pass`、`ha/safe` 中的全部 Silo 示例凭据，也不会处理用户自定义值。应按照 [**默认凭据**](/docs/concept/sec/compliance#默认凭据) 复核生成结果。
 
 PostgreSQL 默认使用 SCRAM-SHA-256 保存新设置或更新的口令。需要强制复杂度时，在 [**`pg_libs`**](/docs/pgsql/param#pg_libs) 中预加载 `passwordcheck`，或配置 `credcheck`。账号有效期可以通过 `expire_in` 或 `expire_at` 声明。
 

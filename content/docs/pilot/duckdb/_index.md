@@ -37,5 +37,5 @@ Pigsty 为 PostgreSQL 提供了一些 DuckDB 相关的扩展插件：
 
 - [**`pg_duckdb`**](/ext/e/pg_duckdb)，由 DuckDB 官方提供的 PostgreSQL 扩展
 - [**`pg_mooncake`**](/ext/e/pg_mooncake)，在 `pg_duckdb` 扩展的基础上更进一步提供列式存储引擎与同步功能。
-- [**`pg_analytics`**](/ext/e/pg_analytics)，旨在基于 DuckDB 提供高性能 OLAP 分析能力，已归档
+- [`pg_analytics`](https://github.com/paradedb/pg_analytics)，旨在基于 DuckDB 提供高性能 OLAP 分析能力；该项目已归档，并已从当前 Pigsty 扩展目录移除
 - [**`duckdb_fdw`**](/ext/e/duckdb_fdw)，DuckDB 外部数据源包装器，允许从 PostgreSQL 中读写 DuckDB 数据文件

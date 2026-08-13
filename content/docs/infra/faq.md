@@ -31,10 +31,10 @@ categories: [参考]
 VictoriaMetrics 通过 `/infra/targets/<job>/*.yml` 目录进行静态服务发现。如果目标文件被误删，可使用如下命令重新注册：
 
 ```bash
-./infra.yml  -t infra_register   # 重新渲染 infra 自监控目标
+./infra.yml  -t infra_register   # 重新渲染 Infra 自监控目标
 ./node.yml   -t node_register    # 重新渲染节点 / HAProxy / Vector 目标
-./etcd.yml   -t etcd_register    # 重新渲染 etcd 目标
-./minio.yml  -t minio_register   # 重新渲染 MinIO 目标
+./etcd.yml   -t etcd_register    # 重新渲染 Etcd 目标
+./minio.yml  -t minio_register   # 重新渲染 Silo 模块目标
 ./pgsql.yml  -t pg_register      # 重新渲染 PGSQL/Patroni 目标
 ./redis.yml  -t redis_register   # 重新渲染 Redis 目标
 ```

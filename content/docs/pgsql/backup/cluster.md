@@ -10,7 +10,7 @@ categories: [任务]
 误删数据后从克隆库中导回、定期演练验证备份可用性、审计取证查看历史状态、把测试环境重置为生产某刻的快照 ——
 这些场景的操作方式完全相同，本页给出完整流程。
 
-目标集群需要能访问源集群的备份仓库、允许被覆盖，并使用兼容的 PostgreSQL 主版本。使用集中式仓库（[**MinIO / S3**](/docs/pgsql/backup/repository/)）时，
+目标集群需要能访问源集群的备份仓库、允许被覆盖，并使用兼容的 PostgreSQL 主版本。使用集中式仓库（[**Silo / S3**](/docs/pgsql/backup/repository/)）时，
 仓库中以 [**stanza**](/docs/pgsql/backup/mechanism/#stanza集群的备份身份) 隔离的各集群备份，对持有相应凭据的目标集群可见。
 
 
@@ -18,7 +18,7 @@ categories: [任务]
 
 ## 克隆现有集群
 
-假设四节点沙箱中有 `pg-meta` 与 `pg-test` 两套集群，共享 MinIO 备份仓库。
+假设四节点沙箱中有 `pg-meta` 与 `pg-test` 两套集群，共享 Silo 备份仓库。
 要把 `pg-test` 重置为 `pg-meta` 的 **最新状态**，只需在 [**`pg_pitr`**](/docs/pgsql/backup/restore/#pitr-参数定义)
 中把恢复来源指向 `pg-meta` 的 stanza：
 

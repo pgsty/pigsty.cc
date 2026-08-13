@@ -16,7 +16,7 @@ weight: 5441
 | [`loki`](https://github.com/grafana/loki)                                                | `3.6.7`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | 日志聚合系统（obsolete，冻结）          |
 | [`promtail`](https://github.com/grafana/loki/releases/tag/v3.6.7)                        | `3.6.7`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志采集代理（obsolete，冻结）     |
 | [`logcli`](https://github.com/grafana/loki/releases/tag/v3.6.7)                          | `3.6.7`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志查询命令行客户端（obsolete，冻结） |
-| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)         | `3.11.2` | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源         |
+| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)         | `3.11.3` | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源         |
 | [`grafana-plugins`](https://github.com/pgsty/infra-pkg/tree/main/noarch/grafana-plugins) | `13.0.0` | [Apache-2.0](https://github.com/pgsty/infra-pkg/blob/main/LICENSE)                     | Pigsty 打包的额外面板插件（noarch）     |
 {.stretch-last}
 
@@ -75,11 +75,11 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 | [`nginx-exporter`](https://github.com/nginxinc/nginx-prometheus-exporter) | `1.5.1`  | [Apache-2.0](https://github.com/nginxinc/nginx-prometheus-exporter/blob/main/LICENSE) | 导出 nginx 指标          |
 | [`zfs-exporter`](https://github.com/waitingsong/zfs_exporter/releases/)   | `3.8.1`  | [MIT](https://github.com/waitingsong/zfs_exporter/blob/main/LICENSE)                  | 导出 zfs 指标            |
 | [`mysqld-exporter`](https://github.com/prometheus/mysqld_exporter)        | `0.19.0` | [Apache-2.0](https://github.com/prometheus/mysqld_exporter/blob/main/LICENSE)         | 导出 mysql 指标          |
-| [`redis-exporter`](https://github.com/oliver006/redis_exporter)           | `1.88.0` | [MIT](https://github.com/oliver006/redis_exporter/blob/master/LICENSE)                | 导出 redis 指标          |
+| [`redis-exporter`](https://github.com/oliver006/redis_exporter)           | `1.89.0` | [MIT](https://github.com/oliver006/redis_exporter/blob/master/LICENSE)                | 导出 redis 指标          |
 | [`kafka-exporter`](https://github.com/danielqsj/kafka_exporter)           | `1.9.0`  | [Apache-2.0](https://github.com/danielqsj/kafka_exporter/blob/master/LICENSE)         | 导出 kafka 指标          |
 | [`jmx-exporter`](https://github.com/prometheus/jmx_exporter)              | `1.6.0`  | [Apache-2.0](https://github.com/prometheus/jmx_exporter/blob/main/LICENSE)            | 导出 JVM 指标（noarch）    |
 | [`mongodb-exporter`](https://github.com/percona/mongodb_exporter)         | `0.52.0` | [Apache-2.0](https://github.com/percona/mongodb_exporter/blob/main/LICENSE)           | 导出 mongodb 指标        |
-| [`mtail`](https://github.com/google/mtail)                                | `3.4.6`  | [Apache-2.0](https://github.com/google/mtail/blob/main/LICENSE)                       | 分析日志并生成指标            |
+| [`mtail`](https://github.com/google/mtail)                                | `3.4.7`  | [Apache-2.0](https://github.com/google/mtail/blob/main/LICENSE)                       | 分析日志并生成指标            |
 | [`vector`](https://github.com/vectordotdev/vector/releases)               | `0.57.0` | [MPL-2.0](https://github.com/vectordotdev/vector/blob/master/LICENSE)                 | 多功能日志收集器             |
 {.stretch-last}
 
@@ -92,7 +92,7 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 |---------------------------------------------------------|------------------|---------------------------------------------------------------------------------|--------------------------|
 | [`silo`](https://github.com/pgsty/silo)                 | `20260806000000` | [AGPLv3](https://github.com/pgsty/silo/blob/main/LICENSE)                      | Pigsty 维护的开源 S3 兼容对象存储服务器   |
 | [`mcli`](https://github.com/pgsty/mc)                   | `20260806000000` | [AGPLv3](https://github.com/pgsty/mc/blob/main/LICENSE)                         | 开源 S3 客户端，现在由 pgsty 维护构建 |
-| [`rustfs`](https://github.com/rustfs/rustfs)            | `1.0.0-rc1`      | [Apache-2.0](https://github.com/rustfs/rustfs/blob/main/LICENSE)                | 开源 MinIO，RC              |
+| [`rustfs`](https://github.com/rustfs/rustfs)            | `1.0.0-rc1`      | [Apache-2.0](https://github.com/rustfs/rustfs/blob/main/LICENSE)                | 仓库保留软件包；非 v4.5 MINIO 后端 |
 | [`garage`](https://git.deuxfleurs.fr/Deuxfleurs/garage) | `2.3.0`          | [AGPL-3.0](https://git.deuxfleurs.fr/Deuxfleurs/garage/src/branch/main/LICENSE) | 轻量级 S3                   |
 | [`seaweedfs`](https://github.com/seaweedfs/seaweedfs)   | `4.41`           | [Apache-2.0](https://github.com/seaweedfs/seaweedfs/blob/master/LICENSE)        | 小文件 S3                   |
 | [`rclone`](https://github.com/rclone/rclone/)           | `1.75.0`         | [MIT](https://github.com/rclone/rclone/blob/master/COPYING)                     | S3 命令行工具                 |
@@ -142,9 +142,10 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
 | 名称                                                                                      | 版本         | 许可证                                                                                     | 备注                            |
 |-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|-------------------------------|
-| [`pig`](https://github.com/pgsty/pig)                                                   | `1.6.1`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
+| [`pig`](https://github.com/pgsty/pig)                                                   | `1.6.2`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
+| [`sow`](https://github.com/pgsty/sow)                                                   | `0.3.0`    | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                   |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.2.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点           |
-| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.1.1`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具   |
+| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.2.1`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具   |
 | [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.12.2`   | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI  |
 | [`pgstream`](https://github.com/xataio/pgstream)                                        | `1.3.1`    | [Apache-2.0](https://github.com/xataio/pgstream/blob/main/LICENSE)                      | PostgreSQL 复制与 DDL 变更同步       |
 | [`pg-timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `7.0.0`    | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度               |
@@ -162,13 +163,13 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.7.28`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
 | [`gost`](https://github.com/ginuerzh/gost)                                              | `2.12.0`   | [MIT](https://github.com/ginuerzh/gost/blob/master/LICENSE)                             | Go 编写的通用隧道与代理工具               |
 | [`sabiql`](https://github.com/riii111/sabiql)                                           | `1.15.1`   | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL） |
-| [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `16.0`     | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器（PG 14+） |
+| [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `16.1`     | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器（PG 14+） |
 | [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.21.0`   | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器  |
 | [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.4`   | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器            |
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.164.0`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                     |
 | [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.7.3` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端              |
 | [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.3`   | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器           |
-| [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.16.16`  | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                   |
+| [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.16.17`  | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                   |
 | [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.5`    | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                      |
 {.stretch-last}
 
@@ -181,13 +182,13 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 
 | 名称                                                             | 版本        | 许可证                                                                         | 备注                             |
 |----------------------------------------------------------------|-----------|-----------------------------------------------------------------------------|--------------------------------|
-| [`claude`](https://github.com/anthropics/claude-code)          | `2.1.226` | [Proprietary](https://www.anthropic.com/legal/terms)                        | Claude Code - Anthropic 代理编程工具 |
-| [`opencode`](https://github.com/anomalyco/opencode)            | `1.18.15` | [MIT](https://github.com/anomalyco/opencode/blob/main/LICENSE)              | 终端 AI 编程助手                     |
+| [`claude`](https://github.com/anthropics/claude-code)          | `2.1.227` | [Proprietary](https://www.anthropic.com/legal/terms)                        | Claude Code - Anthropic 代理编程工具 |
+| [`opencode`](https://github.com/anomalyco/opencode)            | `1.18.16` | [MIT](https://github.com/anomalyco/opencode/blob/main/LICENSE)              | 终端 AI 编程助手                     |
 | [`codex`](https://github.com/openai/codex)                     | `0.147.0` | [Apache-2.0](https://github.com/openai/codex/blob/main/LICENSE)             | OpenAI 代理编程工具                  |
 | [`crush`](https://github.com/charmbracelet/crush)              | `0.88.1`  | [FSL-1.1-MIT](https://github.com/charmbracelet/crush/blob/main/LICENSE.md)  | Charm 出品的终端 AI 代理编程助手          |
 | [`agentsview`](https://github.com/kenn-io/agentsview)          | `0.40.1`  | [MIT](https://github.com/kenn-io/agentsview/blob/main/LICENSE)              | 在终端中浏览与回放 AI 编码代理轨迹            |
 | [`code`](https://code.visualstudio.com/)                       | `1.132.0` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)            | Visual Studio Code 编辑器         |
-| [`code-server`](https://github.com/coder/code-server)          | `4.131.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)               | 浏览器中的 VS Code                  |
+| [`code-server`](https://github.com/coder/code-server)          | `4.132.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)               | 浏览器中的 VS Code                  |
 | [`genai-toolbox`](https://github.com/googleapis/mcp-toolbox)   | `1.8.0`   | [Apache-2.0](https://github.com/googleapis/mcp-toolbox/blob/main/LICENSE)   | Google 数据库 MCP 服务器             |
 | [`uv`](https://github.com/astral-sh/uv)                        | `0.12.3`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)                | 新一代 Python 包管理器                |
 | [`golang`](https://golang.org/)                                | `1.26.5`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                   | Go 编译器                         |

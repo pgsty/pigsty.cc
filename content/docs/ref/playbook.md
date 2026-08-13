@@ -31,7 +31,7 @@ categories: [参考]
 
 | 剧本                                                                   |    模块    | 主要用途                                         |
 |:---------------------------------------------------------------------|:--------:|:---------------------------------------------|
-| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | `INFRA`  | 一次性部署核心链路（Infra/Node/Etcd/PGSQL，按配置启用 MinIO） |
+| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | `INFRA`  | 一次性部署核心链路（Infra/Node/Etcd/PGSQL，按配置启用 MINIO） |
 | [**`infra.yml`**](/docs/infra/playbook#infrayml)                     | `INFRA`  | 初始化基础设施节点                                    |
 | [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | `INFRA`  | 移除基础设施组件                                     |
 | [**`node.yml`**](/docs/node/playbook#nodeyml)                        |  `NODE`  | 节点纳管与基线配置                                    |
@@ -47,8 +47,8 @@ categories: [参考]
 | [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | `PGSQL`  | 时间点恢复（PITR）                                  |
 | [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                     |
 | [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
-| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | MinIO 部署                                     |
-| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除所选 Silo、MinIO 或 RustFS 后端                  |
+| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | Silo 部署                                     |
+| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除 Silo、配置与可选数据                           |
 | [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
 | [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
@@ -82,7 +82,7 @@ categories: [参考]
 
 - **PGSQL**: [**`pg_safeguard`**](/docs/pgsql/param#pg_safeguard) 参数用于防止误删 PostgreSQL 集群
 - **ETCD**: [**`etcd_safeguard`**](/docs/etcd/param#etcd_safeguard) 参数用于防止误删 Etcd 集群
-- **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 MinIO 集群
+- **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 Silo 集群
 - **REDIS**: [**`redis_safeguard`**](/docs/redis/param#redis_safeguard) 参数用于防止误删 Redis 实例
 - **KAFKA**: [**`kafka_safeguard`**](/docs/kafka/playbook#kafka-rmyml) 参数用于阻止 Kafka 移除剧本
 - **MYSQL（试点）**: [`mysql_safeguard`](/docs/pilot/mysql/) 与精确匹配的 `mysql_rm_confirm` 共同保护原生 MySQL 退役流程
@@ -93,7 +93,8 @@ PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；
 
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
-./etcd-rm.yml  -l etcd    -e etcd_safeguard=false
+./etcd-rm.yml  -l etcd --check                       # 先预演完整目标
+./etcd-rm.yml  -l etcd -e etcd_safeguard=false      # 确认备份与目标后执行
 ./minio-rm.yml -l minio   -e minio_type=silo -e minio_safeguard=false
 ./redis-rm.yml -l redis-test -e redis_safeguard=false
 ./kafka-rm.yml -l kf-main -e kafka_safeguard=false
@@ -162,7 +163,8 @@ bin/node-rm <cls|ip>             # 移除节点 (包装脚本)
 
 ```bash
 ./etcd.yml                       # 初始化 etcd 集群
-./etcd-rm.yml                    # 移除 etcd 集群
+./etcd-rm.yml -l etcd --check    # 销毁前先对精确完整目标预演
+./etcd-rm.yml -l etcd            # 默认删除该集群的本机数据与配置
 bin/etcd-add <ip>                # 添加 etcd 成员 (包装脚本)
 bin/etcd-rm <ip>                 # 移除 etcd 成员 (包装脚本)
 ```
@@ -197,8 +199,8 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 ### MINIO 模块
 
 ```bash
-./minio.yml -l <cls>                       # 初始化 MINIO 模块所选对象存储后端
-./minio-rm.yml -l <cls> -e minio_type=silo # 移除后端；按实际引擎改为 minio 或 rustfs
+./minio.yml -l <cls>                       # 初始化 MINIO 模块的 Silo 集群
+./minio-rm.yml -l <cls> -e minio_type=silo # 移除 Silo；该值必须显式确认
 ```
 
 ### DOCKER 模块

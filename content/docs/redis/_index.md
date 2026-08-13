@@ -17,4 +17,3 @@ redis_type: redis   # 默认；也可设置为 valkey
 角色会安装所选引擎与 `redis-exporter`，实例进程分别使用 `redis-server` / `redis-cli` 或 `valkey-server` / `valkey-cli`。切换 `redis_type` 会改变软件包和二进制，并不会自动验证数据格式、复制拓扑或回滚路径；已有集群切换前应先演练，且同一逻辑集群的所有节点必须使用同一引擎。
 
 默认 Redis 软件包继续采用 7.2 BSD 分支；不同操作系统仓库中的小版本可能不同，应以目标仓库元数据为准。
-

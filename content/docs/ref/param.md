@@ -9,7 +9,7 @@ categories: [参考]
 本文是 Pigsty v4.x 的参数导航页，不重复展开每个参数的详细解释。
 参数细节请进入各模块的 `param` 页面查看。
 
-按照当前源码与参数参考页逐项对账，10 个正式模块合计 **379** 个公开参数。原生 MySQL 8.4 仍是试点模块，其 10 个公开参数单列，不计入正式模块合计。
+按照当前源码与参数参考页逐项对账，10 个正式模块合计 **373** 个公开参数。原生 MySQL 8.4 仍是试点模块，其 13 个公开参数单列，不计入正式模块合计。
 
 --------
 
@@ -21,7 +21,7 @@ categories: [参考]
 |  [**`INFRA`**](/docs/infra/param)  | 10  | 73  | 软件仓库与 Victoria 可观测基础设施               |
 |   [**`NODE`**](/docs/node/param)   | 11  | 73  | 节点初始化、系统调优与运维基线                      |
 |   [**`ETCD`**](/docs/etcd/param)   |  2  | 13  | ETCD 集群与移除保护参数                       |
-|  [**`MINIO`**](/docs/minio/param)  |  2  | 28  | Silo、MinIO、RustFS 部署、观测与移除参数         |
+|  [**`MINIO`**](/docs/minio/param)  |  2  | 22  | Silo 部署、观测与移除参数                       |
 |  [**`REDIS`**](/docs/redis/param)  |  2  | 22  | Redis/Valkey 部署与移除参数                 |
 | [**`DOCKER`**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                          |
 |  [**`JUICE`**](/docs/juice/param)  |  1  |  2  | JuiceFS 实例与缓存参数                      |
@@ -29,7 +29,7 @@ categories: [参考]
 |  [**`KAFKA`**](/docs/kafka/param)  |  2  | 18  | Kafka 部署参数与移除保护参数                    |
 {.stretch-last}
 
-试点模块：[**原生 `MYSQL` 8.4**](/docs/pilot/mysql/#公开参数) 当前公开 10 个参数；固定的端口、路径、软件版本和定时器不属于公开参数。
+试点模块：[**原生 `MYSQL` 8.4**](/docs/pilot/mysql/param/#参数概览) 当前公开 13 个参数，其中 11 个用于部署、2 个用于受保护移除；固定的端口、路径、软件版本和定时器不属于公开参数。
 
 --------
 

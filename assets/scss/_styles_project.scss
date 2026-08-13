@@ -122,6 +122,26 @@
   display: table;
 }
 
+// 发布索引表：版本、日期与发布页保持单行，把可用宽度留给摘要
+.td-content table.release-index {
+  table-layout: auto;
+
+  th:nth-child(1),
+  td:nth-child(1),
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: auto;
+  }
+}
+
 // 紧凑型全宽表格（无斑马纹，与正文宽度对齐）
 // 使用方法：在 Markdown 表格后添加 {.td-initial .full-width}
 .td-content table.td-initial.full-width {
@@ -186,6 +206,27 @@
   th:last-child,
   td:last-child {
     width: auto;
+  }
+}
+
+// 语义全宽表格在窄屏内自行滚动，避免把整页横向撑开。
+@include media-breakpoint-down(md) {
+  .td-content p,
+  .td-content li {
+    overflow-wrap: anywhere;
+  }
+
+  .td-content table.full-width,
+  .td-content table.full-width-full,
+  .td-content table.td-initial.full-width,
+  .td-content table.td-initial.full-width-full,
+  .td-content table.stretch-last,
+  .td-content table.stretch-last-full {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -797,6 +838,17 @@
     }
 
     a { text-decoration: none; }
+  }
+
+  // 扩展清单有较多不可拆分的徽标；在可用宽度不足时由表格自身滚动。
+  @media (max-width: 1500px) {
+    table.ext-table:not(.ext-table--matrix):not(.ext-table--cate):not(.ext-table--os-matrix) {
+      display: block;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   table.ext-table.ext-table--rel {

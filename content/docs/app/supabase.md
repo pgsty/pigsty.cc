@@ -1,7 +1,7 @@
 ---
 title: Supabase 企业级自建
 weight: 555
-description: 使用 Pigsty 自托管企业级 supabase，带有监控，高可用，PITR，IaC 以及 572 PG 扩展。
+description: 使用 Pigsty 自托管企业级 supabase，带有监控、高可用、PITR、IaC 以及 575 个 PG 扩展。
 module: [SOFTWARE]
 categories: [参考]
 ---
@@ -115,10 +115,10 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并�
 同时，我们在 Supabase 自建部署中默认 [安装](/docs/pgsql/ext/install) 绝大多数扩展，您可以参考可用扩展列表按需 [启用](/docs/pgsql/ext/create)。
 新版模板会安装 `pg_graphql` 扩展包，但不再默认创建 `pg_graphql` 扩展对象；如果需要 GraphQL API，可以在目标数据库中执行 `CREATE EXTENSION IF NOT EXISTS pg_graphql;`，模板中的事件触发器会自动重建 `graphql_public.graphql` 入口与访问权限。
 
-同时，Pigsty 还会负责好底层 [高可用](/docs/concept/ha/) [PostgreSQL](/docs/pgsql/) 数据库集群，高可用 [MinIO](/docs/minio/) 对象存储集群的自动搭建，甚至是 [Docker](/docs/docker/) 容器底座的部署与 [Nginx](/docs/infra/admin/portal) 反向代
+同时，Pigsty 还会负责好底层 [高可用](/docs/concept/ha/) [PostgreSQL](/docs/pgsql/) 数据库集群，高可用 [Silo](/docs/minio/) 对象存储集群的自动搭建，甚至是 [Docker](/docs/docker/) 容器底座的部署与 [Nginx](/docs/infra/admin/portal) 反向代
 理，[域名配置](/docs/infra/admin/domain) 与 [HTTPS证书签发](/docs/infra/admin/cert)。 您可以使用 Docker Compose 拉起任意数量的无状态 Supabase 容器集群，并将状态存储在外部 Pigsty 自托管数据库服务中。
 
-在这一自建部署架构中，您获得了使用不同内核的自由（PostgreSQL 14-18，默认 18），加装 [**{{< param pgext_count >}}**](/ext/list/) 个扩展的自由，扩容与伸缩 Supabase / Postgres / MinIO 的自由，
+在这一自建部署架构中，您获得了使用不同内核的自由（PostgreSQL 14-18，默认 18），加装 [**{{< param pgext_count >}}**](/ext/list/) 个扩展的自由，扩容与伸缩 Supabase / Postgres / Silo 的自由，
 免于数据库运维杂务的自由，以及免于供应商锁定，本地运行到地老天荒的自由。 而相比于使用云服务需要付出的代价，不过是准备服务器和多敲几行命令而已。
 
 
@@ -164,7 +164,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 以下是一些自建 Supabase 会涉及到的关键技术决策，供您参考：
 
-使用默认的 **单节点部署** Supabase 无法享受到 PostgreSQL / MinIO 的高可用能力。
+使用默认的 **单节点部署** Supabase 无法享受到 PostgreSQL / Silo 的高可用能力。
 尽管如此，单节点部署相比官方纯 Docker Compose 方案依然要有显著优势： 例如开箱即用的监控系统，自由安装扩展的能力，各个组件的扩缩容能力，以及提供兜底数据库时间点恢复能力等。
 
 Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` 容器，也不使用 Supabase 自带连接池。
@@ -176,10 +176,10 @@ Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` �
 Supabase Studio 的 Query Performance 页面会在 `public, extensions` 搜索路径下访问 `pg_stat_statements`。
 Pigsty 仍然将 `pg_stat_statements` 扩展对象保留在 `monitor` 模式中，以兼容 `pg_exporter` 与现有监控面板；模板会在 `extensions` 模式中创建兼容视图与函数，供 Studio 使用。
 
-如果您只有一台服务器，或者选择在云服务器上自建，Pigsty 建议您使用外部的 S3 替代本地的 MinIO 作为对象存储，存放 PostgreSQL 的备份，并承载 Supabase Storage 服务。
+如果您只有一台服务器，或者选择在云服务器上自建，Pigsty 建议您使用外部的 S3 替代本地的 Silo 作为对象存储，存放 PostgreSQL 的备份，并承载 Supabase Storage 服务。
 这样的部署在故障时可以在单机部署条件下，提供一个兜底级别的 RTO（小时级恢复时长）/ RPO（分钟级数据损失）容灾水平。
 
-在严肃的生产部署中，Pigsty 建议使用至少3～4个节点的部署策略，确保 MinIO 与 PostgreSQL 都使用满足企业级高可用要求的多节点部署。
+在严肃的生产部署中，Pigsty 建议使用至少 3～4 个节点的部署策略，确保 Silo 与 PostgreSQL 都使用满足企业级高可用要求的多节点部署。
 在这种情况下，您需要相应准备更多节点与磁盘，并相应调整 `pigsty.yml` 配置清单中的集群配置，以及 supabase 集群配置中的接入信息，使用高可用接入点访问服务。
 
 Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除非单纯用于内网，否则对于严肃的生产部署，建议使用 SMTP 云服务。自建的邮件服务器发送的邮件容易被标记为垃圾邮件导致拒收。
@@ -203,8 +203,8 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 - [`pg_replication_password`](/docs/pgsql/param/#pg_replication_password): `DBUser.Replicator`，PG 复制用户密码
 - [`patroni_password`](/docs/pgsql/param/#patroni_password): `Patroni.API`，Patroni 高可用组件密码
 - [`haproxy_admin_password`](/docs/node/param/#haproxy_admin_password): `pigsty`，负载均衡器管控密码
-- [`minio_secret_key`](/docs/minio/param/#minio_secret_key): `S3User.MinIO`，MinIO 根用户密钥
-- [`etcd_root_password`](/docs/etcd/param/#etcd_root_password): `Etcd.Root`，MinIO 根用户密钥
+- [`minio_secret_key`](/docs/minio/param/#minio_secret_key): `S3User.MinIO`，Silo 根用户密钥
+- [`etcd_root_password`](/docs/etcd/param/#etcd_root_password): `Etcd.Root`，Etcd 根用户密码
 - 此外，强烈建议您修改 Supabase 使用的 [PostgreSQL 业务用户](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L72) 密码，默认为 `DBUser.Supa`
 
 以上密码为 Pigsty 组件模块的密码，强烈建议在安装部署前就设置完毕。
@@ -340,7 +340,7 @@ S3_PROTOCOL_ACCESS_KEY_SECRET: S3User.Data # S3 协议访问密钥
 ```yaml
 all:
   vars:
-    pgbackrest_method: aliyun          # pgbackrest 备份方法：local,minio,[其他用户定义的仓库...]，本例中将备份存储到 MinIO 上
+    pgbackrest_method: aliyun          # pgBackRest 备份方法：local、minio 或其他自定义仓库；本例使用阿里云 OSS
     pgbackrest_repo:                   # pgbackrest 备份仓库: https://pgbackrest.org/configuration.html#section-repository
       aliyun:                          # 定义一个新的备份仓库 aliyun
         type: s3                       # 阿里云 oss 是 s3-兼容的对象存储
@@ -356,7 +356,7 @@ all:
         bundle_size: 128MiB               # Target size for file bundles, 128MiB for object storage
         cipher_type: aes-256-cbc          # enable AES encryption for remote backup repo
         cipher_pass: pgBackRest.MyPass    # 设置一个加密密码，pgBackRest 备份仓库的加密密码
-        retention_full_type: time         # retention full backup by time on minio repo
+        retention_full_type: time         # retain full backups by time in this S3 repository
         retention_full: 14                # keep full backup for the last 14 days
 ```
 
@@ -413,6 +413,6 @@ all:
 - [INFRA](/docs/infra/)：监控基础设施故障影响稍小，建议生产环境使用双副本
 - Supabase 无状态容器本身也可以是多节点的副本，可以实现高可用。
 
-在这种情况下，您还需要修改 PostgreSQL 与 MinIO 的接入点，使用 DNS / L2 VIP / HAProxy 等 [高可用接入点](/docs/pgsql/service#接入服务)
+在这种情况下，您还需要修改 PostgreSQL 与 Silo 的接入点，使用 DNS / L2 VIP / HAProxy 等 [高可用接入点](/docs/pgsql/service#接入服务)
 关于这些部分，您只需参考 Pigsty 中各个模块的文档进行配置部署即可。
 建议您参考 [`conf/ha/trio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 与 [`conf/ha/safe.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 中的配置，将集群规模升级到三节点或以上。

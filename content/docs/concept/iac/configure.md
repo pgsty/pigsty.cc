@@ -255,7 +255,7 @@ pg_lc_ctype: C.UTF-8
 | `pg_replication_password` | PostgreSQL 复制用户密码 |
 |    `patroni_password`     | Patroni API 密码    |
 | `haproxy_admin_password`  | HAProxy 管理密码      |
-|    `minio_secret_key`     | MinIO Secret Key  |
+|    `minio_secret_key`     | Silo Root Secret  |
 |   `etcd_root_password`    | ETCD Root 密码      |
 
 同时还会替换以下占位符密码：
@@ -289,7 +289,7 @@ $ ./configure -g
 |    模板    | 说明                                            |
 |:--------:|:----------------------------------------------|
 |  `meta`  | **默认模板**：单节点安装，包含 INFRA + NODE + ETCD + PGSQL |
-|  `rich`  | 功能丰富版：包含几乎所有扩展、MinIO、本地仓库                     |
+|  `rich`  | 功能丰富版：包含几乎所有扩展、Silo、本地仓库                      |
 |  `slim`  | 精简版：仅 PostgreSQL + ETCD，无监控基础设施               |
 |  `fat`   | 完整版：rich 基础上安装更多扩展                            |
 | `pgsql`  | 纯 PostgreSQL 模板                               |
@@ -357,7 +357,6 @@ $ ./configure -g
 | `demo/kernel` | 十节点数据库内核矩阵             |
 | `demo/redis`  | Redis 主从、哨兵与原生集群演示     |
 | `demo/minio`  | Silo（源码默认）多节点多盘集群演示    |
-| `demo/rustfs` | RustFS 四节点分布式集群演示      |
 | `demo/kafka`  | Kafka KRaft 开发与安全集群演示  |
 | `demo/mysql`  | 原生 MySQL 8.4 试点演示      |
 | `demo/remote` | 远程 PostgreSQL/RDS 监控示例 |

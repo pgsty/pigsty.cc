@@ -10,7 +10,7 @@ Pigsty 当前正式发布版本为 [**v4.4.0**](#v440)；本文档主干同时�
 
 |       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
 |:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.5.0](#v450) |    WIP     | Kafka、MySQL、Valkey、Silo/RustFS、572 个扩展与编排改进              |                                            未发布                                            |
+| [v4.5.0](#v450) |    WIP     | Kafka、MySQL、Valkey、Silo、575 个扩展与安全编排改进                   |                                            未发布                                            |
 | [v4.4.0](#v440) | 2026-07-10 | PG 19 beta 支持，531 个扩展，内核更新与 Pig CLI 改进                   |               [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)               |
 | [v4.3.0](#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持              |               [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)               |
 | [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs           |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
@@ -69,91 +69,113 @@ Pigsty 当前正式发布版本为 [**v4.4.0**](#v440)；本文档主干同时�
 |     v0.0.3      | 2020-06-22 | 接口设计改进                                                   | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
 |     v0.0.2      | 2020-04-30 | 首次提交                                                     | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
 |     v0.0.1      | 2019-05-15 | 概念原型                                                     |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
-{.full-width}
+{.full-width-full .release-index}
 
 
 ------
 
 ## v4.5.0
 
-> **WIP**：本草案根据截至 **2026-08-09** 的本地源码与软件包目录整理。Silo 默认后端、MINIO 多集群身份、SOW 仓库生成和 Metrics V3 采集已经进入当前源码，但候选包的平台覆盖、仓库索引与签名、离线包、升级/回滚矩阵和公开发布仍须单独验收；源码存在不等于已经发布。
+> **WIP**：本草案以截至 **2026-08-12** 的 Pigsty 源码 `v4.4.0..d19dbb7a`（**71 个已提交变更**），以及当前工作树中的扩展包别名更新与本地软件包/文档目录为基线。候选包的平台覆盖、仓库索引与签名、离线包、升级/回滚矩阵及公开发布仍须分别验收；源码与本地制品存在不等于已经发布。
 
-Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份编排和软件供应链为重点的功能版本。它引入 Kafka KRaft 与 MySQL 8.4 模块，为 Redis 增加 Valkey 引擎，为 MINIO 模块增加 RustFS 后端，并将扩展目录推进到 572 个已打包扩展。
+Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份编排、可观测性和软件供应链为重点的功能版本。它引入 Kafka KRaft 与 MySQL 8.4 模块，为 REDIS 增加 Valkey 引擎，将 MINIO 模块收敛到 Silo，并把已打包扩展目录从 531 个推进到 575 个。已提交的完整源码差异见 [`v4.4.0...d19dbb7a`](https://github.com/pgsty/pigsty/compare/v4.4.0...d19dbb7a386b6d9cb8ccb484df1893c7614cdc2e)。
 
 **亮点特性**
 
-- **572 个扩展**：已打包扩展由 531 个增加到 572 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2238 个。
+- **575 个扩展**：相比 v4.4.0 的 531 项，当前目录新增 46 项、移除 2 项，净增 44 项；现有 575 个扩展、406 个非 contrib 主软件包族。RPM/DEB 覆盖差异继续按平台记录。
 - **Kafka KRaft 模块**：新增 Pigsty 原生 Kafka 编排，支持多集群、动态成员加入与退役、SCRAM/TLS、安全轮转、监控指标和 Grafana 仪表盘。
 - **MySQL 8.4 模块**：新增单机与三节点 InnoDB Cluster、MySQL Router、XtraBackup、用户与数据库置备、监控告警和幂等协调能力。
-- **Valkey 与 RustFS**：REDIS 模块新增 `redis_type: valkey`；MINIO 模块新增 `minio_type: rustfs`，配套专用监控、告警和 Grafana 仪表盘。
-- **52 个配置模板**：在 v4.4.0 的 48 个独立模板基础上新增 `demo/kafka`、`demo/mysql`、`demo/rustfs` 与八节点 `ha/octo` 仿真模板。
-- **更安全的集群身份编排**：PGSQL、REDIS、MINIO、KAFKA、MYSQL 及其移除剧本按显式集群身份选择主机，无关主机提前退出；etcd 委派和 DBSU 密钥交换也改用实际集群成员。
-- **内核与工具链更新**：完善 PostgreSQL 19 beta2 的 pgBackRest 支持，启用 Percona PostgreSQL TDE 集群模式，修正 IvorySQL 初始化与 WAL 压缩，并更新 Pig 的 SOW 仓库生成和 Grafana Dashboard API v2 支持。
+- **Valkey 与 Silo**：REDIS 模块新增 `redis_type: valkey`；MINIO 模块在最终源码中仅接受 `minio_type: silo`。本周期曾开发的 RustFS 集成已在候选基线前完整撤回。
+- **51 个独立配置模板**：在 v4.4.0 的 48 个独立模板基础上新增 `demo/kafka`、`demo/mysql` 与八节点 `ha/octo` 仿真模板；另保留 `conf/app/supa.yml` → `../supabase.yml` 兼容软链接。
+- **更安全的集群身份编排**：PGSQL、REDIS、MINIO、KAFKA 及 MYSQL 的初始化剧本，以及除 `mysql-rm.yml` 外的对应移除剧本，都会按显式集群身份跳过无关主机；`mysql-rm.yml` 则对任何误选主机失败关闭。etcd 委派和 DBSU 密钥交换也改用实际集群成员。
+- **可观测性与供应链**：Grafana 仪表盘重导出为 Dashboard API v2，MinIO/Silo 改采 Metrics V3；本地仓库由 SOW 原子生成，不再写入伪造的 ModuleMD 元数据。
+- **内核与工具链更新**：完善 PostgreSQL 19 beta2 的 pgBackRest 支持，启用 Percona PostgreSQL TDE 集群模式，修正 IvorySQL 初始化与 WAL 压缩，并更新 PostgreSQL 扩展包映射、Exporter 与构建工具链。
 
 **新模块与数据服务**
 
-- [Kafka 模块](/docs/kafka/) 采用节点状态为权威源的动态 KRaft 编排，可在同一清单中管理多个集群，并对不完整限域、已有格式化状态、成员加入、控制器退役和凭据轮转执行显式检查。
-- [MySQL 试点模块](/docs/pilot/mysql/) 面向 MySQL 8.4 LTS，支持一节点独立实例或三节点 InnoDB Cluster；包括 MySQL Shell/Router、XtraBackup 定时备份、TLS、账户置备、主键约束检查和完整监控面板。
+- [Kafka 模块](/docs/kafka/) 采用节点状态为权威源的动态 KRaft 编排，可在同一清单中管理一个或多个集群，也可裸跑 `kafka.yml`；不完整的 `--limit` 会被拒绝。节点保存权威 manifest/secrets，支持动态控制器加入、Broker 准入、成员退役、故障节点三步替换、SCRAM-SHA-512/TLS、凭据与证书轮换，以及带自测的分区健康门禁。
+- [MySQL 试点模块](/docs/pilot/mysql/) 面向固定的 MySQL 8.4 LTS 平台，支持一节点独立实例或三节点 InnoDB Cluster；包括 MySQL Shell/Router、XtraBackup 定时全量备份、TLS、账户与数据库置备、主键策略检查、保守成员移除和幂等协调能力。
 - REDIS 模块保留 `redis` 默认引擎，同时可通过 `redis_type: valkey` 部署 Valkey；服务单元改用 `Type=notify`，并加强拓扑校验、密码处理和重建保护。
-- MINIO 模块通过 `minio_type` 在 `silo`、`minio`、`rustfs` 三种后端之间选择；当前源码默认部署 Silo。三种后端复用集群、用户、桶与服务暴露接口，RustFS 另用原生 OTLP 指标与就绪探测。
-- Infra 软件包线新增 `silo` 与 `mcli`。Silo 沿用 S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量和磁盘格式；`minio_cluster` 现在必须在对象存储集群变量中显式定义，清单分组名可以与集群标识不同。
-- 独立 FERRET 模块由 [PostgreSQL Mongo 模式](/docs/conf/mongo/) 与 FerretDB Docker APP 取代；PostgreSQL 负责 DocumentDB 数据层，Docker Compose 负责 FerretDB 协议层。
+- MINIO 模块现在部署并且只部署 Silo；`minio_type` 仍作为扩展点保留，但当前唯一合法值是 `silo`。Infra 软件包线新增 `silo` 与 `mcli`，继续沿用 S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量和磁盘格式。
+- 对象存储拓扑按 `minio_cluster` 聚合，清单分组名可与集群标识不同，同一清单也可声明多个对象存储集群；每个集群还应使用不同的 `minio_alias`、`minio_domain` 与 `minio_endpoint`，避免在 INFRA 节点覆盖共享客户端别名。`demo/minio` 已显式选择 Silo，并把本地仓库裁剪为 `infra,node` 模块。
+- 独立 FERRET 模块由 [PostgreSQL Mongo 模式](/docs/conf/mongo/) 与 [FerretDB Docker APP](/docs/app/ferretdb/) 取代；PostgreSQL 负责 DocumentDB 数据层，Docker Compose 负责 FerretDB 协议层。
 
-**编排、安全与问题修复**
+**编排、安全与工具链**
 
-- `deploy.yml`、`slim.yml` 以及 PGSQL、REDIS、MINIO、KAFKA、MYSQL 的初始化/移除剧本现在根据对应的 `*_cluster` 身份跳过无关主机；角色内部仍保留第二层身份校验。
+- `deploy.yml`、`slim.yml` 以及 PGSQL、REDIS、MINIO、KAFKA、MYSQL 的初始化剧本现在根据对应的 `*_cluster` 身份跳过无关主机；PGSQL、REDIS、MINIO 与 KAFKA 的移除剧本同样处理。MySQL 移除是有意的例外：`mysql-rm.yml` 不跳过无身份主机，而是在 `mysql_rm_check` 失败关闭。所有进入角色的目标仍会执行内部身份校验。
 - PGSQL 配置、PITR 与移除流程仅在规范的 `etcd` 分组存在且至少有一个成员时才委派，不再在缺少 etcd 目标时静默落到本机；DBSU SSH 密钥按实际 `pg_cluster_members` 交换，可正确覆盖 Citus 等跨清单组拓扑。
-- HAProxy 采用 `/etc/haproxy/haproxy.cfg` 与 `/etc/haproxy/conf.d` 的固定布局，并使用上游 master-worker 模式、master socket 与 `Type=notify`；dnsmasq 可处理晚于 INFRA 初始化加入的节点地址。
+- HAProxy 采用 `/etc/haproxy/haproxy.cfg` 与 `/etc/haproxy/conf.d` 的固定布局，并使用上游 master-worker 模式、master socket 与 `Type=notify`；dnsmasq 改用动态绑定，同时本地回答私网反向解析，可处理晚于 INFRA 初始化加入的节点地址。
 - Pigsty 管理的渲染后 systemd 单元统一放在 `/etc/systemd/system`，敏感配置和特权文件权限进一步收紧；移除流程会先停服务，再进入数据清理阶段。
-- REPO 与 CACHE 角色改用 `sow create --pigsty` 原子生成 RPM/APT 元数据及 SHA-256 `repo_complete` 标记，不再生成伪造的 ModuleMD 元数据；同时修复 Ansible 旧版本中的集群规模类型比较问题。
-- 修复 `pg_exporter` 1.4.1 中 `pg_subrel` 查询产生重复时间序列的问题，并优化 RustFS 与 MinIO 仪表盘。
+- REPO 与 CACHE 角色改用 `sow create --pigsty` 原子生成 RPM/APT 元数据及 SHA-256 `repo_complete` 标记，不再生成伪造的 ModuleMD 元数据；`pg_id` 的集群规模比较也改为显式整数，以兼容较旧 Ansible。
+- RPM Exporter 包名由下划线形式统一为连字符形式，例如 `node_exporter` → `node-exporter`；同时修复 Debian 仓库名与 PGDG YUM 扩展包名映射。
+- 中国区域的软件源路由完成一次系统性刷新：操作系统、Docker、Grafana、Percona、受支持的 MongoDB APT 与 uv/PyPI 路径优先使用腾讯云；EL 与 Docker 条目按平台保留华为云、阿里云回退，MySQL/Kubernetes 使用中科大镜像，ClickHouse 使用华为云。MongoDB RPM 不再声明已经不可用的中国区替代地址；每个平台的最终选择仍以 `roles/node_id/vars/<os>.<arch>.yml` 为准。
+- Docker 镜像更新到 Debian 13.6 并标记 v4.5.0；Vagrant 强制 32GB 根盘并支持固定 box 版本，新增八节点 `ha/octo` 实验环境。`docker/Makefile` 的数据目录固定为 `./data`，`make purge` 会直接删除该目录。
+- GitHub Actions 的 checkout、CodeQL、Docker build/login 与 Cosign 动作批量升级；发布、引导、安装和校验脚本同步收紧文件与参数处理。发布归档现在从 `conf/meta.yml` 生成顶层 `pigsty.yml`，纳入 Kafka/MySQL 剧本并移除旧 Mongo 剧本。
+
+**可观测性**
+
+- 使用 Pig/Grafana 工具重导出整套仪表盘为 Dashboard API v2；新增 4 个 Kafka 与 5 个 MySQL 仪表盘，并更新节点、PostgreSQL、Redis 与 Infra 仪表盘的链接、变量和布局。
+- MinIO/Silo 的 Overview 与 Instance 仪表盘迁移到 Metrics V3；Victoria 抓取统一使用 `/minio/metrics/v3` 根端点，并丢弃带非空 `bucket` 标签的高基数样本。
+- `pg_exporter` 配置升级到 1.4.0，并修复 1.4.1 `pg_subrel` 查询产生重复时间序列的问题；PG19 新增 `pg_sub_19`、`pg_recovery_state`、`pg_wal_19`、`pg_lock_stat` 与 `pg_vacuum_score` 采集器，PG10+ 新增 `pg_xact_age` 事务年龄直方图，同时补齐复制槽 `idle_timeout` 与 WAL Receiver `connecting` 状态编码。Kafka JMX/协议 Exporter 与 MySQL Exporter 也纳入统一目标和告警规则。
 
 **PostgreSQL 内核与扩展软件包**
 
 - PostgreSQL 19 beta2 模板补齐 pgBackRest 软件包与备份支持。
 - Percona PostgreSQL 18 TDE 模式改为集群模式，继续使用 Pigsty 私有前缀包避免与原生 PostgreSQL 冲突。
 - IvorySQL 补齐默认数据库初始化，并在工作负载模板中启用兼容的 WAL 压缩设置。
-- 2026-07-31 至 2026-08-08 扩展批次涉及 18 个包族、23 个扩展名；RPM 与 DEB 的具体平台差异见 [RPM 变更日志](/docs/repo/pgsql/rpm/#2026-08-08) 和 [DEB 变更日志](/docs/repo/pgsql/deb/#2026-08-08)。
+- PostgreSQL 事实加载器、各平台 `package_map` 与默认扩展组同步刷新，补齐缺失包并修正 PGDG/YUM 命名。以 v4.4.0 对应的 PIG v1.5.1 目录与当前目录做名称集合比较，共新增 46 项、移除 2 项：
 
-| 包族              | 旧版本    | 候选版本   | 摘要                                      |
-|:----------------|:-------|:-------|:----------------------------------------|
-| `cat_tools`     | -      | 0.3.0  | 新增纯 SQL 扩展，PG14-18                      |
-| `citus`         | 14.1.0 | 14.2.0 | 包含 `citus_columnar`，PG16-18             |
-| `pg_describe`   | -      | 1.0.0  | 新增，PG17-18                              |
-| `pg_disorder`   | -      | 0.1.0  | 新增，PG14-18                              |
-| `pg_mentat`     | -      | 1.5.7  | 从仅源码收录提升为软件包，PG14-18                    |
-| `pg_rational`   | 0.0.2  | 0.0.3  | PIGSTY RPM 已更新；DEB 仍沿用 PGDG 包           |
-| `pg_readme`     | 0.7.0  | 0.7.1  | 包含 `pg_readme_test_extension`；RPM 入库待完成 |
-| `pg_search`     | 0.25.0 | 0.25.1 | PG15-18，pgrx 0.19.1                     |
-| `pg_squeeze`    | 1.9.2  | 1.9.4  | PGDG 软件包，PG14-18                        |
-| `pg_turbovec`   | -      | 1.28.3 | PG14-18；软件包版本与上游 1.29.0 元数据尚待统一         |
-| `pg_vault_tde`  | -      | 1.7.0  | PG17-18，需要预加载；RPM 仅 EL9/10              |
-| `pgbson`        | 2.0.4  | 2.1.0  | 包名为 `postgresbson`，PG14-18              |
-| `pgmnemo`       | 0.15.0 | 0.16.1 | PG17-18                                 |
-| `plpgsql_check` | 2.10.3 | 2.10.4 | PG14-18                                 |
-| `plruby`        | -      | 2.5.0  | 包含三个 transform 扩展，PG14-18               |
-| `provsql`       | 1.11.0 | 1.12.0 | PG14-18                                 |
-| `timescaledb`   | 2.29.0 | 2.29.1 | PG16-18                                 |
-| `vector`        | 0.8.6  | 0.8.6  | PGDG 0.8.6 补充入库，PG14-18                 |
+  - 新增 32 个主扩展：`argm`, `cat_tools`, `cron_utils`, `fbsql`, `oidc_validator`, `online_advisor`, `pg_cjk_parser`, `pg_column_tetris`, `pg_describe`, `pg_disorder`, `pg_fts`, `pg_jieba`, `pg_kpart`, `pg_lake`, `pg_local_cache`, `pg_mentat`, `pg_oidc_validator`, `pg_policy`, `pg_roast`, `pg_tiktoken_c`, `pg_turbovec`, `pg_vault_tde`, `pgcontext`, `pgfr_record`, `pgmemento`, `pgmonitor`, `pgsqlmock`, `pgwasm`, `plruby`, `plx`, `postbis`, `qdgc`。
+  - 随上述软件包新增 13 个子扩展：`hstore_plruby`, `jsonb_plruby`, `ltree_plruby`, `pg_extension_base`, `pg_extension_updater`, `pg_lake_copy`, `pg_lake_engine`, `pg_lake_iceberg`, `pg_lake_table`, `pg_map`, `pgcontext_pgvector`, `pgfr_analyze`, `qdgc_postgis`。
+  - 新增 1 个 PGDG 扩展：`pg_statviz`；其软件包从默认安装组隐藏，但扩展仍属于在线目录。
+  - 移除 2 个目录项：`pg_analytics`, `spat`。因此总数从 531 增至 575，净增 44。
+
+- 累计关键升级包括 `citus` 14.2.0、`pg_search` 0.25.2、`timescaledb` 2.29.1、`vector` 0.8.6、`documentdb` 0.114、`pg_partman` 5.5.0、`pgmnemo` 0.16.1、`plpgsql_check` 2.10.4、`provsql` 1.12.0 与 `pgbson` 2.1.0，并为大量 Rust 扩展切换到 pgrx 0.19.1。
+- 扩展包构建批次及平台差异见 [RPM 变更日志](/docs/repo/pgsql/rpm/#2026-07-24)、[RPM 2026-07-30](/docs/repo/pgsql/rpm/#2026-07-30)、[RPM 2026-08-08](/docs/repo/pgsql/rpm/#2026-08-08) 与对应的 [DEB 变更日志](/docs/repo/pgsql/deb/#2026-07-24)；当前工作树新增项见 [`pg_local_cache`](/ext/e/pg_local_cache/) 与 [`pg_policy`](/ext/e/pg_policy/) 目录页。日志日期反映软件包批次，不宜与当前 CSV 的 `mtime` 逐项等同。
+- `pg_statviz` 在 [`db/reload.sql`](https://github.com/pgsty/pgext/blob/main/db/reload.sql) 中只被排除出默认安装组；在线目录仍保留其详情、平台覆盖与包名差异。
+
+下表摘录最后一个 2026-08-08 批次；“旧版本”是该批次前的值，而不是统一的 v4.4.0 基线：
+
+| 包族              | 批次前版本  | 候选版本   | 摘要                                   |
+|:----------------|:-------|:-------|:-------------------------------------|
+| `cat_tools`     | -      | 0.3.0  | 新增纯 SQL 扩展，PG14-18                   |
+| `citus`         | 14.1.0 | 14.2.0 | 包含 `citus_columnar`，PG16-18          |
+| `pg_describe`   | -      | 1.0.0  | 新增，PG17-18                           |
+| `pg_disorder`   | -      | 0.1.0  | 新增，PG14-18                           |
+| `pg_mentat`     | -      | 1.5.7  | 从仅源码收录提升为软件包，PG14-18                 |
+| `pg_rational`   | 0.0.2  | 0.0.3  | PIGSTY RPM 已更新；DEB 仍沿用 PGDG 包        |
+| `pg_readme`     | 0.7.0  | 0.7.1  | RPM 沿用 PGDG 0.7.0；PIGSTY DEB 为 0.7.1 |
+| `pg_search`     | 0.25.0 | 0.25.2 | PG15-18，pgrx 0.19.1                  |
+| `pg_squeeze`    | 1.9.2  | 1.9.4  | PGDG 软件包，PG14-18                     |
+| `pg_turbovec`   | -      | 1.29.0 | PG14-18；RPM、DEB 与源码元数据已对齐            |
+| `pg_vault_tde`  | -      | 1.7.0  | PG17-18，需要预加载；RPM 仅 EL9/10           |
+| `pgbson`        | 2.0.4  | 2.1.0  | 包名为 `postgresbson`，PG14-18           |
+| `pgmnemo`       | 0.15.0 | 0.16.1 | PG17-18                              |
+| `plpgsql_check` | 2.10.3 | 2.10.4 | PG14-18                              |
+| `plruby`        | -      | 2.5.0  | 包含三个 transform 扩展，PG14-18            |
+| `provsql`       | 1.11.0 | 1.12.0 | PG14-18                              |
+| `timescaledb`   | 2.29.0 | 2.29.1 | PG16-18                              |
+| `vector`        | 0.8.6  | 0.8.6  | PGDG 0.8.6 补充入库，PG14-18              |
 {.stretch-last}
 
 **基础设施软件包候选更新**
 
 本轮基础设施仓库集中更新对象存储、可观测性、数据库工具和 Agent CLI。以下为草案中的主要版本，构建完成不等同于已完成仓库索引、签名、同步和离线包验收；完整记录见 [Infra 变更日志](/docs/repo/infra/log/)。
 
-| 软件包                             | 候选版本                        | 备注                               |
-|:--------------------------------|:----------------------------|:---------------------------------|
-| `silo` / `mcli`                 | 20260806000000              | Silo 正式接替 MinIO 包名；双架构制品已核验      |
-| `rustfs`                        | 1.0.0-rc1                   | 上游 `rc.1-preview.1`              |
-| `haproxy`                       | 3.4.3                       | Pigsty 修订包，匹配新版 systemd 单元       |
-| `redis` / `valkey`              | 7.2.15 / 9.1.1              | 双引擎软件包与跨平台构建                     |
-| `grafana`                       | 13.1.3                      | 双架构官方制品                          |
-| `victoria-metrics`              | 1.149.0                     | 包含主包、cluster 与 vmutils           |
-| `postgrest`                     | 16.0                        | 最低支持 PostgreSQL 14               |
-| `k3s` / `k3s-images`            | 1.36.3                      | 二进制与双架构离线镜像配套                    |
-| `seaweedfs` / `pgschema`        | 4.41 / 1.12.2               | 存储与模式管理工具更新                      |
-| `codex` / `claude` / `opencode` | 0.147.0 / 2.1.226 / 1.18.15 | Agent CLI 集中更新                   |
-| `pig`                           | 1.6.1（后续提交）                 | 扩展目录刷新；后续提交接入 SOW 与 Dashboard v2 |
+| 软件包                                         | 候选版本                        | 备注                                   |
+|:--------------------------------------------|:----------------------------|:-------------------------------------|
+| `silo` / `mcli`                             | 20260806000000              | Silo 正式接替 MinIO 包名；本地双架构制品已核验        |
+| `rustfs`                                    | 1.0.0-rc1                   | 仍在 Infra 包目录中，但 v4.5 核心集成已撤回，不是受支持后端 |
+| `haproxy`                                   | 3.4.3                       | Pigsty 修订包，匹配新版 systemd 单元           |
+| `redis` / `valkey`                          | 7.2.15 / 9.1.1              | 双引擎软件包与跨平台构建                         |
+| `kafka` / `jmx-exporter` / `kafka-exporter` | 4.3.1 / 1.6.0 / 1.9.0       | Kafka 模块运行时与双 Exporter               |
+| `grafana` / `victoria-metrics`              | 13.1.3 / 1.149.0            | Victoria 包含主包、cluster 与 vmutils      |
+| `pg-exporter` / `redis-exporter`            | 1.4.1 / 1.89.0              | 查询修复与 Exporter 更新                    |
+| `postgrest`                                 | 16.1                        | 最低支持 PostgreSQL 14                   |
+| `k3s` / `k3s-images`                        | 1.36.3                      | 二进制与双架构离线镜像配套                        |
+| `seaweedfs` / `pgschema`                    | 4.41 / 1.12.2               | 存储与模式管理工具更新                          |
+| `pig` / `sow`                               | 1.6.2 / 0.3.0               | 扩展目录与本地仓库生成工具                        |
+| `codex` / `claude` / `opencode`             | 0.147.0 / 2.1.227 / 1.18.16 | Agent CLI 集中更新                       |
 {.stretch-last}
 
 **兼容性变化与升级说明**
@@ -161,17 +183,20 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 - 现有 FERRET 部署应移除旧的 `ferretdb` systemd 服务，并使用 `docker.yml` 与 `app.yml` 重新部署协议层；旧的 `mongo.yml` 剧本、`mongo_*` 参数、抓取任务和专用仪表盘不再提供。
 - HAProxy 单元不再由 Pigsty 渲染 `/etc/default/haproxy`，但会可选读取该文件。仅使用 `EXTRAOPTS` 传递进程参数，不再使用 `OPTIONS`；若覆盖 `EXTRAOPTS`，必须保留 `-S /run/haproxy-master.sock`，且不得在其中加入 `-f`。
 - 新版模块剧本要求目标主机显式定义对应的 `pg_cluster`、`redis_cluster`、`minio_cluster`、`kafka_cluster` 或 `mysql_cluster`。过去依赖固定组名但缺少集群身份变量的自定义清单需要先补齐身份定义。
-- Valkey 与 RustFS 均为显式选择：分别设置 `redis_type: valkey` 与 `minio_type: rustfs`。Silo 是新建对象存储的源码默认值；已有 MinIO 集群升级前应显式保留 `minio_type: minio`，任何引擎切换都不等同于自动迁移数据。
-- Silo 与 MinIO 在协议和磁盘格式上保持兼容，但服务名、软件包名和二进制名不同。现有 MinIO 集群升级时应显式设置 `minio_type: minio`，待迁移流程与回滚步骤完成验收后再切换；不得把软件包替换当作自动数据迁移。
-- Pigsty 核心 REPO/CACHE 角色要求 SOW，并使用 `sow create --pigsty` 生成本地仓库；旧离线包或旧本地仓库若不包含 SOW 0.2.0，必须先从 Pigsty INFRA 仓库补齐或刷新。`pig repo create` 属于 CLI 的另一条执行路径，应按其自身版本核对回退行为。
+- MINIO 角色现在只接受 `minio_type: silo`；`minio` 与 `rustfs` 都会在身份检查阶段失败。Silo 与 MinIO 保持协议及磁盘格式兼容，但软件包、二进制与 systemd 服务名已经变更；升级既有对象存储前仍须完成备份、原地兼容性和回滚验证，不得把软件包替换当作自动迁移已经验收。
+- Valkey 仍是显式选择：设置 `redis_type: valkey` 后安装 `valkey-server` / `valkey-cli`，但配置路径、服务名、监控 job 与其他模块接口继续使用 `redis`，便于兼容现有清单和面板。
+- Pigsty 核心 REPO/CACHE 角色要求 SOW，并使用 `sow create --pigsty` 生成本地仓库；旧离线包或旧本地仓库若不包含当前候选 `sow` 0.3.0，必须先从 Pigsty INFRA 仓库补齐或刷新。`pig repo create` 属于 CLI 的另一条执行路径，应按其自身版本核对回退行为。
+- 自建 RPM 仓库或外部自动化如果仍引用 `node_exporter`、`redis_exporter` 等旧下划线包名，需要迁移到 `node-exporter`、`redis-exporter` 等连字符名称。
+- `docker/Makefile` 不再允许用 `DATA` 把清理目标指向其他路径；`make purge` 会无倒计时直接删除仓库内的 `./data`，执行前应自行确认需要保留的数据。
+- KAFKA 与 MYSQL 仍是试点模块；Kafka 客户端必须直连并解析各 Broker，不能把数据平面置于 HAProxy/VIP/L4 负载均衡器之后。MySQL 当前只接受 1 或 3 个成员。
 
 **发布前待冻结**
 
-- 验证 Silo 默认后端、多 MINIO 集群、删除安全边界以及 Metrics V3 抓取/告警闭环，并完成 MinIO → Silo 的升级与回滚矩阵。
-- 验证旧离线包、旧本地仓库缺少 SOW 时的引导与刷新流程。
-- 完成 Grafana Dashboard API v2 导入器、MinIO Metrics V3 与 RustFS 原生 OTLP 面板的端到端验证。
-- 解决 `pg_turbovec` 版本/元数据差异与 `pg_readme` RPM 入库，复核 RPM/DEB 差异，并完成候选包索引、签名、同步和公共仓库可用性检查。
-- 对 Kafka、MySQL、Valkey、RustFS/Silo 及标准操作系统矩阵执行最终生命周期与离线部署验收；CLICK 当前仅完成 ClickHouse 软件源模块接入，独立部署剧本仍不应列为已交付特性。
+- 验证 Silo 唯一后端、多 MINIO 集群、删除安全边界以及 Metrics V3 抓取/告警闭环，并完成 MinIO → Silo 的升级与回滚矩阵。
+- 验证旧离线包、旧本地仓库缺少 SOW 时的引导与刷新流程，以及 RPM Exporter 包名迁移。
+- 完成 Grafana Dashboard API v2 导入器、MinIO Metrics V3、Kafka 与 MySQL 面板/告警的端到端验证。
+- 冻结 575 个已打包扩展的全站口径，复核 `pg_readme`、`pg_statviz` 等 RPM/DEB 平台差异，并完成候选包索引、签名、同步和公共仓库可用性检查。
+- 对 Kafka、MySQL、Valkey、Silo 及标准操作系统/双架构矩阵执行最终生命周期、故障替换和离线部署验收；RustFS 不属于 v4.5 核心验收范围。CLICK 当前仅完成 ClickHouse 软件源模块接入，独立部署剧本仍不应列为已交付特性。
 
 
 ------

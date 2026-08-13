@@ -18,4 +18,4 @@ categories: [概念]
 同时供环境中的多套 PostgreSQL 数据库集群（以及其他数据库模块组件）使用。（例外：也有 [**不带基础设施的部署**](/docs/setup/slim)）
 
 在 Pigsty 中，几乎所有数据库模块都是以 "**集群**"（Cluster）的方式组织起来的。每一个集群都是一个 Ansible 分组，包含有若干节点资源。
-例如 PostgreSQL 高可用数据库集群，Redis，Etcd / MinIO 这些数据库都是以集群的形式存在。一套环境中可以包含多个集群。
+例如 PostgreSQL 高可用数据库集群、Redis、Etcd 与 Silo 都以集群形式存在。一套环境中可以包含多个集群。

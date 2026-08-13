@@ -100,14 +100,14 @@ Pigsty 不接管 SSH 服务端配置：禁用口令登录、限制 root 远程�
 ./configure -g    # --generate：随机化向导识别的默认凭据
 ```
 
-该选项不会替换 pgBackRest 的 `cipher_pass`、`ha/safe` 中的全部 MinIO 示例凭据，也不会处理用户自定义值。完整范围见 [**默认凭证清单**](/docs/concept/sec/compliance#默认凭证清单)。
+该选项不会替换 pgBackRest 的 `cipher_pass`、`ha/safe` 中的全部 Silo 示例凭据，也不会处理用户自定义值。完整范围见 [**默认凭证清单**](/docs/concept/sec/compliance#默认凭证清单)。
 
 **第三档：策略加固（`ha/safe` 模板）**。配置模板 [**`conf/ha/safe.yml`**](/docs/conf/safe) 将多项安全配置组合为一份可以继续定制的参考：
 
 - **TLS 与证书认证**：主要 TCP HBA 规则使用 `ssl`，公网管理员使用客户端证书；PgBouncer 启用 `require`，Patroni API 启用 HTTPS。本地 `ident` 与部分 localhost 口令规则仍然保留。
 - **密码策略**：显式预加载 `passwordcheck`，并为内置用户声明 `expire_in`；模板中的示例口令仍需在部署前检查和替换。
 - **攻击面收敛**：监听地址收敛至 `${ip},${vip},${lo}`，监控与管理账号从公网访问连接池被显式拒绝。
-- **备份加密**：pgBackRest 使用 MinIO 仓库并启用 AES-256-CBC；`pgBR.${pg_cluster}` 是可预测的示例值，必须替换。
+- **备份加密**：pgBackRest 使用远程 `minio` 仓库预设并启用 AES-256-CBC；`pgBR.${pg_cluster}` 是可预测的示例值，必须替换。
 - [**安全扩展**](/ext/cate/sec/)：安装 `passwordcheck`、`credcheck`、`pgaudit`、`pgsodium`、`anonymizer` 等安全相关扩展；安装不等于预加载、创建或配置。
 
 **第四档：内核加固（`crit.yml` 参数模板）**。safe 模板默认为集群指定了面向核心业务的 [**CRIT 参数模板**](/docs/pgsql/template/crit)，它相对通用的 `oltp` 模板：

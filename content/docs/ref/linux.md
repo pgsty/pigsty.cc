@@ -13,7 +13,7 @@ Pigsty 不使用任何虚拟化容器化技术，直接运行于裸操作系统�
 
 ## 概述
 
-Pigsty 推荐使用的操作系统版本：RockyLinux 10.1 / 9.7、Ubuntu 26.04.0 / 24.04.4 / 22.04.5、Debian 13.6 / 12.14。
+Pigsty 推荐使用的操作系统版本：Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.6、Ubuntu 22.04.5 / 24.04.4 / 26.04.0。
 
 | 发行版                       |                 架构                 |                                              系统代码                                               |                       PG18                       |                       PG17                       |                       PG16                       |                       PG15                       |                       PG14                       |
 |:--------------------------|:----------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
@@ -54,9 +54,9 @@ Pigsty 支持 RHEL / Rocky / Alma / Anolis / CentOS 8、9、10 版本。
 | RHEL7 / CentOS7           | <b class="text-danger">aarch64</b> |                                                -                                                |                                                    |                                                    |                                                    |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 RockyLinux 10.1 与 9.7" color="success" %}}
-请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前建议使用的小版本为：9.7, 10.1。
-建议离线安装包/自建离线仓库与系统 **EL 小版本**（例如 RockyLinux 9.7 / 10.1）保持一致，跨小版本可能因 OpenSSL 等依赖版本跳变导致不可用。
+{{% alert title="推荐使用 Rocky Linux 9.8 / 10.2" color="success" %}}
+请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前建议使用的小版本为：9.8 / 10.2。
+建议离线安装包/自建离线仓库与系统 **EL 小版本**（例如 Rocky Linux 9.8 / 10.2）保持一致，跨小版本可能因 OpenSSL 等依赖版本跳变导致不可用。
 {{% /alert %}}
 
 {{% alert title="EL8 即将不再支持" color="warning" %}}
@@ -85,7 +85,7 @@ Pigsty 支持 Ubuntu 26.04 / 24.04 / 22.04：
 | Ubuntu 22.04 (`jammy`)    | <b class="text-danger">aarch64</b> | [`u22.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 {.full-width}
 
-{{% alert title="推荐使用 Ubuntu 26.04.0 / 24.04.4 / 22.04.5 LTS" color="success" %}}
+{{% alert title="推荐使用 Ubuntu 22.04.5 / 24.04.4 / 26.04.0 LTS" color="success" %}}
 Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生产环境基线，也可以继续使用 Ubuntu 24.04。
 {{% /alert %}}
 
@@ -106,7 +106,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Debian 12.14 / 13.6" color="success" %}}
+{{% alert title="推荐使用 Debian 12.15 / 13.6" color="success" %}}
 {{% /alert %}}
 
 {{% alert title="Debian 11 EOL @ 2024-07" color="danger" %}}
@@ -122,10 +122,10 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 
 | **系统**         | 镜像                                                                                                         |
 |:---------------|:-----------------------------------------------------------------------------------------------------------|
-| AlmaLinux 8.10 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |
-| Rocky 9.7      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           |
-| AlmaLinux 10.1 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) |
-| Debian 12.14   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       |
+| Rocky 8.10     | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8)           |
+| Rocky 9.8      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           |
+| Rocky 10.2     | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         |
+| Debian 12.15   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       |
 | Debian 13.6    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
 | Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
 | Ubuntu 24.04.4 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |
@@ -142,24 +142,24 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | **x86_64**     | 阿里云镜像前缀                |
 |:---------------|:-----------------------|
 | Rocky 8.10     | `rockylinux_8_10_x64`  |
-| Rocky 9.7      | `rockylinux_9_7_x64`   |
-| Rocky 10.1     | `rockylinux_10_1_x64`  |
+| Rocky 9.8      | `rockylinux_9_8_x64`   |
+| Rocky 10.2     | `rockylinux_10_2_x64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_x64_20G` |
 | Ubuntu 24.04.4 | `ubuntu_24_04_x64_20G` |
 | Ubuntu 26.04.0 | `ubuntu_26_04_x64_20G` |
-| Debian 12.14   | `debian_12_14_x64`     |
-| Debian 13.5    | `debian_13_5_x64`      |
+| Debian 12.15   | `debian_12_15_x64`     |
+| Debian 13.6    | `debian_13_6_x64`      |
 {.full-width}
 
 
 | **aarch64**    | 阿里云镜像前缀                  |
 |:---------------|:-------------------------|
 | Rocky 8.10     | `rockylinux_8_10_arm64`  |
-| Rocky 9.7      | `rockylinux_9_7_arm64`   |
-| Rocky 10.1     | `rockylinux_10_1_arm64`  |
+| Rocky 9.8      | `rockylinux_9_8_arm64`   |
+| Rocky 10.2     | `rockylinux_10_2_arm64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_arm64_20G` |
 | Ubuntu 24.04.4 | `ubuntu_24_04_arm64_20G` |
 | Ubuntu 26.04.0 | `ubuntu_26_04_arm64_20G` |
-| Debian 12.14   | `debian_12_14_arm64`     |
-| Debian 13.5    | `debian_13_5_arm64`      |
+| Debian 12.15   | `debian_12_15_arm64`     |
+| Debian 13.6    | `debian_13_6_arm64`      |
 {.full-width}

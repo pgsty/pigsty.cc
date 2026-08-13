@@ -82,7 +82,7 @@ all:
 在 `meta` 节点上还部署有：
 
 - **ETCD 集群**：单节点 `etcd` 集群，为 PostgreSQL HA 提供 DCS 服务
-- **MinIO 集群**：单节点 `minio` 集群，提供 S3 兼容的对象存储服务
+- **Silo 集群**：由 MINIO 模块管理的单节点 `minio` 集群，提供 S3 兼容对象存储服务
 
 ```bash
 10.10.10.10 etcd-1
@@ -183,6 +183,6 @@ make simu       # 创建 20 节点生产仿真环境
 
 - 3 个基础设施节点（`meta1`, `meta2`, `meta3`）
 - 2 个 HAProxy 代理节点
-- 4 个 MinIO 节点
+- 4 个 MINIO（Silo）节点
 - 5 个 ETCD 节点
 - 6 个 PostgreSQL 节点（2 个集群，每个 3 节点）

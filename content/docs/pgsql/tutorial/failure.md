@@ -38,7 +38,7 @@ Pigsty 带有 NodeFsSpaceFull 告警规则，当文件系统可用空间不足 1
 如果问题出在 Pigsty 管理节点或监控节点，还需考虑：
 
 - **监控数据**：VictoriaMetrics 的时序指标和 VictoriaLogs 日志存储都会占用磁盘，可检查保留策略。
-- **对象存储数据**：Pigsty 集成的 MinIO 对象存储可能会被用于 PG 备份保存。
+- **对象存储数据**：Pigsty 集成的 Silo 对象存储可能会被用于 PG 备份保存。
 
 明确占用空间最大的目录后，可进一步使用 `du -sh <目录>` 深入查找特定大型文件或子目录。
 

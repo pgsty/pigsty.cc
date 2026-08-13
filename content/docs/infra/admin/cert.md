@@ -24,7 +24,7 @@ Pigsty 在基础设施初始化 (`infra.yml`) 时自动创建自签名 CA。该 
 - PostgreSQL 服务器/客户端 SSL
 - Patroni REST API
 - etcd 集群通信
-- MinIO 集群通信
+- Silo 集群通信
 - Nginx HTTPS（备用）
 - 基础设施服务
 

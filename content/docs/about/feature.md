@@ -21,7 +21,7 @@ categories: [参考]
 - [**可观测性**](/img/pigsty/dashboard.jpg)：基于 [**Victoria**](/docs/infra#victoria-可观测性套件) 与 [**Grafana**](/docs/infra#grafana) 的可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
-- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**DuckDB**](/docs/pilot/duckdb/), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
+- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis)、[**Silo 对象存储**](/docs/minio)、[**ETCD**](/docs/etcd)、[**DuckDB**](/docs/pilot/duckdb/)、[**Docker**](/docs/app/)、[**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
 ![Pigsty 功能概览](/img/pigsty/banner.png)
 
@@ -34,7 +34,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
 - [开箱即用的RDS](#开箱即用的rds)：从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 14-18 版本的生产级 PG 数据库服务。
 - [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 {{< param pgext_count >}} 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
-- [灵活的模块架构](#灵活的模块架构)：组合 Redis/Etcd/MinIO 模块与 Mongo 等 PostgreSQL 模式；可独立监控现有 RDS、主机和数据库。
+- [灵活的模块架构](#灵活的模块架构)：组合 Redis、Etcd、Silo 对象存储模块与 Mongo 等 PostgreSQL 模式；可独立监控现有 RDS、主机和数据库。
 - [惊艳的观测能力](#惊艳的观测能力)：基于 Victoria 与 Grafana 的现代可观测性技术栈，使用 Prometheus 兼容指标与生态工具。
 - [验证过的可靠性](#久经考验的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
 - [简单易用可维护](#简单易用可维护)：声明式 API，GitOps 就位，傻瓜式操作，Database/Infra-as-Code 以及管理 SOP 封装管理复杂度！
@@ -47,7 +47,7 @@ PostgreSQL 整合了生态中的工具与最佳实践：
 - 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，整合地理、时序、分布式、图、向量、搜索、AI 等 {{< param pgext_count >}} 个 [扩展插件](/ext/list)。
 - 运行于裸操作系统之上，无需容器支持，支持主流操作系统： EL 8/9/10, Ubuntu 22.04/24.04/26.04 以及 Debian 12/13。
 - 基于 [patroni](https://patroni.readthedocs.io/en/latest/), [haproxy](http://www.haproxy.org/), 与 [etcd](https://etcd.io/)，打造故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。
-- 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [MinIO](https://min.io/) 集群提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
+- 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [Silo 对象存储](/docs/minio/) 提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
 - 基于 [Ansible](https://www.ansible.com/) 提供声明式的 API 对复杂度进行抽象，以 **Database-as-Code** 的方式极大简化了日常运维管理操作。
 - Pigsty 用途广泛，可用作完整应用运行时，开发演示数据/可视化应用，大量使用 PG 的软件可用 [Docker](https://www.docker.com/) 模板一键拉起。
 - 提供基于 [Vagrant](https://www.vagrantup.com/) 的本地开发测试沙箱环境，与基于 [Terraform](https://www.terraform.io/) 的云端自动部署方案，开发测试生产保持环境一致。
@@ -102,7 +102,7 @@ PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-wor
 Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)，并可自由组合以应对多变的需求场景。[**`INFRA`**](/docs/infra) 模块带有完整的现代监控技术栈，而 [**`NODE`**](/docs/node) 模块则将节点调谐至指定状态并纳管。
 在多个节点上安装 [**`PGSQL`**](/docs/pgsql) 模块会自动组建出基于主从复制的高可用数据库集群，而同样的 [**`ETCD`**](/docs/etcd) 模块则为数据库高可用提供共识与元数据存储。
 
-除了上述四个 [核心模块](/docs/ref/module#核心模块) 之外，Pigsty 还提供一系列选装功能模块：[**`MINIO`**](/docs/minio) 模块可以提供本地对象存储能力，并作为集中式数据库备份仓库。
+除了上述四个 [核心模块](/docs/ref/module#核心模块) 之外，Pigsty 还提供一系列选装功能模块：[**`MINIO`**](/docs/minio) 模块可以部署 Silo，提供本地对象存储能力并作为集中式数据库备份仓库。
 [**`REDIS`**](/docs/redis/) 模块能以独立主从，哨兵，原生集群的方式为数据库提供辅助。[**`DOCKER`**](/docs/docker) 模块可用于拉起无状态的应用软件。
 
 此外，Pigsty 还提供 PG 兼容 / 衍生内核的支持，您可以使用 [**`Babelfish`**](/docs/pgsql/kernel/babelfish) 提供 MS SQL Server 兼容性，使用 [**`IvorySQL`**](/docs/pgsql/kernel/ivorysql) 提供 Oracle 兼容性，
@@ -125,7 +125,7 @@ Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)�
 
 Pigsty 提供了基于开源 Grafana 与 Victoria Stack 的现代可观测性技术栈做 [**监控**](/docs/pgsql/monitor)：Grafana 负责可视化呈现，VictoriaMetrics 通过 Prometheus 兼容接口收集监控指标，VictoriaLogs 用于日志收集与查询，Alertmanager 用于告警通知，Blackbox Exporter 负责检查服务可用性。这些组件由 INFRA 模块部署。
 
-Pigsty 所管理的任何组件都会被自动纳入监控之中，包括主机节点，负载均衡 HAProxy，数据库 Postgres，连接池 Pgbouncer，元数据库 ETCD，KV 缓存 Redis，对象存储 MinIO，……，以及整套监控基础设施本身。大量的 Grafana 监控面板与预置告警规则会让你的系统观测能力有质的提升，当然，这套系统也可以被复用于您的应用监控基础设施，或者监控已有的数据库实例或 RDS。
+Pigsty 所管理的任何组件都会被自动纳入监控之中，包括主机节点，负载均衡 HAProxy，数据库 Postgres，连接池 Pgbouncer，元数据库 ETCD，KV 缓存 Redis，对象存储 Silo，……，以及整套监控基础设施本身。大量的 Grafana 监控面板与预置告警规则会让你的系统观测能力有质的提升，当然，这套系统也可以被复用于您的应用监控基础设施，或者监控已有的数据库实例或 RDS。
 
 无论是故障分析还是慢查询优化、无论是水位评估还是资源规划，Pigsty 为您提供全面的数据支撑，真正做到数据驱动。在 Pigsty 中，超过三千类监控指标被用于描述整个系统的方方面面，并被进一步加工、聚合、处理、分析、提炼并以符合直觉的可视化模式呈现在您的面前。从全局大盘总览，到某个数据库实例中单个对象（表，索引，函数）的增删改查详情都能一览无余。您可以随意上卷下钻横向跳转，浏览系统现状与历史趋势，并预测未来的演变。
 
@@ -145,7 +145,7 @@ Pigsty 所管理的任何组件都会被自动纳入监控之中，包括主机�
 
 **开箱即用的高可用与时间点恢复能力，确保你的数据库坚如磐石！**
 
-对于软件缺陷或人为误操作造成的删表删库，Pigsty 提供了开箱即用的 [PITR](/docs/concept/pitr) 时间点恢复能力，无需额外配置即默认启用。只要存储空间管够，基于 `pgBackRest` 的基础备份与 WAL 归档让您拥有快速回到恢复窗口内任意时间点的能力。您可以使用本地目录/磁盘，亦或专用的 MinIO 集群或 S3 对象存储服务保留更长的回溯期限，丰俭由人。
+对于软件缺陷或人为误操作造成的删表删库，Pigsty 提供了开箱即用的 [PITR](/docs/concept/pitr) 时间点恢复能力，无需额外配置即默认启用。只要存储空间管够，基于 `pgBackRest` 的基础备份与 WAL 归档让您拥有快速回到恢复窗口内任意时间点的能力。您可以使用本地目录/磁盘、MINIO 模块部署的 Silo，亦或外部 S3 兼容对象存储服务保留更长的回溯期限，丰俭由人。
 
 Pigsty 基于 Patroni、etcd 与 HAProxy 提供 [高可用故障自愈架构](/docs/concept/ha)。在节点、网络、仲裁和同步副本满足设计前提时，系统可自动完成主库故障转移；实际 RTO 与 RPO 取决于复制模式、故障类型、超时参数和客户端重连策略。
 
@@ -195,7 +195,7 @@ Pigsty 提供数据库部署所需的基础安全能力，包括分层 HBA、内
 
 在各类数据密集型应用中，数据库往往是最为棘手的部分。例如 Gitlab 企业版与社区版的核心区别就是底层 PostgreSQL 数据库的监控与高可用，如果您已经有了足够好的本地 PG RDS，完全可以拒绝为软件自带的土法手造数据库组件买单。
 
-Pigsty 提供了 [**Docker 模块**](/docs/docker) 与大量开箱即用的 [**Compose 模板**](/docs/app)。您可以使用 Pigsty 管理的高可用 PostgreSQL （以及 Redis 与 MinIO）作为后端存储，以无状态的模式一键拉起这些软件：
+Pigsty 提供了 [**Docker 模块**](/docs/docker) 与大量开箱即用的 [**Compose 模板**](/docs/app)。您可以使用 Pigsty 管理的高可用 PostgreSQL（以及 Redis 与 Silo）作为后端存储，以无状态的模式一键拉起这些软件：
 Gitlab、Gitea、Wiki.js、NocoDB、Odoo、Jira、Confluence、Habour、Mastodon、Discourse、KeyCloak、MatterMost 等等。
 如果您的应用需要一个可靠的 PostgreSQL 数据库， Pigsty 也许是最简单的获取方案。
 

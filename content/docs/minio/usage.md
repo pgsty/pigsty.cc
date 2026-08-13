@@ -1,13 +1,13 @@
 ---
 title: 使用方法
 weight: 3610
-description: 快速使用 MINIO 模块部署的 Silo、MinIO 或 RustFS，并通过 mcli、rclone 与 pgBackRest 接入。
+description: 快速使用 MINIO 模块部署的 Silo，并通过 mcli、rclone 与 pgBackRest 接入。
 icon: fa-solid fa-bell-concierge
 module: [MINIO]
 categories: [参考]
 ---
 
-当您 [配置](/docs/minio/config/) 并执行 [剧本](/docs/minio/playbook/) 部署对象存储集群后，可以参考本页通过统一的 S3 与 `mcli` 接口使用它。除非另有说明，以下命令适用于 Silo、MinIO 与 RustFS。
+当您 [配置](/docs/minio/config/) 并执行 [剧本](/docs/minio/playbook/) 部署 Silo 后，可以参考本页通过 S3 与 `mcli` 兼容接口使用它。
 
 
 
@@ -27,9 +27,9 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 ./minio.yml -l minio
 ```
 
-请注意在 [`deploy.yml`](/docs/setup/playbook#部署剧本) 中，事先定义好的 MinIO 集群将自动创建，无需手动再次执行 `minio.yml` 剧本。
+请注意在 [`deploy.yml`](/docs/setup/playbook#部署剧本) 中，事先定义好的 Silo 集群会自动创建，无需手动再次执行 `minio.yml` 剧本。
 
-生产多节点部署应通读 Pigsty [配置文档](/docs/minio/config/)，并另外核对所选引擎版本的上游文档；不要将 S3 API 兼容理解为扩缩容和数据格式完全相同。
+生产多节点部署应通读 Pigsty [配置文档](/docs/minio/config/)，并核对实际 Silo 版本的操作约束。
 
 
 
@@ -45,12 +45,12 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 2. 您可以在内网的 DNS 服务器上添加一条记录，如果已经有了现成的 DNS 服务
 3. 如果您启用了 Infra 节点上的 DNS 服务器，可以在 [`dns_records`](/docs/infra/param#dns_records) 中添加记录
 
-对于生产环境访问 MinIO，通常我们建议使用第一种方式：静态 DNS 解析记录，避免 MinIO 对于 DNS 的额外依赖。
+生产环境通常建议使用第一种方式：静态 DNS 解析记录，避免对象存储服务依赖动态 DNS。
 
-您应当将 MinIO 服务域名指向 MinIO 服务器节点的 IP 地址与服务端口，或者负载均衡器的 IP 地址与服务端口。
+应将 S3 服务域名指向 Silo 节点或负载均衡器的 IP 地址与服务端口。
 Pigsty 默认使用 `sss.pigsty` 作为 S3 服务域名，并在 `9000` 端口提供服务；角色不会自动为 `minio_domain` 创建全局 DNS 解析，需要按上文显式配置。
 
-在一些例子中，MinIO 集群上还部署了 HAProxy 实例对外暴露服务，在这种情况下，`9002` 是模板中使用的服务端口。
+部分示例在 Silo 集群上部署 HAProxy 对外暴露服务，此时模板使用 `9002` 作为统一服务端口。
 
 
 
@@ -86,7 +86,7 @@ MinIO 客户端工具 `mcli` 的完整功能参考，请查阅文档： [MinIO �
 
 ## 用户管理
 
-使用 `mcli` 可以管理 MinIO 中的业务用户。默认置备已经创建 `pgbackrest`、`s3user_meta` 与 `s3user_data`；下面创建一个额外用户，并附加默认生成的 `data` 桶策略：
+使用 `mcli` 可以管理 Silo 中的业务用户。默认置备已经创建 `pgbackrest`、`s3user_meta` 与 `s3user_data`；下面创建一个额外用户，并附加默认生成的 `data` 桶策略：
 
 ```bash
 mcli admin user list sss
@@ -101,7 +101,7 @@ set -o history
 
 ## 存储桶管理
 
-**您可以对 MinIO 中的存储桶进行增删改查**：
+**您可以对 Silo 中的存储桶进行增删改查**：
 
 ```bash
 mcli ls sss/                         # 列出别名 'sss' 的所有桶
@@ -118,7 +118,7 @@ mcli rb --force sss/hello            # 强制删除 'hello' 桶
 
 ```bash
 mcli cp /www/pigsty/* sss/data/      # 将本地软件源的内容上传到默认创建的 data 桶中
-mcli cp sss/data/plugins.tgz /tmp/   # 从 MinIO 下载文件到本地
+mcli cp sss/data/plugins.tgz /tmp/   # 从 Silo 下载文件到本地
 mcli ls sss/data                     # 列出 data 桶中的所有文件
 mcli rm sss/data/plugins.tgz         # 删除 data 桶中的特定文件
 mcli cat sss/data/repo_complete      # 查看 data 桶中的文件内容
@@ -129,7 +129,7 @@ mcli cat sss/data/repo_complete      # 查看 data 桶中的文件内容
 
 ## 使用rclone
 
-Pigsty 仓库中提供了 [rclone](https://rclone.org/)， 一个方便的多云对象存储客户端，您可以使用它来访问 MinIO 服务。
+Pigsty 仓库中提供了 [rclone](https://rclone.org/)，一个方便的多云对象存储客户端，可以用它访问 Silo 服务。
 
 ```bash
 yum install rclone;  # EL 系列系统
@@ -148,7 +148,7 @@ rclone ls sss:/
 ```
 
 {{% alert title="注意：HTTPS 与证书信任" color="warning" %}}
-如果 MinIO 使用 HTTPS（默认配置），您需要确保客户端信任 Pigsty 的 CA 证书（`/etc/pki/ca.crt`），或者在 rclone 配置中添加 `no_check_certificate = true` 来跳过证书验证（不建议在生产环境使用）。
+如果 Silo 使用 HTTPS（默认配置），需要确保客户端信任 Pigsty CA 证书（`/etc/pki/ca.crt`），或者在 rclone 配置中添加 `no_check_certificate = true` 跳过证书验证（不建议在生产环境使用）。
 {{% /alert %}}
 
 
@@ -157,7 +157,7 @@ rclone ls sss:/
 ## 配置备份仓库
 
 在 Pigsty 中，MINIO 模块的主要用例是作为 pgBackRest 的 S3 备份仓库。
-当您修改 [`pgbackrest_method`](/docs/pgsql/param#pgbackrest_method) 为 `minio` 时，PGSQL 模块会自动将备份存储仓库切换到 MinIO 上。
+当您将 [`pgbackrest_method`](/docs/pgsql/param#pgbackrest_method) 设为 `minio` 时，PGSQL 模块会使用同名的 S3 兼容仓库预设；MINIO 模块部署的 Silo 可以直接使用该预设。
 
 ```yaml
 pgbackrest_method: local          # pgbackrest repo method: local,minio,[user-defined...]
@@ -184,4 +184,4 @@ pgbackrest_repo:                  # pgbackrest repo: https://pgbackrest.org/conf
     retention_full: 14            # keep full backup for last 14 days
 ```
 
-请注意，如果您使用了多节点部署的 MinIO 集群，并通过负载均衡器对外提供服务，您需要相应地修改这里的 `s3_endpoint` 与 `storage_port` 参数。
+如果使用多节点 Silo 集群并通过负载均衡器对外提供服务，需要相应修改这里的 `s3_endpoint` 与 `storage_port`。

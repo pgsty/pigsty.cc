@@ -57,11 +57,12 @@ etcd:
 
 ## 销毁集群
 
-要销毁一个 etcd 集群，请使用独立的 [`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本。执行此命令前请务必三思！
+要销毁一个 Etcd 集群，请使用独立的 [`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本。默认的 `etcd_rm_data: true` 会删除本机数据与配置；请先确认没有 PostgreSQL 集群仍将它用作 DCS，并核验近期备份和精确目标名。
 
 ```bash
-./etcd-rm.yml                         # 移除整个 etcd 集群
-./etcd-rm.yml -e etcd_safeguard=false # 强制覆盖防误删保险
+./etcd-rm.yml -l etcd --check                    # 先对完整且精确的目标预演
+./etcd-rm.yml -l etcd                            # 确认后销毁整个 etcd 集群
+./etcd-rm.yml -l etcd -e etcd_safeguard=false   # 仅在清单已启用保险时显式覆盖
 ```
 
 或使用便捷脚本：
@@ -70,7 +71,7 @@ etcd:
 bin/etcd-rm                           # 移除整个 etcd 集群
 ```
 
-移除剧本会尊重 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 防误删保险的配置。如果该参数设置为 `true`，剧本将中止执行以防止误删。
+移除剧本会尊重 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 防误删保险的配置。如果该参数设置为 `true`，剧本将在退群、注销、停服和删除之前中止；其默认值为 `false`，不能把未显式覆盖保险当作一次确认。
 
 {{% alert title="注意" color="warning" %}}
 在移除 etcd 集群之前，请确保没有 PostgreSQL 集群正在使用该 etcd 作为 DCS 服务。否则会导致 PostgreSQL 高可用功能失效。
@@ -317,23 +318,26 @@ bin/etcd-rm <ip1> <ip2> ...   # 移除多个成员
 bin/etcd-rm                   # 移除整个 etcd 集群
 ```
 
-脚本会自动完成以下操作：
+脚本会依次尝试以下操作：
 - 从集群中优雅地移除成员
 - 停止并禁用 etcd 服务
 - 清理数据和配置文件
 - 从监控系统中注销
+
+底层移除角色会容忍部分退群与清理错误，因此脚本结束后仍必须核对 `etcdctl member list`、端点健康、剩余仲裁，以及目标服务和数据目录的实际状态。
 
 ### 手动方式：分步操作
 
 要从 etcd 集群中删除一个成员实例，通常需要以下步骤：
 
 1. **保持成员仍在配置清单中**：移除剧本需要清单里的 `etcd_seq`、集群成员和连接端点信息
-2. **清理实例**：对目标运行 `etcd-rm.yml`；剧本会先尝试 `member remove`，再停服并按参数清理
+2. **清理实例**：先用相同目标执行 `--check`，再运行 `etcd-rm.yml`；剧本会先尝试 `member remove`，再停服并按参数清理
 3. **更新配置清单**：成功后再从配置清单中注释或删除该实例
 4. **重载引用**：按 [重载配置](#重载配置) 刷新其余 etcd 成员及 Patroni/VIP-Manager 的端点
 
 ```bash
 # 此时 <ip> 必须仍在 etcd 清单组中
+./etcd-rm.yml -l <ip> --check          # 对完全相同的目标先预演
 ./etcd-rm.yml -l <ip>                  # 自动退出集群并清理实例
 # 成功后编辑 pigsty.yml 删除该成员，再刷新其余成员与客户端配置
 ```
@@ -351,7 +355,7 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 $ bin/etcd-rm 10.10.10.12
 ```
 
-脚本会自动完成所有操作，包括从集群中移除成员、停止服务、清理数据。
+脚本会尝试从集群中移除成员、停止服务并清理数据；结束后仍需按上文检查成员列表、仲裁与目标文件状态。
 
 **方法二：手动操作**
 
@@ -361,7 +365,7 @@ $ bin/etcd-rm 10.10.10.12
 $ ./etcd-rm.yml -l 10.10.10.12
 ```
 
-剧本会自动执行以下操作：
+剧本会依次尝试以下操作：
 1. 获取成员列表并找到对应的成员 ID
 2. 执行 `etcdctl member remove` 从集群中踢除
 3. 停止 etcd 服务
@@ -381,7 +385,7 @@ Member 93fcf23b220473fb removed from cluster 6646fbcf5debc68f
 
 手工踢除后仍需在目标尚存于清单时运行 `./etcd-rm.yml -l 10.10.10.12` 完成停服、注销和清理；其退出步骤找不到已删除的成员时会跳过。
 
-实例清理成功后，才从配置清单中删除 `10.10.10.12`，并按 [重载配置](#重载配置) 刷新其余 etcd 成员和所有客户端引用，移除成员至此完成。
+确认成员已经离开现场集群、剩余成员保持仲裁且目标服务与文件符合预期后，才从配置清单中删除 `10.10.10.12`，并按 [重载配置](#重载配置) 刷新其余 Etcd 成员和所有客户端引用，移除成员至此完成。
 
 重复以上步骤，可以移除更多成员，与 [添加成员](#添加成员) 配合使用，可以对 etcd 集群进行滚动升级搬迁。
 

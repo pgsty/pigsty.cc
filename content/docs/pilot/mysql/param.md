@@ -1,13 +1,13 @@
 ---
 title: 参数参考
 weight: 5012
-description: MYSQL 模块 11 项公开参数与固定平台约定。
+description: MYSQL 模块 13 项公开参数：11 项部署参数、2 项受保护移除参数，以及固定平台约定。
 icon: fa-solid fa-sliders
 module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 角色刻意只公开 11 项参数。软件版本、端口、目录、字符集、TLS 路径与定时器表达式由角色统一固定，内存基线按节点规格推导；需要调整服务器行为时使用 [`mysql_parameters`](#mysql_parameters)。
+MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保护运维参数。软件版本、端口、目录、字符集、TLS 路径与定时器表达式由角色统一固定，内存基线按节点规格推导；需要调整服务器行为时使用 [`mysql_parameters`](#mysql_parameters)。
 
 
 --------
@@ -27,6 +27,14 @@ MYSQL 角色刻意只公开 11 项参数。软件版本、端口、目录、字�
 | [`mysql_backup_enabled`](#mysql_backup_enabled) | 集群 | `true` | 每日全量备份定时器 |
 | [`mysql_backup_repo`](#mysql_backup_repo) | 集群 | 见下文 | 本地备份目录与保留份数 |
 | [`mysql_exporter_enabled`](#mysql_exporter_enabled) | 集群 | `true` | Exporter 与监控 Target |
+{.full-width}
+
+移除参数由 `mysql-rm.yml` 使用：
+
+| 参数 | 层级 | 默认值 | 说明 |
+|:---|:---:|:---|:---|
+| [`mysql_safeguard`](#mysql_safeguard) | 全局/集群/命令行 | `true` | 默认拒绝执行移除 |
+| [`mysql_rm_confirm`](#mysql_rm_confirm) | 命令行 | `''` | 必须精确匹配实例名或集群名 |
 {.full-width}
 
 旧版页面曾出现的 `mysql_role`、`mysql_services`、`mysql_packages`、`mysql_data`、`mysql_port`、`mysql_replication_*`、`mysql_*_username` 等变量已不属于公开接口，请勿使用。
@@ -187,6 +195,23 @@ mysql_exporter_enabled: true
 ```
 
 设为 `false` 时停用 Exporter 服务，并将 `/infra/targets/mysql/<实例>.yml` 收敛为空列表（不删除文件；文件只由 `mysql-rm.yml` 删除）。
+
+
+--------
+
+## 移除参数
+
+### `mysql_safeguard`
+
+受保护移除的保险开关，默认值为 `true`。执行 `mysql-rm.yml` 时必须显式设置为 `false`，否则角色会拒绝继续：
+
+```bash
+./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
+```
+
+### `mysql_rm_confirm`
+
+目标名称确认字符串，默认值为空。移除单个成员时必须精确等于实例名（例如 `my-test-3`）；移除完整集群或单机实例时必须精确等于 `mysql_cluster`。该参数与 `mysql_safeguard=false` 缺一不可。
 
 
 --------

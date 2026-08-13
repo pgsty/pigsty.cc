@@ -169,15 +169,17 @@ export ALICLOUD_REGION="cn-shanghai"
 
 以下是阿里云中常用的 [**ECS 公共操作系统镜像**](https://help.aliyun.com/zh/ecs/user-guide/public-mirroring-overview) 前缀：
 
+当前推荐并验证的基线为 Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.6，以及 Ubuntu 22.04.5 / 24.04.4 / 26.04.0。
+
 | 发行版                   | 代码     | x86_64 镜像前缀                       | aarch64 镜像前缀                        |
 |-----------------------|--------|-----------------------------------|-------------------------------------|
 | CentOS 7.9            | `el7`  | `centos_7_9_x64`                  | -                                   |
 | Rocky 8.10            | `el8`  | `rockylinux_8_10_x64`             | `rockylinux_8_10_arm64`             |
-| Rocky 9.7             | `el9`  | `rockylinux_9_7_x64`              | `rockylinux_9_7_arm64`              |
-| Rocky 10.1            | `el10` | `rockylinux_10_1_x64`             | `rockylinux_10_1_arm64`             |
+| Rocky 9.8             | `el9`  | `rockylinux_9_8_x64`              | `rockylinux_9_8_arm64`              |
+| Rocky 10.2            | `el10` | `rockylinux_10_2_x64`             | `rockylinux_10_2_arm64`             |
 | Debian 11.11          | `d11`  | `debian_11_11_x64`                | -                                   |
-| Debian 12.14          | `d12`  | `debian_12_14_x64`                | `debian_12_14_arm64`                |
-| Debian 13.5           | `d13`  | `debian_13_5_x64`                 | `debian_13_5_arm64`                 |
+| Debian 12.15          | `d12`  | `debian_12_15_x64`                | `debian_12_15_arm64`                |
+| Debian 13.6           | `d13`  | `debian_13_6_x64`                 | `debian_13_6_arm64`                 |
 | Ubuntu 22.04.5 LTS    | `u22`  | `ubuntu_22_04_x64_20G`            | `ubuntu_22_04_arm64_20G`            |
 | Ubuntu 24.04.4 LTS    | `u24`  | `ubuntu_24_04_x64_20G`            | `ubuntu_24_04_arm64_20G`            |
 | Ubuntu 26.04.0 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
