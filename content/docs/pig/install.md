@@ -50,20 +50,20 @@ curl -fsSL https://repo.pigsty.cc/pig | bash -s X.Y.Z
 
 ## 发布产物下载
 
-当前 `v1.7.0` 安装包（`RPM`/`DEB`/压缩包）可从 [GitHub Release](https://github.com/pgsty/pig/releases/tag/v1.7.0) 获取，发布哈希见 [checksums.txt](https://github.com/pgsty/pig/releases/download/v1.7.0/checksums.txt)。直接下载格式如下：
+当前 `v1.8.0` 安装包（`RPM`/`DEB`/压缩包）可从 [GitHub Release](https://github.com/pgsty/pig/releases/tag/v1.8.0) 获取，发布哈希见 [checksums.txt](https://github.com/pgsty/pig/releases/download/v1.8.0/checksums.txt)。直接下载格式如下：
 
-- `https://github.com/pgsty/pig/releases/download/v1.7.0/<filename>`
+- `https://github.com/pgsty/pig/releases/download/v1.8.0/<filename>`
 
 ```text
-v1.7.0
-├── pig_1.7.0-1_amd64.deb
-├── pig_1.7.0-1_arm64.deb
-├── pig-1.7.0-1.aarch64.rpm
-├── pig-1.7.0-1.x86_64.rpm
-├── pig-v1.7.0.linux-amd64.tar.gz
-├── pig-v1.7.0.linux-arm64.tar.gz
-├── pig-v1.7.0.darwin-amd64.tar.gz
-└── pig-v1.7.0.darwin-arm64.tar.gz
+v1.8.0
+├── pig_1.8.0-1_amd64.deb
+├── pig_1.8.0-1_arm64.deb
+├── pig-1.8.0-1.aarch64.rpm
+├── pig-1.8.0-1.x86_64.rpm
+├── pig-v1.8.0.linux-amd64.tar.gz
+├── pig-v1.8.0.linux-arm64.tar.gz
+├── pig-v1.8.0.darwin-amd64.tar.gz
+└── pig-v1.8.0.darwin-arm64.tar.gz
 ```
 
 将其解压后，将二进制文件放入您的 PATH 系统路径中即可。
