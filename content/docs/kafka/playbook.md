@@ -218,17 +218,19 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 
 ## `kafka-rm.yml`
 
-移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。`-l` 选中一个集群的 **全部成员** 即为集群下线，选中 **真子集** 即为成员退役，两者共用同一执行顺序：
+移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。
+该剧本 **强制要求非空 `-l/--limit`**，裸跑会在进入角色前失败；`-l` 选中一个集群的 **全部成员** 即为集群下线，选中 **真子集** 即为成员退役，两者共用同一执行顺序：
 
-注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 经幸存成员摘除 KRaft Voter 条目与 Broker 注册（`kafka_retire`，仅在选中真子集时有幸存成员可用）→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
+注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 经幸存成员摘除 KRaft Voter 条目与 Broker 注册（`kafka_retire`，仅在选中真子集时有幸存成员可用）
+→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
 
+在任何注销或停服前，角色还会验证 `kafka_data` 是专用的安全绝对路径：不含 `.`/`..` 路径段，且不能是 `/`、`/data`、`/var`、`/etc`、`/opt`、`/usr`、`/home`、`/root` 或 `/pg`。
 防误删开关是 `kafka_safeguard`：设置为 `true`（命令行或清单中）时剧本直接中止，不删除任何东西。身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由——先用 [`kafka.yml`](#kafkayml) 收敛并读取失败原因。
 
 
 ### 集群下线
 
 ```bash
-./kafka-rm.yml -l kf-main --check                  # 先以完全相同的完整集群目标预演
 ./kafka-rm.yml -l kf-main                          # 移除集群：注销监控、停服务，默认删除数据与 /etc/kafka 恢复状态
 ./kafka-rm.yml -l kf-main -e kafka_rm_data=false   # 保留磁盘数据与 /etc/kafka 恢复状态，只移除服务集成
 ./kafka-rm.yml -l kf-main -e kafka_rm_pkg=true     # 同时卸载 kafka-stack 软件包（共享的 Java 运行时不会卸载）
@@ -242,11 +244,14 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 ### 成员退役
 
 ```bash
-./kafka-rm.yml -l 10.10.10.13 --check              # 先以完全相同的成员目标预演
 ./kafka-rm.yml -l 10.10.10.13                      # 退役单个成员：摘除 Voter 条目与 Broker 注册，再清理本机
 ```
 
-剧本通过一台幸存成员尝试摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。元数据操作委派给幸存成员，因此对已经死亡、无法连接的节点同样适用——这也是 [替换故障节点](/docs/kafka/admin#替换故障节点) 的第一步。注销 Broker 的命令被设计为可重入并容忍失败；真实运行后必须检查现场 Quorum、Broker 注册和副本健康，不能只凭剧本返回状态判定退役完成。
+部分退役要求 `-l` 之外至少保留一个 Broker-capable（`combined`/`broker`）成员和一个 Controller-capable（`combined`/`controller`）成员；
+两者可以是同一台 Combined 节点。缺少任一幸存锚点时，剧本会在注销或停服前失败。
+通过这些幸存成员，剧本尝试摘除目标的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。
+元数据操作委派给幸存成员，因此对已经死亡、无法连接的目标节点同样适用——这也是 [替换故障节点](/docs/kafka/admin#替换故障节点) 的第一步。
+注销 Broker 的命令被设计为可重入并容忍失败；真实运行后必须检查现场 Quorum、Broker 注册和副本健康，不能只凭剧本返回状态判定退役完成。
 
 退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。
 

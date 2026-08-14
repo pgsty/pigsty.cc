@@ -108,7 +108,7 @@ juice_instances:
 ```
 
 移除动作包括：停止服务、懒卸载、删除 systemd 单元与环境文件、重载 systemd；随后 `juice_register` 会重写该节点的目标文件并移除陈旧抓取地址。只执行 `juice_clean` 不会更新监控 Target。
-**不会删除** PostgreSQL 元数据或对象存储数据。
+**不会删除** PostgreSQL 元数据、PostgreSQL `jfs_blob` 数据表或对象存储数据。
 
 --------
 

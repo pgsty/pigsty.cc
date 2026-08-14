@@ -15,7 +15,7 @@ categories: [参考]
 这意味着正准备移除的 Redis 实例打开了防误删保险：当 [`redis_safeguard`](/docs/redis/param#redis_safeguard) 设置为 `true` 时，`redis-rm.yml` 会无条件拒绝执行。
 该开关不会探测实例是否正在运行。
 
-确认精确的 `-l`/`redis_port` 目标、近期备份以及 `redis_rm_data` 的取值后，先对同一目标执行 `--check`；确需移除时，再通过 `-e redis_safeguard=false` 覆盖保护。该参数只解除保险，不会替您验证目标或数据可恢复性。
+确认精确的 `-l`/`redis_port` 目标、近期备份以及 `redis_rm_data` 的取值后，通过 `-e redis_safeguard=false` 覆盖保护并执行移除。该参数只解除保险，不会替您验证目标或数据可恢复性。
 
 
 

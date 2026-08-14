@@ -291,7 +291,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 紧急情况下，可以使用命令行参数覆盖配置：
 
 ```bash
-./etcd-rm.yml -e etcd_safeguard=false
+./etcd-rm.yml -l etcd -e etcd_safeguard=false # 覆盖保险并移除目标 Etcd 集群
 ```
 
 
@@ -322,7 +322,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 
 ```bash
 # 仅停止服务，保留数据
-./etcd-rm.yml -e etcd_rm_data=false
+./etcd-rm.yml -l etcd -e etcd_rm_data=false
 ```
 
 
@@ -346,7 +346,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 
 ```bash
 # 移除时同时卸载软件包
-./etcd-rm.yml -e etcd_rm_pkg=true
+./etcd-rm.yml -l etcd -e etcd_rm_pkg=true
 ```
 
 {{% alert title="提示" color="info" %}}

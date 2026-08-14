@@ -89,7 +89,7 @@ juice_instances:
 `data` 字段直接拼接到 `juicefs format`，可配置任意支持的后端。
 以下为常见示例：
 
-### PostgreSQL 大对象
+### PostgreSQL 数据后端
 
 ```yaml
 juice_instances:
@@ -99,14 +99,17 @@ juice_instances:
     data: --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
 ```
 
-### MinIO 对象存储
+JuiceFS 会在 `--bucket` 指定的数据库中创建 `jfs_blob` 表存储文件数据。
+这里的 PostgreSQL 数据后端与 `meta` 元数据引擎是两个独立角色；它们可以使用同一个数据库，也可以分别部署。数据库和具有读写权限的用户必须预先存在。
+
+### Silo / MinIO 兼容对象存储
 
 ```yaml
 juice_instances:
   jfs:
     path: /fs
     meta: postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
-    data: --storage minio --bucket http://10.10.10.10:9000/juice --access-key minioadmin --secret-key minioadmin
+    data: --storage minio --bucket https://sss.pigsty:9000/juice --access-key <s3_access_key> --secret-key <s3_secret_key>
 ```
 
 ### S3 兼容存储
@@ -135,7 +138,7 @@ juice_instances:
   shared:
     path: /shared
     meta: postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/shared
-    data: --storage minio --bucket http://10.10.10.10:9000/shared
+    data: --storage minio --bucket https://sss.pigsty:9000/shared --access-key <s3_access_key> --secret-key <s3_secret_key>
     port: 9568
     owner: postgres
     group: postgres
@@ -160,3 +163,4 @@ app:
 
 - `port` 会暴露在 `0.0.0.0`，请结合防火墙或安全组控制访问。
 - `data` 变更不会更新已存在的文件系统，如需切换后端请手动处理。
+- `meta` 与 `data` 可能包含数据库或对象存储凭据；请限制 `pigsty.yml` 的读取权限，并使用独立的最小权限账号，生产环境不要沿用示例密码。

@@ -13,6 +13,12 @@ categories: [任务]
 目标集群需要能访问源集群的备份仓库、允许被覆盖，并使用兼容的 PostgreSQL 主版本。使用集中式仓库（[**Silo / S3**](/docs/pgsql/backup/repository/)）时，
 仓库中以 [**stanza**](/docs/pgsql/backup/mechanism/#stanza集群的备份身份) 隔离的各集群备份，对持有相应凭据的目标集群可见。
 
+{{% alert color="danger" title="克隆会覆盖目标集群" %}}
+先用 `pig pg list <目标集群>` 核对目标拓扑、用 `pig pb info` 核对源 stanza 的近期备份与恢复窗口，
+并由操作者确认精确的源集群、目标集群和恢复点后实施恢复。
+目标集群上原有的数据会被覆盖；生产操作仍需维护窗口和独立、已验证的备份。
+{{% /alert %}}
+
 
 --------
 
@@ -23,6 +29,8 @@ categories: [任务]
 中把恢复来源指向 `pg-meta` 的 stanza：
 
 ```bash
+pig pg list pg-test
+pig pb info
 ./pgsql-pitr.yml -l pg-test -e '{"pg_pitr": { "cluster": "pg-meta", "archive": false, "action": "promote" }}'
 ```
 
@@ -53,7 +61,8 @@ pgBackRest 的还原是增量的（`delta`）：只重写与备份不一致的�
 克隆出的新集群带着 **源集群的数据**，但备份仓库中它自己的 stanza 仍记录着 **原来的身份**（system-id）。
 pgBackRest 写入备份前会核对身份，不一致即拒绝 —— 这个保护机制防止新集群的备份污染源集群的备份历史。
 
-因此，确认克隆结果符合预期后，必须执行三步善后，新集群的备份链路才能恢复正常：
+因此，确认克隆结果符合预期后，必须执行三步善后，新集群的备份链路才能恢复正常。
+其中集群重启是服务变更：先核对主库、复制状态和维护窗口，并获得明确批准：
 
 ```bash
 pb stanza-upgrade                          # 1. 升级 stanza，接纳新集群的 system-id（仅跨集群克隆需要）
@@ -82,20 +91,25 @@ INFO: backup command end: aborted with exception [051]
 （例如克隆出的集群将长期独立演化），也可以选择彻底重建其备份配置 —— 声明式方式：
 
 ```bash
-./pgsql-rm.yml -t pg_backup -l pg-test -e pg_rm_backup=true   # 删除 pg-test 的 stanza 与旧备份
-./pgsql.yml    -t pg_backup -l pg-test                        # 重新配置 pgbackrest，创建全新 stanza
-pg-backup full                                                # 建立第一个恢复点
+pig pb info -s pg-test           # 核对现有备份与恢复窗口
+pig pb delete -s pg-test         # 输入精确 stanza 名确认后执行
+./pgsql.yml -t pg_backup -l pg-test          # 创建全新 stanza
+pg-backup full                               # 建立第一个恢复点
 ```
 
 或者用 [**pgbackrest 原语**](/docs/pgsql/backup/admin/#stanza-管理) 手动完成同样的事情：
 
 ```bash
-pb stop --force            # 暂停 pgbackrest 操作
-pb stanza-delete --force   # 删除 stanza 及其备份（危险操作，确认无误再执行）
-pb start                   # 恢复 pgbackrest 操作
-pb stanza-create           # 以当前集群身份重建 stanza
-pg-backup full             # 建立第一个恢复点
+pig pb stop                       # 暂停 pgbackrest 操作
+pig pb delete -s pg-test          # 确认精确目标后删除
+pig pb start                      # 恢复 pgbackrest 操作
+pig pb create -s pg-test          # 以当前集群身份重建 stanza
+pig pb backup full -s pg-test     # 建立第一个恢复点
 ```
+
+{{% alert color="warning" title="重建会永久丢弃旧恢复历史" %}}
+只有在已经核对近期备份、保留了需要的独立恢复副本，并由操作者确认精确的 `pg-test` stanza 后，才可执行删除。对象锁定仓库中的历史版本可能继续保留并占用空间；删除命令成功不等于底层版本已经物理清空。
+{{% /alert %}}
 
 
 --------

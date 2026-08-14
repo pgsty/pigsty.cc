@@ -223,7 +223,7 @@ Exporter 使用的 Kafka 协议版本、TLS/SCRAM 参数和副本放置均为角
 
 ### `kafka_users`
 
-默认 `[]`，仅允许在 `scram` 模式声明。每个对象只接受 `name`、`password`、`acls`、`quota`：
+默认 `[]`，仅允许在 `scram` 模式声明。集合必须是对象列表，每个对象只接受 `name`、`password`、`acls`、`quota`；非对象条目或未知顶层字段会在资源收敛前失败：
 
 ```yaml
 kafka_users:
@@ -260,7 +260,7 @@ kafka_users:
 
 ### `kafka_topics`
 
-默认 `[]`。每个对象只接受 `name`、`partitions`、`replication_factor`、`config`：
+默认 `[]`。集合必须是对象列表，每个对象只接受 `name`、`partitions`、`replication_factor`、`config`；非对象条目或未知顶层字段会在资源收敛前失败：
 
 ```yaml
 kafka_topics:
@@ -288,11 +288,11 @@ kafka_topics:
 
 以下变量只通过命令行 `-e` 用于一次性运维动作，不属于 15 项持久 API，也不应写入 `pigsty.yml`：
 
-| 动作     | 剧本             | 临时变量                                                                                | 保护条件                           |
-|:-------|:---------------|:------------------------------------------------------------------------------------|:-------------------------------|
-| 轮换内部凭据 | `kafka.yml`    | `kafka_rotate_credentials=true`、`kafka_rotate_confirm=<cluster>`                    | 健康、全员已格式化的 `scram` 集群          |
-| 轮换证书   | `kafka.yml`    | `kafka_rotate_certificates=true`、`kafka_rotate_confirm=<cluster>`                   | 健康、全员已格式化的 `scram` 集群          |
-| 下线集群   | `kafka-rm.yml` | `kafka_rm_data`（默认 `true`）、`kafka_rm_pkg`（默认 `false`）、`kafka_safeguard`（默认 `false`） | `kafka_safeguard=true` 时中止一切删除 |
+| 动作     | 剧本             | 临时变量                                                                                | 保护条件                                     |
+|:-------|:---------------|:------------------------------------------------------------------------------------|:-----------------------------------------|
+| 轮换内部凭据 | `kafka.yml`    | `kafka_rotate_credentials=true`、`kafka_rotate_confirm=<cluster>`                    | 健康、全员已格式化的 `scram` 集群                    |
+| 轮换证书   | `kafka.yml`    | `kafka_rotate_certificates=true`、`kafka_rotate_confirm=<cluster>`                   | 健康、全员已格式化的 `scram` 集群                    |
+| 下线集群   | `kafka-rm.yml` | `kafka_rm_data`（默认 `true`）、`kafka_rm_pkg`（默认 `false`）、`kafka_safeguard`（默认 `false`） | 强制显式 `-l`；`kafka_safeguard=true` 时中止一切删除 |
 {.full-width}
 
 两种轮换动作互斥，且必须以精确完整集群为目标。`kafka-rm.yml` 默认删除数据目录与节点上的 `/etc/kafka` 恢复状态；`kafka_rm_data=false` 会同时保留二者。执行前必须显式确认目标集群与备份/重建意图，命令与完整语义见 [预置剧本](/docs/kafka/playbook)。

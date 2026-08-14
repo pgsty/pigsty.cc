@@ -151,16 +151,16 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 
 # 3. 修改密码（重要！）
 vi pigsty.yml
-# 修改 code_password, jupyter_password 等
+# 修改 code_password、jupyter_password、数据库与基础设施默认密码
 
 # 4. 部署基础设施和 PostgreSQL
 ./deploy.yml
 
-# 5. 部署 JuiceFS 文件系统
-./juice.yml
+# 5. 可选：部署 JuiceFS 文件系统
+./juice.yml -l 10.10.10.10
 
 # 6. 部署 VIBE 模块（Code-Server、JupyterLab、Claude Code、Codex CLI）
-./vibe.yml
+./vibe.yml -l 10.10.10.10
 ```
 
 
@@ -171,20 +171,20 @@ vi pigsty.yml
 部署完成后，通过浏览器访问：
 
 ```bash
-# Code-Server (VS Code Web)
-http://<ip>/code
-# 密码：DBUser.Meta（请修改）
+# Code-Server（VS Code Web）
+https://<domain>/code/
+# 使用已轮换的 code_password
 
 # JupyterLab
-http://<ip>/jupyter
-# 密码：DBUser.Meta（请修改）
+https://<domain>/jupyter/
+# 使用已轮换的 jupyter_password Token
 
 # Claude Code 仪表盘
-http://<ip>/ui/d/claude-code
-# Grafana 默认用户名：admin，密码：pigsty
+https://<domain>/ui/d/claude-code
+# 使用已轮换的 Grafana 管理凭据
 
 # PostgreSQL
-psql postgres://dbuser_meta:DBUser.Meta@<ip>:5432/meta
+psql 'host=<ip> port=5432 dbname=meta user=dbuser_meta sslmode=require'
 ```
 
 
@@ -205,7 +205,8 @@ psql postgres://dbuser_meta:DBUser.Meta@<ip>:5432/meta
 ## 注意事项
 
 - **必须修改密码**：`code_password` 和 `jupyter_password` 默认值仅供测试
-- **网络安全**：此模板默认开放 `5432`（`node_firewall_public_port`）且包含 `addr: world` HBA 规则，生产环境请收紧
+- **Jupyter 安全边界**：模板监听 `0.0.0.0:8888`、允许任意 Origin、关闭 XSRF 校验，默认只依靠 Token；必须限制端口与门户来源，不得直接暴露公网
+- **网络安全**：此模板默认开放 `5432`（`node_firewall_public_port`）且包含 `addr: world` HBA 规则，生产环境请删除这些公网入口，并在需要时为门户增加 Basic Auth
 - **资源需求**：建议至少 2 核 4GB 内存，SSD 磁盘
 - **精简架构**：此模板禁用了 Patroni、PgBouncer 等高可用组件，适合单节点开发环境
 - **Claude API**：使用 Claude Code 需要配置 `claude_env` 中的 API 密钥

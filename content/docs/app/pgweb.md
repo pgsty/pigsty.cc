@@ -7,53 +7,46 @@ module: [SOFTWARE]
 categories: [参考]
 ---
 
-## PGWeb客户端工具
+## PGWeb 客户端
 
-[PGWeb](https://github.com/sosedoff/pgweb) 是一款基于浏览器的 PG 客户端工具，使用以下命令，在元节点上拉起 PGWEB 服务，默认为主机 `8886` 端口。可使用域名： http://cli.pigsty 访问，公开 Demo：http://cli.pigsty.cc。
+[PGWeb](https://github.com/sosedoff/pgweb) 是一款基于浏览器的 PostgreSQL 客户端。Pigsty 在 `app/pgweb` 中提供了一个小型 Docker Compose 模板，把容器的 `8081` 端口发布到主机的 `8886` 端口。
 
 ```bash
-# docker stop pgweb; docker rm pgweb
-docker run --init --name pgweb --restart always --detach --publish 8886:8081 sosedoff/pgweb
+cd ~/pigsty/app/pgweb
+make up                    # docker compose up -d
 ```
 
-用户需要自行填写数据库连接串，例如默认 CMDB 的连接串：
+当 `cli.pigsty` 门户项解析到 Infra 节点时，可打开 [http://cli.pigsty](http://cli.pigsty)，也可以直接访问 `http://10.10.10.10:8886`。公开演示地址为 [http://cli.pigsty.cc](http://cli.pigsty.cc)。
 
-`postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslmode=disable`
+PGWeb 会要求输入 PostgreSQL 连接 URL，例如：
 
-
-
-公开 Demo 地址：[http://cli.pigsty.cc](http://cli.pigsty.cc)
-
-![PGWeb](/img/docs/app/pgweb.jpeg)
-
-
-使用 Docker Compose 拉起 PGWEB 容器：
-
-```bash
-cd ~/pigsty/app/pgweb ; docker-compose up -d
-```
-
-接下来，访问您本机的 8886 端口，即可看到 PGWEB 的 UI 界面： http://10.10.10.10:8886
-
-您可以尝试使用下面的 URL 连接串，通过 PGWEB 连接至数据库实例并进行探索。
-
-```bash
+```text
 postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta?sslmode=disable
 postgres://test:test@10.10.10.11:5432/test?sslmode=disable
 ```
 
+这些字符串包含公开的演示默认密码并关闭 TLS。实际部署应使用最小权限账户、非默认密码和合适的 `sslmode`，
+不要把未加额外访问控制的 PGWeb 容器或数据库凭据暴露给不可信网络。
+
+![PGWeb](/img/docs/app/pgweb.jpeg)
+
+
 ## 快捷方式
 
+模板附带的 `Makefile` 提供：
+
 ```bash
-make up         # pull up pgweb with docker-compose
-make run        # launch pgweb with docker
-make view       # print pgweb access point
-make log        # tail -f pgweb logs
-make info       # introspect pgweb with jq
-make stop       # stop pgweb container
-make clean      # remove pgweb container
-make pull       # pull latest pgweb image
-make rmi        # remove pgweb image
-make save       # save pgweb image to /tmp/pgweb.tgz
-make load       # load pgweb image from /tmp
+make up         # 使用 docker compose 启动
+make run        # 使用 docker run 启动
+make view       # 打印本地访问入口与示例 URL
+make log        # 跟踪容器日志
+make info       # 使用 jq 检查容器
+make stop       # 停止容器
+make clean      # 停止并删除容器
+make pull       # 拉取当前未固定版本的 sosedoff/pgweb 镜像
+make rmi        # 删除本地镜像
+make save       # 将镜像保存到 /tmp/docker/pgweb.tgz
+make load       # 从 /tmp/docker/pgweb.tgz 加载镜像
 ```
+
+当前模板使用未固定版本的 `sosedoff/pgweb` 镜像；若正式环境要求部署可复现，应在 `app/pgweb/docker-compose.yml` 中固定镜像版本或摘要。

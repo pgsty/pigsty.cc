@@ -29,6 +29,7 @@ categories: [任务]
 
 * 在执行时添加 `-l` 参数，限制命令执行的对象范围，并确保自己在正确的目标上执行正确的任务。
 * 限制范围通常以一个数据库集群为宜，使用不带参数的 `pgsql.yml` 在生产环境中是一个高危操作，务必三思而后行。
+* 移除前核对 `pig pg list <cluster>` 与 `pig pb info`，确认近期备份，并让操作者输入精确目标。
 
 出于防止误删的目的，Pigsty 的 PGSQL 模块提供了防误删保险，由 [`pg_safeguard`](/docs/pgsql/param#pg_safeguard) 参数控制。
 当 `pg_safeguard` 设置为 `true` 时，[`pgsql-rm.yml`](#pgsql-rmyml) 剧本会立即中止执行，防止误删数据库集群。

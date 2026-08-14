@@ -145,6 +145,8 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 
 > **提示**：如果只想更新配置而不想重启所有实例，可以使用 `-t redis_config` 仅渲染配置，然后手动重启需要的实例。
 
+Redis/Valkey 采用 `Type=notify`。实例启动时 systemd 最多等待 `1800s` 收到就绪通知，以覆盖大型 RDB/AOF 加载与恢复；
+
 
 
 --------
@@ -163,6 +165,12 @@ redis            : 停止并禁用 redis 实例
 redis_data       : 删除数据目录（当 redis_rm_data=true）
 redis_pkg        : 卸载所选引擎与 redis-exporter（当 redis_rm_pkg=true）
 ```
+
+标签化执行遵循数据/卸包开关：`-t redis` 总会进入实例停服阶段；
+单独运行 `-t redis_data` 只有在 `redis_rm_data=true` 时才停服，
+单独运行 `-t redis_pkg` 只有在 `redis_rm_pkg=true` 时才停服。
+换言之，`-t redis_data -e redis_rm_data=false` 与 `-t redis_pkg -e redis_rm_pkg=false`
+不会仅因选中标签就停止 Redis。真实移除前应核对完全相同的 `-l`、标签与 extra-vars。
 
 
 ### 操作级别
@@ -260,9 +268,6 @@ redis_pkg        : 卸载所选引擎与 redis-exporter（当 redis_rm_pkg=true�
 使用示例：
 
 ```bash
-# 先以完全相同的目标预演；默认真实运行会删除 RDB/AOF 数据目录
-./redis-rm.yml -l redis-ms --check
-
 # 移除集群但保留数据目录
 ./redis-rm.yml -l redis-ms -e redis_rm_data=false
 

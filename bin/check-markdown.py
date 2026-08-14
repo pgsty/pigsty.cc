@@ -28,7 +28,6 @@ from html.parser import HTMLParser
 import pathlib
 import re
 import sys
-import unicodedata
 
 
 FENCE_RE = re.compile(r"^(?P<indent> {0,3})(?P<run>`{3,}|~{3,})(?P<info>.*)$")
@@ -137,11 +136,21 @@ class RenderedMarkdownParser(HTMLParser):
                 self.issues.append(Issue(self.path, line, code, f"{message}: {snippet}"))
 
 
-def is_word_character(character: str) -> bool:
-    """Return whether a neighboring character should be separated by a space."""
+def is_cjk_character(character: str) -> bool:
+    """Return whether a neighboring character is CJK prose needing spacing."""
 
-    return bool(character) and (
-        character == "_" or unicodedata.category(character)[0] in {"L", "N"}
+    if not character:
+        return False
+    codepoint = ord(character)
+    return (
+        0x2E80 <= codepoint <= 0x2FFF
+        or 0x3040 <= codepoint <= 0x30FF
+        or 0x31F0 <= codepoint <= 0x31FF
+        or 0x3400 <= codepoint <= 0x4DBF
+        or 0x4E00 <= codepoint <= 0x9FFF
+        or 0xAC00 <= codepoint <= 0xD7AF
+        or 0xF900 <= codepoint <= 0xFAFF
+        or 0x20000 <= codepoint <= 0x323AF
     )
 
 
@@ -296,9 +305,9 @@ def add_boundary_spaces(line: str) -> str:
     def add_for_span(start: int, end: int) -> None:
         before = line[start - 1] if start else ""
         after = line[end] if end < len(line) else ""
-        if is_word_character(before):
+        if is_cjk_character(before):
             insertions.add(start)
-        if is_word_character(after):
+        if is_cjk_character(after):
             insertions.add(end)
 
     for match in INLINE_CODE_RE.finditer(line):
@@ -454,7 +463,7 @@ def scan_inline(path: pathlib.Path, line_number: int, line: str, state: Markdown
             issues.append(Issue(path, line_number, "MD101", "whitespace inside inline code"))
         before = line[match.start() - 1] if match.start() else ""
         after = line[match.end()] if match.end() < len(line) else ""
-        if is_word_character(before) or is_word_character(after):
+        if is_cjk_character(before) or is_cjk_character(after):
             issues.append(Issue(path, line_number, "MD102", "inline code touches surrounding prose"))
 
     for match in MARKDOWN_LINK_RE.finditer(line):
@@ -464,7 +473,7 @@ def scan_inline(path: pathlib.Path, line_number: int, line: str, state: Markdown
             issues.append(Issue(path, line_number, "MD103", "whitespace inside link label"))
         before = line[match.start() - 1] if match.start() else ""
         after = line[match.end()] if match.end() < len(line) else ""
-        if is_word_character(before) or is_word_character(after):
+        if is_cjk_character(before) or is_cjk_character(after):
             issues.append(Issue(path, line_number, "MD104", "Markdown link touches surrounding prose"))
 
     for match in EMPHASIS_RE.finditer(line):
@@ -472,7 +481,7 @@ def scan_inline(path: pathlib.Path, line_number: int, line: str, state: Markdown
             continue
         before = line[match.start() - 1] if match.start() else ""
         after = line[match.end()] if match.end() < len(line) else ""
-        if is_word_character(before) or is_word_character(after):
+        if is_cjk_character(before) or is_cjk_character(after):
             issues.append(Issue(path, line_number, "MD122", "emphasis touches surrounding prose"))
 
     adjacent = re.compile(r"(?<!\*)\*{4}(?!\*)")
@@ -497,7 +506,7 @@ def scan_inline(path: pathlib.Path, line_number: int, line: str, state: Markdown
             issues.append(Issue(path, line_number, "MD107", "invalid whitespace inside strong emphasis"))
         before = line[opening - 1] if opening else ""
         after = line[closing + 2] if closing + 2 < len(line) else ""
-        if is_word_character(before) or is_word_character(after):
+        if is_cjk_character(before) or is_cjk_character(after):
             issues.append(Issue(path, line_number, "MD108", "strong emphasis touches surrounding prose"))
 
     trailing = re.search(r"[ \t]+$", line)

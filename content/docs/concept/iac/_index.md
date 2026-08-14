@@ -176,8 +176,8 @@ pg-meta:
     pg_vip_enabled: true
     pg_vip_address: 10.10.10.2/24
     pg_vip_interface: eth1
-    node_crontab:  # make a full backup 1 am everyday
-      - '00 01 * * * postgres /pg/bin/pg-backup full'
+    pg_crontab:  # 每天凌晨 1 点执行全量备份（写入 postgres 用户 crontab）
+      - '00 01 * * * /pg/bin/pg-backup full'
 
 ```
 

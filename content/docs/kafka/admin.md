@@ -294,7 +294,6 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 用 `kafka-rm.yml` 选择集群的 **真子集** 即为成员退役（选择整个集群则是 [**集群下线**](/docs/kafka/playbook#集群下线)）。退役会通过一台幸存成员，自动从现场元数据中摘除该节点：
 
 ```bash
-./kafka-rm.yml -l 10.10.10.13 --check  # 先以完全相同的成员目标预演
 ./kafka-rm.yml -l 10.10.10.13     # 退役单个成员：摘除 Voter 条目、注销 Broker、清理本机
 ```
 

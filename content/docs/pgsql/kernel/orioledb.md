@@ -48,7 +48,7 @@ pg-meta:
       - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty], extensions: [orioledb]}
     pg_hba_rules:
       - {user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes'}
-    node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
+    pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
 
     # OrioleDB 临时设置
     pg_mode: oriole                                         # oriole 兼容模式

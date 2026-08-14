@@ -18,8 +18,9 @@ categories: [参考]
 - 配置名称： `supabase`
 - 节点数量： 单节点
 - 配置说明：使用 Pigsty 托管的 PostgreSQL 自建 Supabase
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
+- 适用系统：`el8`, `el9`, `d12`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
+- PostgreSQL：`15`, `16`, `17`, `18`（模板默认 `18`）
 - 相关配置：[`meta`](/docs/conf/meta/)，[`rich`](/docs/conf/rich/)
 
 启用方式：
@@ -70,8 +71,8 @@ categories: [参考]
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase                   # 使用 supabase 配置模板
 ./deploy.yml                              # 安装 Pigsty、PostgreSQL、Silo
-./docker.yml                              # 安装 Docker
-./app.yml                                 # 启动 Supabase 容器
+./docker.yml -l supabase                  # 在 supabase 组安装 Docker
+./app.yml -l supabase                     # 在 supabase 组启动容器
 ```
 
 **访问方式**：

@@ -345,8 +345,8 @@ INFRA 模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/in
 ./infra-rm.yml               # 全量移除：注销、停服、删配置/环境/数据并卸载软件包
 ./infra-rm.yml -t deregister # 仅注销监控目标、数据源与日志采集
 ./infra-rm.yml -t service    # 停止 INFRA 上的基础设施服务
-./infra-rm.yml -t data       # 移除 INFRA 上的存留数据
-./infra-rm.yml -t package    # 卸载 INFRA 上安装的软件包
+./infra-rm.yml -t data       # 移除 INFRA 数据
+./infra-rm.yml -t package    # 卸载软件包
 ```
 
 全量执行没有防误删开关，并会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）和 `/var/lib/grafana`；执行前请先备份要保留的数据。

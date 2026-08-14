@@ -28,7 +28,7 @@ categories: [任务]
 使用 [`infra-rm.yml`](/docs/infra/playbook/#infra-rmyml) 剧本从 `infra` 分组上卸载 INFRA 模块：
 
 ```bash
-./infra-rm.yml  # 全量移除：注销、停服、删配置/环境/数据并卸载软件包
+./infra-rm.yml -l infra # 全量移除：注销、停服、删配置/环境/数据并卸载软件包
 ```
 
 该剧本没有防误删开关，且全量执行会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）和 `/var/lib/grafana`。

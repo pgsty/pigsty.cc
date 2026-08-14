@@ -88,16 +88,16 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 ## 对象存储
 
-| 名称                                                      | 版本               | 许可证                                                                             | 备注                       |
-|---------------------------------------------------------|------------------|---------------------------------------------------------------------------------|--------------------------|
-| [`silo`](https://github.com/pgsty/silo)                 | `20260806000000` | [AGPLv3](https://github.com/pgsty/silo/blob/main/LICENSE)                      | Pigsty 维护的开源 S3 兼容对象存储服务器   |
-| [`mcli`](https://github.com/pgsty/mc)                   | `20260806000000` | [AGPLv3](https://github.com/pgsty/mc/blob/main/LICENSE)                         | 开源 S3 客户端，现在由 pgsty 维护构建 |
-| [`rustfs`](https://github.com/rustfs/rustfs)            | `1.0.0-rc1`      | [Apache-2.0](https://github.com/rustfs/rustfs/blob/main/LICENSE)                | 仓库保留软件包；非 v4.5 MINIO 后端 |
-| [`garage`](https://git.deuxfleurs.fr/Deuxfleurs/garage) | `2.3.0`          | [AGPL-3.0](https://git.deuxfleurs.fr/Deuxfleurs/garage/src/branch/main/LICENSE) | 轻量级 S3                   |
-| [`seaweedfs`](https://github.com/seaweedfs/seaweedfs)   | `4.41`           | [Apache-2.0](https://github.com/seaweedfs/seaweedfs/blob/master/LICENSE)        | 小文件 S3                   |
-| [`rclone`](https://github.com/rclone/rclone/)           | `1.75.0`         | [MIT](https://github.com/rclone/rclone/blob/master/COPYING)                     | S3 命令行工具                 |
-| [`restic`](https://github.com/restic/restic)            | `0.19.1`         | [BSD-2](https://github.com/restic/restic/blob/master/LICENSE)                   | 备份工具                     |
-| [`juicefs`](https://github.com/juicedata/juicefs)       | `1.4.1`          | [Apache-2.0](https://github.com/juicedata/juicefs/blob/main/LICENSE)            | S3 上的文件系统                |
+| 名称                                                      | 版本               | 许可证                                                                             | 备注                        |
+|---------------------------------------------------------|------------------|---------------------------------------------------------------------------------|---------------------------|
+| [`silo`](https://github.com/pgsty/silo)                 | `20260806000000` | [AGPLv3](https://github.com/pgsty/silo/blob/main/LICENSE)                       | Pigsty 维护的开源 S3 兼容对象存储服务器 |
+| [`mcli`](https://github.com/pgsty/mc)                   | `20260806000000` | [AGPLv3](https://github.com/pgsty/mc/blob/main/LICENSE)                         | 开源 S3 客户端，现在由 pgsty 维护构建  |
+| [`rustfs`](https://github.com/rustfs/rustfs)            | `1.0.0-rc1`      | [Apache-2.0](https://github.com/rustfs/rustfs/blob/main/LICENSE)                | 仓库保留软件包；非 v4.5 MINIO 后端   |
+| [`garage`](https://git.deuxfleurs.fr/Deuxfleurs/garage) | `2.3.0`          | [AGPL-3.0](https://git.deuxfleurs.fr/Deuxfleurs/garage/src/branch/main/LICENSE) | 轻量级 S3                    |
+| [`seaweedfs`](https://github.com/seaweedfs/seaweedfs)   | `4.41`           | [Apache-2.0](https://github.com/seaweedfs/seaweedfs/blob/master/LICENSE)        | 小文件 S3                    |
+| [`rclone`](https://github.com/rclone/rclone/)           | `1.75.0`         | [MIT](https://github.com/rclone/rclone/blob/master/COPYING)                     | S3 命令行工具                  |
+| [`restic`](https://github.com/restic/restic)            | `0.19.1`         | [BSD-2](https://github.com/restic/restic/blob/master/LICENSE)                   | 备份工具                      |
+| [`juicefs`](https://github.com/juicedata/juicefs)       | `1.4.1`          | [Apache-2.0](https://github.com/juicedata/juicefs/blob/main/LICENSE)            | S3 上的文件系统                 |
 {.stretch-last}
 
 {{% alert title="SILO 已正式替换 MinIO" color="info" %}}
@@ -140,37 +140,37 @@ PostgreSQL 相关工具、数据库管理系统和其他实用程序
 
 Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
-| 名称                                                                                      | 版本         | 许可证                                                                                     | 备注                            |
-|-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|-------------------------------|
-| [`pig`](https://github.com/pgsty/pig)                                                   | `1.6.2`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
-| [`sow`](https://github.com/pgsty/sow)                                                   | `0.3.0`    | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                   |
-| [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.2.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点           |
-| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.2.1`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具   |
-| [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.12.2`   | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI  |
-| [`pgstream`](https://github.com/xataio/pgstream)                                        | `1.3.1`    | [Apache-2.0](https://github.com/xataio/pgstream/blob/main/LICENSE)                      | PostgreSQL 复制与 DDL 变更同步       |
-| [`pg-timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `7.0.0`    | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度               |
-| [`timescaledb-tools`](https://github.com/timescale/timescaledb-tune)                    | `0.19.0`   | [Apache-2.0](https://github.com/timescale/timescaledb-tune/blob/main/LICENSE)           | 优化 timescaledb 参数             |
-| [`timescaledb-event-streamer`](https://github.com/noctarius/timescaledb-event-streamer) | `0.20.0`   | [Apache-2.0](https://github.com/noctarius/timescaledb-event-streamer/blob/main/LICENSE) | timescaledb 超表 CDC            |
-| [`tigerfs`](https://github.com/timescale/tigerfs)                                       | `0.7.0`    | [MIT](https://github.com/timescale/tigerfs/blob/main/LICENSE)                           | 将 PostgreSQL 挂载为文件系统          |
-| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.47.4`   | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                     |
-| [`rainfrog`](https://github.com/achristmascarl/rainfrog)                                | `0.4.3`    | [MIT](https://github.com/achristmascarl/rainfrog/blob/main/LICENSE)                     | Postgres 终端数据库管理工具            |
-| [`sql-studio`](https://github.com/frectonz/sql-studio)                                  | `0.1.51`   | [MIT](https://github.com/frectonz/sql-studio/blob/main/LICENSE)                         | 终端 SQL 数据库浏览器                 |
-| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.10.0`   | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端          |
-| [`asciinema`](https://github.com/asciinema/asciinema)                                   | `3.2.1`    | [GPL-3.0](https://github.com/asciinema/asciinema/blob/main/LICENSE)                     | 终端会话录制与回放工具                   |
-| [`pev2`](https://github.com/dalibo/pev2)                                                | `1.23.0`   | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2        |
-| [`sealos`](https://github.com/labring/sealos)                                           | `5.1.1`    | [Apache-2.0](https://github.com/labring/sealos/blob/main/LICENSE)                       | 开箱即用的 Kubernetes 发行版          |
-| [`vray`](https://github.com/v2fly/v2ray-core)                                           | `5.52.0`   | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                   |
-| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.7.28`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
-| [`gost`](https://github.com/ginuerzh/gost)                                              | `2.12.0`   | [MIT](https://github.com/ginuerzh/gost/blob/master/LICENSE)                             | Go 编写的通用隧道与代理工具               |
-| [`sabiql`](https://github.com/riii111/sabiql)                                           | `1.15.1`   | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL） |
+| 名称                                                                                      | 版本         | 许可证                                                                                     | 备注                                 |
+|-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|------------------------------------|
+| [`pig`](https://github.com/pgsty/pig)                                                   | `1.7.0`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                            |
+| [`sow`](https://github.com/pgsty/sow)                                                   | `0.3.0`    | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                        |
+| [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.2.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点                |
+| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.2.1`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具        |
+| [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.12.2`   | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI       |
+| [`pgstream`](https://github.com/xataio/pgstream)                                        | `1.3.1`    | [Apache-2.0](https://github.com/xataio/pgstream/blob/main/LICENSE)                      | PostgreSQL 复制与 DDL 变更同步            |
+| [`pg-timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `7.0.0`    | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度                    |
+| [`timescaledb-tools`](https://github.com/timescale/timescaledb-tune)                    | `0.19.0`   | [Apache-2.0](https://github.com/timescale/timescaledb-tune/blob/main/LICENSE)           | 优化 timescaledb 参数                  |
+| [`timescaledb-event-streamer`](https://github.com/noctarius/timescaledb-event-streamer) | `0.20.0`   | [Apache-2.0](https://github.com/noctarius/timescaledb-event-streamer/blob/main/LICENSE) | timescaledb 超表 CDC                 |
+| [`tigerfs`](https://github.com/timescale/tigerfs)                                       | `0.7.0`    | [MIT](https://github.com/timescale/tigerfs/blob/main/LICENSE)                           | 将 PostgreSQL 挂载为文件系统               |
+| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.47.4`   | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                          |
+| [`rainfrog`](https://github.com/achristmascarl/rainfrog)                                | `0.4.3`    | [MIT](https://github.com/achristmascarl/rainfrog/blob/main/LICENSE)                     | Postgres 终端数据库管理工具                 |
+| [`sql-studio`](https://github.com/frectonz/sql-studio)                                  | `0.1.51`   | [MIT](https://github.com/frectonz/sql-studio/blob/main/LICENSE)                         | 终端 SQL 数据库浏览器                      |
+| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.10.0`   | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端               |
+| [`asciinema`](https://github.com/asciinema/asciinema)                                   | `3.2.1`    | [GPL-3.0](https://github.com/asciinema/asciinema/blob/main/LICENSE)                     | 终端会话录制与回放工具                        |
+| [`pev2`](https://github.com/dalibo/pev2)                                                | `1.23.0`   | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2             |
+| [`sealos`](https://github.com/labring/sealos)                                           | `5.1.1`    | [Apache-2.0](https://github.com/labring/sealos/blob/main/LICENSE)                       | 开箱即用的 Kubernetes 发行版               |
+| [`vray`](https://github.com/v2fly/v2ray-core)                                           | `5.52.0`   | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                        |
+| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.7.28`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议                |
+| [`gost`](https://github.com/ginuerzh/gost)                                              | `2.12.0`   | [MIT](https://github.com/ginuerzh/gost/blob/master/LICENSE)                             | Go 编写的通用隧道与代理工具                    |
+| [`sabiql`](https://github.com/riii111/sabiql)                                           | `1.15.1`   | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL）      |
 | [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `16.1`     | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器（PG 14+） |
-| [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.21.0`   | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器  |
-| [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.4`   | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器            |
-| [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.164.0`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                     |
-| [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.7.3` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端              |
-| [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.3`   | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器           |
-| [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.16.17`  | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                   |
-| [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.5`    | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                      |
+| [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.21.0`   | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器       |
+| [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.4`   | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器                 |
+| [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.164.0`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                          |
+| [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.7.3` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端                   |
+| [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.3`   | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                |
+| [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.16.17`  | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                        |
+| [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.5`    | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                           |
 {.stretch-last}
 
 

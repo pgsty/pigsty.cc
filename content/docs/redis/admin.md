@@ -68,6 +68,8 @@ bin/redis-add 10.10.10.10 6379  # 初始化 redis 实例 '10.10.10.10:6379'
 
 您可以使用 [`redis-rm.yml`](/docs/redis/playbook#redis-rmyml) 剧本来下线 Redis 集群、节点、或实例：
 
+`redis_rm_data` 默认为 `true`。先核对 RDB/AOF 备份、当前主从/哨兵/集群拓扑并让操作者确认精确目标；下面命令会直接执行相应的下线操作。
+
 ```bash
 # 下线 Redis 集群 `redis-test`
 ./redis-rm.yml -l redis-test

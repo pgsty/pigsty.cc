@@ -163,6 +163,8 @@ VIBE 通过 [`infra_portal`](/docs/infra/param#infra_portal) 暴露服务。
 
 ```yaml
 infra_portal:
-  code: { domain: code.pigsty, endpoint: "127.0.0.1:8443", websocket: true }
-  jupyter: { domain: jupyter.pigsty, endpoint: "127.0.0.1:8888", websocket: true }
+  code: { domain: code.pigsty, endpoint: "127.0.0.1:8443", websocket: true, auth: true }
+  jupyter: { domain: jupyter.pigsty, endpoint: "127.0.0.1:8888", websocket: true, auth: true }
+nginx_users:
+  devadmin: '<strong-password>'
 ```

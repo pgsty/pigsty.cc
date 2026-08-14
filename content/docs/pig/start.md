@@ -90,10 +90,10 @@ OS Version Code  : resolute
 
 # [PG Environment] ===============================
 Installed:
-* PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)  72  Extensions
+* PostgreSQL {{< param pg_version >}} (Ubuntu {{< param pg_version >}}-1.pgdg26.04+1)  72  Extensions
 
 Active:
-PG Version      :  PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+PG Version      :  PostgreSQL {{< param pg_version >}} (Ubuntu {{< param pg_version >}}-1.pgdg26.04+1)
 Config Path     :  /usr/lib/postgresql/18/bin/pg_config
 Binary Path     :  /usr/lib/postgresql/18/bin
 Library Path    :  /usr/lib/postgresql/18/lib
@@ -328,7 +328,7 @@ pig ext add pg16=16.5            # install PostgreSQL 16 with a specific minor v
 $ pig ext status
 
 ✓ PostgreSQL 18: 72 extensions installed (3 shown)
-PostgreSQL 18: PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+PostgreSQL 18: PostgreSQL {{< param pg_version >}} (Ubuntu {{< param pg_version >}}-1.pgdg26.04+1)
   Binary: /usr/lib/postgresql/18/bin
   Extension: /usr/share/postgresql/18/extension
 

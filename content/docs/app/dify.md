@@ -48,7 +48,9 @@ Dify 启动后，您可以安装各种扩展、配置系统模型并开始使用
 
 自托管 Dify 有很多原因，但主要动机是数据安全。Dify 提供的 DockerCompose 模板使用基本的默认数据库镜像，缺乏企业级功能，如高可用性、灾难恢复、监控、IaC 和 PITR 能力。
 
-Pigsty 为 Dify 优雅地解决了这些问题，基于配置文件使用单个命令部署所有组件，并使用镜像解决中国地区访问挑战。这使得 Dify 部署和交付变得非常顺畅。它一次性处理 PostgreSQL 主数据库、PGVector 向量数据库、Redis、VictoriaMetrics 监控、Grafana 可视化、Nginx 反向代理和免费 HTTPS 证书；文件默认保存到 `DIFY_DATA`（`/data/dify`），也可按需接入 MinIO/S3 对象存储。
+Pigsty 为 Dify 提供声明式部署，并可使用镜像解决中国地区的镜像访问问题。模板将 PostgreSQL 与 pgvector 交给 Pigsty 管理，
+部署 Compose Redis、VictoriaMetrics/Grafana 监控与 Nginx 反向代理；满足公网 DNS、端口和 Certbot 配置后，还可申请 Let's Encrypt 证书。
+文件默认保存到 `DIFY_DATA`（`/data/dify`），也可按需接入 Silo/S3 对象存储。
 
 当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件与插件数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Compose 内置 Redis 的数据仍位于 `/opt/dify/volumes/redis/data`，Sandbox 依赖与 Certbot 数据也位于 `/opt/dify/volumes/`，因此整套应用并非完全无状态，备份时不能只保留数据库。
 
@@ -74,8 +76,8 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
 接下来，运行 [`docker.yml`](https://github.com/pgsty/pigsty/blob/main/docker.yml) 安装 Docker 和 Docker Compose，然后使用 [`app.yml`](https://github.com/pgsty/pigsty/blob/main/app.yml) 完成 Dify 部署：
 
 ```bash
-./docker.yml              # 安装 Docker 和 Docker Compose
-./app.yml                 # 使用 Docker 部署 Dify 无状态组件
+./docker.yml -l dify      # 在 Dify 节点安装 Docker 和 Docker Compose
+./app.yml -l dify         # 使用 Docker 部署 Dify 应用组件
 ```
 
 您可以在本地网络上通过 `http://<your_ip_address>:5001` 访问 Dify Web 管理界面。
@@ -88,128 +90,9 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
 
 ## 配置
 
-当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和您当前的环境自动生成配置文件。以下是默认配置的详细说明：
+当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和当前环境生成配置文件。以下快照与 v4.5.0 源模板同步：
 
-```yaml
-all:
-  children:
-
-    # Dify 应用程序
-    dify:
-      hosts: { 10.10.10.10: {} }
-      vars:
-        app: dify   # 指定要安装的应用程序名称（在 apps 中）
-        apps:       # 定义所有应用程序
-          dify:     # 应用程序名称，应该有对应的 ~/pigsty/app/dify 文件夹
-            file:   # 要创建的数据目录
-              - { path: /data/dify ,state: directory ,mode: 0755 }
-            conf:   # 覆盖 /opt/dify/.env 配置文件
-
-              # 更改域名、镜像、代理、密钥
-              NGINX_SERVER_NAME: dify.pigsty
-              # 用于签名和加密的密钥，使用 `openssl rand -base64 42` 生成（务必更改！）
-              SECRET_KEY: sk-somerandomkey
-              # 默认使用端口 5001 暴露 DIFY nginx 服务
-              DIFY_PORT: 5001
-              # dify 文件存储位置？默认是 ./volume，我们将使用上面创建的另一个卷
-              DIFY_DATA: /data/dify
-              # 启用 collaboration profile，并设置 WebSocket / Trigger / Webhook 回调地址
-              COMPOSE_PROFILES: collaboration
-              NEXT_PUBLIC_SOCKET_URL: ws://dify.pigsty
-              TRIGGER_URL: http://dify.pigsty
-              ENDPOINT_URL_TEMPLATE: http://dify.pigsty/e/{hook_id}
-
-              # 代理和镜像设置
-              #PIP_MIRROR_URL: https://pypi.tuna.tsinghua.edu.cn/simple
-              #SANDBOX_HTTP_PROXY: http://10.10.10.10:12345
-              #SANDBOX_HTTPS_PROXY: http://10.10.10.10:12345
-
-              # 数据库凭据
-              DB_TYPE: postgresql
-              DB_USERNAME: dify
-              DB_PASSWORD: difyai123456
-              DB_HOST: 10.10.10.10
-              DB_PORT: 5432
-              DB_DATABASE: dify
-              DB_SSL_MODE: disable
-              VECTOR_STORE: pgvector
-              PGVECTOR_HOST: 10.10.10.10
-              PGVECTOR_PORT: 5432
-              PGVECTOR_USER: dify
-              PGVECTOR_PASSWORD: difyai123456
-              PGVECTOR_DATABASE: dify
-              PGVECTOR_MIN_CONNECTION: 2
-              PGVECTOR_MAX_CONNECTION: 10
-
-              # 可选 MinIO/S3 文件存储，默认关闭，避免误用 pgBackRest 备份桶
-              #STORAGE_TYPE: s3
-              #S3_ENDPOINT: http://10.10.10.10:9000
-              #S3_BUCKET_NAME: dify
-              #S3_ACCESS_KEY: dify
-              #S3_SECRET_KEY: S3User.Dify
-              #S3_REGION: us-east-1
-              #S3_ADDRESS_STYLE: path
-
-    pg-meta:
-      hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
-      vars:
-        pg_cluster: pg-meta
-        pg_extensions: [ pgvector ]
-        pg_users:
-          - { name: dify ,password: difyai123456 ,pgbouncer: true ,roles: [ dbrole_admin ] ,superuser: true ,comment: dify superuser }
-        pg_databases:
-          - { name: dify        ,owner: dify ,extensions: [ { name: vector } ] ,comment: dify main database  }
-          - { name: dify_plugin ,owner: dify ,comment: dify plugin daemon database }
-        pg_hba_rules:
-          - { user: dify ,db: all ,addr: 172.16.0.0/12  ,auth: pwd ,title: 'allow dify access from local docker networks' }
-        pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行完整备份
-
-    infra: { hosts: { 10.10.10.10: { infra_seq: 1 } } }
-    etcd:  { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
-    #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
-
-  vars:                               # 全局变量
-    version: v4.5.0                   # 当前 main 分支版本
-    admin_ip: 10.10.10.10             # 管理节点 ip 地址
-    region: default                   # 上游镜像区域：default|china|europe
-    node_tune: oltp                   # 节点调优规格：oltp,olap,tiny,crit
-    pg_conf: oltp.yml                 # pgsql 调优规格：{oltp,olap,tiny,crit}.yml
-
-    docker_enabled: true              # 在应用程序组上启用 docker
-    #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
-
-    proxy_env:                        # 下载包和拉取 docker 镜像时的全局代理环境
-      no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.tsinghua.edu.cn"
-      #http_proxy:  127.0.0.1:12345   # 在此处添加代理环境以下载包或拉取镜像
-      #https_proxy: 127.0.0.1:12345   # 通常代理格式为 http://user:pass@proxy.xxx.com
-      #all_proxy:   127.0.0.1:12345
-
-    infra_portal:                      # 域名和上游服务器
-      home  : { domain: i.pigsty }
-      #minio : { domain: m.pigsty ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
-      dify:                            # dify 的 nginx 服务器配置
-        domain: dify.pigsty            # 替换为您自己的域名！
-        endpoint: "10.10.10.10:5001"   # dify 服务端点：IP:PORT
-        websocket: true                # 添加 websocket 支持
-        certbot: dify.pigsty           # certbot 证书名称，使用 `make cert` 申请
-
-    repo_enabled: false
-    node_repo_modules: node,infra,pgsql
-    pg_version: 18
-
-    #----------------------------------#
-    # 凭据：务必更改这些密码！
-    #----------------------------------#
-    grafana_admin_password: pigsty
-    grafana_view_password: DBUser.Viewer
-    pg_admin_password: DBUser.DBA
-    pg_monitor_password: DBUser.Monitor
-    pg_replication_password: DBUser.Replicator
-    patroni_password: Patroni.API
-    haproxy_admin_password: pigsty
-    minio_secret_key: S3User.MinIO
-    etcd_root_password: Etcd.Root
-```
+{{< readfile file="/docs/conf/yaml/app/dify.yml" code="true" lang="yaml" >}}
 
 ------
 
@@ -223,7 +106,7 @@ all:
 - 如果通过公网访问，确保您有可用的域名指向当前节点的 **公网 IP 地址**
 - 确保使用 `app/dify` 配置模板并根据需要修改参数
   - `configure -c app/dify`，并输入节点的内网主 IP 地址，或通过 `-i <primary_ip>` 命令行参数指定
-- 您是否修改了所有密码相关的配置参数？【可选】
+- 在生产环境中，您是否已经修改全部示例密码、应用密钥与数据库凭据？【必需】
   - [`grafana_admin_password`](/docs/infra/param/#grafana_admin_password)：`pigsty`，Grafana 管理员密码
   - [`pg_admin_password`](/docs/pgsql/param/#pg_admin_password)：`DBUser.DBA`，PG 超级用户密码
   - [`pg_monitor_password`](/docs/pgsql/param/#pg_monitor_password)：`DBUser.Monitor`，PG 监控用户密码
@@ -273,17 +156,14 @@ all:
 使用以下命令申请 Nginx 证书：
 
 ```bash
-# 申请证书，也可以手动执行 /etc/nginx/sign-cert 脚本
-make cert
-
-# 上述 Makefile 快捷命令实际执行以下剧本任务：
-./infra.yml -t nginx_certbot,nginx_reload -e certbot_sign=true
+# 在明确限定的 infra 组上申请并加载证书
+./infra.yml -l infra -t nginx_certbot,nginx_reload -e certbot_sign=true
 ```
 
 执行 `app.yml` 剧本重新部署 Dify 服务以使 `NGINX_SERVER_NAME` 配置生效。
 
 ```bash
-./app.yml
+./app.yml -l dify -t app_config,app_launch
 ```
 
 ------
@@ -311,27 +191,32 @@ restic restore 0b11f778 --target /tmp/dify-restore  # 先恢复到临时目录�
 restic check                                  # 定期检查仓库完整性
 ```
 
-另一种更可靠的方法是使用 JuiceFS 将 MinIO 对象存储挂载到 `/data/dify` 目录，这样您就可以使用 MinIO/S3 存储文件状态。
+另一种方案是把 `/data/dify` 放在由 [`JUICE`](/docs/juice/) 模块管理的共享文件系统上。文件数据可以位于 Silo/S3，也可以位于 PostgreSQL 的 `jfs_blob` 表；后者并不是“大对象”存储。
 
-如果您想将所有数据存储在 PostgreSQL 中，请考虑"使用 JuiceFS 将文件系统数据存储在 PostgreSQL 中"
+若使用 PostgreSQL 同时保存 JuiceFS 元数据和文件数据，请先在 `pg_databases` 中声明并创建专用数据库和最小权限用户，再在 Dify 节点上声明实例。以下示例中的密码只是占位符，不能直接用于生产环境：
 
-例如，您可以创建另一个 `dify_fs` 数据库并将其用作 JuiceFS 的元数据存储：
+```yaml
+pg_databases:
+  - { name: dify_fs, owner: dify, comment: JuiceFS metadata and data for Dify }
+
+juice_instances:
+  dify:
+    path: /data/dify
+    meta: postgres://dify:<password>@10.10.10.10:5432/dify_fs
+    data: --storage postgres --bucket 10.10.10.10:5432/dify_fs --access-key dify --secret-key <password>
+    owner: 1001
+    group: 1001
+    port: 9567
+```
+
+先分别对数据库创建与 JUICE 部署做检查，确认精确目标后再执行实际 playbook：
 
 ```bash
-METAURL=postgres://dify:difyai123456@:5432/dify_fs
-OPTIONS=(
-  --storage postgres
-  --bucket :5432/dify_fs
-  --access-key dify
-  --secret-key difyai123456
-  ${METAURL}
-  jfs
-)
-juicefs format "${OPTIONS[@]}"         # 创建 PG 文件系统
-juicefs mount ${METAURL} /data/dify -d # 后台挂载到 /data/dify 目录
-juicefs bench /data/dify               # 测试性能
-juicefs umount /data/dify              # 停止挂载
+./pgsql-db.yml -l pg-meta -e dbname=dify_fs
+./juice.yml -l dify -e fsname=dify
 ```
+
+数据库创建、文件系统首次格式化和挂载都会改变目标环境，实际执行前必须确认备份、数据库名和主机组。部署后再启动 Dify，参见 [JUICE 配置](/docs/juice/config/) 与 [PITR 一致性边界](/docs/juice/admin/#pitr-恢复)。直接挂载到已有非空的 `/data/dify` 之前，还必须先停止 Dify 并规划现有文件迁移。
 
 ------
 

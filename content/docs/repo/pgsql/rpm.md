@@ -8,38 +8,60 @@ categories: [参考]
 
 ------
 
+## 2026-08-14
+
+| 名称                | 旧版本   | 新版本    | 备注                                                   |
+|:------------------|:------|:-------|:-----------------------------------------------------|
+| asn1oid           | 1.6   | 1.6    | 许可证元数据：`GPL-3.0-or-later`；r2；PG14-18                 |
+| emailaddr         | 0     | 0      | 许可证元数据：`LicenseRef-Upstream-No-License`；r3；PG14-18   |
+| explain_ui        | 0.0.2 | 0.0.2  | 许可证元数据：`LicenseRef-Upstream-No-License`；r4；PG14-18   |
+| numeral           | 1.3   | 1.3    | 许可证元数据：`GPL-2.0-or-later`；r6；PG14-18                 |
+| oidc_validator    | 0.1.0 | 0.1.0  | Rust 模块；`LicenseRef-Upstream-No-License`；r2；PG18     |
+| pg_failover_slots | 1.2.1 | 1.2.1  | 许可证元数据：`PostgreSQL`；r2；需预加载；PG14-18                  |
+| pg_geohash        | 1.0   | 1.0    | 许可证元数据：`MIT`；r4；修复 SQL 文件名与目标 PG ABI；PG14-18         |
+| pg_oidc_validator | 0.2   | 1.1.0  | PG18 OAuth 校验模块；新增 `discovery_url_override`；仅 EL10   |
+| pg_relation_sql   | -     | 0.2.2  | 独立 SQL；不支持 `CREATE EXTENSION`；noarch；PG14-18         |
+| pg_summarize      | 0.0.1 | 0.0.1  | 许可证元数据：`LicenseRef-Upstream-No-License`；r6；PG14-18   |
+| pg_when           | 0.1.9 | 0.1.10 | GitHub/PGXN 同一发行版；上游 pgrx 0.18.1，打包使用 0.19.1；PG14-18 |
+| pre_prepare       | 0.9   | 0.9    | 许可证元数据：`PostgreSQL`；r2；PG14-18                       |
+| smlar             | 1.0   | 1.0    | 许可证元数据：`LicenseRef-Upstream-No-License`；r2；PG14-18   |
+| unit              | 7.10  | 7.10   | 许可证元数据：`GPL-3.0-or-later`；r7；PG14-18                 |
+{.stretch-last}
+
+------
+
 ## 2026-08-12
 
-| 名称             | 旧版本                   | 新版本                   | 备注                                             |
-|:---------------|:----------------------|:----------------------|:-----------------------------------------------|
-| biscuit        | 2.4.3                 | 3.0.0                 | PG16-18；2.x 索引需 REINDEX                        |
-| cat_tools      | -                     | 0.3.0                 | 纯 SQL；PG14-18                                  |
-| citus          | 14.1.0                | 14.2.0                | 含 citus_columnar；PG16-18                       |
-| pg_clickhouse  | 0.3.2                 | 0.10.0                | PG14-18                                        |
-| pg_describe    | -                     | 1.0.0                 | PG17-18                                        |
-| pg_disorder    | -                     | 0.1.0                 | PG14-18                                        |
-| pg_local_cache | -                     | 1.3.0                 | PG14-18；需预加载；仅单主                             |
-| pg_mentat      | -                     | 1.5.7                 | PG14-18                                        |
-| pg_policy      | -                     | 0.1.0                 | 纯 SQL；PG14-18                                  |
-| pg_rational    | 0.0.2                 | 0.0.3                 | PIGSTY；PG14-18                                |
-| pg_readme      | 0.7.0                 | 0.7.1                 | 目录 0.7.1；RPM 仍为 PGDG 0.7.0                   |
-| pg_search      | 0.25.0                | 0.25.2                | PG15-18；pgrx 0.19.1；需预加载                     |
-| pg_squeeze     | 1.9.2                 | 1.9.4                 | PGDG；PG14-18                                  |
-| pg_statviz     | -                     | 0.9                   | PGDG；PG14-16，另有 EL10 PG18；无 PG17；非默认包组      |
-| pg_turbovec    | -                     | 1.29.0                | PG14-18；pgrx 0.19.1                            |
-| pg_uuid_v8     | 1.0.0                 | 1.1.0                 | PG14-18；含 1.0 至 1.1 升级脚本                     |
-| pg_vault_tde   | -                     | 1.7.0                 | PG17-18；仅 EL9/10；需预加载                        |
-| pgbson         | 2.0.4                 | 2.1.0                 | RPM 包名 postgresbson；PG14-18                   |
-| pgmnemo        | 0.15.0                | 0.16.1                | PG17-18                                        |
-| plpgsql_check  | 2.10.3                | 2.10.4                | PG14-18                                        |
-| plruby         | -                     | 2.5.0                 | 含 jsonb_plruby、hstore_plruby、ltree_plruby；PG14-18 |
-| polardb-17     | 17.10.1.0-1PIGSTY     | 17.10.1.0-2PGSTY     | 重构建；PG17                                       |
-| polarstore     | 1.2.42-1PIGSTY        | 1.2.42-2PGSTY        | 重构建                                            |
-| provsql        | 1.11.0                | 1.12.0                | PG14-18                                        |
-| q3c            | 2.0.2                 | 2.0.5                 | PGDG；PIGSTY 仍为 2.0.2；PG14-18                 |
-| timescaledb    | 2.29.0                | 2.29.1                | PG16-18                                        |
-| vector         | 0.8.6                 | 0.8.6                 | PGDG 仓库刷新；PG14-18                             |
-| zlog           | 1.2.18-1PIGSTY        | 1.2.18-2PGSTY        | 重构建                                            |
+| 名称             | 旧版本               | 新版本              | 备注                                                |
+|:---------------|:------------------|:-----------------|:--------------------------------------------------|
+| biscuit        | 2.4.3             | 3.0.0            | PG16-18；2.x 索引需 REINDEX                           |
+| cat_tools      | -                 | 0.3.0            | 纯 SQL；PG14-18                                     |
+| citus          | 14.1.0            | 14.2.0           | 含 citus_columnar；PG16-18                          |
+| pg_clickhouse  | 0.3.2             | 0.10.0           | PG14-18                                           |
+| pg_describe    | -                 | 1.0.0            | PG17-18                                           |
+| pg_disorder    | -                 | 0.1.0            | PG14-18                                           |
+| pg_local_cache | -                 | 1.3.0            | PG14-18；需预加载；仅单主                                  |
+| pg_mentat      | -                 | 1.5.7            | PG14-18                                           |
+| pg_policy      | -                 | 0.1.0            | 纯 SQL；PG14-18                                     |
+| pg_rational    | 0.0.2             | 0.0.3            | PIGSTY；PG14-18                                    |
+| pg_readme      | 0.7.0             | 0.7.1            | 目录 0.7.1；RPM 仍为 PGDG 0.7.0                        |
+| pg_search      | 0.25.0            | 0.25.2           | PG15-18；pgrx 0.19.1；需预加载                          |
+| pg_squeeze     | 1.9.2             | 1.9.4            | PGDG；PG14-18                                      |
+| pg_statviz     | -                 | 0.9              | PGDG；PG14-16，另有 EL10 PG18；无 PG17；非默认包组            |
+| pg_turbovec    | -                 | 1.29.0           | PG14-18；pgrx 0.19.1                               |
+| pg_uuid_v8     | 1.0.0             | 1.1.0            | PG14-18；含 1.0 至 1.1 升级脚本                          |
+| pg_vault_tde   | -                 | 1.7.0            | PG17-18；仅 EL9/10；需预加载                             |
+| pgbson         | 2.0.4             | 2.1.0            | RPM 包名 postgresbson；PG14-18                       |
+| pgmnemo        | 0.15.0            | 0.16.1           | PG17-18                                           |
+| plpgsql_check  | 2.10.3            | 2.10.4           | PG14-18                                           |
+| plruby         | -                 | 2.5.0            | 含 jsonb_plruby、hstore_plruby、ltree_plruby；PG14-18 |
+| polardb-17     | 17.10.1.0-1PIGSTY | 17.10.1.0-2PGSTY | 重构建；PG17                                          |
+| polarstore     | 1.2.42-1PIGSTY    | 1.2.42-2PGSTY    | 重构建                                               |
+| provsql        | 1.11.0            | 1.12.0           | PG14-18                                           |
+| q3c            | 2.0.2             | 2.0.5            | PGDG；PIGSTY 仍为 2.0.2；PG14-18                      |
+| timescaledb    | 2.29.0            | 2.29.1           | PG16-18                                           |
+| vector         | 0.8.6             | 0.8.6            | PGDG 仓库刷新；PG14-18                                 |
+| zlog           | 1.2.18-1PIGSTY    | 1.2.18-2PGSTY    | 重构建                                               |
 {.stretch-last}
 
 ------

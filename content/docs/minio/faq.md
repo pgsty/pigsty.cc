@@ -58,10 +58,23 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
 
 ----------------
 
-## 启动多节点/多盘 Silo 集群失败怎么办？
+## Silo 数据目录可以使用普通目录吗？
 
-在 [**单机多盘**](/docs/minio/config#单机多盘) 或 [**多机多盘**](/docs/minio/config#多机多盘) 模式下，如果数据目录不是有效的磁盘挂载点，Silo 会拒绝启动。
-请使用已挂载的磁盘作为数据目录，而不是普通目录。只有 [**单机单盘**](/docs/minio/config#单机单盘) 模式可以使用普通目录，且仅适用于开发测试或非关键场合。
+`minio_data` 填写的是目录路径，不是裸磁盘设备。`/data/minio` 可以是普通子目录，但在多节点或多盘部署中，它背后必须是非根盘的独立持久文件系统。
+
+- 如果 `/data` 已经挂载到独立本地盘、云盘、分区或 LVM 逻辑卷，那么 `/data/minio` 可以直接使用。
+- 如果 `/data/minio` 只是根文件系统 `/` 下创建的目录，分布式 Silo 会将其标记为根盘并拒绝使用，错误为 `drive is part of root drive, will not be used`。
+- 单机多盘的每个路径都应对应独立文件系统，不能用同一块盘上的多个目录模拟多盘。
+- 只有 [单机单盘](/docs/minio/config#单机单盘) 模式可以直接使用根文件系统中的普通目录，且仅适合开发测试或非关键场合。
+
+使用下面的命令检查实际挂载点：
+
+```bash
+findmnt -T /
+findmnt -T /data/minio
+```
+
+详细说明参见 [集群配置：存储路径与挂载](/docs/minio/config#存储路径与挂载)；三节点单盘拓扑参见 [多机单盘](/docs/minio/config#多机单盘)。
 
 
 
@@ -86,12 +99,11 @@ Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/p
 从 Pigsty v3.6 开始，移除 MinIO 集群需要使用专用的 `minio-rm.yml` 剧本：
 
 ```bash
-./minio-rm.yml -l minio --check -e minio_type=silo                 # 先以完全相同的目标预演
 ./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
-./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据与配置
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据
 ```
 
-删除角色没有 `minio_type` 默认值；如果清单中未定义，必须在命令行显式指定 `silo`。其他取值会被拒绝。
+删除角色也把 `minio_type` 默认为 `silo`，其他取值会被拒绝。示例仍显式写出该值，方便删除前连同集群身份和路径一起复核。
 
 `minio_rm_data` 默认为 `true`，而移除角色会容忍部分清理错误。真实执行前应核对精确的 `-l` 目标和近期备份，执行后再检查服务、数据目录、DNS 与监控目标，不能只凭剧本返回状态判断清理完成。
 

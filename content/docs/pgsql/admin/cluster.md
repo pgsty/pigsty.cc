@@ -157,6 +157,9 @@ bin/pgsql-add pg-test 10.10.10.13   # 示例，为 pg-test 集群扩容 IP 为 1
 
 若要从 **现有的 PostgreSQL 集群** 中移除副本，您需要从 [**配置清单**](/docs/concept/iac/inventory) 的 `all.children.<cls>.hosts` 中移除对应的 [**实例定义**](/docs/pgsql/config/cluster)。
 
+缩容会停止实例并默认删除其数据目录。操作前先执行 `pig pg list <cls>` 与 `pig pb info`，确认目标不是主库、存在近期可恢复备份，
+并让操作者输入精确的 `<ip>`，确认后方可实际执行。
+
 缩容集群首先需要卸载目标节点上的 PGSQL 模块（针对 **`<ip>`** 执行 [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml) 剧本）：
 
 {{< tabpane text=true persist=header >}}
@@ -223,6 +226,9 @@ pg-test:
 ## 销毁集群
 
 销毁集群需要在集群的所有节点上卸载 PGSQL 模块（针对 **`<cls>`** 执行 [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml) 剧本）：
+
+这是不可逆的数据删除：先用 `pig pg list <cls>` 与 `pig pb info` 核对状态和近期备份，决定是否保留独立备份副本，
+并要求操作者输入精确集群名。下面命令会直接执行相应的销毁操作。
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="脚本" %}}

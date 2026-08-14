@@ -60,7 +60,6 @@ etcd:
 要销毁一个 Etcd 集群，请使用独立的 [`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本。默认的 `etcd_rm_data: true` 会删除本机数据与配置；请先确认没有 PostgreSQL 集群仍将它用作 DCS，并核验近期备份和精确目标名。
 
 ```bash
-./etcd-rm.yml -l etcd --check                    # 先对完整且精确的目标预演
 ./etcd-rm.yml -l etcd                            # 确认后销毁整个 etcd 集群
 ./etcd-rm.yml -l etcd -e etcd_safeguard=false   # 仅在清单已启用保险时显式覆盖
 ```
@@ -331,13 +330,12 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 要从 etcd 集群中删除一个成员实例，通常需要以下步骤：
 
 1. **保持成员仍在配置清单中**：移除剧本需要清单里的 `etcd_seq`、集群成员和连接端点信息
-2. **清理实例**：先用相同目标执行 `--check`，再运行 `etcd-rm.yml`；剧本会先尝试 `member remove`，再停服并按参数清理
+2. **清理实例**：对目标运行 `etcd-rm.yml`；剧本会先尝试 `member remove`，再停服并按参数清理
 3. **更新配置清单**：成功后再从配置清单中注释或删除该实例
 4. **重载引用**：按 [重载配置](#重载配置) 刷新其余 etcd 成员及 Patroni/VIP-Manager 的端点
 
 ```bash
 # 此时 <ip> 必须仍在 etcd 清单组中
-./etcd-rm.yml -l <ip> --check          # 对完全相同的目标先预演
 ./etcd-rm.yml -l <ip>                  # 自动退出集群并清理实例
 # 成功后编辑 pigsty.yml 删除该成员，再刷新其余成员与客户端配置
 ```

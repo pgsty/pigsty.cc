@@ -32,13 +32,12 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 要销毁一个集群，执行专用的 [`minio-rm.yml`](/docs/minio/playbook#minio-rmyml) 剧本即可：
 
 ```bash
-./minio-rm.yml -l minio --check -e minio_type=silo                 # 先以完全相同的目标预演
 ./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
 ./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据与配置
 ./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_pkg=true    # 移除集群并卸载软件包
 ```
 
-删除角色不为 `minio_type` 提供默认值。若清单中未显式定义，必须像上例一样通过 `-e minio_type=silo` 指定；当前其他取值会被拒绝。
+删除角色也将 `minio_type` 默认为 `silo`，当前其他取值会被拒绝。
 
 {{% alert title="架构变更：Pigsty v3.6+" color="info" %}}
 从 Pigsty v3.6 开始，集群移除操作已从 `minio.yml` 剧本迁移至专用的 `minio-rm.yml` 剧本。旧的 `minio_clean` 任务已被弃用。

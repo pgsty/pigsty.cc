@@ -47,8 +47,8 @@ categories: [参考]
 | [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | `PGSQL`  | 时间点恢复（PITR）                                  |
 | [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                     |
 | [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
-| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | Silo 部署                                     |
-| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除 Silo、配置与可选数据                           |
+| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | Silo 部署                                      |
+| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除 Silo、配置与可选数据                              |
 | [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
 | [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
@@ -93,8 +93,7 @@ PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；
 
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
-./etcd-rm.yml  -l etcd --check                       # 先预演完整目标
-./etcd-rm.yml  -l etcd -e etcd_safeguard=false      # 确认备份与目标后执行
+./etcd-rm.yml  -l etcd -e etcd_safeguard=false
 ./minio-rm.yml -l minio   -e minio_type=silo -e minio_safeguard=false
 ./redis-rm.yml -l redis-test -e redis_safeguard=false
 ./kafka-rm.yml -l kf-main -e kafka_safeguard=false
@@ -163,7 +162,6 @@ bin/node-rm <cls|ip>             # 移除节点 (包装脚本)
 
 ```bash
 ./etcd.yml                       # 初始化 etcd 集群
-./etcd-rm.yml -l etcd --check    # 销毁前先对精确完整目标预演
 ./etcd-rm.yml -l etcd            # 默认删除该集群的本机数据与配置
 bin/etcd-add <ip>                # 添加 etcd 成员 (包装脚本)
 bin/etcd-rm <ip>                 # 移除 etcd 成员 (包装脚本)

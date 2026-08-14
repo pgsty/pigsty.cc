@@ -73,8 +73,10 @@ mysql_cluster: my-test
 
 本地 `root@'localhost'` 密码，仅限本机使用（套接字或回环地址）。不能包含换行，不能保留 `CHANGE_ME` 前缀：
 
+默认值为 `DBUser.Root`：
+
 ```yaml
-mysql_root_password: MySQL.Root
+mysql_root_password: DBUser.Root
 ```
 
 首次启动时设置；此后如果现场密码与声明不一致，任务会 **拒绝隐式重置** 并明确报错——修改 root 密码需要先手工 `ALTER USER` 再同步清单。
@@ -83,16 +85,20 @@ mysql_root_password: MySQL.Root
 
 `dbuser_monitor@'127.0.0.1'` 密码，供 mysqld_exporter 使用，仅限本机回环地址、最多 3 连接、只读权限：
 
+默认值为 `DBUser.Monitor`：
+
 ```yaml
-mysql_monitor_password: MySQL.Monitor
+mysql_monitor_password: DBUser.Monitor
 ```
 
 ### `mysql_cluster_password`
 
 `dbuser_cluster@'%'`（要求 TLS）与 `dbuser_backup@'localhost'` 共用的平台密码，用于 AdminAPI 集群管理、Router 引导与 XtraBackup：
 
+默认值为 `DBUser.Cluster`：
+
 ```yaml
-mysql_cluster_password: MySQL.Cluster
+mysql_cluster_password: DBUser.Cluster
 ```
 
 HA 集群中该密码写入集群 Metadata 与 Router 密钥环，**不能通过普通重跑轮换**：现场值与声明不一致时预检直接拒绝。单机实例无此绑定，改清单重跑即生效。
@@ -104,12 +110,12 @@ HA 集群中该密码写入集群 Metadata 与 Router 密钥环，**不能通过
 
 ### `mysql_databases`
 
-增量收敛的业务数据库列表，字段 `name / encoding / collate / encrypt`：
+增量收敛的业务数据库列表，仅接受 `name / encoding / collate` 三个字段：
 
 ```yaml
 mysql_databases:
   - { name: app }
-  - { name: app2, encoding: utf8mb4, collate: utf8mb4_general_ci, encrypt: false }
+  - { name: app2, encoding: utf8mb4, collate: utf8mb4_general_ci }
 ```
 
 只创建与更新，不会因移除条目而删除数据库。写法与校验规则见 [集群配置](/docs/pilot/mysql/config#业务数据库)。
@@ -147,7 +153,7 @@ mysql_parameters:
 约束与行为：
 
 - 键名 `[A-Za-z][A-Za-z0-9_.-]{0,63}`，值为单行标量；渲染后仍经 `mysqld --validate-config` 校验，写错参数在部署阶段失败而不影响运行中的实例；
-- **保留参数拒绝覆盖**（`-`/`_` 写法同判）：`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`plugin_load_add`，以及 `group_replication_*` 与 TLS 相关（`require_secure_transport`、`ssl_*`）全族；
+- **保留参数拒绝覆盖**（`-`/`_` 写法同判）：`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`require_secure_transport`、`ssl_ca`、`ssl_cert`、`ssl_key`、`plugin_load`、`plugin_load_add`、`clone`、`plugin_clone`、`mysqlx`、`plugin_mysqlx`，以及 `group_replication_*`、`plugin_group_replication*`、`plugin_mysqlx_bind_address` 与 `ssl_*` 全族；
 - 变更后重跑 `mysql.yml` 触发编排式滚动重启（从库先行、主库殿后），HA 集群预期仅主库切换瞬间有秒级写中断；
 - 平台默认值中可覆盖的典型项：`sql_require_primary_key`（默认 `ON`）、`long_query_time`（默认 `1`）、`binlog_expire_logs_seconds`（默认 7 天）、内存类参数。
 
@@ -220,18 +226,18 @@ mysql_exporter_enabled: true
 
 以下值由角色固定或推导，**不是** 清单参数，列出供运维参考：
 
-| 项目 | 值 |
-|:---|:---|
-| 软件版本 | MySQL Server/Client/Shell/Router 8.4 LTS、Percona XtraBackup 8.4 |
-| 端口 | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO）、`9104`（Exporter） |
-| 数据目录 | `/var/lib/mysql`（Binlog 于 `binlog/` 子目录，7 天过期） |
-| 配置文件 | EL：`/etc/my.cnf.d/pigsty.cnf`；Debian/Ubuntu：`/etc/mysql/mysql.conf.d/pigsty.cnf` |
-| 服务单元 | MySQL：EL 为 `mysqld`，Debian/Ubuntu 为 `mysql`；Router：`mysqlrouter`；Exporter：`mysqld_exporter` |
-| 凭据与脚本 | `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`） |
-| 日志 | 错误日志 `/var/log/mysql/error.log` 并镜像到 Journald；慢查询 `/var/log/mysql/slow.log`（阈值 1s） |
-| TLS | 强制加密（`require_secure_transport=ON`）；CA `/etc/pki/ca.crt`，叶证书 `/etc/mysql/pki/` |
-| 字符集 | `utf8mb4` / `utf8mb4_0900_ai_ci` |
-| 内存基线 | 缓冲池 = max(节点内存 × 25%, 256MB)；Redo = clamp(缓冲池 × 50%, 128MB, 4GB) |
-| 复制 | GTID 强制、`sql_require_primary_key=ON`、MGR 单主、故障切换读一致性 `BEFORE_ON_PRIMARY_FAILOVER` |
-| 数据目录标记 | `.pigsty-mysql-initialized`（属主校验）与 `.pigsty-mysql-retired`（退役防护） |
+| 项目     | 值                                                                                                                                                                    |
+|:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 软件版本   | MySQL Server/Client/Shell/Router 8.4 LTS、Percona XtraBackup 8.4                                                                                                      |
+| 端口     | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO）、`9104`（Exporter）；INFRA 角色以只读参考常量 `mysql_exporter_port: 9104` 生成监控配置，它不是 MYSQL 的公开参数 |
+| 数据目录   | `/var/lib/mysql`（Binlog 于 `binlog/` 子目录，7 天过期）                                                                                                                       |
+| 配置文件   | EL：`/etc/my.cnf.d/pigsty.cnf`；Debian/Ubuntu：`/etc/mysql/mysql.conf.d/pigsty.cnf`                                                                                     |
+| 服务单元   | MySQL：EL 为 `mysqld`，Debian/Ubuntu 为 `mysql`；Router：`mysqlrouter`；Exporter：`mysqld_exporter`                                                                          |
+| 凭据与脚本  | `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`）                                                                                                                    |
+| 日志     | 错误日志 `/var/log/mysql/error.log` 并镜像到 Journald；慢查询 `/var/log/mysql/slow.log`（阈值 1s）                                                                                   |
+| TLS    | 强制加密（`require_secure_transport=ON`）；CA `/etc/pki/ca.crt`，叶证书 `/etc/mysql/pki/`                                                                                       |
+| 字符集    | `utf8mb4` / `utf8mb4_0900_ai_ci`                                                                                                                                     |
+| 内存基线   | 缓冲池 = max(节点内存 × 25%, 256MB)；Redo = clamp(缓冲池 × 50%, 128MB, 4GB)                                                                                                     |
+| 复制     | GTID 强制、`sql_require_primary_key=ON`、MGR 单主、故障切换读一致性 `BEFORE_ON_PRIMARY_FAILOVER`                                                                                    |
+| 数据目录标记 | `.pigsty-mysql-initialized`（属主校验）与 `.pigsty-mysql-retired`（退役防护）                                                                                                     |
 {.full-width}

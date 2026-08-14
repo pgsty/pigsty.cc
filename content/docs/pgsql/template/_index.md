@@ -22,6 +22,8 @@ Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的�
 
 > 通常，数据库调优模板 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 应当与机器调优模板 [**`node_tune`**](/docs/node/param#node_tune) 配套使用。
 
+四套标准模板都将 `wal_level` 设为 `logical`。从 PostgreSQL 18.6 起，服务端新增 `output_plugin_libraries` 安全白名单；Pigsty 默认允许内置的 `pgoutput`、`test_decoding` 与默认随 `pgsql-main` 安装的 `wal2json`。如果要使用其他逻辑解码输出插件，应在评审其代码与权限边界后，将准确的库名加入 [`pg_parameters`](/docs/pgsql/param#pg_parameters)；Patroni 会在不支持该参数的旧 PostgreSQL 版本上过滤模板项。
+
 
 ----------------
 

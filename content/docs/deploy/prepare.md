@@ -209,12 +209,12 @@ curl -fsSL https://repo.pigsty.io/get | bash;
 {{< tabpane text=true persist=header >}}
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.cc/get | bash -s <version>  # 安装特定版本（示例：{{< param version >}}）
+curl -fsSL https://repo.pigsty.cc/get | bash -s <version>  # 安装特定版本（当前稳定版：{{< param stable_version >}}）
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.io/get | bash -s <version>  # 安装特定版本（示例：{{< param version >}}）
+curl -fsSL https://repo.pigsty.io/get | bash -s <version>  # 安装特定版本（当前稳定版：{{< param stable_version >}}）
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -239,7 +239,7 @@ curl -fsSL https://repo.pigsty.io/beta | bash;
 
 ```bash
 git clone https://github.com/pgsty/pigsty.git;
-cd pigsty; git checkout <tag>  # 使用特定版本（示例：{{< param version >}}）
+cd pigsty; git checkout <tag>  # 使用已发布版本（当前稳定 tag：{{< param stable_version >}}）
 ```
 
 如果您的环境没有互联网访问，也可以直接从 [**GitHub Release**](https://github.com/pgsty/pigsty/releases/) 页面，或者 Pigsty 仓库下载源码包：

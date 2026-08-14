@@ -63,8 +63,8 @@ juice_instances:
 
 取决于 `data` 参数：
 
-- `--storage postgres`：数据存于 PostgreSQL `pg_largeobject`
-- `--storage minio/s3`：数据存于对象存储 bucket
+- `--storage postgres`：JuiceFS 在 `--bucket` 指定的 PostgreSQL 数据库中创建 `jfs_blob` 表存储数据
+- `--storage minio/s3`：数据存于 Silo/S3 兼容对象存储的 bucket
 
 元数据存储在 `meta` 指定的元数据引擎中（Pigsty 生产场景通常使用 PostgreSQL）。
 

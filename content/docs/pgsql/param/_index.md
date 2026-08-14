@@ -989,30 +989,18 @@ pg_extensions:
   - pgsql-fdw     # 使用别名一次性安装常用 FDW
 ```
 
-`pg_package_map` 中提供了大量别名，方便在不同发行版之间屏蔽包名差异。以下是 EL9 平台可用的扩展组合供参考（按需挑选即可）：
+`pg_package_map` 中提供了大量别名，方便在不同发行版之间屏蔽包名差异。下面给出当前 v4.5 EL9 映射中的单扩展别名与分类包组示例；其他平台及 PostgreSQL 大版本的实际可用范围可能不同：
 
 ```bash
 pg_extensions: # extensions to be installed on this cluster
-  - timescaledb periods temporal_tables emaj table_version pg_cron pg_later pg_background pg_timetable
-  - postgis pgrouting pointcloud pg_h3 q3c ogr_fdw geoip #pg_geohash #mobilitydb
-  - pgvector pgvectorscale pg_vectorize pg_similarity pg_tiktoken pgml #smlar
-  - pg_search pg_bigm zhparser hunspell
-  - hydra pg_analytics pg_lakehouse pg_duckdb duckdb_fdw pg_fkpart pg_partman plproxy #pg_strom citus
-  - pg_hint_plan age hll rum pg_graphql pg_jsonschema jsquery index_advisor hypopg imgsmlr pg_ivm pgmq pgq #rdkit
-  - pg_tle plv8 pllua plprql pldebugger plpgsql_check plprofiler plsh #pljava plr pgtap faker dbt2
-  - prefix semver pgunit md5hash asn1oid roaringbitmap pgfaceting pgsphere pg_country pg_currency pgmp numeral pg_rational pguint ip4r timestamp9 chkpass #pg_uri #pgemailaddr #acl #debversion #pg_rrule
-  - topn pg_gzip pg_http pg_net pg_html5_email_address pgsql_tweaks pg_extra_time pg_timeit count_distinct extra_window_functions first_last_agg tdigest aggs_for_arrays pg_arraymath pg_idkit pg_uuidv7 permuteseq pg_hashids
-  - sequential_uuids pg_math pg_random pg_base36 pg_base62 floatvec pg_financial pgjwt pg_hashlib shacrypt cryptint pg_ecdsa pgpcre icu_ext envvar url_encode #pg_zstd #aggs_for_vecs #quantile #lower_quantile #pgqr #pg_protobuf
-  - pg_repack pg_squeeze pg_dirtyread pgfincore pgdd ddlx pg_prioritize pg_checksums pg_readonly safeupdate pg_permissions pgautofailover pg_catcheck preprepare pgcozy pg_orphaned pg_crash pg_cheat_funcs pg_savior table_log pg_fio #pgpool pgagent
-  - pg_profile pg_show_plans pg_stat_kcache pg_stat_monitor pg_qualstats pg_store_plans pg_track_settings pg_wait_sampling system_stats pg_meta pgnodemx pg_sqlog bgw_replstatus pgmeminfo toastinfo pagevis powa pg_top #pg_statviz #pgexporter_ext #pg_mon
-  - passwordcheck supautils pgsodium pg_vault anonymizer pg_tde pgsmcrypto pgaudit pgauditlogtofile pg_auth_mon credcheck pgcryptokey pg_jobmon logerrors login_hook set_user pg_snakeoil pgextwlist pg_auditor noset #sslutils
-  - wrappers multicorn odbc_fdw mysql_fdw tds_fdw sqlite_fdw pgbouncer_fdw mongo_fdw redis_fdw pg_redis_pubsub kafka_fdw hdfs_fdw firebird_fdw aws_s3 log_fdw #oracle_fdw #db2_fdw #jdbc_fdw
-  - orafce pgtt session_variable pg_statement_rollback pg_dbms_metadata pg_dbms_lock pgmemcache #pg_dbms_job #babelfish
-  - pglogical pgl_ddl_deploy pg_failover_slots wal2json wal2mongo decoderbufs decoder_raw mimeo pgcopydb pgloader pg_fact_loader pg_bulkload pg_comparator pgimportdoc pgexportdoc #repmgr #slony
-  - gis-stack rag-stack fdw-stack fts-stack etl-stack feat-stack olap-stack supa-stack stat-stack json-stack
+  - timescaledb postgis pgvector pg_search pg_duckdb pg_repack wal2json
+  # 也可以按分类安装当前平台映射中的整组软件包；通常只选择确实需要的组
+  # - pgsql-time pgsql-gis pgsql-rag pgsql-fts pgsql-olap
+  # - pgsql-feat pgsql-lang pgsql-type pgsql-util pgsql-func
+  # - pgsql-admin pgsql-stat pgsql-sec pgsql-fdw pgsql-sim pgsql-etl
 ```
 
-完整列表请参考：[`roles/node_id/vars`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/)
+完整映射请以目标平台的 [`roles/node_id/vars/<os>.<arch>.yml`](https://github.com/pgsty/pigsty/tree/main/roles/node_id/vars) 与当前 [**扩展目录**](/ext/list/) 为准。`pg_analytics` 与 `spat` 已从 v4.5 目录及当前主流平台映射中移除；不要沿用旧版示例安装它们。
 
 
 
@@ -2039,7 +2027,8 @@ pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/c
 
 是否在 PGSQL 节点上启用 pgBackRest？默认值为： `true`
 
-在使用本地文件系统备份仓库（`local`）时，只有集群主库才会真正启用 `pgbackrest`。其他实例只会初始化一个空仓库。
+启用后，各节点都会获得 pgBackRest 配置；使用本地文件系统仓库（`local`）时，每个成员都会创建各自的本地 stanza。
+初始与定时备份只由当前主库执行，从库上的 `pg-backup` 会因角色检查而退出。非本地仓库只在未定义 [`pg_upstream`](#pg_upstream) 的主库上初始化共享 stanza。
 
 
 
@@ -2076,7 +2065,9 @@ Pigsty 默认使用 `local` 备份仓库，这将在主实例的 `/pg/backup` �
 
 在 pgBackRest 初始化完成后是否立即执行一次全量备份？默认为 `true`。
 
-此操作仅在集群主库（primary）且非级联从库（无 [`pg_upstream`](#pg_upstream) 定义）时执行。启用此参数可以确保在集群初始化后立即拥有一个基础备份，以便在需要时进行恢复。
+此任务仅在集群主库（primary）且未定义 [`pg_upstream`](#pg_upstream) 时尝试执行。任务对备份错误使用 `ignore_errors`，
+因此启用此参数不等于保证已经存在基础备份；只有命令成功后才会写入 `/etc/pgbackrest/initial.done`。
+部署后必须用 `pig pb info`（或 `pb info`）核验实际备份。
 
 
 
@@ -2087,7 +2078,8 @@ Pigsty 默认使用 `local` 备份仓库，这将在主实例的 `/pg/backup` �
 
 pgBackRest 仓库文档：https://pgbackrest.org/configuration.html#section-repository
 
-默认值包括两种仓库方法：`local` 和 `minio`，定义如下：
+默认值包括 `local` 与 `minio` 两个候选仓库，定义如下。`pgbackrest_method` 只选择其中一个，
+v4.5.0 模板只将被选项渲染为 pgBackRest 的 `repo1`；同时列出两个字典项不表示双仓同时备份：
 
 ```yaml
 pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/configuration.html#section-repository

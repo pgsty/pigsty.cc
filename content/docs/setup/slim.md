@@ -126,7 +126,7 @@ all:
           - { name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer  }
         pg_databases:
           - { name: meta, baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [ vector ]}
-        node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # make a full backup every 1am
+        pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点执行全量备份
   vars:
     # 省略 ……
 ```

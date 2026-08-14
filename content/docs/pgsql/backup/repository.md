@@ -10,6 +10,7 @@ categories: [任务]
 [**`pgbackrest_method`**](/docs/pgsql/param/#pgbackrest_method) 选择实际使用哪一个。
 仓库定义中的键值会 [**按固定规则**](/docs/pgsql/backup/mechanism/#配置如何渲染) 渲染为 pgbackrest 的 `repo1-*` 配置项，
 因此 [**pgBackRest 支持的任何仓库选项**](/docs/pgbackrest/configuration) 都可以直接写入。
+v4.5.0 每次只把 `pgbackrest_method` 选中的一个字典项渲染为 `repo1`；候选项同时存在并不等于多仓备份。
 
 
 --------
@@ -78,7 +79,7 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 ## 使用 Silo 仓库
 
 [**MINIO 模块**](/docs/minio) 当前部署 Silo S3 兼容对象存储。
-作为集中备份仓库时，它为备份提供独立于数据库主机的故障域。部署对象存储集群后，将备份方法切换为 `minio`：
+只有把对象存储部署在数据库主机或站点的故障域之外时，它才提供独立的容灾副本。部署对象存储集群后，将备份方法切换为 `minio`：
 
 ```yaml
 all:
@@ -204,8 +205,8 @@ minio_buckets:
 变更仓库定义或切换 `pgbackrest_method` 后，需要重新渲染配置、初始化 stanza，并尽快建立新仓库中的恢复起点：
 
 ```bash
-./pgsql.yml -t pg_backup -l pg-meta   # 重新配置 pgbackrest 并创建 stanza
-pg-backup full                        # 立即执行全量备份，建立新仓库中的第一个恢复点
+./pgsql.yml -t pg_backup -l pg-meta           # 重新配置并创建 stanza
+sudo -iu postgres pg-backup full              # 在当前主库执行全量备份，建立新仓库中的第一个恢复点
 ```
 
 旧仓库中的备份不会自动迁移，但在其保留期内仍可作为恢复来源使用（通过 [**`pg_pitr.repo`**](/docs/pgsql/backup/restore/#pitr-参数定义) 指定）。

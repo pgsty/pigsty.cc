@@ -46,8 +46,11 @@ bin/node-add 10.10.10.10              # 初始化节点 '10.10.10.10'
 
 要从 Pigsty 中移除一个节点，您可以使用以下命令：
 
+先确认目标节点上所有业务模块都已按各自流程移除，并检查需要保留的 `vector_data` 缓冲。
+确认精确目标后调用脚本：
+
 ```bash
-# ./node-rm.yml -l <cls|ip|group>    # 从 pigsty 中移除节点的实际剧本
+# ./node-rm.yml -l <cls|ip|group>    # 从 Pigsty 中移除节点的实际剧本
 # bin/node-rm <cls|ip|selector> ...  # 从 pigsty 中移除节点
 bin/node-rm node-test                # 移除节点集群 'node-test'
 bin/node-rm 10.10.10.10              # 移除节点 '10.10.10.10'

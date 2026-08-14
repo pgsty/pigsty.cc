@@ -89,7 +89,7 @@ juice_instances:
 - 重载 systemd
 - 重写该节点的 VictoriaMetrics 目标文件，移除 `state=absent` 的实例
 
-**不会删除** PostgreSQL 元数据与对象存储数据。
+**不会删除** PostgreSQL 元数据、PostgreSQL `jfs_blob` 数据表或对象存储数据。
 
 只执行 `-t juice_clean` 不会更新监控目标，会暂时留下已移除实例的陈旧抓取地址；因此上面的命令同时执行 `juice_register`。
 
@@ -104,7 +104,7 @@ juice_instances:
   newfs:
     path: /newfs
     meta: postgres://...
-    data: --storage minio --bucket http://minio:9000/newfs
+    data: --storage minio --bucket https://sss.pigsty:9000/newfs --access-key <s3_access_key> --secret-key <s3_secret_key>
     port: 9568
 ```
 
@@ -133,23 +133,27 @@ app:
 
 ## PITR 恢复
 
-当 **数据也存储在 PostgreSQL**（`--storage postgres`）时，可通过 PG 的 PITR 恢复文件系统：
+JuiceFS 元数据与数据必须恢复到相互一致的状态。
+执行任何恢复前，请停止所有写入方并卸载/停止每个客户端上的对应 JuiceFS 服务，明确目标 PostgreSQL 集群和时间点，并先确认可用备份：
 
 ```bash
-# 停止所有节点上的服务
-systemctl stop juicefs-jfs
+# 核对 Patroni 集群成员；在数据库节点核对目标 stanza 的备份
+pig pt list <cluster>
+pig pb info -s <stanza>
 
-# 使用 pgBackRest 恢复元数据库
-pb restore --stanza=meta --type=time --target="2024-01-15 10:30:00"
-
-# 启动 PostgreSQL
-systemctl start postgresql
-
-# 启动 JuiceFS 服务
-systemctl start juicefs-jfs
+# 在目标数据库节点以 postgres 用户执行恢复
+sudo -iu postgres pg-pitr -s <stanza> -t "2026-08-14 10:30:00+08"
 ```
 
-如果数据存储在 MinIO/S3，仅元数据可回滚，数据对象不会自动回退。
+{{% alert color="danger" title="PITR 会覆盖 PostgreSQL 数据目录" %}}
+确认准确的集群名、近期备份、恢复时间点与回滚方案后，按照 [PostgreSQL PITR 教程](/docs/pgsql/tutorial/pitr/) 停止 Patroni/PostgreSQL 并执行恢复。`pg-pitr` 不负责停止服务、恢复 Patroni/DCS、验证数据或重建副本，不要把上述命令当作完整恢复流程。
+{{% /alert %}}
+
+当元数据与 `--storage postgres` 的 `jfs_blob` 位于同一个被恢复的 PostgreSQL 数据库中时，数据库级 PITR 可以把两者恢复到同一时间点。
+若两者位于不同数据库或集群，必须设计一致的联合恢复点。
+
+如果文件数据位于 Silo/S3，对 PostgreSQL 做 PITR **只会回滚元数据**，不会回滚对象：
+目标时间点之后的新对象可能残留，而已删除或回收的旧对象可能无法找回。恢复能否得到完整文件系统取决于对象版本、回收站与生命周期策略；验证完成前不要运行垃圾回收。
 
 -------------
 

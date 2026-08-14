@@ -95,6 +95,8 @@ archive_timeout: 300                                          # 低写入时最�
 | `immediate` | 到达一致状态即停止         | 最快可用，验证备份                          |
 {.full-width}
 
+`set` 字段只选择 pgBackRest 从哪个备份集开始还原，并不是 WAL 重放的停止目标。
+
 ### 边界语义
 
 恢复目标默认是 **包含**（inclusive）的：目标点上的那个事务会被保留。

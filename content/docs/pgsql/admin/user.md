@@ -41,13 +41,13 @@ bin/pgsql-user pg-meta dbuser_app    # 在 pg-meta 集群上创建/修改 dbuser
 
 关于用户定义参数的完整参考，请查阅 [**用户配置**](/docs/pgsql/config/user)。角色与权限模型参见 [**访问控制**](/docs/concept/sec/ac#角色体系)，认证与凭据管理参见 [**身份认证**](/docs/concept/sec/auth)。
 
-请注意，用户的 `name` 字段在创建后无法修改。如需更改用户名，请先删除原用户，再创建新用户。
+`name` 是 `pgsql-user.yml` 查找用户定义的键，剧本不会执行角色重命名。需要更名时，应先创建新角色，迁移所有权、成员关系与客户端凭据，完成切换和验证后再删除旧角色；不要把“删除后重建”当作无损的重命名操作。
 
 | 操作                  | 快捷命令                          | 说明                          |
 |:--------------------|:------------------------------|:----------------------------|
 | [**创建用户**](#创建用户) | `bin/pgsql-user <cls> <user>` | 创建新的业务用户或角色                 |
 | [**修改用户**](#修改用户) | `bin/pgsql-user <cls> <user>` | 修改已存在用户的属性                  |
-| [**删除用户**](#删除用户) | `bin/pgsql-user <cls> <user>` | 安全删除用户（需设置 `state: absent`） |
+| [**删除用户**](#删除用户) | `bin/pgsql-user <cls> <user>` | 依赖感知的破坏性删除（需设置 `state: absent`） |
 {.full-width}
 
 
@@ -124,7 +124,7 @@ bin/pgsql-user pg-meta dbuser_app    # 修改 dbuser_app 用户的属性使其�
 {{< /tabpane >}}
 
 
-**不可修改的属性**：用户的 `name`（名称）在创建后无法修改，需要先删除再创建。
+**不可直接修改的属性**：用户的 `name` 是声明式定义的身份键，剧本不会把一个现有角色重命名为另一个角色。应按“创建新角色 → 迁移所有权/权限与客户端 → 验证 → 删除旧角色”的顺序完成更名。
 
 其他属性均可修改，以下是一些常见的修改示例：
 
@@ -197,12 +197,12 @@ bin/pgsql-user pg-meta dbuser_app    # 修改 dbuser_app 用户的属性使其�
 
 ## 删除用户
 
-要删除用户，将其 `state` 设置为 `absent` 并执行剧本：
+删除用户会终止连接、转移对象所有权、撤销授权并执行 `DROP ROLE`，属于不可逆操作。先确认精确的集群名、用户名、继任所有者与近期备份，再将目标用户的 `state` 设置为 `absent` 并执行实际变更。
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="脚本" %}}
 ```bash
-bin/pgsql-user <cls> <user>   # 删除用户 <user>（需在配置中设置 state: absent）
+bin/pgsql-user <cls> <user>   # 确认后实际删除；配置中必须为 state: absent
 ```
 {{% /tab %}}
 {{% tab header="剧本" %}}
@@ -225,13 +225,22 @@ pg_users:
     state: absent
 ```
 
-**删除操作会**：使用 `pg-drop-role` 脚本安全删除用户，自动禁用用户登录并终止活跃连接，自动转移数据库/表空间所有权到 `postgres`，自动处理所有数据库中的对象所有权和权限，撤销所有角色成员关系，创建审计日志，从 Pgbouncer 用户列表中移除并重载配置。
+**删除操作会**：在主库调用 `pg-drop-role <user> postgres --force`，先禁用登录并终止活跃连接，将数据库、表空间以及每个可连接数据库中的对象所有权转移给 `postgres`，执行 `DROP OWNED` 清理授权，撤销角色成员关系，最后执行 `DROP ROLE`。脚本在 `/tmp/pg_drop_role_<user>_<timestamp>.log` 保存执行前的审计快照。
 
-**保护机制**：以下系统用户无法删除，会被自动跳过：`postgres`（超级用户）、`replicator`（或 [**`pg_replication_username`**](/docs/pgsql/param#pg_replication_username) 配置的用户）、`dbuser_dba`（或 [**`pg_admin_username`**](/docs/pgsql/param#pg_admin_username) 配置的用户）、`dbuser_monitor`（或 [**`pg_monitor_username`**](/docs/pgsql/param#pg_monitor_username) 配置的用户）。
+**保护机制**：Ansible 任务会跳过 `postgres` 以及清单中配置的复制、管理和监控用户。直接运行 `pg-drop-role` 时，脚本只硬编码保护默认名称 `postgres`、`replicator`、`dbuser_dba`、`dbuser_monitor`；如果改过系统用户名，直接脚本不会自动识别它们，必须额外谨慎。
 
-{{% alert title="安全删除" color="primary" %}}
-Pigsty 使用 `pg-drop-role` 脚本安全删除用户，该脚本会自动处理用户拥有的数据库、表空间、Schema、表等对象，自动终止用户的活跃连接，将对象所有权转移给 `postgres` 用户，并在 `/tmp/pg_drop_role_<user>_<timestamp>.log` 创建审计日志。无需手动处理依赖对象。
+{{% alert title="依赖感知，但不是事务性删除" color="warning" %}}
+`pg-drop-role` 会在 `REASSIGN OWNED` 失败时跳过对应数据库的 `DROP OWNED`，但整个跨数据库流程不是一个事务；中途失败可能留下 `NOLOGIN`、已转移的部分对象或残余依赖。v4.5 的 Ansible 删除任务还使用 `ignore_errors`，因此剧本最终状态不能代替核验。执行后必须确认角色已消失、继任所有权正确、应用已切换，并检查审计日志。
 {{% /alert %}}
+
+v4.5 的 `pgsql-user.yml` 会重载 Pgbouncer，但不会可靠地从 `/etc/pgbouncer/userlist.txt` 清除已删除角色。删除后应在每个集群实例检查：
+
+```bash
+sudo -iu postgres psql -AXtwc "SELECT 1 FROM pg_roles WHERE rolname = 'dbuser_old';"
+grep -n '^"dbuser_old"[[:space:]]' /etc/pgbouncer/userlist.txt
+```
+
+若仍有精确匹配的 Pgbouncer 条目，应在受控变更中移除该行、重载 Pgbouncer 并验证应用连接；不要用模糊匹配批量删除。
 
 
 ----------------
@@ -247,14 +256,11 @@ pg-drop-role dbuser_old --check
 # 预览删除操作（不实际执行）
 pg-drop-role dbuser_old --dry-run -v
 
-# 删除用户，转移对象给 postgres
-pg-drop-role dbuser_old
-
-# 强制删除（终止活跃连接）
-pg-drop-role dbuser_old --force
-
-# 删除用户，转移对象给指定用户
+# 确认近期备份、精确用户名与继任所有者后，才执行实际删除
 pg-drop-role dbuser_old dbuser_new
+
+# 仅当已明确同意终止连接时使用 --force
+pg-drop-role dbuser_old dbuser_new --force
 ```
 
 
@@ -392,54 +398,52 @@ ORDER BY rolvaliduntil;
 | [**`pg_replication_password`**](/docs/pgsql/param#pg_replication_password) | `DBUser.Replicator` | `replicator`     | 复制用户密码              |
 {.full-width}
 
-要修改 [**`pg_admin_password`**](/docs/pgsql/param#pg_admin_password)，请执行以下命令：
+这三个账号属于 [**`pg_default_roles`**](/docs/pgsql/param#pg_default_roles)，不在 `pg_users` 中。`pgsql-user.yml` 只查找 `pg_users`，因此不应通过命令行临时覆盖 `pg_users` 来轮换默认密码：这既会改变本次剧本看到的业务用户列表，也会把明文密码留在 shell 历史中。
+
+使用以下通用顺序一次轮换一个账号：
+
+1. 在 `pigsty.yml`（或实际使用的清单）中持久化新的密码参数，不要把明文密码写进命令行。
+2. 在当前主库上以超级用户打开交互式 `psql`，使用 `\password <username>` 修改数据库角色密码；该元命令会交互读取密码。
+3. 使用下面对应的刷新剧本，并核对 `-l` 限定的集群/节点。
+4. 保留当前管理会话，验证 PostgreSQL 直连、Pgbouncer、复制、Exporter 和 Grafana 数据源，再轮换下一个账号。
 
 ```bash
-# Step 1: 修改配置文件中的密码 pg_admin_password 后（重要！），通过剧本批量修改密码
-./pgsql-user.yml -e username=dbuser_dba -e '{"pg_users":[{"name":"dbuser_dba","password":"NewPass123"}]}'
-
-# Step 2: 更新所有 PG 节点的 patroni 配置文件与 .pgpass，然后重载 patroni 配置
-./pgsql.yml -t pg_conf,pg_pass,patroni_reload -e pg_reload=true
-
-# Step 3: 刷新 /infra/env/.pgpass 以及 /infra/conf/pg_service.conf 对管理员密码的引用
-./infra.yml -t env_pgpass,env_pgscv
+# 在目标集群当前主库上，交互修改数据库角色密码
+sudo -iu postgres psql -d postgres
+\password dbuser_dba       # 或 dbuser_monitor / replicator
 ```
 
-要修改 [**`pg_monitor_password`**](/docs/pgsql/param#pg_monitor_password)，请执行以下命令：
+随后按账号刷新所有消费者；下列命令中的 `<cls>` 与 `infra` 必须替换/限定为实际目标：
 
 ```bash
-# Step 1: 修改配置文件中的密码 pg_monitor_password 后（重要！），通过剧本批量修改密码
-./pgsql-user.yml -e username=dbuser_monitor -e '{"pg_users":[{"name":"dbuser_monitor","password":"NewPass123"}]}'
+# 管理员 dbuser_dba：PG 节点 .pgpass、Pgbouncer、Infra 管理端与 pgAdmin 文件
+./pgsql.yml -l <cls> -t pg_pass,pgbouncer_user,pgbouncer_reload -e pg_reload=true
+./infra.yml -l infra -t env_pgpass,env_pgscv,env_pgadmin
 
-# Step 2: 更新所有 PG 节点的 patroni 配置文件与 .pgpass，然后重载 patroni 配置
-./pgsql.yml -t pg_conf,pg_pass,patroni_reload -e pg_reload=true
+# 监控用户 dbuser_monitor：PG 节点 .pgpass、Pgbouncer、两个 Exporter 与 Grafana 数据源
+./pgsql.yml -l <cls> -t pg_pass,pgbouncer_user,pgbouncer_reload,pg_exporter,pgbouncer_exporter,add_ds -e pg_reload=true
+./infra.yml -l infra -t env_pgpass
 
-# Step 3: 刷新 pg_exporter 与 pgbouncer_exporter 配置里面使用的密码，更新 Grafana 监控面板中数据源使用的密码
-./pgsql.yml -t pg_exporter,pgbouncer_exporter,add_ds
+# 复制用户 replicator：Patroni 配置、PG 节点 .pgpass 与 Infra .pgpass
+./pgsql.yml -l <cls> -t pg_conf,pg_pass,patroni_reload -e pg_reload=true
+./infra.yml -l infra -t env_pgpass
 ```
 
-要修改 [**`pg_replication_password`**](/docs/pgsql/param#pg_replication_password)，请执行以下命令：
+复制密码在数据库角色与所有 Patroni 节点之间不一致时，新建复制连接会失败，因此应安排维护窗口并快速完成验证。若部署了 VIBE 等会把管理员连接串写入工作区上下文的模块，还应按模块文档重新渲染对应文件。
+
+{{% alert title="检查 Infra .pgpass 重复项" color="warning" %}}
+v4.5 的 `env_pgpass` 使用 `lineinfile` 添加新记录，不会按用户名自动删除旧密码；libpq 又采用第一条匹配记录。刷新后应在每个目标 Infra 节点检查每个系统用户名是否只有一条匹配记录，并通过受控编辑删掉旧项（不要把密码打印到终端或日志）：
 
 ```bash
-# Step 1: 修改配置文件中的密码 pg_replication_password 后（重要！），通过剧本批量修改密码
-./pgsql-user.yml -e username=replicator -e '{"pg_users":[{"name":"replicator","password":"NewPass123"}]}'
-
-# Step 2: 更新所有 PG 节点的 patorni 配置文件与 .pgpass，然后重载 patroni 配置
-./pgsql.yml -t pg_conf,pg_pass,patroni_reload -e pg_reload=true
-
-# Step 3: 更新 Infra 节点的 .pgpass
-./infra.yml -t env_pgpass
+awk -F: '$4=="dbuser_dba" || $4=="dbuser_monitor" || $4=="replicator" {print NR, $4}' ~/.pgpass
 ```
+{{% /alert %}}
 
-此外，Patroni 本身 RestAPI 的密码 [**`patroni_password`**](/docs/pgsql/param#patroni_password) 可以通过以下命令进行修改：
+Patroni REST API 的 [**`patroni_password`**](/docs/pgsql/param#patroni_password) 不是 PostgreSQL 角色密码。修改清单后，应分别刷新目标 PostgreSQL 集群和 Infra 管理端：
 
 ```bash
-# Step 1: 刷新 patroni 配置文件里面配置的密码，并重载 patroni 配置应用生效
-./pgsql.yml -t pg_conf,patroni_reload -e pg_reload=true
-
-# Step 2: 刷新 /infra/conf/patronictl.yml 对 patroni 密码的引用
-./infra.yml -t env_patroni
+./pgsql.yml -l <cls> -t pg_conf,patroni_reload -e pg_reload=true
+./infra.yml -l infra -t env_patroni
 ```
 
-
-> 修改前三个密码前，需先用 SQL 修改对应 PostgreSQL 用户的密码：`ALTER USER <username> PASSWORD '<new_password>';`
+执行后用 `patronictl` 或 `pig pg list <cls>` 验证认证与集群状态。

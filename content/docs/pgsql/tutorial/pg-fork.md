@@ -1,434 +1,192 @@
 ---
-title: 利用 xfs 实现实例 Fork
+title: 克隆与旁路恢复 PostgreSQL 实例
 linkTitle: Fork 实例
 weight: 1708
-description: 在同一台机器上克隆实例并执行时间点恢复
+description: 使用 pg-fork 创建本机物理副本，并以 pg-pitr 对停止的数据目录执行低层恢复。
 icon: fa-solid fa-code-fork
 categories: [任务]
+aliases: [/docs/pgsql/tutorial/instance/]
 ---
 
+Pigsty v4.5.0 提供两个本机 Shell 工具：
 
-Pigsty 提供了两个实用脚本，用于在同一台机器上快速克隆实例并执行时间点恢复：
+- [`pg-fork`](#pg-fork)：复制一个 PostgreSQL 数据目录，并为副本设置独立端口。
+- [`pg-pitr`](#pg-pitr)：调用 pgBackRest，将一个 **已停止** 的数据目录恢复到指定目标。
 
-- [`pg-fork`](#pg-fork)：在同一台机器上快速克隆一个新的 PostgreSQL 实例
-- [`pg-pitr`](#pg-pitr)：使用 pgbackrest 手动执行时间点恢复
+它们适合沙箱演练、旁路取证和临时测试，不是完整的 Patroni 集群恢复编排器。托管实例优先使用 [`pig pitr`](/docs/pig/pitr/)；多节点集群优先使用分阶段的 [`pgsql-pitr.yml`](/docs/pgsql/backup/restore/)。
 
-这两个脚本可以配合使用：先用 `pg-fork` 克隆实例，再用 `pg-pitr` 将克隆实例恢复到指定时间点。
+{{% alert color="danger" title="先确认路径、备份和停机状态" %}}
+`pg-fork` 会递归删除已存在的目标目录；`pg-pitr` 会用备份覆盖目标目录。两者在非交互环境都可能不经确认直接执行。真实运行前必须核对源与目标的绝对路径、端口、表空间、精确集群/实例身份，并确认有独立、近期且经过验证的备份。不要把刚创建的 CoW 克隆当作独立备份。
+{{% /alert %}}
 
 
 --------
-
 
 ## pg-fork
 
-[`pg-fork`](https://github.com/pgsty/pigsty/blob/main/files/postgres/pg-fork) 可以在同一台机器上快速克隆一个新的 PostgreSQL 实例。
-
-### 快速上手
-
-使用 `postgres` 用户（dbsu）执行以下命令，即可创建一个新的实例：
+[`pg-fork`](https://github.com/pgsty/pigsty/blob/main/files/postgres/pg-fork) 在当前节点上复制 PostgreSQL 数据目录。以数据库操作系统用户（通常为 `postgres`，至少属于 `postgres` 组）执行：
 
 ```bash
-pg-fork 1                         # 从 /pg/data 克隆到 /pg/data1，端口 15432
-pg-fork 2 -d /pg/data1            # 从 /pg/data1 克隆到 /pg/data2，端口 25432
-pg-fork 3 -D /tmp/test -P 5555    # 克隆到自定义目录和端口
+pg-fork 1                         # /pg/data -> /pg/data1，目标端口 15432
+pg-fork 2 -d /pg/data1            # /pg/data1 -> /pg/data2，目标端口 25432
+pg-fork 3 -D /srv/pg-clone -P 55432
 ```
 
-克隆完成后，可以启动并访问新实例：
+### 参数
 
-```bash
-pg_ctl -D /pg/data1 start         # 启动克隆实例
-psql -p 15432                     # 连接克隆实例
-```
-
-
-### 命令语法
-
-```bash
+```text
 pg-fork <FORK_ID> [options]
 ```
 
-**必填参数：**
-
-| 参数 | 说明 |
-|------|------|
-| `<FORK_ID>` | 克隆实例编号（1-9），决定默认端口和数据目录 |
-
-**可选参数：**
-
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `-d, --data <datadir>` | 源实例数据目录 | `/pg/data` 或 `$PG_DATA` |
-| `-D, --dst <dst_dir>` | 目标数据目录 | `/pg/data<FORK_ID>` |
-| `-p, --port <port>` | 源实例端口 | `5432` 或 `$PG_PORT` |
+| 参数 | 含义 | 默认值 |
+|:-----|:-----|:-------|
+| `<FORK_ID>` | 单个数字 `1`–`9`，用于推导默认目录和端口 | 必填 |
+| `-d, --data <path>` | 源数据目录 | `$PG_DATA` 或 `/pg/data` |
+| `-D, --dst <path>` | 目标数据目录 | `/pg/data<FORK_ID>` |
+| `-p, --port <port>` | 源实例端口 | `$PG_PORT` 或 `5432` |
 | `-P, --dst-port <port>` | 目标实例端口 | `<FORK_ID>5432` |
-| `-s, --skip` | 跳过备份 API，使用冷拷贝模式 | - |
-| `-y, --yes` | 跳过确认提示 | - |
-| `-h, --help` | 显示帮助信息 | - |
+| `-s, --skip` | 跳过在线备份 API，强制冷拷贝 | 否 |
+| `-y, --yes` | 跳过交互确认 | 否 |
+{.full-width}
 
+脚本会拒绝相同的规范化源/目标路径，但不会判断自定义目标目录是否属于其他重要数据。目标目录存在时，它会在复制前执行递归删除。
 
-### 使用示例
+### 热备份与冷拷贝
 
-{{< tabpane persist="disabled" >}}
-{{% tab header="pg-fork 示例" disabled=true /%}}
-{{< tab header="基础克隆" lang="bash" >}}
-# 从默认实例克隆到 /pg/data1，端口 15432
-pg-fork 1
+默认情况下，脚本用目标端口连接源实例，在同一个 `psql` 会话中执行：
 
-# 从默认实例克隆到 /pg/data2，端口 25432
-pg-fork 2
-{{< /tab >}}
-{{< tab header="指定源端口" lang="bash" >}}
-# 从端口 5433 的实例克隆
-pg-fork 1 -p 5433
+1. `CHECKPOINT`；
+2. `pg_backup_start()`；
+3. `rm -rf <目标>` 与 `cp -a --reflink=auto`；
+4. `pg_backup_stop(wait_for_archive => false)`。
 
-# 使用环境变量指定源端口
-PG_PORT=5433 pg-fork 1
-{{< /tab >}}
-{{< tab header="链式克隆" lang="bash" >}}
-# 从 /pg/data1 克隆到 /pg/data2
-pg-fork 2 -d /pg/data1
+如果无法通过指定端口连接源实例，脚本会 **自动降级为冷拷贝**，而不是中止。`-s` 也会强制冷拷贝。只有确认源实例已经完全停止时，冷拷贝才是安全的；`postmaster.pid` 只能作为警告线索，不能证明进程状态。
 
-# 从 /pg/data2 克隆到 /pg/data3
-pg-fork 3 -d /pg/data2
-{{< /tab >}}
-{{< tab header="自定义位置" lang="bash" >}}
-# 克隆到自定义目录和端口
-pg-fork 1 -D /tmp/pgtest -P 5555
+同一文件系统上，脚本会将以下文件系统识别为快速 CoW 模式：启用 reflink 的 XFS、Btrfs、Bcachefs 和 OCFS2。其他文件系统或跨文件系统目标仍执行 `cp --reflink=auto`，但可能退化为完整复制。脚本帮助中的 ZFS 描述比当前探测逻辑更宽；v4.5.0 实现不会把 ZFS 标记为已确认的快速 CoW 模式。
 
-# 完全自定义
-pg-fork 1 -d /pg/data -D /mnt/backup/pgclone -P 6543
-{{< /tab >}}
-{{< tab header="冷拷贝模式" lang="bash" >}}
-# 源实例已停止时使用冷拷贝
-pg-fork 1 -s
+### 副本配置
 
-# 跳过确认直接执行
-pg-fork 1 -s -y
-{{< /tab >}}
-{{< /tabpane >}}
+复制成功后，`pg-fork` 会：
 
+- 删除目标中的 `postmaster.pid`、`postmaster.opts` 与 `standby.signal`；
+- 清空目标中的物理复制槽目录；
+- 在目标 `postgresql.auto.conf` 中设置独立 `port`、`archive_mode=off` 与本地 `log_directory`；
+- 删除 `primary_conninfo`、`primary_slot_name` 与旧的 `recovery_target*` 覆盖项。
 
-### 工作原理
-
-`pg-fork` 支持两种工作模式：
-
-**热备份模式**（默认，源实例运行中）：
-1. 调用 `pg_backup_start()` 开始备份
-2. 使用 `cp --reflink=auto` 拷贝数据目录
-3. 调用 `pg_backup_stop()` 结束备份
-4. 修改配置文件，避免与源实例冲突
-
-**冷拷贝模式**（使用 `-s` 参数或源实例未运行）：
-1. 直接使用 `cp --reflink=auto` 拷贝数据目录
-2. 修改配置文件
-
-{{% alert color="info" title="CoW 快速克隆" %}}
-如果您使用 XFS（启用 reflink）、Btrfs 或 ZFS 文件系统，`pg-fork` 会利用 **Copy-on-Write** 特性，
-数据目录拷贝在几百毫秒内完成，且几乎不占用额外存储空间。只有在数据被修改时才会分配新的存储块。
-{{% /alert %}}
-
-
-### 克隆后配置
-
-`pg-fork` 会自动修改克隆实例的以下配置：
-
-| 配置项 | 修改内容 |
-|--------|----------|
-| `port` | 改为目标端口（避免冲突） |
-| `archive_mode` | 设为 `off`（避免污染 WAL 归档） |
-| `log_directory` | 设为 `log`（使用数据目录下的日志） |
-| `primary_conninfo` | 移除（创建独立实例） |
-| `standby.signal` | 移除（创建独立实例） |
-| `pg_replslot/*` | 清空（避免复制槽冲突） |
-
-
-### 典型工作流
+脚本不会检查目标端口是否空闲，也不会调整内存参数。启动副本前，至少核对：
 
 ```bash
-# 1. 克隆实例用于测试
-pg-fork 1 -y
-
-# 2. 启动克隆实例
-pg_ctl -D /pg/data1 start
-
-# 3. 在克隆实例上测试（不影响生产）
-psql -p 15432 -c "DROP TABLE important_data;"  # 安全测试
-
-# 4. 测试完成后清理
-pg_ctl -D /pg/data1 stop
-rm -rf /pg/data1
+postgres -D /pg/data1 -C port
+postgres -D /pg/data1 -C archive_mode
+postgres -D /pg/data1 -C shared_buffers
+pg_ctl -D /pg/data1 status
 ```
+
+{{% alert color="warning" title="外部表空间不会被隔离" %}}
+`cp -a` 会保留 `pg_tblspc` 中的符号链接；`pg-fork` 不会复制或重映射 PGDATA 之外的表空间。直接启动这样的副本可能访问甚至修改源实例的表空间。存在外部表空间时，必须先独立复制并重映射所有表空间，或不要使用此脚本创建可写副本。
+{{% /alert %}}
+
+### 交互边界
+
+只有标准输入是终端且没有 `-y` 时，脚本才询问 `Proceed with fork? [y/N]`。管道、CI、cron 等非交互调用不会出现该确认。因此自动化必须在调用前自行完成严格的绝对路径白名单与目标存在性检查；不要为了方便默认添加 `-y`。
 
 
 --------
-
 
 ## pg-pitr
 
-[`pg-pitr`](https://github.com/pgsty/pigsty/blob/main/files/postgres/pg-pitr) 是一个用于手动执行时间点恢复的脚本，基于 pgbackrest。
+[`pg-pitr`](https://github.com/pgsty/pigsty/blob/main/files/postgres/pg-pitr) 是低层 pgBackRest restore 包装器。它不暂停或启动 Patroni，不停止或启动 PostgreSQL，不清理 DCS，也不重建副本。
 
-### 快速上手
+### 恢复目标
 
-```bash
-pg-pitr -d                                  # 恢复到最新状态
-pg-pitr -i                                  # 恢复到备份完成时间
-pg-pitr -t "2025-01-01 12:00:00+08"         # 恢复到指定时间点
-pg-pitr -n my-savepoint                     # 恢复到命名恢复点
-pg-pitr -l "0/7C82CB8"                      # 恢复到指定 LSN
-pg-pitr -x 12345678 -X                      # 恢复到事务之前
-pg-pitr -b 20251225-120000F                 # 恢复到指定备份集
-```
+实际执行至少要明确理解一个恢复目标。无参数调用只显示帮助：
 
-
-### 命令语法
-
-```bash
-pg-pitr [options] [recovery_target]
-```
-
-**恢复目标（选择一个）：**
-
-| 参数 | 说明 |
-|------|------|
-| `-d, --default` | 恢复到 WAL 归档流末尾（最新状态） |
-| `-i, --immediate` | 恢复到数据库一致性点（最快恢复） |
-| `-t, --time <timestamp>` | 恢复到指定时间点 |
-| `-n, --name <restore_point>` | 恢复到命名恢复点 |
+| 参数 | pgBackRest 语义 |
+|:-----|:---------------|
+| `-d, --default` | 不设置停止目标，重放到可用 WAL 末尾 |
+| `-i, --immediate` | 到达所选备份的一致性点后停止 |
+| `-t, --time <timestamp>` | 恢复到指定时间 |
+| `-n, --name <restore-point>` | 恢复到命名还原点 |
 | `-l, --lsn <lsn>` | 恢复到指定 LSN |
 | `-x, --xid <xid>` | 恢复到指定事务 ID |
-| `-b, --backup <label>` | 恢复到指定备份集 |
+{.full-width}
 
-**可选参数：**
+`-S/--set`（兼容别名 `-b/--backup`）只选择 **从哪个备份集开始恢复**，不是停止目标。例如，`-S 20251225-120000F -d` 仍会继续重放到 WAL 末尾；若要在该备份一致后立即停止，应组合 `-S ... -i`。
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `-D, --data <path>` | 恢复目标数据目录 | `/pg/data` |
-| `-s, --stanza <name>` | pgbackrest stanza 名称 | 自动检测 |
-| `-X, --exclusive` | 排除目标点（恢复到目标之前） | - |
-| `-P, --promote` | 恢复后自动提升（默认暂停） | - |
-| `-c, --check` | 干运行模式，仅打印命令 | - |
-| `-y, --yes` | 跳过确认和倒计时 | - |
-| `-h, --help` | 显示帮助信息 | - |
+针对 `time`、`name`、`lsn`、`xid` 与 `immediate`，pgBackRest 的有效默认动作是抵达目标后暂停；`-P/--promote` 改为自动提升。`-X/--exclusive` 只应与 `time`、`lsn` 或 `xid` 这类明确边界配合使用。
 
+### 其他选项
 
-### 恢复目标类型
+| 参数 | 含义 |
+|:-----|:-----|
+| `-D, --data <path>` | 目标数据目录，必须是绝对路径；默认 `/pg/data` |
+| `-s, --stanza <name>` | pgBackRest stanza；默认从配置取第一个非 `global` stanza |
+| `-T, --timeline <value>` | `latest`、`current` 或正整数时间线 |
+| `-P, --promote` | 对有停止目标的恢复设置自动提升 |
+| `-v, --verbose` | 启用 pgBackRest info 级控制台日志 |
+| `-c, --check, --dry-run` | 只打印将执行的命令 |
+| `-y, --yes` | 跳过五秒倒计时 |
+| `-- <args>` | 将额外参数原样传给 pgBackRest |
+{.full-width}
 
-{{< tabpane persist="disabled" >}}
-{{% tab header="恢复目标" disabled=true /%}}
-{{< tab header="latest" lang="bash" >}}
-# 恢复到 WAL 归档流末尾（最新状态）
-pg-pitr -d
+`-c` 是命令渲染检查，不会证明备份/WAL 可用，也不会检查 PostgreSQL 或 Patroni 已停止。额外 pgBackRest 参数也没有由包装器做冲突过滤；传递仓库、表空间或链接映射参数时必须单独审查最终命令。
 
-# 这是默认行为，会重放所有可用的 WAL
-{{< /tab >}}
-{{< tab header="immediate" lang="bash" >}}
-# 恢复到数据库一致性点
-pg-pitr -i
+### 安全执行顺序
 
-# 最快的恢复方式，不重放额外的 WAL
-# 适用于快速验证备份是否可用
-{{< /tab >}}
-{{< tab header="time" lang="bash" >}}
-# 恢复到指定时间点
-pg-pitr -t "2025-01-01 12:00:00+08"
-
-# 使用 UTC 时间
-pg-pitr -t "2025-01-01 04:00:00+00"
-
-# 时间格式：YYYY-MM-DD HH:MM:SS[.usec][+/-TZ]
-{{< /tab >}}
-{{< tab header="name" lang="bash" >}}
-# 恢复到命名恢复点
-pg-pitr -n my-savepoint
-
-# 恢复点需要事先使用 pg_create_restore_point() 创建
-# SELECT pg_create_restore_point('my-savepoint');
-{{< /tab >}}
-{{< tab header="lsn" lang="bash" >}}
-# 恢复到指定 LSN
-pg-pitr -l "0/7C82CB8"
-
-# LSN 可以从监控面板或 pg_current_wal_lsn() 获取
-{{< /tab >}}
-{{< tab header="xid" lang="bash" >}}
-# 恢复到指定事务 ID
-pg-pitr -x 12345678
-
-# 恢复到事务之前（不包含该事务）
-pg-pitr -x 12345678 -X
-{{< /tab >}}
-{{< tab header="backup" lang="bash" >}}
-# 恢复到指定备份集
-pg-pitr -b 20251225-120000F
-
-# 查看可用备份集
-pgbackrest info
-{{< /tab >}}
-{{< /tabpane >}}
-
-
-### 使用示例
-
-**恢复到指定时间点：**
+以下示例只展示单个已隔离目标目录的低层流程；生产集群恢复应使用完整 runbook：
 
 ```bash
-# 1. 停止 PostgreSQL
-pg_ctl -D /pg/data stop -m fast
+# 1. 只读核验备份与恢复窗口
+pig pb info
 
-# 2. 执行 PITR
-pg-pitr -t "2025-12-27 10:00:00+08"
+# 2. 核对目标实例已经停止；Patroni 托管实例还要先停止 Patroni
+pg_ctl -D /pg/data1 status
 
-# 3. 启动并验证
-pg_ctl -D /pg/data start
-psql -c "SELECT * FROM important_table;"
+# 3. 打印并人工审查准确命令，不写数据
+pg-pitr -D /pg/data1 -t "2026-08-13 10:00:00+08" -c
 
-# 4. 确认无误后提升
-pg_ctl -D /pg/data promote
-
-# 5. 启用归档并执行新备份
-psql -c "ALTER SYSTEM SET archive_mode = on;"
-pg_ctl -D /pg/data restart
-pg-backup full
+# 4. 只有在操作者再次确认绝对目标、备份与停机状态后，才去掉 -c
+pg-pitr -D /pg/data1 -t "2026-08-13 10:00:00+08"
 ```
 
-**恢复到克隆实例：**
+实际执行拒绝 root，并在发现目标目录中存在 `postmaster.pid` 时中止；即使 PID 已失效，也要求人工确认后清理。它没有 `y/N` 问答：交互终端只有五秒可中断倒计时，非交互环境没有倒计时并直接进入 restore。
+
+恢复后由操作者启动实例并验证：
 
 ```bash
-# 1. 克隆实例
-pg-fork 1 -y
-
-# 2. 在克隆实例上执行 PITR
-pg-pitr -D /pg/data1 -t "2025-12-27 10:00:00+08"
-
-# 3. 启动克隆实例验证
 pg_ctl -D /pg/data1 start
-psql -p 15432
+psql -p 15432 -Atqc \
+  'SELECT pg_is_in_recovery(), pg_is_wal_replay_paused(), pg_last_xact_replay_timestamp()'
 ```
 
-**干运行模式：**
+只有恢复目标、允许访问的业务数据、时间线和归档设置全部验证无误后，才决定是否提升。提升会创建新时间线，不是可撤销的“查看”动作。`pg-pitr` 本身不会关闭归档；不要机械执行脚本结尾的通用“enable archive_mode”提示，应先查看有效值，只纠正本次恢复明确造成的覆盖项。
 
-```bash
-# 仅打印命令，不执行
-pg-pitr -t "2025-12-27 10:00:00+08" -c
+### 旁路恢复的额外风险
 
-# 输出示例：
-# Command:
-#   pgbackrest --stanza=pg-meta --delta --force --type=time --target="2025-12-27 10:00:00+08" restore
-```
+向 `/pg/data1` 之类的自定义目录恢复时，pgBackRest 可能从备份恢复 `postgresql.auto.conf`，覆盖 `pg-fork` 写入的独立端口。启动前重新检查 `port`、`archive_mode`、socket、日志与内存设置。
 
-
-### 恢复后处理
-
-恢复完成后，实例会处于 **恢复暂停** 状态（除非使用 `-P` 参数）。您需要：
-
-1. **启动实例**：`pg_ctl -D /pg/data start`
-2. **验证数据**：检查数据是否符合预期
-3. **提升实例**：`pg_ctl -D /pg/data promote`
-4. **启用归档**：`psql -c "ALTER SYSTEM SET archive_mode = on;"`
-5. **重启实例**：`pg_ctl -D /pg/data restart`
-6. **执行备份**：`pg-backup full`
-
-{{% alert color="warning" title="重要提示" %}}
-恢复后的实例 `archive_mode` 被设为 `off`，以防止意外的 WAL 写入污染归档仓库。
-确认数据正确后，务必重新启用归档并执行全量备份。
-{{% /alert %}}
+备份中若包含外部表空间或链接，旁路恢复还可能使用原路径。需要隔离时，应在 `--` 后提供经过审查的 pgBackRest `--tablespace-map`、`--link-map` 等参数，并检查打印出的完整命令；否则不要在与生产实例相同的主机上启动恢复副本。
 
 
 --------
 
+## 推荐的克隆验证流程
 
-## 组合使用
+1. 核对源实例、目标绝对路径、目标端口、表空间与独立备份。
+2. 在交互终端运行 `pg-fork <id>`，确认脚本显示的是热备份而非意外降级的冷拷贝。
+3. 不启动副本，先用 `pg-pitr -D <clone> ... -c` 检查恢复命令。
+4. 明确确认目标后执行恢复；随后重新检查副本端口和所有外部路径。
+5. 启动副本，在隔离端口上验证恢复状态和经授权的数据。
+6. 只有需要形成新主库时才提升；否则停止副本并按经过验证的精确路径清理。
 
-`pg-fork` 和 `pg-pitr` 可以组合使用，实现安全的 PITR 验证流程：
-
-```bash
-# 1. 克隆当前实例
-pg-fork 1 -y
-
-# 2. 在克隆实例上执行 PITR（不影响生产）
-pg-pitr -D /pg/data1 -t "2025-12-27 10:00:00+08"
-
-# 3. 启动克隆实例
-pg_ctl -D /pg/data1 start
-
-# 4. 验证恢复结果
-psql -p 15432 -c "SELECT count(*) FROM orders WHERE created_at < '2025-12-27 10:00:00';"
-
-# 5. 确认无误后，可以选择：
-#    - 方案A：在生产实例上执行相同的 PITR
-#    - 方案B：将克隆实例提升为新的生产实例
-
-# 6. 清理测试实例
-pg_ctl -D /pg/data1 stop
-rm -rf /pg/data1
-```
+这种旁路验证可以降低对当前 PGDATA 的直接影响，但仍会读取同一个备份仓库、占用主机资源，并可能触及外部表空间；它不是无风险沙箱。
 
 
 --------
 
+## 相关文档
 
-## 注意事项
-
-### 运行要求
-
-- 必须以 `postgres` 用户（或 postgres 组成员）执行
-- `pg-pitr` 执行前必须停止目标实例的 PostgreSQL
-- `pg-fork` 热备份模式需要源实例正在运行
-
-### 文件系统
-
-- 推荐使用 XFS（启用 reflink）或 Btrfs 文件系统
-- CoW 文件系统上克隆几乎瞬间完成，且不占用额外空间
-- 非 CoW 文件系统会执行完整拷贝，耗时较长
-
-### 端口规划
-
-| FORK_ID | 默认端口 | 默认数据目录 |
-|---------|----------|--------------|
-| 1 | 15432 | /pg/data1 |
-| 2 | 25432 | /pg/data2 |
-| 3 | 35432 | /pg/data3 |
-| ... | ... | ... |
-| 9 | 95432 | /pg/data9 |
-
-### 安全建议
-
-- 克隆实例仅用于测试和验证，不应长期运行
-- 验证完成后及时清理克隆实例
-- 生产环境 PITR 建议使用 `pgsql-pitr.yml` 剧本
-- 重要操作前先使用 `-c` 干运行模式确认命令
-
-
-
-
-
-## 原理剖析
-
-有时候，您想要用现有的 PostgreSQL 实例在 **同一台机器** 上创建一个新的实例 （用于测试，PITR 恢复），可以使用 `postgres` 用户执行下面的命令：
-
-```bash
-psql <<EOF
-CHECKPOINT;
-SELECT pg_backup_start('pgfork', true);
-\! rm -rf /pg/data2 && cp -r --reflink=auto /pg/data /pg/data2 && ls -alhd /pg/data2
-SELECT * FROM pg_backup_stop(false);
-EOF
-
-# 修改配置，避免与现有实例冲突：端口，日志，归档等
-sed -i 's/^port.*/port = 5431/' /pg/data2/postgresql.conf;
-sed -i 's/^log_destination.*/log_destination = stderr/' /pg/data2/postgresql.conf;
-sed -i 's/^archive_mode.*/archive_mode = off/' /pg/data2/postgresql.conf;
-rm -rf /pg/data2/postmaster.pid /pg/data2/postmaster.opts
-pg_ctl -D /pg/data2 start -l /pg/log/pgfork.log
-pg_ctl -D /pg/data2 stop
-psql -p 5431  # 访问新实例
-```
-
-上面的命令会创建一个新的数据目录 `/pg/data2`，它是现有数据目录 `/pg/data` 的一个完整拷贝。
-如果您使用的是 XFS （启用了 reflink COW 特性），那么同磁盘拷贝目录会非常快，通常几百毫秒的常数时间内即可完成。
-
-您在原地拉起新实例前，**务必** 修改 `postgresql.conf` 里的 `port` / `archive_mode` / `log_destination` 参数，避免影响现有生产实例等运行。
-您可以使用一个没有被占用的端口，例如 `5431`，并将日志输出到 `/pg/log/xxxx.log` 避免写脏现有实例的日志文件。
-
-我们建议同时修改 `shared_buffers`  Pigsty 默认情况通常分配 25% 的系统内存给 PostgreSQL 实例，
-开启新实例时，会与现有实例争夺内存资源。您可以适当调小，以减小对现有生产实例的影响。
+- [PITR 手工演练](/docs/pgsql/tutorial/pitr/)
+- [恢复操作与 `pgsql-pitr.yml`](/docs/pgsql/backup/restore/)
+- [`pig pitr`](/docs/pig/pitr/)
+- [`pig pb restore`](/docs/pig/pb/#pb-restore/)

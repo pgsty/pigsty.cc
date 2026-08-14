@@ -8,8 +8,6 @@ categories: [参考]
 main_menu: True
 ---
 
-当前 `main` 分支（v4.5.0 开发版）在 `conf/` 目录提供 51 个独立的 YAML 配置模板，适用于不同的部署、测试与构建场景。最新正式发布版 v4.4.0 提供 48 个；新增的是 `demo/kafka`、`demo/mysql` 与 `ha/octo`。此外，`app/supa.yml` 是指向 `supabase.yml` 的兼容软链接，不重复计数。
-
 您可以在 [**`configure`**](/docs/concept/iac/configure) 时使用 `-c` 指定配置模板；参数值为相对 `conf/` 的路径且不带 `.yml` 后缀。如果没有指定，将使用默认的 [**`meta`**](/docs/conf/meta/) 模板。
 
 | 分类    | 模板                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |

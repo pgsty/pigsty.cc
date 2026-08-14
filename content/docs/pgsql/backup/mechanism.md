@@ -182,10 +182,10 @@ stanza: pg-meta
 `pb` 是登录 shell 内置的别名函数：从配置文件解析出 stanza 后转发，让您少敲一个参数：
 
 ```bash
-function pb() {
-    local stanza=$(grep -o '\[[^][]*]' /etc/pgbackrest/pgbackrest.conf | head -n1 | sed 's/.*\[\([^]]*\)].*/\1/')
-    pgbackrest --stanza=$stanza $@
-}
+pb() (
+    stanza=$(grep -o '\[[^][]*]' /etc/pgbackrest/pgbackrest.conf | head -n1 | sed 's/.*\[\([^]]*\)].*/\1/')
+    pgbackrest --stanza="${stanza}" "$@"
+)
 pb info     # = pgbackrest --stanza=pg-meta info
 pb backup   # = pgbackrest --stanza=pg-meta backup
 ```
@@ -280,7 +280,7 @@ pgBackRest 组件在 [**`pgsql.yml`**](/docs/pgsql/playbook/#pgsqlyml) 剧本中
 
 - 随 [**`pg_packages`**](/docs/pgsql/param#pg_packages) 中的 `pgsql-common` 组安装，二进制位于 `/usr/bin/pgbackrest`
 - `pg_backup` 子任务负责渲染配置、创建 stanza；由 [**`pgbackrest_enabled`**](/docs/pgsql/param#pgbackrest_enabled) 控制（默认启用）
-- 集群初始化后默认尝试执行一次 **初始全量备份**，留下 `/etc/pgbackrest/initial.done` 标记防止重复；
+- 集群初始化后默认尝试执行一次 **初始全量备份**，且只在备份成功后留下 `/etc/pgbackrest/initial.done` 标记防止重复；
   由 [**`pgbackrest_init_backup`**](/docs/pgsql/param#pgbackrest_init_backup) 控制
 
 ### 文件层次

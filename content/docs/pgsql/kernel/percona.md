@@ -9,7 +9,7 @@ categories: [概念]
 
 [Percona Postgres](https://www.percona.com/postgresql/software/postgresql-distribution) 是一个带有 [`pg_tde`](https://docs.percona.com/pg-tde/index.html)（透明数据加密）扩展的补丁 Postgres 内核。
 
-Pigsty v4.4.0 将 Percona PostgreSQL 打包到私有前缀 `/usr/pgtde-$v`
+Pigsty 从 v4.4.0 起将 Percona PostgreSQL 打包到私有前缀 `/usr/pgtde-$v`，v4.5.0 延续这一布局
 （PostgreSQL 18 对应 `/usr/pgtde-18`）。`pgtde` 包别名会同时安装内核包
 与 contrib 包，其中包含 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、
 pgaudit、pg_stat_monitor 等常用组件。
@@ -55,7 +55,7 @@ pg-meta:
         extensions: [ vector, postgis, pg_tde ,pgaudit, { name: pg_stat_monitor, schema: monitor } ]
     pg_hba_rules:
       - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
-    node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
+    pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
 
     # Percona PostgreSQL TDE 内核设置
     pg_packages: [ pgtde, pgsql-common ]

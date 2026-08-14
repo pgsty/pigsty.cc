@@ -78,13 +78,13 @@ cd ~/pigsty      # 进入 Pigsty 目录
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash            # 安装当前默认版本
-curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param version >}}  # 安装特定版本（示例：{{< param version >}}）
+curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash            # 安装当前默认版本
-curl -fsSL https://repo.pigsty.io/get | bash -s {{< param version >}}  # 安装特定版本（示例：{{< param version >}}）
+curl -fsSL https://repo.pigsty.io/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -93,7 +93,7 @@ curl -fsSL https://repo.pigsty.io/get | bash -s {{< param version >}}  # 安装�
 
 ```bash
 git clone https://github.com/pgsty/pigsty; cd pigsty;
-git checkout {{< param version >}};  # 使用 git 安装时，请务必检出特定版本（示例：{{< param version >}}）
+git checkout {{< param stable_version >}};  # 使用 git 安装时，请务必检出已发布的 tag
 ```
 
 手工下载克隆安装时，请额外执行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
@@ -135,9 +135,9 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
 
-下面展示的是当前 `main` 分支（v4.5.0 开发版）的输出；若按上文安装 {{< param version >}} 正式版，首行版本号会显示为 `{{< param version >}}`。
+下面展示的是当前 `main` 分支（{{< param version >}}）的输出；若安装其他版本，首行会显示对应版本号。
 
-<details><summary>当前 main（v4.5.0 开发版）的 configure 样例输出</summary>
+<details><summary>当前 main（{{< param version >}}）的 configure 样例输出</summary>
 
 ```bash
 vagrant@meta:~/pigsty$ ./configure
@@ -167,14 +167,14 @@ proceed with ./deploy.yml
 
 **配置脚本常用参数**：
 
-| 参数                      | 说明                                                               |
-|:------------------------|:-----------------------------------------------------------------|
-| `-i\|--ip`              | 当前主机的首要内网 IP 地址，用于替换配置文件中的 IP 地址占位符 `10.10.10.10`                |
-| `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称 |
+| 参数                      | 说明                                                                             |
+|:------------------------|:-------------------------------------------------------------------------------|
+| `-i\|--ip`              | 当前主机的首要内网 IP 地址，用于替换配置文件中的 IP 地址占位符 `10.10.10.10`                              |
+| `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称               |
 | `-v\|--version`         | 指定 PostgreSQL 大版本 `14`～`19`；PG19 当前为 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板 |
-| `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                    |
-| `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                      |
-| `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量         |
+| `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                                  |
+| `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                                    |
+| `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量                       |
 {.full-width}
 
 如果您的机器网卡绑定了多个 IP 地址，那么需要使用 `-i|--ip <ipaddr>` 显式指定一个当前节点的首要 IP 地址，或在交互式问询中提供。

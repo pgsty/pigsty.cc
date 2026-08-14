@@ -1,175 +1,137 @@
 ---
-title: Jupyter：笔记本 AI IDE
+title: Jupyter：Notebook 与数据分析环境
 weight: 650
-description: 使用 Jupyter Lab 并访问 PostgreSQL 数据库，组合使用 SQL 与 Python 的能力进行数据分析。
+lastmod: 2026-08-13
+description: 使用 Pigsty 的独立 Docker Compose 模板运行 JupyterLab，并安全访问 PostgreSQL。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-Jupyter Lab 是基于 IPython Notebook 的完整数据科学研发环境，可用于数据分析与可视化。
+[JupyterLab](https://jupyter.org/) 是交互式 Notebook、终端与数据分析环境。Pigsty v4.5.0 有两种不同的部署方式：
 
-Pigsty 提供了 Docker Compose 模板，可以一键在容器中启动 Jupyter Lab 服务，并方便地访问 PostgreSQL 数据库。
+- [`VIBE`](/docs/vibe/) 模块：由 Ansible 和 systemd 管理，适合 v4.5.0 的完整开发沙箱。
+- `app/jupyter`：轻量的独立 Docker Compose 模板，本页介绍这一方式。
+
+`app/jupyter` 不是默认 `apps` 清单项，且创建数据目录是独立步骤；不要直接假设 `app.yml -e app=jupyter` 能处理目录权限。
 
 ![JupyterLab](/img/docs/app/jupyter.jpeg)
 
-
+--------
 
 ## 快速开始
 
-在 Pigsty 软件模板目录中提供了 Jupyter 的 Docker Compose 配置文件：
-
 ```bash
 cd ~/pigsty/app/jupyter
+vi .env                    # 修改 JUPYTER_TOKEN，并按需固定 JUPYTER_IMAGE
+chmod 600 .env
+make dir                   # 创建 /data/jupyter，属主 1000:100
+make up                    # docker compose up -d
 ```
 
-修改默认密码，编辑 `.env` 文件中的 `JUPYTER_TOKEN` 参数（默认值为 `pigsty`）。
+可用 `openssl rand -hex 32` 生成强 Token。默认端口为 `8888`，从 `http://<host_ip>:8888` 访问。
 
-创建数据目录并启动服务：
+只有在 `infra_portal`、Nginx 与 DNS 中配置了 `lab.pigsty` 时，该域名才可用。模板默认值 `JUPYTER_TOKEN=pigsty` 只能用于本地演示，生产环境必须更换。
+
+--------
+
+## 当前模板
+
+`.env` 的 v4.5.0 默认值为：
 
 ```bash
-make dir    # 创建 /data/jupyter 目录并设置权限
-make up     # 使用 Docker Compose 启动服务
+JUPYTER_IMAGE=quay.io/jupyter/minimal-notebook:latest
+JUPYTER_PORT=8888
+JUPYTER_TOKEN=pigsty
 ```
 
-访问 Jupyter Lab：
+Compose 将宿主机 `/data/jupyter` 挂载到容器的 `/home/jovyan/work`，并把 Token 传给容器。`latest` 会随上游变化；生产环境应改为经过验证的具体镜像标签或摘要。
 
-- 默认地址： http://lab.pigsty
-- 备用地址： http://10.10.10.10:8888
-- 默认 Token：`pigsty`
+若需要 SciPy、R、Julia、TensorFlow、PyTorch 或 Spark，可使用 `.env` 中列出的其他 [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/) 镜像，但仍应固定版本并验证架构支持。
 
+--------
 
+## 访问 PostgreSQL
 
-## 管理命令
-
-Pigsty 提供了便捷的 Makefile 命令来管理 Jupyter 服务：
+在 Jupyter Terminal 中安装现代 Psycopg 驱动及可选分析库：
 
 ```bash
-make up      # 启动 Jupyter Lab 服务
-make dir     # 创建 /data/jupyter 数据目录
-make log     # 查看容器日志
-make info    # 显示服务信息
-make stop    # 停止服务
-make clean   # 停止并移除容器
-make pull    # 拉取最新镜像
-make save    # 保存 Docker 镜像到文件
-make load    # 从文件加载 Docker 镜像
+pip install "psycopg[binary]" pandas sqlalchemy
 ```
 
-
-
-## 访问 PostgreSQL 数据库
-
-在 Jupyter Lab 中访问 PostgreSQL 数据库需要先安装驱动。
-
-在 Jupyter Lab 的 Terminal 中执行：
-
-```bash
-pip install psycopg2-binary psycopg2
-```
-
-然后在 Notebook 中使用 `psycopg2` 驱动访问 PostgreSQL：
+不要把真实密码写入 Notebook。以下示例通过隐藏输入获得连接串，只读取系统信息：
 
 ```python
-import psycopg2
+from getpass import getpass
+import psycopg
 
-# 连接到 PostgreSQL 数据库
-conn = psycopg2.connect('postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta')
-
-# 执行查询
-cursor = conn.cursor()
-cursor.execute("SELECT date, new_cases FROM covid.country_history WHERE country_code = 'CN';")
-data = cursor.fetchall()
-
-# 处理数据
-for row in data:
-    print(row)
+pgurl = getpass("PostgreSQL URL: ")
+with psycopg.connect(pgurl) as conn:
+    with conn.cursor() as cur:
+        cur.execute("SELECT current_database(), current_user, version()")
+        print(cur.fetchone())
 ```
 
-你也可以使用其他 Python 数据分析库，如 Pandas、SQLAlchemy 等：
+使用 Pandas 与 SQLAlchemy 查询系统统计视图：
 
 ```python
 import pandas as pd
 from sqlalchemy import create_engine
 
-# 使用 SQLAlchemy 连接
-engine = create_engine('postgresql://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta')
-
-# 使用 Pandas 读取数据
-df = pd.read_sql("SELECT * FROM covid.country_history WHERE country_code = 'CN'", engine)
-print(df.head())
+engine = create_engine(pgurl)
+df = pd.read_sql(
+    "SELECT datname, numbackends, xact_commit, xact_rollback "
+    "FROM pg_stat_database ORDER BY datname",
+    engine,
+)
+df
 ```
 
+这些示例只访问系统视图。读取业务表前，应得到数据所有者授权，并限制列、条件和结果规模。
 
+--------
 
-## 配置说明
+## 持久化与依赖
 
-Jupyter 服务的配置在 `.env` 文件中：
+只有 `/home/jovyan/work` 映射到 `/data/jupyter`。以下内容默认不会随容器重建持久化：
+
+- 在容器环境中临时安装的 Python/Conda 包
+- `work` 目录以外的 Notebook、配置与缓存
+- 容器自身的用户状态
+
+生产环境应通过固定镜像、定制 Dockerfile 或可复现的依赖文件安装包，并单独备份 `/data/jupyter`。持久卷不能替代备份。
+
+--------
+
+## 管理命令
+
+在 `~/pigsty/app/jupyter` 中：
 
 ```bash
-JUPYTER_TOKEN=pigsty    # Jupyter Lab 访问 Token（密码）
+make up      # 启动 JupyterLab
+make dir     # 创建数据目录并设置 1000:100 权限
+make view    # 显示访问地址
+make log     # 跟随日志
+make info    # 检查容器
+make stop    # 停止容器
+make pull    # 拉取 .env 指定的镜像
 ```
 
-如果需要修改端口或其他配置，可以编辑 `docker-compose.yml` 文件：
+`make clean` 会移除容器但保留 `/data/jupyter`；`make purge` 会递归删除 `/data/jupyter`，属于不可恢复的数据删除操作，执行前必须确认精确目录与近期备份。
 
-```yaml
-services:
-  jupyter:
-    image: jupyter/scipy-notebook:latest
-    ports:
-      - "8888:8888"
-    volumes:
-      - /data/jupyter:/home/jovyan/work
-    environment:
-      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
-```
-
-
-
-## 安装额外的 Python 包
-
-Jupyter 容器支持使用 `pip` 或 `conda` 安装 Python 包。
-
-在 Jupyter Lab 的 Terminal 中执行：
-
-```bash
-# 使用 pip 安装
-pip install numpy pandas matplotlib seaborn scikit-learn
-
-# 使用 conda 安装
-conda install -c conda-forge geopandas
-
-# 使用国内镜像加速（可选）
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy
-```
-
-
-
-## 数据持久化
-
-Jupyter 的数据存储在 `/data/jupyter` 目录中，该目录会被挂载到容器的 `/home/jovyan/work` 路径。
-
-所有保存在 `work` 目录下的 Notebook 和数据文件都会持久化保存在宿主机上，即使容器重启或删除也不会丢失。
-
-
+--------
 
 ## 安全建议
 
-**强烈建议修改默认的 Token（密码）！**
+- 使用随机强 Token，保护 `.env`，不要禁用认证。
+- 默认端口映射监听主机网络；用防火墙限制来源，优先通过 Nginx 与有效 HTTPS 证书访问。
+- Notebook 可执行任意代码并访问挂载文件与数据库；只授予最小权限的数据库账号和宿主机目录。
+- 固定镜像版本、扫描镜像并对依赖升级做可复现验证。
+- 定期备份 `/data/jupyter`，并实际验证恢复到临时目录。
 
-1. 编辑 `.env` 文件，修改 `JUPYTER_TOKEN` 的值
-2. 重启服务：`make up`
-
-如果在生产环境中使用 Jupyter Lab，还应该：
-
-- 使用强密码或禁用 Token 认证
-- 配置 HTTPS 访问
-- 限制网络访问权限
-- 定期备份数据目录
-
-
+--------
 
 ## 相关链接
 
-- Jupyter 官方文档： https://jupyter.org/documentation
-- Docker Stacks 仓库： https://github.com/jupyter/docker-stacks
-- Pigsty 软件模板： https://github.com/pgsty/pigsty/tree/main/app
+- [Jupyter 官方文档](https://jupyter.org/documentation)
+- [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/)
+- [Pigsty VIBE 模块](/docs/vibe/)

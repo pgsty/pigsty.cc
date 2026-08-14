@@ -26,10 +26,10 @@ MYSQL 模块通过清单（Inventory）声明集群，`mysql.yml` 将现场收�
 
 每套集群由清单分组声明，两个身份参数必填：
 
-| 参数 | 层级 | 说明 |
-|:---|:---:|:---|
+| 参数              | 层级 | 说明                                           |
+|:----------------|:--:|:---------------------------------------------|
 | `mysql_cluster` | 集群 | 集群名，必须与清单分组名一致（成员须位于同名分组）；也是备份目录与监控 `cls` 标签 |
-| `mysql_seq` | 实例 | 单机为 `1`；HA 为连续的 `1..3`，同时作为 `server_id` |
+| `mysql_seq`     | 实例 | 单机为 `1`；HA 为连续的 `1..3`，同时作为 `server_id`      |
 {.full-width}
 
 拓扑由成员数量决定：**1 个成员是单机，3 个成员是 InnoDB Cluster**，其他数量会被预检拒绝。`mysql_seq=1` 只是首次引导协调者，不代表运行时主库。
@@ -95,13 +95,14 @@ mysql_databases:
   - { name: app2, encoding: utf8mb4, collate: utf8mb4_general_ci }
 ```
 
-| 字段 | 默认值 | 说明 |
-|:---|:---|:---|
-| `name` | 必填 | 库名，`[A-Za-z0-9_$-]`，不能使用系统库名 |
-| `encoding` | `utf8mb4` | 字符集 |
-| `collate` | `utf8mb4_0900_ai_ci` | 排序规则 |
-| `encrypt` | `false` | 库级 `DEFAULT ENCRYPTION`；需自行配置 InnoDB Keyring 组件（平台未预置，未配置时建表会失败） |
+| 字段         | 默认值                  | 说明                           |
+|:-----------|:---------------------|:-----------------------------|
+| `name`     | 必填                   | 库名，`[A-Za-z0-9_$-]`，不能使用系统库名 |
+| `encoding` | `utf8mb4`            | 字符集                          |
+| `collate`  | `utf8mb4_0900_ai_ci` | 排序规则                         |
 {.full-width}
+
+每个条目只接受以上三个字段；额外字段会在预检阶段被拒绝。
 
 声明是 **增量收敛**：重跑会创建缺失的库，但从列表删除条目不会 DROP 数据库。删除数据属于手工运维操作。
 
@@ -157,7 +158,7 @@ my-test:
 
 - 键名须为普通选项名（字母开头，可含 `._-`），值必须是单行标量；
 - 渲染后的配置仍会经过 `mysqld --validate-config` 校验，非法参数在部署阶段即失败，不会影响运行中的服务；
-- **平台保留参数不可覆盖**：身份（`server_id`、`datadir`、`port`、`socket`、`bind_address`、`report_host` 等）、复制（`gtid_mode`、`log_bin`、`group_replication_*`）与 TLS（`require_secure_transport`、`ssl_*`）由角色统一管理，声明即拒绝；
+- **平台保留参数不可覆盖**：身份与协议（`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`mysqlx` 等）、复制与插件（`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`plugin_load*`、`clone`、`plugin_clone`、`plugin_mysqlx`、`group_replication_*` 等）以及 TLS（`require_secure_transport`、`ssl_*`）由角色统一管理，声明即拒绝；
 - 参数变更会触发 [编排式滚动重启](/docs/pilot/mysql/admin#修改集群参数)：从库先行、主库殿后。
 
 内存基线无需配置：缓冲池为节点内存的 25%（下限 256MB），Redo 容量为缓冲池一半（128MB–4GB），复制并行度按 CPU 推导。需要精确控制时用 `mysql_parameters` 覆盖 `innodb_buffer_pool_size` 等参数即可。

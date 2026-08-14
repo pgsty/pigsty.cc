@@ -50,7 +50,7 @@ pg-meta:
       - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty]}
     pg_hba_rules:
       - {user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes'}
-    node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
+    pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
 
     # OpenHalo 临时设置
     pg_mode: mysql                    # HaloDB 的 MySQL 兼容模式
@@ -123,13 +123,13 @@ Pigsty 安装的 [OpenHalo](https://github.com/pgsty/openHalo) 内核基于 [Hal
 
 OpenHalo 内核共有 **59** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
 
-| 扩展名 | 版本号 | 说明 |
-|:-------|:------|:-----|
-| [aux_mysql](/ext/e/aux_mysql) | `1.5` | MySQL Supplementary Extension |
-| hstore_plpython2u | `1.0` | transform between hstore and plpython2u |
-| hstore_plpythonu | `1.0` | transform between hstore and plpythonu |
-| jsonb_plpython2u | `1.0` | transform between jsonb and plpython2u |
-| jsonb_plpythonu | `1.0` | transform between jsonb and plpythonu |
-| ltree_plpython2u | `1.0` | transform between ltree and plpython2u |
-| ltree_plpythonu | `1.0` | transform between ltree and plpythonu |
+| 扩展名                           | 版本号   | 说明                                      |
+|:------------------------------|:------|:----------------------------------------|
+| [aux_mysql](/ext/e/aux_mysql) | `1.5` | MySQL Supplementary Extension           |
+| hstore_plpython2u             | `1.0` | transform between hstore and plpython2u |
+| hstore_plpythonu              | `1.0` | transform between hstore and plpythonu  |
+| jsonb_plpython2u              | `1.0` | transform between jsonb and plpython2u  |
+| jsonb_plpythonu               | `1.0` | transform between jsonb and plpythonu   |
+| ltree_plpython2u              | `1.0` | transform between ltree and plpython2u  |
+| ltree_plpythonu               | `1.0` | transform between ltree and plpythonu   |
 {.full-width}

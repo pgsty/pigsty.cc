@@ -61,7 +61,7 @@ MINIO 模块提供两个内置剧本：
 `minio_rm_data` 默认为 `true`。完整执行移除剧本会删除展开后的所有 `minio_data` 目录；运行前必须核对 `minio_cluster`、`minio_seq`、`minio_type: silo` 与磁盘挂载路径。只想退役服务并保留数据时，请显式设置 `-e minio_rm_data=false`。
 {{% /alert %}}
 
-部署角色默认 `minio_type: silo`，但移除角色刻意没有后端默认值。清单若省略了 `minio_type`，运行移除剧本时必须补充 `-e minio_type=silo`；其他取值会被拒绝。这项显式确认用于防止清理错误的软件包、服务和证书目录。
+部署与移除角色都默认 `minio_type: silo`，其他取值会被拒绝。下面的删除示例仍显式传入该值，作为复核软件包、服务、证书目录和数据路径的一部分；它不是额外的交互确认门。
 
 
 ----------------
@@ -76,7 +76,7 @@ MINIO 模块提供两个内置剧本：
 ./minio.yml -l minio -t minio_register        # 刷新监控目标
 ./minio.yml -l minio -t minio_provision       # 重新置备别名、存储桶和用户
 
-./minio-rm.yml -l minio -e minio_type=silo                       # 移除 Silo 服务、配置与数据
+./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 服务、配置与数据
 ./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除服务但保留数据和配置
 ./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_pkg=true    # 同时卸载 Silo 与 mcli
 ```

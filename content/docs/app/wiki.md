@@ -15,7 +15,7 @@ categories: [参考]
 ## 太长;不看
 
 ```bash
-cd app/wiki ; docker-compose up -d
+cd ~/pigsty/app/wiki && docker compose up -d
 ```
 
 ## 准备数据库
@@ -61,6 +61,5 @@ services:
 ```
 
 ```bash
-./infra.yml -t nginx_config
-ansible all -b -a 'nginx -s reload'
+./infra.yml -t nginx_config,nginx_reload -l infra
 ```

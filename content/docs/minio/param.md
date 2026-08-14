@@ -105,6 +105,8 @@ minio_users:                      # 待创建的 minio 用户列表
 minio_safeguard: false            # 防止意外删除？默认为 false
 minio_rm_data: true               # 移除时是否删除 minio 数据？默认为 true
 minio_rm_pkg: false               # 移除时是否卸载 minio 软件包？默认为 false
+# MINIO（引用）
+minio_type: silo                  # 对象存储引擎，当前必须为 silo
 ```
 
 
@@ -127,7 +129,7 @@ minio_rm_pkg: false               # 移除时是否卸载 minio 软件包？默�
 
 `minio` 与 `rustfs` 不再是有效取值，会在角色身份检查阶段失败。旧 MinIO 集群升级到 v4.5 前，必须独立验证备份、MinIO → Silo 数据兼容性与回滚方案；修改参数本身不会执行数据迁移。
 
-这里的默认值来自部署角色。出于删除安全考虑，`minio_remove` 角色不为 `minio_type` 提供默认值；执行 `minio-rm.yml` 前必须在清单中显式设置 `silo`，或通过 `-e minio_type=silo` 指定，否则身份校验会中止。
+部署与移除角色都将 `minio_type` 默认为 `silo`。执行 `minio-rm.yml` 时仍必须提供 `minio_cluster` 与 `minio_seq` 身份参数，并受 `minio_safeguard`、数据与软件包清理开关约束；默认引擎值不会绕过这些删除保护。
 
 
 
@@ -201,7 +203,7 @@ Pigsty 默认的 pgBackRest `minio` 仓库预设使用 HTTPS，并通过 `/etc/p
 
 参数名称： `minio_node`， 类型： `string`， 层次：`C`
 
-对象存储节点名称模式，用于 [多节点](/docs/minio/config#多机多盘) 部署。
+对象存储节点名称模式，用于 [多机单盘](/docs/minio/config#多机单盘) 与 [多机多盘](/docs/minio/config#多机多盘) 部署。
 
 默认值为：`${minio_cluster}-${minio_seq}.pigsty`，即以实例名 + `.pigsty` 后缀作为默认的节点名。
 
@@ -217,9 +219,13 @@ Pigsty 默认的 pgBackRest `minio` 仓库预设使用 HTTPS，并通过 `/etc/p
 
 参数名称： `minio_data`， 类型： `path`， 层次：`C`
 
-Silo 数据目录，默认值为 `/data/minio`，这是 [单节点](/docs/minio/config#单机单盘) 部署的常见目录。
+Silo 数据目录，默认值为 `/data/minio`。该参数填写文件系统目录，而不是 `/dev/sdb` 之类的裸块设备；MINIO 角色会创建目录并设置权限，但不会格式化或挂载生产服务器的数据盘。
 
-对于 [多机多盘](/docs/minio/config#多机多盘) 与 [**单机多盘**](/docs/minio/config#单机多盘) 部署，您可以使用 `{x...y}` 的记法来指定多个磁盘。
+[单机单盘](/docs/minio/config#单机单盘) 可以使用根文件系统中的普通目录，但只适合开发测试。[多机单盘](/docs/minio/config#多机单盘)、[多机多盘](/docs/minio/config#多机多盘) 与 [单机多盘](/docs/minio/config#单机多盘) 应使用非根盘的独立持久文件系统。分布式 Silo 会拒绝根文件系统上的数据路径。
+
+`/data/minio` 可以是独立挂载点 `/data` 下的子目录；如果 `/data` 只是 `/` 下的普通目录，则仍属于根盘。对于多盘部署，可以使用 `{x...y}` 记法指定多个挂载点，例如 `/data{1...4}/minio`，每个展开后的路径应对应独立文件系统。
+
+完整的挂载要求与检查方法参见 [集群配置：存储路径与挂载](/docs/minio/config#存储路径与挂载)。
 
 
 

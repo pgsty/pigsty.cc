@@ -51,7 +51,7 @@ pg-meta:
       - { name: meta, baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [ vector ]}
     pg_hba_rules:
       - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
-    node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
+    pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
     pg_packages: [ pgsql-main, pgsql-common ]   # pg 内核和通用工具
     #pg_extensions: [ pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
 ```
@@ -75,7 +75,7 @@ pg-meta:
 如果 PostgreSQL 集群已经安装，您需要在安装新版本之前卸载它：
 
 ```bash
-./pgsql-rm.yml # -l pg-meta
+./pgsql-rm.yml -l pg-meta # 卸载 pg-meta 集群
 ```
 
 
@@ -83,23 +83,4 @@ pg-meta:
 
 ## 扩展生态
 
-Pigsty 为 PostgreSQL 提供了丰富的扩展生态，包括：
-
-- **时序类**：timescaledb, pg_cron, periods
-- **地理类**：postgis, h3, pgrouting
-- **向量类**：pgvector, pgml, vchord
-- **搜索类**：pg_trgm, zhparser, pgroonga
-- **分析类**：citus, pg_duckdb, pg_mooncake
-- **特性类**：age, pg_graphql, rum
-- **语言类**：plpython3u, pljava, plv8
-- **类型类**：hstore, ltree, citext
-- **工具类**：http, pg_net, pgjwt
-- **函数类**：pgcrypto, uuid-ossp, pg_uuidv7
-- **管理类**：pg_repack, pgagent, pg_squeeze
-- **统计类**：pg_stat_statements, pg_qualstats, auto_explain
-- **安全类**：pgaudit, pgcrypto, pgsodium
-- **外部类**：postgres_fdw, mysql_fdw, oracle_fdw
-- **兼容类**：orafce, babelfishpg_tds
-- **数据类**：pglogical, wal2json, decoderbufs
-
-详情请参考 [扩展目录](/ext/list/)。
+Pigsty 为 PostgreSQL 提供了丰富的扩展生态，详情请参考 [扩展目录](/ext/list/)。

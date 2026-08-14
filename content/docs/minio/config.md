@@ -7,13 +7,14 @@ module: [MINIO]
 categories: [参考]
 ---
 
-在部署 MINIO 模块之前，需要在 [配置清单](/docs/setup/config) 中定义 Silo 对象存储集群。v4.5.0 当前源码要求 [`minio_type: silo`](/docs/minio/param#minio_type)，支持以下清单部署模式：
+在部署 MINIO 模块之前，需要在 [配置清单](/docs/setup/config) 中定义 Silo 对象存储集群。当前角色要求 [`minio_type: silo`](/docs/minio/param#minio_type)，支持以下清单部署模式：
 
 - [单机单盘：SNSD](#单机单盘)：单机单盘模式，可以使用任意目录作为数据盘，仅作为开发、测试、演示使用。
 - [单机多盘：SNMD](#单机多盘)：折中模式，在单台服务器上使用多块磁盘 (>=2)，仅当资源极为有限时使用。
+- [多机单盘：MNSD](#多机单盘)：多台服务器各使用一个独立数据盘，提供紧凑的节点级高可用能力。
 - [多机多盘：MNMD](#多机多盘)：多机多盘模式，标准生产环境部署，具有最好的可靠性，但需要多台服务器。
 
-通常我们建议使用 SNSD 与 MNMD 这两种模式，前者用于开发测试，后者用于生产部署，SNMD 仅在资源有限（只有一台服务器）的情况下使用。
+SNSD 适合开发测试，三节点 MNSD 适合资源受限的紧凑高可用部署，MNMD 适合对容量、吞吐和磁盘冗余有更高要求的生产环境。SNMD 只解决单机内的磁盘故障，不能容忍整机故障。
 
 此外，Silo 可以使用 [多池部署](#多池部署) 扩容，或直接部署 [多套集群](#多套集群)。
 
@@ -25,7 +26,7 @@ categories: [参考]
 ## 后端选择
 
 ```yaml
-minio_type: silo   # v4.5.0 当前唯一合法值
+minio_type: silo   # 当前唯一合法值
 ```
 
 `minio_type` 是为后续扩展保留的选择器，但当前部署与移除角色都只接受 `silo`。它对应 `silo` 软件包、`silo.service`、`/etc/default/silo` 与 `~/.minio/certs/`。为支持原地迁移，`silo.service` 会先读取旧的 `/etc/default/minio`，再读取优先级更高的 `/etc/default/silo`，并与旧 `minio.service` 冲突；新部署只应维护 Silo 配置文件。
@@ -42,10 +43,35 @@ Pigsty 使用 [`minio_volumes`](/docs/minio/param#minio_volumes) 描述成员与
 
 - 单机单盘：`minio_volumes` 指向本机上的普通目录，默认由 [`minio_data`](/docs/minio/param#minio_data) 生成，默认位置为 `/data/minio`。
 - 单机多盘：`minio_volumes` 指向本机上的序列挂载点，同样由 `minio_data` 生成，例如 `/data{1...4}`。
+- 多机单盘：`minio_volumes` 指向每台服务器上的一个数据目录，例如 `https://minio-{1...3}.pigsty:9000/data/minio`。
 - 多机多盘：`minio_volumes` 指向多台服务器上的序列挂载点，由以下两部分自动组合生成：
   - 首先要使用 [`minio_data`](/docs/minio/param#minio_data) 指定集群每个成员的磁盘挂载点序列 `/data{1...4}`，
   - 还需要使用 [`minio_node`](/docs/minio/param#minio_node) 指定节点的命名模式 `${minio_cluster}-${minio_seq}.pigsty`
 - 多池部署：需要显式指定 `minio_volumes` 来分配每个存储池的节点。
+
+
+----------------
+
+## 存储路径与挂载
+
+[`minio_data`](/docs/minio/param#minio_data) 配置的是文件系统目录，不是裸块设备。磁盘、云盘、独立分区或 LVM 逻辑卷应先格式化并挂载，再把挂载点或其子目录交给 Silo；不要把 `/dev/sdb` 直接写入 `minio_data`。
+
+MINIO 角色会创建数据目录并设置属主与权限，但不会替生产服务器完成磁盘格式化和持久化挂载。不同拓扑对目录背后的文件系统有不同要求：
+
+- 单机单盘可以使用根文件系统中的普通目录，但只适合开发、测试与演示。
+- 单机多盘中的每个数据路径都应对应独立文件系统，不能用同一块盘上的多个普通目录冒充多盘。
+- 多节点分布式 Silo 会识别并拒绝根文件系统上的数据路径，错误为 `drive is part of root drive, will not be used`。
+
+因此，`/data/minio` 可以是普通子目录，前提是 `/data` 本身已经挂载到独立持久化文件系统；如果 `/data` 只是 `/` 下的普通目录，则不满足分布式部署要求。绑定挂载根文件系统中的另一个目录也不会形成新的磁盘故障域。
+
+可以在部署前检查实际挂载关系：
+
+```bash
+findmnt -T /
+findmnt -T /data/minio
+```
+
+第二条命令应显示 `/data` 或 `/data/minio` 对应的独立挂载点，而不是 `/`。生产环境还应确保挂载写入 `/etc/fstab` 或由等效的持久化机制管理，并为同一存储池使用容量接近的数据盘。
 
 
 ----------------
@@ -96,7 +122,7 @@ minio:
 ```
 
 {{% alert title="请使用真实磁盘挂载点" color="warning" %}}
-请注意，SNMD 模式不支持使用普通目录作为数据目录。如果数据目录不是有效的磁盘挂载点，Silo 将拒绝启动。请确保使用 XFS 格式化的真实磁盘。
+SNMD 模式中的每个数据路径都必须位于独立文件系统上。如果多个路径实际落在同一个文件系统中，Silo 会拒绝把它们作为多块盘使用。生产环境建议使用 XFS；Vagrant 在 XFS 工具不可用时也支持以 ext4 准备测试数据盘。
 {{% /alert %}}
 
 
@@ -125,6 +151,33 @@ SNMD 模式可以利用单机上的多块磁盘，提供更高的性能和容量
 
 
 
+
+
+----------------
+
+## 多机单盘
+
+MNSD 模式在多台服务器上各使用一个数据盘。以下配置定义了一个三节点单盘 Silo 集群，也是 [`ha/trio`](/docs/conf/trio/) 使用的存储拓扑：
+
+```yaml
+minio:
+  hosts:
+    10.10.10.10: { minio_seq: 1 }
+    10.10.10.11: { minio_seq: 2 }
+    10.10.10.12: { minio_seq: 3 }
+  vars:
+    minio_cluster: minio
+    minio_type: silo
+    minio_data: /data/minio
+```
+
+角色会生成 `https://minio-{1...3}.pigsty:9000/data/minio`。三条路径分别位于三台服务器上，每台服务器的 `/data/minio` 都必须落在非根盘的独立持久文件系统中。
+
+三盘存储集默认使用 `EC:1`：每个对象拆分为 2 份数据和 1 份校验，读写仲裁都是 2，因此允许一个节点或一个数据盘不可用。使用容量相同的磁盘时，扣除文件系统与元数据开销前，可用容量约为原始容量的三分之二，并由最小磁盘容量限制。
+
+这是资源占用较低的紧凑高可用拓扑，消除了单节点对象存储故障，但每个节点仍只有一个数据盘。需要更高容量、吞吐或节点内磁盘冗余时，应使用 [多机多盘](#多机多盘) 模式。
+
+既有单节点存储池不能通过直接增加两个成员原地改成三节点存储池。需要创建新的三节点集群、迁移对象并切换客户端入口。
 
 
 ----------------

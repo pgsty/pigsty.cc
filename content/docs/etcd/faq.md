@@ -83,7 +83,6 @@ Pigsty 默认只把 etcd 用作 Patroni DCS。服务重启与整簇重建是两�
 确需 **重置/重建** etcd 集群时，应在维护窗口内先清理再重建，并在完成后核对 `etcdctl endpoint health`、`etcdctl member list` 与 `patronictl list`：
 
 ```bash
-./etcd-rm.yml -l etcd --check  # 先预演完整目标；真实运行默认删除数据
 ./etcd-rm.yml -l etcd          # 核对备份和目标后清理集群
 ./etcd.yml -l etcd             # 按清单重新部署 etcd 集群
 ```
@@ -237,7 +236,6 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 **手动方式：**
 
 ```bash
-./etcd-rm.yml -l <ins_ip> --check            # 对精确目标先预演
 ./etcd-rm.yml -l <ins_ip>                    # 退群、停服并默认清理本机数据
 ```
 

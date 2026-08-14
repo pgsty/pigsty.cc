@@ -7,7 +7,7 @@ categories: [参考]
 aliases: [/docs/conf/rustfs/]
 ---
 
-`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，并显式设置 `minio_type: silo`；v4.5.0 当前源码只接受这一取值。移除角色没有引擎默认值，执行 `minio-rm.yml` 时仍必须保留或显式传入 `-e minio_type=silo`。
+`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，并显式设置 `minio_type: silo`；v4.5.0 当前源码只接受这一取值，部署与移除角色也都默认使用 `silo`。删除前仍应把该值连同精确目标、集群身份和数据盘路径一并核对。
 
 更多教程，请参考 **[MINIO](/docs/minio/)** 模块文档。
 

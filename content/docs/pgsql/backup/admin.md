@@ -46,7 +46,7 @@ categories: [任务]
 ./pgsql.yml -t pg_backup -l pg-meta   # 配置 pgbackrest，创建 stanza
 ```
 
-集群初始化后 Pigsty 会自动尝试执行一次初始全量备份（标记文件 `/etc/pgbackrest/initial.done`）；该任务会忽略失败，标记也不能证明备份成功，应以 `pb info` 为准。
+集群初始化后 Pigsty 会自动尝试执行一次初始全量备份；只有备份命令成功后才写入 `/etc/pgbackrest/initial.done`，失败会被剧本忽略且不会留下标记。该文件只防止初始化任务重复执行，最终仍应使用 `pig pb info`（或 `pgbackrest info`）核对仓库中的实际备份状态。
 定时备份计划通过 [**`pg_crontab`**](/docs/pgsql/param#pg_crontab) 声明，详见 [**备份策略**](/docs/pgsql/backup/policy/)。
 
 
@@ -54,20 +54,30 @@ categories: [任务]
 
 ## 移除备份
 
-移除主实例（[**`pg_role`**](/docs/pgsql/param/#pg_role) = `primary`）时，Pigsty 默认一并删除该集群的备份 stanza：
+`pig pb delete` 是只删除备份 stanza 的首选入口。它会在实际执行前交互确认；多 stanza 配置还要求显式给出目标。核对目标后执行：
 
 ```bash
-./pgsql-rm.yml                          # 移除集群（含备份）
-./pgsql-rm.yml -e pg_rm_backup=false    # 移除集群，但保留备份
-./pgsql-rm.yml -t pg_backup             # 仅删除备份，保留集群
+pig pb info -s pg-meta           # 核对当前备份链与恢复窗口
+pig pb delete -s pg-meta         # 输入精确 stanza 名确认后才执行
 ```
 
-使用 [**`pg_rm_backup`**](/docs/pgsql/param/#pg_rm_backup)（设为 `false`）保留备份，使用 `pg_backup` 子任务只删备份。
+移除主实例（[**`pg_role`**](/docs/pgsql/param/#pg_role) = `primary`）时，`pgsql-rm.yml` 默认也会尝试删除该集群的备份 stanza。以下命令会直接修改或删除状态：
+
+```bash
+./pgsql-rm.yml -l pg-meta                          # 移除集群及其备份
+./pgsql-rm.yml -l pg-meta -e pg_rm_backup=false    # 移除集群但保留备份
+./pgsql-rm.yml -l pg-meta -t pg_backup             # 仅删除备份相关状态
+```
+
+执行前应确认近期备份可用、记录恢复需求，并由操作者再次输入精确的集群/stanza 名。使用 [**`pg_rm_backup`**](/docs/pgsql/param/#pg_rm_backup)（设为 `false`）可以在移除集群时保留备份。
+
+`pgsql-rm.yml -t pg_backup` 会在主库上强制执行 `pgbackrest stanza-delete`，删除本地仓库目录（仅 `local` 模式），并移除 pgBackRest 配置与初始备份标记；该任务会忽略部分删除错误。因此执行后必须再次检查仓库，不能把剧本“成功”当成备份已物理清空的证明。只需要删除 stanza 时，优先使用上面的 `pig pb delete`，它提供计划与确认保护。
+
 如果备份仓库为对象版本配置了 [**对象锁定保留期**](/docs/pgsql/backup/repository/#仓库锁定)，
 删除可能只写入 Delete Marker，被锁定的历史版本会继续占用空间，直到保留期结束。
 
 {{% alert color="warning" title="备份删除" %}}
-删除备份可能导致永久性数据丢失，这是一个危险操作，请务必谨慎。
+删除备份可能造成永久数据丢失。执行前必须确认目标集群/stanza、核对近期备份与替代恢复副本，并保留 `pig pb info`/删除计划的审计记录。
 {{% /alert %}}
 
 
@@ -130,9 +140,9 @@ pig pb expire           # 按保留策略执行清理
 以下场景需要手动管理：
 
 ```bash
-pig pb create    # 创建 stanza：新仓库初始化（Pigsty 集群初始化时自动执行）
-pig pb upgrade   # 升级 stanza：PostgreSQL 大版本升级后，或克隆恢复出新集群后
-pig pb delete    # 删除 stanza：连同其所有备份与归档一并删除，危险操作！
+pig pb create             # 创建 stanza：新仓库初始化（Pigsty 集群初始化时自动执行）
+pig pb upgrade            # 升级 stanza：PostgreSQL 大版本升级后，或克隆恢复出新集群后
+pig pb delete -s pg-meta  # 交互确认后删除全部备份与归档，危险操作！
 ```
 
 最常见的手动场景是 [**克隆集群的善后**](/docs/pgsql/backup/cluster/#克隆善后)：

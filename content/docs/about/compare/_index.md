@@ -46,7 +46,7 @@ categories: [参考]
 
 ### 重要扩展
 
-这里列出了一些重要扩展。该对比基于 2024-02-28 可见的 PostgreSQL 16 扩展支持情况。
+这里保留了一份基于 2024-02-28 可见信息的 PostgreSQL 16 扩展支持历史快照。表内版本与项目（包括后来归档并从目录移除的 `pg_analytics`）不代表 Pigsty v4.5.0 或云厂商的当前支持矩阵；当前 Pigsty 能力请以 [**扩展目录**](/ext/list/) 为准，云服务能力请重新核对厂商文档。
 
 - [**Pigsty 扩展列表**](/ext/list/)
 - [**AWS RDS 扩展列表**](https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-extensions.html):

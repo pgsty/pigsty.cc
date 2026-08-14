@@ -6,7 +6,7 @@ weight: 220
 icon: fas fa-code
 ---
 
-| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> | <a class="ext-badge ext-badge--lang java" href="/ext/language#java">Java</a> | <a class="ext-badge ext-badge--lang plpgsql" href="/ext/language#plpgsql">PLpgSQL</a> |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> | <a class="ext-badge ext-badge--lang plpgsql" href="/ext/language#plpgsql">PLpgSQL</a> | <a class="ext-badge ext-badge--lang java" href="/ext/language#java">Java</a> |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | **扩展数** | 418 | 72 | 57 | 15 | 10 | 2 | 1 | 1 |
 {.ext-table}
@@ -654,18 +654,6 @@ Python 语言编写的扩展（2 个）
 
 --------
 
-## Java {#java}
-
-Java 语言编写的扩展（1 个）
-
-| **扩展** | **包** | **版本** | **分类** | **许可证** | **描述** |
-|:---------|:-------|:--------:|:--------:|:----------:|:---------|
-| [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | Java 程序语言 |
-{.ext-table}
-
-
---------
-
 ## PLpgSQL {#plpgsql}
 
 PLpgSQL 语言编写的扩展（1 个）
@@ -673,4 +661,16 @@ PLpgSQL 语言编写的扩展（1 个）
 | **扩展** | **包** | **版本** | **分类** | **许可证** | **描述** |
 |:---------|:-------|:--------:|:--------:|:----------:|:---------|
 | [`pg_relation_sql`](/ext/e/pg_relation_sql) | [`pg_relation_sql`](https://github.com/asmgit/pg_relation_sql) | `0.2.2` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 根据 PostgreSQL 外键生成可内联的关系导航 SQL 函数 |
+{.ext-table}
+
+
+--------
+
+## Java {#java}
+
+Java 语言编写的扩展（1 个）
+
+| **扩展** | **包** | **版本** | **分类** | **许可证** | **描述** |
+|:---------|:-------|:--------:|:--------:|:----------:|:---------|
+| [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | Java 程序语言 |
 {.ext-table}

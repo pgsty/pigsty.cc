@@ -8,15 +8,22 @@ categories: [任务]
 
 Pigsty 提供三个层次的恢复入口，共用 [**同一套参数语义**](/docs/pgsql/backup/mechanism/#参数如何映射)，按场景选用：
 
-| 入口                                           | 适用场景            | 特点                              |
-|:---------------------------------------------|:----------------|:--------------------------------|
+| 入口                                           | 适用场景            | 特点                                |
+|:---------------------------------------------|:----------------|:----------------------------------|
 | [**`pgsql-pitr.yml`**](#快速上手) 剧本             | 生产集群恢复          | 编排整个集群：HA 暂停、多节点、etcd 清理、恢复控制信息输出 |
-| [**`pig pitr`**](#单实例pig-pitr) 命令            | 单节点集群 / 节点本机操作  | 无需管理节点，在数据库节点上直接编排执行            |
-| [**`pig pb restore`**](#原语pig-pb-restore) 原语 | 非 Patroni 托管的实例 | pgbackrest restore 的直接封装，最精细的控制 |
+| [**`pig pitr`**](#单实例pig-pitr) 命令            | 单节点集群 / 节点本机操作  | 无需管理节点，在数据库节点上直接编排执行              |
+| [**`pig pb restore`**](#原语pig-pb-restore) 原语 | 非 Patroni 托管的实例 | pgbackrest restore 的直接封装，最精细的控制   |
 {.full-width}
 
 手把手的沙箱演练教程请参阅 [**手工恢复**](/docs/pgsql/tutorial/pitr)；
 用恢复克隆出新集群（不影响生产的推荐姿势）请参阅 [**克隆数据库集群**](/docs/pgsql/backup/cluster/)。
+
+{{% alert color="danger" title="PITR 会覆盖目标集群" %}}
+`pgsql-pitr.yml` 会暂停 HA、停止 Patroni/PostgreSQL、以 `pgbackrest --force restore` 覆盖目标数据目录，
+随后删除目标集群的 etcd 前缀并重建 HA；它只打印计划，**不会等待人工确认**。
+执行任何实质恢复前，必须先用 `pig pg list <目标集群>` 核对当前拓扑、用 `pig pb info` 核对近期备份与恢复窗口，
+由操作者复述并确认精确的目标集群与恢复点。生产恢复仍应安排维护窗口并保留独立、已验证的备份。
+{{% /alert %}}
 
 
 --------
@@ -34,6 +41,8 @@ pg-meta:
 ```
 
 ```bash
+pig pg list pg-meta
+pig pb info
 ./pgsql-pitr.yml -l pg-meta
 ```
 
@@ -153,6 +162,7 @@ SELECT pg_create_restore_point('before_migration');
 一步到位固然方便，但在生产事故中，您可能希望亲手控制每个阶段。剧本的任务树支持用 tags 三步走：
 
 ```bash
+# 确认备份、恢复点和精确目标 pg-meta 后，按顺序执行；不要跳过阶段间检查
 ./pgsql-pitr.yml -l pg-meta -t down     # 第一步：暂停 HA，停止 patroni 与 postgres
 ./pgsql-pitr.yml -l pg-meta -t pitr     # 第二步：执行还原与重放，打印恢复控制信息
 ./pgsql-pitr.yml -l pg-meta -t up       # 第三步：清理 etcd，拉起集群，恢复 HA
@@ -297,7 +307,7 @@ pig pb restore -d                            # 恢复到归档末尾
    ```
 
 3. **恢复归档**：探索性恢复若设置了 `archive: false`，归档已被关闭，验证完成后必须恢复
-   （`archive_mode` 是 postmaster 参数，需要重启生效）：
+   （`archive_mode` 是 postmaster 参数，需要重启生效）。先确认维护窗口、当前主库和复制状态，再由操作者明确批准重启：
 
    ```bash
    psql -c 'ALTER SYSTEM RESET archive_mode;'

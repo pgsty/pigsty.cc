@@ -1,5 +1,5 @@
 ---
-title: Pigsty 中文文档 v4.4
+title: Pigsty 中文文档 v4.5
 weight: 10
 module: [PIGSTY]
 categories: [参考]
@@ -48,7 +48,7 @@ cascade:
 [**快速上手**](/docs/setup/install)：[**准备**](/docs/deploy/prepare) 一台全新安装 [**Linux**](/docs/ref/linux) 操作系统的节点，使用具有免密 `ssh` 与 `sudo` 权限的用户运行：
 
 ```bash
-curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param version >}}   # 下载 Pigsty 源码包
+curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param stable_version >}}   # 下载公开稳定版源码包
 cd ~/pigsty      # 进入源码目录
 ./configure      # 生成配置文件
 ./deploy.yml     # 执行安装部署

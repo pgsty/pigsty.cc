@@ -10,7 +10,7 @@ Supabase 很好，拥有属于你自己的 supabase 则好上加好。
 Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务器），一键自建企业级 supabase
 —— 更多扩展，更好性能，更深入的控制，更合算的成本。
 
-> Pigsty 是 Supabase 官网文档上列举的三种自建部署之一：[Self-hosting: Third-Party Guides](https://supabase.com/docs/guides/self-hosting#third-party-guides)
+> 截至 2026-08，Supabase 的 [官方自托管文档](https://supabase.com/docs/guides/self-hosting) 推荐 Docker，并将其他实现归为社区项目；Pigsty 是独立的社区集成，目前不在该页面的项目列表中。
 
 本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
 
@@ -27,8 +27,8 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase    # 使用 supabase 配置（请在 pigsty.yml 中更改凭据）
 vi pigsty.yml              # 编辑域名、密码、密钥...
 ./deploy.yml               # 标准单机部署 pigsty
-./docker.yml               # 安装 docker 模块
-./app.yml                  # 使用 docker 启动 supabase 无状态部分（可能较慢）
+./docker.yml -l supabase   # 在 supabase 组安装 docker 模块
+./app.yml -l supabase      # 在 supabase 组启动无状态容器（可能较慢）
 ```
 
 安装完毕后，使用浏览器访问 `8000` 端口造访 Supa Studio，用户名 `supabase`，密码 `pigsty`。
@@ -43,7 +43,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 ## 检查清单
 
-- [ ] 至少一台 1C2G 的服务器
+- [ ] 至少一台 2C4G 的服务器；完整 Supabase 栈建议 4C8G 或更高
 - [ ] 带有静态内网 IPv4 地址
 - [ ] 安装支持的 [**Linux 发行版**](/docs/ref/linux)
 - [ ] [**标准安装**](/docs/setup/install) Pigsty
@@ -76,8 +76,8 @@ Supabase 旨在为开发者提供一条龙式的后端解决方案，减少开�
 它能让开发者告别绝大部分后端开发的工作，**只需要懂数据库设计与前端即可快速出活！**
 开发者只要用 Vibe Coding 糊个前端与数据库模式设计，就可以快速完成一个完整的应用。
 
-目前，Supabase 是 [PostgreSQL 开源生态](https://ossrank.com/cat/368-postgresql-ecosystem) 中人气最高的开源项目，在 GitHub 上已有 [九万](https://github.com/supabase/supabase/) Star。
-Supabase 还为小微创业者提供了"慷慨"的免费云服务额度 —— 免费的 500 MB 空间，对于存个用户表，浏览数之类的东西绰绰有余。
+目前，Supabase 是 [PostgreSQL 开源生态](https://ossrank.com/cat/368-postgresql-ecosystem) 中人气最高的开源项目之一；截至 2026-08，其 [GitHub 仓库](https://github.com/supabase/supabase/) 已有超过十万 Star。
+Supabase 也提供免费云服务额度；当前 [免费计划](https://supabase.com/pricing) 包含共享 CPU、500 MB 内存、500 MB 数据库额度与 1 GB 文件存储，具体配额以后续官方页面为准。
 
 ------
 
@@ -85,22 +85,22 @@ Supabase 还为小微创业者提供了"慷慨"的免费云服务额度 —— �
 
 既然 Supabase 云服务这么香，为什么要自建呢？
 
-最直观的原因是我们在《[云数据库是智商税吗？](https://vonng.com/cloud/rds/)》中提到过的：当你的数据/计算规模超出云计算适用光谱（Supabase：4C/8G/500MB 免费存储），成本很容易出现爆炸式增长。
+最直观的原因是我们在《[云数据库是智商税吗？](https://vonng.com/cloud/rds/)》中提到过的：当数据、计算或可用性需求超出托管服务套餐的适用范围时，成本可能快速增长。
 而且在当下，足够可靠的 [本地企业级 NVMe SSD](https://vonng.com/cloud/bonus/) 在性价比上与 [云端存储](https://vonng.com/cloud/ebs/) 有着三到四个数量级的优势，而自建能更好地利用这一点。
 
 另一个重要的原因是 **功能**， Supabase 云服务的功能受限 —— 很多强力 PG 扩展因为多租户安全挑战与许可证的原因无法以云服务的形式。
-故而尽管 [扩展是 PostgreSQL 的核心特色](https://vonng.com/pg/pg-eat-db-world)，在 Supabase 云服务上也依然只有 **64** 个扩展可用。
+故而尽管 [扩展是 PostgreSQL 的核心特色](https://vonng.com/pg/pg-eat-db-world)，Supabase 官方当前只承诺 [预配置 50 多个扩展](https://supabase.com/docs/guides/database/extensions)，具体清单还会随平台版本变化。
 而通过 Pigsty 自建的 Supabase 则提供了多达 [**{{< param pgext_count >}}**](/ext/list/) 个开箱即用的 PG 扩展。
 
 此外，自主可控与规避供应商锁定也是自建的重要原因 —— 尽管 Supabase 虽然旨在提供一个无供应商锁定的 Google Firebase 开源替代，但实际上自建高标准企业级的 Supabase 门槛并不低。
-Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并计划将原生的 PostgreSQL 内核替换为收购的 [**OrioleDB**](/docs/pgsql/kernel/orioledb)，而这些内核与扩展在 PGDG 官方仓库中并没有提供。
+Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase 在 2024 年收购了 Oriole 团队，并把 [**OrioleDB**](/docs/pgsql/kernel/orioledb) 作为可选 Public Alpha 提供；它不是生产环境默认内核，也不能表述为已计划替换原生 PostgreSQL。部分 Supabase 扩展和带补丁内核不由 PGDG 官方仓库提供。
 
 这实际上是某种隐性的供应商锁定，阻止了用户使用除了 supabase/postgres Docker 镜像之外的方式自建，Pigsty 则提供开源，透明，通用的方案解决这个问题。
-我们将所有 Supabase 自研与用到的 10 个缺失的扩展打成开箱即用的 RPM/DEB 包，确保它们在所有 [主流Linux操作系统发行版](/docs/ref/linux) 上都可用：
+我们将 Supabase 自研与用到的 10 个缺失扩展打成开箱即用的 RPM/DEB 包，覆盖当前 `supabase` 模板声明支持的 [Linux 发行版](/docs/ref/linux)：EL 8/9、Debian 12、Ubuntu 22.04/24.04/26.04，以及 x86_64/aarch64 架构。
 
 | 扩展                                       | 说明                                                         |
 |------------------------------------------|------------------------------------------------------------|
-| [`pg_graphql`](/ext/e/pg_graphql/)       | 提供 PG 内的 GraphQL 支持 (RUST)，Rust 扩展，由 PIGSTY 提供，按需启用       |
+| [`pg_graphql`](/ext/e/pg_graphql/)       | 提供 PG 内的 GraphQL 支持 (RUST)，Rust 扩展，由 PIGSTY 提供，按需启用        |
 | [`pg_jsonschema`](/ext/e/pg_jsonschema/) | 提供 JSON Schema 校验能力，Rust 扩展，由 PIGSTY 提供                    |
 | [`wrappers`](/ext/e/wrappers/)           | Supabase 提供的外部数据源包装器捆绑包，Rust 扩展，由 PIGSTY 提供                |
 | [`index_advisor`](/ext/e/index_advisor/) | 查询索引建议器，SQL 扩展，由 PIGSTY 提供                                 |
@@ -118,7 +118,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并�
 同时，Pigsty 还会负责好底层 [高可用](/docs/concept/ha/) [PostgreSQL](/docs/pgsql/) 数据库集群，高可用 [Silo](/docs/minio/) 对象存储集群的自动搭建，甚至是 [Docker](/docs/docker/) 容器底座的部署与 [Nginx](/docs/infra/admin/portal) 反向代
 理，[域名配置](/docs/infra/admin/domain) 与 [HTTPS证书签发](/docs/infra/admin/cert)。 您可以使用 Docker Compose 拉起任意数量的无状态 Supabase 容器集群，并将状态存储在外部 Pigsty 自托管数据库服务中。
 
-在这一自建部署架构中，您获得了使用不同内核的自由（PostgreSQL 14-18，默认 18），加装 [**{{< param pgext_count >}}**](/ext/list/) 个扩展的自由，扩容与伸缩 Supabase / Postgres / Silo 的自由，
+在这一自建部署架构中，您获得了使用不同内核的自由（当前模板支持 PostgreSQL 15-18，默认 18），加装 [**{{< param pgext_count >}}**](/ext/list/) 个扩展的自由，扩容与伸缩 Supabase / Postgres / Silo 的自由，
 免于数据库运维杂务的自由，以及免于供应商锁定，本地运行到地老天荒的自由。 而相比于使用云服务需要付出的代价，不过是准备服务器和多敲几行命令而已。
 
 
@@ -136,8 +136,8 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase    # 使用 supabase 配置（请在 pigsty.yml 中更改凭据）
 vi pigsty.yml              # 编辑域名、密码、密钥...
 ./deploy.yml               # 安装 pigsty
-./docker.yml               # 安装 docker compose 组件
-./app.yml                  # 使用 docker 启动 supabase 无状态部分
+./docker.yml -l supabase   # 在 supabase 组安装 docker compose 组件
+./app.yml -l supabase      # 在 supabase 组启动无状态容器
 ```
 
 在部署 Supabase 前请根据实际情况修改自动生成的 `pigsty.yml` 配置文件中的参数（域名与密码）
@@ -177,7 +177,7 @@ Supabase Studio 的 Query Performance 页面会在 `public, extensions` 搜索�
 Pigsty 仍然将 `pg_stat_statements` 扩展对象保留在 `monitor` 模式中，以兼容 `pg_exporter` 与现有监控面板；模板会在 `extensions` 模式中创建兼容视图与函数，供 Studio 使用。
 
 如果您只有一台服务器，或者选择在云服务器上自建，Pigsty 建议您使用外部的 S3 替代本地的 Silo 作为对象存储，存放 PostgreSQL 的备份，并承载 Supabase Storage 服务。
-这样的部署在故障时可以在单机部署条件下，提供一个兜底级别的 RTO（小时级恢复时长）/ RPO（分钟级数据损失）容灾水平。
+这样的部署可在单机故障后提供小时级恢复的兜底路径；实际 RPO 取决于最近一次可恢复备份、WAL 归档状态与对象存储可用性，不能仅凭该拓扑承诺固定数值。
 
 在严肃的生产部署中，Pigsty 建议使用至少 3～4 个节点的部署策略，确保 Silo 与 PostgreSQL 都使用满足企业级高可用要求的多节点部署。
 在这种情况下，您需要相应准备更多节点与磁盘，并相应调整 `pigsty.yml` 配置清单中的集群配置，以及 supabase 集群配置中的接入信息，使用高可用接入点访问服务。
@@ -224,8 +224,8 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 - [`REALTIME_DB_ENC_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L151)：Realtime 数据库加密密钥
 - [`DASHBOARD_USERNAME`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L153)：Supabase Studio Web 界面的默认用户名，默认为 `supabase`
 - [`DASHBOARD_PASSWORD`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L154)：Supabase Studio Web 界面的默认密码，默认为 `pigsty`
-- [`LOGFLARE_PUBLIC_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L157)：Logflare 公开访问令牌，32-64 个随机字符
-- [`LOGFLARE_PRIVATE_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L158)：Logflare 私有访问令牌，32-64 个随机字符
+- [`LOGFLARE_PUBLIC_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L157)：Logflare 公开访问令牌，至少 32 个随机字符
+- [`LOGFLARE_PRIVATE_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L158)：Logflare 私有访问令牌，至少 32 个随机字符
 - [`LOGFLARE_DB`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L159) / [`LOGFLARE_SCHEMA`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L160)：Logflare / Analytics 使用的内部数据库与模式，默认是 `_supabase` / `_analytics`
 
 这里请您务必参照 [Supabase教程：保护你的服务](https://supabase.com/docs/guides/self-hosting/docker#generate-api-keys) 里的说明：
@@ -235,6 +235,8 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 - 使用教程中提供的工具，根据 `JWT_SECRET` 以及过期时间等属性，生成一个 `SERVICE_ROLE_KEY`，这是权限更高服务角色的身份凭据。
 - 如果您使用新版不透明 API Key 或非对称 JWT，请同步生成并填写 `SUPABASE_PUBLISHABLE_KEY`、`SUPABASE_SECRET_KEY`、`JWT_KEYS`、`JWT_JWKS` 与对应的非对称 `ANON_KEY` / `SERVICE_ROLE_KEY`。
 - 指定一个32个字符以上的随机字符串密钥 `PG_META_CRYPTO_KEY`，用于加密 Studio UI 与 meta 服务的交互
+- `SECRET_KEY_BASE` 至少 64 个字符；`REALTIME_DB_ENC_KEY` 必须恰好 16 个字符。
+- 为 `S3_PROTOCOL_ACCESS_KEY_ID` 与 `S3_PROTOCOL_ACCESS_KEY_SECRET` 生成独立随机凭据，不要复用对象存储管理员密码。
 - 如果您使用的 PostgreSQL 业务用户使用了不同于默认值的密码，请相应修改 [`POSTGRES_PASSWORD`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L166) 的值
 - 如果您的对象存储使用了不同于默认值的密码，请相应修改 [`S3_ACCESS_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L177) 与 [`S3_SECRET_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L178) 的值
 - 如果您将 Edge Functions 暴露给不可信客户端，请按需将 [`FUNCTIONS_VERIFY_JWT`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L191) 改为 `true`。
@@ -244,7 +246,7 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 Supabase 部分的凭据修改后，您可以重启 Docker Compose 容器以应用新的配置：
 
 ```bash
-./app.yml -t app_config,app_launch   # 使用剧本
+./app.yml -l supabase -t app_config,app_launch   # 使用剧本
 cd /opt/supabase; make up            # 手工执行
 ```
 
@@ -268,7 +270,7 @@ sed -ie 's/supa.pigsty/supa.pigsty.cc/g' ~/pigsty/pigsty.yml
 
 ```bash
 make cert       # 申请 certbot 免费 HTTPS 证书
-./app.yml       # 重载 Supabase 配置
+./app.yml -l supabase -t app_config,app_launch  # 重载 Supabase 配置
 ```
 
 修改后的配置应当类似下面的片段：
@@ -278,7 +280,7 @@ all:
   vars:
     certbot_sign: true                # 使用 certbot 签发真实证书
     infra_portal:
-      home: i.pigsty.cc               # 替换为你的域名！
+      home: { domain: i.pigsty.cc }   # 替换为你的域名！
       supa:
         domain: supa.pigsty.cc        # 替换为你的域名！
         endpoint: "10.10.10.10:8000"
@@ -311,28 +313,28 @@ all:
 > Pigsty 提供了一个 [`terraform/spec/aliyun-s3.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/aliyun-s3.tf) 模板，
 > 可以用于在阿里云上拉起一台服务器，以及一个 OSS 存储桶。
 
-首先，我们修改 `all.children.supa.vars.apps.[supabase].conf` 中 S3 相关的配置，将其指向阿里云 OSS 存储桶：
+首先，修改 `all.children.supabase.vars.apps.supabase.conf` 中 S3 相关的配置，将其指向阿里云 OSS 存储桶：
 
 ```yaml
 # if using s3/minio as file storage
-S3_BUCKET: data                            # 兼容旧模板，建议与 GLOBAL_S3_BUCKET 保持一致
-GLOBAL_S3_BUCKET: data                     # Supabase Storage 实际使用的 bucket
-S3_ENDPOINT: https://sss.pigsty:9000       # 替换为 S3 兼容服务的连接信息
-S3_ACCESS_KEY: s3user_data                 # 替换为 S3 兼容服务的连接信息
-S3_SECRET_KEY: S3User.Data                 # 替换为 S3 兼容服务的连接信息
-S3_FORCE_PATH_STYLE: true                  # 替换为 S3 兼容服务的连接信息
-S3_PROTOCOL: https                         # 替换为 S3 兼容服务的连接信息
-S3_REGION: stub                            # 兼容旧模板
-REGION: stub                               # Supabase Storage 实际使用的 region
-STORAGE_TENANT_ID: stub                    # Supabase Storage tenant id
-S3_PROTOCOL_ACCESS_KEY_ID: s3user_data     # S3 协议访问密钥
-S3_PROTOCOL_ACCESS_KEY_SECRET: S3User.Data # S3 协议访问密钥
+S3_BUCKET: pigsty-supa                     # 兼容旧模板，与 GLOBAL_S3_BUCKET 保持一致
+GLOBAL_S3_BUCKET: pigsty-supa              # Supabase Storage 实际使用的 bucket
+S3_ENDPOINT: https://oss-cn-beijing.aliyuncs.com
+S3_ACCESS_KEY: <your_access_key>
+S3_SECRET_KEY: <your_secret_key>
+S3_FORCE_PATH_STYLE: false                 # 阿里云 OSS 使用 host-style URI
+S3_PROTOCOL: https
+S3_REGION: oss-cn-beijing                  # 兼容旧模板，与 REGION 保持一致
+REGION: oss-cn-beijing                     # Supabase Storage 实际使用的 region
+STORAGE_TENANT_ID: pigsty                  # Supabase Storage tenant id
+S3_PROTOCOL_ACCESS_KEY_ID: <independent_access_key>
+S3_PROTOCOL_ACCESS_KEY_SECRET: <independent_secret_key>
 ```
 
 同样使用以下命令重载 Supabase 配置：
 
 ```bash
-./app.yml -t app_config,app_launch
+./app.yml -l supabase -t app_config,app_launch
 ```
 
 您同样可以使用 S3 作为 PostgreSQL 的备份仓库，在 `all.vars.pgbackrest_repo` 新增一个 `aliyun` 备份仓库的定义：
@@ -360,13 +362,15 @@ all:
         retention_full: 14                # keep full backup for the last 14 days
 ```
 
-然后在 `all.vars.pgbackrest_mehod` 中指定使用 `aliyun` 备份仓库，重置 pgBackrest 备份：
+然后在 `all.vars.pgbackrest_method` 中指定 `aliyun`。先核对现有备份，再在明确授权后对目标集群重新渲染 pgBackRest 配置、初始化 stanza，并立即建立新的全量恢复点：
 
 ```bash
-./pgsql.yml -t pgbackrest
+pig pb info
+./pgsql.yml -t pg_backup -l pg-meta
+pg-backup full
 ```
 
-Pigsty 会将备份仓库切换到外部对象存储上，更多备份配置可以参考 [PostgreSQL 备份](/docs/pgsql/backup) 文档。
+旧仓库中的备份不会自动迁移；新仓库首次全量备份成功前存在恢复窗口缺口。完整步骤与注意事项见 [PostgreSQL 备份仓库](/docs/pgsql/backup/repository/#切换仓库)。
 
 
 
@@ -384,7 +388,7 @@ all:
         apps:        # supa group app list
           supabase:  # the supabase app
             conf:    # the supabase app conf entries
-              SMTP_HOST: smtpdm.aliyun.com:80
+              SMTP_HOST: smtpdm.aliyun.com
               SMTP_PORT: 80
               SMTP_USER: no_reply@mail.your.domain.com
               SMTP_PASS: your_email_user_password
@@ -393,7 +397,7 @@ all:
               ENABLE_ANONYMOUS_USERS: false
 ```
 
-不要忘了使用 `app.yml` 来重载配置
+不要忘了使用 `./app.yml -l supabase -t app_config,app_launch` 重载配置。
 
 
 ------
@@ -404,9 +408,9 @@ all:
 高可用的配置请参考 Pigsty 其他部份的文档，如果您懒得阅读学习，我们提供手把手扶上马的 Supabase 自建专家咨询服务 —— ¥2000 元免去折腾与下载的烦恼。
 
 单节点的 RTO / RPO 依赖外部对象存储服务提供兜底，如果您的这个节点挂了，外部 S3 存储中保留了备份，您可以在新的节点上重新部署 Supabase，然后从备份中恢复。
-这样的部署在故障时可以提供一个最低标准的 RTO （小时级恢复时长）/ RPO （MB 级数据损失）[兜底容灾水平](/docs/pgsql/backup) 兜底。
+这种拓扑可以提供小时级恢复的 [兜底路径](/docs/pgsql/backup)，但 RPO 取决于备份与 WAL 归档的实际状态，必须通过恢复演练验证，不能用“MB 级”作为固定承诺。
 
-如果想要达到 RTO < 30s，切换零数据丢失，那么需要使用多节点进行高可用部署，这涉及到：
+若目标是 RTO < 30s 且已确认事务在切换时不丢失，需要使用多节点，并显式选择 `fast` RTO 预设与 `crit.yml` 严格同步策略后进行故障演练；默认 `norm` 预设的目标是 RTO < 45s，异步复制不承诺 RPO=0。这涉及到：
 
 - [ETCD](/docs/etcd/)： DCS 需要使用三个节点或以上，才能容忍一个节点的故障。
 - [PGSQL](/docs/pgsql/)： PGSQL 同步提交不丢数据模式，建议使用至少三个节点。
@@ -415,4 +419,4 @@ all:
 
 在这种情况下，您还需要修改 PostgreSQL 与 Silo 的接入点，使用 DNS / L2 VIP / HAProxy 等 [高可用接入点](/docs/pgsql/service#接入服务)
 关于这些部分，您只需参考 Pigsty 中各个模块的文档进行配置部署即可。
-建议您参考 [`conf/ha/trio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 与 [`conf/ha/safe.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 中的配置，将集群规模升级到三节点或以上。
+建议您参考 [`conf/ha/trio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 与 [`conf/ha/safe.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/safe.yml) 中的配置，将集群规模升级到三节点或以上。

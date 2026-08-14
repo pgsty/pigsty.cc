@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-`MINIO` 是 Pigsty 中 S3 兼容对象存储的兼容模块名。v4.5.0 当前源码部署 [**Silo**](https://github.com/pgsty/silo)，并且 [`minio_type`](/docs/minio/param#minio_type) 只接受 `silo`。
+`MINIO` 是 Pigsty 中 S3 兼容对象存储的兼容模块名。当前角色部署 [**Silo**](https://github.com/pgsty/silo)，并且 [`minio_type`](/docs/minio/param#minio_type) 只接受 `silo`。
 
 Silo 沿用 MinIO 的 S3/Admin API、`MINIO_*` 环境变量、磁盘格式与 `mcli` 客户端接口，可用作 PostgreSQL [**pgBackRest 备份仓库**](/docs/pgsql/backup/repository/)。模块名、参数前缀和监控 `job` 继续使用 `MINIO` / `minio_*`，以保持现有清单和运维入口兼容。
 
@@ -54,12 +54,15 @@ minio:
 
 Silo 使用以下 Pigsty 清单部署模式：
 
-| 模式                                        | 说明          | 适用场景       |
-|:------------------------------------------|:------------|:-----------|
-| [**单机单盘**](/docs/minio/config#单机单盘)（SNSD） | 单节点、单个数据目录  | 开发、测试、演示   |
-| [**单机多盘**](/docs/minio/config#单机多盘)（SNMD） | 单节点、多块磁盘    | 资源受限的小规模部署 |
-| [**多机多盘**](/docs/minio/config#多机多盘)（MNMD） | 多节点、每节点多块磁盘 | **生产环境推荐** |
+| 模式                                        | 说明           | 适用场景       |
+|:------------------------------------------|:-------------|:-----------|
+| [**单机单盘**](/docs/minio/config#单机单盘)（SNSD） | 单节点、单个数据目录   | 开发、测试、演示   |
+| [**单机多盘**](/docs/minio/config#单机多盘)（SNMD） | 单节点、多块磁盘     | 资源受限的小规模部署 |
+| [**多机单盘**](/docs/minio/config#多机单盘)（MNSD） | 多节点、每节点一个数据盘 | 紧凑高可用部署    |
+| [**多机多盘**](/docs/minio/config#多机多盘)（MNMD） | 多节点、每节点多块磁盘  | **生产环境推荐** |
 {.full-width}
+
+`minio_data` 始终是目录路径。分布式与多盘部署要求这些目录位于非根盘的独立持久文件系统上；例如 `/data/minio` 可以是独立挂载点 `/data` 下的子目录，但不能只是根文件系统中的普通目录。
 
 `minio_volumes` 的多池扩容语义来自 Silo 保留的 MinIO 兼容接口；生产扩缩容前仍应按实际 Silo 版本验证操作与回滚流程。
 
@@ -69,7 +72,7 @@ Silo 使用以下 Pigsty 清单部署模式：
 ## 核心能力
 
 - **兼容接口**：Silo 沿用 `minio_*` 参数、S3 端口、TLS 和 `mcli` 置备流程
-- **高可用拓扑**：支持单节点与多节点多盘部署，可在同一清单中定义多套独立集群
+- **高可用拓扑**：支持单节点、多节点单盘与多节点多盘部署，可在同一清单中定义多套独立集群
 - **备份仓库**：可作为 pgBackRest 的 S3 远程仓库
 - **安全基线**：默认启用 HTTPS，并由 Pigsty CA 为每个实例签发证书
 - **可观测性**：通过 `/minio/metrics/v3` 采集 Silo 指标，并提供 Grafana 面板与告警

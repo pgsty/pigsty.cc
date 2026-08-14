@@ -1,7 +1,7 @@
 ---
 title: 参数列表
 weight: 3230
-description: NODE 模块提供了 11 组共 73 个配置参数
+description: NODE 模块提供了 11 组共 74 个配置参数
 icon: fa-solid fa-sliders
 modules: [NODE]
 categories: [参考]
@@ -83,6 +83,7 @@ categories: [参考]
 | [`node_hugepage_ratio`](#node_hugepage_ratio)     |  `float`   | `C` | 主机节点分配的内存大页占总内存比例，0 默认禁用                |
 | [`node_overcommit_ratio`](#node_overcommit_ratio) |  `float`   | `C` | 节点内存允许的 OverCommit 超额比率 (50-100)，0 默认禁用 |
 | [`node_tune`](#node_tune)                         |   `enum`   | `C` | 节点调优配置文件：无，oltp,olap,crit,tiny          |
+| [`node_tuned_profile_dir`](#node_tuned_profile_dir) |  `path`  | `C` | tuned 配置文件目录，由发行版映射确定                 |
 | [`node_sysctl_params`](#node_sysctl_params)       |   `dict`   | `C` | 额外的 sysctl 配置参数，k:v 格式                  |
 {.full-width}
 
@@ -534,6 +535,7 @@ node_hugepage_count: 0            # number of 2MB hugepage, take precedence over
 node_hugepage_ratio: 0            # node mem hugepage ratio, 0 disable it by default
 node_overcommit_ratio: 0          # node mem overcommit ratio, 0 disable it by default
 node_tune: oltp                   # node tuned profile: none,oltp,olap,crit,tiny
+node_tuned_profile_dir: /etc/tuned # node tuned profile directory
 node_sysctl_params:               # sysctl parameters in k:v format in addition to tuned
   fs.nr_open: 8388608
 ```
@@ -676,6 +678,16 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 
 
+
+
+
+### `node_tuned_profile_dir`
+
+参数名称：`node_tuned_profile_dir`，类型：`path`，层次：`C`
+
+Pigsty 写入 `tiny`、`oltp`、`olap` 与 `crit` 调优配置的目录。角色默认值为 `/etc/tuned`，随后由平台变量适配发行版目录布局：EL 10、Debian 13 与 Ubuntu 26 使用 `/etc/tuned/profiles`；EL 8/9、Debian 12 与 Ubuntu 22/24 使用 `/etc/tuned`。
+
+通常无需手工覆盖；仅当目标系统的 tuned 配置目录偏离 Pigsty 已知平台映射时才应设置本参数。
 
 
 
