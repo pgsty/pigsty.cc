@@ -46,8 +46,7 @@ weight: 2565
 {.ext-table .ext-table--rel}
 
 
-> The control file declares pg_lake_engine; canonical metadata also retains plpgsql because the install SQL uses PL/pgSQL. plpgsql is installed by default in normal PostgreSQL databases.
-Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> The control file declares pg_lake_engine; canonical metadata also retains plpgsql because the install SQL uses PL/pgSQL. plpgsql is installed by default in normal PostgreSQL databases. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
 
 
 ## 版本

@@ -38,7 +38,7 @@ weight: 7180
 {.ext-table .ext-table--rel}
 
 
-> Configure oauth_validator_libraries='oidc_validator'. Built from upstream commit b65bbbe288f84fab91d58b8304e8a526d1326af5; upstream publishes no license grant.
+> Configure oauth_validator_libraries='oidc_validator'. no valid license, distribution suspend
 
 
 ## 版本
@@ -69,22 +69,22 @@ weight: 7180
 | u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_oidc_validator_rust_18-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~resolute_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~resolute_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el8.x86_64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el8.aarch64.rpm pigsty 0.1.0 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el9.x86_64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el9.aarch64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el10.x86_64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_oidc_validator_rust_18 pg_oidc_validator_rust_18-0.1.0-2PGSTY.el10.aarch64.rpm pigsty 0.1.0 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_oidc_validator_rust_18-0.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~bookworm_amd64.deb pigsty 0.1.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~bookworm_arm64.deb pigsty 0.1.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~trixie_amd64.deb pigsty 0.1.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~trixie_arm64.deb pigsty 0.1.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~jammy_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~jammy_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~noble_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~noble_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~resolute_amd64.deb pigsty 0.1.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-oidc-validator-rust postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~resolute_arm64.deb pigsty 0.1.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-oidc-validator-rust/postgresql-18-pg-oidc-validator-rust_0.1.0-2PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

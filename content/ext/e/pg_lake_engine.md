@@ -46,8 +46,7 @@ weight: 2564
 {.ext-table .ext-table--rel}
 
 
-> Query-engine component. pg_extension_base auto-loads its module; delegated DuckDB execution additionally requires the separately running PG-major pgduck_server.
-Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> Query-engine component. pg_extension_base auto-loads its module; delegated DuckDB execution additionally requires the separately running PG-major pgduck_server. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
 
 
 ## 版本

@@ -8,7 +8,7 @@ icon: fas fa-warehouse
 
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | <a class="ext-badge ext-badge--repo contrib" href="/ext/repo#contrib">CONTRIB</a> | **总计** |
 |:------:|:------:|:------:|:------:|:------:|:------:|
-| **扩展数量** | 95 | 343 | 66 | 71 | **575** |
+| **扩展数量** | 95 | 344 | 66 | 71 | **576** |
 {.ext-table}
 
 
@@ -122,7 +122,7 @@ PostgreSQL 全球开发组提供的二进制制成品仓库，包括 95 个扩�
 
 ## PIGSTY 仓库 {#pigsty}
 
-Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 343 个扩展。
+Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 344 个扩展。
 
 | **扩展** | **RPM仓库** | **RPM包** | **RPM版本** | **DEB仓库** | **DEB包** | **DEB版本** |
 |:---------|:----------:|:---------|:----------:|:----------:|:---------|:----------:|
@@ -135,7 +135,7 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 343 个扩展�
 | [`pg_task`](/ext/e/pg_task) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_task_$v` | `2.1.29` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-task` | `2.1.29` |
 | [`pg_later`](/ext/e/pg_later) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_later_$v` | `0.4.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-later` | `0.4.0` |
 | [`pg_dispatch`](/ext/e/pg_dispatch) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_dispatch_$v` | `0.1.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-dispatch` | `0.1.5` |
-| [`pg_when`](/ext/e/pg_when) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_when_$v` | `0.1.9` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-when` | `0.1.9` |
+| [`pg_when`](/ext/e/pg_when) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_when_$v` | `0.1.10` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-when` | `0.1.10` |
 | [`pg_stl`](/ext/e/pg_stl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_stl_$v` | `1.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-stl` | `1.0.0` |
 | [`cron_utils`](/ext/e/cron_utils) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `cron_utils_$v` | `0.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-cron-utils` | `0.1.0` |
 | [`pg_polyline`](/ext/e/pg_polyline) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_polyline_$v` | `0.0.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-polyline` | `0.0.1` |
@@ -326,6 +326,7 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 343 个扩展�
 | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_html5_email_address_$v` | `1.2.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-html5-email-address` | `1.2.3` |
 | [`url_encode`](/ext/e/url_encode) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `url_encode_$v` | `1.2.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-url-encode` | `1.2.5` |
 | [`pgsql_tweaks`](/ext/e/pgsql_tweaks) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgsql_tweaks_$v` | `1.0.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgsql-tweaks` | `1.0.5` |
+| [`pg_relation_sql`](/ext/e/pg_relation_sql) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_relation_sql_$v` | `0.2.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-relation-sql` | `0.2.2` |
 | [`pg_extra_time`](/ext/e/pg_extra_time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_extra_time_$v` | `2.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-extra-time` | `2.1.0` |
 | [`re2`](/ext/e/re2) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `re2_$v` | `0.4.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-re2` | `0.4.1` |
 | [`pgqr`](/ext/e/pgqr) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgqr_$v` | `1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgqr` | `1.0` |
@@ -420,7 +421,7 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 343 个扩展�
 | [`pg_enigma`](/ext/e/pg_enigma) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_enigma_$v` | `0.5.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-enigma` | `0.5.0` |
 | [`pg_roast`](/ext/e/pg_roast) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_roast_$v` | `1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-roast` | `1.0` |
 | [`pg_auditor`](/ext/e/pg_auditor) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_auditor_$v` | `0.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-auditor` | `0.2` |
-| [`pg_oidc_validator`](/ext/e/pg_oidc_validator) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_oidc_validator_$v` | `0.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-oidc-validator` | `0.2` |
+| [`pg_oidc_validator`](/ext/e/pg_oidc_validator) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_oidc_validator_$v` | `1.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-oidc-validator` | `1.1.0` |
 | [`oidc_validator`](/ext/e/oidc_validator) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_oidc_validator_rust_$v` | `0.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-oidc-validator-rust` | `0.1.0` |
 | [`pgmemento`](/ext/e/pgmemento) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgmemento_$v` | `0.7.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgmemento` | `0.7.4` |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_command_fw_$v` | `0.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-command-fw` | `0.1.0` |

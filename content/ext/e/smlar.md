@@ -25,7 +25,7 @@ weight: 1850
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`smlar`**](/ext/e/smlar) | `1.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`smlar`**](/ext/e/smlar) | `1.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license unknown" href="/ext/license#unknown">Unknown</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,7 +38,7 @@ weight: 1850
 {.ext-table .ext-table--rel}
 
 
-> fix pg18 break issue by https://github.com/Vonng/smlar
+> fix pg18 break issue by https://github.com/Vonng/smlar, no valid license, distribution suspend
 
 
 ## 版本
@@ -69,86 +69,86 @@ weight: 1850
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 smlar_18 smlar_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 smlar_18 smlar_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 smlar_18 smlar_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 smlar_18 smlar_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 smlar_18 smlar_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 smlar_18 smlar_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 70.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 77.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 76.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 75.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 74.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 74.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 74.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-18-smlar_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 smlar_17 smlar_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 smlar_17 smlar_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 smlar_17 smlar_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 smlar_17 smlar_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 smlar_17 smlar_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 smlar_17 smlar_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 70.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 71.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 70.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 85.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 84.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 75.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 74.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 74.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 74.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-17-smlar_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 smlar_16 smlar_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 smlar_16 smlar_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 smlar_16 smlar_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 smlar_16 smlar_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 smlar_16 smlar_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 smlar_16 smlar_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 71.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 70.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 71.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 70.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 85.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 84.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 75.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 74.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 74.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 74.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-16-smlar_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 smlar_15 smlar_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 35.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 smlar_15 smlar_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 smlar_15 smlar_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 smlar_15 smlar_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 smlar_15 smlar_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 smlar_15 smlar_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 72.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 70.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 71.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 86.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 84.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 75.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 74.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 74.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 73.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-15-smlar_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 smlar_14 smlar_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 35.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 smlar_14 smlar_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 smlar_14 smlar_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 smlar_14 smlar_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 smlar_14 smlar_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 smlar_14 smlar_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 72.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 70.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 71.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 86.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 84.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 75.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 74.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 74.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 73.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-14-smlar_1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 smlar_18 smlar_18-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 34.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_18-1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 smlar_18 smlar_18-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_18-1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 smlar_18 smlar_18-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_18-1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 smlar_18 smlar_18-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_18-1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 smlar_18 smlar_18-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_18-1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 smlar_18 smlar_18-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 33.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_18-1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~bookworm_amd64.deb pigsty 1.0 73.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~bookworm_arm64.deb pigsty 1.0 72.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~trixie_amd64.deb pigsty 1.0 73.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~trixie_arm64.deb pigsty 1.0 72.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~jammy_amd64.deb pigsty 1.0 79.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~jammy_arm64.deb pigsty 1.0 78.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~noble_amd64.deb pigsty 1.0 77.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~noble_arm64.deb pigsty 1.0 76.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~resolute_amd64.deb pigsty 1.0 76.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-smlar postgresql-18-smlar_1.0-2PGSTY~resolute_arm64.deb pigsty 1.0 76.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-18-smlar_1.0-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 smlar_17 smlar_17-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 34.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_17-1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 smlar_17 smlar_17-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_17-1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 smlar_17 smlar_17-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_17-1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 smlar_17 smlar_17-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_17-1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 smlar_17 smlar_17-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_17-1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 smlar_17 smlar_17-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 33.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_17-1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~bookworm_amd64.deb pigsty 1.0 73.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~bookworm_arm64.deb pigsty 1.0 72.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~trixie_amd64.deb pigsty 1.0 73.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~trixie_arm64.deb pigsty 1.0 72.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~jammy_amd64.deb pigsty 1.0 87.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~jammy_arm64.deb pigsty 1.0 86.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~noble_amd64.deb pigsty 1.0 77.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~noble_arm64.deb pigsty 1.0 76.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~resolute_amd64.deb pigsty 1.0 76.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-smlar postgresql-17-smlar_1.0-2PGSTY~resolute_arm64.deb pigsty 1.0 76.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-17-smlar_1.0-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 smlar_16 smlar_16-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 34.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_16-1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 smlar_16 smlar_16-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_16-1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 smlar_16 smlar_16-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_16-1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 smlar_16 smlar_16-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 32.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_16-1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 smlar_16 smlar_16-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_16-1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 smlar_16 smlar_16-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 33.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_16-1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~bookworm_amd64.deb pigsty 1.0 73.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~bookworm_arm64.deb pigsty 1.0 71.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~trixie_amd64.deb pigsty 1.0 73.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~trixie_arm64.deb pigsty 1.0 72.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~jammy_amd64.deb pigsty 1.0 87.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~jammy_arm64.deb pigsty 1.0 86.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~noble_amd64.deb pigsty 1.0 77.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~noble_arm64.deb pigsty 1.0 76.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~resolute_amd64.deb pigsty 1.0 76.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-smlar postgresql-16-smlar_1.0-2PGSTY~resolute_arm64.deb pigsty 1.0 76.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-16-smlar_1.0-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 smlar_15 smlar_15-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 35.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_15-1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 smlar_15 smlar_15-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 33.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_15-1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 smlar_15 smlar_15-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_15-1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 smlar_15 smlar_15-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_15-1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 smlar_15 smlar_15-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_15-1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 smlar_15 smlar_15-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_15-1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~bookworm_amd64.deb pigsty 1.0 74.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~bookworm_arm64.deb pigsty 1.0 72.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~trixie_amd64.deb pigsty 1.0 73.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~trixie_arm64.deb pigsty 1.0 72.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~jammy_amd64.deb pigsty 1.0 88.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~jammy_arm64.deb pigsty 1.0 86.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~noble_amd64.deb pigsty 1.0 76.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~noble_arm64.deb pigsty 1.0 76.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~resolute_amd64.deb pigsty 1.0 76.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-smlar postgresql-15-smlar_1.0-2PGSTY~resolute_arm64.deb pigsty 1.0 75.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-15-smlar_1.0-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 smlar_14 smlar_14-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 35.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/smlar_14-1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 smlar_14 smlar_14-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 33.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/smlar_14-1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 smlar_14 smlar_14-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/smlar_14-1.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 smlar_14 smlar_14-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/smlar_14-1.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 smlar_14 smlar_14-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/smlar_14-1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 smlar_14 smlar_14-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/smlar_14-1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~bookworm_amd64.deb pigsty 1.0 74.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~bookworm_arm64.deb pigsty 1.0 72.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~trixie_amd64.deb pigsty 1.0 73.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~trixie_arm64.deb pigsty 1.0 72.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~jammy_amd64.deb pigsty 1.0 88.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~jammy_arm64.deb pigsty 1.0 86.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~noble_amd64.deb pigsty 1.0 76.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~noble_arm64.deb pigsty 1.0 76.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~resolute_amd64.deb pigsty 1.0 76.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-smlar postgresql-14-smlar_1.0-2PGSTY~resolute_arm64.deb pigsty 1.0 75.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/smlar/postgresql-14-smlar_1.0-2PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

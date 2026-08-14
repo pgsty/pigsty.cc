@@ -45,8 +45,7 @@ weight: 2562
 {.ext-table .ext-table--rel}
 
 
-> Optional packaged component. It runs installed extension updates at database start through pg_extension_base; it is not part of CREATE EXTENSION pg_lake CASCADE dependency closure.
-Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> Optional packaged component. It runs installed extension updates at database start through pg_extension_base; it is not part of CREATE EXTENSION pg_lake CASCADE dependency closure. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
 
 
 ## 版本

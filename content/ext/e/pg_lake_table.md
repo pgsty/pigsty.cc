@@ -46,8 +46,7 @@ weight: 2566
 {.ext-table .ext-table--rel}
 
 
-> pg_extension_base auto-loads pg_lake_engine, pg_lake_iceberg, and pg_lake_table in dependency order.
-Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> pg_extension_base auto-loads pg_lake_engine, pg_lake_iceberg, and pg_lake_table in dependency order. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
 
 
 ## 版本

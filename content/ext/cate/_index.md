@@ -17,7 +17,7 @@ sidebar_expanded: true
 | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | 76 | 37 | 功能特性扩展：图数据库，Hyperloglog，Rum索引，GraphQL，JsonSchema，Hint，虚拟索引，增量物化视图，消息队列等等 |
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | 42 | 26 | 存储过程语言扩展：使用各种编程语言开发，调试，打包，分发，测试 PostgreSQL 存储过程：Java，Js，Lua，R，SH，PRQL… |
 | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | 42 | 41 | 自定义类型扩展：前缀树，语义版本号，SI单位，位图，无符号整型，高精度数值，有理数，哈希值，IP地址段，球面，RRULE等 |
-| <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | 40 | 39 | 实用功能扩展：HTTP请求，GZIP压缩，JWT处理，邮件客户端，正则，字符编码，编码解码，加密解密等实用功能 |
+| <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | 41 | 40 | 实用功能扩展：HTTP请求，GZIP压缩，JWT处理，邮件客户端，正则，字符编码，编码解码，加密解密等实用功能 |
 | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | 54 | 54 | 标识聚合函数：ID生成器，各类聚合函数，摘要函数，数组处理函数，数学函数，统计量，伪随机，等等 |
 | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | 47 | 45 | 管理工具扩展：膨胀治理，脏读，检视缓冲区，数据目录，校验和，腐败检查，优先级管理，权限管理，语句准备，限制批量更新等 |
 | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | 44 | 42 | 监控统计扩展：AWR报告，可观测性指标，显示执行计划，查询统计信息，内存使用，配置变更，等待事件采样，慢查询日志，等等 |

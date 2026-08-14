@@ -46,8 +46,7 @@ weight: 2561
 {.ext-table .ext-table--rel}
 
 
-> Set shared_preload_libraries=pg_extension_base. It auto-loads dependent libraries declared through the pg_lake control-file marker and manages extension lifecycle background workers.
-Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> Set shared_preload_libraries=pg_extension_base. It auto-loads dependent libraries declared through the pg_lake control-file marker and manages extension lifecycle background workers. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
 
 
 ## 版本

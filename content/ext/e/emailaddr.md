@@ -25,7 +25,7 @@ weight: 3800
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_emailaddr`**](/ext/e/emailaddr) | `0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_emailaddr`**](/ext/e/emailaddr) | `0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license unknown" href="/ext/license#unknown">Unknown</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,7 +38,7 @@ weight: 3800
 {.ext-table .ext-table--rel}
 
 
-> +varatt.h
+> +varatt.h, no valid license, distribution suspend
 
 
 ## 版本
@@ -69,86 +69,86 @@ weight: 3800
 | u24.aarch64 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 |
 | u26.x86_64 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 |
 | u26.aarch64 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 |
-@ el8.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el8.x86_64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_18-0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el8.aarch64.rpm pigsty 0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_18-0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_18-0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_18-0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_18-0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-1PIGSTY.el10.aarch64.rpm pigsty 0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_18-0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb pigsty 0 12.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~noble_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~noble_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el8.x86_64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_17-0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el8.aarch64.rpm pigsty 0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_17-0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_17-0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_17-0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_17-0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-1PIGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_17-0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~noble_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~noble_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el8.x86_64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_16-0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el8.aarch64.rpm pigsty 0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_16-0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_16-0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_16-0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_16-0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-1PIGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_16-0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~noble_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~noble_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el8.x86_64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_15-0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el8.aarch64.rpm pigsty 0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_15-0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_15-0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_15-0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_15-0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-1PIGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_15-0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~noble_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~noble_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el8.x86_64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_14-0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el8.aarch64.rpm pigsty 0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_14-0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_14-0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_14-0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_14-0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-1PIGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_14-0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb pigsty 0 12.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~noble_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~noble_arm64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb pigsty 0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el8.x86_64.rpm pigsty 0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_18-0-3PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el8.aarch64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_18-0-3PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_18-0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_18-0-3PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_18-0-3PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_emailaddr_18 pg_emailaddr_18-0-3PGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_18-0-3PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~trixie_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~trixie_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~jammy_amd64.deb pigsty 0 12.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~jammy_arm64.deb pigsty 0 12.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~noble_amd64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~noble_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~resolute_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-emailaddr postgresql-18-pg-emailaddr_0-3PGSTY~resolute_arm64.deb pigsty 0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-18-pg-emailaddr_0-3PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el8.x86_64.rpm pigsty 0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_17-0-3PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el8.aarch64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_17-0-3PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_17-0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_17-0-3PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_17-0-3PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_emailaddr_17 pg_emailaddr_17-0-3PGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_17-0-3PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~trixie_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~trixie_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~jammy_amd64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~jammy_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~noble_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~noble_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~resolute_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-emailaddr postgresql-17-pg-emailaddr_0-3PGSTY~resolute_arm64.deb pigsty 0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-17-pg-emailaddr_0-3PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el8.x86_64.rpm pigsty 0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_16-0-3PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el8.aarch64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_16-0-3PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_16-0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_16-0-3PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_16-0-3PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_emailaddr_16 pg_emailaddr_16-0-3PGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_16-0-3PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~trixie_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~trixie_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~jammy_amd64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~jammy_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~noble_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~noble_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~resolute_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-emailaddr postgresql-16-pg-emailaddr_0-3PGSTY~resolute_arm64.deb pigsty 0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-16-pg-emailaddr_0-3PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el8.x86_64.rpm pigsty 0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_15-0-3PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el8.aarch64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_15-0-3PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_15-0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_15-0-3PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_15-0-3PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_emailaddr_15 pg_emailaddr_15-0-3PGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_15-0-3PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~trixie_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~trixie_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~jammy_amd64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~jammy_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~noble_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~noble_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~resolute_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-emailaddr postgresql-15-pg-emailaddr_0-3PGSTY~resolute_arm64.deb pigsty 0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-15-pg-emailaddr_0-3PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el8.x86_64.rpm pigsty 0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_emailaddr_14-0-3PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el8.aarch64.rpm pigsty 0 13.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_emailaddr_14-0-3PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el9.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_emailaddr_14-0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el9.aarch64.rpm pigsty 0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_emailaddr_14-0-3PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el10.x86_64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_emailaddr_14-0-3PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_emailaddr_14 pg_emailaddr_14-0-3PGSTY.el10.aarch64.rpm pigsty 0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_emailaddr_14-0-3PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~trixie_amd64.deb pigsty 0 12.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~trixie_arm64.deb pigsty 0 12.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~jammy_amd64.deb pigsty 0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~jammy_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~noble_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~noble_arm64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~resolute_amd64.deb pigsty 0 13.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-emailaddr postgresql-14-pg-emailaddr_0-3PGSTY~resolute_arm64.deb pigsty 0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-emailaddr/postgresql-14-pg-emailaddr_0-3PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
