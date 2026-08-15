@@ -12,14 +12,12 @@ footer_style: slim
 outputs:
   - HTML
   - RSS
-  - print
   - markdown
 cascade:
   params:
     footer_style: slim
   outputs:
     - HTML
-    - print
     - markdown
 ---
 

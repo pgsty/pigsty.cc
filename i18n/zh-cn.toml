@@ -120,21 +120,6 @@ other = "切换主题"
 [silo_lang_label]
 other = "语言"
 
-[silo_search_nav]
-other = "切换"
-
-[silo_search_open]
-other = "选定"
-
-[silo_search_close]
-other = "关闭"
-
-[silo_search_empty]
-other = "没有找到相关结果"
-
-[silo_search_loading]
-other = "正在加载搜索索引……"
-
 [silo_root_menu_label]
 other = "切换文档集"
 

@@ -2,6 +2,7 @@
       homepage. The desktop markup below intentionally mirrors home.html;
       shell-only data attributes preserve search, theme, and drawer behavior. */ -}}
 {{- $drawerMode := and (partial "shell/chrome-enabled.html" .) (partial "shell/sidebar-enabled.html" .) -}}
+{{- $localSearch := partial "shell/search-enabled.html" . -}}
 <header class="landing-header pigsty-navbar d-print-none" data-header>
   <div class="landing-container">
     <nav class="landing-nav" aria-label="主导航">
@@ -128,10 +129,12 @@
 
         <a href="/price/" class="nav-link">服务</a>
         <div class="nav-utils">
+          {{- if $localSearch }}
           <button type="button" class="nav-util" data-td-shell-search-open title="搜索（⌘K）" aria-label="搜索"
                   aria-controls="td-shell-search" aria-expanded="false">
             {{- partialCached "shell/icon.html" "search" "pigsty-navbar-search" -}}
           </button>
+          {{- end }}
           <button type="button" class="nav-util" data-td-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
             {{- partialCached "shell/icon.html" "moon" "pigsty-navbar-moon" -}}
             {{- partialCached "shell/icon.html" "sun" "pigsty-navbar-sun" -}}
@@ -161,9 +164,11 @@
   <a href="/ext/" class="mobile-menu-link">扩展</a>
   <a href="/blog/" class="mobile-menu-link">博客</a>
   <a href="/price/" class="mobile-menu-link">服务</a>
+  {{- if $localSearch }}
   <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-td-shell-search-open>
     <i class="fas fa-search"></i> 搜索
   </button>
+  {{- end }}
   <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
   <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-td-theme-toggle>
     <i class="fas fa-moon"></i> 亮暗切换

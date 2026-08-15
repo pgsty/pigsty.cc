@@ -180,11 +180,19 @@ markup:
 #=======================================#
 # Outputs
 #=======================================#
+# `make dev` selects this segment to keep the interactive HTML and its Markdown
+# source links while skipping the expensive deployment-only outputs. Normal
+# builds and `make view` do not select a segment.
+segments:
+  dev:
+    includes:
+      - output: '{html,markdown}'
+
 outputs:
   home:
     - HTML
     - RSS
-    - JSON
+    #- JSON
     - markdown
     - LLMS
   page:
@@ -193,7 +201,7 @@ outputs:
   section:
     - HTML
     - RSS
-    - print
+    #- print
     - markdown
 
 # Keep ext HTML-only; large catalog outputs can exceed hosting limits.
@@ -260,6 +268,7 @@ params:
 
   # OINK 本地搜索与增强代码块均不依赖远程运行时。
   offlineSearch: true
+  offlineSearchOnServe: false
   offlineSearchIndex: summary
   offlineSearchSummaryLength: 100
   offlineSearchMaxResults: 12
@@ -288,6 +297,7 @@ params:
       types: [docs, blog]
     quick_links: [docs, ext, blog]
     sidebar_icon_policy: all
+    sidebar_cache_limit: 500
     sidebar_menu_compact: true
     sidebar_menu_foldable: true
     sidebar_root_enabled: true
@@ -308,13 +318,10 @@ params:
     keyboard_nav:
       enable: true
 
-    # Feedback section (requires Google Analytics)
+    # One-click structured feedback; emits gtag events when analytics exists.
     feedback:
       enable: true
-      "yes": >-
-        感谢反馈！请 <a href="https://github.com/pgsty/pigsty/issues/new">告诉我们如何改进</a>。
-      "no": >-
-        抱歉给您带来不便。请 <a href="https://github.com/pgsty/pigsty/issues/new">告诉我们如何改进</a>。
+      reasons: true
 
     # Reading time
     readingtime:

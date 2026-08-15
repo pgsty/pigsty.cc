@@ -67,10 +67,11 @@
   <!-- Landing Page CSS（指纹化：改动后 URL 变化，避免 CDN / 浏览器缓存旧样式） -->
   {{ $landingCss := resources.Get "css/landing-v3.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}">
-
-  <!-- ⌘K 搜索弹窗（复用文档站样式，桥接 landing 主题令牌） -->
+  {{ $localSearch := partial "shell/search-enabled.html" . }}
+  {{ if $localSearch }}
   {{ $searchCss := resources.Get "scss/landing-search.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $searchCss.RelPermalink }}" integrity="{{ $searchCss.Data.Integrity }}">
+  {{ end }}
 
   <!-- Analytics -->
   {{ with .Site.Config.Services.GoogleAnalytics.ID }}
@@ -211,9 +212,12 @@
           </div>
           <a href="/price/" class="nav-link">服务</a>
           <div class="nav-utils">
-            <button type="button" class="nav-util" data-silo-search-open title="搜索（⌘K）" aria-label="搜索">
-              {{- partialCached "silo/icon.html" "search" "search" -}}
+            {{- if $localSearch }}
+            <button type="button" class="nav-util" data-td-shell-search-open title="搜索（⌘K）" aria-label="搜索"
+                    aria-controls="td-shell-search" aria-expanded="false">
+              {{- partialCached "silo/icon.html" "search" "landing-search" -}}
             </button>
+            {{- end }}
             <button type="button" class="nav-util" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
               {{- partialCached "silo/icon.html" "moon" "moon" -}}
               {{- partialCached "silo/icon.html" "sun" "sun" -}}
@@ -241,9 +245,12 @@
     <a href="/ext/" class="mobile-menu-link">扩展</a>
     <a href="/blog/" class="mobile-menu-link">博客</a>
     <a href="/price/" class="mobile-menu-link">服务</a>
-    <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-silo-search-open>
-      <i class="fas fa-search"></i> 搜索
+    {{- if $localSearch }}
+    <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-td-shell-search-open
+            aria-controls="td-shell-search" aria-expanded="false">
+      <i class="fas fa-search" aria-hidden="true"></i> 搜索
     </button>
+    {{- end }}
     <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
     <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-theme-toggle>
       <i class="fas fa-moon"></i> 亮暗切换
@@ -2139,10 +2146,18 @@
 {{ $landingJs := resources.Get "js/landing-v3.js" | minify | fingerprint }}
 <script src="{{ $landingJs.RelPermalink }}" integrity="{{ $landingJs.Data.Integrity }}"></script>
 
-{{ partial "silo/search-dialog.html" . }}
-{{ $searchJs := slice (resources.Get "js/vendor/lunr.min.js") (resources.Get "js/silo-search.js")
-      | resources.Concat "js/landing-search-bundle.js" | minify | fingerprint }}
-<script src="{{ $searchJs.RelPermalink }}" integrity="{{ $searchJs.Data.Integrity }}" defer></script>
+{{ if $localSearch }}
+{{ partialCached "shell/search-dialog.html" . .Site.Language.Lang "landing" }}
+<script type="application/json" id="oink-action-manifest">{"version":1,"actions":[],"commands":[],"quickLinks":[],"rootOrder":[]}</script>
+{{ $searchJs := slice
+  (resources.Get "js/third_party/lunr.min.js")
+  (resources.Get "js/action-registry.js")
+  (resources.Get "js/search-engine.js")
+  (resources.Get "js/palette-model.js")
+  (resources.Get "js/command-palette.js")
+  | resources.Concat "js/landing-oink-search.js" | minify | fingerprint }}
+<script src="{{ $searchJs.RelPermalink }}" integrity="{{ $searchJs.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
 
 </body>
 </html>

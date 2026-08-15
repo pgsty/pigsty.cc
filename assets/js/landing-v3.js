@@ -204,14 +204,16 @@
       toggle.setAttribute('aria-expanded', active ? 'true' : 'false');
     });
 
-    // 链接与搜索按钮点击后收起菜单（主题切换按钮除外，保持菜单打开）。
-    menu.querySelectorAll('a, [data-silo-search-open]').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('active');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
+    // 链接与搜索按钮点击后收起菜单（主题切换按钮保持菜单打开）。
+    menu
+      .querySelectorAll('a, [data-td-shell-search-open]')
+      .forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('active');
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
       });
-    });
   }
 
   // ============================================

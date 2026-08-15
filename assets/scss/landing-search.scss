@@ -1,28 +1,38 @@
-// ============================================================
-// landing-search —— landing 页（首页 / 价格页）⌘K 搜索弹窗样式。
-// 复用文档站 silo/_search.scss 的全部规则，此处仅把它引用的
-// --bs-* / --silo-* 变量桥接到 landing-v3.css 的主题令牌上
-// （landing 用 html[data-theme] 切换亮暗，令牌随之自动翻转）。
-// 由 home / price 模板经 Hugo pipes 编译为独立小 CSS，
-// 不引入 docsy 主样式，避免与 landing 样式冲突。
-// ============================================================
+// OINK Command Palette bridge for the standalone Pigsty landing template.
+// The homepage keeps its own token system but shares the theme's markup,
+// search index, search engine, accessibility behavior, and keyboard controls.
 
 html[data-theme] {
   --bs-border-color: var(--line);
   --bs-body-bg: var(--bg);
   --bs-body-color: var(--ink);
-  --silo-popover: var(--bg-elev);
-  --silo-muted-fg: var(--ink-mute);
-  --silo-primary: var(--pg);
-  --silo-primary-dim: color-mix(in srgb, var(--pg) 11%, transparent);
-  --silo-shadow-lg: var(--shadow-md);
-  --silo-ease-dialog: cubic-bezier(0.16, 1, 0.3, 1); // 与 silo/_tokens.scss 同参
+  --td-shell-popover: var(--bg-elev);
+  --td-shell-muted-fg: var(--ink-mute);
+  --td-shell-primary: var(--pg);
+  --td-shell-primary-dim: color-mix(in srgb, var(--pg) 11%, transparent);
+  --td-shell-shadow-lg: var(--shadow-md);
+  --td-shell-ease-dialog: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-// 弹窗打开时锁定页面滚动（对应 silo/_tokens.scss 的同名规则）。
-html[data-silo-lock] {
+html[data-td-shell-lock] {
   overflow: hidden;
 }
 
-// 弹窗头部搜索图标的尺寸由 _search.scss 按 .silo-icon 类约束，无需额外规则。
-@import 'silo/search';
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.nav-util .silo-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@import 'td/shell/search';

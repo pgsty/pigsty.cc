@@ -9,12 +9,10 @@ footer_style: slim
 outputs:
   - HTML
   - RSS
-  - print
   - markdown
 cascade:
   outputs:
     - HTML
-    - print
     - markdown
   params:
     footer_style: slim
