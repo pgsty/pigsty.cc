@@ -1,6 +1,6 @@
 ---
 title: 概念
-weight: 150
+weight: 300
 description: 理解 Pigsty 的核心概念、架构设计与设计理念，掌握高可用、备份恢复、安全合规等关键能力。
 icon: fa-solid fa-compass
 module: [PIGSTY]

@@ -1,102 +1,175 @@
-{{ $cover := and
-    (.HasShortcode "blocks/cover")
-    (not .Site.Params.ui.navbar_translucent_over_cover_disable)
--}}
-{{ $baseURL := urls.Parse $.Site.Params.Baseurl -}}
+{{- /* Keep the OINK page chrome on the same navigation surface as the custom
+      homepage. The desktop markup below intentionally mirrors home.html;
+      shell-only data attributes preserve search, theme, and drawer behavior. */ -}}
+{{- $drawerMode := and (partial "shell/chrome-enabled.html" .) (partial "shell/sidebar-enabled.html" .) -}}
+<header class="landing-header pigsty-navbar d-print-none" data-header>
+  <div class="landing-container">
+    <nav class="landing-nav" aria-label="主导航">
+      <a href="/" class="nav-brand">
+        <img src="/img/logo/logo.svg" alt="Pigsty" class="nav-logo">
+        <span class="nav-title">PIGSTY</span>
+      </a>
 
-<nav class="td-navbar js-navbar-scroll
-            {{- if $cover }} td-navbar-cover {{- end }}">
-<div class="td-navbar-container container-fluid flex-column flex-md-row">
-  <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
-    {{- /**/ -}}
-    <span class="navbar-brand__logo navbar-logo">
-      {{- if ne .Site.Params.ui.navbar_logo false -}}
-        {{ with resources.Get "icons/logo.svg" -}}
-          {{ ( . | minify).Content | safeHTML -}}
-        {{ end -}}
-      {{ end -}}
-    </span>
-    {{- /**/ -}}
-    <span class="navbar-brand__name">
-      {{- .Site.Title -}}
-    </span>
-    {{- /**/ -}}
+      <div class="nav-links">
+        <div class="nav-item">
+          <a href="/docs/" class="nav-link">文档 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+          <div class="nav-dropdown nav-dropdown--docs" role="menu" aria-label="文档菜单">
+            <div class="dropdown-group">
+              <p class="dropdown-group-title silkscreen">文档</p>
+              <div class="dropdown-cols">
+                <ul class="dropdown-col">
+                  <li><a href="/docs/"><i class="fas fa-book"></i>Pigsty {{ .Site.Params.version_short }}</a></li>
+                  <li><a href="https://doc.pgsty.com" target="_blank" rel="noopener"><i class="fas fa-book-open"></i>Pigsty v3.7</a></li>
+                  <li><a href="/docs/about/release/"><i class="fas fa-clipboard-list"></i>发布注记</a></li>
+                  <li><a href="/docs/piglet/"><i class="fas fa-dharmachakra"></i>Piglet.Run</a></li>
+                  <li><a href="/docs/pgsql/kernel/"><i class="fas fa-microchip"></i>PG 内核分支</a></li>
+                  <li><a href="/ext/"><i class="fas fa-puzzle-piece"></i>PG 扩展目录</a></li>
+                </ul>
+                <ul class="dropdown-col">
+                  <li><a href="/docs/pig/"><i class="fas fa-piggy-bank"></i>PIG 命令行</a></li>
+                  <li><a href="https://pg.center/docs/18/index.html" target="_blank" rel="noopener"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                  <li><a href="/docs/pgbouncer/"><i class="fas fa-baseball"></i>PgBouncer</a></li>
+                  <li><a href="/docs/patroni/"><i class="fas fa-yin-yang"></i>Patroni</a></li>
+                  <li><a href="/docs/pgbackrest/"><i class="fas fa-couch"></i>pgBackRest</a></li>
+                  <li><a href="/docs/pg_exporter/"><i class="fas fa-chart-line"></i>pg_exporter</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown-sep" aria-hidden="true"></div>
+            <div class="dropdown-group">
+              <p class="dropdown-group-title silkscreen">模块</p>
+              <div class="dropdown-cols">
+                <ul class="dropdown-col">
+                  <li><a href="/docs/pgsql/"><i class="fas fa-database"></i>PGSQL</a></li>
+                  <li><a href="/docs/infra/"><i class="fas fa-bank"></i>INFRA</a></li>
+                  <li><a href="/docs/node/"><i class="fas fa-server"></i>NODE</a></li>
+                  <li><a href="/docs/etcd/"><i class="fas fa-gears"></i>ETCD</a></li>
+                  <li><a href="/docs/minio/"><i class="fas fa-boxes-stacked"></i>MINIO</a></li>
+                  <li><a href="/docs/redis/"><i class="fas fa-layer-group"></i>REDIS</a></li>
+                </ul>
+                <ul class="dropdown-col">
+                  <li><a href="/docs/docker/"><i class="fa-brands fa-docker"></i>DOCKER</a></li>
+                  <li><a href="/docs/juice/"><i class="fas fa-folder-tree"></i>JUICE</a></li>
+                  <li><a href="/docs/vibe/"><i class="fas fa-laptop-code"></i>VIBE</a></li>
+                  <li><a href="/docs/kafka/"><i class="fas fa-share-nodes"></i>KAFKA</a></li>
+                  <li><a href="/docs/mysql/"><i class="fas fa-fish"></i>MYSQL</a></li>
+                  <li><a href="/docs/pilot/"><i class="fas fa-flask-vial"></i>PILOT</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="/ext/" class="nav-link">扩展 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+          <div class="nav-dropdown nav-dropdown--ext" role="menu" aria-label="扩展菜单">
+            <div class="dropdown-group">
+              <p class="dropdown-group-title silkscreen">扩展</p>
+              <div class="dropdown-cols">
+                <ul class="dropdown-col">
+                  <li><a href="/ext/list/"><i class="fas fa-puzzle-piece"></i>扩展列表</a></li>
+                  <li><a href="/ext/rpm/"><i class="fa-brands fa-redhat"></i>RPM 列表</a></li>
+                  <li><a href="/ext/deb/"><i class="fa-brands fa-debian"></i>DEB 列表</a></li>
+                  <li><a href="/ext/repo/"><i class="fas fa-warehouse"></i>归属仓库</a></li>
+                  <li><a href="/ext/language/"><i class="fas fa-code"></i>编程语言</a></li>
+                  <li><a href="/ext/license/"><i class="fas fa-scale-balanced"></i>开源协议</a></li>
+                  <li><a href="/docs/ref/linux/"><i class="fa-brands fa-linux"></i>操作系统</a></li>
+                  <li><a href="/docs/repo/"><i class="fas fa-clipboard-list"></i>更新日志</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown-sep" aria-hidden="true"></div>
+            <div class="dropdown-group">
+              <p class="dropdown-group-title silkscreen">分类</p>
+              <div class="dropdown-cols">
+                <ul class="dropdown-col">
+                  <li><a href="/ext/cate/time/"><i class="fas fa-clock"></i>TIME</a></li>
+                  <li><a href="/ext/cate/gis/"><i class="fas fa-globe"></i>GIS</a></li>
+                  <li><a href="/ext/cate/rag/"><i class="fas fa-brain"></i>RAG</a></li>
+                  <li><a href="/ext/cate/fts/"><i class="fas fa-magnifying-glass"></i>FTS</a></li>
+                  <li><a href="/ext/cate/olap/"><i class="fas fa-chart-line"></i>OLAP</a></li>
+                  <li><a href="/ext/cate/feat/"><i class="fas fa-icons"></i>FEAT</a></li>
+                  <li><a href="/ext/cate/lang/"><i class="fas fa-language"></i>LANG</a></li>
+                  <li><a href="/ext/cate/type/"><i class="fas fa-cubes"></i>TYPE</a></li>
+                </ul>
+                <ul class="dropdown-col">
+                  <li><a href="/ext/cate/util/"><i class="fas fa-wrench"></i>UTIL</a></li>
+                  <li><a href="/ext/cate/func/"><i class="fas fa-square-root-variable"></i>FUNC</a></li>
+                  <li><a href="/ext/cate/admin/"><i class="fas fa-bank"></i>ADMIN</a></li>
+                  <li><a href="/ext/cate/stat/"><i class="fas fa-file-waveform"></i>STAT</a></li>
+                  <li><a href="/ext/cate/sec/"><i class="fas fa-shield-halved"></i>SEC</a></li>
+                  <li><a href="/ext/cate/fdw/"><i class="fas fa-file-import"></i>FDW</a></li>
+                  <li><a href="/ext/cate/sim/"><i class="fas fa-user-ninja"></i>SIM</a></li>
+                  <li><a href="/ext/cate/etl/"><i class="fas fa-truck"></i>ETL</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="/blog/" class="nav-link">博客 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+          <div class="nav-dropdown nav-dropdown--blog" role="menu" aria-label="博客菜单">
+            <div class="dropdown-group">
+              <div class="dropdown-cols">
+                <ul class="dropdown-col">
+                  <li><a href="/blog/pigsty/"><i class="fas fa-newspaper"></i>Pigsty</a></li>
+                  <li><a href="/blog/pg/"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                  <li><a href="/blog/cloud/"><i class="fas fa-cloud"></i>云计算</a></li>
+                  <li><a href="/blog/db/"><i class="fas fa-database"></i>数据库</a></li>
+                  <li><a href="/blog/ai/"><i class="fas fa-robot"></i>AI Agent</a></li>
+                  <li><a href="https://vonng.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i>Vonng 博客</a></li>
+                  <li><a href="/img/pigsty/addvon.jpg" target="_blank"><i class="fab fa-weixin"></i>老冯云数</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/price/" class="nav-link">服务</a>
+        <div class="nav-utils">
+          <button type="button" class="nav-util" data-td-shell-search-open title="搜索（⌘K）" aria-label="搜索"
+                  aria-controls="td-shell-search" aria-expanded="false">
+            {{- partialCached "shell/icon.html" "search" "pigsty-navbar-search" -}}
+          </button>
+          <button type="button" class="nav-util" data-td-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+            {{- partialCached "shell/icon.html" "moon" "pigsty-navbar-moon" -}}
+            {{- partialCached "shell/icon.html" "sun" "pigsty-navbar-sun" -}}
+          </button>
+          <a href="https://pigsty.io" class="nav-util" title="English Site" aria-label="切换到英文站">
+            {{- partialCached "shell/icon.html" "languages" "pigsty-navbar-languages" -}}
+          </a>
+          <a href="https://github.com/pgsty/pigsty" class="nav-github" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+            {{- partialCached "shell/icon.html" "github" "pigsty-navbar-github" -}}
+            <span class="nav-star">{{ .Site.Params.github_stars }}</span>
+          </a>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"
+        {{- if $drawerMode }} data-td-shell-drawer-open aria-controls="td-shell-sidebar"
+        {{- else }} data-bs-toggle="collapse" data-bs-target="#pigsty-mobile-menu" aria-controls="pigsty-mobile-menu"{{ end }}>
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+{{- if not $drawerMode }}
+<div class="mobile-menu collapse d-print-none" id="pigsty-mobile-menu">
+  <a href="/docs/" class="mobile-menu-link">文档</a>
+  <a href="/ext/" class="mobile-menu-link">扩展</a>
+  <a href="/blog/" class="mobile-menu-link">博客</a>
+  <a href="/price/" class="mobile-menu-link">服务</a>
+  <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-td-shell-search-open>
+    <i class="fas fa-search"></i> 搜索
+  </button>
+  <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
+  <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-td-theme-toggle>
+    <i class="fas fa-moon"></i> 亮暗切换
+  </button>
+  <a href="https://github.com/pgsty/pigsty" class="mobile-menu-link" target="_blank" rel="noopener">
+    <i class="fab fa-github"></i> GitHub
   </a>
-  <div class="td-navbar-nav-scroll td-navbar-nav-scroll--indicator" id="main_navbar">
-    <div class="scroll-indicator scroll-left"></div>
-    <ul class="navbar-nav">
-      {{ $p := . -}}
-      {{/* 渲染内部菜单项，跳过外部链接 */}}
-      {{ range .Site.Menus.main -}}
-        {{ $isExternal := ne $baseURL.Host (urls.Parse .URL).Host -}}
-        {{ if not $isExternal -}}
-        <li class="nav-item">
-          {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
-          {{ $href := "" -}}
-          {{ with .Page -}}
-            {{ $active = or $active ( $.IsDescendant .) -}}
-            {{ $href = .RelPermalink -}}
-          {{ else -}}
-            {{ $href = .URL | relLangURL -}}
-          {{ end -}}
-          <a class="nav-link {{- if $active }} active {{- end }}" href="{{ $href }}">
-              {{- .Pre -}}
-              <span>{{ .Name }}</span>
-              {{- .Post -}}
-          </a>
-        </li>
-        {{ end -}}
-      {{ end -}}
-      {{/* 外部链接（如 GitHub）移到右侧 */}}
-      {{ range .Site.Menus.main -}}
-        {{ $isExternal := ne $baseURL.Host (urls.Parse .URL).Host -}}
-        {{ if $isExternal -}}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ .URL }}" target="_blank" rel="noopener">
-              {{- .Pre -}}
-              <span>{{ .Name }}</span>
-              {{- .Post -}}
-          </a>
-        </li>
-        {{ end -}}
-      {{ end -}}
-      {{ if (gt (len .Site.Home.Translations) 0) -}}
-      <li class="nav-item td-navbar__lang-menu">
-        {{ partial "navbar-lang-selector.html" . -}}
-      </li>
-      {{ end -}}
-      {{- $darkMode := partialCached "dark-mode-config.html" "dark-mode-global" -}}
-      {{ if $darkMode.showMenu -}}
-      <li class="nav-item td-navbar__light-dark-menu">
-        {{ partial "theme-toggler" . }}
-      </li>
-      {{ end -}}
-      {{/* 语言切换按钮：pigsty.cc <-> pigsty.io */}}
-      <li class="nav-item">
-        <a class="nav-link" href="#" onclick="switchLang(); return false;" title="Switch to English / 切换语言">
-          <i class="fas fa-language"></i>
-        </a>
-      </li>
-    </ul>
-    <div class="scroll-indicator scroll-right"></div>
-  </div>
-  <div class="d-none d-lg-block td-navbar__search">
-    {{ partial "search-input.html" . }}
-  </div>
 </div>
-</nav>
-
-<script>
-function switchLang() {
-  var host = window.location.host;
-  var path = window.location.pathname + window.location.search + window.location.hash;
-  if (host.indexOf('pigsty.cc') !== -1) {
-    window.location.href = 'https://pigsty.io' + path;
-  } else if (host.indexOf('pigsty.io') !== -1) {
-    window.location.href = 'https://pigsty.cc' + path;
-  } else {
-    // 本地开发环境，切换到对应站点
-    window.location.href = 'https://pigsty.io' + path;
-  }
-}
-</script>
+{{- end }}

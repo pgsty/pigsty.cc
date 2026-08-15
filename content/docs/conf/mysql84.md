@@ -48,4 +48,4 @@ ansible-playbook -i conf/demo/mysql.yml mysql.yml -l my-test --check
 - 默认启用每天一次的本地全量 XtraBackup 与 `mysqld_exporter`；当前试点不提供连续 binlog 归档、PITR 或自动恢复。
 - `node.yml` 负责安装共享信任锚 `/etc/pki/ca.crt`；MySQL 角色只签发并安装叶子证书。
 
-完整约束与移除确认流程参见 [原生 MySQL 试点文档](/docs/pilot/mysql/)。
+完整约束与移除确认流程参见 [原生 MySQL 试点文档](/docs/mysql/)。

@@ -1,0 +1,29 @@
+brand:
+  name: PIGSTY
+  tagline: PostgreSQL In Great STYle
+  slogan: 开源免费、开箱即用、本地优先、自主可控的企业级 PostgreSQL 发行版。
+columns:
+  - title: 产品
+    links:
+      - { label: 功能特性, url: /docs/about/feature/ }
+      - { label: 快速上手, url: /docs/setup/install/ }
+      - { label: 生产部署, url: /docs/deploy/ }
+      - { label: 服务价格, url: /price/ }
+  - title: 文档
+    links:
+      - { label: PostgreSQL, url: /docs/pgsql/ }
+      - { label: 扩展目录, url: /ext/ }
+      - { label: 配置模板, url: /docs/conf/ }
+      - { label: 组件手册, url: /docs/pig/ }
+  - title: 社区
+    links:
+      - { label: GitHub, url: "https://github.com/pgsty/pigsty", external: true }
+      - { label: 论坛, url: "https://github.com/orgs/pgsty/discussions", external: true }
+      - { label: 微信群, url: /img/pigsty/pigsty-cc.jpg }
+      - { label: 博客, url: /blog/ }
+  - title: 关于
+    links:
+      - { label: 项目介绍, url: /docs/about/ }
+      - { label: 版本发布, url: /docs/about/release/ }
+      - { label: 开源协议, url: /docs/about/license/ }
+      - { label: 隐私政策, url: /docs/about/privacy/ }

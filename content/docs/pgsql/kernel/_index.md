@@ -4,7 +4,7 @@ weight: 2200
 description: 如何在 Pigsty 中使用其他 PostgreSQL 内核分支？例如 Citus，Babelfish，IvorySQL，PolarDB 等
 icon: fas fa-heart
 module: [PGSQL]
-categories: [参考，概念]
+categories: [参考, 概念]
 ---
 
 在 Pigsty 中，您可以使用不同 "**风味**" 的 PostgreSQL 分支替换 "原生 PG 内核"，实现特殊的功能与效果。

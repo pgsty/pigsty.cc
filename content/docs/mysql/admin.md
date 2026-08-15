@@ -99,7 +99,7 @@ HA 集群的对象变更只会在当前主库执行并经复制生效。声明�
 
 ## 修改集群参数
 
-参数覆盖统一走 [`mysql_parameters`](/docs/pilot/mysql/param#mysql_parameters)：
+参数覆盖统一走 [`mysql_parameters`](/docs/mysql/param#mysql_parameters)：
 
 ```yaml
 mysql_parameters:
@@ -332,7 +332,7 @@ print(c.status().defaultReplicaSet.status);'
 
 ## 平台密码的边界
 
-三个平台密码的运维边界（详见 [参数参考](/docs/pilot/mysql/param#凭据参数)）：
+三个平台密码的运维边界（详见 [参数参考](/docs/mysql/param#凭据参数)）：
 
 - `mysql_monitor_password`：改清单后重跑即可轮换（Exporter 配置随之更新）；
 - `mysql_root_password`：不支持隐式重置。轮换流程：主库手工 `ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';` → 更新清单 → 重跑收敛凭据文件；

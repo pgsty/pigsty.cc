@@ -1,6 +1,6 @@
 ---
 title: 部署
-weight: 350
+weight: 200
 description: 在生产环境中进行多节点、高可用的 Pigsty 规划、准备与部署工作。
 icon: fas fa-download
 module: [PIGSTY]

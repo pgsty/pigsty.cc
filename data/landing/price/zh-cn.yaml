@@ -1,0 +1,153 @@
+sections:
+  - hero
+  - pricing
+  - pricing-compare
+  - type: cards
+    key: services
+  - faq
+  - cta
+
+hero:
+  eyebrow: 开源软件 · 商业支持 · 按需服务
+  title: 选择适合你的 Pigsty 方案
+  title_size: 4.25rem
+  lead: 从永久免费、功能完整的开源版，到带有 SLA、专家支持和定制交付的企业订阅。
+  note: 商业版核心功能与开源版一致，购买的是授权、保障、支持范围与响应承诺。
+  actions:
+    - { label: 使用开源版, url: /docs/setup/install/, icon: fa-solid fa-download, style: primary }
+    - { label: 联系咨询, url: "mailto:rh@vonng.com", icon: fa-solid fa-envelope, style: ghost }
+
+pricing:
+  eyebrow: 年度订阅
+  title: 四档服务方案
+  desc: 节点数指由 Pigsty 纳入管理的独立 IP 地址数量。
+  tiers:
+    - name: OSS · 开源版
+      price: 免费
+      period: 永久
+      desc: 自给自足的开源用户
+      features:
+        - Apache 2.0 许可证
+        - 不限制节点数量
+        - 完整功能，无功能阉割
+        - 社区论坛支持
+        - 开源软件，风险自担
+      cta: { label: 立即下载, url: /docs/setup/install/ }
+    - name: Standard · 标准版
+      price: ¥5 万
+      period: /年
+      desc: 中小企业的理想之选
+      features:
+        - 商业授权许可证
+        - 不超过 5 个数据库节点
+        - PostgreSQL 17 / 18
+        - 工作日邮件支持
+        - 工作日内响应
+        - 年度健康检查报告
+      cta: { label: 联系咨询, url: "mailto:rh@vonng.com?subject=Pigsty%20Standard" }
+    - name: Professional · 专业版
+      featured: true
+      price: ¥15 万
+      period: /年
+      desc: 专业团队的最佳伙伴
+      features:
+        - 商业授权许可证
+        - 不超过 15 个数据库节点
+        - PostgreSQL 16–18
+        - 离线软件包支持
+        - 每月 5 小时 DBA 工时
+        - 4 小时内响应
+        - 季度健康检查报告
+      cta: { label: 立即订阅, url: "mailto:rh@vonng.com?subject=Pigsty%20Professional" }
+    - name: Enterprise · 企业版
+      price: ¥40 万
+      period: /年
+      desc: 大型企业的坚实后盾
+      features:
+        - 商业授权许可证
+        - 参考规模 50 个数据库节点
+        - PostgreSQL 13–18
+        - 每月 10 小时 DBA 工时
+        - RDS / DBaaS OEM
+        - 7×24 SLA 与 30 分钟响应
+        - 月度健康检查报告
+      cta: { label: 商务洽谈, url: "mailto:rh@vonng.com?subject=Pigsty%20Enterprise" }
+
+pricing_compare:
+  eyebrow: 规格对照
+  title: 功能与服务范围
+  desc: 详细比较许可、支持版本、响应时间和增值服务。
+  feature_label: 功能特性
+  tiers: [OSS, Standard, Professional, Enterprise]
+  groups:
+    - name: 许可授权
+      rows:
+        - { name: 许可证类型, cells: [Apache 2.0, 商业许可, 商业许可, 商业许可] }
+        - { name: 再分发权限, cells: [Y, N, N, Y] }
+    - name: 规模限制
+      rows:
+        - { name: 数据库节点数, cells: [不限, ≤5, ≤15, 参考规模 50 节点] }
+        - { name: PostgreSQL 版本, cells: ["18", "16、17、18", 14–18, 12–18] }
+        - { name: 离线软件包, cells: [el10 / d13 / u24, +el9 / d12 / u22, +arm64, 定制] }
+    - name: 技术支持
+      rows:
+        - { name: 支持渠道, cells: [社区论坛, 邮件, 邮件 / 微信, 专属通道] }
+        - { name: 响应时间, cells: [—, 工作日内, < 4 小时, < 30 分钟] }
+        - { name: 服务时间, cells: [—, 工作日, 工作日, 7×24] }
+        - { name: 数据库专家咨询, cells: [—, —, 5 小时/月, 10 小时/月] }
+    - name: 增值服务
+      rows:
+        - { name: 健康检查报告, cells: [N, 年度, 季度, 月度] }
+        - { name: 架构咨询, cells: [N, N, Y, Y] }
+        - { name: 紧急故障处理, cells: [N, N, 付费, Y] }
+        - { name: 定制开发, cells: [N, N, 付费选项, 付费选项] }
+        - { name: 年度价格, price_row: true, cells: [免费, ¥5 万, ¥15 万, ¥40 万] }
+
+services:
+  eyebrow: 按需服务
+  title: 不订阅也可以按次获得专家支持
+  desc: 面向明确问题、专项咨询、紧急故障与定制交付的单次服务。
+  columns: 4
+  items:
+    - title: 挂专家号
+      icon: fa-solid fa-user-doctor
+      meta: ¥300 / 问题
+      desc: 快速诊断一个数据库问题，或定制一份 Pigsty 离线安装包。
+    - title: 专家咨询
+      icon: fa-solid fa-comments
+      meta: ¥3,000 / 案例
+      desc: 深入探讨一个主题，获得数据库架构与工程实践建议。
+    - title: 紧急救援
+      icon: fa-solid fa-truck-medical
+      meta: ¥30,000 / 人天·案例
+      desc: 架构升级、数据迁移、紧急故障响应与数据恢复。
+    - title: 专家顾问
+      icon: fa-solid fa-code-branch
+      meta: 面议
+      desc: 功能定制、私有化部署，以及规模化 RDS / DBaaS 自建。
+
+faq:
+  eyebrow: 常见问题
+  title: 商业服务说明
+  items:
+    - question: 商业版提供哪些服务？
+      answer: 商业版提供商业授权、专用 DBA Agent、定制离线软件包、专家技术支持与疑难问题兜底、响应时间 SLA，以及更宽广的 Linux 与 PostgreSQL 版本支持范围。
+      open: true
+    - question: 节点数量如何计算？
+      answer: 节点数量指 Pigsty 纳入管理的独立 IP 地址数量。
+    - question: 可以先试用再购买吗？
+      answer: 可以。商业版核心功能与开源版一致，你可以充分评估后再决定；企业评估也可申请 30 天试用期。
+    - question: 如何获取发票和合同？
+      answer: 可提供普通发票、增值税发票与标准商务合同，请发送邮件至 `rh@vonng.com` 咨询细节。
+    - question: 支持哪些支付方式？
+      answer: 订阅服务使用对公转账；专家号与咨询可使用支付宝、微信等方式。
+    - question: 需要更多节点怎么办？
+      answer: 超出方案节点数量可按需加购；企业版也支持根据实际规模定制方案。
+
+cta:
+  title: 还有疑问？欢迎咨询。
+  desc: 我们会根据规模、版本、响应时间与交付方式，帮助你选择合适的方案。
+  actions:
+    - { label: 发送邮件, url: "mailto:rh@vonng.com", icon: fa-solid fa-envelope, style: primary }
+    - { label: 微信咨询, url: /img/pigsty/pigsty-cc.jpg, icon: fa-brands fa-weixin, style: ghost }
+    - { label: 了解更多, url: /docs/about/service/, icon: fa-solid fa-book-open, style: ghost }

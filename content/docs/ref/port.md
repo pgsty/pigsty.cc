@@ -40,12 +40,12 @@ categories: [参考]
 |    [**`KAFKA`**](/docs/kafka)     |      **`KRaft controller`**      | `9093`  | [**`kafka_controller_port`**](/docs/kafka/param#kafka_controller_port)       | 🧪 BETA  |
 |    [**`KAFKA`**](/docs/kafka)     |       **`kafka_exporter`**       | `9308`  | [**`kafka_exporter_port`**](/docs/kafka/param#kafka_exporter_port)           | 🧪 BETA  |
 |    [**`KAFKA`**](/docs/kafka)     |        **`JMX exporter`**        | `9404`  | [**`kafka_jmx_exporter_port`**](/docs/kafka/param#kafka_jmx_exporter_port)   | 🧪 BETA  |
-| [**`MYSQL`**](/docs/pilot/mysql/) |           **`mysqld`**           | `3306`  | 固定值（当前试点不提供端口参数）                                                             | 🧪 PILOT |
-| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL X Protocol`**      | `33060` | 固定值；单节点仅绑定回环地址，三节点拓扑对成员地址监听                                                  | 🧪 PILOT |
-| [**`MYSQL`**](/docs/pilot/mysql/) |     **`Group Replication`**      | `33061` | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
-| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL Router RW`**       | `6446`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
-| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL Router RO`**       | `6447`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
-| [**`MYSQL`**](/docs/pilot/mysql/) |      **`mysqld_exporter`**       | `9104`  | 固定值；受 `mysql_exporter_enabled` 控制                                            | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |           **`mysqld`**           | `3306`  | 固定值（当前试点不提供端口参数）                                                             | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |      **`MySQL X Protocol`**      | `33060` | 固定值；单节点仅绑定回环地址，三节点拓扑对成员地址监听                                                  | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |     **`Group Replication`**      | `33061` | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |      **`MySQL Router RW`**       | `6446`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |      **`MySQL Router RO`**       | `6447`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/mysql/) |      **`mysqld_exporter`**       | `9104`  | 固定值；受 `mysql_exporter_enabled` 控制                                            | 🧪 PILOT |
 |    [**`PGSQL`**](/docs/pgsql)     |          **`postgres`**          | `5432`  | [**`pg_port`**](/docs/pgsql/param#pg_port)                                   | ✅ 默认启用   |
 |    [**`PGSQL`**](/docs/pgsql)     |         **`pgbouncer`**          | `6432`  | [**`pgbouncer_port`**](/docs/pgsql/param#pgbouncer_port)                     | ✅ 默认启用   |
 |    [**`PGSQL`**](/docs/pgsql)     |          **`patroni`**           | `8008`  | [**`patroni_port`**](/docs/pgsql/param#patroni_port)                         | ✅ 默认启用   |

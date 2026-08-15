@@ -8,27 +8,36 @@ icon: fa-solid fa-book
 sidebar_root_for: self
 no_list: true
 hide_feedback: true
+footer_style: slim
 outputs:
   - HTML
   - RSS
   - print
+  - markdown
 cascade:
+  params:
+    footer_style: slim
   outputs:
     - HTML
     - print
+    - markdown
 ---
 
 "<strong>P</strong>ostgreSQL <strong>I</strong>n <strong>G</strong>reat <strong>STY</strong>le": <strong>P</strong>ostgres, <strong>I</strong>nfras, <strong>G</strong>raphics, <strong>S</strong>ervice, <strong>T</strong>oolbox, it's all <strong>Y</strong>ours.
 
 —— **开源免费、开箱即用、本地优先、自主可控的企业级 PostgreSQL 发行版与 RDS 方案**
 
+{{< badge text="开源免费" tone="success" >}} {{< badge text="本地优先" tone="info" >}} {{< badge text="生产可用" tone="warning" >}}
+
 > [仓库](https://github.com/pgsty/pigsty) | [演示](https://demo.pigsty.cc) | [博客](/blog) | [论坛](https://github.com/pgsty/pigsty/discussions) | [微信](https://mp.weixin.qq.com/s/-E_-HZ7LvOze5lmzy3QbQA) | [EN Docs](https://pigsty.io/docs/)
+
+按 {{< kbd "⌘" "K" >}}（macOS）或 {{< kbd "Ctrl" "K" >}} 可随时打开本地搜索与命令面板。
 
 ## 简介
 
 从了解项目、理解概念，到单机上手、生产部署，四步掌握 Pigsty：
 
-{{< nav-cards >}}
+{{< nav-cards cols="2" >}}
 {{< nav-card title="关于" link="/docs/about/" icon="fa-solid fa-circle-info" desc="了解 Pigsty 项目本身的方方面面：功能特性、历史沿革、开源协议、隐私政策与社区动态。" >}}
 [功能特性](/docs/about/feature) [历史沿革](/docs/about/history) [活动新闻](/docs/about/event) [加入社区](/docs/about/community) [开源协议](/docs/about/license) [服务订阅](/docs/about/service)
 {{< /nav-card >}}
@@ -47,7 +56,7 @@ cascade:
 
 [**快速上手**](/docs/setup/install)：[**准备**](/docs/deploy/prepare) 一台全新安装 [**Linux**](/docs/ref/linux) 操作系统的节点，使用具有免密 `ssh` 与 `sudo` 权限的用户运行：
 
-```bash
+```bash {filename="Terminal" copy="all" label="Pigsty 快速安装"}
 curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param stable_version >}}   # 下载公开稳定版源码包
 cd ~/pigsty      # 进入源码目录
 ./configure      # 生成配置文件
@@ -65,8 +74,8 @@ cd ~/pigsty      # 进入源码目录
 
 Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA` / `NODE` / `ETCD`（PINE 组合）是自建 PostgreSQL RDS 服务的 **必选** 模块：
 
-{{< nav-cards >}}
-{{< nav-card title="PGSQL" link="/docs/pgsql/" icon="fa-solid fa-database" accent="copper" badge="核心" desc="自治自愈的高可用 PostgreSQL 集群：HA、PITR、IaC、ACL 与监控齐备，海量扩展开箱即用。" >}}
+{{< nav-cards cols="2" >}}
+{{< nav-card title="PGSQL" link="/docs/pgsql/" icon="fa-brands fa-postgresql" accent="copper" badge="核心" desc="自治自愈的高可用 PostgreSQL 集群：HA、PITR、IaC、ACL 与监控齐备，海量扩展开箱即用。" >}}
 [集群配置](/docs/pgsql/config/) [日常管理](/docs/pgsql/admin/) [备份恢复](/docs/pgsql/backup/) [服务接入](/docs/pgsql/service/) [内核分支](/docs/pgsql/kernel/) [参数列表](/docs/pgsql/param/)
 {{< /nav-card >}}
 {{< nav-card title="INFRA" link="/docs/infra/" icon="fa-solid fa-bank" accent="copper" badge="核心" desc="Nginx、本地软件仓库、DNS、NTP，以及 VictoriaMetrics 与 Grafana 可观测性技术栈。" >}}
@@ -86,10 +95,10 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 {{< nav-card title="MINIO" link="/docs/minio/" icon="fa-solid fa-boxes-stacked" accent="gray" badge="可选" desc="S3 兼容的对象存储，可用作数据库备份的集中存储仓库。" />}}
 {{< nav-card title="REDIS" link="/docs/redis/" icon="fa-solid fa-layer-group" accent="gray" badge="可选" desc="高性能内存数据结构服务器，主从、集群、哨兵三种模式。" />}}
 {{< nav-card title="DOCKER" link="/docs/docker/" icon="fa-brands fa-docker" accent="gray" badge="可选" desc="容器运行时，一键拉起容器化的无状态软件与应用模板。" />}}
-{{< nav-card title="PG MONGO" link="/docs/conf/mongo/" icon="fa-solid fa-leaf" accent="gray" badge="模式" desc="由 DocumentDB 与 FerretDB Docker APP 实现的 PostgreSQL Mongo 模式。" />}}
 {{< nav-card title="JUICE" link="/docs/juice/" icon="fa-solid fa-folder-tree" accent="gray" badge="可选" desc="JuiceFS 分布式文件系统，将 PostgreSQL 挂载为文件系统" />}}
 {{< nav-card title="VIBE" link="/docs/vibe/" icon="fa-solid fa-laptop-code" accent="gray" badge="可选" desc="AI 编程沙箱，Claude/Codex 开发环境，Agent 运行时" />}}
 {{< nav-card title="KAFKA" link="/docs/kafka/" icon="fa-solid fa-share-nodes" accent="gray" badge="可选" desc="Apache Kafka 4.x dynamic KRaft 消息队列集群，安全与监控齐备。" />}}
+{{< nav-card title="MYSQL" link="/docs/mysql/" icon="fa-solid fa-fish" accent="gray" badge="可选" desc="MySQL 数据库，广泛使用的关系型数据库管理系统。" />}}
 {{< nav-card title="PILOT" link="/docs/pilot/" icon="fa-solid fa-flask-vial" accent="gray" badge="试点" desc="试点功能模组：Kubernetes、DuckDB、MySQL、TigerBeetle……供尝鲜探索。" />}}
 {{< /nav-cards >}}
 
@@ -98,7 +107,7 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 
 详尽的参考资料、扩展目录、开箱即用的模板，以及周边组件的中文文档：
 
-{{< nav-cards >}}
+{{< nav-cards cols="2" >}}
 {{< nav-card title="参考手册" link="/docs/ref/" icon="fa-solid fa-map" desc="详尽的参考信息列表：操作系统、文件结构、参数、监控指标与同类产品对比。" >}}
 [操作系统](/docs/ref/linux) [模块列表](/docs/ref/module) [文件结构](/docs/ref/fhs) [同类产品](/docs/about/compare) [成本参考](/docs/about/compare/cost) [运维 SOP](/docs/sop/)
 {{< /nav-card >}}

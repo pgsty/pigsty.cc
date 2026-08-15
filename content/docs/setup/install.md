@@ -9,7 +9,7 @@ categories: [教程]
 ---
 
 
-本文是 Pigsty 单节点安装指南，生产环境的多节点高可用部署请参考 [**部署**](/docs/deploy/) 文档。
+本文是 Pigsty 单节点安装指南 {{< badge text="单节点" tone="info" >}}，生产环境的多节点高可用部署请参考 [**部署**](/docs/deploy/) 文档。
 
 Pigsty 单机安装分为三步走：[**安装**](#安装)，[**配置**](#配置) 与 [**部署**](#部署)。
 
@@ -21,26 +21,41 @@ Pigsty 单机安装分为三步走：[**安装**](#安装)，[**配置**](#配�
 [**准备**](/docs/deploy/prepare) 一台具有 [**SSH 权限**](/docs/deploy/admin#ssh) 的 [**节点**](/docs/deploy/prepare#节点)，
 安装 [**兼容的 Linux 系统**](/docs/ref/linux/)，使用具有免密 [**`ssh`**](/docs/deploy/admin#ssh) 和 [**`sudo`**](/docs/deploy/admin#sudo) 权限的 [**管理用户**](/docs/deploy/admin) 执行：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
-curl -fsSL https://repo.pigsty.cc/get | bash;
-```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
-curl -fsSL https://repo.pigsty.io/get | bash;
-```
-{{% /tab %}}
-{{< /tabpane >}}
+{{< code-group id="quick-install-mirror" sync="download-mirror" persist=true label="选择 Pigsty 下载镜像" copy="all" >}}
+  {{< code-tab title="pigsty.cc（中国）" value="china" lang="bash" selected=true >}}
+curl -fsSL https://repo.pigsty.cc/get | bash
+  {{< /code-tab >}}
+
+  {{< code-tab title="pigsty.io（全球）" value="global" lang="bash" >}}
+curl -fsSL https://repo.pigsty.io/get | bash
+  {{< /code-tab >}}
+{{< /code-group >}}
 
 该命令会执行 [**安装**](#安装) 脚本，下载并提取 Pigsty 源码至家目录并安装依赖，接下来依次完成 [**配置**](#配置) 与 [**部署**](#部署) 即可完成交付。
 
-```bash
-cd ~/pigsty      # 进入 Pigsty 目录
-./configure -g   # 生成配置文件（可选，如果知道如何配置可以跳过）
-./deploy.yml     # 执行部署剧本，根据生成的配置文件开始安装
+{{% steps %}}
+
+### 进入源码目录
+
+```bash {filename="Terminal" copy="all"}
+cd ~/pigsty
 ```
+
+### 生成配置清单
+
+```bash {filename="Terminal" copy="all"}
+./configure -g
+```
+
+如果你已经准备好 `pigsty.yml`，可以跳过这一步。
+
+### 执行部署剧本
+
+```bash {filename="Terminal" copy="all"}
+./deploy.yml
+```
+
+{{% /steps %}}
 
 安装完成后，您可以通过 IP / 域名 + `80/443` 端口访问 [**Web 用户界面**](/docs/setup/webui/)，
 并通过 `5432` 端口访问 [**PostgreSQL 服务**](/docs/setup/pgsql/)。
@@ -74,31 +89,28 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 您可以使用以下命令自动安装 Pigsty 源码包至 `~/pigsty` 目录（推荐），部署所需依赖（Ansible）会自动安装。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+{{< code-group id="versioned-install-mirror" sync="download-mirror" persist=true label="选择 Pigsty 下载镜像" copy="all" >}}
+  {{< code-tab title="pigsty.cc（中国）" value="china" lang="bash" selected=true >}}
 curl -fsSL https://repo.pigsty.cc/get | bash            # 安装当前默认版本
 curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
-```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+  {{< /code-tab >}}
+
+  {{< code-tab title="pigsty.io（全球）" value="global" lang="bash" >}}
 curl -fsSL https://repo.pigsty.io/get | bash            # 安装当前默认版本
 curl -fsSL https://repo.pigsty.io/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
-```
-{{% /tab %}}
-{{< /tabpane >}}
+  {{< /code-tab >}}
+{{< /code-group >}}
 
 如果您不希望执行远程脚本，可以手动 [**下载**](https://github.com/pgsty/pigsty/releases) 或克隆源码。使用 `git` 克隆安装时，请务必检出特定版本后再使用。
 
-```bash
+```bash {filename="Terminal" copy="all" label="从 Git 安装 Pigsty"}
 git clone https://github.com/pgsty/pigsty; cd pigsty;
 git checkout {{< param stable_version >}};  # 使用 git 安装时，请务必检出已发布的 tag
 ```
 
 手工下载克隆安装时，请额外执行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
 
-```bash
+```bash {filename="Terminal" copy="all"}
 ./bootstrap           # 安装 ansible，用于执行后续部署
 ```
 
@@ -113,7 +125,7 @@ git checkout {{< param stable_version >}};  # 使用 git 安装时，请务必�
 Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/configure) 脚本作为可选的 [**配置向导**](/docs/concept/iac/configure)，
 它将根据您的环境和输入，生成具有良好默认值的 [**配置清单**](/docs/concept/iac/inventory/)：
 
-```bash
+```bash {filename="Terminal" copy="all" label="运行 Pigsty 配置向导"}
 ./configure -g                # 使用配置向导生成配置文件，并且生成随机密码
 ```
 
@@ -123,7 +135,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 有许多 [**配置模板**](/docs/concept/iac/template/) 供您参考与使用，但您也完全可以跳过配置向导，直接编辑 `pigsty.yml` 配置文件进行定制。
 
-```bash
+```bash {filename="Terminal" copy="all" collapse=6 label="常用 configure 命令"}
 ./configure                  # 使用默认模板，安装默认的 PG 18，带有必要扩展
 ./configure -v 17            # 使用 PG 17 的版本，而非默认的 PG18
 ./configure -c rich          # 创建本地软件仓库，下载所有扩展，安装主要扩展
@@ -137,9 +149,11 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 下面展示的是当前 `main` 分支（{{< param version >}}）的输出；若安装其他版本，首行会显示对应版本号。
 
-<details><summary>当前 main（{{< param version >}}）的 configure 样例输出</summary>
+{{< example num="1" id="configure-output" caption="当前 main 分支的 configure 样例输出" />}}
 
-```bash
+{{% details title="当前 main 分支的 configure 样例输出" %}}
+
+```console {filename="configure output" copy="command" collapse=12 label="configure 样例输出"}
 vagrant@meta:~/pigsty$ ./configure
 configure pigsty v4.5.0 begin
 [ OK ] region = china
@@ -163,19 +177,33 @@ configure pigsty v4.5.0 begin
 proceed with ./deploy.yml
 ```
 
-</details><br>
+{{% /details %}}
 
-**配置脚本常用参数**：
+{{< fields label="配置脚本常用参数" >}}
+  {{< field name="-i | --ip" type="IPv4" >}}
+  当前主机的首要内网 IP 地址，用于替换配置文件中的 IP 地址占位符 `10.10.10.10`。
+  {{< /field >}}
 
-| 参数                      | 说明                                                                             |
-|:------------------------|:-------------------------------------------------------------------------------|
-| `-i\|--ip`              | 当前主机的首要内网 IP 地址，用于替换配置文件中的 IP 地址占位符 `10.10.10.10`                              |
-| `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称               |
-| `-v\|--version`         | 指定 PostgreSQL 大版本 `14`～`19`；PG19 当前为 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板 |
-| `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                                  |
-| `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                                    |
-| `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量                       |
-{.full-width}
+  {{< field name="-c | --conf" type="string" >}}
+  指定 [**配置模板**](/docs/conf/)，填写相对于 `conf/` 目录且不带 `.yml` 后缀的名称。
+  {{< /field >}}
+
+  {{< field name="-v | --version" type="integer" >}}
+  指定 PostgreSQL 大版本 `14`～`19`；PG19 当前为 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板。
+  {{< /field >}}
+
+  {{< field name="-r | --region" type="enum" default="default" >}}
+  指定上游软件源区域以加速下载：`default`、`china` 或 `europe`。
+  {{< /field >}}
+
+  {{< field name="-n | --non-interactive" type="boolean" default=false >}}
+  直接使用命令行参数提供首要 IP 地址，跳过交互式向导。
+  {{< /field >}}
+
+  {{< field name="-x | --proxy" type="boolean" default=false >}}
+  使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量。
+  {{< /field >}}
+{{< /fields >}}
 
 如果您的机器网卡绑定了多个 IP 地址，那么需要使用 `-i|--ip <ipaddr>` 显式指定一个当前节点的首要 IP 地址，或在交互式问询中提供。
 该脚本将把 IP 占位符 `10.10.10.10` 替换为当前节点的主 IPv4 地址。选用的地址应为静态 IP 地址，请勿使用公网 IP 地址。
@@ -194,13 +222,13 @@ proceed with ./deploy.yml
 
 Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/playbook/) 会将 [**配置**](#配置) 中生成的蓝图应用至目标节点。
 
-```bash
+```bash {filename="Terminal" copy="all" label="执行 Pigsty 部署剧本"}
 ./deploy.yml     # 一次性部署核心链路中已定义的模块
 ```
 
-<details><summary>部署过程的样例输出</summary>
+{{% details title="部署过程的样例输出" %}}
 
-```bash
+```console {filename="deploy output" copy=false collapse=10 label="Pigsty 部署输出"}
 ......
 
 TASK [pgsql : pgsql init done] *************************************************
@@ -219,7 +247,7 @@ localhost                  : ok=6    changed=3    unreachable=0    failed=0    s
 
 当您看到输出尾部如果带有 `pgsql init done`，`PLAY RECAP` 等字样，说明安装已经完成！
 
-</details><br>
+{{% /details %}}
 
 {{% alert title="上游软件仓库变更可能导致在线安装失败！" color="warning" %}}
 Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为不恰当的更新，进入崩溃状态并导致部署失败（有过多次先例）！

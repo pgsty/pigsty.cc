@@ -109,7 +109,7 @@ Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)�
 使用 [**`OpenHaloDB`**](/docs/pgsql/kernel/openhalo) 提供 MySQL 兼容性，使用 [**`OrioleDB`**](/docs/pgsql/kernel/orioledb) 提供极致的 OLTP 性能。
 
 不仅如此，你还可以使用 [**PostgreSQL Mongo 模式**](/docs/conf/mongo/) 提供 MongoDB 兼容性，使用 [**`Supabase`**](/docs/pgsql/kernel/supabase) 提供 Firebase 兼容，并使用 [**`PolarDB`**](/docs/pgsql/kernel/polardb) 满足国产化合规要求。
-消息队列可以使用 [**`KAFKA`**](/docs/kafka/) 模块部署 Kafka 4.x dynamic KRaft 集群。更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/blog/db/victoria-stack/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/app/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/pilot/mysql/), …
+消息队列可以使用 [**`KAFKA`**](/docs/kafka/) 模块部署 Kafka 4.x dynamic KRaft 集群。更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/blog/db/victoria-stack/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/app/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/mysql/), …
 
 [![pigsty-sandbox](/img/pigsty/sandbox.png)](/docs/ref/module/)
 

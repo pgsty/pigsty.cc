@@ -12,32 +12,116 @@ rssLimit: 200
 capitalizeListTitles: false
 
 #=======================================#
-# Hugo Module (replaces theme: docsy)
+# Hugo Module (OINK, pinned for reproducible production builds)
 #=======================================#
 module:
   proxy: direct
   hugoVersion:
     extended: true
-    min: "0.155.0"
+    min: "0.160.1"
   imports:
-    - path: github.com/google/docsy
+    - path: github.com/pgsty/oink
       disable: false
+  # Keep the site's own component data authoritative alongside the theme.
+  mounts:
+    - source: content
+      target: content
+    - source: data
+      target: data
+    - source: layouts
+      target: layouts
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: static
+      target: static
 
 #=======================================#
 # Menu Customization
 #=======================================#
-menu:
+menus:
   main:
     - identifier: docs
       name: 文档
       weight: 10
-      url: /docs/
-      pre: <i class='fa-solid fa-book'></i>
+      pageRef: /docs
+      params:
+        columns: 2
+    - identifier: docs-setup
+      parent: docs
+      name: 快速上手
+      pageRef: /docs/setup
+      weight: 10
+      params:
+        icon: fa-solid fa-rocket
+        description: 从一台 Linux 主机开始安装 Pigsty
+    - identifier: docs-deploy
+      parent: docs
+      name: 生产部署
+      pageRef: /docs/deploy
+      weight: 20
+      params:
+        icon: fa-solid fa-server
+        description: 规划并交付多节点高可用数据库服务
+    - identifier: docs-pgsql
+      parent: docs
+      name: PostgreSQL
+      pageRef: /docs/pgsql
+      weight: 30
+      params:
+        icon: fa-solid fa-database
+        description: 集群、服务、备份、监控与日常管理
+    - identifier: docs-components
+      parent: docs
+      name: 组件手册
+      pageRef: /docs/pig
+      weight: 40
+      params:
+        icon: fa-solid fa-toolbox
+        description: Pig、Patroni、PgBouncer、PgBackRest 等组件
+
     - identifier: ext
       name: 扩展
       weight: 20
-      url: /ext/
-      pre: <i class='fa-solid fa-puzzle-piece'></i>
+      pageRef: /ext
+      params:
+        columns: 2
+    - identifier: ext-list
+      parent: ext
+      name: 扩展目录
+      pageRef: /ext/list
+      weight: 10
+      params:
+        icon: fa-solid fa-puzzle-piece
+        description: 浏览 575 个已打包 PostgreSQL 扩展
+    - identifier: ext-os
+      parent: ext
+      name: 系统支持
+      pageRef: /ext/os
+      weight: 20
+      params:
+        icon: fa-brands fa-linux
+        description: 查看操作系统与 PostgreSQL 版本兼容矩阵
+    - identifier: ext-repo
+      parent: ext
+      name: 软件仓库
+      pageRef: /docs/repo
+      weight: 30
+      params:
+        icon: fa-solid fa-box-archive
+        description: 配置 Pigsty 软件源并安装扩展包
+
+    - identifier: blog
+      name: 博客
+      pageRef: /blog
+      weight: 30
+    - identifier: price
+      name: 服务
+      pageRef: /price
+      weight: 40
 
 #=======================================#
 # Taxonomies Support
@@ -85,8 +169,7 @@ markup:
           block: [['\[', '\]'], ['$$', '$$']]
           inline: [['\(', '\)']]
   highlight:
-    # Use class-based Chroma output so Docsy can swap light/dark palettes
-    # via CSS instead of baking light-theme colors into the generated HTML.
+    # OINK enhanced code blocks use class-based Chroma palettes.
     style: tango
     codeFences: true
     noClasses: false
@@ -102,9 +185,16 @@ outputs:
     - HTML
     - RSS
     - JSON
+    - markdown
+    - LLMS
+  page:
+    - HTML
+    - markdown
   section:
     - HTML
     - RSS
+    - print
+    - markdown
 
 # Keep ext HTML-only; large catalog outputs can exceed hosting limits.
 cascade:
@@ -127,7 +217,7 @@ params:
   pig_version: 1.7.0        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
   pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
   pgext_count: 575          # Pigsty 在线已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
-  github_stars: 5.52k       # GitHub Star 数（约数），首页与价格页导航栏展示用
+  github_stars: '5.5 K'      # GitHub Star 数（约数），正文兼容参数
   copyright:
     authors: Ruohang Feng
     from_year: 2018
@@ -163,45 +253,60 @@ params:
     taxonomyCloudTitle: [模块, 分类, 标签]
     taxonomyPageHeader: [模块, 分类, 标签]
 
-  # 正文列宽模式：normal（1050px，默认）| wide（1300px）| full（占满可用宽）。
-  # 页面 front matter 可单页覆盖（page_width: wide），栏目可经 cascade 继承。
+  # OINK 文档壳层与 Book 正文宽度。
   page_width: normal
-  # ICP 备案号（单行页脚居中显示，链接到 beian.miit.gov.cn；留空则不渲染）。
-  footer_icp: 浙ICP备15016890号-2
+  content_width: norm
+  footer_center_info: '[浙ICP备15016890号-2](https://beian.miit.gov.cn/)'
 
-  # 站内搜索由项目自有的 ⌘K 弹窗实现（lunr 自托管 + /index.json 索引），
-  # 必须关闭 Docsy offlineSearch：否则其 offline-search.js 在页面上找不到
-  # .td-search input 时会 $.ajax(undefined) 抓当前页 HTML 并抛错。
-  offlineSearch: false
+  # OINK 本地搜索与增强代码块均不依赖远程运行时。
+  offlineSearch: true
+  offlineSearchIndex: summary
+  offlineSearchSummaryLength: 100
+  offlineSearchMaxResults: 12
+  highlight_classes: true
   prism_syntax_highlighting: false
 
   # UI settings
   ui:
     breadcrumb_disable: false
     navbar_logo: true
-    navbar_translucent_over_cover_disable: false
+    navbar_enabled: true
+    footer_style: fat
+    landing_search: true
+    section_index: cards
+    lastmod_commit: subject
+    github_stars: '5.5 K'
+    alt_site:
+      label: English
+      url: https://pigsty.io
+    typography:
+      preset: technical
+    shell_types: [docs, blog, swagger]
+    docs_section: docs
+    blog_section: blog
+    pager:
+      types: [docs, blog]
+    quick_links: [docs, ext, blog]
+    sidebar_icon_policy: all
     sidebar_menu_compact: true
-    sidebar_search_disable: false
     sidebar_menu_foldable: true
-    sidebar_cache_limit: 1000
     sidebar_root_enabled: true
     sidebar_menu_truncate: 2000
-    ul_show: 3
-    showLightDarkModeMenu: true
-    # TOC 高亮由 silo-docs.js 的 IntersectionObserver 实现；Docsy 的
-    # Bootstrap ScrollSpy 注入路径存在属性转义 bug，本就从未生效。
-    scrollSpy:
-      disable: true
-    # ---- Fumadocs 式侧栏定制（chrome）----
-    # 搜索框下方的根节点下拉：列出所有 sidebar_root_for: self 的 section
-    #（文档 / 扩展 / 博客 / Patroni / PgBackRest / PgBouncer）。
     sidebar_root_menu: true
-    # 侧栏宽度（px）：默认宽随断点 268/286，可拖拽调整并持久化；
-    # min/max 为拖拽钳制范围，可在栏目 front matter 中经 cascade 覆盖。
     sidebar_width_min: 220
     sidebar_width_max: 480
-    # 侧栏条目文字溢出策略：ellipsis（省略号，默认）| wrap（换行）。
     sidebar_item_overflow: ellipsis
+    ul_show: 2
+    showLightDarkModeMenu: true
+    scrollSpy:
+      disable: true
+    image_zoom:
+      enable: true
+    page_context_menu:
+      enable: true
+      assistant_links: false
+    keyboard_nav:
+      enable: true
 
     # Feedback section (requires Google Analytics)
     feedback:

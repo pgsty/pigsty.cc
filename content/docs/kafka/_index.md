@@ -1,5 +1,5 @@
 ---
-title: 模块：Kafka
+title: 模块：KAFKA
 weight: 4900
 description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.1+ 动态 KRaft 集群。
 icon: fas fa-share-nodes

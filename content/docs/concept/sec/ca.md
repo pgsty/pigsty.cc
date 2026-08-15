@@ -77,7 +77,7 @@ psql "host=pg-meta dbname=postgres user=dbuser_dba sslmode=verify-full sslrootce
 | [**Etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}`      | 客户端与对等通信使用 TLS                                                                 |
 | [**Silo**](/docs/concept/model/minio)                 | `<节点名>`             | `~minio/.minio/certs/`            | Silo HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                |
 | [**Kafka**](/docs/kafka/)                             | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`        | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                        |
-| [**MySQL**](/docs/pilot/mysql/)                       | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                            |
+| [**MySQL**](/docs/mysql/)                       | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                            |
 | [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名） | `/etc/nginx/conf.d/cert/`         | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
 | [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点名>`             | `/etc/pki/infra.{crt,key}`        | 供基础设施组件使用                                                                      |
 {.full-width}

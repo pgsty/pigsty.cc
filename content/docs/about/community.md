@@ -8,6 +8,7 @@ categories: [参考]
 ---
 
 
+
 ---------------
 
 ## GitHub
@@ -19,6 +20,17 @@ categories: [参考]
 [![Star History Chart](https://api.star-history.com/svg?repos=pgsty/pigsty&type=Date)](https://star-history.com/#pgsty/pigsty&Date)
 
 请注意，关于 Pigsty 文档的问题，请在 [github.com/pgsty/pigsty.cc](https://github.com/pgsty/pigsty.cc) 仓库中提交 [Issue](https://github.com/pgsty/pigsty.cc/issues)。
+
+在本站按 {{< kbd "⌘" "K" >}}（macOS）或 {{< kbd "Ctrl" "K" >}}，可以直接搜索文档、扩展与博客文章。
+
+
+---------------
+
+## 维护者
+
+Pigsty 由维护者与社区共同建设。
+
+{{< contributors >}}
 
 
 ---------------

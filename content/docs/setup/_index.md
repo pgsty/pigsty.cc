@@ -1,6 +1,6 @@
 ---
 title: 上手
-weight: 250
+weight: 100
 description: 在你的笔记本/云服务器上部署 Pigsty 单机版本，访问数据库以及 Web 用户界面
 icon: fas fa-rocket
 module: [PIGSTY]

@@ -1,8 +1,8 @@
 ---
 title: 模块：PGSQL
 weight: 1000
-description: 使用 Pigsty v4.5.0 声明、部署、接入、监控、备份与管理 PostgreSQL 集群。
-icon: fas fa-database
+description: 使用 Pigsty v4.5 声明、部署、接入、监控、备份与管理 PostgreSQL 集群。
+icon: fab fa-postgresql
 module: [PGSQL]
 categories: [参考]
 hide_feedback: true
@@ -30,17 +30,17 @@ PGSQL 是 Pigsty 的核心模块：通过 Ansible 清单声明 PostgreSQL 集群
 
 ## 部署与管理
 
-| 任务 | 入口 |
-|:-----|:-----|
-| 初始化集群或添加实例 | [集群管理](/docs/pgsql/admin/cluster/) · [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml) |
-| 创建或变更用户 | [用户管理](/docs/pgsql/admin/user/) · [`pgsql-user.yml`](/docs/pgsql/playbook/#pgsql-useryml) |
-| 创建或变更数据库 | [数据库管理](/docs/pgsql/admin/db/) · [`pgsql-db.yml`](/docs/pgsql/playbook/#pgsql-dbyml) |
-| HBA 与参数变更 | [HBA 管理](/docs/pgsql/admin/hba/) · [组件管理](/docs/pgsql/admin/component/) |
-| Patroni 切换、维护与故障处理 | [Patroni 管理](/docs/pgsql/admin/patroni/) |
-| 扩展安装、创建、升级与移除 | [扩展管理](/docs/pgsql/admin/ext/) |
-| 外部实例监控接入 | [`pgsql-monitor.yml`](/docs/pgsql/playbook/#pgsql-monitoryml) |
-| 迁移准备 | [迁移](/docs/pgsql/migration/) · [`pgsql-migration.yml`](/docs/pgsql/playbook/#pgsql-migrationyml) |
-| 移除实例或集群 | [安全移除流程](/docs/pgsql/admin/cluster/#销毁集群) · [`pgsql-rm.yml`](/docs/pgsql/playbook/#pgsql-rmyml) |
+| 任务                 | 入口                                                                                               |
+|:-------------------|:-------------------------------------------------------------------------------------------------|
+| 初始化集群或添加实例         | [集群管理](/docs/pgsql/admin/cluster/) · [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml)               |
+| 创建或变更用户            | [用户管理](/docs/pgsql/admin/user/) · [`pgsql-user.yml`](/docs/pgsql/playbook/#pgsql-useryml)        |
+| 创建或变更数据库           | [数据库管理](/docs/pgsql/admin/db/) · [`pgsql-db.yml`](/docs/pgsql/playbook/#pgsql-dbyml)             |
+| HBA 与参数变更          | [HBA 管理](/docs/pgsql/admin/hba/) · [组件管理](/docs/pgsql/admin/component/)                          |
+| Patroni 切换、维护与故障处理 | [Patroni 管理](/docs/pgsql/admin/patroni/)                                                         |
+| 扩展安装、创建、升级与移除      | [扩展管理](/docs/pgsql/admin/ext/)                                                                   |
+| 外部实例监控接入           | [`pgsql-monitor.yml`](/docs/pgsql/playbook/#pgsql-monitoryml)                                    |
+| 迁移准备               | [迁移](/docs/pgsql/migration/) · [`pgsql-migration.yml`](/docs/pgsql/playbook/#pgsql-migrationyml) |
+| 移除实例或集群            | [安全移除流程](/docs/pgsql/admin/cluster/#销毁集群) · [`pgsql-rm.yml`](/docs/pgsql/playbook/#pgsql-rmyml)  |
 {.full-width}
 
 `pgsql.yml`、`pgsql-user.yml`、`pgsql-db.yml` 等真实执行会修改目标环境；`pgsql-rm.yml` 默认可能删除数据与备份。执行前先核对精确集群/节点与近期备份；移除操作还必须由操作者输入并确认精确目标。

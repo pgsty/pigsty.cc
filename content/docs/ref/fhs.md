@@ -15,39 +15,60 @@ categories: [参考]
 
 Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如下所示：
 
-```bash
-#------------------------------------------------------------------------------
-# pigsty
-#  ^-----@app                    # 额外的示例应用资源
-#  ^-----@bin                    # bin 脚本
-#  ^-----@docs                   # 文档（可docsify化）
-#  ^-----@files                  # ansible 文件资源
-#            ^-----@victoria     # Victoria 规则与运维脚本（bin/rules）
-#            ^-----@grafana      # grafana 仪表盘
-#            ^-----@postgres     # /pg/bin/ 脚本
-#            ^-----@migration    # pgsql 迁移任务定义
-#            ^-----@pki          # 自签名 CA 和证书
-#  ^-----@roles                  # ansible 剧本实现
-#  ^-----@templates              # ansible 模板文件
-#  ^-----@vagrant                # Vagrant 沙箱虚拟机定义模板
-#  ^-----@terraform              # Terraform 云虚拟机申请模板
-#  ^-----configure               # 配置向导脚本
-#  ^-----ansible.cfg             # ansible 默认配置文件
-#  ^-----pigsty.yml              # pigsty 默认配置文件
-#  ^-----*.yml                   # ansible 剧本
-#------------------------------------------------------------------------------
-# /infra -> /data/infra          # infra 运行时目录软链接
-# /data/infra                    # root:infra 0771
-#  ^-----@metrics                # VictoriaMetrics TSDB 数据
-#  ^-----@logs                   # VictoriaLogs 数据
-#  ^-----@traces                 # VictoriaTraces 数据
-#  ^-----@alertmgr               # AlertManager 数据
-#  ^-----@rules                  # 规则定义（含 agent.yml）
-#  ^-----@targets                # FileSD 监控目标
-#  ^-----@dashboards             # Grafana 仪表盘定义
-#  ^-----@datasources            # Grafana 数据源定义
-#  ^-----prometheus.yml          # Victoria 的 Prometheus 兼容配置
-#------------------------------------------------------------------------------
+{{< filetree label="~/pigsty 源码树" >}}
+  {{< filetree/folder name="app" >}}
+    {{< filetree/file name="应用模板资源" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="bin" >}}
+    {{< filetree/file name="管理与运维脚本" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="files" open=true >}}
+    {{< filetree/folder name="victoria" >}}
+      {{< filetree/file name="规则与运维脚本" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="grafana" >}}
+      {{< filetree/file name="Grafana 仪表盘" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="postgres" >}}
+      {{< filetree/file name="PostgreSQL 管理脚本" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="migration" >}}
+      {{< filetree/file name="数据迁移任务定义" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="pki" >}}
+      {{< filetree/file name="自签名 CA 与证书" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="roles" >}}
+    {{< filetree/file name="Ansible 角色实现" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="templates" >}}
+    {{< filetree/file name="Ansible 模板文件" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="vagrant" >}}
+    {{< filetree/file name="Vagrant 沙箱定义" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="terraform" >}}
+    {{< filetree/file name="Terraform 云资源模板" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/file name="configure" >}}
+  {{< filetree/file name="ansible.cfg" >}}
+  {{< filetree/file name="pigsty.yml" >}}
+  {{< filetree/file name="*.yml" >}}
+{{< /filetree >}}
+
+`/infra` 是 `/data/infra` 的运行时软链接，集中存放可观测性数据与生成的配置：
+
+```text {filename="/data/infra" collapse=8 wrap=true label="INFRA 运行时目录"}
+metrics/           # VictoriaMetrics TSDB 数据
+logs/              # VictoriaLogs 数据
+traces/            # VictoriaTraces 数据
+alertmgr/           # AlertManager 数据
+rules/              # 规则定义（含 agent.yml）
+targets/            # FileSD 监控目标
+dashboards/         # Grafana 仪表盘定义
+datasources/        # Grafana 数据源定义
+prometheus.yml      # Victoria 的 Prometheus 兼容配置
 ```
 
 

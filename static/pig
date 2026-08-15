@@ -112,6 +112,22 @@ build_download_url() {
 }
 
 #--------------------------------------------------------------#
+# Check whether the target package is already installed
+#--------------------------------------------------------------#
+package_installed() {
+    case "${OS_PACKAGE}" in
+        rpm)
+            rpm -q --quiet "pig-${VERSION}-1.${ARCH}"
+            ;;
+        deb)
+            local installed
+            installed=$(dpkg-query -W -f='${Status} ${Version}' pig 2>/dev/null) || return 1
+            [[ "${installed}" == "install ok installed ${VERSION}-1" ]]
+            ;;
+    esac
+}
+
+#--------------------------------------------------------------#
 # Download file (skip if exists with same size)
 #--------------------------------------------------------------#
 download_file() {
@@ -170,6 +186,11 @@ main() {
     # System checks
     check_system
     build_download_url
+
+    if package_installed; then
+        log_warn "pig v${VERSION} is already installed, skip installation"
+        return 0
+    fi
 
     # Download package
     log_info "downloading pig v${VERSION}"

@@ -65,5 +65,5 @@ Pigsty 提供了六个 <span class="text-secondary"><b>扩展</b></span> 功能�
 - [**`MSSQL`**](/docs/pgsql/kernel/babelfish)、[**`IVORY`**](/docs/pgsql/kernel/ivorysql)、[**`POLAR`**](/docs/pgsql/kernel/polardb)、[**`CITUS`**](/docs/pgsql/kernel/citus)、[**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)、[**`PGEDGE`**](/docs/pgsql/kernel/pgedge)：内核替代、分布式与 MPP 形态。
 - [**`MYSQL` 兼容内核（OpenHalo）**](/docs/pgsql/kernel/openhalo)、[**`ORIOLE`**](/docs/pgsql/kernel/orioledb)、[**`PGTDE`**](/docs/pgsql/kernel/percona)、[**`AGENS`**](/docs/pgsql/kernel/agensgraph)：协议兼容、存储引擎、透明加密与图数据库内核。这里的 `MYSQL` 是 `pg_mode=mysql` 的 PostgreSQL 兼容内核，不是原生 MySQL 服务。
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)、[**`NEON`**](/docs/pgsql/kernel/neon)：保留历史文档，不再作为默认开放能力。
-- [**`MYSQL` 原生试点**](/docs/pilot/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 10 个正式模块。
+- [**`MYSQL` 原生试点**](/docs/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 10 个正式模块。
 - [**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：其他试点模块，当前不对外开放使用。

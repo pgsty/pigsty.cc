@@ -40,7 +40,7 @@ Exporter 启用的采集器包括：全局状态/变量、Binlog 尺寸、InnoDB
 | `topology` | 拓扑类型 | `innodb_cluster` / `standalone` |
 {.full-width}
 
-衍生规则以 `mysql:ins:*`（实例级）与 `mysql:cls:*`（集群级）命名，完整清单见 [指标定义](/docs/pilot/mysql/metric)。
+衍生规则以 `mysql:ins:*`（实例级）与 `mysql:cls:*`（集群级）命名，完整清单见 [指标定义](/docs/mysql/metric)。
 
 
 --------

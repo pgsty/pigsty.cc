@@ -1,4 +1,4 @@
-``---
+---
 title: 发布注记
 weight: 160
 description: Pigsty 历史版本发布说明
@@ -10,7 +10,7 @@ Pigsty 当前最新版本为 [**v4.5.0**](#v450)。
 
 |       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
 |:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.5.0](#v450) | 2026-08-15 | 安全跟进，Kafka、MySQL、Valkey、Silo、575 个扩展与安全编排改进              |               [v4.5.0](https://github.com/pgsty/pigsty/releases/tag/v4.5.0)               |
+| [v4.5.0](#v450) | 2026-08-15 | Silo、Kafka、MySQL、Valkey、575 个扩展与安全编排改进                   |               [v4.5.0](https://github.com/pgsty/pigsty/releases/tag/v4.5.0)               |
 | [v4.4.0](#v440) | 2026-07-10 | PG 19 beta 支持，531 个扩展，内核更新与 Pig CLI 改进                   |               [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)               |
 | [v4.3.0](#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持              |               [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)               |
 | [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs           |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
@@ -94,7 +94,7 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 **新模块与数据服务**
 
 - [Kafka 模块](/docs/kafka/) 采用节点状态为权威源的动态 KRaft 编排，可在同一清单中管理一个或多个集群，也可裸跑 `kafka.yml`；不完整的 `--limit` 会被拒绝。破坏性的 `kafka-rm.yml` 则强制要求非空 `-l/--limit`，并在任何停服前校验安全的绝对数据目录以及部分退役所需的幸存 Broker/Controller 锚点。节点保存权威 manifest/secrets，支持动态控制器加入、Broker 准入、成员退役、故障节点三步替换、SCRAM-SHA-512/TLS、凭据与证书轮换，以及带自测的分区健康门禁。
-- [MySQL 试点模块](/docs/pilot/mysql/) 面向固定的 MySQL 8.4 LTS 平台，支持一节点独立实例或三节点 InnoDB Cluster；包括 MySQL Shell/Router、XtraBackup 定时全量备份、TLS、账户与数据库置备、主键策略检查、保守成员移除和幂等协调能力。
+- [MySQL 试点模块](/docs/mysql/) 面向固定的 MySQL 8.4 LTS 平台，支持一节点独立实例或三节点 InnoDB Cluster；包括 MySQL Shell/Router、XtraBackup 定时全量备份、TLS、账户与数据库置备、主键策略检查、保守成员移除和幂等协调能力。
 - REDIS 模块保留 `redis` 默认引擎，同时可通过 `redis_type: valkey` 部署 Valkey；服务单元改用 `Type=notify`，启动超时扩展到 1800 秒，并加强拓扑校验、密码处理、标签化移除语义和重建保护。
 - MINIO 模块现在部署并且只部署 Silo；`minio_type` 仍作为扩展点保留，但当前唯一合法值是 `silo`。启动流程通过 systemd Invocation ID 与 `ActiveState=active` 确认本次重启成功，默认最多等待约 600 秒，再执行 Silo 自带的集群健康检查。Infra 软件包线新增 `silo` 与 `mcli`，继续沿用 S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量和磁盘格式。
 - 对象存储拓扑按 `minio_cluster` 聚合，清单分组名可与集群标识不同，同一清单也可声明多个对象存储集群；每个集群还应使用不同的 `minio_alias`、`minio_domain` 与 `minio_endpoint`，避免在 INFRA 节点覆盖共享客户端别名。`demo/minio` 已显式选择 Silo，并把本地仓库裁剪为 `infra,node` 模块。

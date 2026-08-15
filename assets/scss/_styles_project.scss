@@ -1,126 +1,5 @@
-// Custom styles for Pigsty.cc
-
-// Syntax highlighting must stay class-based so the site theme can control
-// light/dark palettes. Our Docsy module version ships the Chroma theme partials
-// but does not import them into the main bundle, so wire them up here.
-[data-bs-theme='light'] {
-  @import 'td/chroma/tango';
-}
-
-[data-bs-theme='dark'] {
-  --pg-code-surface: color-mix(in srgb, var(--bs-body-bg) 82%, #000 18%);
-  --pg-code-border: color-mix(in srgb, var(--bs-border-color) 82%, #000 18%);
-  --pg-inline-code-surface: color-mix(
-    in srgb,
-    var(--pg-code-surface) 78%,
-    var(--bs-primary-bg-subtle) 22%
-  );
-
-  @import 'td/chroma/dark';
-
-  .td-content {
-    .highlight {
-      background-color: var(--pg-code-surface);
-      border: 1px solid var(--pg-code-border);
-      border-radius: 0.6rem;
-      overflow: hidden;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-    }
-
-    pre {
-      background-color: var(--pg-code-surface);
-      border-color: var(--pg-code-border);
-    }
-
-    .highlight pre,
-    pre.chroma,
-    .chroma {
-      background-color: var(--pg-code-surface);
-    }
-
-    .highlight pre {
-      border: 0;
-      border-radius: 0;
-    }
-
-    // Inline code needs a dedicated dark surface so it does not blend into
-    // surrounding paragraph text or table cells.
-    p code,
-    li > code,
-    table code {
-      color: inherit;
-      background-color: var(--pg-inline-code-surface);
-      border: 1px solid color-mix(in srgb, var(--pg-code-border) 85%, transparent);
-    }
-  }
-
-  .chroma {
-    background-color: var(--td-pre-bg);
-
-    // Native's default number and line-number colors are too dim on our dark
-    // code surface, so lift them slightly for readability.
-    .m,
-    .mb,
-    .mf,
-    .mh,
-    .mi,
-    .il,
-    .mo {
-      color: #6cb6ff;
-    }
-
-    .ln,
-    .lnt {
-      color: #7b8591;
-    }
-
-    .go {
-      color: #c8d1dc;
-    }
-  }
-}
-
-// 内容占满正文列：列宽本身由 .silo-article 的 page_width 参数管理
-//（normal 1050 / wide 1300 / full），不再用百分比二次收窄。
-.td-max-width-on-larger-screens {
-  @include media-breakpoint-up(lg) {
-    max-width: 100%;
-  }
-}
-
-// Force blog sidebar to expand all menu items
-// body.td-blog nav.foldable-nav ul.foldable {
-//   display: block !important;
-// }
-
-// Add spacing and separator before feedback section
-.feedback--title {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #dee2e6;
-}
-
-// （旧 .td-sidebar 加宽与 sidebar-divider 样式已随 fumadocs 化侧栏退役：
-//   分区丝印现由 silo/_sidebar.scss 的 .silo-tree__heading 渲染。）
-
-// 全宽表格样式（与正文宽度对齐，大屏幕上 90%）
-// 使用方法：在 Markdown 表格后添加 {.full-width}
-.td-content table.full-width {
-  width: 100% !important;
-  display: table;
-
-  @include media-breakpoint-up(lg) {
-    max-width: 90%;
-  }
-}
-
-// 全宽表格样式（拉满整个容器宽度）
-// 使用方法：在 Markdown 表格后添加 {.full-width-full}
-.td-content table.full-width-full {
-  width: 100% !important;
-  max-width: 100%;
-  display: table;
-}
+// Pigsty-specific extensions layered on top of OINK 0.4.1.
+// OINK owns code blocks, semantic table overflow, navigation, and page chrome.
 
 // 发布索引表：版本、日期与发布页保持单行，把可用宽度留给摘要
 .td-content table.release-index {
@@ -142,108 +21,6 @@
   }
 }
 
-// 紧凑型全宽表格（无斑马纹，与正文宽度对齐）
-// 使用方法：在 Markdown 表格后添加 {.td-initial .full-width}
-.td-content table.td-initial.full-width {
-  width: 100% !important;
-  display: table;
-
-  @include media-breakpoint-up(lg) {
-    max-width: 90%;
-  }
-}
-
-// 紧凑型全宽表格（无斑马纹，拉满整个容器宽度）
-// 使用方法：在 Markdown 表格后添加 {.td-initial .full-width-full}
-.td-content table.td-initial.full-width-full {
-  width: 100% !important;
-  max-width: 100%;
-  display: table;
-}
-
-// 最后一列延伸表格（与正文宽度对齐，大屏幕上 90%）
-// 前面几列宽度刚好够用，最后一列延伸到末尾
-// 使用方法：在 Markdown 表格后添加 {.full-width .stretch-last}
-.td-content table.stretch-last {
-  width: 100% !important;
-  display: table;
-  table-layout: auto;
-
-  @include media-breakpoint-up(lg) {
-    max-width: 90%;
-  }
-
-  // 除最后一列外，所有列收缩到内容宽度
-  th:not(:last-child),
-  td:not(:last-child) {
-    width: 1%;
-    white-space: nowrap;
-  }
-
-  // 最后一列自动填充剩余空间
-  th:last-child,
-  td:last-child {
-    width: auto;
-  }
-}
-
-// 最后一列延伸表格（拉满整个容器宽度）
-// 使用方法：在 Markdown 表格后添加 {.full-width-full .stretch-last-full}
-.td-content table.stretch-last-full {
-  width: 100% !important;
-  max-width: 100%;
-  display: table;
-  table-layout: auto;
-
-  // 除最后一列外，所有列收缩到内容宽度
-  th:not(:last-child),
-  td:not(:last-child) {
-    width: 1%;
-    white-space: nowrap;
-  }
-
-  // 最后一列自动填充剩余空间
-  th:last-child,
-  td:last-child {
-    width: auto;
-  }
-}
-
-// 语义全宽表格在窄屏内自行滚动，避免把整页横向撑开。
-@include media-breakpoint-down(md) {
-  .td-content p,
-  .td-content li {
-    overflow-wrap: anywhere;
-  }
-
-  .td-content table.full-width,
-  .td-content table.full-width-full,
-  .td-content table.td-initial.full-width,
-  .td-content table.td-initial.full-width-full,
-  .td-content table.stretch-last,
-  .td-content table.stretch-last-full {
-    display: block;
-    width: 100% !important;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-// Infographic 容器样式
-// 默认与正文内容宽度对齐（大屏幕 90%），可通过 full="true" 参数填满容器
-.infographic-container {
-  width: 100%;
-  margin: 1.5rem 0;
-}
-
-// ECharts 容器样式
-// 默认与正文内容宽度对齐（大屏幕 90%），可通过 full="true" 参数填满容器
-.echarts-container {
-  width: 100%;
-  margin: 1.5rem 0;
-}
-
 // =============================================================================
 // Extensions (content/ext) - Reusable styles
 //
@@ -251,7 +28,7 @@
 // - Keep markdown/HTML clean (no inline styles)
 // - Provide semantic classes for: category, license, language, repo, flags, etc.
 // - Aesthetic close to Tailwind / Mintlify (subtle, pastel, not "rainbow blobs")
-// - Work in both light/dark (Docsy uses Bootstrap 5 `data-bs-theme`)
+// - Work in both light/dark (OINK uses Bootstrap 5 `data-bs-theme`)
 // =============================================================================
 
 .td-content {
@@ -463,8 +240,8 @@
   .ext-card--repo { --ext-accent: #64748b; }
   .ext-card--source { --ext-accent: #2563eb; }
 
-  // ---- Top cards (Docsy card shortcode) ------------------------------------
-  // Prefer Docsy's built-in `card`/`cardpane` shortcode, but keep a cohesive
+  // ---- Top cards (OINK-compatible card shortcode) --------------------------
+  // Keep OINK's `card`/`cardpane` output visually cohesive with extension data.
   // "ext" look by scoping light restyling under `.ext-topcards`.
   .ext-topcards {
     margin: 1rem 0 1.25rem;
@@ -1050,9 +827,9 @@ a {
 }
 
 // ============================================================
-// Pigsty「通电主板」主题 —— 与首页 landing-v3 同一套设计令牌
+// Pigsty「通电主板」主题 —— 与 OINK Landing 组件共享设计令牌
 // 暗色 = 通电电路板（蓝黑阻焊 + 铜色丝印），亮色 = 印刷工程图纸
-// 此段追加于文件末尾，晚于 Bootstrap / Docsy 编译，天然胜出级联
+// 此段追加于文件末尾，晚于 Bootstrap / OINK 编译，天然胜出级联
 // ============================================================
 
 // ---- 本地字体（零外部请求） ----------------------------------
@@ -1159,10 +936,9 @@ a {
   --pg-grid-line: rgba(120, 150, 190, 0.045);
 }
 
-// （覆铜网格背景已从文档 chrome 移除 —— fumadocs 纯平基调；
-//   首页/价格页的格线在 landing-v3.css 中独立保留。）
+// 文档正文保持纯平基调，首页与价格页的网格由 OINK Landing 组件负责。
 
-// ---- 导航栏：毛玻璃电路板顶盖（仅服务 search 等非 chrome 页）----
+// ---- OINK 导航栏：毛玻璃电路板顶盖 -----------------------------
 .td-navbar {
   --td-navbar-bg-color: var(--pg-header-bg);
   --td-navbar-backdrop-filter: blur(14px);
@@ -1235,26 +1011,7 @@ a {
     }
   }
 
-  // 三态主题循环按钮：固定宽度避免图标切换时抖动
-  .pg-theme-cycle {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-
-    i {
-      display: inline-block;
-      width: 1.15em;
-      text-align: center;
-    }
-
-    i.d-none {
-      display: none;
-    }
-  }
 }
-
-// （旧 .td-sidebar / .td-sidebar-nav / .td-toc / .td-page-meta 皮肤已随
-//   fumadocs 化 chrome 退役 —— 新样式见文件末尾的 silo/ 系列分部。）
 
 // ---- 页底补充信息区：最后修改行（图标列 + 文本的统一行结构）------
 .td-content .td-page-meta__lastmod,
@@ -1280,21 +1037,6 @@ a {
     &:hover {
       color: var(--bs-link-hover-color);
     }
-  }
-}
-
-// 图标列：FA 与 lucide SVG 共用，等宽居中对齐、弱化。
-.silo-origin__icon {
-  flex-shrink: 0;
-  display: inline-flex;
-  justify-content: center;
-  width: 1.25em;
-  opacity: 0.65;
-
-  .silo-icon {
-    width: 1.05em;
-    height: 1.05em;
-    align-self: center;
   }
 }
 
@@ -1350,7 +1092,7 @@ a {
     > :last-child { margin-bottom: 0; }
   }
 
-  // 告警块（Docsy alert shortcode）：标题是 h4.alert-heading，
+  // 告警块（OINK alert shortcode）：标题是 h4.alert-heading，
   // 不能吃通用标题的 margin-top，否则块内上方大片留白
   .alert {
     margin: 1.5rem 0;
@@ -1475,134 +1217,7 @@ a {
   color: var(--bs-tertiary-color);
 }
 
-// ---- 页脚：landing 同款（pg-footer 全自定义，见 footer.html） -----
-.pg-footer {
-  margin-top: 3rem;
-  border-top: 1px solid var(--bs-border-color);
-  background: var(--bs-secondary-bg);
-  font-size: 0.9rem;
-
-  a {
-    color: var(--bs-secondary-color);
-    transition: color 150ms ease;
-
-    &:hover {
-      color: var(--bs-link-hover-color);
-    }
-  }
-
-  &__container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: clamp(2.5rem, 4vw, 3.5rem) 1.75rem 1.5rem;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 2.2fr repeat(4, 1fr);
-    gap: 2rem 1.5rem;
-    margin-bottom: 2.25rem;
-  }
-
-  &__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.8rem;
-
-    svg {
-      height: 1.75rem;
-      width: auto;
-    }
-
-    span {
-      font-family: 'Chakra Petch', var(--bs-font-sans-serif);
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.18em;
-      color: var(--bs-body-color);
-    }
-  }
-
-  &__tagline {
-    margin: 0 0 0.4rem;
-    line-height: 1.8;
-    color: var(--bs-secondary-color);
-
-    .ini-p { color: #2f6793; font-weight: 700; }
-    .ini-i { color: #419edb; font-weight: 700; }
-    .ini-g { color: #ffa269; font-weight: 700; }
-    .ini-s { color: #6f747c; font-weight: 700; }
-    .ini-t { color: #de372c; font-weight: 700; }
-    .ini-y { color: #53ac79; font-weight: 700; }
-  }
-
-  &__slogan {
-    margin: 0;
-    color: var(--bs-tertiary-color);
-
-    .hl-good { color: var(--pg-copper); font-weight: 700; }
-    .hl-use { color: var(--bs-link-hover-color); font-weight: 700; }
-  }
-
-  &__title {
-    margin: 0 0 0.85rem;
-    font-family: var(--bs-font-monospace);
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--pg-silk);
-  }
-
-  &__links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: 0.55rem;
-    }
-  }
-
-  &__bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--bs-border-color);
-    font-size: 0.8rem;
-    color: var(--bs-tertiary-color);
-  }
-
-  &__lang {
-    display: flex;
-    gap: 0.9rem;
-  }
-
-  @include media-breakpoint-down(lg) {
-    &__grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    &__brand {
-      grid-column: 1 / -1;
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-    &__bottom {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-}
-
-// 隐藏 Docsy 默认 td-footer 的暗盒样式残留（我们完全接管 footer）
-
-// ---- 文档首页导航（eyebrow 铭牌 + nav-cards / nav-card 短代码）--
+// ---- 文档首页导航（eyebrow 铭牌 + OINK nav-cards 短代码）--------
 // 克制的图纸风：纯平卡片 + 发丝线描边，图标与标题内联；
 // 必选模块以铜色丝印与微铜描边区分（通电轨道），可选模块用丝印灰。
 
@@ -1774,13 +1389,470 @@ a {
   }
 }
 
-// ============================================================
-// Fumadocs 风格文档 chrome（侧栏 / TOC / 搜索弹窗 / 布局壳）
-// 置于文件最末，享有整个样式管线的最高级联优先级。
-// ============================================================
-@import 'silo/tokens';
-@import 'silo/layout';
-@import 'silo/sidebar';
-@import 'silo/toc';
-@import 'silo/search';
-@import 'silo/blog';
+// =============================================================================
+// Homepage navbar on OINK-rendered pages
+//
+// The homepage owns this navigation language. Keep the shell override scoped
+// to `.pigsty-navbar` so the rest of OINK's document chrome remains untouched.
+// =============================================================================
+
+html:has(body.td-shell-chrome--navbar > .pigsty-navbar) {
+  --td-shell-nav-h: 62px;
+}
+
+html[data-td-kbd-zen]:has(body.td-shell-chrome--navbar > .pigsty-navbar) {
+  --td-shell-nav-h: 0px;
+}
+
+@font-face {
+  font-family: 'Pigsty Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('/vendor/fontawesome/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pigsty Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('/vendor/fontawesome/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+.pigsty-navbar {
+  --pigsty-nav-elev: var(--td-brand-elev);
+  --pigsty-nav-elev-2: var(--bs-tertiary-bg);
+  --pigsty-nav-line: var(--bs-border-color);
+  --pigsty-nav-line-strong: var(--td-brand-line-strong);
+  --pigsty-nav-ink: var(--bs-body-color);
+  --pigsty-nav-ink-soft: var(--bs-secondary-color);
+  --pigsty-nav-ink-mute: var(--bs-tertiary-color);
+  --pigsty-nav-silk: var(--td-brand-silk);
+  --pigsty-nav-copper: var(--td-brand-copper);
+  --pigsty-nav-shadow-lg: 0 24px 60px rgba(23, 42, 66, 0.16);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--pigsty-nav-line);
+  background: var(--td-brand-header-bg);
+  transition: box-shadow 200ms ease;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+[data-bs-theme='dark'] .pigsty-navbar {
+  --pigsty-nav-shadow-lg: 0 26px 70px rgba(1, 6, 14, 0.6);
+}
+
+.pigsty-navbar.scrolled {
+  box-shadow: var(--td-brand-shadow-sm);
+}
+
+body .pigsty-navbar .landing-container,
+body.td-shell-chrome .pigsty-navbar .landing-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.pigsty-navbar .landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: normal;
+  height: 62px;
+}
+
+.pigsty-navbar .nav-brand {
+  display: flex;
+  align-items: center;
+  justify-self: auto;
+  gap: 11px;
+  color: var(--pigsty-nav-ink);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-brand:hover {
+  color: var(--pigsty-nav-ink);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.pigsty-navbar .nav-title {
+  display: inline-block;
+  margin: 0;
+  color: var(--pigsty-nav-ink);
+  background: none;
+  font-family: 'Chakra Petch', 'IBM Plex Mono', 'Noto Sans SC', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  -webkit-text-fill-color: currentColor;
+}
+
+.pigsty-navbar .fa-solid,
+.pigsty-navbar .fas {
+  font-family: 'Pigsty Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.pigsty-navbar .fa-brands,
+.pigsty-navbar .fab {
+  font-family: 'Pigsty Font Awesome 6 Brands';
+  font-weight: 400;
+}
+
+.pigsty-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pigsty-navbar .nav-link {
+  display: inline;
+  min-width: 0;
+  min-height: 0;
+  gap: normal;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: var(--pigsty-nav-ink-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-link:hover,
+.pigsty-navbar .nav-link:focus-visible {
+  color: var(--pigsty-nav-ink);
+  background: var(--pigsty-nav-elev);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-utils {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 8px;
+}
+
+.pigsty-navbar .nav-util {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--pigsty-nav-ink-mute);
+  cursor: pointer;
+}
+
+.pigsty-navbar .nav-util:hover,
+.pigsty-navbar .nav-util:focus-visible {
+  color: var(--pigsty-nav-ink);
+  background: var(--pigsty-nav-elev);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-util .td-shell-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.pigsty-navbar .nav-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  margin: 0;
+  padding: 0 8px;
+  border-radius: 6px;
+  color: var(--pigsty-nav-ink-mute);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-github:hover,
+.pigsty-navbar .nav-github:focus-visible {
+  color: var(--pigsty-nav-ink);
+  background: var(--pigsty-nav-elev);
+  text-decoration: none;
+}
+
+.pigsty-navbar .nav-github .td-shell-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.pigsty-navbar .nav-star {
+  color: var(--pigsty-nav-ink-soft);
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.pigsty-navbar .nav-github:hover .nav-star,
+.pigsty-navbar .nav-github:focus-visible .nav-star {
+  color: var(--pigsty-nav-ink);
+}
+
+.pigsty-navbar .nav-item {
+  position: relative;
+}
+
+.pigsty-navbar .nav-caret {
+  margin-left: 3px;
+  font-size: 0.58em;
+  opacity: 0.55;
+  transition: transform 180ms ease;
+}
+
+.pigsty-navbar .nav-item:hover .nav-caret,
+.pigsty-navbar .nav-item:focus-within .nav-caret {
+  transform: rotate(180deg);
+}
+
+.pigsty-navbar .nav-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  z-index: 110;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: max-content;
+  max-width: unquote('min(94vw, 880px)');
+  padding: 14px 16px;
+  border: 1px solid var(--pigsty-nav-line-strong);
+  border-radius: 12px;
+  background: var(--pigsty-nav-elev);
+  box-shadow: var(--pigsty-nav-shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 8px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+}
+
+.pigsty-navbar .nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  right: 0;
+  left: 0;
+  height: 14px;
+}
+
+.pigsty-navbar .nav-item:hover .nav-dropdown,
+.pigsty-navbar .nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s;
+}
+
+.pigsty-navbar .dropdown-group {
+  min-width: 0;
+}
+
+.pigsty-navbar .silkscreen {
+  font-family: 'IBM Plex Mono', var(--bs-font-monospace);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.pigsty-navbar .dropdown-group-title {
+  margin: 0 0 8px;
+  padding-left: 9px;
+  color: var(--pigsty-nav-copper);
+  font-size: 0.66rem;
+}
+
+.pigsty-navbar .dropdown-cols {
+  display: flex;
+  gap: 2px;
+}
+
+.pigsty-navbar .dropdown-col {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pigsty-navbar .dropdown-col a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 33px;
+  padding: 0 9px;
+  border-radius: 6px;
+  color: var(--pigsty-nav-ink-soft);
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.pigsty-navbar .dropdown-col a:hover,
+.pigsty-navbar .dropdown-col a:focus-visible {
+  color: var(--pigsty-nav-ink);
+  background: var(--pigsty-nav-elev-2);
+  text-decoration: none;
+}
+
+.pigsty-navbar .dropdown-col a i {
+  flex: none;
+  width: 18px;
+  color: var(--pigsty-nav-silk);
+  font-size: 0.82rem;
+  text-align: center;
+  transition: color 140ms ease;
+}
+
+.pigsty-navbar .dropdown-col a:hover i,
+.pigsty-navbar .dropdown-col a:focus-visible i {
+  color: var(--pigsty-nav-copper);
+}
+
+.pigsty-navbar .nav-dropdown--docs .dropdown-group:last-child .dropdown-col a,
+.pigsty-navbar .nav-dropdown--ext .dropdown-group:last-child .dropdown-col a {
+  font-family: 'IBM Plex Mono', var(--bs-font-monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.pigsty-navbar .dropdown-sep {
+  flex: none;
+  width: 1px;
+  align-self: stretch;
+  background: var(--pigsty-nav-line);
+}
+
+.pigsty-navbar .mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  border: 1px solid var(--pigsty-nav-line);
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+}
+
+.pigsty-navbar .mobile-menu-toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--pigsty-nav-ink);
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.pigsty-navbar .mobile-menu-toggle[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.pigsty-navbar .mobile-menu-toggle[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.pigsty-navbar .mobile-menu-toggle[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#pigsty-mobile-menu.mobile-menu {
+  position: fixed;
+  top: 62px;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  flex-direction: column;
+  padding: 10px 20px 18px;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: var(--td-brand-header-bg);
+  box-shadow: var(--td-brand-shadow-md);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+#pigsty-mobile-menu.mobile-menu.show {
+  display: flex;
+}
+
+#pigsty-mobile-menu .mobile-menu-link {
+  padding: 13px 6px;
+  border: 0;
+  border-bottom: 1px solid var(--bs-border-color);
+  background: none;
+  color: var(--bs-body-color);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#pigsty-mobile-menu .mobile-menu-link:last-child {
+  border-bottom: 0;
+}
+
+#pigsty-mobile-menu .mobile-menu-link i {
+  width: 22px;
+  color: var(--bs-tertiary-color);
+}
+
+@media (max-width: 768px) {
+  body .pigsty-navbar .landing-container,
+  body.td-shell-chrome .pigsty-navbar .landing-container {
+    padding: 0 18px;
+  }
+
+  .pigsty-navbar .nav-links {
+    display: none;
+  }
+
+  .pigsty-navbar .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+@media (forced-colors: active) {
+  .pigsty-navbar .nav-title {
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pigsty-navbar .nav-caret,
+  .pigsty-navbar .nav-dropdown,
+  .pigsty-navbar .mobile-menu-toggle span {
+    transition: none;
+  }
+}

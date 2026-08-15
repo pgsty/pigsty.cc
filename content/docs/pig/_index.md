@@ -1,5 +1,5 @@
 ---
-title: "pig 1.7 文档"
+title: "pig 1.8 文档"
 weight: 5200
 description: "PostgreSQL 扩展生态包管理器与管理命令行工具"
 icon: fas fa-piggy-bank

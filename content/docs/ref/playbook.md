@@ -22,7 +22,7 @@ categories: [参考]
 | [**`JUICE`**](/docs/juice/playbook)   | 1  | `juice.yml`                                                                                                                     |
 | [**`VIBE`**](/docs/vibe/playbook)     | 1  | `vibe.yml`                                                                                                                      |
 | [**`KAFKA`**](/docs/kafka/playbook)   | 2  | `kafka.yml` `kafka-rm.yml`                                                                                                      |
-| [**`MYSQL`（试点）**](/docs/pilot/mysql/) | 2  | `mysql.yml` `mysql-rm.yml`                                                                                                      |
+| [**`MYSQL`（试点）**](/docs/mysql/) | 2  | `mysql.yml` `mysql-rm.yml`                                                                                                      |
 {.full-width}
 
 --------
@@ -54,8 +54,8 @@ categories: [参考]
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
 | [**`kafka.yml`**](/docs/kafka/playbook#kafkayml)                     | `KAFKA`  | 创建或收敛完整的 dynamic KRaft 集群                    |
 | [**`kafka-rm.yml`**](/docs/kafka/playbook#kafka-rmyml)               | `KAFKA`  | 移除 Kafka 集群，或安全退役单个成员                        |
-| [**`mysql.yml`**](/docs/pilot/mysql/)                                | `MYSQL`  | 收敛原生 MySQL 8.4 单节点或三节点 InnoDB Cluster（试点）    |
-| [**`mysql-rm.yml`**](/docs/pilot/mysql/)                             | `MYSQL`  | 停止/退役原生 MySQL 实例或集群并保留本地状态（试点）               |
+| [**`mysql.yml`**](/docs/mysql/)                                | `MYSQL`  | 收敛原生 MySQL 8.4 单节点或三节点 InnoDB Cluster（试点）    |
+| [**`mysql-rm.yml`**](/docs/mysql/)                             | `MYSQL`  | 停止/退役原生 MySQL 实例或集群并保留本地状态（试点）               |
 {.full-width}
 
 --------
@@ -85,7 +85,7 @@ categories: [参考]
 - **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 Silo 集群
 - **REDIS**: [**`redis_safeguard`**](/docs/redis/param#redis_safeguard) 参数用于防止误删 Redis 实例
 - **KAFKA**: [**`kafka_safeguard`**](/docs/kafka/playbook#kafka-rmyml) 参数用于阻止 Kafka 移除剧本
-- **MYSQL（试点）**: [`mysql_safeguard`](/docs/pilot/mysql/) 与精确匹配的 `mysql_rm_confirm` 共同保护原生 MySQL 退役流程
+- **MYSQL（试点）**: [`mysql_safeguard`](/docs/mysql/) 与精确匹配的 `mysql_rm_confirm` 共同保护原生 MySQL 退役流程
 
 PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；生产环境可在已初始化的集群上设置为 `true`。原生 MySQL 试点相反：`mysql_safeguard` 默认是 `true`，且即使显式关闭，也必须提供与目标实例或集群完全一致的 `mysql_rm_confirm`。
 
