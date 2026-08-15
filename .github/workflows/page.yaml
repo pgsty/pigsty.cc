@@ -1,15 +1,21 @@
-# Build Hugo site and push to page branch
-name: Build Hugo Site
+# 构建 Hugo 站点并发布到 GitHub Pages
+name: Deploy Hugo Site to Pages
 
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
   workflow_dispatch:
 
+# GITHUB_TOKEN 权限：读取仓库 + 部署 Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只允许一个部署，且不打断正在进行的生产部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 defaults:
   run:
@@ -19,46 +25,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.161.0
+      HUGO_VERSION: 0.164.0
+      HUGO_ENVIRONMENT: production
+      HUGO_ENV: production
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
-          fetch-depth: 0
-          submodules: recursive
+          fetch-depth: 0 # enableGitInfo 需要完整历史
 
-      - name: Setup Go
-        uses: actions/setup-go@v5
+      - name: Setup Go # Hugo Module 依赖：github.com/pgsty/oink
+        uses: actions/setup-go@v7
         with:
-          go-version: '1.26.0'
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install npm dependencies
-        run: npm ci --prefer-offline --no-audit
+          go-version: '1.26'
 
       - name: Setup Hugo
         run: |
           wget -q -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
       - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
         run: hugo --gc --minify
 
-      - name: Deploy to page branch
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: page
-          publish_dir: ./public
-          force_orphan: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'deploy: ${{ github.sha }}'
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
