@@ -86,98 +86,95 @@ Pigsty 为每一个扩展都提供了 **版本可用性矩阵**，这是一个�
 
 Pigsty 扩展目录的模式定义于 [`github.com/pgsty/pgext`](https://github.com/pgsty/pgext/blob/main/db/schema.sql)，数据位于 [`extension.csv`](https://github.com/pgsty/pgext/blob/main/db/extension.csv) 中。
 
-<details><summary> Extension 表结构定义</summary>
-
-```sql
-CREATE TABLE IF NOT EXISTS pgext.extension
-(
-    id          INTEGER PRIMARY KEY,      -- Unique extension identifier
-    name        TEXT NOT NULL UNIQUE,     -- Extension name as it appears in pg_extension
-    pkg         TEXT NOT NULL,            -- Normalized package name (may differ from extension name)
-    lead_ext    TEXT,                     -- Leading/primary extension in multi-extension packages
-    category    TEXT,                     -- Category classification (TIME, GIS, RAG, FTS, etc.)
-    state       TEXT,                     -- Extension state: available, deprecated, removed, not-ready
-    url         TEXT,                     -- Extension homepage or source repository URL
-    license     TEXT,                     -- Software license (PostgreSQL, MIT, Apache-2.0, etc.)
-    tags        TEXT[],                   -- Additional classification tags
-    version     TEXT,                     -- Latest available version of this extension
-    repo        TEXT,                     -- Source repository type (github, gitlab, etc.)
-    lang        TEXT,                     -- Primary programming language (C, SQL, PLpgSQL, Rust, etc.)
-    contrib     BOOLEAN,                  -- Whether this is a PostgreSQL contrib extension
-    lead        BOOLEAN,                  -- Whether this is the lead extension in its package
-    has_bin     BOOLEAN,                  -- Whether extension includes binary executables
-    has_lib     BOOLEAN,                  -- Whether extension includes shared libraries (.so/.dll)
-    need_ddl    BOOLEAN,                  -- Whether requires CREATE EXTENSION DDL to install
-    need_load   BOOLEAN,                  -- Whether requires LOAD or shared_preload_libraries
-    trusted     BOOLEAN,                  -- Whether non-superuser can install (trusted extension)
-    relocatable BOOLEAN,                  -- Whether extension can be relocated to different schema
-    schemas     TEXT[],                   -- Fixed schema names if not relocatable
-    pg_ver      TEXT[],                   -- Supported PostgreSQL major versions
-    requires    TEXT[],                   -- Extension dependencies (other extensions required)
-    require_by  TEXT[],                   -- Extensions that depend on this extension
-    see_also    TEXT[],                   -- Related or similar extensions
-    rpm_ver     TEXT,                     -- Latest RPM package version
-    rpm_repo    TEXT,                     -- RPM repository source (PGDG, PIGSTY, etc.)
-    rpm_pkg     TEXT,                     -- RPM package name template ($v for PG version)
-    rpm_pg      TEXT[],                   -- PostgreSQL versions available in RPM
-    rpm_deps    TEXT[],                   -- RPM package dependencies
-    deb_ver     TEXT,                     -- Latest DEB package version
-    deb_repo    TEXT,                     -- DEB repository source (PGDG, PIGSTY, etc.)
-    deb_pkg     TEXT,                     -- DEB package name template ($v for PG version)
-    deb_deps    TEXT[],                   -- DEB package dependencies
-    deb_pg      TEXT[],                   -- PostgreSQL versions available in DEB
-    source      TEXT,                     -- Source tarball name if built by Pigsty
-    extra       JSONB,                    -- Additional metadata in JSONB format
-    en_desc     TEXT,                     -- English description of extension functionality
-    zh_desc     TEXT,                     -- Chinese description of extension functionality
-    comment     TEXT,                     -- Additional notes or special instructions
-    mtime       DATE DEFAULT CURRENT_DATE -- Last modification date of this record
-);
-
-CREATE INDEX IF NOT EXISTS ext_name_pkg_idx ON pgext.extension (name, pkg);
-
-COMMENT ON TABLE pgext.extension IS 'PostgreSQL Extension Central Catalog Table';
-COMMENT ON COLUMN pgext.extension.id IS 'Unique integer identifier for each extension';
-COMMENT ON COLUMN pgext.extension.name IS 'Extension name as it appears in PostgreSQL system catalog (pg_extension)';
-COMMENT ON COLUMN pgext.extension.pkg IS 'Normalized package name used for package management (may differ from extension name)';
-COMMENT ON COLUMN pgext.extension.lead_ext IS 'Primary/leading extension name in multi-extension packages';
-COMMENT ON COLUMN pgext.extension.category IS 'Functional category: TIME, GIS, RAG, FTS, OLAP, FEAT, LANG, TYPE, UTIL, FUNC, ADMIN, STAT, SEC, FDW, SIM, ETL';
-COMMENT ON COLUMN pgext.extension.state IS 'Extension lifecycle state: available, deprecated, removed, not-ready';
-COMMENT ON COLUMN pgext.extension.url IS 'Extension homepage or source code repository URL (GitHub, GitLab, etc.)';
-COMMENT ON COLUMN pgext.extension.license IS 'Software license (e.g., PostgreSQL, MIT, Apache-2.0, GPL, BSD)';
-COMMENT ON COLUMN pgext.extension.tags IS 'Additional classification tags as string array for flexible categorization';
-COMMENT ON COLUMN pgext.extension.version IS 'Latest available version of this extension';
-COMMENT ON COLUMN pgext.extension.repo IS 'Source repository hosting platform (github, gitlab, bitbucket, etc.)';
-COMMENT ON COLUMN pgext.extension.lang IS 'Primary implementation language (C, SQL, PLpgSQL, Rust, Go, Python, etc.)';
-COMMENT ON COLUMN pgext.extension.contrib IS 'Whether this is an official PostgreSQL contrib extension';
-COMMENT ON COLUMN pgext.extension.lead IS 'Whether this is the primary/lead extension in a multi-extension package';
-COMMENT ON COLUMN pgext.extension.has_bin IS 'Whether the extension package includes binary executables/utilities';
-COMMENT ON COLUMN pgext.extension.has_lib IS 'Whether the extension includes shared library files (.so on Linux, .dll on Windows)';
-COMMENT ON COLUMN pgext.extension.need_ddl IS 'Whether extension requires CREATE EXTENSION DDL command to install';
-COMMENT ON COLUMN pgext.extension.need_load IS 'Whether requires explicit LOAD or shared_preload_libraries configuration';
-COMMENT ON COLUMN pgext.extension.trusted IS 'Whether non-superuser can install this extension (trusted extension feature)';
-COMMENT ON COLUMN pgext.extension.relocatable IS 'Whether extension can be relocated to a different schema after installation';
-COMMENT ON COLUMN pgext.extension.schemas IS 'Fixed schema names if extension is not relocatable (must be installed in specific schema)';
-COMMENT ON COLUMN pgext.extension.pg_ver IS 'Array of supported PostgreSQL major versions (e.g., {14,15,16,17,18})';
-COMMENT ON COLUMN pgext.extension.requires IS 'Array of extension dependencies (other extensions that must be installed first)';
-COMMENT ON COLUMN pgext.extension.require_by IS 'Array of extensions that depend on this extension (reverse dependency list)';
-COMMENT ON COLUMN pgext.extension.see_also IS 'Array of related or similar extensions (for discovery and comparison)';
-COMMENT ON COLUMN pgext.extension.rpm_ver IS 'Latest available RPM package version';
-COMMENT ON COLUMN pgext.extension.rpm_repo IS 'RPM repository source (PGDG, PIGSTY, EPEL, etc.)';
-COMMENT ON COLUMN pgext.extension.rpm_pkg IS 'RPM package name template where $v is replaced with PostgreSQL major version';
-COMMENT ON COLUMN pgext.extension.rpm_pg IS 'Array of PostgreSQL versions available as RPM packages';
-COMMENT ON COLUMN pgext.extension.rpm_deps IS 'Array of RPM package dependencies (system libraries and other packages)';
-COMMENT ON COLUMN pgext.extension.deb_ver IS 'Latest available DEB package version';
-COMMENT ON COLUMN pgext.extension.deb_repo IS 'DEB repository source (PGDG, PIGSTY, etc.)';
-COMMENT ON COLUMN pgext.extension.deb_pkg IS 'DEB package name template where $v is replaced with PostgreSQL major version';
-COMMENT ON COLUMN pgext.extension.deb_deps IS 'Array of DEB package dependencies (system libraries and other packages)';
-COMMENT ON COLUMN pgext.extension.deb_pg IS 'Array of PostgreSQL versions available as DEB packages';
-COMMENT ON COLUMN pgext.extension.source IS 'Source code tarball filename if built and distributed by Pigsty';
-COMMENT ON COLUMN pgext.extension.extra IS 'Additional extension metadata stored as JSONB for extensibility';
-COMMENT ON COLUMN pgext.extension.en_desc IS 'English description of extension functionality and purpose';
-COMMENT ON COLUMN pgext.extension.zh_desc IS 'Chinese description of extension functionality and purpose';
-COMMENT ON COLUMN pgext.extension.comment IS 'Additional notes, special instructions, or warnings';
-COMMENT ON COLUMN pgext.extension.mtime IS 'Last modification timestamp of this record';
-```
-
-</details>
+> [!DETAILS]- Extension 表结构定义
+> ```sql
+> CREATE TABLE IF NOT EXISTS pgext.extension
+> (
+>     id          INTEGER PRIMARY KEY,      -- Unique extension identifier
+>     name        TEXT NOT NULL UNIQUE,     -- Extension name as it appears in pg_extension
+>     pkg         TEXT NOT NULL,            -- Normalized package name (may differ from extension name)
+>     lead_ext    TEXT,                     -- Leading/primary extension in multi-extension packages
+>     category    TEXT,                     -- Category classification (TIME, GIS, RAG, FTS, etc.)
+>     state       TEXT,                     -- Extension state: available, deprecated, removed, not-ready
+>     url         TEXT,                     -- Extension homepage or source repository URL
+>     license     TEXT,                     -- Software license (PostgreSQL, MIT, Apache-2.0, etc.)
+>     tags        TEXT[],                   -- Additional classification tags
+>     version     TEXT,                     -- Latest available version of this extension
+>     repo        TEXT,                     -- Source repository type (github, gitlab, etc.)
+>     lang        TEXT,                     -- Primary programming language (C, SQL, PLpgSQL, Rust, etc.)
+>     contrib     BOOLEAN,                  -- Whether this is a PostgreSQL contrib extension
+>     lead        BOOLEAN,                  -- Whether this is the lead extension in its package
+>     has_bin     BOOLEAN,                  -- Whether extension includes binary executables
+>     has_lib     BOOLEAN,                  -- Whether extension includes shared libraries (.so/.dll)
+>     need_ddl    BOOLEAN,                  -- Whether requires CREATE EXTENSION DDL to install
+>     need_load   BOOLEAN,                  -- Whether requires LOAD or shared_preload_libraries
+>     trusted     BOOLEAN,                  -- Whether non-superuser can install (trusted extension)
+>     relocatable BOOLEAN,                  -- Whether extension can be relocated to different schema
+>     schemas     TEXT[],                   -- Fixed schema names if not relocatable
+>     pg_ver      TEXT[],                   -- Supported PostgreSQL major versions
+>     requires    TEXT[],                   -- Extension dependencies (other extensions required)
+>     require_by  TEXT[],                   -- Extensions that depend on this extension
+>     see_also    TEXT[],                   -- Related or similar extensions
+>     rpm_ver     TEXT,                     -- Latest RPM package version
+>     rpm_repo    TEXT,                     -- RPM repository source (PGDG, PIGSTY, etc.)
+>     rpm_pkg     TEXT,                     -- RPM package name template ($v for PG version)
+>     rpm_pg      TEXT[],                   -- PostgreSQL versions available in RPM
+>     rpm_deps    TEXT[],                   -- RPM package dependencies
+>     deb_ver     TEXT,                     -- Latest DEB package version
+>     deb_repo    TEXT,                     -- DEB repository source (PGDG, PIGSTY, etc.)
+>     deb_pkg     TEXT,                     -- DEB package name template ($v for PG version)
+>     deb_deps    TEXT[],                   -- DEB package dependencies
+>     deb_pg      TEXT[],                   -- PostgreSQL versions available in DEB
+>     source      TEXT,                     -- Source tarball name if built by Pigsty
+>     extra       JSONB,                    -- Additional metadata in JSONB format
+>     en_desc     TEXT,                     -- English description of extension functionality
+>     zh_desc     TEXT,                     -- Chinese description of extension functionality
+>     comment     TEXT,                     -- Additional notes or special instructions
+>     mtime       DATE DEFAULT CURRENT_DATE -- Last modification date of this record
+> );
+>
+> CREATE INDEX IF NOT EXISTS ext_name_pkg_idx ON pgext.extension (name, pkg);
+>
+> COMMENT ON TABLE pgext.extension IS 'PostgreSQL Extension Central Catalog Table';
+> COMMENT ON COLUMN pgext.extension.id IS 'Unique integer identifier for each extension';
+> COMMENT ON COLUMN pgext.extension.name IS 'Extension name as it appears in PostgreSQL system catalog (pg_extension)';
+> COMMENT ON COLUMN pgext.extension.pkg IS 'Normalized package name used for package management (may differ from extension name)';
+> COMMENT ON COLUMN pgext.extension.lead_ext IS 'Primary/leading extension name in multi-extension packages';
+> COMMENT ON COLUMN pgext.extension.category IS 'Functional category: TIME, GIS, RAG, FTS, OLAP, FEAT, LANG, TYPE, UTIL, FUNC, ADMIN, STAT, SEC, FDW, SIM, ETL';
+> COMMENT ON COLUMN pgext.extension.state IS 'Extension lifecycle state: available, deprecated, removed, not-ready';
+> COMMENT ON COLUMN pgext.extension.url IS 'Extension homepage or source code repository URL (GitHub, GitLab, etc.)';
+> COMMENT ON COLUMN pgext.extension.license IS 'Software license (e.g., PostgreSQL, MIT, Apache-2.0, GPL, BSD)';
+> COMMENT ON COLUMN pgext.extension.tags IS 'Additional classification tags as string array for flexible categorization';
+> COMMENT ON COLUMN pgext.extension.version IS 'Latest available version of this extension';
+> COMMENT ON COLUMN pgext.extension.repo IS 'Source repository hosting platform (github, gitlab, bitbucket, etc.)';
+> COMMENT ON COLUMN pgext.extension.lang IS 'Primary implementation language (C, SQL, PLpgSQL, Rust, Go, Python, etc.)';
+> COMMENT ON COLUMN pgext.extension.contrib IS 'Whether this is an official PostgreSQL contrib extension';
+> COMMENT ON COLUMN pgext.extension.lead IS 'Whether this is the primary/lead extension in a multi-extension package';
+> COMMENT ON COLUMN pgext.extension.has_bin IS 'Whether the extension package includes binary executables/utilities';
+> COMMENT ON COLUMN pgext.extension.has_lib IS 'Whether the extension includes shared library files (.so on Linux, .dll on Windows)';
+> COMMENT ON COLUMN pgext.extension.need_ddl IS 'Whether extension requires CREATE EXTENSION DDL command to install';
+> COMMENT ON COLUMN pgext.extension.need_load IS 'Whether requires explicit LOAD or shared_preload_libraries configuration';
+> COMMENT ON COLUMN pgext.extension.trusted IS 'Whether non-superuser can install this extension (trusted extension feature)';
+> COMMENT ON COLUMN pgext.extension.relocatable IS 'Whether extension can be relocated to a different schema after installation';
+> COMMENT ON COLUMN pgext.extension.schemas IS 'Fixed schema names if extension is not relocatable (must be installed in specific schema)';
+> COMMENT ON COLUMN pgext.extension.pg_ver IS 'Array of supported PostgreSQL major versions (e.g., {14,15,16,17,18})';
+> COMMENT ON COLUMN pgext.extension.requires IS 'Array of extension dependencies (other extensions that must be installed first)';
+> COMMENT ON COLUMN pgext.extension.require_by IS 'Array of extensions that depend on this extension (reverse dependency list)';
+> COMMENT ON COLUMN pgext.extension.see_also IS 'Array of related or similar extensions (for discovery and comparison)';
+> COMMENT ON COLUMN pgext.extension.rpm_ver IS 'Latest available RPM package version';
+> COMMENT ON COLUMN pgext.extension.rpm_repo IS 'RPM repository source (PGDG, PIGSTY, EPEL, etc.)';
+> COMMENT ON COLUMN pgext.extension.rpm_pkg IS 'RPM package name template where $v is replaced with PostgreSQL major version';
+> COMMENT ON COLUMN pgext.extension.rpm_pg IS 'Array of PostgreSQL versions available as RPM packages';
+> COMMENT ON COLUMN pgext.extension.rpm_deps IS 'Array of RPM package dependencies (system libraries and other packages)';
+> COMMENT ON COLUMN pgext.extension.deb_ver IS 'Latest available DEB package version';
+> COMMENT ON COLUMN pgext.extension.deb_repo IS 'DEB repository source (PGDG, PIGSTY, etc.)';
+> COMMENT ON COLUMN pgext.extension.deb_pkg IS 'DEB package name template where $v is replaced with PostgreSQL major version';
+> COMMENT ON COLUMN pgext.extension.deb_deps IS 'Array of DEB package dependencies (system libraries and other packages)';
+> COMMENT ON COLUMN pgext.extension.deb_pg IS 'Array of PostgreSQL versions available as DEB packages';
+> COMMENT ON COLUMN pgext.extension.source IS 'Source code tarball filename if built and distributed by Pigsty';
+> COMMENT ON COLUMN pgext.extension.extra IS 'Additional extension metadata stored as JSONB for extensibility';
+> COMMENT ON COLUMN pgext.extension.en_desc IS 'English description of extension functionality and purpose';
+> COMMENT ON COLUMN pgext.extension.zh_desc IS 'Chinese description of extension functionality and purpose';
+> COMMENT ON COLUMN pgext.extension.comment IS 'Additional notes, special instructions, or warnings';
+> COMMENT ON COLUMN pgext.extension.mtime IS 'Last modification timestamp of this record';
+> ```

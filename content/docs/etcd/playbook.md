@@ -10,9 +10,8 @@ categories: [任务]
 
 Etcd 模块提供了两个核心剧本：[`etcd.yml`](#etcdyml) 用于安装与配置 Etcd 集群，[`etcd-rm.yml`](#etcd-rmyml) 用于移除 Etcd 集群或成员。
 
-{{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
-自 Pigsty v3.6 起，`etcd.yml` 剧本专注于集群安装和成员添加，所有移除操作已迁移至独立的 `etcd-rm.yml` 剧本和 `etcd_remove` 角色。
-{{% /alert %}}
+> [!NOTE] 架构变化：Pigsty v3.6+
+> 自 Pigsty v3.6 起，`etcd.yml` 剧本专注于集群安装和成员添加，所有移除操作已迁移至独立的 `etcd-rm.yml` 剧本和 `etcd_remove` 角色。
 
 
 --------
@@ -60,10 +59,9 @@ Etcd 模块提供了两个核心剧本：[`etcd.yml`](#etcdyml) 用于安装与�
 - [`etcd_rm_data`](/docs/etcd/param#etcd_rm_data)：控制是否删除 ETCD 数据（默认：`true`）
 - [`etcd_rm_pkg`](/docs/etcd/param#etcd_rm_pkg)：控制是否卸载 ETCD 软件包（默认：`false`）
 
-{{% alert title="危险操作" color="danger" %}}
-`etcd_safeguard` 默认是 `false`，`etcd_rm_data` 默认是 `true`。因此，完整执行 `etcd-rm.yml` 会尝试将目标退群、注销并停服，随后删除本机 Etcd 数据、配置、单元和客户端环境文件。
-剧本会忽略部分退群与清理错误，也不会证明剩余成员仍有仲裁；每次都应使用精确的 `-l`，并核对近期备份、成员列表与剩余仲裁。
-{{% /alert %}}
+> [!CAUTION] 危险操作
+> `etcd_safeguard` 默认是 `false`，`etcd_rm_data` 默认是 `true`。因此，完整执行 `etcd-rm.yml` 会尝试将目标退群、注销并停服，随后删除本机 Etcd 数据、配置、单元和客户端环境文件。
+> 剧本会忽略部分退群与清理错误，也不会证明剩余成员仍有仲裁；每次都应使用精确的 `-l`，并核对近期备份、成员列表与剩余仲裁。
 
 
 

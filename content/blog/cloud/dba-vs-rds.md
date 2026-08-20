@@ -1,7 +1,7 @@
 ---
 title: "DBA 会被云淘汰吗？"
 date: 2024-02-02
-manualLink: https://vonng.com/cloud/dba-vs-rds/
+manual_link: https://vonng.com/cloud/dba-vs-rds/
 author: 冯若航
 description: >
   开源漫谈第九期主题《DBA 会被云淘汰吗？》，我作为主持人全程克制着自己亲自下场的冲动，因此特此写了这篇文章来聊聊这个问题。

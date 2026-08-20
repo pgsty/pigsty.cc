@@ -22,19 +22,14 @@ categories: [教程]
 
 最简单的有效配置文件可能如下所示，唯一的内容是定义 [**`admin_ip`**](/docs/infra/param#admin_ip) 变量，这是当前安装 Pigsty 节点的 IP 地址（**管理节点**）
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="最简配置" %}}
-```yaml
+```yaml {tab="最简配置" group="tab1-tab2" value="tab1"}
 all: { vars: { admin_ip: 10.10.10.10 } }
 ```
-{{% /tab %}}
-{{% tab header="中国特色" %}}
-```yaml
+
+```yaml {tab="中国特色" value="tab2"}
 # 天朝自有国情在此，额外配置 region: china 以使用国内的镜像源加速下载
 all: { vars: { admin_ip: 10.10.10.10, region: china } }
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 这个配置不会部署任何东西，但是执行 `./deploy.yml` 剧本时，会在 `files/pki/ca` 生成一套自签名的 **CA**，用于签发证书。
@@ -48,9 +43,7 @@ all: { vars: { admin_ip: 10.10.10.10, region: china } }
 
 Pigsty 的 [**`NODE`**](/docs/node/) 模块负责管理集群中的节点。配置清单里存在的 IP 地址，都会被 Pigsty 纳入管理，安装 NODE 模块。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="最简配置" %}}
-```yaml
+```yaml {tab="最简配置" group="tab1-tab2" value="tab1"}
 all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址
   children: { nodes: { hosts: { 10.10.10.10: {} } } } 
   vars: 
@@ -58,9 +51,8 @@ all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址
     region: default                         # 全球默认软件仓库
     node_repo_modules: node,pgsql,infra     # 添加 node, pgsql, infra 软件仓库
 ```
-{{% /tab %}}
-{{% tab header="中国特色" %}}
-```yaml
+
+```yaml {tab="中国特色" value="tab2"}
 all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址                        
   children: { nodes: { hosts: { 10.10.10.10: {} } } } 
   vars:
@@ -68,8 +60,6 @@ all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址
     region: china                         # 使用中国镜像
     node_repo_modules: node,pgsql,infra   # 添加 node, pgsql, infra 软件仓库
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 为了让这个配置更有用，我们添加了两个 [**全局参数**](/docs/concept/iac/parameter)：
 指定该节点要添加的软件源 [**`node_repo_modules`**](/docs/node/param/#node_repo_modules)；
@@ -95,9 +85,7 @@ all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址
 
 现在，我们通过定义一个特殊的分组 `infra`，来部署 [**`INFRA`**](/docs/infra/) 模块。为 Pigsty 添加基础设施支持。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="最简配置" %}}
-```yaml
+```yaml {tab="最简配置" group="tab1-tab2" value="tab1"}
 all:  # 只是简单的改了个分组名 nodes -> infra，并添加新的实例变量 infra_seq
   children: { infra: { hosts: { 10.10.10.10: { infra_seq: 1 } } } } 
   vars: 
@@ -105,9 +93,8 @@ all:  # 只是简单的改了个分组名 nodes -> infra，并添加新的实例
     region: default
     node_repo_modules: node,pgsql,infra
 ```
-{{% /tab %}}
-{{% tab header="中国特色" %}}
-```yaml
+
+```yaml {tab="中国特色" value="tab2"}
 all:  # 只是简单的改了个分组名 nodes -> infra，并添加新的实例变量 infra_seq
   children: { infra: { hosts: { 10.10.10.10: { infra_seq: 1 } } } } 
   vars:
@@ -115,8 +102,6 @@ all:  # 只是简单的改了个分组名 nodes -> infra，并添加新的实例
     region: china
     node_repo_modules: node,pgsql,infra
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 同时，我们还分配了一个 [**身份参数**](/docs/concept/iac/parameter#身份参数)：[**`infra_seq`**](/docs/infra/param/#infra_seq)，这是为了在多节点部署高可用 **INFRA** 模块时将不同的节点区分开来。
@@ -149,9 +134,7 @@ Pigsty 中的一切都是 **模块化** 的：您可以只部署监控基础设�
 
 要提供 PostgreSQL 服务，您还需要额外安装 [**PGSQL**](/docs/pgsql/) 模块和它所依赖的 [**ETCD**](/docs/etcd/) 模块，这并不复杂，两行配置而已：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="最简配置" %}}
-```yaml
+```yaml {tab="最简配置" group="tab1-tab2" value="tab1"}
 all:
   children:
     infra:   { hosts: { 10.10.10.10: { infra_seq: 1 } } }
@@ -159,9 +142,8 @@ all:
     pg-meta: { hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }, vars: { pg_cluster: pg-meta } } # 新增 pg 集群
   vars: { admin_ip: 10.10.10.10, region: default, node_repo_modules: node,pgsql,infra }
 ```
-{{% /tab %}}
-{{% tab header="中国特色" %}}
-```yaml
+
+```yaml {tab="中国特色" value="tab2"}
 all:
   children:
     infra:   { hosts: { 10.10.10.10: { infra_seq: 1 } } }
@@ -169,8 +151,6 @@ all:
     pg-meta: { hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }, vars: { pg_cluster: pg-meta } } # 新增 pg 集群
   vars: { admin_ip: 10.10.10.10, region: china, node_repo_modules: node,pgsql,infra }
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 我们在这里添加了两个新的分组：`etcd` 与 `pg-meta`，分别定义了一个单节点的 etcd 集群和一个单节点的 PostgreSQL 集群。

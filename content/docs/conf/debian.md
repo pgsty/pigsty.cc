@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/debian.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/debian.yml)
 
-{{< readfile file="yaml/demo/debian.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/debian.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -317,40 +317,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pgextwlist;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pgextwlist -v 18  # PG 18
 pig ext install -y pgextwlist -v 17  # PG 17
 pig ext install -y pgextwlist -v 16  # PG 16
 pig ext install -y pgextwlist -v 15  # PG 15
 pig ext install -y pgextwlist -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pgextwlist_18       # PG 18
 dnf install -y pgextwlist_17       # PG 17
 dnf install -y pgextwlist_16       # PG 16
 dnf install -y pgextwlist_15       # PG 15
 dnf install -y pgextwlist_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pgextwlist   # PG 18
 apt install -y postgresql-17-pgextwlist   # PG 17
 apt install -y postgresql-16-pgextwlist   # PG 16
 apt install -y postgresql-15-pgextwlist   # PG 15
 apt install -y postgresql-14-pgextwlist   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：

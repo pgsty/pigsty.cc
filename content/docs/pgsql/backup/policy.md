@@ -36,8 +36,9 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 恢复窗口在 **24～48 小时** 之间循环，备份占用约为 2 个全量备份加上 1～2 天的 WAL 归档。
 在实践中，您需要准备至少 **3～5 倍** 数据库大小的备份磁盘，才能从容使用该默认策略。
 
-{{< echarts height="640px" >}}
-```js
+<script>
+window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
+(function (registry) {
 var int1 = function(v) { return Math.round(Number(v)); };
 var fmtHour = function(v) { return int1(v) === 0 ? '0' : int1(v) + 'h'; };
 var fmtWin = function(v) { return int1(v) + 'h'; };
@@ -62,8 +63,16 @@ var tipMerged = function(params) {
       (item.seriesName === '瞬时备份' ? { win: acc.win, p: acc.p, s: acc.s, w: acc.w, t: Number(item.value) } : acc))));
   }, { win: null, p: 0, s: 0, w: 0, t: 0 }));
 };
-```
-```yaml
+registry["int1"] = int1;
+registry["fmtHour"] = fmtHour;
+registry["fmtWin"] = fmtWin;
+registry["fmtGb"] = fmtGb;
+registry["fmtGbTick"] = fmtGbTick;
+registry["tipMerged"] = tipMerged;
+})(window.OinkEchartsFunctions);
+</script>
+
+```echarts {height="640px"}
 tooltip: { trigger: axis, formatter: $fn:tipMerged, axisPointer: { type: line, snap: true, label: { show: false } } }
 axisPointer: { link: [ { xAxisIndex: [0, 1] } ] }
 legend: { show: false, bottom: 10, itemGap: 18, data: ["首要备份", "次要备份", "WAL归档", "瞬时备份"] }
@@ -129,7 +138,6 @@ yAxis:
     splitLine: { show: true, lineStyle: { type: dashed, width: 1, opacity: 0.32, color: "#9ca3af" } }
 series: [ { name: 恢复窗口, type: line, smooth: false, symbol: none, showSymbol: false, xAxisIndex: 0, yAxisIndex: 0, lineStyle: { width: 3, color: "#f2a000" }, itemStyle: { color: "#f2a000" }, data: [[0,0],[1,0],[2,1],[3,2],[4,3],[5,4],[6,5],[7,6],[8,7],[9,8],[10,9],[11,10],[12,11],[13,12],[14,13],[15,14],[16,15],[17,16],[18,17],[19,18],[20,19],[21,20],[22,21],[23,22],[24,23],[25,24],[26,25],[27,26],[28,27],[29,28],[30,29],[31,30],[32,31],[33,32],[34,33],[35,34],[36,35],[37,36],[38,37],[39,38],[40,39],[41,40],[42,41],[43,42],[44,43],[45,44],[46,45],[47,46],[48,47],[49,48],[49,24],[50,25],[51,26],[52,27],[53,28],[54,29],[55,30],[56,31],[57,32],[58,33],[59,34],[60,35],[61,36],[62,37],[63,38],[64,39],[65,40],[66,41],[67,42],[68,43],[69,44],[70,45],[71,46],[72,47],[73,48],[73,24],[74,25],[75,26],[76,27],[77,28],[78,29],[79,30],[80,31],[81,32],[82,33],[83,34],[84,35],[85,36],[86,37],[87,38],[88,39],[89,40],[90,41],[91,42],[92,43],[93,44],[94,45],[95,46],[96,47],[97,48],[97,24],[98,25],[99,26],[100,27],[101,28],[102,29],[103,30],[104,31],[105,32],[106,33],[107,34],[108,35]], markLine: { symbol: none, label: { show: false }, data: [ { xAxis: 0, lineStyle: { color: "#59a14f", type: "solid", width: 1.4, opacity: 0.75 } }, { xAxis: 24, lineStyle: { color: "#59a14f", type: "solid", width: 1.4, opacity: 0.75 } }, { xAxis: 48, lineStyle: { color: "#59a14f", type: "solid", width: 1.4, opacity: 0.75 } }, { xAxis: 72, lineStyle: { color: "#59a14f", type: "solid", width: 1.4, opacity: 0.75 } }, { xAxis: 96, lineStyle: { color: "#59a14f", type: "solid", width: 1.4, opacity: 0.75 } }, { xAxis: 1, lineStyle: { color: "#336791", type: "solid", width: 1.4, opacity: 0.8 } }, { xAxis: 25, lineStyle: { color: "#336791", type: "solid", width: 1.4, opacity: 0.8 } }, { xAxis: 49, lineStyle: { color: "#336791", type: "solid", width: 1.4, opacity: 0.8 } }, { xAxis: 73, lineStyle: { color: "#336791", type: "solid", width: 1.4, opacity: 0.8 } }, { xAxis: 97, lineStyle: { color: "#336791", type: "solid", width: 1.4, opacity: 0.8 } }, { yAxis: 24, label: { show: true, formatter: "稳态下限 24h", position: "end", distance: 12, color: "#2563eb" }, lineStyle: { color: "#2563eb", type: "dashdot", width: 1.4, opacity: 0.75 } }, { yAxis: 48, label: { show: true, formatter: "窗口峰值 48h", position: "end", distance: 12, color: "#7c3aed" }, lineStyle: { color: "#7c3aed", type: "dashdot", width: 1.4, opacity: 0.75 } } ] } }, { name: 首要备份, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 5, itemStyle: { color: "#59a14f" }, data: [0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100] }, { name: 次要备份, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 5, itemStyle: { color: "#4e79a7" }, data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100] }, { name: WAL归档, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 5, itemStyle: { color: "#edc949" }, data: [0,0.42,0.83,1.25,1.67,2.08,2.5,2.92,3.33,3.75,4.17,4.58,5,5.42,5.83,6.25,6.67,7.08,7.5,7.92,8.33,8.75,9.17,9.58,10,10.42,10.83,11.25,11.67,12.08,12.5,12.92,13.33,13.75,14.17,14.58,15,15.42,15.83,16.25,16.67,17.08,17.5,17.92,18.33,18.75,19.17,19.58,20,10.42,10.83,11.25,11.67,12.08,12.5,12.92,13.33,13.75,14.17,14.58,15,15.42,15.83,16.25,16.67,17.08,17.5,17.92,18.33,18.75,19.17,19.58,20,10.42,10.83,11.25,11.67,12.08,12.5,12.92,13.33,13.75,14.17,14.58,15,15.42,15.83,16.25,16.67,17.08,17.5,17.92,18.33,18.75,19.17,19.58,20,10.42,10.83,11.25,11.67,12.08,12.5,12.92,13.33,13.75,14.17,14.58,15] }, { name: 瞬时备份, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 5, itemStyle: { color: "#9ca3af", opacity: 0.75 }, data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0] } ]
 ```
-{{< /echarts >}}
 
 
 --------
@@ -171,8 +179,9 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 按这组未压缩假设，稳态占用约为 560～690GB，新全量完成、旧链过期前的瞬时峰值约为 790GB；
 实际占用取决于 WAL 量、块级增量命中率与 zstd 压缩率。
 
-{{< echarts height="640px" >}}
-```js
+<script>
+window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
+(function (registry) {
 var int30d = function(v) { return Math.round(Number(v)); };
 var fmtDay30 = function(v) { return (int30d(v) < 1 || int30d(v) > 30) ? '' : ('' + int30d(v)); };
 var fmtWin30 = function(v) { return int30d(v) + 'h'; };
@@ -197,8 +206,17 @@ var tipMerged30 = function(params) {
       (item.seriesName === '瞬时全量' ? { win: acc.win, p: acc.p, s: acc.s, i: acc.i, w: acc.w, t: valY30(item.value) } : acc)))));
   }, { win: null, p: 0, s: 0, i: 0, w: 0, t: 0 }));
 };
-```
-```yaml
+registry["int30d"] = int30d;
+registry["fmtDay30"] = fmtDay30;
+registry["fmtWin30"] = fmtWin30;
+registry["fmtGb30"] = fmtGb30;
+registry["fmtGbTick30"] = fmtGbTick30;
+registry["valY30"] = valY30;
+registry["tipMerged30"] = tipMerged30;
+})(window.OinkEchartsFunctions);
+</script>
+
+```echarts {height="640px"}
 tooltip: { trigger: axis, formatter: $fn:tipMerged30, axisPointer: { type: line, snap: true, label: { show: false } } }
 axisPointer: { link: [ { xAxisIndex: [0, 1] } ] }
 legend: { show: false, bottom: 10, itemGap: 18, data: ["基础全量", "追加全量", "增量备份", "WAL归档"] }
@@ -273,7 +291,6 @@ series:
   - { name: 增量备份, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 16, itemStyle: { color: "#76b7b2" }, data: [0,10,20,30,40,50,60,60,70,80,90,100,110,120,120,130,140,150,160,170,180,120,130,140,150,160,170,180,120,130] }
   - { name: WAL归档, type: bar, stack: used, xAxisIndex: 1, yAxisIndex: 1, barWidth: 16, itemStyle: { color: "#edc949" }, data: [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,140,150,160,170,180,190,200,140,150] }
 ```
-{{< /echarts >}}
 
 
 --------

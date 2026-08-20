@@ -257,40 +257,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_gzip;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_gzip -v 18  # PG 18
 pig ext install -y pg_gzip -v 17  # PG 17
 pig ext install -y pg_gzip -v 16  # PG 16
 pig ext install -y pg_gzip -v 15  # PG 15
 pig ext install -y pg_gzip -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pgsql_gzip_18       # PG 18
 dnf install -y pgsql_gzip_17       # PG 17
 dnf install -y pgsql_gzip_16       # PG 16
 dnf install -y pgsql_gzip_15       # PG 15
 dnf install -y pgsql_gzip_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-gzip   # PG 18
 apt install -y postgresql-17-gzip   # PG 17
 apt install -y postgresql-16-gzip   # PG 16
 apt install -y postgresql-15-gzip   # PG 15
 apt install -y postgresql-14-gzip   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -312,7 +305,7 @@ CREATE EXTENSION gzip;
 
 本扩展正是为此而设计的。
 
-本扩展**不适用于**存储压缩场景。PostgreSQL 本身已经具备[元组压缩](https://www.postgresql.org/docs/current/storage-toast.html)机制，当元组足够大时会自动进行压缩，手动使用本函数预压缩数据并不会进一步减小存储空间。
+本扩展 **不适用于** 存储压缩场景。PostgreSQL 本身已经具备 [元组压缩](https://www.postgresql.org/docs/current/storage-toast.html) 机制，当元组足够大时会自动进行压缩，手动使用本函数预压缩数据并不会进一步减小存储空间。
 
 
 * `gzip(uncompressed BYTEA, [compression_level INTEGER])` 返回 `BYTEA`
@@ -331,7 +324,7 @@ CREATE EXTENSION gzip;
     --------------------------------------------------------------------------
      \x1f8b08000000000000132bc9c82c5600a2dc4a851282ccd48a12002e7a22ff30000000
 
-等等，压缩后的输出怎么反而更长了？！其实并非如此，只是**看起来**更长罢了，因为十六进制表示中每个字节需要两个十六进制字符。原始字符串的十六进制表示如下：
+等等，压缩后的输出怎么反而更长了？！其实并非如此，只是 **看起来** 更长罢了，因为十六进制表示中每个字节需要两个十六进制字符。原始字符串的十六进制表示如下：
 
     > SELECT 'this is my this is my this is my this is my text'::bytea;
 

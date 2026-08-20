@@ -17,18 +17,13 @@ categories: [教程]
 [**准备**](/docs/deploy/prepare) [**几台**](/docs/deploy/planning) 具有 [**SSH 权限**](/docs/deploy/admin#ssh) 的 [**节点**](/docs/deploy/prepare#节点)，
 安装 [**兼容的 Linux 系统**](/docs/ref/linux/)，使用具有免密 [**`ssh`**](/docs/deploy/admin#ssh) 和 [**`sudo`**](/docs/deploy/admin#sudo) 权限的 [**管理用户**](/docs/deploy/admin) 执行：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+```bash {tab="pigsty.cc（中国）" group="pigstycc-pigstyio" value="pigstycc"}
 curl -fsSL https://repo.pigsty.cc/get | bash;
 ```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+
+```bash {tab="pigsty.io（全球）" value="pigstyio"}
 curl -fsSL https://repo.pigsty.io/get | bash;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 该命令会执行 [**安装**](#安装) 脚本，下载并提取 Pigsty 源码至家目录并安装依赖，接下来依次完成 [**配置**](#配置) 与 [**部署**](#部署) 即可完成交付。
 
@@ -78,20 +73,15 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 您可以使用以下命令自动安装 [**Pigsty 源码包**](/docs/deploy/prepare#pigsty) 至 `~/pigsty` 目录（推荐），部署所需依赖（Ansible）会自动安装。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+```bash {tab="pigsty.cc（中国）" group="pigstycc-pigstyio" value="pigstycc"}
 curl -fsSL https://repo.pigsty.cc/get | bash            # 安装当前默认版本
 curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
 ```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+
+```bash {tab="pigsty.io（全球）" value="pigstyio"}
 curl -fsSL https://repo.pigsty.io/get | bash            # 安装当前默认版本
 curl -fsSL https://repo.pigsty.io/get | bash -s {{< param stable_version >}}  # 显式安装当前公开稳定版
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 如果您不希望执行远程脚本，可以手动 [**下载**](https://github.com/pgsty/pigsty/releases) 或克隆源码。使用 `git` 克隆安装时，请务必检出特定版本后再使用。
 
@@ -133,33 +123,30 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ```
 
 
-<details><summary>配置 / configure 过程的样例输出</summary>
-
-```bash
-vagrant@meta:~/pigsty$ ./configure
-configure pigsty v4.5.0 begin
-[ OK ] region = china
-[ OK ] kernel  = Linux
-[ OK ] machine = x86_64
-[ OK ] package = deb,apt
-[ OK ] vendor  = ubuntu (Ubuntu)
-[ OK ] version = 22 (22.04)
-[ OK ] sudo = vagrant ok
-[ OK ] ssh = vagrant@127.0.0.1 ok
-[WARN] Multiple IP address candidates found:
-    (1) 192.168.121.38	    inet 192.168.121.38/24 metric 100 brd 192.168.121.255 scope global dynamic eth0
-    (2) 10.10.10.10	    inet 10.10.10.10/24 brd 10.10.10.255 scope global eth1
-[ OK ] primary_ip = 10.10.10.10 (from demo)
-[ OK ] admin = vagrant@10.10.10.10 ok
-[ OK ] mode = meta (ubuntu22.04)
-[ OK ] locale  = C.UTF-8
-[ OK ] ansible = ready
-[ OK ] pigsty configured
-[WARN] don't forget to check it and change passwords!
-proceed with ./deploy.yml
-```
-
-</details><br>
+> [!DETAILS]- 配置 / configure 过程的样例输出
+> ```bash
+> vagrant@meta:~/pigsty$ ./configure
+> configure pigsty v4.5.0 begin
+> [ OK ] region = china
+> [ OK ] kernel  = Linux
+> [ OK ] machine = x86_64
+> [ OK ] package = deb,apt
+> [ OK ] vendor  = ubuntu (Ubuntu)
+> [ OK ] version = 22 (22.04)
+> [ OK ] sudo = vagrant ok
+> [ OK ] ssh = vagrant@127.0.0.1 ok
+> [WARN] Multiple IP address candidates found:
+>     (1) 192.168.121.38	    inet 192.168.121.38/24 metric 100 brd 192.168.121.255 scope global dynamic eth0
+>     (2) 10.10.10.10	    inet 10.10.10.10/24 brd 10.10.10.255 scope global eth1
+> [ OK ] primary_ip = 10.10.10.10 (from demo)
+> [ OK ] admin = vagrant@10.10.10.10 ok
+> [ OK ] mode = meta (ubuntu22.04)
+> [ OK ] locale  = C.UTF-8
+> [ OK ] ansible = ready
+> [ OK ] pigsty configured
+> [WARN] don't forget to check it and change passwords!
+> proceed with ./deploy.yml
+> ```
 
 配置向导只会为您替换 **当前节点** 的 IP（如果您不想要替换，使用 `-s` 参数），所以对于一个多节点的部署，您需要自己替换其他节点的 IP 地址。
 同时，你还需要按需对配置文件进行进一步的定制，例如修改默认密码、添加更多节点等。
@@ -181,9 +168,8 @@ proceed with ./deploy.yml
 
 配置过程生成的配置文件默认位于：`~/pigsty/pigsty.yml`，您可以在安装前进行检查与修改定制。
 
-{{% alert title="修改默认密码！" color="danger" %}}
-安装前应修改配置文件中的默认密码与凭据，详见 [**安全建议**](/docs/setup/security#密码)。
-{{% /alert %}}
+> [!CAUTION] 修改默认密码！
+> 安装前应修改配置文件中的默认密码与凭据，详见 [**安全建议**](/docs/setup/security#密码)。
 
 
 
@@ -198,37 +184,32 @@ Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/pl
 ./deploy.yml     # 一次性在所有目标节点上部署核心模块
 ```
 
-<details><summary>部署过程的样例输出</summary>
+> [!DETAILS]- 部署过程的样例输出
+> ```bash
+> ......
+>
+> TASK [pgsql : pgsql init done] *************************************************
+> ok: [10.10.10.11] => {
+>     "msg": "postgres://10.10.10.11/postgres | meta  | dbuser_meta dbuser_view "
+> }
+> ......
+>
+> TASK [pg_monitor : load grafana datasource meta] *******************************
+> changed: [10.10.10.11]
+>
+> PLAY RECAP *********************************************************************
+> 10.10.10.11                : ok=302  changed=232  unreachable=0    failed=0    skipped=65   rescued=0    ignored=1
+> localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+> ```
+>
+> 当您看到输出尾部如果带有 `pgsql init done`，`PLAY RECAP` 等字样，说明安装已经完成！
 
-```bash
-......
+> [!WARNING] 上游软件仓库变更可能导致在线安装失败！
+> Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为不恰当的更新，进入崩溃状态并导致部署失败（相当常见）！
+> 对于严肃的生产环境部署，我们强烈建议使用经过验证的 [**离线软件包**](/docs/setup/offline#离线软件包) 进行 [**离线安装**](/docs/setup/offline)
 
-TASK [pgsql : pgsql init done] *************************************************
-ok: [10.10.10.11] => {
-    "msg": "postgres://10.10.10.11/postgres | meta  | dbuser_meta dbuser_view "
-}
-......
-
-TASK [pg_monitor : load grafana datasource meta] *******************************
-changed: [10.10.10.11]
-
-PLAY RECAP *********************************************************************
-10.10.10.11                : ok=302  changed=232  unreachable=0    failed=0    skipped=65   rescued=0    ignored=1
-localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
-```
-
-当您看到输出尾部如果带有 `pgsql init done`，`PLAY RECAP` 等字样，说明安装已经完成！
-
-</details><br>
-
-{{% alert title="上游软件仓库变更可能导致在线安装失败！" color="warning" %}}
-Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为不恰当的更新，进入崩溃状态并导致部署失败（相当常见）！
-对于严肃的生产环境部署，我们强烈建议使用经过验证的 [**离线软件包**](/docs/setup/offline#离线软件包) 进行 [**离线安装**](/docs/setup/offline)
-{{% /alert %}}
-
-{{% alert title="避免重复执行部署剧本！" color="warning" %}}
-警告： 在已经完成部署的环境中再次完整运行 [**`deploy.yml`**](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 可能会重启相关服务并覆盖配置，请务必注意！
-{{% /alert %}}
+> [!WARNING] 避免重复执行部署剧本！
+> 警告： 在已经完成部署的环境中再次完整运行 [**`deploy.yml`**](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 可能会重启相关服务并覆盖配置，请务必注意！
 
 
 --------

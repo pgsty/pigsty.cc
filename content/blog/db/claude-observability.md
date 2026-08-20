@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 可观测性怎么做？"
 date: 2026-01-25
-manualLink: https://vonng.com/db/claude-observability/
+manual_link: https://vonng.com/db/claude-observability/
 author: 冯若航
 description: >
   获取 Claude Code 的详细 OTEL 日志与指标，放入 Victoria 全家桶，放进并通过 Grafana 监控面板呈现。

@@ -1,7 +1,7 @@
 ---
 title: "云 SLA 是不是安慰剂？"
 date: 2023-06-12
-manualLink: https://vonng.com/cloud/sla/
+manual_link: https://vonng.com/cloud/sla/
 author: 冯若航
 description: >
   SLA 并不是真正的可靠性承诺或历史战绩，而是一种营销工具。你以为花钱买云服务上了保险，在最坏情况下是哑巴亏，最好情况也只是安慰剂。

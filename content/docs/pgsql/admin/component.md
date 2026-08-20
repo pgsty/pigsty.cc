@@ -26,10 +26,9 @@ Pigsty 的 PGSQL 模块由多个组件构成，每个组件都以 systemd 服务
 | vip-manager        | -          | `vip-manager`        | 可选，管理 L2 VIP 地址漂移            |
 {.full-width}
 
-{{% alert title="重要提示" color="warning" %}}
-**不要直接使用 systemctl 管理 PostgreSQL 服务**。PostgreSQL 由 Patroni 托管，应通过 [**`patronictl`**](/docs/pgsql/admin/patroni) 命令进行管理。
-直接操作 PostgreSQL 可能导致 Patroni 状态不一致，触发意外的故障转移。`postgres` 服务是 Patroni 服务失效时的应急逃生窗口。
-{{% /alert %}}
+> [!WARNING] 重要提示
+> **不要直接使用 systemctl 管理 PostgreSQL 服务**。PostgreSQL 由 Patroni 托管，应通过 [**`patronictl`**](/docs/pgsql/admin/patroni) 命令进行管理。
+> 直接操作 PostgreSQL 可能导致 Patroni 状态不一致，触发意外的故障转移。`postgres` 服务是 Patroni 服务失效时的应急逃生窗口。
 
 
 ----------------

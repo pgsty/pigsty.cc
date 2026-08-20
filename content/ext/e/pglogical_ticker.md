@@ -182,40 +182,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pglogical_ticker;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pglogical_ticker -v 18  # PG 18
 pig ext install -y pglogical_ticker -v 17  # PG 17
 pig ext install -y pglogical_ticker -v 16  # PG 16
 pig ext install -y pglogical_ticker -v 15  # PG 15
 pig ext install -y pglogical_ticker -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pglogical_ticker_18       # PG 18
 dnf install -y pglogical_ticker_17       # PG 17
 dnf install -y pglogical_ticker_16       # PG 16
 dnf install -y pglogical_ticker_15       # PG 15
 dnf install -y pglogical_ticker_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pglogical-ticker   # PG 18
 apt install -y postgresql-17-pglogical-ticker   # PG 17
 apt install -y postgresql-16-pglogical-ticker   # PG 16
 apt install -y postgresql-15-pglogical-ticker   # PG 15
 apt install -y postgresql-14-pglogical-ticker   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：
@@ -258,7 +251,7 @@ CREATE EXTENSION pglogical_ticker;
 
 ### 部署 Ticker 表
 
-仅在**提供者**上运行（通过 pglogical 传播到订阅者）：
+仅在 **提供者** 上运行（通过 pglogical 传播到订阅者）：
 
 ```sql
 -- 部署 ticker 表（每个复制集一个）
@@ -294,13 +287,13 @@ SELECT pglogical_ticker.launch_if_repset_tables();
 
 ### 查看复制延迟
 
-在**提供者**上：
+在 **提供者** 上：
 
 ```sql
 SELECT * FROM pglogical_ticker.all_repset_tickers();
 ```
 
-在**订阅者**上：
+在 **订阅者** 上：
 
 ```sql
 SELECT * FROM pglogical_ticker.all_subscription_tickers();

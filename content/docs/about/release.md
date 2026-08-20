@@ -3726,19 +3726,16 @@ Pigsty [v2.0.0](https://github.com/pgsty/pigsty/releases/tag/v2.0.0) 正式发�
 curl -fsSL https://get.pigsty.cc/latest | bash
 ```
 
-<details><summary>Download directly from GitHub Release</summary>
-
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/pgsty/pigsty/master/bin/get)"
-
-# or download tarball directly with curl (EL9)
-curl -L https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-v2.0.0.tgz -o ~/pigsty.tgz
-curl -L https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el9.x86_64.tgz  -o /tmp/pkg.tgz
-# EL7: https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el7.x86_64.tgz
-# EL8: https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el8.x86_64.tgz
-```
-
-</details>
+> [!DETAILS]- Download directly from GitHub Release
+> ```bash
+> bash -c "$(curl -fsSL https://raw.githubusercontent.com/pgsty/pigsty/master/bin/get)"
+>
+> # or download tarball directly with curl (EL9)
+> curl -L https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-v2.0.0.tgz -o ~/pigsty.tgz
+> curl -L https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el9.x86_64.tgz  -o /tmp/pkg.tgz
+> # EL7: https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el7.x86_64.tgz
+> # EL8: https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0.0.el8.x86_64.tgz
+> ```
 
 
 **亮点**
@@ -4540,62 +4537,59 @@ v1 正式发布，监控系统全面改进
 
 v0.9 极大简化了安装流程，进行了大量日志相关改进，开发了命令行工具（Beta），并修复了一系列问题。
 
-<details><br>
-
-**新功能**
-
-* 一键安装模式：
-
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://pigsty.cc/install)"
-  ```
-
-* 开发命令行工具 `pigsty-cli` 封装常用 Ansible 命令，目前 pigsty-cli 处于 Beta 状态
-* 使用 Loki 与 Promtail 收集日志：
-    * 默认收集 Postgres，Pgbouncer，Patroni 日志
-    * 新增部署脚本 `infra-loki.yml` 与 `pgsql-promtail.yml`
-    * 定义基于日志的监控指标
-    * 使用 Grafana 制作日志相关可视化面板。
-* 监控组件可以使用二进制安装，使用 `files/get_bin.sh` 下载监控二进制组件。
-* 飞升模式：
-  当集群元节点初始化完成后，可以使用 `bin/upgrade` 升级为动态 Inventory
-  使用 pg-meta 上的数据库代替 YAML 配置文件。
-
-
-**问题修复**
-
-* 集中修复日志相关问题：
-    * 修复了 HAProxy 健康检查造成 PG 日志中大量 `connection reset by peer` 的问题。
-    * 修复了 HAProxy 健康检查造成 Patroni 日志中大量出现 `Connect Reset` Exception 的问题
-    * 修复了 Patroni 日志时间戳格式，去除毫秒时间戳，附加完整时区信息。
-    * 为 `dbuser_monitor` 配置1秒的 `log_min_duration_statement`，避免监控查询出现在日志中。
-* 重构 Grafana 角色
-    * 在保持 API 不变的前提下重构 Grafana 角色。
-    * 使用 CDN 下载预打包的 Grafana 插件，加速插件下载
-* 其他问题修复
-    * 修复了 `pgbouncer-create-user` 未能正确处理 md5 密码的问题。
-    * 完善了数据库与用户创建 SQL 模版中参数空置检查。
-    * 修复了 NODE DNS 配置时如果手工中断执行，DNS 配置可能出错的问题。
-    * 重构了 Makefile 快捷方式 Makefile 中的错别字
-
-**参数变更**
-
-* `node_disable_swap` 默认为 False，默认不会关闭 SWAP。
-* `node_sysctl_params` 不再有默认修改的系统参数。
-*  `grafana_plugin` 的默认值 `install` 现在意味着当插件缓存不存在时，从 CDN 下载。
-* `repo_url_packages` 现在从 Pigsty CDN 下载额外的 RPM 包，解决墙内无法访问的问题。
-* `proxy_env.no_proxy` 现在将 Pigsty CDN 加入到 NOPROXY 列表中。
-* `grafana_customize` 现在默认为 `false`，启用意味着安装 Pigsty Pro 版 UI（默认不开源所以不要启用）
-* `node_admin_pk_current`，新增选项，启用后会将当前用户的 `~/.ssh/id_rsa.pub` 添加至管理员的 Key 中
-* `loki_clean`：新增选项，安装 Loki 时是否清除现有数据
-* `loki_data_dir`：新增选项，指明安装 Loki 时的数据目录
-* `promtail_enabled` 是否启用 Promtail 日志收集服务？
-* `promtail_clean` 是否在安装 promtail 时移除已有状态信息？
-* `promtail_port` promtail 使用的默认端口，默认为9080
-* `promtail_status_file` 保存 Promtail 状态信息的文件位置
-* `promtail_send_url` 用于接收日志的 loki 服务 endpoint
-
-</details>
+> [!DETAILS]-
+> **新功能**
+>
+> * 一键安装模式：
+>
+>   ```bash
+>   /bin/bash -c "$(curl -fsSL https://pigsty.cc/install)"
+>   ```
+>
+> * 开发命令行工具 `pigsty-cli` 封装常用 Ansible 命令，目前 pigsty-cli 处于 Beta 状态
+> * 使用 Loki 与 Promtail 收集日志：
+>     * 默认收集 Postgres，Pgbouncer，Patroni 日志
+>     * 新增部署脚本 `infra-loki.yml` 与 `pgsql-promtail.yml`
+>     * 定义基于日志的监控指标
+>     * 使用 Grafana 制作日志相关可视化面板。
+> * 监控组件可以使用二进制安装，使用 `files/get_bin.sh` 下载监控二进制组件。
+> * 飞升模式：
+>   当集群元节点初始化完成后，可以使用 `bin/upgrade` 升级为动态 Inventory
+>   使用 pg-meta 上的数据库代替 YAML 配置文件。
+>
+>
+> **问题修复**
+>
+> * 集中修复日志相关问题：
+>     * 修复了 HAProxy 健康检查造成 PG 日志中大量 `connection reset by peer` 的问题。
+>     * 修复了 HAProxy 健康检查造成 Patroni 日志中大量出现 `Connect Reset` Exception 的问题
+>     * 修复了 Patroni 日志时间戳格式，去除毫秒时间戳，附加完整时区信息。
+>     * 为 `dbuser_monitor` 配置1秒的 `log_min_duration_statement`，避免监控查询出现在日志中。
+> * 重构 Grafana 角色
+>     * 在保持 API 不变的前提下重构 Grafana 角色。
+>     * 使用 CDN 下载预打包的 Grafana 插件，加速插件下载
+> * 其他问题修复
+>     * 修复了 `pgbouncer-create-user` 未能正确处理 md5 密码的问题。
+>     * 完善了数据库与用户创建 SQL 模版中参数空置检查。
+>     * 修复了 NODE DNS 配置时如果手工中断执行，DNS 配置可能出错的问题。
+>     * 重构了 Makefile 快捷方式 Makefile 中的错别字
+>
+> **参数变更**
+>
+> * `node_disable_swap` 默认为 False，默认不会关闭 SWAP。
+> * `node_sysctl_params` 不再有默认修改的系统参数。
+> *  `grafana_plugin` 的默认值 `install` 现在意味着当插件缓存不存在时，从 CDN 下载。
+> * `repo_url_packages` 现在从 Pigsty CDN 下载额外的 RPM 包，解决墙内无法访问的问题。
+> * `proxy_env.no_proxy` 现在将 Pigsty CDN 加入到 NOPROXY 列表中。
+> * `grafana_customize` 现在默认为 `false`，启用意味着安装 Pigsty Pro 版 UI（默认不开源所以不要启用）
+> * `node_admin_pk_current`，新增选项，启用后会将当前用户的 `~/.ssh/id_rsa.pub` 添加至管理员的 Key 中
+> * `loki_clean`：新增选项，安装 Loki 时是否清除现有数据
+> * `loki_data_dir`：新增选项，指明安装 Loki 时的数据目录
+> * `promtail_enabled` 是否启用 Promtail 日志收集服务？
+> * `promtail_clean` 是否在安装 promtail 时移除已有状态信息？
+> * `promtail_port` promtail 使用的默认端口，默认为9080
+> * `promtail_status_file` 保存 Promtail 状态信息的文件位置
+> * `promtail_send_url` 用于接收日志的 loki 服务 endpoint
 
 
 
@@ -4608,192 +4602,189 @@ v0.9 极大简化了安装流程，进行了大量日志相关改进，开发了
 
 v0.8 针对 **服务（Service）** 接入部分进行了彻底的重做。现在除了默认的 `primary`, `replica` 服务外，用户可以自行定义新的服务。服务的接口可以支持多种不同的实现，例如 L4 DPKG VIP 可作为 Haproxy 的替代品与 Pigsty 集成。同时，针对用户反馈的一些问题进行了集中处理与改进。
 
-<details><br>
-
-**改动内容**
-
-v0.8 是供给方案定稿版本，此后供给系统的 API 将保持稳定。
-
-**API 变更**
-
-原有 `vip` 与 `haproxy` 角色的所有配置项，现在迁移至 `service` 角色中。
-
-```yaml
-#------------------------------------------------------------------------------
-# SERVICE PROVISION
-#------------------------------------------------------------------------------
-pg_weight: 100              # default load balance weight (instance level)
-
-# - service - #
-pg_services:                                  # how to expose postgres service in cluster?
-  # primary service will route {ip|name}:5433 to primary pgbouncer (5433->6432 rw)
-  - name: primary           # service name {{ pg_cluster }}_primary
-    src_ip: "*"
-    src_port: 5433
-    dst_port: pgbouncer     # 5433 route to pgbouncer
-    check_url: /primary     # primary health check, success when instance is primary
-    selector: "[]"          # select all instance as primary service candidate
-
-  # replica service will route {ip|name}:5434 to replica pgbouncer (5434->6432 ro)
-  - name: replica           # service name {{ pg_cluster }}_replica
-    src_ip: "*"
-    src_port: 5434
-    dst_port: pgbouncer
-    check_url: /read-only   # read-only health check. (including primary)
-    selector: "[]"          # select all instance as replica service candidate
-    selector_backup: "[? pg_role == `primary`]"   # primary are used as backup server in replica service
-
-  # default service will route {ip|name}:5436 to primary postgres (5436->5432 primary)
-  - name: default           # service's actual name is {{ pg_cluster }}-{{ service.name }}
-    src_ip: "*"             # service bind ip address, * for all, vip for cluster virtual ip address
-    src_port: 5436          # bind port, mandatory
-    dst_port: postgres      # target port: postgres|pgbouncer|port_number , pgbouncer(6432) by default
-    check_method: http      # health check method: only http is available for now
-    check_port: patroni     # health check port:  patroni|pg_exporter|port_number , patroni by default
-    check_url: /primary     # health check url path, / as default
-    check_code: 200         # health check http code, 200 as default
-    selector: "[]"          # instance selector
-    haproxy:                # haproxy specific fields
-      maxconn: 3000         # default front-end connection
-      balance: roundrobin   # load balance algorithm (roundrobin by default)
-      default_server_options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
-
-  # offline service will route {ip|name}:5438 to offline postgres (5438->5432 offline)
-  - name: offline           # service name {{ pg_cluster }}_replica
-    src_ip: "*"
-    src_port: 5438
-    dst_port: postgres
-    check_url: /replica     # offline MUST be a replica
-    selector: "[? pg_role == `offline` || pg_offline_query ]"         # instances with pg_role == 'offline' or instance marked with 'pg_offline_query == true'
-    selector_backup: "[? pg_role == `replica` && !pg_offline_query]"  # replica are used as backup server in offline service
-
-pg_services_extra: []        # extra services to be added
-
-# - haproxy - #
-haproxy_enabled: true                         # enable haproxy among every cluster members
-haproxy_reload: true                          # reload haproxy after config
-haproxy_policy: roundrobin                    # roundrobin, leastconn
-haproxy_admin_auth_enabled: false             # enable authentication for haproxy admin?
-haproxy_admin_username: admin                 # default haproxy admin username
-haproxy_admin_password: admin                 # default haproxy admin password
-haproxy_exporter_port: 9101                   # default admin/exporter port
-haproxy_client_timeout: 3h                    # client side connection timeout
-haproxy_server_timeout: 3h                    # server side connection timeout
-
-# - vip - #
-vip_mode: none                                # none | l2 | l4
-vip_reload: true                              # whether reload service after config
-# vip_address: 127.0.0.1                      # virtual ip address ip (l2 or l4)
-# vip_cidrmask: 24                            # virtual ip address cidr mask (l2 only)
-# vip_interface: eth0                         # virtual ip network interface (l2 only)
-```
-
-**新增选项**
-
-```yml
-# - localization - #
-pg_encoding: UTF8                             # default to UTF8
-pg_locale: C                                  # default to C
-pg_lc_collate: C                              # default to C
-pg_lc_ctype: en_US.UTF8                       # default to en_US.UTF8
-
-pg_reload: true                               # reload postgres after hba changes
-vip_mode: none                                # none | l2 | l4
-vip_reload: true                              # whether reload service after config
-```
-
-**移除选项**
-
-```bash
-haproxy_check_port                            # Haproxy相关参数已经被Service定义覆盖
-haproxy_primary_port
-haproxy_replica_port
-haproxy_backend_port
-haproxy_weight
-haproxy_weight_fallback
-vip_enabled                                   # vip_enabled参数被vip_mode覆盖
-```
-
-**服务管理**
-
-`pg_services` 与 `pg_services_extra` 定义了集群中的 **服务**，每一个服务的定义结构如下例所示：
-
-一个服务必须指定以下内容：
-
-* **名称**：服务的完整名称以数据库集群名为前缀，以 `service.name` 为后缀，通过 `-` 连接。例如在 `pg-test` 集群中 `name=primary` 的服务，其完整服务名称为 `pg-test-primary`。
-
-* **端口**：在 Pigsty 中，服务默认采用 NodePort 的形式对外暴露，因此暴露端口为必选项。但如果使用外部负载均衡服务接入方案，您也可以通过其他的方式区分服务。
-
-* **选择器**：选择器指定了服务的成员，采用 JMESPath 的形式，从所有集群实例成员中筛选变量。默认的 `[]` 选择器会选取所有的集群成员。
-
-  此外 `selector_backup` 会选择或标记用于 backup 的实例列表（当集群中所有其他成员失效时方才接管服务）
-
-```yaml
-  # default service will route {ip|name}:5436 to primary postgres (5436->5432 primary)
-  - name: default           # service's actual name is {{ pg_cluster }}-{{ service.name }}
-    src_ip: "*"             # service bind ip address, * for all, vip for cluster virtual ip address
-    src_port: 5436          # bind port, mandatory
-    dst_port: postgres      # target port: postgres|pgbouncer|port_number , pgbouncer(6432) by default
-    check_method: http      # health check method: only http is available for now
-    check_port: patroni     # health check port:  patroni|pg_exporter|port_number , patroni by default
-    check_url: /primary     # health check url path, / as default
-    check_code: 200         # health check http code, 200 as default
-    selector: "[]"          # instance selector
-    haproxy:                # haproxy specific fields
-      maxconn: 3000         # default front-end connection
-      balance: roundrobin   # load balance algorithm (roundrobin by default)
-      default_server_options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
-```
-
-**数据库管理**
-
-数据库现在可以对 locale 的细分选项：`lc_ctype` 与 `lc_collate` 分别进行指定。支持这一功能的主要原因是 PG 的扩展插件 `pg_trgm` 需要在 `lc_ctype!=C` 的环境中才能正常支持中文。
-
-**旧接口定义**
-
-```yaml
-pg_databases:
-  - name: meta                      # name is the only required field for a database
-    owner: postgres                 # optional, database owner
-    template: template1             # optional, template1 by default
-    encoding: UTF8                  # optional, UTF8 by default
-    locale: C                       # optional, C by default
-    allowconn: true                 # optional, true by default, false disable connect at all
-    revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
-    tablespace: pg_default          # optional, 'pg_default' is the default tablespace
-    connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
-    extensions:                     # optional, extension name and where to create
-      - {name: postgis, schema: public}
-    parameters:                     # optional, extra parameters with ALTER DATABASE
-      enable_partitionwise_join: true
-    pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
-    comment: pigsty meta database   # optional, comment string for database
-```
-
-**新的接口定义**
-
-```yaml
-pg_databases:
-  - name: meta                      # name is the only required field for a database
-    # owner: postgres                 # optional, database owner
-    # template: template1             # optional, template1 by default
-    # encoding: UTF8                # optional, UTF8 by default , must same as template database, leave blank to set to db default
-    # locale: C                     # optional, C by default , must same as template database, leave blank to set to db default
-    # lc_collate: C                 # optional, C by default , must same as template database, leave blank to set to db default
-    # lc_ctype: C                   # optional, C by default , must same as template database, leave blank to set to db default
-    allowconn: true                 # optional, true by default, false disable connect at all
-    revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
-    # tablespace: pg_default          # optional, 'pg_default' is the default tablespace
-    connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
-    extensions:                     # optional, extension name and where to create
-      - {name: postgis, schema: public}
-    parameters:                     # optional, extra parameters with ALTER DATABASE
-      enable_partitionwise_join: true
-    pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
-    comment: pigsty meta database   # optional, comment string for database
-```
-
-</details>
+> [!DETAILS]-
+> **改动内容**
+>
+> v0.8 是供给方案定稿版本，此后供给系统的 API 将保持稳定。
+>
+> **API 变更**
+>
+> 原有 `vip` 与 `haproxy` 角色的所有配置项，现在迁移至 `service` 角色中。
+>
+> ```yaml
+> #------------------------------------------------------------------------------
+> # SERVICE PROVISION
+> #------------------------------------------------------------------------------
+> pg_weight: 100              # default load balance weight (instance level)
+>
+> # - service - #
+> pg_services:                                  # how to expose postgres service in cluster?
+>   # primary service will route {ip|name}:5433 to primary pgbouncer (5433->6432 rw)
+>   - name: primary           # service name {{ pg_cluster }}_primary
+>     src_ip: "*"
+>     src_port: 5433
+>     dst_port: pgbouncer     # 5433 route to pgbouncer
+>     check_url: /primary     # primary health check, success when instance is primary
+>     selector: "[]"          # select all instance as primary service candidate
+>
+>   # replica service will route {ip|name}:5434 to replica pgbouncer (5434->6432 ro)
+>   - name: replica           # service name {{ pg_cluster }}_replica
+>     src_ip: "*"
+>     src_port: 5434
+>     dst_port: pgbouncer
+>     check_url: /read-only   # read-only health check. (including primary)
+>     selector: "[]"          # select all instance as replica service candidate
+>     selector_backup: "[? pg_role == `primary`]"   # primary are used as backup server in replica service
+>
+>   # default service will route {ip|name}:5436 to primary postgres (5436->5432 primary)
+>   - name: default           # service's actual name is {{ pg_cluster }}-{{ service.name }}
+>     src_ip: "*"             # service bind ip address, * for all, vip for cluster virtual ip address
+>     src_port: 5436          # bind port, mandatory
+>     dst_port: postgres      # target port: postgres|pgbouncer|port_number , pgbouncer(6432) by default
+>     check_method: http      # health check method: only http is available for now
+>     check_port: patroni     # health check port:  patroni|pg_exporter|port_number , patroni by default
+>     check_url: /primary     # health check url path, / as default
+>     check_code: 200         # health check http code, 200 as default
+>     selector: "[]"          # instance selector
+>     haproxy:                # haproxy specific fields
+>       maxconn: 3000         # default front-end connection
+>       balance: roundrobin   # load balance algorithm (roundrobin by default)
+>       default_server_options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
+>
+>   # offline service will route {ip|name}:5438 to offline postgres (5438->5432 offline)
+>   - name: offline           # service name {{ pg_cluster }}_replica
+>     src_ip: "*"
+>     src_port: 5438
+>     dst_port: postgres
+>     check_url: /replica     # offline MUST be a replica
+>     selector: "[? pg_role == `offline` || pg_offline_query ]"         # instances with pg_role == 'offline' or instance marked with 'pg_offline_query == true'
+>     selector_backup: "[? pg_role == `replica` && !pg_offline_query]"  # replica are used as backup server in offline service
+>
+> pg_services_extra: []        # extra services to be added
+>
+> # - haproxy - #
+> haproxy_enabled: true                         # enable haproxy among every cluster members
+> haproxy_reload: true                          # reload haproxy after config
+> haproxy_policy: roundrobin                    # roundrobin, leastconn
+> haproxy_admin_auth_enabled: false             # enable authentication for haproxy admin?
+> haproxy_admin_username: admin                 # default haproxy admin username
+> haproxy_admin_password: admin                 # default haproxy admin password
+> haproxy_exporter_port: 9101                   # default admin/exporter port
+> haproxy_client_timeout: 3h                    # client side connection timeout
+> haproxy_server_timeout: 3h                    # server side connection timeout
+>
+> # - vip - #
+> vip_mode: none                                # none | l2 | l4
+> vip_reload: true                              # whether reload service after config
+> # vip_address: 127.0.0.1                      # virtual ip address ip (l2 or l4)
+> # vip_cidrmask: 24                            # virtual ip address cidr mask (l2 only)
+> # vip_interface: eth0                         # virtual ip network interface (l2 only)
+> ```
+>
+> **新增选项**
+>
+> ```yml
+> # - localization - #
+> pg_encoding: UTF8                             # default to UTF8
+> pg_locale: C                                  # default to C
+> pg_lc_collate: C                              # default to C
+> pg_lc_ctype: en_US.UTF8                       # default to en_US.UTF8
+>
+> pg_reload: true                               # reload postgres after hba changes
+> vip_mode: none                                # none | l2 | l4
+> vip_reload: true                              # whether reload service after config
+> ```
+>
+> **移除选项**
+>
+> ```bash
+> haproxy_check_port                            # Haproxy相关参数已经被Service定义覆盖
+> haproxy_primary_port
+> haproxy_replica_port
+> haproxy_backend_port
+> haproxy_weight
+> haproxy_weight_fallback
+> vip_enabled                                   # vip_enabled参数被vip_mode覆盖
+> ```
+>
+> **服务管理**
+>
+> `pg_services` 与 `pg_services_extra` 定义了集群中的 **服务**，每一个服务的定义结构如下例所示：
+>
+> 一个服务必须指定以下内容：
+>
+> * **名称**：服务的完整名称以数据库集群名为前缀，以 `service.name` 为后缀，通过 `-` 连接。例如在 `pg-test` 集群中 `name=primary` 的服务，其完整服务名称为 `pg-test-primary`。
+>
+> * **端口**：在 Pigsty 中，服务默认采用 NodePort 的形式对外暴露，因此暴露端口为必选项。但如果使用外部负载均衡服务接入方案，您也可以通过其他的方式区分服务。
+>
+> * **选择器**：选择器指定了服务的成员，采用 JMESPath 的形式，从所有集群实例成员中筛选变量。默认的 `[]` 选择器会选取所有的集群成员。
+>
+>   此外 `selector_backup` 会选择或标记用于 backup 的实例列表（当集群中所有其他成员失效时方才接管服务）
+>
+> ```yaml
+>   # default service will route {ip|name}:5436 to primary postgres (5436->5432 primary)
+>   - name: default           # service's actual name is {{ pg_cluster }}-{{ service.name }}
+>     src_ip: "*"             # service bind ip address, * for all, vip for cluster virtual ip address
+>     src_port: 5436          # bind port, mandatory
+>     dst_port: postgres      # target port: postgres|pgbouncer|port_number , pgbouncer(6432) by default
+>     check_method: http      # health check method: only http is available for now
+>     check_port: patroni     # health check port:  patroni|pg_exporter|port_number , patroni by default
+>     check_url: /primary     # health check url path, / as default
+>     check_code: 200         # health check http code, 200 as default
+>     selector: "[]"          # instance selector
+>     haproxy:                # haproxy specific fields
+>       maxconn: 3000         # default front-end connection
+>       balance: roundrobin   # load balance algorithm (roundrobin by default)
+>       default_server_options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
+> ```
+>
+> **数据库管理**
+>
+> 数据库现在可以对 locale 的细分选项：`lc_ctype` 与 `lc_collate` 分别进行指定。支持这一功能的主要原因是 PG 的扩展插件 `pg_trgm` 需要在 `lc_ctype!=C` 的环境中才能正常支持中文。
+>
+> **旧接口定义**
+>
+> ```yaml
+> pg_databases:
+>   - name: meta                      # name is the only required field for a database
+>     owner: postgres                 # optional, database owner
+>     template: template1             # optional, template1 by default
+>     encoding: UTF8                  # optional, UTF8 by default
+>     locale: C                       # optional, C by default
+>     allowconn: true                 # optional, true by default, false disable connect at all
+>     revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
+>     tablespace: pg_default          # optional, 'pg_default' is the default tablespace
+>     connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
+>     extensions:                     # optional, extension name and where to create
+>       - {name: postgis, schema: public}
+>     parameters:                     # optional, extra parameters with ALTER DATABASE
+>       enable_partitionwise_join: true
+>     pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
+>     comment: pigsty meta database   # optional, comment string for database
+> ```
+>
+> **新的接口定义**
+>
+> ```yaml
+> pg_databases:
+>   - name: meta                      # name is the only required field for a database
+>     # owner: postgres                 # optional, database owner
+>     # template: template1             # optional, template1 by default
+>     # encoding: UTF8                # optional, UTF8 by default , must same as template database, leave blank to set to db default
+>     # locale: C                     # optional, C by default , must same as template database, leave blank to set to db default
+>     # lc_collate: C                 # optional, C by default , must same as template database, leave blank to set to db default
+>     # lc_ctype: C                   # optional, C by default , must same as template database, leave blank to set to db default
+>     allowconn: true                 # optional, true by default, false disable connect at all
+>     revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
+>     # tablespace: pg_default          # optional, 'pg_default' is the default tablespace
+>     connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
+>     extensions:                     # optional, extension name and where to create
+>       - {name: postgis, schema: public}
+>     parameters:                     # optional, extra parameters with ALTER DATABASE
+>       enable_partitionwise_join: true
+>     pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
+>     comment: pigsty meta database   # optional, comment string for database
+> ```
 
 
 
@@ -4805,181 +4796,178 @@ pg_databases:
 
 v0.7 针对 **接入已有数据库实例** 进行了改进，现在用户可以采用 **仅监控部署（Monly Deployment）** 模式使用 Pigsty。同时新增了专用于管理数据库与用户、以及单独部署监控的剧本，并对数据库与用户的定义进行改进。
 
-<details><br>
-
-**Features**
-
-* [Monitor Only Deployment Support #25](https://github.com/pgsty/pigsty/issues/25)
-* [Split monolith static monitor target file into per-cluster conf #36](https://github.com/pgsty/pigsty/issues/36)
-* [Add create user playbook #29](https://github.com/pgsty/pigsty/issues/29)
-* [Add create database playbook #28](https://github.com/pgsty/pigsty/issues/28)
-* [Database provisioning interface enhancement #33](https://github.com/pgsty/pigsty/issues/33)
-* [User provisioning interface enhancement #34](https://github.com/pgsty/pigsty/issues/34)
-
-**Bug Fix**
-
-* [Create extension with schema typo #32](https://github.com/pgsty/pigsty/issues/32)
-* [pgbouncer reload with systemctl not work #35](https://github.com/pgsty/pigsty/issues/35)
-
-**API 变更**
-
-**新增选项**
-
-```yml
-prometheus_sd_target: batch                   # batch|single    监控目标定义文件采用单体还是每个实例一个
-exporter_install: none                        # none|yum|binary 监控Exporter的安装模式
-exporter_repo_url: ''                         # 如果设置，这里的REPO连接会加入目标的Yum源中
-node_exporter_options: '--no-collector.softnet --collector.systemd --collector.ntp --collector.tcpstat --collector.processes'                          # Node Exporter默认的命令行选项
-pg_exporter_url: ''                           # 可选，PG Exporter监控对象的URL
-pgbouncer_exporter_url: ''                    # 可选，PGBOUNCER EXPORTER监控对象的URL
-```
-
-**移除选项**
-
-```yml
-exporter_binary_install: false                 # 功能被 exporter_install 覆盖
-```
-
-**定义结构变更**
-
-```text
-pg_default_roles                               # 变化细节参考 用户管理。
-pg_users                                       # 变化细节参考 用户管理。
-pg_databases                                   # 变化细节参考 数据库管理。
-```
-
-**重命名选项**
-
-```text
-pg_default_privilegs -> pg_default_privileges # 很明显这是一个错别字
-```
-
-**仅监控模式**
-
-有时用户不希望使用 Pigsty 供给方案，只希望使用 Pigsty 监控系统管理现有 PostgreSQL 实例。
-
-Pigsty 提供了仅监控部署（monly, monitor-only 模式，剥离供给方案部分，可用于监控现有 PostgreSQL 集群。
-
-仅监控模式的部署流程与标准模式大体上保持一致，但省略了很多步骤
-
-- 在 **元节点** 上完成基础设施初始化的部分与标准流程保持一致，仍然通过 `./infra.yml` 完成。
-- 不需要在 **数据库节点** 上完成 **基础设施初始化**。
-- 不需要在 **数据库节点** 上执行数据库初始化的绝大多数任务，而是通过专用的 `./pgsql-monitor.yml` 完成仅监控系统部署。
-- 实际使用的配置项大大减少，只保留基础设施相关变量，与 监控系统相关的少量变量。
-
-
-**数据库管理**
-
-[Database provisioning interface enhancement #33](https://github.com/pgsty/pigsty/issues/33)
-
-**旧接口定义**
-
-```yaml
-pg_databases:                       # create a business database 'meta'
-  - name: meta
-    schemas: [meta]                 # create extra schema named 'meta'
-    extensions: [{name: postgis}]   # create extra extension postgis
-    parameters:                     # overwrite database meta's default search_path
-      search_path: public, monitor
-```
-
-**新的接口定义**
-
-```yaml
-pg_databases:
-  - name: meta                      # name is the only required field for a database
-    owner: postgres                 # optional, database owner
-    template: template1             # optional, template1 by default
-    encoding: UTF8                  # optional, UTF8 by default
-    locale: C                       # optional, C by default
-    allowconn: true                 # optional, true by default, false disable connect at all
-    revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
-    tablespace: pg_default          # optional, 'pg_default' is the default tablespace
-    connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
-    extensions:                     # optional, extension name and where to create
-      - {name: postgis, schema: public}
-    parameters:                     # optional, extra parameters with ALTER DATABASE
-      enable_partitionwise_join: true
-    pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
-    comment: pigsty meta database   # optional, comment string for database
-```
-
-**接口变更**
-
-* Add new options: `template` , `encoding`, `locale`, `allowconn`, `tablespace`, `connlimit`
-* Add new option `revokeconn`, which revoke connect privileges from public for this database
-* Add `comment` field for database
-
-**数据库变更**
-
-在运行中集群中创建新数据库可以使用 `pgsql-createdb.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
-
-```bash
-./pgsql-createdb.yml -e pg_database=<your_new_database_name>
-```
-
-通过 `-e pg_datbase=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-db-{{ database.name}}.sql` 文件。
-
-**用户管理**
-
-[User provisioning interface enhancement #34](https://github.com/pgsty/pigsty/issues/34)
-
-**旧接口定义**
-
-```yaml
-pg_users:
-  - username: test                  # example production user have read-write access
-    password: test                  # example user's password
-    options: LOGIN                  # extra options
-    groups: [ dbrole_readwrite ]    # dborole_admin|dbrole_readwrite|dbrole_readonly
-    comment: default test user for production usage
-    pgbouncer: true                 # add to pgbouncer
-```
-
-**新接口定义**
-
-```yaml
-pg_users:
-  # complete example of user/role definition for production user
-  - name: dbuser_meta               # example production user have read-write access
-    password: DBUser.Meta           # example user's password, can be encrypted
-    login: true                     # can login, true by default (should be false for role)
-    superuser: false                # is superuser? false by default
-    createdb: false                 # can create database? false by default
-    createrole: false               # can create role? false by default
-    inherit: true                   # can this role use inherited privileges?
-    replication: false              # can this role do replication? false by default
-    bypassrls: false                # can this role bypass row level security? false by default
-    connlimit: -1                   # connection limit, -1 disable limit
-    expire_at: '2030-12-31'         # 'timestamp' when this role is expired
-    expire_in: 365                  # now + n days when this role is expired (OVERWRITE expire_at)
-    roles: [dbrole_readwrite]       # dborole_admin|dbrole_readwrite|dbrole_readonly
-    pgbouncer: true                 # add this user to pgbouncer? false by default (true for production user)
-    parameters:                     # user's default search path
-      search_path: public
-    comment: test user
-```
-
-**接口变更**
-
-* `username` field rename to `name`
-* `groups` field rename to `roles`
-* `options` now split into separated configration entries:
-  `login`, `superuser`, `createdb`, `createrole`, `inherit`, `replication`,`bypassrls`,`connlimit`
-* `expire_at` and `expire_in` options
-* `pgbouncer` option for user is now `false` by default
-
-**用户管理**
-
-在运行中集群中创建新数据库可以使用 `pgsql-createuser.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
-
-```bash
-./pgsql-createuser.yml -e pg_user=<your_new_user_name>
-```
-
-通过 `-e pg_user=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-user-{{ user.name}}.sql` 文件。
-
-</details>
+> [!DETAILS]-
+> **Features**
+>
+> * [Monitor Only Deployment Support #25](https://github.com/pgsty/pigsty/issues/25)
+> * [Split monolith static monitor target file into per-cluster conf #36](https://github.com/pgsty/pigsty/issues/36)
+> * [Add create user playbook #29](https://github.com/pgsty/pigsty/issues/29)
+> * [Add create database playbook #28](https://github.com/pgsty/pigsty/issues/28)
+> * [Database provisioning interface enhancement #33](https://github.com/pgsty/pigsty/issues/33)
+> * [User provisioning interface enhancement #34](https://github.com/pgsty/pigsty/issues/34)
+>
+> **Bug Fix**
+>
+> * [Create extension with schema typo #32](https://github.com/pgsty/pigsty/issues/32)
+> * [pgbouncer reload with systemctl not work #35](https://github.com/pgsty/pigsty/issues/35)
+>
+> **API 变更**
+>
+> **新增选项**
+>
+> ```yml
+> prometheus_sd_target: batch                   # batch|single    监控目标定义文件采用单体还是每个实例一个
+> exporter_install: none                        # none|yum|binary 监控Exporter的安装模式
+> exporter_repo_url: ''                         # 如果设置，这里的REPO连接会加入目标的Yum源中
+> node_exporter_options: '--no-collector.softnet --collector.systemd --collector.ntp --collector.tcpstat --collector.processes'                          # Node Exporter默认的命令行选项
+> pg_exporter_url: ''                           # 可选，PG Exporter监控对象的URL
+> pgbouncer_exporter_url: ''                    # 可选，PGBOUNCER EXPORTER监控对象的URL
+> ```
+>
+> **移除选项**
+>
+> ```yml
+> exporter_binary_install: false                 # 功能被 exporter_install 覆盖
+> ```
+>
+> **定义结构变更**
+>
+> ```text
+> pg_default_roles                               # 变化细节参考 用户管理。
+> pg_users                                       # 变化细节参考 用户管理。
+> pg_databases                                   # 变化细节参考 数据库管理。
+> ```
+>
+> **重命名选项**
+>
+> ```text
+> pg_default_privilegs -> pg_default_privileges # 很明显这是一个错别字
+> ```
+>
+> **仅监控模式**
+>
+> 有时用户不希望使用 Pigsty 供给方案，只希望使用 Pigsty 监控系统管理现有 PostgreSQL 实例。
+>
+> Pigsty 提供了仅监控部署（monly, monitor-only 模式，剥离供给方案部分，可用于监控现有 PostgreSQL 集群。
+>
+> 仅监控模式的部署流程与标准模式大体上保持一致，但省略了很多步骤
+>
+> - 在 **元节点** 上完成基础设施初始化的部分与标准流程保持一致，仍然通过 `./infra.yml` 完成。
+> - 不需要在 **数据库节点** 上完成 **基础设施初始化**。
+> - 不需要在 **数据库节点** 上执行数据库初始化的绝大多数任务，而是通过专用的 `./pgsql-monitor.yml` 完成仅监控系统部署。
+> - 实际使用的配置项大大减少，只保留基础设施相关变量，与 监控系统相关的少量变量。
+>
+>
+> **数据库管理**
+>
+> [Database provisioning interface enhancement #33](https://github.com/pgsty/pigsty/issues/33)
+>
+> **旧接口定义**
+>
+> ```yaml
+> pg_databases:                       # create a business database 'meta'
+>   - name: meta
+>     schemas: [meta]                 # create extra schema named 'meta'
+>     extensions: [{name: postgis}]   # create extra extension postgis
+>     parameters:                     # overwrite database meta's default search_path
+>       search_path: public, monitor
+> ```
+>
+> **新的接口定义**
+>
+> ```yaml
+> pg_databases:
+>   - name: meta                      # name is the only required field for a database
+>     owner: postgres                 # optional, database owner
+>     template: template1             # optional, template1 by default
+>     encoding: UTF8                  # optional, UTF8 by default
+>     locale: C                       # optional, C by default
+>     allowconn: true                 # optional, true by default, false disable connect at all
+>     revokeconn: false               # optional, false by default, true revoke connect from public # (only default user and owner have connect privilege on database)
+>     tablespace: pg_default          # optional, 'pg_default' is the default tablespace
+>     connlimit: -1                   # optional, connection limit, -1 or none disable limit (default)
+>     extensions:                     # optional, extension name and where to create
+>       - {name: postgis, schema: public}
+>     parameters:                     # optional, extra parameters with ALTER DATABASE
+>       enable_partitionwise_join: true
+>     pgbouncer: true                 # optional, add this database to pgbouncer list? true by default
+>     comment: pigsty meta database   # optional, comment string for database
+> ```
+>
+> **接口变更**
+>
+> * Add new options: `template` , `encoding`, `locale`, `allowconn`, `tablespace`, `connlimit`
+> * Add new option `revokeconn`, which revoke connect privileges from public for this database
+> * Add `comment` field for database
+>
+> **数据库变更**
+>
+> 在运行中集群中创建新数据库可以使用 `pgsql-createdb.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
+>
+> ```bash
+> ./pgsql-createdb.yml -e pg_database=<your_new_database_name>
+> ```
+>
+> 通过 `-e pg_datbase=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-db-{{ database.name}}.sql` 文件。
+>
+> **用户管理**
+>
+> [User provisioning interface enhancement #34](https://github.com/pgsty/pigsty/issues/34)
+>
+> **旧接口定义**
+>
+> ```yaml
+> pg_users:
+>   - username: test                  # example production user have read-write access
+>     password: test                  # example user's password
+>     options: LOGIN                  # extra options
+>     groups: [ dbrole_readwrite ]    # dborole_admin|dbrole_readwrite|dbrole_readonly
+>     comment: default test user for production usage
+>     pgbouncer: true                 # add to pgbouncer
+> ```
+>
+> **新接口定义**
+>
+> ```yaml
+> pg_users:
+>   # complete example of user/role definition for production user
+>   - name: dbuser_meta               # example production user have read-write access
+>     password: DBUser.Meta           # example user's password, can be encrypted
+>     login: true                     # can login, true by default (should be false for role)
+>     superuser: false                # is superuser? false by default
+>     createdb: false                 # can create database? false by default
+>     createrole: false               # can create role? false by default
+>     inherit: true                   # can this role use inherited privileges?
+>     replication: false              # can this role do replication? false by default
+>     bypassrls: false                # can this role bypass row level security? false by default
+>     connlimit: -1                   # connection limit, -1 disable limit
+>     expire_at: '2030-12-31'         # 'timestamp' when this role is expired
+>     expire_in: 365                  # now + n days when this role is expired (OVERWRITE expire_at)
+>     roles: [dbrole_readwrite]       # dborole_admin|dbrole_readwrite|dbrole_readonly
+>     pgbouncer: true                 # add this user to pgbouncer? false by default (true for production user)
+>     parameters:                     # user's default search path
+>       search_path: public
+>     comment: test user
+> ```
+>
+> **接口变更**
+>
+> * `username` field rename to `name`
+> * `groups` field rename to `roles`
+> * `options` now split into separated configration entries:
+>   `login`, `superuser`, `createdb`, `createrole`, `inherit`, `replication`,`bypassrls`,`connlimit`
+> * `expire_at` and `expire_in` options
+> * `pgbouncer` option for user is now `false` by default
+>
+> **用户管理**
+>
+> 在运行中集群中创建新数据库可以使用 `pgsql-createuser.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
+>
+> ```bash
+> ./pgsql-createuser.yml -e pg_user=<your_new_user_name>
+> ```
+>
+> 通过 `-e pg_user=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-user-{{ user.name}}.sql` 文件。
 
 
 
@@ -4991,67 +4979,64 @@ pg_users:
 
 v0.6 对数据库供给方案进行了修改与调整，根据用户的反馈添加了一系列实用功能与修正。针对监控系统的移植性进行优化，便于与其他外部数据库供给方案对接。
 
-<details><br>
-
-**BUG 修复**
-
-* 修复了新版本 Patroni 重启后会重置 PG HBA 的问题
-* 修复了 PG Overview Dashboard 标题中的别字
-* 修复了沙箱集群 `pg-test` 的默认主库，原来为 `pg-test-2`，应当为 `pg-test-1`
-* 修复了过时代码注释
-
-**功能改进**
-
-* 改造 Prometheus 与监控供给方式
-    * 允许在无基础设施的情况下对已有 PG 集群进行监控部署，便于监控系统与其他供给方案集成。[#11](https://github.com/pgsty/pigsty/issues/11)
-    * 基于 Inventory 渲染所有监控对象的静态列表，用于静态服务发现。[#11](https://github.com/pgsty/pigsty/issues/11)
-    * Prometheus 添加了静态对象模式，用于替代动态服务发现，集中进行身份管理 [#11](https://github.com/pgsty/pigsty/issues/11)
-    * 监控 Exporter 现在添加了 `service_registry` 选项，Consul 服务注册变为可选项 [#13](https://github.com/pgsty/pigsty/issues/13)
-    * Exporter 现在可以通过拷贝二进制的方式直接安装：`exporter_binary_install`，[#14](https://github.com/pgsty/pigsty/issues)
-    * Exporter 现在具有 `xxx_enabled` 选项，控制是否启用该组件。
-* Haproxy 供给重构与改进  [#8](https://github.com/pgsty/pigsty/issues/8)
-    * 新增了全局 HAProxy 管理界面导航，默认域名 `h.pigsty`
-    * 允许将主库加入只读服务集中，当集群中所有从库宕机时自动承接读流量。 [#8](https://github.com/pgsty/pigsty/issues/8)
-    * 允许位 Haproxy 实例管理界面启用认证 `haproxy_admin_auth_enabled`
-    * 允许通过配置项调整每个服务对应后端的流量权重. [#10](https://github.com/pgsty/pigsty/issues/10)
-* 访问控制模型改进。[#7](https://github.com/pgsty/pigsty/issues/7)
-    * 添加了默认角色 `dbrole_offline`，用于慢查询，ETL，交互式查询场景。
-    * 修改默认 HBA 规则，允许 `dbrole_offline` 分组的用户访问 `pg_role == 'offline'` 及 `pg_offline_query == true` 的实例。
-* 软件更新 Release v0.6
-    * PostgreSQL 13.2
-    * Prometheus 2.25
-    * PG Exporter 0.3.2
-    * Node Exporter 1.1
-    * Consul 1.9.3
-    * 更新默认 PG 源：PostgreSQL 现在默认使用浙江大学的镜像，加速下载安装
-
-**接口变更**
-
-**新增选项**
-
-```yaml
-service_registry: consul                      # 服务注册机制：none | consul | etcd | both
-prometheus_options: '--storage.tsdb.retention=30d'  # prometheus命令行选项
-prometheus_sd_method: consul                  # Prometheus使用的服务发现机制：static|consul
-prometheus_sd_interval: 2s                    # Prometheus服务发现刷新间隔
-pg_offline_query: false                       # 设置后将允许dbrole_offline角色连接与查询该实例
-node_exporter_enabled: true                   # 设置后将安装配置Node Exporter
-pg_exporter_enabled: true                     # 设置后将安装配置PG Exporter
-pgbouncer_exporter_enabled: true              # 设置后将安装配置Pgbouncer Exporter
-dcs_disable_purge: false                      # 双保险，强制 dcs_exists_action = abort 避免误删除DCS实例
-pg_disable_purge: false                       # 双保险，强制 pg_exists_action = abort 避免误删除数据库实例
-haproxy_weight: 100                           # 配置实例的相对负载均衡权重
-haproxy_weight_fallback: 1                    # 配置集群主库在只读服务中的相对权重
-```
-
-**移除选项**
-
-```text
-prometheus_metrics_path                       # 与 exporter_metrics_path 重复
-prometheus_retention                          # 功能被 prometheus_options 覆盖
-```
-
-</details>
+> [!DETAILS]-
+> **BUG 修复**
+>
+> * 修复了新版本 Patroni 重启后会重置 PG HBA 的问题
+> * 修复了 PG Overview Dashboard 标题中的别字
+> * 修复了沙箱集群 `pg-test` 的默认主库，原来为 `pg-test-2`，应当为 `pg-test-1`
+> * 修复了过时代码注释
+>
+> **功能改进**
+>
+> * 改造 Prometheus 与监控供给方式
+>     * 允许在无基础设施的情况下对已有 PG 集群进行监控部署，便于监控系统与其他供给方案集成。[#11](https://github.com/pgsty/pigsty/issues/11)
+>     * 基于 Inventory 渲染所有监控对象的静态列表，用于静态服务发现。[#11](https://github.com/pgsty/pigsty/issues/11)
+>     * Prometheus 添加了静态对象模式，用于替代动态服务发现，集中进行身份管理 [#11](https://github.com/pgsty/pigsty/issues/11)
+>     * 监控 Exporter 现在添加了 `service_registry` 选项，Consul 服务注册变为可选项 [#13](https://github.com/pgsty/pigsty/issues/13)
+>     * Exporter 现在可以通过拷贝二进制的方式直接安装：`exporter_binary_install`，[#14](https://github.com/pgsty/pigsty/issues)
+>     * Exporter 现在具有 `xxx_enabled` 选项，控制是否启用该组件。
+> * Haproxy 供给重构与改进  [#8](https://github.com/pgsty/pigsty/issues/8)
+>     * 新增了全局 HAProxy 管理界面导航，默认域名 `h.pigsty`
+>     * 允许将主库加入只读服务集中，当集群中所有从库宕机时自动承接读流量。 [#8](https://github.com/pgsty/pigsty/issues/8)
+>     * 允许位 Haproxy 实例管理界面启用认证 `haproxy_admin_auth_enabled`
+>     * 允许通过配置项调整每个服务对应后端的流量权重. [#10](https://github.com/pgsty/pigsty/issues/10)
+> * 访问控制模型改进。[#7](https://github.com/pgsty/pigsty/issues/7)
+>     * 添加了默认角色 `dbrole_offline`，用于慢查询，ETL，交互式查询场景。
+>     * 修改默认 HBA 规则，允许 `dbrole_offline` 分组的用户访问 `pg_role == 'offline'` 及 `pg_offline_query == true` 的实例。
+> * 软件更新 Release v0.6
+>     * PostgreSQL 13.2
+>     * Prometheus 2.25
+>     * PG Exporter 0.3.2
+>     * Node Exporter 1.1
+>     * Consul 1.9.3
+>     * 更新默认 PG 源：PostgreSQL 现在默认使用浙江大学的镜像，加速下载安装
+>
+> **接口变更**
+>
+> **新增选项**
+>
+> ```yaml
+> service_registry: consul                      # 服务注册机制：none | consul | etcd | both
+> prometheus_options: '--storage.tsdb.retention=30d'  # prometheus命令行选项
+> prometheus_sd_method: consul                  # Prometheus使用的服务发现机制：static|consul
+> prometheus_sd_interval: 2s                    # Prometheus服务发现刷新间隔
+> pg_offline_query: false                       # 设置后将允许dbrole_offline角色连接与查询该实例
+> node_exporter_enabled: true                   # 设置后将安装配置Node Exporter
+> pg_exporter_enabled: true                     # 设置后将安装配置PG Exporter
+> pgbouncer_exporter_enabled: true              # 设置后将安装配置Pgbouncer Exporter
+> dcs_disable_purge: false                      # 双保险，强制 dcs_exists_action = abort 避免误删除DCS实例
+> pg_disable_purge: false                       # 双保险，强制 pg_exists_action = abort 避免误删除数据库实例
+> haproxy_weight: 100                           # 配置实例的相对负载均衡权重
+> haproxy_weight_fallback: 1                    # 配置集群主库在只读服务中的相对权重
+> ```
+>
+> **移除选项**
+>
+> ```text
+> prometheus_metrics_path                       # 与 exporter_metrics_path 重复
+> prometheus_retention                          # 功能被 prometheus_options 覆盖
+> ```
 
 
 
@@ -5063,222 +5048,219 @@ prometheus_retention                          # 功能被 prometheus_options 覆
 Pigsty 现在有了官方网站啦：[pigsty.cc](https://pigsty.cc/) 🎉 !
 
 
-<details><br>
-
-**亮点特性**
-
-* Pigsty 官方 [文档站](http://pigsty.cc/) 正式上线！
-* 添加了数据库模板的定制支持，用户可以通过配置文件定制所需的数据库内部对象。
-* 对默认 [访问控制](/docs/concept/sec/ac/) 模型进行了改进
-* 重构了 HBA 管理的逻辑，现在将由 Pigsty 替代 Patroni 直接负责生成 HBA
-* 将 Grafana 监控系统的供给方案从 sqlite 改为 JSON 文件静态 Provision
-* 将 `pg-cluster-replication` 面板加入 Pigsty 开源免费套餐。
-* 最新的经过测试的离线安装包：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.5.0/pkg.tgz) (v0.5)
-
-**定制数据库**
-
-
-您是否烦恼过单实例多租户的问题？比如总有研发拿着 PostgreSQL 当 MySQL 使，明明是一个 Schema 就能解决的问题，非要创建一个新的数据库出来，在一个实例中创建出几十个不同的 DB。
-不要忧伤，不要心急。Pigsty 已经提供数据库内部对象的 Provision 方案，您可以轻松地在配置文件中指定所需的数据库内对象，包括：
-
-* 角色
-    * 用户/角色名
-    * 密码
-    * 用户属性
-    * 用户备注
-    * 用户所属的权限组
-* 数据库
-    * 属主
-    * 额外的模式
-    * 额外的扩展插件
-    * 数据库级的自定义配置参数
-* 数据库
-    * 属主
-    * 额外的模式
-    * 额外的扩展插件
-    * 数据库级的自定义配置参数
-* 默认权限
-    * 默认情况下这里配置的权限会应用至所有由 超级用户 和 管理员用户创建的对象上。
-* 默认扩展
-    * 所有新创建的业务数据库都会安装有这些默认扩展
-* 默认模式
-    * 所有新创建的业务数据库都会创建有这些默认的模式
-
-配置样例
-
-```yaml
-# 通常是每个DB集群配置的变量
-pg_users:
-  - username: test
-    password: test
-    comment: default test user
-    groups: [ dbrole_readwrite ]    # dborole_admin|dbrole_readwrite|dbrole_readonly
-pg_databases:                       # create a business database 'test'
-  - name: test
-    extensions: [{name: postgis}]   # create extra extension postgis
-    parameters:                     # overwrite database meta's default search_path
-      search_path: public,monitor
-
-# 通常是整个环境统一配置的全局变量
-# - system roles - #
-pg_replication_username: replicator           # system replication user
-pg_replication_password: DBUser.Replicator    # system replication password
-pg_monitor_username: dbuser_monitor           # system monitor user
-pg_monitor_password: DBUser.Monitor           # system monitor password
-pg_admin_username: dbuser_admin               # system admin user
-pg_admin_password: DBUser.Admin               # system admin password
-
-# - default roles - #
-pg_default_roles:
-  - username: dbrole_readonly                 # sample user:
-    options: NOLOGIN                          # role can not login
-    comment: role for readonly access         # comment string
-
-  - username: dbrole_readwrite                # sample user: one object for each user
-    options: NOLOGIN
-    comment: role for read-write access
-    groups: [ dbrole_readonly ]               # read-write includes read-only access
-
-  - username: dbrole_admin                    # sample user: one object for each user
-    options: NOLOGIN BYPASSRLS                # admin can bypass row level security
-    comment: role for object creation
-    groups: [dbrole_readwrite,pg_monitor,pg_signal_backend]
-
-  # NOTE: replicator, monitor, admin password are overwritten by separated config entry
-  - username: postgres                        # reset dbsu password to NULL (if dbsu is not postgres)
-    options: SUPERUSER LOGIN
-    comment: system superuser
-
-  - username: replicator
-    options: REPLICATION LOGIN
-    groups: [pg_monitor, dbrole_readonly]
-    comment: system replicator
-
-  - username: dbuser_monitor
-    options: LOGIN CONNECTION LIMIT 10
-    comment: system monitor user
-    groups: [pg_monitor, dbrole_readonly]
-
-  - username: dbuser_admin
-    options: LOGIN BYPASSRLS
-    comment: system admin user
-    groups: [dbrole_admin]
-
-  - username: dbuser_stats
-    password: DBUser.Stats
-    options: LOGIN
-    comment: business read-only user for statistics
-    groups: [dbrole_readonly]
-
-
-# object created by dbsu and admin will have their privileges properly set
-pg_default_privilegs:
-  - GRANT USAGE                         ON SCHEMAS   TO dbrole_readonly
-  - GRANT SELECT                        ON TABLES    TO dbrole_readonly
-  - GRANT SELECT                        ON SEQUENCES TO dbrole_readonly
-  - GRANT EXECUTE                       ON FUNCTIONS TO dbrole_readonly
-  - GRANT INSERT, UPDATE, DELETE        ON TABLES    TO dbrole_readwrite
-  - GRANT USAGE,  UPDATE                ON SEQUENCES TO dbrole_readwrite
-  - GRANT TRUNCATE, REFERENCES, TRIGGER ON TABLES    TO dbrole_admin
-  - GRANT CREATE                        ON SCHEMAS   TO dbrole_admin
-  - GRANT USAGE                         ON TYPES     TO dbrole_admin
-
-# schemas
-pg_default_schemas: [monitor]
-
-# extension
-pg_default_extensions:
-  - { name: 'pg_stat_statements',  schema: 'monitor' }
-  - { name: 'pgstattuple',         schema: 'monitor' }
-  - { name: 'pg_qualstats',        schema: 'monitor' }
-  - { name: 'pg_buffercache',      schema: 'monitor' }
-  - { name: 'pageinspect',         schema: 'monitor' }
-  - { name: 'pg_prewarm',          schema: 'monitor' }
-  - { name: 'pg_visibility',       schema: 'monitor' }
-  - { name: 'pg_freespacemap',     schema: 'monitor' }
-  - { name: 'pg_repack',           schema: 'monitor' }
-  - name: postgres_fdw
-  - name: file_fdw
-  - name: btree_gist
-  - name: btree_gin
-  - name: pg_trgm
-  - name: intagg
-  - name: intarray
-
-# postgres host-based authentication rules
-pg_hba_rules:
-  - title: allow meta node password access
-    role: common
-    rules:
-      - host    all     all                         10.10.10.10/32      md5
-
-  - title: allow intranet admin password access
-    role: common
-    rules:
-      - host    all     +dbrole_admin               10.0.0.0/8          md5
-      - host    all     +dbrole_admin               172.16.0.0/12       md5
-      - host    all     +dbrole_admin               192.168.0.0/16      md5
-
-  - title: allow intranet password access
-    role: common
-    rules:
-      - host    all             all                 10.0.0.0/8          md5
-      - host    all             all                 172.16.0.0/12       md5
-      - host    all             all                 192.168.0.0/16      md5
-
-  - title: allow local read-write access (local production user via pgbouncer)
-    role: common
-    rules:
-      - local   all     +dbrole_readwrite                               md5
-      - host    all     +dbrole_readwrite           127.0.0.1/32        md5
-
-  - title: allow read-only user (stats, personal) password directly access
-    role: replica
-    rules:
-      - local   all     +dbrole_readonly                               md5
-      - host    all     +dbrole_readonly           127.0.0.1/32        md5
-pg_hba_rules_extra: []
-
-# pgbouncer host-based authentication rules
-pgbouncer_hba_rules:
-  - title: local password access
-    role: common
-    rules:
-      - local  all          all                                     md5
-      - host   all          all                     127.0.0.1/32    md5
-
-  - title: intranet password access
-    role: common
-    rules:
-      - host   all          all                     10.0.0.0/8      md5
-      - host   all          all                     172.16.0.0/12   md5
-      - host   all          all                     192.168.0.0/16  md5
-pgbouncer_hba_rules_extra: []
-```
-
-**数据库模板**
-
-* [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-template.sql) 用于初始化 `template1` 数据的脚本模板
-* [pg-init-business.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-business.sql) 用于初始化其他业务数据库的脚本模板
-
-
-**权限模型**
-
-v0.5 改善了默认的权限模型，主要是针对单实例多租户的场景进行优化，并收紧权限控制。
-
-* 撤回了普通业务用户对非所属数据库的默认 `CONNECT` 权限
-* 撤回了非管理员用户对所属数据库的默认 `CREATE` 权限
-* 撤回了所有用户在 `public` 模式下的默认创建权限。
-
-
-**供给方式**
-
-原先 Pigsty 采用直接拷贝 Grafana 自带的 grafana.db 的方式完成监控系统的初始化。
-这种方式虽然简单粗暴管用，但不适合进行精细化的版本控制管理。在 v0.5 中，Pigsty 采用了 Grafana API 完成了监控系统面板供给的工作。
-您所需的就是在 `grafana_url` 中填入带有用户名密码的 Grafana URL。
-因此，监控系统可以背方便地添加至已有的 Grafana 中。
-
-</details>
+> [!DETAILS]-
+> **亮点特性**
+>
+> * Pigsty 官方 [文档站](http://pigsty.cc/) 正式上线！
+> * 添加了数据库模板的定制支持，用户可以通过配置文件定制所需的数据库内部对象。
+> * 对默认 [访问控制](/docs/concept/sec/ac/) 模型进行了改进
+> * 重构了 HBA 管理的逻辑，现在将由 Pigsty 替代 Patroni 直接负责生成 HBA
+> * 将 Grafana 监控系统的供给方案从 sqlite 改为 JSON 文件静态 Provision
+> * 将 `pg-cluster-replication` 面板加入 Pigsty 开源免费套餐。
+> * 最新的经过测试的离线安装包：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.5.0/pkg.tgz) (v0.5)
+>
+> **定制数据库**
+>
+>
+> 您是否烦恼过单实例多租户的问题？比如总有研发拿着 PostgreSQL 当 MySQL 使，明明是一个 Schema 就能解决的问题，非要创建一个新的数据库出来，在一个实例中创建出几十个不同的 DB。
+> 不要忧伤，不要心急。Pigsty 已经提供数据库内部对象的 Provision 方案，您可以轻松地在配置文件中指定所需的数据库内对象，包括：
+>
+> * 角色
+>     * 用户/角色名
+>     * 密码
+>     * 用户属性
+>     * 用户备注
+>     * 用户所属的权限组
+> * 数据库
+>     * 属主
+>     * 额外的模式
+>     * 额外的扩展插件
+>     * 数据库级的自定义配置参数
+> * 数据库
+>     * 属主
+>     * 额外的模式
+>     * 额外的扩展插件
+>     * 数据库级的自定义配置参数
+> * 默认权限
+>     * 默认情况下这里配置的权限会应用至所有由 超级用户 和 管理员用户创建的对象上。
+> * 默认扩展
+>     * 所有新创建的业务数据库都会安装有这些默认扩展
+> * 默认模式
+>     * 所有新创建的业务数据库都会创建有这些默认的模式
+>
+> 配置样例
+>
+> ```yaml
+> # 通常是每个DB集群配置的变量
+> pg_users:
+>   - username: test
+>     password: test
+>     comment: default test user
+>     groups: [ dbrole_readwrite ]    # dborole_admin|dbrole_readwrite|dbrole_readonly
+> pg_databases:                       # create a business database 'test'
+>   - name: test
+>     extensions: [{name: postgis}]   # create extra extension postgis
+>     parameters:                     # overwrite database meta's default search_path
+>       search_path: public,monitor
+>
+> # 通常是整个环境统一配置的全局变量
+> # - system roles - #
+> pg_replication_username: replicator           # system replication user
+> pg_replication_password: DBUser.Replicator    # system replication password
+> pg_monitor_username: dbuser_monitor           # system monitor user
+> pg_monitor_password: DBUser.Monitor           # system monitor password
+> pg_admin_username: dbuser_admin               # system admin user
+> pg_admin_password: DBUser.Admin               # system admin password
+>
+> # - default roles - #
+> pg_default_roles:
+>   - username: dbrole_readonly                 # sample user:
+>     options: NOLOGIN                          # role can not login
+>     comment: role for readonly access         # comment string
+>
+>   - username: dbrole_readwrite                # sample user: one object for each user
+>     options: NOLOGIN
+>     comment: role for read-write access
+>     groups: [ dbrole_readonly ]               # read-write includes read-only access
+>
+>   - username: dbrole_admin                    # sample user: one object for each user
+>     options: NOLOGIN BYPASSRLS                # admin can bypass row level security
+>     comment: role for object creation
+>     groups: [dbrole_readwrite,pg_monitor,pg_signal_backend]
+>
+>   # NOTE: replicator, monitor, admin password are overwritten by separated config entry
+>   - username: postgres                        # reset dbsu password to NULL (if dbsu is not postgres)
+>     options: SUPERUSER LOGIN
+>     comment: system superuser
+>
+>   - username: replicator
+>     options: REPLICATION LOGIN
+>     groups: [pg_monitor, dbrole_readonly]
+>     comment: system replicator
+>
+>   - username: dbuser_monitor
+>     options: LOGIN CONNECTION LIMIT 10
+>     comment: system monitor user
+>     groups: [pg_monitor, dbrole_readonly]
+>
+>   - username: dbuser_admin
+>     options: LOGIN BYPASSRLS
+>     comment: system admin user
+>     groups: [dbrole_admin]
+>
+>   - username: dbuser_stats
+>     password: DBUser.Stats
+>     options: LOGIN
+>     comment: business read-only user for statistics
+>     groups: [dbrole_readonly]
+>
+>
+> # object created by dbsu and admin will have their privileges properly set
+> pg_default_privilegs:
+>   - GRANT USAGE                         ON SCHEMAS   TO dbrole_readonly
+>   - GRANT SELECT                        ON TABLES    TO dbrole_readonly
+>   - GRANT SELECT                        ON SEQUENCES TO dbrole_readonly
+>   - GRANT EXECUTE                       ON FUNCTIONS TO dbrole_readonly
+>   - GRANT INSERT, UPDATE, DELETE        ON TABLES    TO dbrole_readwrite
+>   - GRANT USAGE,  UPDATE                ON SEQUENCES TO dbrole_readwrite
+>   - GRANT TRUNCATE, REFERENCES, TRIGGER ON TABLES    TO dbrole_admin
+>   - GRANT CREATE                        ON SCHEMAS   TO dbrole_admin
+>   - GRANT USAGE                         ON TYPES     TO dbrole_admin
+>
+> # schemas
+> pg_default_schemas: [monitor]
+>
+> # extension
+> pg_default_extensions:
+>   - { name: 'pg_stat_statements',  schema: 'monitor' }
+>   - { name: 'pgstattuple',         schema: 'monitor' }
+>   - { name: 'pg_qualstats',        schema: 'monitor' }
+>   - { name: 'pg_buffercache',      schema: 'monitor' }
+>   - { name: 'pageinspect',         schema: 'monitor' }
+>   - { name: 'pg_prewarm',          schema: 'monitor' }
+>   - { name: 'pg_visibility',       schema: 'monitor' }
+>   - { name: 'pg_freespacemap',     schema: 'monitor' }
+>   - { name: 'pg_repack',           schema: 'monitor' }
+>   - name: postgres_fdw
+>   - name: file_fdw
+>   - name: btree_gist
+>   - name: btree_gin
+>   - name: pg_trgm
+>   - name: intagg
+>   - name: intarray
+>
+> # postgres host-based authentication rules
+> pg_hba_rules:
+>   - title: allow meta node password access
+>     role: common
+>     rules:
+>       - host    all     all                         10.10.10.10/32      md5
+>
+>   - title: allow intranet admin password access
+>     role: common
+>     rules:
+>       - host    all     +dbrole_admin               10.0.0.0/8          md5
+>       - host    all     +dbrole_admin               172.16.0.0/12       md5
+>       - host    all     +dbrole_admin               192.168.0.0/16      md5
+>
+>   - title: allow intranet password access
+>     role: common
+>     rules:
+>       - host    all             all                 10.0.0.0/8          md5
+>       - host    all             all                 172.16.0.0/12       md5
+>       - host    all             all                 192.168.0.0/16      md5
+>
+>   - title: allow local read-write access (local production user via pgbouncer)
+>     role: common
+>     rules:
+>       - local   all     +dbrole_readwrite                               md5
+>       - host    all     +dbrole_readwrite           127.0.0.1/32        md5
+>
+>   - title: allow read-only user (stats, personal) password directly access
+>     role: replica
+>     rules:
+>       - local   all     +dbrole_readonly                               md5
+>       - host    all     +dbrole_readonly           127.0.0.1/32        md5
+> pg_hba_rules_extra: []
+>
+> # pgbouncer host-based authentication rules
+> pgbouncer_hba_rules:
+>   - title: local password access
+>     role: common
+>     rules:
+>       - local  all          all                                     md5
+>       - host   all          all                     127.0.0.1/32    md5
+>
+>   - title: intranet password access
+>     role: common
+>     rules:
+>       - host   all          all                     10.0.0.0/8      md5
+>       - host   all          all                     172.16.0.0/12   md5
+>       - host   all          all                     192.168.0.0/16  md5
+> pgbouncer_hba_rules_extra: []
+> ```
+>
+> **数据库模板**
+>
+> * [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-template.sql) 用于初始化 `template1` 数据的脚本模板
+> * [pg-init-business.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-business.sql) 用于初始化其他业务数据库的脚本模板
+>
+>
+> **权限模型**
+>
+> v0.5 改善了默认的权限模型，主要是针对单实例多租户的场景进行优化，并收紧权限控制。
+>
+> * 撤回了普通业务用户对非所属数据库的默认 `CONNECT` 权限
+> * 撤回了非管理员用户对所属数据库的默认 `CREATE` 权限
+> * 撤回了所有用户在 `public` 模式下的默认创建权限。
+>
+>
+> **供给方式**
+>
+> 原先 Pigsty 采用直接拷贝 Grafana 自带的 grafana.db 的方式完成监控系统的初始化。
+> 这种方式虽然简单粗暴管用，但不适合进行精细化的版本控制管理。在 v0.5 中，Pigsty 采用了 Grafana API 完成了监控系统面板供给的工作。
+> 您所需的就是在 `grafana_url` 中填入带有用户名密码的 Grafana URL。
+> 因此，监控系统可以背方便地添加至已有的 Grafana 中。
 
 
 
@@ -5288,52 +5270,49 @@ v0.5 改善了默认的权限模型，主要是针对单实例多租户的场景
 
 第二个公开测试版 v0.4 现已正式发行！
 
-<details><br>
-
-**监控系统**
-
-Pigsty v0.4 对监控系统进行了整体升级改造，精心挑选了10个面板作为标准的 Pigsty 开源内容。同时，针对 Grafana 7.3的不兼容升级进行了大量适配改造工作。使用升级的 `pg_exporter v0.3.1` 作为默认指标导出器，调整了监控报警规则的监控面板连接。
-
-
-**Pigsty 开源版**
-
-Pigsty 开源版选定了以下10个 Dashboard 作为开源内容。其他 Dashboard 作为可选的商业支持内容提供。
-
-* PG Overview
-* PG Cluster
-* PG Service
-* PG Instance
-* PG Database
-* PG Query
-* PG Table
-* PG Table Catalog
-* PG Table Detail
-* Node
-
-尽管进行了少量阉割，这10个监控面板所涵盖的内容仍然可以吊打所有同类软件。
-
-**软件升级**
-
-Pigsty v0.4 进行了大量软件适配工作，包括：
-
-* Upgrade to PostgreSQL 13.1, Patroni 2.0.1-4, add citus to repo.
-* Upgrade to [`pg_exporter 0.3.1`](https://github.com/Vonng/pg_exporter/releases/tag/v0.3.1)
-* Upgrade to Grafana 7.3, Ton's of compatibility work
-* Upgrade to prometheus 2.23, with new UI as default
-* Upgrade to consul 1.9
-
-**其他改进**
-
-* Update prometheus alert rules
-* Fix alertmanager info links
-* Fix bugs and typos.
-* add a simple backup script
-
-**离线安装包**
-
-* v0.4 的离线安装包（CentOS 7.8）已经可以从 Github 下载：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.4.0/pkg.tgz)
-
-</details>
+> [!DETAILS]-
+> **监控系统**
+>
+> Pigsty v0.4 对监控系统进行了整体升级改造，精心挑选了10个面板作为标准的 Pigsty 开源内容。同时，针对 Grafana 7.3的不兼容升级进行了大量适配改造工作。使用升级的 `pg_exporter v0.3.1` 作为默认指标导出器，调整了监控报警规则的监控面板连接。
+>
+>
+> **Pigsty 开源版**
+>
+> Pigsty 开源版选定了以下10个 Dashboard 作为开源内容。其他 Dashboard 作为可选的商业支持内容提供。
+>
+> * PG Overview
+> * PG Cluster
+> * PG Service
+> * PG Instance
+> * PG Database
+> * PG Query
+> * PG Table
+> * PG Table Catalog
+> * PG Table Detail
+> * Node
+>
+> 尽管进行了少量阉割，这10个监控面板所涵盖的内容仍然可以吊打所有同类软件。
+>
+> **软件升级**
+>
+> Pigsty v0.4 进行了大量软件适配工作，包括：
+>
+> * Upgrade to PostgreSQL 13.1, Patroni 2.0.1-4, add citus to repo.
+> * Upgrade to [`pg_exporter 0.3.1`](https://github.com/Vonng/pg_exporter/releases/tag/v0.3.1)
+> * Upgrade to Grafana 7.3, Ton's of compatibility work
+> * Upgrade to prometheus 2.23, with new UI as default
+> * Upgrade to consul 1.9
+>
+> **其他改进**
+>
+> * Update prometheus alert rules
+> * Fix alertmanager info links
+> * Fix bugs and typos.
+> * add a simple backup script
+>
+> **离线安装包**
+>
+> * v0.4 的离线安装包（CentOS 7.8）已经可以从 Github 下载：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.4.0/pkg.tgz)
 
 
 
@@ -5343,22 +5322,19 @@ Pigsty v0.4 进行了大量软件适配工作，包括：
 
 首个 Pigsty 公开测试版本现在已经释出！
 
-<details><br>
-
-**监控系统**
-
-Pigsty v0.3 包含以下8个监控面板作为开源内容：
-* PG Overview
-* PG Cluster
-* PG Service
-* PG Instance
-* PG Database
-* PG Table Overview
-* PG Table Catalog
-* Node
-
-**离线安装包**
-
-* v0.3 离线安装包（CentOS 7.8）已经可以从 Github 下载：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.3.0/pkg.tgz)
-
-</details>
+> [!DETAILS]-
+> **监控系统**
+>
+> Pigsty v0.3 包含以下8个监控面板作为开源内容：
+> * PG Overview
+> * PG Cluster
+> * PG Service
+> * PG Instance
+> * PG Database
+> * PG Table Overview
+> * PG Table Catalog
+> * Node
+>
+> **离线安装包**
+>
+> * v0.3 离线安装包（CentOS 7.8）已经可以从 Github 下载：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.3.0/pkg.tgz)

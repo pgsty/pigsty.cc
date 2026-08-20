@@ -1,7 +1,7 @@
 ---
 title: "驳《再论为什么你不应该招 DBA》"
 date: 2023-03-01
-manualLink: https://vonng.com/cloud/no-dba-bullshit/
+manual_link: https://vonng.com/cloud/no-dba-bullshit/
 author: 冯若航
 description: >
   郭德纲有一段相声：比如我和火箭专家说，你那火箭不行，燃料不好，我认为得烧柴。如果那科学家拿正眼看我一眼，那他就输了。

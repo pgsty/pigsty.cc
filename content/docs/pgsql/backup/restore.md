@@ -18,12 +18,11 @@ Pigsty 提供三个层次的恢复入口，共用 [**同一套参数语义**](/d
 手把手的沙箱演练教程请参阅 [**手工恢复**](/docs/pgsql/tutorial/pitr)；
 用恢复克隆出新集群（不影响生产的推荐姿势）请参阅 [**克隆数据库集群**](/docs/pgsql/backup/cluster/)。
 
-{{% alert color="danger" title="PITR 会覆盖目标集群" %}}
-`pgsql-pitr.yml` 会暂停 HA、停止 Patroni/PostgreSQL、以 `pgbackrest --force restore` 覆盖目标数据目录，
-随后删除目标集群的 etcd 前缀并重建 HA；它只打印计划，**不会等待人工确认**。
-执行任何实质恢复前，必须先用 `pig pg list <目标集群>` 核对当前拓扑、用 `pig pb info` 核对近期备份与恢复窗口，
-由操作者复述并确认精确的目标集群与恢复点。生产恢复仍应安排维护窗口并保留独立、已验证的备份。
-{{% /alert %}}
+> [!CAUTION] PITR 会覆盖目标集群
+> `pgsql-pitr.yml` 会暂停 HA、停止 Patroni/PostgreSQL、以 `pgbackrest --force restore` 覆盖目标数据目录，
+> 随后删除目标集群的 etcd 前缀并重建 HA；它只打印计划，**不会等待人工确认**。
+> 执行任何实质恢复前，必须先用 `pig pg list <目标集群>` 核对当前拓扑、用 `pig pb info` 核对近期备份与恢复窗口，
+> 由操作者复述并确认精确的目标集群与恢复点。生产恢复仍应安排维护窗口并保留独立、已验证的备份。
 
 
 --------
@@ -52,10 +51,9 @@ pig pb info
 ./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "time": "2025-07-13 10:00:00+00", "action": "promote" }}'
 ```
 
-{{% alert color="info" title="命令行传参请使用合法 JSON" %}}
-`-e` 传入的参数必须是合法 JSON：键与字符串值都要加双引号，例如 `{"pg_pitr": {"time": "...", "archive": true}}`。
-布尔值不加引号，字符串必须加 —— 引号缺失会导致参数解析失败或静默取错值。
-{{% /alert %}}
+> [!NOTE] 命令行传参请使用合法 JSON
+> `-e` 传入的参数必须是合法 JSON：键与字符串值都要加双引号，例如 `{"pg_pitr": {"time": "...", "archive": true}}`。
+> 布尔值不加引号，字符串必须加 —— 引号缺失会导致参数解析失败或静默取错值。
 
 剧本会依次执行：暂停 Patroni 高可用 → 停止集群进程 → 执行 pgbackrest 增量还原 → 启动 PostgreSQL 并等待进入一致恢复状态 →
 用 `pg_controldata` 打印控制信息 → 清理 etcd 元数据 → 重新拉起集群与高可用。
@@ -69,27 +67,29 @@ pig pb info
 
 `pg_pitr` 支持 [**六类恢复目标**](/docs/concept/pitr/mechanism/#目标恢复到哪一刻)，其中四类目标值互斥，只能指定一个：
 
-{{< tabpane persist="disabled" >}}
-{{% tab header="恢复目标类型" disabled=true /%}}
-{{< tab header="default/latest" lang="yaml" >}}
+```yaml {tab="default/latest"}
 pg_pitr: { }  # 恢复到最新状态（WAL 归档流末尾）
-{{< /tab >}}
-{{< tab header="time" lang="yaml" >}}
+```
+
+```yaml {tab="time"}
 pg_pitr: { time: "2025-07-13 10:00:00+00" }
-{{< /tab >}}
-{{< tab header="lsn" lang="yaml" >}}
+```
+
+```yaml {tab="lsn"}
 pg_pitr: { lsn: "0/4001C80" }
-{{< /tab >}}
-{{< tab header="xid" lang="yaml" >}}
+```
+
+```yaml {tab="xid"}
 pg_pitr: { xid: "250000" }
-{{< /tab >}}
-{{< tab header="name" lang="yaml" >}}
+```
+
+```yaml {tab="name"}
 pg_pitr: { name: "some_restore_point" }
-{{< /tab >}}
-{{< tab header="immediate" lang="yaml" >}}
+```
+
+```yaml {tab="immediate"}
 pg_pitr: { type: "immediate" }
-{{< /tab >}}
-{{< /tabpane >}}
+```
 
 未指定任何目标时，重放全部 WAL 归档恢复到最新状态（内部类型 `default`）；
 `immediate` 类型在到达第一个一致点后立即停止，用于最快恢复出可用实例（例如验证备份）。
@@ -132,11 +132,10 @@ SELECT pg_create_restore_point('before_migration');
 ./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "lsn": "0/4001C80", "timeline": "1", "action": "promote" }}'
 ```
 
-{{% alert color="info" title="包含与排除" %}}
-恢复目标默认是"包含"（inclusive）的：目标点上的事务会被重放。
-`exclusive: true` 排除目标点本身 —— 例如 `xid: 250000, exclusive: true` 时，最后被重放的是 249999 号之前已提交的事务。
-仅适用于 `time`、`xid`、`lsn` 目标，对应 PostgreSQL 的 [`recovery_target_inclusive`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-INCLUSIVE)。
-{{% /alert %}}
+> [!NOTE] 包含与排除
+> 恢复目标默认是"包含"（inclusive）的：目标点上的事务会被重放。
+> `exclusive: true` 排除目标点本身 —— 例如 `xid: 250000, exclusive: true` 时，最后被重放的是 249999 号之前已提交的事务。
+> 仅适用于 `time`、`xid`、`lsn` 目标，对应 PostgreSQL 的 [`recovery_target_inclusive`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-INCLUSIVE)。
 
 
 --------
@@ -203,10 +202,9 @@ pg_ctl -D /pg/data promote              # action: pause 验证通过后执行
 ./pgsql-pitr.yml -l pg-meta -t up       # 清理 etcd，拉起 Patroni，恢复 HA
 ```
 
-{{% alert color="warning" title="重跑 pitr 阶段" %}}
-`backup: true` 会把当前数据目录搬到 `/pg/data-backup`，而再次运行时会先删除已有的 `/pg/data-backup`。
-因此剧本支持分阶段执行，但不能把带 `backup: true` 的恢复笼统视为幂等操作。
-{{% /alert %}}
+> [!WARNING] 重跑 pitr 阶段
+> `backup: true` 会把当前数据目录搬到 `/pg/data-backup`，而再次运行时会先删除已有的 `/pg/data-backup`。
+> 因此剧本支持分阶段执行，但不能把带 `backup: true` 的恢复笼统视为幂等操作。
 
 
 --------

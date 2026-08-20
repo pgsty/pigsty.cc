@@ -1,0 +1,21 @@
+# 首页「内核与扩展」指标卡片，按顺序渲染，每张卡片点击前往 href
+# 字段：label 标签 · value 数值（或 param 引用 hugo.yaml params 中的参数名，两者取其一）· href 目标链接
+#       以 http 开头的外链在新标签页打开；数值来自 pgext.cloud 首页，更新目录快照后请同步核对
+- label: 内核分支
+  value: 12
+  href: /docs/pgsql/kernel/
+- label: 收录在册扩展
+  value: 2241
+  href: https://pgext.cloud/
+- label: 已打包扩展
+  param: pgext_count
+  href: https://pgext.cloud/?scope=packaged
+- label: 扩展软件包
+  value: 407
+  href: https://pgext.cloud/?scope=packaged&entity=pkg
+- label: OS/PG 组合
+  value: 60
+  href: https://pgext.cloud/list/os
+- label: 构建槽位
+  value: 32560
+  href: https://pgext.cloud/matrix

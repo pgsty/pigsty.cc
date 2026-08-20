@@ -31,53 +31,40 @@ categories: [任务]
 
 要创建一个新的 PostgreSQL 集群，请首先在 [**配置清单**](/docs/concept/iac/inventory) 中 [**定义集群**](/docs/pgsql/config/cluster)，然后 [**纳管节点**](/docs/node/admin#添加节点) 并进行初始化：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/node-add  <cls>     # 添加分组 <cls> 下的节点
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./node.yml  -l <cls>    # 直接使用 Ansible 剧本添加分组 <cls> 下的节点
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/node-add pg-test    # 例子，添加 pg-test 分组下的节点，实际执行 ./node.yml -l pg-test
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 在被纳管的节点上，可以使用以下命令创建集群：（针对 **`<cls>`** 分组执行 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 剧本）
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-add <cls>     # 创建 PostgreSQL 集群 <cls>
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls>    # 直接使用 Ansible 剧本创建 PostgreSQL 集群 <cls>
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-add pg-test   # 例子，创建 pg-test 集群
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **示例：创建三节点 PG 集群 `pg-test`**
 
 {{< asciinema file="demo/pgsql.cast" markers="4:执行" speed="1.3" autoplay="true" loop="true" >}}
 
-{{% alert title="针对已经存在的集群重新执行创建存在风险" color="warning" %}}
-如果您在已经存在的集群上重新执行创建操作，Pigsty 不会移除已有的数据文件，但现有服务配置会被覆盖，集群会发生 **重启**！
-此外，如果你在 [**数据库定义**](/docs/pgsql/config/db#baseline) 中指定了 `baseline` SQL，它也会重新执行，如果里面包含删除/覆盖逻辑，可能会导致 **数据丢失**。
-{{% /alert %}}
+> [!WARNING] 针对已经存在的集群重新执行创建存在风险
+> 如果您在已经存在的集群上重新执行创建操作，Pigsty 不会移除已有的数据文件，但现有服务配置会被覆盖，集群会发生 **重启**！
+> 此外，如果你在 [**数据库定义**](/docs/pgsql/config/db#baseline) 中指定了 `baseline` SQL，它也会重新执行，如果里面包含删除/覆盖逻辑，可能会导致 **数据丢失**。
 
 
 
@@ -102,43 +89,31 @@ pg-test:
 
 扩容集群的操作与 [**创建集群**](#创建集群) 非常类似，首先需要将扩容的节点纳入 Pigsty 管理：[**添加节点**](/docs/node/admin#添加节点)：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/node-add <ip>       # 添加 IP 地址为 <ip> 的节点
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./node.yml -l <ip>      # 直接使用 Ansible 剧本添加 <ip> 对应的节点
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/node-add 10.10.10.13    # 例子，添加 IP 为 10.10.10.13 的节点，实际执行 ./node.yml -l 10.10.10.13
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 然后在新节点上运行以下命令以扩容集群（针对新节点安装 [**PGSQL 模块**](/docs/pgsql)，使用与现有集群相同的 [**`pg_cluster`**](/docs/pgsql/param#pg_cluster)）
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-add <cls> <ip>  # 添加 IP 地址为 <ip> 的节点
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <ip>       # 核心逻辑：使用 Ansible 剧本在 <ip> 节点上安装 PGSQL 模块
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-add pg-test 10.10.10.13   # 示例，为 pg-test 集群扩容 IP 为 10.10.10.13 的节点
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 扩容完成后，您应当 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将新成员添加至负载均衡器中以实际承载流量。
 
@@ -162,43 +137,31 @@ bin/pgsql-add pg-test 10.10.10.13   # 示例，为 pg-test 集群扩容 IP 为 1
 
 缩容集群首先需要卸载目标节点上的 PGSQL 模块（针对 **`<ip>`** 执行 [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml) 剧本）：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-rm <cls> <ip>   # 从集群 <cls> 中移除 <ip> 节点上的 PostgreSQL 实例
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-rm.yml -l <ip>    # 直接使用 Ansible 剧本移除 <ip> 节点上的 PostgreSQL 实例
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-rm pg-test 10.10.10.13  # 例子，从 pg-test 集群移除 10.10.10.13 节点
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 移除 PGSQL 模块后，您可以选择将节点从 Pigsty 管理中移除：[**移除节点**](/docs/node/admin#移除节点)（可选）：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/node-rm <ip>          # 从 Pigsty 管理中移除 <ip> 节点
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./node-rm.yml -l <ip>     # 直接使用 Ansible 剧本从 Pigsty 管理中移除 <ip> 节点
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/node-rm 10.10.10.13   # 例子，从 Pigsty 管理中移除 10.10.10.13 节点
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 缩容完成后，您应当从 [**配置清单**](/docs/concept/iac/inventory) 中移除该实例的定义，然后 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将它从负载均衡器中踢除。
 
@@ -230,43 +193,31 @@ pg-test:
 这是不可逆的数据删除：先用 `pig pg list <cls>` 与 `pig pb info` 核对状态和近期备份，决定是否保留独立备份副本，
 并要求操作者输入精确集群名。下面命令会直接执行相应的销毁操作。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-rm <cls>        # 销毁整个 PostgreSQL 集群 <cls>
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-rm.yml -l <cls>   # 直接使用 Ansible 剧本销毁整个 PostgreSQL 集群 <cls>
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-rm pg-test      # 例子，销毁 pg-test 集群
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 销毁 PGSQL 模块后，您可以选择将节点一并从 Pigsty 管理中移除：[**移除节点**](/docs/node/admin#移除节点)（可选，如果还有其他服务可以保留）：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/node-rm <cls>         # 从 Pigsty 管理中移除 <cls> 分组下的所有节点
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./node-rm.yml -l <cls>    # 直接使用 Ansible 剧本从 Pigsty 管理中移除 <cls> 分组下的所有节点
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/node-rm pg-test       # 例子，从 Pigsty 管理中移除 pg-test 分组下的所有节点
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 销毁结束后，建议及时从 [**配置清单**](/docs/concept/iac/inventory) 中移除整个 [**集群定义**](/docs/pgsql/config/cluster)。
 
@@ -310,26 +261,20 @@ PostgreSQL 集群通过主机节点上的 [**HAProxy**](/docs/concept/arch/pgsql
 
 要在整个集群或特定实例上刷新服务配置（针对 **`<cls>`** 或 **`<ip>`** 执行 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 的 `pg_service` 子任务）：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-svc <cls>           # 刷新整个集群 <cls> 的服务配置
 bin/pgsql-svc <cls> <ip...>   # 刷新集群 <cls> 中指定实例的服务配置
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pg_service -e pg_reload=true        # 刷新整个集群的服务配置
 ./pgsql.yml -l <ip>  -t pg_service -e pg_reload=true        # 刷新指定实例的服务配置
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-svc pg-test                 # 例子，刷新 pg-test 集群的服务配置
 bin/pgsql-svc pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.10.13 实例的服务配置
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 > 备注：如果您使用集中式的专用负载均衡集群（[**`pg_service_provider`**](/docs/pgsql/param#pg_service_provider)），那么只有刷新集群主库时才会更新负载均衡配置。
 
@@ -338,11 +283,8 @@ bin/pgsql-svc pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.
 
 {{< asciinema file="demo/pgsql-svc.cast" markers="" speed="1.2" autoplay="true" loop="true" >}}
 
-<details><summary>示例：重载 PG 服务以踢除一个实例</summary>
-
-[![asciicast](https://asciinema.org/a/568815.svg)](https://asciinema.org/a/568815)
-
-</details>
+> [!DETAILS]- 示例：重载 PG 服务以踢除一个实例
+> [![asciicast](https://asciinema.org/a/568815.svg)](https://asciinema.org/a/568815)
 
 
 
@@ -356,26 +298,20 @@ bin/pgsql-svc pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.
 
 要在整个集群或特定实例上刷新 PG 和 Pgbouncer 的 HBA 规则（针对 **`<cls>`** 或 **`<ip>`** 执行 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 的 HBA 相关子任务）：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-hba <cls>           # 刷新整个集群 <cls> 的 HBA 规则
 bin/pgsql-hba <cls> <ip...>   # 刷新集群 <cls> 中指定实例的 HBA 规则
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload -e pg_reload=true   # 刷新整个集群
 ./pgsql.yml -l <ip>  -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload -e pg_reload=true   # 刷新指定实例
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-hba pg-test                 # 例子，刷新 pg-test 集群的 HBA 规则
 bin/pgsql-hba pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.10.13 实例的 HBA 规则
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **示例：刷新集群 `pg-test` 的 HBA 规则**
@@ -437,58 +373,47 @@ pg-test2:
 
 使用以下命令创建备份集群：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2" value="tab1"}
 bin/pgsql-add pg-test2    # 创建备份集群，自动从上游 pg-test 克隆数据
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l pg-test2   # 直接使用 Ansible 剧本创建备份集群
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 备份集群会持续追随上游集群，保持数据同步。您可以随时将其 **提升** 为独立集群：
 
-<details><summary>示例：提升备份集群为独立集群</summary>
+> [!DETAILS]- 示例：提升备份集群为独立集群
+> 通过 [**配置集群**](#配置集群) 擦除 `standby_cluster` 配置段，即可将备份集群提升为独立集群：
+>
+> ```bash
+> $ pg edit-config pg-test2
+> -standby_cluster:
+> -  create_replica_methods:
+> -  - basebackup
+> -  host: 10.10.10.11
+> -  port: 5432
+>
+> Apply these changes? [y/N]: y
+> ```
+>
+> 提升后，`pg-test2` 将成为可以独立承载写入请求的独立集群，与原集群 `pg-test` 分叉。
 
-通过 [**配置集群**](#配置集群) 擦除 `standby_cluster` 配置段，即可将备份集群提升为独立集群：
-
-```bash
-$ pg edit-config pg-test2
--standby_cluster:
--  create_replica_methods:
--  - basebackup
--  host: 10.10.10.11
--  port: 5432
-
-Apply these changes? [y/N]: y
-```
-
-提升后，`pg-test2` 将成为可以独立承载写入请求的独立集群，与原集群 `pg-test` 分叉。
-
-</details>
-
-<details><summary>示例：更改复制上游</summary>
-
-如果上游集群发生主从切换，您可以通过 [**配置集群**](#配置集群) 更改备份集群的复制上游：
-
-```bash
-$ pg edit-config pg-test2
-
- standby_cluster:
-   create_replica_methods:
-   - basebackup
--  host: 10.10.10.11     # <--- 旧的上游
-+  host: 10.10.10.14     # <--- 新的上游
-   port: 5432
-
-Apply these changes? [y/N]: y
-```
-
-</details>
+> [!DETAILS]- 示例：更改复制上游
+> 如果上游集群发生主从切换，您可以通过 [**配置集群**](#配置集群) 更改备份集群的复制上游：
+>
+> ```bash
+> $ pg edit-config pg-test2
+>
+>  standby_cluster:
+>    create_replica_methods:
+>    - basebackup
+> -  host: 10.10.10.11     # <--- 旧的上游
+> +  host: 10.10.10.14     # <--- 新的上游
+>    port: 5432
+>
+> Apply these changes? [y/N]: y
+> ```
 
 
 ### 使用 PITR 克隆
@@ -513,19 +438,14 @@ pg-meta2:
 
 使用 `pgsql-pitr.yml` 剧本执行克隆：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="剧本" %}}
-```bash
+```bash {tab="剧本" group="tab1-tab2" value="tab1"}
 ./pgsql-pitr.yml -l pg-meta2    # 使用上面显式声明的 action: promote
 ```
-{{% /tab %}}
-{{% tab header="命令行" %}}
-```bash
+
+```bash {tab="命令行" value="tab2"}
 # 也可以通过命令行参数指定 PITR 选项
 ./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": {"cluster": "pg-meta", "time": "2025-01-10 10:00:00+00", "archive": false, "action": "promote"}}'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 PITR 支持多种恢复目标类型：
 
@@ -537,8 +457,7 @@ PITR 支持多种恢复目标类型：
 | LSN   | `lsn: "0/4001C80"`               | 恢复到指定 WAL 位置 |
 | 最新    | `pg_pitr: {}`                    | 恢复到 WAL 归档末尾 |
 
-{{% alert title="PITR 恢复后处理" color="info" %}}
-跨集群恢复完成后，按 [**克隆善后**](/docs/pgsql/backup/cluster/#克隆善后) 处理归档与 stanza。
-{{% /alert %}}
+> [!NOTE] PITR 恢复后处理
+> 跨集群恢复完成后，按 [**克隆善后**](/docs/pgsql/backup/cluster/#克隆善后) 处理归档与 stanza。
 
 更多 PITR 的详细用法，请参考 [**恢复操作**](/docs/pgsql/backup/restore)；跨集群恢复后的归档与 stanza 处理见 [**克隆数据库集群**](/docs/pgsql/backup/cluster/)。

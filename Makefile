@@ -11,25 +11,32 @@ d:dev
 dev:
 	@test -f "$(LOCAL_OINK)/go.mod" || { echo "local OINK not found: $(abspath $(LOCAL_OINK))" >&2; exit 1; }
 	HUGO_MODULE_REPLACEMENTS="github.com/pgsty/oink -> $(abspath $(LOCAL_OINK))" \
-	HUGO_PARAMS_OFFLINESEARCH=$(DEV_SEARCH) \
-	HUGO_PARAMS_OFFLINESEARCHONSERVE=$(DEV_SEARCH) \
+	HUGOxPARAMSxOFFLINE_SEARCH=$(DEV_SEARCH) \
+	HUGOxPARAMSxOFFLINE_SEARCH_ON_SERVE=$(DEV_SEARCH) \
 	$(HUGO) serve --ignoreVendorPaths "**" --disableKinds RSS,sitemap \
 		--enableGitInfo=false --renderSegments dev --renderToMemory $(HUGO_FLAGS)
 
 v:view
 # Fidelity preview: locked OINK and the site's normal output configuration.
 view:
-	$(HUGO) serve $(HUGO_FLAGS)
+	$(HUGO) serve --ignoreVendorPaths "**" $(HUGO_FLAGS)
+
+# Production-environment preview with the OINK version pinned in go.mod.
+serve:
+	$(HUGO) serve --ignoreVendorPaths "**" --environment production --minify \
+		--disableFastRender --disableLiveReload $(HUGO_FLAGS)
 
 b:build
 build:
-	$(HUGO) build --minify
+	$(HUGO) build --ignoreVendorPaths "**" --minify
 
 c: check
 check:
 	python3 bin/check-markdown.py README.md
 	python3 bin/check-markdown.py content
-	$(HUGO) build --cleanDestinationDir --quiet
+	GOWORK=off go mod verify
+	GOWORK=off $(HUGO) build --ignoreVendorPaths "**" --cleanDestinationDir \
+		--printPathWarnings --printI18nWarnings --panicOnWarning
 	python3 bin/check-markdown.py --rendered public
 	python3 bin/check_internal_links.py public
 
@@ -37,4 +44,4 @@ s: sync
 sync:
 	rsync -avz public/ jp:/data/web/pigsty.cc/
 
-.PHONY: default d dev v view b build c check s sync
+.PHONY: default d dev v view serve b build c check s sync

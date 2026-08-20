@@ -1,7 +1,7 @@
 ---
 title: "是时候和 GPL 说再见了"
 date: 2021-09-16
-manualLink: https://vonng.com/db/goodbye-gpl/
+manual_link: https://vonng.com/db/goodbye-gpl/
 author: Martin Kleppmann
 description: >
   DDIA 作者 Martin Kleppmann 认为应远离 GPL 及相关许可证，因为它们未能实现其目的，造成的麻烦比产生的价值更大。在2020年代，计算自由的敌人是云软件，本文倡导本地优先软件的概念。

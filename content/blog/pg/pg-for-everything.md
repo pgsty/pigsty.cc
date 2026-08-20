@@ -2,7 +2,7 @@
 title: "为什么 PostgreSQL 是未来数据库的事实标准？"
 linkTitle: "为什么 PG 是未来数据的基石？"
 date: 2024-05-16
-manualLink: https://vonng.com/pg/pg-for-everything/
+manual_link: https://vonng.com/pg/pg-for-everything/
 author: Ajay Kulkarni
 description: >
   如今软件开发中最大的趋势之一，是 PostgreSQL 正在成为事实上的数据库标准。直到现在还没有多少文章能解释这一现象背后的原因。

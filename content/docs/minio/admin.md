@@ -39,9 +39,8 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio,
 
 删除角色也将 `minio_type` 默认为 `silo`，当前其他取值会被拒绝。
 
-{{% alert title="架构变更：Pigsty v3.6+" color="info" %}}
-从 Pigsty v3.6 开始，集群移除操作已从 `minio.yml` 剧本迁移至专用的 `minio-rm.yml` 剧本。旧的 `minio_clean` 任务已被弃用。
-{{% /alert %}}
+> [!NOTE] 架构变更：Pigsty v3.6+
+> 从 Pigsty v3.6 开始，集群移除操作已从 `minio.yml` 剧本迁移至专用的 `minio-rm.yml` 剧本。旧的 `minio_clean` 任务已被弃用。
 
 移除剧本会依次尝试以下操作：
 - 从 VictoriaMetrics 监控系统中注销对象存储目标

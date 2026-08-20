@@ -29,7 +29,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/wool.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/wool.yml)
 
-{{< readfile file="yaml/demo/wool.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/wool.yml" code=true lang="yaml" >}}
 
 
 --------

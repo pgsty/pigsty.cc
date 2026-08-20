@@ -1,7 +1,7 @@
 ---
 title: "下云奥德赛：该放弃云计算了吗？"
 date: 2023-07-07
-manualLink: https://vonng.com/cloud/odyssey/
+manual_link: https://vonng.com/cloud/odyssey/
 author: Dhh
 description: >
   本文翻译了下云先锋 DHH 主导37Signal 从云上搬下来的完整旅程，无论是对于准备上云，还是已经在云上的企业，都非常有借鉴与参考价值。

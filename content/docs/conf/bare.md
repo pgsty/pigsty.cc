@@ -29,7 +29,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/bare.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/bare.yml)
 
-{{< readfile file="yaml/demo/bare.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/bare.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -103,10 +103,9 @@ chmod 600 ~/.pgpass
 PG_EXPORTER_URL='postgres://monitor@localhost:5432/postgres'
 ```
 
-{{% alert title="RPM/DEB 包安装场景" color="info" %}}
-包安装的服务以 `prometheus` 系统用户运行。自 v1.4.0 起该用户的 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的位置），但安装包 **不会** 创建这个目录。使用 `.pgpass` 前请先执行：
-`install -d -o prometheus -g prometheus /var/lib/prometheus`
-{{% /alert %}}
+> [!NOTE] RPM/DEB 包安装场景
+> 包安装的服务以 `prometheus` 系统用户运行。自 v1.4.0 起该用户的 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的位置），但安装包 **不会** 创建这个目录。使用 `.pgpass` 前请先执行：
+> `install -d -o prometheus -g prometheus /var/lib/prometheus`
 
 ### 数据库连接 TLS
 
@@ -203,9 +202,8 @@ services:
       - postgres
 ```
 
-{{% alert title="注意" color="warning" %}}
-官方镜像基于 `scratch`，不含系统 CA 证书。若以 `sslmode=verify-ca` / `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书并通过 `sslrootcert` 指定，否则 TLS 校验无法完成。
-{{% /alert %}}
+> [!WARNING] 注意
+> 官方镜像基于 `scratch`，不含系统 CA 证书。若以 `sslmode=verify-ca` / `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书并通过 `sslrootcert` 指定，否则 TLS 校验无法完成。
 
 
 --------

@@ -19,24 +19,21 @@ Pigsty 使用 Patroni 管理 PostgreSQL 集群，它可以用来修改集群配�
 
 Patroni 提供了 [**`patronictl`**](https://patroni.readthedocs.io/en/latest/patronictl.html) 命令行工具用于管理，Pigsty 提供了封装的快捷命令 `pg` 来简化其操作。
 
-<details><summary>通过 pg 别名使用 patronictl</summary>
-
-```bash
-pg ()
-{
-    local patroni_conf="/infra/conf/patronictl.yml";
-    if [ ! -r ${patroni_conf} ]; then
-        patroni_conf="/etc/patroni/patroni.yml";
-        if [ ! -r ${patroni_conf} ]; then
-            echo "error: patronictl config not found";
-            return 1;
-        fi;
-    fi;
-    patronictl -c ${patroni_conf} "$@"
-}
-```
-
-</details>
+> [!DETAILS]- 通过 pg 别名使用 patronictl
+> ```bash
+> pg ()
+> {
+>     local patroni_conf="/infra/conf/patronictl.yml";
+>     if [ ! -r ${patroni_conf} ]; then
+>         patroni_conf="/etc/patroni/patroni.yml";
+>         if [ ! -r ${patroni_conf} ]; then
+>             echo "error: patronictl config not found";
+>             return 1;
+>         fi;
+>     fi;
+>     patronictl -c ${patroni_conf} "$@"
+> }
+> ```
 
 
 ----------------

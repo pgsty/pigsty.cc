@@ -11,9 +11,8 @@ REDIS 模块的参数列表，共有 **22** 个参数，分为两个部分：
 - [**`REDIS`**](#redis)：19 个参数，用于 Redis/Valkey 集群的部署与配置
 - [**`REDIS_REMOVE`**](#redis_remove)：3 个参数，控制 Redis 集群的移除
 
-{{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
-自 Pigsty v3.6 起，`redis.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `redis_remove` 角色和 `redis-rm.yml` 剧本。
-{{% /alert %}}
+> [!NOTE] 架构变化：Pigsty v3.6+
+> 自 Pigsty v3.6 起，`redis.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `redis_remove` 角色和 `redis-rm.yml` 剧本。
 
 
 ----------------

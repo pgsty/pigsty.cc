@@ -38,7 +38,7 @@ aliases: [/docs/conf/rustfs/]
 
 源文件地址：[`pigsty/conf/demo/minio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/minio.yml)
 
-{{< readfile file="yaml/demo/minio.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/minio.yml" code=true lang="yaml" >}}
 
 
 --------

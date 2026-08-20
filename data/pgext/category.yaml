@@ -1,0 +1,19 @@
+# 首页「扩展索引」分类配置：代码、中文名、明/暗主题配色
+# 顺序即格点阵列的排列顺序（与 pgext.cloud 一致）；配色取自 pgext.cloud style.css 的 16 色分类色板
+# 字段：code 分类代码 · name 中文名 · light 亮色主题色 · dark 暗色主题色 · href 点击图例前往的页面
+- {code: TIME,  name: 时序,     light: "#b97e0c", dark: "#bd861a", href: "https://pgext.cloud/cate/TIME"}
+- {code: GIS,   name: 地理,     light: "#2f9e4f", dark: "#33a856", href: "https://pgext.cloud/cate/GIS"}
+- {code: RAG,   name: 向量,     light: "#7c3aed", dark: "#8f6ff0", href: "https://pgext.cloud/cate/RAG"}
+- {code: FTS,   name: 全文检索, light: "#e8590c", dark: "#db5a18", href: "https://pgext.cloud/cate/FTS"}
+- {code: OLAP,  name: 数据分析, light: "#2456b8", dark: "#2e63c6", href: "https://pgext.cloud/cate/OLAP"}
+- {code: FEAT,  name: 特性,     light: "#d13ad6", dark: "#c337d7", href: "https://pgext.cloud/cate/FEAT"}
+- {code: LANG,  name: 编程语言, light: "#0f9e99", dark: "#14ab9c", href: "https://pgext.cloud/cate/LANG"}
+- {code: TYPE,  name: 数据类型, light: "#5b5bd6", dark: "#7379f0", href: "https://pgext.cloud/cate/TYPE"}
+- {code: UTIL,  name: 工具,     light: "#9d5c00", dark: "#b0742f", href: "https://pgext.cloud/cate/UTIL"}
+- {code: FUNC,  name: 数学函数, light: "#0e8fb3", dark: "#1e9fc9", href: "https://pgext.cloud/cate/FUNC"}
+- {code: ADMIN, name: 管理,     light: "#a61e4d", dark: "#c93d6e", href: "https://pgext.cloud/cate/ADMIN"}
+- {code: STAT,  name: 监控统计, light: "#6a9a0a", dark: "#769c1c", href: "https://pgext.cloud/cate/STAT"}
+- {code: SEC,   name: 安全,     light: "#d21f3c", dark: "#e04b41", href: "https://pgext.cloud/cate/SEC"}
+- {code: FDW,   name: 外部数据, light: "#e04e8f", dark: "#e2609f", href: "https://pgext.cloud/cate/FDW"}
+- {code: SIM,   name: 兼容模拟, light: "#9741c9", dark: "#a05fd6", href: "https://pgext.cloud/cate/SIM"}
+- {code: ETL,   name: 数据集成, light: "#b8540f", dark: "#c45f1e", href: "https://pgext.cloud/cate/ETL"}

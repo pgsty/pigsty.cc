@@ -1,7 +1,7 @@
 ---
 title: "MySQL 安魂九霄，PostgreSQL 驶向云外"
 date: 2024-07-08
-manualLink: https://vonng.com/db/mysql-is-dead/
+manual_link: https://vonng.com/db/mysql-is-dead/
 author: 冯若航
 description: >
   MySQL 9.0终于发布，距离上一次大版本更新已经过去八年。然而这个空洞无物的所谓"创新版本"犹如一个恶劣的玩笑，宣告着 MySQL 正在死去。Percona CEO 也表示：有了 PostgreSQL，谁还需要 MySQL 呢？

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI：一套 PG 支持8亿 ChatGPT 用户"
 date: 2026-01-24
-manualLink: https://vonng.com/pg/openai-postgres/
+manual_link: https://vonng.com/pg/openai-postgres/
 author: 冯若航
 description: >
   PostgreSQL 的标杆案例，他们使用1主50从的经典主从 PG，支撑了8亿 ChatGPT 用户。附上老冯的评论与看法。

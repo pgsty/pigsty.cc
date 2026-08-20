@@ -36,7 +36,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/ha/octo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/octo.yml)
 
-{{< readfile file="yaml/ha/octo.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ha/octo.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -241,18 +241,6 @@ main { display: block; }
   font-size: clamp(1rem, 1.25vw, 1.15rem);
 }
 
-.section-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 26px;
-  margin-top: 18px;
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-}
-.section-links a { color: var(--copper); }
-.section-links a:hover { color: var(--pg-strong); }
-.section-links a i:last-child { font-size: 0.75em; margin-left: 2px; }
-
 /* ------------------------------------------------------------
    3. Buttons
    ------------------------------------------------------------ */
@@ -1088,64 +1076,80 @@ html[data-theme="light"] .module-img img {
 .kernel-name { font-weight: 700; font-size: 0.95rem; color: var(--ink); }
 .kernel-desc { font-size: 0.76rem; color: var(--ink-mute); }
 
-.extbus-head {
+/* 指标卡片：六格一行，复用 .stats-grid / .stat-item（数据 data/pgext/stats.yaml） */
+.stats-grid.stats-grid--6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.pgext-stats { margin: 0 0 28px; }
+.pgext-stats .stat-item { min-width: 0; padding: 20px 10px 16px; }
+.pgext-stats .stat-value { font-size: clamp(1.55rem, 2.3vw, 2.1rem); }
+.pgext-stats .stat-label { white-space: nowrap; }
+.pgext-stats .stat-label i { font-size: 0.7em; margin-left: 2px; opacity: 0.7; }
+
+/* 扩展索引：格点阵列（照 pgext.cloud 首页 universe field，数据 data/pgext/{category,extension}.yaml）
+   每个格点一个扩展，按分类着色；已打包实色、仅收录淡色；悬停显示扩展名与简介，点击前往 pgext.cloud */
+.extidx { margin-top: 4px; }
+.extidx-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 8px 18px;
+  margin-bottom: 14px;
 }
-.extbus-head::after {
-  content: '';
-  flex: 1;
-  height: 5px;
-  background: repeating-linear-gradient(90deg, var(--copper) 0 14px, transparent 14px 22px);
-  opacity: 0.35;
-  border-radius: 2px;
-}
-
-/* 扩展总线跑马灯 */
-.extensions-marquee {
+.extidx-head > .silkscreen { flex: none; margin-right: auto; }
+.extidx-legend {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  flex-wrap: wrap;
+  gap: 4px 11px;
 }
-
-.marquee-row { overflow: hidden; }
-.marquee-content {
+.extidx-chip {
   display: inline-flex;
-  gap: 10px;
-  width: max-content;
-  padding: 2px 0;
-  animation: scroll-left var(--dur, 160s) linear infinite;
-}
-.marquee-row[data-direction="right"] .marquee-content { animation-name: scroll-right; }
-.marquee-row:nth-of-type(1) .marquee-content { --dur: 200s; }
-.marquee-row:nth-of-type(2) .marquee-content { --dur: 230s; }
-.marquee-row:nth-of-type(3) .marquee-content { --dur: 210s; }
-.marquee-row:nth-of-type(4) .marquee-content { --dur: 240s; }
-.marquee-row:hover .marquee-content { animation-play-state: paused; }
-
-@keyframes scroll-left { to { transform: translateX(-50%); } }
-@keyframes scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-
-.ext-pill {
-  flex: none;
-  padding: 6px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--pill-bg);
+  align-items: center;
+  gap: 5px;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ink-soft) !important;
-  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute) !important;
+  transition: color 150ms ease;
 }
-.ext-pill:hover {
-  border-color: var(--copper);
-  color: var(--copper) !important;
-  background: rgba(224, 163, 92, 0.08);
+.extidx-chip i {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  background: var(--cl);
 }
+html[data-theme="dark"] .extidx-chip i { background: var(--cd); }
+.extidx-chip:hover { color: var(--ink) !important; }
+
+.extidx-canvas {
+  display: block;
+  width: 100%;
+  height: 136px;              /* 占位高度，加载后由脚本按行数重设 */
+  cursor: crosshair;
+}
+.extidx.is-error .extidx-canvas { display: none; }
+
+/* 格点悬停提示（样式同板卡引脚 .pin-tip） */
+.extidx-tip {
+  position: fixed;
+  z-index: 90;
+  pointer-events: none;
+  max-width: 320px;
+  padding: 7px 12px 8px;
+  border: 1px solid var(--copper-dim);
+  border-radius: 7px;
+  background: var(--bg-elev);
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+.extidx-tip.show { opacity: 1; transform: none; }
+.extidx-tip b { font-weight: 700; color: var(--ink); }
+.extidx-tip .c { font-weight: 600; letter-spacing: 0.06em; margin-left: 6px; }
+.extidx-tip .s { color: var(--ink-mute); margin-left: 6px; }
+.extidx-tip .d { display: block; color: var(--ink-soft); font-family: var(--font-body); }
 
 .extbus-cta { margin-top: 26px; text-align: center; }
 
@@ -1170,6 +1174,10 @@ html[data-theme="light"] .module-img img {
 }
 .landing-page .dashwall-link:hover { color: var(--pg-strong); }
 .dashwall-link i { font-size: 0.78em; }
+
+/* 跑马灯公用关键帧（仪表盘画廊 / 用户 logo / 社区评价共用） */
+@keyframes scroll-left { to { transform: translateX(-50%); } }
+@keyframes scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
 .dashboard-gallery-marquee {
   overflow: hidden;
@@ -1646,6 +1654,7 @@ html.js [data-reveal].revealed { opacity: 1; transform: none; }
    ------------------------------------------------------------ */
 @media (max-width: 1180px) {
   .kernel-grid { grid-template-columns: repeat(4, 1fr); }
+  .stats-grid.stats-grid--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 980px) {
@@ -1680,7 +1689,8 @@ html.js [data-reveal].revealed { opacity: 1; transform: none; }
   .command-box { font-size: 0.8rem; }
   .command-text { white-space: pre-wrap; word-break: break-all; }
   .kernel-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid,
+  .stats-grid.stats-grid--6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonial-card { width: 320px; }
   .fieldreport-stats { gap: 20px 28px; }
   .br-wide { display: none; }
@@ -1703,11 +1713,9 @@ html.js [data-reveal].revealed { opacity: 1; transform: none; }
   html.js [data-reveal] { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
   .board-pin,
   .board-legend { transition: none !important; }
-  .marquee-content,
   .logos-marquee-content,
   .testimonials-content,
   .dashboard-gallery-track { animation: none !important; }
-  .marquee-row,
   .logos-marquee-row,
   .testimonials-row,
   .dashboard-gallery-marquee { overflow-x: auto; }

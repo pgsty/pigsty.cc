@@ -41,7 +41,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/meta.yml`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml)
 
-{{< readfile file="yaml/meta.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/meta.yml" code=true lang="yaml" >}}
 
 
 --------

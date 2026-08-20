@@ -64,13 +64,12 @@ terraform output -raw ssh_command
 ssh meta    # 使用主机名而非 IP 登录
 ```
 
-{{% alert title="使用 SSH 配置文件" color="info" %}}
-如果您希望使用 `~/.ssh/pigsty_config` 中的配置，请确保在 `~/.ssh/config` 中包含以下内容：
-
-```bash
-Include ~/.ssh/pigsty_config
-```
-{{% /alert %}}
+> [!NOTE] 使用 SSH 配置文件
+> 如果您希望使用 `~/.ssh/pigsty_config` 中的配置，请确保在 `~/.ssh/config` 中包含以下内容：
+>
+> ```bash
+> Include ~/.ssh/pigsty_config
+> ```
 
 ### 销毁资源
 
@@ -226,9 +225,8 @@ aws_secret_access_key = <AWS_ACCESS_SECRET>
 ~/.aws/pigsty-key.pub
 ```
 
-{{% alert title="AWS 模板需要调整" color="warning" %}}
-`aws.tf` 使用 Debian 官方 AMI 的滚动查询；`aws-cn.tf` 使用中国区硬编码 AMI 与 `~/.aws/pigsty-key.pub`，部署前应核对目标区域、AMI 与密钥。
-{{% /alert %}}
+> [!WARNING] AWS 模板需要调整
+> `aws.tf` 使用 Debian 官方 AMI 的滚动查询；`aws-cn.tf` 使用中国区硬编码 AMI 与 `~/.aws/pigsty-key.pub`，部署前应核对目标区域、AMI 与密钥。
 
 
 ----------------
@@ -245,9 +243,8 @@ export TENCENTCLOUD_SECRET_KEY="<your_secret_key>"
 export TENCENTCLOUD_REGION="ap-beijing"
 ```
 
-{{% alert title="腾讯云模板需要调整" color="warning" %}}
-腾讯云模板是社区贡献的示例，可能需要根据您的具体需求进行调整。
-{{% /alert %}}
+> [!WARNING] 腾讯云模板需要调整
+> 腾讯云模板是社区贡献的示例，可能需要根据您的具体需求进行调整。
 
 ### 其他云凭证
 
@@ -296,28 +293,24 @@ make r          # 重置 terraform.tf 到版本库状态
 
 ## 注意事项
 
-{{% alert title="云资源费用" color="warning" %}}
-使用 Terraform 创建的云资源会产生费用。测试完成后，请及时使用 `terraform destroy` 销毁资源，避免不必要的开支。
+> [!WARNING] 云资源费用
+> 使用 Terraform 创建的云资源会产生费用。测试完成后，请及时使用 `terraform destroy` 销毁资源，避免不必要的开支。
+>
+> 建议使用按量付费的实例类型进行测试。模板默认使用竞价实例（Spot Instance）以降低成本。
 
-建议使用按量付费的实例类型进行测试。模板默认使用竞价实例（Spot Instance）以降低成本。
-{{% /alert %}}
+> [!NOTE] 默认密码
+> 阿里云模板与腾讯云模板默认设置 root 密码 `PigstyDemo4`；Linode 因密码复杂度要求使用 `PigstyDemo4!`。
+> AWS、Azure、GCP、Hetzner、Vultr 与 DigitalOcean 的当前模板主要使用 SSH 公钥认证，并没有统一的默认 root 密码。示例密码只能用于临时测试，生产环境必须更换或禁用密码登录。
 
-{{% alert title="默认密码" color="info" %}}
-阿里云模板与腾讯云模板默认设置 root 密码 `PigstyDemo4`；Linode 因密码复杂度要求使用 `PigstyDemo4!`。
-AWS、Azure、GCP、Hetzner、Vultr 与 DigitalOcean 的当前模板主要使用 SSH 公钥认证，并没有统一的默认 root 密码。示例密码只能用于临时测试，生产环境必须更换或禁用密码登录。
-{{% /alert %}}
+> [!NOTE] 安全组配置
+> 这些模板面向演示/开发，当前安全组或云防火墙会从 `0.0.0.0/0`（部分同时含 `::/0`）开放全部或近乎全部入站流量，而不只是 Pigsty 必需端口。
+> 部署前应先限制来源网段与端口；不要原样用于生产环境。
 
-{{% alert title="安全组配置" color="info" %}}
-这些模板面向演示/开发，当前安全组或云防火墙会从 `0.0.0.0/0`（部分同时含 `::/0`）开放全部或近乎全部入站流量，而不只是 Pigsty 必需端口。
-部署前应先限制来源网段与端口；不要原样用于生产环境。
-{{% /alert %}}
-
-{{% alert title="SSH 访问" color="info" %}}
-创建完成后，使用以下命令 SSH 登录到管理节点：
-
-```bash
-ssh root@<public_ip>
-```
-
-兼容旧式输出与密码约定的阿里云模板还可以使用 `./ssh` 或 `make ssh` 写入 SSH 别名；其他模板请使用其 `ssh_command` 输出。
-{{% /alert %}}
+> [!NOTE] SSH 访问
+> 创建完成后，使用以下命令 SSH 登录到管理节点：
+>
+> ```bash
+> ssh root@<public_ip>
+> ```
+>
+> 兼容旧式输出与密码约定的阿里云模板还可以使用 `./ssh` 或 `make ssh` 写入 SSH 别名；其他模板请使用其 `ssh_command` 输出。

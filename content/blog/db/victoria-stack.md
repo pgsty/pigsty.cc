@@ -2,7 +2,7 @@
 title: "Victoria：吊打业界的可观测性全家桶来了"
 linkTitle: "Victoria 可观测性全家桶来了"
 date: 2025-12-17
-manualLink: https://vonng.com/db/victoria-stack/
+manual_link: https://vonng.com/db/victoria-stack/
 author: 冯若航
 description: >
   Victoria 是朴实无华的强悍— — 用几分之一的资源，实现 Prometheus + Loki 几倍的效果。Pigsty v4.0 将全面采用 Victoria 全家桶。

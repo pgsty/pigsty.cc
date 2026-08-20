@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/electric.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/electric.yml)
 
-{{< readfile file="yaml/app/electric.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/electric.yml" code=true lang="yaml" >}}
 
 
 --------

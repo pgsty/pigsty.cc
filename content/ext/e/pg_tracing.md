@@ -167,40 +167,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_tracing;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_tracing -v 18  # PG 18
 pig ext install -y pg_tracing -v 17  # PG 17
 pig ext install -y pg_tracing -v 16  # PG 16
 pig ext install -y pg_tracing -v 15  # PG 15
 pig ext install -y pg_tracing -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_tracing_18       # PG 18
 dnf install -y pg_tracing_17       # PG 17
 dnf install -y pg_tracing_16       # PG 16
 dnf install -y pg_tracing_15       # PG 15
 dnf install -y pg_tracing_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pg-tracing   # PG 18
 apt install -y postgresql-17-pg-tracing   # PG 17
 apt install -y postgresql-16-pg-tracing   # PG 16
 apt install -y postgresql-15-pg-tracing   # PG 15
 apt install -y postgresql-14-pg-tracing   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：
@@ -276,7 +269,7 @@ SELECT pg_tracing_reset();
 
 在 `postgresql.conf` 中配置：
 
-```
+```text
 pg_tracing.otel_endpoint = http://127.0.0.1:4318/v1/traces
 pg_tracing.otel_naptime = 2000
 ```

@@ -25,25 +25,19 @@ pg-meta:
 ```
 
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-ext <cls>           # 在 <cls> 集群上安装配置中定义的扩展
 bin/pgsql-ext <cls> [ext...]  # 在 <cls> 集群上安装命令行参数给出的扩展
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l pg-meta -t pg_ext    # 使用剧本安装扩展
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-ext pg-meta                         # 在 pg-meta 集群上安装定义的扩展
 bin/pgsql-ext pg-meta pg_duckdb pg_mooncake   # 安装指定扩展
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 关于扩展的完整参考，请查阅 [**扩展插件**](/docs/pgsql/ext/) 章节。关于可用扩展列表，请参考 [**扩展目录**](/ext/list/)。
 
@@ -72,23 +66,17 @@ bin/pgsql-ext pg-meta pg_duckdb pg_mooncake   # 安装指定扩展
 
 要在现有的 PostgreSQL 集群上安装扩展，请将扩展添加到 `all.children.<cls>.pg_extensions`，然后执行：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-ext <cls>   # 在 <cls> 集群上安装扩展
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pg_extension   # 直接使用 Ansible 剧本安装扩展
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-ext pg-meta    # 在 pg-meta 集群上安装配置中定义的扩展
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **示例配置：在集群上安装 PostGIS、TimescaleDB 和 PGVector**
 
@@ -100,9 +88,8 @@ pg_extensions: [ postgis, timescaledb, pgvector ]
 **执行效果**：在集群所有节点上安装扩展软件包。Pigsty 会自动将 [**包别名**](/docs/pgsql/config/alias) 翻译为对应操作系统和 PostgreSQL 版本的实际包名。
 
 
-{{% alert title="安装前，确保软件源可用" color="secondary" %}}
-安装扩展前请确保节点已配置正确的软件源 —— 扩展已经在本地仓库中 [**下载好**](#下载扩展)，或者已经 [**配置扩展仓库**](#配置仓库)。
-{{% /alert %}}
+> [!NOTE] 安装前，确保软件源可用
+> 安装扩展前请确保节点已配置正确的软件源 —— 扩展已经在本地仓库中 [**下载好**](#下载扩展)，或者已经 [**配置扩展仓库**](#配置仓库)。
 
 
 ----------------
@@ -111,19 +98,13 @@ pg_extensions: [ postgis, timescaledb, pgvector ]
 
 如果您不想使用 Pigsty 配置来管理 PostgreSQL 扩展，可以在命令行中直接传递要安装的扩展列表：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2" value="tab1"}
 bin/pgsql-ext pg-meta pg_duckdb pg_mooncake   # 在 pg-meta 集群上安装指定扩展
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l pg-meta -t pg_ext -e '{"pg_extensions": ["pg_duckdb", "pg_mooncake"]}'
 ```
-{{% /tab %}}
-
-{{< /tabpane >}}
 
 您也可以使用 [**pig**](/docs/pig) 包管理器命令行工具在单个节点上安装扩展，同样会自动进行 [**包别名**](/docs/pgsql/config/alias) 解析。
 
@@ -162,22 +143,17 @@ Pigsty 的默认配置在安装过程中会自动下载主流扩展到本地仓�
 repo_extra_packages: [ pgvector, postgis, timescaledb ]
 ```
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2" value="tab1"}
 make repo         # 快捷方式 = repo-build + node-repo
 make repo-build   # 快捷方式，重建 Infra 上的软件仓库（下载软件包与依赖）
 make node-repo    # 快捷方式，刷新节点上的软件源缓存，更新对 Infra 软件仓库的引用
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./deploy.yml -t repo_build,node_repo  # 一次性执行两个任务
 ./infra.yml -t repo_build     # 重新下载软件包到本地仓库
 ./node.yml  -t node_repo      # 刷新节点软件源缓存
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ----------------
@@ -241,28 +217,22 @@ pg_databases:
 
 **手动启用**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="SQL" %}}
-```sql
+```sql {tab="SQL" group="sql-psql-tab3" value="sql"}
 CREATE EXTENSION vector;                      -- 创建扩展
 CREATE EXTENSION postgis SCHEMA public;       -- 指定 Schema
 CREATE EXTENSION IF NOT EXISTS vector;        -- 幂等创建
 CREATE EXTENSION postgis_topology CASCADE;    -- 自动安装依赖
 ```
-{{% /tab %}}
-{{% tab header="psql" %}}
-```bash
+
+```bash {tab="psql" value="psql"}
 psql -d meta -c 'CREATE EXTENSION vector;'                  # 在 meta 数据库创建扩展
 psql -d meta -c 'CREATE EXTENSION postgis SCHEMA public;'   # 指定 Schema
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab3"}
 # 修改数据库定义后使用剧本启用扩展
 bin/pgsql-db pg-meta meta    # 创建/修改数据库会自动启用定义的扩展
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **执行效果**：在数据库中创建扩展对象（函数、类型、操作符、索引方法等），之后即可使用扩展提供的功能。
 
@@ -275,23 +245,17 @@ bin/pgsql-db pg-meta meta    # 创建/修改数据库会自动启用定义的扩
 
 **更新软件包**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pig" %}}
-```bash
+```bash {tab="pig" group="pig-yum-apt" value="pig"}
 pig update pgvector                           # 使用 pig 更新扩展
 ```
-{{% /tab %}}
-{{% tab header="yum" %}}
-```bash
+
+```bash {tab="yum" value="yum"}
 sudo yum update pgvector_18 # EL
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 sudo apt upgrade postgresql-18-pgvector  # Debian/Ubuntu
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **更新扩展对象**
 
@@ -307,9 +271,8 @@ ALTER EXTENSION vector UPDATE;
 ALTER EXTENSION vector UPDATE TO '0.8.1';
 ```
 
-{{% alert title="更新注意事项" color="info" %}}
-更新扩展前建议备份数据库。预加载扩展更新后可能需要重启 PostgreSQL。某些扩展版本升级可能不兼容，请查阅扩展文档。
-{{% /alert %}}
+> [!NOTE] 更新注意事项
+> 更新扩展前建议备份数据库。预加载扩展更新后可能需要重启 PostgreSQL。某些扩展版本升级可能不兼容，请查阅扩展文档。
 
 
 ----------------
@@ -336,27 +299,20 @@ pg restart pg-meta   # 重启使配置生效
 
 **卸载软件包（可选）**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pig" %}}
-```bash
+```bash {tab="pig" group="pig-yum-apt" value="pig"}
 pig remove pgvector                           # 使用 pig 卸载
 ```
-{{% /tab %}}
-{{% tab header="yum" %}}
-```bash
+
+```bash {tab="yum" value="yum"}
 sudo yum remove pgvector_18*                  # EL 系统
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 sudo apt remove postgresql-18-pgvector        # Debian/Ubuntu
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
-{{% alert title="CASCADE 警告" color="warning" %}}
-使用 `CASCADE` 删除扩展会同时删除所有依赖该扩展的对象（表、索引、视图等）。请先检查依赖关系再执行删除。
-{{% /alert %}}
+> [!WARNING] CASCADE 警告
+> 使用 `CASCADE` 删除扩展会同时删除所有依赖该扩展的对象（表、索引、视图等）。请先检查依赖关系再执行删除。
 
 
 ----------------

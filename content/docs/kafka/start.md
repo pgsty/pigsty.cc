@@ -11,9 +11,8 @@ aliases: [/docs/pilot/kafka/start]
 
 本教程从一个最小单节点集群开始，完成 Topic 创建与消息读写；随后部署一套独立的三节点安全集群，配置应用用户、ACL、Quota 和生产 Topic；最后演示核心参数修改、客户端接入、监控验证与上线检查。
 
-{{% alert title="教程范围" color="info" %}}
-这里的“从零开始”是指从尚未部署 Kafka 开始。您需要先有一套可用的 Pigsty 管理节点，并已部署基础 [`INFRA`](/docs/infra) 服务；如果还没有，请先完成 [Pigsty 快速安装](/docs/setup/install)。目标节点需要 SSH/Sudo 权限，并可被 [`NODE`](/docs/node) 模块纳管。
-{{% /alert %}}
+> [!NOTE] 教程范围
+> 这里的“从零开始”是指从尚未部署 Kafka 开始。您需要先有一套可用的 Pigsty 管理节点，并已部署基础 [`INFRA`](/docs/infra) 服务；如果还没有，请先完成 [Pigsty 快速安装](/docs/setup/install)。目标节点需要 SSH/Sudo 权限，并可被 [`NODE`](/docs/node) 模块纳管。
 
 
 --------
@@ -29,9 +28,8 @@ aliases: [/docs/pilot/kafka/start]
 | 5  | 上线验收            | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册                       |
 {.full-width}
 
-{{% alert title="两个示例是独立集群" color="warning" %}}
-下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见 [扩容集群](/docs/kafka/admin#扩容集群)。
-{{% /alert %}}
+> [!WARNING] 两个示例是独立集群
+> 下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见 [扩容集群](/docs/kafka/admin#扩容集群)。
 
 
 --------

@@ -1,7 +1,7 @@
 ---
 title: "SQL 实现 ItemCF 推荐系统"
 date: 2017-04-05
-manualLink: https://vonng.com/pg/pg-recsys/
+manual_link: https://vonng.com/pg/pg-recsys/
 author: 冯若航
 description: >
   用 PostgreSQL 5分钟实现一个最简单 ItemCF 推荐系统。

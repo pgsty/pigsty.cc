@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml)
 
-{{< readfile file="yaml/app/dify.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/dify.yml" code=true lang="yaml" >}}
 
 
 --------

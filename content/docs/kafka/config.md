@@ -11,9 +11,8 @@ aliases: [/docs/pilot/kafka/config]
 
 KAFKA 模块使用 15 项持久公开参数表达集群意图，其余拓扑、监听器、存储子目录、复制安全、授权与 Exporter 放置由角色统一推导。首次部署建议先完成 [快速上手](/docs/kafka/start)；完整字段见 [参数参考](/docs/kafka/param)。
 
-{{% alert title="先规划，后格式化" color="warning" %}}
-`kafka_seq` 会写入 KRaft `node.id`；新集群的随机 Cluster ID、初始 Controller Identity、安全模式与初始复制策略会写入 Bootstrap Manifest。存储格式化后，不要随意修改身份、安全模式或 Controller 集合。角色会验证现场与 Manifest 并在冲突时失败关闭，不会自动覆盖或重新格式化数据。
-{{% /alert %}}
+> [!WARNING] 先规划，后格式化
+> `kafka_seq` 会写入 KRaft `node.id`；新集群的随机 Cluster ID、初始 Controller Identity、安全模式与初始复制策略会写入 Bootstrap Manifest。存储格式化后，不要随意修改身份、安全模式或 Controller 集合。角色会验证现场与 Manifest 并在冲突时失败关闭，不会自动覆盖或重新格式化数据。
 
 
 --------

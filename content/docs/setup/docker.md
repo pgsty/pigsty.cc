@@ -40,9 +40,8 @@ cd ~/pigsty/docker
 make pass | grep -E 'grafana_admin_password|pg_admin_password'
 ```
 
-{{% alert title="Web 界面与 PostgreSQL 服务" color="info" %}}
-Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才可用。
-{{% /alert %}}
+> [!NOTE] Web 界面与 PostgreSQL 服务
+> Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才可用。
 
 
 ----------------
@@ -58,17 +57,15 @@ Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才
 
 请确保默认宿主机端口（2222/8080/8443/5432）可用，否则请先修改 [**`.env`**](#配置) 文件。
 
-{{% alert title="Docker 部署适用场景" color="success" %}}
-- 在 macOS / Windows 等非 Linux 环境下快速体验 Pigsty
-- 学习和测试 Pigsty 的功能特性，进行开发调试
-- 快速构建一个本地开发用的 PostgreSQL 环境
-{{% /alert %}}
+> [!TIP] Docker 部署适用场景
+> - 在 macOS / Windows 等非 Linux 环境下快速体验 Pigsty
+> - 学习和测试 Pigsty 的功能特性，进行开发调试
+> - 快速构建一个本地开发用的 PostgreSQL 环境
 
-{{% alert title="Docker 部署不适用场景" color="warning" %}}
-- **生产环境部署**：容器环境性能和稳定性不如原生 Linux
-- **高可用集群**：Docker 单机模式无法实现多节点高可用
-- **大规模部署**：建议使用原生 Linux 虚拟机或物理机
-{{% /alert %}}
+> [!WARNING] Docker 部署不适用场景
+> - **生产环境部署**：容器环境性能和稳定性不如原生 Linux
+> - **高可用集群**：Docker 单机模式无法实现多节点高可用
+> - **大规模部署**：建议使用原生 Linux 虚拟机或物理机
 
 
 ----------------
@@ -208,9 +205,8 @@ make clean        # 停止并删除容器
 make purge        # 停止并删除容器，然后直接删除当前目录的 ./data
 ```
 
-{{% alert title="谨慎执行 make purge" color="warning" %}}
-当前 Makefile 不再提供倒计时确认；`make purge` 会在移除容器后直接执行 `rm -rf -- ./data`。请先确认当前目录与待删除数据，必要时先备份。
-{{% /alert %}}
+> [!WARNING] 谨慎执行 make purge
+> 当前 Makefile 不再提供倒计时确认；`make purge` 会在移除容器后直接执行 `rm -rf -- ./data`。请先确认当前目录与待删除数据，必要时先备份。
 
 
 ----------------

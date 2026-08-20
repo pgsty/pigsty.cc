@@ -1,7 +1,7 @@
 ---
 title: "PipelineDB 快速上手"
 date: 2018-09-07
-manualLink: https://vonng.com/pg/pipeline-intro/
+manual_link: https://vonng.com/pg/pipeline-intro/
 author: 冯若航
 description: >
   PipelineDB 是 PostgreSQL 的一个扩展插件，提供流式数据处理的相关功能。

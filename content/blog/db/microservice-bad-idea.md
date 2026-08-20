@@ -1,7 +1,7 @@
 ---
 title: "微服务是不是个蠢主意？"
 date: 2023-05-07
-manualLink: https://vonng.com/db/microservice-bad-idea/
+manual_link: https://vonng.com/db/microservice-bad-idea/
 author: Dhh
 description: >
   连 SOA 典范亚马逊自己都觉得微服务和 Serverless 拉胯了。Prime Video 团队放弃微服务改用单体架构，运营成本节省了惊人的90%。微服务就像塞壬歌声一样诱惑你为系统添加毫无必要的复杂度。

@@ -1,7 +1,7 @@
 ---
 title: "从 AGPL 到 Apache：Pigsty 协议变更的思考"
 date: 2026-01-29
-manualLink: https://vonng.com/pg/pigsty-relicense/
+manual_link: https://vonng.com/pg/pigsty-relicense/
 author: 冯若航
 description: >
   Pigsty 从 AGPLv3 切换到 Apache 2.0 许可证，有朋友问我不怕别人白嫖吗？

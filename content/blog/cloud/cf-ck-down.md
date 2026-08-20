@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare 11-18 故障复盘报告"
 date: 2025-11-19
-manualLink: https://vonng.com/cloud/cf-ck-down/
+manual_link: https://vonng.com/cloud/cf-ck-down/
 author: 冯若航
 description: >
   ClickHouse 权限配置失当，导致了 Cloudflare 最近六年以来的最严重故障——核心流量分发停摆六个小时。

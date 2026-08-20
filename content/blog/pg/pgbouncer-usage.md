@@ -1,7 +1,7 @@
 ---
 title: "Pgbouncer 快速上手"
 date: 2018-02-07
-manualLink: https://vonng.com/pg/pgbouncer-usage/
+manual_link: https://vonng.com/pg/pgbouncer-usage/
 author: 冯若航
 description: >
   Pgbouncer 是一个轻量级的数据库连接池，这里简单介绍 Pgbouncer 的配置、管理与使用。

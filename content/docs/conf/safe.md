@@ -69,4 +69,4 @@ categories: [参考]
 
 源文件：[**`pigsty/conf/ha/safe.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/ha/safe.yml)
 
-{{< readfile file="yaml/ha/safe.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ha/safe.yml" code=true lang="yaml" >}}

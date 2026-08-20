@@ -37,7 +37,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/mssql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mssql.yml)
 
-{{< readfile file="yaml/mssql.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/mssql.yml" code=true lang="yaml" >}}
 
 
 --------

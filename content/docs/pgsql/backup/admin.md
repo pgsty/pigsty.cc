@@ -76,9 +76,8 @@ pig pb delete -s pg-meta         # 输入精确 stanza 名确认后才执行
 如果备份仓库为对象版本配置了 [**对象锁定保留期**](/docs/pgsql/backup/repository/#仓库锁定)，
 删除可能只写入 Delete Marker，被锁定的历史版本会继续占用空间，直到保留期结束。
 
-{{% alert color="warning" title="备份删除" %}}
-删除备份可能造成永久数据丢失。执行前必须确认目标集群/stanza、核对近期备份与替代恢复副本，并保留 `pig pb info`/删除计划的审计记录。
-{{% /alert %}}
+> [!WARNING] 备份删除
+> 删除备份可能造成永久数据丢失。执行前必须确认目标集群/stanza、核对近期备份与替代恢复副本，并保留 `pig pb info`/删除计划的审计记录。
 
 
 --------
@@ -194,10 +193,9 @@ mkdir -p /tmp/data                   # 解压提取
 cat /pg/backup/backup_pg-meta_20250713.tar.lz4 | unlz4 -d -c | tar -xC /tmp/data
 ```
 
-{{% alert color="warning" title="加密选项为遗留实现" %}}
-`pg-basebackup -e` 使用 OpenSSL **RC4** 加密 —— 这是一个已被淘汰的弱加密算法，仅作混淆用途，
-不应作为机密性保障。需要加密备份时，请使用 pgbackrest 仓库的 AES-256 加密（`cipher_type: aes-256-cbc`）。
-{{% /alert %}}
+> [!WARNING] 加密选项为遗留实现
+> `pg-basebackup -e` 使用 OpenSSL **RC4** 加密 —— 这是一个已被淘汰的弱加密算法，仅作混淆用途，
+> 不应作为机密性保障。需要加密备份时，请使用 pgbackrest 仓库的 AES-256 加密（`cipher_type: aes-256-cbc`）。
 
 ### 逻辑备份
 

@@ -1,7 +1,7 @@
 ---
 title: "批量配置 SSH 免密登录"
 date: 2018-01-07
-manualLink: https://vonng.com/pg/ssh-add-key/
+manual_link: https://vonng.com/pg/ssh-add-key/
 author: 冯若航
 description: >
   快速配置所有机器的免密登陆。

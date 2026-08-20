@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/vibe.yml`](https://github.com/pgsty/pigsty/blob/main/conf/vibe.yml)
 
-{{< readfile file="yaml/vibe.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/vibe.yml" code=true lang="yaml" >}}
 
 
 --------

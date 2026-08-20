@@ -19,31 +19,25 @@ PostgreSQL 版本升级分为两种类型：**小版本升级** 和 **大版本�
 {.full-width}
 
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="小版本" %}}
-```bash
+```bash {tab="小版本" group="tab1-tab2-tab3" value="tab1"}
 # 滚动升级：先从库后主库
 ansible <cls> -b -a 'yum upgrade -y postgresql17*'
 pg restart --role replica --force <cls>
 pg switchover <cls>
 pg restart <cls> <old-primary> --force
 ```
-{{% /tab %}}
-{{% tab header="大版本" %}}
-```bash
+
+```bash {tab="大版本" value="tab2"}
 # 推荐：逻辑复制迁移
 bin/pgsql-add pg-new              # 创建新版本集群
 # 配置逻辑复制同步数据...
 # 切换流量到新集群
 ```
-{{% /tab %}}
-{{% tab header="扩展" %}}
-```bash
+
+```bash {tab="扩展" value="tab3"}
 ansible <cls> -b -a 'yum upgrade -y postgis36_17*'
 psql -c 'ALTER EXTENSION postgis UPDATE;'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 关于在线迁移的详细流程，请参考 [**在线迁移**](/docs/pgsql/migration) 文档。
 
@@ -73,46 +67,35 @@ psql -c 'ALTER EXTENSION postgis UPDATE;'
 
 确保本地软件仓库中有最新版本的 PostgreSQL 包，并刷新节点缓存：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="仓库" %}}
-```bash
+```bash {tab="仓库" group="tab1-el-debian" value="tab1"}
 cd ~/pigsty
 ./infra.yml -t repo_upstream      # 添加上游仓库（需要互联网）
 ./infra.yml -t repo_build         # 重建本地仓库
 ```
-{{% /tab %}}
-{{% tab header="EL" %}}
-```bash
+
+```bash {tab="EL" value="el"}
 ansible <cls> -b -a 'yum clean all'
 ansible <cls> -b -a 'yum makecache'
 ```
-{{% /tab %}}
-{{% tab header="Debian" %}}
-```bash
+
+```bash {tab="Debian" value="debian"}
 ansible <cls> -b -a 'apt clean'
 ansible <cls> -b -a 'apt update'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **步骤二：升级从库**
 
 在所有从库上升级软件包并验证版本：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL" %}}
-```bash
+```bash {tab="EL" group="el-debian" value="el"}
 ansible <cls> -b -a 'yum upgrade -y postgresql17*'
 ansible <cls> -b -a '/usr/pgsql/bin/pg_ctl --version'
 ```
-{{% /tab %}}
-{{% tab header="Debian" %}}
-```bash
+
+```bash {tab="Debian" value="debian"}
 ansible <cls> -b -a 'apt install -y postgresql-17'
 ansible <cls> -b -a '/usr/lib/postgresql/17/bin/pg_ctl --version'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 重启所有从库以应用新版本：
 
@@ -134,18 +117,13 @@ pg switchover --leader <old-primary> --candidate <new-primary> --scheduled=now -
 
 原主库现在已降级为从库，升级软件包并重启：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL" %}}
-```bash
+```bash {tab="EL" group="el-debian" value="el"}
 ansible <old-primary-ip> -b -a 'yum upgrade -y postgresql17*'
 ```
-{{% /tab %}}
-{{% tab header="Debian" %}}
-```bash
+
+```bash {tab="Debian" value="debian"}
 ansible <old-primary-ip> -b -a 'apt install -y postgresql-17'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 ```bash
 pg restart <cls> <old-primary-name> --force
@@ -169,36 +147,26 @@ pg query <cls> -c "SELECT version()"
 
 **步骤一：获取旧版本包**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL" %}}
-```bash
+```bash {tab="EL" group="el-tab2" value="el"}
 cd ~/pigsty; ./infra.yml -t repo_upstream     # 添加上游仓库
 cd /www/pigsty; repotrack postgresql17-*-17.1 # 下载指定版本的包
 cd ~/pigsty; ./infra.yml -t repo_create       # 重建仓库元数据
 ```
-{{% /tab %}}
-{{% tab header="刷新缓存" %}}
-```bash
+
+```bash {tab="刷新缓存" value="tab2"}
 ansible <cls> -b -a 'yum clean all'
 ansible <cls> -b -a 'yum makecache'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **步骤二：执行降级**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL" %}}
-```bash
+```bash {tab="EL" group="el-debian" value="el"}
 ansible <cls> -b -a 'yum downgrade -y postgresql17*'
 ```
-{{% /tab %}}
-{{% tab header="Debian" %}}
-```bash
+
+```bash {tab="Debian" value="debian"}
 ansible <cls> -b -a 'apt install -y postgresql-17=17.1*'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **步骤三：重启集群**
 
@@ -219,9 +187,8 @@ pg restart --force <cls>
 | [**pg_upgrade 原地升级**](#pg_upgrade-原地升级) | 分钟~小时  | 中   | 测试环境，数据量较小     |
 {.full-width}
 
-{{% alert title="推荐方案" color="success" %}}
-对于生产环境，推荐使用 **逻辑复制迁移** 方式：创建新版本集群，通过逻辑复制同步数据，然后进行蓝绿切换。这种方式停机时间最短，且可以随时回滚。详见 [**在线迁移**](/docs/pgsql/migration)。
-{{% /alert %}}
+> [!TIP] 推荐方案
+> 对于生产环境，推荐使用 **逻辑复制迁移** 方式：创建新版本集群，通过逻辑复制同步数据，然后进行蓝绿切换。这种方式停机时间最短，且可以随时回滚。详见 [**在线迁移**](/docs/pgsql/migration)。
 
 
 ### 逻辑复制迁移
@@ -286,9 +253,8 @@ DROP SUBSCRIPTION upgrade_sub;
 
 `pg_upgrade` 是 PostgreSQL 官方提供的大版本升级工具，适用于测试环境或可接受较长停机时间的场景。
 
-{{% alert title="重要警告" color="warning" %}}
-原地升级会导致较长的停机时间，且回滚困难。生产环境请优先考虑逻辑复制迁移方式。
-{{% /alert %}}
+> [!WARNING] 重要警告
+> 原地升级会导致较长的停机时间，且回滚困难。生产环境请优先考虑逻辑复制迁移方式。
 
 **步骤一：安装新版本软件包**
 
@@ -350,18 +316,13 @@ pg resume <cls>
 
 **升级扩展软件包**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL" %}}
-```bash
+```bash {tab="EL" group="el-debian" value="el"}
 ansible <cls> -b -a 'yum upgrade -y postgis36_17 timescaledb-2-postgresql-17* pgvector_17*'
 ```
-{{% /tab %}}
-{{% tab header="Debian" %}}
-```bash
+
+```bash {tab="Debian" value="debian"}
 ansible <cls> -b -a 'apt install -y postgresql-17-postgis-3 postgresql-17-pgvector'
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **升级扩展版本**
 
@@ -381,9 +342,8 @@ ALTER EXTENSION vector UPDATE;
 SELECT extname, extversion FROM pg_extension;
 ```
 
-{{% alert title="扩展兼容性" color="warning" %}}
-大版本升级前，请确认所有使用的扩展都支持目标 PostgreSQL 版本。某些扩展可能需要先卸载再重新安装，请查阅扩展文档。
-{{% /alert %}}
+> [!WARNING] 扩展兼容性
+> 大版本升级前，请确认所有使用的扩展都支持目标 PostgreSQL 版本。某些扩展可能需要先卸载再重新安装，请查阅扩展文档。
 
 
 ----------------

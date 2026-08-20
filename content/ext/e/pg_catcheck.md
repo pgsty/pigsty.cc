@@ -191,40 +191,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_catcheck;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_catcheck -v 18  # PG 18
 pig ext install -y pg_catcheck -v 17  # PG 17
 pig ext install -y pg_catcheck -v 16  # PG 16
 pig ext install -y pg_catcheck -v 15  # PG 15
 pig ext install -y pg_catcheck -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_catcheck_18       # PG 18
 dnf install -y pg_catcheck_17       # PG 17
 dnf install -y pg_catcheck_16       # PG 16
 dnf install -y pg_catcheck_15       # PG 15
 dnf install -y pg_catcheck_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pg-catcheck   # PG 18
 apt install -y postgresql-17-pg-catcheck   # PG 17
 apt install -y postgresql-16-pg-catcheck   # PG 16
 apt install -y postgresql-15-pg-catcheck   # PG 15
 apt install -y postgresql-14-pg-catcheck   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -250,13 +243,13 @@ pg_catcheck -h localhost -p 5432 -d mydb
 
 未发现问题时的正常输出：
 
-```
+```text
 progress: done (0 inconsistencies, 0 warnings, 0 errors)
 ```
 
 ### 存在损坏时的示例输出
 
-```
+```text
 notice: pg_class row has invalid relnamespace "24580": no matching entry in pg_namespace
 row identity: oid="24581" relname="foo" relkind="r"
 notice: pg_type row has invalid typnamespace "24580": no matching entry in pg_namespace

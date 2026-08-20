@@ -53,11 +53,10 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 两套仓库的预置策略有意不同：`local` 不加密、不打包、按份数保留，追求简单与恢复速度；
 `minio` 加密（AES-256-CBC）、打包（bundle）、块级增量（block）、按时间保留两周，面向生产容灾。
 
-{{% alert color="warning" title="生产环境请修改默认密码" %}}
-使用远程仓库时，请务必修改默认的 `cipher_pass` 加密密码与 `s3_key_secret` 访问密钥。
-示例中的 `pgBackRest` 与 `S3User.Backup` 是公开默认值，不能直接用于生产环境。
-加密密码一旦遗失，仓库中的备份将无法解密恢复 —— 请与备份分开妥善保管，具体要求参阅 [**部署安全**](/docs/deploy/security/#备份与恢复)。
-{{% /alert %}}
+> [!WARNING] 生产环境请修改默认密码
+> 使用远程仓库时，请务必修改默认的 `cipher_pass` 加密密码与 `s3_key_secret` 访问密钥。
+> 示例中的 `pgBackRest` 与 `S3User.Backup` 是公开默认值，不能直接用于生产环境。
+> 加密密码一旦遗失，仓库中的备份将无法解密恢复 —— 请与备份分开妥善保管，具体要求参阅 [**部署安全**](/docs/deploy/security/#备份与恢复)。
 
 
 --------

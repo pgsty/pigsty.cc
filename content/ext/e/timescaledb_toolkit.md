@@ -157,37 +157,30 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install timescaledb_toolkit;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y timescaledb_toolkit -v 18  # PG 18
 pig ext install -y timescaledb_toolkit -v 17  # PG 17
 pig ext install -y timescaledb_toolkit -v 16  # PG 16
 pig ext install -y timescaledb_toolkit -v 15  # PG 15
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y timescaledb-toolkit_18       # PG 18
 dnf install -y timescaledb-toolkit_17       # PG 17
 dnf install -y timescaledb-toolkit_16       # PG 16
 dnf install -y timescaledb-toolkit_15       # PG 15
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-timescaledb-toolkit   # PG 18
 apt install -y postgresql-17-timescaledb-toolkit   # PG 17
 apt install -y postgresql-16-timescaledb-toolkit   # PG 16
 apt install -y postgresql-15-timescaledb-toolkit   # PG 15
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -203,7 +196,7 @@ CREATE EXTENSION timescaledb_toolkit;
 
 来源：[documentation index](https://github.com/timescale/timescaledb-toolkit/blob/1.23.0/docs/README.md)、[v1.23.0 release](https://github.com/timescale/timescaledb-toolkit/releases/tag/1.23.0)、[Changelog](https://github.com/timescale/timescaledb-toolkit/blob/1.23.0/Changelog.md)
 
-TimescaleDB Toolkit 提供了一系列专用于时序数据分析的函数，采用**两步聚合模式**。大多数函数会先创建中间表示，再通过访问器函数进行查询，从而实现高效复用和多维分析。
+TimescaleDB Toolkit 提供了一系列专用于时序数据分析的函数，采用 **两步聚合模式**。大多数函数会先创建中间表示，再通过访问器函数进行查询，从而实现高效复用和多维分析。
 
 ### 近似分析
 

@@ -1,7 +1,7 @@
 ---
 title: "DBA 还是一份好工作吗？"
 date: 2022-05-10
-manualLink: https://vonng.com/cloud/is-dba-good-job/
+manual_link: https://vonng.com/cloud/is-dba-good-job/
 author: 冯若航
 description: >
   蚂蚁金服有过一个自嘲的段子：能干翻支付宝的，除了监管就是 DBA 了。尽管 DBA 听上去是一个有着光辉历史与暗淡前景的行当，但天知道会不会重新成为潮流呢？

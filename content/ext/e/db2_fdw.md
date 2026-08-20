@@ -176,31 +176,25 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf" value="tab1"}
 pig install db2_fdw;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y db2_fdw -v 18  # PG 18
 pig ext install -y db2_fdw -v 17  # PG 17
 pig ext install -y db2_fdw -v 16  # PG 16
 pig ext install -y db2_fdw -v 15  # PG 15
 pig ext install -y db2_fdw -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y db2_fdw_18       # PG 18
 dnf install -y db2_fdw_17       # PG 17
 dnf install -y db2_fdw_16       # PG 16
 dnf install -y db2_fdw_15       # PG 15
 dnf install -y db2_fdw_14       # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：

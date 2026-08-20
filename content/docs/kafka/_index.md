@@ -11,10 +11,9 @@ aliases: [/docs/pilot/kafka]
 
 [Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.1+ 动态 KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
-{{% alert title="当前状态：Beta 模块" color="info" %}}
-当前 Kafka 模块处于 Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
-包括动态 KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
-{{% /alert %}}
+> [!NOTE] 当前状态：Beta 模块
+> 当前 Kafka 模块处于 Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
+> 包括动态 KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
 
 
 --------

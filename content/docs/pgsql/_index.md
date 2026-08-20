@@ -5,7 +5,7 @@ description: 使用 Pigsty v4.5 声明、部署、接入、监控、备份与管
 icon: fab fa-postgresql
 module: [PGSQL]
 categories: [参考]
-hide_feedback: true
+feedback: false
 ---
 
 PGSQL 是 Pigsty 的核心模块：通过 Ansible 清单声明 PostgreSQL 集群，以 Patroni 与 etcd 提供高可用编排，以 pgBackRest 提供备份/PITR，并通过 HAProxy、VIP、DNS、PgBouncer 与完整可观测性栈提供数据库服务。

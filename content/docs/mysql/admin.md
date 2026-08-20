@@ -244,9 +244,8 @@ journalctl -u mysql-backup --since today          # 查看备份日志
 ansible my-test -b -a 'ls -l /data/backups/mysql/my-test/latest'
 ```
 
-{{% alert title="备份告警缺口" color="warning" %}}
-当前版本没有备份新鲜度指标与告警：备份失败只能从 `mysql-backup` 日志（已接入 VictoriaLogs，Instance Dashboard 的 Router / Backup Logs 面板可查）发现。重要环境建议为备份日志配置外部巡检，并定期演练下文的恢复流程。
-{{% /alert %}}
+> [!WARNING] 备份告警缺口
+> 当前版本没有备份新鲜度指标与告警：备份失败只能从 `mysql-backup` 日志（已接入 VictoriaLogs，Instance Dashboard 的 Router / Backup Logs 面板可查）发现。重要环境建议为备份日志配置外部巡检，并定期演练下文的恢复流程。
 
 
 --------

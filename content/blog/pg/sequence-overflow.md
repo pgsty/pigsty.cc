@@ -2,7 +2,7 @@
 title: "故障档案：序列号消耗过快导致整型溢出"
 linkTitle: "故障档案：序列号溢出"
 date: 2018-07-20
-manualLink: https://vonng.com/pg/sequence-overflow/
+manual_link: https://vonng.com/pg/sequence-overflow/
 author: 冯若航
 description: >
   如果您在表上用了 Interger 的序列号，最好还是考虑一下可能溢出的情况。

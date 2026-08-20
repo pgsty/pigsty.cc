@@ -21,23 +21,17 @@ pg-meta:
 ```
 
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-user <cls> <username>    # 在 <cls> 集群上创建/修改 <username> 用户
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-user.yml -l pg-meta -e username=dbuser_app    # 直接使用剧本在 <cls> 集群上创建/修改 <username> 用户
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-user pg-meta dbuser_app    # 在 pg-meta 集群上创建/修改 dbuser_app 用户
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 关于用户定义参数的完整参考，请查阅 [**用户配置**](/docs/pgsql/config/user)。角色与权限模型参见 [**访问控制**](/docs/concept/sec/ac#角色体系)，认证与凭据管理参见 [**身份认证**](/docs/concept/sec/auth)。
 
@@ -62,23 +56,17 @@ bin/pgsql-user pg-meta dbuser_app    # 在 pg-meta 集群上创建/修改 dbuser
 
 要在现有的 PostgreSQL 集群上创建新的业务用户，请将 [**用户定义**](/docs/pgsql/config/user) 添加到 `all.children.<cls>.pg_users`，然后执行：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-user <cls> <username>   # 创建用户 <username>
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-user.yml -l <cls> -e username=<username>   # 直接使用 Ansible 剧本创建用户
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-user pg-meta dbuser_app    # 例子，在 pg-meta 集群中创建 dbuser_app 用户
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **示例配置：创建名为 `dbuser_app` 的业务用户**
 
@@ -94,9 +82,8 @@ bin/pgsql-user pg-meta dbuser_app    # 例子，在 pg-meta 集群中创建 dbus
 **执行效果**：在主库上创建用户 `dbuser_app`，设置密码，授予 `dbrole_readwrite` 角色权限，
 将用户添加到 Pgbouncer 连接池，在每个实例上重载 Pgbouncer 配置使其立即生效。
 
-{{% alert title="建议使用剧本创建用户" color="secondary" %}}
-如果您需要手工创建用户，那么需要自行确保 Pgbouncer 连接池用户列表同步。
-{{% /alert %}}
+> [!NOTE] 建议使用剧本创建用户
+> 如果您需要手工创建用户，那么需要自行确保 Pgbouncer 连接池用户列表同步。
 
 
 ----------------
@@ -105,23 +92,17 @@ bin/pgsql-user pg-meta dbuser_app    # 例子，在 pg-meta 集群中创建 dbus
 
 修改用户与创建用户使用相同的命令，剧本是幂等的。当目标用户已存在时，Pigsty 会修改目标用户的属性使其符合配置。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-user <cls> <user>   # 修改用户 <user> 的属性
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-user.yml -l <cls> -e username=<user>   # 幂等操作，可重复执行
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-user pg-meta dbuser_app    # 修改 dbuser_app 用户的属性使其符合配置
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **不可直接修改的属性**：用户的 `name` 是声明式定义的身份键，剧本不会把一个现有角色重命名为另一个角色。应按“创建新角色 → 迁移所有权/权限与客户端 → 验证 → 删除旧角色”的顺序完成更名。
@@ -199,23 +180,17 @@ bin/pgsql-user pg-meta dbuser_app    # 修改 dbuser_app 用户的属性使其�
 
 删除用户会终止连接、转移对象所有权、撤销授权并执行 `DROP ROLE`，属于不可逆操作。先确认精确的集群名、用户名、继任所有者与近期备份，再将目标用户的 `state` 设置为 `absent` 并执行实际变更。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-user <cls> <user>   # 确认后实际删除；配置中必须为 state: absent
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-user.yml -l <cls> -e username=<user>   # 直接使用 Ansible 剧本删除用户
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-user pg-meta dbuser_old    # 删除 dbuser_old 用户（配置中已设置 state: absent）
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **配置示例**：
 
@@ -229,9 +204,8 @@ pg_users:
 
 **保护机制**：Ansible 任务会跳过 `postgres` 以及清单中配置的复制、管理和监控用户。直接运行 `pg-drop-role` 时，脚本只硬编码保护默认名称 `postgres`、`replicator`、`dbuser_dba`、`dbuser_monitor`；如果改过系统用户名，直接脚本不会自动识别它们，必须额外谨慎。
 
-{{% alert title="依赖感知，但不是事务性删除" color="warning" %}}
-`pg-drop-role` 会在 `REASSIGN OWNED` 失败时跳过对应数据库的 `DROP OWNED`，但整个跨数据库流程不是一个事务；中途失败可能留下 `NOLOGIN`、已转移的部分对象或残余依赖。v4.5 的 Ansible 删除任务还使用 `ignore_errors`，因此剧本最终状态不能代替核验。执行后必须确认角色已消失、继任所有权正确、应用已切换，并检查审计日志。
-{{% /alert %}}
+> [!WARNING] 依赖感知，但不是事务性删除
+> `pg-drop-role` 会在 `REASSIGN OWNED` 失败时跳过对应数据库的 `DROP OWNED`，但整个跨数据库流程不是一个事务；中途失败可能留下 `NOLOGIN`、已转移的部分对象或残余依赖。v4.5 的 Ansible 删除任务还使用 `ignore_errors`，因此剧本最终状态不能代替核验。执行后必须确认角色已消失、继任所有权正确、应用已切换，并检查审计日志。
 
 v4.5 的 `pgsql-user.yml` 会重载 Pgbouncer，但不会可靠地从 `/etc/pgbouncer/userlist.txt` 清除已删除角色。删除后应在每个集群实例检查：
 
@@ -431,13 +405,12 @@ sudo -iu postgres psql -d postgres
 
 复制密码在数据库角色与所有 Patroni 节点之间不一致时，新建复制连接会失败，因此应安排维护窗口并快速完成验证。若部署了 VIBE 等会把管理员连接串写入工作区上下文的模块，还应按模块文档重新渲染对应文件。
 
-{{% alert title="检查 Infra .pgpass 重复项" color="warning" %}}
-v4.5 的 `env_pgpass` 使用 `lineinfile` 添加新记录，不会按用户名自动删除旧密码；libpq 又采用第一条匹配记录。刷新后应在每个目标 Infra 节点检查每个系统用户名是否只有一条匹配记录，并通过受控编辑删掉旧项（不要把密码打印到终端或日志）：
-
-```bash
-awk -F: '$4=="dbuser_dba" || $4=="dbuser_monitor" || $4=="replicator" {print NR, $4}' ~/.pgpass
-```
-{{% /alert %}}
+> [!WARNING] 检查 Infra .pgpass 重复项
+> v4.5 的 `env_pgpass` 使用 `lineinfile` 添加新记录，不会按用户名自动删除旧密码；libpq 又采用第一条匹配记录。刷新后应在每个目标 Infra 节点检查每个系统用户名是否只有一条匹配记录，并通过受控编辑删掉旧项（不要把密码打印到终端或日志）：
+>
+> ```bash
+> awk -F: '$4=="dbuser_dba" || $4=="dbuser_monitor" || $4=="replicator" {print NR, $4}' ~/.pgpass
+> ```
 
 Patroni REST API 的 [**`patroni_password`**](/docs/pgsql/param#patroni_password) 不是 PostgreSQL 角色密码。修改清单后，应分别刷新目标 PostgreSQL 集群和 Infra 管理端：
 

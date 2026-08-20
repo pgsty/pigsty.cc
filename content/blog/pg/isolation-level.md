@@ -1,7 +1,7 @@
 ---
 title: "事务隔离等级注意事项"
 date: 2019-11-12
-manualLink: https://vonng.com/pg/isolation-level/
+manual_link: https://vonng.com/pg/isolation-level/
 author: 冯若航
 description: >
   PostgreSQL 实际上只有两种事务隔离等级：读已提交（Read Commited）与可序列化（Serializable）。

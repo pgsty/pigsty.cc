@@ -1,7 +1,7 @@
 ---
 title: "如何用 pg_filedump 抢救数据？"
 date: 2023-09-27
-manualLink: https://vonng.com/pg/pg-filedump/
+manual_link: https://vonng.com/pg/pg-filedump/
 author: 冯若航
 description: >
   备份是 DBA 的生命线，但如果你的 PostgreSQL 数据库已经爆炸了又没有备份，该怎么办？也许 pg_filedump 可以帮到你！

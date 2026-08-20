@@ -63,14 +63,11 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 PG Exporter 提供多种 [**安装方式**](/docs/pg_exporter/install)，适配各种基础设施：
 
-{{< tabpane persist="disabled" >}}
-{{% tab header="安装" disabled=true /%}}
-
-{{< tab header="Docker" lang="bash" >}}
+```bash {tab="Docker"}
 docker run -d --name pg_exporter -p 9630:9630 -e PG_EXPORTER_URL="postgres://user:pass@host:5432/postgres" pgsty/pg_exporter:latest
-{{< /tab >}}
+```
 
-{{< tab header="YUM" lang="bash" >}}
+```bash {tab="YUM"}
 # 基于 RPM 的系统
 sudo tee /etc/yum.repos.d/pigsty-infra.repo > /dev/null <<-'EOF'
 [pigsty-infra]
@@ -83,34 +80,32 @@ EOF
 
 sudo yum makecache;
 sudo yum install -y pg-exporter
-{{< /tab >}}
+```
 
-{{< tab header="APT" lang="bash" >}}
+```bash {tab="APT"}
 sudo tee /etc/apt/sources.list.d/pigsty-infra.list > /dev/null <<EOF
 deb [trusted=yes] https://repo.pigsty.io/apt/infra generic main
 EOF
 
 sudo apt update;
 sudo apt install -y pg-exporter
-{{< /tab >}}
+```
 
-{{< tab header="二进制" lang="bash" >}}
+```bash {tab="二进制"}
 VERSION=$(curl -fsSL https://api.github.com/repos/pgsty/pg_exporter/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
 wget "https://github.com/pgsty/pg_exporter/releases/download/v${VERSION}/pg_exporter-${VERSION}.linux-amd64.tar.gz"
 mkdir -p "pg_exporter-${VERSION}.linux-amd64"
 tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz" -C "pg_exporter-${VERSION}.linux-amd64"
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter" /usr/bin/
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_exporter.yml
-{{< /tab >}}
+```
 
-{{< tab header="源码" lang="bash" >}}
+```bash {tab="源码"}
 # 从源码构建
 git clone https://github.com/pgsty/pg_exporter.git
 cd pg_exporter
 make build
-{{< /tab >}}
-
-{{< /tabpane >}}
+```
 
 
 --------

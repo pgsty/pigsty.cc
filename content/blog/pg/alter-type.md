@@ -1,7 +1,7 @@
 ---
 title: "在线修改主键列类型"
 date: 2021-01-15
-manualLink: https://vonng.com/pg/alter-type/
+manual_link: https://vonng.com/pg/alter-type/
 author: 冯若航
 description: >
   如何在线修改表中列的类型，例如从 INT 升级为 BIGINT？

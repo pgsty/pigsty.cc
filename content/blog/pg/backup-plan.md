@@ -1,7 +1,7 @@
 ---
 title: "温备：使用 pg_receivewal"
 date: 2019-03-02
-manualLink: https://vonng.com/pg/backup-plan/
+manual_link: https://vonng.com/pg/backup-plan/
 author: 冯若航
 description: >
   备份有各种各样的策略，物理备份通常可以分为四种。

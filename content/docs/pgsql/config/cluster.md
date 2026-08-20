@@ -160,29 +160,26 @@ synchronous_node_count: 2       # 指定“至少”有多少个从库提交成�
 synchronous_standby_names = '2 ("pg-test-3","pg-test-2")'
 ```
 
-<details><summary>示例：使用多个同步从库</summary>
-
-```bash
-$ pg edit-config pg-test
----
-+synchronous_node_count: 2
-
-Apply these changes? [y/N]: y
-```
-
-应用配置后，出现两个同步备库。
-
-```bash
-+ Cluster: pg-test (7080814403632534854) +---------+----+-----------+-----------------+
-| Member    | Host        | Role         | State   | TL | Lag in MB | Tags            |
-+-----------+-------------+--------------+---------+----+-----------+-----------------+
-| pg-test-1 | 10.10.10.10 | Leader       | running |  1 |           | clonefrom: true |
-| pg-test-2 | 10.10.10.11 | Sync Standby | running |  1 |         0 | clonefrom: true |
-| pg-test-3 | 10.10.10.12 | Sync Standby | running |  1 |         0 | clonefrom: true |
-+-----------+-------------+--------------+---------+----+-----------+-----------------+
-```
-
-</details>
+> [!DETAILS]- 示例：使用多个同步从库
+> ```bash
+> $ pg edit-config pg-test
+> ---
+> +synchronous_node_count: 2
+>
+> Apply these changes? [y/N]: y
+> ```
+>
+> 应用配置后，出现两个同步备库。
+>
+> ```bash
+> + Cluster: pg-test (7080814403632534854) +---------+----+-----------+-----------------+
+> | Member    | Host        | Role         | State   | TL | Lag in MB | Tags            |
+> +-----------+-------------+--------------+---------+----+-----------+-----------------+
+> | pg-test-1 | 10.10.10.10 | Leader       | running |  1 |           | clonefrom: true |
+> | pg-test-2 | 10.10.10.11 | Sync Standby | running |  1 |         0 | clonefrom: true |
+> | pg-test-3 | 10.10.10.12 | Sync Standby | running |  1 |         0 | clonefrom: true |
+> +-----------+-------------+--------------+---------+----+-----------+-----------------+
+> ```
 
 另一种情景是，使用 **任意 n 个** 从库来确认提交。在这种情况下，配置的方式略有不同，例如，假设我们只需要任意一个从库确认提交：
 
@@ -193,20 +190,17 @@ postgresql:
     synchronous_standby_names: 'ANY 1 (*)'  # 你可以指定具体的从库列表，或直接使用 * 通配所有从库。
 ```
 
-<details><summary>示例：启用 ANY 法定人数提交</summary>
-
-```bash
-$ pg edit-config pg-test
-
-+    synchronous_standby_names: 'ANY 1 (*)' # 在 ANY 模式下，需要使用此参数
-- synchronous_node_count: 2  # 在 ANY 模式下， 不需要使用此参数
-
-Apply these changes? [y/N]: y
-```
-
-应用后，配置生效，所有备库在 Patroni 中变为普通的 replica。但是在 `pg_stat_replication` 中可以看到 `sync_state` 会变为 `quorum`。
-
-</details>
+> [!DETAILS]- 示例：启用 ANY 法定人数提交
+> ```bash
+> $ pg edit-config pg-test
+>
+> +    synchronous_standby_names: 'ANY 1 (*)' # 在 ANY 模式下，需要使用此参数
+> - synchronous_node_count: 2  # 在 ANY 模式下， 不需要使用此参数
+>
+> Apply these changes? [y/N]: y
+> ```
+>
+> 应用后，配置生效，所有备库在 Patroni 中变为普通的 replica。但是在 `pg_stat_replication` 中可以看到 `sync_state` 会变为 `quorum`。
 
 
 
@@ -247,69 +241,60 @@ bin/pgsql-add pg-test     # 创建原始集群
 bin/pgsql-add pg-test2    # 创建备份集群
 ```
 
-<details><summary>示例：更改复制上游</summary>
-
-如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin/cluster#配置集群) 更改备份集群的复制上游。
-
-要这样做，只需将 `standby_cluster.host` 更改为新的上游 IP 地址并应用。
-
-```bash
-$ pg edit-config pg-test2
-
- standby_cluster:
-   create_replica_methods:
-   - basebackup
--  host: 10.10.10.13     # <--- 旧的上游
-+  host: 10.10.10.12     # <--- 新的上游
-   port: 5432
-
- Apply these changes? [y/N]: y
-```
-
-</details>
+> [!DETAILS]- 示例：更改复制上游
+> 如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin/cluster#配置集群) 更改备份集群的复制上游。
+>
+> 要这样做，只需将 `standby_cluster.host` 更改为新的上游 IP 地址并应用。
+>
+> ```bash
+> $ pg edit-config pg-test2
+>
+>  standby_cluster:
+>    create_replica_methods:
+>    - basebackup
+> -  host: 10.10.10.13     # <--- 旧的上游
+> +  host: 10.10.10.12     # <--- 新的上游
+>    port: 5432
+>
+>  Apply these changes? [y/N]: y
+> ```
 
 
 
-<details><summary>示例：提升备份集群</summary>
-
-你可以随时将备份集群提升为独立集群，这样该集群就可以独立承载写入请求，并与原集群分叉。
-
-为此，你必须 [配置](/docs/pgsql/admin/cluster#配置集群) 该集群并完全擦除 `standby_cluster` 部分，然后应用。
-
-```bash
-$ pg edit-config pg-test2
--standby_cluster:
--  create_replica_methods:
--  - basebackup
--  host: 10.10.10.11
--  port: 5432
-
-Apply these changes? [y/N]: y
-```
-
-</details>
+> [!DETAILS]- 示例：提升备份集群
+> 你可以随时将备份集群提升为独立集群，这样该集群就可以独立承载写入请求，并与原集群分叉。
+>
+> 为此，你必须 [配置](/docs/pgsql/admin/cluster#配置集群) 该集群并完全擦除 `standby_cluster` 部分，然后应用。
+>
+> ```bash
+> $ pg edit-config pg-test2
+> -standby_cluster:
+> -  create_replica_methods:
+> -  - basebackup
+> -  host: 10.10.10.11
+> -  port: 5432
+>
+> Apply these changes? [y/N]: y
+> ```
 
 
 
- <details><summary>示例：级联复制</summary>
-
-如果您在一台从库上指定了 [`pg_upstream`](/docs/pgsql/param#pg_upstream)，而不是主库。那么可以配置集群的 **级联复制**（Cascade Replication）
-
-在配置级联复制时，您必须使用集群中某一个实例的 IP 地址作为参数的值，否则初始化会报错。该从库从特定的实例进行流复制，而不是主库。
-
-这台充当 WAL 中继器的实例被称为 **桥接实例**（Bridge Instance）。使用桥接实例可以分担主库发送 WAL 的负担，当您有几十台从库时，使用桥接实例级联复制是一个不错的注意。
-
-```yaml
-pg-test:
-  hosts: # pg-test-1 ---> pg-test-2 ---> pg-test-3
-    10.10.10.11: { pg_seq: 1, pg_role: primary }
-    10.10.10.12: { pg_seq: 2, pg_role: replica } # <--- 桥接实例
-    10.10.10.13: { pg_seq: 3, pg_role: replica, pg_upstream: 10.10.10.12 }
-    # ^--- 从 pg-test-2 (桥接)复制，而不是从 pg-test-1 (主节点) 
-  vars: { pg_cluster: pg-test }
-```
-
-</details>
+ > [!DETAILS]- 示例：级联复制
+ > 如果您在一台从库上指定了 [`pg_upstream`](/docs/pgsql/param#pg_upstream)，而不是主库。那么可以配置集群的 **级联复制**（Cascade Replication）
+ >
+ > 在配置级联复制时，您必须使用集群中某一个实例的 IP 地址作为参数的值，否则初始化会报错。该从库从特定的实例进行流复制，而不是主库。
+ >
+ > 这台充当 WAL 中继器的实例被称为 **桥接实例**（Bridge Instance）。使用桥接实例可以分担主库发送 WAL 的负担，当您有几十台从库时，使用桥接实例级联复制是一个不错的注意。
+ >
+ > ```yaml
+ > pg-test:
+ >  hosts: # pg-test-1 ---> pg-test-2 ---> pg-test-3
+ >    10.10.10.11: { pg_seq: 1, pg_role: primary }
+ >    10.10.10.12: { pg_seq: 2, pg_role: replica } # <--- 桥接实例
+ >    10.10.10.13: { pg_seq: 3, pg_role: replica, pg_upstream: 10.10.10.12 }
+>    # ^--- 从 pg-test-2 (桥接)复制，而不是从 pg-test-1 (主节点)
+ >  vars: { pg_cluster: pg-test }
+ > ```
 
 
 

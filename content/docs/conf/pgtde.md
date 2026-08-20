@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/pgtde.yml`](https://github.com/pgsty/pigsty/blob/main/conf/pgtde.yml)
 
-{{< readfile file="yaml/pgtde.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/pgtde.yml" code=true lang="yaml" >}}
 
 
 --------

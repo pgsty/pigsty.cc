@@ -66,10 +66,9 @@ JUICE 模块仅有两个参数：
 | `state` | 否  | `create`         | `create` / `absent`       |
 {.full-width}
 
-{{% alert title="重要" color="warning" %}}
-- 建议在 **首次格式化** 时显式设置 `data`，以明确存储后端。
-- 同一节点多个实例必须配置不同的 `port`。
-{{% /alert %}}
+> [!WARNING] 重要
+> - 建议在 **首次格式化** 时显式设置 `data`，以明确存储后端。
+> - 同一节点多个实例必须配置不同的 `port`。
 
 配置示例：
 

@@ -370,38 +370,26 @@ INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/depl
 
 [Pigsty Home](https://demo.pigsty.cc/d/pigsty)：Pigsty 监控系统主页
 
-<details><summary>Pigsty Home Dashboard</summary>
-
-[![pigsty.jpg](/img/dashboard/pigsty.jpg)](https://demo.pigsty.cc/d/pigsty/)
-
-</details>
+> [!DETAILS]- Pigsty Home Dashboard
+> [![pigsty.jpg](/img/dashboard/pigsty.jpg)](https://demo.pigsty.cc/d/pigsty/)
 
 
 [INFRA Overview](https://demo.pigsty.cc/d/infra-overview)：Pigsty 基础设施自监控概览
 
-<details><summary>INFRA Overview Dashboard</summary>
-
-[![infra-overview.jpg](/img/dashboard/infra-overview.jpg)](https://demo.pigsty.cc/d/infra-overview/)
-
-</details>
+> [!DETAILS]- INFRA Overview Dashboard
+> [![infra-overview.jpg](/img/dashboard/infra-overview.jpg)](https://demo.pigsty.cc/d/infra-overview/)
 
 
 [Nginx Instance](https://demo.pigsty.cc/d/nginx-instance)：Nginx 监控指标与日志
 
-<details><summary>Nginx Overview Dashboard</summary>
-
-[![nginx-overview.jpg](/img/dashboard/nginx-overview.jpg)](https://demo.pigsty.cc/d/nginx-overview)
-
-</details>
+> [!DETAILS]- Nginx Overview Dashboard
+> [![nginx-overview.jpg](/img/dashboard/nginx-overview.jpg)](https://demo.pigsty.cc/d/nginx-overview)
 
 
 [Grafana Instance](https://demo.pigsty.cc/d/grafana-instance)：Grafana 监控指标与日志
 
-<details><summary>Grafana Overview Dashboard</summary>
-
-[![grafana-overview.jpg](/img/dashboard/grafana-overview.jpg)](https://demo.pigsty.cc/d/grafana-overview)
-
-</details>
+> [!DETAILS]- Grafana Overview Dashboard
+> [![grafana-overview.jpg](/img/dashboard/grafana-overview.jpg)](https://demo.pigsty.cc/d/grafana-overview)
 
 
 [VictoriaMetrics Instance](https://demo.pigsty.cc/d/vmetrics-instance)：VictoriaMetrics 抓取、查询与存储指标
@@ -417,29 +405,20 @@ INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/depl
 
 [Logs Instance](https://demo.pigsty.cc/d/logs-instance)：基于 Vector + VictoriaLogs 的节点日志检索
 
-<details><summary>Logs Instance Dashboard</summary>
-
-[![logs-instance.jpg](/img/dashboard/logs-instance.jpg)](https://demo.pigsty.cc/d/logs-instance)
-
-</details>
+> [!DETAILS]- Logs Instance Dashboard
+> [![logs-instance.jpg](/img/dashboard/logs-instance.jpg)](https://demo.pigsty.cc/d/logs-instance)
 
 
 [CMDB Overview](https://demo.pigsty.cc/d/inventory-cmdb)：CMDB 可视化
 
-<details><summary>CMDB Overview Dashboard</summary>
-
-[![cmdb-overview.jpg](/img/dashboard/cmdb-overview.jpg)](https://demo.pigsty.cc/d/inventory-cmdb)
-
-</details>
+> [!DETAILS]- CMDB Overview Dashboard
+> [![cmdb-overview.jpg](/img/dashboard/cmdb-overview.jpg)](https://demo.pigsty.cc/d/inventory-cmdb)
 
 
 [ETCD Overview](https://demo.pigsty.cc/d/etcd-overview)：etcd 监控指标与日志
 
-<details><summary>ETCD Overview Dashboard</summary>
-
-[![etcd-overview.jpg](/img/dashboard/etcd-overview.jpg)](https://demo.pigsty.cc/d/etcd-overview)
-
-</details>
+> [!DETAILS]- ETCD Overview Dashboard
+> [![etcd-overview.jpg](/img/dashboard/etcd-overview.jpg)](https://demo.pigsty.cc/d/etcd-overview)
 
 
 
@@ -461,8 +440,5 @@ INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/depl
 - [`PROMETHEUS`](/docs/infra/param#prometheus)：Alertmanager 与 Blackbox Exporter
 - [`GRAFANA`](/docs/infra/param#grafana)：Grafana 可观测性全家桶
 
-<details><summary>参数速览</summary>
-
-为保持与 Pigsty 版本一致，请参阅 [《参数列表》](/docs/infra/param/#参数概览) 获取最新的默认值、类型与层级说明。
-
-</details>
+> [!DETAILS]- 参数速览
+> 为保持与 Pigsty 版本一致，请参阅 [《参数列表》](/docs/infra/param/#参数概览) 获取最新的默认值、类型与层级说明。

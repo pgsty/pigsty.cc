@@ -134,6 +134,5 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 ./infra-rm.yml -t package    # 卸载 INFRA 软件包
 ```
 
-{{% alert title="全量移除会删除数据" color="danger" %}}
-`infra-rm.yml` 没有防误删开关；不带标签执行时会运行上面所有阶段。`data` 阶段会递归删除 `infra_data`（默认 `/data/infra`）、`nginx_data`（默认 `/data/nginx`）、`nginx_home`（默认 `/www`）与 `/var/lib/grafana`，其中包括监控/日志/追踪数据、软件仓库和 Grafana 本地数据。只想停服或注销时必须使用相应标签；全量执行前必须备份需要保留的数据，并核对精确的 `infra` 目标。
-{{% /alert %}}
+> [!CAUTION] 全量移除会删除数据
+> `infra-rm.yml` 没有防误删开关；不带标签执行时会运行上面所有阶段。`data` 阶段会递归删除 `infra_data`（默认 `/data/infra`）、`nginx_data`（默认 `/data/nginx`）、`nginx_home`（默认 `/www`）与 `/var/lib/grafana`，其中包括监控/日志/追踪数据、软件仓库和 Grafana 本地数据。只想停服或注销时必须使用相应标签；全量执行前必须备份需要保留的数据，并核对精确的 `infra` 目标。

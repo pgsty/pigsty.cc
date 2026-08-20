@@ -278,9 +278,8 @@ redis_pkg        : 卸载所选引擎与 redis-exporter（当 redis_rm_pkg=true�
 ./redis-rm.yml -l redis-ms -e redis_safeguard=false
 ```
 
-{{% alert title="危险操作" color="danger" %}}
-`redis_safeguard` 默认是 `false`，`redis_rm_data` 默认是 `true`。移除剧本还会容忍多项停服、注销、删数据和卸包错误；真实运行后必须检查目标进程、数据目录与监控注册，不能只凭剧本返回状态判定完成。
-{{% /alert %}}
+> [!CAUTION] 危险操作
+> `redis_safeguard` 默认是 `false`，`redis_rm_data` 默认是 `true`。移除剧本还会容忍多项停服、注销、删数据和卸包错误；真实运行后必须检查目标进程、数据目录与监控注册，不能只凭剧本返回状态判定完成。
 
 
 ### 安全保险机制

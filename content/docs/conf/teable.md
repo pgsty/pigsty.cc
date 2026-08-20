@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/teable.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/teable.yml)
 
-{{< readfile file="yaml/app/teable.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/teable.yml" code=true lang="yaml" >}}
 
 
 --------

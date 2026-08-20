@@ -119,26 +119,26 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 Pigsty 向用户提供无可比拟的 PostgreSQL 扩展交付体验，已有多家 PostgreSQL Vendor 使用它进行交付。
 
-{{< cardpane >}}
-{{< card header="[**Pigsty**](https://github.com/pgsty/pigsty)" >}}
+{{< cards >}}
+{{< card title="Pigsty" link="https://github.com/pgsty/pigsty" >}}
 开箱即用的开源企业级 PostgreSQL RDS 发行版
 {{< /card >}}
-{{< card header="[**Omnigres**](https://docs.omnigres.org/quick_start/)" >}}
+{{< card title="Omnigres" link="https://docs.omnigres.org/quick_start/" >}}
 PostgreSQL as a Platform，在数据库中进行应用开发
 {{< /card >}}
-{{< card header="[**AutoBase**](https://autobase.tech/docs/extensions/install)" >}}
+{{< card title="AutoBase" link="https://autobase.tech/docs/extensions/install" >}}
 基于 Ansible 的 PG 集群自动化部署，开源 DBaaS
 {{< /card >}}
-{{< /cardpane >}}
+{{< /cards >}}
 
-{{< cardpane >}}
-{{< card header="[**TensorChord**](https://github.com/tensorchord)" >}}
+{{< cards >}}
+{{< card title="TensorChord" link="https://github.com/tensorchord" >}}
 云原生 AI 基础设施，开发了多个知名 PG 扩展
 {{< /card >}}
-{{< card header="[**文武IT**](https://w3.ww-it.cn/)" >}}
+{{< card title="文武IT" link="https://w3.ww-it.cn/" >}}
 企业级 PostgreSQL 服务商
 {{< /card >}}
-{{< /cardpane >}}
+{{< /cards >}}
 
 
 --------

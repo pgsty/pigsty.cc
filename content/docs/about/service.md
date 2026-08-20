@@ -34,9 +34,11 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 
 除了 [**开源版**](#pigsty开源版) 之外，Pigsty 提供两种不同的订阅服务档位：[**专业版**](#pigsty专业版) 与 [**企业版**](#pigsty企业版)，您可以根据自身的实际情况与需求选购。
 
-{{< cardpane >}}
+{{< cards >}}
 
-{{< card header="**Pigsty 开源版（OSS）**" title="开源免费" subtitle="无规模限制，无质保承诺" footer="自给自足的开源老司机">}}
+{{< card title="Pigsty 开源版（OSS）" badge="开源免费" >}}
+
+**无规模限制，无质保承诺**
 
 <p><b>许可协议：<a href="/docs/about/license">Apache-2.0</a></b></p>
 <p><b>PG 支持：18（默认），14 - 18 可选</b></p>
@@ -58,10 +60,14 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 
 <p><b>支持：无人天支持选项</b></p>
 <p><b>仓库：全球 CF 托管仓库</b></p>
+
+*自给自足的开源老司机*
 {{< /card >}}
 
 
-{{< card header="**Pigsty 专业版（PRO）**" title="起售价：150,000 ¥ / 年" subtitle="普通用户的默认之选" footer="普通用户的默认之选">}}
+{{< card title="Pigsty 专业版（PRO）" badge="起售价：150,000 ¥ / 年" >}}
+
+**普通用户的默认之选**
 
 <p><b>许可协议：商业许可证</b></p>
 <p><b>PG 支持：14 - 18</b></p>
@@ -85,13 +91,17 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 <p><b>支持：每年包含 1 人天</b></p>
 <p><b>交付：标准离线软件包</b></p>
 <p><b>仓库：中国大陆镜像站</b></p>
+
+*普通用户的默认之选*
 {{< /card >}}
 
 
 
 
 
-{{< card header="**Pigsty 企业版（ENTERPRISE）**" title="起售价：400,000 ¥ / 年" subtitle="严格 SLA 的关键场景" footer="严格 SLA 的关键场景">}}
+{{< card title="Pigsty 企业版（ENTERPRISE）" badge="起售价：400,000 ¥ / 年" >}}
+
+**严格 SLA 的关键场景**
 
 <p><b>许可协议：商业许可证</b></p>
 <p><b>PG 支持：14 - 18+（旧版本按需定制）</b></p>
@@ -124,8 +134,9 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 <p><b>交付：定制离线软件包</b></p>
 <p><b>信创：<a href="/docs/pgsql/kernel/polardb-o">PolarDB-O</a> 支持</b></p>
 
+*严格 SLA 的关键场景*
 {{< /card >}}
-{{< /cardpane >}}
+{{< /cards >}}
 
 
 
@@ -160,7 +171,7 @@ Pigsty 开源软件支持七个当前验证基线：EL 9.8 / 10.2、Debian 12.15
 
 ## Pigsty专业版
 
-{{% alert title="专业版订阅： 起售价格 ¥ 150,000 / 年" color="secondary" %}}{{% /alert %}}
+> [!NOTE] 专业版订阅： 起售价格 ¥ 150,000 / 年
 
 Pigsty 专业版订阅提供了完整的功能模块，以及对于 Pigsty 本身的质保。关于 PostgreSQL 本身与扩展插件的缺陷，我们将尽最大努力通过 PostgreSQL 全球开发者社区进行反馈与修复。
 
@@ -193,7 +204,7 @@ Pigsty 专业版的起售价格 **¥150,000 / 年**，相当于 **9** vCPU 的 A
 
 ## Pigsty企业版
 
-{{% alert title="企业版订阅： 起售价格 ¥ 400,000 / 年" color="primary" %}}{{% /alert %}}
+> [!IMPORTANT] 企业版订阅： 起售价格 ¥ 400,000 / 年
 
 Pigsty 企业版订阅包含 Pigsty 专业版订阅提供的全部服务内容，和以下增值服务项：
 
@@ -286,35 +297,23 @@ Pigsty 的定价策略确保用户物有所值 —— 您可以立即获得顶�
 除了 Pigsty 订阅，Pigsty 还提供按需采购的 Pigsty x PostgreSQL 专家服务 —— 业界顶级数据库专家坐堂问诊。
 
 
-{{% alert title="专家顾问：300,000 ¥ / 三年" color="primary" %}}
-
-<br>
-在三年内，提供 10 次关于 PostgreSQL 与 Pigsty 的复杂案例处理，以及不限量答疑。
-
-{{% /alert %}}
+> [!IMPORTANT] 专家顾问：300,000 ¥ / 三年
+> <br>
+> 在三年内，提供 10 次关于 PostgreSQL 与 Pigsty 的复杂案例处理，以及不限量答疑。
 
 
-{{% alert title="专家支持：30,000 ¥ / 人·天" color="secondary" %}}
+> [!NOTE] 专家支持：30,000 ¥ / 人·天
+> <br>
+> 业界顶级专家现场支持，可用于架构咨询，故障分析，问题排查，数据库体检，监控解读，迁移评估，教学培训，上下云参谋等连续耗时场景。
 
-<br>
-业界顶级专家现场支持，可用于架构咨询，故障分析，问题排查，数据库体检，监控解读，迁移评估，教学培训，上下云参谋等连续耗时场景。
+> [!TIP] 专家咨询：3000 ¥ / 例
+> <br>
+> 咨询任何您想要了解的问题，关于 Pigsty， PostgreSQL，数据库，云计算，AI……
+> 数据库老司机，云计算泥石流与您分享行业顶级洞察、认知与研判。
 
-{{% /alert %}}
-
-{{% alert title="专家咨询：3000 ¥ / 例" color="success" %}}
-
-<br>
-咨询任何您想要了解的问题，关于 Pigsty， PostgreSQL，数据库，云计算，AI……
-数据库老司机，云计算泥石流与您分享行业顶级洞察、认知与研判。
-
-{{% /alert %}}
-
-{{% alert title="挂专家号：300 ¥ / 问题" color="danger" %}}
-
-<br>
-给出一个关于 PostgreSQL / Pigsty / 数据库相关的问题的快速诊断意见与答复，不超过 5 分钟。
-
-{{% /alert %}}
+> [!CAUTION] 挂专家号：300 ¥ / 问题
+> <br>
+> 给出一个关于 PostgreSQL / Pigsty / 数据库相关的问题的快速诊断意见与答复，不超过 5 分钟。
 
 
 

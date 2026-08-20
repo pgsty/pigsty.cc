@@ -1,7 +1,7 @@
 ---
 title: "草台班子唱大戏，阿里云 PG 翻车记"
 date: 2024-08-19
-manualLink: https://vonng.com/cloud/rds-failure/
+manual_link: https://vonng.com/cloud/rds-failure/
 author: 冯若航
 description: >
   一位客户在云数据库上经历了一次离谱的连环故障：一套高可用 PG RDS 集群，因为扩容内存，主库从库都挂了，折腾到凌晨。期间昏招迭出，复盘敷衍。

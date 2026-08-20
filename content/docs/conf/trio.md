@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/ha/trio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml)
 
-{{< readfile file="yaml/ha/trio.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ha/trio.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -1,7 +1,7 @@
 ---
 title: "DHH：下云省下千万美元，比预想的还要多！"
 date: 2023-07-07
-manualLink: https://vonng.com/cloud/odyssey-done/
+manual_link: https://vonng.com/cloud/odyssey-done/
 author: Dhh
 description: >
   DHH 将他们的七个云上应用从 AWS 迁移到自己的硬件上，2024年是第一个完全实现节省的年份。他们欣喜地发现，节省的费用比最初估计的还要多。

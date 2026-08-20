@@ -2,7 +2,7 @@
 title: "PostgreSQL 例行维护"
 linkTitle: "PgSQL 例行维护任务"
 date: 2018-02-10
-manualLink: https://vonng.com/pg/routine-maintain/
+manual_link: https://vonng.com/pg/routine-maintain/
 author: 冯若航
 description: >
   汽车需要上油，数据库也需要维护保养。对 Pg 而言，有三项比较重要的维护工作：备份、重整、清理。

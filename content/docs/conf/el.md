@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/el.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/el.yml)
 
-{{< readfile file="yaml/demo/el.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/el.yml" code=true lang="yaml" >}}
 
 
 --------

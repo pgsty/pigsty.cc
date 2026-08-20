@@ -36,9 +36,8 @@ pig repo add -u                           # all = node + pgsql (pgdg + pigsty) +
 
 Pigsty 在中国区域提供了 PGDG 镜像的子集，更新频率约为一周一更新。对于 EL 7-10，Debian 11-13，Ubuntu 22.04 - 26.04 提供 x86_64 与 arm64 架构的镜像仓库。稳定仓库覆盖生命周期内的 PG14 - PG18，`beta` 模块额外提供 PostgreSQL 19 Beta。
 
-{{% alert title="2025-11 更新通知：阿里云/清华TUNA 恢复更新" color="info" %}}
-目前阿里云/清华 TUNA 镜像站已经恢复 PGDG 仓库的同步。
-{{% /alert %}}
+> [!NOTE] 2025-11 更新通知：阿里云/清华TUNA 恢复更新
+> 目前阿里云/清华 TUNA 镜像站已经恢复 PGDG 仓库的同步。
 
 
 ---------
@@ -72,22 +71,17 @@ PGDG APT 仓库使用以下 GPG 密钥签名: `B97B0AFCAA1A47F044F244A07FCC7D46A
 
 MD5 校验和为 `f54c5c1aa1329dc26e33b29762faaec4`，详情参考 https://www.postgresql.org/download/linux/debian/
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="官方" %}}
-```bash
+```bash {tab="官方" group="tab1-tab2" value="tab1"}
 sudo curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
 . /etc/os-release
 sudo sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 sudo curl -fsSL https://repo.pigsty.cc/apt/pgdg/ACCC4CF8.key -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
 . /etc/os-release
 sudo sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://repo.pigsty.cc/apt/pgdg/ $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ---------

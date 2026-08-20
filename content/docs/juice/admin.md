@@ -145,9 +145,8 @@ pig pb info -s <stanza>
 sudo -iu postgres pg-pitr -s <stanza> -t "2026-08-14 10:30:00+08"
 ```
 
-{{% alert color="danger" title="PITR 会覆盖 PostgreSQL 数据目录" %}}
-确认准确的集群名、近期备份、恢复时间点与回滚方案后，按照 [PostgreSQL PITR 教程](/docs/pgsql/tutorial/pitr/) 停止 Patroni/PostgreSQL 并执行恢复。`pg-pitr` 不负责停止服务、恢复 Patroni/DCS、验证数据或重建副本，不要把上述命令当作完整恢复流程。
-{{% /alert %}}
+> [!CAUTION] PITR 会覆盖 PostgreSQL 数据目录
+> 确认准确的集群名、近期备份、恢复时间点与回滚方案后，按照 [PostgreSQL PITR 教程](/docs/pgsql/tutorial/pitr/) 停止 Patroni/PostgreSQL 并执行恢复。`pg-pitr` 不负责停止服务、恢复 Patroni/DCS、验证数据或重建副本，不要把上述命令当作完整恢复流程。
 
 当元数据与 `--storage postgres` 的 `jfs_blob` 位于同一个被恢复的 PostgreSQL 数据库中时，数据库级 PITR 可以把两者恢复到同一时间点。
 若两者位于不同数据库或集群，必须设计一致的联合恢复点。

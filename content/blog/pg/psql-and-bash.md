@@ -1,7 +1,7 @@
 ---
 title: "Bash 与 psql 小技巧"
 date: 2018-04-07
-manualLink: https://vonng.com/pg/psql-and-bash/
+manual_link: https://vonng.com/pg/psql-and-bash/
 author: 冯若航
 description: >
   一些 PostgreSQL 与 Bash 交互的技巧。

@@ -1,0 +1,36 @@
+{{- /*
+  首页「扩展索引」格点阵列（照搬 pgext.cloud 首页的 universe field）
+  数据源：data/pgext/extension.yaml（扩展名/分类/是否打包/简介）+ data/pgext/category.yaml（分类顺序、名称、明暗配色）
+  格点按分类着色、已打包实色/未打包淡色；悬停显示扩展名与简介，点击前往 {{ pgext_url }}/ext/<name>。
+  数据以指纹化 JSON 资源输出，由 landing-v3.js 的 initExtIndex 懒加载并绘制到 canvas。
+*/ -}}
+{{- $cats := hugo.Data.pgext.category -}}
+{{- $exts := hugo.Data.pgext.extension -}}
+{{- $base := site.Params.pgext_url | default "https://pgext.cloud" -}}
+{{- $total := len $exts -}}
+{{- $packaged := len (where $exts "pkg" true) -}}
+{{- $cs := slice -}}
+{{- range $cats }}{{ $cs = $cs | append (dict "c" .code "n" .name "l" .light "d" .dark) }}{{ end -}}
+{{- /* 每个扩展编码为紧凑数组 [name, cat, pkg, desc]；Hugo 的 append 会展开切片，故逐条 jsonify 成字符串再拼接 */ -}}
+{{- $es := slice -}}
+{{- range $exts }}{{ $es = $es | append (jsonify (slice .name .cat (cond .pkg 1 0) .desc)) }}{{ end -}}
+{{- $json := printf `{"cats":%s,"ext":[%s]}` (jsonify $cs) (delimit $es ",") -}}
+{{- $res := resources.FromString "pgext/index.json" $json | fingerprint -}}
+<div class="extidx" id="extidx" data-reveal
+     data-src="{{ $res.RelPermalink }}"
+     data-base="{{ $base }}/ext/"
+     data-l-pkg="已打包" data-l-nopkg="仅收录">
+  <div class="extidx-head">
+    <span class="silkscreen">EXTENSION INDEX · {{ lang.FormatNumberCustom 0 $total }} EXT · {{ lang.FormatNumberCustom 0 $packaged }} PACKAGED</span>
+    <div class="extidx-legend" aria-label="扩展分类图例">
+      {{- range $cats }}
+      {{- $n := len (where $exts "cat" .code) }}
+      <a class="extidx-chip" href="{{ .href }}" target="_blank" rel="noopener" style="--cl:{{ .light }};--cd:{{ .dark }}" title="{{ .name }} · {{ $n }} 个扩展"><i aria-hidden="true"></i>{{ .code }}</a>
+      {{- end }}
+    </div>
+  </div>
+  <canvas class="extidx-canvas" role="img" aria-label="扩展索引：{{ $total }} 个 PostgreSQL 扩展按分类着色排列，其中 {{ $packaged }} 个已打包以实色显示，点击格点前往 pgext.cloud 扩展页"></canvas>
+  <div class="extbus-cta">
+    <a href="{{ $base }}/" class="btn btn-line" target="_blank" rel="noopener">在 pgext.cloud 检索全部 {{ lang.FormatNumberCustom 0 $total }} 个扩展 <i class="fas fa-arrow-up-right-from-square"></i></a>
+  </div>
+</div>

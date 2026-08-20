@@ -163,37 +163,30 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pgspider_ext;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pgspider_ext -v 18  # PG 18
 pig ext install -y pgspider_ext -v 17  # PG 17
 pig ext install -y pgspider_ext -v 16  # PG 16
 pig ext install -y pgspider_ext -v 15  # PG 15
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pgspider_ext_18       # PG 18
 dnf install -y pgspider_ext_17       # PG 17
 dnf install -y pgspider_ext_16       # PG 16
 dnf install -y pgspider_ext_15       # PG 15
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pgspider-ext   # PG 18
 apt install -y postgresql-17-pgspider-ext   # PG 17
 apt install -y postgresql-16-pgspider-ext   # PG 16
 apt install -y postgresql-15-pgspider-ext   # PG 15
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：

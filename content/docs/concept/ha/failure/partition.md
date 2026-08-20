@@ -7,8 +7,7 @@ module: [PGSQL]
 categories: [概念]
 ---
 
-{{< infographic >}}
-```text
+```infographic
 infographic list-row-simple-horizontal-arrow
 data
   title 网络分区故障切换流程
@@ -32,18 +31,21 @@ data
 theme light
   palette antv
 ```
-{{< /infographic >}}
 
 
 --------
 
 ## RTO 时序图
 
-{{< echarts height="520px" >}}
-```js
+<script>
+window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
+(function (registry) {
 var fmt = function(params) { if (!params || !params.length || params[0].name === '') return ''; return '<b>' + params[0].name + '</b><br/>' + params.filter(p => p.value !== '-' && p.value != null).map(p => p.marker + ' ' + p.seriesName + ': ' + p.value + 's').join('<br/>'); };
-```
-```yaml
+registry["fmt"] = fmt;
+})(window.OinkEchartsFunctions);
+</script>
+
+```echarts {height="520px"}
 tooltip: { trigger: axis, axisPointer: { type: shadow }, formatter: $fn:fmt }
 legend: { top: 0, itemGap: 12, data: [主库降级, 租约过期, 从库检测, 抢锁提拔, 健康检查] }
 grid: { left: 64, right: 24, bottom: 32, top: 40 }
@@ -58,7 +60,6 @@ series:
   - { name: RTO总计, type: bar, barGap: "-100%", barWidth: 20, z: 1, itemStyle: { color: "#888", opacity: 0 }, emphasis: { itemStyle: { opacity: 0 } }, data: [150, 127, 104, "-", 78, 66, 53, "-", 41, 34, 27, "-", 29, 23, 16] }
   - { name: RTO预算, type: bar, barGap: "-100%", barWidth: 20, z: 0, itemStyle: { color: "rgba(0,0,0,0.08)" }, emphasis: { itemStyle: { color: "rgba(0,0,0,0.12)" } }, data: [150, 150, 150, "-", 90, 90, 90, "-", 45, 45, 45, "-", 30, 30, 30] }
 ```
-{{< /echarts >}}
 
 
 --------

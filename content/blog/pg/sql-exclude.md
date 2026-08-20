@@ -1,7 +1,7 @@
 ---
 title: "用 Exclude 实现互斥约束"
 date: 2018-04-06
-manualLink: https://vonng.com/pg/sql-exclude/
+manual_link: https://vonng.com/pg/sql-exclude/
 author: 冯若航
 description: >
   Exclude 约束是一个 PostgreSQL 扩展，它可以实现一些更高级，更巧妙的的数据库约束。

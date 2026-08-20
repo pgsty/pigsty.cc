@@ -24,17 +24,14 @@ Pigsty 需要 Linux 环境运行，您可以使用 Vagrant 轻松在本地创建
 在 Linux 上，您可以使用 VirtualBox 或 [**vagrant-libvirt**](https://vagrant-libvirt.github.io/vagrant-libvirt/) 作为虚拟机管理软件；
 在 Windows 专业版上，可以使用 VirtualBox 与 Hyper-V 作为提供商。
 
-{{< tabpane persist="disabled" >}}
-{{< tab header="macOS" lang="Bash" >}}
+```Bash {tab="macOS"}
 brew install vagrant virtualbox ansible
 # 安装 VirtualBox 后需要重启系统，并在系统偏好设置中允许其内核扩展。
-{{% /tab %}}
+```
 
-{{< tab header="安装 Homebrew" lang="Bash" >}}
+```Bash {tab="安装 Homebrew"}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-{{< /tab >}}
-
-{{< /tabpane >}}
+```
 
 
 
@@ -188,9 +185,8 @@ Specs = [
 ]
 ```
 
-{{% alert title="simu 与 deci 规格不支持缩放" color="info" %}}
-`simu` 和 `deci` 规格不支持资源缩放，scale 参数会被自动重置为 `1`，因为其资源配置已经针对仿真场景优化。
-{{% /alert %}}
+> [!NOTE] simu 与 deci 规格不支持缩放
+> `simu` 和 `deci` 规格不支持资源缩放，scale 参数会被自动重置为 `1`，因为其资源配置已经针对仿真场景优化。
 
 
 ----------------
@@ -274,18 +270,15 @@ export VAGRANT_EXPERIMENTAL=disks  # 直接运行 vagrant 时启用磁盘功能�
 
 ## 注意事项
 
-{{% alert title="VirtualBox 网络配置" color="warning" %}}
-使用较旧版本的 VirtualBox 作为 Vagrant 提供商时，需要额外配置才能使用 `10.x.x.x` CIDR 作为 Host-Only 网络：
+> [!WARNING] VirtualBox 网络配置
+> 使用较旧版本的 VirtualBox 作为 Vagrant 提供商时，需要额外配置才能使用 `10.x.x.x` CIDR 作为 Host-Only 网络：
+>
+> ```bash
+> echo "* 10.0.0.0/8" | sudo tee -a /etc/vbox/networks.conf
+> ```
 
-```bash
-echo "* 10.0.0.0/8" | sudo tee -a /etc/vbox/networks.conf
-```
-{{% /alert %}}
+> [!NOTE] 第一次下载镜像较慢
+> 第一次使用 Vagrant 启动特定操作系统时，会下载相应的 Box 镜像文件（通常 1-2 GB）。下载完成后，镜像会被缓存，后续创建虚拟机时会直接复用。
 
-{{% alert title="第一次下载镜像较慢" color="info" %}}
-第一次使用 Vagrant 启动特定操作系统时，会下载相应的 Box 镜像文件（通常 1-2 GB）。下载完成后，镜像会被缓存，后续创建虚拟机时会直接复用。
-{{% /alert %}}
-
-{{% alert title="libvirt 提供商" color="info" %}}
-如果您使用 libvirt 作为提供商，可以使用 `make info` 查看虚拟机、网络和存储卷，使用 `make nuke` 强制销毁所有相关资源。
-{{% /alert %}}
+> [!NOTE] libvirt 提供商
+> 如果您使用 libvirt 作为提供商，可以使用 `make info` 查看虚拟机、网络和存储卷，使用 `make nuke` 强制销毁所有相关资源。

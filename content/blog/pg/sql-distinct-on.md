@@ -1,7 +1,7 @@
 ---
 title: "Distinct On 去除重复数据"
 date: 2018-04-06
-manualLink: https://vonng.com/pg/sql-distinct-on/
+manual_link: https://vonng.com/pg/sql-distinct-on/
 author: 冯若航
 description: >
   使用 Distinct On 扩展字句快速找出分组内具有最大最小值的记录。

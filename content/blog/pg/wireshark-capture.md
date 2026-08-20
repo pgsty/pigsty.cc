@@ -1,7 +1,7 @@
 ---
 title: "Wireshark 抓包分析协议"
 date: 2018-01-05
-manualLink: https://vonng.com/pg/wireshark-capture/
+manual_link: https://vonng.com/pg/wireshark-capture/
 author: 冯若航
 description: >
   Wireshark 是一个很有用的工具，特别适合用来分析网络协议，这里简单介绍使用 Wireshark 抓包分析 PostgreSQL 协议的方法。

@@ -64,7 +64,7 @@ mongosh 'mongodb://mongod:DBUser.Mongo@127.0.0.1:27017/'
 
 源文件：[`pigsty/conf/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mongo.yml)
 
-{{< readfile file="yaml/mongo.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/mongo.yml" code=true lang="yaml" >}}
 
 FerretDB 参数是 `apps.ferretdb.conf` 下的普通 APP 覆盖项：
 

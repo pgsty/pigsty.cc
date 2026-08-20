@@ -1,0 +1,21 @@
+{{- /*
+  首页「内核与扩展」指标卡片
+  数据源：data/pgext/stats.yaml（label / value 或 param / href）
+  value 为字面数字；param 引用 hugo.yaml params 中的参数（如 pgext_count），二者取其一。
+  以 http 开头的 href 视为外链，在新标签页打开；数字沿用 .stat-value[data-count] 计数动画。
+*/ -}}
+{{- $stats := hugo.Data.pgext.stats -}}
+{{- if $stats }}
+<div class="stats-grid stats-grid--6 pgext-stats" data-reveal>
+  {{- range $stats }}
+  {{- $v := .value }}
+  {{- with .param }}{{ $v = index site.Params . }}{{ end }}
+  {{- $v = int $v }}
+  {{- $ext := hasPrefix .href "http" }}
+  <a class="stat-item" href="{{ .href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
+    <span class="stat-value" data-count="{{ $v }}">{{ lang.FormatNumberCustom 0 $v }}</span>
+    <span class="stat-label">{{ .label }}{{ if $ext }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>{{ end }}</span>
+  </a>
+  {{- end }}
+</div>
+{{- end }}

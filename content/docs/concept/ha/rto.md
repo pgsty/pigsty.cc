@@ -66,29 +66,25 @@ Pigsty 提供四种 RTO 模式，以帮助用户在不同的网络条件下进�
 {.full-width}
 
 
-{{% alert title="fast：同机柜/同交换机" color="primary" %}}
-- 适用于网络延迟极低（< 1ms）且非常稳定的场景，例如同机柜或同交换机部署
-- 平均 RTO: **14s**，最坏情况: **29s**，TTL 仅 20s，检测间隔 5s
-- 对网络质量要求最高，任何抖动都可能触发切换，**误切风险较高**
-{{% /alert %}}
+> [!IMPORTANT] fast：同机柜/同交换机
+> - 适用于网络延迟极低（< 1ms）且非常稳定的场景，例如同机柜或同交换机部署
+> - 平均 RTO: **14s**，最坏情况: **29s**，TTL 仅 20s，检测间隔 5s
+> - 对网络质量要求最高，任何抖动都可能触发切换，**误切风险较高**
 
-{{% alert title="norm：同机房（默认）" color="success" %}}
-- **默认模式**，适用于同机房部署，网络延迟 1-5ms，质量正常，丢包率合理
-- 平均 RTO: **21s**，最坏情况: **43s**，TTL 为 30s，提供合理的容错窗口
-- 平衡了恢复速度与稳定性，适合绝大多数生产环境
-{{% /alert %}}
+> [!TIP] norm：同机房（默认）
+> - **默认模式**，适用于同机房部署，网络延迟 1-5ms，质量正常，丢包率合理
+> - 平均 RTO: **21s**，最坏情况: **43s**，TTL 为 30s，提供合理的容错窗口
+> - 平衡了恢复速度与稳定性，适合绝大多数生产环境
 
-{{% alert title="safe：同省跨机房" color="secondary" %}}
-- 适用于同省/同区域跨机房部署，网络延迟 10-50ms，可能存在偶发抖动
-- 平均 RTO: **43s**，最坏情况: **91s**，TTL 为 60s，更长的容错窗口
-- 主库重启等待时间较长（60s），给予更多本地恢复机会，**误切风险较低**
-{{% /alert %}}
+> [!NOTE] safe：同省跨机房
+> - 适用于同省/同区域跨机房部署，网络延迟 10-50ms，可能存在偶发抖动
+> - 平均 RTO: **43s**，最坏情况: **91s**，TTL 为 60s，更长的容错窗口
+> - 主库重启等待时间较长（60s），给予更多本地恢复机会，**误切风险较低**
 
-{{% alert title="wide：跨地域/跨洲" color="danger" %}}
-- 适用于跨地域甚至跨大洲部署，网络延迟 100-200ms，可能有公网级别的丢包率
-- 平均 RTO: **92s**，最坏情况: **207s**，TTL 为 120s，极宽的容错窗口
-- 牺牲恢复速度换取极低的误切率，适合异地容灾场景
-{{% /alert %}}
+> [!CAUTION] wide：跨地域/跨洲
+> - 适用于跨地域甚至跨大洲部署，网络延迟 100-200ms，可能有公网级别的丢包率
+> - 平均 RTO: **92s**，最坏情况: **207s**，TTL 为 120s，极宽的容错窗口
+> - 牺牲恢复速度换取极低的误切率，适合异地容灾场景
 
 --------
 
@@ -96,11 +92,15 @@ Pigsty 提供四种 RTO 模式，以帮助用户在不同的网络条件下进�
 
 Patroni / PG HA 有两条关键故障路径：**主动故障检测**（PG 崩溃后 Patroni 检测到并尝试重启）与 **被动租约过期**（节点宕机后等待 TTL 过期触发选举）。
 
-{{< echarts height="820px" >}}
-```js
+<script>
+window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
+(function (registry) {
 var fmt = function(params) { if (!params || !params.length || params[0].name === '') return ''; return '<b>' + params[0].name + '</b><br/>' + params.filter(p => p.value !== '-' && p.value != null).map(p => p.marker + ' ' + p.seriesName + ': ' + p.value + 's').join('<br/>'); };
-```
-```yaml
+registry["fmt"] = fmt;
+})(window.OinkEchartsFunctions);
+</script>
+
+```echarts {height="820px"}
 tooltip: { trigger: axis, axisPointer: { type: shadow }, formatter: $fn:fmt }
 legend: { top: 0, itemGap: 10, data: [租约过期, 故障检测, 重启超时, 从库检测, 抢锁提拔, 健康检查] }
 grid: { left: 110, right: 24, bottom: 32, top: 40 }
@@ -116,7 +116,6 @@ series:
   - { name: RTO总计, type: bar, barGap: "-100%", barWidth: 16, z: 1, itemStyle: { color: "#888", opacity: 0 }, emphasis: { itemStyle: { opacity: 0 } }, data: [150, 127, 104, 145, 122, 4, "-", 78, 66, 53, 73, 61, 3, "-", 41, 34, 27, 41, 35, 2, "-", 29, 23, 16, 29, 24, 1] }
   - { name: RTO预算, type: bar, barGap: "-100%", barWidth: 16, z: 0, itemStyle: { color: "rgba(0,0,0,0.08)" }, emphasis: { itemStyle: { color: "rgba(0,0,0,0.12)" } }, data: [150, 150, 150, 150, 150, 150, "-", 90, 90, 90, 90, 90, 90, "-", 45, 45, 45, 45, 45, 45, "-", 30, 30, 30, 30, 30, 30] }
 ```
-{{< /echarts >}}
 
 
 

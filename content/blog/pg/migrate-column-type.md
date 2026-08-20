@@ -1,7 +1,7 @@
 ---
 title: "在线修改 PG 字段类型"
 date: 2020-01-30
-manualLink: https://vonng.com/pg/migrate-column-type/
+manual_link: https://vonng.com/pg/migrate-column-type/
 author: 冯若航
 description: >
   如何在线修改 PostgreSQL 中的字段类型？一种通用方法。

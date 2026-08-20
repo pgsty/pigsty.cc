@@ -1,7 +1,7 @@
 ---
 title: "黄金监控指标：错误延迟吞吐饱和"
 date: 2020-11-06
-manualLink: https://vonng.com/pg/golden-metrics/
+manual_link: https://vonng.com/pg/golden-metrics/
 author: 冯若航
 description: >
   了解 PostgreSQL 中的黄金监控指标：错误、延迟、吞吐和饱和度。

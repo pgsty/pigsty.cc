@@ -85,7 +85,6 @@ juice_instances:
 | `state` | 否  | `create`         | `create` / `absent`          |
 {.full-width}
 
-{{% alert title="注意" color="warning" %}}
-- `data` 仅用于 `juicefs format`，文件系统创建后不会再更新。
-- 同一节点多实例必须使用不同的 `port`。
-{{% /alert %}}
+> [!WARNING] 注意
+> - `data` 仅用于 `juicefs format`，文件系统创建后不会再更新。
+> - 同一节点多实例必须使用不同的 `port`。

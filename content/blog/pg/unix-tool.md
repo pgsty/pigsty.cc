@@ -1,7 +1,7 @@
 ---
 title: "Linux 常用统计 CLI 工具"
 date: 2017-09-07
-manualLink: https://vonng.com/pg/unix-tool/
+manual_link: https://vonng.com/pg/unix-tool/
 author: 冯若航
 description: >
   top, free, vmstat, iostat：四大常用 CLI 工具命令速查。

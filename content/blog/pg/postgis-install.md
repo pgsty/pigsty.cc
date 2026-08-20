@@ -1,7 +1,7 @@
 ---
 title: "源码编译安装 PostGIS"
 date: 2017-09-07
-manualLink: https://vonng.com/pg/postgis-install/
+manual_link: https://vonng.com/pg/postgis-install/
 author: 冯若航
 description: >
   PostGIS 是 PG 的杀手锏插件，但编译安装可不容易。

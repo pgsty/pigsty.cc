@@ -36,33 +36,23 @@ sub   rsa4096 2024-07-16 [E]
 
 在 RHEL 兼容的 Linux 发行版上，你可以使用以下命令导入此密钥：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2" value="tab1"}
 curl -fsSL https://repo.pigsty.io/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 curl -fsSL https://repo.pigsty.cc/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 在 Debian / Ubuntu 兼容的 Linux 发行版上，你可以使用以下命令导入此密钥：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2" value="tab1"}
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ---------
@@ -135,23 +125,17 @@ UWEnnC1xBSasNebw4fSE8AJg9JMCRw+3GAetlotOeW9q7PN6yrXD9rGuV/QquQNd
 
 ### 安装 GPG 软件包
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="brew" %}}
-```bash
+```bash {tab="brew" group="brew-apt-dnf" value="brew"}
 brew install gnupg pinentry-mac
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 sudo apt install gnupg2 pinentry-curses
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 sudo dnf install gnupg2 pinentry-curses
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 ### 生成 GPG 密钥
 

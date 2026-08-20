@@ -19,11 +19,10 @@ Pigsty 使用语义化版本号，`<主版本>.<次版本>.<修订号>`。Alpha 
 Pigsty 计划每年发布一次主版本更新，次版本更新通常跟随 PostgreSQL 小版本更新节奏，在 PostgreSQL 新版本发布后最迟一个月内跟进。
 Pigsty 通常每年计划 4 - 6 个小版本，完整发布历史请参考 [**发行注记**](/docs/about/release)。
 
-{{% alert title="使用具体的版本号进行部署" color="primary" %}}
-Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号的 [**Release**](https://github.com/pgsty/pigsty/releases)。
-
-除非您清楚知道自己在做什么，否则请勿使用 GitHub 的 **main** 分支，总是检出特定版本使用。
-{{% /alert %}}
+> [!IMPORTANT] 使用具体的版本号进行部署
+> Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号的 [**Release**](https://github.com/pgsty/pigsty/releases)。
+>
+> 除非您清楚知道自己在做什么，否则请勿使用 GitHub 的 **main** 分支，总是检出特定版本使用。
 
 
 

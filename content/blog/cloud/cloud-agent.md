@@ -1,7 +1,7 @@
 ---
 title: "隐私换便利？云上 AI 助理意味着什么？"
 date: 2026-01-30
-manualLink: https://vonng.com/cloud/cloud-agent/
+manual_link: https://vonng.com/cloud/cloud-agent/
 author: 冯若航
 description: >
   避免将隐私交到对你有直接影响力的平台中 —— 利用数据避风港原则，可以在享受 AI 便利的同时，大幅降低隐私风险。

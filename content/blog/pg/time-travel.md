@@ -2,7 +2,7 @@
 title: "故障档案：时间回溯导致的 Patroni 故障"
 linkTitle: "故障档案：NTP/Patroni"
 date: 2021-02-22
-manualLink: https://vonng.com/pg/time-travel/
+manual_link: https://vonng.com/pg/time-travel/
 author: 冯若航
 description: >
   机器因为故障重启，NTP 服务在 PG 启动后修复了 PG 的时间，导致 Patroni 无法启动。

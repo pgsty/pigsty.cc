@@ -167,40 +167,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install plprql;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y plprql -v 18  # PG 18
 pig ext install -y plprql -v 17  # PG 17
 pig ext install -y plprql -v 16  # PG 16
 pig ext install -y plprql -v 15  # PG 15
 pig ext install -y plprql -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y plprql_18       # PG 18
 dnf install -y plprql_17       # PG 17
 dnf install -y plprql_16       # PG 16
 dnf install -y plprql_15       # PG 15
 dnf install -y plprql_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-plprql   # PG 18
 apt install -y postgresql-17-plprql   # PG 17
 apt install -y postgresql-16-plprql   # PG 16
 apt install -y postgresql-15-plprql   # PG 15
 apt install -y postgresql-14-plprql   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -268,7 +261,7 @@ SELECT prql_to_sql('from matches | filter player == "Player1"');
 
 PRQL 使用管道式转换：
 
-```
+```text
 from employees                    # 数据源
 filter department == "Engineering" # 行过滤
 derive monthly_salary = salary / 12 # 计算列

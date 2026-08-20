@@ -1,7 +1,7 @@
 ---
 title: "数据库火星撞地球：当 PG 爱上 DuckDB"
 date: 2025-03-12
-manualLink: https://vonng.com/db/pg-kiss-duckdb/
+manual_link: https://vonng.com/db/pg-kiss-duckdb/
 author: 冯若航
 description: >
   老冯很看好"DuckDB + PostgreSQL 深度融合"这条路径，它可能会引爆数据库世界下一场"火星撞地球"式的变革。相比折腾分布式 DuckDB，这才是更有前景的方向。

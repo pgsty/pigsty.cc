@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL 中的锁"
 date: 2019-06-11
-manualLink: https://vonng.com/pg/pg-lock/
+manual_link: https://vonng.com/pg/pg-lock/
 author: 冯若航
 description: >
   详细介绍 PostgreSQL 中的各种锁：表级锁、行级锁、页级锁、咨询锁等。

@@ -1,7 +1,7 @@
 ---
 title: "备份恢复手段概览"
 date: 2018-02-09
-manualLink: https://vonng.com/pg/backup-overview/
+manual_link: https://vonng.com/pg/backup-overview/
 author: 冯若航
 description: >
   备份是 DBA 的安身立命之本，有备份，就不用慌。

@@ -1,7 +1,7 @@
 ---
 title: "20刀好兄弟 PolarDB：论数据库该卖什么价？"
 date: 2024-04-25
-manualLink: https://vonng.com/db/cheap-polar/
+manual_link: https://vonng.com/db/cheap-polar/
 author: 冯若航
 description: >
   PolarDB 数据库每节点许可证只卖130块？国内 IT 已经卷到这个阶段了吗？今天来聊聊商业数据库、开源数据库、云数据库、国产数据库的公允价格到底是多少。

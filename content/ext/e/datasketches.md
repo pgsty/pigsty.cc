@@ -170,40 +170,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install datasketches;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y datasketches -v 18  # PG 18
 pig ext install -y datasketches -v 17  # PG 17
 pig ext install -y datasketches -v 16  # PG 16
 pig ext install -y datasketches -v 15  # PG 15
 pig ext install -y datasketches -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y datasketches_18       # PG 18
 dnf install -y datasketches_17       # PG 17
 dnf install -y datasketches_16       # PG 16
 dnf install -y datasketches_15       # PG 15
 dnf install -y datasketches_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-datasketches   # PG 18
 apt install -y postgresql-17-datasketches   # PG 17
 apt install -y postgresql-16-datasketches   # PG 16
 apt install -y postgresql-15-datasketches   # PG 15
 apt install -y postgresql-14-datasketches   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：

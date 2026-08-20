@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/agens.yml`](https://github.com/pgsty/pigsty/blob/main/conf/agens.yml)
 
-{{< readfile file="yaml/agens.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/agens.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -31,10 +31,7 @@ categories: [参考]
 即可安装，然后请参考官方文档进行配置：https://github.com/tigerbeetle/tigerbeetle
 
 
-{{% alert title="TigerBeetle需要Linux内核5.5以上版本！" color="danger" %}}
-
-请注意，TigerBeetle 仅支持 Linux 内核 5.5 或更高版本，因此默认在 EL7 (3.10) / EL8 (4.18) 系统上无法使用。
-
-请使用 EL 9/10、Ubuntu 22/24/26、Debian 12/13，或其他内核版本满足要求的系统来安装 TigerBeetle。
-
-{{% /alert %}}
+> [!CAUTION] TigerBeetle需要Linux内核5.5以上版本！
+> 请注意，TigerBeetle 仅支持 Linux 内核 5.5 或更高版本，因此默认在 EL7 (3.10) / EL8 (4.18) 系统上无法使用。
+>
+> 请使用 EL 9/10、Ubuntu 22/24/26、Debian 12/13，或其他内核版本满足要求的系统来安装 TigerBeetle。

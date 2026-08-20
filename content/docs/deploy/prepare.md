@@ -81,9 +81,8 @@ IP 地址将用作节点的 **唯一标识符**，它应该是绑定到用于 **
 
 作为特例，[**单机部署**](/docs/setup/install) 时如果没有固定 IP 地址，可以使用本地环回地址 `127.0.0.1` 作为变通。
 
-{{% alert title="永远不要使用公网 IP 作为标识符" color="danger" %}}
-使用公网 IP 地址作为节点标识符可能导致安全和连接问题，请务必使用内网 IP 地址作为标识。
-{{% /alert %}}
+> [!CAUTION] 永远不要使用公网 IP 作为标识符
+> 使用公网 IP 地址作为节点标识符可能导致安全和连接问题，请务必使用内网 IP 地址作为标识。
 
 
 
@@ -96,9 +95,8 @@ Pigsty 支持 NODE 集群（`keepalived`）和 PGSQL 集群（`vip-manager`）�
 要使用 L2 VIP 功能，您必须为节点集群/数据库集群明确分配指定一个 L2 VIP 地址。
 在您自己的硬件上运行时这不是大问题，但在公有云环境中工作时可能成为问题。
 
-{{% alert title="L2 VIP 需要 L2 网络" color="warning" %}}
-要使用可选的节点 VIP 和 PG VIP 功能，请确保所有节点位于同一 L2 网络内。
-{{% /alert %}}
+> [!WARNING] L2 VIP 需要 L2 网络
+> 要使用可选的节点 VIP 和 PG VIP 功能，请确保所有节点位于同一 L2 网络内。
 
 
 ----------------
@@ -145,11 +143,8 @@ Pigsty 运行在 **Linux** 操作系统上，支持 8 个发行版大版本在�
 
 我们 **强烈建议** 使用全新安装的操作系统环境，如果您的服务器已经运行了 Nginx / PostgreSQL 等服务，请考虑使用新的节点进行部署。
 
-{{% alert title="在所有节点上使用相同的操作系统版本" color="warning" %}}
-
-多节点部署时，请确保所有节点使用相同的 Linux 发行版，架构与版本。异构节点部署虽然可能可以工作，但不受支持且可能导致不可预见的问题。
-
-{{% /alert %}}
+> [!WARNING] 在所有节点上使用相同的操作系统版本
+> 多节点部署时，请确保所有节点使用相同的 Linux 发行版，架构与版本。异构节点部署虽然可能可以工作，但不受支持且可能导致不可预见的问题。
 
 --------
 
@@ -190,50 +185,35 @@ Pigsty 默认会在 Infra 节点上安装 Ansible，所以 Infra 节点是可以
 
 您可以使用以下方式 [**安装**](/docs/deploy/install#安装) 最新稳定版本的 Pigsty 源代码：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+```bash {tab="pigsty.cc（中国）" group="pigstycc-pigstyio" value="pigstycc"}
 curl -fsSL https://repo.pigsty.cc/get | bash;
 ```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+
+```bash {tab="pigsty.io（全球）" value="pigstyio"}
 curl -fsSL https://repo.pigsty.io/get | bash;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 要 [**安装**](/docs/deploy/install#安装) 最新特定版本的 Pigsty，可以使用 **`-s <version>`** 参数：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+```bash {tab="pigsty.cc（中国）" group="pigstycc-pigstyio" value="pigstycc"}
 curl -fsSL https://repo.pigsty.cc/get | bash -s <version>  # 安装特定版本（当前稳定版：{{< param stable_version >}}）
 ```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+
+```bash {tab="pigsty.io（全球）" value="pigstyio"}
 curl -fsSL https://repo.pigsty.io/get | bash -s <version>  # 安装特定版本（当前稳定版：{{< param stable_version >}}）
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 要 [**安装**](/docs/deploy/install#安装) 最新 Beta 版本的 Pigsty 源代码，可以使用 **`beta`** 脚本：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="pigsty.cc（中国）" %}}
-```bash
+```bash {tab="pigsty.cc（中国）" group="pigstycc-pigstyio" value="pigstycc"}
 curl -fsSL https://repo.pigsty.cc/beta | bash;
 ```
-{{% /tab %}}
-{{% tab header="pigsty.io（全球）" %}}
-```bash
+
+```bash {tab="pigsty.io（全球）" value="pigstyio"}
 curl -fsSL https://repo.pigsty.io/beta | bash;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 如果你是开发者，或者想要获取最新的开发版本，可以直接 git 克隆 Pigsty 代码仓库：
 

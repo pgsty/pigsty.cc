@@ -230,40 +230,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_repack;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_repack -v 18  # PG 18
 pig ext install -y pg_repack -v 17  # PG 17
 pig ext install -y pg_repack -v 16  # PG 16
 pig ext install -y pg_repack -v 15  # PG 15
 pig ext install -y pg_repack -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_repack_18       # PG 18
 dnf install -y pg_repack_17       # PG 17
 dnf install -y pg_repack_16       # PG 16
 dnf install -y pg_repack_15       # PG 15
 dnf install -y pg_repack_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-repack   # PG 18
 apt install -y postgresql-17-repack   # PG 17
 apt install -y postgresql-16-repack   # PG 16
 apt install -y postgresql-15-repack   # PG 15
 apt install -y postgresql-14-repack   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -281,7 +274,7 @@ CREATE EXTENSION pg_repack;
 - [**项目文档**](https://reorg.github.io/pg_repack/)
 
 pg_repack 是一个 PostgreSQL 扩展，用于消除表和索引中的膨胀（bloat），并可选择性地恢复聚簇索引的物理排列顺序。
-与 [CLUSTER](https://www.postgresql.org/docs/current/static/sql-cluster.html) 和 [VACUUM FULL](https://www.postgresql.org/docs/current/static/sql-vacuum.html) 不同，pg_repack 可以**在线工作**，在处理过程中不会对目标表持有排他锁。pg_repack 性能出色，效果与直接使用 CLUSTER 相当。
+与 [CLUSTER](https://www.postgresql.org/docs/current/static/sql-cluster.html) 和 [VACUUM FULL](https://www.postgresql.org/docs/current/static/sql-vacuum.html) 不同，pg_repack 可以 **在线工作**，在处理过程中不会对目标表持有排他锁。pg_repack 性能出色，效果与直接使用 CLUSTER 相当。
 
 pg_repack 是早期 [pg_reorg](https://github.com/reorg/pg_reorg) 项目的分支。
 
@@ -317,7 +310,7 @@ PostgreSQL 版本
 
 ## 下载与安装
 
-你可以从 PGXN 网站[下载 pg_repack](http://pgxn.org/dist/pg_repack/)，解压后按照下面的安装说明操作。
+你可以从 PGXN 网站 [下载 pg_repack](http://pgxn.org/dist/pg_repack/)，解压后按照下面的安装说明操作。
 
 也可以使用 [PGXN Client](https://pgxn.github.io/pgxnclient/) 来下载、编译和安装：
 
@@ -348,13 +341,13 @@ $ psql -c "CREATE EXTENSION pg_repack" -d your_database
 
 ## 用法
 
-```
+```text
 pg_repack [OPTION]... [DBNAME]
 ```
 
 可以在 `OPTIONS` 中指定以下选项：
 
-```
+```text
 选项：
   -a, --all                          重组所有数据库
   -t, --table=TABLE                  仅重组指定的表
@@ -496,7 +489,7 @@ pg_repack [OPTION]... [DBNAME]
 `PGDATABASE`、`PGHOST`、`PGPORT`、`PGUSER`
 : 默认连接参数。
 
-与大多数其他 PostgreSQL 工具一样，此工具也使用 libpq 支持的环境变量（参见[环境变量](http://www.postgresql.org/docs/current/static/libpq-envars.html)）。
+与大多数其他 PostgreSQL 工具一样，此工具也使用 libpq 支持的环境变量（参见 [环境变量](http://www.postgresql.org/docs/current/static/libpq-envars.html)）。
 
 
 ## 使用示例

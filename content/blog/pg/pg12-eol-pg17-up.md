@@ -2,7 +2,7 @@
 title: "PostgreSQL 12 过保，PG 17 上位"
 linkTitle: "PG12 过保，PG17 上位"
 date: 2024-11-14
-manualLink: https://vonng.com/pg/pg12-eol-pg17-up/
+manual_link: https://vonng.com/pg/pg12-eol-pg17-up/
 author: 冯若航
 description: >
   PG17 使用 PG16 一半的时间实现扩展生态适配，300个可用扩展就绪，达到生产可用状态。PG12 正式脱离支持生命周期。

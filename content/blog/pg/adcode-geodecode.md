@@ -2,7 +2,7 @@
 title: "PostGIS 高效解决行政区划归属查询"
 linkTitle: "行政区划查询：GIS 点找面"
 date: 2018-06-06
-manualLink: https://vonng.com/pg/adcode-geodecode/
+manual_link: https://vonng.com/pg/adcode-geodecode/
 author: 冯若航
 description: >
   如何高效解决典型地理逆编码问题：根据用户的经纬度坐标，定位用户的行政区划。

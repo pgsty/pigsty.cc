@@ -1,7 +1,7 @@
 ---
 title: "使用 FIO 测试磁盘性能"
 date: 2018-02-06
-manualLink: https://vonng.com/pg/fio/
+manual_link: https://vonng.com/pg/fio/
 author: 冯若航
 description: >
   FIO 可以很方便地测试磁盘 IO 性能。

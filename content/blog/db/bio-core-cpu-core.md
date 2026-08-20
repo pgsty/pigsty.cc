@@ -2,7 +2,7 @@
 title: "先优化碳基 BIO 核，再优化硅基 CPU 核"
 linkTitle: "先优化 BIO 核，再优化 CPU 核"
 date: 2024-09-07
-manualLink: https://vonng.com/db/bio-core-cpu-core/
+manual_link: https://vonng.com/db/bio-core-cpu-core/
 author: Dhh
 description: >
   程序员是昂贵稀缺的生物计算核心，是软件成本的锚钉。硅制计算内核丰富而成本不断下降，而生物核却日益稀缺昂贵。因此优化 CPU 核之前，请优先考虑优化生物核——这正是 Ruby on Rails 的设计哲学。

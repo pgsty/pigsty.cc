@@ -237,54 +237,50 @@ pg14-core:    "postgresql14 postgresql14-server postgresql14-libs postgresql14-c
 注意这里的 `$v` 占位符会被替换为 PG 大版本号，因此当您使用 `pgsql` 别名时，`$v` 会被实际替代为 18，17 这样的大版本号。
 因此，当您安装 `pg18-server` 别名时，EL 上实际安装的是 `postgresql18-server`, `postgresql18-libs`, `postgresql18-contrib`，在 Debian / Ubuntu 上安装的是 `postgresql-18`，pig 会处理好所有细节。
 
-<details>
-<summary>常用 PostgreSQL 别名</summary>
-
-[EL 使用的别名翻译列表](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L206)
-
-```bash
-"pgsql":        "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl",
-"pgsql-mini":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib",
-"pgsql-core":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl",
-"pgsql-full":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl postgresql$v-llvmjit postgresql$v-test postgresql$v-devel",
-"pgsql-main":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl pg_repack_$v wal2json_$v pgvector_$v",
-"pgsql-client": "postgresql$v",
-"pgsql-server": "postgresql$v-server postgresql$v-libs postgresql$v-contrib",
-"pgsql-devel":  "postgresql$v-devel",
-"pgsql-basic":  "pg_repack_$v wal2json_$v pgvector_$v",
-```
-
-[Debian / Ubuntu 系统使用的别名翻译](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L270)
-
-```bash
-"pgsql":        "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v",
-"pgsql-mini":   "postgresql-$v postgresql-client-$v",
-"pgsql-core":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v",
-"pgsql-full":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v postgresql-server-dev-$v",
-"pgsql-main":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v postgresql-$v-repack postgresql-$v-wal2json postgresql-$v-pgvector",
-"pgsql-client": "postgresql-client-$v",
-"pgsql-server": "postgresql-$v",
-"pgsql-devel":  "postgresql-server-dev-$v",
-"pgsql-basic":  "postgresql-$v-repack postgresql-$v-wal2json postgresql-$v-pgvector",
-```
-
-上面这些别名可以直接使用，并通过参数实例化大版本号，也可以使用另一种带有大版本号的别名变体：即将 `pgsql` 替换为 `pg18`, `pg17`, `pgxx` 等具体大版本号。
-当前活跃支持的 PostgreSQL 主版本范围为 **14-18**，例如对于 PostgreSQL 18，可以直接使用下面这些别名：
-
-| `pgsql`        | `pg18`        | `pg17`        | `pg16`        | `pg15`        | `pg14`        |
-|:---------------|:--------------|:--------------|:--------------|:--------------|:--------------|
-| `pgsql`        | **`pg18`**    | `pg17`        | `pg16`        | `pg15`        | `pg14`        |
-| `pgsql-mini`   | `pg18-mini`   | `pg17-mini`   | `pg16-mini`   | `pg15-mini`   | `pg14-mini`   |
-| `pgsql-core`   | `pg18-core`   | `pg17-core`   | `pg16-core`   | `pg15-core`   | `pg14-core`   |
-| `pgsql-full`   | `pg18-full`   | `pg17-full`   | `pg16-full`   | `pg15-full`   | `pg14-full`   |
-| `pgsql-main`   | `pg18-main`   | `pg17-main`   | `pg16-main`   | `pg15-main`   | `pg14-main`   |
-| `pgsql-client` | `pg18-client` | `pg17-client` | `pg16-client` | `pg15-client` | `pg14-client` |
-| `pgsql-server` | `pg18-server` | `pg17-server` | `pg16-server` | `pg15-server` | `pg14-server` |
-| `pgsql-devel`  | `pg18-devel`  | `pg17-devel`  | `pg16-devel`  | `pg15-devel`  | `pg14-devel`  |
-| `pgsql-basic`  | `pg18-basic`  | `pg17-basic`  | `pg16-basic`  | `pg15-basic`  | `pg14-basic`  |
-{.full-width}
-
-</details>
+> [!DETAILS]- 常用 PostgreSQL 别名
+> [EL 使用的别名翻译列表](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L206)
+>
+> ```bash
+> "pgsql":        "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl",
+> "pgsql-mini":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib",
+> "pgsql-core":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl",
+> "pgsql-full":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl postgresql$v-llvmjit postgresql$v-test postgresql$v-devel",
+> "pgsql-main":   "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl pg_repack_$v wal2json_$v pgvector_$v",
+> "pgsql-client": "postgresql$v",
+> "pgsql-server": "postgresql$v-server postgresql$v-libs postgresql$v-contrib",
+> "pgsql-devel":  "postgresql$v-devel",
+> "pgsql-basic":  "pg_repack_$v wal2json_$v pgvector_$v",
+> ```
+>
+> [Debian / Ubuntu 系统使用的别名翻译](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L270)
+>
+> ```bash
+> "pgsql":        "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v",
+> "pgsql-mini":   "postgresql-$v postgresql-client-$v",
+> "pgsql-core":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v",
+> "pgsql-full":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v postgresql-server-dev-$v",
+> "pgsql-main":   "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v postgresql-$v-repack postgresql-$v-wal2json postgresql-$v-pgvector",
+> "pgsql-client": "postgresql-client-$v",
+> "pgsql-server": "postgresql-$v",
+> "pgsql-devel":  "postgresql-server-dev-$v",
+> "pgsql-basic":  "postgresql-$v-repack postgresql-$v-wal2json postgresql-$v-pgvector",
+> ```
+>
+> 上面这些别名可以直接使用，并通过参数实例化大版本号，也可以使用另一种带有大版本号的别名变体：即将 `pgsql` 替换为 `pg18`, `pg17`, `pgxx` 等具体大版本号。
+> 当前活跃支持的 PostgreSQL 主版本范围为 **14-18**，例如对于 PostgreSQL 18，可以直接使用下面这些别名：
+>
+> | `pgsql`        | `pg18`        | `pg17`        | `pg16`        | `pg15`        | `pg14`        |
+> |:---------------|:--------------|:--------------|:--------------|:--------------|:--------------|
+> | `pgsql`        | **`pg18`**    | `pg17`        | `pg16`        | `pg15`        | `pg14`        |
+> | `pgsql-mini`   | `pg18-mini`   | `pg17-mini`   | `pg16-mini`   | `pg15-mini`   | `pg14-mini`   |
+> | `pgsql-core`   | `pg18-core`   | `pg17-core`   | `pg16-core`   | `pg15-core`   | `pg14-core`   |
+> | `pgsql-full`   | `pg18-full`   | `pg17-full`   | `pg16-full`   | `pg15-full`   | `pg14-full`   |
+> | `pgsql-main`   | `pg18-main`   | `pg17-main`   | `pg16-main`   | `pg15-main`   | `pg14-main`   |
+> | `pgsql-client` | `pg18-client` | `pg17-client` | `pg16-client` | `pg15-client` | `pg14-client` |
+> | `pgsql-server` | `pg18-server` | `pg17-server` | `pg16-server` | `pg15-server` | `pg14-server` |
+> | `pgsql-devel`  | `pg18-devel`  | `pg17-devel`  | `pg16-devel`  | `pg15-devel`  | `pg14-devel`  |
+> | `pgsql-basic`  | `pg18-basic`  | `pg17-basic`  | `pg16-basic`  | `pg15-basic`  | `pg14-basic`  |
+> {.full-width}
 
 
 

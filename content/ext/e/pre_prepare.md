@@ -167,40 +167,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install preprepare;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y preprepare -v 18  # PG 18
 pig ext install -y preprepare -v 17  # PG 17
 pig ext install -y preprepare -v 16  # PG 16
 pig ext install -y preprepare -v 15  # PG 15
 pig ext install -y preprepare -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y preprepare_18       # PG 18
 dnf install -y preprepare_17       # PG 17
 dnf install -y preprepare_16       # PG 16
 dnf install -y preprepare_15       # PG 15
 dnf install -y preprepare_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-preprepare   # PG 18
 apt install -y postgresql-17-preprepare   # PG 17
 apt install -y postgresql-16-preprepare   # PG 16
 apt install -y postgresql-15-preprepare   # PG 15
 apt install -y postgresql-14-preprepare   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -222,7 +215,7 @@ pre_prepare 在连接建立时自动准备 SQL 语句，使客户端可以直接
 
 在 `postgresql.conf` 中配置：
 
-```
+```text
 preprepare.relation = 'preprepare.statements'
 preprepare.at_init = on    -- 连接时自动准备（需要 local_preload_libraries）
 ```

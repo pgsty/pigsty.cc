@@ -2,7 +2,7 @@
 title: "开源“暴君”Linus 清洗整风"
 linkTitle: "开源暴君 Linus 清君侧"
 date: 2024-10-25
-manualLink: https://vonng.com/db/linus-ban-ru/
+manual_link: https://vonng.com/db/linus-ban-ru/
 author: 冯若航
 description: >
   Linus 踢出了几位俄罗斯籍开发者，引发开源世界一片哀嚎。但 Linux 是 Linus 的个人项目，三十年前是，现在也依然是。Linux 社区本质是帝制的，而 Linus 本人就是最早且最成功的技术独裁者。

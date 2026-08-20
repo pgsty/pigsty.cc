@@ -67,11 +67,10 @@ pg_crontab:
 | `pg-repack` | 每周/每月 | 业务低峰期 | 重整膨胀表索引，回收空间      |
 {.full-width}
 
-{{% alert title="仅在主库执行" color="secondary" %}}
-`pg-backup`、`pg-vacuum`、`pg-repack` 脚本会自动检测当前节点角色，只有主库才会实际执行，从库会直接退出。
-
-因此可以安全地在所有节点配置相同的定时任务，故障切换后新主库会自动继续执行维护任务。
-{{% /alert %}}
+> [!NOTE] 仅在主库执行
+> `pg-backup`、`pg-vacuum`、`pg-repack` 脚本会自动检测当前节点角色，只有主库才会实际执行，从库会直接退出。
+>
+> 因此可以安全地在所有节点配置相同的定时任务，故障切换后新主库会自动继续执行维护任务。
 
 
 ----------------
@@ -83,15 +82,12 @@ pg_crontab:
 - EL（RHEL/Rocky/Alma）：`/var/spool/cron/postgres`
 - Debian/Ubuntu：`/var/spool/cron/crontabs/postgres`
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="剧本" %}}
-```bash
+```bash {tab="剧本" group="tab1-tab2" value="tab1"}
 ./pgsql.yml -l pg-meta -t pg_crontab     # 应用 pg_crontab 配置到指定集群
 ./pgsql.yml -l 10.10.10.10 -t pg_crontab # 仅针对特定主机
 ```
-{{% /tab %}}
-{{% tab header="手工" %}}
-```bash
+
+```bash {tab="手工" value="tab2"}
 # 以 postgres 用户编辑定时任务
 sudo -u postgres crontab -e
 
@@ -99,8 +95,6 @@ sudo -u postgres crontab -e
 sudo vi /var/spool/cron/postgres           # EL 系列
 sudo vi /var/spool/cron/crontabs/postgres  # Debian/Ubuntu
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 每次执行剧本都会 **全量覆盖刷新** 定时任务配置。
 
@@ -156,28 +150,22 @@ pg-backup incr           # 执行增量备份（基于最近的任意备份）
 
 **常用定时任务配置**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="每日全量" %}}
-```yaml
+```yaml {tab="每日全量" group="tab1-tab2-tab3" value="tab1"}
 pg_crontab:
   - '00 01 * * * /pg/bin/pg-backup full'    # 每天凌晨1点全量备份
 ```
-{{% /tab %}}
-{{% tab header="周全量+日增量" %}}
-```yaml
+
+```yaml {tab="周全量+日增量" value="tab2"}
 pg_crontab:
   - '00 01 * * 1            /pg/bin/pg-backup full'  # 周一全量备份
   - '00 01 * * 2,3,4,5,6,7  /pg/bin/pg-backup'       # 其他日期增量备份
 ```
-{{% /tab %}}
-{{% tab header="周全量+日差异" %}}
-```yaml
+
+```yaml {tab="周全量+日差异" value="tab3"}
 pg_crontab:
   - '00 01 * * 1            /pg/bin/pg-backup full'  # 周一全量备份
   - '00 01 * * 2,3,4,5,6,7  /pg/bin/pg-backup diff'  # 其他日期差异备份
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 更多备份恢复操作，请参考 [**备份管理**](/docs/pgsql/backup/) 章节。
 
@@ -190,30 +178,24 @@ pg_crontab:
 
 **基本用法**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="基本" %}}
-```bash
+```bash {tab="基本" group="tab1-tab2-sql" value="tab1"}
 pg-vacuum                    # 冻结所有数据库中的老化表
 pg-vacuum mydb               # 仅处理指定数据库
 ```
-{{% /tab %}}
-{{% tab header="选项" %}}
-```bash
+
+```bash {tab="选项" value="tab2"}
 pg-vacuum -n mydb            # 空跑模式，只显示不执行
 pg-vacuum -a 80000000 mydb   # 使用自定义年龄阈值（默认1亿）
 pg-vacuum -r 50 mydb         # 使用自定义老化比例阈值（默认40%）
 ```
-{{% /tab %}}
-{{% tab header="手工SQL" %}}
-```sql
+
+```sql {tab="手工SQL" value="sql"}
 -- 对整个数据库执行 VACUUM FREEZE
 VACUUM FREEZE;
 
 -- 对特定表执行 VACUUM FREEZE
 VACUUM FREEZE schema.table_name;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **命令选项**
 
@@ -258,32 +240,26 @@ pg_crontab:
 
 **基本用法**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="基本" %}}
-```bash
+```bash {tab="基本" group="tab1-tab2-tab3" value="tab1"}
 pg-repack                    # 重整所有数据库中的膨胀表与索引
 pg-repack mydb               # 仅重整指定数据库
 pg-repack mydb1 mydb2        # 重整多个数据库
 ```
-{{% /tab %}}
-{{% tab header="选项" %}}
-```bash
+
+```bash {tab="选项" value="tab2"}
 pg-repack -n mydb            # 空跑模式，只显示不执行
 pg-repack -t mydb            # 仅重整表
 pg-repack -i mydb            # 仅重整索引
 pg-repack -T 30 -j 4 mydb    # 自定义锁超时(秒)和并行度
 ```
-{{% /tab %}}
-{{% tab header="手工" %}}
-```bash
+
+```bash {tab="手工" value="tab3"}
 # 直接使用 pg_repack 命令重整特定表
 pg_repack dbname -t schema.table
 
 # 直接使用 pg_repack 命令重整特定索引
 pg_repack dbname -i schema.index
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **命令选项**
 
@@ -331,9 +307,8 @@ pg_repack dbname -i schema.index
 - 使用文件锁 `/tmp/pg-repack.lock` 防止并发执行
 - 自动跳过 `template0`、`template1`、`postgres` 系统数据库
 
-{{% alert title="锁等待" color="info" %}}
-重整期间不会影响正常读写，但重整完毕的 **切换瞬间** 需要获取表上的 AccessExclusive 锁阻塞一切访问。对于高吞吐量业务，建议在业务低峰期或维护窗口进行。
-{{% /alert %}}
+> [!NOTE] 锁等待
+> 重整期间不会影响正常读写，但重整完毕的 **切换瞬间** 需要获取表上的 AccessExclusive 锁阻塞一切访问。对于高吞吐量业务，建议在业务低峰期或维护窗口进行。
 
 **常用定时任务配置**
 

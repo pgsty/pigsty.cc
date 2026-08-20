@@ -139,31 +139,25 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf" value="tab1"}
 pig install pg_strom;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_strom -v 18  # PG 18
 pig ext install -y pg_strom -v 17  # PG 17
 pig ext install -y pg_strom -v 16  # PG 16
 pig ext install -y pg_strom -v 15  # PG 15
 pig ext install -y pg_strom -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_strom_18       # PG 18
 dnf install -y pg_strom_17       # PG 17
 dnf install -y pg_strom_16       # PG 16
 dnf install -y pg_strom_15       # PG 15
 dnf install -y pg_strom_14       # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -234,7 +228,7 @@ EXPLAIN (ANALYZE, COSTS OFF)
 SELECT * FROM lineorder WHERE lo_quantity > 40 AND lo_discount BETWEEN 1 AND 3;
 ```
 
-```
+```text
  Custom Scan (GpuScan) on lineorder
    GPU Filter: ((lo_quantity > 40) AND (lo_discount >= 1) AND (lo_discount <= 3))
    Rows Removed by GPU Filter: 59532300
@@ -258,7 +252,7 @@ SELECT d_year, s_nation, sum(lo_revenue) AS revenue
  ORDER BY d_year, s_nation;
 ```
 
-```
+```text
  Sort
    Sort Key: date1.d_year, supplier.s_nation
    ->  Custom Scan (GpuPreAgg) on lineorder
@@ -284,7 +278,7 @@ SELECT lo_shipmode, count(*), avg(lo_quantity)
  GROUP BY lo_shipmode;
 ```
 
-```
+```text
  Finalize GroupAggregate
    Group Key: lo_shipmode
    ->  Custom Scan (GpuPreAgg) on lineorder
@@ -413,7 +407,7 @@ SELECT a.id, b.name
  WHERE st_contains(b.geom, st_makepoint(a.longitude, a.latitude));
 ```
 
-```
+```text
  Custom Scan (GpuJoin) on gps_points a
    GPU Projection: a.id, b.name
    GPU GiST Join Quals [1]: st_contains(b.geom, st_makepoint(a.longitude, a.latitude))

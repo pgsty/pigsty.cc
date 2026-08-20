@@ -1,7 +1,7 @@
 ---
 title: "新年，聊聊 AI 将带来的变化"
 date: 2026-02-17
-manualLink: https://vonng.com/db/new-year-ai-change/
+manual_link: https://vonng.com/db/new-year-ai-change/
 author: 冯若航
 description: >
   AI 正在以远超历史经验的速度重塑知识工作。真正的挑战不是“会不会用 AI”，而是能否在缓冲期结束前完成认知与能力迁移。

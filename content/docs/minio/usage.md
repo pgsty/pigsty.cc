@@ -76,9 +76,8 @@ mcli alias set pgbackrest https://sss.pigsty:9000 pgbackrest S3User.Backup    # 
 
 MinIO 客户端工具 `mcli` 的完整功能参考，请查阅文档： [MinIO 客户端](https://min.io/docs/minio/linux/reference/minio-mc.html)。
 
-{{% alert title="注意：请使用您实际配置的密码" color="warning" %}}
-上述示例中的密码 `S3User.MinIO` 是 Pigsty 的默认值。如果您在部署时修改了 [`minio_secret_key`](/docs/minio/param#minio_secret_key)，请使用您实际配置的密码。
-{{% /alert %}}
+> [!WARNING] 注意：请使用您实际配置的密码
+> 上述示例中的密码 `S3User.MinIO` 是 Pigsty 的默认值。如果您在部署时修改了 [`minio_secret_key`](/docs/minio/param#minio_secret_key)，请使用您实际配置的密码。
 
 
 
@@ -147,9 +146,8 @@ EOF
 rclone ls sss:/
 ```
 
-{{% alert title="注意：HTTPS 与证书信任" color="warning" %}}
-如果 Silo 使用 HTTPS（默认配置），需要确保客户端信任 Pigsty CA 证书（`/etc/pki/ca.crt`），或者在 rclone 配置中添加 `no_check_certificate = true` 跳过证书验证（不建议在生产环境使用）。
-{{% /alert %}}
+> [!WARNING] 注意：HTTPS 与证书信任
+> 如果 Silo 使用 HTTPS（默认配置），需要确保客户端信任 Pigsty CA 证书（`/etc/pki/ca.crt`），或者在 rclone 配置中添加 `no_check_certificate = true` 跳过证书验证（不建议在生产环境使用）。
 
 
 ----------------

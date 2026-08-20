@@ -1,7 +1,7 @@
 ---
 title: "理解字符编码原理"
 date: 2018-07-01
-manualLink: https://vonng.com/db/character-encoding/
+manual_link: https://vonng.com/db/character-encoding/
 author: 冯若航
 description: >
   如果不了解字符编码的基本原理，即使只是简单常规的字符串比较、排序、随机访问操作，都可能会一不小心栽进大坑中。本文详细解析 ASCII、Unicode、UTF-8 等编码原理，希望能讲清楚这个问题。

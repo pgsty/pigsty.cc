@@ -37,7 +37,7 @@ Pigsty 大部分教程和示例都基于此模板的沙箱环境。
 
 源文件地址：[`pigsty/conf/ha/full.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)
 
-{{< readfile file="yaml/ha/full.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ha/full.yml" code=true lang="yaml" >}}
 
 
 --------

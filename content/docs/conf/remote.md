@@ -29,7 +29,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/remote.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/remote.yml)
 
-{{< readfile file="yaml/demo/remote.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/remote.yml" code=true lang="yaml" >}}
 
 
 --------

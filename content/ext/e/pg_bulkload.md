@@ -229,40 +229,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_bulkload;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_bulkload -v 18  # PG 18
 pig ext install -y pg_bulkload -v 17  # PG 17
 pig ext install -y pg_bulkload -v 16  # PG 16
 pig ext install -y pg_bulkload -v 15  # PG 15
 pig ext install -y pg_bulkload -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_bulkload_18       # PG 18
 dnf install -y pg_bulkload_17       # PG 17
 dnf install -y pg_bulkload_16       # PG 16
 dnf install -y pg_bulkload_15       # PG 15
 dnf install -y pg_bulkload_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pg-bulkload   # PG 18
 apt install -y postgresql-17-pg-bulkload   # PG 17
 apt install -y postgresql-16-pg-bulkload   # PG 16
 apt install -y postgresql-15-pg-bulkload   # PG 15
 apt install -y postgresql-14-pg-bulkload   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -290,7 +283,7 @@ pg_bulkload sample_csv.ctl
 
 输出：
 
-```
+```text
 NOTICE: BULK LOAD START
 NOTICE: BULK LOAD END
     0 Rows skipped.

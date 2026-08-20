@@ -118,13 +118,11 @@ openssl rand -base64 36 | tr -dc A-Za-z0-9 | head -c 48; echo
 openssl rand -base64 24 | tr -dc A-Za-z0-9 | head -c 24; echo
 ```
 
-{{% alert title="生产密钥必须稳定" color="warning" %}}
-`SECRET_KEY` 与 `BOOTSTRAP_TOKEN` 在生产数据存在后不要再更改。它们必须与数据库备份、`/data/jumpserver`、`/opt/jumpserver/.env` 一起保存；丢失原始 `SECRET_KEY` 后，数据库中的加密账号密钥可能无法恢复。
-{{% /alert %}}
+> [!WARNING] 生产密钥必须稳定
+> `SECRET_KEY` 与 `BOOTSTRAP_TOKEN` 在生产数据存在后不要再更改。它们必须与数据库备份、`/data/jumpserver`、`/opt/jumpserver/.env` 一起保存；丢失原始 `SECRET_KEY` 后，数据库中的加密账号密钥可能无法恢复。
 
-{{% alert title="密码字符限制" color="warning" %}}
-`DB_PASSWORD` 与 `REDIS_PASSWORD` 不要包含单引号或双引号，这与 JumpServer 官方安装器行为一致。
-{{% /alert %}}
+> [!WARNING] 密码字符限制
+> `DB_PASSWORD` 与 `REDIS_PASSWORD` 不要包含单引号或双引号，这与 JumpServer 官方安装器行为一致。
 
 ------
 
@@ -226,9 +224,8 @@ pg_databases:
 
 模板中的 `pg_version` 可以按环境固定为 16、17 或更新主版本；JumpServer 的下限是 PostgreSQL 16。若使用高可用数据库形态，可以参考模板中注释的 `pg_vip_enabled` 示例，将应用侧 `DB_HOST` 指向主库 VIP。
 
-{{% alert title="不要使用 PgBouncer transaction pooling" color="warning" %}}
-JumpServer 的 Django 迁移与 Celery Beat 不适合 PgBouncer transaction pooling。默认使用 PostgreSQL `5432` 直连；如需通过 PgBouncer，请为 `jumpserver` 用户使用 session pooling。
-{{% /alert %}}
+> [!WARNING] 不要使用 PgBouncer transaction pooling
+> JumpServer 的 Django 迁移与 Celery Beat 不适合 PgBouncer transaction pooling。默认使用 PostgreSQL `5432` 直连；如需通过 PgBouncer，请为 `jumpserver` 用户使用 session pooling。
 
 ------
 

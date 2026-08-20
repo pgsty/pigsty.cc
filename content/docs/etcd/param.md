@@ -11,9 +11,8 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 - [**`ETCD`**](#etcd)：10 个参数，用于 etcd 集群的部署与配置
 - [**`ETCD_REMOVE`**](#etcd_remove)：3 个参数，控制 etcd 集群的移除
 
-{{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
-自 Pigsty v3.6 起，`etcd.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `etcd_remove` 角色。v4.0 起默认启用 RBAC 认证，新增 `etcd_root_password` 参数。
-{{% /alert %}}
+> [!NOTE] 架构变化：Pigsty v3.6+
+> 自 Pigsty v3.6 起，`etcd.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `etcd_remove` 角色。v4.0 起默认启用 RBAC 认证，新增 `etcd_root_password` 参数。
 
 
 ----------------
@@ -122,9 +121,8 @@ etcd 集群 & 分组名称，默认值为硬编码值 `etcd`。
 2. 等待数据同步完成（通过 `etcdctl endpoint status` 检查）
 3. 使用 `etcdctl member promote <member_id>` 将其提升为正式成员
 
-{{% alert title="注意" color="info" %}}
-Learner 实例不计入集群仲裁成员数。例如，3 节点集群中有 1 个 learner，实际投票成员数为 2，不能容忍任何节点故障。
-{{% /alert %}}
+> [!NOTE] 注意
+> Learner 实例不计入集群仲裁成员数。例如，3 节点集群中有 1 个 learner，实际投票成员数为 2，不能容忍任何节点故障。
 
 
 
@@ -178,9 +176,8 @@ etcd 初始集群状态，可以是 `new` 或 `existing`，默认值：`new`。
 
 **重要说明**：
 
-{{% alert title="扩容时必须使用 existing" color="warning" %}}
-向现有 etcd 集群添加新成员时，**必须** 设置 `etcd_init=existing`。否则新实例会尝试创建独立的新集群，导致脑裂或初始化失败。
-{{% /alert %}}
+> [!WARNING] 扩容时必须使用 existing
+> 向现有 etcd 集群添加新成员时，**必须** 设置 `etcd_init=existing`。否则新实例会尝试创建独立的新集群，导致脑裂或初始化失败。
 
 **使用示例**：
 
@@ -240,16 +237,14 @@ Pigsty 自 v4.0 起默认启用 etcd 的 RBAC（基于角色的访问控制）�
 
 **安全建议**：
 
-{{% alert title="生产环境安全" color="warning" %}}
-在生产环境中，**强烈建议修改默认密码** `Etcd.Root`。可以在全局配置或集群配置中设置：
-
-```yaml
-etcd_root_password: 'YourSecurePassword'
-```
-
-使用 `configure -g` 参数可以自动生成并替换 `etcd_root_password`
-
-{{% /alert %}}
+> [!WARNING] 生产环境安全
+> 在生产环境中，**强烈建议修改默认密码** `Etcd.Root`。可以在全局配置或集群配置中设置：
+>
+> ```yaml
+> etcd_root_password: 'YourSecurePassword'
+> ```
+>
+> 使用 `configure -g` 参数可以自动生成并替换 `etcd_root_password`
 
 
 
@@ -349,6 +344,5 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 ./etcd-rm.yml -l etcd -e etcd_rm_pkg=true
 ```
 
-{{% alert title="提示" color="info" %}}
-通常不需要卸载 etcd 软件包。保留软件包可以加快后续的重新部署速度，因为不需要重新下载和安装。
-{{% /alert %}}
+> [!NOTE] 提示
+> 通常不需要卸载 etcd 软件包。保留软件包可以加快后续的重新部署速度，因为不需要重新下载和安装。

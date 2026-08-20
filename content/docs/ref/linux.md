@@ -54,20 +54,17 @@ Pigsty 支持 RHEL / Rocky / Alma / Anolis / CentOS 8、9、10 版本。
 | RHEL7 / CentOS7           | <b class="text-danger">aarch64</b> |                                                -                                                |                                                    |                                                    |                                                    |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Rocky Linux 9.8 / 10.2" color="success" %}}
-请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前建议使用的小版本为：9.8 / 10.2。
-建议离线安装包/自建离线仓库与系统 **EL 小版本**（例如 Rocky Linux 9.8 / 10.2）保持一致，跨小版本可能因 OpenSSL 等依赖版本跳变导致不可用。
-{{% /alert %}}
+> [!TIP] 推荐使用 Rocky Linux 9.8 / 10.2
+> 请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前建议使用的小版本为：9.8 / 10.2。
+> 建议离线安装包/自建离线仓库与系统 **EL 小版本**（例如 Rocky Linux 9.8 / 10.2）保持一致，跨小版本可能因 OpenSSL 等依赖版本跳变导致不可用。
 
-{{% alert title="EL8 即将不再支持" color="warning" %}}
-EL8 将于 2029 年进入 EOL，建议尽早规划升级。鉴于 EL10 适配已经完成，我们将在下个版本移除对 EL8 的支持。
-{{% /alert %}}
+> [!WARNING] EL8 即将不再支持
+> EL8 将于 2029 年进入 EOL，建议尽早规划升级。鉴于 EL10 适配已经完成，我们将在下个版本移除对 EL8 的支持。
 
-{{% alert title="EL 7 @ 2024-06" color="danger" %}}
-Red Hat Enterprise Linux 7 已经于 2024年6月停止维护，PGDG 也不再为 PostgreSQL 16/17/18 提供 EL7 二进制包支持。
-
-如需在老旧操作系统上获得运行支持，请考虑我们的 [专业订阅服务](/docs/about/service)。
-{{% /alert %}}
+> [!CAUTION] EL 7 @ 2024-06
+> Red Hat Enterprise Linux 7 已经于 2024年6月停止维护，PGDG 也不再为 PostgreSQL 16/17/18 提供 EL7 二进制包支持。
+>
+> 如需在老旧操作系统上获得运行支持，请考虑我们的 [专业订阅服务](/docs/about/service)。
 
 ----------------
 
@@ -85,9 +82,8 @@ Pigsty 支持 Ubuntu 26.04 / 24.04 / 22.04：
 | Ubuntu 22.04 (`jammy`)    | <b class="text-danger">aarch64</b> | [`u22.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 {.full-width}
 
-{{% alert title="推荐使用 Ubuntu 22.04.5 / 24.04.4 / 26.04.0 LTS" color="success" %}}
-Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生产环境基线，也可以继续使用 Ubuntu 24.04。
-{{% /alert %}}
+> [!TIP] 推荐使用 Ubuntu 22.04.5 / 24.04.4 / 26.04.0 LTS
+> Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生产环境基线，也可以继续使用 Ubuntu 24.04。
 
 
 ----------------
@@ -106,12 +102,10 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Debian 12.15 / 13.6" color="success" %}}
-{{% /alert %}}
+> [!TIP] 推荐使用 Debian 12.15 / 13.6
 
-{{% alert title="Debian 11 EOL @ 2024-07" color="danger" %}}
-Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩展支持，请考虑我们的 [专业订阅服务](/docs/about/service)。
-{{% /alert %}}
+> [!CAUTION] Debian 11 EOL @ 2024-07
+> Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩展支持，请考虑我们的 [专业订阅服务](/docs/about/service)。
 
 
 ----------------

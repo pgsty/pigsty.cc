@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/kernel.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/kernel.yml)
 
-{{< readfile file="yaml/demo/kernel.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/kernel.yml" code=true lang="yaml" >}}
 
 
 --------

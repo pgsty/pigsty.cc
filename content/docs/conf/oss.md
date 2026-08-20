@@ -36,7 +36,7 @@ cp conf/build/oss.yml pigsty.yml
 
 源文件地址：[`pigsty/conf/build/oss.yml`](https://github.com/pgsty/pigsty/blob/main/conf/build/oss.yml)
 
-{{< readfile file="yaml/build/oss.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/build/oss.yml" code=true lang="yaml" >}}
 
 
 --------

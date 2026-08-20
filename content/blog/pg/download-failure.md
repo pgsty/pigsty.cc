@@ -1,7 +1,7 @@
 ---
 title: "故障档案：快慢不匀雪崩"
 date: 2018-04-08
-manualLink: https://vonng.com/pg/download-failure/
+manual_link: https://vonng.com/pg/download-failure/
 author: 冯若航
 description: >
   最近发生了一起匪夷所思的故障，某数据库切走了一半的数据量和负载，结果却因为负载变大被打挂了。

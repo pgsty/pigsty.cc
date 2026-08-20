@@ -1,7 +1,7 @@
 ---
 title: "AI Agent 的操作系统时刻"
 date: 2026-01-26
-manualLink: https://vonng.com/db/agent-os/
+manual_link: https://vonng.com/db/agent-os/
 author: 冯若航
 description: >
   我们正在见证一个"AI 操作系统"的诞生。LLM 是新 CPU，Context 是新内存，Agent 是新应用。那么 OS 会是什么？

@@ -32,7 +32,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/immich.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/immich.yml)
 
-{{< readfile file="yaml/app/immich.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/immich.yml" code=true lang="yaml" >}}
 
 
 --------

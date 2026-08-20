@@ -217,40 +217,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pgpdf;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pgpdf -v 18  # PG 18
 pig ext install -y pgpdf -v 17  # PG 17
 pig ext install -y pgpdf -v 16  # PG 16
 pig ext install -y pgpdf -v 15  # PG 15
 pig ext install -y pgpdf -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pgpdf_18       # PG 18
 dnf install -y pgpdf_17       # PG 17
 dnf install -y pgpdf_16       # PG 16
 dnf install -y pgpdf_15       # PG 15
 dnf install -y pgpdf_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pgpdf   # PG 18
 apt install -y postgresql-17-pgpdf   # PG 17
 apt install -y postgresql-16-pgpdf   # PG 16
 apt install -y postgresql-15-pgpdf   # PG 15
 apt install -y postgresql-14-pgpdf   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：
@@ -331,7 +324,7 @@ INSERT INTO pdfs VALUES ('pgintro', '/tmp/sample.pdf');
 
 ### 字符串函数和运算符
 
-标准的 PostgreSQL [字符串函数和运算符](https://www.postgresql.org/docs/17/functions-string.html)均可正常使用：
+标准的 PostgreSQL [字符串函数和运算符](https://www.postgresql.org/docs/17/functions-string.html) 均可正常使用：
 
 ```sql
 SELECT 'Below is the PDF we received ' || '/tmp/pgintro.pdf'::pdf;
@@ -525,17 +518,17 @@ SELECT pdf_version('/tmp/pgintro.pdf');
 安装 [poppler](https://poppler.freedesktop.org) 依赖
 
 **Linux**
-```
+```text
 sudo apt install -y libpoppler-glib-dev pkg-config
 ```
 
 **Homebrew/MacOS**
 
-```
+```text
 brew install poppler pkgconf
 ```
 
-```
+```text
 cd /tmp
 git clone https://github.com/Florents-Tselai/pgpdf.git
 cd pgpdf

@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/ha/dual.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/dual.yml)
 
-{{< readfile file="yaml/ha/dual.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ha/dual.yml" code=true lang="yaml" >}}
 
 
 --------

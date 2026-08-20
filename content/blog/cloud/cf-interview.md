@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare 圆桌访谈与问答录"
 date: 2024-04-23
-manualLink: https://vonng.com/cloud/cf-interview/
+manual_link: https://vonng.com/cloud/cf-interview/
 author: 冯若航
 description: >
   作为圆桌嘉宾受邀参加了 Cloudflare 在深圳举办的 Immerse 大会，与 Cloudflare 亚太区 CMO 等深入交流探讨了许多网友关心的问题。

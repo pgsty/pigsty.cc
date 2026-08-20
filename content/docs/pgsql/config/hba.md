@@ -56,10 +56,9 @@ bin/pgsql-hba <cls> <ip>...           # 刷新集群中指定实例的 HBA 规�
 
 **仅刷新 Pgbouncer**：`./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload`
 
-{{% alert title="不要直接编辑配置文件" color="warning" %}}
-不要直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf`，下次执行 playbook 时会被覆盖。
-所有变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。
-{{% /alert %}}
+> [!WARNING] 不要直接编辑配置文件
+> 不要直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf`，下次执行 playbook 时会被覆盖。
+> 所有变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。
 
 
 ----------------

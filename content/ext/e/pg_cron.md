@@ -342,40 +342,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pg_cron;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pg_cron -v 18  # PG 18
 pig ext install -y pg_cron -v 17  # PG 17
 pig ext install -y pg_cron -v 16  # PG 16
 pig ext install -y pg_cron -v 15  # PG 15
 pig ext install -y pg_cron -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pg_cron_18       # PG 18
 dnf install -y pg_cron_17       # PG 17
 dnf install -y pg_cron_16       # PG 16
 dnf install -y pg_cron_15       # PG 15
 dnf install -y pg_cron_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-cron   # PG 18
 apt install -y postgresql-17-cron   # PG 17
 apt install -y postgresql-16-cron   # PG 16
 apt install -y postgresql-15-cron   # PG 15
 apt install -y postgresql-14-cron   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：
@@ -398,7 +391,7 @@ CREATE EXTENSION pg_cron;
 
 请注意，`cron.database` 必须在将 `pg_cron` 添加到 `shared_preload_libraries` 之前设置好。
 
-```
+```text
 -- 每周六凌晨 3:30（GMT）删除过期数据
 SELECT cron.schedule('30 3 * * 6', $$DELETE FROM events WHERE event_time < now() - interval '1 week'$$);
  schedule
@@ -443,7 +436,7 @@ SELECT cron.schedule('process-payroll', '0 12 $ * *', 'CALL process_payroll()');
 
 Crontab 格式说明：
 
-```
+```text
  ┌───────────── 分钟 (0 - 59)
  │ ┌────────────── 小时 (0 - 23)
  │ │ ┌─────────────── 日期 (1 - 31) 或月末最后一天 ($)

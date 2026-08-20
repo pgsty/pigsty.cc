@@ -23,28 +23,22 @@ pg-meta:
 ```
 
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-hba <cls>              # 刷新集群的 PostgreSQL 和 Pgbouncer HBA 规则
 bin/pgsql-hba <cls> <ip>...      # 刷新集群中特定实例的 HBA 规则
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pg_hba,pg_reload                 # 仅刷新 PostgreSQL HBA
 ./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload   # 仅刷新 Pgbouncer HBA
 ./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload  # 同时刷新两者
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-hba pg-meta                      # 刷新 pg-meta 集群的 HBA 规则
 bin/pgsql-hba pg-meta 10.10.10.10          # 仅刷新特定实例
 bin/pgsql-hba pg-meta 10.10.10.11 10.10.10.12  # 刷新多个实例
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 关于规则语法，请查阅 [**HBA 配置**](/docs/pgsql/config/hba)；关于认证方法、默认边界与凭据管理，请参考 [**身份认证**](/docs/concept/sec/auth)。
 
@@ -67,27 +61,21 @@ bin/pgsql-hba pg-meta 10.10.10.11 10.10.10.12  # 刷新多个实例
 
 修改 `pigsty.yml` 中的 HBA 规则后，需要重新渲染配置文件并让服务重载。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-hba <cls>              # 刷新整个集群的 HBA 规则（PostgreSQL + Pgbouncer）
 bin/pgsql-hba <cls> <ip>...      # 刷新特定实例（多个 IP 空格分隔）
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pg_hba,pg_reload                 # 仅刷新 PostgreSQL HBA
 ./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload   # 仅刷新 Pgbouncer HBA
 ./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload  # 同时刷新两者
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-hba pg-meta                      # 刷新 pg-meta 集群
 bin/pgsql-hba pg-meta 10.10.10.10          # 仅刷新 10.10.10.10 实例
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **执行效果**：根据配置清单中的 HBA 规则定义，渲染 PostgreSQL 和 Pgbouncer 的 HBA 配置文件，然后重载服务使配置生效。
 
@@ -99,9 +87,8 @@ bin/pgsql-hba pg-meta 10.10.10.10          # 仅刷新 10.10.10.10 实例
 | Pgbouncer  | `/etc/pgbouncer/pgb_hba.conf` | `roles/pgsql/templates/pgbouncer.hba` |
 {.full-width}
 
-{{% alert title="不要直接编辑配置文件" color="warning" %}}
-直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf` 虽然可以临时生效，但下次执行 Ansible 剧本时会被覆盖。所有 HBA 规则变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。
-{{% /alert %}}
+> [!WARNING] 不要直接编辑配置文件
+> 直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf` 虽然可以临时生效，但下次执行 Ansible 剧本时会被覆盖。所有 HBA 规则变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。
 
 **相关 Tags**
 
@@ -122,18 +109,15 @@ bin/pgsql-hba pg-meta 10.10.10.10          # 仅刷新 10.10.10.10 实例
 
 **查看当前生效的 HBA 规则**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="SQL" %}}
-```sql
+```sql {tab="SQL" group="sql-bash-tab3" value="sql"}
 -- 查看 PostgreSQL HBA 规则（推荐）
 TABLE pg_hba_file_rules;
 
 -- 查看特定数据库的匹配规则
 SELECT * FROM pg_hba_file_rules WHERE database @> ARRAY['mydb']::text[];
 ```
-{{% /tab %}}
-{{% tab header="Bash" %}}
-```bash
+
+```bash {tab="Bash" value="bash"}
 # 查看 PostgreSQL HBA 配置文件
 cat /pg/data/pg_hba.conf
 
@@ -143,17 +127,14 @@ cat /etc/pgbouncer/pgb_hba.conf
 # 查看配置文件头部（确认是否更新）
 head -20 /pg/data/pg_hba.conf
 ```
-{{% /tab %}}
-{{% tab header="测试连接" %}}
-```bash
+
+```bash {tab="测试连接" value="tab3"}
 # 测试特定用户从特定地址的连接
 psql -h <host> -p 5432 -U <user> -d <database> -c "SELECT 1"
 
 # 测试通过 Pgbouncer 连接
 psql -h <host> -p 6432 -U <user> -d <database> -c "SELECT 1"
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **检查 HBA 配置语法**
 
@@ -317,23 +298,17 @@ Pgbouncer 的 HBA 管理与 PostgreSQL 类似，但有一些差异。
 
 **刷新 Pgbouncer HBA**
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-hba <cls>    # 同时刷新 PostgreSQL 和 Pgbouncer
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload   # 仅刷新 Pgbouncer HBA
 ```
-{{% /tab %}}
-{{% tab header="查看" %}}
-```bash
+
+```bash {tab="查看" value="tab3"}
 cat /etc/pgbouncer/pgb_hba.conf    # 查看 Pgbouncer HBA 规则
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ----------------

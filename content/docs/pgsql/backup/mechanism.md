@@ -106,9 +106,7 @@ pgbackrest --stanza=pg-meta --type=lsn  --target='0/4001C80' --target-action=pro
 您可以使用 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) 用户（默认 `postgres`）直接执行 pgbackrest 命令，
 观察上述概念的实际形态 —— 注意备份标签的命名、备份大小的差异，以及 `info` 输出中的备份链引用关系：
 
-{{< tabpane persist="disabled" >}}
-{{% tab header="备份命令" disabled=true /%}}
-{{< tab header="full" lang="bash" >}}
+```bash {tab="full"}
 $ pgbackrest --stanza=pg-meta --type=full backup
 2025-07-15 01:36:57.007 P00   INFO: backup command begin 2.54.2: --annotation=pg_cluster=pg-meta ...
 2025-07-15 01:36:57.030 P00   INFO: execute non-exclusive backup start: backup begins after the requested immediate checkpoint completes
@@ -116,24 +114,27 @@ $ pgbackrest --stanza=pg-meta --type=full backup
 2025-07-15 01:36:58.540 P00   INFO: new backup label = 20250715-013657F
 2025-07-15 01:36:58.588 P00   INFO: full backup size = 44.5MB, file total = 1437
 2025-07-15 01:36:58.589 P00   INFO: backup command end: completed successfully (1584ms)
-{{< /tab >}}
-{{< tab header="diff" lang="bash" >}}
+```
+
+```bash {tab="diff"}
 $ pgbackrest --stanza=pg-meta --type=diff backup
 2025-07-15 01:37:24.952 P00   INFO: backup command begin 2.54.2: ...
 2025-07-15 01:37:24.985 P00   INFO: last backup label = 20250715-013657F, version = 2.54.2
 2025-07-15 01:37:26.337 P00   INFO: new backup label = 20250715-013657F_20250715-013724D
 2025-07-15 01:37:26.381 P00   INFO: diff backup size = 424.3KB, file total = 1437
 2025-07-15 01:37:26.381 P00   INFO: backup command end: completed successfully (1431ms)
-{{< /tab >}}
-{{< tab header="incr" lang="bash" >}}
+```
+
+```bash {tab="incr"}
 $ pgbackrest --stanza=pg-meta --type=incr backup
 2025-07-15 01:37:30.305 P00   INFO: backup command begin 2.54.2: ...
 2025-07-15 01:37:30.337 P00   INFO: last backup label = 20250715-013657F_20250715-013724D, version = 2.54.2
 2025-07-15 01:37:31.356 P00   INFO: new backup label = 20250715-013657F_20250715-013730I
 2025-07-15 01:37:31.403 P00   INFO: incr backup size = 8.3KB, file total = 1437
 2025-07-15 01:37:31.403 P00   INFO: backup command end: completed successfully (1099ms)
-{{< /tab >}}
-{{< tab header="info" lang="bash" >}}
+```
+
+```bash {tab="info"}
 $ pgbackrest --stanza=pg-meta info
 stanza: pg-meta
     status: ok
@@ -159,8 +160,7 @@ stanza: pg-meta
             database size: 44.5MB, database backup size: 8.3KB
             repo1: backup size: 504B
             backup reference total: 1 full, 1 diff
-{{< /tab >}}
-{{< /tabpane >}}
+```
 
 
 --------

@@ -1,7 +1,7 @@
 ---
 title: "重新拿回计算机硬件的红利"
 date: 2023-11-16
-manualLink: https://vonng.com/cloud/bonus/
+manual_link: https://vonng.com/cloud/bonus/
 author: 冯若航
 description: >
   在当下，硬件重新变得有趣起来，AI 浪潮引发的显卡狂热便是例证。但 CPU 与 SSD 的变化却不为大多数开发者所知，有一整代开发者被云和炒作遮蔽了双眼。

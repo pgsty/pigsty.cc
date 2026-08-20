@@ -35,17 +35,13 @@ Pigsty 使用 [**pgBackRest**](/docs/pgbackrest/) 管理 PostgreSQL 备份 —�
 {.full-width}
 
 
-{{% alert color="warning" title="免责声明" %}}
+> [!WARNING] 免责声明
+> > Pigsty 尽最大努力提供可靠的 PITR 解决方案，但我们不对 PITR 操作导致的数据丢失承担任何责任，使用需自担风险。如需专业支持，请考虑我们的 [专业服务](/docs/about/service)。
 
-> Pigsty 尽最大努力提供可靠的 PITR 解决方案，但我们不对 PITR 操作导致的数据丢失承担任何责任，使用需自担风险。如需专业支持，请考虑我们的 [专业服务](/docs/about/service)。
-
-{{% /alert %}}
-
-{{% alert color="danger" title="恢复操作会覆盖目标数据" %}}
-执行 PITR 前必须先核对 `pig pg list <目标集群>` 与 `pig pb info`，确认近期可用备份和恢复窗口，
-由操作者复述精确的目标集群与恢复点，再执行目标限定的 `./pgsql-pitr.yml -l <目标集群> ...`。
-`pgsql-pitr.yml` 只打印计划，不会暂停等待确认；生产恢复还需要维护窗口和独立验证过的备份。
-{{% /alert %}}
+> [!CAUTION] 恢复操作会覆盖目标数据
+> 执行 PITR 前必须先核对 `pig pg list <目标集群>` 与 `pig pb info`，确认近期可用备份和恢复窗口，
+> 由操作者复述精确的目标集群与恢复点，再执行目标限定的 `./pgsql-pitr.yml -l <目标集群> ...`。
+> `pgsql-pitr.yml` 只打印计划，不会暂停等待确认；生产恢复还需要维护窗口和独立验证过的备份。
 
 
 --------

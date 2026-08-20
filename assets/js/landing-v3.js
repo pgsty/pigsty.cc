@@ -293,6 +293,187 @@
   }
 
   // ============================================
+  // Extension index（照 pgext.cloud 首页 universe field）
+  // 容器 #extidx 携带 data-src（指纹化 JSON：{cats:[{c,n,l,d}], ext:[[name,cat,pkg,desc]]}）
+  // 与 data-base（扩展页链接前缀）；格点按分类着色，已打包实色 / 仅收录淡色，
+  // 悬停显示扩展名与简介，点击在新标签页打开 pgext.cloud 扩展页。
+  // ============================================
+  function initExtIndex() {
+    var box = document.getElementById('extidx');
+    if (!box) return;
+    var cv = box.querySelector('canvas');
+    if (!cv || !cv.getContext || typeof window.fetch !== 'function') return;
+
+    var src = box.dataset.src;
+    var base = box.dataset.base || 'https://pgext.cloud/ext/';
+    var labelPkg = box.dataset.lPkg || 'packaged';
+    var labelNoPkg = box.dataset.lNopkg || 'unpacked';
+
+    var data = null;        // {cats, ext}
+    var colors = {};        // cat code → color for current theme
+    var names = {};         // cat code → display name
+    var grid = null;        // {pitch, cols, hits: {index → ext}}
+    var hover = null;       // hovered ext row
+    var drawnWidth = 0;
+    var rafPending = false;
+    var tipEl = null;
+
+    function palette() {
+      var light = currentTheme() === 'light';
+      colors = {}; names = {};
+      (data.cats || []).forEach(function (c) {
+        colors[c.c] = light ? c.l : c.d;
+        names[c.c] = c.n || c.c;
+      });
+    }
+
+    function draw() {
+      if (!data) return;
+      var W = box.clientWidth;
+      if (!W) return;
+      var dpr = window.devicePixelRatio || 1;
+      var pitch = W > 900 ? 8 : W > 560 ? 7 : 6;
+      var dot = pitch - 2;
+      var cols = Math.max(24, Math.floor(W / pitch));
+      var hits = {};
+      var cell = 0, prev = null, i, e, col, row;
+      var ext = data.ext;
+      var rows = 0;
+      // 先布局：同分类连续排列，分类之间空一格
+      var pos = new Array(ext.length);
+      for (i = 0; i < ext.length; i++) {
+        e = ext[i];
+        if (prev && e[1] !== prev) cell += 1;
+        pos[i] = cell;
+        hits[cell] = e;
+        prev = e[1]; cell++;
+      }
+      rows = Math.ceil(cell / cols);
+      var H = rows * pitch;
+      cv.width = W * dpr; cv.height = H * dpr;
+      cv.style.height = H + 'px';
+      var ctx = cv.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      var hovIdx = -1;
+      for (i = 0; i < ext.length; i++) {
+        e = ext[i];
+        col = pos[i] % cols; row = Math.floor(pos[i] / cols);
+        ctx.fillStyle = colors[e[1]] || '#888';
+        if (hover && e === hover) { hovIdx = i; continue; }
+        ctx.globalAlpha = e[2] ? 0.95 : 0.45;
+        ctx.fillRect(col * pitch, row * pitch, dot, dot);
+      }
+      if (hovIdx >= 0) {
+        // 悬停格点最后画，放大一圈并全不透明
+        col = pos[hovIdx] % cols; row = Math.floor(pos[hovIdx] / cols);
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = colors[hover[1]] || '#888';
+        ctx.fillRect(col * pitch - 1, row * pitch - 1, dot + 2, dot + 2);
+      }
+      ctx.globalAlpha = 1;
+      grid = { pitch: pitch, cols: cols, hits: hits };
+      drawnWidth = W;
+    }
+
+    function scheduleDraw() {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(function () { rafPending = false; draw(); });
+    }
+
+    function hit(ev) {
+      if (!grid) return null;
+      var r = cv.getBoundingClientRect();
+      var x = ev.clientX - r.left, y = ev.clientY - r.top;
+      if (x < 0 || y < 0) return null;
+      var col = Math.floor(x / grid.pitch), row = Math.floor(y / grid.pitch);
+      if (col >= grid.cols) return null;
+      return grid.hits[row * grid.cols + col] || null;
+    }
+
+    function tip() {
+      if (!tipEl) {
+        tipEl = document.createElement('div');
+        tipEl.className = 'extidx-tip';
+        tipEl.setAttribute('role', 'tooltip');
+        document.body.appendChild(tipEl);
+      }
+      return tipEl;
+    }
+
+    function showTip(e, x, y) {
+      var el = tip();
+      el.textContent = '';
+      var b = document.createElement('b'); b.textContent = e[0];
+      var c = document.createElement('span'); c.className = 'c'; c.textContent = e[1]; c.style.color = colors[e[1]] || '';
+      var s = document.createElement('span'); s.className = 's'; s.textContent = e[2] ? labelPkg : labelNoPkg;
+      el.appendChild(b); el.appendChild(c); el.appendChild(s);
+      if (e[3]) { var d = document.createElement('span'); d.className = 'd'; d.textContent = e[3]; el.appendChild(d); }
+      var pad = 14, vw = window.innerWidth, vh = window.innerHeight;
+      el.classList.add('show');
+      var w = el.offsetWidth, h = el.offsetHeight;
+      el.style.left = Math.max(8, Math.min(x + pad, vw - w - 10)) + 'px';
+      el.style.top = (y + pad + h > vh ? y - h - 8 : y + pad) + 'px';
+    }
+
+    function hideTip() { if (tipEl) tipEl.classList.remove('show'); }
+
+    function onMove(ev) {
+      var e = hit(ev);
+      if (e !== hover) { hover = e; scheduleDraw(); }
+      if (e) { showTip(e, ev.clientX, ev.clientY); cv.style.cursor = 'pointer'; }
+      else { hideTip(); cv.style.cursor = 'crosshair'; }
+    }
+
+    function onLeave() {
+      if (hover) { hover = null; scheduleDraw(); }
+      hideTip();
+    }
+
+    function onClick(ev) {
+      var e = hit(ev);
+      if (!e) return;
+      window.open(base + encodeURIComponent(e[0]), '_blank', 'noopener');
+    }
+
+    function ready(payload) {
+      data = payload || {};
+      if (!data.ext || !data.ext.length) { box.classList.add('is-error'); return; }
+      palette();
+      draw();
+      box.classList.add('is-ready');
+      cv.addEventListener('mousemove', onMove);
+      cv.addEventListener('mouseleave', onLeave);
+      cv.addEventListener('click', onClick);
+      window.addEventListener('resize', function () {
+        if (box.clientWidth !== drawnWidth) scheduleDraw();
+      }, { passive: true });
+      window.addEventListener('pigsty-theme-change', function () { palette(); scheduleDraw(); });
+    }
+
+    var loading = false;
+    function load() {
+      if (loading || data) return;
+      loading = true;
+      fetch(src, { credentials: 'same-origin' })
+        .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+        .then(ready)
+        .catch(function () { box.classList.add('is-error'); });
+    }
+
+    // 滚动临近时再拉取数据，首屏不受影响
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries.some(function (en) { return en.isIntersecting; })) { io.disconnect(); load(); }
+      }, { rootMargin: '600px 0px' });
+      io.observe(box);
+    } else {
+      load();
+    }
+  }
+
+  // ============================================
   // Init
   // ============================================
   function init() {
@@ -305,6 +486,7 @@
     initMobileMenu();
     initDashboardGallery();
     initAsciinema();
+    initExtIndex();
   }
 
   if (document.readyState === 'loading') {

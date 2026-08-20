@@ -2,7 +2,7 @@
 title: "StackOverflow 2024调研：PostgreSQL 已经杀疯了"
 linkTitle: "SO 2024：PostgreSQL 已经杀疯了"
 date: 2024-07-25
-manualLink: https://vonng.com/pg/pg-is-no1-again/
+manual_link: https://vonng.com/pg/pg-is-no1-again/
 author: 冯若航
 description: >
   2024年的 SO 全球开发者调研结果新鲜出炉，PostgreSQL 连续第二年成为全球最流行、最受喜爱、需求量最高的数据库。

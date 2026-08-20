@@ -12,17 +12,15 @@ categories: [教程]
 
 精简安装没有 [**`INFRA`**](/docs/infra/) 模块，没有监控，没有 [**本地仓库**](/docs/setup/offline/)，只有 [**`ETCD`**](/docs/etcd/) 和 [**`PGSQL`**](/docs/pgsql/) 以及部分 [**`NODE`**](/docs/node/) 功能。
 
-{{% alert title="精简安装适合以下场景" color="success" %}}
-- 只需要 PostgreSQL 数据库本身，不需要可观测性基础设施。
-- 资源极度受限的环境，不愿意承担基础设施开销（单机约 0.2 vCPU / 500MB 开销）
-- 已有外部监控系统，希望统一使用自己的监控管理体系。
-- 不需要 Grafana 可视化看板组件。
-  {{% /alert %}}
+> [!TIP] 精简安装适合以下场景
+> - 只需要 PostgreSQL 数据库本身，不需要可观测性基础设施。
+> - 资源极度受限的环境，不愿意承担基础设施开销（单机约 0.2 vCPU / 500MB 开销）
+> - 已有外部监控系统，希望统一使用自己的监控管理体系。
+> - 不需要 Grafana 可视化看板组件。
 
-{{% alert title="精简安装的局限性" color="warning" %}}
-- 没有 [**基础设施模块**](/docs/infra)，无法使用 WebUI 和本地软件仓库功能。
-- [**离线安装**](/docs/setup/offline) 仅限单机模式使用，多节点精简安装只能在线安装。
-  {{% /alert %}}
+> [!WARNING] 精简安装的局限性
+> - 没有 [**基础设施模块**](/docs/infra)，无法使用 WebUI 和本地软件仓库功能。
+> - [**离线安装**](/docs/setup/offline) 仅限单机模式使用，多节点精简安装只能在线安装。
 
 
 --------
@@ -77,7 +75,7 @@ curl https://repo.pigsty.cc/get | bash
 {.full-width}
 
 
-{{< readfile file="/docs/conf/yaml/slim.yml" code="true" lang="yaml" >}}
+{{< include file="/docs/conf/yaml/slim.yml" code=true lang="yaml" >}}
 
 
 --------

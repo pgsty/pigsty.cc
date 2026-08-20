@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/registry.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/registry.yml)
 
-{{< readfile file="yaml/app/registry.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/registry.yml" code=true lang="yaml" >}}
 
 
 --------

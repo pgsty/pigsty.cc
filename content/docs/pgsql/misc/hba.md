@@ -217,149 +217,143 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 
 > **注意**：`order` 字段控制规则渲染顺序。`0-99` 用于高优先规则（如黑名单），`100-650` 为默认规则区间，`1000+` 用于追加规则。详见 [HBA 配置](/docs/pgsql/config/hba/)。
 
-<details><summary>示例：渲染 pg_hba.conf</summary>
-
-```ini
-#==============================================================#
-# File      :   pg_hba.conf
-# Desc      :   Postgres HBA Rules for pg-meta-1 [primary]
-# Time      :   2023-01-11 15:19
-# Host      :   pg-meta-1 @ 10.10.10.10:5432
-# Path      :   /pg/data/pg_hba.conf
-# Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
-# Author    :   Ruohang Feng (rh@vonng.com)
-# License   :   Apache-2.0
-#==============================================================#
-
-# addr alias
-# local     : /var/run/postgresql
-# admin     : 10.10.10.10
-# infra     : 10.10.10.10
-# intra     : 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
-
-# user alias
-# dbsu    :  postgres
-# repl    :  replicator
-# monitor :  dbuser_monitor
-# admin   :  dbuser_dba
-
-# dbsu access via local os user ident [default]
-local    all                postgres                              ident
-
-# dbsu replication from local os ident [default]
-local    replication        postgres                              ident
-
-# replicator replication from localhost [default]
-local    replication        replicator                            scram-sha-256
-host     replication        replicator         127.0.0.1/32       scram-sha-256
-
-# replicator replication from intranet [default]
-host     replication        replicator         10.0.0.0/8         scram-sha-256
-host     replication        replicator         172.16.0.0/12      scram-sha-256
-host     replication        replicator         192.168.0.0/16     scram-sha-256
-
-# replicator postgres db from intranet [default]
-host     postgres           replicator         10.0.0.0/8         scram-sha-256
-host     postgres           replicator         172.16.0.0/12      scram-sha-256
-host     postgres           replicator         192.168.0.0/16     scram-sha-256
-
-# monitor from localhost with password [default]
-local    all                dbuser_monitor                        scram-sha-256
-host     all                dbuser_monitor     127.0.0.1/32       scram-sha-256
-
-# monitor from infra host with password [default]
-host     all                dbuser_monitor     10.10.10.10/32     scram-sha-256
-
-# admin @ infra nodes with pwd & ssl [default]
-hostssl  all                dbuser_dba         10.10.10.10/32     scram-sha-256
-
-# admin @ everywhere with ssl & pwd [default]
-hostssl  all                dbuser_dba         0.0.0.0/0          scram-sha-256
-
-# pgbouncer read/write via local socket [default]
-local    all                +dbrole_readonly                      scram-sha-256
-host     all                +dbrole_readonly   127.0.0.1/32       scram-sha-256
-
-# read/write biz user via password [default]
-host     all                +dbrole_readonly   10.0.0.0/8         scram-sha-256
-host     all                +dbrole_readonly   172.16.0.0/12      scram-sha-256
-host     all                +dbrole_readonly   192.168.0.0/16     scram-sha-256
-
-# allow etl offline tasks from intranet [default]
-host     all                +dbrole_offline    10.0.0.0/8         scram-sha-256
-host     all                +dbrole_offline    172.16.0.0/12      scram-sha-256
-host     all                +dbrole_offline    192.168.0.0/16     scram-sha-256
-
-# allow application database intranet access [common] [DISABLED]
-#host    kong            dbuser_kong         10.0.0.0/8          md5
-#host    bytebase        dbuser_bytebase     10.0.0.0/8          md5
-#host    grafana         dbuser_grafana      10.0.0.0/8          md5
-
-```
-
-</details>
+> [!DETAILS]- 示例：渲染 pg_hba.conf
+> ```ini
+> #==============================================================#
+> # File      :   pg_hba.conf
+> # Desc      :   Postgres HBA Rules for pg-meta-1 [primary]
+> # Time      :   2023-01-11 15:19
+> # Host      :   pg-meta-1 @ 10.10.10.10:5432
+> # Path      :   /pg/data/pg_hba.conf
+> # Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
+> # Author    :   Ruohang Feng (rh@vonng.com)
+> # License   :   Apache-2.0
+> #==============================================================#
+>
+> # addr alias
+> # local     : /var/run/postgresql
+> # admin     : 10.10.10.10
+> # infra     : 10.10.10.10
+> # intra     : 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+>
+> # user alias
+> # dbsu    :  postgres
+> # repl    :  replicator
+> # monitor :  dbuser_monitor
+> # admin   :  dbuser_dba
+>
+> # dbsu access via local os user ident [default]
+> local    all                postgres                              ident
+>
+> # dbsu replication from local os ident [default]
+> local    replication        postgres                              ident
+>
+> # replicator replication from localhost [default]
+> local    replication        replicator                            scram-sha-256
+> host     replication        replicator         127.0.0.1/32       scram-sha-256
+>
+> # replicator replication from intranet [default]
+> host     replication        replicator         10.0.0.0/8         scram-sha-256
+> host     replication        replicator         172.16.0.0/12      scram-sha-256
+> host     replication        replicator         192.168.0.0/16     scram-sha-256
+>
+> # replicator postgres db from intranet [default]
+> host     postgres           replicator         10.0.0.0/8         scram-sha-256
+> host     postgres           replicator         172.16.0.0/12      scram-sha-256
+> host     postgres           replicator         192.168.0.0/16     scram-sha-256
+>
+> # monitor from localhost with password [default]
+> local    all                dbuser_monitor                        scram-sha-256
+> host     all                dbuser_monitor     127.0.0.1/32       scram-sha-256
+>
+> # monitor from infra host with password [default]
+> host     all                dbuser_monitor     10.10.10.10/32     scram-sha-256
+>
+> # admin @ infra nodes with pwd & ssl [default]
+> hostssl  all                dbuser_dba         10.10.10.10/32     scram-sha-256
+>
+> # admin @ everywhere with ssl & pwd [default]
+> hostssl  all                dbuser_dba         0.0.0.0/0          scram-sha-256
+>
+> # pgbouncer read/write via local socket [default]
+> local    all                +dbrole_readonly                      scram-sha-256
+> host     all                +dbrole_readonly   127.0.0.1/32       scram-sha-256
+>
+> # read/write biz user via password [default]
+> host     all                +dbrole_readonly   10.0.0.0/8         scram-sha-256
+> host     all                +dbrole_readonly   172.16.0.0/12      scram-sha-256
+> host     all                +dbrole_readonly   192.168.0.0/16     scram-sha-256
+>
+> # allow etl offline tasks from intranet [default]
+> host     all                +dbrole_offline    10.0.0.0/8         scram-sha-256
+> host     all                +dbrole_offline    172.16.0.0/12      scram-sha-256
+> host     all                +dbrole_offline    192.168.0.0/16     scram-sha-256
+>
+> # allow application database intranet access [common] [DISABLED]
+> #host    kong            dbuser_kong         10.0.0.0/8          md5
+> #host    bytebase        dbuser_bytebase     10.0.0.0/8          md5
+> #host    grafana         dbuser_grafana      10.0.0.0/8          md5
+>
+> ```
 
 
 
-<details><summary>示例：渲染 pgb_hba.conf</summary>
-
-```ini
-#==============================================================#
-# File      :   pgb_hba.conf
-# Desc      :   Pgbouncer HBA Rules for pg-meta-1 [primary]
-# Time      :   2023-01-11 15:28
-# Host      :   pg-meta-1 @ 10.10.10.10:5432
-# Path      :   /etc/pgbouncer/pgb_hba.conf
-# Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
-# Author    :   Ruohang Feng (rh@vonng.com)
-# License   :   Apache-2.0
-#==============================================================#
-
-# PGBOUNCER HBA RULES FOR pg-meta-1 @ 10.10.10.10:6432
-# ansible managed: 2023-01-11 14:30:58
-
-# addr alias
-# local     : /var/run/postgresql
-# admin     : 10.10.10.10
-# infra     : 10.10.10.10
-# intra     : 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
-
-# user alias
-# dbsu    :  postgres
-# repl    :  replicator
-# monitor :  dbuser_monitor
-# admin   :  dbuser_dba
-
-# dbsu local admin access with os ident [default]
-local    pgbouncer          postgres                              peer
-
-# allow all user local access with pwd [default]
-local    all                all                                   scram-sha-256
-host     all                all                127.0.0.1/32       scram-sha-256
-
-# monitor access via intranet with pwd [default]
-host     pgbouncer          dbuser_monitor     10.0.0.0/8         scram-sha-256
-host     pgbouncer          dbuser_monitor     172.16.0.0/12      scram-sha-256
-host     pgbouncer          dbuser_monitor     192.168.0.0/16     scram-sha-256
-
-# reject all other monitor access addr [default]
-host     all                dbuser_monitor     0.0.0.0/0          reject
-
-# admin access via intranet with pwd [default]
-host     all                dbuser_dba         10.0.0.0/8         scram-sha-256
-host     all                dbuser_dba         172.16.0.0/12      scram-sha-256
-host     all                dbuser_dba         192.168.0.0/16     scram-sha-256
-
-# reject all other admin access addr [default]
-host     all                dbuser_dba         0.0.0.0/0          reject
-
-# allow all user intra access with pwd [default]
-host     all                all                10.0.0.0/8         scram-sha-256
-host     all                all                172.16.0.0/12      scram-sha-256
-host     all                all                192.168.0.0/16     scram-sha-256
-```
-
-</details>
+> [!DETAILS]- 示例：渲染 pgb_hba.conf
+> ```ini
+> #==============================================================#
+> # File      :   pgb_hba.conf
+> # Desc      :   Pgbouncer HBA Rules for pg-meta-1 [primary]
+> # Time      :   2023-01-11 15:28
+> # Host      :   pg-meta-1 @ 10.10.10.10:5432
+> # Path      :   /etc/pgbouncer/pgb_hba.conf
+> # Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
+> # Author    :   Ruohang Feng (rh@vonng.com)
+> # License   :   Apache-2.0
+> #==============================================================#
+>
+> # PGBOUNCER HBA RULES FOR pg-meta-1 @ 10.10.10.10:6432
+> # ansible managed: 2023-01-11 14:30:58
+>
+> # addr alias
+> # local     : /var/run/postgresql
+> # admin     : 10.10.10.10
+> # infra     : 10.10.10.10
+> # intra     : 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+>
+> # user alias
+> # dbsu    :  postgres
+> # repl    :  replicator
+> # monitor :  dbuser_monitor
+> # admin   :  dbuser_dba
+>
+> # dbsu local admin access with os ident [default]
+> local    pgbouncer          postgres                              peer
+>
+> # allow all user local access with pwd [default]
+> local    all                all                                   scram-sha-256
+> host     all                all                127.0.0.1/32       scram-sha-256
+>
+> # monitor access via intranet with pwd [default]
+> host     pgbouncer          dbuser_monitor     10.0.0.0/8         scram-sha-256
+> host     pgbouncer          dbuser_monitor     172.16.0.0/12      scram-sha-256
+> host     pgbouncer          dbuser_monitor     192.168.0.0/16     scram-sha-256
+>
+> # reject all other monitor access addr [default]
+> host     all                dbuser_monitor     0.0.0.0/0          reject
+>
+> # admin access via intranet with pwd [default]
+> host     all                dbuser_dba         10.0.0.0/8         scram-sha-256
+> host     all                dbuser_dba         172.16.0.0/12      scram-sha-256
+> host     all                dbuser_dba         192.168.0.0/16     scram-sha-256
+>
+> # reject all other admin access addr [default]
+> host     all                dbuser_dba         0.0.0.0/0          reject
+>
+> # allow all user intra access with pwd [default]
+> host     all                all                10.0.0.0/8         scram-sha-256
+> host     all                all                172.16.0.0/12      scram-sha-256
+> host     all                all                192.168.0.0/16     scram-sha-256
+> ```
 
 
 

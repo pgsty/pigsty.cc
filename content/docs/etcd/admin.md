@@ -43,9 +43,8 @@ etcd:
 ./etcd.yml  # 初始化 etcd 集群
 ```
 
-{{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
-自 Pigsty v3.6 起，`etcd.yml` 剧本专注于集群安装和成员添加，不再包含移除功能。所有移除操作请使用独立的 `etcd-rm.yml` 剧本。
-{{% /alert %}}
+> [!NOTE] 架构变化：Pigsty v3.6+
+> 自 Pigsty v3.6 起，`etcd.yml` 剧本专注于集群安装和成员添加，不再包含移除功能。所有移除操作请使用独立的 `etcd-rm.yml` 剧本。
 
 对于已初始化的生产环境 etcd 集群，可以打开防误删保护 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard)，避免误删现有的 etcd 实例。
 
@@ -72,9 +71,8 @@ bin/etcd-rm                           # 移除整个 etcd 集群
 
 移除剧本会尊重 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 防误删保险的配置。如果该参数设置为 `true`，剧本将在退群、注销、停服和删除之前中止；其默认值为 `false`，不能把未显式覆盖保险当作一次确认。
 
-{{% alert title="注意" color="warning" %}}
-在移除 etcd 集群之前，请确保没有 PostgreSQL 集群正在使用该 etcd 作为 DCS 服务。否则会导致 PostgreSQL 高可用功能失效。
-{{% /alert %}}
+> [!WARNING] 注意
+> 在移除 etcd 集群之前，请确保没有 PostgreSQL 集群正在使用该 etcd 作为 DCS 服务。否则会导致 PostgreSQL 高可用功能失效。
 
 
 
@@ -187,9 +185,8 @@ ansible all -f 1 -b -a 'systemctl reload patroni' # 重新加载 patroni 配置
 ansible all -f 1 -b -a 'systemctl restart vip-manager' # 重启 vip-manager
 ```
 
-{{% alert title="提示" color="info" %}}
-使用 `bin/etcd-add` 和 `bin/etcd-rm` 便捷脚本时，脚本会在操作完成后提示您需要执行的配置刷新命令。
-{{% /alert %}}
+> [!NOTE] 提示
+> 使用 `bin/etcd-add` 和 `bin/etcd-rm` 便捷脚本时，脚本会在操作完成后提示您需要执行的配置刷新命令。
 
 
 
@@ -233,72 +230,68 @@ bin/etcd-add <ip1> <ip2> ...   # 添加多个新成员
 etcdctl member promote <new_ins_server_id>
 ```
 
-{{% alert title="重要" color="warning" %}}
-添加新成员时必须使用 `etcd_init=existing` 参数，否则新实例会尝试创建新集群而非加入现有集群。
-{{% /alert %}}
+> [!WARNING] 重要
+> 添加新成员时必须使用 `etcd_init=existing` 参数，否则新实例会尝试创建新集群而非加入现有集群。
 
-<details><summary>详细步骤：向 etcd 集群添加成员</summary>
-
-下面是具体操作的详细细节，让我们从一个单实例 etcd 集群开始：
-
-```yaml
-etcd:
-  hosts:
-    10.10.10.10: { etcd_seq: 1 } # <--- 集群中原本存在的唯一实例
-    10.10.10.11: { etcd_seq: 2 } # <--- 将此新成员定义添加到清单中
-  vars: { etcd_cluster: etcd }
-```
-
-使用便捷脚本添加新成员（推荐）：
-
-```bash
-$ bin/etcd-add 10.10.10.11
-```
-
-或者手动操作。首先使用 `etcdctl member add` 向现有 etcd 集群宣告新的学习者实例 `etcd-2` 即将到来：
-
-```bash
-$ etcdctl member add etcd-2 --learner=true --peer-urls=https://10.10.10.11:2380
-Member 33631ba6ced84cf8 added to cluster 6646fbcf5debc68f
-
-ETCD_NAME="etcd-2"
-ETCD_INITIAL_CLUSTER="etcd-2=https://10.10.10.11:2380,etcd-1=https://10.10.10.10:2380"
-ETCD_INITIAL_ADVERTISE_PEER_URLS="https://10.10.10.11:2380"
-ETCD_INITIAL_CLUSTER_STATE="existing"
-```
-
-使用 `etcdctl member list`（或 `em list`）检查成员列表，我们可以看到一个 `unstarted` 新成员：
-
-```bash
-33631ba6ced84cf8, unstarted, , https://10.10.10.11:2380, , true       # 这里有一个未启动的新成员
-429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
-```
-
-接下来使用 `etcd.yml` 剧本初始化新的 etcd 实例 `etcd-2`，完成后，我们可以看到新成员已经启动：
-
-```bash
-$ ./etcd.yml -l 10.10.10.11 -e etcd_init=existing    # 一定要添加 existing 参数
-...
-33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, true
-429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
-```
-
-新成员初始化完成并稳定运行后，可以将新成员从学习者提升为追随者：
-
-```bash
-$ etcdctl member promote 33631ba6ced84cf8   # 将学习者提升为追随者
-Member 33631ba6ced84cf8 promoted in cluster 6646fbcf5debc68f
-
-$ em list                # 再次检查，新成员已提升为正式成员
-33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, false
-429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
-```
-
-新成员添加完成，请不要忘记 [重载配置](#重载配置)，让所有客户端也知道新成员的存在。
-
-重复以上步骤，可以添加更多成员。记住，生产环境中至少要使用 3 个成员。
-
-</details>
+> [!DETAILS]- 详细步骤：向 etcd 集群添加成员
+> 下面是具体操作的详细细节，让我们从一个单实例 etcd 集群开始：
+>
+> ```yaml
+> etcd:
+>   hosts:
+>     10.10.10.10: { etcd_seq: 1 } # <--- 集群中原本存在的唯一实例
+>     10.10.10.11: { etcd_seq: 2 } # <--- 将此新成员定义添加到清单中
+>   vars: { etcd_cluster: etcd }
+> ```
+>
+> 使用便捷脚本添加新成员（推荐）：
+>
+> ```bash
+> $ bin/etcd-add 10.10.10.11
+> ```
+>
+> 或者手动操作。首先使用 `etcdctl member add` 向现有 etcd 集群宣告新的学习者实例 `etcd-2` 即将到来：
+>
+> ```bash
+> $ etcdctl member add etcd-2 --learner=true --peer-urls=https://10.10.10.11:2380
+> Member 33631ba6ced84cf8 added to cluster 6646fbcf5debc68f
+>
+> ETCD_NAME="etcd-2"
+> ETCD_INITIAL_CLUSTER="etcd-2=https://10.10.10.11:2380,etcd-1=https://10.10.10.10:2380"
+> ETCD_INITIAL_ADVERTISE_PEER_URLS="https://10.10.10.11:2380"
+> ETCD_INITIAL_CLUSTER_STATE="existing"
+> ```
+>
+> 使用 `etcdctl member list`（或 `em list`）检查成员列表，我们可以看到一个 `unstarted` 新成员：
+>
+> ```bash
+> 33631ba6ced84cf8, unstarted, , https://10.10.10.11:2380, , true       # 这里有一个未启动的新成员
+> 429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
+> ```
+>
+> 接下来使用 `etcd.yml` 剧本初始化新的 etcd 实例 `etcd-2`，完成后，我们可以看到新成员已经启动：
+>
+> ```bash
+> $ ./etcd.yml -l 10.10.10.11 -e etcd_init=existing    # 一定要添加 existing 参数
+> ...
+> 33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, true
+> 429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
+> ```
+>
+> 新成员初始化完成并稳定运行后，可以将新成员从学习者提升为追随者：
+>
+> ```bash
+> $ etcdctl member promote 33631ba6ced84cf8   # 将学习者提升为追随者
+> Member 33631ba6ced84cf8 promoted in cluster 6646fbcf5debc68f
+>
+> $ em list                # 再次检查，新成员已提升为正式成员
+> 33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, false
+> 429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
+> ```
+>
+> 新成员添加完成，请不要忘记 [重载配置](#重载配置)，让所有客户端也知道新成员的存在。
+>
+> 重复以上步骤，可以添加更多成员。记住，生产环境中至少要使用 3 个成员。
 
 
 
@@ -343,51 +336,48 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 不要在运行移除剧本前先从清单删除目标；`etcd-rm.yml` 的 `hosts: etcd` 将无法再选中它，也无法从清单推导实例身份和集群端点。
 也不需要在移除剧本前后额外重复执行 `etcdctl member remove`。
 
-<details><summary>详细步骤：从 etcd 集群移除成员</summary>
-
-让我们以一个 3 节点的 etcd 集群为例，从中移除 3 号实例。
-
-**方法一：使用便捷脚本（推荐）**
-
-```bash
-$ bin/etcd-rm 10.10.10.12
-```
-
-脚本会尝试从集群中移除成员、停止服务并清理数据；结束后仍需按上文检查成员列表、仲裁与目标文件状态。
-
-**方法二：手动操作**
-
-首先保持待删除成员仍在清单中，使用移除剧本：
-
-```bash
-$ ./etcd-rm.yml -l 10.10.10.12
-```
-
-剧本会依次尝试以下操作：
-1. 获取成员列表并找到对应的成员 ID
-2. 执行 `etcdctl member remove` 从集群中踢除
-3. 停止 etcd 服务
-4. 清理数据和配置文件
-
-剧本会自动查询成员 ID 并执行 `member remove`。只有在排障时需要手工完成这一步：
-
-```bash
-$ etcdctl member list
-429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
-33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, false
-93fcf23b220473fb, started, etcd-3, https://10.10.10.12:2380, https://10.10.10.12:2379, false  # <--- 移除这个
-
-$ etcdctl member remove 93fcf23b220473fb  # 从集群中踢除
-Member 93fcf23b220473fb removed from cluster 6646fbcf5debc68f
-```
-
-手工踢除后仍需在目标尚存于清单时运行 `./etcd-rm.yml -l 10.10.10.12` 完成停服、注销和清理；其退出步骤找不到已删除的成员时会跳过。
-
-确认成员已经离开现场集群、剩余成员保持仲裁且目标服务与文件符合预期后，才从配置清单中删除 `10.10.10.12`，并按 [重载配置](#重载配置) 刷新其余 Etcd 成员和所有客户端引用，移除成员至此完成。
-
-重复以上步骤，可以移除更多成员，与 [添加成员](#添加成员) 配合使用，可以对 etcd 集群进行滚动升级搬迁。
-
-</details>
+> [!DETAILS]- 详细步骤：从 etcd 集群移除成员
+> 让我们以一个 3 节点的 etcd 集群为例，从中移除 3 号实例。
+>
+> **方法一：使用便捷脚本（推荐）**
+>
+> ```bash
+> $ bin/etcd-rm 10.10.10.12
+> ```
+>
+> 脚本会尝试从集群中移除成员、停止服务并清理数据；结束后仍需按上文检查成员列表、仲裁与目标文件状态。
+>
+> **方法二：手动操作**
+>
+> 首先保持待删除成员仍在清单中，使用移除剧本：
+>
+> ```bash
+> $ ./etcd-rm.yml -l 10.10.10.12
+> ```
+>
+> 剧本会依次尝试以下操作：
+> 1. 获取成员列表并找到对应的成员 ID
+> 2. 执行 `etcdctl member remove` 从集群中踢除
+> 3. 停止 etcd 服务
+> 4. 清理数据和配置文件
+>
+> 剧本会自动查询成员 ID 并执行 `member remove`。只有在排障时需要手工完成这一步：
+>
+> ```bash
+> $ etcdctl member list
+> 429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
+> 33631ba6ced84cf8, started, etcd-2, https://10.10.10.11:2380, https://10.10.10.11:2379, false
+> 93fcf23b220473fb, started, etcd-3, https://10.10.10.12:2380, https://10.10.10.12:2379, false  # <--- 移除这个
+>
+> $ etcdctl member remove 93fcf23b220473fb  # 从集群中踢除
+> Member 93fcf23b220473fb removed from cluster 6646fbcf5debc68f
+> ```
+>
+> 手工踢除后仍需在目标尚存于清单时运行 `./etcd-rm.yml -l 10.10.10.12` 完成停服、注销和清理；其退出步骤找不到已删除的成员时会跳过。
+>
+> 确认成员已经离开现场集群、剩余成员保持仲裁且目标服务与文件符合预期后，才从配置清单中删除 `10.10.10.12`，并按 [重载配置](#重载配置) 刷新其余 Etcd 成员和所有客户端引用，移除成员至此完成。
+>
+> 重复以上步骤，可以移除更多成员，与 [添加成员](#添加成员) 配合使用，可以对 etcd 集群进行滚动升级搬迁。
 
 
 

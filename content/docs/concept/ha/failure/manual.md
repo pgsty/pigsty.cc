@@ -8,8 +8,7 @@ module: [PGSQL]
 categories: [概念]
 ---
 
-{{< infographic >}}
-```text
+```infographic
 infographic list-row-simple-horizontal-arrow
 data
 
@@ -26,7 +25,6 @@ data
 theme light
   palette antv
 ```
-{{< /infographic >}}
 
 
 --------
@@ -35,11 +33,15 @@ theme light
 
 以下分析以 **Failover**（人工故障转移）为主，因为它涉及实际的服务中断时间。
 
-{{< echarts height="520px" >}}
-```js
+<script>
+window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
+(function (registry) {
 var fmt = function(params) { if (!params || !params.length || params[0].name === '') return ''; return '<b>' + params[0].name + '</b><br/>' + params.filter(p => p.value !== '-' && p.value != null).map(p => p.marker + ' ' + p.seriesName + ': ' + p.value + 's').join('<br/>'); };
-```
-```yaml
+registry["fmt"] = fmt;
+})(window.OinkEchartsFunctions);
+</script>
+
+```echarts {height="520px"}
 tooltip: { trigger: axis, axisPointer: { type: shadow }, formatter: $fn:fmt }
 legend: { top: 0, itemGap: 12, data: [命令执行, 从库提升, 健康检查] }
 grid: { left: 64, right: 24, bottom: 32, top: 40 }
@@ -51,7 +53,6 @@ series:
   - { name: 健康检查, type: bar, stack: main, z: 2, emphasis: { focus: series }, itemStyle: { color: "#4e79a7" }, data: [8, 6, 4, "-", 6, 5, 3, "-", 4, 3, 2, "-", 2, 2, 1] }
   - { name: RTO总计, type: bar, barGap: "-100%", barWidth: 20, z: 1, itemStyle: { color: "#888", opacity: 0 }, emphasis: { itemStyle: { opacity: 0 } }, data: [11, 7, 4, "-", 9, 6, 3, "-", 7, 4, 2, "-", 5, 3, 1] }
 ```
-{{< /echarts >}}
 
 
 --------
@@ -226,8 +227,7 @@ pg switchover pg-test              # 切换到最佳候选
 pg switchover pg-test pg-test-2    # 切换到指定从库
 ```
 
-{{< infographic >}}
-```text
+```infographic
 infographic list-row-simple-horizontal-arrow
 data
   title Switchover 计划切换流程
@@ -248,7 +248,6 @@ data
 theme light
   palette antv
 ```
-{{< /infographic >}}
 
 **WAL 追平时间不计入 RTO**：追平期间主库仍可处理只读请求，服务并未完全中断。
 

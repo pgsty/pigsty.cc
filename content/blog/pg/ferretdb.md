@@ -1,7 +1,7 @@
 ---
 title: "FerretDB：假扮成 MongoDB 的 PG"
 date: 2023-10-08
-manualLink: https://vonng.com/pg/ferretdb/
+manual_link: https://vonng.com/pg/ferretdb/
 author: 冯若航
 description: >
   FerretDB 旨在提供一个基于 PostgreSQL 的，真正开源的 MongoDB 替代。

@@ -1,7 +1,7 @@
 ---
 title: "504 个扩展，PostgreSQL 生态的天花板在哪？"
 date: 2026-04-13
-manualLink: https://vonng.com/pg/extension-504/
+manual_link: https://vonng.com/pg/extension-504/
 author: 冯若航
 description: >
   一个 Issue ，引发扩展马拉松；32 个新扩展告诉你，PostgreSQL 正在变成什么；504 个扩展，PostgreSQL 生态的天花板在哪？

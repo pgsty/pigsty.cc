@@ -1,7 +1,7 @@
 ---
 title: "高级模糊查询的实现"
 date: 2021-03-05
-manualLink: https://vonng.com/pg/fuzzymatch/
+manual_link: https://vonng.com/pg/fuzzymatch/
 author: 冯若航
 description: >
   如何在 PostgreSQL 中实现比较复杂的模糊查询逻辑？

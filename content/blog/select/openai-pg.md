@@ -1,7 +1,7 @@
 ---
 title: "OpenAI: 将 PG 伸缩至新阶段"
 date: 2025-05-19
-manualLink: https://vonng.com/db/openai-pg/
+manual_link: https://vonng.com/db/openai-pg/
 author: |
   冯若航 | 演讲人：Bohan Zhang
 description: >

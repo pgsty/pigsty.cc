@@ -2,7 +2,7 @@
 title: "PostgreSQL 的触发器使用注意事项"
 linkTitle: "触发器使用注意事项"
 date: 2018-07-07
-manualLink: https://vonng.com/pg/sql-trigger/
+manual_link: https://vonng.com/pg/sql-trigger/
 author: 冯若航
 description: >
   详细了解 PostgreSQL 中触发器的管理与使用。

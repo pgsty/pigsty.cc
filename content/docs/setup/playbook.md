@@ -45,31 +45,24 @@ Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一
 如果您想手动安装 Ansible，可以参考以下说明，支持的 Ansible 最低版本为 2.9
 
 
-{{< tabpane text=true persist=disabled >}}
-{{% tab header="Debian / Ubuntu" %}}
-```bash
+```bash {tab="Debian / Ubuntu"}
 sudo apt install -y ansible python3-jmespath
 ```
-{{% /tab %}}
-{{% tab header="EL" %}}
-```bash
+
+```bash {tab="EL"}
 sudo dnf install -y ansible python3.12-jmespath python3-cryptography  # EL 8
 sudo dnf install -y ansible python3-jmespath                           # EL 9
 sudo dnf install -y ansible                                            # EL 10
 ```
-{{% /tab %}}
-{{% tab header="MacOS" %}}
-```bash
+
+```bash {tab="MacOS"}
 brew install ansible
 pip3 install jmespath
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
-{{% alert title="修改默认密码！" color="warning" %}}
-请注意，目前 EL10 EPEL 仓库尚未提供完整的 Ansible 包，[**Pigsty PGSQL**](/docs/repo/pgsql) EL10 仓库中补充了这个包。
-{{% /alert %}}
+> [!WARNING] 修改默认密码！
+> 请注意，目前 EL10 EPEL 仓库尚未提供完整的 Ansible 包，[**Pigsty PGSQL**](/docs/repo/pgsql) EL10 仓库中补充了这个包。
 
 
 Ansible 在 macOS 上也可用。您可以使用 [**Homebrew**](https://brew.sh/) 在 Mac 上安装 Ansible，
@@ -122,9 +115,8 @@ Ansible 剧本（Playbook）是包含要执行的一系列任务定义的可执�
 
 查看 Ansible 文档中的所有详细信息：[Patterns: targeting hosts and groups](https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html)
 
-{{% alert title="谨慎运行没有主机限制的剧本！" color="warning" %}}
-在大多数时候，缺少这个值可能会有危险，因为大多数剧本将在 `all` 主机上执行。**请谨慎使用**。
-{{% /alert %}}
+> [!WARNING] 谨慎运行没有主机限制的剧本！
+> 在大多数时候，缺少这个值可能会有危险，因为大多数剧本将在 `all` 主机上执行。**请谨慎使用**。
 
 
 
@@ -193,9 +185,8 @@ Ansible 剧本（Playbook）是包含要执行的一系列任务定义的可执�
 ./pgsql.yml -i conf/app/supa.yml        # 根据 supa.yml 配置初始化一个 1 节点 Supabase 部署
 ```
 
-{{% alert title="更改默认清单文件" color="info" %}}
-要永久更改 **默认** 配置文件，请修改 [`ansible.cfg`](https://github.com/pgsty/pigsty/blob/main/ansible.cfg#L6) 中的 `inventory` 参数。
-{{% /alert %}}
+> [!NOTE] 更改默认清单文件
+> 要永久更改 **默认** 配置文件，请修改 [`ansible.cfg`](https://github.com/pgsty/pigsty/blob/main/ansible.cfg#L6) 中的 `inventory` 参数。
 
 
 

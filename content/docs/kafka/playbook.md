@@ -12,9 +12,8 @@ aliases: [/docs/pilot/kafka/playbook]
 KAFKA 模块提供两个剧本：[`kafka.yml`](https://github.com/pgsty/pigsty/blob/main/kafka.yml) 用于部署 Apache Kafka 4.1+ 动态 KRaft 集群并收敛其安全、
 资源与监控状态；[`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 用于下线集群或移除成员。
 
-{{% alert title="集群完整性约束" color="warning" %}}
-每个被选中的 `kafka_cluster` 必须包含其全部成员：部分选择会在写入前失败；选择一个集群、多个完整集群或不加 `-l` 裸跑全部集群都是允许的。先对完全相同的目标执行 `--check`；真实运行前仍需人工核验备份/重建意图、容量、业务窗口、回退方案与变更批准。
-{{% /alert %}}
+> [!WARNING] 集群完整性约束
+> 每个被选中的 `kafka_cluster` 必须包含其全部成员：部分选择会在写入前失败；选择一个集群、多个完整集群或不加 `-l` 裸跑全部集群都是允许的。先对完全相同的目标执行 `--check`；真实运行前仍需人工核验备份/重建意图、容量、业务窗口、回退方案与变更批准。
 
 
 --------
@@ -236,9 +235,8 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 ./kafka-rm.yml -l kf-main -e kafka_rm_pkg=true     # 同时卸载 kafka-stack 软件包（共享的 Java 运行时不会卸载）
 ```
 
-{{% alert title="永久删除" color="danger" %}}
-`kafka_rm_data` 默认为 `true`：一次默认参数的 `kafka-rm.yml` 就会删除所选节点的数据/KRaft 元数据与 `/etc/kafka` 恢复状态。剧本没有确认字符串等额外闸门，执行前必须人工核对 `-l` 目标、备份或明确重建意图，并评估生产者/消费者影响。
-{{% /alert %}}
+> [!CAUTION] 永久删除
+> `kafka_rm_data` 默认为 `true`：一次默认参数的 `kafka-rm.yml` 就会删除所选节点的数据/KRaft 元数据与 `/etc/kafka` 恢复状态。剧本没有确认字符串等额外闸门，执行前必须人工核对 `-l` 目标、备份或明确重建意图，并评估生产者/消费者影响。
 
 
 ### 成员退役

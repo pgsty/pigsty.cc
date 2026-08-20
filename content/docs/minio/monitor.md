@@ -14,9 +14,8 @@ Silo 默认通过 [`minio_admin_port`](/docs/minio/param#minio_admin_port)（`90
 
 部分配置模板还会通过 `m.pigsty` 暴露管理入口。登录凭证由 [`minio_access_key`](/docs/minio/param#minio_access_key) 与 [`minio_secret_key`](/docs/minio/param#minio_secret_key) 指定。
 
-{{% alert title="HTTPS 与证书信任" color="info" %}}
-对象存储默认使用 Pigsty CA 签发的 HTTPS 证书。浏览器和容器客户端必须信任该 CA；生产环境不要以忽略证书校验代替正确配置证书信任。
-{{% /alert %}}
+> [!NOTE] HTTPS 与证书信任
+> 对象存储默认使用 Pigsty CA 签发的 HTTPS 证书。浏览器和容器客户端必须信任该 CA；生产环境不要以忽略证书校验代替正确配置证书信任。
 
 
 ---------

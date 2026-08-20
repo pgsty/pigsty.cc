@@ -195,26 +195,23 @@ Primary 服务可能是生产环境中最关键的服务，它在 5433 端口提
 
 如果 `pg_default_service_dest` 的值为 `postgres`，那么 primary 服务的目的地就会绕过连接池，直接使用 PostgreSQL 数据库的端口（[`pg_port`](/docs/pgsql/param#pg_port)，默认值 5432），对于一些不希望使用连接池的场景，这个参数非常实用。
 
-<details><summary>示例：pg-test-primary 的 haproxy 配置</summary>
-
-```text
-listen pg-test-primary
-    bind *:5433         # <--- primary 服务默认使用 5433 端口
-    mode tcp
-    maxconn 5000
-    balance roundrobin
-    option httpchk
-    option http-keep-alive
-    http-check send meth OPTIONS uri /primary # <--- primary 服务默认使用 Patroni RestAPI /primary 健康检查
-    http-check expect status 200
-    default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
-    # servers
-    server pg-test-1 10.10.10.11:6432 check port 8008 weight 100
-    server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
-    server pg-test-2 10.10.10.12:6432 check port 8008 weight 100
-```
-
-</details>
+> [!DETAILS]- 示例：pg-test-primary 的 haproxy 配置
+> ```text
+> listen pg-test-primary
+>     bind *:5433         # <--- primary 服务默认使用 5433 端口
+>     mode tcp
+>     maxconn 5000
+>     balance roundrobin
+>     option httpchk
+>     option http-keep-alive
+>     http-check send meth OPTIONS uri /primary # <--- primary 服务默认使用 Patroni RestAPI /primary 健康检查
+>     http-check expect status 200
+>     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     # servers
+>     server pg-test-1 10.10.10.11:6432 check port 8008 weight 100
+>     server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
+>     server pg-test-2 10.10.10.12:6432 check port 8008 weight 100
+> ```
 
 Patroni 的 [高可用](/docs/concept/ha) 机制确保任何时候最多只会有一个实例的 `/primary` 健康检查为真，因此 Primary 服务将始终将流量路由到主实例。
 
@@ -241,26 +238,23 @@ Replica 服务在生产环境中的重要性仅次于 Primary 服务，它在 54
 - `dest` 默认值 `default` 会被替换为 `pg_default_service_dest` 的值，默认为 `pgbouncer`，这一点和 [Primary服务](#primary服务) 相同
 - 默认情况下 Replica 服务的目的地默认是从库上的连接池，也就是由 [`pgbouncer_port`](/docs/pgsql/param#pgbouncer_port) 指定的端口，默认为 6432
 
-<details><summary>示例：pg-test-replica 的 haproxy 配置</summary>
-
-```ini
-listen pg-test-replica
-    bind *:5434
-    mode tcp
-    maxconn 5000
-    balance roundrobin
-    option httpchk
-    option http-keep-alive
-    http-check send meth OPTIONS uri /read-only
-    http-check expect status 200
-    default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
-    # servers
-    server pg-test-1 10.10.10.11:6432 check port 8008 weight 100 backup
-    server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
-    server pg-test-2 10.10.10.12:6432 check port 8008 weight 100
-```
-
-</details>
+> [!DETAILS]- 示例：pg-test-replica 的 haproxy 配置
+> ```ini
+> listen pg-test-replica
+>     bind *:5434
+>     mode tcp
+>     maxconn 5000
+>     balance roundrobin
+>     option httpchk
+>     option http-keep-alive
+>     http-check send meth OPTIONS uri /read-only
+>     http-check expect status 200
+>     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     # servers
+>     server pg-test-1 10.10.10.11:6432 check port 8008 weight 100 backup
+>     server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
+>     server pg-test-2 10.10.10.12:6432 check port 8008 weight 100
+> ```
 
 Replica 服务非常灵活：如果有存活的专用 Replica 实例，那么它会优先使用这些实例来承载只读请求，只有当从库实例全部宕机后，才会由主库来兜底只读请求。对于常见的一主一从双节点集群就是：只要从库活着就用从库，从库挂了再用主库。
 
@@ -282,26 +276,23 @@ Default 服务总是绕过连接池直接连到主库上的 PostgreSQL，这对�
 
 如果 `pg_default_service_dest` 被修改为 `postgres`，那么可以说 Default 服务除了端口和名称内容之外，与 Primary 服务是完全等价的。在这种情况下，您可以考虑将 Default 从默认服务中剔除。
 
-<details><summary>示例：pg-test-default 的 haproxy 配置</summary>
-
-```ini
-listen pg-test-default
-    bind *:5436         # <--- 除了监听端口/目标端口和服务名，其他配置和 primary 服务一模一样
-    mode tcp
-    maxconn 5000
-    balance roundrobin
-    option httpchk
-    option http-keep-alive
-    http-check send meth OPTIONS uri /primary
-    http-check expect status 200
-    default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
-    # servers
-    server pg-test-1 10.10.10.11:5432 check port 8008 weight 100
-    server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
-    server pg-test-2 10.10.10.12:5432 check port 8008 weight 100
-```
-
-</details>
+> [!DETAILS]- 示例：pg-test-default 的 haproxy 配置
+> ```ini
+> listen pg-test-default
+>     bind *:5436         # <--- 除了监听端口/目标端口和服务名，其他配置和 primary 服务一模一样
+>     mode tcp
+>     maxconn 5000
+>     balance roundrobin
+>     option httpchk
+>     option http-keep-alive
+>     http-check send meth OPTIONS uri /primary
+>     http-check expect status 200
+>     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     # servers
+>     server pg-test-1 10.10.10.11:5432 check port 8008 weight 100
+>     server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
+>     server pg-test-2 10.10.10.12:5432 check port 8008 weight 100
+> ```
 
 
 
@@ -324,25 +315,22 @@ Offline 服务将流量直接路由到专用的 [离线从库](/docs/pgsql/confi
 - 健康检查 `/replica` 只会针对从库返回 200， 主库会返回错误，因此 Offline 服务 永远不会将流量分发到主库实例上去，哪怕集群中只剩这一台主库。
 - 同时，主库实例既不会被选择器圈中，也不会被备份选择器圈中，因此它永远不会承载 Offline 服务。因此 Offline 服务总是可以避免用户访问主库，从而避免对主库的影响。
 
-<details><summary>示例：pg-test-offline 的 haproxy 配置</summary>
-
-```ini
-listen pg-test-offline
-    bind *:5438
-    mode tcp
-    maxconn 5000
-    balance roundrobin
-    option httpchk
-    option http-keep-alive
-    http-check send meth OPTIONS uri /replica
-    http-check expect status 200
-    default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
-    # servers
-    server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
-    server pg-test-2 10.10.10.12:5432 check port 8008 weight 100 backup
-```
-
-</details>
+> [!DETAILS]- 示例：pg-test-offline 的 haproxy 配置
+> ```ini
+> listen pg-test-offline
+>     bind *:5438
+>     mode tcp
+>     maxconn 5000
+>     balance roundrobin
+>     option httpchk
+>     option http-keep-alive
+>     http-check send meth OPTIONS uri /replica
+>     http-check expect status 200
+>     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     # servers
+>     server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
+>     server pg-test-2 10.10.10.12:5432 check port 8008 weight 100 backup
+> ```
 
 Offline 服务提供受限的只读服务，通常用于两类查询：交互式查询（个人用户），慢查询长事务（分析/ETL）。
 

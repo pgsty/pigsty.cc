@@ -1,7 +1,7 @@
 ---
 title: "监控 PG 中的表大小"
 date: 2018-05-14
-manualLink: https://vonng.com/pg/mon-table-size/
+manual_link: https://vonng.com/pg/mon-table-size/
 author: 冯若航
 description: >
   PostgreSQL 中的表对应着许多物理文件，本文介绍如何统计一张表在 PostgreSQL 的实际大小。

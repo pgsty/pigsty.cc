@@ -29,7 +29,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/saas.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/saas.yml)
 
-{{< readfile file="yaml/demo/saas.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/saas.yml" code=true lang="yaml" >}}
 
 
 --------

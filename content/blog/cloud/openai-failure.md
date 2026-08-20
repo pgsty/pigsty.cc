@@ -1,7 +1,7 @@
 ---
 title: "OpenAI 全球宕机复盘：K8S 循环依赖"
 date: 2024-12-14
-manualLink: https://vonng.com/cloud/openai-failure/
+manual_link: https://vonng.com/cloud/openai-failure/
 author: 冯若航
 description: >
   即使是万亿级独角兽，在非专业领域上，也照样是个草台班子。

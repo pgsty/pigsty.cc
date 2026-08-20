@@ -1,7 +1,7 @@
 ---
 title: "阿里云 PostgreSQL 灵魂人物德哥离职"
 date: 2026-04-02
-manualLink: https://vonng.com/cloud/digoal-leave-aliyun/
+manual_link: https://vonng.com/cloud/digoal-leave-aliyun/
 author: 冯若航
 description: >
   阿里云 PostgreSQL 灵魂人物离场，与中国云数据库的路线之争。

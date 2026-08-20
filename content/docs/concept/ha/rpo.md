@@ -64,23 +64,20 @@ flowchart LR
 
 Pigsty 提供三种保护模式，以帮助用户在不同的 RPO 要求下进行利弊权衡，类似于 [**Oracle Data Guard**](https://docs.oracle.com/en/database/oracle/oracle-database/21/sbydb/oracle-data-guard-protection-modes.html) 的数据保护模式。
 
-{{% alert title="最大性能（Maximum Performance）" color="primary" %}}
-- **默认模式**，异步复制，事务提交仅需本地 WAL 持久化，无需等待从库，从库故障对主库完全透明，不影响服务
-- 主库故障时可能丢失尚未发送/接收的 WAL；默认候选采样落后阈值为 1MiB，但它不是实际丢失量的硬上限
-- 针对性能优化，适用于常规业务场景，容许在故障时损失少量数据。
-{{% /alert %}}
+> [!IMPORTANT] 最大性能（Maximum Performance）
+> - **默认模式**，异步复制，事务提交仅需本地 WAL 持久化，无需等待从库，从库故障对主库完全透明，不影响服务
+> - 主库故障时可能丢失尚未发送/接收的 WAL；默认候选采样落后阈值为 1MiB，但它不是实际丢失量的硬上限
+> - 针对性能优化，适用于常规业务场景，容许在故障时损失少量数据。
 
-{{% alert title="最大可用性（Maximum Availability）" color="success" %}}
-- 配置有 [**`pg_rpo = 0`**](/docs/pgsql/param#pg_rpo)，启用 Patroni 同步提交模式： `synchronous_mode: true`
-- 正常情况下等待至少一个从库确认，实现零数据丢失。当 **所有** 同步从库故障时，**自动降级为异步模式继续服务**
-- 兼顾数据安全与服务可用性，是生产环境 **核心业务** 的推荐配置
-{{% /alert %}}
+> [!TIP] 最大可用性（Maximum Availability）
+> - 配置有 [**`pg_rpo = 0`**](/docs/pgsql/param#pg_rpo)，启用 Patroni 同步提交模式： `synchronous_mode: true`
+> - 正常情况下等待至少一个从库确认，实现零数据丢失。当 **所有** 同步从库故障时，**自动降级为异步模式继续服务**
+> - 兼顾数据安全与服务可用性，是生产环境 **核心业务** 的推荐配置
 
-{{% alert title="最大保护（Maximum Protection）" color="secondary" %}}
-- 使用 `crit.yml` 模板，启用 Patroni 严格同步模式：`synchronous_mode: true` / `synchronous_mode_strict: true`
-- 当所有同步从库故障时，**主库将拒绝写入** 以防止数据丢失，事务必须在至少一个从库持久化后才返回成功。
-- 适用于金融交易、医疗记录等对数据完整性要求极高的场景
-{{% /alert %}}
+> [!NOTE] 最大保护（Maximum Protection）
+> - 使用 `crit.yml` 模板，启用 Patroni 严格同步模式：`synchronous_mode: true` / `synchronous_mode_strict: true`
+> - 当所有同步从库故障时，**主库将拒绝写入** 以防止数据丢失，事务必须在至少一个从库持久化后才返回成功。
+> - 适用于金融交易、医疗记录等对数据完整性要求极高的场景
 
 | **名称**     |                  **最大性能** Performance                  |                 **最大可用** Availability                  |                  **最大保护** Protection                   |
 |:-----------|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|

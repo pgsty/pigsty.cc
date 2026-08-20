@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL 逻辑复制详解"
 date: 2021-03-03
-manualLink: https://vonng.com/pg/logical-replication/
+manual_link: https://vonng.com/pg/logical-replication/
 author: 冯若航
 description: >
   本文介绍 PostgreSQL 中逻辑复制的相关原理，以及最佳实践。

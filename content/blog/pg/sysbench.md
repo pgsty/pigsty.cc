@@ -2,7 +2,7 @@
 title: "使用 sysbench 测试 PostgreSQL 性能"
 linkTitle: "使用 sysbench 测试性能"
 date: 2018-02-06
-manualLink: https://vonng.com/pg/sysbench/
+manual_link: https://vonng.com/pg/sysbench/
 author: 冯若航
 description: >
   尽管 PostgreSQL 提供了 pgbench，但有时候为了吊打一下 MySQL，还是需要用到 sysbench 的。

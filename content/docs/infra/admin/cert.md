@@ -8,9 +8,8 @@ categories: [任务]
 
 Pigsty 默认在管理节点维护一套自签名证书颁发机构（CA），为 PostgreSQL、Patroni、etcd、Silo、Nginx 和其他内部服务签发证书。面向公网的 Nginx 入口可以按 `infra_portal` 配置改用 Certbot/Let's Encrypt 证书。
 
-{{% alert color="danger" title="保护 CA 私钥" %}}
-`files/pki/ca/ca.key` 是整个部署的信任根私钥。不要打印、提交、上传或通过不受保护的渠道传输它；应将它与 `ca.crt` 成对加密备份，并严格限制读权限。
-{{% /alert %}}
+> [!CAUTION] 保护 CA 私钥
+> `files/pki/ca/ca.key` 是整个部署的信任根私钥。不要打印、提交、上传或通过不受保护的渠道传输它；应将它与 `ca.crt` 成对加密备份，并严格限制读权限。
 
 --------
 
@@ -225,9 +224,8 @@ dig +short example.com
 ./infra.yml -l infra -t nginx_certbot,nginx_reload -e certbot_sign=true
 ```
 
-{{% alert color="warning" title="必须单独验证签发结果" %}}
-v4.5.0 的 `nginx_certbot` 任务设置了 `ignore_errors: true`。Playbook 继续执行或总体成功不代表证书已签发；必须检查 Certbot 状态、证书文件、Nginx 配置和真实 TLS 握手。
-{{% /alert %}}
+> [!WARNING] 必须单独验证签发结果
+> v4.5.0 的 `nginx_certbot` 任务设置了 `ignore_errors: true`。Playbook 继续执行或总体成功不代表证书已签发；必须检查 Certbot 状态、证书文件、Nginx 配置和真实 TLS 握手。
 
 ```bash
 certbot certificates

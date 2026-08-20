@@ -200,45 +200,42 @@ CREATE TABLE IF NOT EXISTS isd.daily
 
 **亚小时级原始观测数据表**
 
-<details><summary>ISD Hourly</summary>
-
-```sql
-CREATE TABLE IF NOT EXISTS isd.hourly
-(
-    station    VARCHAR(12) NOT NULL, -- station id
-    ts         TIMESTAMP   NOT NULL, -- timestamp
-    -- air
-    temp       NUMERIC(3, 1),        -- [-93.2,+61.8]
-    dewp       NUMERIC(3, 1),        -- [-98.2,+36.8]
-    slp        NUMERIC(5, 1),        -- [8600,10900]
-    stp        NUMERIC(5, 1),        -- [4500,10900]
-    vis        NUMERIC(6),           -- [0,160000]
-    -- wind
-    wd_angle   NUMERIC(3),           -- [1,360]
-    wd_speed   NUMERIC(4, 1),        -- [0,90]
-    wd_gust    NUMERIC(4, 1),        -- [0,110]
-    wd_code    VARCHAR(1),           -- code that denotes the character of the WIND-OBSERVATION.
-    -- cloud
-    cld_height NUMERIC(5),           -- [0,22000]
-    cld_code   VARCHAR(2),           -- cloud code
-    -- water
-    sndp       NUMERIC(5, 1),        -- mm snow
-    prcp       NUMERIC(5, 1),        -- mm precipitation
-    prcp_hour  NUMERIC(2),           -- precipitation duration in hour
-    prcp_code  VARCHAR(1),           -- precipitation type code
-    -- sky
-    mw_code    VARCHAR(2),           -- manual weather observation code
-    aw_code    VARCHAR(2),           -- auto weather observation code
-    pw_code    VARCHAR(1),           -- weather code of past period of time
-    pw_hour    NUMERIC(2),           -- duration of pw_code period
-    -- misc
-    -- remark     TEXT,
-    -- eqd        TEXT,
-    data       JSONB                 -- extra data
-) PARTITION BY RANGE (ts);
-```
-
-</details>
+> [!DETAILS]- ISD Hourly
+> ```sql
+> CREATE TABLE IF NOT EXISTS isd.hourly
+> (
+>     station    VARCHAR(12) NOT NULL, -- station id
+>     ts         TIMESTAMP   NOT NULL, -- timestamp
+>     -- air
+>     temp       NUMERIC(3, 1),        -- [-93.2,+61.8]
+>     dewp       NUMERIC(3, 1),        -- [-98.2,+36.8]
+>     slp        NUMERIC(5, 1),        -- [8600,10900]
+>     stp        NUMERIC(5, 1),        -- [4500,10900]
+>     vis        NUMERIC(6),           -- [0,160000]
+>     -- wind
+>     wd_angle   NUMERIC(3),           -- [1,360]
+>     wd_speed   NUMERIC(4, 1),        -- [0,90]
+>     wd_gust    NUMERIC(4, 1),        -- [0,110]
+>     wd_code    VARCHAR(1),           -- code that denotes the character of the WIND-OBSERVATION.
+>     -- cloud
+>     cld_height NUMERIC(5),           -- [0,22000]
+>     cld_code   VARCHAR(2),           -- cloud code
+>     -- water
+>     sndp       NUMERIC(5, 1),        -- mm snow
+>     prcp       NUMERIC(5, 1),        -- mm precipitation
+>     prcp_hour  NUMERIC(2),           -- precipitation duration in hour
+>     prcp_code  VARCHAR(1),           -- precipitation type code
+>     -- sky
+>     mw_code    VARCHAR(2),           -- manual weather observation code
+>     aw_code    VARCHAR(2),           -- auto weather observation code
+>     pw_code    VARCHAR(1),           -- weather code of past period of time
+>     pw_hour    NUMERIC(2),           -- duration of pw_code period
+>     -- misc
+>     -- remark     TEXT,
+>     -- eqd        TEXT,
+>     data       JSONB                 -- extra data
+> ) PARTITION BY RANGE (ts);
+> ```
 
 
 
@@ -308,11 +305,8 @@ OPTIONS
 
 展示单个气象站的详细信息，元数据，天/月/年度汇总指标。
 
-<details><summary>ISD Station Dashboard</summary>
-
-![isd-station.jpg](/img/docs/app/isd-station.jpg)
-
-</details>
+> [!DETAILS]- ISD Station Dashboard
+> ![isd-station.jpg](/img/docs/app/isd-station.jpg)
 
 -----------
 
@@ -320,9 +314,6 @@ OPTIONS
 
 展示一个气象站原始亚小时级观测指标数据，需要 `isd.hourly` 数据集。
 
-<details><summary>ISD Station Dashboard</summary>
-
-![isd-detail.jpg](/img/docs/app/isd-detail.jpg)
-
-</details>
+> [!DETAILS]- ISD Station Dashboard
+> ![isd-detail.jpg](/img/docs/app/isd-detail.jpg)
 <br><br><br>

@@ -88,16 +88,13 @@ sudo yum install -y python3.11 python3.11-pip       # 安装最新的 python3.11
 python3.11 -m pip install --upgrade pip virtualenv  # 在 EL8 / EL9 上使用 python3.11
 ```
 
-<details><summary>使用 PyPI 镜像</summary>
-
-对于中国大陆用户，建议使用清华大学 PyPI [镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)。
-
-```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple    # 设置全局镜像（推荐）
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package        # 单次安装时使用
-```
-
-</details>
+> [!DETAILS]- 使用 PyPI 镜像
+> 对于中国大陆用户，建议使用清华大学 PyPI [镜像](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)。
+>
+> ```bash
+> pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple    # 设置全局镜像（推荐）
+> pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package        # 单次安装时使用
+> ```
 
 
 

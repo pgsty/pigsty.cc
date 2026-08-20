@@ -6,6 +6,7 @@ description: 面向新手用户的 Pigsty 与 PostgreSQL 运维文档索引：�
 icon: fa-solid fa-list-check
 module: [PIGSTY, PGSQL]
 categories: [教程, 参考]
+hide: true
 ---
 
 

@@ -50,7 +50,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/demo/demo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/demo.yml)
 
-{{< readfile file="yaml/demo/demo.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/demo.yml" code=true lang="yaml" >}}
 
 
 --------

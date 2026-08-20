@@ -1,7 +1,7 @@
 ---
 title: "AI 撕掉了软件的皮"
 date: 2026-02-05
-manualLink: https://vonng.com/db/saas-burn-pg-rise/
+manual_link: https://vonng.com/db/saas-burn-pg-rise/
 author: 冯若航
 description: >
   软件股暴跌，谁能幸存？谁会崛起？AI 撕掉了软件的皮，露出了数据库的骨。市场不是在错杀，而是在分化定价。

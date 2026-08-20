@@ -21,23 +21,17 @@ pg-meta:
 ```
 
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <dbname>    # 在 <cls> 集群上创建/修改 <dbname> 数据库
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l pg-meta -e dbname=some_db    # 直接使用剧本在 <cls> 集群上创建/修改 <dbname> 数据库
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta some_db    # 在 pg-meta 集群上创建/修改 some_db 数据库
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 关于数据库定义参数的完整参考，请查阅 [**数据库配置**](/docs/pgsql/config/db)。数据库访问权限见 [**访问控制：数据库隔离**](/docs/concept/sec/ac#数据库隔离)。
 
@@ -64,23 +58,17 @@ bin/pgsql-db pg-meta some_db    # 在 pg-meta 集群上创建/修改 some_db 数
 
 要在现有的 PostgreSQL 集群上创建新的业务数据库，请将 [**数据库定义**](/docs/pgsql/config/db) 添加到 `all.children.<cls>.pg_databases`，然后执行：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <dbname>   # 创建数据库 <dbname>
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l <cls> -e dbname=<dbname>   # 直接使用 Ansible 剧本创建数据库
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta myapp    # 例子，在 pg-meta 集群中创建 myapp 数据库
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **示例配置：创建名为 `myapp` 的业务数据库**
 
@@ -98,9 +86,8 @@ bin/pgsql-db pg-meta myapp    # 例子，在 pg-meta 集群中创建 myapp 数�
 **执行效果**：在主库上创建数据库 `myapp`，设置数据库所有者为 `dbuser_myapp`，创建 schema `app`，
 启用扩展 `pg_trgm` 和 `btree_gin`，数据库将默认添加到 Pgbouncer 连接池，并注册为 Grafana PG 数据源。
 
-{{% alert title="建议使用剧本创建数据库" color="secondary" %}}
-如果您需要手工创建数据库，那么需要自行确保 pgbouncer 连接池 / grafana 数据源同步。
-{{% /alert %}}
+> [!NOTE] 建议使用剧本创建数据库
+> 如果您需要手工创建数据库，那么需要自行确保 pgbouncer 连接池 / grafana 数据源同步。
 
 
 ----------------
@@ -111,23 +98,17 @@ bin/pgsql-db pg-meta myapp    # 例子，在 pg-meta 集群中创建 myapp 数�
 
 当目标数据库已存在时，Pigsty 会修改目标数据库的属性使其符合配置。然而，一些属性只能在数据库创建时设置。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <db>   # 修改数据库 <db> 的属性
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l <cls> -e dbname=<db>   # 幂等操作，可重复执行
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta myapp    # 修改 myapp 数据库的属性使其符合配置
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **不可修改的属性**：以下属性在数据库创建后无法修改，需要使用 `state: recreate` 重建数据库：
@@ -190,9 +171,8 @@ bin/pgsql-db pg-meta myapp    # 修改 myapp 数据库的属性使其符合配�
     - { name: pg_trgm, state: absent }        # 卸载扩展
 ```
 
-{{% alert title="CASCADE 警告" color="warning" %}}
-删除模式或卸载扩展使用 `CASCADE` 选项，会同时删除依赖该模式/扩展的所有对象。请确保理解影响范围后再执行删除操作。
-{{% /alert %}}
+> [!WARNING] CASCADE 警告
+> 删除模式或卸载扩展使用 `CASCADE` 选项，会同时删除依赖该模式/扩展的所有对象。请确保理解影响范围后再执行删除操作。
 
 **连接池配置**：默认情况下所有业务数据库都会添加到 Pgbouncer 连接池。可配置 `pgbouncer`（是否加入连接池）、`pool_mode`（池化模式）、`pool_size`（默认池大小）、`pool_reserve`（保留连接数）、`pool_size_min`（最小池大小）、`pool_connlimit`（最大数据库连接）、`pool_auth_user`（认证查询用户）等参数。
 
@@ -216,23 +196,17 @@ bin/pgsql-db pg-meta myapp    # 修改 myapp 数据库的属性使其符合配�
 
 要删除数据库，将其 `state` 设置为 `absent` 并执行剧本：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <db>   # 删除数据库 <db>（需在配置中设置 state: absent）
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l <cls> -e dbname=<db>   # 直接使用 Ansible 剧本删除数据库
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta olddb    # 删除 olddb 数据库（配置中已设置 state: absent）
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **配置示例**：
 
@@ -246,10 +220,9 @@ pg_databases:
 
 **保护机制**：系统数据库 `postgres`、`template0`、`template1` 无法删除。删除操作仅在主库上执行，流复制会自动同步到从库。
 
-{{% alert title="危险操作警告" color="danger" %}}
-删除数据库是 **不可逆** 操作，会永久删除该数据库中的所有数据。执行前请确保：已有最新的数据库备份、已确认没有业务在使用该数据库、已通知相关干系人。
-Pigsty 不对任何因删除数据库导致的数据丢失承担责任，使用需自担风险。
-{{% /alert %}}
+> [!CAUTION] 危险操作警告
+> 删除数据库是 **不可逆** 操作，会永久删除该数据库中的所有数据。执行前请确保：已有最新的数据库备份、已确认没有业务在使用该数据库、已通知相关干系人。
+> Pigsty 不对任何因删除数据库导致的数据丢失承担责任，使用需自担风险。
 
 
 ----------------
@@ -258,23 +231,17 @@ Pigsty 不对任何因删除数据库导致的数据丢失承担责任，使用�
 
 `recreate` 状态用于重建数据库，等效于先删除再创建：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <db>   # 重建数据库 <db>（需在配置中设置 state: recreate）
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l <cls> -e dbname=<db>   # 直接使用 Ansible 剧本重建数据库
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta testdb    # 重建 testdb 数据库（配置中已设置 state: recreate）
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **配置示例**：
 
@@ -297,23 +264,17 @@ pg_databases:
 
 你可以通过 PG 的 template 机制复制一个 PostgreSQL 数据库，在克隆期间，不允许有任何连接到模版数据库的活动连接。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="脚本" %}}
-```bash
+```bash {tab="脚本" group="tab1-tab2-tab3" value="tab1"}
 bin/pgsql-db <cls> <db>   # 克隆数据库 <db>（需在配置中指定 template）
 ```
-{{% /tab %}}
-{{% tab header="剧本" %}}
-```bash
+
+```bash {tab="剧本" value="tab2"}
 ./pgsql-db.yml -l <cls> -e dbname=<db>   # 直接使用 Ansible 剧本克隆数据库
 ```
-{{% /tab %}}
-{{% tab header="示例" %}}
-```bash
+
+```bash {tab="示例" value="tab3"}
 bin/pgsql-db pg-meta meta_dev    # 克隆创建 meta_dev 数据库（配置中已指定 template: meta）
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 **配置示例**：
 

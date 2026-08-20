@@ -46,9 +46,8 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 
 您可以直接使用操作系统的包管理器（`rpm`/`dpkg`）安装，或者将二进制文件放入 `$PATH` 中。当前归档文件还会附带 `pg_exporter.yml`、`package/pg_exporter.default`、`package/pg_exporter.service` 与 `LICENSE`，便于按 tarball 手工部署。
 
-{{% alert title="RPM 包名变更" color="info" %}}
-自 `v1.4.1` 起，官方 RPM 的包名及文件名前缀由 `pg_exporter` 统一为 `pg-exporter`，与 DEB 及仓库安装命令保持一致。新 RPM 同时声明兼容并替换旧包名 `pg_exporter`，可直接从旧版升级。
-{{% /alert %}}
+> [!NOTE] RPM 包名变更
+> 自 `v1.4.1` 起，官方 RPM 的包名及文件名前缀由 `pg_exporter` 统一为 `pg-exporter`，与 DEB 及仓库安装命令保持一致。新 RPM 同时声明兼容并替换旧包名 `pg_exporter`，可直接从旧版升级。
 
 完整 SHA256 校验信息见发布页面中的 `checksums.txt`；具体版本的校验和也会在 [发布注记](/docs/pg_exporter/release/) 中归档。
 
@@ -124,9 +123,8 @@ docker run -d \
   pgsty/pg_exporter:latest
 ```
 
-{{% alert title="注意" color="warning" %}}
-当前 Docker 镜像基于 `scratch`。如果您使用 `sslmode=verify-ca` 或 `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书（例如 `sslrootcert` 或系统 CA bundle），否则 TLS 校验可能无法完成。
-{{% /alert %}}
+> [!WARNING] 注意
+> 当前 Docker 镜像基于 `scratch`。如果您使用 `sslmode=verify-ca` 或 `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书（例如 `sslrootcert` 或系统 CA bundle），否则 TLS 校验可能无法完成。
 
 
 --------

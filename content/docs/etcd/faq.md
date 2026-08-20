@@ -114,9 +114,8 @@ quota-backend-bytes: 8589934592     # 8 GiB 配额
 
 更多维护细节请阅读 etcd [官方文档维护指南](https://etcd.io/docs/v3.5/op-guide/maintenance/)。
 
-{{% alert title="提示" color="info" %}}
-对于 Pigsty v2.6 之前的版本，请参照下面的说明手动启用 etcd 自动垃圾回收。
-{{% /alert %}}
+> [!NOTE] 提示
+> 对于 Pigsty v2.6 之前的版本，请参照下面的说明手动启用 etcd 自动垃圾回收。
 
 
 

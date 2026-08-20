@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/app/insforge.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/insforge.yml)
 
-{{< readfile file="yaml/app/insforge.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/app/insforge.yml" code=true lang="yaml" >}}
 
 
 --------

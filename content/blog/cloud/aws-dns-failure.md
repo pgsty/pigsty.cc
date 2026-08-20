@@ -1,7 +1,7 @@
 ---
 title: "一次 AWS DNS 故障如何级联瘫痪半个互联网"
 date: 2025-10-21
-manualLink: https://vonng.com/cloud/aws-dns-failure/
+manual_link: https://vonng.com/cloud/aws-dns-failure/
 author: 冯若航
 description: >
   AWS US-EAST-1 区域 DNS 解析故障带崩半个互联网，老冯带您复盘 AWS 史诗故障。

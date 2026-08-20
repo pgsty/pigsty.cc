@@ -290,13 +290,11 @@ server reloaded
 - 修改缓存 TTL 值
 - 添加或移除采集器
 
-{{% alert title="注意" color="info" %}}
-重载会刷新采集器配置和查询计划；如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
-{{% /alert %}}
+> [!NOTE] 注意
+> 重载会刷新采集器配置和查询计划；如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
 
-{{% alert title="安全建议" color="warning" %}}
-`/reload`、`/explain`、`/stat` 都属于管理端点。若 exporter 不仅在本机或可信内网使用，建议通过 `--web.config.file` 启用认证/TLS，或在反向代理 / 防火墙层限制访问。
-{{% /alert %}}
+> [!WARNING] 安全建议
+> `/reload`、`/explain`、`/stat` 都属于管理端点。若 exporter 不仅在本机或可信内网使用，建议通过 `--web.config.file` 启用认证/TLS，或在反向代理 / 防火墙层限制访问。
 
 ### GET /explain
 

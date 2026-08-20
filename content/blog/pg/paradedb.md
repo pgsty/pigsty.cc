@@ -1,7 +1,7 @@
 ---
 title: "PG 生态新玩家：ParadeDB"
 date: 2024-02-18
-manualLink: https://vonng.com/pg/paradedb/
+manual_link: https://vonng.com/pg/paradedb/
 author: 冯若航
 description: >
   ParadeDB 旨在成为 Elasticsearch 的替代：用于搜索和分析的 PostgreSQL。

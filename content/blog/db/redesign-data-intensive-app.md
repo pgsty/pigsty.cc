@@ -1,7 +1,7 @@
 ---
 title: "重新设计数据密集型应用"
 date: 2026-02-20
-manualLink: https://vonng.com/db/redesign-data-intensive-app/
+manual_link: https://vonng.com/db/redesign-data-intensive-app/
 author: Martin Kleppmann
 description: >
   Martin Kleppmann 在播客三聊到了关于《设计数据密集型应用》第二版的一些内容。以及一些关于数据密集型应用设计的思考。

@@ -2,7 +2,7 @@
 title: "PostgreSQL MongoFDW 安装部署"
 linkTitle: "MongoFDW 安装部署"
 date: 2016-05-28
-manualLink: https://vonng.com/pg/mongo_fdw-install/
+manual_link: https://vonng.com/pg/mongo_fdw-install/
 author: 冯若航
 description: >
   最近有业务要求通过 PostgreSQL FDW 去访问 MongoDB，但是 MongoDB FDW 编译起来真是要人命啊。

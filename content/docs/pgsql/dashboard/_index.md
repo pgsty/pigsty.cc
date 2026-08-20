@@ -81,29 +81,20 @@ categories: [参考]
 
 [PGSQL Overview](https://demo.pigsty.cc/ui/d/pgsql-overview)：PGSQL 模块的主仪表板
 
-<details><summary>PGSQL Overview</summary>
-
-[![pgsql-overview.jpg](/img/dashboard/pgsql-overview.jpg)](https://demo.pigsty.cc/ui/d/pgsql-overview)
-
-</details>
+> [!DETAILS]- PGSQL Overview
+> [![pgsql-overview.jpg](/img/dashboard/pgsql-overview.jpg)](https://demo.pigsty.cc/ui/d/pgsql-overview)
 
 
 [PGSQL Alert](https://demo.pigsty.cc/ui/d/pgsql-alert)：PGSQL 全局核心指标总览与告警事件一览
 
-<details><summary>PGSQL Alert</summary>
-
-[![pgsql-alert.jpg](/img/dashboard/pgsql-alert.jpg)](https://demo.pigsty.cc/ui/d/pgsql-alert)
-
-</details>
+> [!DETAILS]- PGSQL Alert
+> [![pgsql-alert.jpg](/img/dashboard/pgsql-alert.jpg)](https://demo.pigsty.cc/ui/d/pgsql-alert)
 
 
 [PGSQL Shard](https://demo.pigsty.cc/ui/d/pgsql-shard)：展示一个 PGSQL 水平分片集群内的横向指标对比：例如 CITUS / GPSQL 集群。
 
-<details><summary>PGSQL Shard</summary>
-
-[![pgsql-shard.jpg](/img/dashboard/pgsql-shard.jpg)](https://demo.pigsty.cc/ui/d/pgsql-shard)
-
-</details>
+> [!DETAILS]- PGSQL Shard
+> [![pgsql-shard.jpg](/img/dashboard/pgsql-shard.jpg)](https://demo.pigsty.cc/ui/d/pgsql-shard)
 
 
 
@@ -113,72 +104,48 @@ categories: [参考]
 
 [PGSQL Cluster](https://demo.pigsty.cc/ui/d/pgsql-cluster)：一个 PGSQL 集群的主仪表板
 
-<details><summary>PGSQL Cluster</summary>
-
-[![pgsql-cluster.jpg](/img/dashboard/pgsql-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgsql-cluster)
-
-</details>
+> [!DETAILS]- PGSQL Cluster
+> [![pgsql-cluster.jpg](/img/dashboard/pgsql-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgsql-cluster)
 
 
 [PGRDS Cluster](https://demo.pigsty.cc/ui/d/pgrds-cluster)：PGSQL Cluster 的 RDS 版本，专注于所有 PostgreSQL 本身的指标
 
-<details><summary>PGRDS Cluster</summary>
-
-[![pgrds-cluster.jpg](/img/dashboard/pgrds-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgrds-cluster)
-
-</details>
+> [!DETAILS]- PGRDS Cluster
+> [![pgrds-cluster.jpg](/img/dashboard/pgrds-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgrds-cluster)
 
 
 [PGSQL Service](https://demo.pigsty.cc/ui/d/pgsql-service)：关注 PGSQL 集群服务、代理、路由和负载均衡。
 
-<details><summary>PGSQL Service</summary>
-
-[![pgsql-service.jpg](/img/dashboard/pgsql-service.jpg)](https://demo.pigsty.cc/ui/d/pgsql-service)
-
-</details>
+> [!DETAILS]- PGSQL Service
+> [![pgsql-service.jpg](/img/dashboard/pgsql-service.jpg)](https://demo.pigsty.cc/ui/d/pgsql-service)
 
 [PGSQL Activity](https://demo.pigsty.cc/ui/d/pgsql-activity)：关注 PGSQL 集群的会话/负载/QPS/TPS/锁定情况
 
-<details><summary>PGSQL Activity</summary>
-
-[![pgsql-activity.jpg](/img/dashboard/pgsql-activity.jpg)](https://demo.pigsty.cc/ui/d/pgsql-activity)
-
-</details>
+> [!DETAILS]- PGSQL Activity
+> [![pgsql-activity.jpg](/img/dashboard/pgsql-activity.jpg)](https://demo.pigsty.cc/ui/d/pgsql-activity)
 
 [PGSQL Replication](https://demo.pigsty.cc/ui/d/pgsql-replication)：关注 PGSQL 集群复制、插槽和发布/订阅。
 
-<details><summary>PGSQL Replication</summary>
-
-[![pgsql-replication.jpg](/img/dashboard/pgsql-replication.jpg)](https://demo.pigsty.cc/ui/d/pgsql-replication)
-
-</details>
+> [!DETAILS]- PGSQL Replication
+> [![pgsql-replication.jpg](/img/dashboard/pgsql-replication.jpg)](https://demo.pigsty.cc/ui/d/pgsql-replication)
 
 
 [PGSQL Databases](https://demo.pigsty.cc/ui/d/pgsql-databases)：关注所有实例的数据库 CRUD、慢查询和表统计信息。
 
-<details><summary>PGSQL Databases</summary>
-
-[![pgsql-databases.jpg](/img/dashboard/pgsql-databases.jpg)](https://demo.pigsty.cc/ui/d/pgsql-databases)
-
-</details>
+> [!DETAILS]- PGSQL Databases
+> [![pgsql-databases.jpg](/img/dashboard/pgsql-databases.jpg)](https://demo.pigsty.cc/ui/d/pgsql-databases)
 
 
 [PGSQL Patroni](https://demo.pigsty.cc/ui/d/pgsql-patroni)：关注集群高可用状态，Patroni 组件状态
 
-<details><summary>PGSQL Patroni</summary>
-
-[![pgsql-patroni.jpg](/img/dashboard/pgsql-patroni.jpg)](https://demo.pigsty.cc/ui/d/pgsql-patroni)
-
-</details>
+> [!DETAILS]- PGSQL Patroni
+> [![pgsql-patroni.jpg](/img/dashboard/pgsql-patroni.jpg)](https://demo.pigsty.cc/ui/d/pgsql-patroni)
 
 
 [PGSQL PITR](https://demo.pigsty.cc/ui/d/pgsql-pitr)：关注集群 PITR 过程的上下文，用于辅助时间点恢复
 
-<details><summary>PGSQL PITR</summary>
-
-[![pgsql-patroni.jpg](/img/dashboard/pgsql-pitr.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pitr)
-
-</details>
+> [!DETAILS]- PGSQL PITR
+> [![pgsql-patroni.jpg](/img/dashboard/pgsql-pitr.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pitr)
 
 
 
@@ -188,74 +155,50 @@ categories: [参考]
 
 [PGSQL Instance](https://demo.pigsty.cc/ui/d/pgsql-instance)：单个 PGSQL 实例的主仪表板
 
-<details><summary>PGSQL Instance</summary>
-
-[![pgsql-instance.jpg](/img/dashboard/pgsql-instance.jpg)](https://demo.pigsty.cc/ui/d/pgsql-instance)
-
-</details>
+> [!DETAILS]- PGSQL Instance
+> [![pgsql-instance.jpg](/img/dashboard/pgsql-instance.jpg)](https://demo.pigsty.cc/ui/d/pgsql-instance)
 
 
 [PGRDS Instance](https://demo.pigsty.cc/ui/d/pgrds-instance)：PGSQL Instance 的 RDS 版本，专注于所有 PostgreSQL 本身的指标
 
-<details><summary>PGRDS Instance</summary>
-
-[![pgrds-instance.jpg](/img/dashboard/pgrds-instance.jpg)](https://demo.pigsty.cc/ui/d/pgrds-instance)
-
-</details>
+> [!DETAILS]- PGRDS Instance
+> [![pgrds-instance.jpg](/img/dashboard/pgrds-instance.jpg)](https://demo.pigsty.cc/ui/d/pgrds-instance)
 
 
 [PGSQL Proxy](https://demo.pigsty.cc/ui/d/pgsql-proxy)：单个 haproxy 负载均衡器的详细指标
 
-<details><summary>PGSQL Proxy</summary>
-
-[![pgsql-proxy.jpg](/img/dashboard/pgsql-proxy.jpg)](https://demo.pigsty.cc/ui/d/pgsql-proxy)
-
-</details>
+> [!DETAILS]- PGSQL Proxy
+> [![pgsql-proxy.jpg](/img/dashboard/pgsql-proxy.jpg)](https://demo.pigsty.cc/ui/d/pgsql-proxy)
 
 
 [PGSQL Pgbouncer](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer)：单个 Pgbouncer 连接池实例中的指标总览
 
-<details><summary>PGSQL Pgbouncer</summary>
-
-[![pgsql-pgbouncer.jpg](/img/dashboard/pgsql-pgbouncer.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer)
-
-</details>
+> [!DETAILS]- PGSQL Pgbouncer
+> [![pgsql-pgbouncer.jpg](/img/dashboard/pgsql-pgbouncer.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer)
 
 
 [PGSQL Persist](https://demo.pigsty.cc/ui/d/pgsql-persist)：持久性指标：WAL、XID、检查点、存档、IO
 
-<details><summary>PGSQL Persist</summary>
-
-[![pgsql-persist.jpg](/img/dashboard/pgsql-persist.jpg)](https://demo.pigsty.cc/ui/d/pgsql-persist)
-
-</details>
+> [!DETAILS]- PGSQL Persist
+> [![pgsql-persist.jpg](/img/dashboard/pgsql-persist.jpg)](https://demo.pigsty.cc/ui/d/pgsql-persist)
 
 
 [PGSQL Xacts](https://demo.pigsty.cc/ui/d/pgsql-xacts)：关于事务、锁、TPS/QPS 相关的指标
 
-<details><summary>PGSQL Xacts</summary>
-
-[![pgsql-xacts.jpg](/img/dashboard/pgsql-xacts.jpg)](https://demo.pigsty.cc/ui/d/pgsql-xacts)
-
-</details>
+> [!DETAILS]- PGSQL Xacts
+> [![pgsql-xacts.jpg](/img/dashboard/pgsql-xacts.jpg)](https://demo.pigsty.cc/ui/d/pgsql-xacts)
 
 
 [PGSQL Session](https://demo.pigsty.cc/ui/d/pgsql-session)：单个实例中的会话和活动/空闲时间的指标
 
-<details><summary>PGSQL Session</summary>
-
-[![pgsql-session.jpg](/img/dashboard/pgsql-session.jpg)](https://demo.pigsty.cc/ui/d/pgsql-session)
-
-</details>
+> [!DETAILS]- PGSQL Session
+> [![pgsql-session.jpg](/img/dashboard/pgsql-session.jpg)](https://demo.pigsty.cc/ui/d/pgsql-session)
 
 
 [PGSQL Exporter](https://demo.pigsty.cc/ui/d/pgsql-exporter)：Postgres/Pgbouncer 监控组件自我监控指标
 
-<details><summary>PGSQL Exporter</summary>
-
-[![pgsql-exporter.jpg](/img/dashboard/pgsql-exporter.jpg)](https://demo.pigsty.cc/ui/d/pgsql-exporter)
-
-</details>
+> [!DETAILS]- PGSQL Exporter
+> [![pgsql-exporter.jpg](/img/dashboard/pgsql-exporter.jpg)](https://demo.pigsty.cc/ui/d/pgsql-exporter)
 
 
 
@@ -267,38 +210,26 @@ categories: [参考]
 
 [PGSQL Database](https://demo.pigsty.cc/ui/d/pgsql-database)：单个 PGSQL 数据库的主仪表板
 
-<details><summary>PGSQL Database</summary>
-
-[![pgsql-database.jpg](/img/dashboard/pgsql-database.jpg)](https://demo.pigsty.cc/ui/d/pgsql-database)
-
-</details>
+> [!DETAILS]- PGSQL Database
+> [![pgsql-database.jpg](/img/dashboard/pgsql-database.jpg)](https://demo.pigsty.cc/ui/d/pgsql-database)
 
 
 [PGSQL Tables](https://demo.pigsty.cc/ui/d/pgsql-tables)：单个数据库内的表/索引访问指标
 
-<details><summary>PGSQL Tables</summary>
-
-[![pgsql-tables.jpg](/img/dashboard/pgsql-tables.jpg)](https://demo.pigsty.cc/ui/d/pgsql-tables)
-
-</details>
+> [!DETAILS]- PGSQL Tables
+> [![pgsql-tables.jpg](/img/dashboard/pgsql-tables.jpg)](https://demo.pigsty.cc/ui/d/pgsql-tables)
 
 
 [PGSQL Table](https://demo.pigsty.cc/ui/d/pgsql-table)：单个表的详细信息（QPS/RT/索引/序列...）
 
-<details><summary>PGSQL Table</summary>
-
-[![pgsql-table.jpg](/img/dashboard/pgsql-table.jpg)](https://demo.pigsty.cc/ui/d/pgsql-table)
-
-</details>
+> [!DETAILS]- PGSQL Table
+> [![pgsql-table.jpg](/img/dashboard/pgsql-table.jpg)](https://demo.pigsty.cc/ui/d/pgsql-table)
 
 
 [PGSQL Query](https://demo.pigsty.cc/ui/d/pgsql-query)：单类查询的详细信息（QPS/RT）
 
-<details><summary>PGSQL Query</summary>
-
-[![pgsql-query.jpg](/img/dashboard/pgsql-query.jpg)](https://demo.pigsty.cc/ui/d/pgsql-query)
-
-</details>
+> [!DETAILS]- PGSQL Query
+> [![pgsql-query.jpg](/img/dashboard/pgsql-query.jpg)](https://demo.pigsty.cc/ui/d/pgsql-query)
 
 
 
@@ -309,61 +240,43 @@ categories: [参考]
 
 [PGCAT Instance](https://demo.pigsty.cc/ui/d/pgcat-instance)：直接从数据库目录获取的实例信息
 
-<details><summary>PGCAT Instance</summary>
-
-[![pgcat-instance.jpg](/img/dashboard/pgcat-instance.jpg)](https://demo.pigsty.cc/ui/d/pgcat-instance)
-
-</details>
+> [!DETAILS]- PGCAT Instance
+> [![pgcat-instance.jpg](/img/dashboard/pgcat-instance.jpg)](https://demo.pigsty.cc/ui/d/pgcat-instance)
 
 
 [PGCAT Database](https://demo.pigsty.cc/ui/d/pgcat-database)：直接从数据库目录获取的数据库信息
 
-<details><summary>PGCAT Database</summary>
-
-[![pgcat-database.jpg](/img/dashboard/pgcat-database.jpg)](https://demo.pigsty.cc/ui/d/pgcat-database)
-
-</details>
+> [!DETAILS]- PGCAT Database
+> [![pgcat-database.jpg](/img/dashboard/pgcat-database.jpg)](https://demo.pigsty.cc/ui/d/pgcat-database)
 
 
 
 [PGCAT Schema](https://demo.pigsty.cc/ui/d/pgcat-schema)：直接从数据库目录获取关于模式的信息（表/索引/序列...）
 
-<details><summary>PGCAT Schema</summary>
-
-[![pgcat-schema.jpg](/img/dashboard/pgcat-schema.jpg)](https://demo.pigsty.cc/ui/d/pgcat-schema)
-
-</details>
+> [!DETAILS]- PGCAT Schema
+> [![pgcat-schema.jpg](/img/dashboard/pgcat-schema.jpg)](https://demo.pigsty.cc/ui/d/pgcat-schema)
 
 
 
 
 [PGCAT Table](https://demo.pigsty.cc/ui/d/pgcat-table)：直接从数据库目录获取的单个表的详细信息（统计/膨胀...）
 
-<details><summary>PGCAT Table</summary>
-
-[![pgcat-table.jpg](/img/dashboard/pgcat-table.jpg)](https://demo.pigsty.cc/ui/d/pgcat-table)
-
-</details>
+> [!DETAILS]- PGCAT Table
+> [![pgcat-table.jpg](/img/dashboard/pgcat-table.jpg)](https://demo.pigsty.cc/ui/d/pgcat-table)
 
 
 
 [PGCAT Query](https://demo.pigsty.cc/ui/d/pgcat-query)：直接从数据库目录获取的单类查询的详细信息（SQL/统计）
 
-<details><summary>PGCAT Query</summary>
-
-[![pgcat-query.jpg](/img/dashboard/pgcat-query.jpg)](https://demo.pigsty.cc/ui/d/pgcat-query)
-
-</details>
+> [!DETAILS]- PGCAT Query
+> [![pgcat-query.jpg](/img/dashboard/pgcat-query.jpg)](https://demo.pigsty.cc/ui/d/pgcat-query)
 
 
 
 [PGCAT Locks](https://demo.pigsty.cc/ui/d/pgcat-locks)：直接从数据库目录获取的关于活动与锁等待的信息
 
-<details><summary>PGCAT Locks</summary>
-
-[![pgcat-locks.jpg](/img/dashboard/pgcat-locks.jpg)](https://demo.pigsty.cc/ui/d/pgcat-locks)
-
-</details>
+> [!DETAILS]- PGCAT Locks
+> [![pgcat-locks.jpg](/img/dashboard/pgcat-locks.jpg)](https://demo.pigsty.cc/ui/d/pgcat-locks)
 
 
 
@@ -373,21 +286,15 @@ categories: [参考]
 
 [PGLOG Overview](https://demo.pigsty.cc/ui/d/pglog-overview)：总览 Pigsty CMDB 中的 CSV 日志样本
 
-<details><summary>PGLOG Overview</summary>
-
-[![pglog-overview.jpg](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/ui/d/pglog-overview)
-
-</details>
+> [!DETAILS]- PGLOG Overview
+> [![pglog-overview.jpg](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/ui/d/pglog-overview)
 
 
 
 [PGLOG Overview](https://demo.pigsty.cc/ui/d/pglog-overview)：Pigsty CMDB 中的 CSV 日志样本中某一条会话的日志详情
 
-<details><summary>PGLOG Session</summary>
-
-[![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)
-
-</details>
+> [!DETAILS]- PGLOG Session
+> [![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)
 
 
 
@@ -399,179 +306,102 @@ categories: [参考]
 
 详情请参考 [pigsty/wiki/gallery](https://github.com/pgsty/pigsty/wiki/Gallery)。
 
-<details><summary>PGSQL Overview</summary>
+> [!DETAILS]- PGSQL Overview
+> [![pgsql-overview.jpg](/img/dashboard/pgsql-overview.jpg)](https://demo.pigsty.cc/ui/d/pgsql-overview)
 
-[![pgsql-overview.jpg](/img/dashboard/pgsql-overview.jpg)](https://demo.pigsty.cc/ui/d/pgsql-overview)
 
-</details>
+> [!DETAILS]- PGSQL Shard
+> [![pgsql-shard.jpg](/img/dashboard/pgsql-shard.jpg)](https://demo.pigsty.cc/ui/d/pgsql-shard)
 
 
-<details><summary>PGSQL Shard</summary>
+> [!DETAILS]- PGSQL Cluster
+> [![pgsql-cluster.jpg](/img/dashboard/pgsql-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgsql-cluster)
 
-[![pgsql-shard.jpg](/img/dashboard/pgsql-shard.jpg)](https://demo.pigsty.cc/ui/d/pgsql-shard)
 
-</details>
+> [!DETAILS]- PGSQL Service
+> [![pgsql-service.jpg](/img/dashboard/pgsql-service.jpg)](https://demo.pigsty.cc/ui/d/pgsql-service)
 
 
-<details><summary>PGSQL Cluster</summary>
+> [!DETAILS]- PGSQL Activity
+> [![pgsql-activity.jpg](/img/dashboard/pgsql-activity.jpg)](https://demo.pigsty.cc/ui/d/pgsql-activity)
 
-[![pgsql-cluster.jpg](/img/dashboard/pgsql-cluster.jpg)](https://demo.pigsty.cc/ui/d/pgsql-cluster)
 
-</details>
+> [!DETAILS]- PGSQL Replication
+> [![pgsql-replication.jpg](/img/dashboard/pgsql-replication.jpg)](https://demo.pigsty.cc/ui/d/pgsql-replication)
 
 
-<details><summary>PGSQL Service</summary>
+> [!DETAILS]- PGSQL Databases
+> [![pgsql-databases.jpg](/img/dashboard/pgsql-databases.jpg)](https://demo.pigsty.cc/ui/d/pgsql-databases)
 
-[![pgsql-service.jpg](/img/dashboard/pgsql-service.jpg)](https://demo.pigsty.cc/ui/d/pgsql-service)
 
-</details>
+> [!DETAILS]- PGSQL Instance
+> [![pgsql-instance.jpg](/img/dashboard/pgsql-instance.jpg)](https://demo.pigsty.cc/ui/d/pgsql-instance)
 
 
-<details><summary>PGSQL Activity</summary>
+> [!DETAILS]- PGSQL Proxy
+> [![pgsql-proxy.jpg](/img/dashboard/pgsql-proxy.jpg)](https://demo.pigsty.cc/ui/d/pgsql-proxy)
 
-[![pgsql-activity.jpg](/img/dashboard/pgsql-activity.jpg)](https://demo.pigsty.cc/ui/d/pgsql-activity)
 
-</details>
+> [!DETAILS]- PGSQL Pgbouncer
+> [![pgsql-pgbouncer.jpg](/img/dashboard/pgsql-pgbouncer.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer)
 
 
-<details><summary>PGSQL Replication</summary>
+> [!DETAILS]- PGSQL Session
+> [![pgsql-session.jpg](/img/dashboard/pgsql-session.jpg)](https://demo.pigsty.cc/ui/d/pgsql-session)
 
-[![pgsql-replication.jpg](/img/dashboard/pgsql-replication.jpg)](https://demo.pigsty.cc/ui/d/pgsql-replication)
 
-</details>
+> [!DETAILS]- PGSQL Xacts
+> [![pgsql-xacts.jpg](/img/dashboard/pgsql-xacts.jpg)](https://demo.pigsty.cc/ui/d/pgsql-xacts)
 
 
-<details><summary>PGSQL Databases</summary>
+> [!DETAILS]- PGSQL Persist
+> [![pgsql-persist.jpg](/img/dashboard/pgsql-persist.jpg)](https://demo.pigsty.cc/ui/d/pgsql-persist)
 
-[![pgsql-databases.jpg](/img/dashboard/pgsql-databases.jpg)](https://demo.pigsty.cc/ui/d/pgsql-databases)
 
-</details>
+> [!DETAILS]- PGSQL Database
+> [![pgsql-database.jpg](/img/dashboard/pgsql-database.jpg)](https://demo.pigsty.cc/ui/d/pgsql-database)
 
 
-<details><summary>PGSQL Instance</summary>
+> [!DETAILS]- PGSQL Tables
+> [![pgsql-tables.jpg](/img/dashboard/pgsql-tables.jpg)](https://demo.pigsty.cc/ui/d/pgsql-tables)
 
-[![pgsql-instance.jpg](/img/dashboard/pgsql-instance.jpg)](https://demo.pigsty.cc/ui/d/pgsql-instance)
 
-</details>
+> [!DETAILS]- PGSQL Table
+> [![pgsql-table.jpg](/img/dashboard/pgsql-table.jpg)](https://demo.pigsty.cc/ui/d/pgsql-table)
 
 
-<details><summary>PGSQL Proxy</summary>
+> [!DETAILS]- PGSQL Query
+> [![pgsql-query.jpg](/img/dashboard/pgsql-query.jpg)](https://demo.pigsty.cc/ui/d/pgsql-query)
 
-[![pgsql-proxy.jpg](/img/dashboard/pgsql-proxy.jpg)](https://demo.pigsty.cc/ui/d/pgsql-proxy)
 
-</details>
+> [!DETAILS]- PGCAT Instance
+> [![pgcat-instance.jpg](/img/dashboard/pgcat-instance.jpg)](https://demo.pigsty.cc/ui/d/pgcat-instance)
 
 
-<details><summary>PGSQL Pgbouncer</summary>
+> [!DETAILS]- PGCAT Database
+> [![pgcat-database.jpg](/img/dashboard/pgcat-database.jpg)](https://demo.pigsty.cc/ui/d/pgcat-database)
 
-[![pgsql-pgbouncer.jpg](/img/dashboard/pgsql-pgbouncer.jpg)](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer)
 
-</details>
+> [!DETAILS]- PGCAT Schema
+> [![pgcat-schema.jpg](/img/dashboard/pgcat-schema.jpg)](https://demo.pigsty.cc/ui/d/pgcat-schema)
 
 
-<details><summary>PGSQL Session</summary>
+> [!DETAILS]- PGCAT Table
+> [![pgcat-table.jpg](/img/dashboard/pgcat-table.jpg)](https://demo.pigsty.cc/ui/d/pgcat-table)
 
-[![pgsql-session.jpg](/img/dashboard/pgsql-session.jpg)](https://demo.pigsty.cc/ui/d/pgsql-session)
 
-</details>
+> [!DETAILS]- PGCAT Lock
+> [![pgcat-locks.jpg](/img/dashboard/pgcat-locks.jpg)](https://demo.pigsty.cc/ui/d/pgcat-locks)
 
 
-<details><summary>PGSQL Xacts</summary>
+> [!DETAILS]- PGCAT Query
+> [![pgcat-query.jpg](/img/dashboard/pgcat-query.jpg)](https://demo.pigsty.cc/ui/d/pgcat-query)
 
-[![pgsql-xacts.jpg](/img/dashboard/pgsql-xacts.jpg)](https://demo.pigsty.cc/ui/d/pgsql-xacts)
 
-</details>
 
+> [!DETAILS]- PGLOG Overview
+> [![pglog-overview.jpg](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/ui/d/pglog-overview)
 
-<details><summary>PGSQL Persist</summary>
 
-[![pgsql-persist.jpg](/img/dashboard/pgsql-persist.jpg)](https://demo.pigsty.cc/ui/d/pgsql-persist)
-
-</details>
-
-
-<details><summary>PGSQL Database</summary>
-
-[![pgsql-database.jpg](/img/dashboard/pgsql-database.jpg)](https://demo.pigsty.cc/ui/d/pgsql-database)
-
-</details>
-
-
-<details><summary>PGSQL Tables</summary>
-
-[![pgsql-tables.jpg](/img/dashboard/pgsql-tables.jpg)](https://demo.pigsty.cc/ui/d/pgsql-tables)
-
-</details>
-
-
-<details><summary>PGSQL Table</summary>
-
-[![pgsql-table.jpg](/img/dashboard/pgsql-table.jpg)](https://demo.pigsty.cc/ui/d/pgsql-table)
-
-
-</details>
-
-
-<details><summary>PGSQL Query</summary>
-
-[![pgsql-query.jpg](/img/dashboard/pgsql-query.jpg)](https://demo.pigsty.cc/ui/d/pgsql-query)
-
-</details>
-
-
-<details><summary>PGCAT Instance</summary>
-
-[![pgcat-instance.jpg](/img/dashboard/pgcat-instance.jpg)](https://demo.pigsty.cc/ui/d/pgcat-instance)
-
-</details>
-
-
-<details><summary>PGCAT Database</summary>
-
-[![pgcat-database.jpg](/img/dashboard/pgcat-database.jpg)](https://demo.pigsty.cc/ui/d/pgcat-database)
-
-</details>
-
-
-<details><summary>PGCAT Schema</summary>
-
-[![pgcat-schema.jpg](/img/dashboard/pgcat-schema.jpg)](https://demo.pigsty.cc/ui/d/pgcat-schema)
-
-</details>
-
-
-<details><summary>PGCAT Table</summary>
-
-[![pgcat-table.jpg](/img/dashboard/pgcat-table.jpg)](https://demo.pigsty.cc/ui/d/pgcat-table)
-
-</details>
-
-
-<details><summary>PGCAT Lock</summary>
-
-[![pgcat-locks.jpg](/img/dashboard/pgcat-locks.jpg)](https://demo.pigsty.cc/ui/d/pgcat-locks)
-
-</details>
-
-
-<details><summary>PGCAT Query</summary>
-
-[![pgcat-query.jpg](/img/dashboard/pgcat-query.jpg)](https://demo.pigsty.cc/ui/d/pgcat-query)
-
-</details>
-
-
-
-<details><summary>PGLOG Overview</summary>
-
-[![pglog-overview.jpg](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/ui/d/pglog-overview)
-
-
-</details>
-
-
-<details><summary>PGLOG Session</summary>
-
-[![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)
-
-</details>
+> [!DETAILS]- PGLOG Session
+> [![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)

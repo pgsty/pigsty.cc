@@ -36,9 +36,7 @@ pig repo add -u                             # all = node + pgsql (pgdg + pigsty)
 
 您也可以直接在 Debian / Ubuntu 上使用 `apt` 启用此仓库：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
@@ -51,9 +49,8 @@ EOF
 # 刷新 APT 仓库缓存
 sudo apt update
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
@@ -67,17 +64,13 @@ EOF
 # 刷新 APT 仓库缓存
 sudo apt update
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ### DNF
 
 您也可以直接在兼容 EL 的系统上使用 `dnf`/`yum` 启用此仓库：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.io/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
 
@@ -97,9 +90,8 @@ EOF
 # 刷新 YUM/DNF 仓库缓存
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.cc/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
@@ -120,8 +112,6 @@ EOF
 # 刷新 YUM/DNF 仓库缓存
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ---------

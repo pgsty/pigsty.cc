@@ -39,11 +39,8 @@ Pigsty 提供了三个与 [`REDIS`](/docs/redis) 模块有关的监控仪表盘�
 
 [Redis Cluster](https://demo.pigsty.cc/d/redis-cluster)：关于单个 Redis 集群的详细信息
 
-<details><summary>Redis Cluster Dashboard</summary>
-
-[![redis-cluster.jpg](/img/dashboard/redis-cluster.jpg)](https://demo.pigsty.cc/d/redis-cluster)
-
-</details><br>
+> [!DETAILS]- Redis Cluster Dashboard
+> [![redis-cluster.jpg](/img/dashboard/redis-cluster.jpg)](https://demo.pigsty.cc/d/redis-cluster)
 
 ----------------
 
@@ -51,11 +48,8 @@ Pigsty 提供了三个与 [`REDIS`](/docs/redis) 模块有关的监控仪表盘�
 
 [Redis Instance](https://demo.pigsty.cc/d/redis-instance)： 关于单个 Redis 实例的详细信息
 
-<details><summary>Redis Instance Dashboard</summary>
-
-[![redis-instance](/img/dashboard/redis-instance.jpg)](https://demo.pigsty.cc/d/redis-instance)
-
-</details><br>
+> [!DETAILS]- Redis Instance Dashboard
+> [![redis-instance](/img/dashboard/redis-instance.jpg)](https://demo.pigsty.cc/d/redis-instance)
 
 
 

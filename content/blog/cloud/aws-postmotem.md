@@ -1,7 +1,7 @@
 ---
 title: "AWS 故障官方复盘报告"
 date: 2025-10-24
-manualLink: https://vonng.com/cloud/aws-postmotem/
+manual_link: https://vonng.com/cloud/aws-postmotem/
 author: 冯若航
 description: >
   AWS DynamoDB 故障的官方复盘来了，老冯带您一起看看，到底是什么故障带崩了半个互联网。

@@ -42,20 +42,15 @@ Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 
 
 你可以使用 [**`pig`**](/docs/pig/) 命令行工具来方便地启用 infra 和 pgsql 仓库：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2" value="tab1"}
 curl https://repo.pigsty.io/pig | bash      # 下载安装最新版本的 pig 命令行工具
 pig repo add all -u                         # 添加 Linux / PGDG / Pigsty 仓库并更新缓存
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 curl https://repo.pigsty.cc/pig | bash      # 从中国镜像站下载安装最新版本的 pig 命令行工具
 pig repo add -u                             # 添加 Linux / PGDG / Pigsty 仓库并更新缓存
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ---------
@@ -64,9 +59,7 @@ pig repo add -u                             # 添加 Linux / PGDG / Pigsty 仓�
 
 您也可以使用经典的 `apt` / `dnf` / `yum` 命令，将仓库手工添加到系统中。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="APT" %}}
-```bash
+```bash {tab="APT" group="apt-yum" value="apt"}
 # 将 Pigsty 的 GPG 公钥添加到系统密钥链中，以验证软件包签名
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
@@ -80,9 +73,8 @@ EOF
 # 刷新 APT 仓库缓存
 sudo apt update
 ```
-{{% /tab %}}
-{{% tab header="YUM" %}}
-```bash
+
+```bash {tab="YUM" value="yum"}
 # 将 Pigsty 的 GPG 公钥添加到系统密钥链中，以验证软件包签名
 curl -fsSL https://repo.pigsty.io/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
 
@@ -112,8 +104,6 @@ EOF
 # 刷新 YUM 仓库缓存
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 所有的 RPM / DEB 软件包都使用指纹为 (`B9BD8B20`) 的 [GPG 密钥](/docs/repo/gpg/) 进行签名，以确保软件包的完整性。
 

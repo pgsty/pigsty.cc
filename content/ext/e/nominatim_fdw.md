@@ -390,40 +390,33 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install nominatim_fdw;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y nominatim_fdw -v 18  # PG 18
 pig ext install -y nominatim_fdw -v 17  # PG 17
 pig ext install -y nominatim_fdw -v 16  # PG 16
 pig ext install -y nominatim_fdw -v 15  # PG 15
 pig ext install -y nominatim_fdw -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y nominatim_fdw_18       # PG 18
 dnf install -y nominatim_fdw_17       # PG 17
 dnf install -y nominatim_fdw_16       # PG 16
 dnf install -y nominatim_fdw_15       # PG 15
 dnf install -y nominatim_fdw_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-nominatim-fdw   # PG 18
 apt install -y postgresql-17-nominatim-fdw   # PG 17
 apt install -y postgresql-16-nominatim-fdw   # PG 16
 apt install -y postgresql-15-nominatim-fdw   # PG 15
 apt install -y postgresql-14-nominatim-fdw   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **创建扩展**：
@@ -506,16 +499,16 @@ FROM nominatim_lookup(
 
 - `nominatim_search(...)` 实现了自由文本或结构化前向搜索。
 - `nominatim_reverse(...)` 将经度和纬度解析为最近的合适OSM地址。
-- `nominatim_lookup(...)` 获取节点、方式或关系标识符，如`N123`、`W456`或`R789`。
+- `nominatim_lookup(...)` 获取节点、方式或关系标识符，如 `N123`、`W456` 或 `R789`。
 - `nominatim_fdw_version()` 报告扩展和主库版本。
 - `nominatim_fdw_settings` 以行的形式暴露依赖和构建版本。
-- 服务器选项包括`url`、代理配置、超时设置、重试和重定向限制，以及默认的`accept_language`。
+- 服务器选项包括 `url`、代理配置、超时设置、重试和重定向限制，以及默认的 `accept_language`。
 
-所有端点函数都是`STRICT`：显式SQL中的`NULL`参数返回空结果而不发送请求。在2.0中它们正确声明为`VOLATILE`，因为响应是远程的且可以更改。
+所有端点函数都是 `STRICT`：显式SQL中的 `NULL` 参数返回空结果而不发送请求。在2.0中它们正确声明为 `VOLATILE`，因为响应是远程的且可以更改。
 
 ### 2.1 版本变更和注意事项
 
-2.0版本验证逆向坐标、添加了`email`、`polygon_threshold`和`entrances`，暴露依赖设置，并修复了返回详细字段中的JSON转义。它还具有用户可见的变化：逆向输出使用`display_name`；`addressparts`变为`addressdetails`；地址细节默认为真用于逆向和查找；版本输出更短。
+2.0版本验证逆向坐标、添加了 `email`、`polygon_threshold` 和 `entrances`，暴露依赖设置，并修复了返回详细字段中的JSON转义。它还具有用户可见的变化：逆向输出使用 `display_name`；`addressparts` 变为 `addressdetails`；地址细节默认为真用于逆向和查找；版本输出更短。
 
 安装 2.1 软件包文件后，在已有数据库中升级：
 

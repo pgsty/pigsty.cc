@@ -1,7 +1,7 @@
 ---
 title: "专栏：数据库老司机"
 date: 2023-01-01
-manualLink: https://vonng.com/db/guru/
+manual_link: https://vonng.com/db/guru/
 author: 冯若航
 description: >
   数据库领域充满着太多胡言乱语与不实营销，数据库老司机带您拨云见日，穿透迷糊，直击行业核心与本质。

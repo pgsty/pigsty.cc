@@ -35,7 +35,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/ivory.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ivory.yml)
 
-{{< readfile file="yaml/ivory.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/ivory.yml" code=true lang="yaml" >}}
 
 
 --------

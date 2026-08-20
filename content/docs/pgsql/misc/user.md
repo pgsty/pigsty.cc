@@ -107,12 +107,9 @@ bin/pgsql-user <cls> <username>    # pgsql-user.yml -l <cls> -e username=<userna
 不同于数据库，创建用户的剧本总是幂等的。当目标用户已经存在时，Pigsty 会修改目标用户的属性使其符合配置。所以在现有集群上重复运行它通常不会有问题。
 
 
-{{% alert title="请使用剧本创建用户" color="secondary" %}}
-
-我们不建议您手工创建新的业务用户，特别当您想要创建的用户使用默认的 pgbouncer 连接池时：除非您愿意手工负责维护 Pgbouncer 中的用户列表并与 PostgreSQL 保持一致。
-使用 **`bin/pgsql-user`** 工具或 [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml) 剧本创建新数据库时，会将此数据库一并添加到  [Pgbouncer用户](#pgbouncer用户) 列表中。
-
-{{% /alert %}}
+> [!NOTE] 请使用剧本创建用户
+> 我们不建议您手工创建新的业务用户，特别当您想要创建的用户使用默认的 pgbouncer 连接池时：除非您愿意手工负责维护 Pgbouncer 中的用户列表并与 PostgreSQL 保持一致。
+> 使用 **`bin/pgsql-user`** 工具或 [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml) 剧本创建新数据库时，会将此数据库一并添加到  [Pgbouncer用户](#pgbouncer用户) 列表中。
 
 
 

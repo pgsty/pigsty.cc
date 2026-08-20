@@ -39,7 +39,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/pgsql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml)
 
-{{< readfile file="yaml/pgsql.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/pgsql.yml" code=true lang="yaml" >}}
 
 
 --------

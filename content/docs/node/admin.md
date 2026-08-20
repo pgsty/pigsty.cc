@@ -229,9 +229,7 @@ node_firewall_intranet:
 > **重要提示**：Pigsty 的防火墙管理是 **只增不删** 的。从配置中移除条目并重新执行
 > **不会** 删除已存在的规则。您需要手动删除规则。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL (firewalld)" %}}
-```bash
+```bash {tab="EL (firewalld)" group="el-firewalld-debian-ufw" value="el-firewalld"}
 # 从 public 区域删除指定端口
 sudo firewall-cmd --zone=public --remove-port=5432/tcp
 sudo firewall-cmd --runtime-to-permanent
@@ -247,9 +245,8 @@ sudo firewall-cmd --zone=trusted --list-sources
 # 重置为初始状态（删除所有自定义规则）
 sudo firewall-cmd --complete-reload
 ```
-{{% /tab %}}
-{{% tab header="Debian (ufw)" %}}
-```bash
+
+```bash {tab="Debian (ufw)" value="debian-ufw"}
 # 删除指定端口规则
 sudo ufw delete allow 5432/tcp
 
@@ -265,8 +262,6 @@ sudo ufw delete <规则编号>
 # 重置为初始状态（删除所有规则，保持 ufw 启用状态）
 sudo ufw reset
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 ### 关闭防火墙
 
@@ -282,15 +277,10 @@ node_firewall_mode: off    # 完全禁用防火墙
 
 或者手动关闭：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="EL (firewalld)" %}}
-```bash
+```bash {tab="EL (firewalld)" group="el-firewalld-debian-ufw" value="el-firewalld"}
 sudo systemctl disable --now firewalld
 ```
-{{% /tab %}}
-{{% tab header="Debian (ufw)" %}}
-```bash
+
+```bash {tab="Debian (ufw)" value="debian-ufw"}
 sudo ufw disable
 ```
-{{% /tab %}}
-{{< /tabpane >}}

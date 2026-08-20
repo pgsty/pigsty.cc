@@ -10,9 +10,8 @@ categories: [任务]
 
 [pgAdmin](https://www.pgadmin.org/) 是 PostgreSQL 的开源图形管理与开发工具。Pigsty v4.5.0 提供 `app/pgadmin` Docker Compose 模板，并可从当前清单生成服务器列表与密码文件。
 
-{{% alert color="warning" title="先修改默认凭据" %}}
-模板默认登录名为 `admin@pigsty.cc`、密码为 `pigsty`，只适合本地演示。部署到共享网络或公网前，必须修改登录凭据、限制端口访问并配置 HTTPS。
-{{% /alert %}}
+> [!WARNING] 先修改默认凭据
+> 模板默认登录名为 `admin@pigsty.cc`、密码为 `pigsty`，只适合本地演示。部署到共享网络或公网前，必须修改登录凭据、限制端口访问并配置 HTTPS。
 
 --------
 

@@ -1,7 +1,7 @@
 ---
 title: "PG 中的本地化排序规则"
 date: 2021-03-05
-manualLink: https://vonng.com/pg/collate/
+manual_link: https://vonng.com/pg/collate/
 author: 冯若航
 description: >
   什么？不知道 COLLATTION 是什么，那记住一件事，用 C COLLATE 准没错！

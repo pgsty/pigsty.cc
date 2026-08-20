@@ -36,7 +36,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/supabase.yml`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)
 
-{{< readfile file="yaml/supabase.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/supabase.yml" code=true lang="yaml" >}}
 
 --------
 

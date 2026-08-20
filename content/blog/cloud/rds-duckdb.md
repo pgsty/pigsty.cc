@@ -1,7 +1,7 @@
 ---
 title: "阿里云 rds_duckdb：致敬还是抄袭？"
 date: 2025-03-06
-manualLink: https://vonng.com/cloud/rds-duckdb/
+manual_link: https://vonng.com/cloud/rds-duckdb/
 author: 冯若航
 description: >
   商业与开源本应共生共赢，企业若只想坐享其成而不反哺开源，最终只会沦为社区鄙视的对象。

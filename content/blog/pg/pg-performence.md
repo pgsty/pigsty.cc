@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL 到底有多强？"
 date: 2022-08-22
-manualLink: https://vonng.com/pg/pg-performence/
+manual_link: https://vonng.com/pg/pg-performence/
 author: 冯若航
 description: >
   用性能数据说话，为什么 PostgreSQL 是世界上最先进的开源关系型数据库。MySQL 和 PgSQL 性能谁好？分布式数据库到底怎么样？

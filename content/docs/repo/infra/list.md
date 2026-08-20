@@ -38,14 +38,13 @@ weight: 5441
 | [`grafana-victoriametrics-ds`](https://github.com/VictoriaMetrics/victoriametrics-datasource/releases/) | `0.25.2`  | [Apache-2.0](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/main/LICENSE) | VictoriaMetrics Grafana 数据源 |
 {.stretch-last}
 
-{{% alert title="自行安装使用 victoria grafana 数据源插件时注意" color="info" %}}
-Pigsty 将 victoria 数据源扩展拆分为特定架构的专用分包，因此如果您选择自行安装这些插件到您自己的 grafana 中使用时，
-请在 `/etc/grafana/grafana.ini` 中配置以下参数，以允许使用未签名的插件。
-
-```ini
-allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics-metrics-datasource
-```
-{{% /alert %}}
+> [!NOTE] 自行安装使用 victoria grafana 数据源插件时注意
+> Pigsty 将 victoria 数据源扩展拆分为特定架构的专用分包，因此如果您选择自行安装这些插件到您自己的 grafana 中使用时，
+> 请在 `/etc/grafana/grafana.ini` 中配置以下参数，以允许使用未签名的插件。
+>
+> ```ini
+> allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics-metrics-datasource
+> ```
 
 
 
@@ -100,10 +99,8 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 | [`juicefs`](https://github.com/juicedata/juicefs)       | `1.4.1`          | [Apache-2.0](https://github.com/juicedata/juicefs/blob/main/LICENSE)            | S3 上的文件系统                 |
 {.stretch-last}
 
-{{% alert title="SILO 已正式替换 MinIO" color="info" %}}
-[`silo`](https://github.com/pgsty/silo) 与 [`mcli`](https://github.com/pgsty/mc) 是 Pigsty 维护的服务端与客户端。从 2026-08-06 起，软件包、二进制与 systemd 服务名均使用 `silo`；S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量与磁盘格式保持兼容。
-
-{{% /alert %}}
+> [!NOTE] SILO 已正式替换 MinIO
+> [`silo`](https://github.com/pgsty/silo) 与 [`mcli`](https://github.com/pgsty/mc) 是 Pigsty 维护的服务端与客户端。从 2026-08-06 起，软件包、二进制与 systemd 服务名均使用 `silo`；S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量与磁盘格式保持兼容。
 
 
 --------

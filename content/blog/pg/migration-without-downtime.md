@@ -2,7 +2,7 @@
 title: "空中换引擎：PostgreSQL 不停机迁移数据"
 linkTitle: "不停机迁移数据基本原理"
 date: 2018-02-06
-manualLink: https://vonng.com/pg/migration-without-downtime/
+manual_link: https://vonng.com/pg/migration-without-downtime/
 author: 冯若航
 description: >
   通常涉及到数据迁移，常规操作都是停服务更新。不停机迁移数据是相对比较高级的操作。

@@ -12,9 +12,8 @@ MINIO 模块共有 **22** 个公开参数，分为两个部分：
 - [**`MINIO`**](#minio)：19 个参数，用于部署 Silo 对象存储集群
 - [**`MINIO_REMOVE`**](#minio_remove)：3 个参数，控制对象存储集群的移除
 
-{{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
-自 Pigsty v3.6 起，`minio.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `minio_remove` 角色和 `minio-rm.yml` 剧本。
-{{% /alert %}}
+> [!NOTE] 架构变化：Pigsty v3.6+
+> 自 Pigsty v3.6 起，`minio.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `minio_remove` 角色和 `minio-rm.yml` 剧本。
 
 
 ----------------
@@ -328,11 +327,10 @@ Silo 控制台端口，默认为 `9001`。
 
 这是 Silo 超级管理员密码，与 [`minio_access_key`](#minio_access_key) 配合使用。
 
-{{% alert title="安全警告：请务必修改默认密码！" color="danger" %}}
-使用默认密码是高危行为！请务必在您的生产环境部署中修改此密码。
-
-提示：执行 `./configure -g` 时，会随机化配置向导识别的默认密码；完整范围见 [**默认凭证清单**](/docs/concept/sec/compliance#默认凭证清单)。
-{{% /alert %}}
+> [!CAUTION] 安全警告：请务必修改默认密码！
+> 使用默认密码是高危行为！请务必在您的生产环境部署中修改此密码。
+>
+> 提示：执行 `./configure -g` 时，会随机化配置向导识别的默认密码；完整范围见 [**默认凭证清单**](/docs/concept/sec/compliance#默认凭证清单)。
 
 
 
@@ -465,11 +463,8 @@ minio_users:
 - `s3user_meta`：用于访问 `meta` 存储桶。
 - `s3user_data`：用于访问 `data` 存储桶。
 
-{{% alert title="使用默认密码是高危行为！请务必在您的部署中调整这些凭证！" color="danger" %}}
-
-提示：`./configure -g` 会默认修改配置文件模板中的这些密码，如果这些默认密码出现在模版文件中。
-
-{{% /alert %}}
+> [!CAUTION] 使用默认密码是高危行为！请务必在您的部署中调整这些凭证！
+> 提示：`./configure -g` 会默认修改配置文件模板中的这些密码，如果这些默认密码出现在模版文件中。
 
 
 

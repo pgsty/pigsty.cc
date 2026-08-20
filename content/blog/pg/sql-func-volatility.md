@@ -1,7 +1,7 @@
 ---
 title: "函数易变性等级分类"
 date: 2018-04-06
-manualLink: https://vonng.com/pg/sql-func-volatility/
+manual_link: https://vonng.com/pg/sql-func-volatility/
 author: 冯若航
 description: >
   PgSQL 中的函数默认有三种易变性等级，合理使用可以显著改善性能。

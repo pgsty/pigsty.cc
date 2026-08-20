@@ -2,7 +2,7 @@
 title: "2025 年度数据库世界总结：石破天 vs Andy Pavlo 对谈录"
 linkTitle: "2025 年度数据库世界总结"
 date: 2025-12-24
-manualLink: https://vonng.com/db/db-year-review-2025/
+manual_link: https://vonng.com/db/db-year-review-2025/
 author: 冯若航
 description: >
   图灵奖得主 + CMU 教授：2025 数据库圈最犀利的一场对话。关于数据库，LLM，Agent，AI 落地的实际效果，程序员的职业生涯……

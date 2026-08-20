@@ -33,7 +33,7 @@ categories: [参考]
 
 源文件地址：[`pigsty/conf/docker.yml`](https://github.com/pgsty/pigsty/blob/main/conf/docker.yml)
 
-{{< readfile file="yaml/docker.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/docker.yml" code=true lang="yaml" >}}
 
 
 --------

@@ -11,9 +11,8 @@ aliases: [/docs/pgsql/tutorial/example/]
 
 如果只恢复当前节点，可使用 [`pig pitr`](/docs/pig/pitr/)；如果需要直接控制 pgBackRest，可参考 [`pg-pitr` 低层工具](/docs/pgsql/tutorial/pg-fork/#pg-pitr)。
 
-{{% alert color="danger" title="只在可丢弃沙箱中照做" %}}
-恢复会停止 Patroni/PostgreSQL，并以 `pgbackrest --force restore` 覆盖目标 PGDATA；`up` 阶段还会删除目标集群的 etcd 前缀并重建 Patroni 状态。剧本会打印计划，但 **没有交互确认**。生产操作前必须由操作者明确说出并确认精确集群名与恢复点，核对近期可用且独立验证过的备份，使用完全相同的 `-l`、变量与标签先运行 `--check`，并安排维护窗口。本教程不授权在任何生产环境执行这些命令。
-{{% /alert %}}
+> [!CAUTION] 只在可丢弃沙箱中照做
+> 恢复会停止 Patroni/PostgreSQL，并以 `pgbackrest --force restore` 覆盖目标 PGDATA；`up` 阶段还会删除目标集群的 etcd 前缀并重建 Patroni 状态。剧本会打印计划，但 **没有交互确认**。生产操作前必须由操作者明确说出并确认精确集群名与恢复点，核对近期可用且独立验证过的备份，使用完全相同的 `-l`、变量与标签先运行 `--check`，并安排维护窗口。本教程不授权在任何生产环境执行这些命令。
 
 
 --------

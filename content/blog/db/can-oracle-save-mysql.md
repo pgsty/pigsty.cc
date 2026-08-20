@@ -1,7 +1,7 @@
 ---
 title: "Oracle 还能挽救 MySQL 吗？"
 date: 2024-06-21
-manualLink: https://vonng.com/db/can-oracle-save-mysql/
+manual_link: https://vonng.com/db/can-oracle-save-mysql/
 author: Peter Zaitsev
 description: >
   Percona 创始人 Peter Zaitsev 在官方博客上公开表达了对 MySQL 及其知识产权属主 Oracle 的失望，以及对版本越高性能越差的不满。作为 MySQL 生态的主要扛旗者，Percona 的公开表态是一个值得关注的信号。

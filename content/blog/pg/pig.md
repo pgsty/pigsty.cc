@@ -2,7 +2,7 @@
 title: "小猪骑大象：PG 内核与扩展包管理神器"
 linkTitle: "小猪骑大象：PG 包管理神器 Pig"
 date: 2024-12-23
-manualLink: https://vonng.com/pg/pig/
+manual_link: https://vonng.com/pg/pig/
 author: 冯若航
 description: >
   PostgreSQL 与 Pigsty 中长期缺失的一个包管理器 —— PIG。

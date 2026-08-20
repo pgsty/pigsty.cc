@@ -207,40 +207,33 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="安装" %}}
-```bash
+```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
 pig install pgaudit;          # 当前活跃 PG 版本安装
 ```
-{{% /tab %}}
-{{% tab header="pig" %}}
-```bash
+
+```bash {tab="pig" value="pig"}
 pig ext install -y pgaudit -v 18  # PG 18
 pig ext install -y pgaudit -v 17  # PG 17
 pig ext install -y pgaudit -v 16  # PG 16
 pig ext install -y pgaudit -v 15  # PG 15
 pig ext install -y pgaudit -v 14  # PG 14
 ```
-{{% /tab %}}
-{{% tab header="dnf" %}}
-```bash
+
+```bash {tab="dnf" value="dnf"}
 dnf install -y pgaudit_18       # PG 18
 dnf install -y pgaudit_17       # PG 17
 dnf install -y pgaudit_16       # PG 16
 dnf install -y pgaudit_15       # PG 15
 dnf install -y pgaudit_14       # PG 14
 ```
-{{% /tab %}}
-{{% tab header="apt" %}}
-```bash
+
+```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-pgaudit   # PG 18
 apt install -y postgresql-17-pgaudit   # PG 17
 apt install -y postgresql-16-pgaudit   # PG 16
 apt install -y postgresql-15-pgaudit   # PG 15
 apt install -y postgresql-14-pgaudit   # PG 14
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 **预加载配置**：
@@ -301,7 +294,7 @@ SET pgaudit.log = 'all, -misc';
 ```
 
 输出示例：
-```
+```text
 AUDIT: SESSION,1,1,DDL,CREATE TABLE,TABLE,public.account,create table account(...)
 AUDIT: SESSION,2,1,READ,SELECT,,,select * from account
 ```

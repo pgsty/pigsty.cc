@@ -1,7 +1,7 @@
 ---
 title: "半年下云省千万，DHH 下云 FAQ"
 date: 2023-12-21
-manualLink: https://vonng.com/cloud/cloud-exit-faq/
+manual_link: https://vonng.com/cloud/cloud-exit-faq/
 author: Dhh
 description: >
   DHH 的下云旅程到了新阶段，下云已省下近百万美元，未来五年还可省下近千万美元。本文跟进他们下云的最新进展，对准备上云或云上的企业都有参考价值。

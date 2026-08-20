@@ -1,7 +1,7 @@
 ---
 title: "OpenAI：将 PostgreSQL 伸缩至新阶段"
 date: 2025-05-19
-manualLink: https://vonng.com/db/openai-pg/
+manual_link: https://vonng.com/db/openai-pg/
 author: Bohan Zhang
 description: >
   在 PGConf.Dev 2025大会上，来自 OpenAI 的 Bohan Zhang 分享了 OpenAI 在 PostgreSQL 上的最佳实践。在 OpenAI，他们使用一写多读的未分片架构，证明了 PostgreSQL 在海量读负载下也可以伸缩自如。

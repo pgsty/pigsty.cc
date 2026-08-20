@@ -27,24 +27,20 @@ Infra 仓库的更新记录可以参考 [**发布 - Infra 变更日志**](/docs/
 
 您可以使用 [**`pig`**](/docs/pig/) CLI 工具添加 `pigsty-infra` 仓库，它会自动从 `apt/yum/dnf` 中选择合适的包管理器。
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2-tab3" value="tab1"}
 curl https://repo.pigsty.io/pig | bash  # 下载并安装 pig CLI 工具
 pig repo add infra                      # 将 pigsty-infra 仓库文件添加到您的系统
 pig repo update                         # 使用 apt / dnf 更新本地仓库缓存
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 curl https://repo.pigsty.cc/pig | bash  # 从中国 CDN 镜像安装 pig
 pig repo add infra                      # 将 pigsty-infra 仓库文件添加到您的系统
 pig repo update                         # 使用 apt / dnf 更新本地仓库缓存
 ```
-{{% /tab %}}
-{{% tab header="提示" %}}
-```bash
+
+```bash {tab="提示" value="tab3"}
 # 您可以使用以下命令管理 infra 仓库：
 pig repo add infra -u       # 添加仓库文件，并更新缓存
 pig repo add infra -ru      # 删除所有现有仓库，添加仓库并创建缓存
@@ -53,8 +49,6 @@ pig repo set infra          # = pigsty repo add infra -ru
 pig repo add all            # 将 infra、node、pgsql 仓库添加到您的系统
 pig repo set all            # 删除现有仓库，添加上述仓库并更新缓存
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 ---------
@@ -67,9 +61,7 @@ pig repo set all            # 删除现有仓库，添加上述仓库并更新�
 
 在 **Debian / Ubuntu** 兼容的 Linux 发行版上，您可以手动添加 [GPG 密钥](/docs/repo/gpg/) 和 APT 仓库文件：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2-tab3" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名，或者直接信任
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
@@ -83,9 +75,8 @@ EOF
 # 刷新 APT 仓库缓存
 sudo apt update
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名，或者直接信任
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
@@ -100,9 +91,8 @@ EOF
 # 刷新 APT 仓库缓存
 sudo apt update
 ```
-{{% /tab %}}
-{{% tab header="免密钥" %}}
-```bash
+
+```bash {tab="免密钥" value="tab3"}
 # 如果您不想信任任何 GPG 密钥，直接信任仓库
 distro_codename=$(lsb_release -cs)
 sudo tee /etc/apt/sources.list.d/pigsty-infra.list > /dev/null <<EOF
@@ -111,8 +101,6 @@ EOF
 
 sudo apt update
 ```
-{{% /tab %}}
-{{< /tabpane >}}
 
 
 
@@ -121,9 +109,7 @@ sudo apt update
 
 在 **RHEL** 兼容的 Linux 发行版上，您可以手动添加 [GPG 密钥](/docs/repo/gpg/) 和 YUM 仓库文件：
 
-{{< tabpane text=true persist=header >}}
-{{% tab header="默认" %}}
-```bash
+```bash {tab="默认" group="tab1-tab2-tab3" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.io/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
 
@@ -143,9 +129,8 @@ EOF
 # 刷新 YUM/DNF 仓库缓存
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{% tab header="镜像" %}}
-```bash
+
+```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.cc/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty >/dev/null
@@ -166,9 +151,8 @@ EOF
 # 刷新 YUM/DNF 仓库缓存
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{% tab header="免密钥" %}}
-```bash
+
+```bash {tab="免密钥" value="tab3"}
 # 如果您不想信任任何 GPG 密钥，直接信任仓库
 sudo tee /etc/yum.repos.d/pigsty-infra.repo > /dev/null <<-'EOF'
 [pigsty-infra]
@@ -183,5 +167,3 @@ EOF
 
 sudo yum makecache;
 ```
-{{% /tab %}}
-{{< /tabpane >}}

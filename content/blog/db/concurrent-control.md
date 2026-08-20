@@ -1,7 +1,7 @@
 ---
 title: "并发异常那些事"
 date: 2018-06-19
-manualLink: https://vonng.com/db/concurrent-control/
+manual_link: https://vonng.com/db/concurrent-control/
 author: 冯若航
 description: >
   并发程序很难写对，更难写好。很多程序员只是把问题丢给数据库，但即使最强大的 ACID 数据库也会使用弱隔离级别。本文阐述 SQL92 标准定义的隔离级别及其缺陷，以及现代模型中的隔离级别定义。

@@ -36,7 +36,7 @@ ansible-playbook -i conf/demo/mysql.yml mysql.yml -l my-test --check
 
 源文件地址：[`pigsty/conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)
 
-{{< readfile file="yaml/demo/mysql.yml" code="true" lang="yaml" >}}
+{{< include file="yaml/demo/mysql.yml" code=true lang="yaml" >}}
 
 
 --------

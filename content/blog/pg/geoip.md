@@ -1,7 +1,7 @@
 ---
 title: "GeoIP 地理逆查询优化"
 date: 2018-07-07
-manualLink: https://vonng.com/pg/geoip/
+manual_link: https://vonng.com/pg/geoip/
 author: 冯若航
 description: >
   在应用开发中，一个很常见的需求就是 GeoIP 转换：将请求的来源 IP 转换为相应的地理坐标，或者行政区划。
