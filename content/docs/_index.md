@@ -54,7 +54,7 @@ cascade:
 {{< card title="部署" link="/docs/deploy/" icon="fa-solid fa-download" >}}
 在生产环境中进行多节点、高可用的 Pigsty 架构规划、资源准备与正式部署。
 
-[架构规划](/docs/deploy/planning) [资源准备](/docs/deploy/prepare) [生产部署](/docs/deploy/install) [沙箱环境](/docs/deploy/sandbox) [Vagrant](/docs/deploy/vagrant) [Terraform](/docs/deploy/terraform)
+[架构规划](/docs/deploy/planning) [资源准备](/docs/deploy/prepare) [生产部署](/docs/deploy/install) [沙箱环境](/docs/deploy/sandbox) [Vagrant](/docs/deploy/vagrant) [OpenTofu](/docs/deploy/terraform)
 {{< /card >}}
 {{< /cards >}}
 

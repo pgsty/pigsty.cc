@@ -31,7 +31,7 @@ hide: true
 |:-----------------|:-------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
 | 准备服务器、磁盘、网络、VIP  | [**资源准备**](/docs/deploy/prepare/)，[**架构规划**](/docs/deploy/planning/)，[**Linux 兼容性**](/docs/ref/linux/) | [**生产部署**](/docs/deploy/install/)                                                  |
 | 准备 SSH、Sudo、管理用户 | [**管理机制**](/docs/deploy/admin/)                                                                        | [**生产部署**](/docs/deploy/install/)                                                  |
-| 本地或云上搭沙箱         | [**沙箱环境**](/docs/deploy/sandbox/)                                                                      | [**Vagrant**](/docs/deploy/vagrant/)，[**Terraform**](/docs/deploy/terraform/)      |
+| 本地或云上搭沙箱         | [**沙箱环境**](/docs/deploy/sandbox/)                                                                      | [**Vagrant**](/docs/deploy/vagrant/)，[**OpenTofu**](/docs/deploy/terraform/)       |
 | 单机体验             | [**快速上手**](/docs/setup/install/)                                                                       | `./configure -g`，`./deploy.yml`                                                    |
 | 多节点生产部署          | [**部署**](/docs/deploy/)，[**生产部署**](/docs/deploy/install/)                                              | `./deploy.yml`，`./pgsql.yml`                                                       |
 | 离线环境部署           | [**离线安装**](/docs/setup/offline/)                                                                       | [**软件仓库管理**](/docs/infra/admin/repo/)                                              |

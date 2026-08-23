@@ -96,7 +96,7 @@ all:
 
 ## 创建沙箱
 
-Pigsty 提供了开箱即用的模板，您可以使用 [**Vagrant**](/docs/deploy/vagrant/) 在本地创建沙箱，或使用 [**Terraform**](/docs/deploy/terraform/) 在云上创建沙箱。
+Pigsty 提供了开箱即用的模板，您可以使用 [**Vagrant**](/docs/deploy/vagrant/) 在本地创建沙箱，或使用 [**OpenTofu**](/docs/deploy/terraform/) 在云上创建沙箱。
 
 当然，您也可以自己手工准备并置备这些节点。
 
@@ -131,7 +131,7 @@ terraform init
 terraform apply
 ```
 
-更多详情请参考 [**Terraform**](/docs/deploy/terraform/) 文档。
+更多详情请参考 [**OpenTofu**](/docs/deploy/terraform/) 文档。
 
 
 

@@ -15,7 +15,7 @@ categories: [教程]
 --------
 
 我们建议您在真实的生产环境部署之前，使用 Pigsty 提供的 [**沙箱环境**](/docs/deploy/sandbox) 进行测试与演练，确保对部署流程有充分的了解。
-您可以使用 [**Vagrant**](/docs/deploy/vagrant/) 在本地快速创建一个四节点的 Pigsty 沙箱环境用于测试，或者利用 [**Terraform**](/docs/deploy/terraform/) 在云端置备一个更大规模的仿真环境。
+您可以使用 [**Vagrant**](/docs/deploy/vagrant/) 在本地快速创建一个四节点的 Pigsty 沙箱环境用于测试，或者利用 [**OpenTofu**](/docs/deploy/terraform/) 在云端置备一个更大规模的仿真环境。
 
 [![pigsty-sandbox](/img/pigsty/sandbox.png)](/docs/concept/arch)
 

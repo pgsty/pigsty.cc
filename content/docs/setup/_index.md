@@ -13,7 +13,7 @@ Pigsty 采用可伸缩的架构设计，既可用于 [**超大规模生产环境
 如果您打算学习了解 Pigsty，可以从 [**快速上手**](/docs/setup/install/) 单机部署开始。一台 1C/2G 的 Linux 虚拟机即可运行 Pigsty。
 
 您可以利用一台 Linux MiniPC，云厂商提供的免费/优惠虚拟机，Windows 的 WSL，或者在自己的笔记本上创建虚拟机用于 Pigsty 部署。
-Pigsty 提供了开箱即用的 [**Vagrant**](/docs/deploy/vagrant/) 模板与 [**Terraform**](/docs/deploy/terraform/) 模版，可以帮助您一键在本地或云端置备 Linux 虚拟机。
+Pigsty 提供了开箱即用的 [**Vagrant**](/docs/deploy/vagrant/) 模板与 [**OpenTofu**](/docs/deploy/terraform/) 模板，可以帮助您一键在本地或云端置备 Linux 虚拟机。
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/concept/arch)
 

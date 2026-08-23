@@ -1,50 +1,52 @@
 ---
-title: Terraform
+title: OpenTofu
 weight: 390
-description: 使用 Terraform 在公有云上创建虚拟机环境
+description: 使用 OpenTofu 在公有云上创建虚拟机环境
 icon: fa-solid fa-cloud
 module: [PIGSTY]
 categories: [教程]
 ---
 
-[**Terraform**](https://www.terraform.io/) 是一个流行的"基础设施即代码"工具，您可以使用它在公有云上一键创建虚拟机。
+[**OpenTofu**](https://opentofu.org/) 是一个开源的“基础设施即代码”工具，您可以使用它在公有云上一键创建虚拟机。
 
-Pigsty 当前提供阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode 的 Terraform 示例模板；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
+Pigsty 默认使用 OpenTofu，并提供兼容 Terraform 的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
 
 
 ----------------
 
 ## 快速开始
 
-### 安装 Terraform
+### 安装 OpenTofu
 
-在 macOS 上，您可以使用 [**Homebrew**](https://brew.sh/) 安装 Terraform：
+在 macOS 上，您可以使用 [**Homebrew**](https://brew.sh/) 安装 OpenTofu：
 
 ```bash
-brew install terraform
+brew install opentofu
+tofu version
 ```
 
-其他平台请参考 [**Terraform 官方安装指南**](https://developer.hashicorp.com/terraform/install)。
+Debian、Ubuntu、RHEL 与其他平台请参考 [**OpenTofu 官方安装指南**](https://opentofu.org/docs/intro/install/)；软件包名和命令名都是 `tofu`。
 
 ### 初始化与应用
 
-进入 Terraform 目录，选择模板，初始化提供商插件，然后应用配置：
+进入云模板目录，选择模板，初始化提供商插件，然后应用配置：
 
 ```bash
 cd ~/pigsty/terraform
 cp spec/aliyun.tf terraform.tf         # 选择模板
-terraform init                         # 安装云提供商插件（首次使用时）
-terraform apply                        # 生成执行计划并创建资源
+tofu init                              # 安装云提供商插件（首次使用时）
+tofu plan                              # 审阅执行计划
+tofu apply                             # 交互确认后创建资源
 ```
 
-运行 `apply` 命令后，按提示输入 `yes` 确认，Terraform 将为您创建虚拟机及相关云资源。
+审阅计划后运行 `tofu apply`，并按提示输入 `yes` 确认，OpenTofu 才会创建虚拟机及相关云资源。
 
 ### 获取 IP 地址
 
 创建完成后，打印管理节点的公网 IP 地址：
 
 ```bash
-terraform output -raw meta_ip
+tofu output -raw meta_ip
 ```
 
 ### 配置 SSH 访问
@@ -52,10 +54,10 @@ terraform output -raw meta_ip
 全球云模板通常同时提供可直接执行的 `ssh_command` 输出：
 
 ```bash
-terraform output -raw ssh_command
+tofu output -raw ssh_command
 ```
 
-仓库中的 `./ssh` 是面向旧式“全部输出都是 IP、root 密码为 `PigstyDemo4`”模板的兼容脚本：它会遍历 **每一个** Terraform 输出，将其当作 IP 写入 `~/.ssh/pigsty_config`，再用 `sshpass` 分发密钥。因此它适用于 `aliyun.tf`、`aliyun-full.tf`、`aliyun-oss.tf`、`aliyun-pro.tf` 这类兼容模板；不要对包含 `ssh_command`、私网 IP 或访问密钥输出的现代模板运行它。
+仓库中的 `./ssh` 是面向旧式“全部输出都是 IP、root 密码为 `PigstyDemo4`”模板的兼容脚本：它会遍历 IaC 输出，将其当作 IP 写入 `~/.ssh/pigsty_config`，再用 `sshpass` 分发密钥。因此它适用于 `aliyun.tf`、`aliyun-full.tf`、`aliyun-oss.tf`、`aliyun-pro.tf` 这类兼容模板；不要对包含 `ssh_command`、私网 IP 或访问密钥输出的现代模板运行它。
 
 使用兼容脚本时：
 
@@ -76,8 +78,30 @@ ssh meta    # 使用主机名而非 IP 登录
 测试完成后，可以一键销毁所有创建的云资源：
 
 ```bash
-terraform destroy
+tofu destroy
 ```
+
+
+----------------
+
+## Terraform 兼容与迁移
+
+目录和文件名继续保留为 `terraform/`、`.tf`、`terraform.tfvars`、`.terraform.lock.hcl` 与 `terraform.tfstate`，因为 OpenTofu 正式支持这些兼容名称。需要使用 Terraform 时，应显式指定：
+
+```bash
+make IAC_CLI=terraform plan
+```
+
+同一个工作目录同一时间只使用一种 CLI。迁移现有 state 前应先保留副本，并比较两边的执行计划：
+
+```bash
+cp -p terraform.tfstate "terraform.tfstate.pre-tofu.$(date +%Y%m%d%H%M%S)"
+terraform plan
+tofu init
+tofu plan
+```
+
+只有当 OpenTofu 计划与预期一致时才继续操作。重新初始化 provider 时，切勿删除 `terraform.tfstate`。
 
 
 ----------------
@@ -109,7 +133,7 @@ Pigsty 在 [`terraform/spec/`](https://github.com/pgsty/pigsty/tree/main/terrafo
 ```bash
 cd ~/pigsty/terraform
 cp spec/aliyun-full.tf terraform.tf   # 使用阿里云 4 节点沙箱模板
-terraform init && terraform apply
+tofu init && tofu apply
 ```
 
 
@@ -265,28 +289,31 @@ export DIGITALOCEAN_TOKEN="<api_token>"
 export LINODE_TOKEN="<api_token>"
 ```
 
-GCP 模板还要求提供 `project` 变量，例如 `terraform apply -var="project=my-project"`。除 AWS 中国区外，使用密钥认证的当前模板默认读取 `~/.ssh/id_rsa.pub`；如需其他公钥路径，请直接修改所选模板。
+GCP 模板还要求提供 `project` 变量，例如 `tofu apply -var="project=my-project"`。除 AWS 中国区外，使用密钥认证的当前模板默认读取 `~/.ssh/id_rsa.pub`；如需其他公钥路径，请直接修改所选模板。
 
 
 ----------------
 
 ## 快捷命令
 
-Pigsty 提供了一些 Makefile 快捷命令用于 Terraform 操作：
+Pigsty 提供默认使用 OpenTofu 的 Makefile 快捷命令；如需 Terraform，显式设置 `IAC_CLI=terraform`。
 
 ```bash
 cd ~/pigsty/terraform
 
-make u          # terraform apply -auto-approve + 运行旧式 ./ssh（仅兼容模板）
-make d          # terraform destroy -auto-approve
-make apply      # terraform apply（交互式确认）
-make destroy    # terraform destroy（交互式确认）
-make out        # terraform output
+make init       # tofu init
+make validate   # tofu validate
+make plan       # tofu plan
+make u          # 交互式 tofu apply + 运行旧式 ./ssh（仅兼容模板）
+make d          # 交互式 tofu destroy
+make apply      # 交互式 tofu apply
+make destroy    # 交互式 tofu destroy
+make out        # tofu output
 make ssh        # 运行 ssh 脚本配置 SSH 访问
 make r          # 重置 terraform.tf 到版本库状态
 ```
 
-对于带有 `ssh_command`、私网 IP 或其他非 IP 输出的现代模板，请直接运行 `terraform apply`，不要使用会随后调用旧式 `./ssh` 的 `make u`。
+对于带有 `ssh_command`、私网 IP 或其他非 IP 输出的现代模板，请直接运行 `tofu apply`，不要使用会随后调用旧式 `./ssh` 的 `make u`。只有名称明确的 `up-auto`、`apply-auto` 与 `destroy-auto` 目标才会跳过交互确认。
 
 
 ----------------
@@ -294,7 +321,7 @@ make r          # 重置 terraform.tf 到版本库状态
 ## 注意事项
 
 > [!WARNING] 云资源费用
-> 使用 Terraform 创建的云资源会产生费用。测试完成后，请及时使用 `terraform destroy` 销毁资源，避免不必要的开支。
+> 使用 OpenTofu 创建的云资源会产生费用。测试完成后，请及时使用 `tofu destroy` 销毁资源，避免不必要的开支。
 >
 > 建议使用按量付费的实例类型进行测试。模板默认使用竞价实例（Spot Instance）以降低成本。
 
