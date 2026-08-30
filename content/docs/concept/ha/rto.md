@@ -133,7 +133,7 @@ series:
 |               | **`primary_start_timeout`** |    15    |    25    |    45    |    95    | 主库重启等待时间（秒）      |
 |               |     **`safety_margin`**     |    5     |    5     |    10    |    15    | Watchdog 安全边际（秒） |
 | **`haproxy`** |         **`inter`**         |    1s    |    2s    |    3s    |    4s    | 正常状态检查间隔         |
-|               |       **`fastinter`**       |   0.5s   |    1s    |   1.5s   |    2s    | 状态变化期检查间隔        |
+|               |       **`fastinter`**       |  500ms   |    1s    |  1500ms  |    2s    | 状态变化期检查间隔        |
 |               |       **`downinter`**       |    1s    |    2s    |    3s    |    4s    | DOWN 状态检查间隔      |
 |               |         **`rise`**          |    3     |    3     |    3     |    3     | 标记 UP 所需连续成功次数   |
 |               |         **`fall`**          |    3     |    3     |    3     |    3     | 标记 DOWN 所需连续失败次数 |
@@ -204,8 +204,8 @@ loop\_wait + 2 \times retry\_timeout \leq ttl
 
 ```yaml
 pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, rise, fall]
-  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'0.5s' ,'1s' ,3 ,3 ]  # rto < 30s
-  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'   ,'2s' ,3 ,3 ]  # rto < 45s
-  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1.5s' ,'3s' ,3 ,3 ]  # rto < 90s
-  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'   ,'4s' ,3 ,3 ]  # rto < 150s
+  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'500ms'  ,'1s' ,3 ,3 ]  # rto < 30s
+  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'     ,'2s' ,3 ,3 ]  # rto < 45s
+  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1500ms' ,'3s' ,3 ,3 ]  # rto < 90s
+  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'     ,'4s' ,3 ,3 ]  # rto < 150s
 ```

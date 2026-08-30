@@ -1462,10 +1462,10 @@ RTO 预设配置字典，定义了 Patroni 高可用与 HAProxy 健康检查的�
 
 ```yaml
 pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, rise, fall]
-  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'0.5s' ,'1s' ,3 ,3 ]  # rto < 30s
-  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'   ,'2s' ,3 ,3 ]  # rto < 45s
-  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1.5s' ,'3s' ,3 ,3 ]  # rto < 90s
-  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'   ,'4s' ,3 ,3 ]  # rto < 150s
+  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'500ms'  ,'1s' ,3 ,3 ]  # rto < 30s
+  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'     ,'2s' ,3 ,3 ]  # rto < 45s
+  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1500ms' ,'3s' ,3 ,3 ]  # rto < 90s
+  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'     ,'4s' ,3 ,3 ]  # rto < 150s
 ```
 
 每个模式是一个包含 10 个参数的数组，用于同时控制 Patroni 和 HAProxy 的超时行为：
@@ -1487,7 +1487,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 
 ```yaml
 pg_rto_plan:
-  ultra: [ 10, 2, 3, 8, 2, '0.5s', '0.25s', '0.5s', 2, 2 ]  # 极速模式，仅限低延迟环境
+  ultra: [ 10, 2, 3, 8, 2, '500ms', '250ms', '500ms', 2, 2 ]  # 极速模式，仅限低延迟环境
 ```
 
 > **注意**：修改此参数需要谨慎，不恰当的超时配置可能导致集群不稳定或频繁误切换。
