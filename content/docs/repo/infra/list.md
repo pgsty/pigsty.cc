@@ -166,6 +166,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.164.0`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                          |
 | [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.7.3` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端                   |
 | [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.3`   | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                |
+| [`tailcat`](https://github.com/tailscale/tailcat)                                       | `0.0.0-20260830010511-7c2a6ea60429` | [BSD-3](https://github.com/tailscale/tailcat/blob/main/LICENSE) | 无需控制平面的 Tailscale 数据平面 netcat 工具 |
 | [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.16.17`  | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                        |
 | [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.5`    | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                           |
 {.stretch-last}
