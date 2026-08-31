@@ -21,6 +21,14 @@
   }
 }
 
+// Star 历史快照表在窄屏保持数值与仓库名完整，由外层语义表格容器横向滚动。
+.td-content table.star-history-table {
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
 // =============================================================================
 // Extensions (content/ext) - Reusable styles
 //

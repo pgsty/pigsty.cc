@@ -1,0 +1,92 @@
+{{- /*
+  Render the repository comparison table and ECharts history from
+  data/star_history.json. The data file is refreshed by
+  bin/update-star-history.py.
+*/ -}}
+{{- $data := hugo.Data.star_history -}}
+{{- $page := .Page -}}
+{{- $height := .Get "height" | default "640px" -}}
+{{- $series := slice -}}
+{{- $colors := slice -}}
+{{- range $index, $project := $data.repositories -}}
+  {{- $colors = $colors | append $project.color -}}
+  {{- $line := dict
+    "name" $project.label
+    "type" "line"
+    "data" $project.history
+    "showSymbol" false
+    "smooth" 0.15
+    "connectNulls" false
+    "lineStyle" (dict "width" 3)
+    "emphasis" (dict "focus" "series" "lineStyle" (dict "width" 5))
+  -}}
+  {{- if eq $index 0 -}}
+    {{- $line = merge $line (dict "markLine" (dict
+      "silent" true
+      "symbol" "none"
+      "lineStyle" (dict "color" "#94a3b8" "type" "dashed" "width" 1.5)
+      "label" (dict "formatter" "GitHub API 限制\n2026-07-01" "color" "#64748b")
+      "data" (slice (dict "xAxis" $data.baseline_date))
+    )) -}}
+  {{- end -}}
+  {{- $series = $series | append $line -}}
+{{- end -}}
+{{- $options := dict
+  "animationDuration" 450
+  "aria" (dict "enabled" true)
+  "color" $colors
+  "grid" (dict "top" 92 "right" 36 "bottom" 82 "left" 76)
+  "legend" (dict "type" "scroll" "top" 8 "left" 8 "right" 8)
+  "tooltip" (dict "trigger" "axis" "axisPointer" (dict "type" "cross"))
+  "xAxis" (dict
+    "type" "time"
+    "name" "日期"
+    "nameLocation" "middle"
+    "nameGap" 32
+    "axisPointer" (dict "snap" true)
+    "splitLine" (dict "show" false)
+  )
+  "yAxis" (dict
+    "type" "value"
+    "name" "GitHub Star"
+    "min" 0
+    "splitLine" (dict "lineStyle" (dict "type" "dashed" "opacity" 0.45))
+  )
+  "dataZoom" (slice
+    (dict "type" "inside" "filterMode" "none")
+    (dict "type" "slider" "height" 22 "bottom" 18 "filterMode" "none")
+  )
+  "series" $series
+-}}
+
+<div class="td-table-scroll td-table-scroll--full" tabindex="0" role="region" aria-label="GitHub Star 增长对比表">
+  <table class="full-width star-history-table">
+    <thead>
+      <tr>
+        <th scope="col">项目</th>
+        <th scope="col">{{ $data.baseline_date }}</th>
+        <th scope="col">{{ $data.updated_at }}</th>
+        <th scope="col">增量</th>
+        <th scope="col">增幅</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $project := $data.repositories }}
+      <tr>
+        <td><a href="https://github.com/{{ $project.repo }}"><code>{{ $project.repo }}</code></a></td>
+        <td>{{ $project.baseline }}</td>
+        <td><strong>{{ $project.current }}</strong></td>
+        <td>+{{ $project.growth }}</td>
+        <td>+{{ printf "%.2f" $project.growth_pct }}%</td>
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</div>
+
+{{- $page.Store.Set "hasEcharts" true -}}
+<div id="star-history-{{ md5 $page.RelPermalink }}" class="td-echarts"
+  data-td-echarts>
+  <div data-td-echarts-canvas style="height: {{ $height }}"></div>
+  <script type="application/json" data-td-echarts-options>{{ $options | jsonify | safeJS }}</script>
+</div>
