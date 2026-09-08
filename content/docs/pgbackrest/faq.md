@@ -78,7 +78,9 @@ process-max=1
 
 ## S3 存储桶名称中可以使用点号（句点）吗？
 
-不可以。RFC-2818 不允许通配符匹配点号（.），因此 S3 存储桶名称不得包含点号。若存储桶名称中含有点号，将会出现类似"unable to find hostname 'my.backup.bucket.s3.amazonaws.com' in certificate common name or subject alternative names"的错误。
+RFC-2818 不允许通配符匹配点号（.），因此使用默认 URI 样式时，S3 存储桶名称不得包含点号。若存储桶名称中含有点号，将会出现类似"unable to find hostname 'my.backup.bucket.s3.amazonaws.com' in certificate common name or subject alternative names"的错误。
+
+`repo-s3-uri-style=path` 是一个例外：它会将存储桶名称放在 URI 路径而不是主机名中。由于存储桶名称不再属于主机名，证书只需与端点匹配，因此桶名中的点号不会造成问题。请注意，并非所有 S3 兼容对象存储都支持 path-style URI。
 
 
 --------

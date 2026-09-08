@@ -22,9 +22,36 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 ## 当前稳定版本
 
 
+### v2.59.1 版本说明
+
+*支持 PostgreSQL 19beta3*
+
+*发布于 2026 年 8 月 17 日*
+
+**漏洞修复：**
+
+- 修复分块缓冲区小于输入缓冲区时发生挂起的问题。（*由 Andrew Pogrebnoi、Douglas J Hunley 审核，crajac66 报告。*）
+- 新备份标签仅与其所属的全量备份集比较。（*由 Douglas J Hunley 审核，Anton Glushakov 报告。*）
+- 修复 GitHub 生成的源码归档缺少构建所需文件的问题。（*由 aardvarkzed 报告。*）
+
+**新功能：**
+
+- 支持 PostgreSQL 19beta3。（*由 Lardière Sébastien 贡献，David Steele 审核。*）
+
+**文档改进：**
+
+- 说明使用 `repo-s3-uri-style=path` 时，S3 存储桶名称可以包含点号。
+- 从用户指南中移除显式的 `hot_standby` 配置。
+
+
+--------
+
+## 稳定版本
+
+
 ### v2.59.0 版本说明
 
-*PostgreSQL 19 支持*
+*支持 PostgreSQL 19beta2*
 
 *发布于 2026 年 7 月 20 日*
 
@@ -80,11 +107,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **测试套件改进：**
 
 - 修复 CI 容器中的 Alpine 用户组冲突。（*由 Artur Zakirov 贡献，David Steele 审核。*）
-
-
---------
-
-## 稳定版本
 
 
 ### v2.58.0 版本说明
