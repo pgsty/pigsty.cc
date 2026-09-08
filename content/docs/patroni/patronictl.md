@@ -92,6 +92,68 @@ patronictl [ { -c | --config-file } CONFIG_FILE ]
 
 以下各小节介绍 [patronictl](/docs/patroni/patronictl#patronictl) 的每个子命令，示例均使用 Patroni GitHub 仓库中的配置文件（**`postgres0.yml`**、**`postgres1.yml`** 和 **`postgres2.yml`**）。
 
+<a id="patronictl_demote_cluster"></a>
+
+### patronictl demote-cluster
+
+<a id="patronictl_demote_cluster_synopsis"></a>
+
+#### 语法
+
+```text
+demote-cluster
+  [ CLUSTER_NAME ]
+  [ --host HOST ]
+  [ --port PORT ]
+  [ --restore-command RESTORE_COMMAND ]
+  [ --primary-slot-name PRIMARY_SLOT_NAME ]
+  [ --force ]
+```
+
+<a id="patronictl_demote_cluster_description"></a>
+
+#### 描述
+
+**`patronictl demote-cluster`** 将普通 Patroni 集群转换为 [备用集群](/docs/patroni/standby_cluster#standby_cluster)。
+
+该命令会使用所提供的远端主库连接选项构造 `standby_cluster` 配置段并修补动态配置，然后等待领导者以备用集群领导者身份运行。修改配置前会打印当前集群拓扑；除非使用 `--force`，否则会要求确认。
+
+`--host`、`--port` 与 `--restore-command` 中至少要指定一项。
+
+<a id="patronictl_demote_cluster_parameters"></a>
+
+#### 参数
+
+**`CLUSTER_NAME`**
+Patroni 集群名称。
+
+若未指定，[patronictl](/docs/patroni/patronictl#patronictl) 将尝试从 `scope` 配置中获取（如果存在）。
+
+**`--host`**
+远端节点地址。
+
+**`--port`**
+远端节点端口。
+
+**`--restore-command`**
+从远端主库恢复 WAL 记录所用的命令。
+
+**`--primary-slot-name`**
+用于从远端节点复制的复制槽名称。
+
+**`--force`**
+降级集群时跳过确认提示，适合脚本调用。
+
+<a id="patronictl_demote_cluster_examples"></a>
+
+#### 示例
+
+将集群降级为跟随远端主库端点的备用集群：
+
+```bash
+$ patronictl -c postgres0.yml demote-cluster batman --host 192.0.2.10 --port 5432 --primary-slot-name batman --force
+```
+
 <a id="patronictl_dsn"></a>
 
 ### patronictl dsn
@@ -873,6 +935,50 @@ Patroni 集群名称。
 $ patronictl -c postgres0.yml pause batman --wait
 'pause' request sent, waiting until it is recognized by all nodes
 Success: cluster management is paused
+```
+
+<a id="patronictl_promote_cluster"></a>
+
+### patronictl promote-cluster
+
+<a id="patronictl_promote_cluster_synopsis"></a>
+
+#### 语法
+
+```text
+promote-cluster
+  [ CLUSTER_NAME ]
+  [ --force ]
+```
+
+<a id="patronictl_promote_cluster_description"></a>
+
+#### 描述
+
+**`patronictl promote-cluster`** 将备用集群转换为普通 Patroni 集群。
+
+该命令会从动态配置中移除 `standby_cluster` 配置段，并等待领导者以主库身份运行。修改配置前会打印当前集群拓扑；除非使用 `--force`，否则会要求确认。
+
+<a id="patronictl_promote_cluster_parameters"></a>
+
+#### 参数
+
+**`CLUSTER_NAME`**
+Patroni 集群名称。
+
+若未指定，[patronictl](/docs/patroni/patronictl#patronictl) 将尝试从 `scope` 配置中获取（如果存在）。
+
+**`--force`**
+提升集群时跳过确认提示，适合脚本调用。
+
+<a id="patronictl_promote_cluster_examples"></a>
+
+#### 示例
+
+将备用集群提升为普通 Patroni 集群：
+
+```bash
+$ patronictl -c postgres0.yml promote-cluster batman --force
 ```
 
 <a id="patronictl_pause_description"></a>

@@ -13,6 +13,32 @@ categories: [参考]
 
 --------
 
+## Version 4.1.5
+
+发布于 2026-08-12
+
+**兼容性改进**
+
+- 兼容 PostgreSQL 14.24、15.19、16.15、17.11 与 18.6（Alexander Kukushkin）
+
+  添加用于限制逻辑解码输出插件的新 GUC `output_plugin_libraries`。
+
+**改进**
+
+- 将 REST API 连接重置的日志级别从 `WARNING` 调整为 `DEBUG`（Kyle McLaren）
+
+  屏蔽常见的“客户端在写入中途离开”类日志，同时不影响真正的非连接类错误处理。
+
+**错误修复**
+
+- 修正 `thread_stack_size` 的对齐校验（Sundong Kim）
+
+  将 `thread_stack_size` 模式项中的 `aligned` 值从 `65535` 修正为 `65536`。此前，`patroni --validate-config` 会拒绝几乎所有实际可用的值，包括守护进程自身采用的默认值 `524288`。
+
+- 允许 `synchronous_mode` 校验接受 `'quorum'` 及布尔风格字符串（Eray Araz）
+
+  此前，`patroni --validate-config` 会拒绝运行时实际接受的 `quorum` 以及 PostgreSQL 风格布尔字符串。
+
 ## Version 4.1.4
 
 发布于 2026-07-07
@@ -54,6 +80,130 @@ categories: [参考]
 - 修正 patronictl 成员校验错误中的角色表示（Polina Bungina）
 
   确保异常消息使用正确的字符串表示，避免错误被格式化为 **`Error: No CtlPostgresqlRole.REPLICA among provided members`**。
+
+## Version 4.1.3
+
+发布于 2026-05-05
+
+**稳定性改进**
+
+- 正确处理标签错误的 Etcd 异常（Ants Aasma）
+
+  当前 Etcd 版本在更新租约期间丢失领导者时会抛出 `Unknown` 错误。Patroni 现在会把报告的错误码改写为 `Unavailable`。
+
+**错误修复**
+
+- `PG_VERSION` 文件不存在时使用二进制程序版本（Polina Bungina）
+
+  在自定义引导等场景中，数据目录可能尚无 `PG_VERSION`。此前 Patroni 会把版本视为 0.0，导致部分版本相关逻辑异常；现在会尝试从二进制程序获取版本。
+
+- 重构日志初始化，避免遗漏早期日志（Alexander Kukushkin）
+
+  在加载 `Config` 前创建 `PatroniLogger`，以捕获启动早期的日志消息。
+
+- 在 `RELOADING=1` systemd 通知中加入 `MONOTONIC_USEC`（Alexander Kukushkin）
+
+  systemd 257+ 要求 `Type=notify-reload` 服务在发送 `RELOADING=1` 时同时提供 `MONOTONIC_USEC`，否则 `systemctl reload` 会无限期挂起。
+
+**改进**
+
+- 存在 `backup_label` 时跳过单用户崩溃恢复（Vadim Ponomarev）
+
+  启动由外部备份恢复的副本（非自定义引导方式）时，跳过单用户崩溃恢复，让 PostgreSQL 在正常启动过程中自行处理。
+
+- 在 systemd 环境缺少 `python-systemd` 时发出针对性警告（Alexander Kukushkin）
+
+  启动时不再笼统记录“systemd integration is not supported”，而是检查 `NOTIFY_SOCKET`，仅在确实运行于 systemd 且缺少 `python-systemd` 时发出警告。
+
+## Version 4.1.2
+
+发布于 2026-04-21
+
+**Systemd 支持改进**
+
+- 支持 systemd `notify-reload` 单元类型（Ronan Dunklau）
+
+  通过发送 `RELOADING=1` 与 `READY=1` 通知，使 `systemctl reload` 能等待 Patroni 真正完成配置重载。
+
+- 关闭时发送 `STOPPING=1` 通知（Alexander Kukushkin）
+
+  Patroni 现在会按照 systemd notify 协议正确通知 systemd 自身正在关闭。
+
+- 阻止 PostgreSQL 向 systemd 发送通知（Alexander Kukushkin）
+
+  从示例 systemd 单元中移除 `NotifyAccess=all`。启动 PostgreSQL 时过滤 `NOTIFY_SOCKET`，避免其发送 `READY=1` 或 `STOPPING=1`。接管在 Patroni 之前已启动且带有 `NOTIFY_SOCKET` 的 PostgreSQL 时，在 PostgreSQL 关闭期间重新发送 `READY=1`，抵消其 `STOPPING=1` 通知。
+
+## Version 4.1.1
+
+发布于 2026-04-08
+
+**稳定性改进**
+
+- 兼容 Python 3.11+ 的线程行为变化（Alexander Kukushkin）
+
+  避免在运行时启动或停止线程；为 REST API 和异步任务引入线程池，并允许配置全局 `thread_pool_size` 与 `restapi.thread_pool_size`。
+
+- 兼容 Python 3.14（Alexander Kukushkin）
+
+  在 Python 3.14 上运行测试并修复兼容性问题。
+
+- 兼容 Etcd v3.6.9、v3.5.28 与 v3.4.42 的安全修复（Alexander Kukushkin）
+
+  这些 Etcd 版本修复 CVE 后，不再允许未经认证读取集群拓扑或续租。Patroni 现在会在成员发现和租约续期路径中进行认证，在认证失败时重新认证并重试请求。
+
+- 改进 Etcd3 错误处理（Alexander Kukushkin）
+
+  处理损坏的 JSON 响应，更灵活地解析 JSON 错误，并改进 Etcd 内部错误的报告。
+
+**错误修复**
+
+- Kubernetes 暂时返回 `403` 时重试领导者更新（Sophia Ruan、Alexander Kukushkin）
+
+  Kubernetes API 暂时返回 `403 Permission Denied`（例如短暂的 RBAC 异常）时，Patroni 现在会确认当前节点是否仍持有领导权，并在 `retry_timeout` 内重试更新，而不是立即降级。
+
+- 修复同步模式暂停期间重命名领导者节点的问题（Alexander Kukushkin）
+
+  在暂停状态下重启 Patroni 并重命名领导者节点（不重启 PostgreSQL）后，`/sync` 键此前不会更新，导致下次退出暂停再重启时无法提升节点。
+
+- 同一主库时间线增加时触发 `pg_rewind` 检查（Alexander Kukushkin）
+
+  隔离其他副本后，单用户模式崩溃恢复加上获取领导者键后的提升可能使同一主库增加时间线。此前领导者与 `primary_conninfo` 均未变化，副本不会触发 `pg_rewind` 状态机。
+
+- 仅在超级用户密码非空时写入 `initdb` 引导参数（Michael Banck）
+
+  `initdb` 引导期间写入空密码会引发问题。
+
+- 修复 `synchronous_mode=on` 时 `failover_priority` 不生效（Alexander Kukushkin）
+
+  当 `synchronous_node_count > 1` 时，`tag.failover_priority` 的值此前会被忽略。
+
+- 修复 `primary_conninfo` 密码比较（Alexander Kukushkin）
+
+  PostgreSQL 10 起 Patroni 在 `primary_conninfo` 中使用 passfile。通过重载更新 YAML 中的复制密码后，Passfile 此前不会同步更新。
+
+- 暂停模式下不要重启带 `nofailover` 标签的副本（Alexander Kukushkin）
+
+  带有 `nofailover=true` 标签的 PostgreSQL 副本即使被手动停止，Patroni 此前仍会在暂停模式下重新启动它。
+
+- 修复 PostgreSQL 处于启动状态时的 `check_recovery_conf()`（Alexander Kukushkin）
+
+  PostgreSQL 12 及以上版本尚未接受连接时无法查询 `pg_settings`。现在写入 `postgresql.conf` 时会把缺失的恢复参数加入内部状态，并恢复 `Ha.is_healthiest_node()` 中的 `Postgresql.is_starting()` 检查。
+
+- 校验字典格式的 `initdb`/`basebackup` 用户选项（m4rrypro）
+
+  此前以字典而非列表提供选项时会绕过 `option_is_allowed()` 校验，允许使用被禁用的选项。
+
+- 允许 `basebackup` 使用服务器端压缩选项（m4rrypro）
+
+  此前完全禁止 `basebackup` 的 `compress` 选项；PostgreSQL 15 起服务器端压缩可用于 plain 格式，因此现在允许，客户端压缩仍会被拒绝。
+
+- 运行自定义引导时不要重载 PostgreSQL 配置（Alexander Kukushkin）
+
+  自定义引导可能包含多次启停 PostgreSQL 的复杂流程，在此期间重载配置可能导致意外行为。
+
+- 检查 `postgresql.parameters` 是否为字典（Alexander Kukushkin）
+
+  若 `postgresql.parameters` 不是字典，则丢弃新配置。
 
 ## Version 4.1.0
 
@@ -2432,7 +2582,7 @@ $ patronictl list
 
 - 兼容 PostgreSQL 12（Alexander Kukushkin）
 
-  从 PostgreSQL 12 开始不再有 **`recovery.conf`**，所有原来的恢复参数都被转换为 [GUC](https://www.enterprisedb.com/blog/what-is-a-guc-variable)。为了防止 **`ALTER SYSTEM SET primary_conninfo`** 或类似操作，Patroni 将解析 **`postgresql.auto.conf`** 并从中删除所有备库和恢复参数。Patroni 配置保持向后兼容。例如，尽管 **`restore_command`** 是一个 GUC，仍然可以在 **`postgresql.recovery_conf.restore_command`** 部分中指定它，Patroni 会将其写入 PostgreSQL 12 的 **`postgresql.conf`** 中。
+  从 PostgreSQL 12 开始不再有 **`recovery.conf`**，所有原来的恢复参数都被转换为 [GUC](https://www.enterprisedb.com/blog/what-guc-variable)。为了防止 **`ALTER SYSTEM SET primary_conninfo`** 或类似操作，Patroni 将解析 **`postgresql.auto.conf`** 并从中删除所有备库和恢复参数。Patroni 配置保持向后兼容。例如，尽管 **`restore_command`** 是一个 GUC，仍然可以在 **`postgresql.recovery_conf.restore_command`** 部分中指定它，Patroni 会将其写入 PostgreSQL 12 的 **`postgresql.conf`** 中。
 
 - 支持在 PostgreSQL 11 及更新版本上无需超级用户使用 **`pg_rewind`**（Alexander Kukushkin）
 
@@ -3344,7 +3494,7 @@ Version 1.3增加了自定义引导功能，显著改进了对 pg_rewind 的支�
 
 发布于 2016-12-13
 
-此版本在同步复制处理方面引入了重大改进，使启动过程和故障转移更加可靠，添加了 PostgreSQL 9.6支持并修复了大量错误。此外，包括这些发布说明在内的文档已迁移至 </docs/patroni>。
+此版本在同步复制处理方面引入了重大改进，使启动过程和故障转移更加可靠，添加了 PostgreSQL 9.6支持并修复了大量错误。此外，包括这些发布说明在内的文档已迁移至 [Patroni 文档](/docs/patroni/)。
 
 **同步复制**
 
@@ -3418,7 +3568,7 @@ Version 1.3增加了自定义引导功能，显著改进了对 pg_rewind 的支�
 
 - 改进 README，添加 Helm chart 和发布说明链接。（Lauri Apple）
 
-- 将 Patroni 文档迁移至 **`Read the Docs`**。最新文档可在 </docs/patroni> 查阅。（Oleksii Kliukin）
+- 将 Patroni 文档迁移至 **`Read the Docs`**。最新文档可在 [Patroni 文档](/docs/patroni/) 查阅。（Oleksii Kliukin）
 
   使文档可在不同设备（包括智能手机）上轻松查看和搜索。
 

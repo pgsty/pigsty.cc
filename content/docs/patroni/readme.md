@@ -59,7 +59,7 @@ Patroni/PostgreSQL 节点与 DCS 节点是解耦的（除非 Patroni 自行实�
 
 通过添加更多 **`postgres*.yml`** 文件，可以构建规模更大的集群。
 
-Patroni 提供了一份 [HAProxy](http://www.haproxy.org/) 配置，可为应用程序提供连接集群主库的单一端点。配置方式如下：
+Patroni 提供了一份 [HAProxy](https://www.haproxy.org/) 配置，可为应用程序提供连接集群主库的单一端点。配置方式如下：
 
     > haproxy -f haproxy.cfg
 

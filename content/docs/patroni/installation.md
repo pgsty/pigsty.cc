@@ -27,7 +27,7 @@ brew install postgresql etcd haproxy libyaml python
 
 ## Psycopg
 
-从 [psycopg2-2.8](http://initd.org/psycopg/articles/2019/04/04/psycopg-28-released/) 开始，psycopg2 的二进制版本不再默认安装。从源码编译安装需要 C 编译器以及 postgres 和 python 的开发包。由于 Python 生态中无法将依赖声明为 **`psycopg2 OR psycopg2-binary`**，您需要自行选择安装方式。
+从 [psycopg2-2.8](https://www.psycopg.org/articles/2019/04/04/psycopg-28-released/) 开始，psycopg2 的二进制版本不再默认安装。从源码编译安装需要 C 编译器以及 postgres 和 python 的开发包。由于 Python 生态中无法将依赖声明为 **`psycopg2 OR psycopg2-binary`**，您需要自行选择安装方式。
 
 可选方案如下：
 
