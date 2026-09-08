@@ -1,9 +1,9 @@
 ---
-title: "pgBouncer 1.25 中文文档"
+title: "PgBouncer 1.25.2 中文文档"
 linkTitle: pgbouncer 文档
 weight: 8100
 description: >
-  PgBouncer —— PostgreSQL 轻量级连接池，v1.25 中文文档
+  PgBouncer —— PostgreSQL 轻量级连接池，v1.25.2 中文文档
 icon: fas fa-baseball
 sidebar_root_for: self
 module: [PGBOUNCER]

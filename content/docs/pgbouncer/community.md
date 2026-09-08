@@ -13,10 +13,6 @@ categories: [概念]
 
 ## 教程
 
-- [**在 CentOS/RedHat/Fedora 上为 PostgreSQL 配置 PgBouncer 连接池**](https://opensourcedbms.com/dbms/setup-pgbouncer-connection-pooling-for-postgresql-on-centosredhatfedora/)
-
-  在基于 RedHat 的系统上安装。
-
 - [**为 Postgres Plus Standard Server 配置 PgBouncer**](https://get.enterprisedb.com/docs/Tutorial_All_PPSS_pgBouncer.pdf)
 
   对 PgBouncer 概念的精彩概述。
@@ -35,4 +31,4 @@ categories: [概念]
 
 - [**PgBouncer 专区**](https://stackoverflow.com/questions/tagged/pgbouncer)（Stack Overflow）
 
-- [**聊天室**](https://gitter.im/pgbouncer/pgbouncer)（Gitter）
+- [**社区讨论**](https://github.com/pgbouncer/pgbouncer/discussions)（GitHub）
