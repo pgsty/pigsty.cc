@@ -8,14 +8,14 @@ icon: fa-solid fa-book
 sidebar_root_for: self
 no_list: true
 feedback: false
-footer_style: slim
+footer_style: fat
 outputs:
   - HTML
   - RSS
   - markdown
 cascade:
   params:
-    footer_style: slim
+    footer_style: fat
   outputs:
     - HTML
     - markdown

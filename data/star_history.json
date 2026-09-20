@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31",
+  "updated_at": "2026-09-20",
   "baseline_date": "2026-07-01",
   "archive_asset": "/img/pigsty/star-history.webp",
   "provenance": {
@@ -13,9 +13,9 @@
       "label": "CloudNativePG",
       "color": "#f3db53",
       "baseline": 8899,
-      "current": 9214,
-      "growth": 315,
-      "growth_pct": 3.54,
+      "current": 9329,
+      "growth": 430,
+      "growth_pct": 4.83,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2022-05-01", 30],
@@ -75,7 +75,8 @@
         ["2026-08-08", 9108],
         ["2026-08-13", 9133],
         ["2026-08-28", 9206],
-        ["2026-08-31", 9214]
+        ["2026-08-31", 9214],
+        ["2026-09-20", 9329]
       ]
     },
     {
@@ -83,9 +84,9 @@
       "label": "Pigsty",
       "color": "#dd4526",
       "baseline": 5195,
-      "current": 5584,
-      "growth": 389,
-      "growth_pct": 7.49,
+      "current": 5660,
+      "growth": 465,
+      "growth_pct": 8.95,
       "history_method": "github-starred-at+snapshots",
       "history": [
         ["2020-10-01", 0],
@@ -165,7 +166,8 @@
         ["2026-08-08", 5502],
         ["2026-08-13", 5521],
         ["2026-08-28", 5579],
-        ["2026-08-31", 5584]
+        ["2026-08-31", 5584],
+        ["2026-09-20", 5660]
       ]
     },
     {
@@ -173,9 +175,9 @@
       "label": "Zalando Postgres Operator",
       "color": "#ed84b5",
       "baseline": 5192,
-      "current": 5229,
-      "growth": 37,
-      "growth_pct": 0.71,
+      "current": 5245,
+      "growth": 53,
+      "growth_pct": 1.02,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2017-06-01", 10],
@@ -294,7 +296,8 @@
         ["2026-08-08", 5219],
         ["2026-08-13", 5222],
         ["2026-08-28", 5228],
-        ["2026-08-31", 5229]
+        ["2026-08-31", 5229],
+        ["2026-09-20", 5245]
       ]
     },
     {
@@ -302,9 +305,9 @@
       "label": "Stolon",
       "color": "#49b74d",
       "baseline": 4821,
-      "current": 4827,
-      "growth": 6,
-      "growth_pct": 0.12,
+      "current": 4829,
+      "growth": 8,
+      "growth_pct": 0.17,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2015-11-01", 80],
@@ -437,7 +440,8 @@
         ["2026-06-01", 4810],
         ["2026-07-01", 4821],
         ["2026-08-28", 4827],
-        ["2026-08-31", 4827]
+        ["2026-08-31", 4827],
+        ["2026-09-20", 4829]
       ]
     },
     {
@@ -445,9 +449,9 @@
       "label": "Crunchy PGO",
       "color": "#9179c0",
       "baseline": 4428,
-      "current": 4444,
-      "growth": 16,
-      "growth_pct": 0.36,
+      "current": 4453,
+      "growth": 25,
+      "growth_pct": 0.56,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2017-03-01", 0],
@@ -569,7 +573,8 @@
         ["2026-08-08", 4436],
         ["2026-08-13", 4436],
         ["2026-08-28", 4443],
-        ["2026-08-31", 4444]
+        ["2026-08-31", 4444],
+        ["2026-09-20", 4453]
       ]
     },
     {
@@ -577,9 +582,9 @@
       "label": "Autobase",
       "color": "#26a3dd",
       "baseline": 4282,
-      "current": 4360,
-      "growth": 78,
-      "growth_pct": 1.82,
+      "current": 4390,
+      "growth": 108,
+      "growth_pct": 2.52,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2019-07-01", 10],
@@ -673,7 +678,8 @@
         ["2026-08-08", 4327],
         ["2026-08-13", 4332],
         ["2026-08-28", 4347],
-        ["2026-08-31", 4360]
+        ["2026-08-31", 4360],
+        ["2026-09-20", 4390]
       ]
     },
     {
@@ -681,9 +687,9 @@
       "label": "KubeBlocks",
       "color": "#8e6d5a",
       "baseline": 3069,
-      "current": 3116,
-      "growth": 47,
-      "growth_pct": 1.53,
+      "current": 3136,
+      "growth": 67,
+      "growth_pct": 2.18,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2022-09-01", 0],
@@ -739,7 +745,8 @@
         ["2026-08-08", 3098],
         ["2026-08-13", 3102],
         ["2026-08-28", 3114],
-        ["2026-08-31", 3116]
+        ["2026-08-31", 3116],
+        ["2026-09-20", 3136]
       ]
     },
     {
@@ -747,9 +754,9 @@
       "label": "StackGres",
       "color": "#f19838",
       "baseline": 1411,
-      "current": 1428,
-      "growth": 17,
-      "growth_pct": 1.2,
+      "current": 1427,
+      "growth": 16,
+      "growth_pct": 1.13,
       "history_method": "archived-chart-sample+snapshots",
       "history": [
         ["2020-07-01", 10],
@@ -831,7 +838,8 @@
         ["2026-08-08", 1424],
         ["2026-08-13", 1426],
         ["2026-08-28", 1426],
-        ["2026-08-31", 1428]
+        ["2026-08-31", 1428],
+        ["2026-09-20", 1427]
       ]
     }
   ]

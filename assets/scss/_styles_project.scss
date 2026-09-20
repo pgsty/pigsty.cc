@@ -29,6 +29,30 @@
   }
 }
 
+// 影响力排名铺满正文，Star 与类型保持单行，窄屏由表格容器横向滚动。
+.td-content .td-table-scroll > table.impact-table {
+  width: 100%;
+  min-width: 54rem;
+  overflow-wrap: normal;
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 5rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    white-space: nowrap;
+  }
+
+  th:last-child,
+  td:last-child {
+    min-width: 16rem;
+  }
+}
+
 // =============================================================================
 // Extensions (content/ext) - Reusable styles
 //

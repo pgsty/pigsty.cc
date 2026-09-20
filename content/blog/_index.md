@@ -5,7 +5,7 @@ description: 收录了与 Pigsty、云计算、数据库、AI/Agent 领域有关
 icon: fas fa-blog
 sidebar_root_for: self
 weight: 30
-footer_style: slim
+footer_style: fat
 outputs:
   - HTML
   - RSS
@@ -15,7 +15,7 @@ cascade:
     - HTML
     - markdown
   params:
-    footer_style: slim
+    footer_style: fat
     sidebar_menu_foldable: false
     sidebar_menu_compact: false
     sidebar_expand_levels: 3

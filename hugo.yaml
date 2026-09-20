@@ -149,7 +149,12 @@ services:
 #=======================================#
 imaging:
   resampleFilter: CatmullRom
-  quality: 75
+  jpeg:
+    quality: 75
+  webp:
+    quality: 75
+  avif:
+    quality: 75
   anchor: smart
 
 #=======================================#
@@ -227,7 +232,7 @@ params:
   pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
   pgext_count: 576          # Pigsty 在线已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
   pgext_url: https://pgext.cloud  # PG 扩展目录站点，首页扩展索引格点与指标卡片链接前缀
-  github_stars: '5.5 K'      # GitHub Star 数（约数），正文兼容参数
+  github_stars: '5.66 K'      # GitHub Star 数（约数），正文兼容参数
   copyright:
     authors: Ruohang Feng
     from_year: 2018
@@ -286,7 +291,7 @@ params:
     landing_search: true
     section_index: cards
     lastmod_commit: subject
-    github_stars: '5.5 K'
+    github_stars: '5.66 K'
     alt_site:
       label: English
       url: https://pigsty.io
