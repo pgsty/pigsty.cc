@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **130** 个扩展依赖其他扩展，**76** 个扩展被其他扩展所依赖。
+共有 **129** 个扩展依赖其他扩展，**75** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **130** 个扩展需要先安装其他扩展才能使用：
+以下 **129** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -44,7 +44,6 @@ weight: 30
 | [`vectorize`](/ext/e/vectorize) | [`pg_cron`](/ext/e/pg_cron) [`pgmq`](/ext/e/pgmq) [`vector`](/ext/e/vector) | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pg4ml`](/ext/e/pg4ml) | [`plpgsql`](/ext/e/plpgsql) [`tablefunc`](/ext/e/tablefunc) [`cube`](/ext/e/cube) [`plpython3u`](/ext/e/plpython3u) | PG4ML是一个机器学习框架 |
 | [`pgmnemo`](/ext/e/pgmnemo) | [`vector`](/ext/e/vector) | PostgreSQL 单计划多模态智能体记忆扩展 |
-| [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | [`pgcontext`](/ext/e/pgcontext) [`vector`](/ext/e/vector) | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 | [`pg_search`](/ext/e/pg_search) | [`vector`](/ext/e/vector) | 使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展 |
 | [`biscuit`](/ext/e/biscuit) | [`plpgsql`](/ext/e/plpgsql) | 使用IAM的高性能文本模式匹配 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_duckdb`](/ext/e/pg_duckdb) | PostgreSQL列式存储表 |
@@ -147,7 +146,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **76** 个扩展被其他扩展所依赖：
+以下 **75** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -160,8 +159,7 @@ weight: 30
 | [`pgh_raster`](/ext/e/pgh_raster) | [`pgh_hgm`](/ext/e/pgh_hgm) | PgHydro 栅格水文分析扩展 |
 | [`mobilitydb`](/ext/e/mobilitydb) | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | MobilityDB地理空间投影数据管理分析平台 |
 | [`qdgc`](/ext/e/qdgc) | [`qdgc_postgis`](/ext/e/qdgc_postgis) | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
-| [`vector`](/ext/e/vector) | `ai` `alloydb_scann` `avocado` [`documentdb`](/ext/e/documentdb) `embedding_search` `hybrid_search` `maludb_core` `pg_cuvs` `pg_diskann` `pg_gembed` `pg_knowledge_graph` `pg_llm` `pg_llm_helper` [`pg_search`](/ext/e/pg_search) `pg_semantic_cache` `pg_sentence_transformer` `pg_splade` `pg_turboquant` [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) `pgedge_vectorizer` [`pgmnemo`](/ext/e/pgmnemo) `pgpu` `pgturbohybrid` `pgvecutils` `rag` `rag_bge_small_en_v15` `rag_jina_reranker_v1_tiny_en` `rds_ai` `rds_embedding` [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
-| [`pgcontext`](/ext/e/pgcontext) | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
+| [`vector`](/ext/e/vector) | `ai` `alloydb_scann` `avocado` [`documentdb`](/ext/e/documentdb) `embedding_search` `hybrid_search` `maludb_core` `pg_cuvs` `pg_diskann` `pg_gembed` `pg_knowledge_graph` `pg_llm` `pg_llm_helper` [`pg_search`](/ext/e/pg_search) `pg_semantic_cache` `pg_sentence_transformer` `pg_splade` `pg_turboquant` `pgedge_vectorizer` [`pgmnemo`](/ext/e/pgmnemo) `pgpu` `pgturbohybrid` `pgvecutils` `rag` `rag_bge_small_en_v15` `rag_jina_reranker_v1_tiny_en` `rds_ai` `rds_embedding` [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | 确定字符串之间的相似性和距离 |
 | [`citus`](/ext/e/citus) | `cigration` [`documentdb_distributed`](/ext/e/documentdb_distributed) | 将 PostgreSQL 横向扩展为分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |

@@ -25,7 +25,7 @@ weight: 7020
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgsodium`**](/ext/e/pgsodium) | `3.1.11` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgsodium`**](/ext/e/pgsodium) | `3.1.11` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -39,7 +39,7 @@ weight: 7020
 {.ext-table .ext-table--rel}
 
 
-> +fix missing pg17
+> Uses private libsodium 1.0.22; no external runtime dependency.
 
 
 ## 版本
@@ -48,7 +48,7 @@ weight: 7020
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pgsodium` | - |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pgsodium_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsodium` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsodium` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -323,7 +323,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pgsodium;          # 当前活跃 PG 版本安装
 ```
 

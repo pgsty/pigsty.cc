@@ -38,7 +38,7 @@ weight: 4690
 {.ext-table .ext-table--rel}
 
 
-> Built against Apache DataSketches C++ core 5.0.0.
+> Built against DataSketches C++ core 5.2.0.
 
 
 ## 版本
@@ -170,7 +170,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install datasketches;          # 当前活跃 PG 版本安装
 ```
 

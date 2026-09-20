@@ -252,7 +252,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_tle;          # 当前活跃 PG 版本安装
 ```
 
@@ -305,7 +305,7 @@ CREATE EXTENSION pg_tle;
 
 在 `postgresql.conf` 中将 `pg_tle` 添加到 `shared_preload_libraries`：
 
-```text
+```
 shared_preload_libraries = 'pg_tle'
 ```
 

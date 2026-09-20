@@ -171,7 +171,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_duckdb;          # 当前活跃 PG 版本安装
 ```
 
@@ -267,7 +267,7 @@ EXPLAIN ANALYZE SELECT count(*) FROM pgbench_accounts;
 
 在本地笔记本电脑的 4 核虚拟机上，查询耗时从 8 秒降至 4 秒：
 
-```text
+```
 postgres@el9:5432/postgres=# SET duckdb.force_execution = true;
 EXPLAIN ANALYZE SELECT count(*) FROM pgbench_accounts;
 SET

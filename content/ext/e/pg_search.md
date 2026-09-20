@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">main/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/main/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.25.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.25.6.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.25.2.tar.gz</div>
-    <div class="ext-card__desc">pg_search-0.25.2.tar.gz</div>
+    <div class="ext-card__title">pg_search-0.25.6.tar.gz</div>
+    <div class="ext-card__desc">pg_search-0.25.6.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_search`**](/ext/e/pg_search) | `0.25.2` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_search`**](/ext/e/pg_search) | `0.25.6` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 2100
 {.ext-table .ext-table--rel}
 
 
-> Requires shared_preload_libraries=pg_search and pgvector; bm25 access method conflicts with pg_textsearch and vchord_bm25; PIGSTY uses pgrx 0.19.1 for upstream pgrx 0.19.0.
+> Requires preload and pgvector; conflicts with pg_textsearch and vchord_bm25. pgrx 0.19.2.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.2` | {{< pgvers "15,16,17,18" >}} | `pg_search` | `vector` |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.2` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | `pgvector_$v`, `openblas` |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.2` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | `postgresql-$v-pgvector`, `libopenblas0` |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.6` | {{< pgvers "18,17,16,15" >}} | `pg_search` | `vector` |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.6` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | `pgvector_$v`, `openblas` |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.25.6` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | `postgresql-$v-pgvector`, `libopenblas0` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -154,7 +154,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_search;          # 当前活跃 PG 版本安装
 ```
 
@@ -197,19 +197,19 @@ CREATE EXTENSION pg_search CASCADE;  -- 依赖: vector
 
 来源：
 
-- [pg_search v0.25.2 README](https://github.com/paradedb/paradedb/blob/v0.25.2/pg_search/README.md)
-- [pg_search v0.25.2 发行说明](https://github.com/paradedb/paradedb/releases/tag/v0.25.2)
-- [pg_search v0.25.2 变更日志](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/changelog/0.25.2.mdx)
-- [pg_search v0.25.1 迁移说明](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/changelog/0.25.1.mdx)
-- [创建 ParadeDB 索引](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/indexing/create-index.mdx)
-- [全文匹配操作符](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/full-text/match.mdx)
-- [BM25 评分](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/sorting/score.mdx)
-- [高亮与摘要](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/full-text/highlight.mdx)
-- [索引向量](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/indexing/indexing-vectors.mdx)
-- [查询向量](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/vector/querying.mdx)
-- [混合搜索概述](https://github.com/paradedb/paradedb/blob/v0.25.2/docs/documentation/hybrid/overview.mdx)
+- [pg_search v0.25.6 README](https://github.com/paradedb/paradedb/blob/v0.25.6/pg_search/README.md)
+- [pg_search v0.25.6 发行说明](https://github.com/paradedb/paradedb/releases/tag/v0.25.6)
+- [PGXN 0.25.6 元数据](https://api.pgxn.org/src/pg_search/pg_search-0.25.6/META.json)
+- [pg_search v0.25.1 迁移说明](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/changelog/0.25.1.mdx)
+- [创建 ParadeDB 索引](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/indexing/create-index.mdx)
+- [全文匹配操作符](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/full-text/match.mdx)
+- [BM25 评分](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/sorting/score.mdx)
+- [高亮与摘要](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/full-text/highlight.mdx)
+- [索引向量](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/indexing/indexing-vectors.mdx)
+- [查询向量](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/vector/querying.mdx)
+- [混合搜索概述](https://github.com/paradedb/paradedb/blob/v0.25.6/docs/documentation/hybrid/overview.mdx)
 
-`pg_search` 0.25.2 为 PostgreSQL 增加 ParadeDB 的全文、结构化、向量和混合搜索索引。版本 0.25 使用 `paradedb` 索引访问方法；旧的 `bm25` 访问方法名称仍保留为兼容别名。该扩展依赖 `vector`，上游支持 PostgreSQL 15-18，且必须通过 `shared_preload_libraries` 加载。
+`pg_search` 0.25.6 为 PostgreSQL 增加 ParadeDB 的全文、结构化、向量和混合搜索索引。版本 0.25 使用 `paradedb` 索引访问方法；旧的 `bm25` 访问方法名称仍保留为兼容别名。该扩展依赖 `vector`，上游支持 PostgreSQL 15-18，且必须通过 `shared_preload_libraries` 加载。
 
 ### 安装并构建索引
 
@@ -287,11 +287,12 @@ ORDER BY embedding <=> $1::vector, id
 LIMIT 20;
 ```
 
-### 版本 0.25.2 与注意事项
+### 版本 0.25.6 与注意事项
 
 - 版本 0.25 将主要索引访问方法从 `bm25` 重命名为 `paradedb`。现有的 `USING bm25` 定义仍受支持，但新示例应使用 `USING paradedb`。
 - 版本 0.25.1 支持确定性的向量并列结果排序，并将倒数排名融合查询的向量分支下推到索引中。它还新增 `paradedb.vector_clustering_threshold`，默认值为 500，并将向量索引构建并行度上限设为四个工作进程。
 - 版本 0.25.1 移除了 `paradedb.vector_cluster_probe_epsilon`，并更改了向量索引的边界门控。从 0.25.0 升级数据库后，必须对所有包含向量字段的 ParadeDB 索引执行 `REINDEX`；对于这些索引，仅安装新的共享库并执行 `ALTER EXTENSION` 并不充分。
 - 0.25.2 是稳定性与正确性版本：它修复带向量列的无字段 `more_like_this`、通用预备计划中的 `pdb.fuzzy`、遗留动态过滤器、多种并行子计划和 MPP 计划形态错误，并收紧 typemod 定义的访问控制。除了继承自 0.25.0 的向量索引重建要求外，没有新增索引迁移。
+- 0.25.4 至 0.25.6 新增 `paradedb.vector_clusters`、分区感知索引构建、聚合分数连接、统一规划器告警控制与位图扫描交集；同时修复被丢弃的位图交集子节点，以及负高精度 `numeric` 值的可排序编码。即便没有记录新的显式索引迁移，升级后也应验证计划与排序。
 - `CREATE EXTENSION pg_search CASCADE` 可以安装所需的 `vector` 扩展，但仍须先为所有服务器进程配置预加载并重启。仅通过 `LOAD` 或 `session_preload_libraries` 加载并不充分。
 - 使用不同字段选项重建索引后，查询计划、分词和排名都可能变化。在上线前，请使用符合生产形态的数据测试相关性与向量召回率。

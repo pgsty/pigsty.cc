@@ -182,7 +182,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pglogical_ticker;          # 当前活跃 PG 版本安装
 ```
 
@@ -251,7 +251,7 @@ CREATE EXTENSION pglogical_ticker;
 
 ### 部署 Ticker 表
 
-仅在 **提供者** 上运行（通过 pglogical 传播到订阅者）：
+仅在**提供者**上运行（通过 pglogical 传播到订阅者）：
 
 ```sql
 -- 部署 ticker 表（每个复制集一个）
@@ -287,13 +287,13 @@ SELECT pglogical_ticker.launch_if_repset_tables();
 
 ### 查看复制延迟
 
-在 **提供者** 上：
+在**提供者**上：
 
 ```sql
 SELECT * FROM pglogical_ticker.all_repset_tickers();
 ```
 
-在 **订阅者** 上：
+在**订阅者**上：
 
 ```sql
 SELECT * FROM pglogical_ticker.all_subscription_tickers();

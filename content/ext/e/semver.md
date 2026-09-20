@@ -279,7 +279,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_semver;          # 当前活跃 PG 版本安装
 ```
 
@@ -321,7 +321,7 @@ CREATE EXTENSION semver;
 
 > [semver: 语义版本号数据类型](https://github.com/theory/pg-semver)
 
-`semver` 扩展提供了实现 [语义版本号 2.0.0](https://semver.org/spec/v2.0.0.html) 的数据类型。
+`semver` 扩展提供了实现[语义版本号 2.0.0](https://semver.org/spec/v2.0.0.html)的数据类型。
 
 ```sql
 CREATE EXTENSION semver;

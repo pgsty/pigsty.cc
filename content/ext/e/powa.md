@@ -20,7 +20,7 @@ weight: 6870
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`powa`**](/ext/e/powa) | `5.2.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> |
+| [**`powa`**](/ext/e/powa) | `5.3.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,16 +33,16 @@ weight: 6870
 {.ext-table .ext-table--rel}
 
 
-> Latest stable upstream/PGXN and PGDG DEB are 5.2.0; PGDG RPM remains at 5.1.0.
+> RPM: PGDG 5.1.0; DEB: PGDG 5.3.0.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.2.0` | {{< pgvers "18,17,16,15,14" >}} | `powa` | `plpgsql`, `pg_stat_statements`, `btree_gist` |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.3.0` | {{< pgvers "18,17,16,15,14" >}} | `powa` | `plpgsql`, `pg_stat_statements`, `btree_gist` |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.1.0` | {{< pgvers "18,17,16,15,14" >}} | `powa_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-powa` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-powa` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,16 +54,16 @@ weight: 6870
 | el9.aarch64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 7 | AVAIL PGDG 5.1.0 8 | AVAIL PGDG 5.1.0 8 |
 | el10.x86_64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 |
 | el10.aarch64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 |
-| d12.x86_64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| d12.aarch64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| d13.x86_64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| d13.aarch64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u22.x86_64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u22.aarch64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u24.x86_64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u24.aarch64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u26.x86_64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
-| u26.aarch64 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 | AVAIL PGDG 5.2.0 3 |
+| d12.x86_64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| d12.aarch64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| d13.x86_64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| d13.aarch64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u22.x86_64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u22.aarch64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u24.x86_64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u24.aarch64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u26.x86_64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
+| u26.aarch64 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 | AVAIL PGDG 5.3.0 3 |
 @ el8.x86_64 18 powa_18 powa_18-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/powa_18-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 powa_18 powa_18-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/powa_18-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 powa_18 powa_18-5.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/powa_18-5.1.0-1PGDG.rhel8.10.aarch64.rpm
@@ -84,36 +84,36 @@ weight: 6870
 @ el10.aarch64 18 powa_18 powa_18-5.1.0-1PGDGrhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/powa_18-5.1.0-1PGDGrhel10.0.aarch64.rpm
 @ el10.aarch64 18 powa_18 powa_18-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/powa_18-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 powa_18 powa_18-5.0.1-1PGDG.rhel10.aarch64.rpm pgdg 5.0.1 7.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/powa_18-5.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg12+1_amd64.deb pgdg 5.3.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg12+1_amd64.deb pgdg 5.2.0 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg12+1_arm64.deb pgdg 5.3.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg12+1_arm64.deb pgdg 5.2.0 66.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg12+1_arm64.deb pgdg 5.1.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg12+1_arm64.deb pgdg 5.1.1 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg13+1_amd64.deb pgdg 5.3.0 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg13+1_amd64.deb pgdg 5.2.0 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg13+1_amd64.deb pgdg 5.1.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg13+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg13+1_arm64.deb pgdg 5.3.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg13+1_arm64.deb pgdg 5.2.0 66.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg13+1_arm64.deb pgdg 5.1.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg13+1_arm64.deb pgdg 5.1.1 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg22.04+1_amd64.deb pgdg 5.3.0 63.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg22.04+1_amd64.deb pgdg 5.2.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg22.04+1_amd64.deb pgdg 5.1.2 60.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg22.04+1_amd64.deb pgdg 5.1.1 59.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg22.04+1_arm64.deb pgdg 5.3.0 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg22.04+1_arm64.deb pgdg 5.2.0 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg22.04+1_arm64.deb pgdg 5.1.2 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 59.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg24.04+1_amd64.deb pgdg 5.3.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg24.04+1_amd64.deb pgdg 5.2.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg24.04+1_amd64.deb pgdg 5.1.2 60.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg24.04+1_arm64.deb pgdg 5.3.0 62.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg24.04+1_arm64.deb pgdg 5.2.0 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg24.04+1_arm64.deb pgdg 5.1.2 59.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg26.04+1_amd64.deb pgdg 5.3.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg26.04+1_amd64.deb pgdg 5.2.0 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg26.04+1_amd64.deb pgdg 5.1.2 59.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 58.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-powa postgresql-18-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 61.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-powa postgresql-18-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.2-1.pgdg26.04+1_arm64.deb pgdg 5.1.2 59.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 powa_17 powa_17-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/powa_17-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 powa_17 powa_17-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/powa_17-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 powa_17 powa_17-5.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/powa_17-5.1.0-1PGDG.rhel8.10.aarch64.rpm
@@ -132,36 +132,36 @@ weight: 6870
 @ el10.aarch64 17 powa_17 powa_17-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/powa_17-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 powa_17 powa_17-5.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/powa_17-5.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 powa_17 powa_17-5.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/powa_17-5.1.0-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg12+1_amd64.deb pgdg 5.3.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg12+1_amd64.deb pgdg 5.2.0 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg12+1_arm64.deb pgdg 5.3.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg12+1_arm64.deb pgdg 5.2.0 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg12+1_arm64.deb pgdg 5.1.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg12+1_arm64.deb pgdg 5.1.1 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg13+1_amd64.deb pgdg 5.3.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg13+1_amd64.deb pgdg 5.2.0 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg13+1_amd64.deb pgdg 5.1.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg13+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg13+1_arm64.deb pgdg 5.3.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg13+1_arm64.deb pgdg 5.2.0 66.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg13+1_arm64.deb pgdg 5.1.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg13+1_arm64.deb pgdg 5.1.1 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg22.04+1_amd64.deb pgdg 5.3.0 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg22.04+1_amd64.deb pgdg 5.2.0 66.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg22.04+1_amd64.deb pgdg 5.1.2 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg22.04+1_amd64.deb pgdg 5.1.1 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg22.04+1_arm64.deb pgdg 5.3.0 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg22.04+1_arm64.deb pgdg 5.2.0 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg22.04+1_arm64.deb pgdg 5.1.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg24.04+1_amd64.deb pgdg 5.3.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg24.04+1_amd64.deb pgdg 5.2.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg24.04+1_amd64.deb pgdg 5.1.2 60.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg24.04+1_arm64.deb pgdg 5.3.0 62.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg24.04+1_arm64.deb pgdg 5.2.0 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg24.04+1_arm64.deb pgdg 5.1.2 59.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg26.04+1_amd64.deb pgdg 5.3.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg26.04+1_amd64.deb pgdg 5.2.0 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg26.04+1_amd64.deb pgdg 5.1.2 59.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-powa postgresql-17-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-powa postgresql-17-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.2-1.pgdg26.04+1_arm64.deb pgdg 5.1.2 59.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 powa_16 powa_16-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 powa_16 powa_16-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 powa_16 powa_16-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -194,36 +194,36 @@ weight: 6870
 @ el10.aarch64 16 powa_16 powa_16-5.1.0-1PGDGrhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/powa_16-5.1.0-1PGDGrhel10.0.aarch64.rpm
 @ el10.aarch64 16 powa_16 powa_16-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/powa_16-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 powa_16 powa_16-5.0.1-1PGDG.rhel10.aarch64.rpm pgdg 5.0.1 7.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/powa_16-5.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg12+1_amd64.deb pgdg 5.3.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg12+1_amd64.deb pgdg 5.2.0 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg12+1_arm64.deb pgdg 5.3.0 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg12+1_arm64.deb pgdg 5.2.0 66.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg12+1_arm64.deb pgdg 5.1.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg12+1_arm64.deb pgdg 5.1.1 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg13+1_amd64.deb pgdg 5.3.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg13+1_amd64.deb pgdg 5.2.0 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg13+1_amd64.deb pgdg 5.1.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg13+1_amd64.deb pgdg 5.1.1 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg13+1_arm64.deb pgdg 5.3.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg13+1_arm64.deb pgdg 5.2.0 66.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg13+1_arm64.deb pgdg 5.1.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg13+1_arm64.deb pgdg 5.1.1 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg22.04+1_amd64.deb pgdg 5.3.0 66.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg22.04+1_amd64.deb pgdg 5.2.0 66.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg22.04+1_amd64.deb pgdg 5.1.2 64.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg22.04+1_amd64.deb pgdg 5.1.1 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg22.04+1_arm64.deb pgdg 5.3.0 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg22.04+1_arm64.deb pgdg 5.2.0 66.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg22.04+1_arm64.deb pgdg 5.1.2 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg24.04+1_amd64.deb pgdg 5.3.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg24.04+1_amd64.deb pgdg 5.2.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg24.04+1_amd64.deb pgdg 5.1.2 60.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg24.04+1_arm64.deb pgdg 5.3.0 62.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg24.04+1_arm64.deb pgdg 5.2.0 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg24.04+1_arm64.deb pgdg 5.1.2 59.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg26.04+1_amd64.deb pgdg 5.3.0 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg26.04+1_amd64.deb pgdg 5.2.0 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg26.04+1_amd64.deb pgdg 5.1.2 59.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-powa postgresql-16-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-powa postgresql-16-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.2-1.pgdg26.04+1_arm64.deb pgdg 5.1.2 59.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 powa_15 powa_15-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 powa_15 powa_15-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 powa_15 powa_15-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -260,36 +260,36 @@ weight: 6870
 @ el10.aarch64 15 powa_15 powa_15-5.1.0-1PGDGrhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/powa_15-5.1.0-1PGDGrhel10.0.aarch64.rpm
 @ el10.aarch64 15 powa_15 powa_15-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/powa_15-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 powa_15 powa_15-5.0.1-1PGDG.rhel10.aarch64.rpm pgdg 5.0.1 7.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/powa_15-5.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg12+1_amd64.deb pgdg 5.3.0 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg12+1_amd64.deb pgdg 5.2.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg12+1_arm64.deb pgdg 5.3.0 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg12+1_arm64.deb pgdg 5.2.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg12+1_arm64.deb pgdg 5.1.2 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg12+1_arm64.deb pgdg 5.1.1 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg13+1_amd64.deb pgdg 5.3.0 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg13+1_amd64.deb pgdg 5.2.0 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg13+1_amd64.deb pgdg 5.1.2 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg13+1_amd64.deb pgdg 5.1.1 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg13+1_arm64.deb pgdg 5.3.0 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg13+1_arm64.deb pgdg 5.2.0 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg13+1_arm64.deb pgdg 5.1.2 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg13+1_arm64.deb pgdg 5.1.1 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg22.04+1_amd64.deb pgdg 5.3.0 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg22.04+1_amd64.deb pgdg 5.2.0 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg22.04+1_amd64.deb pgdg 5.1.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg22.04+1_amd64.deb pgdg 5.1.1 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg22.04+1_arm64.deb pgdg 5.3.0 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg22.04+1_arm64.deb pgdg 5.2.0 66.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg22.04+1_arm64.deb pgdg 5.1.2 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg24.04+1_amd64.deb pgdg 5.3.0 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg24.04+1_amd64.deb pgdg 5.2.0 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg24.04+1_amd64.deb pgdg 5.1.2 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg24.04+1_arm64.deb pgdg 5.3.0 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg24.04+1_arm64.deb pgdg 5.2.0 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg24.04+1_arm64.deb pgdg 5.1.2 60.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg26.04+1_amd64.deb pgdg 5.3.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg26.04+1_amd64.deb pgdg 5.2.0 62.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg26.04+1_amd64.deb pgdg 5.1.2 60.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-powa postgresql-15-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-powa postgresql-15-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.2-1.pgdg26.04+1_arm64.deb pgdg 5.1.2 60.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 powa_14 powa_14-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 powa_14 powa_14-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 powa_14 powa_14-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -329,36 +329,36 @@ weight: 6870
 @ el10.aarch64 14 powa_14 powa_14-5.1.0-1PGDGrhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.1.0-1PGDGrhel10.0.aarch64.rpm
 @ el10.aarch64 14 powa_14 powa_14-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 powa_14 powa_14-5.0.1-1PGDG.rhel10.aarch64.rpm pgdg 5.0.1 7.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg12+1_amd64.deb pgdg 5.3.0 69.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg12+1_amd64.deb pgdg 5.2.0 68.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 65.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg12+1_arm64.deb pgdg 5.3.0 69.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg12+1_arm64.deb pgdg 5.2.0 68.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg12+1_arm64.deb pgdg 5.1.2 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg12+1_arm64.deb pgdg 5.1.1 65.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg13+1_amd64.deb pgdg 5.3.0 69.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg13+1_amd64.deb pgdg 5.2.0 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg13+1_amd64.deb pgdg 5.1.2 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg13+1_amd64.deb pgdg 5.1.1 66.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg13+1_arm64.deb pgdg 5.3.0 69.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg13+1_arm64.deb pgdg 5.2.0 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg13+1_arm64.deb pgdg 5.1.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg13+1_arm64.deb pgdg 5.1.1 66.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg22.04+1_amd64.deb pgdg 5.3.0 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg22.04+1_amd64.deb pgdg 5.2.0 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg22.04+1_amd64.deb pgdg 5.1.2 65.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg22.04+1_amd64.deb pgdg 5.1.1 64.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg22.04+1_arm64.deb pgdg 5.3.0 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg22.04+1_arm64.deb pgdg 5.2.0 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg22.04+1_arm64.deb pgdg 5.1.2 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg24.04+1_amd64.deb pgdg 5.3.0 64.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg24.04+1_amd64.deb pgdg 5.2.0 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg24.04+1_amd64.deb pgdg 5.1.2 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 61.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg24.04+1_arm64.deb pgdg 5.3.0 64.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg24.04+1_arm64.deb pgdg 5.2.0 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg24.04+1_arm64.deb pgdg 5.1.2 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 61.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg26.04+1_amd64.deb pgdg 5.3.0 64.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg26.04+1_amd64.deb pgdg 5.2.0 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg26.04+1_amd64.deb pgdg 5.1.2 62.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 61.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg26.04+1_arm64.deb pgdg 5.1.2 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 60.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -372,7 +372,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install powa;          # 当前活跃 PG 版本安装
 ```
 

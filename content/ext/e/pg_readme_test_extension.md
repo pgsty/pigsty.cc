@@ -54,12 +54,12 @@ weight: 4301
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el8.aarch64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el9.x86_64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
-| el9.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
-| el10.x86_64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
-| el10.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
+| el8.x86_64 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 |
+| el8.aarch64 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 |
+| el9.x86_64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el9.aarch64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el10.x86_64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el10.aarch64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
 | d12.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
@@ -91,7 +91,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_readme;          # 当前活跃 PG 版本安装
 ```
 

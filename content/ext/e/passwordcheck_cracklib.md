@@ -11,10 +11,10 @@ weight: 7000
     <div class="ext-card__title">devrimgunduz/passwordcheck_cracklib</div>
     <div class="ext-card__desc">https://github.com/devrimgunduz/passwordcheck_cracklib</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/passwordcheck_cracklib-3.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/passwordcheck_cracklib-3.2.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">passwordcheck_cracklib-3.1.0.tar.gz</div>
-    <div class="ext-card__desc">passwordcheck_cracklib-3.1.0.tar.gz</div>
+    <div class="ext-card__title">passwordcheck_cracklib-3.2.0.tar.gz</div>
+    <div class="ext-card__desc">passwordcheck_cracklib-3.2.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7000
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`passwordcheck_cracklib`**](/ext/e/passwordcheck_cracklib) | `3.1.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license lgpl21" href="/ext/license#lgpl21">LGPL-2.1</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`passwordcheck_cracklib`**](/ext/e/passwordcheck_cracklib) | `3.2.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license lgpl21" href="/ext/license#lgpl21">LGPL-2.1</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,13 +38,16 @@ weight: 7000
 {.ext-table .ext-table--rel}
 
 
+> Preload-only; requires cracklib dictionaries.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `3.1.0` | {{< pgvers "18,17,16,15,14" >}} | `passwordcheck_cracklib` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.1.0` | {{< pgvers "18,17,16,15,14" >}} | `passwordcheck_cracklib_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-passwordcheck-cracklib` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2.0` | {{< pgvers "18,17,16,15,14" >}} | `passwordcheck_cracklib` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2.0` | {{< pgvers "18,17,16,15,14" >}} | `passwordcheck_cracklib_$v` | `cracklib-dicts` |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-passwordcheck-cracklib` | `cracklib-runtime`, `libcrack2` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -172,10 +175,10 @@ weight: 7000
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `passwordcheck_cracklib` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `passwordcheck_cracklib` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg passwordcheck_cracklib         # 构建 DEB 包
+pig build pkg passwordcheck_cracklib         # 构建 RPM / DEB 包
 ```
 
 
@@ -189,7 +192,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install passwordcheck_cracklib;          # 当前活跃 PG 版本安装
 ```
 

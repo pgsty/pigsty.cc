@@ -2,7 +2,7 @@
 title: Pigsty 已打包扩展目录
 linkTitle: Pigsty 已打包扩展目录
 description: >
-  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、打包、收录并整合了 576 个 PG 生态扩展，供用户开箱即用。
+  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、打包、收录并整合了 577 个 PG 生态扩展，供用户开箱即用。
 weight: 20
 outputs:
   - HTML
@@ -14,7 +14,7 @@ cascade:
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：
 
-- [**已打包扩展目录**](/ext/list)：查阅 [**576 个已打包扩展**](/ext/list) 的详细信息，使用方法，元数据，下载链接与文档
+- [**已打包扩展目录**](/ext/list)：查阅 [**577 个已打包扩展**](/ext/list) 的详细信息，使用方法，元数据，下载链接与文档
 - [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**16 个 Linux 系统**](/ext/os) 上可用
 - [**包管理器**](https://pig.pgsty.com/zh)：使用 [**`pig`**](https://pig.pgsty.com/zh) 命令行工具，屏蔽复杂度与操作系统与架构差异
 
@@ -33,7 +33,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 核心特点
 
-- **数量**：无与伦比的扩展数量：**576 个已打包扩展**，为 PG 扩展生态之最
+- **数量**：无与伦比的扩展数量：**577 个已打包扩展**，为 PG 扩展生态之最
 - **质量**：原生 Linux RPM/DEB 包，完全兼容 PGDG 打包规范
 - **易用**：提供包管理器 [**`pig`**](https://pig.pgsty.com/zh)，屏蔽操作系统与架构差异，开箱即用
 - **兼容**：扩展完全兼容 PGDG 打包规范，可与 PGDG 仓库无缝混用
@@ -47,12 +47,12 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|:---:|:------:|:------:|:------:|:------:|:------:|
-| **ALL** | 576 | 161 | 410 | 71 | | 571 | 557 | 543 | 522 | 500 |
-| **EL** | 575 | 123 | 381 | 71 | | 570 | 555 | 542 | 521 | 499 |
-| **Debian** | 573 | 112 | 390 | 71 | | 568 | 554 | 540 | 519 | 497 |
+| **ALL** | 577 | 157 | 415 | 71 | | 572 | 558 | 544 | 522 | 501 |
+| **EL** | 576 | 119 | 386 | 71 | | 570 | 555 | 543 | 521 | 501 |
+| **Debian** | 574 | 110 | 393 | 71 | | 567 | 554 | 541 | 519 | 498 |
 {.ext-table}
 
-> **576** 是已打包扩展总目录口径；EL、Debian/Ubuntu 及各 PostgreSQL 大版本行展示对应平台的实际覆盖数，因此可能少于 576。
+> **577** 是已打包扩展总目录口径；EL、Debian/Ubuntu 及各 PostgreSQL 大版本行展示对应平台的实际覆盖数，因此可能少于 577。
 >
 > 详见：[扩展列表](/ext/list)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)，[归属仓库](/ext/repo)
 
@@ -66,7 +66,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | [`timescaledb`](/ext/e/timescaledb)  [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit)  [`pg_timeseries`](/ext/e/timeseries)  [`periods`](/ext/e/periods)  [`temporal_tables`](/ext/e/temporal_tables)  [`emaj`](/ext/e/emaj)  [`table_version`](/ext/e/table_version)  [`pg_cron`](/ext/e/pg_cron)  [`pg_task`](/ext/e/pg_task)  [`pg_later`](/ext/e/pg_later)  [`pg_dispatch`](/ext/e/pg_dispatch)  [`pg_background`](/ext/e/pg_background)  [`pg_when`](/ext/e/pg_when)  [`pg_stl`](/ext/e/pg_stl)  [`cron_utils`](/ext/e/cron_utils) |
 | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | [`postgis`](/ext/e/postgis)  [`pgrouting`](/ext/e/pgrouting)  [`pointcloud`](/ext/e/pointcloud)  [`pg_h3`](/ext/e/h3)  [`q3c`](/ext/e/q3c)  [`ogr_fdw`](/ext/e/ogr_fdw)  [`geoip`](/ext/e/geoip)  [`pg_polyline`](/ext/e/pg_polyline)  [`pg_eviltransform`](/ext/e/pg_eviltransform)  [`pg_geohash`](/ext/e/pg_geohash)  [`pghydro`](/ext/e/pghydro)  [`mobilitydb`](/ext/e/mobilitydb)  [`pg_tzf`](/ext/e/tzf)  [`qdgc`](/ext/e/qdgc) |
 | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | [`pgvector`](/ext/e/vector)  [`vchord`](/ext/e/vchord)  [`pgvectorscale`](/ext/e/vectorscale)  [`pg_vectorize`](/ext/e/vectorize)  [`pg_similarity`](/ext/e/pg_similarity)  [`pg_rrf`](/ext/e/pg_rrf)  [`smlar`](/ext/e/smlar)  [`pg_summarize`](/ext/e/pg_summarize)  [`pg_tiktoken`](/ext/e/pg_tiktoken)  [`pg_tiktoken_c`](/ext/e/pg_tiktoken_c)  [`pg4ml`](/ext/e/pg4ml)  [`pgml`](/ext/e/pgml)  [`pgmnemo`](/ext/e/pgmnemo)  [`pgcontext`](/ext/e/pgcontext)  [`pg_turbovec`](/ext/e/pg_turbovec) |
-| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | [`pg_search`](/ext/e/pg_search)  [`pgroonga`](/ext/e/pgroonga)  [`pg_bigm`](/ext/e/pg_bigm)  [`zhparser`](/ext/e/zhparser)  [`pg_bestmatch`](/ext/e/pg_bestmatch)  [`vchord_bm25`](/ext/e/vchord_bm25)  [`pg_tokenizer`](/ext/e/pg_tokenizer)  [`pg_biscuit`](/ext/e/biscuit)  [`pg_textsearch`](/ext/e/pg_textsearch)  [`pg_pinyin`](/ext/e/pg_pinyin)  [`pg_kazsearch`](/ext/e/pg_kazsearch)  [`psql_bm25s`](/ext/e/psql_bm25s)  [`pg_fts`](/ext/e/pg_fts)  [`pg_cjk_parser`](/ext/e/pg_cjk_parser)  [`pg_jieba`](/ext/e/pg_jieba)  [`hunspell`](/ext/e/hunspell_cs_cz) |
+| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | [`pg_search`](/ext/e/pg_search)  [`pgroonga`](/ext/e/pgroonga)  [`pg_bigm`](/ext/e/pg_bigm)  [`zhparser`](/ext/e/zhparser)  [`pg_bestmatch`](/ext/e/pg_bestmatch)  [`vchord_bm25`](/ext/e/vchord_bm25)  [`pg_tokenizer`](/ext/e/pg_tokenizer)  [`pg_biscuit`](/ext/e/biscuit)  [`pg_textsearch`](/ext/e/pg_textsearch)  [`pg_pinyin`](/ext/e/pg_pinyin)  [`pg_kazsearch`](/ext/e/pg_kazsearch)  [`psql_bm25s`](/ext/e/psql_bm25s)  [`pg_fts`](/ext/e/pg_fts)  [`pg_cjk_parser`](/ext/e/pg_cjk_parser)  [`pg_jieba`](/ext/e/pg_jieba)  [`acdat`](/ext/e/acdat)  [`hunspell`](/ext/e/hunspell_cs_cz) |
 | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | [`citus`](/ext/e/citus)  [`hydra`](/ext/e/columnar)  [`pg_duckdb`](/ext/e/pg_duckdb)  [`pg_mooncake`](/ext/e/pg_mooncake)  [`storage_engine`](/ext/e/storage_engine)  [`pg_clickhouse`](/ext/e/pg_clickhouse)  [`duckdb_fdw`](/ext/e/duckdb_fdw)  [`pg_parquet`](/ext/e/pg_parquet)  [`pg_ducklake`](/ext/e/pg_ducklake)  [`pg_fkpart`](/ext/e/pg_fkpart)  [`pg_partman`](/ext/e/pg_partman)  [`plproxy`](/ext/e/plproxy)  [`pg_strom`](/ext/e/pg_strom)  [`pg_orca`](/ext/e/pg_orca)  [`pg_sorted_heap`](/ext/e/pg_sorted_heap)  [`pg_lake`](/ext/e/pg_lake) |
 | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | [`age`](/ext/e/age)  [`pg_liquid`](/ext/e/pg_liquid)  [`one_sparse`](/ext/e/onesparse)  [`pggraph`](/ext/e/graph)  [`pgrdf`](/ext/e/pgrdf)  [`pgq`](/ext/e/pgq)  [`pgmq`](/ext/e/pgmq)  [`pgmb`](/ext/e/pgmb)  [`ulak`](/ext/e/ulak)  [`fsm_core`](/ext/e/fsm_core)  [`hll`](/ext/e/hll)  [`rum`](/ext/e/rum)  [`pg_ai_query`](/ext/e/pg_ai_query)  [`pg_ttl_index`](/ext/e/pg_ttl_index)  [`pg_graphql`](/ext/e/pg_graphql)  [`pg_jsonschema`](/ext/e/pg_jsonschema)  [`jsonschema`](/ext/e/jsonschema)  [`jsquery`](/ext/e/jsquery)  [`pg_hint_plan`](/ext/e/pg_hint_plan)  [`hypopg`](/ext/e/hypopg)  [`index_advisor`](/ext/e/index_advisor)  [`pg_plan_filter`](/ext/e/plan_filter)  [`pg_variables`](/ext/e/pg_variables)  [`imgsmlr`](/ext/e/imgsmlr)  [`pg_ivm`](/ext/e/pg_ivm)  [`pg_incremental`](/ext/e/pg_incremental)  [`pg_trickle`](/ext/e/pg_trickle)  [`pg_durable`](/ext/e/pg_durable)  [`pg_disorder`](/ext/e/pg_disorder)  [`pg_local_cache`](/ext/e/pg_local_cache)  [`provsql`](/ext/e/provsql)  [`orioledb`](/ext/e/orioledb)  [`pg_cardano`](/ext/e/pg_cardano)  [`rdkit`](/ext/e/rdkit)  [`omnigres`](/ext/e/omni)  [`pg_mentat`](/ext/e/pg_mentat) |
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | [`pg_tle`](/ext/e/pg_tle)  [`plv8`](/ext/e/plv8)  [`pljs`](/ext/e/pljs)  [`pllua`](/ext/e/pllua)  [`plprql`](/ext/e/plprql)  [`pldebugger`](/ext/e/pldbgapi)  [`plpgsql_check`](/ext/e/plpgsql_check)  [`plprofiler`](/ext/e/plprofiler)  [`plsh`](/ext/e/plsh)  [`pljava`](/ext/e/pljava)  [`plr`](/ext/e/plr)  [`plxslt`](/ext/e/plxslt)  [`pg_mockable`](/ext/e/pg_mockable)  [`pgsqlmock`](/ext/e/pgsqlmock)  [`plx`](/ext/e/plx)  [`pgwasm`](/ext/e/pgwasm)  [`plruby`](/ext/e/plruby)  [`pgtap`](/ext/e/pgtap)  [`faker`](/ext/e/faker)  [`dbt2`](/ext/e/dbt2)  [`pg_regresql`](/ext/e/pg_regresql) |
@@ -119,26 +119,12 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 Pigsty 向用户提供无可比拟的 PostgreSQL 扩展交付体验，已有多家 PostgreSQL Vendor 使用它进行交付。
 
-{{< cards >}}
-{{< card title="Pigsty" link="https://github.com/pgsty/pigsty" >}}
-开箱即用的开源企业级 PostgreSQL RDS 发行版
-{{< /card >}}
-{{< card title="Omnigres" link="https://docs.omnigres.org/quick_start/" >}}
-PostgreSQL as a Platform，在数据库中进行应用开发
-{{< /card >}}
-{{< card title="AutoBase" link="https://autobase.tech/docs/extensions/install" >}}
-基于 Ansible 的 PG 集群自动化部署，开源 DBaaS
-{{< /card >}}
-{{< /cards >}}
-
-{{< cards >}}
-{{< card title="TensorChord" link="https://github.com/tensorchord" >}}
-云原生 AI 基础设施，开发了多个知名 PG 扩展
-{{< /card >}}
-{{< card title="文武IT" link="https://w3.ww-it.cn/" >}}
-企业级 PostgreSQL 服务商
-{{< /card >}}
-{{< /cards >}}
+- [Pigsty](https://github.com/pgsty/pigsty) — 开箱即用的开源企业级 PostgreSQL RDS 发行版
+- [Omnigres](https://docs.omnigres.org/quick_start/) — PostgreSQL as a Platform，在数据库中进行应用开发
+- [AutoBase](https://autobase.tech/docs/extensions/install) — 基于 Ansible 的 PG 集群自动化部署，开源 DBaaS
+- [TensorChord](https://github.com/tensorchord) — 云原生 AI 基础设施，开发了多个知名 PG 扩展
+- [文武IT](https://w3.ww-it.cn/) — 企业级 PostgreSQL 服务商
+{.cards}
 
 
 --------

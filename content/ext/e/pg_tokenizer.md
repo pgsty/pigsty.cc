@@ -170,7 +170,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_tokenizer;          # 当前活跃 PG 版本安装
 ```
 
@@ -277,7 +277,7 @@ SELECT tokenize('PostgreSQL是一个强大的数据库系统', 'zh_tokenizer');
 
 ## 文本分析器
 
-pg_tokenizer 还提供文本分析器功能，将分词与额外的文本处理步骤结合。详细的文本分析器用法请参见 [文本分析器文档](https://github.com/tensorchord/pg_tokenizer.rs/blob/main/docs/05-text-analyzer.md)。
+pg_tokenizer 还提供文本分析器功能，将分词与额外的文本处理步骤结合。详细的文本分析器用法请参见[文本分析器文档](https://github.com/tensorchord/pg_tokenizer.rs/blob/main/docs/05-text-analyzer.md)。
 
 ## 与 VectorChord-BM25 集成
 

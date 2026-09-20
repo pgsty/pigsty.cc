@@ -11,10 +11,10 @@ weight: 6000
     <div class="ext-card__title">zubkov-andrei/pg_profile</div>
     <div class="ext-card__desc">https://github.com/zubkov-andrei/pg_profile</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_profile-4.11.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_profile-4.15.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_profile-4.11.tar.gz</div>
-    <div class="ext-card__desc">pg_profile-4.11.tar.gz</div>
+    <div class="ext-card__title">pg_profile-4.15.tar.gz</div>
+    <div class="ext-card__desc">pg_profile-4.15.tar.gz</div>
   </a>
 </div>
 
@@ -25,12 +25,12 @@ weight: 6000
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_profile`**](/ext/e/pg_profile) | `4.15` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_profile`**](/ext/e/pg_profile) | `4.15` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6000  | [**`pg_profile`**](/ext/e/pg_profile) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 6000  | [**`pg_profile`**](/ext/e/pg_profile) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`dblink`](/ext/e/dblink) [`plpgsql`](/ext/e/plpgsql) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`powa`](/ext/e/powa) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) [`pgsentinel`](/ext/e/pgsentinel) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_track_settings`](/ext/e/pg_track_settings) [`pg_track_optimizer`](/ext/e/pg_track_optimizer) |
@@ -38,13 +38,16 @@ weight: 6000
 {.ext-table .ext-table--rel}
 
 
+> SQL-only; requires dblink and plpgsql.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile` | `dblink`, `plpgsql` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-profile` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile` | `dblink`, `plpgsql` |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile_$v` | `postgresql$v-contrib` |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-profile` | `postgresql-contrib-$v` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -294,10 +297,10 @@ weight: 6000
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_profile` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `pg_profile` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_profile         # 构建 DEB 包
+pig build pkg pg_profile         # 构建 RPM / DEB 包
 ```
 
 
@@ -311,7 +314,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_profile;          # 当前活跃 PG 版本安装
 ```
 
@@ -427,7 +430,7 @@ SELECT * FROM v_sample_timings;
 
 ### 推荐配置
 
-```text
+```
 track_activities = on
 track_counts = on
 track_io_timing = on

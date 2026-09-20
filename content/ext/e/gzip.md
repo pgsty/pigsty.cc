@@ -11,10 +11,10 @@ weight: 4010
     <div class="ext-card__title">pramsey/pgsql-gzip</div>
     <div class="ext-card__desc">https://github.com/pramsey/pgsql-gzip</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-gzip-1.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-gzip-1.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgsql-gzip-1.1.0.tar.gz</div>
-    <div class="ext-card__desc">pgsql-gzip-1.1.0.tar.gz</div>
+    <div class="ext-card__title">pgsql-gzip-1.1.1.tar.gz</div>
+    <div class="ext-card__desc">pgsql-gzip-1.1.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 4010
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_gzip`**](/ext/e/gzip) | `1.1.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_gzip`**](/ext/e/gzip) | `1.1.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,20 +42,20 @@ weight: 4010
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_gzip` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgsql_gzip_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-gzip` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_gzip` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pgsql_gzip_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-gzip` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
-| el8.aarch64 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
-| el9.x86_64 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 |
-| el9.aarch64 | AVAIL PIGSTY 1.1.0 6 | AVAIL PIGSTY 1.1.0 6 | AVAIL PIGSTY 1.1.0 6 | AVAIL PIGSTY 1.1.0 6 | AVAIL PIGSTY 1.1.0 6 |
-| el10.x86_64 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 |
-| el10.aarch64 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 | AVAIL PIGSTY 1.1.0 4 |
+| el8.x86_64 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 |
+| el8.aarch64 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 | AVAIL PGDG 1.1.1 4 |
+| el9.x86_64 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 |
+| el9.aarch64 | AVAIL PGDG 1.1.1 7 | AVAIL PGDG 1.1.1 7 | AVAIL PGDG 1.1.1 7 | AVAIL PGDG 1.1.1 7 | AVAIL PGDG 1.1.1 7 |
+| el10.x86_64 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 |
+| el10.aarch64 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 | AVAIL PGDG 1.1.1 5 |
 | d12.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
@@ -66,26 +66,32 @@ weight: 4010
 | u24.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
+@ el8.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_gzip_18-1.1.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_18-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_gzip_18-1.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_gzip_18-1.0.0-6PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_gzip_18-1.1.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_18-1.1.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 13.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_gzip_18-1.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_gzip_18-1.0.0-6PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.1.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_18-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.0.0-6PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.1 13.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.1.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_18-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-6PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.1.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_18-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.0.0-6PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_gzip_18-1.1.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_18-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_gzip_18-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.aarch64.rpm
@@ -100,26 +106,32 @@ weight: 4010
 @ u24.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~resolute_amd64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~resolute_arm64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_gzip_17-1.1.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_gzip_17-1.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_gzip_17-1.0.0-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_gzip_17-1.1.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 13.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_gzip_17-1.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_gzip_17-1.0.0-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.1.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.0.0-3PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.1 13.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.1.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-3PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.1.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.0.0-6PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_gzip_17-1.1.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_gzip_17-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.aarch64.rpm
@@ -134,26 +146,32 @@ weight: 4010
 @ u24.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~resolute_amd64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~resolute_arm64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_gzip_16-1.1.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_gzip_16-1.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_gzip_16-1.0.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_gzip_16-1.1.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 13.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_gzip_16-1.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_gzip_16-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.1.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.0.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.1 13.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.1.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.1.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.0.0-6PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_gzip_16-1.1.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_gzip_16-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.aarch64.rpm
@@ -168,26 +186,32 @@ weight: 4010
 @ u24.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~resolute_amd64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~resolute_arm64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_gzip_15-1.1.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_gzip_15-1.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_gzip_15-1.0.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_gzip_15-1.1.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 13.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_gzip_15-1.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_gzip_15-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.1.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.0.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.1 13.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.1.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.1.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.0.0-6PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_gzip_15-1.1.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_gzip_15-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.aarch64.rpm
@@ -202,26 +226,32 @@ weight: 4010
 @ u24.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~resolute_amd64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~resolute_arm64.deb pigsty 1.1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_gzip_14-1.1.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.1.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_gzip_14-1.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_gzip_14-1.0.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.1 14.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_gzip_14-1.1.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 13.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_gzip_14-1.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_gzip_14-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.1.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.0.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.1 13.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.1.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.1.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.0.0-6PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.1 14.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_gzip_14-1.1.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_gzip_14-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.aarch64.rpm
@@ -257,7 +287,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_gzip;          # 当前活跃 PG 版本安装
 ```
 
@@ -305,7 +335,7 @@ CREATE EXTENSION gzip;
 
 本扩展正是为此而设计的。
 
-本扩展 **不适用于** 存储压缩场景。PostgreSQL 本身已经具备 [元组压缩](https://www.postgresql.org/docs/current/storage-toast.html) 机制，当元组足够大时会自动进行压缩，手动使用本函数预压缩数据并不会进一步减小存储空间。
+本扩展**不适用于**存储压缩场景。PostgreSQL 本身已经具备[元组压缩](https://www.postgresql.org/docs/current/storage-toast.html)机制，当元组足够大时会自动进行压缩，手动使用本函数预压缩数据并不会进一步减小存储空间。
 
 
 * `gzip(uncompressed BYTEA, [compression_level INTEGER])` 返回 `BYTEA`
@@ -324,7 +354,7 @@ CREATE EXTENSION gzip;
     --------------------------------------------------------------------------
      \x1f8b08000000000000132bc9c82c5600a2dc4a851282ccd48a12002e7a22ff30000000
 
-等等，压缩后的输出怎么反而更长了？！其实并非如此，只是 **看起来** 更长罢了，因为十六进制表示中每个字节需要两个十六进制字符。原始字符串的十六进制表示如下：
+等等，压缩后的输出怎么反而更长了？！其实并非如此，只是**看起来**更长罢了，因为十六进制表示中每个字节需要两个十六进制字符。原始字符串的十六进制表示如下：
 
     > SELECT 'this is my this is my this is my this is my text'::bytea;
 

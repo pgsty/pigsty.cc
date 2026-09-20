@@ -11,10 +11,10 @@ weight: 3220
     <div class="ext-card__title">osdldbt/dbt2</div>
     <div class="ext-card__desc">https://github.com/osdldbt/dbt2</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/dbt2-0.61.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/dbt2-0.62.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">dbt2-0.61.7.tar.gz</div>
-    <div class="ext-card__desc">dbt2-0.61.7.tar.gz</div>
+    <div class="ext-card__title">dbt2-0.62.0.tar.gz</div>
+    <div class="ext-card__desc">dbt2-0.62.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 3220
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`dbt2`**](/ext/e/dbt2) | `0.61.7` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license artistic20" href="/ext/license#artistic20">Artistic-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`dbt2`**](/ext/e/dbt2) | `0.62.0` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license artistic20" href="/ext/license#artistic20">Artistic-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,27 +38,27 @@ weight: 3220
 {.ext-table .ext-table--rel}
 
 
-> Package/source version 0.61.7; SQL extension version 0.45.0. This package contains the PostgreSQL stored-function extension, not the full DBT-2 benchmark toolchain.
+> Package 0.62.0; SQL version 0.46.0.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.61.7` | {{< pgvers "18,17,16,15,14" >}} | `dbt2` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.61.7` | {{< pgvers "18,17,16,15,14" >}} | `dbt2-pg$v-extensions` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.61.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-dbt2` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.62.0` | {{< pgvers "18,17,16,15,14" >}} | `dbt2` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.62.0` | {{< pgvers "18,17,16,15,14" >}} | `dbt2-pg$v-extensions` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.62.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-dbt2` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PGDG 0.53.7 1 | AVAIL PGDG 0.53.7 5 | AVAIL PGDG 0.53.7 6 |
-| el8.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PGDG 0.53.7 1 | AVAIL PGDG 0.53.7 4 | AVAIL PGDG 0.53.7 4 |
-| el9.x86_64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 5 | AVAIL PGDG 0.61.7 9 | AVAIL PGDG 0.61.7 8 |
-| el9.aarch64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 5 | AVAIL PGDG 0.61.7 9 | AVAIL PGDG 0.61.7 9 |
-| el10.x86_64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 |
-| el10.aarch64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 |
+| el8.x86_64 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 6 | AVAIL PGDG 0.62.0 7 |
+| el8.aarch64 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 2 | AVAIL PGDG 0.62.0 5 | AVAIL PGDG 0.62.0 5 |
+| el9.x86_64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 6 | AVAIL PGDG 0.62.0 10 | AVAIL PGDG 0.62.0 9 |
+| el9.aarch64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 6 | AVAIL PGDG 0.62.0 10 | AVAIL PGDG 0.62.0 10 |
+| el10.x86_64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 |
+| el10.aarch64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 |
 | d12.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
@@ -69,14 +69,20 @@ weight: 3220
 | u24.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
+@ el8.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm pigsty 0.61.7 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.aarch64.rpm pigsty 0.61.7 28.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.62.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm pgdg 0.61.7 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/dbt2-pg18-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm pgdg 0.61.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/dbt2-pg18-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.62.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm pgdg 0.61.7 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/dbt2-pg18-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm pgdg 0.61.7 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/dbt2-pg18-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.62.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 178.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
@@ -89,17 +95,23 @@ weight: 3220
 @ u24.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 193.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 196.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 196.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm pigsty 0.61.7 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.aarch64.rpm pigsty 0.61.7 28.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.62.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm pgdg 0.61.7 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/dbt2-pg17-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm pgdg 0.61.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/dbt2-pg17-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm pgdg 0.61.6 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/dbt2-pg17-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.62.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm pgdg 0.61.7 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/dbt2-pg17-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm pgdg 0.61.7 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/dbt2-pg17-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm pgdg 0.61.6 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/dbt2-pg17-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.62.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm pgdg 0.61.6 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
@@ -113,21 +125,27 @@ weight: 3220
 @ u24.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 192.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 193.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 193.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm pgdg 0.53.7 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.62.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm pgdg 0.61.7 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm pgdg 0.61.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm pgdg 0.61.6 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.7-1PGDG.rhel9.x86_64.rpm pgdg 0.53.7 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.53.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.6-1PGDG.rhel9.x86_64.rpm pgdg 0.53.6 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/dbt2-pg16-extensions-0.53.6-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.62.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm pgdg 0.61.7 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm pgdg 0.61.7 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm pgdg 0.61.6 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.7-1PGDG.rhel9.aarch64.rpm pgdg 0.53.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.53.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.6-1PGDG.rhel9.aarch64.rpm pgdg 0.53.6 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/dbt2-pg16-extensions-0.53.6-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.62.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm pgdg 0.61.6 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
@@ -141,15 +159,18 @@ weight: 3220
 @ u24.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 177.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 180.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 179.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm pgdg 0.53.4 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.50.1-1.rhel8.x86_64.rpm pgdg 0.50.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.50.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.49.1-1.rhel8.x86_64.rpm pgdg 0.49.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.49.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.48.7-1.rhel8.x86_64.rpm pgdg 0.48.7 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.48.7-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm pgdg 0.53.7 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.aarch64.rpm pgdg 0.53.4 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.50.1-1.rhel8.aarch64.rpm pgdg 0.50.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/dbt2-pg15-extensions-0.50.1-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.49.1-1.rhel8.aarch64.rpm pgdg 0.49.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/dbt2-pg15-extensions-0.49.1-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.62.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm pgdg 0.61.7 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm pgdg 0.61.6 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm
@@ -159,6 +180,7 @@ weight: 3220
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.49.1-1.rhel9.x86_64.rpm pgdg 0.49.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.49.1-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.48.7-1.rhel9.x86_64.rpm pgdg 0.48.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.48.7-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.48.3-2.rhel9.x86_64.rpm pgdg 0.48.3 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/dbt2-pg15-extensions-0.48.3-2.rhel9.x86_64.rpm
+@ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.62.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm pgdg 0.61.7 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm pgdg 0.61.7 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm pgdg 0.61.6 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm
@@ -168,9 +190,11 @@ weight: 3220
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.49.1-1.rhel9.aarch64.rpm pgdg 0.49.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.49.1-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.48.7-1.rhel9.aarch64.rpm pgdg 0.48.7 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.48.7-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.48.3-2.rhel9.aarch64.rpm pgdg 0.48.3 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/dbt2-pg15-extensions-0.48.3-2.rhel9.aarch64.rpm
+@ el10.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.62.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm pgdg 0.61.6 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
@@ -184,16 +208,19 @@ weight: 3220
 @ u24.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 171.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 175.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 174.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm pgdg 0.53.4 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.50.1-1.rhel8.x86_64.rpm pgdg 0.50.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.50.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.49.1-1.rhel8.x86_64.rpm pgdg 0.49.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.49.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.48.7-1.rhel8.x86_64.rpm pgdg 0.48.7 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.48.7-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.48.3-2.rhel8.x86_64.rpm pgdg 0.48.3 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.48.3-2.rhel8.x86_64.rpm
+@ el8.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm pgdg 0.53.7 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.aarch64.rpm pgdg 0.53.4 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.50.1-1.rhel8.aarch64.rpm pgdg 0.50.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/dbt2-pg14-extensions-0.50.1-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.49.1-1.rhel8.aarch64.rpm pgdg 0.49.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/dbt2-pg14-extensions-0.49.1-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.62.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm pgdg 0.61.7 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm pgdg 0.61.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm pgdg 0.61.6 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel9.x86_64.rpm
@@ -202,6 +229,7 @@ weight: 3220
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.50.1-1.rhel9.x86_64.rpm pgdg 0.50.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.50.1-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.49.1-1.rhel9.x86_64.rpm pgdg 0.49.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.49.1-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.48.7-1.rhel9.x86_64.rpm pgdg 0.48.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/dbt2-pg14-extensions-0.48.7-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.62.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm pgdg 0.61.7 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm pgdg 0.61.7 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm pgdg 0.61.6 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel9.aarch64.rpm
@@ -211,9 +239,11 @@ weight: 3220
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.49.1-1.rhel9.aarch64.rpm pgdg 0.49.1 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.49.1-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.48.7-1.rhel9.aarch64.rpm pgdg 0.48.7 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.48.7-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.48.3-2.rhel9.aarch64.rpm pgdg 0.48.3 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/dbt2-pg14-extensions-0.48.3-2.rhel9.aarch64.rpm
+@ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.62.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm pgdg 0.61.6 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
@@ -231,10 +261,10 @@ weight: 3220
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `dbt2` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `dbt2` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg dbt2         # 构建 DEB 包
+pig build pkg dbt2         # 构建 RPM / DEB 包
 ```
 
 
@@ -248,7 +278,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install dbt2;          # 当前活跃 PG 版本安装
 ```
 

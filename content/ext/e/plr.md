@@ -20,7 +20,7 @@ weight: 3100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`plr`**](/ext/e/plr) | `8.4.8.6` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`plr`**](/ext/e/plr) | `8.4.8.7` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -40,9 +40,9 @@ weight: 3100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.6` | {{< pgvers "18,17,16,15,14" >}} | `plr` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.7` | {{< pgvers "18,17,16,15,14" >}} | `plr` | - |
 | [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.6` | {{< pgvers "18,17,16,15,14" >}} | `plr_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plr` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plr` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,16 +54,16 @@ weight: 3100
 | el9.aarch64 | AVAIL PGDG 8.4.8.6 6 | AVAIL PGDG 8.4.8.6 7 | AVAIL PGDG 8.4.8.6 8 | AVAIL PGDG 8.4.8.6 8 | AVAIL PGDG 8.4.8.6 8 |
 | el10.x86_64 | AVAIL PGDG 8.4.8.6 5 | AVAIL PGDG 8.4.8.6 5 | AVAIL PGDG 8.4.8.6 5 | AVAIL PGDG 8.4.8.6 5 | AVAIL PGDG 8.4.8.6 5 |
 | el10.aarch64 | AVAIL PGDG 8.4.8.6 6 | AVAIL PGDG 8.4.8.6 6 | AVAIL PGDG 8.4.8.6 6 | AVAIL PGDG 8.4.8.6 6 | AVAIL PGDG 8.4.8.6 6 |
-| d12.x86_64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| d12.aarch64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| d13.x86_64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| d13.aarch64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u22.x86_64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u22.aarch64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u24.x86_64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u24.aarch64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u26.x86_64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
-| u26.aarch64 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 | AVAIL PGDG 8.4.8.6 3 |
+| d12.x86_64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| d12.aarch64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| d13.x86_64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| d13.aarch64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u22.x86_64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u22.aarch64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u24.x86_64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u24.aarch64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u26.x86_64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
+| u26.aarch64 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 | AVAIL PGDG 8.4.8.7 3 |
 @ el8.x86_64 18 plr_18 plr_18-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.6 77.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plr_18-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plr_18 plr_18-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.4 77.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plr_18-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plr_18 plr_18-8.4.8-1PGDG.rhel8.x86_64.rpm pgdg 8.4.8 76.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plr_18-8.4.8-1PGDG.rhel8.x86_64.rpm
@@ -93,36 +93,36 @@ weight: 3100
 @ el10.aarch64 18 plr_18 plr_18-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plr_18-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 plr_18 plr_18-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plr_18-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 plr_18 plr_18-8.4.8-1PGDG.rhel10.aarch64.rpm pgdg 8.4.8 73.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plr_18-8.4.8-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg12+1_amd64.deb pgdg 8.4.8.7 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg12+1_amd64.deb pgdg 8.4.8.6 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg12+1_amd64.deb pgdg 8.4.8.4 135.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg12+1_amd64.deb pgdg 8.4.8.3 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg12+1_arm64.deb pgdg 8.4.8.7 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg12+1_arm64.deb pgdg 8.4.8.6 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg12+1_arm64.deb pgdg 8.4.8.4 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg12+1_arm64.deb pgdg 8.4.8.3 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg13+1_amd64.deb pgdg 8.4.8.7 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg13+1_amd64.deb pgdg 8.4.8.6 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg13+1_amd64.deb pgdg 8.4.8.4 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg13+1_amd64.deb pgdg 8.4.8.3 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg13+1_arm64.deb pgdg 8.4.8.7 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg13+1_arm64.deb pgdg 8.4.8.6 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg13+1_arm64.deb pgdg 8.4.8.4 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg13+1_arm64.deb pgdg 8.4.8.3 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.7 131.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.6 131.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.4 131.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.3 131.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.7 128.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.6 128.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.4 128.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.3 128.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.7 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.6 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.4 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.3 127.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.7 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.6 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.4 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.3 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.7 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.6 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.4 125.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.3 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.7 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.6 122.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.4 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-plr postgresql-18-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.3 122.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-18-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 plr_17 plr_17-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.6 77.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plr_17-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plr_17 plr_17-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.4 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plr_17-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plr_17 plr_17-8.4.8-1PGDG.rhel8.x86_64.rpm pgdg 8.4.8 76.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plr_17-8.4.8-1PGDG.rhel8.x86_64.rpm
@@ -156,36 +156,36 @@ weight: 3100
 @ el10.aarch64 17 plr_17 plr_17-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plr_17-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 plr_17 plr_17-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plr_17-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 plr_17 plr_17-8.4.8-1PGDG.rhel10.aarch64.rpm pgdg 8.4.8 73.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plr_17-8.4.8-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg12+1_amd64.deb pgdg 8.4.8.7 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg12+1_amd64.deb pgdg 8.4.8.6 135.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg12+1_amd64.deb pgdg 8.4.8.4 135.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg12+1_amd64.deb pgdg 8.4.8.3 135.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg12+1_arm64.deb pgdg 8.4.8.7 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg12+1_arm64.deb pgdg 8.4.8.6 132.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg12+1_arm64.deb pgdg 8.4.8.4 132.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg12+1_arm64.deb pgdg 8.4.8.3 132.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg13+1_amd64.deb pgdg 8.4.8.7 136.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg13+1_amd64.deb pgdg 8.4.8.6 136.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg13+1_amd64.deb pgdg 8.4.8.4 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg13+1_amd64.deb pgdg 8.4.8.3 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg13+1_arm64.deb pgdg 8.4.8.7 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg13+1_arm64.deb pgdg 8.4.8.6 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg13+1_arm64.deb pgdg 8.4.8.4 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg13+1_arm64.deb pgdg 8.4.8.3 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.7 155.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.6 155.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.4 155.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.3 155.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.7 152.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.6 152.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.4 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.3 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.7 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.6 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.4 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.3 127.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.7 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.6 123.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.4 123.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.3 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.7 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.6 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.4 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.3 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.7 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.6 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.4 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-plr postgresql-17-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.3 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-17-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 plr_16 plr_16-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.6 77.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plr_16-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plr_16 plr_16-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.4 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plr_16-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plr_16 plr_16-8.4.8-1PGDG.rhel8.x86_64.rpm pgdg 8.4.8 76.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plr_16-8.4.8-1PGDG.rhel8.x86_64.rpm
@@ -225,36 +225,36 @@ weight: 3100
 @ el10.aarch64 16 plr_16 plr_16-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plr_16-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 plr_16 plr_16-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 8.4.8.4 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plr_16-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 plr_16 plr_16-8.4.8-1PGDG.rhel10.aarch64.rpm pgdg 8.4.8 73.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plr_16-8.4.8-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg12+1_amd64.deb pgdg 8.4.8.7 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg12+1_amd64.deb pgdg 8.4.8.6 136.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg12+1_amd64.deb pgdg 8.4.8.4 135.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg12+1_amd64.deb pgdg 8.4.8.3 135.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg12+1_arm64.deb pgdg 8.4.8.7 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg12+1_arm64.deb pgdg 8.4.8.6 132.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg12+1_arm64.deb pgdg 8.4.8.4 132.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg12+1_arm64.deb pgdg 8.4.8.3 132.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg13+1_amd64.deb pgdg 8.4.8.7 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg13+1_amd64.deb pgdg 8.4.8.6 136.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg13+1_amd64.deb pgdg 8.4.8.4 135.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg13+1_amd64.deb pgdg 8.4.8.3 135.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg13+1_arm64.deb pgdg 8.4.8.7 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg13+1_arm64.deb pgdg 8.4.8.6 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg13+1_arm64.deb pgdg 8.4.8.4 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg13+1_arm64.deb pgdg 8.4.8.3 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.7 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.6 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.4 151.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.3 151.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.6 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.4 148.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.3 148.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.7 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.6 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.4 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.3 127.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.7 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.6 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.4 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.3 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.7 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.6 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.4 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.3 125.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.7 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.6 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.4 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-plr postgresql-16-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.3 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-16-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 plr_15 plr_15-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.6 78.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plr_15-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plr_15 plr_15-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.4 77.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plr_15-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plr_15 plr_15-8.4.8-1PGDG.rhel8.x86_64.rpm pgdg 8.4.8 76.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plr_15-8.4.8-1PGDG.rhel8.x86_64.rpm
@@ -294,36 +294,36 @@ weight: 3100
 @ el10.aarch64 15 plr_15 plr_15-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 8.4.8.4 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plr_15-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 plr_15 plr_15-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 8.4.8.4 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plr_15-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 plr_15 plr_15-8.4.8-1PGDG.rhel10.aarch64.rpm pgdg 8.4.8 74.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plr_15-8.4.8-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg12+1_amd64.deb pgdg 8.4.8.7 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg12+1_amd64.deb pgdg 8.4.8.6 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg12+1_amd64.deb pgdg 8.4.8.4 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg12+1_amd64.deb pgdg 8.4.8.3 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg12+1_arm64.deb pgdg 8.4.8.7 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg12+1_arm64.deb pgdg 8.4.8.6 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg12+1_arm64.deb pgdg 8.4.8.4 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg12+1_arm64.deb pgdg 8.4.8.3 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg13+1_amd64.deb pgdg 8.4.8.7 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg13+1_amd64.deb pgdg 8.4.8.6 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg13+1_amd64.deb pgdg 8.4.8.4 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg13+1_amd64.deb pgdg 8.4.8.3 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg13+1_arm64.deb pgdg 8.4.8.7 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg13+1_arm64.deb pgdg 8.4.8.6 132.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg13+1_arm64.deb pgdg 8.4.8.4 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg13+1_arm64.deb pgdg 8.4.8.3 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.7 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.6 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.4 151.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.3 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.6 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.4 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.3 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.7 127.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.6 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.4 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.3 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.7 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.6 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.4 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.3 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.7 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.6 125.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.4 125.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.3 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.7 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.6 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.4 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-plr postgresql-15-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.3 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-15-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 plr_14 plr_14-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.6 78.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plr_14-8.4.8.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plr_14 plr_14-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 8.4.8.4 77.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plr_14-8.4.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plr_14 plr_14-8.4.8-1PGDG.rhel8.x86_64.rpm pgdg 8.4.8 76.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plr_14-8.4.8-1PGDG.rhel8.x86_64.rpm
@@ -364,36 +364,36 @@ weight: 3100
 @ el10.aarch64 14 plr_14 plr_14-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 8.4.8.4 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plr_14-8.4.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 plr_14 plr_14-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 8.4.8.4 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plr_14-8.4.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 plr_14 plr_14-8.4.8-1PGDG.rhel10.aarch64.rpm pgdg 8.4.8 74.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plr_14-8.4.8-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg12+1_amd64.deb pgdg 8.4.8.7 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg12+1_amd64.deb pgdg 8.4.8.6 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg12+1_amd64.deb pgdg 8.4.8.4 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg12+1_amd64.deb pgdg 8.4.8.3 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg12+1_arm64.deb pgdg 8.4.8.7 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg12+1_arm64.deb pgdg 8.4.8.6 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg12+1_arm64.deb pgdg 8.4.8.4 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg12+1_arm64.deb pgdg 8.4.8.3 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg13+1_amd64.deb pgdg 8.4.8.7 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg13+1_amd64.deb pgdg 8.4.8.6 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg13+1_amd64.deb pgdg 8.4.8.4 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg13+1_amd64.deb pgdg 8.4.8.3 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg13+1_arm64.deb pgdg 8.4.8.7 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg13+1_arm64.deb pgdg 8.4.8.6 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg13+1_arm64.deb pgdg 8.4.8.4 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg13+1_arm64.deb pgdg 8.4.8.3 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.7 151.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.6 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.4 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb pgdg 8.4.8.3 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.7 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.6 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.4 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb pgdg 8.4.8.3 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.7 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.6 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.4 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb pgdg 8.4.8.3 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.7 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.6 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.4 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb pgdg 8.4.8.3 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.7 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.6 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.4 125.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb pgdg 8.4.8.3 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.7 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.6 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.4 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-plr postgresql-14-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb pgdg 8.4.8.3 122.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plr/postgresql-14-plr_8.4.8.3-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -407,7 +407,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install plr;          # 当前活跃 PG 版本安装
 ```
 

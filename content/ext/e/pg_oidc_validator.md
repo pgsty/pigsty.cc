@@ -38,27 +38,27 @@ weight: 7170
 {.ext-table .ext-table--rel}
 
 
-> Configure oauth_validator_libraries=pg_oidc_validator; 1.1.0 adds discovery_url_override; RPM is available on EL10 only while DEB covers all supported Debian and Ubuntu targets.
+> PG18 only; configure oauth_validator_libraries. RPM: PGDG; DEB: PIGSTY.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18" >}} | `pg_oidc_validator` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18" >}} | `pg_oidc_validator_$v` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.1.0` | {{< pgvers "18" >}} | `pg_oidc_validator` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.0` | {{< pgvers "18" >}} | `pg_oidc_validator_$v` | - |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18" >}} | `postgresql-$v-pg-oidc-validator` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.1.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.1.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.x86_64 | AVAIL PGDG 1.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.aarch64 | AVAIL PGDG 1.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 1.1.0 5 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.1.0 4 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | d12.x86_64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -69,10 +69,15 @@ weight: 7170
 | u24.aarch64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.x86_64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.aarch64 | AVAIL PIGSTY 1.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el9.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.1.0 498.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_oidc_validator_18-1.1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.1.0 460.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_oidc_validator_18-1.1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 540.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_oidc_validator_18-1.1.0-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGSTY.el10.x86_64.rpm pigsty 1.1.0 142.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_oidc_validator_18-1.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.1.0 540.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_oidc_validator_18-1.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 173.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_oidc_validator_18-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_oidc_validator_18 pg_oidc_validator_18-0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.2 173.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_oidc_validator_18-0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGSTY.el10.aarch64.rpm pigsty 1.1.0 129.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_oidc_validator_18-1.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.1.0 498.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_oidc_validator_18-1.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_oidc_validator_18 pg_oidc_validator_18-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 155.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_oidc_validator_18-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_oidc_validator_18 pg_oidc_validator_18-0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.2 154.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_oidc_validator_18-0.2-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-oidc-validator postgresql-18-pg-oidc-validator_1.1.0-1PGSTY~bookworm_amd64.deb pigsty 1.1.0 108.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-oidc-validator/postgresql-18-pg-oidc-validator_1.1.0-1PGSTY~bookworm_amd64.deb
@@ -106,7 +111,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_oidc_validator;          # 当前活跃 PG 版本安装
 ```
 

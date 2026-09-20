@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_tracing;          # 当前活跃 PG 版本安装
 ```
 
@@ -269,7 +269,7 @@ SELECT pg_tracing_reset();
 
 在 `postgresql.conf` 中配置：
 
-```text
+```
 pg_tracing.otel_endpoint = http://127.0.0.1:4318/v1/traces
 pg_tracing.otel_naptime = 2000
 ```

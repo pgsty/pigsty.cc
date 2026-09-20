@@ -11,10 +11,10 @@ weight: 7500
     <div class="ext-card__title">percona/pg_tde</div>
     <div class="ext-card__desc">https://github.com/percona/pg_tde</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/percona-pg_tde18-2.2.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/percona-pg_tde18-2.2.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">percona-pg_tde18-2.2.1.tar.gz</div>
-    <div class="ext-card__desc">percona-pg_tde18-2.2.1.tar.gz</div>
+    <div class="ext-card__title">percona-pg_tde18-2.2.2.tar.gz</div>
+    <div class="ext-card__desc">percona-pg_tde18-2.2.2.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7500
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_tde`**](/ext/e/pg_tde) | `2.2.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_tde`**](/ext/e/pg_tde) | `2.2.2` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 7500
 {.ext-table .ext-table--rel}
 
 
-> works on percona postgres tde fork
+> Percona PostgreSQL 18.6 only; requires preload.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.1` | {{< pgvers "18" >}} | `pg_tde` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18" >}} | `pgtde-$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18" >}} | `pgtde-$v` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.2` | {{< pgvers "18" >}} | `pg_tde` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.6` | {{< pgvers "18" >}} | `pgtde-$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.6` | {{< pgvers "18" >}} | `pgtde-$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -87,6 +87,14 @@ weight: 7500
 @ u26.aarch64 18 pgtde-18 pgtde-18_18.4-2PIGSTY~resolute_arm64.deb pigsty 18.4 10.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgtde-18/pgtde-18_18.4-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_tde` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pg_tde         # 构建 RPM / DEB 包
+```
+
 
 ## 安装
 
@@ -98,7 +106,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_tde;          # 当前活跃 PG 版本安装
 ```
 

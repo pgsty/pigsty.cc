@@ -11,10 +11,10 @@ weight: 2930
     <div class="ext-card__title">rdkit/rdkit</div>
     <div class="ext-card__desc">https://github.com/rdkit/rdkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit_202503.6.orig.tar.xz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit_202603.6.orig.tar.xz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">rdkit_202503.6.orig.tar.xz</div>
-    <div class="ext-card__desc">rdkit_202503.6.orig.tar.xz</div>
+    <div class="ext-card__title">rdkit_202603.6.orig.tar.xz</div>
+    <div class="ext-card__desc">rdkit_202603.6.orig.tar.xz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2930
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`rdkit`**](/ext/e/rdkit) | `202503.6` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`rdkit`**](/ext/e/rdkit) | `202603.6` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 2930
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY RPM and DEB packages provide 202503.6 for PostgreSQL 14-18; legacy 202303.3 packages remain in some repositories.
+> SQL version 4.8.0; RPM supports PG14-18 on EL9+, DEB supports PG14-17.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `202503.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202503.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202503.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-rdkit` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit_$v` | `rdkit` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-rdkit` | `librdkit1t64` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -202,7 +202,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install rdkit;          # 当前活跃 PG 版本安装
 ```
 

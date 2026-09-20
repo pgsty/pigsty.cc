@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install preprepare;          # 当前活跃 PG 版本安装
 ```
 
@@ -215,7 +215,7 @@ pre_prepare 在连接建立时自动准备 SQL 语句，使客户端可以直接
 
 在 `postgresql.conf` 中配置：
 
-```text
+```
 preprepare.relation = 'preprepare.statements'
 preprepare.at_init = on    -- 连接时自动准备（需要 local_preload_libraries）
 ```

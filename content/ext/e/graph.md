@@ -11,10 +11,10 @@ weight: 2630
     <div class="ext-card__title">evokoa/pggraph</div>
     <div class="ext-card__desc">https://github.com/evokoa/pggraph</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pggraph-1.0.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pggraph-1.2.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pggraph-1.0.0.tar.gz</div>
-    <div class="ext-card__desc">pggraph-1.0.0.tar.gz</div>
+    <div class="ext-card__title">pggraph-1.2.0.tar.gz</div>
+    <div class="ext-card__desc">pggraph-1.2.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2630
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pggraph`**](/ext/e/graph) | `1.0.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pggraph`**](/ext/e/graph) | `1.2.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,9 +45,9 @@ weight: 2630
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pggraph` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pggraph_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pggraph` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pggraph` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pggraph_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pggraph` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -170,7 +170,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pggraph;          # 当前活跃 PG 版本安装
 ```
 
@@ -212,16 +212,18 @@ CREATE EXTENSION graph;
 
 来源：
 
-- [pgGraph v1.0.0 README](https://github.com/evokoa/pggraph/blob/v1.0.0/README.md)
-- [v1.0.0 发行说明](https://github.com/evokoa/pggraph/blob/v1.0.0/docs/release-notes.mdx)
-- [SQL API 参考](https://github.com/evokoa/pggraph/blob/v1.0.0/docs/user_guide/api-reference.mdx)
-- [Schema 注册](https://github.com/evokoa/pggraph/blob/v1.0.0/docs/user_guide/schema-registration.mdx)
-- [管理与安全](https://github.com/evokoa/pggraph/blob/v1.0.0/docs/user_guide/administration-and-security.mdx)
-- [v0.1.8 到 v1.0.0 迁移指南](https://github.com/evokoa/pggraph/blob/v1.0.0/docs/user_guide/migration-1-0.mdx)
+- [pgGraph v1.2.0 README](https://github.com/Evokoa/pgGraph/blob/v1.2.0/README.md)
+- [v1.2.0 发行说明](https://github.com/Evokoa/pgGraph/releases/tag/v1.2.0)
+- [SQL API 参考](https://github.com/Evokoa/pgGraph/blob/v1.2.0/docs/user_guide/api-reference.mdx)
+- [Schema 注册](https://github.com/Evokoa/pgGraph/blob/v1.2.0/docs/user_guide/schema-registration.mdx)
+- [管理与安全](https://github.com/Evokoa/pgGraph/blob/v1.2.0/docs/user_guide/administration-and-security.mdx)
+- [故障排查](https://github.com/Evokoa/pgGraph/blob/v1.2.0/docs/user_guide/troubleshooting.mdx)
+- [扩展控制文件](https://github.com/Evokoa/pgGraph/blob/v1.2.0/graph/graph.control)
+- [v1.1.0 到 v1.2.0 升级 SQL](https://github.com/Evokoa/pgGraph/blob/v1.2.0/graph/sql/graph--1.1.0--1.2.0.sql)
 
 `pggraph` 是包名与 PGXN 发行名，但安装到 PostgreSQL 中的扩展名是 `graph`。它从普通 PostgreSQL 表构建派生图产物，并以源表作为事实来源，通过 `graph` schema 提供图搜索、遍历、最短路径、GQL 风格读取，以及部分映射式写入。
 
-v1.0.0 是首个 production 发行版。它支持 PostgreSQL 14-18、命名图、按图隔离的授权与配额、持久同步、有界遍历与分析、维护任务，以及选定的 GQL 读写 profile。它不声明支持完整 ISO GQL、完整 openCypher 或公开 SQL/PGQ `GRAPH_TABLE` surface。标准 PostgreSQL SQLSTATE 会与稳定的 `PGxxx` detail 配对，供应用诊断。
+版本 1.2.0 支持 PostgreSQL 14-18、命名图、按图隔离的授权与配额、持久同步、有界遍历与分析、维护任务，以及选定的 GQL 读写 profile。它还通过有边界的开放词汇类型字典，移除了历史上 254 个关系标签的上限。它不声明支持完整 ISO GQL、完整 openCypher 或公开 SQL/PGQ `GRAPH_TABLE` surface。标准 PostgreSQL SQLSTATE 会与稳定的 `PGxxx` detail 配对，供应用诊断。
 
 ### 基本图构建
 
@@ -327,6 +329,31 @@ FROM graph.shortest_path(
 
 `hydrate := false` 返回紧凑的图坐标。启用 hydration 后，源表行的可见性仍由 PostgreSQL ACL 与 RLS 控制。过期坐标会失败关闭，而不会伪造行。
 
+### 关系类型与注册恢复
+
+版本 1.2.0 允许单个图包含最多 1,000,000 种关系类型。每个 UTF-8 标签上限为 1,024 字节，字典累计上限为 256 MiB，关系类型过滤数组在分配前受 4,096 项和 4 MiB 限制。`graph.status()` 只会按稳定 ID 顺序预览前 64 个已提交类型；要分页读取完整有效字典，请使用：
+
+```sql
+SELECT type_id, label
+FROM graph.edge_types(after_type_id := 0, max_rows := 1000);
+```
+
+通过触发器同步提交的动态标签会由 `graph.apply_sync()` 加入字典，无需全量重建。不存在的关系类型会返回无匹配，而端点映射存在歧义时会失败关闭。
+
+无参形式会删除选中图的派生引擎与产物，但保留注册。只在表重建或逻辑恢复导致 relation identity 过期时，才使用 boolean 重载：
+
+```sql
+SELECT graph.reset();
+
+-- This also clears table, edge, and filter registrations for the selected graph.
+SELECT graph.reset(true);
+-- Reapply reviewed graph.add_table(...), graph.add_edge(...), and
+-- graph.add_filter_column(...) calls before rebuilding.
+SELECT * FROM graph.build();
+```
+
+两种形式都不会修改 PostgreSQL 源表或其他命名图。`graph.reset(true)` 会清空选中图的注册目录，因此使用前必须保留已审核的注册 SQL。
+
 ### GQL 查询与关系写入
 
 ```sql
@@ -358,32 +385,23 @@ SELECT * FROM graph.projection_status();
 
 图管理覆盖 catalog 变更、构建、同步回放、维护、配额、运行时图加载和全局分析。命名图权限包括 `read`、`write`、`build`、`admin`，但图级 `read` 本身不够：hydrated 读取仍需要源表 `SELECT` 权限。选中图的 tenant 也会默认约束遍历、搜索、GQL 与 Cypher 调用，除非显式传入匹配的 tenant。
 
-### 从 Alpha 版本迁移
+### 升级到 1.2.0
 
-v0.1.8 到 v1.0.0 的迁移会保留源表，但不是就地 catalog 或 binary 更新。应先备份并测试恢复、盘点注册和依赖对象、停止图写入者与调度器，再在事务中预检删除：
-
-```sql
-BEGIN;
-DROP EXTENSION graph;
-ROLLBACK;
-```
-
-检查全部依赖对象后，删除 alpha 扩展、安装 v1.0.0，只重新应用经过复核的公开注册调用，再从 PostgreSQL 源表重建：
+1.1.0 到 1.2.0 的 catalog 更新是加法式的：它会安装 `graph.edge_types()` 和 `graph.reset(boolean)`，但不替换已有函数对象、owner 或显式授权。
 
 ```sql
-DROP EXTENSION graph CASCADE;
-CREATE EXTENSION graph VERSION '1.0.0';
+ALTER EXTENSION graph UPDATE TO '1.2.0';
 
--- Reapply graph.add_table(...), graph.add_edge(...), and related calls.
-SELECT * FROM graph.build();
-SELECT * FROM graph.status();
+SELECT extversion
+FROM pg_extension
+WHERE extname = 'graph';
 ```
 
-`CASCADE` 可能删除应用视图、函数、生成的同步对象及其他依赖。Alpha catalog、`.pggraph` 文件、manifest 与 projection segment 都不是 v1.0.0 可移植状态。回滚必须使用匹配的 alpha 软件包恢复已测试备份，再重建旧版图状态。
+已有 v6 产物仍可读取。新构建会发布 v7 产物；当基础产物本身需要表示超过 254 种关系类型时，应重新构建。不支持就地降级，因为 1.1 binary 无法读取 v7 产物。回滚需要使用匹配的 1.1.0 软件包恢复升级前的 PostgreSQL 备份，再从恢复后的源表重建派生图状态。
 
 ### 注意事项
 
 - 源表仍是事实来源。图产物、projection 文件、同步状态和运行时引擎都是派生状态，可从源表重建。
 - 注册信息变化后需要运行 `graph.build()` 或图级构建辅助函数；依赖增量 projection 时，应使用 sync/maintenance API。
 - `graph._graphs`、授权、配额、任务、同步日志、projection 元数据等内部表是实现细节，应用代码应使用公开 SQL 函数。
-- v1.0.0 源码构建使用 Rust 1.96 与 `cargo-pgrx` 0.19.1。上游支持 PostgreSQL 14 到 18，默认 release gate 目标是 PostgreSQL 17。
+- 版本 1.2.0 源码构建使用 Rust 1.96 与 `cargo-pgrx` 0.19.1。上游支持 PostgreSQL 14 到 18，默认 release gate 目标是 PostgreSQL 17。

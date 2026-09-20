@@ -11,10 +11,10 @@ weight: 5210
     <div class="ext-card__title">cybertec-postgresql/pg_crash</div>
     <div class="ext-card__desc">https://github.com/cybertec-postgresql/pg_crash</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_crash-1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_crash-0.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_crash-1.0.tar.gz</div>
-    <div class="ext-card__desc">pg_crash-1.0.tar.gz</div>
+    <div class="ext-card__title">pg_crash-0.3.tar.gz</div>
+    <div class="ext-card__desc">pg_crash-0.3.tar.gz</div>
   </a>
 </div>
 
@@ -25,12 +25,12 @@ weight: 5210
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_crash`**](/ext/e/pg_crash) | `1.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_crash`**](/ext/e/pg_crash) | `0.3` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 5210  | [**`pg_crash`**](/ext/e/pg_crash) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 5210  | [**`pg_crash`**](/ext/e/pg_crash) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_savior`](/ext/e/pg_savior) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) |
@@ -38,13 +38,16 @@ weight: 5210
 {.ext-table .ext-table--rel}
 
 
+> Requires preload; empty extension SQL preserves historical 1.0 catalog compatibility.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-crash` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-crash` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -201,7 +204,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_crash;          # 当前活跃 PG 版本安装
 ```
 
@@ -237,6 +240,12 @@ shared_preload_libraries = 'pg_crash';
 ```
 
 
+**创建扩展**：
+
+```sql
+CREATE EXTENSION pg_crash;
+```
+
 
 
 
@@ -250,7 +259,7 @@ pg_crash 是一个混沌工程扩展，定期向 PostgreSQL 后端进程发送 k
 
 添加到 `postgresql.conf`：
 
-```text
+```
 shared_preload_libraries = 'pg_crash'
 
 # 要发送的 POSIX 信号（空格分隔）

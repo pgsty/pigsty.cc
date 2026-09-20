@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install wrappers;          # 当前活跃 PG 版本安装
 ```
 
@@ -251,7 +251,7 @@ CREATE FOREIGN TABLE stripe_customers (
 
 ### 版本 0.6.2
 
-`v0.6.2` 版本保持了相同的扩展模型，并增加了以下内容：
+`v0.6.2`版本保持了相同的扩展模型，并增加了以下内容：
 
 - MongoDB FDW 支持读写操作
 - 在 WASM 封装器中使用会话变量凭证进行每次请求的身份验证

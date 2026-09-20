@@ -26,9 +26,9 @@ icon: fas fa-globe
 | [`h3_postgis`](/ext/e/h3_postgis) | [`pg_h3`](https://github.com/zachasme/h3-pg) | `4.2.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | H3与PostGIS集成的扩展插件 |
 | [`q3c`](/ext/e/q3c) | [`q3c`](https://github.com/segasai/q3c) | `2.0.5` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Q3C天空索引插件 |
 | [`ogr_fdw`](/ext/e/ogr_fdw) | [`ogr_fdw`](https://github.com/pramsey/pgsql-ogr-fdw) | `1.1.9` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | GIS 数据外部数据源包装器 |
-| [`geoip`](/ext/e/geoip) | [`geoip`](https://github.com/tvondra/geoip) | `0.3.0` | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器） |
+| [`geoip`](/ext/e/geoip) | [`geoip`](https://github.com/tvondra/geoip) | `0.4.0` | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器） |
 | [`pg_polyline`](/ext/e/pg_polyline) | [`pg_polyline`](https://github.com/yihong0618/pg_polyline) | `0.0.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Google快速Polyline编码解码扩展 |
-| [`pg_eviltransform`](/ext/e/pg_eviltransform) | [`pg_eviltransform`](https://github.com/aiyou178/pg_eviltransform) | `0.0.4` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展 |
+| [`pg_eviltransform`](/ext/e/pg_eviltransform) | [`pg_eviltransform`](https://github.com/aiyou178/pg_eviltransform) | `0.0.5` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展 |
 | [`pg_geohash`](/ext/e/pg_geohash) | [`pg_geohash`](https://github.com/jistok/pg_geohash) | `1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用GeoHash处理空间坐标的函数包 |
 | [`pghydro`](/ext/e/pghydro) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL/PostGIS 排水网络分析核心扩展 |
 | [`pgh_raster`](/ext/e/pgh_raster) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 栅格水文分析扩展 |
@@ -39,7 +39,7 @@ icon: fas fa-globe
 | [`pgh_consistency`](/ext/e/pgh_consistency) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro Pfafstetter 一致性检查扩展 |
 | [`mobilitydb`](/ext/e/mobilitydb) | [`mobilitydb`](https://github.com/MobilityDB/MobilityDB) | `1.3.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | MobilityDB地理空间投影数据管理分析平台 |
 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | [`mobilitydb`](https://github.com/MobilityDB/MobilityDB) | `1.3.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | MobilityDB随机数据生成函数 |
-| [`tzf`](/ext/e/tzf) | [`pg_tzf`](https://github.com/ringsaturn/pg-tzf) | `0.3.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 快速根据GPS经纬度坐标查找时区 |
+| [`tzf`](/ext/e/tzf) | [`pg_tzf`](https://github.com/ringsaturn/pg-tzf) | `0.3.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 快速根据GPS经纬度坐标查找时区 |
 | [`earthdistance`](/ext/e/earthdistance) | [`earthdistance`](https://www.postgresql.org/docs/current/earthdistance.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 计算地球表面上的大圆距离 |
 | [`qdgc`](/ext/e/qdgc) | [`qdgc`](https://pgxn.org/dist/qdgc/0.1.0/) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
 | [`qdgc_postgis`](/ext/e/qdgc_postgis) | [`qdgc`](https://pgxn.org/dist/qdgc/0.1.0/) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 为 QDGC 增加 PostGIS geometry/geography 绑定与区域到网格单元的填充能力。 |
@@ -316,7 +316,7 @@ icon: fas fa-globe
 
 ## geoip {#geoip}
 
-[**`geoip`**](/ext/e/geoip) - `0.3.0` : IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器）
+[**`geoip`**](/ext/e/geoip) - `0.4.0` : IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器）
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -354,7 +354,7 @@ icon: fas fa-globe
 
 ## pg_eviltransform {#pg_eviltransform}
 
-[**`pg_eviltransform`**](/ext/e/pg_eviltransform) - `0.0.4` : 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展
+[**`pg_eviltransform`**](/ext/e/pg_eviltransform) - `0.0.5` : 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -563,7 +563,7 @@ icon: fas fa-globe
 
 ## tzf {#tzf}
 
-[**`pg_tzf`**](/ext/e/tzf) - `0.3.0` : 快速根据GPS经纬度坐标查找时区
+[**`pg_tzf`**](/ext/e/tzf) - `0.3.1` : 快速根据GPS经纬度坐标查找时区
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

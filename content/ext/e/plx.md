@@ -11,10 +11,10 @@ weight: 3140
     <div class="ext-card__title">commandprompt/plx</div>
     <div class="ext-card__desc">https://github.com/commandprompt/plx</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plx-1.3.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plx-2.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">plx-1.3.1.tar.gz</div>
-    <div class="ext-card__desc">plx-1.3.1.tar.gz</div>
+    <div class="ext-card__title">plx-2.0.1.tar.gz</div>
+    <div class="ext-card__desc">plx-2.0.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 3140
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`plx`**](/ext/e/plx) | `1.3.1` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`plx`**](/ext/e/plx) | `2.0.1` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 3140
 {.ext-table .ext-table--rel}
 
 
-> Uses PostgreSQL's built-in PL/pgSQL call handler; no control-file dependency is declared.
+> Package 2.0.1; SQL version 2.0.0.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `plx` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `plx_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plx` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `plx` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `plx_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plx` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -170,7 +170,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install plx;          # 当前活跃 PG 版本安装
 ```
 
@@ -209,11 +209,11 @@ CREATE EXTENSION plx;
 
 来源：
 
-- [plx 1.3.1 README](https://github.com/commandprompt/plx/blob/v1.3.1/README.md)
-- [plx 文档](https://commandprompt.github.io/plx/)
-- [plx 用户指南](https://github.com/commandprompt/plx/blob/v1.3.1/doc/USERGUIDE.md)
-- [plx 限制](https://github.com/commandprompt/plx/blob/v1.3.1/doc/LIMITATIONS.md)
-- [plx 1.3.1 发行版](https://github.com/commandprompt/plx/releases/tag/v1.3.1)
+- [PGXN plx 2.0.1 README](https://pgxn.org/dist/plx/2.0.1/README.html)
+- [plx 2.0.1 用户指南](https://api.pgxn.org/src/plx/plx-2.0.1/doc/USERGUIDE.md)
+- [plx 2.0.1 兼容性说明](https://api.pgxn.org/src/plx/plx-2.0.1/doc/COMPATIBILITY.md)
+- [plx 2.0.1 变更日志](https://api.pgxn.org/src/plx/plx-2.0.1/CHANGELOG.md)
+- [plx 控制文件](https://api.pgxn.org/src/plx/plx-2.0.1/plx.control)
 
 `plx` 提供了熟悉的程序语言方言，当 `CREATE FUNCTION` 执行时会编译为普通的 PL/pgSQL。PostgreSQL 存储并执行生成的 PL/pgSQL，使用其内置的信任处理程序；无需加载 Ruby、PHP、JavaScript、Python、Go、COBOL、Oracle 或 SQL Server 运行时到后端。
 
@@ -301,4 +301,4 @@ $$;
 - 参数和返回类型必须是 PostgreSQL 类型。局部变量的类型推断有限；对于调用和复合表达式需要显式声明类型。
 - SQL 使用三值逻辑和 PostgreSQL 的数值/字符串语义。源语言中的真假性和使用 `+` 进行字符串连接没有被复制。
 - 局部变量被提升到一个 PL/pgSQL 的 `DECLARE` 块中，因此块局部作用域和具有不同类型的重新声明不可用。
-- 版本 1.3.1 是一个仅包含代码的安全发布：它增加了词法分析/字符串构建容量保护、堆栈深度检查、有限缩进处理以及对原始字符串、PHP 插值和非十进制整数字面量解析的修复。安装二进制文件后，请运行 `ALTER EXTENSION plx UPDATE TO '1.3.1'`。
+- 发行包 2.0.1 安装扩展版本 2.0.0；2.0.1 只修改 PGXN 打包，没有自己的 SQL 升级。2.0.0 改变 `plxruby`、`plxphp`、`plxjs`、`plxts`、`plxpython3` 与 `plxgo` 的插值行为：NULL 操作数现在会让整个插值字符串变为 NULL，而不是静默转为空字符串。运行 `ALTER EXTENSION plx UPDATE TO '2.0.0'` 后还需重新部署受影响函数，因为扩展升级不会重写 `pg_proc.prosrc` 中既有的生成 PL/pgSQL。

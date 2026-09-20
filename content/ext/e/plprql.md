@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install plprql;          # 当前活跃 PG 版本安装
 ```
 
@@ -261,7 +261,7 @@ SELECT prql_to_sql('from matches | filter player == "Player1"');
 
 PRQL 使用管道式转换：
 
-```text
+```
 from employees                    # 数据源
 filter department == "Engineering" # 行过滤
 derive monthly_salary = salary / 12 # 计算列

@@ -38,15 +38,15 @@ weight: 8680
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY RPM and DEB packages are aligned at 2.1.0 for PostgreSQL 14 through 18.
+> RPM: PGDG 2.1; DEB/source: PIGSTY 2.1.0.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `nominatim_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `nominatim_fdw_$v` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `nominatim_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.1` | {{< pgvers "18,17,16,15,14" >}} | `nominatim_fdw_$v` | - |
 | [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-nominatim-fdw` | - |
 {.ext-table}
 
@@ -55,10 +55,10 @@ weight: 8680
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
 | el8.aarch64 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
-| el9.x86_64 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 |
-| el9.aarch64 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 |
-| el10.x86_64 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 |
-| el10.aarch64 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 | AVAIL PIGSTY 2.1.0 10 |
+| el9.x86_64 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 |
+| el9.aarch64 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 |
+| el10.x86_64 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 |
+| el10.aarch64 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 | AVAIL PGDG 2.1 11 |
 | d12.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
@@ -79,6 +79,7 @@ weight: 8680
 @ el8.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/nominatim_fdw_18-1.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/nominatim_fdw_18-1.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/nominatim_fdw_18-1.1.0-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-2.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-2.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 36.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/nominatim_fdw_18-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-1.3-2PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel9.7.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-1.3-2PGDG.rhel9.7.x86_64.rpm
@@ -89,6 +90,7 @@ weight: 8680
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.2 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-1.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.1.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-1.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.1.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/nominatim_fdw_18-1.1.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-2.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-2.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 36.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/nominatim_fdw_18-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-1.3-2PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel9.7.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-1.3-2PGDG.rhel9.7.aarch64.rpm
@@ -99,6 +101,7 @@ weight: 8680
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.2 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-1.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.1.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-1.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.1.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/nominatim_fdw_18-1.1.0-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-2.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1 37.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-2.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/nominatim_fdw_18-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-1.3-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel10.1.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-1.3-2PGDG.rhel10.1.x86_64.rpm
@@ -109,6 +112,7 @@ weight: 8680
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-1.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.1.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-1.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 nominatim_fdw_18 nominatim_fdw_18-1.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/nominatim_fdw_18-1.1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-2.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/nominatim_fdw_18-2.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 36.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/nominatim_fdw_18-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/nominatim_fdw_18-1.3-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 nominatim_fdw_18 nominatim_fdw_18-1.3-2PGDG.rhel10.1.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/nominatim_fdw_18-1.3-2PGDG.rhel10.1.aarch64.rpm
@@ -139,6 +143,7 @@ weight: 8680
 @ el8.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/nominatim_fdw_17-1.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/nominatim_fdw_17-1.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/nominatim_fdw_17-1.1.0-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-2.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-2.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 36.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/nominatim_fdw_17-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-1.3-2PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel9.7.x86_64.rpm pgdg 1.3 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-1.3-2PGDG.rhel9.7.x86_64.rpm
@@ -149,6 +154,7 @@ weight: 8680
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.2 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-1.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.1.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-1.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.1.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/nominatim_fdw_17-1.1.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-2.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-2.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 36.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/nominatim_fdw_17-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-1.3-2PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel9.7.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-1.3-2PGDG.rhel9.7.aarch64.rpm
@@ -159,6 +165,7 @@ weight: 8680
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-1.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.1.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-1.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.1.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/nominatim_fdw_17-1.1.0-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-2.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-2.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/nominatim_fdw_17-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-1.3-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel10.1.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-1.3-2PGDG.rhel10.1.x86_64.rpm
@@ -169,6 +176,7 @@ weight: 8680
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.2 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-1.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.1.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-1.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 nominatim_fdw_17 nominatim_fdw_17-1.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/nominatim_fdw_17-1.1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-2.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/nominatim_fdw_17-2.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 36.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/nominatim_fdw_17-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/nominatim_fdw_17-1.3-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 nominatim_fdw_17 nominatim_fdw_17-1.3-2PGDG.rhel10.1.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/nominatim_fdw_17-1.3-2PGDG.rhel10.1.aarch64.rpm
@@ -199,6 +207,7 @@ weight: 8680
 @ el8.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/nominatim_fdw_16-1.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/nominatim_fdw_16-1.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/nominatim_fdw_16-1.1.0-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-2.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-2.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 36.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/nominatim_fdw_16-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-1.3-2PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel9.7.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-1.3-2PGDG.rhel9.7.x86_64.rpm
@@ -209,6 +218,7 @@ weight: 8680
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.2 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-1.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.1.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-1.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.1.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/nominatim_fdw_16-1.1.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-2.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-2.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 36.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/nominatim_fdw_16-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-1.3-2PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel9.7.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-1.3-2PGDG.rhel9.7.aarch64.rpm
@@ -219,6 +229,7 @@ weight: 8680
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-1.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.1.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-1.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.1.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/nominatim_fdw_16-1.1.0-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-2.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-2.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/nominatim_fdw_16-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-1.3-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel10.1.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-1.3-2PGDG.rhel10.1.x86_64.rpm
@@ -229,6 +240,7 @@ weight: 8680
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-1.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.1.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-1.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 nominatim_fdw_16 nominatim_fdw_16-1.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/nominatim_fdw_16-1.1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-2.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/nominatim_fdw_16-2.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 36.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/nominatim_fdw_16-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/nominatim_fdw_16-1.3-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 nominatim_fdw_16 nominatim_fdw_16-1.3-2PGDG.rhel10.1.aarch64.rpm pgdg 1.3 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/nominatim_fdw_16-1.3-2PGDG.rhel10.1.aarch64.rpm
@@ -259,6 +271,7 @@ weight: 8680
 @ el8.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/nominatim_fdw_15-1.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/nominatim_fdw_15-1.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/nominatim_fdw_15-1.1.0-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-2.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-2.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 36.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/nominatim_fdw_15-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-1.3-2PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel9.7.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-1.3-2PGDG.rhel9.7.x86_64.rpm
@@ -269,6 +282,7 @@ weight: 8680
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.2 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-1.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.1.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-1.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.1.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/nominatim_fdw_15-1.1.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-2.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-2.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 36.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/nominatim_fdw_15-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-1.3-2PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel9.7.aarch64.rpm pgdg 1.3 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-1.3-2PGDG.rhel9.7.aarch64.rpm
@@ -279,6 +293,7 @@ weight: 8680
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-1.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.1.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-1.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.1.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/nominatim_fdw_15-1.1.0-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-2.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-2.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/nominatim_fdw_15-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-1.3-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel10.1.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-1.3-2PGDG.rhel10.1.x86_64.rpm
@@ -289,6 +304,7 @@ weight: 8680
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-1.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.1.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-1.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 nominatim_fdw_15 nominatim_fdw_15-1.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/nominatim_fdw_15-1.1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-2.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/nominatim_fdw_15-2.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 36.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/nominatim_fdw_15-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/nominatim_fdw_15-1.3-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 nominatim_fdw_15 nominatim_fdw_15-1.3-2PGDG.rhel10.1.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/nominatim_fdw_15-1.3-2PGDG.rhel10.1.aarch64.rpm
@@ -319,6 +335,7 @@ weight: 8680
 @ el8.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/nominatim_fdw_14-1.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/nominatim_fdw_14-1.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.1.0 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/nominatim_fdw_14-1.1.0-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-2.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-2.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 36.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/nominatim_fdw_14-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-1.3-2PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel9.7.x86_64.rpm pgdg 1.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-1.3-2PGDG.rhel9.7.x86_64.rpm
@@ -329,6 +346,7 @@ weight: 8680
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.2 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-1.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.1.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-1.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.1.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/nominatim_fdw_14-1.1.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-2.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-2.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 36.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/nominatim_fdw_14-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-1.3-2PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel9.7.aarch64.rpm pgdg 1.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-1.3-2PGDG.rhel9.7.aarch64.rpm
@@ -339,6 +357,7 @@ weight: 8680
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-1.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.1.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-1.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.1.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/nominatim_fdw_14-1.1.0-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-2.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-2.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/nominatim_fdw_14-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-1.3-2PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel10.1.x86_64.rpm pgdg 1.3 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-1.3-2PGDG.rhel10.1.x86_64.rpm
@@ -349,6 +368,7 @@ weight: 8680
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-1.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.1.0 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-1.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 nominatim_fdw_14 nominatim_fdw_14-1.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/nominatim_fdw_14-1.1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-2.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/nominatim_fdw_14-2.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 36.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/nominatim_fdw_14-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/nominatim_fdw_14-1.3-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 nominatim_fdw_14 nominatim_fdw_14-1.3-2PGDG.rhel10.1.aarch64.rpm pgdg 1.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/nominatim_fdw_14-1.3-2PGDG.rhel10.1.aarch64.rpm
@@ -390,7 +410,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install nominatim_fdw;          # 当前活跃 PG 版本安装
 ```
 
@@ -499,16 +519,16 @@ FROM nominatim_lookup(
 
 - `nominatim_search(...)` 实现了自由文本或结构化前向搜索。
 - `nominatim_reverse(...)` 将经度和纬度解析为最近的合适OSM地址。
-- `nominatim_lookup(...)` 获取节点、方式或关系标识符，如 `N123`、`W456` 或 `R789`。
+- `nominatim_lookup(...)` 获取节点、方式或关系标识符，如`N123`、`W456`或`R789`。
 - `nominatim_fdw_version()` 报告扩展和主库版本。
 - `nominatim_fdw_settings` 以行的形式暴露依赖和构建版本。
-- 服务器选项包括 `url`、代理配置、超时设置、重试和重定向限制，以及默认的 `accept_language`。
+- 服务器选项包括`url`、代理配置、超时设置、重试和重定向限制，以及默认的`accept_language`。
 
-所有端点函数都是 `STRICT`：显式SQL中的 `NULL` 参数返回空结果而不发送请求。在2.0中它们正确声明为 `VOLATILE`，因为响应是远程的且可以更改。
+所有端点函数都是`STRICT`：显式SQL中的`NULL`参数返回空结果而不发送请求。在2.0中它们正确声明为`VOLATILE`，因为响应是远程的且可以更改。
 
 ### 2.1 版本变更和注意事项
 
-2.0版本验证逆向坐标、添加了 `email`、`polygon_threshold` 和 `entrances`，暴露依赖设置，并修复了返回详细字段中的JSON转义。它还具有用户可见的变化：逆向输出使用 `display_name`；`addressparts` 变为 `addressdetails`；地址细节默认为真用于逆向和查找；版本输出更短。
+2.0版本验证逆向坐标、添加了`email`、`polygon_threshold`和`entrances`，暴露依赖设置，并修复了返回详细字段中的JSON转义。它还具有用户可见的变化：逆向输出使用`display_name`；`addressparts`变为`addressdetails`；地址细节默认为真用于逆向和查找；版本输出更短。
 
 安装 2.1 软件包文件后，在已有数据库中升级：
 

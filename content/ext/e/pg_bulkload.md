@@ -229,7 +229,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_bulkload;          # 当前活跃 PG 版本安装
 ```
 
@@ -283,7 +283,7 @@ pg_bulkload sample_csv.ctl
 
 输出：
 
-```text
+```
 NOTICE: BULK LOAD START
 NOTICE: BULK LOAD END
     0 Rows skipped.

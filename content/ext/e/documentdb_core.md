@@ -11,10 +11,10 @@ weight: 9010
     <div class="ext-card__title">documentdb/documentdb</div>
     <div class="ext-card__desc">https://github.com/documentdb/documentdb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.114-0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.116-0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">documentdb-0.114-0.tar.gz</div>
-    <div class="ext-card__desc">documentdb-0.114-0.tar.gz</div>
+    <div class="ext-card__title">documentdb-0.116-0.tar.gz</div>
+    <div class="ext-card__desc">documentdb-0.116-0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9010
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`documentdb`**](/ext/e/documentdb) | `0.114` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`documentdb`**](/ext/e/documentdb) | `0.116` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -46,9 +46,9 @@ weight: 9010
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.114` | {{< pgvers "18,17,16,15" >}} | `documentdb` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.114` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis36_$v` |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.114` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `documentdb` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis36_$v` |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -62,14 +62,14 @@ weight: 9010
 | el10.aarch64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
 | d12.x86_64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
 | d12.aarch64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | N/A PIGSTY - 0 |
 | u22.x86_64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
 | u22.aarch64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | AVAIL PIGSTY 0.114 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | AVAIL PGDG 0.114 4 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | AVAIL PGDG 0.116 4 | N/A PIGSTY - 0 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -91,7 +91,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install documentdb;          # 当前活跃 PG 版本安装
 ```
 
@@ -135,21 +135,21 @@ CREATE EXTENSION documentdb_core;
 来源：
 
 - [DocumentDB v0.114-0 README](https://github.com/documentdb/documentdb/blob/v0.114-0/README.md)
-- [`documentdb_core` 控制文件](https://github.com/documentdb/documentdb/blob/v0.114-0/pg_documentdb_core/documentdb_core.control)
+- [`documentdb_core`控制文件](https://github.com/documentdb/documentdb/blob/v0.114-0/pg_documentdb_core/documentdb_core.control)
 - [BSON SQL定义](https://github.com/documentdb/documentdb/blob/v0.114-0/pg_documentdb_core/sql/udfs/bson_io/bson_io--latest.sql)
 - [官方预加载助手](https://github.com/documentdb/documentdb/blob/v0.114-0/scripts/preload_libraries.sh)
 
-`documentdb_core` 是DocumentDB使用的低层BSON类型和操作符层。通常它作为 `documentdb` 的依赖项安装，自身不提供集合CRUD、MongoDB网络协议或网关。
+`documentdb_core`是DocumentDB使用的低层BSON类型和操作符层。通常它作为`documentdb`的依赖项安装，自身不提供集合CRUD、MongoDB网络协议或网关。
 
 ### 配置与安装
 
-必须通过 `pg_documentdb_core` 加载 `shared_preload_libraries`，然后重启PostgreSQL：
+必须通过`pg_documentdb_core`加载`shared_preload_libraries`，然后重启PostgreSQL：
 
 ```conf
 shared_preload_libraries = 'pg_documentdb_core'
 ```
 
-对于完整的单节点堆栈，官方助手还会预加载 `pg_cron` 和 `pg_documentdb`。在常规部署中安装父扩展：
+对于完整的单节点堆栈，官方助手还会预加载`pg_cron`和`pg_documentdb`。在常规部署中安装父扩展：
 
 ```sql
 CREATE EXTENSION documentdb CASCADE;
@@ -174,19 +174,19 @@ SELECT documentdb_core.bson_get_value_text(
 );
 ```
 
-除非 `documentdb_core` 在 `search_path` 中，否则请显式使用模式限定名。
+除非`documentdb_core`在`search_path`中，否则请显式使用模式限定名。
 
 ### 重要对象
 
-- `documentdb_core.bson` 存储BSON文档。
-- `documentdb_core.bsonquery` 表示用于DocumentDB计划器和操作符层的BSON查询值。
-- `documentdb_core.bsonsequence` 表示BSON值序列。
-- `bson_get_value` 和 `bson_get_value_text`，通过 `->` 和 `->>` 也暴露出来，从BSON文档中提取路径。
+- `documentdb_core.bson`存储BSON文档。
+- `documentdb_core.bsonquery`表示用于DocumentDB计划器和操作符层的BSON查询值。
+- `documentdb_core.bsonsequence`表示BSON值序列。
+- `bson_get_value` 和 `bson_get_value_text`，通过`->`和`->>`也暴露出来，从BSON文档中提取路径。
 - `bson_from_bytea`, `bson_to_bytea`, `bson_json_to_bson` 和 `bson_to_json_string` 支持序列化边界。
 - `bson_btree_ops` 和 `bson_hash_ops` 提供更高层所需的比较和哈希支持。
 
 ### 操作边界
 
-BSON比较、索引和数值语义遵循DocumentDB的实现，不应假设与PostgreSQL `jsonb` 匹配。大多数对象是 `documentdb` 的基础架构；寻求集合和MongoDB命令的应用程序应使用父扩展或网关而非直接构建在内部类型上。
+BSON比较、索引和数值语义遵循DocumentDB的实现，不应假设与PostgreSQL `jsonb`匹配。大多数对象是`documentdb`的基础架构；寻求集合和MongoDB命令的应用程序应使用父扩展或网关而非直接构建在内部类型上。
 
-版本0.114-0保持 `documentdb_core` 与整个DocumentDB堆栈一致。上游变更日志未标识此发布单独的用户核心API迁移，因此没有新的独立工作流程声明。
+版本0.114-0保持`documentdb_core`与整个DocumentDB堆栈一致。上游变更日志未标识此发布单独的用户核心API迁移，因此没有新的独立工作流程声明。

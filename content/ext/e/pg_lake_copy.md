@@ -11,10 +11,10 @@ weight: 2567
     <div class="ext-card__title">main/pg_lake_copy</div>
     <div class="ext-card__desc">https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_copy</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_lake-3.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_lake-3.4.4.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_lake-3.4.0.tar.gz</div>
-    <div class="ext-card__desc">pg_lake-3.4.0.tar.gz</div>
+    <div class="ext-card__title">pg_lake-3.4.4.tar.gz</div>
+    <div class="ext-card__desc">pg_lake-3.4.4.tar.gz</div>
   </a>
 </div>
 
@@ -46,7 +46,7 @@ weight: 2567
 {.ext-table .ext-table--rel}
 
 
-> pg_extension_base auto-loads pg_lake_engine, pg_lake_iceberg, pg_lake_table, and pg_lake_copy in dependency order. Extension SQL/control version is 3.4; source and DEB/RPM package version is 3.4.0.
+> Lake COPY component. Package 3.4.4; SQL 3.4.
 
 
 ## 版本
@@ -54,8 +54,8 @@ weight: 2567
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.4` | {{< pgvers "18,17,16" >}} | `pg_lake` | `pg_lake_engine`, `pg_lake_iceberg`, `pg_lake_table` |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.4.0` | {{< pgvers "18,17,16" >}} | `pg_lake_$v` | - |
-| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.4.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-lake` | - |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.4.4` | {{< pgvers "18,17,16" >}} | `pg_lake_$v` | - |
+| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.4.4` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-lake` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -98,7 +98,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_lake;          # 当前活跃 PG 版本安装
 ```
 

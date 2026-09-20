@@ -53,12 +53,12 @@ weight: 2170
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 3.0.0 3 | AVAIL PIGSTY 3.0.0 3 | AVAIL PIGSTY 3.0.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 3.0.0 3 | AVAIL PIGSTY 3.0.0 3 | AVAIL PIGSTY 3.0.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | AVAIL PIGSTY 3.0.0 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 3.0.0 4 | AVAIL PIGSTY 3.0.0 4 | AVAIL PIGSTY 3.0.0 4 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 3.0.0 4 | AVAIL PIGSTY 3.0.0 4 | AVAIL PIGSTY 3.0.0 4 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | AVAIL PIGSTY 3.0.0 6 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -70,27 +70,33 @@ weight: 2170
 | u26.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 105.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/biscuit_18-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel8.10.x86_64.rpm pgdg 3.0.0 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/biscuit_18-3.0.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4.0 62.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/biscuit_18-2.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.2 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/biscuit_18-2.2.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 98.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/biscuit_18-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 3.0.0 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/biscuit_18-3.0.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4.0 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/biscuit_18-2.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.2 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/biscuit_18-2.2.2-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 101.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/biscuit_18-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel9.8.x86_64.rpm pgdg 3.0.0 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/biscuit_18-3.0.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.0 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/biscuit_18-2.4.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.2 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/biscuit_18-2.2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.2.2 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/biscuit_18-2.2.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.2.2 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/biscuit_18-2.2.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 96.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/biscuit_18-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel9.8.aarch64.rpm pgdg 3.0.0 94.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/biscuit_18-3.0.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.0 61.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/biscuit_18-2.4.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.2 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/biscuit_18-2.2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.2.2 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/biscuit_18-2.2.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.2.2 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/biscuit_18-2.2.2-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 102.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/biscuit_18-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 3.0.0 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/biscuit_18-3.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.0 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/biscuit_18-2.4.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.2 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/biscuit_18-2.2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.2.2 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/biscuit_18-2.2.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.2.2 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/biscuit_18-2.2.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 98.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/biscuit_18-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 biscuit_18 biscuit_18-3.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 3.0.0 96.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/biscuit_18-3.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 biscuit_18 biscuit_18-2.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.0 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/biscuit_18-2.4.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/biscuit_18-2.2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 biscuit_18 biscuit_18-2.2.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.2.2 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/biscuit_18-2.2.2-1PGDG.rhel10.1.aarch64.rpm
@@ -106,27 +112,33 @@ weight: 2170
 @ u26.x86_64 18 postgresql-18-biscuit postgresql-18-biscuit_3.0.0-1PGSTY~resolute_amd64.deb pigsty 3.0.0 247.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-biscuit/postgresql-18-biscuit_3.0.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-biscuit postgresql-18-biscuit_3.0.0-1PGSTY~resolute_arm64.deb pigsty 3.0.0 241.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-biscuit/postgresql-18-biscuit_3.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 105.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/biscuit_17-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel8.10.x86_64.rpm pgdg 3.0.0 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/biscuit_17-3.0.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4.0 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/biscuit_17-2.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.2 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/biscuit_17-2.2.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 98.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/biscuit_17-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 3.0.0 92.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/biscuit_17-3.0.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4.0 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/biscuit_17-2.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.2 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/biscuit_17-2.2.2-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 101.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/biscuit_17-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel9.8.x86_64.rpm pgdg 3.0.0 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/biscuit_17-3.0.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.0 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/biscuit_17-2.4.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/biscuit_17-2.2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.2.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/biscuit_17-2.2.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.2.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/biscuit_17-2.2.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 96.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/biscuit_17-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel9.8.aarch64.rpm pgdg 3.0.0 94.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/biscuit_17-3.0.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.0 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/biscuit_17-2.4.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.2 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/biscuit_17-2.2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.2.2 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/biscuit_17-2.2.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.2.2 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/biscuit_17-2.2.2-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 102.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/biscuit_17-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 3.0.0 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/biscuit_17-3.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.0 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/biscuit_17-2.4.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.2 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/biscuit_17-2.2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.2.2 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/biscuit_17-2.2.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.2.2 68.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/biscuit_17-2.2.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 98.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/biscuit_17-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 biscuit_17 biscuit_17-3.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 3.0.0 96.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/biscuit_17-3.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 biscuit_17 biscuit_17-2.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.0 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/biscuit_17-2.4.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/biscuit_17-2.2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 biscuit_17 biscuit_17-2.2.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.2.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/biscuit_17-2.2.2-1PGDG.rhel10.1.aarch64.rpm
@@ -142,27 +154,33 @@ weight: 2170
 @ u26.x86_64 17 postgresql-17-biscuit postgresql-17-biscuit_3.0.0-1PGSTY~resolute_amd64.deb pigsty 3.0.0 246.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-biscuit/postgresql-17-biscuit_3.0.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-biscuit postgresql-17-biscuit_3.0.0-1PGSTY~resolute_arm64.deb pigsty 3.0.0 241.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-biscuit/postgresql-17-biscuit_3.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 105.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/biscuit_16-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel8.10.x86_64.rpm pgdg 3.0.0 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/biscuit_16-3.0.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4.0 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/biscuit_16-2.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.2 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/biscuit_16-2.2.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 98.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/biscuit_16-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 3.0.0 92.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/biscuit_16-3.0.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4.0 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/biscuit_16-2.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.2 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/biscuit_16-2.2.2-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 101.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/biscuit_16-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel9.8.x86_64.rpm pgdg 3.0.0 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/biscuit_16-3.0.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.0 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/biscuit_16-2.4.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/biscuit_16-2.2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.2.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/biscuit_16-2.2.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.2.2 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/biscuit_16-2.2.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 96.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/biscuit_16-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel9.8.aarch64.rpm pgdg 3.0.0 94.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/biscuit_16-3.0.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.0 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/biscuit_16-2.4.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.2 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/biscuit_16-2.2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.2.2 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/biscuit_16-2.2.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.2.2 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/biscuit_16-2.2.2-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 102.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/biscuit_16-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 3.0.0 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/biscuit_16-3.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.0 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/biscuit_16-2.4.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.2 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/biscuit_16-2.2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.2.2 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/biscuit_16-2.2.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.2.2 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/biscuit_16-2.2.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 98.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/biscuit_16-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 biscuit_16 biscuit_16-3.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 3.0.0 96.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/biscuit_16-3.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 biscuit_16 biscuit_16-2.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.0 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/biscuit_16-2.4.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/biscuit_16-2.2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 biscuit_16 biscuit_16-2.2.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.2.2 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/biscuit_16-2.2.2-1PGDG.rhel10.1.aarch64.rpm
@@ -198,7 +216,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_biscuit;          # 当前活跃 PG 版本安装
 ```
 

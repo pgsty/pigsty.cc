@@ -11,10 +11,10 @@ weight: 7040
     <div class="ext-card__title">fmbiete/passwordpolicy</div>
     <div class="ext-card__desc">https://github.com/fmbiete/passwordpolicy</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/passwordpolicy-2.0.5.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/passwordpolicy-2.0.6.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">passwordpolicy-2.0.5.tar.gz</div>
-    <div class="ext-card__desc">passwordpolicy-2.0.5.tar.gz</div>
+    <div class="ext-card__title">passwordpolicy-2.0.6.tar.gz</div>
+    <div class="ext-card__desc">passwordpolicy-2.0.6.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7040
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`passwordpolicy`**](/ext/e/passwordpolicy) | `2.0.5` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`passwordpolicy`**](/ext/e/passwordpolicy) | `2.0.6` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 7040
 {.ext-table .ext-table--rel}
 
 
-> PGDG RPM and Pigsty DEB package fmbiete/passwordpolicy 2.0.5; requires shared_preload_libraries and cracklib runtime.
+> Requires preload and cracklib dictionaries.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.5` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.5` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy_$v` | `cracklib` |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-passwordpolicy` | `cracklib-runtime`, `libcrack2` |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy_$v` | `cracklib-dicts` |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-passwordpolicy` | `cracklib-runtime`, `libcrack2` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -202,15 +202,15 @@ pig build pkg passwordpolicy         # 构建 RPM / DEB 包
 
 ## 安装
 
-您可以直接安装 `passwordpolicy` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `passwordpolicy` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install passwordpolicy;          # 当前活跃 PG 版本安装
 ```
 

@@ -11,10 +11,10 @@ weight: 4070
     <div class="ext-card__title">pramsey/pgsql-http</div>
     <div class="ext-card__desc">https://github.com/pramsey/pgsql-http</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-http-1.7.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-http-1.7.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgsql-http-1.7.1.tar.gz</div>
-    <div class="ext-card__desc">pgsql-http-1.7.1.tar.gz</div>
+    <div class="ext-card__title">pgsql-http-1.7.2.tar.gz</div>
+    <div class="ext-card__desc">pgsql-http-1.7.2.tar.gz</div>
   </a>
 </div>
 
@@ -449,10 +449,10 @@ weight: 4070
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_http` 扩展的 RPM 包：
+您可以使用 `pig build` 命令构建 `pg_http` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_http         # 构建 RPM 包
+pig build pkg pg_http         # 构建 RPM / DEB 包
 ```
 
 
@@ -466,7 +466,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_http;          # 当前活跃 PG 版本安装
 ```
 

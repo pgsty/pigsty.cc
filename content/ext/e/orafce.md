@@ -20,7 +20,7 @@ weight: 9100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`orafce`**](/ext/e/orafce) | `4.16.7` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license 0bsd" href="/ext/license#0bsd">0BSD</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`orafce`**](/ext/e/orafce) | `4.16.8` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license 0bsd" href="/ext/license#0bsd">0BSD</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -40,20 +40,20 @@ weight: 9100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.7` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.7` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.8` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.8` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.16.7 5 | AVAIL PGDG 4.16.7 13 | AVAIL PGDG 4.16.7 22 | AVAIL PGDG 4.16.7 22 | AVAIL PGDG 4.16.7 22 |
-| el8.aarch64 | AVAIL PGDG 4.16.7 5 | AVAIL PGDG 4.16.7 13 | AVAIL PGDG 4.16.7 22 | AVAIL PGDG 4.16.7 22 | AVAIL PGDG 4.16.7 22 |
-| el9.x86_64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 18 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 |
-| el9.aarch64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 18 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 |
-| el10.x86_64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 |
-| el10.aarch64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 |
+| el8.x86_64 | AVAIL PGDG 4.16.8 6 | AVAIL PGDG 4.16.8 14 | AVAIL PGDG 4.16.8 23 | AVAIL PGDG 4.16.8 23 | AVAIL PGDG 4.16.8 23 |
+| el8.aarch64 | AVAIL PGDG 4.16.8 6 | AVAIL PGDG 4.16.8 14 | AVAIL PGDG 4.16.8 23 | AVAIL PGDG 4.16.8 23 | AVAIL PGDG 4.16.8 23 |
+| el9.x86_64 | AVAIL PGDG 4.16.8 11 | AVAIL PGDG 4.16.8 19 | AVAIL PGDG 4.16.8 28 | AVAIL PGDG 4.16.8 28 | AVAIL PGDG 4.16.8 28 |
+| el9.aarch64 | AVAIL PGDG 4.16.8 11 | AVAIL PGDG 4.16.8 19 | AVAIL PGDG 4.16.8 28 | AVAIL PGDG 4.16.8 28 | AVAIL PGDG 4.16.8 28 |
+| el10.x86_64 | AVAIL PGDG 4.16.8 11 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 |
+| el10.aarch64 | AVAIL PGDG 4.16.8 11 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 | AVAIL PGDG 4.16.8 12 |
 | d12.x86_64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | d12.aarch64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | d13.x86_64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
@@ -64,16 +64,19 @@ weight: 9100
 | u24.aarch64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | u26.x86_64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | u26.aarch64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
+@ el8.x86_64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.8 154.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.7 153.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel8.x86_64.rpm pgdg 4.14.5 151.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.14.5-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.8 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.16.8-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.7 149.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.16.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 orafce_18 orafce_18-4.16.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.5 148.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.16.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 orafce_18 orafce_18-4.16.2-2PGDG.rhel8.aarch64.rpm pgdg 4.16.2 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.16.2-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel8.aarch64.rpm pgdg 4.14.6 146.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.14.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel8.aarch64.rpm pgdg 4.14.5 147.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/orafce_18-4.14.5-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.8 150.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.16.8-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.7 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.16.7-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.16.7 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.16.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.6.x86_64.rpm pgdg 4.16.7 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.16.7-1PGDG.rhel9.6.x86_64.rpm
@@ -84,6 +87,7 @@ weight: 9100
 @ el9.x86_64 18 orafce_18 orafce_18-4.16.1-1PGDG.rhel9.x86_64.rpm pgdg 4.16.1 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.16.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel9.x86_64.rpm pgdg 4.14.6 148.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.14.6-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel9.x86_64.rpm pgdg 4.14.5 148.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/orafce_18-4.14.5-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.8 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.16.8-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.7 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.16.7-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.16.7 147.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.16.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel9.6.aarch64.rpm pgdg 4.16.7 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.16.7-1PGDG.rhel9.6.aarch64.rpm
@@ -94,6 +98,7 @@ weight: 9100
 @ el9.aarch64 18 orafce_18 orafce_18-4.16.1-1PGDG.rhel9.aarch64.rpm pgdg 4.16.1 147.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.16.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel9.aarch64.rpm pgdg 4.14.6 146.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.14.6-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel9.aarch64.rpm pgdg 4.14.5 146.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/orafce_18-4.14.5-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.8 151.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.16.8-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.7 150.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.16.7-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.16.7 150.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.16.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.0.x86_64.rpm pgdg 4.16.7 150.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.16.7-1PGDG.rhel10.0.x86_64.rpm
@@ -104,6 +109,7 @@ weight: 9100
 @ el10.x86_64 18 orafce_18 orafce_18-4.16.1-1PGDG.rhel10.x86_64.rpm pgdg 4.16.1 150.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.16.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 150.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel10.x86_64.rpm pgdg 4.14.5 149.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/orafce_18-4.14.5-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 orafce_18 orafce_18-4.16.8-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.8 149.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.16.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 orafce_18 orafce_18-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.16.7-1PGDG.rhel10.0.aarch64.rpm
@@ -144,6 +150,7 @@ weight: 9100
 @ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.7-1.pgdg26.04+1_arm64.deb pgdg 4.16.7 351.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 351.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 351.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.8 154.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.7 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -157,6 +164,7 @@ weight: 9100
 @ el8.x86_64 17 orafce_17 orafce_17-4.13.3-1PGDG.rhel8.x86_64.rpm pgdg 4.13.3 147.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.13.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.13.2-1PGDG.rhel8.x86_64.rpm pgdg 4.13.2 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.13.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.13.0-1PGDG.rhel8.x86_64.rpm pgdg 4.13.0 147.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.13.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.8 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.16.8-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.7 149.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.16.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 orafce_17 orafce_17-4.16.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.5 148.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.16.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 orafce_17 orafce_17-4.16.2-2PGDG.rhel8.aarch64.rpm pgdg 4.16.2 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.16.2-2PGDG.rhel8.aarch64.rpm
@@ -170,6 +178,7 @@ weight: 9100
 @ el8.aarch64 17 orafce_17 orafce_17-4.13.3-1PGDG.rhel8.aarch64.rpm pgdg 4.13.3 142.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.13.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 orafce_17 orafce_17-4.13.2-1PGDG.rhel8.aarch64.rpm pgdg 4.13.2 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.13.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 orafce_17 orafce_17-4.13.0-1PGDG.rhel8.aarch64.rpm pgdg 4.13.0 142.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/orafce_17-4.13.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.8 150.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.16.8-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.7 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.16.7-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.16.7 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.16.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.6.x86_64.rpm pgdg 4.16.7 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.16.7-1PGDG.rhel9.6.x86_64.rpm
@@ -188,6 +197,7 @@ weight: 9100
 @ el9.x86_64 17 orafce_17 orafce_17-4.13.3-1PGDG.rhel9.x86_64.rpm pgdg 4.13.3 143.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.13.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 orafce_17 orafce_17-4.13.2-1PGDG.rhel9.x86_64.rpm pgdg 4.13.2 143.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.13.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 orafce_17 orafce_17-4.13.0-1PGDG.rhel9.x86_64.rpm pgdg 4.13.0 143.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/orafce_17-4.13.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.8 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.16.8-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.7 147.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.16.7-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.16.7 147.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.16.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel9.6.aarch64.rpm pgdg 4.16.7 147.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.16.7-1PGDG.rhel9.6.aarch64.rpm
@@ -206,6 +216,7 @@ weight: 9100
 @ el9.aarch64 17 orafce_17 orafce_17-4.13.3-1PGDG.rhel9.aarch64.rpm pgdg 4.13.3 141.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.13.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 orafce_17 orafce_17-4.13.2-1PGDG.rhel9.aarch64.rpm pgdg 4.13.2 141.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.13.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 orafce_17 orafce_17-4.13.0-1PGDG.rhel9.aarch64.rpm pgdg 4.13.0 140.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/orafce_17-4.13.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.8 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.16.8-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.7 150.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.16.7-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.16.7 150.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.16.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.0.x86_64.rpm pgdg 4.16.7 150.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.16.7-1PGDG.rhel10.0.x86_64.rpm
@@ -217,6 +228,7 @@ weight: 9100
 @ el10.x86_64 17 orafce_17 orafce_17-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 orafce_17 orafce_17-4.14.4-1PGDG.rhel10.x86_64.rpm pgdg 4.14.4 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.14.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 orafce_17 orafce_17-4.14.3-2PGDG.rhel10.x86_64.rpm pgdg 4.14.3 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/orafce_17-4.14.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 orafce_17 orafce_17-4.16.8-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.8 149.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.16.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 orafce_17 orafce_17-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.16.7-1PGDG.rhel10.0.aarch64.rpm
@@ -258,6 +270,7 @@ weight: 9100
 @ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.7-1.pgdg26.04+1_arm64.deb pgdg 4.16.7 351.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 351.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 352.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.8 154.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.7 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -280,6 +293,7 @@ weight: 9100
 @ el8.x86_64 16 orafce_16 orafce_16-4.9.2-1PGDG.rhel8.x86_64.rpm pgdg 4.9.2 143.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.9.1-1PGDG.rhel8.x86_64.rpm pgdg 4.9.1 143.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.9.0-1PGDG.rhel8.x86_64.rpm pgdg 4.9.0 143.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.9.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.8 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.16.8-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.7 149.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.16.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 orafce_16 orafce_16-4.16.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.5 148.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.16.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 orafce_16 orafce_16-4.16.2-2PGDG.rhel8.aarch64.rpm pgdg 4.16.2 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.16.2-2PGDG.rhel8.aarch64.rpm
@@ -302,6 +316,7 @@ weight: 9100
 @ el8.aarch64 16 orafce_16 orafce_16-4.9.2-1PGDG.rhel8.aarch64.rpm pgdg 4.9.2 138.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.9.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 orafce_16 orafce_16-4.9.1-1PGDG.rhel8.aarch64.rpm pgdg 4.9.1 138.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 orafce_16 orafce_16-4.9.0-1PGDG.rhel8.aarch64.rpm pgdg 4.9.0 138.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/orafce_16-4.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.8 150.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.16.8-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.7 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.16.7-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.16.7 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.16.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.6.x86_64.rpm pgdg 4.16.7 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.16.7-1PGDG.rhel9.6.x86_64.rpm
@@ -329,6 +344,7 @@ weight: 9100
 @ el9.x86_64 16 orafce_16 orafce_16-4.9.2-1PGDG.rhel9.x86_64.rpm pgdg 4.9.2 139.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.9.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 orafce_16 orafce_16-4.9.1-1PGDG.rhel9.x86_64.rpm pgdg 4.9.1 139.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.9.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 orafce_16 orafce_16-4.9.0-1PGDG.rhel9.x86_64.rpm pgdg 4.9.0 139.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/orafce_16-4.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.8 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.16.8-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.7 147.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.16.7-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.16.7 147.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.16.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel9.6.aarch64.rpm pgdg 4.16.7 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.16.7-1PGDG.rhel9.6.aarch64.rpm
@@ -356,6 +372,7 @@ weight: 9100
 @ el9.aarch64 16 orafce_16 orafce_16-4.9.2-1PGDG.rhel9.aarch64.rpm pgdg 4.9.2 137.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 orafce_16 orafce_16-4.9.1-1PGDG.rhel9.aarch64.rpm pgdg 4.9.1 137.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.9.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 orafce_16 orafce_16-4.9.0-1PGDG.rhel9.aarch64.rpm pgdg 4.9.0 137.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/orafce_16-4.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.8 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.16.8-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.7 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.16.7-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.16.7 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.16.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.0.x86_64.rpm pgdg 4.16.7 150.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.16.7-1PGDG.rhel10.0.x86_64.rpm
@@ -367,6 +384,7 @@ weight: 9100
 @ el10.x86_64 16 orafce_16 orafce_16-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 orafce_16 orafce_16-4.14.4-1PGDG.rhel10.x86_64.rpm pgdg 4.14.4 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.14.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 orafce_16 orafce_16-4.14.3-2PGDG.rhel10.x86_64.rpm pgdg 4.14.3 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/orafce_16-4.14.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 orafce_16 orafce_16-4.16.8-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.8 149.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.16.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 orafce_16 orafce_16-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 148.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.16.7-1PGDG.rhel10.0.aarch64.rpm
@@ -408,6 +426,7 @@ weight: 9100
 @ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.7-1.pgdg26.04+1_arm64.deb pgdg 4.16.7 351.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 350.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 351.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.8 155.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.7 153.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -430,6 +449,7 @@ weight: 9100
 @ el8.x86_64 15 orafce_15 orafce_15-4.9.2-1PGDG.rhel8.x86_64.rpm pgdg 4.9.2 145.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.9.1-1PGDG.rhel8.x86_64.rpm pgdg 4.9.1 145.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.9.0-1PGDG.rhel8.x86_64.rpm pgdg 4.9.0 144.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.9.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.8 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.16.8-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.7 149.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.16.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 orafce_15 orafce_15-4.16.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.5 148.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.16.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 orafce_15 orafce_15-4.16.2-2PGDG.rhel8.aarch64.rpm pgdg 4.16.2 148.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.16.2-2PGDG.rhel8.aarch64.rpm
@@ -452,6 +472,7 @@ weight: 9100
 @ el8.aarch64 15 orafce_15 orafce_15-4.9.2-1PGDG.rhel8.aarch64.rpm pgdg 4.9.2 140.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.9.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 orafce_15 orafce_15-4.9.1-1PGDG.rhel8.aarch64.rpm pgdg 4.9.1 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 orafce_15 orafce_15-4.9.0-1PGDG.rhel8.aarch64.rpm pgdg 4.9.0 140.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/orafce_15-4.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.8 151.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.16.8-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.7 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.16.7-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.16.7 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.16.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.6.x86_64.rpm pgdg 4.16.7 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.16.7-1PGDG.rhel9.6.x86_64.rpm
@@ -479,6 +500,7 @@ weight: 9100
 @ el9.x86_64 15 orafce_15 orafce_15-4.9.2-1PGDG.rhel9.x86_64.rpm pgdg 4.9.2 144.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.9.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 orafce_15 orafce_15-4.9.1-1PGDG.rhel9.x86_64.rpm pgdg 4.9.1 144.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.9.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 orafce_15 orafce_15-4.9.0-1PGDG.rhel9.x86_64.rpm pgdg 4.9.0 144.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/orafce_15-4.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.8 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.16.8-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.7 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.16.7-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.16.7 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.16.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel9.6.aarch64.rpm pgdg 4.16.7 147.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.16.7-1PGDG.rhel9.6.aarch64.rpm
@@ -506,6 +528,7 @@ weight: 9100
 @ el9.aarch64 15 orafce_15 orafce_15-4.9.2-1PGDG.rhel9.aarch64.rpm pgdg 4.9.2 141.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 orafce_15 orafce_15-4.9.1-1PGDG.rhel9.aarch64.rpm pgdg 4.9.1 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.9.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 orafce_15 orafce_15-4.9.0-1PGDG.rhel9.aarch64.rpm pgdg 4.9.0 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/orafce_15-4.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.8 151.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.16.8-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.7 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.16.7-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.16.7 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.16.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.0.x86_64.rpm pgdg 4.16.7 150.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.16.7-1PGDG.rhel10.0.x86_64.rpm
@@ -517,6 +540,7 @@ weight: 9100
 @ el10.x86_64 15 orafce_15 orafce_15-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 orafce_15 orafce_15-4.14.4-1PGDG.rhel10.x86_64.rpm pgdg 4.14.4 150.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.14.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 orafce_15 orafce_15-4.14.3-2PGDG.rhel10.x86_64.rpm pgdg 4.14.3 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/orafce_15-4.14.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 orafce_15 orafce_15-4.16.8-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.8 149.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.16.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 148.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 148.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 orafce_15 orafce_15-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 148.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.16.7-1PGDG.rhel10.0.aarch64.rpm
@@ -558,6 +582,7 @@ weight: 9100
 @ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.7-1.pgdg26.04+1_arm64.deb pgdg 4.16.7 356.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 355.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 356.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.8 156.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.7 154.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 154.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 153.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -580,6 +605,7 @@ weight: 9100
 @ el8.x86_64 14 orafce_14 orafce_14-4.9.2-1PGDG.rhel8.x86_64.rpm pgdg 4.9.2 146.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.9.1-1PGDG.rhel8.x86_64.rpm pgdg 4.9.1 146.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.9.0-1PGDG.rhel8.x86_64.rpm pgdg 4.9.0 146.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.9.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.8 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.16.8-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.7 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.16.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.16.5 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.16.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 orafce_14 orafce_14-4.16.2-2PGDG.rhel8.aarch64.rpm pgdg 4.16.2 149.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.16.2-2PGDG.rhel8.aarch64.rpm
@@ -602,6 +628,7 @@ weight: 9100
 @ el8.aarch64 14 orafce_14 orafce_14-4.9.2-1PGDG.rhel8.aarch64.rpm pgdg 4.9.2 141.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.9.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 orafce_14 orafce_14-4.9.1-1PGDG.rhel8.aarch64.rpm pgdg 4.9.1 140.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 orafce_14 orafce_14-4.9.0-1PGDG.rhel8.aarch64.rpm pgdg 4.9.0 140.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/orafce_14-4.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.8 152.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.16.8-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.8.x86_64.rpm pgdg 4.16.7 150.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.16.7-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.16.7 150.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.16.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.6.x86_64.rpm pgdg 4.16.7 151.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.16.7-1PGDG.rhel9.6.x86_64.rpm
@@ -629,6 +656,7 @@ weight: 9100
 @ el9.x86_64 14 orafce_14 orafce_14-4.9.2-1PGDG.rhel9.x86_64.rpm pgdg 4.9.2 145.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.9.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 orafce_14 orafce_14-4.9.1-1PGDG.rhel9.x86_64.rpm pgdg 4.9.1 145.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.9.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 orafce_14 orafce_14-4.9.0-1PGDG.rhel9.x86_64.rpm pgdg 4.9.0 145.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/orafce_14-4.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.8 149.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.16.8-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.8.aarch64.rpm pgdg 4.16.7 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.16.7-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.16.7 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.16.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel9.6.aarch64.rpm pgdg 4.16.7 148.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.16.7-1PGDG.rhel9.6.aarch64.rpm
@@ -656,6 +684,7 @@ weight: 9100
 @ el9.aarch64 14 orafce_14 orafce_14-4.9.2-1PGDG.rhel9.aarch64.rpm pgdg 4.9.2 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 orafce_14 orafce_14-4.9.1-1PGDG.rhel9.aarch64.rpm pgdg 4.9.1 142.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.9.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 orafce_14 orafce_14-4.9.0-1PGDG.rhel9.aarch64.rpm pgdg 4.9.0 142.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/orafce_14-4.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.8 152.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.16.8-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.2.x86_64.rpm pgdg 4.16.7 151.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.16.7-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.16.7 151.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.16.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.0.x86_64.rpm pgdg 4.16.7 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.16.7-1PGDG.rhel10.0.x86_64.rpm
@@ -667,6 +696,7 @@ weight: 9100
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.4-1PGDG.rhel10.x86_64.rpm pgdg 4.14.4 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.3-2PGDG.rhel10.x86_64.rpm pgdg 4.14.3 151.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 orafce_14 orafce_14-4.16.8-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.8 150.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.0.aarch64.rpm
@@ -721,7 +751,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install orafce;          # 当前活跃 PG 版本安装
 ```
 

@@ -11,10 +11,10 @@ weight: 7150
     <div class="ext-card__title">RafiaSabih/pg_auth_mon</div>
     <div class="ext-card__desc">https://github.com/RafiaSabih/pg_auth_mon</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_auth_mon-3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_auth_mon-5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_auth_mon-3.0.tar.gz</div>
-    <div class="ext-card__desc">pg_auth_mon-3.0.tar.gz</div>
+    <div class="ext-card__title">pg_auth_mon-5.0.tar.gz</div>
+    <div class="ext-card__desc">pg_auth_mon-5.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7150
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_auth_mon`**](/ext/e/pg_auth_mon) | `3.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_auth_mon`**](/ext/e/pg_auth_mon) | `5.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,13 +38,16 @@ weight: 7150
 {.ext-table .ext-table--rel}
 
 
+> SQL version 1.1; requires preload.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `3.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_auth_mon` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_auth_mon_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-auth-mon` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_auth_mon` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_auth_mon_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-auth-mon` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -177,10 +180,10 @@ weight: 7150
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_auth_mon` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `pg_auth_mon` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_auth_mon         # 构建 DEB 包
+pig build pkg pg_auth_mon         # 构建 RPM / DEB 包
 ```
 
 
@@ -194,7 +197,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_auth_mon;          # 当前活跃 PG 版本安装
 ```
 

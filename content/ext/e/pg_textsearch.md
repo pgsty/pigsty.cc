@@ -11,10 +11,10 @@ weight: 2180
     <div class="ext-card__title">timescale/pg_textsearch</div>
     <div class="ext-card__desc">https://github.com/timescale/pg_textsearch</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_textsearch-1.2.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_textsearch-1.4.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_textsearch-1.2.0.tar.gz</div>
-    <div class="ext-card__desc">pg_textsearch-1.2.0.tar.gz</div>
+    <div class="ext-card__title">pg_textsearch-1.4.0.tar.gz</div>
+    <div class="ext-card__desc">pg_textsearch-1.4.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2180
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_textsearch`**](/ext/e/pg_textsearch) | `1.2.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_textsearch`**](/ext/e/pg_textsearch) | `1.4.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,20 +45,20 @@ weight: 2180
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17" >}} | `pg_textsearch` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17" >}} | `pg_textsearch_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.0` | {{< pgvers "18,17" >}} | `postgresql-$v-textsearch` | - |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.4.0` | {{< pgvers "18,17" >}} | `pg_textsearch` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17" >}} | `pg_textsearch_$v` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.0` | {{< pgvers "18,17" >}} | `postgresql-$v-textsearch` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | d12.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -69,11 +69,17 @@ weight: 2180
 | u24.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | u26.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 129.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_textsearch_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 127.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_textsearch_18-1.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_textsearch_18-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 121.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_textsearch_18-1.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_textsearch_18-1.4.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 118.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_textsearch_18-1.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_textsearch_18-1.4.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el9.aarch64.rpm pigsty 1.2.0 115.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_textsearch_18-1.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 129.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_textsearch_18-1.4.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el10.x86_64.rpm pigsty 1.2.0 121.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_textsearch_18-1.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_textsearch_18-1.4.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_textsearch_18 pg_textsearch_18-1.2.0-1PIGSTY.el10.aarch64.rpm pigsty 1.2.0 117.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_textsearch_18-1.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-textsearch postgresql-18-textsearch_1.2.0-1PIGSTY~bookworm_amd64.deb pigsty 1.2.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-textsearch/postgresql-18-textsearch_1.2.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-textsearch postgresql-18-textsearch_1.2.0-1PIGSTY~bookworm_arm64.deb pigsty 1.2.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-textsearch/postgresql-18-textsearch_1.2.0-1PIGSTY~bookworm_arm64.deb
@@ -85,11 +91,17 @@ weight: 2180
 @ u24.aarch64 18 postgresql-18-textsearch postgresql-18-textsearch_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-textsearch/postgresql-18-textsearch_1.2.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-textsearch postgresql-18-textsearch_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-textsearch/postgresql-18-textsearch_1.2.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-textsearch postgresql-18-textsearch_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-textsearch/postgresql-18-textsearch_1.2.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 129.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_textsearch_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 127.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_textsearch_17-1.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_textsearch_17-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 121.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_textsearch_17-1.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_textsearch_17-1.4.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 118.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_textsearch_17-1.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_textsearch_17-1.4.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el9.aarch64.rpm pigsty 1.2.0 115.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_textsearch_17-1.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 129.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_textsearch_17-1.4.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el10.x86_64.rpm pigsty 1.2.0 121.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_textsearch_17-1.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_textsearch_17-1.4.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_textsearch_17 pg_textsearch_17-1.2.0-1PIGSTY.el10.aarch64.rpm pigsty 1.2.0 117.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_textsearch_17-1.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-textsearch postgresql-17-textsearch_1.2.0-1PIGSTY~bookworm_amd64.deb pigsty 1.2.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-textsearch/postgresql-17-textsearch_1.2.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-textsearch postgresql-17-textsearch_1.2.0-1PIGSTY~bookworm_arm64.deb pigsty 1.2.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-textsearch/postgresql-17-textsearch_1.2.0-1PIGSTY~bookworm_arm64.deb
@@ -122,7 +134,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_textsearch;          # 当前活跃 PG 版本安装
 ```
 

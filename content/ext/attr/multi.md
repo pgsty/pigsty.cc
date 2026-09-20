@@ -85,7 +85,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1960 | [**`pgcontext`**](/ext/e/pgcontext) | `0.2.0` | `--s-d--` | `pgcontext` | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
+| 1960 | [**`pgcontext`**](/ext/e/pgcontext) | `0.3.0` | `--s-d--` | `pgcontext` | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
 | 1970 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | `0.2.0` | `--s-d--` | - | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 {.ext-table}
 
@@ -95,8 +95,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.4` | `--s-dtr` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
-| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.4` | `--s-dtr` | - | PGGroonga 数据库管理模块 |
+| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.8` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
+| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.8` | `--s-d--` | - | PGGroonga 数据库管理模块 |
 {.ext-table}
 
 ## hunspell
@@ -157,7 +157,7 @@ weight: 40
 | 2945 | [`omni_credentials`](/ext/e/omni_credentials) | `0.2.0` | `----d--` | `omni_credentials` | Omnigres 应用密钥管理模块 |
 | 2948 | [`omni_email`](/ext/e/omni_email) | `0.1.0` | `----d--` | `omni_email` | Omnigres Email 框架 |
 | 2949 | [`omni_http`](/ext/e/omni_http) | `0.1.0` | `----d--` | `omni_http` | Omnigres 基本HTTP类型 |
-| 2950 | [`omni_httpc`](/ext/e/omni_httpc) | `0.1.10` | `--s-d--` | `omni_httpc` | Omnigres HTTP客户端 |
+| 2950 | [`omni_httpc`](/ext/e/omni_httpc) | `0.1.11` | `--s-d--` | `omni_httpc` | Omnigres HTTP客户端 |
 | 2951 | [`omni_httpd`](/ext/e/omni_httpd) | `0.4.11` | `--s-d--` | `omni_httpd` | Omnigres HTTP服务器 |
 | 2952 | [`omni_id`](/ext/e/omni_id) | `0.4.3` | `--s-d-r` | - | Omnigres ID身份数据类型 |
 | 2953 | [`omni_json`](/ext/e/omni_json) | `0.1.1` | `----dt-` | `omni_json` | Omnigres JSON工具箱 |
@@ -295,8 +295,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 6060 | [**`pgfr_record`**](/ext/e/pgfr_record) | `2.29.2` | `----d--` | `pgfr_record` | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
-| 6061 | [`pgfr_analyze`](/ext/e/pgfr_analyze) | `2.29.2` | `----d--` | `pgfr_analyze` | pgfr_record 采集数据的报告与性能分析函数 |
+| 6060 | [**`pgfr_record`**](/ext/e/pgfr_record) | `2.32.1` | `----d--` | `pgfr_record` | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
+| 6061 | [`pgfr_analyze`](/ext/e/pgfr_analyze) | `2.32.1` | `----d--` | `pgfr_analyze` | pgfr_record 采集数据的报告与性能分析函数 |
 {.ext-table}
 
 ## pgnodemx
@@ -315,10 +315,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.114` | `--sLd--` | - | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.114` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.114` | `--sLd--` | - | DocumentDB多节点模式的API层 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.114` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.116` | `--sLd--` | - | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.116` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
+| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.116` | `--sLd--` | - | DocumentDB多节点模式的API层 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.116` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
 ## ivorysql
@@ -341,10 +341,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9300 | [**`babelfishpg_common`**](/ext/e/babelfishpg_common) | `5.4.0` | `--s-d-r` | - | SQL Server 数据类型兼容扩展 |
-| 9310 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | `5.4.0` | `--s-d-r` | - | SQL Server SQL语法兼容性扩展 |
+| 9300 | [**`babelfishpg_common`**](/ext/e/babelfishpg_common) | `6.2.0` | `--s-d-r` | - | SQL Server 数据类型兼容扩展 |
+| 9310 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | `6.2.0` | `--s-d-r` | - | SQL Server SQL语法兼容性扩展 |
 | 9320 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | `1.0.0` | `--sLd-r` | - | SQL Server TDS线缆协议兼容扩展 |
-| 9330 | [`babelfishpg_money`](/ext/e/babelfishpg_money) | `1.1.0` | `--s-dt-` | - | SQL Server 货币数据类型兼容扩展 |
+| 9330 | [`babelfishpg_money`](/ext/e/babelfishpg_money) | `1.1.0` | `--s-d--` | - | SQL Server 货币数据类型兼容扩展 |
 {.ext-table}
 
 ## pglogical

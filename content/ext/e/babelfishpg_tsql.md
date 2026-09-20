@@ -11,10 +11,10 @@ weight: 9310
     <div class="ext-card__title">https://babelfishpg.org/</div>
     <div class="ext-card__desc">https://babelfishpg.org/</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/babelfish-17-17.7-5.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/babelfish-18-18.4-6.2.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">babelfish-17-17.7-5.4.0.tar.gz</div>
-    <div class="ext-card__desc">babelfish-17-17.7-5.4.0.tar.gz</div>
+    <div class="ext-card__title">babelfish-18-18.4-6.2.0.tar.gz</div>
+    <div class="ext-card__desc">babelfish-18-18.4-6.2.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9310
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`babelfish`**](/ext/e/babelfishpg_common) | `5.4.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`babelfish`**](/ext/e/babelfishpg_common) | `6.2.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,7 +33,7 @@ weight: 9310
 | 9300  | [**`babelfishpg_common`**](/ext/e/babelfishpg_common) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 | 9310  | [**`babelfishpg_tsql`**](/ext/e/babelfishpg_tsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 | 9320  | [**`babelfishpg_tds`**](/ext/e/babelfishpg_tds) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-| 9330  | [**`babelfishpg_money`**](/ext/e/babelfishpg_money) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 9330  | [**`babelfishpg_money`**](/ext/e/babelfishpg_money) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`babelfishpg_common`](/ext/e/babelfishpg_common) [`uuid-ossp`](/ext/e/uuid-ossp) [`tds_fdw`](/ext/e/tds_fdw) [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`pgtt`](/ext/e/pgtt) [`session_variable`](/ext/e/session_variable) [`ivorysql_ora`](/ext/e/ivorysql_ora) [`db_migrator`](/ext/e/db_migrator) [`mysql_fdw`](/ext/e/mysql_fdw) [`db2_fdw`](/ext/e/db2_fdw) |
@@ -42,16 +42,16 @@ weight: 9310
 {.ext-table .ext-table--rel}
 
 
-> special case: this extension only works on wiltondb kernel fork
+> PG17: Babelfish 5.7.0; PG18: 6.2.0. Package fields use PG18.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.4.0` | {{< pgvers "18,17" >}} | `babelfish` | `babelfishpg_common`, `uuid-ossp` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.0.0` | {{< pgvers "18,17" >}} | `babelfish-$v` | `antlr4-runtime413` |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.0.0` | {{< pgvers "18,17" >}} | `babelfish-$v` | `libantlr4-runtime413` |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.2.0` | {{< pgvers "18,17" >}} | `babelfish` | `babelfishpg_common`, `uuid-ossp` |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.2.0` | {{< pgvers "18,17" >}} | `babelfish-$v` | `antlr4-runtime413` |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.2.0` | {{< pgvers "18,17" >}} | `babelfish-$v` | `libantlr4-runtime413` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -94,7 +94,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install babelfish;          # 当前活跃 PG 版本安装
 ```
 
@@ -126,11 +126,11 @@ CREATE EXTENSION babelfishpg_tsql CASCADE;  -- 依赖: babelfishpg_common, uuid-
 
 - [Babelfish扩展BABEL_5_4_0 README](https://github.com/babelfish-for-postgresql/babelfish_extensions/blob/BABEL_5_4_0/README.md)
 - [安装指南](https://github.com/babelfish-for-postgresql/babelfish_extensions/blob/BABEL_5_4_0/INSTALLING.md.tmpl)
-- [`babelfishpg_tsql` 控制文件](https://github.com/babelfish-for-postgresql/babelfish_extensions/blob/BABEL_5_4_0/contrib/babelfishpg_tsql/babelfishpg_tsql.control.in)
+- [`babelfishpg_tsql`控制文件](https://github.com/babelfish-for-postgresql/babelfish_extensions/blob/BABEL_5_4_0/contrib/babelfishpg_tsql/babelfishpg_tsql.control.in)
 - [Babelfish限制](https://babelfishpg.org/docs/limitations/limitations-of-babelfish/)
 - [处理T-SQL](https://babelfishpg.org/docs/usage/handling-tsql/)
 
-`babelfishpg_tsql` 实现了T-SQL语言和SQL Server兼容的系统目录行为，这是Babelfish数据库的一个组成部分，而不是一个可以独立添加到标准PostgreSQL中的兼容层：完整的堆栈需要带有Babelfish补丁的PostgreSQL引擎加上公共、TDS和T-SQL扩展。
+`babelfishpg_tsql`实现了T-SQL语言和SQL Server兼容的系统目录行为，这是Babelfish数据库的一个组成部分，而不是一个可以独立添加到标准PostgreSQL中的兼容层：完整的堆栈需要带有Babelfish补丁的PostgreSQL引擎加上公共、TDS和T-SQL扩展。
 
 ### 核心工作流程
 
@@ -140,7 +140,7 @@ CREATE EXTENSION babelfishpg_tsql CASCADE;  -- 依赖: babelfishpg_common, uuid-
 shared_preload_libraries = 'babelfishpg_tds'
 ```
 
-使用 `CASCADE` 创建TDS扩展，以便安装其依赖项，包括 `babelfishpg_tsql`。在初始化前选择迁移模式。
+使用`CASCADE`创建TDS扩展，以便安装其依赖项，包括`babelfishpg_tsql`。在初始化前选择迁移模式。
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS babelfishpg_tds CASCADE;
@@ -155,19 +155,19 @@ CALL sys.initialize_babelfish('babelfish_user');
 
 ### 组件和对象索引
 
-- `babelfishpg_tsql` 提供T-SQL解析器、过程语言、系统对象、兼容函数以及T-SQL配置变量。
-- `babelfishpg_tds` 提供表格数据流监听器，也是常规安装入口点。
-- `babelfishpg_common` 提供共享的数据类型和函数。它和 `uuid-ossp` 是 `babelfishpg_tsql` 的声明依赖项。
-- `babelfishpg_money` 提供与堆栈相关的货币相关兼容对象。
-- `sys.initialize_babelfish(login_name)` 为Babelfish目录和服务初始化登录。
-- `sys.sp_babelfish_configure` 控制文档化的兼容性开关。
-- `babelfishpg_tsql.database_name` 标识托管Babelfish的物理PostgreSQL数据库。
-- `babelfishpg_tsql.migration_mode` 选择 `single-db` 或 `multi-db` 逻辑数据库映射。
+- `babelfishpg_tsql`提供T-SQL解析器、过程语言、系统对象、兼容函数以及T-SQL配置变量。
+- `babelfishpg_tds`提供表格数据流监听器，也是常规安装入口点。
+- `babelfishpg_common`提供共享的数据类型和函数。它和`uuid-ossp`是`babelfishpg_tsql`的声明依赖项。
+- `babelfishpg_money`提供与堆栈相关的货币相关兼容对象。
+- `sys.initialize_babelfish(login_name)`为Babelfish目录和服务初始化登录。
+- `sys.sp_babelfish_configure`控制文档化的兼容性开关。
+- `babelfishpg_tsql.database_name`标识托管Babelfish的物理PostgreSQL数据库。
+- `babelfishpg_tsql.migration_mode`选择`single-db`或`multi-db`逻辑数据库映射。
 
 ### 运行边界
 
-安装需要超级用户权限和与扩展版本匹配的Babelfish构建。不要单独安装 `babelfishpg_tsql` 并期望获得TDS连接性。迁移模式是一个配置决策，在数据库初始化后不应更改。
+安装需要超级用户权限和与扩展版本匹配的Babelfish构建。不要单独安装`babelfishpg_tsql`并期望获得TDS连接性。迁移模式是一个配置决策，在数据库初始化后不应更改。
 
 Babelfish实现了大量但不完整的SQL Server功能集。在迁移前，请根据官方限制验证应用程序语法、数据类型、系统目录假设、驱动程序和开关设置。PostgreSQL和T-SQL连接可以观察不同的命名和事务语义。
 
-从5.5.0到5.4.0的目录更改是官方 `BABEL_5_4_0` 发布线的一个版本修正，而不是新功能或自动降级过程的证据。
+从5.5.0到5.4.0的目录更改是官方`BABEL_5_4_0`发布线的一个版本修正，而不是新功能或自动降级过程的证据。

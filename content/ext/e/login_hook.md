@@ -11,10 +11,10 @@ weight: 7360
     <div class="ext-card__title">splendiddata/login_hook</div>
     <div class="ext-card__desc">https://github.com/splendiddata/login_hook</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/login_hook-1.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/login_hook-1.8.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">login_hook-1.7.tar.gz</div>
-    <div class="ext-card__desc">login_hook-1.7.tar.gz</div>
+    <div class="ext-card__title">login_hook-1.8.tar.gz</div>
+    <div class="ext-card__desc">login_hook-1.8.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7360
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`login_hook`**](/ext/e/login_hook) | `1.7` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`login_hook`**](/ext/e/login_hook) | `1.8` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,9 +42,9 @@ weight: 7360
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `login_hook` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `login_hook_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-login-hook` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `login_hook` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `login_hook_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-login-hook` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -211,7 +211,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install login_hook;          # 当前活跃 PG 版本安装
 ```
 

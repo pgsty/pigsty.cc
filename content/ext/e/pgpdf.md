@@ -217,7 +217,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pgpdf;          # 当前活跃 PG 版本安装
 ```
 
@@ -324,7 +324,7 @@ INSERT INTO pdfs VALUES ('pgintro', '/tmp/sample.pdf');
 
 ### 字符串函数和运算符
 
-标准的 PostgreSQL [字符串函数和运算符](https://www.postgresql.org/docs/17/functions-string.html) 均可正常使用：
+标准的 PostgreSQL [字符串函数和运算符](https://www.postgresql.org/docs/17/functions-string.html)均可正常使用：
 
 ```sql
 SELECT 'Below is the PDF we received ' || '/tmp/pgintro.pdf'::pdf;
@@ -518,17 +518,17 @@ SELECT pdf_version('/tmp/pgintro.pdf');
 安装 [poppler](https://poppler.freedesktop.org) 依赖
 
 **Linux**
-```text
+```
 sudo apt install -y libpoppler-glib-dev pkg-config
 ```
 
 **Homebrew/MacOS**
 
-```text
+```
 brew install poppler pkgconf
 ```
 
-```text
+```
 cd /tmp
 git clone https://github.com/Florents-Tselai/pgpdf.git
 cd pgpdf

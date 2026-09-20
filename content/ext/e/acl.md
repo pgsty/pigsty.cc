@@ -170,7 +170,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_acl;          # 当前活跃 PG 版本安装
 ```
 
@@ -229,7 +229,7 @@ ACL 以 ACE 类型的 PostgreSQL 数组形式存储（例如 `ace[]`）。
 
 ### ACE 格式
 
-```text
+```
 [type]/[flags]/[who]=[mask]
 ```
 

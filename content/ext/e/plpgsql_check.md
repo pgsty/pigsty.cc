@@ -53,12 +53,12 @@ weight: 3060
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.10.4 13 | AVAIL PIGSTY 2.10.4 18 | AVAIL PIGSTY 2.10.4 32 | AVAIL PIGSTY 2.10.4 40 | AVAIL PIGSTY 2.10.4 50 |
-| el8.aarch64 | AVAIL PIGSTY 2.10.4 13 | AVAIL PIGSTY 2.10.4 18 | AVAIL PIGSTY 2.10.4 32 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 39 |
-| el9.x86_64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 25 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 47 | AVAIL PIGSTY 2.10.4 54 |
-| el9.aarch64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 25 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 46 | AVAIL PIGSTY 2.10.4 46 |
-| el10.x86_64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 |
-| el10.aarch64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 |
+| el8.x86_64 | AVAIL PIGSTY 2.10.4 14 | AVAIL PIGSTY 2.10.4 19 | AVAIL PIGSTY 2.10.4 33 | AVAIL PIGSTY 2.10.4 41 | AVAIL PIGSTY 2.10.4 51 |
+| el8.aarch64 | AVAIL PIGSTY 2.10.4 14 | AVAIL PIGSTY 2.10.4 19 | AVAIL PIGSTY 2.10.4 33 | AVAIL PIGSTY 2.10.4 40 | AVAIL PIGSTY 2.10.4 40 |
+| el9.x86_64 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 26 | AVAIL PIGSTY 2.10.4 40 | AVAIL PIGSTY 2.10.4 48 | AVAIL PIGSTY 2.10.4 55 |
+| el9.aarch64 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 26 | AVAIL PIGSTY 2.10.4 40 | AVAIL PIGSTY 2.10.4 47 | AVAIL PIGSTY 2.10.4 47 |
+| el10.x86_64 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 |
+| el10.aarch64 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 | AVAIL PIGSTY 2.10.4 22 |
 | d12.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
 | d12.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
 | d13.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
@@ -70,6 +70,7 @@ weight: 3060
 | u26.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
 | u26.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.4 126.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -83,6 +84,7 @@ weight: 3060
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel8.x86_64.rpm pgdg 2.8.3 113.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel8.x86_64.rpm pgdg 2.8.2 113.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.4 117.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -96,6 +98,7 @@ weight: 3060
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel8.aarch64.rpm pgdg 2.8.3 105.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.8.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel8.aarch64.rpm pgdg 2.8.2 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.8.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.4 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 119.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -116,6 +119,7 @@ weight: 3060
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel9.x86_64.rpm pgdg 2.8.3 109.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel9.x86_64.rpm pgdg 2.8.2 108.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.4 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -136,6 +140,7 @@ weight: 3060
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel9.aarch64.rpm pgdg 2.8.3 103.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.8.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel9.aarch64.rpm pgdg 2.8.2 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.8.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 119.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.4 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -156,6 +161,7 @@ weight: 3060
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 111.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.4 117.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -216,6 +222,7 @@ weight: 3060
 @ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.4 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -234,6 +241,7 @@ weight: 3060
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel8.x86_64.rpm pgdg 2.7.12 105.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.7.12-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel8.x86_64.rpm pgdg 2.7.11 105.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.7.11-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.4 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -252,6 +260,7 @@ weight: 3060
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel8.aarch64.rpm pgdg 2.7.12 97.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.7.12-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel8.aarch64.rpm pgdg 2.7.11 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.7.11-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.4 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -277,6 +286,7 @@ weight: 3060
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel9.x86_64.rpm pgdg 2.7.12 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.7.12-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel9.x86_64.rpm pgdg 2.7.11 103.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.7.11-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.4 116.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -302,6 +312,7 @@ weight: 3060
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel9.aarch64.rpm pgdg 2.7.12 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.7.12-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel9.aarch64.rpm pgdg 2.7.11 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.7.11-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 118.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.4 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -323,6 +334,7 @@ weight: 3060
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 110.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.4 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -384,6 +396,7 @@ weight: 3060
 @ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.4 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -416,6 +429,7 @@ weight: 3060
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel8.x86_64.rpm pgdg 2.5.1 100.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel8.x86_64.rpm pgdg 2.5.0 100.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.4 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -448,6 +462,7 @@ weight: 3060
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel8.aarch64.rpm pgdg 2.5.1 93.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.5.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel8.aarch64.rpm pgdg 2.5.0 93.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.5.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.4 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -487,6 +502,7 @@ weight: 3060
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel9.x86_64.rpm pgdg 2.5.1 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.5.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel9.x86_64.rpm pgdg 2.5.0 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.4 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -526,6 +542,7 @@ weight: 3060
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel9.aarch64.rpm pgdg 2.5.1 94.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.5.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel9.aarch64.rpm pgdg 2.5.0 94.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.5.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 118.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.4 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -547,6 +564,7 @@ weight: 3060
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 110.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.4 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -608,6 +626,7 @@ weight: 3060
 @ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 126.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.4 126.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -648,6 +667,7 @@ weight: 3060
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel8.x86_64.rpm pgdg 2.2.3 95.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.2.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.2-1.rhel8.x86_64.rpm pgdg 2.2.2 94.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.2.2-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 116.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.4 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -687,6 +707,7 @@ weight: 3060
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel8.aarch64.rpm pgdg 2.2.4 88.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.2.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel8.aarch64.rpm pgdg 2.2.3 88.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.2.3-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 121.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.4 120.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -734,6 +755,7 @@ weight: 3060
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel9.x86_64.rpm pgdg 2.2.3 95.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.2.3-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.2-1.rhel9.x86_64.rpm pgdg 2.2.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.2.2-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 116.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.4 116.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 115.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -780,6 +802,7 @@ weight: 3060
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel9.aarch64.rpm pgdg 2.2.4 91.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.2.4-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel9.aarch64.rpm pgdg 2.2.3 91.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.2.3-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 123.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.4 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -801,6 +824,7 @@ weight: 3060
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 114.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 113.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 117.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.4 117.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -862,6 +886,7 @@ weight: 3060
 @ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 304.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 304.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 126.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.4 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -912,6 +937,7 @@ weight: 3060
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 87.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.0.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-1.17.1-1.rhel8.x86_64.rpm pgdg 1.17.1 83.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-1.17.1-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 116.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.4 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -951,6 +977,7 @@ weight: 3060
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.4-1.rhel8.aarch64.rpm pgdg 2.2.4 88.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.2.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.3-1.rhel8.aarch64.rpm pgdg 2.2.3 88.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.2.3-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 122.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.4 120.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 119.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -1005,6 +1032,7 @@ weight: 3060
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.1.3-1.rhel9.x86_64.rpm pgdg 2.1.3 88.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.1.3-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.1.2-1.rhel9.x86_64.rpm pgdg 2.1.2 88.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.1.2-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 116.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.4 116.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 115.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -1051,6 +1079,7 @@ weight: 3060
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.4-1.rhel9.aarch64.rpm pgdg 2.2.4 91.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.2.4-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.3-1.rhel9.aarch64.rpm pgdg 2.2.3 90.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.2.3-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 124.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.4 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -1072,6 +1101,7 @@ weight: 3060
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 115.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 114.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 117.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.4 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -1153,7 +1183,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install plpgsql_check;          # 当前活跃 PG 版本安装
 ```
 

@@ -20,7 +20,7 @@ weight: 6080
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_statviz`**](/ext/e/pg_statviz) | `1.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pg_statviz`**](/ext/e/pg_statviz) | `1.2.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,16 +33,16 @@ weight: 6080
 {.ext-table .ext-table--rel}
 
 
-> Cataloged but hidden from default package groups. GitHub release and control are 1.1 while PGXN still serves 1.0. PGDG DEB 1.1 covers active PG14-18 except Ubuntu 22.04 and recommends the separate Python utility, so a normal APT install can pull its Python stack. PGDG RPM remains at 0.9, lacks PG17, and provides PG18 only on EL10; its metadata declares no PostgreSQL dependency, labels GPLv2+ although upstream uses the PostgreSQL License, and describes a CLI although the subpackage contains only extension SQL and control files. The extension itself is pure SQL and PL/pgSQL and needs no preload.
+> DEB 1.2.1; RPM 0.9 lacks PG17. SQL-only.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_statviz` | `plpgsql` |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_statviz` | `plpgsql` |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.9` | {{< pgvers "18,16,15,14" >}} | `pg_statviz_extension_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-statviz` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-statviz` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,69 +54,69 @@ weight: 6080
 | el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | AVAIL PGDG 0.9 3 | AVAIL PGDG 0.9 5 | AVAIL PGDG 0.9 5 |
 | el10.x86_64 | AVAIL PGDG 0.9 3 | MISS PGDG - 0 | AVAIL PGDG 0.9 4 | AVAIL PGDG 0.9 4 | AVAIL PGDG 0.9 4 |
 | el10.aarch64 | AVAIL PGDG 0.9 2 | MISS PGDG - 0 | AVAIL PGDG 0.9 3 | AVAIL PGDG 0.9 3 | AVAIL PGDG 0.9 3 |
-| d12.x86_64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| d12.aarch64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| d13.x86_64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| d13.aarch64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
+| d12.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| d12.aarch64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| d13.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| d13.aarch64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
 | u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| u24.aarch64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| u26.x86_64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
-| u26.aarch64 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 | AVAIL PGDG 1.1 3 |
+| u24.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| u24.aarch64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| u26.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
+| u26.aarch64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
 @ el10.x86_64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.2.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_statviz_extension_18-0.9-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.x86_64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 15.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm
+@ d12.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg12+1_all.deb
+@ d12.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg12+1_all.deb
+@ d13.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg13+1_all.deb
+@ d13.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg13+1_all.deb
+@ u24.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u24.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.x86_64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.aarch64 18 postgresql-18-statviz postgresql-18-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-18-statviz_1.0-1.pgdg26.04+1_all.deb
+@ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg12+1_all.deb
+@ d12.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg12+1_all.deb
+@ d13.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg13+1_all.deb
+@ d13.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg13+1_all.deb
+@ u24.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u24.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u26.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.aarch64 17 postgresql-17-statviz postgresql-17-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.0-1.pgdg26.04+1_all.deb
 @ el8.x86_64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel8.10.noarch.rpm pgdg 0.9 15.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_statviz_extension_16-0.9-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.6-1PGDG.rhel8.noarch.rpm pgdg 0.6 11.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_statviz_extension_16-0.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel8.10.noarch.rpm pgdg 0.9 15.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_statviz_extension_16-0.9-1PGDG.rhel8.10.noarch.rpm
@@ -134,30 +134,30 @@ weight: 6080
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-0.6-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg12+1_all.deb
+@ d12.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg12+1_all.deb
+@ d13.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg13+1_all.deb
+@ d13.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg13+1_all.deb
+@ u24.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u24.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u26.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.x86_64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.aarch64 16 postgresql-16-statviz postgresql-16-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-16-statviz_1.0-1.pgdg26.04+1_all.deb
 @ el8.x86_64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel8.10.noarch.rpm pgdg 0.9 15.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_statviz_extension_15-0.9-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.6-1PGDG.rhel8.noarch.rpm pgdg 0.6 11.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_statviz_extension_15-0.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.5-1PGDG.rhel8.noarch.rpm pgdg 0.5 11.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_statviz_extension_15-0.5-1PGDG.rhel8.noarch.rpm
@@ -183,30 +183,30 @@ weight: 6080
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-0.6-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg12+1_all.deb
+@ d12.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg12+1_all.deb
+@ d13.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg13+1_all.deb
+@ d13.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg13+1_all.deb
+@ u24.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u24.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u26.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.x86_64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.aarch64 15 postgresql-15-statviz postgresql-15-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-15-statviz_1.0-1.pgdg26.04+1_all.deb
 @ el8.x86_64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel8.10.noarch.rpm pgdg 0.9 15.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_statviz_extension_14-0.9-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.6-1PGDG.rhel8.noarch.rpm pgdg 0.6 11.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_statviz_extension_14-0.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.5-1PGDG.rhel8.noarch.rpm pgdg 0.5 11.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_statviz_extension_14-0.5-1PGDG.rhel8.noarch.rpm
@@ -232,30 +232,30 @@ weight: 6080
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-0.6-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg12+1_all.deb
+@ d12.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg12+1_all.deb
 @ d12.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg12+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg12+1_all.deb
-@ d12.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg12+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg12+1_all.deb
+@ d13.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg13+1_all.deb
+@ d13.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg13+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg13+1_all.deb
 @ d13.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg13+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg13+1_all.deb
 @ d13.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg13+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg13+1_all.deb
-@ d13.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg13+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg13+1_all.deb
+@ u24.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u24.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg24.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg24.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg24.04+1_all.deb
 @ u24.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg24.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg24.04+1_all.deb
-@ u24.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg24.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg24.04+1_all.deb
+@ u26.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.x86_64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg26.04+1_all.deb
+@ u26.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.2.1-1.pgdg26.04+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.2.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.1-1.pgdg26.04+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.1-1.pgdg26.04+1_all.deb
 @ u26.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-2.pgdg26.04+1_all.deb pgdg 1.0 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-2.pgdg26.04+1_all.deb
-@ u26.aarch64 14 postgresql-14-statviz postgresql-14-statviz_1.0-1.pgdg26.04+1_all.deb pgdg 1.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-14-statviz_1.0-1.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 
@@ -269,7 +269,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_statviz;          # 当前活跃 PG 版本安装
 ```
 
@@ -308,16 +308,17 @@ CREATE EXTENSION pg_statviz CASCADE;  -- 依赖: plpgsql
 
 来源：
 
-- [pg_statviz v1.1 发行说明](https://github.com/vyruss/pg_statviz/releases/tag/v1.1)
-- [pg_statviz v1.1 README](https://github.com/vyruss/pg_statviz/blob/v1.1/README.md)
-- [pg_statviz v1.1 安装 SQL](https://github.com/vyruss/pg_statviz/blob/v1.1/pg_statviz--1.1.sql)
-- [pg_statviz v1.1 控制文件](https://github.com/vyruss/pg_statviz/blob/v1.1/pg_statviz.control)
-- [pg_statviz v1.1 元数据](https://github.com/vyruss/pg_statviz/blob/v1.1/META.json)
-- [pg_statviz v1.1 Python 软件包元数据](https://github.com/vyruss/pg_statviz/blob/v1.1/pyproject.toml)
-- [pg_statviz v1.1 AI 服务商实现](https://github.com/vyruss/pg_statviz/blob/v1.1/src/pg_statviz/libs/ai.py)
-- [正式 PGXN 分发](https://pgxn.org/dist/pg_statviz/)
+- [pg_statviz v1.2 发行说明](https://github.com/vyruss/pg_statviz/releases/tag/v1.2)
+- [pg_statviz v1.2 README](https://github.com/vyruss/pg_statviz/blob/v1.2/README.md)
+- [pg_statviz v1.2 安装 SQL](https://github.com/vyruss/pg_statviz/blob/v1.2/pg_statviz--1.2.sql)
+- [pg_statviz v1.1 至 v1.2 升级 SQL](https://github.com/vyruss/pg_statviz/blob/v1.2/pg_statviz--1.1--1.2.sql)
+- [pg_statviz v1.2 控制文件](https://github.com/vyruss/pg_statviz/blob/v1.2/pg_statviz.control)
+- [pg_statviz v1.2 元数据](https://github.com/vyruss/pg_statviz/blob/v1.2/META.json)
+- [pg_statviz v1.2 Python 软件包元数据](https://github.com/vyruss/pg_statviz/blob/v1.2/pyproject.toml)
+- [pg_statviz v1.2 AI 服务商实现](https://github.com/vyruss/pg_statviz/blob/v1.2/src/pg_statviz/libs/ai.py)
+- [正式 PGXN v1.2.0 分发](https://pgxn.org/dist/pg_statviz/1.2.0/README.html)
 
-`pg_statviz` v1.1 由一个纯 SQL 与 PL/pgSQL 的统计快照扩展和一个单独安装的 Python 可视化工具组成。扩展把 PostgreSQL 的累积及动态统计保存在固定的 `pgstatviz` 模式中；工具读取选定时间范围，并生成图表或可选的 AI 辅助 HTML 报告。它要求 PostgreSQL 13 或以上版本，不需要 `shared_preload_libraries`，也无需重启。工具要求 Python 3.11 或以上版本。
+`pg_statviz` v1.2（PGXN 分发版本为 1.2.0）由一个纯 SQL 与 PL/pgSQL 的统计快照扩展和一个单独安装的 Python 可视化工具组成。扩展把 PostgreSQL 的累积及动态统计保存在固定的 `pgstatviz` 模式中；工具读取选定时间范围，并生成图表或可选的 AI 辅助 HTML 报告。它要求 PostgreSQL 13 或以上版本，支持到 PostgreSQL 19，不需要 `shared_preload_libraries`，也无需重启。工具要求 Python 3.11 或以上版本。
 
 ### 采集并保留快照
 
@@ -338,15 +339,15 @@ WHERE snapshot_tstamp < CURRENT_DATE - 90;
 
 ### 存储数据与版本边界
 
-主要关系包括 `pgstatviz.snapshots`、`pgstatviz.buf`、`pgstatviz.conf`、`pgstatviz.conn`、`pgstatviz.db`、`pgstatviz.io`、`pgstatviz.lock`、`pgstatviz.repl`、`pgstatviz.slru`、`pgstatviz.wait` 和 `pgstatviz.wal`。样本会包含配置值、连接用户名与时长、复制应用及槽名称、等待、锁、I/O、数据库计数器和 WAL 计数器。应把这些表、转储、图表与报告作为运维数据加以保护。
+主要关系包括 `pgstatviz.snapshots`、`pgstatviz.blocking`、`pgstatviz.buf`、`pgstatviz.conf`、`pgstatviz.conn`、`pgstatviz.db`、`pgstatviz.io`、`pgstatviz.lock`、`pgstatviz.repl`、`pgstatviz.slru`、`pgstatviz.wait` 和 `pgstatviz.wal`。样本会包含配置值、连接用户名与时长、复制应用及槽名称、等待、阻塞锁与普通锁、I/O、数据库计数器和 WAL 计数器。应把这些表、转储、图表与报告作为运维数据加以保护。
 
-配置只在发生变化时保存，因此 `pgstatviz.conf` 不一定对应每次快照都有一行。PostgreSQL 14 及以上版本采集 `pg_stat_wal`，PostgreSQL 16 及以上版本采集 `pg_stat_io`，并单独处理 PostgreSQL 18 基于字节的字段。较早的受支持版本仍会创建这些表，但会跳过不可用的采集器。
+配置只在发生变化时保存，因此 `pgstatviz.conf` 不一定对应每次快照都有一行。PostgreSQL 14 及以上版本采集 `pg_stat_wal`，PostgreSQL 16 及以上版本采集 `pg_stat_io`，并单独处理 PostgreSQL 18 基于字节的字段。版本 1.2 还会记录 PostgreSQL 19 的 `wal_fpi_bytes`，并在相应设置存在时采集 PostgreSQL 18/19 新增的 I/O 工作进程、有效 WAL 级别与 autovacuum 评分设置。较早的受支持版本仍会创建这些表，但会跳过不可用的采集器与设置。
 
 扩展把快照表标记为可感知扩展的转储对象，因此可以用 `pg_dump` 搬迁历史，但仍需主动限制保留量与备份大小。
 
 ### 可视化时间范围
 
-可视化工具需要单独安装，并接受常规 libpq 连接选项。`analyze` 命令会运行全部分析模块；只需要较窄的报告时，可以选择 `conn`、`io`、`wait` 和 `wal` 等单个模块。
+可视化工具需要单独安装，并接受常规 libpq 连接选项。`analyze` 命令会运行全部分析模块；只需要较窄的报告时，可以选择 `blocking`、`conn`、`io`、`wait` 和 `wal` 等单个模块。v1.2 的 `blocking` 模块通过基于 `pg_blocking_pids()` 的快照，按锁类型汇总被阻塞与阻塞其他会话的数量，因此同时包含软阻塞与硬锁冲突。
 
 ```bash
 pip install pg_statviz
@@ -361,13 +362,23 @@ pg_statviz analyze \
 
 ### 权限边界
 
-v1.1 安装 SQL 会向 `pg_monitor` 的所有成员授予模式使用权、函数执行权，以及全部 `pgstatviz` 表上的 `SELECT`、`INSERT`、`DELETE` 与 `TRUNCATE`。因此，该成员身份同时允许采集快照，并能通过 `pgstatviz.delete_snapshots()` 删除全部历史；它并不是只读可视化角色。
+v1.2 安装 SQL 会向 `pg_monitor` 的所有成员授予模式使用权、函数执行权，以及全部 `pgstatviz` 表上的 `SELECT`、`INSERT`、`DELETE` 与 `TRUNCATE`。因此，该成员身份同时允许采集快照，并能通过 `pgstatviz.delete_snapshots()` 删除全部历史；它并不是只读可视化角色。
 
 如果必须分离采集、可视化和保留管理，应在安装后修订默认授权，只向专用角色授予所需函数与表权限。扩展升级后应再次检查这些授权。
 
+### 升级到 v1.2
+
+安装 v1.2 扩展文件后，需要在每个已经安装 `pg_statviz` 的数据库中执行升级：
+
+```sql
+ALTER EXTENSION pg_statviz UPDATE TO '1.2';
+```
+
+v1.1 至 v1.2 的迁移会添加 `pgstatviz.blocking` 与 `pgstatviz.wal.wal_fpi_bytes`，替换快照函数，向 `pg_monitor` 授予新表权限，并把该表标记为可感知扩展的转储对象。只替换软件包文件不会应用这些数据库变更。升级前应备份运维历史，并检查任何假定 v1.1 模式结构的外部报告或恢复流程能否处理新增表和字段。
+
 ### 可选 AI 与云端数据审查
 
-普通图表生成不会请求 LLM。AI 模式需要可选的 `pg_statviz[ai]` 依赖，并显式使用 `--ai` 参数。Claude 是默认云服务商并读取 `ANTHROPIC_API_KEY`；Gemini 读取 `GOOGLE_API_KEY`；`--ai local` 使用本地 Ollama 服务。当前默认模型为 `claude-sonnet-4-6`、`gemini-2.5-flash` 与 `gemma4:e4b`；这些只是实现默认值，并不保证服务商账户或本地运行时会持续提供相应模型。
+普通图表生成不会请求 LLM。AI 模式需要可选的 `pg_statviz[ai]` 依赖，并显式使用 `--ai` 参数。Claude 是默认云服务商并读取 `ANTHROPIC_API_KEY`；Gemini 读取 `GOOGLE_API_KEY`；OpenAI 或 OpenAI 兼容端点读取 `OPENAI_API_KEY`，并可通过 `OPENAI_BASE_URL` 重定向；`--ai local` 使用本地 Ollama 服务。当前默认模型为 `claude-sonnet-5`、`gemini-3.7-flash`、`gpt-5.6-luna` 与 `gemma4:e4b`；`OPENAI_MODEL` 可以覆盖 OpenAI 兼容模型。这些只是实现默认值，并不保证服务商账户或本地运行时会持续提供相应模型。
 
 ```bash
 pip install 'pg_statviz[ai]'

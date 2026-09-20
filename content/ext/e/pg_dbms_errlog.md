@@ -46,19 +46,19 @@ weight: 9270
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_errlog` | `pg_statement_rollback` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_errlog_$v` | `pg_statement_rollback_$v` |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_errlog_$v` | `pg_statement_rollback_$v` |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-dbms-errlog` | `postgresql-$v-pg-statement-rollback` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
-| el8.aarch64 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
-| el9.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
-| el9.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
-| el10.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
-| el10.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| el8.x86_64 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 |
+| el8.aarch64 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 | AVAIL PGDG 2.4 2 |
+| el9.x86_64 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 |
+| el9.aarch64 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 |
+| el10.x86_64 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 |
+| el10.aarch64 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 | AVAIL PGDG 2.4 3 |
 | d12.x86_64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
@@ -69,14 +69,20 @@ weight: 9270
 | u24.aarch64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 | AVAIL PIGSTY 2.4 1 |
+@ el8.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_errlog_18-2.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_errlog_18-2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_errlog_18-2.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_errlog_18-2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_errlog_18-2.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_errlog_18-2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_errlog_18-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_errlog_18-2.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_errlog_18-2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_errlog_18-2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_errlog_18-2.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_errlog_18-2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_errlog_18-2.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_errlog_18-2.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_errlog_18-2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_dbms_errlog_18 pg_dbms_errlog_18-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_errlog_18-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-dbms-errlog postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 62.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-errlog/postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb
@@ -89,14 +95,20 @@ weight: 9270
 @ u24.aarch64 18 postgresql-18-pg-dbms-errlog postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb pigsty 2.4 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-errlog/postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pg-dbms-errlog postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb pigsty 2.4 64.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-dbms-errlog postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb pigsty 2.4 64.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-18-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_errlog_17-2.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_errlog_17-2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_errlog_17-2.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_errlog_17-2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_errlog_17-2.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_errlog_17-2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_errlog_17-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_errlog_17-2.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_errlog_17-2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_errlog_17-2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_errlog_17-2.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_errlog_17-2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_errlog_17-2.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_errlog_17-2.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_errlog_17-2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_dbms_errlog_17 pg_dbms_errlog_17-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_errlog_17-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-dbms-errlog postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 62.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-errlog/postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb
@@ -109,14 +121,20 @@ weight: 9270
 @ u24.aarch64 17 postgresql-17-pg-dbms-errlog postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb pigsty 2.4 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-errlog/postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pg-dbms-errlog postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb pigsty 2.4 64.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-dbms-errlog postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb pigsty 2.4 64.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-17-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_errlog_16-2.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_errlog_16-2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_errlog_16-2.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_errlog_16-2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_errlog_16-2.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_errlog_16-2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_errlog_16-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_errlog_16-2.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_errlog_16-2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_errlog_16-2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_errlog_16-2.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_errlog_16-2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_errlog_16-2.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_errlog_16-2.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_errlog_16-2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_dbms_errlog_16 pg_dbms_errlog_16-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_errlog_16-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-dbms-errlog postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 62.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-errlog/postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb
@@ -129,14 +147,20 @@ weight: 9270
 @ u24.aarch64 16 postgresql-16-pg-dbms-errlog postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb pigsty 2.4 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-errlog/postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pg-dbms-errlog postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb pigsty 2.4 64.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-dbms-errlog postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb pigsty 2.4 63.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-16-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_errlog_15-2.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_errlog_15-2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_errlog_15-2.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_errlog_15-2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4 33.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_errlog_15-2.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_errlog_15-2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_errlog_15-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_errlog_15-2.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2 32.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_errlog_15-2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 32.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_errlog_15-2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_errlog_15-2.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_errlog_15-2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_errlog_15-2.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_errlog_15-2.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_errlog_15-2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_dbms_errlog_15 pg_dbms_errlog_15-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_errlog_15-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-dbms-errlog postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 62.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-errlog/postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb
@@ -149,14 +173,20 @@ weight: 9270
 @ u24.aarch64 15 postgresql-15-pg-dbms-errlog postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb pigsty 2.4 64.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-errlog/postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-dbms-errlog postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb pigsty 2.4 64.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-dbms-errlog postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb pigsty 2.4 64.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-errlog/postgresql-15-pg-dbms-errlog_2.4-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.4 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_errlog_14-2.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_errlog_14-2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.4 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_errlog_14-2.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_errlog_14-2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4 33.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_errlog_14-2.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_errlog_14-2.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_errlog_14-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_errlog_14-2.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_errlog_14-2.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_errlog_14-2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4 33.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_errlog_14-2.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_errlog_14-2.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_errlog_14-2.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4 33.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_errlog_14-2.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_errlog_14-2.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_errlog_14 pg_dbms_errlog_14-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_errlog_14-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-dbms-errlog postgresql-14-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 62.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-errlog/postgresql-14-pg-dbms-errlog_2.4-1PIGSTY~bookworm_amd64.deb
@@ -190,7 +220,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_dbms_errlog;          # 当前活跃 PG 版本安装
 ```
 

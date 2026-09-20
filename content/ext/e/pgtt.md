@@ -11,6 +11,11 @@ weight: 9110
     <div class="ext-card__title">darold/pgtt</div>
     <div class="ext-card__desc">https://github.com/darold/pgtt</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgtt-4.6.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pgtt-4.6.tar.gz</div>
+    <div class="ext-card__desc">pgtt-4.6.tar.gz</div>
+  </a>
 </div>
 
 
@@ -464,6 +469,14 @@ weight: 9110
 @ u26.aarch64 14 postgresql-14-pgtt postgresql-14-pgtt_4.4-1PIGSTY~resolute_arm64.deb pigsty 4.4 48.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgtt/postgresql-14-pgtt_4.4-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgtt` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pgtt         # 构建 RPM / DEB 包
+```
+
 
 ## 安装
 
@@ -475,7 +488,7 @@ pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pgtt;          # 当前活跃 PG 版本安装
 ```
 

@@ -11,10 +11,10 @@ weight: 8730
     <div class="ext-card__title">adjust/kafka_fdw</div>
     <div class="ext-card__desc">https://github.com/adjust/kafka_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafka_fdw-0.0.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafka_fdw-0.0.3+git20251030.8615082.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">kafka_fdw-0.0.3.tar.gz</div>
-    <div class="ext-card__desc">kafka_fdw-0.0.3.tar.gz</div>
+    <div class="ext-card__title">kafka_fdw-0.0.3+git20251030.8615082.tar.gz</div>
+    <div class="ext-card__desc">kafka_fdw-0.0.3+git20251030.8615082.tar.gz</div>
   </a>
 </div>
 
@@ -44,7 +44,7 @@ weight: 8730
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `kafka_fdw` | - |
 | [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `kafka_fdw_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-kafka-fdw` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3+git20251030.8615082` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-kafka-fdw` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install kafka_fdw;          # 当前活跃 PG 版本安装
 ```
 

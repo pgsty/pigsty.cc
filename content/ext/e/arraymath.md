@@ -11,10 +11,10 @@ weight: 4770
     <div class="ext-card__title">pramsey/pgsql-arraymath</div>
     <div class="ext-card__desc">https://github.com/pramsey/pgsql-arraymath</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-arraymath-1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-arraymath-1.1+git20260702.4822319.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgsql-arraymath-1.1.tar.gz</div>
-    <div class="ext-card__desc">pgsql-arraymath-1.1.tar.gz</div>
+    <div class="ext-card__title">pgsql-arraymath-1.1+git20260702.4822319.tar.gz</div>
+    <div class="ext-card__desc">pgsql-arraymath-1.1+git20260702.4822319.tar.gz</div>
   </a>
 </div>
 
@@ -44,7 +44,7 @@ weight: 4770
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_arraymath` | - |
 | [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_arraymath_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-arraymath` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1+git20260702.4822319` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-arraymath` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -167,7 +167,7 @@ pig repo add pgsql -u          # 添加仓库并更新缓存
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
-```bash {tab="安装" group="tab1-pig-dnf-apt" value="tab1"}
+```bash {tab="安装" group="extension-install" value="install"}
 pig install pg_arraymath;          # 当前活跃 PG 版本安装
 ```
 
