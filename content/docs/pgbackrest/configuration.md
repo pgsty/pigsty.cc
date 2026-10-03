@@ -44,11 +44,26 @@ pgBackRest 可以完全通过命令行参数使用，但当配置较为复杂或
 
 **List（列表）**：该选项可指定多次。
 
-命令行示例：`--db-exclude=db1 --db-exclude=db2 --db-exclude=db5`<br/>配置文件示例，每项单独占一行：`db-exclude=db1 db-exclude=db2 db-exclude=db5`
+命令行示例：`--db-exclude=db1 --db-exclude=db2 --db-exclude=db5`
+
+配置文件示例，每项单独占一行：
+
+```ini
+db-exclude=db1
+db-exclude=db2
+db-exclude=db5
+```
 
 **Key/Value（键值对）**：该选项可以 `key=value` 的形式指定多次。
 
-命令行示例：`--tablespace-map=ts_01=/db/ts_01 --tablespace-map=ts_02=/db/ts_02`<br/>配置文件示例，每项单独占一行：`tablespace-map=ts_01=/db/ts_01 tablespace-map=ts_02=/db/ts_02`
+命令行示例：`--tablespace-map=ts_01=/db/ts_01 --tablespace-map=ts_02=/db/ts_02`
+
+配置文件示例，每项单独占一行：
+
+```ini
+tablespace-map=ts_01=/db/ts_01
+tablespace-map=ts_02=/db/ts_02
+```
 
 --------
 

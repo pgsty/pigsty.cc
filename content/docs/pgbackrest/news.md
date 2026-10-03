@@ -12,6 +12,45 @@ categories: [参考]
 
 --------
 
+## pgBackRest 2.59.2 正式发布 {#release-2-59-2}
+
+**2026 年 9 月 27 日**
+
+pgBackRest 社区很高兴地宣布 [pgBackRest](https://pgbackrest.org) 2.59.2 正式发布。pgBackRest 是一款可靠、易用的备份与恢复解决方案，可无缝扩展以应对超大规模数据库和工作负载。
+
+pgBackRest 为管理备份与恢复基础设施提供了丰富而强大的功能，包括：并行备份与恢复、全量/差异/增量备份、块级增量备份、多仓库、delta 恢复、并行异步归档、恶意软件/勒索软件防护、逐文件校验和、备份期间验证页面校验和（启用时）、多种压缩类型、加密、部分备份/失败备份续传、从备库执行备份、表空间与链接支持、S3/Azure/GCS/SFTP 支持、备份过期、本地或通过 SSH/TLS 进行远程操作、灵活配置，以及更多功能。
+
+pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org) 或 [PostgreSQL APT 仓库](https://apt.postgresql.org) 安装，许多其他发行版也提供相应软件包。源码可从 [版本发布](/docs/pgbackrest/release/) 页面下载。
+
+### 新功能与漏洞修复 {#release-2-59-2-feature}
+
+- 支持 PostgreSQL 19beta4（David Steele）
+- 修复备份期间文件被截断为零长度时产生空块映射的问题（David Steele）
+- 向驱动传入过滤器时，禁用读取重试（David Steele）
+- 修复 S3 对象版本列表的分页问题（David Steele）
+- 使用 SAS 认证时设置 Azure 版本请求头（David Steele）
+- 修复异步 `archive-push` 遇到零长度备份历史文件时停滞的问题（Andrew Kroh）
+- 修复 `annotate` 命令在远程加密仓库上执行时的问题（Douglas J Hunley）
+
+其他修复和改进请参阅 [2.59.2 版本说明](/docs/pgbackrest/release/#v2592-版本说明)。
+
+### 重要提示 {#release-2-59-2-note}
+
+- PostgreSQL 19beta4 更改了 `pg_control` 和 WAL 格式，因此不再支持早期 PostgreSQL 19 beta 版本的集群及其 WAL。运行早期 beta 版本的集群应使用 19beta4 重新创建。
+
+### 相关链接 {#release-2-59-2-link}
+
+- [网站](/docs/pgbackrest/)
+- [用户指南](/docs/pgbackrest/user-guide/)
+- [版本说明](/docs/pgbackrest/release/)
+
+### 赞助 {#release-2-59-2-sponsorship}
+
+感谢 [AWS](https://aws.amazon.com)、[Supabase](https://supabase.com)、[pgEdge](https://pgedge.com)、[Tiger Data](https://tigerdata.com)、[Percona](https://percona.com)、[Eon](https://eon.io)、[Xata](https://xata.io)、[Dalibo](https://dalibo.com) 和 [Data Egret](https://dataegret.com) 的慷慨赞助，使本次发布成为可能。
+
+
+--------
+
 ## pgBackRest 2.59.1 正式发布 {#release-2-59-1}
 
 **2026 年 8 月 17 日**

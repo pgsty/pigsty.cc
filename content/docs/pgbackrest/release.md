@@ -22,6 +22,31 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 ## 当前稳定版本
 
 
+### v2.59.2 版本说明
+
+*支持 PostgreSQL 19beta4*
+
+*发布于 2026 年 9 月 27 日*
+
+**漏洞修复：**
+
+- 修复备份期间文件被截断为零长度时产生空块映射的问题。（*由 Douglas J Hunley 审核，JPCOSTA78 报告。*）
+- 向驱动传入过滤器时，禁用读取重试。（*由 Douglas J Hunley 审核，megamaced 报告。*）
+- 修复 S3 对象版本列表的分页问题。（*由 Douglas J Hunley、guruguruguru 审核，guruguruguru 报告。*）
+- 使用 SAS 认证时设置 Azure 版本请求头。（*由 Douglas J Hunley 审核，Florian Helmberger 报告。*）
+- 修复异步 `archive-push` 遇到零长度备份历史文件时停滞的问题。（*由 Andrew Kroh 修复，David Steele、Douglas J Hunley 审核。*）
+- 修复 `annotate` 命令在远程加密仓库上执行时的问题。（*由 Douglas J Hunley 修复，David Steele 审核。*）
+
+**新功能：**
+
+- 支持 PostgreSQL 19beta4。
+
+
+--------
+
+## 稳定版本
+
+
 ### v2.59.1 版本说明
 
 *支持 PostgreSQL 19beta3*
@@ -42,11 +67,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 说明使用 `repo-s3-uri-style=path` 时，S3 存储桶名称可以包含点号。
 - 从用户指南中移除显式的 `hot_standby` 配置。
-
-
---------
-
-## 稳定版本
 
 
 ### v2.59.0 版本说明
