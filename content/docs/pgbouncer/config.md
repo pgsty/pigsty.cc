@@ -8,7 +8,7 @@ module: [PGBOUNCER]
 categories: [参考]
 ---
 
-> 原始页面： <https://www.pgbouncer.org/config.html>
+> 原始页面： <https://www.pgbouncer.org/config.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/doc/config.md)
 
 --------
 
@@ -53,8 +53,6 @@ categories: [参考]
 ### unix_socket_dir
 
 指定 Unix 套接字的位置。同时适用于监听套接字和服务端连接。若设为空字符串，则禁用 Unix 套接字。以 `@` 开头的值表示创建抽象命名空间中的 Unix 套接字（目前仅支持 Linux 和 Windows）。
-
-若要使在线重启（`-R`）正常工作，需要配置 Unix 套接字，且必须位于文件系统命名空间中。
 
 默认值：`/tmp`（Windows 上为空）
 
@@ -181,23 +179,38 @@ max_client_conn + (max pool_size * total databases)
 
 ### track_extra_parameters
 
-默认情况下，PgBouncer 为每个客户端跟踪 `client_encoding`、`datestyle`、`timezone`、`standard_conforming_strings` 和 `application_name` 参数。若需跟踪其他参数，可在此处指定，使 PgBouncer 知道应将它们维护在客户端变量缓存中，并在客户端变为活跃状态时将其恢复到服务端。
+默认情况下，PgBouncer 会跟踪 Postgres 向客户端报告、且客户端可以修改的所有参数：
 
-若需指定多个值，请使用逗号分隔的列表（例如 `default_transaction_read_only, IntervalStyle`）。
+- `application_name`
+- `client_encoding`
+- `DateStyle`
+- `default_transaction_read_only`
+- `IntervalStyle`
+- `scram_iterations`（自 PostgreSQL 16 起）
+- `search_path`（自 PostgreSQL 18 起）
+- `session_authorization`
+- `standard_conforming_strings`
+- `TimeZone`
 
-注意：大多数参数无法通过此方式跟踪。只有 Postgres 向客户端报告的参数才能被跟踪。Postgres 有一份 [官方报告给客户端的参数列表](https://www.postgresql.org/docs/15/protocol-flow.html#PROTOCOL-ASYNC)。不过，Postgres 扩展可以修改此列表——它们可以添加自己上报的参数，也可以开始上报 Postgres 原本未上报的已有参数。值得注意的是，Citus 12.0+ 会导致 Postgres 额外上报 `search_path`。
+若要跟踪其他参数，可在此处指定，PgBouncer 便知道应将它们保存在客户端变量缓存中，并在客户端变为活跃状态时将其恢复到服务端。
+
+若需指定多个值，请使用逗号分隔的列表（例如 `some_extension.setting, other_extension.setting`）。
+
+注意：大多数参数无法通过此方式完整跟踪。对于通过 `SET` 修改的参数，PgBouncer 只有在 Postgres 向客户端报告该参数时，才能获知其变化。Postgres 有一份 [官方报告给客户端的参数列表](https://www.postgresql.org/docs/current/protocol-flow.html#PROTOCOL-ASYNC)。不过，Postgres 扩展可以修改此列表——它们可以添加自己上报的参数，也可以开始上报 Postgres 原本未上报的已有参数。值得注意的是，Citus 12.0+ 会导致 Postgres 额外上报 `search_path`。部分默认跟踪的参数也只有较新的 Postgres 版本才会上报：`default_transaction_read_only` 自 Postgres 14 起、`scram_iterations` 自 Postgres 16 起、`search_path` 自 Postgres 18 起。
+
+对于已纳入跟踪、但 Postgres 不会上报的参数（例如 Postgres 18 之前的 `search_path`），PgBouncer 只能获知客户端在启动包中（或在 `options` 启动参数中）指定的值。客户端变为活跃状态时，该值会被应用到服务端连接；如果客户端未指定该参数，则将其重置为默认值。连接建立后通过 `SET` 进行的修改不会被跟踪，因此会泄漏给共享同一服务端连接的其他客户端，除非使用 `server_reset_query_always`。
 
 Postgres 协议支持通过两种方式指定参数设置：直接作为启动包中的参数，或在 [`options` 启动包][options-startup] 中指定。这两种方式指定的参数均受 `track_extra_parameters` 支持。但 `options` 本身不能被包含在 `track_extra_parameters` 中，只有 `options` 中包含的参数才可以。
 
-默认值：IntervalStyle
+默认值：空
 
 ### ignore_startup_parameters
 
-默认情况下，PgBouncer 在启动包中只允许它可以跟踪的参数：`client_encoding`、`datestyle`、`timezone` 和 `standard_conforming_strings`。所有其他参数都会触发错误。若要允许其他参数，可在此处指定，PgBouncer 便知道这些参数由管理员处理，可以忽略它们。
+默认情况下，PgBouncer 在启动包中只允许它可以跟踪的参数（参数列表参见 `track_extra_parameters`）。所有其他参数都会触发错误。若要允许其他参数，可在此处指定，PgBouncer 便知道这些参数由管理员处理，可以忽略它们。
 
 若需指定多个值，请使用逗号分隔的列表（例如 `options,extra_float_digits`）。
 
-Postgres 协议支持通过两种方式指定参数设置：直接作为启动包中的参数，或在 [`options` 启动包][options-startup] 中指定。这两种方式指定的参数均受 `ignore_startup_parameters` 支持。甚至可以将 `options` 本身包含在 `track_extra_parameters` 中，这样 `options` 中包含的所有未知参数都会被忽略。
+Postgres 协议支持通过两种方式指定参数设置：直接作为启动包中的参数，或在 [`options` 启动包][options-startup] 中指定。这两种方式指定的参数均受 `ignore_startup_parameters` 支持。甚至可以将 `options` 本身包含在 `ignore_startup_parameters` 中，这样 `options` 中包含的所有未知参数都会被忽略。
 
 [options-startup]: https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-OPTIONS
 
@@ -304,7 +317,7 @@ PgBouncer 处理自己的客户端认证，并维护自己的用户数据库。�
 - **`scram-sha-256`**：使用 SCRAM-SHA-256 进行密码验证。`auth_file` 必须包含 SCRAM 密钥或明文密码。
 - **`plain`**：明文密码通过网络传输。已弃用。
 - **`trust`**：不进行认证。用户名仍必须存在于 `auth_file` 中。
-- **`any`**：类似 `trust` 方式，但忽略所提供的用户名。要求所有数据库都配置为以特定用户登录。此外，控制台数据库允许任何用户以管理员身份登录。
+- **`any`**：类似 `trust` 方式，但忽略所提供的用户名。要求所有数据库都配置为以特定用户登录。此外，控制台数据库允许任何用户以统计用户身份登录；列于 `admin_users` 中的用户获得管理员权限。
 - **`hba`**：实际的认证类型从 `auth_hba_file` 加载。这允许为不同的访问路径使用不同的认证方式，例如：通过 Unix 套接字的连接使用 `peer` 认证方式，通过 TCP 的连接必须使用 TLS。
 - **`ldap`**：用户通过 LDAP 服务器认证，与 PostgreSQL 中的方式类似（详见 <https://www.postgresql.org/docs/current/auth-ldap.html>）。LDAP 连接选项通过 `auth_ldap_options` 设置配置，也可在 `auth_hba_file` 中配置。
 - **`pam`**：使用 PAM 认证用户，忽略 `auth_file`。此方法与使用 `auth_user` 选项的数据库不兼容。报告给 PAM 的服务名称为 "pgbouncer"。`pam` 在 HBA 配置文件中不受支持。
@@ -344,6 +357,8 @@ PgBouncer 处理自己的客户端认证，并维护自己的用户数据库。�
 直接访问 `pg_authid` 需要管理员权限。建议使用调用 SECURITY DEFINER 函数的非超级用户替代。
 
 注意：该查询在目标数据库内部运行。因此，若使用函数，需要将其安装到每个数据库中。
+
+查询必须返回两列：用户名和密码（使用适当的加密或哈希形式）。要表示用户不存在，可不返回任何行，或返回用户名为 null 的一行。（下方的默认查询对不存在的用户不返回任何行；当查询调用返回记录的函数时，返回 null 用户名的方式很有用，例如下方 [示例](#示例) 中的用法。）密码列为 null 表示用户存在但没有可用密码，因此客户端提供的任何密码都不会被接受。
 
 默认值：`SELECT rolname, CASE WHEN rolvaliduntil < now() THEN NULL ELSE rolpassword END FROM pg_authid WHERE rolname=$1 AND rolcanlogin`
 
@@ -417,13 +432,13 @@ auth_ldap_options = ldapurl="ldap://127.0.0.1:12345/dc=example,dc=net?uid?sub"
 
 ### admin_users
 
-允许连接并在控制台执行所有命令的数据库用户（逗号分隔列表）。当 `auth_type` 为 `any` 时忽略此项，此时任何用户名都被允许作为管理员登录。
+允许连接并在控制台执行所有命令的数据库用户（逗号分隔列表）。当 `auth_type=any` 时，此列表仍决定哪些用户获得管理员权限；其他用户可作为统计用户登录。详见 [1.26.0 控制台访问检查](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/src/admin.c#L1572-L1609)。
 
 默认值：空
 
 ### stats_users
 
-允许连接并在控制台执行只读查询的数据库用户（逗号分隔列表）。即除 `SHOW FDS` 外的所有 `SHOW` 命令。
+允许连接并在控制台执行只读查询的数据库用户（逗号分隔列表）。即所有 `SHOW` 命令。
 
 默认值：空
 
@@ -505,7 +520,7 @@ auth_ldap_options = ldapurl="ldap://127.0.0.1:12345/dc=example,dc=net?uid?sub"
 
 ### client_login_timeout
 
-客户端连接后，若在此时间内未能完成登录，则断开该连接。主要用于避免僵尸连接阻塞 `SUSPEND` 进而影响在线重启。[秒]
+客户端连接后，若在此时间内未能完成登录，则断开该连接。[秒]
 
 默认值：60.0
 
@@ -514,6 +529,14 @@ auth_ldap_options = ldapurl="ldap://127.0.0.1:12345/dc=example,dc=net?uid?sub"
 通过 `*` 自动创建的数据库连接池，若在此秒数内未被使用，则释放。其负面影响是对应的统计数据也会被清除。[秒]
 
 默认值：3600.0
+
+### pool_idle_timeout
+
+若一个连接池（特定的数据库/用户组合）在此秒数内既无客户端连接，也无服务端连接，则释放该连接池。此设置与 `autodb_idle_timeout` 类似，但释放的是单个连接池，而非整个自动创建的数据库。与 `server_idle_timeout` 只关闭空闲服务端连接、保留连接池不同，此设置会释放整个连接池，且只有在连接池完全为空时才生效。
+
+与 `autodb_idle_timeout` 一样，其负面影响是被释放连接池的统计数据也会被清除。由于 `SHOW STATS` 中各数据库的总计值是当前所有连接池统计数据的总和，释放连接池会使这些总计值下降，监控系统可能将其误认为计数器重置。因此默认禁用此设置。0 表示禁用。[秒]
+
+默认值：0（禁用）
 
 ### dns_max_ttl
 
@@ -554,6 +577,12 @@ PgBouncer 可以从主机名（第一个点之后的所有内容）中收集 DNS
 设为 0 时禁用此通知消息。
 
 默认值：5
+
+### login_notify_message
+
+客户端成功登录后发送的欢迎通知消息。可用于告知客户端其连接的是 PgBouncer，而非直接连接到 Postgres。
+
+默认值：空（不发送欢迎消息）
 
 --------
 
@@ -695,7 +724,7 @@ PgBouncer 用于向 PostgreSQL 服务器进行认证的私钥。
 - `TLS_AES_128_CCM_8_SHA256`
 - `TLS_AES_128_CCM_SHA256`
 
-此设置仅影响使用 TLS 1.3 及以上版本的连接。对于 1.2 及以下版本，请参见 `client_tls_ciphers`。
+此设置仅影响使用 TLS 1.3 及以上版本的连接。对于 1.2 及以下版本，请参见 `server_tls_ciphers`。
 
 默认值：`<empty>`
 
@@ -716,6 +745,8 @@ PgBouncer 用于向 PostgreSQL 服务器进行认证的私钥。
 查询等待执行的最长时间。若在此时间内未将查询分配给服务器，则断开客户端连接。0 表示禁用；禁用后，客户端将无限期排队。[秒]
 
 此设置用于防止无响应的服务器占用连接。在服务器宕机或因任何原因拒绝连接时也有帮助。
+
+此设置也可在数据库级和用户级配置，优先级依次为用户、数据库、全局。实际选用的配置层级若显式设为 0，则禁用此超时。详见 [1.26.0 超时选择逻辑](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/src/janitor.c#L328-L336)。
 
 默认值：120.0
 
@@ -744,12 +775,6 @@ PgBouncer 用于向 PostgreSQL 服务器进行认证的私钥。
 客户端处于"事务进行中"状态超过此时间后，将被断开连接。[秒]
 
 默认值：0.0（禁用）
-
-### suspend_timeout
-
-在 `SUSPEND` 或重启（`-R`）期间，等待缓冲区刷新的时长。若刷新未能成功完成，则断开该连接。[秒]
-
-默认值：10
 
 --------
 
@@ -947,6 +972,14 @@ host=192.168.0.1,192.168.0.2,192.168.0.3
 
 为此数据库设置特定的池化模式。若未设置，则使用默认的 `pool_mode`。
 
+### query_wait_timeout
+
+查询等待执行的最长时间。0 表示禁用。省略此设置可继承适用的默认值。[秒]
+
+其他细节请参阅全局 `query_wait_timeout` 设置的说明。
+
+用户级 `query_wait_timeout` 会覆盖此数据库设置。若两者均未设置，则使用全局 `query_wait_timeout`。
+
 ### load_balance_hosts
 
 当 `host` 中指定了逗号分隔的列表时，`load_balance_hosts` 控制新连接选择哪个条目。
@@ -1023,6 +1056,14 @@ user1 = pool_mode=session
 ### query_timeout
 
 设置用户查询的最长运行秒数。若设置，此超时将覆盖上述服务器级别的 `query_timeout`。
+
+### query_wait_timeout
+
+查询等待执行的最长时间。0 表示禁用。省略此设置可继承适用的默认值。[秒]
+
+其他细节请参阅全局 `query_wait_timeout` 设置的说明。
+
+此设置会覆盖数据库级和全局 `query_wait_timeout`。若未设置，则使用数据库设置；数据库也未设置时，回退到全局值。
 
 ### idle_transaction_timeout
 

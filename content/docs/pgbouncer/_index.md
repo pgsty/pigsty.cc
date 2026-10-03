@@ -1,9 +1,9 @@
 ---
-title: "PgBouncer 1.25.2 中文文档"
+title: "PgBouncer 1.26.0 中文文档"
 linkTitle: pgbouncer 文档
 weight: 8100
 description: >
-  PgBouncer —— PostgreSQL 轻量级连接池，v1.25.2 中文文档
+  PgBouncer —— PostgreSQL 轻量级连接池，v1.26.0 中文文档
 icon: fas fa-baseball
 sidebar_root_for: self
 module: [PGBOUNCER]
@@ -11,6 +11,8 @@ categories: [概念]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/>
+
+本手册以 2026-09-23 发布的 [PgBouncer 1.26.0](https://github.com/pgbouncer/pgbouncer/releases/tag/pgbouncer_1_26_0) 为基准。与此前版本的差异请参阅 [发布说明](/docs/pgbouncer/changelog/#pgbouncer-126x)。
 
 **pgbouncer** 是 PostgreSQL 的连接池。任何目标应用都可以像连接 PostgreSQL 服务器一样连接到 **pgbouncer**，**pgbouncer** 将负责创建到实际服务器的连接，或者复用已有的连接。
 

@@ -8,13 +8,13 @@ module: [PGBOUNCER]
 categories: [任务]
 ---
 
-> 原始页面： <https://www.pgbouncer.org/usage.html>
+> 原始页面： <https://www.pgbouncer.org/usage.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/doc/usage.md)
 
 --------
 
 ## 语法
 
-    pgbouncer [-d][-R][-v][-u user] <pgbouncer.ini>
+    pgbouncer [-d][-v][-u user] <pgbouncer.ini>
     pgbouncer -V|-h
 
 在 Windows 系统上，选项如下：
@@ -50,6 +50,8 @@ categories: [任务]
 :   最激进的方式。查询完成后，服务端连接将立即归还到连接池中。此模式下不允许多语句事务，因为这会导致错误。
 
 **pgbouncer** 的管理接口由一些新的 `SHOW` 命令组成，这些命令在连接到特殊的"虚拟"数据库 **pgbouncer** 时可用。
+
+自 1.26.0 起，PgBouncer 会在客户端登录时发送 `pgbouncer.version`、`pgbouncer.pool_mode` 和 `pgbouncer.max_prepared_statements` 三项 `ParameterStatus` 值。驱动程序可据此识别 PgBouncer 并调整行为。可选的 [`login_notify_message`](/docs/pgbouncer/config/#login_notify_message) 设置会在登录成功后发送欢迎 NOTICE 消息。
 
 --------
 
@@ -89,11 +91,10 @@ categories: [任务]
         pgbouncer=# SHOW HELP;
         NOTICE:  Console usage
         DETAIL:
-          SHOW [HELP|CONFIG|DATABASES|FDS|POOLS|CLIENTS|SERVERS|SOCKETS|LISTS|VERSION|...]
+          SHOW [HELP|CONFIG|DATABASES|POOLS|CLIENTS|SERVERS|SOCKETS|LISTS|VERSION|...]
           SET key = arg
           RELOAD
           PAUSE
-          SUSPEND
           RESUME
           SHUTDOWN
           [...]
@@ -112,10 +113,6 @@ categories: [任务]
     在守护进程模式下，需要同时设置 `pidfile` 以及 `logfile` 或 `syslog`。进入后台后，不会向 stderr 写入任何日志信息。
 
     注意：在 Windows 上不可用；**pgbouncer** 需要以服务形式运行。
-
-`-R`，`--reboot`
-:   **已弃用：请使用多个 pgbouncer 进程通过 so_reuseport 监听同一端口的滚动重启方式来替代此选项。** 执行在线重启。即连接到正在运行的进程，从中加载已打开的套接字，然后使用这些套接字。如果没有活动进程，则正常启动。
-    注意：仅在 OS 支持 Unix 套接字且配置中未禁用 `unix_socket_dir` 时有效。在 Windows 上不可用。TLS 连接不兼容此选项，将被断开。
 
 `-u` _USERNAME_，`--user=` _USERNAME_
 :   启动时切换到指定用户。
@@ -196,6 +193,9 @@ total_server_parse_count
 total_bind_count
 :   客户端准备执行并由 **pgbouncer** 转发给 PostgreSQL 的预处理语句总数。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
 
+total_client_login_count
+:   客户端成功登录的总次数。
+
 avg_xact_count
 :   最近统计周期内每秒平均事务数。
 
@@ -228,6 +228,9 @@ avg_server_parse_count
 
 avg_bind_count
 :   客户端准备执行并由 **pgbouncer** 转发给 PostgreSQL 的预处理语句平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
+
+avg_client_login_count
+:   每秒平均客户端成功登录次数。
 
 #### SHOW STATS_TOTALS
 
@@ -432,7 +435,7 @@ load_balance_hosts
 
 每个已配置的 peer 会创建一个 peer_pool 条目。
 
-database
+peer_id
 :   已配置 peer 条目的 ID。
 
 cl_active_cancel_req
@@ -580,39 +583,6 @@ port
 pool_size
 :   可向此 peer 建立的最大服务端连接数。
 
-#### SHOW FDS
-
-内部命令——显示当前使用中的文件描述符列表及其关联的内部状态。
-
-当连接用户名为"pgbouncer"、通过 Unix 套接字连接且 UID 与运行进程相同时，实际的 FD 将通过连接传递。此机制用于在线重启。
-注意：在 Windows 上不可用。
-
-此命令还会阻塞内部事件循环，因此在 PgBouncer 使用期间不应调用。
-
-fd
-:   文件描述符的数值。
-
-task
-:   为 **pooler**、**client** 或 **server** 之一。
-
-user
-:   使用该 FD 的连接的用户名。
-
-database
-:   使用该 FD 的连接的数据库名。
-
-addr
-:   使用该 FD 的连接的 IP 地址，若使用 Unix 套接字则为 **unix**。
-
-port
-:   使用该 FD 的连接所用的端口。
-
-cancel
-:   此连接的取消密钥。
-
-link
-:   对应服务端/客户端的 FD。空闲时为 NULL。
-
 #### SHOW SOCKETS, SHOW ACTIVE_SOCKETS
 
 显示套接字或仅显示活跃套接字的底层信息。包含 **SHOW CLIENTS** 和 **SHOW SERVERS** 所显示的信息，以及其他更底层的信息。
@@ -670,7 +640,7 @@ count
 
 #### SHOW STATE
 
-显示 PgBouncer 状态设置。当前状态为 active、paused 和 suspended。
+显示 PgBouncer 状态设置。当前状态为 active 和 paused。
 
 ### 进程控制命令
 
@@ -710,15 +680,9 @@ PgBouncer 尝试断开与所有服务器的连接。断开每个服务端连接�
 
 示例命令类似于 `KILL_CLIENT 1234`。
 
-#### SUSPEND
-
-所有套接字缓冲区将被刷新，PgBouncer 停止监听其上的数据。该命令在所有缓冲区清空之前不会返回。适用于 PgBouncer 在线重启时使用。
-
-连接到已挂起数据库的新客户端连接将等待，直到调用 **RESUME**。
-
 #### RESUME [db]
 
-从之前的 **KILL**、**PAUSE** 或 **SUSPEND** 命令中恢复工作。
+从之前的 **KILL** 或 **PAUSE** 命令中恢复工作。
 
 #### SHUTDOWN
 

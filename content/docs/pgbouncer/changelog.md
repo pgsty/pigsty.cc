@@ -8,7 +8,103 @@ module: [PGBOUNCER]
 categories: [参考]
 ---
 
-> 来源： <https://www.pgbouncer.org/changelog.html>
+> 来源： <https://www.pgbouncer.org/changelog.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/NEWS.md)
+
+--------
+
+## PgBouncer 1.26.x
+
+**2026-09-23  -  PgBouncer 1.26.0  -  "Ignore all previous search_path（忽略此前所有 search_path）"**
+
+- 安全
+    * 修复 CVE-2026-19888：PgBouncer 1.26.0 之前未检查 SCRAM client-final-message 是否包含 nonce。未经身份验证的远程攻击者可发送不含 nonce 的 client-final-message，使 PgBouncer 崩溃。这也适用于不存在的用户，因为 PgBouncer 会为这些用户执行模拟 SCRAM 交换。此缺陷自 PgBouncer 1.11.0 引入 SCRAM 支持起便已存在。
+    * 修复 CVE-2026-6668：PgBouncer 1.26.0 之前的数据包缓冲区扩容逻辑存在整数溢出，可能使进程陷入无限循环。触发此问题需要向单个数据包缓冲区发送大量数据；当 `max_packet_size` 保持默认值时，未经身份验证也可以做到。由于 PgBouncer 是单线程程序，这会使它停止为所有客户端提供服务，直到进程被终止。
+    * 修复 CVE-2026-6669：PgBouncer 1.26.0 之前未限制从服务端接受的 SCRAM 迭代次数。恶意或遭入侵的 PostgreSQL 服务器可使 PgBouncer 在一次登录中执行没有上限的计算，期间无法为其他客户端和数据库提供服务。现在迭代次数最多为 1000000。
+- 特性
+    * 默认跟踪 PostgreSQL 上报的所有参数。其中最值得关注的是 `search_path`（PostgreSQL 18 及以上）和 `default_transaction_read_only`（PostgreSQL 14 及以上）。此前，在事务池化模式下，客户端执行 `SET search_path` 或 `SET default_transaction_read_only = true` 会影响之后使用同一服务端连接的其他客户端。（[#1580]、[#1573]）
+    * 新增 `pool_idle_timeout` 设置，用于清理长期未使用的连接池。这对大量用户偶尔连接的场景很有用；未启用此设置时，这类场景中的连接池数量会持续增长。由于移除连接池也会丢失其统计数据，此设置默认禁用。（[#1491]）
+    * 允许在用户级和数据库级配置 `query_wait_timeout`。（[#1449]）
+    * 在 `SHOW STATS` 中新增 `client_login_count` 统计，记录客户端成功登录的次数，可用于发现频繁建立和断开连接的客户端。（[#1457]）
+    * 在登录时向客户端发送 PgBouncer 专属的 `ParameterStatus` 消息：`pgbouncer.version`、`pgbouncer.pool_mode` 和 `pgbouncer.max_prepared_statements`。客户端和驱动程序可据此识别经由 PgBouncer 建立的连接，并相应调整行为。（[#1490]）
+    * 新增 `login_notify_message` 设置。设置后，会在客户端登录成功时将其内容作为 NOTICE 消息发送，可用于明确告知客户端其连接的是 PgBouncer，而非直接连接到 PostgreSQL。（[#1488]）
+    * 支持使用 Meson 构建 PgBouncer，包括在 UCRT64 环境中进行 Windows 构建。继续支持 Autoconf 构建。（[#1524]、[#1426]、[#1568]、[#1585]、[#1602]、[#1607]）
+    * 新增项目 Logo。（[#1609]）
+- 变更
+    * 移除已弃用的在线重启功能（`-R`，也称 takeover），以及仅用于支持此功能的 `SHOW FDS` 和 `SUSPEND` 管理命令。请改用 [基于 `so_reuseport` 的滚动重启][rolling-restart-docs]。（[#1581]）
+    * 将密码最大长度提高到 65535 字节，与 libpq 保持一致。（[#1310]、[#1520]）
+    * 将 `auth_query` 返回的 `NULL` 用户名视为没有返回任何行，而不再视为错误。（[#1569]）
+    * 允许在管理数据库上执行 `SET extra_float_digits`，以兼容新版 PostgreSQL JDBC 驱动在连接建立时发送的此命令。（[#1550]）
+    * 允许将 `-` 作为输出文件参数传给 `mkauth.py`，使其写入标准输出。（[#1514]）
+    * 在使用 OpenSSL 3 构建时，不再为客户端意外 EOF 记录噪音错误日志。（[#1507]）
+    * 在使用 OpenSSL 3 构建时，TLS 错误消息包含底层系统错误。（[#1492]）
+    * 要求使用支持 C11 的编译器。（[#1417]）
+    * 在日志中记录服务端连接被驱逐是由哪个限制触发的。断开原因现在为 `evicted for max_db_connections`、`evicted for pool_size` 或 `evicted for max_user_connections`，不再只有 `evicted`。（[#1597]）
+- 修复
+    * 修复迟到的 `COPY` 消息在事务池化模式下导致连接池耗尽的问题。此修复也使 `COPY` 能够在事务池化模式下于显式事务之外工作。（[#1471]）
+    * 提高 LDAP URL 的最大长度，修复较长 DN 导致 LDAP 认证失败的问题。（[#1497]）
+    * 修复 SCRAM 透传污染强制指定用户的缓存凭据的问题；此前会使实际服务器拒绝 SCRAM 证明，导致服务端登录失败。（[#1612]）
+    * 修复使用已存储 SCRAM 密钥进行 SCRAM 透传时，在服务端重连后失败并报告 "password is SCRAM secret but client authentication did not provide SCRAM keys" 的问题。（[#1504]，引入自 1.25.1）
+    * 修复复制客户端在服务端连接仍处于登录过程中断开时，由释放后使用引发的崩溃。（[#1577]）
+    * 修复连接池已满时，为复制客户端驱逐空闲服务端连接的问题。此前，一个复制客户端可能驱逐池内所有空闲服务端连接，而非仅驱逐一个；当备用连接池或取消请求导致池内服务端连接数超过 `pool_size` 时，又完全不会驱逐连接。（[#1597]）
+    * 修复数据包跨越包缓冲区边界时导致 TLS 连接停滞的问题，例如 `SET application_name` 使用较长值时。（[#1531]）
+    * 修复一个批次在没有 `Sync` 分隔的情况下混合 `Parse` 和 `Close` 消息时，预处理语句响应顺序错误的问题。（[#1555]）
+    * 修复客户端在启动包中设置了 `track_extra_parameters` 所列、但服务端不报告的参数时，产生错误行为的问题。（[#1576]）
+    * 修复服务端将登录数据拆分到多个 TCP 包时导致登录失败的问题，例如 PgBouncer 与 PostgreSQL 之间还存在另一个代理时。（[#1446]）
+    * 修复没有正在执行的查询时，`query_timeout` 仍会关闭连接的问题。（[#1395]）
+    * 修复未能立即获得可用服务端连接时，重复发送 `NegotiateProtocolVersion` 消息的问题。（[#1460]）
+    * 修复 `SHOW USERS` 的 `pool_size` 列为未配置该值的用户显示数值的问题。（[#1489]）
+    * 修正 `ENABLE` 管理命令的错误消息。（[#1308]）
+    * 修复针对未来将 `struct asn1_string_st` 改为不透明结构的 OpenSSL 版本编译时出现的问题。（[#1440]）
+    * 防止编译器优化掉对栈上敏感密码学数据的擦除操作。（[#1508]）
+    * 修复在 Windows 上使用 clang 链接 `pgbevent.dll` 的问题。（[#1571]）
+    * 修复发布 tar 包中的根目录文件路径；此前保存为 `pgbouncer-X.Y.Z/./configure`，而非 `pgbouncer-X.Y.Z/configure`。（[#1549]）
+    * 修复读取配置中的 `track_extra_parameters` 时发生的内存泄漏。（[#1510]）
+    * 修复每个含有协议扩展参数（`_pq_.` 前缀）的启动包都会引发的内存泄漏，未经身份验证的客户端也能触发此问题。（[#1540]）
+
+[rolling-restart-docs]: /docs/pgbouncer/usage/#shutdown-wait_for_clients
+[#1308]: https://github.com/pgbouncer/pgbouncer/pull/1308
+[#1310]: https://github.com/pgbouncer/pgbouncer/pull/1310
+[#1395]: https://github.com/pgbouncer/pgbouncer/pull/1395
+[#1417]: https://github.com/pgbouncer/pgbouncer/pull/1417
+[#1426]: https://github.com/pgbouncer/pgbouncer/pull/1426
+[#1440]: https://github.com/pgbouncer/pgbouncer/pull/1440
+[#1446]: https://github.com/pgbouncer/pgbouncer/pull/1446
+[#1449]: https://github.com/pgbouncer/pgbouncer/pull/1449
+[#1457]: https://github.com/pgbouncer/pgbouncer/pull/1457
+[#1460]: https://github.com/pgbouncer/pgbouncer/pull/1460
+[#1471]: https://github.com/pgbouncer/pgbouncer/pull/1471
+[#1488]: https://github.com/pgbouncer/pgbouncer/pull/1488
+[#1489]: https://github.com/pgbouncer/pgbouncer/pull/1489
+[#1490]: https://github.com/pgbouncer/pgbouncer/pull/1490
+[#1491]: https://github.com/pgbouncer/pgbouncer/pull/1491
+[#1492]: https://github.com/pgbouncer/pgbouncer/pull/1492
+[#1497]: https://github.com/pgbouncer/pgbouncer/pull/1497
+[#1504]: https://github.com/pgbouncer/pgbouncer/pull/1504
+[#1507]: https://github.com/pgbouncer/pgbouncer/pull/1507
+[#1508]: https://github.com/pgbouncer/pgbouncer/pull/1508
+[#1510]: https://github.com/pgbouncer/pgbouncer/pull/1510
+[#1514]: https://github.com/pgbouncer/pgbouncer/pull/1514
+[#1520]: https://github.com/pgbouncer/pgbouncer/pull/1520
+[#1524]: https://github.com/pgbouncer/pgbouncer/pull/1524
+[#1531]: https://github.com/pgbouncer/pgbouncer/pull/1531
+[#1540]: https://github.com/pgbouncer/pgbouncer/pull/1540
+[#1549]: https://github.com/pgbouncer/pgbouncer/pull/1549
+[#1550]: https://github.com/pgbouncer/pgbouncer/pull/1550
+[#1555]: https://github.com/pgbouncer/pgbouncer/pull/1555
+[#1568]: https://github.com/pgbouncer/pgbouncer/pull/1568
+[#1569]: https://github.com/pgbouncer/pgbouncer/pull/1569
+[#1571]: https://github.com/pgbouncer/pgbouncer/pull/1571
+[#1573]: https://github.com/pgbouncer/pgbouncer/pull/1573
+[#1576]: https://github.com/pgbouncer/pgbouncer/pull/1576
+[#1577]: https://github.com/pgbouncer/pgbouncer/pull/1577
+[#1580]: https://github.com/pgbouncer/pgbouncer/pull/1580
+[#1581]: https://github.com/pgbouncer/pgbouncer/pull/1581
+[#1585]: https://github.com/pgbouncer/pgbouncer/pull/1585
+[#1597]: https://github.com/pgbouncer/pgbouncer/pull/1597
+[#1602]: https://github.com/pgbouncer/pgbouncer/pull/1602
+[#1607]: https://github.com/pgbouncer/pgbouncer/pull/1607
+[#1609]: https://github.com/pgbouncer/pgbouncer/pull/1609
+[#1612]: https://github.com/pgbouncer/pgbouncer/pull/1612
 
 --------
 
@@ -865,7 +961,7 @@ categories: [参考]
   * 执行 PAUSE <db> 后，不允许建立新的服务端连接。
     （Petr Jelinek）
   * 修复登录时因包头延迟导致的 'bad packet' 错误。
-    （Michal Trojnara, Marko Kreen）
+    （Michał Trojnara, Marko Kreen）
   * 修复 Coverity 检测到的错误。
     （Euler Taveira）
   * 当服务端连接数低于 min_pool 时，禁用 server_idle_timeout（#60）
@@ -947,7 +1043,7 @@ categories: [参考]
   * 基于 DNS 区域 serial 的主机名失效机制。当设置了 dns_zone_check_period 选项后，所有 DNS 区域都会被查询 SOA 记录，一旦 serial 发生变化，所有主机名都将重新查询。这是实现确定性连接失效的必要机制，因为当没有查询发生时，基于查询的失效方式毫无意义。仅在新 UDNS 后端下可用。
   * 新增 SHOW DNS_HOSTS、SHOW DNS_ZONES 命令，用于检查 DNS 缓存。
   * 新增参数：`min_pool_size`——避免在无负载时断开所有连接。
-    （Filip Rembialkowski）
+    （Filip Rembiałkowski）
   * `idle_in_transaction_timeout`——若事务空闲时间过长则终止。默认不设置。
   * 新增 libudns DNS 查询后端，比 evdns 功能更丰富。使用 --with-udns 启用。暂不支持 IPv6。
   * KILL 命令，立即断开某一数据库的所有连接。
@@ -1185,7 +1281,7 @@ categories: [参考]
 
     在某些情况下——如 SMP 服务器、本地 Postgres 和快速网络——pgbouncer 可以在两端都不阻塞的情况下多次执行 recv()->send() 循环。但这意味着其他连接将长时间停滞。为使处理更加公平，限制对单个套接字执行 recv()->send() 的次数。若计数达到限制，则继续处理其他套接字，该套接字的处理将在下一个事件循环中恢复。
 
-    感谢 Alexander Schocke 的报告和测试。
+    感谢 Alexander Schöcke 的报告和测试。
 
   * crypt() 认证现为可选，因为它已从 Postgres 中移除。若操作系统不提供它，pgbouncer 也能正常工作。
 
@@ -1217,12 +1313,12 @@ categories: [参考]
 - 修复
   * 禁用在 BSD 上无法正常工作的 SO_ACCEPTFILTER 代码。
   * 在 tgz 中包含示例 etc/userlist.txt。
-  * 在递归调用中使用 '$(MAKE)' 而非 'make'（Jorgen Austvik）
+  * 在递归调用中使用 '$(MAKE)' 而非 'make'（Jørgen Austvik）
   * 定义 _GNU_SOURCE，否则 glibc 形同虚设。
   * 允许 libevent 1.1 通过链接测试，以便稍后报告"需要 1.3b+"。
   * 检测并移除过期的 pidfile。
 
-感谢 Devrim GUNDUZ 和 Bjoern Metzdorf 的问题报告和测试。
+感谢 Devrim GÜNDÜZ 和 Bjoern Metzdorf 的问题报告和测试。
 
 **2008-08-06  -  PgBouncer 1.2.2  -  "Barf-bag Included（随附呕吐袋）"**
 
@@ -1303,7 +1399,7 @@ PgBouncer 1.2 现在要求 libevent 版本 1.3b 或更高。更旧的 libevent �
   * 每个事件循环只处理一个 accept()，当连接请求量较大时可能导致连接积压。现在始终将监听套接字完全排空，应可解决此问题。
   * 处理来自 connect() 的 EINTR。
   * 使 configure.ac 兼容 autoconf 2.59。
-  * Solaris 兼容性修复（Magne Maehre）
+  * Solaris 兼容性修复（Magne Mæhre）
 
 --------
 

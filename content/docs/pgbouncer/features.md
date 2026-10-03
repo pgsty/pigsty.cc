@@ -26,7 +26,7 @@ categories: [概念]
 
 - 支持大多数配置项的在线重新配置。
 
-- 支持在不断开客户端连接的情况下在线重启/升级。
+- 支持通过多个进程配合 [`so_reuseport`](/docs/pgbouncer/config/#so_reuseport) 进行 [滚动重启与升级](/docs/pgbouncer/usage/#shutdown-wait_for_clients)。旧的在线重启功能（`-R`）已在 1.26.0 中移除。
 
 --------
 
@@ -37,7 +37,7 @@ categories: [概念]
 | 特性                             | 会话池化          |  事务池化             |
 |----------------------------------|:----------------:|:---------------------:|
 | Startup parameters [^0]          | 是               |          是           |
-| SET/RESET                        | 是               |         不支持         |
+| SET/RESET                        | 是               | 已跟踪参数支持 [^0] |
 | LISTEN                           | 是               |         不支持         |
 | NOTIFY                           | 是               |          是           |
 | WITHOUT HOLD CURSOR              | 是               |          是           |
@@ -50,6 +50,6 @@ categories: [概念]
 | LOAD statement                   | 是               |         不支持         |
 | Session-level advisory locks     | 是               |         不支持         |
 
-[^0]: 启动参数包括：`client_encoding`、`DateStyle`、`IntervalStyle`、`Timezone`、`standard_conforming_strings` 和 `application_name`。PgBouncer 会检测这些参数的变化，从而确保客户端获得一致的值。如果需要 PgBouncer 支持更多启动参数，请参阅 [`track_extra_parameters`](/docs/pgbouncer/config/#track_extra_parameters) 和 [`ignore_startup_parameters`](/docs/pgbouncer/config/#ignore_startup_parameters)。
+[^0]: 自 1.26.0 起，PgBouncer 会跟踪所有由服务端上报且客户端可修改的参数：`application_name`、`client_encoding`、`DateStyle`、`default_transaction_read_only`（PostgreSQL 14+）、`IntervalStyle`、`scram_iterations`（PostgreSQL 16+）、`search_path`（PostgreSQL 18+）、`session_authorization`、`standard_conforming_strings` 和 `TimeZone`。对于服务端不报告的参数，只能跟踪启动时指定的值，后续的 `SET` 修改不会被跟踪。相关细节及扩展上报的参数，请参阅 [`track_extra_parameters`](/docs/pgbouncer/config/#track_extra_parameters) 和 [`ignore_startup_parameters`](/docs/pgbouncer/config/#ignore_startup_parameters)。
 
-[^1]: 需要将 [`max_prepared_statements`](/docs/pgbouncer/config/#max_prepared_statements) 设置为非零值以启用此支持。
+[^1]: 当 [`max_prepared_statements`](/docs/pgbouncer/config/#max_prepared_statements) 为非零值时，启用协议级预处理语句支持。默认值为 200，设为 0 可禁用此支持。SQL 级 `PREPARE` / `DEALLOCATE` 仍不兼容事务池化；启用跟踪时的 `DEALLOCATE ALL` 和 `DISCARD ALL` 除外。

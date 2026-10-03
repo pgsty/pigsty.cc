@@ -20,9 +20,16 @@ PgBouncer 扮演 PostgreSQL 服务器的角色，只需将客户端指向 PgBoun
 
 ## 如何在多个服务器之间实现查询负载均衡？
 
-PgBouncer 没有内置的多主机配置功能，但可以通过外部工具实现：
+PgBouncer 支持在数据库连接字符串中指定以逗号分隔的主机列表。使用 [`load_balance_hosts=round-robin`](/docs/pgbouncer/config/#load_balance_hosts) 时，新建服务端连接会在该列表中的主机之间轮换。例如：
 
-1.  DNS 轮询。在一个 DNS 名称后面配置多个 IP。PgBouncer 不会在每次新建连接时查询 DNS，而是缓存所有 IP 并在内部进行轮询。注意：若一个名称后有 8 个以上的 IP，则 DNS 后端必须支持 EDNS0 协议。详情参见 README。
+```ini
+[databases]
+app = host=pg1,pg2 port=5432 dbname=app load_balance_hosts=round-robin
+```
+
+也可以使用外部工具：
+
+1.  DNS 轮询。在一个 DNS 名称后面配置多个 IP。PgBouncer 不会在每次新建连接时查询 DNS，而是缓存所有 IP 并在内部进行轮询。注意：若一个名称后有 8 个以上的 IP，则 DNS 后端必须支持 EDNS0 协议。详情参见 [DNS 查询支持](/docs/pgbouncer/install/#dns-查询支持)。
 
 2.  使用 TCP 连接负载均衡器。 [**LVS**](http://www.linuxvirtualserver.org/) 或 [**HAProxy**](https://www.haproxy.org/) 都是不错的选择。在 PgBouncer 一侧，建议适当减小 `server_lifetime` 的值并开启 `server_round_robin`：默认情况下，空闲连接按 LIFO 算法复用，在需要负载均衡时效果可能不佳。
 
@@ -30,7 +37,7 @@ PgBouncer 没有内置的多主机配置功能，但可以通过外部工具实�
 
 ## 如何实现故障转移？
 
-PgBouncer 没有内置的故障转移主机配置或检测功能，可借助外部工具实现：
+对于以逗号分隔的主机列表，设置 [`load_balance_hosts=disable`](/docs/pgbouncer/config/#load_balance_hosts) 后，PgBouncer 会持续使用同一主机，直到连接尝试失败，才改用下一主机。这不会检测主从角色。若需要根据数据库拓扑变化进行故障转移，可借助外部工具：
 
 1. DNS 重新配置：当 DNS 名称对应的 IP 地址发生变化时，PgBouncer 将重新连接到新服务器。可通过两个配置参数进行调整：`dns_max_ttl` 控制单个主机名的生存时间，`dns_zone_check_period` 控制查询区域 SOA 变更的频率。若区域 SOA 记录发生变化，PgBouncer 将重新查询该区域下的所有主机名。
 
@@ -48,7 +55,7 @@ PgBouncer 没有内置的故障转移主机配置或检测功能，可借助外�
 
 ## 如何在事务池化模式下使用预处理语句？
 
-自 1.21.0 版本起，PgBouncer 可在事务池化模式下追踪预处理语句，并确保它们在关联的服务端连接上即时准备好。要启用此功能，需将 `max_prepared_statements` 设置为非零值。详情请参阅 [`max_prepared_statements`](/docs/pgbouncer/config/#max_prepared_statements) 的文档。
+自 1.21.0 版本起，PgBouncer 可在事务池化模式下追踪预处理语句，并确保它们在关联的服务端连接上即时准备好。要启用此功能，需将 `max_prepared_statements` 设置为非零值（默认值为 200）。详情请参阅 [`max_prepared_statements`](/docs/pgbouncer/config/#max_prepared_statements) 的文档。
 
 如果使用 PHP/PDO，根据其版本可能与 PgBouncer 的预处理语句支持不兼容（[#991]）。PHP/PDO 仅在使用 [PHP 8.4+ **且** libpq 17][php-fix] 时才兼容。因此，对于使用旧版本的环境，建议升级或在客户端禁用预处理语句。
 

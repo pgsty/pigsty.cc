@@ -12,6 +12,14 @@ categories: [参考]
 
 --------
 
+## PgBouncer 1.26
+
+| 文件 | 日期 | 大小 | 校验值 |
+|------|------|------|--------|
+| [pgbouncer-1.26.0.tar.gz](https://www.pgbouncer.org/downloads/files/1.26.0/pgbouncer-1.26.0.tar.gz) | 2026-09-23 | 897943 bytes | [sha256](https://www.pgbouncer.org/downloads/files/1.26.0/pgbouncer-1.26.0.tar.gz.sha256) |
+
+--------
+
 ## PgBouncer 1.25
 
 | File                                                                                                |    Date    |     Size     |                                          SHA256                                           |

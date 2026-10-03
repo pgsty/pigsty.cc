@@ -31,4 +31,6 @@ categories: [概念]
 
 - [**PgBouncer 专区**](https://stackoverflow.com/questions/tagged/pgbouncer)（Stack Overflow）
 
+- [**聊天室**](https://gitter.im/pgbouncer/pgbouncer)（Gitter）
+
 - [**社区讨论**](https://github.com/pgbouncer/pgbouncer/discussions)（GitHub）
