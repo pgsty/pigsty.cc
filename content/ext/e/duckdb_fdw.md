@@ -11,10 +11,10 @@ weight: 2470
     <div class="ext-card__title">alitrack/duckdb_fdw</div>
     <div class="ext-card__desc">https://github.com/alitrack/duckdb_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/duckdb_fdw-2.0.1+git20260529.9354241.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz</div>
-    <div class="ext-card__desc">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz</div>
+    <div class="ext-card__title">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz</div>
+    <div class="ext-card__desc">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz</div>
   </a>
 </div>
 

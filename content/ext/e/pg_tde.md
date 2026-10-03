@@ -11,10 +11,10 @@ weight: 7500
     <div class="ext-card__title">percona/pg_tde</div>
     <div class="ext-card__desc">https://github.com/percona/pg_tde</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/percona-pg_tde18-2.2.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/percona-postgresql-18.6.tar.gz percona-pg_tde18-2.2.2.tar.gz pgtde-pg-config percona-postgis-3.5.7.tar.gz percona-pgvector_18-0.8.6.tar.gz percona-wal2json-2.6.tar.gz percona-pg_repack-1.5.3.tar.gz percona-pgaudit-18.0.tar.gz percona-pgaudit18_set_user-4.2.0.tar.gz percona-pg-stat-monitor18-2.3.2.tar.gz percona-pg_gather-33.tar.gz pgtde-sfcgal-config">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">percona-pg_tde18-2.2.2.tar.gz</div>
-    <div class="ext-card__desc">percona-pg_tde18-2.2.2.tar.gz</div>
+    <div class="ext-card__title">percona-postgresql-18.6.tar.gz percona-pg_tde18-2.2.2.tar.gz pgtde-pg-config percona-postgis-3.5.7.tar.gz percona-pgvector_18-0.8.6.tar.gz percona-wal2json-2.6.tar.gz percona-pg_repack-1.5.3.tar.gz percona-pgaudit-18.0.tar.gz percona-pgaudit18_set_user-4.2.0.tar.gz percona-pg-stat-monitor18-2.3.2.tar.gz percona-pg_gather-33.tar.gz pgtde-sfcgal-config</div>
+    <div class="ext-card__desc">percona-postgresql-18.6.tar.gz percona-pg_tde18-2.2.2.tar.gz pgtde-pg-config percona-postgis-3.5.7.tar.gz percona-pgvector_18-0.8.6.tar.gz percona-wal2json-2.6.tar.gz percona-pg_repack-1.5.3.tar.gz percona-pgaudit-18.0.tar.gz percona-pgaudit18_set_user-4.2.0.tar.gz percona-pg-stat-monitor18-2.3.2.tar.gz percona-pg_gather-33.tar.gz pgtde-sfcgal-config</div>
   </a>
 </div>
 

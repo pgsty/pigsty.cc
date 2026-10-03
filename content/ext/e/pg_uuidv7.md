@@ -42,9 +42,9 @@ weight: 4520
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_uuidv7` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_uuidv7` | - |
 | [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_uuidv7_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-uuidv7` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-uuidv7` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -56,16 +56,16 @@ weight: 4520
 | el9.aarch64 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 4 | AVAIL PGDG 1.7.0 8 | AVAIL PGDG 1.7.0 10 | AVAIL PGDG 1.7.0 10 |
 | el10.x86_64 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 |
 | el10.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| d12.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| d12.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| d13.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| d13.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u22.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u22.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u24.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u24.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u26.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| u26.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
+| d12.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| d12.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| d13.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| d13.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u22.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u22.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u24.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u24.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u26.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u26.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
 @ el8.x86_64 18 pg_uuidv7_18 pg_uuidv7_18-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_uuidv7_18-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pg_uuidv7_18 pg_uuidv7_18-1.6.0-2PGDG.rhel8.x86_64.rpm pgdg 1.6.0 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_uuidv7_18-1.6.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_uuidv7_18 pg_uuidv7_18-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 21.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_uuidv7_18-1.7.0-1PGDG.rhel8.aarch64.rpm
@@ -82,25 +82,15 @@ weight: 4520
 @ el10.aarch64 18 pg_uuidv7_18 pg_uuidv7_18-1.7.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_uuidv7_18-1.7.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_uuidv7_18 pg_uuidv7_18-1.6.0-2PGDG.rhel10.aarch64.rpm pgdg 1.6.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_uuidv7_18-1.6.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb pgdg 1.7.0 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb pgdg 1.7.0 12.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb
 @ u22.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb pgdg 1.7.0 12.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 17.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-pg-uuidv7 postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_uuidv7_17 pg_uuidv7_17-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_uuidv7_17-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_uuidv7_17 pg_uuidv7_17-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_uuidv7_17-1.6.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_uuidv7_17 pg_uuidv7_17-1.5.0-3PGDG.rhel8.x86_64.rpm pgdg 1.5.0 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_uuidv7_17-1.5.0-3PGDG.rhel8.x86_64.rpm
@@ -121,25 +111,15 @@ weight: 4520
 @ el10.aarch64 17 pg_uuidv7_17 pg_uuidv7_17-1.7.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_uuidv7_17-1.7.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_uuidv7_17 pg_uuidv7_17-1.6.0-2PGDG.rhel10.aarch64.rpm pgdg 1.6.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_uuidv7_17-1.6.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb pgdg 1.7.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb
 @ u22.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-pg-uuidv7 postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-17-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_uuidv7_16 pg_uuidv7_16-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_uuidv7_16-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_uuidv7_16 pg_uuidv7_16-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_uuidv7_16-1.6.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_uuidv7_16 pg_uuidv7_16-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_uuidv7_16-1.5.0-1PGDG.rhel8.x86_64.rpm
@@ -176,25 +156,15 @@ weight: 4520
 @ el10.aarch64 16 pg_uuidv7_16 pg_uuidv7_16-1.7.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_uuidv7_16-1.7.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_uuidv7_16 pg_uuidv7_16-1.6.0-2PGDG.rhel10.aarch64.rpm pgdg 1.6.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_uuidv7_16-1.6.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb
 @ u22.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb pgdg 1.7.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb pigsty 1.7.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-pg-uuidv7 postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-16-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_uuidv7_15 pg_uuidv7_15-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_uuidv7_15-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_uuidv7_15 pg_uuidv7_15-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_uuidv7_15-1.6.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_uuidv7_15 pg_uuidv7_15-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_uuidv7_15-1.5.0-1PGDG.rhel8.x86_64.rpm
@@ -240,25 +210,15 @@ weight: 4520
 @ el10.aarch64 15 pg_uuidv7_15 pg_uuidv7_15-1.7.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_uuidv7_15-1.7.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_uuidv7_15 pg_uuidv7_15-1.6.0-2PGDG.rhel10.aarch64.rpm pgdg 1.6.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_uuidv7_15-1.6.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb pgdg 1.7.0 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb pgdg 1.7.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-pg-uuidv7 postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-15-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_uuidv7_14 pg_uuidv7_14-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_uuidv7_14-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_uuidv7_14 pg_uuidv7_14-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_uuidv7_14-1.6.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_uuidv7_14 pg_uuidv7_14-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_uuidv7_14-1.5.0-1PGDG.rhel8.x86_64.rpm
@@ -304,25 +264,15 @@ weight: 4520
 @ el10.aarch64 14 pg_uuidv7_14 pg_uuidv7_14-1.7.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_uuidv7_14-1.7.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_uuidv7_14 pg_uuidv7_14-1.6.0-2PGDG.rhel10.aarch64.rpm pgdg 1.6.0 21.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_uuidv7_14-1.6.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb pgdg 1.7.0 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb pgdg 1.7.0 13.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb pigsty 1.7.0 18.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~trixie_arm64.deb
 @ u22.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb pgdg 1.7.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb pigsty 1.7.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~jammy_amd64.deb
 @ u22.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 12.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-uuidv7 postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 17.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uuidv7/postgresql-14-pg-uuidv7_1.7.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -336,10 +286,10 @@ pig build pkg pg_uuidv7         # 构建 DEB 包
 
 ## 安装
 
-您可以直接安装 `pg_uuidv7` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+您可以直接安装 `pg_uuidv7` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgsql -u          # 添加仓库并更新缓存
+pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：

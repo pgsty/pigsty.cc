@@ -11,10 +11,10 @@ weight: 2490
     <div class="ext-card__title">relytcloud/pg_ducklake</div>
     <div class="ext-card__desc">https://github.com/relytcloud/pg_ducklake</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_ducklake-1.0.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_ducklake-1.0.2.tar.gz CRoaring-4.7.1-amalgamation.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_ducklake-1.0.2.tar.gz</div>
-    <div class="ext-card__desc">pg_ducklake-1.0.2.tar.gz</div>
+    <div class="ext-card__title">pg_ducklake-1.0.2.tar.gz CRoaring-4.7.1-amalgamation.tar.gz</div>
+    <div class="ext-card__desc">pg_ducklake-1.0.2.tar.gz CRoaring-4.7.1-amalgamation.tar.gz</div>
   </a>
 </div>
 

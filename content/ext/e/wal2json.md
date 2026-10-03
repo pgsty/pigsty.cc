@@ -50,10 +50,10 @@ weight: 9630
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 |
-| el8.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 3 |
-| el9.x86_64 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| el9.aarch64 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 4 | AVAIL PGDG 2.6 4 |
+| el8.x86_64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 |
+| el8.aarch64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 3 |
+| el9.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
+| el9.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 4 | AVAIL PGDG 2.6 4 |
 | el10.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 | el10.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 | d12.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
@@ -67,15 +67,11 @@ weight: 9630
 | u26.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 | u26.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 @ el8.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm pgdg 2.6 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 18 wal2json_18 wal2json_18-2.6-1PIGSTY.el8.x86_64.rpm pigsty 2.6 31.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2json_18-2.6-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel8.aarch64.rpm pgdg 2.6 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/wal2json_18-2.6-3PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 18 wal2json_18 wal2json_18-2.6-1PIGSTY.el8.aarch64.rpm pigsty 2.6 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wal2json_18-2.6-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 wal2json_18 wal2json_18-2.6-5PGDG.rhel9.8.x86_64.rpm pgdg 2.6 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/wal2json_18-2.6-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel9.x86_64.rpm pgdg 2.6 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/wal2json_18-2.6-3PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 18 wal2json_18 wal2json_18-2.6-1PIGSTY.el9.x86_64.rpm pigsty 2.6 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2json_18-2.6-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 wal2json_18 wal2json_18-2.6-5PGDG.rhel9.8.aarch64.rpm pgdg 2.6 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/wal2json_18-2.6-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel9.aarch64.rpm pgdg 2.6 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/wal2json_18-2.6-3PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 18 wal2json_18 wal2json_18-2.6-1PIGSTY.el9.aarch64.rpm pigsty 2.6 30.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2json_18-2.6-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 wal2json_18 wal2json_18-2.6-5PGDG.rhel10.2.x86_64.rpm pgdg 2.6 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/wal2json_18-2.6-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/wal2json_18-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 wal2json_18 wal2json_18-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/wal2json_18-2.6-5PGDG.rhel10.2.aarch64.rpm

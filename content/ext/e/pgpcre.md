@@ -38,22 +38,25 @@ weight: 4230
 {.ext-table .ext-table--rel}
 
 
+> PGDG supplies RPM and DEB packages for PostgreSQL 14-18, including EL10. The Pigsty RPM recipe remains limited to EL8/EL9 because it uses legacy PCRE 1.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.20190509` | {{< pgvers "18,17,16,15,14" >}} | `pgpcre` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.20190509` | {{< pgvers "18,17,16,15,14" >}} | `pgpcre_$v` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.20190509` | {{< pgvers "18,17,16,15,14" >}} | `pgpcre` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.20190509` | {{< pgvers "18,17,16,15,14" >}} | `pgpcre_$v` | - |
 | [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.20190509` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgpcre` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 |
-| el8.aarch64 | AVAIL PGDG 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 |
-| el9.x86_64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 |
-| el9.aarch64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 |
+| el8.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
+| el8.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
+| el9.x86_64 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 |
+| el9.aarch64 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 |
 | el10.x86_64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 |
 | el10.aarch64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 |
 | d12.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
@@ -67,15 +70,11 @@ weight: 4230
 | u26.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 | u26.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 @ el8.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgpcre_18-0.20190509-3PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_18-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_18-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgpcre_18-0.20190509-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgpcre_18-0.20190509-3PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_18-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgpcre_18-0.20190509-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgpcre_18-0.20190509-3PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_18-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-3PGDG.rhel10.x86_64.rpm
@@ -92,15 +91,11 @@ weight: 4230
 @ u24.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
 @ u26.x86_64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_17-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgpcre_17-0.20190509-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_17-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgpcre_17-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgpcre_17-0.20190509-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_17-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgpcre_17-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgpcre_17-0.20190509-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_17-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgpcre_17-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-4PGDG.rhel10.x86_64.rpm
@@ -120,15 +115,11 @@ weight: 4230
 @ u24.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
 @ u26.x86_64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_16-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgpcre_16-0.20190509-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_16-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgpcre_16-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgpcre_16-0.20190509-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_16-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgpcre_16-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgpcre_16-0.20190509-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_16-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgpcre_16-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-4PGDG.rhel10.x86_64.rpm
@@ -148,15 +139,11 @@ weight: 4230
 @ u24.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
 @ u26.x86_64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_15-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgpcre_15-0.20190509-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_15-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgpcre_15-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgpcre_15-0.20190509-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_15-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgpcre_15-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgpcre_15-0.20190509-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_15-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgpcre_15-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-4PGDG.rhel10.x86_64.rpm
@@ -176,15 +163,11 @@ weight: 4230
 @ u24.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
 @ u26.x86_64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_14-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgpcre_14-0.20190509-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_14-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgpcre_14-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgpcre_14-0.20190509-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_14-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgpcre_14-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgpcre_14-0.20190509-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_14-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgpcre_14-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-4PGDG.rhel10.x86_64.rpm
@@ -217,10 +200,10 @@ pig build pkg pgpcre         # 构建 RPM 包
 
 ## 安装
 
-您可以直接安装 `pgpcre` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+您可以直接安装 `pgpcre` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgsql -u          # 添加仓库并更新缓存
+pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：

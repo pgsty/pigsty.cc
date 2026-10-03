@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **126** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **130** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -71,6 +71,7 @@ weight: 10
 | [`pg_pathcheck`](/ext/e/pg_pathcheck) | `pg_pathcheck` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
 | [`pgdisablelogerror`](/ext/e/pgdisablelogerror) | `$libdir/pgdisablelogerror` | 按 SQLSTATE 错误码禁止部分错误写入 PostgreSQL 服务器日志。 |
 | [`online_advisor`](/ext/e/online_advisor) | `online_advisor` | 在线建议缺失索引、扩展统计信息与预备语句 |
+| [`pg_circuit`](/ext/e/pg_circuit) | `pg_circuit` | 针对危险 SQL 语句提供运行时观察、告警和拦截 |
 | [`safeupdate`](/ext/e/safeupdate) | `safeupdate` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | `pg_prewarm` | 预热关系数据 |
@@ -129,12 +130,15 @@ weight: 10
 | [`pg_dbms_job`](/ext/e/pg_dbms_job) | `pg_dbms_job` | 添加 Oracle DBMS_JOB 兼容性支持的扩展 |
 | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | `pg_dbms_errlog` | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | `babelfishpg_tds` | SQL Server TDS线缆协议兼容扩展 |
+| [`pgs3`](/ext/e/pgs3) | `pgs3` | 在 PostgreSQL 内实现的 S3 兼容对象存储端点 |
+| [`kafgres`](/ext/e/kafgres) | `kafgres` | 在 PostgreSQL 中运行 Kafka 协议消息代理 |
 | [`pglogical`](/ext/e/pglogical) | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
 | [`pglogical_ticker`](/ext/e/pglogical_ticker) | `pglogical_ticker` | pglogical复制延迟以秒计的精确视图 |
 | [`pg_failover_slots`](/ext/e/pg_failover_slots) | `pg_failover_slots` | 在Failover过程中保留复制槽 |
 | [`pgactive`](/ext/e/pgactive) | `pgactive` | PostgreSQL多主逻辑复制 |
 | [`spock`](/ext/e/spock) | `spock` | PostgreSQL 多主逻辑复制扩展 |
 | [`pgclone`](/ext/e/pgclone) | `pgclone` | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
+| [`pgmqtt`](/ext/e/pgmqtt) | `pgmqtt` | PostgreSQL 的 CDC 到 MQTT 代理扩展 |
 | [`decoderbufs`](/ext/e/decoderbufs) | `decoderbufs` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`repmgr`](/ext/e/repmgr) | `repmgr` | PostgreSQL复制管理组件 |
 {.ext-table}

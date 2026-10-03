@@ -11,10 +11,10 @@ weight: 2967
     <div class="ext-card__title">https://docs.omnigres.org/omni_shmem/</div>
     <div class="ext-card__desc">https://docs.omnigres.org/omni_shmem/</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20251108.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20260212.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">omnigres-20251108.tar.gz</div>
-    <div class="ext-card__desc">omnigres-20251108.tar.gz</div>
+    <div class="ext-card__title">omnigres-20260212.tar.gz</div>
+    <div class="ext-card__desc">omnigres-20260212.tar.gz</div>
   </a>
 </div>
 
@@ -43,8 +43,8 @@ weight: 2967
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `omni_shmem` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `omnigres_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-omnigres` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
 {.ext-table}
 
 ## 构建

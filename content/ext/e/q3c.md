@@ -50,12 +50,12 @@ weight: 1540
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 |
-| el8.aarch64 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 6 |
-| el9.x86_64 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 |
-| el9.aarch64 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 |
-| el10.x86_64 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 |
-| el10.aarch64 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 | AVAIL PGDG 2.0.5 10 |
+| el8.x86_64 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 |
+| el8.aarch64 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 |
+| el9.x86_64 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 |
+| el9.aarch64 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 |
+| el10.x86_64 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 |
+| el10.aarch64 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 | AVAIL PGDG 2.0.5 9 |
 | d12.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
 | d12.aarch64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
 | d13.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
@@ -69,13 +69,11 @@ weight: 1540
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el8.x86_64.rpm pigsty 2.0.2 99.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/q3c_18-2.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el8.aarch64.rpm pigsty 2.0.2 93.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/q3c_18-2.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm
@@ -83,7 +81,6 @@ weight: 1540
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 160.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 160.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el9.x86_64.rpm pigsty 2.0.2 97.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/q3c_18-2.0.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 109.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.6.x86_64.rpm
@@ -93,7 +90,6 @@ weight: 1540
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 93.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 93.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 93.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el9.aarch64.rpm pigsty 2.0.2 126.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/q3c_18-2.0.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 112.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 112.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 112.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.6.aarch64.rpm
@@ -103,7 +99,6 @@ weight: 1540
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 153.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el10.x86_64.rpm pigsty 2.0.2 133.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/q3c_18-2.0.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.0.x86_64.rpm
@@ -113,7 +108,6 @@ weight: 1540
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 128.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_18-2.0.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.2-1PGDG.rhel10.0.aarch64.rpm
@@ -151,13 +145,11 @@ weight: 1540
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el8.x86_64.rpm pigsty 2.0.2 99.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/q3c_17-2.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el8.aarch64.rpm pigsty 2.0.2 93.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/q3c_17-2.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm
@@ -165,7 +157,6 @@ weight: 1540
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 143.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el9.x86_64.rpm pigsty 2.0.2 97.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/q3c_17-2.0.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 109.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 136.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.6.x86_64.rpm
@@ -175,7 +166,6 @@ weight: 1540
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el9.aarch64.rpm pigsty 2.0.2 94.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/q3c_17-2.0.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.6.aarch64.rpm
@@ -185,7 +175,6 @@ weight: 1540
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el10.x86_64.rpm pigsty 2.0.2 133.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/q3c_17-2.0.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.0.x86_64.rpm
@@ -195,7 +184,6 @@ weight: 1540
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 128.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_17-2.0.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.2-1PGDG.rhel10.0.aarch64.rpm
@@ -233,13 +221,11 @@ weight: 1540
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el8.x86_64.rpm pigsty 2.0.2 99.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/q3c_16-2.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el8.aarch64.rpm pigsty 2.0.2 93.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/q3c_16-2.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm
@@ -247,7 +233,6 @@ weight: 1540
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el9.x86_64.rpm pigsty 2.0.2 97.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/q3c_16-2.0.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 136.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.6.x86_64.rpm
@@ -257,7 +242,6 @@ weight: 1540
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el9.aarch64.rpm pigsty 2.0.2 94.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/q3c_16-2.0.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 103.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.6.aarch64.rpm
@@ -267,7 +251,6 @@ weight: 1540
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 160.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el10.x86_64.rpm pigsty 2.0.2 133.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/q3c_16-2.0.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 114.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.0.x86_64.rpm
@@ -277,7 +260,6 @@ weight: 1540
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 128.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_16-2.0.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 132.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.2-1PGDG.rhel10.0.aarch64.rpm
@@ -315,13 +297,11 @@ weight: 1540
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el8.x86_64.rpm pigsty 2.0.2 98.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/q3c_15-2.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el8.aarch64.rpm pigsty 2.0.2 93.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/q3c_15-2.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm
@@ -329,7 +309,6 @@ weight: 1540
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el9.x86_64.rpm pigsty 2.0.2 109.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/q3c_15-2.0.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.6.x86_64.rpm
@@ -339,7 +318,6 @@ weight: 1540
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 95.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 95.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el9.aarch64.rpm pigsty 2.0.2 102.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/q3c_15-2.0.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 109.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.6.aarch64.rpm
@@ -349,7 +327,6 @@ weight: 1540
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el10.x86_64.rpm pigsty 2.0.2 106.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/q3c_15-2.0.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.0.x86_64.rpm
@@ -359,7 +336,6 @@ weight: 1540
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 97.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 97.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 97.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 100.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_15-2.0.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 112.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 113.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 113.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.2-1PGDG.rhel10.0.aarch64.rpm
@@ -397,13 +373,11 @@ weight: 1540
 @ el8.x86_64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el8.x86_64.rpm pigsty 2.0.2 98.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/q3c_14-2.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el8.aarch64.rpm pigsty 2.0.2 93.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/q3c_14-2.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm
@@ -411,7 +385,6 @@ weight: 1540
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el9.x86_64.rpm pigsty 2.0.2 109.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/q3c_14-2.0.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 91.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.6.x86_64.rpm
@@ -421,7 +394,6 @@ weight: 1540
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 95.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el9.aarch64.rpm pigsty 2.0.2 101.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/q3c_14-2.0.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.6.aarch64.rpm
@@ -431,7 +403,6 @@ weight: 1540
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el10.x86_64.rpm pigsty 2.0.2 106.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/q3c_14-2.0.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm
@@ -441,7 +412,6 @@ weight: 1540
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 127.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_14-2.0.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm

@@ -11,6 +11,11 @@ weight: 2530
     <div class="ext-card__title">heterodb/pg-strom</div>
     <div class="ext-card__desc">https://github.com/heterodb/pg-strom</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_strom-6.1.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_strom-6.1.0.tar.gz</div>
+    <div class="ext-card__desc">pg_strom-6.1.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -33,15 +38,15 @@ weight: 2530
 {.ext-table .ext-table--rel}
 
 
-> RPM only: version 6.1 is available for PostgreSQL 15-18; PostgreSQL 14 remains on 3.5; no DEB package is available.
+> RPM only: PGDG provides version 6.1 for PostgreSQL 15-18; the local 3.5/PG14 compatibility spec is a quarantined legacy orphan and is not scheduled; no DEB package is available.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_strom` | - |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_strom_$v` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15" >}} | `pg_strom` | - |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15" >}} | `pg_strom_$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -148,7 +153,6 @@ pig ext install -y pg_strom -v 18  # PG 18
 pig ext install -y pg_strom -v 17  # PG 17
 pig ext install -y pg_strom -v 16  # PG 16
 pig ext install -y pg_strom -v 15  # PG 15
-pig ext install -y pg_strom -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -156,7 +160,6 @@ dnf install -y pg_strom_18       # PG 18
 dnf install -y pg_strom_17       # PG 17
 dnf install -y pg_strom_16       # PG 16
 dnf install -y pg_strom_15       # PG 15
-dnf install -y pg_strom_14       # PG 14
 ```
 
 

@@ -25,7 +25,7 @@ weight: 5920
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 5900  | [**`pgpool_adm`**](/ext/e/pgpool_adm) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 5900  | [**`pgpool_adm`**](/ext/e/pgpool_adm) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 | 5910  | [**`pgpool_recovery`**](/ext/e/pgpool_recovery) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 | 5920  | [**`pgpool_regclass`**](/ext/e/pgpool_regclass) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
@@ -47,12 +47,12 @@ weight: 5920
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.7.2 6 | AVAIL PGDG 4.7.2 11 | AVAIL PGDG 4.7.2 14 | AVAIL PGDG 4.7.2 17 | AVAIL PGDG 4.7.2 20 |
-| el8.aarch64 | AVAIL PGDG 4.7.2 6 | AVAIL PGDG 4.7.2 11 | AVAIL PGDG 4.7.2 14 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 |
-| el9.x86_64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 18 | AVAIL PGDG 4.7.2 21 | AVAIL PGDG 4.7.2 24 | AVAIL PGDG 4.7.2 26 |
-| el9.aarch64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 18 | AVAIL PGDG 4.7.2 21 | AVAIL PGDG 4.7.2 24 | AVAIL PGDG 4.7.2 24 |
-| el10.x86_64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 |
-| el10.aarch64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 |
+| el8.x86_64 | AVAIL PGDG 4.7.3 7 | AVAIL PGDG 4.7.3 12 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 21 |
+| el8.aarch64 | AVAIL PGDG 4.7.3 7 | AVAIL PGDG 4.7.3 12 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 |
+| el9.x86_64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 19 | AVAIL PGDG 4.7.3 22 | AVAIL PGDG 4.7.3 25 | AVAIL PGDG 4.7.3 27 |
+| el9.aarch64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 19 | AVAIL PGDG 4.7.3 22 | AVAIL PGDG 4.7.3 25 | AVAIL PGDG 4.7.3 25 |
+| el10.x86_64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 |
+| el10.aarch64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 |
 | d12.x86_64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |
 | d12.aarch64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |
 | d13.x86_64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |

@@ -1,20 +1,20 @@
 ---
 title: "acdat"
 linkTitle: "acdat"
-description: "PostgreSQL 大规模精确多模式匹配与替换扩展"
+description: "在 PostgreSQL 中编译 Aho-Corasick 双数组机，实现精确多模式匹配与替换"
 weight: 2250
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/Vonng/ac">
+  <a class="ext-card ext-card--repo" href="https://github.com/pgsty/acdat">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">Vonng/ac</div>
-    <div class="ext-card__desc">https://github.com/Vonng/ac</div>
+    <div class="ext-card__title">pgsty/acdat</div>
+    <div class="ext-card__desc">https://github.com/pgsty/acdat</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/acdat-0.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/acdat-0.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">acdat-0.1.0.tar.gz</div>
-    <div class="ext-card__desc">acdat-0.1.0.tar.gz</div>
+    <div class="ext-card__title">acdat-0.1.1.tar.gz</div>
+    <div class="ext-card__desc">acdat-0.1.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2250
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`acdat`**](/ext/e/acdat) | `0.1.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`acdat`**](/ext/e/acdat) | `0.1.1` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,37 +38,117 @@ weight: 2250
 {.ext-table .ext-table--rel}
 
 
-> Indexes the compiled pattern dictionary, not the document table; exact case-sensitive matching in the fixed acdat schema.
+> 0.1.1 preserves the 0.1.0 SQL API and format-major-1 machine compatibility; fixed acdat schema; no preload required.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `acdat` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `acdat_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-acdat` | - |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `acdat` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `acdat_$v` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-acdat` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el8.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+@ el8.x86_64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 118.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acdat_18-0.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 116.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acdat_18-0.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 118.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acdat_18-0.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el9.aarch64.rpm pigsty 0.1.1 117.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/acdat_18-0.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el10.x86_64.rpm pigsty 0.1.1 121.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/acdat_18-0.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 acdat_18 acdat_18-0.1.1-1PGSTY.el10.aarch64.rpm pigsty 0.1.1 120.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/acdat_18-0.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~bookworm_amd64.deb pigsty 0.1.1 109.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~bookworm_arm64.deb pigsty 0.1.1 107.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~trixie_amd64.deb pigsty 0.1.1 111.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~trixie_arm64.deb pigsty 0.1.1 109.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~jammy_amd64.deb pigsty 0.1.1 116.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~jammy_arm64.deb pigsty 0.1.1 114.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~noble_amd64.deb pigsty 0.1.1 111.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~noble_arm64.deb pigsty 0.1.1 110.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~resolute_amd64.deb pigsty 0.1.1 112.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-acdat postgresql-18-acdat_0.1.1-1PGSTY~resolute_arm64.deb pigsty 0.1.1 111.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-18-acdat_0.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 118.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acdat_17-0.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 116.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acdat_17-0.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 118.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acdat_17-0.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el9.aarch64.rpm pigsty 0.1.1 117.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/acdat_17-0.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el10.x86_64.rpm pigsty 0.1.1 121.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/acdat_17-0.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 acdat_17 acdat_17-0.1.1-1PGSTY.el10.aarch64.rpm pigsty 0.1.1 119.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/acdat_17-0.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~bookworm_amd64.deb pigsty 0.1.1 110.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~bookworm_arm64.deb pigsty 0.1.1 107.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~trixie_amd64.deb pigsty 0.1.1 111.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~trixie_arm64.deb pigsty 0.1.1 109.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~jammy_amd64.deb pigsty 0.1.1 122.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~jammy_arm64.deb pigsty 0.1.1 121.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~noble_amd64.deb pigsty 0.1.1 111.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~noble_arm64.deb pigsty 0.1.1 110.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~resolute_amd64.deb pigsty 0.1.1 112.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-acdat postgresql-17-acdat_0.1.1-1PGSTY~resolute_arm64.deb pigsty 0.1.1 111.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-17-acdat_0.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 118.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acdat_16-0.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 116.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acdat_16-0.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 118.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acdat_16-0.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el9.aarch64.rpm pigsty 0.1.1 117.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/acdat_16-0.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el10.x86_64.rpm pigsty 0.1.1 121.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/acdat_16-0.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 acdat_16 acdat_16-0.1.1-1PGSTY.el10.aarch64.rpm pigsty 0.1.1 119.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/acdat_16-0.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~bookworm_amd64.deb pigsty 0.1.1 110.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~bookworm_arm64.deb pigsty 0.1.1 107.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~trixie_amd64.deb pigsty 0.1.1 111.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~trixie_arm64.deb pigsty 0.1.1 109.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~jammy_amd64.deb pigsty 0.1.1 122.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~jammy_arm64.deb pigsty 0.1.1 120.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~noble_amd64.deb pigsty 0.1.1 111.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~noble_arm64.deb pigsty 0.1.1 110.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~resolute_amd64.deb pigsty 0.1.1 112.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-acdat postgresql-16-acdat_0.1.1-1PGSTY~resolute_arm64.deb pigsty 0.1.1 111.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-16-acdat_0.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 119.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acdat_15-0.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 117.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acdat_15-0.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 120.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acdat_15-0.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el9.aarch64.rpm pigsty 0.1.1 119.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/acdat_15-0.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el10.x86_64.rpm pigsty 0.1.1 122.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/acdat_15-0.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 acdat_15 acdat_15-0.1.1-1PGSTY.el10.aarch64.rpm pigsty 0.1.1 121.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/acdat_15-0.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~bookworm_amd64.deb pigsty 0.1.1 110.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~bookworm_arm64.deb pigsty 0.1.1 108.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~trixie_amd64.deb pigsty 0.1.1 111.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~trixie_arm64.deb pigsty 0.1.1 109.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~jammy_amd64.deb pigsty 0.1.1 123.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~jammy_arm64.deb pigsty 0.1.1 122.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~noble_amd64.deb pigsty 0.1.1 113.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~noble_arm64.deb pigsty 0.1.1 112.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~resolute_amd64.deb pigsty 0.1.1 114.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-acdat postgresql-15-acdat_0.1.1-1PGSTY~resolute_arm64.deb pigsty 0.1.1 113.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-15-acdat_0.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 119.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acdat_14-0.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 117.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acdat_14-0.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 120.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acdat_14-0.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el9.aarch64.rpm pigsty 0.1.1 119.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/acdat_14-0.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el10.x86_64.rpm pigsty 0.1.1 122.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/acdat_14-0.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 acdat_14 acdat_14-0.1.1-1PGSTY.el10.aarch64.rpm pigsty 0.1.1 121.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/acdat_14-0.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~bookworm_amd64.deb pigsty 0.1.1 110.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~bookworm_arm64.deb pigsty 0.1.1 108.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~trixie_amd64.deb pigsty 0.1.1 111.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~trixie_arm64.deb pigsty 0.1.1 109.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~jammy_amd64.deb pigsty 0.1.1 123.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~jammy_arm64.deb pigsty 0.1.1 122.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~noble_amd64.deb pigsty 0.1.1 113.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~noble_arm64.deb pigsty 0.1.1 112.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~resolute_amd64.deb pigsty 0.1.1 114.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-acdat postgresql-14-acdat_0.1.1-1PGSTY~resolute_arm64.deb pigsty 0.1.1 113.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acdat/postgresql-14-acdat_0.1.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -129,13 +209,14 @@ CREATE EXTENSION acdat;
 
 来源：
 
-- [官方 README v0.1.0](https://github.com/Vonng/ac/blob/v0.1.0/README.md)
-- [扩展控制文件](https://github.com/Vonng/ac/blob/v0.1.0/acdat.control)
-- [版本化安装 SQL](https://github.com/Vonng/ac/blob/v0.1.0/sql/acdat--0.1.0.sql)
-- [官方使用指南](https://github.com/Vonng/ac/blob/v0.1.0/docs/usage.md)
-- [可执行 SQL 演示](https://github.com/Vonng/ac/blob/v0.1.0/examples/demo.sql)
+- [官方版本 v0.1.1](https://github.com/pgsty/acdat/releases/tag/v0.1.1)
+- [官方 README v0.1.1](https://github.com/pgsty/acdat/blob/v0.1.1/README.md)
+- [扩展控制文件](https://github.com/pgsty/acdat/blob/v0.1.1/acdat.control)
+- [版本化安装 SQL](https://github.com/pgsty/acdat/blob/v0.1.1/sql/acdat--0.1.1.sql)
+- [官方使用指南](https://github.com/pgsty/acdat/blob/v0.1.1/docs/USAGE.md)
+- [可执行 SQL 演示](https://github.com/pgsty/acdat/blob/v0.1.1/examples/demo.sql)
 
-`acdat` 0.1.0 将大规模精确字面量模式词典编译为不可变的 Aho-Corasick Double-Array machine，再对每个 `text` 或 `bytea` 值执行一次扫描以完成匹配或替换。它适合策略规则、失陷指标、实体名称、脱敏别名等稳定且会被反复使用的词典。
+`acdat` 0.1.1 将大规模精确字面量模式词典编译为不可变的 Aho-Corasick Double-Array machine，再对每个 `text` 或 `bytea` 值执行一次扫描以完成匹配或替换。它适合策略规则、失陷指标、实体名称、脱敏别名等稳定且会被反复使用的词典。
 
 ### 核心流程
 
@@ -213,7 +294,9 @@ WHERE name = 'moderation';
 
 ### 兼容性与安全
 
-0.1.0 已在 PostgreSQL 14 至 18 上测试，不需要预加载或重启服务器，没有外部扩展依赖，也不定义 GUC。控制文件将 schema 固定为 `acdat`，并设置 `relocatable = false` 和 `trusted = false`，因此 `CREATE EXTENSION` 需要超级用户。
+0.1.1 已在 PostgreSQL 14 至 18 上测试，不需要预加载或重启服务器，没有外部扩展依赖，也不定义 GUC。控制文件将 schema 固定为 `acdat`，并设置 `relocatable = false` 和 `trusted = false`，因此 `CREATE EXTENSION` 需要超级用户。
+
+0.1.1 保持 0.1.0 SQL API 与 format-major-1 machine 兼容，并提供 `0.1.0 -> 0.1.1` 扩展升级路径；同时加入可取消编译、保守的构建工作量预算和更快的物化扫描路径，而不改变持久化 machine 契约。
 
 ACDAT 索引的是模式词典，而不是文档表：扫描已有大表时仍需读取候选行。匹配是精确且区分大小写的；扩展不提供正则表达式、模糊匹配、分词、自动大小写折叠、Unicode 规范化或文档侧索引。文本引擎支持 UTF-8 和单字节服务器编码，二进制数据应使用 bytea 接口。需要反复反向查询时，应将 `(document_id, pattern_id)` 命中物化到应用表中。
 

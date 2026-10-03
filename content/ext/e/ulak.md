@@ -11,10 +11,10 @@ weight: 2680
     <div class="ext-card__title">zeybek/ulak</div>
     <div class="ext-card__desc">https://github.com/zeybek/ulak</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/ulak-0.0.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/ulak-0.2.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">ulak-0.0.3.tar.gz</div>
-    <div class="ext-card__desc">ulak-0.0.3.tar.gz</div>
+    <div class="ext-card__title">ulak-0.2.0.tar.gz</div>
+    <div class="ext-card__desc">ulak-0.2.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2680
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`ulak`**](/ext/e/ulak) | `0.0.3` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`ulak`**](/ext/e/ulak) | `0.2.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,110 +45,110 @@ weight: 2680
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `ulak` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `ulak_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-ulak` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `ulak` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `ulak_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-ulak` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-@ el8.x86_64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 107.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_18-0.0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 106.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_18-0.0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 105.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_18-0.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.0.2 104.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_18-0.0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.0.2 105.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_18-0.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 ulak_18 ulak_18-0.0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.0.2 104.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_18-0.0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb pigsty 0.0.2 273.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb pigsty 0.0.2 266.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~trixie_amd64.deb pigsty 0.0.2 298.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~trixie_arm64.deb pigsty 0.0.2 291.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~jammy_amd64.deb pigsty 0.0.2 288.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~jammy_arm64.deb pigsty 0.0.2 284.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~noble_amd64.deb pigsty 0.0.2 305.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~noble_arm64.deb pigsty 0.0.2 302.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 304.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 299.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-18-ulak_0.0.2-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 107.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_17-0.0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 106.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_17-0.0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 105.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_17-0.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.0.2 104.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_17-0.0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.0.2 105.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_17-0.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 ulak_17 ulak_17-0.0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.0.2 104.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_17-0.0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb pigsty 0.0.2 273.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb pigsty 0.0.2 266.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~trixie_amd64.deb pigsty 0.0.2 298.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~trixie_arm64.deb pigsty 0.0.2 291.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~jammy_amd64.deb pigsty 0.0.2 313.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~jammy_arm64.deb pigsty 0.0.2 309.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~noble_amd64.deb pigsty 0.0.2 306.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~noble_arm64.deb pigsty 0.0.2 302.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 304.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 299.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-17-ulak_0.0.2-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 107.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_16-0.0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 105.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_16-0.0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 105.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_16-0.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.0.2 104.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_16-0.0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.0.2 105.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_16-0.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 ulak_16 ulak_16-0.0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.0.2 104.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_16-0.0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb pigsty 0.0.2 273.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb pigsty 0.0.2 267.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~trixie_amd64.deb pigsty 0.0.2 298.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~trixie_arm64.deb pigsty 0.0.2 291.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~jammy_amd64.deb pigsty 0.0.2 313.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~jammy_arm64.deb pigsty 0.0.2 309.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~noble_amd64.deb pigsty 0.0.2 306.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~noble_arm64.deb pigsty 0.0.2 302.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 304.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 299.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-16-ulak_0.0.2-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 111.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_15-0.0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 109.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_15-0.0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 115.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_15-0.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.0.2 114.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_15-0.0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.0.2 115.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_15-0.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 ulak_15 ulak_15-0.0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.0.2 115.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_15-0.0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb pigsty 0.0.2 277.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb pigsty 0.0.2 270.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~trixie_amd64.deb pigsty 0.0.2 302.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~trixie_arm64.deb pigsty 0.0.2 294.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~jammy_amd64.deb pigsty 0.0.2 321.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~jammy_arm64.deb pigsty 0.0.2 317.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~noble_amd64.deb pigsty 0.0.2 314.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~noble_arm64.deb pigsty 0.0.2 310.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 312.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 308.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-15-ulak_0.0.2-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 111.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_14-0.0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 109.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_14-0.0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 114.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_14-0.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.0.2 114.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_14-0.0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.0.2 115.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_14-0.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 ulak_14 ulak_14-0.0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.0.2 115.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_14-0.0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb pigsty 0.0.2 277.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb pigsty 0.0.2 270.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~trixie_amd64.deb pigsty 0.0.2 301.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~trixie_arm64.deb pigsty 0.0.2 294.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~jammy_amd64.deb pigsty 0.0.2 319.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~jammy_arm64.deb pigsty 0.0.2 316.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~noble_amd64.deb pigsty 0.0.2 313.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~noble_arm64.deb pigsty 0.0.2 310.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 312.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 308.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-14-ulak_0.0.2-2PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+@ el8.x86_64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 308.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_18-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 303.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_18-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 336.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_18-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 332.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_18-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 337.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_18-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 ulak_18 ulak_18-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 333.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_18-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 285.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 279.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 314.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 306.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 300.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 295.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 320.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 317.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 320.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-ulak postgresql-18-ulak_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 315.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-18-ulak_0.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 308.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_17-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 303.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_17-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 336.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_17-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 332.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_17-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 337.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_17-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 ulak_17 ulak_17-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 333.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_17-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 285.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 278.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 314.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 306.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 326.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 321.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 320.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 317.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 320.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-ulak postgresql-17-ulak_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 315.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-17-ulak_0.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 308.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_16-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 302.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_16-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 336.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_16-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 332.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_16-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 337.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_16-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 ulak_16 ulak_16-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 333.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_16-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 285.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 278.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 313.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 306.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 325.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 321.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 320.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 317.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 320.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-ulak postgresql-16-ulak_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 315.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-16-ulak_0.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 310.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_15-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 304.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_15-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 343.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_15-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 340.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_15-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 344.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_15-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 ulak_15 ulak_15-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 340.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_15-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 288.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 282.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 318.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 310.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 331.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 328.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 328.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 325.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 327.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-ulak postgresql-15-ulak_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 323.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-15-ulak_0.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 310.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ulak_14-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 304.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ulak_14-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 343.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ulak_14-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 339.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ulak_14-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 344.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ulak_14-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 ulak_14 ulak_14-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 340.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ulak_14-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 288.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 281.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 317.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 309.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 330.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 327.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 327.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 325.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 327.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-ulak postgresql-14-ulak_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 323.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/u/ulak/postgresql-14-ulak_0.2.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -38,16 +38,16 @@ weight: 5020
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY RPM and PGDG DEB are aligned at 2.2 for PostgreSQL 14-18; shared_preload_libraries=pg_rewrite and wal_level=logical are required.
+> Pigsty RPM and DEB package version 2.2; shared_preload_libraries=pg_rewrite and wal_level=logical are required.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite` | - |
 | [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-rewrite` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-rewrite` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

@@ -11,10 +11,10 @@ weight: 1651
     <div class="ext-card__title">MobilityDB/MobilityDB</div>
     <div class="ext-card__desc">https://github.com/MobilityDB/MobilityDB</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/mobilitydb-1.3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/mobilitydb-1.3.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">mobilitydb-1.3.0.tar.gz</div>
-    <div class="ext-card__desc">mobilitydb-1.3.0.tar.gz</div>
+    <div class="ext-card__title">mobilitydb-1.3.1.tar.gz</div>
+    <div class="ext-card__desc">mobilitydb-1.3.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1651
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.0` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -39,42 +39,45 @@ weight: 1651
 {.ext-table .ext-table--rel}
 
 
+> Pigsty 1.3.1 bundles MobilityDB DataGen; upgrading from 1.2 to 1.3 requires upstream backup/restore.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `mobilitydb` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis36_$v` |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `mobilitydb` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis36_$v` |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
-| d12.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| d12.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| d13.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| d13.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| u22.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
-| u24.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| u24.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| u26.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| u26.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
+| el8.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| d12.aarch64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| d13.x86_64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| d13.aarch64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| u22.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 |
+| u22.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 |
+| u24.x86_64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| u24.aarch64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| u26.x86_64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
+| u26.aarch64 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 | AVAIL PIGSTY 1.3.1 4 |
 {{< /pgext_matrix >}}
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `mobilitydb` 扩展的 RPM 包：
+您可以使用 `pig build` 命令构建 `mobilitydb` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg mobilitydb         # 构建 RPM 包
+pig build pkg mobilitydb         # 构建 RPM / DEB 包
 ```
 
 
@@ -123,21 +126,23 @@ apt install -y postgresql-14-mobilitydb   # PG 14
 CREATE EXTENSION mobilitydb_datagen CASCADE;  -- 依赖: mobilitydb
 ```
 
-
-
-
 ## 用法
 
-来源：[repository](https://github.com/MobilityDB/MobilityDB), [synthetic data generator docs](https://docs.mobilitydb.com/MobilityDB/develop/apb.html), [control file](https://github.com/MobilityDB/MobilityDB/blob/master/mobilitydb/datagen/mobilitydb_datagen.in.control), [temporal generators](https://github.com/MobilityDB/MobilityDB/blob/master/mobilitydb/datagen/temporal/random_temporal.sql), [temporal point generators](https://github.com/MobilityDB/MobilityDB/blob/master/mobilitydb/datagen/geo/random_tpoint.sql)
+来源：
 
-`mobilitydb_datagen` 提供 PL/pgSQL 函数，用来生成合成的 PostgreSQL、PostGIS 和 MobilityDB 值。它主要适用于需要随机 temporal value 或轨迹的回归数据、演示和基准测试 fixture。
+- [1.3.1 数据生成器手册](https://github.com/MobilityDB/MobilityDB/blob/v1.3.1/doc/data_generator.xml)
+- [扩展控制文件](https://github.com/MobilityDB/MobilityDB/blob/v1.3.1/mobilitydb/datagen/mobilitydb_datagen.in.control)
+- [时态值生成器](https://github.com/MobilityDB/MobilityDB/blob/v1.3.1/mobilitydb/datagen/temporal/random_temporal.sql)
+- [时态点生成器](https://github.com/MobilityDB/MobilityDB/blob/v1.3.1/mobilitydb/datagen/geo/random_tpoint.sql)
+
+`mobilitydb_datagen` 1.3.1 提供 PL/pgSQL 函数，用来生成合成的 PostgreSQL、PostGIS 和 MobilityDB 值。它主要适用于需要随机时态值或轨迹的回归数据、演示和基准测试数据集。
 
 ```sql
 -- After the main MobilityDB extension is loaded:
 CREATE EXTENSION mobilitydb_datagen;
 ```
 
-### 生成随机 Temporal 值
+### 生成随机时态值
 
 ```sql
 -- A random temporal float sequence.
@@ -190,5 +195,7 @@ FROM generate_series(1, 1000) AS vehicle_id;
 ### 注意事项
 
 - control file 要求主 `mobilitydb` 扩展已存在；`mobilitydb_datagen` 不是独立扩展。
-- `db/extension.csv` 中的包行列出版本 `1.3.0`、package `mobilitydb`，并支持 PostgreSQL 14 到 18。
+- 生成器随 `mobilitydb` 版本 `1.3.1` 分发。应保持依赖与生成器文件一致；可选类型族是否存在取决于构建开关及软件包可用性。
 - 上游文档有意省略许多生成器函数的详细参数列表，并让用户查看 SQL 源文件确认精确签名。
+
+生成器默认产生随机合成值，并不保证应用数据集可重现。比较多次运行时应设置明确的随机种子，并核对边界、时区、插值方式和 SRID 是否符合工作负载。

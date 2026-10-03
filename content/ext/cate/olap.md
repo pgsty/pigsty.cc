@@ -14,11 +14,11 @@ icon: fas fa-chart-line
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`citus`](/ext/e/citus) | [`citus`](https://github.com/citusdata/citus) | `14.2.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将 PostgreSQL 横向扩展为分布式数据库 |
 | [`citus_columnar`](/ext/e/citus_columnar) | [`citus`](https://github.com/citusdata/citus) | `14.2.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 列式存储引擎 |
-| [`columnar`](/ext/e/columnar) | [`hydra`](https://github.com/hydradatabase/hydra) | `1.1.2` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 开源列式存储扩展 |
+| [`columnar`](/ext/e/columnar) | [`hydra`](https://github.com/hydradatabase/columnar) | `1.1.2` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 开源列式存储扩展 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_duckdb`](https://github.com/duckdb/pg_duckdb) | `1.1.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_mooncake`](https://github.com/Mooncake-Labs/pg_mooncake) | `0.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL列式存储表 |
 | [`storage_engine`](/ext/e/storage_engine) | [`storage_engine`](https://github.com/saulojb/storage_engine) | `2.4.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
-| [`pg_clickhouse`](/ext/e/pg_clickhouse) | [`pg_clickhouse`](https://github.com/ClickHouse/pg_clickhouse) | `0.10.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 从PostgreSQL中查询ClickHouse的接口 |
+| [`pg_clickhouse`](/ext/e/pg_clickhouse) | [`pg_clickhouse`](https://github.com/ClickHouse/pg_clickhouse) | `0.11` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从PostgreSQL中查询ClickHouse的接口 |
 | [`duckdb_fdw`](/ext/e/duckdb_fdw) | [`duckdb_fdw`](https://github.com/alitrack/duckdb_fdw) | `2.0.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DuckDB 外部数据源包装器 |
 | [`pg_parquet`](/ext/e/pg_parquet) | [`pg_parquet`](https://github.com/CrunchyData/pg_parquet/) | `0.5.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
 | [`pg_ducklake`](/ext/e/pg_ducklake) | [`pg_ducklake`](https://github.com/relytcloud/pg_ducklake) | `1.0.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 基于 DuckDB 与 Parquet 的 DuckLake 湖仓一体扩展 |
@@ -28,14 +28,14 @@ icon: fas fa-chart-line
 | [`pg_strom`](/ext/e/pg_strom) | [`pg_strom`](https://github.com/heterodb/pg-strom) | `6.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用GPU与NVMe加速大数据处理 |
 | [`pg_orca`](/ext/e/pg_orca) | [`pg_orca`](https://github.com/quantumiodb/pgorca) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL ORCA 查询优化器扩展 |
 | [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | [`pg_sorted_heap`](https://github.com/skuznetsov/pg_sorted_heap) | `0.14.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 带 zone map 剪枝和内置向量搜索的有序堆表访问方法 |
-| [`pg_lake`](/ext/e/pg_lake) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
-| [`pg_extension_base`](/ext/e/pg_extension_base) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_extension_base) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
-| [`pg_extension_updater`](/ext/e/pg_extension_updater) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_extension_updater) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
-| [`pg_map`](/ext/e/pg_map) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_map) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
-| [`pg_lake_engine`](/ext/e/pg_lake_engine) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_engine) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于数据湖查询的查询引擎 |
-| [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_iceberg) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 中的 Iceberg 实现 |
-| [`pg_lake_table`](/ext/e/pg_lake_table) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_table) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数据湖表和 Iceberg 表 |
-| [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_copy) | `3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
+| [`pg_lake`](/ext/e/pg_lake) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| [`pg_extension_base`](/ext/e/pg_extension_base) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_extension_base) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| [`pg_extension_updater`](/ext/e/pg_extension_updater) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_extension_updater) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| [`pg_map`](/ext/e/pg_map) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_map) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
+| [`pg_lake_engine`](/ext/e/pg_lake_engine) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_engine) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于数据湖查询的查询引擎 |
+| [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_iceberg) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 中的 Iceberg 实现 |
+| [`pg_lake_table`](/ext/e/pg_lake_table) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_table) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数据湖表和 Iceberg 表 |
+| [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_copy) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`tablefunc`](/ext/e/tablefunc) | [`tablefunc`](https://www.postgresql.org/docs/current/tablefunc.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 交叉表函数 |
 {.ext-table}
 
@@ -87,7 +87,7 @@ icon: fas fa-chart-line
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`columnar`](/ext/e/columnar) | **el8** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
-| **扩展包** | [`hydra`](https://github.com/hydradatabase/hydra) | **el9** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
+| **扩展包** | [`hydra`](https://github.com/hydradatabase/columnar) | **el9** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
 | **RPM** | `hydra_$v` | **el10** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
 | **DEB** | `postgresql-$v-hydra` | **d12** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
@@ -158,7 +158,7 @@ icon: fas fa-chart-line
 
 ## pg_clickhouse {#pg_clickhouse}
 
-[**`pg_clickhouse`**](/ext/e/pg_clickhouse) - `0.10.0` : 从PostgreSQL中查询ClickHouse的接口
+[**`pg_clickhouse`**](/ext/e/pg_clickhouse) - `0.11` : 从PostgreSQL中查询ClickHouse的接口
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -166,7 +166,7 @@ icon: fas fa-chart-line
 | **扩展包** | [`pg_clickhouse`](https://github.com/ClickHouse/pg_clickhouse) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **RPM** | `pg_clickhouse_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-clickhouse` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
@@ -281,7 +281,7 @@ icon: fas fa-chart-line
 | **RPM** | `plproxy_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-plproxy` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
@@ -348,7 +348,7 @@ icon: fas fa-chart-line
 
 ## pg_lake {#pg_lake}
 
-[**`pg_lake`**](/ext/e/pg_lake) - `3.4` : Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展
+[**`pg_lake`**](/ext/e/pg_lake) - `3.5` : Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -367,7 +367,7 @@ icon: fas fa-chart-line
 
 ## pg_extension_base {#pg_extension_base}
 
-[**`pg_lake`**](/ext/e/pg_extension_base) - `3.4` : Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理
+[**`pg_lake`**](/ext/e/pg_extension_base) - `3.5` : Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -386,7 +386,7 @@ icon: fas fa-chart-line
 
 ## pg_extension_updater {#pg_extension_updater}
 
-[**`pg_lake`**](/ext/e/pg_extension_updater) - `3.4` : 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器
+[**`pg_lake`**](/ext/e/pg_extension_updater) - `3.5` : 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -405,7 +405,7 @@ icon: fas fa-chart-line
 
 ## pg_map {#pg_map}
 
-[**`pg_lake`**](/ext/e/pg_map) - `3.4` : pg_lake 内置并依赖的 PostgreSQL Map 数据类型。
+[**`pg_lake`**](/ext/e/pg_map) - `3.5` : pg_lake 内置并依赖的 PostgreSQL Map 数据类型。
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -424,7 +424,7 @@ icon: fas fa-chart-line
 
 ## pg_lake_engine {#pg_lake_engine}
 
-[**`pg_lake`**](/ext/e/pg_lake_engine) - `3.4` : 用于数据湖查询的查询引擎
+[**`pg_lake`**](/ext/e/pg_lake_engine) - `3.5` : 用于数据湖查询的查询引擎
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -443,7 +443,7 @@ icon: fas fa-chart-line
 
 ## pg_lake_iceberg {#pg_lake_iceberg}
 
-[**`pg_lake`**](/ext/e/pg_lake_iceberg) - `3.4` : PostgreSQL 中的 Iceberg 实现
+[**`pg_lake`**](/ext/e/pg_lake_iceberg) - `3.5` : PostgreSQL 中的 Iceberg 实现
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -462,7 +462,7 @@ icon: fas fa-chart-line
 
 ## pg_lake_table {#pg_lake_table}
 
-[**`pg_lake`**](/ext/e/pg_lake_table) - `3.4` : 数据湖表和 Iceberg 表
+[**`pg_lake`**](/ext/e/pg_lake_table) - `3.5` : 数据湖表和 Iceberg 表
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -481,7 +481,7 @@ icon: fas fa-chart-line
 
 ## pg_lake_copy {#pg_lake_copy}
 
-[**`pg_lake`**](/ext/e/pg_lake_copy) - `3.4` : 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展
+[**`pg_lake`**](/ext/e/pg_lake_copy) - `3.5` : 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

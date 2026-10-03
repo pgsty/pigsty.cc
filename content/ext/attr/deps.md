@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **129** 个扩展依赖其他扩展，**75** 个扩展被其他扩展所依赖。
+共有 **131** 个扩展依赖其他扩展，**76** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **129** 个扩展需要先安装其他扩展才能使用：
+以下 **131** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -42,6 +42,8 @@ weight: 30
 | [`vchord`](/ext/e/vchord) | [`vector`](/ext/e/vector) | 使用Rust重写的高性能向量扩展 |
 | [`vectorscale`](/ext/e/vectorscale) | [`vector`](/ext/e/vector) | 使用DiskANN算法对向量进行高效索引 |
 | [`vectorize`](/ext/e/vectorize) | [`pg_cron`](/ext/e/pg_cron) [`pgmq`](/ext/e/pgmq) [`vector`](/ext/e/vector) | 在PostgreSQL中封装RAG向量检索服务 |
+| [`pg_grammar_guard`](/ext/e/pg_grammar_guard) | [`pg_living_assertions`](/ext/e/pg_living_assertions) | 根据实时目录生成语法并检测已批准语法的漂移 |
+| [`jev`](/ext/e/jev) | [`plpython3u`](/ext/e/plpython3u) | 通过 TypeSafe 实现自然语言行过滤、排序和分类 |
 | [`pg4ml`](/ext/e/pg4ml) | [`plpgsql`](/ext/e/plpgsql) [`tablefunc`](/ext/e/tablefunc) [`cube`](/ext/e/cube) [`plpython3u`](/ext/e/plpython3u) | PG4ML是一个机器学习框架 |
 | [`pgmnemo`](/ext/e/pgmnemo) | [`vector`](/ext/e/vector) | PostgreSQL 单计划多模态智能体记忆扩展 |
 | [`pg_search`](/ext/e/pg_search) | [`vector`](/ext/e/vector) | 使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展 |
@@ -146,7 +148,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **75** 个扩展被其他扩展所依赖：
+以下 **76** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -196,7 +198,7 @@ weight: 30
 | [`plperl`](/ext/e/plperl) | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`sparql`](/ext/e/sparql) | PL/Perl 存储过程语言 |
 | [`plperlu`](/ext/e/plperlu) | [`bool_plperlu`](/ext/e/bool_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`sparql`](/ext/e/sparql) | PL/PerlU 存储过程语言（未受信/高权限） |
 | [`plpgsql`](/ext/e/plpgsql) | `bedquilt` [`biscuit`](/ext/e/biscuit) [`cat_tools`](/ext/e/cat_tools) `check_orapg` [`currency`](/ext/e/currency) [`data_historization`](/ext/e/data_historization) [`db2fce`](/ext/e/db2fce) `dbpatch` `dbstat` [`ddl_historization`](/ext/e/ddl_historization) `drop_role_helper` `dsef` `event_manager` `explanation` `firefly` `geekspeak` `generic_plan` `gogudb` `grants_manager` `hello-world` `hybrid_search` `index_analyzer` `istoria` `italian_codes` `job_queue` `json_query` `json_utils` `jsonb_schema` `jx_io` `keyhippo` `kilobase` `kissfft` `lab-orders` `launchql-base32` `launchql-ext-types` `launchql-extension-utils` `launchql-extension-verify` `launchql-inflection` `launchql-jwt-claims` `launchql-stamps` `launchql-totp` `livewire` `medications` `merge_ips` `meta_triggers` `migration` `monitoring_role` `mv_rewrite` `mv_stats` `myhelper` `mypg_sharding` `mysqlcompat` `newsfeeds` `nfiesta_gisdata` `nfiesta_sdesign` `nfiesta_target_data` `nonoms` `norm` `npm` `ollama` `omnidb_plpgsql_debugger` `partman_to_cstore` `pase` `pathman_sharding` `patients` `pg-audit-json` `pg2podg` [`pg4ml`](/ext/e/pg4ml) `pgAutomator` `pg_abris` [`pg_accumulator`](/ext/e/pg_accumulator) `pg_audit` `pg_audit_tools` `pg_biscuit` `pg_bleve` `pg_bm25` `pg_cache_tree` `pg_calcpi` `pg_catalog_get_defs` [`pg_column_tetris`](/ext/e/pg_column_tetris) `pg_credereum` `pg_datatype_password` `pg_dbo_timestamp` `pg_dbwa` `pg_dms` [`pg_drop_events`](/ext/e/pg_drop_events) `pg_dropbuffers` `pg_dropcache` `pg_eyes` `pg_fairmlq` [`pg_fsql`](/ext/e/pg_fsql) `pg_gen_uid` `pg_git` `pg_graphql_server` `pg_gsl` `pg_idm` `pg_idx_advisor` [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) `pg_landmetrics` `pg_ledger` `pg_linegazer` `pg_llm_helper` `pg_lock_pool` `pg_message_queue` `pg_monitoring` `pg_normalize_email` `pg_once` `pg_os` `pg_osgr` `pg_pageprep` `pg_part` `pg_particulous` [`pg_partman`](/ext/e/pg_partman) `pg_pathman` `pg_paxos` `pg_popyramids_datamarts` [`pg_profile`](/ext/e/pg_profile) `pg_prometheus` `pg_prttn_tools` `pg_reversi` `pg_sakila_db` `pg_semantic_cache` `pg_sendmail` `pg_sentence_transformer` `pg_sessions` `pg_shardman` [`pg_statviz`](/ext/e/pg_statviz) `pg_tileless` `pg_tms` `pg_turboquant` `pg_twkb` [`pg_upless`](/ext/e/pg_upless) `pg_zlog` `pgaut` `pgcat` `pgeyes` `pgfsm` [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) [`pghydro`](/ext/e/pghydro) [`pgmemento`](/ext/e/pgmemento) `pgmock` `pgnats` `pgparts` `pgpm-base32` `pgpm-defaults` `pgpm-faker` `pgpm-inflection` `pgpm-jwt-claims` `pgpm-measurements` `pgpm-types` `pgpm-verify` `pgrao` `pgrollup` [`pgrouting`](/ext/e/pgrouting) [`pgsqlmock`](/ext/e/pgsqlmock) [`pgtap`](/ext/e/pgtap) `pgtap_fixture` `pgtelemetry` `pgvroom` `plparrot` [`plpgsql_check`](/ext/e/plpgsql_check) [`plpgsql_wrap`](/ext/e/plpgsql_wrap) `plrust` `postgres_ci` `postpic` [`powa`](/ext/e/powa) `prescriptions` `qgres` `quria` `range_partitioning` `recall` `recursively_delete` `rep_fdw` `rls_helpers` `roleman` `rpg` `rtiles` `scheduling` `session_variables` `short_ids` `skitch-extension-defaults` `skitch-extension-jobs` `skitch-extension-utils` `skitch-extension-verify` `sphinxlink` `sql_saga` `supa_queue` `supabase` `supabase_auth_apikey` `sys_syn_dblink` `tab_tier` `table_log_pl` [`table_version`](/ext/e/table_version) `tablelog` `telephone` `test_factory` `time_for_keys` `timestampandtz` `town` `types` [`unit`](/ext/e/unit) `units` `us-states` `uuidv7-sql` `variant` `vectors` `vrprouting` `wasm` `webauthn` `xl_global_views` `zombodb` | PL/pgSQL 程序设计语言 |
-| [`plpython3u`](/ext/e/plpython3u) | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) | PL/Python3 存储过程语言（未受信/高权限） |
+| [`plpython3u`](/ext/e/plpython3u) | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jev`](/ext/e/jev) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) | PL/Python3 存储过程语言（未受信/高权限） |
 | [`roaringbitmap`](/ext/e/roaringbitmap) | [`pgfaceting`](/ext/e/pgfaceting) | 支持RoaringBitmap数据类型 |
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | PostgreSQL i8n与l10n工具包 |
 | [`ip4r`](/ext/e/ip4r) | [`geoip`](/ext/e/geoip) | PostgreSQL 的 IPv4/v6 和 IPv4/v6 范围索引类型 |
@@ -209,6 +211,7 @@ weight: 30
 | [`uuid-ossp`](/ext/e/uuid-ossp) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) `bundle` `datalink` `launchql-extension-verify` `launchql-inflection` `launchql-jwt-claims` `npm` `pg_abris` `pg_dms` [`provsql`](/ext/e/provsql) `ruid` `skitch-extension-jobs` `skitch-extension-verify` `supa_audit` `types` | 生成通用唯一标识符（UUIDs） |
 | [`btree_gist`](/ext/e/btree_gist) | [`emaj`](/ext/e/emaj) [`omni_auth`](/ext/e/omni_auth) [`periods`](/ext/e/periods) [`pg_lake_table`](/ext/e/pg_lake_table) [`pgautofailover`](/ext/e/pgautofailover) [`powa`](/ext/e/powa) | 用GiST索引常见数据类型 |
 | [`cat_tools`](/ext/e/cat_tools) | `extension_drop` `object_reference` | 用于操作 PostgreSQL 系统目录的工具集 |
+| [`pg_living_assertions`](/ext/e/pg_living_assertions) | [`pg_grammar_guard`](/ext/e/pg_grammar_guard) | 保存可执行 SQL 检查、核验日期和断言变更历史 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | [`pgcozy`](/ext/e/pgcozy) | 预热关系数据 |
 | [`pgfr_record`](/ext/e/pgfr_record) | [`pgfr_analyze`](/ext/e/pgfr_analyze) | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
 | [`pg_buffercache`](/ext/e/pg_buffercache) | [`pgcozy`](/ext/e/pgcozy) | 检查共享缓冲区缓存 |

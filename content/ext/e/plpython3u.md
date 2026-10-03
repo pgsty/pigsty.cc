@@ -33,7 +33,7 @@ weight: 3290
 
 | **相关扩展** | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`pllua`](/ext/e/pllua) [`pltcl`](/ext/e/pltcl) [`plsh`](/ext/e/plsh) [`pljava`](/ext/e/pljava) [`plr`](/ext/e/plr) [`plxslt`](/ext/e/plxslt) [`plpgsql`](/ext/e/plpgsql) [`plv8`](/ext/e/plv8) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) |
+| **下游依赖** | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jev`](/ext/e/jev) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) |
 {.ext-table .ext-table--rel}
 
 

@@ -6,10 +6,10 @@ weight: 9130
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/lzlabs/pg_statement_rollback">
+  <a class="ext-card ext-card--repo" href="https://github.com/HexaCluster/pg_statement_rollback">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">lzlabs/pg_statement_rollback</div>
-    <div class="ext-card__desc">https://github.com/lzlabs/pg_statement_rollback</div>
+    <div class="ext-card__title">HexaCluster/pg_statement_rollback</div>
+    <div class="ext-card__desc">https://github.com/HexaCluster/pg_statement_rollback</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_statement_rollback-1.6.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -43,8 +43,8 @@ weight: 9130
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6` | {{< pgvers "18,17,16,15,14" >}} | `pg_statement_rollback` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6` | {{< pgvers "18,17,16,15,14" >}} | `pg_statement_rollback_$v` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.6` | {{< pgvers "18,17,16,15,14" >}} | `pg_statement_rollback` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.6` | {{< pgvers "18,17,16,15,14" >}} | `pg_statement_rollback_$v` | - |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-statement-rollback` | - |
 {.ext-table}
 

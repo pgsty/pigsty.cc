@@ -11,10 +11,10 @@ weight: 2640
     <div class="ext-card__title">styk-tv/pgRDF</div>
     <div class="ext-card__desc">https://github.com/styk-tv/pgRDF</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgrdf-0.6.34.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgrdf-0.6.36.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgrdf-0.6.34.tar.gz</div>
-    <div class="ext-card__desc">pgrdf-0.6.34.tar.gz</div>
+    <div class="ext-card__title">pgrdf-0.6.36.tar.gz</div>
+    <div class="ext-card__desc">pgrdf-0.6.36.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2640
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgrdf`**](/ext/e/pgrdf) | `0.6.34` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pgrdf`**](/ext/e/pgrdf) | `0.6.36` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,110 +45,110 @@ weight: 2640
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.34` | {{< pgvers "18,17,16,15,14" >}} | `pgrdf` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.34` | {{< pgvers "18,17,16,15,14" >}} | `pgrdf_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.34` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgrdf` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.36` | {{< pgvers "18,17,16,15,14" >}} | `pgrdf` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.36` | {{< pgvers "18,17,16,15,14" >}} | `pgrdf_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.36` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgrdf` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 | AVAIL PIGSTY 0.6.20 1 |
-@ el8.x86_64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el8.x86_64.rpm pigsty 0.6.20 7.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_18-0.6.20-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el8.aarch64.rpm pigsty 0.6.20 6.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_18-0.6.20-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el9.x86_64.rpm pigsty 0.6.20 7.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_18-0.6.20-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el9.aarch64.rpm pigsty 0.6.20 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_18-0.6.20-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el10.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_18-0.6.20-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgrdf_18 pgrdf_18-0.6.20-1PIGSTY.el10.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_18-0.6.20-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el8.x86_64.rpm pigsty 0.6.20 7.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_17-0.6.20-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el8.aarch64.rpm pigsty 0.6.20 6.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_17-0.6.20-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el9.x86_64.rpm pigsty 0.6.20 7.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_17-0.6.20-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el9.aarch64.rpm pigsty 0.6.20 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_17-0.6.20-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el10.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_17-0.6.20-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgrdf_17 pgrdf_17-0.6.20-1PIGSTY.el10.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_17-0.6.20-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el8.x86_64.rpm pigsty 0.6.20 7.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_16-0.6.20-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el8.aarch64.rpm pigsty 0.6.20 6.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_16-0.6.20-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el9.x86_64.rpm pigsty 0.6.20 7.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_16-0.6.20-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el9.aarch64.rpm pigsty 0.6.20 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_16-0.6.20-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el10.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_16-0.6.20-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgrdf_16 pgrdf_16-0.6.20-1PIGSTY.el10.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_16-0.6.20-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el8.x86_64.rpm pigsty 0.6.20 7.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_15-0.6.20-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el8.aarch64.rpm pigsty 0.6.20 6.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_15-0.6.20-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el9.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_15-0.6.20-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el9.aarch64.rpm pigsty 0.6.20 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_15-0.6.20-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el10.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_15-0.6.20-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgrdf_15 pgrdf_15-0.6.20-1PIGSTY.el10.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_15-0.6.20-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el8.x86_64.rpm pigsty 0.6.20 7.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_14-0.6.20-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el8.aarch64.rpm pigsty 0.6.20 6.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_14-0.6.20-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el9.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_14-0.6.20-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el9.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_14-0.6.20-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el10.x86_64.rpm pigsty 0.6.20 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_14-0.6.20-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgrdf_14 pgrdf_14-0.6.20-1PIGSTY.el10.aarch64.rpm pigsty 0.6.20 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_14-0.6.20-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb pigsty 0.6.20 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb pigsty 0.6.20 5.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb pigsty 0.6.20 6.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb pigsty 0.6.20 6.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.20-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 | AVAIL PIGSTY 0.6.36 1 |
+@ el8.x86_64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el8.x86_64.rpm pigsty 0.6.36 7.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_18-0.6.36-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el8.aarch64.rpm pigsty 0.6.36 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_18-0.6.36-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el9.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_18-0.6.36-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el9.aarch64.rpm pigsty 0.6.36 6.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_18-0.6.36-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el10.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_18-0.6.36-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgrdf_18 pgrdf_18-0.6.36-1PGSTY.el10.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_18-0.6.36-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb pigsty 0.6.36 6.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~noble_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~noble_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgrdf postgresql-18-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-18-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el8.x86_64.rpm pigsty 0.6.36 7.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_17-0.6.36-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el8.aarch64.rpm pigsty 0.6.36 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_17-0.6.36-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el9.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_17-0.6.36-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el9.aarch64.rpm pigsty 0.6.36 6.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_17-0.6.36-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el10.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_17-0.6.36-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgrdf_17 pgrdf_17-0.6.36-1PGSTY.el10.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_17-0.6.36-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb pigsty 0.6.36 6.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~noble_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~noble_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgrdf postgresql-17-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-17-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el8.x86_64.rpm pigsty 0.6.36 7.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_16-0.6.36-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el8.aarch64.rpm pigsty 0.6.36 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_16-0.6.36-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el9.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_16-0.6.36-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el9.aarch64.rpm pigsty 0.6.36 6.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_16-0.6.36-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el10.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_16-0.6.36-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgrdf_16 pgrdf_16-0.6.36-1PGSTY.el10.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_16-0.6.36-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb pigsty 0.6.36 6.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~noble_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~noble_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgrdf postgresql-16-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-16-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el8.x86_64.rpm pigsty 0.6.36 7.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_15-0.6.36-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el8.aarch64.rpm pigsty 0.6.36 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_15-0.6.36-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el9.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_15-0.6.36-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el9.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_15-0.6.36-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el10.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_15-0.6.36-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgrdf_15 pgrdf_15-0.6.36-1PGSTY.el10.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_15-0.6.36-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb pigsty 0.6.36 6.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~noble_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~noble_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgrdf postgresql-15-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-15-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el8.x86_64.rpm pigsty 0.6.36 7.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgrdf_14-0.6.36-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el8.aarch64.rpm pigsty 0.6.36 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgrdf_14-0.6.36-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el9.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgrdf_14-0.6.36-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el9.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgrdf_14-0.6.36-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el10.x86_64.rpm pigsty 0.6.36 7.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgrdf_14-0.6.36-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgrdf_14 pgrdf_14-0.6.36-1PGSTY.el10.aarch64.rpm pigsty 0.6.36 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgrdf_14-0.6.36-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb pigsty 0.6.36 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb pigsty 0.6.36 5.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~noble_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~noble_arm64.deb pigsty 0.6.36 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb pigsty 0.6.36 6.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgrdf postgresql-14-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb pigsty 0.6.36 5.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgrdf/postgresql-14-pgrdf_0.6.36-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

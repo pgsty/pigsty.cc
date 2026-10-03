@@ -38,16 +38,16 @@ weight: 6280
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY RPM and PGDG DEB package version 1.1.11 cover PostgreSQL 14-18; SQL/control version is 1.1 and shared_preload_libraries=pg_wait_sampling is required.
+> Package version 1.1.11; SQL/control version 1.1. shared_preload_libraries=pg_wait_sampling is required; Pigsty DEB builds are pending.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling` | - |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-wait-sampling` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-wait-sampling` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

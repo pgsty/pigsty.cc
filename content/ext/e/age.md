@@ -11,10 +11,10 @@ weight: 2600
     <div class="ext-card__title">apache/age</div>
     <div class="ext-card__desc">https://github.com/apache/age</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/age-PG18-v1.8.0-rc0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">age-PG18-v1.8.0-rc0.tar.gz</div>
-    <div class="ext-card__desc">age-PG18-v1.8.0-rc0.tar.gz</div>
+    <div class="ext-card__title">age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz</div>
+    <div class="ext-card__desc">age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz</div>
   </a>
 </div>
 
@@ -46,8 +46,8 @@ weight: 2600
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18,17" >}} | `age` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18,17" >}} | `age_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.8.0` | {{< pgvers "18,17" >}} | `postgresql-$v-age` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18" >}} | `age_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7.0` | {{< pgvers "17" >}} | `postgresql-$v-age` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,16 @@ weight: 2600
 | el9.aarch64 | AVAIL PIGSTY 1.8.0 5 | AVAIL PIGSTY 1.7.0 6 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 |
 | el10.x86_64 | AVAIL PIGSTY 1.8.0 5 | AVAIL PIGSTY 1.7.0 6 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 |
 | el10.aarch64 | AVAIL PIGSTY 1.8.0 5 | AVAIL PIGSTY 1.7.0 6 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 | AVAIL PIGSTY 1.6.0 3 |
-| d12.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| d12.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| d13.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| d13.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u22.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u22.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u24.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u24.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u26.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
-| u26.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
+| d12.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| d12.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| d13.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| d13.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u22.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u22.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u24.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u24.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u26.x86_64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
+| u26.aarch64 | AVAIL PGDG 1.8.0 3 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.6.0 1 |
 @ el8.x86_64 18 age_18 age_18-1.8.0-1PIGSTY.el8.x86_64.rpm pigsty 1.8.0 300.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/age_18-1.8.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 age_18 age_18-1.7.0-2PIGSTY.el8.x86_64.rpm pigsty 1.7.0 247.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/age_18-1.7.0-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 age_18 age_18-1.7.0-rc0_1PGDG.rhel8.10.x86_64.rpm pgdg 1.7.0 227.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/age_18-1.7.0-rc0_1PGDG.rhel8.10.x86_64.rpm
@@ -217,15 +217,25 @@ weight: 2600
 @ el10.aarch64 15 age_15 age_15-1.6.0-2PIGSTY.el10.aarch64.rpm pigsty 1.6.0 227.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/age_15-1.6.0-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 age_15 age_15-1.6.0-rc0_1PGDG.rhel10.1.aarch64.rpm pgdg 1.6.0 221.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/age_15-1.6.0-rc0_1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 age_15 age_15-1.6.0-rc0_1PGDG.rhel10.0.aarch64.rpm pgdg 1.6.0 221.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/age_15-1.6.0-rc0_1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg12+1_amd64.deb pgdg 1.8.0 807.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg12+1_amd64.deb pgdg 1.6.0 680.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg12+1_arm64.deb pgdg 1.8.0 781.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg12+1_arm64.deb pgdg 1.6.0 660.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg13+1_amd64.deb pgdg 1.8.0 807.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg13+1_amd64.deb pgdg 1.6.0 681.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg13+1_arm64.deb pgdg 1.8.0 783.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg13+1_arm64.deb pgdg 1.6.0 663.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg22.04+1_amd64.deb pgdg 1.8.0 936.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_amd64.deb pgdg 1.6.0 792.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg22.04+1_arm64.deb pgdg 1.8.0 911.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb pgdg 1.6.0 771.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.8.0 806.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.6.0 679.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.8.0 784.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.6.0 661.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.8.0 805.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.6.0 679.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-age postgresql-15-age_1.8.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.8.0 781.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.8.0~rc0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.6.0 658.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 age_14 age_14-1.6.0-2PIGSTY.el8.x86_64.rpm pigsty 1.6.0 250.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/age_14-1.6.0-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 age_14 age_14-1.6.0-rc0_1PGDG.rhel8.10.x86_64.rpm pgdg 1.6.0 228.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/age_14-1.6.0-rc0_1PGDG.rhel8.10.x86_64.rpm

@@ -40,8 +40,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1530 | [**`h3`**](/ext/e/h3) | `4.2.3` | `--s-d-r` | - | H3六边形层级索引支持 |
-| 1531 | [`h3_postgis`](/ext/e/h3_postgis) | `4.2.3` | `--s-d-r` | - | H3与PostGIS集成的扩展插件 |
+| 1530 | [**`h3`**](/ext/e/h3) | `4.5.0` | `--s-d-r` | - | H3六边形层级索引支持 |
+| 1531 | [`h3_postgis`](/ext/e/h3_postgis) | `4.5.0` | `--s-d-r` | - | H3与PostGIS集成的扩展插件 |
 {.ext-table}
 
 ## pghydro
@@ -65,8 +65,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.0` | `--sLd--` | - | MobilityDB地理空间投影数据管理分析平台 |
-| 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.0` | `----d-r` | - | MobilityDB随机数据生成函数 |
+| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | `--sLd--` | - | MobilityDB地理空间投影数据管理分析平台 |
+| 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.1` | `----d-r` | - | MobilityDB随机数据生成函数 |
 {.ext-table}
 
 ## qdgc
@@ -95,8 +95,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.8` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
-| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.8` | `--s-d--` | - | PGGroonga 数据库管理模块 |
+| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.9` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
+| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.9` | `--s-d--` | - | PGGroonga 数据库管理模块 |
 {.ext-table}
 
 ## hunspell
@@ -133,14 +133,14 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.4` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
-| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.4` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
-| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.4` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
-| 2563 | [`pg_map`](/ext/e/pg_map) | `3.4` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
-| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.4` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
-| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.4` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
-| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.4` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
-| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.4` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
+| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.5` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.5` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.5` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| 2563 | [`pg_map`](/ext/e/pg_map) | `3.5` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
+| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.5` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
+| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.5` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
+| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.5` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
+| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.5` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 {.ext-table}
 
 ## omnigres
@@ -284,7 +284,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.2` | `----d--` | - | PGPool 管理函数 |
+| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.3` | `----d-r` | - | PGPool 管理函数 |
 | 5910 | [`pgpool_recovery`](/ext/e/pgpool_recovery) | `4.7.2` | `----d--` | - | PGPool辅助扩展，从v4.3提供的恢复函数 |
 | 5920 | [`pgpool_regclass`](/ext/e/pgpool_regclass) | `4.7.2` | `----d--` | - | PGPool辅助扩展，RegClass替代 |
 {.ext-table}
@@ -315,10 +315,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.116` | `--sLd--` | - | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.116` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.117` | `--sLd--` | - | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.117` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
 | 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.116` | `--sLd--` | - | DocumentDB多节点模式的API层 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.116` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.117` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
 ## ivorysql

@@ -42,18 +42,18 @@ weight: 3640
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting` | `roaringbitmap` |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting_$v` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting` | `roaringbitmap` |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting_$v` | - |
 | [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgfaceting` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 |
-| el8.aarch64 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 | AVAIL PIGSTY 0.2.0 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 |
-| el9.aarch64 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 |
+| el8.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| el8.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| el9.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
+| el9.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
 | el10.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
 | el10.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
 | d12.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
@@ -66,14 +66,10 @@ weight: 3640
 | u24.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
 | u26.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
 | u26.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-@ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_18-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_18-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfaceting_18-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfaceting_18-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm
@@ -100,14 +96,10 @@ weight: 3640
 @ u26.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_17-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_17-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfaceting_17-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfaceting_17-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm
@@ -134,14 +126,10 @@ weight: 3640
 @ u26.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_16-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_16-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfaceting_16-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfaceting_16-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm
@@ -168,14 +156,10 @@ weight: 3640
 @ u26.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_15-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_15-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfaceting_15-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfaceting_15-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm
@@ -202,14 +186,10 @@ weight: 3640
 @ u26.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ el8.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_14-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_14-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfaceting_14-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfaceting_14-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm
@@ -249,10 +229,10 @@ pig build pkg pgfaceting         # 构建 RPM 包
 
 ## 安装
 
-您可以直接安装 `pgfaceting` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+您可以直接安装 `pgfaceting` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgsql -u          # 添加仓库并更新缓存
+pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：

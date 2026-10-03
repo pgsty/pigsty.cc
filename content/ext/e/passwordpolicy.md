@@ -45,8 +45,8 @@ weight: 7040
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy_$v` | `cracklib-dicts` |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.5` | {{< pgvers "18,17,16,15,14" >}} | `passwordpolicy_$v` | `cracklib-dicts` |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-passwordpolicy` | `cracklib-runtime`, `libcrack2` |
 {.ext-table}
 
@@ -202,10 +202,10 @@ pig build pkg passwordpolicy         # 构建 RPM / DEB 包
 
 ## 安装
 
-您可以直接安装 `passwordpolicy` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+您可以直接安装 `passwordpolicy` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgsql -u          # 添加仓库并更新缓存
+pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：

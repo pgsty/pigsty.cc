@@ -42,9 +42,9 @@ weight: 5050
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `pg_dirtyread` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `pg_dirtyread` | - |
 | [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `pg_dirtyread_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-dirtyread` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-dirtyread` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

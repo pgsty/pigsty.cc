@@ -11,10 +11,10 @@ weight: 2930
     <div class="ext-card__title">rdkit/rdkit</div>
     <div class="ext-card__desc">https://github.com/rdkit/rdkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit_202603.6.orig.tar.xz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">rdkit_202603.6.orig.tar.xz</div>
-    <div class="ext-card__desc">rdkit_202603.6.orig.tar.xz</div>
+    <div class="ext-card__title">rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
+    <div class="ext-card__desc">rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
   </a>
 </div>
 
@@ -45,7 +45,7 @@ weight: 2930
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
 | [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit_$v` | `rdkit` |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-rdkit` | `librdkit1t64` |
 {.ext-table}
@@ -237,14 +237,16 @@ apt install -y postgresql-14-rdkit   # PG 14
 CREATE EXTENSION rdkit;
 ```
 
-
-
-
 ## 用法
 
-- 来源：[project README](https://github.com/rdkit/rdkit/blob/master/README.md)，[cartridge docs](https://www.rdkit.org/docs/Cartridge.html)，[2025.03.6 release](https://github.com/rdkit/rdkit/releases/tag/Release_2025.03.6)
+来源：
 
-RDKit 自带 PostgreSQL cartridge，用于化学信息学场景下的分子存储、检索、指纹和描述符计算。cartridge docs 仍然是主要的上游用法参考；2025.03.6 release note 没有提到 cartridge 相关的用户侧变化。
+- [Cartridge documentation](https://github.com/rdkit/rdkit/blob/Release_2026_03_6/Docs/Book/Cartridge.md)
+- [Control](https://github.com/rdkit/rdkit/blob/Release_2026_03_6/Code/PgSQL/rdkit/rdkit.control)
+- [SQL template](https://github.com/rdkit/rdkit/blob/Release_2026_03_6/Code/PgSQL/rdkit/rdkit.sql.in)
+- [Upgrade script](https://github.com/rdkit/rdkit/blob/Release_2026_03_6/Code/PgSQL/rdkit/update_sql/rdkit--4.7.0--4.8.0.sql.in)
+
+`rdkit` 提供分子类型、子结构搜索、指纹和化学描述符。本文依据 RDKit 2026.03.6 随附的 PostgreSQL cartridge。
 
 ### 创建扩展
 
@@ -289,3 +291,7 @@ cartridge docs 还公开了校验与描述符辅助函数，例如：
 - `mol_numrings()`
 
 这些函数构成了 SQL 层面对分子结构做分析时最主要的用户接口。
+
+### 版本与升级边界
+
+RDKit 工具包发行版 2026.03.6 内含的 SQL 扩展版本是 `4.8.0`，两者使用不同的版本号。上游 `4.7.0` 到 `4.8.0` 的 SQL 模板修改函数代价，但其中 `fmcs_smiles` 语句的行注释吞掉了代价子句和终止符。不要假定未经修补的 `ALTER EXTENSION rdkit UPDATE` 路径可用；应检查实际安装的升级脚本，并先在恢复出的副本上测试。打包补丁与上游源码需要区分。
