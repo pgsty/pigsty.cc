@@ -2,7 +2,7 @@
 title: "pg_store_plans"
 linkTitle: "pg_store_plans"
 description: "跟踪所有执行的 SQL 语句的计划统计信息"
-weight: 6250
+weight: 6260
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 6250
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6250  | [**`pg_store_plans`**](/ext/e/pg_store_plans) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 6260  | [**`pg_store_plans`**](/ext/e/pg_store_plans) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`auto_explain`](/ext/e/auto_explain) [`explain_ui`](/ext/e/explain_ui) [`powa`](/ext/e/powa) [`pg_overexplain`](/ext/e/pg_overexplain) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) |

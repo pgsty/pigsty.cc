@@ -2,7 +2,7 @@
 title: "random"
 linkTitle: "random"
 description: "随机数生成器"
-weight: 4790
+weight: 4800
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4790
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4790  | [**`random`**](/ext/e/random) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4800  | [**`random`**](/ext/e/random) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) [`tsm_system_time`](/ext/e/tsm_system_time) [`tsm_system_rows`](/ext/e/tsm_system_rows) [`pg_mockable`](/ext/e/pg_mockable) [`pgsqlmock`](/ext/e/pgsqlmock) [`pgtap`](/ext/e/pgtap) [`omni_test`](/ext/e/omni_test) |

@@ -11,10 +11,10 @@ weight: 2930
     <div class="ext-card__title">rdkit/rdkit</div>
     <div class="ext-card__desc">https://github.com/rdkit/rdkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
-    <div class="ext-card__desc">rdkit_202603.6.orig.tar.xz better-enums-0.11.3-enum.h rdkit_202603.6-1PGSTY~resolute.dsc rdkit_202603.6-1PGSTY~resolute.debian.tar.xz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
+    <div class="ext-card__title">rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
+    <div class="ext-card__desc">rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2930
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`rdkit`**](/ext/e/rdkit) | `202603.6` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`rdkit`**](/ext/e/rdkit) | `202609.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 2930
 {.ext-table .ext-table--rel}
 
 
-> SQL version 4.8.0; RPM supports PG14-18 on EL9+, DEB supports PG14-17.
+> RDKit 2026.09.1 (package 202609.1) installs SQL extension 4.8.0. Modern recipes target EL9+, Trixie, Noble and Resolute; DEB supports PG14-18 across suppliers. Legacy Bookworm/Jammy recipes use 202303.3 with librdkit1; modern DEB uses librdkit1t64. Local modern recipes retain the 4.7.0-to-4.8.0 fmcs_smiles upgrade fix. Repository publication of 202609.1 is pending; public indexes checked on 2026-10-06 still expose 202503.6 and legacy 202303.3.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "18,17,16,15,14" >}} | `rdkit_$v` | `rdkit` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202603.6` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-rdkit` | `librdkit1t64` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202609.1` | {{< pgvers "18,17,16,15,14" >}} | `rdkit` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202609.1` | {{< pgvers "18,17,16,15,14" >}} | `rdkit_$v` | `rdkit` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `202609.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-rdkit` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -55,132 +55,132 @@ weight: 2930
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 |
 | el8.aarch64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 |
-| el9.x86_64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 |
-| el9.aarch64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 |
-| el10.x86_64 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 |
-| el10.aarch64 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 |
+| el9.x86_64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
 | d12.x86_64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 |
 | d12.aarch64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 |
-| d13.x86_64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
-| d13.aarch64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
+| d13.x86_64 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 |
+| d13.aarch64 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 |
 | u22.x86_64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 |
 | u22.aarch64 | AVAIL PIGSTY 202303.3 1 | AVAIL PIGSTY 202303.3 1 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 | AVAIL PGDG 202303.3 2 |
-| u24.x86_64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
-| u24.aarch64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
-| u26.x86_64 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 |
-| u26.aarch64 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 | AVAIL PIGSTY 202503.6 1 |
+| u24.x86_64 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 |
+| u24.aarch64 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 | AVAIL PIGSTY 202609.1 2 |
+| u26.x86_64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 | AVAIL PIGSTY 202609.1 1 |
 @ el8.x86_64 18 rdkit_18 rdkit_18-202303.3-1PIGSTY.el8.x86_64.rpm pigsty 202303.3 165.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdkit_18-202303.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 rdkit_18 rdkit_18-202303.3-1PIGSTY.el8.aarch64.rpm pigsty 202303.3 158.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdkit_18-202303.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 rdkit_18 rdkit_18-202303.3-1PIGSTY.el9.x86_64.rpm pigsty 202303.3 158.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_18-202303.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 rdkit_18 rdkit_18-202303.3-1PIGSTY.el9.aarch64.rpm pigsty 202303.3 152.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_18-202303.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 rdkit_18 rdkit_18-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_18-202503.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 rdkit_18 rdkit_18-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_18-202503.6-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 18 rdkit_18 rdkit_18-202609.1-1PGSTY.el9.x86_64.rpm pigsty 202609.1 131.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_18-202609.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 rdkit_18 rdkit_18-202609.1-1PGSTY.el9.aarch64.rpm pigsty 202609.1 124.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_18-202609.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 rdkit_18 rdkit_18-202609.1-1PGSTY.el10.x86_64.rpm pigsty 202609.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_18-202609.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 rdkit_18 rdkit_18-202609.1-1PGSTY.el10.aarch64.rpm pigsty 202609.1 131.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_18-202609.1-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202303.3-4PIGSTY~bookworm_amd64.deb pigsty 202303.3 74.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-18-rdkit_202303.3-4PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202303.3-4PIGSTY~bookworm_arm64.deb pigsty 202303.3 67.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-18-rdkit_202303.3-4PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 102.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~trixie_amd64.deb
+@ d13.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~trixie_amd64.deb pigsty 202609.1 113.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.1-5.pgdg13+1_amd64.deb pgdg 202503.1 245.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-18-rdkit_202503.1-5.pgdg13+1_amd64.deb
-@ d13.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~trixie_arm64.deb pigsty 202503.6 94.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~trixie_arm64.deb
+@ d13.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~trixie_arm64.deb pigsty 202609.1 104.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.1-5.pgdg13+1_arm64.deb pgdg 202503.1 237.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-18-rdkit_202503.1-5.pgdg13+1_arm64.deb
 @ u22.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202303.3-4PIGSTY~jammy_amd64.deb pigsty 202303.3 81.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-18-rdkit_202303.3-4PIGSTY~jammy_amd64.deb
 @ u22.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202303.3-4PIGSTY~jammy_arm64.deb pigsty 202303.3 77.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-18-rdkit_202303.3-4PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~noble_amd64.deb pigsty 202503.6 108.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~noble_amd64.deb
+@ u24.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~noble_amd64.deb pigsty 202609.1 122.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.1-5.pgdg24.04+1_amd64.deb pgdg 202503.1 243.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-18-rdkit_202503.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~noble_arm64.deb pigsty 202503.6 105.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~noble_arm64.deb
+@ u24.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~noble_arm64.deb pigsty 202609.1 117.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.1-5.pgdg24.04+1_arm64.deb pgdg 202503.1 237.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-18-rdkit_202503.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~resolute_amd64.deb pigsty 202503.6 111.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~resolute_arm64.deb pigsty 202503.6 107.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~resolute_arm64.deb
+@ u26.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~resolute_amd64.deb pigsty 202609.1 123.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-rdkit postgresql-18-rdkit_202609.1-1PGSTY~resolute_arm64.deb pigsty 202609.1 118.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-18-rdkit_202609.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 rdkit_17 rdkit_17-202303.3-1PIGSTY.el8.x86_64.rpm pigsty 202303.3 165.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdkit_17-202303.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 rdkit_17 rdkit_17-202303.3-1PIGSTY.el8.aarch64.rpm pigsty 202303.3 158.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdkit_17-202303.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 rdkit_17 rdkit_17-202303.3-1PIGSTY.el9.x86_64.rpm pigsty 202303.3 158.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_17-202303.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 rdkit_17 rdkit_17-202303.3-1PIGSTY.el9.aarch64.rpm pigsty 202303.3 152.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_17-202303.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 rdkit_17 rdkit_17-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_17-202503.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 rdkit_17 rdkit_17-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_17-202503.6-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 17 rdkit_17 rdkit_17-202609.1-1PGSTY.el9.x86_64.rpm pigsty 202609.1 131.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_17-202609.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 rdkit_17 rdkit_17-202609.1-1PGSTY.el9.aarch64.rpm pigsty 202609.1 124.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_17-202609.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 rdkit_17 rdkit_17-202609.1-1PGSTY.el10.x86_64.rpm pigsty 202609.1 139.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_17-202609.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 rdkit_17 rdkit_17-202609.1-1PGSTY.el10.aarch64.rpm pigsty 202609.1 131.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_17-202609.1-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202303.3-4PIGSTY~bookworm_amd64.deb pigsty 202303.3 74.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-17-rdkit_202303.3-4PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202303.3-4PIGSTY~bookworm_arm64.deb pigsty 202303.3 67.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-17-rdkit_202303.3-4PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 103.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-4PIGSTY~trixie_amd64.deb
+@ d13.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~trixie_amd64.deb pigsty 202609.1 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.1-5.pgdg13+1_amd64.deb pgdg 202503.1 245.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-17-rdkit_202503.1-5.pgdg13+1_amd64.deb
-@ d13.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-4PIGSTY~trixie_arm64.deb pigsty 202503.6 94.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-4PIGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~trixie_arm64.deb pigsty 202609.1 104.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.1-5.pgdg13+1_arm64.deb pgdg 202503.1 237.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-17-rdkit_202503.1-5.pgdg13+1_arm64.deb
 @ u22.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202303.3-4PIGSTY~jammy_amd64.deb pigsty 202303.3 81.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-17-rdkit_202303.3-4PIGSTY~jammy_amd64.deb
 @ u22.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202303.3-4PIGSTY~jammy_arm64.deb pigsty 202303.3 77.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-17-rdkit_202303.3-4PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-4PIGSTY~noble_amd64.deb pigsty 202503.6 108.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-4PIGSTY~noble_amd64.deb
+@ u24.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~noble_amd64.deb pigsty 202609.1 122.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.1-5.pgdg24.04+1_amd64.deb pgdg 202503.1 243.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-17-rdkit_202503.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-4PIGSTY~noble_arm64.deb pigsty 202503.6 105.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-4PIGSTY~noble_arm64.deb
+@ u24.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~noble_arm64.deb pigsty 202609.1 118.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.1-5.pgdg24.04+1_arm64.deb pgdg 202503.1 237.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-17-rdkit_202503.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-5PIGSTY~resolute_amd64.deb pigsty 202503.6 112.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-5PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202503.6-5PIGSTY~resolute_arm64.deb pigsty 202503.6 107.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-17-rdkit_202503.6-5PIGSTY~resolute_arm64.deb
+@ u26.x86_64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~resolute_amd64.deb pigsty 202609.1 123.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-rdkit postgresql-17-rdkit_202609.1-1PGSTY~resolute_arm64.deb pigsty 202609.1 118.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-17-rdkit_202609.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 rdkit_16 rdkit_16-202303.3-1PIGSTY.el8.x86_64.rpm pigsty 202303.3 165.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdkit_16-202303.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 rdkit_16 rdkit_16-202303.3-1PIGSTY.el8.aarch64.rpm pigsty 202303.3 158.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdkit_16-202303.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 rdkit_16 rdkit_16-202303.3-1PIGSTY.el9.x86_64.rpm pigsty 202303.3 158.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_16-202303.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 rdkit_16 rdkit_16-202303.3-1PIGSTY.el9.aarch64.rpm pigsty 202303.3 152.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_16-202303.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 rdkit_16 rdkit_16-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_16-202503.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 rdkit_16 rdkit_16-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_16-202503.6-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 16 rdkit_16 rdkit_16-202609.1-1PGSTY.el9.x86_64.rpm pigsty 202609.1 131.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_16-202609.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 rdkit_16 rdkit_16-202609.1-1PGSTY.el9.aarch64.rpm pigsty 202609.1 124.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_16-202609.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 rdkit_16 rdkit_16-202609.1-1PGSTY.el10.x86_64.rpm pigsty 202609.1 139.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_16-202609.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 rdkit_16 rdkit_16-202609.1-1PGSTY.el10.aarch64.rpm pigsty 202609.1 131.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_16-202609.1-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3.pgdg120+1_amd64.deb pgdg 202303.3 393.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3.pgdg120+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 74.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ d12.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3.pgdg120+1_arm64.deb pgdg 202303.3 384.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3.pgdg120+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 66.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ d13.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 102.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-4PIGSTY~trixie_amd64.deb
+@ d13.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~trixie_amd64.deb pigsty 202609.1 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.1-5.pgdg13+1_amd64.deb pgdg 202503.1 245.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202503.1-5.pgdg13+1_amd64.deb
-@ d13.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-4PIGSTY~trixie_arm64.deb pigsty 202503.6 94.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-4PIGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~trixie_arm64.deb pigsty 202609.1 103.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.1-5.pgdg13+1_arm64.deb pgdg 202503.1 237.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202503.1-5.pgdg13+1_arm64.deb
 @ u22.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3.pgdg22.04+1_amd64.deb pgdg 202303.3 395.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ u22.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3.pgdg22.04+1_arm64.deb pgdg 202303.3 387.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 77.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-16-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ u24.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-4PIGSTY~noble_amd64.deb pigsty 202503.6 108.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-4PIGSTY~noble_amd64.deb
+@ u24.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~noble_amd64.deb pigsty 202609.1 122.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.1-5.pgdg24.04+1_amd64.deb pgdg 202503.1 243.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202503.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-4PIGSTY~noble_arm64.deb pigsty 202503.6 105.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-4PIGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~noble_arm64.deb pigsty 202609.1 117.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.1-5.pgdg24.04+1_arm64.deb pgdg 202503.1 237.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-16-rdkit_202503.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-5PIGSTY~resolute_amd64.deb pigsty 202503.6 112.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-5PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202503.6-5PIGSTY~resolute_arm64.deb pigsty 202503.6 107.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-16-rdkit_202503.6-5PIGSTY~resolute_arm64.deb
+@ u26.x86_64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~resolute_amd64.deb pigsty 202609.1 123.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-rdkit postgresql-16-rdkit_202609.1-1PGSTY~resolute_arm64.deb pigsty 202609.1 118.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-16-rdkit_202609.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 rdkit_15 rdkit_15-202303.3-1PIGSTY.el8.x86_64.rpm pigsty 202303.3 166.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdkit_15-202303.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 rdkit_15 rdkit_15-202303.3-1PIGSTY.el8.aarch64.rpm pigsty 202303.3 159.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdkit_15-202303.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 rdkit_15 rdkit_15-202303.3-1PIGSTY.el9.x86_64.rpm pigsty 202303.3 159.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_15-202303.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 rdkit_15 rdkit_15-202303.3-1PIGSTY.el9.aarch64.rpm pigsty 202303.3 153.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_15-202303.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 rdkit_15 rdkit_15-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_15-202503.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 rdkit_15 rdkit_15-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_15-202503.6-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 15 rdkit_15 rdkit_15-202609.1-1PGSTY.el9.x86_64.rpm pigsty 202609.1 131.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_15-202609.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 rdkit_15 rdkit_15-202609.1-1PGSTY.el9.aarch64.rpm pigsty 202609.1 124.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_15-202609.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 rdkit_15 rdkit_15-202609.1-1PGSTY.el10.x86_64.rpm pigsty 202609.1 139.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_15-202609.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 rdkit_15 rdkit_15-202609.1-1PGSTY.el10.aarch64.rpm pigsty 202609.1 131.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_15-202609.1-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3.pgdg120+1_amd64.deb pgdg 202303.3 394.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3.pgdg120+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 75.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ d12.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3.pgdg120+1_arm64.deb pgdg 202303.3 385.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3.pgdg120+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 67.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ d13.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 103.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-4PIGSTY~trixie_amd64.deb
+@ d13.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~trixie_amd64.deb pigsty 202609.1 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.1-5.pgdg13+1_amd64.deb pgdg 202503.1 245.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202503.1-5.pgdg13+1_amd64.deb
-@ d13.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-4PIGSTY~trixie_arm64.deb pigsty 202503.6 94.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-4PIGSTY~trixie_arm64.deb
+@ d13.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~trixie_arm64.deb pigsty 202609.1 104.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.1-5.pgdg13+1_arm64.deb pgdg 202503.1 237.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202503.1-5.pgdg13+1_arm64.deb
 @ u22.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3.pgdg22.04+1_amd64.deb pgdg 202303.3 395.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ u22.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3.pgdg22.04+1_arm64.deb pgdg 202303.3 387.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 77.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-15-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ u24.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-4PIGSTY~noble_amd64.deb pigsty 202503.6 108.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-4PIGSTY~noble_amd64.deb
+@ u24.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~noble_amd64.deb pigsty 202609.1 122.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.1-5.pgdg24.04+1_amd64.deb pgdg 202503.1 243.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202503.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-4PIGSTY~noble_arm64.deb pigsty 202503.6 105.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-4PIGSTY~noble_arm64.deb
+@ u24.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~noble_arm64.deb pigsty 202609.1 117.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.1-5.pgdg24.04+1_arm64.deb pgdg 202503.1 237.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-15-rdkit_202503.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-5PIGSTY~resolute_amd64.deb pigsty 202503.6 112.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-5PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202503.6-5PIGSTY~resolute_arm64.deb pigsty 202503.6 107.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-15-rdkit_202503.6-5PIGSTY~resolute_arm64.deb
+@ u26.x86_64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~resolute_amd64.deb pigsty 202609.1 123.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-rdkit postgresql-15-rdkit_202609.1-1PGSTY~resolute_arm64.deb pigsty 202609.1 118.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-15-rdkit_202609.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 rdkit_14 rdkit_14-202303.3-1PIGSTY.el8.x86_64.rpm pigsty 202303.3 166.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdkit_14-202303.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 rdkit_14 rdkit_14-202303.3-1PIGSTY.el8.aarch64.rpm pigsty 202303.3 159.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdkit_14-202303.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 rdkit_14 rdkit_14-202303.3-1PIGSTY.el9.x86_64.rpm pigsty 202303.3 159.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_14-202303.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 rdkit_14 rdkit_14-202303.3-1PIGSTY.el9.aarch64.rpm pigsty 202303.3 153.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_14-202303.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 rdkit_14 rdkit_14-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_14-202503.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 rdkit_14 rdkit_14-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_14-202503.6-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 14 rdkit_14 rdkit_14-202609.1-1PGSTY.el9.x86_64.rpm pigsty 202609.1 131.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdkit_14-202609.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 rdkit_14 rdkit_14-202609.1-1PGSTY.el9.aarch64.rpm pigsty 202609.1 124.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdkit_14-202609.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 rdkit_14 rdkit_14-202609.1-1PGSTY.el10.x86_64.rpm pigsty 202609.1 139.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_14-202609.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 rdkit_14 rdkit_14-202609.1-1PGSTY.el10.aarch64.rpm pigsty 202609.1 131.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_14-202609.1-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3.pgdg120+1_amd64.deb pgdg 202303.3 394.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3.pgdg120+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 75.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ d12.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3.pgdg120+1_arm64.deb pgdg 202303.3 385.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3.pgdg120+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 67.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ d13.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 102.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-4PIGSTY~trixie_amd64.deb
+@ d13.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~trixie_amd64.deb pigsty 202609.1 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.1-5.pgdg13+1_amd64.deb pgdg 202503.1 245.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202503.1-5.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-4PIGSTY~trixie_arm64.deb pigsty 202503.6 94.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-4PIGSTY~trixie_arm64.deb
+@ d13.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~trixie_arm64.deb pigsty 202609.1 104.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.1-5.pgdg13+1_arm64.deb pgdg 202503.1 237.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202503.1-5.pgdg13+1_arm64.deb
 @ u22.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3.pgdg22.04+1_amd64.deb pgdg 202303.3 395.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3PIGSTY~legacy_amd64.deb pigsty 202303.3 81.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3PIGSTY~legacy_amd64.deb
 @ u22.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3.pgdg22.04+1_arm64.deb pgdg 202303.3 387.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202303.3-3PIGSTY~legacy_arm64.deb pigsty 202303.3 77.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/rdkit/postgresql-14-rdkit_202303.3-3PIGSTY~legacy_arm64.deb
-@ u24.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-4PIGSTY~noble_amd64.deb pigsty 202503.6 108.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-4PIGSTY~noble_amd64.deb
+@ u24.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~noble_amd64.deb pigsty 202609.1 122.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~noble_amd64.deb
 @ u24.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.1-5.pgdg24.04+1_amd64.deb pgdg 202503.1 242.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202503.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-4PIGSTY~noble_arm64.deb pigsty 202503.6 105.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-4PIGSTY~noble_arm64.deb
+@ u24.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~noble_arm64.deb pigsty 202609.1 117.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.1-5.pgdg24.04+1_arm64.deb pgdg 202503.1 237.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/rdkit/postgresql-14-rdkit_202503.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-5PIGSTY~resolute_amd64.deb pigsty 202503.6 112.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-5PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202503.6-5PIGSTY~resolute_arm64.deb pigsty 202503.6 107.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-14-rdkit_202503.6-5PIGSTY~resolute_arm64.deb
+@ u26.x86_64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~resolute_amd64.deb pigsty 202609.1 123.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-rdkit postgresql-14-rdkit_202609.1-1PGSTY~resolute_arm64.deb pigsty 202609.1 118.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/rdkit/postgresql-14-rdkit_202609.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

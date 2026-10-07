@@ -33,7 +33,7 @@ weight: 6070
 | 6070  | [**`pgmonitor`**](/ext/e/pgmonitor) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgnodemx`](/ext/e/pgnodemx) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`system_stats`](/ext/e/system_stats) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`pgsentinel`](/ext/e/pgsentinel) [`pg_stat_ch`](/ext/e/pg_stat_ch) [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) [`pgpool_adm`](/ext/e/pgpool_adm) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) |
+| **相关扩展** | [`pgnodemx`](/ext/e/pgnodemx) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`system_stats`](/ext/e/system_stats) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`pgsentinel`](/ext/e/pgsentinel) [`pg_stat_ch`](/ext/e/pg_stat_ch) [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) [`pgpool_adm`](/ext/e/pgpool_adm) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgtelemetry`](/ext/e/pgtelemetry) [`pgexporter_ext`](/ext/e/pgexporter_ext) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

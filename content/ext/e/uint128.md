@@ -2,7 +2,7 @@
 title: "uint128"
 linkTitle: "uint128"
 description: "原生128位无符号整型数据类型"
-weight: 3740
+weight: 3760
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3740
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3740  | [**`uint128`**](/ext/e/uint128) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3760  | [**`uint128`**](/ext/e/uint128) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`uint`](/ext/e/uint) [`pgmp`](/ext/e/pgmp) [`numeral`](/ext/e/numeral) [`unit`](/ext/e/unit) [`pg_rational`](/ext/e/pg_rational) [`seg`](/ext/e/seg) [`cube`](/ext/e/cube) |

@@ -2,7 +2,7 @@
 title: "pg_relation_sql"
 linkTitle: "pg_relation_sql"
 description: "根据 PostgreSQL 外键生成可内联的关系导航 SQL 函数"
-weight: 4210
+weight: 4220
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4210
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4210  | [**`pg_relation_sql`**](/ext/e/pg_relation_sql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 4220  | [**`pg_relation_sql`**](/ext/e/pg_relation_sql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_readme`](/ext/e/pg_readme) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`pg_rewrite`](/ext/e/pg_rewrite) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) [`ddl_historization`](/ext/e/ddl_historization) [`data_historization`](/ext/e/data_historization) |

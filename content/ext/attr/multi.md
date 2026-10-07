@@ -15,13 +15,13 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1500 | [**`postgis`**](/ext/e/postgis) | `3.6.4` | `--s-d--` | - | PostGIS 几何和地理空间扩展 |
+| 1500 | [**`postgis`**](/ext/e/postgis) | `3.6.4` | `-bs-d--` | - | PostGIS 几何和地理空间扩展 |
 | 1501 | [`postgis_topology`](/ext/e/postgis_topology) | `3.6.4` | `--s-d--` | `topology` | PostGIS 拓扑空间类型和函数 |
 | 1502 | [`postgis_raster`](/ext/e/postgis_raster) | `3.6.4` | `--s-d--` | - | PostGIS 光栅类型和函数 |
 | 1503 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | `3.6.4` | `--s-d-r` | - | PostGIS SFCGAL 函数 |
-| 1504 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | `3.6.4` | `--s-dt-` | `tiger` | PostGIS tiger 地理编码器和反向地理编码器 |
+| 1504 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | `3.6.4` | `----dt-` | `tiger` | PostGIS tiger 地理编码器和反向地理编码器 |
 | 1505 | [`address_standardizer`](/ext/e/address_standardizer) | `3.6.4` | `--s-d-r` | - | 地址标准化函数。 |
-| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.4` | `--s-d-r` | - | 地址标准化函数：美国数据集示例 |
+| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.4` | `----d-r` | - | 地址标准化函数：美国数据集示例 |
 {.ext-table}
 
 ## pointcloud
@@ -96,7 +96,7 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.9` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
-| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.9` | `--s-d--` | - | PGGroonga 数据库管理模块 |
+| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.9` | `--s-d--` | - | 清理损坏的 PGroonga 内部数据库文件的恢复辅助扩展 |
 {.ext-table}
 
 ## hunspell
@@ -105,16 +105,16 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2270 | [**`hunspell_cs_cz`**](/ext/e/hunspell_cs_cz) | `1.0` | `----d-r` | - | Hunspell捷克语全文检索词典 |
-| 2271 | [`hunspell_de_de`](/ext/e/hunspell_de_de) | `1.0` | `----d-r` | - | Hunspell德语全文检索词典 |
-| 2272 | [`hunspell_en_us`](/ext/e/hunspell_en_us) | `1.0` | `----d-r` | - | Hunspell英语全文检索词典 |
-| 2273 | [`hunspell_fr`](/ext/e/hunspell_fr) | `1.0` | `----d-r` | - | Hunspell法语全文检索词典 |
-| 2274 | [`hunspell_ne_np`](/ext/e/hunspell_ne_np) | `1.0` | `----d-r` | - | Hunspell尼泊尔语全文检索词典 |
-| 2275 | [`hunspell_nl_nl`](/ext/e/hunspell_nl_nl) | `1.0` | `----d-r` | - | Hunspell荷兰语全文检索词典 |
-| 2276 | [`hunspell_nn_no`](/ext/e/hunspell_nn_no) | `1.0` | `----d-r` | - | Hunspell挪威语全文检索词典 |
-| 2277 | [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt) | `1.0` | `----d-r` | - | Hunspell葡萄牙语全文检索词典 |
-| 2278 | [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典 |
-| 2279 | [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典（来自AOT.ru小组） |
+| 2280 | [**`hunspell_cs_cz`**](/ext/e/hunspell_cs_cz) | `1.0` | `----d-r` | - | Hunspell捷克语全文检索词典 |
+| 2281 | [`hunspell_de_de`](/ext/e/hunspell_de_de) | `1.0` | `----d-r` | - | Hunspell德语全文检索词典 |
+| 2282 | [`hunspell_en_us`](/ext/e/hunspell_en_us) | `1.0` | `----d-r` | - | Hunspell英语全文检索词典 |
+| 2283 | [`hunspell_fr`](/ext/e/hunspell_fr) | `1.0` | `----d-r` | - | Hunspell法语全文检索词典 |
+| 2284 | [`hunspell_ne_np`](/ext/e/hunspell_ne_np) | `1.0` | `----d-r` | - | Hunspell尼泊尔语全文检索词典 |
+| 2285 | [`hunspell_nl_nl`](/ext/e/hunspell_nl_nl) | `1.0` | `----d-r` | - | Hunspell荷兰语全文检索词典 |
+| 2286 | [`hunspell_nn_no`](/ext/e/hunspell_nn_no) | `1.0` | `----d-r` | - | Hunspell挪威语全文检索词典 |
+| 2287 | [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt) | `1.0` | `----d-r` | - | Hunspell葡萄牙语全文检索词典 |
+| 2288 | [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典 |
+| 2289 | [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典（来自AOT.ru小组） |
 {.ext-table}
 
 ## citus
@@ -305,8 +305,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 6440 | [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | `--sLd-r` | - | 使用SQL查询获取操作系统指标 |
-| 6450 | [`pg_proctab`](/ext/e/pg_proctab) | `2.0.1` | `--s-d-r` | - | 通过SQL接口访问操作系统进程表 |
+| 6450 | [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | `--sLd-r` | - | 使用SQL查询获取操作系统指标 |
+| 6460 | [`pg_proctab`](/ext/e/pg_proctab) | `2.0.1` | `--s-d-r` | - | 通过SQL接口访问操作系统进程表 |
 {.ext-table}
 
 ## documentdb

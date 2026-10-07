@@ -2,7 +2,7 @@
 title: "url_encode"
 linkTitle: "url_encode"
 description: "提供URL编码解码函数"
-weight: 4190
+weight: 4200
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4190
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4190  | [**`url_encode`**](/ext/e/url_encode) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4200  | [**`url_encode`**](/ext/e/url_encode) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`uri`](/ext/e/uri) [`pg_curl`](/ext/e/pg_curl) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`emailaddr`](/ext/e/emailaddr) [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`pg_smtp_client`](/ext/e/pg_smtp_client) |

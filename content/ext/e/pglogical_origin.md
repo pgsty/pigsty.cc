@@ -11,11 +11,6 @@ weight: 9501
     <div class="ext-card__title">2ndQuadrant/pglogical</div>
     <div class="ext-card__desc">https://github.com/2ndQuadrant/pglogical</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pglogical-2.4.6.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pglogical-2.4.6.tar.gz</div>
-    <div class="ext-card__desc">pglogical-2.4.6.tar.gz</div>
-  </a>
 </div>
 
 
@@ -39,7 +34,7 @@ weight: 9501
 {.ext-table .ext-table--rel}
 
 
-> Latest PGDG DEB/catalog version is 2.4.7; PGDG RPM and Pigsty source remain on 2.4.6.
+> Latest PGDG DEB/catalog version is 2.4.7; PGDG RPM remains on 2.4.6.
 
 
 ## 版本

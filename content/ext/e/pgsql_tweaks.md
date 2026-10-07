@@ -2,7 +2,7 @@
 title: "pgsql_tweaks"
 linkTitle: "pgsql_tweaks"
 description: "一些日常会用到的便利函数与视图"
-weight: 4200
+weight: 4210
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4200
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4200  | [**`pgsql_tweaks`**](/ext/e/pgsql_tweaks) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4210  | [**`pgsql_tweaks`**](/ext/e/pgsql_tweaks) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pgcalendar`](/ext/e/pgcalendar) [`pg_math`](/ext/e/pg_math) [`pg_extra_time`](/ext/e/pg_extra_time) [`pg_rrule`](/ext/e/pg_rrule) |

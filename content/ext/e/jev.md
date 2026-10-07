@@ -1,7 +1,7 @@
 ---
 title: "jev"
 linkTitle: "jev"
-description: "通过 TypeSafe 实现自然语言行过滤、排序和分类"
+description: "通过兼容 Jev 的 API 实现自然语言行过滤、排序和分类"
 weight: 1900
 ---
 
@@ -11,10 +11,10 @@ weight: 1900
     <div class="ext-card__title">realZachi/pg-jev</div>
     <div class="ext-card__desc">https://github.com/realZachi/pg-jev</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/jev-0.2.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/jev-0.2.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">jev-0.2.0.tar.gz</div>
-    <div class="ext-card__desc">jev-0.2.0.tar.gz</div>
+    <div class="ext-card__title">jev-0.2.1.tar.gz</div>
+    <div class="ext-card__desc">jev-0.2.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1900
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`jev`**](/ext/e/jev) | `0.2.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> |
+| [**`jev`**](/ext/e/jev) | `0.2.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,101 +38,101 @@ weight: 1900
 {.ext-table .ext-table--rel}
 
 
-> Requires plpython3u and API credentials; sends row contents to an external model service. PG14-17.
+> Requires plpython3u; TypeSafe endpoints require an API key, while local/other Jev-compatible endpoints can be keyless. Selected row contents are sent to the configured service. PG14-17.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "17,16,15,14" >}} | `jev` | `plpython3u` |
-| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "17,16,15,14" >}} | `jev_$v` | `postgresql$v-plpython3` |
-| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-jev` | `postgresql-plpython3-$v` |
+| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "17,16,15,14" >}} | `jev` | `plpython3u` |
+| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "17,16,15,14" >}} | `jev_$v` | `postgresql$v-plpython3` |
+| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-jev` | `postgresql-plpython3-$v` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-@ el8.x86_64 17 jev_17 jev_17-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_17-0.2.0-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 17 jev_17 jev_17-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_17-0.2.0-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 17 jev_17 jev_17-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_17-0.2.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 17 jev_17 jev_17-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_17-0.2.0-1PGSTY.el9.noarch.rpm
-@ el10.x86_64 17 jev_17 jev_17-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_17-0.2.0-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 17 jev_17 jev_17-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_17-0.2.0-1PGSTY.el10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-17-jev_0.2.0-1PGSTY~resolute_all.deb
-@ el8.x86_64 16 jev_16 jev_16-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_16-0.2.0-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 16 jev_16 jev_16-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_16-0.2.0-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 16 jev_16 jev_16-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_16-0.2.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 16 jev_16 jev_16-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_16-0.2.0-1PGSTY.el9.noarch.rpm
-@ el10.x86_64 16 jev_16 jev_16-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_16-0.2.0-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 16 jev_16 jev_16-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_16-0.2.0-1PGSTY.el10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-16-jev_0.2.0-1PGSTY~resolute_all.deb
-@ el8.x86_64 15 jev_15 jev_15-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_15-0.2.0-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 15 jev_15 jev_15-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_15-0.2.0-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 15 jev_15 jev_15-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_15-0.2.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 15 jev_15 jev_15-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_15-0.2.0-1PGSTY.el9.noarch.rpm
-@ el10.x86_64 15 jev_15 jev_15-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_15-0.2.0-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 15 jev_15 jev_15-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_15-0.2.0-1PGSTY.el10.noarch.rpm
-@ d12.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d12.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d13.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~trixie_all.deb
-@ d13.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u24.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~noble_all.deb
-@ u24.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~noble_all.deb
-@ u26.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~resolute_all.deb
-@ u26.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-15-jev_0.2.0-1PGSTY~resolute_all.deb
-@ el8.x86_64 14 jev_14 jev_14-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_14-0.2.0-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 14 jev_14 jev_14-0.2.0-1PGSTY.el8.noarch.rpm pigsty 0.2.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_14-0.2.0-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 14 jev_14 jev_14-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_14-0.2.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 14 jev_14 jev_14-0.2.0-1PGSTY.el9.noarch.rpm pigsty 0.2.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_14-0.2.0-1PGSTY.el9.noarch.rpm
-@ el10.x86_64 14 jev_14 jev_14-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_14-0.2.0-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 14 jev_14 jev_14-0.2.0-1PGSTY.el10.noarch.rpm pigsty 0.2.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_14-0.2.0-1PGSTY.el10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~bookworm_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~trixie_all.deb pigsty 0.2.0 19.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~jammy_all.deb pigsty 0.2.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~noble_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.0-1PGSTY~resolute_all.deb pigsty 0.2.0 17.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-14-jev_0.2.0-1PGSTY~resolute_all.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+@ el8.x86_64 17 jev_17 jev_17-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_17-0.2.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 jev_17 jev_17-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_17-0.2.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 17 jev_17 jev_17-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_17-0.2.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 jev_17 jev_17-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_17-0.2.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 17 jev_17 jev_17-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_17-0.2.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 jev_17 jev_17-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_17-0.2.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-jev postgresql-17-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-17-jev_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 jev_16 jev_16-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_16-0.2.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 jev_16 jev_16-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_16-0.2.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 16 jev_16 jev_16-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_16-0.2.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 jev_16 jev_16-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_16-0.2.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 16 jev_16 jev_16-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_16-0.2.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 jev_16 jev_16-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_16-0.2.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-jev postgresql-16-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-16-jev_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 jev_15 jev_15-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_15-0.2.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 15 jev_15 jev_15-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_15-0.2.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 15 jev_15 jev_15-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_15-0.2.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 jev_15 jev_15-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_15-0.2.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 15 jev_15 jev_15-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_15-0.2.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 15 jev_15 jev_15-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_15-0.2.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-jev postgresql-15-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-15-jev_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 14 jev_14 jev_14-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jev_14-0.2.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 14 jev_14 jev_14-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 24.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jev_14-0.2.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 14 jev_14 jev_14-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jev_14-0.2.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 14 jev_14 jev_14-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jev_14-0.2.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 14 jev_14 jev_14-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jev_14-0.2.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 14 jev_14 jev_14-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 24.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jev_14-0.2.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-jev postgresql-14-jev_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 18.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jev/postgresql-14-jev_0.2.1-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -190,9 +190,12 @@ CREATE EXTENSION jev CASCADE;  -- 依赖: plpython3u
 
 来源：
 
-- [PGXN 0.2.0](https://pgxn.org/dist/jev/0.2.0/)
+- [README.md](https://github.com/realZachi/pg-jev/blob/8d9598d87d5ff460998d91ec070226176024a841/README.md)
+- [CHANGELOG.md](https://github.com/realZachi/pg-jev/blob/8d9598d87d5ff460998d91ec070226176024a841/CHANGELOG.md)
+- [sql/jev--0.2.0--0.2.1.sql](https://github.com/realZachi/pg-jev/blob/8d9598d87d5ff460998d91ec070226176024a841/sql/jev--0.2.0--0.2.1.sql)
+- [PGXN 0.2.1](https://pgxn.org/dist/jev/0.2.1/)
 
-`jev` 使用 TypeSafe API 对自然语言条件求值，实现行过滤、排序和分类。它依赖 `plpython3u`，需要超级用户安装和 API 密钥。上游文档支持 PostgreSQL 14–17，无需预加载。
+`jev` 使用配置的 Jev 兼容 API 对自然语言条件求值，实现行过滤、排序和分类。它依赖 `plpython3u`，需要超级用户安装；TypeSafe 托管端点还需要 API 密钥。上游文档支持 PostgreSQL 14–17，无需预加载。
 
 ### 查询数据行
 
@@ -213,3 +216,7 @@ SELECT jev_stats();
 扩展会将行内容发送至配置的 API。通过 `jev.api_url` 指定服务，使用 `jev.max_rows_per_statement` 和 `jev.max_chars_per_statement` 限制工作量。API 延迟和费用取决于服务与数据量，API 密钥须按凭据管理。
 
 PL/Python 以数据库服务进程的操作系统权限运行；不提供超级用户或 PL/Python 的托管服务无法运行此扩展。本地包测试使用上游模拟 API，不验证远程模型判断的质量。
+
+### 0.2.1 端点配置
+
+0.2.1 仅对 `*.typesafe.ai` 主机要求 `jev.api_key`。本地运行或其他兼容端点在未设置密钥时不发送 Authorization 头，若已配置密钥仍会发送。将 `jev.api_url` 指向预期的可信服务。为 0.2.0 数据库安装匹配文件后执行 `ALTER EXTENSION jev UPDATE`。模型准确性与数据处理策略仍取决于所选服务。

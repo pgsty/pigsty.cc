@@ -2,7 +2,7 @@
 title: "pg_statviz"
 linkTitle: "pg_statviz"
 description: "采集 PostgreSQL 统计快照，用于时序分析与可视化"
-weight: 6080
+weight: 6090
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 6080
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6080  | [**`pg_statviz`**](/ext/e/pg_statviz) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgstatviz` |
+| 6090  | [**`pg_statviz`**](/ext/e/pg_statviz) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgstatviz` |
 {.ext-table}
 
 | **相关扩展** | [`plpgsql`](/ext/e/plpgsql) `pgsampler` [`pgmonitor`](/ext/e/pgmonitor) `pg_mon` [`timescaledb`](/ext/e/timescaledb) `town` [`pg_stl`](/ext/e/pg_stl) |

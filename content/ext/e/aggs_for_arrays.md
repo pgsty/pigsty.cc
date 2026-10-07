@@ -2,7 +2,7 @@
 title: "aggs_for_arrays"
 linkTitle: "aggs_for_arrays"
 description: "计算数组聚合统计值的函数包"
-weight: 4750
+weight: 4760
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4750
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4750  | [**`aggs_for_arrays`**](/ext/e/aggs_for_arrays) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4760  | [**`aggs_for_arrays`**](/ext/e/aggs_for_arrays) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`intarray`](/ext/e/intarray) [`arraymath`](/ext/e/arraymath) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`floatvec`](/ext/e/floatvec) |

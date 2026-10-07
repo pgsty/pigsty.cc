@@ -2,7 +2,7 @@
 title: "hashtypes"
 linkTitle: "hashtypes"
 description: "包括SHA1，MD5在内的多种哈希数据类型"
-weight: 3750
+weight: 3770
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3750
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3750  | [**`hashtypes`**](/ext/e/hashtypes) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 3770  | [**`hashtypes`**](/ext/e/hashtypes) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pgcrypto`](/ext/e/pgcrypto) [`md5hash`](/ext/e/md5hash) [`hashlib`](/ext/e/hashlib) [`xxhash`](/ext/e/xxhash) [`pgsodium`](/ext/e/pgsodium) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pguecc`](/ext/e/pguecc) |

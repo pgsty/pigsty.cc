@@ -11,11 +11,6 @@ weight: 8630
     <div class="ext-card__title">pg-fdw/db2_fdw</div>
     <div class="ext-card__desc">https://github.com/pg-fdw/db2_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/db2_fdw-18.1.1.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">db2_fdw-18.1.1.tar.gz</div>
-    <div class="ext-card__desc">db2_fdw-18.1.1.tar.gz</div>
-  </a>
 </div>
 
 
@@ -38,7 +33,7 @@ weight: 8630
 {.ext-table .ext-table--rel}
 
 
-> Latest PGDG RPM/catalog version is 18.2.0; Pigsty source remains 18.1.1; no DEB package is available.
+> Latest PGDG RPM/catalog version is 18.2.0; no DEB package is available.
 
 
 ## 版本

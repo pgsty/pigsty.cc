@@ -2,7 +2,7 @@
 title: "psql_bm25s"
 linkTitle: "psql_bm25s"
 description: "PostgreSQL BM25 系列全文检索扩展，提供原生索引访问方法和 BM25 排序"
-weight: 2210
+weight: 2220
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2210
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2210  | [**`psql_bm25s`**](/ext/e/psql_bm25s) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 2220  | [**`psql_bm25s`**](/ext/e/psql_bm25s) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_search`](/ext/e/pg_search) [`pgroonga`](/ext/e/pgroonga) [`pg_textsearch`](/ext/e/pg_textsearch) [`pg_fts`](/ext/e/pg_fts) [`vchord_bm25`](/ext/e/vchord_bm25) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pg_rrf`](/ext/e/pg_rrf) [`pgcontext`](/ext/e/pgcontext) [`vectorize`](/ext/e/vectorize) |

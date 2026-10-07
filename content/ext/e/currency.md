@@ -33,7 +33,7 @@ weight: 3680
 | 3680  | [**`currency`**](/ext/e/currency) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`financial`](/ext/e/financial) [`pg_accumulator`](/ext/e/pg_accumulator) [`omni_ledger`](/ext/e/omni_ledger) [`country`](/ext/e/country) [`isn`](/ext/e/isn) [`pg_xenophile`](/ext/e/pg_xenophile) [`icu_ext`](/ext/e/icu_ext) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`financial`](/ext/e/financial) [`pg_accumulator`](/ext/e/pg_accumulator) [`omni_ledger`](/ext/e/omni_ledger) [`country`](/ext/e/country) [`isn`](/ext/e/isn) [`pg_xenophile`](/ext/e/pg_xenophile) [`icu_ext`](/ext/e/icu_ext) [`pg_money`](/ext/e/pg_money) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

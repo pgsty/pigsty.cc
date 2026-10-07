@@ -2,7 +2,7 @@
 title: "noset"
 linkTitle: "noset"
 description: "阻止非超级用户使用SET/RESET设置变量"
-weight: 7420
+weight: 7430
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 7420
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7420  | [**`noset`**](/ext/e/noset) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 7430  | [**`noset`**](/ext/e/noset) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_command_fw`](/ext/e/pg_command_fw) [`pg_kpart`](/ext/e/pg_kpart) [`pgextwlist`](/ext/e/pgextwlist) [`block_copy_command`](/ext/e/block_copy_command) [`supautils`](/ext/e/supautils) [`plan_filter`](/ext/e/plan_filter) [`safeupdate`](/ext/e/safeupdate) [`pg_readonly`](/ext/e/pg_readonly) [`sepgsql`](/ext/e/sepgsql) [`pg_strict`](/ext/e/pg_strict) |

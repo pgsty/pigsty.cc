@@ -2,7 +2,7 @@
 title: "pg_track_settings"
 linkTitle: "pg_track_settings"
 description: "跟踪设置更改"
-weight: 6260
+weight: 6270
 ---
 
 <div class="ext-cards">
@@ -25,7 +25,7 @@ weight: 6260
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6260  | [**`pg_track_settings`**](/ext/e/pg_track_settings) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 6270  | [**`pg_track_settings`**](/ext/e/pg_track_settings) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_profile`](/ext/e/pg_profile) [`powa`](/ext/e/powa) [`pg_track_optimizer`](/ext/e/pg_track_optimizer) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_stat_plans`](/ext/e/pg_stat_plans) |

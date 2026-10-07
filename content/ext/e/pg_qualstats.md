@@ -2,7 +2,7 @@
 title: "pg_qualstats"
 linkTitle: "pg_qualstats"
 description: "收集有关 quals 的统计信息的扩展"
-weight: 6240
+weight: 6250
 ---
 
 <div class="ext-cards">
@@ -25,7 +25,7 @@ weight: 6240
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6240  | [**`pg_qualstats`**](/ext/e/pg_qualstats) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 6250  | [**`pg_qualstats`**](/ext/e/pg_qualstats) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`online_advisor`](/ext/e/online_advisor) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`plan_filter`](/ext/e/plan_filter) [`pg_relusage`](/ext/e/pg_relusage) [`pg_track_optimizer`](/ext/e/pg_track_optimizer) [`pg_regresql`](/ext/e/pg_regresql) [`pg_strom`](/ext/e/pg_strom) |

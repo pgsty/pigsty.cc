@@ -33,7 +33,7 @@ weight: 4350
 | 4350  | [**`pg_describe`**](/ext/e/pg_describe) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | `describe_resultset` `colnames` [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pglinter`](/ext/e/pglinter) |
+| **相关扩展** | `describe_resultset` [`colnames`](/ext/e/colnames) [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pglinter`](/ext/e/pglinter) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

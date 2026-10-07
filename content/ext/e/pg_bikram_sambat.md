@@ -6,10 +6,10 @@ weight: 3860
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/LeohangRai/pg_bikram_sambat">
+  <a class="ext-card ext-card--repo" href="https://pgxn.org/dist/pg_bikram_sambat/0.1.0/">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">LeohangRai/pg_bikram_sambat</div>
-    <div class="ext-card__desc">https://github.com/LeohangRai/pg_bikram_sambat</div>
+    <div class="ext-card__title">https://pgxn.org/dist/pg_bikram_sambat/0.1.0/</div>
+    <div class="ext-card__desc">https://pgxn.org/dist/pg_bikram_sambat/0.1.0/</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_bikram_sambat-0.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -36,6 +36,9 @@ weight: 3860
 | **相关扩展** | [`pgcalendar`](/ext/e/pgcalendar) [`pg_rrule`](/ext/e/pg_rrule) [`pg_duration`](/ext/e/pg_duration) [`timestamp9`](/ext/e/timestamp9) [`pg_when`](/ext/e/pg_when) [`cron_utils`](/ext/e/cron_utils) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
+
+
+> Former GitHub repository is unavailable; authoritative 0.1.0 sources remain on PGXN.
 
 
 ## 版本

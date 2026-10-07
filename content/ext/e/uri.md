@@ -2,7 +2,7 @@
 title: "uri"
 linkTitle: "uri"
 description: "URI数据类型"
-weight: 3790
+weight: 3800
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3790
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3790  | [**`uri`**](/ext/e/uri) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3800  | [**`uri`**](/ext/e/uri) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`emailaddr`](/ext/e/emailaddr) [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`url_encode`](/ext/e/url_encode) [`ip4r`](/ext/e/ip4r) [`prefix`](/ext/e/prefix) [`asn1oid`](/ext/e/asn1oid) [`pg_smtp_client`](/ext/e/pg_smtp_client) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`omni_email`](/ext/e/omni_email) [`isn`](/ext/e/isn) |

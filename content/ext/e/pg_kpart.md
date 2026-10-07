@@ -2,7 +2,7 @@
 title: "pg_kpart"
 linkTitle: "pg_kpart"
 description: "拒绝未使用分区键的全分区扫描查询"
-weight: 7450
+weight: 7460
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 7450
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7450  | [**`pg_kpart`**](/ext/e/pg_kpart) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 7460  | [**`pg_kpart`**](/ext/e/pg_kpart) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`plan_filter`](/ext/e/plan_filter) [`pg_partman`](/ext/e/pg_partman) [`safeupdate`](/ext/e/safeupdate) [`block_copy_command`](/ext/e/block_copy_command) [`pg_strict`](/ext/e/pg_strict) [`prioritize`](/ext/e/prioritize) [`qos`](/ext/e/qos) [`pg_readonly`](/ext/e/pg_readonly) [`pgextwlist`](/ext/e/pgextwlist) [`timescaledb`](/ext/e/timescaledb) |

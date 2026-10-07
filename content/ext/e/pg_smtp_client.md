@@ -2,7 +2,7 @@
 title: "pg_smtp_client"
 linkTitle: "pg_smtp_client"
 description: "使用SMTP从PostgreSQL内发送邮件的客户端扩展"
-weight: 4170
+weight: 4180
 ---
 
 <div class="ext-cards">
@@ -30,12 +30,15 @@ weight: 4170
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4170  | [**`pg_smtp_client`**](/ext/e/pg_smtp_client) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `smtp_client` |
+| 4180  | [**`pg_smtp_client`**](/ext/e/pg_smtp_client) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `smtp_client` |
 {.ext-table}
 
 | **相关扩展** | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`emailaddr`](/ext/e/emailaddr) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`omni_email`](/ext/e/omni_email) [`uri`](/ext/e/uri) [`ip4r`](/ext/e/ip4r) [`url_encode`](/ext/e/url_encode) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
+
+
+> Upstream GitHub repository is archived.
 
 
 ## 版本
@@ -238,7 +241,7 @@ CREATE EXTENSION IF NOT EXISTS pg_smtp_client CASCADE;
 
 您可以为上表中标注的部分参数配置系统级默认值，方法如下：
 
-```
+```sql
 ALTER SYSTEM SET smtp_client.server TO 'smtp.example.com';
 ALTER SYSTEM SET smtp_client.port TO 587;
 ALTER SYSTEM SET smtp_client.tls TO true;

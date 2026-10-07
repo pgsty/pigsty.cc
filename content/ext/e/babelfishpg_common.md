@@ -57,54 +57,54 @@ weight: 9300
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el8.x86_64.rpm pigsty 6.0.0 15.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/babelfish-18-6.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el8.aarch64.rpm pigsty 6.0.0 15.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/babelfish-18-6.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el9.x86_64.rpm pigsty 6.0.0 13.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/babelfish-18-6.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el9.aarch64.rpm pigsty 6.0.0 13.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/babelfish-18-6.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el10.x86_64.rpm pigsty 6.0.0 14.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/babelfish-18-6.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 babelfish-18 babelfish-18-6.0.0-1PIGSTY.el10.aarch64.rpm pigsty 6.0.0 13.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/babelfish-18-6.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~bookworm_amd64.deb pigsty 6.0.0 12.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~bookworm_arm64.deb pigsty 6.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~trixie_amd64.deb pigsty 6.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~trixie_arm64.deb pigsty 6.0.0 11.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~jammy_amd64.deb pigsty 6.0.0 13.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~jammy_arm64.deb pigsty 6.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~noble_amd64.deb pigsty 6.0.0 13.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~noble_arm64.deb pigsty 6.0.0 13.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~resolute_amd64.deb pigsty 6.0.0 13.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 babelfish-18 babelfish-18_6.0.0-1PIGSTY~resolute_arm64.deb pigsty 6.0.0 13.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-18/babelfish-18_6.0.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el8.x86_64.rpm pigsty 5.4.0 15.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/babelfish-17-5.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el8.aarch64.rpm pigsty 5.4.0 14.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/babelfish-17-5.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el9.x86_64.rpm pigsty 5.4.0 13.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/babelfish-17-5.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el9.aarch64.rpm pigsty 5.4.0 13.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/babelfish-17-5.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el10.x86_64.rpm pigsty 5.4.0 13.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/babelfish-17-5.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 babelfish-17 babelfish-17-5.4.0-1PIGSTY.el10.aarch64.rpm pigsty 5.4.0 13.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/babelfish-17-5.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~bookworm_amd64.deb pigsty 5.4.0 11.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~bookworm_arm64.deb pigsty 5.4.0 11.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~trixie_amd64.deb pigsty 5.4.0 11.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~trixie_arm64.deb pigsty 5.4.0 11.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~jammy_amd64.deb pigsty 5.4.0 13.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~jammy_arm64.deb pigsty 5.4.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~noble_amd64.deb pigsty 5.4.0 13.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~noble_arm64.deb pigsty 5.4.0 13.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~resolute_amd64.deb pigsty 5.4.0 13.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 babelfish-17 babelfish-17_5.4.0-1PIGSTY~resolute_arm64.deb pigsty 5.4.0 12.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-17/babelfish-17_5.4.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 6.2.0 1 | AVAIL PIGSTY 5.7.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el8.x86_64.rpm pigsty 6.2.0 28.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/babelfish-18-6.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el8.aarch64.rpm pigsty 6.2.0 27.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/babelfish-18-6.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el9.x86_64.rpm pigsty 6.2.0 27.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/babelfish-18-6.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el9.aarch64.rpm pigsty 6.2.0 27.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/babelfish-18-6.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el10.x86_64.rpm pigsty 6.2.0 27.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/babelfish-18-6.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 babelfish-18 babelfish-18-6.2.0-1PGSTY.el10.aarch64.rpm pigsty 6.2.0 27.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/babelfish-18-6.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~bookworm_amd64.deb pigsty 6.2.0 24.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~bookworm_arm64.deb pigsty 6.2.0 23.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~trixie_amd64.deb pigsty 6.2.0 24.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~trixie_arm64.deb pigsty 6.2.0 24.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~jammy_amd64.deb pigsty 6.2.0 29.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~jammy_arm64.deb pigsty 6.2.0 29.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~noble_amd64.deb pigsty 6.2.0 26.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~noble_arm64.deb pigsty 6.2.0 26.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~resolute_amd64.deb pigsty 6.2.0 26.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 babelfish-18 babelfish-18_6.2.0-1PGSTY~resolute_arm64.deb pigsty 6.2.0 26.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-18/babelfish-18_6.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el8.x86_64.rpm pigsty 5.7.0 27.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/babelfish-17-5.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el8.aarch64.rpm pigsty 5.7.0 27.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/babelfish-17-5.7.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el9.x86_64.rpm pigsty 5.7.0 26.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/babelfish-17-5.7.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el9.aarch64.rpm pigsty 5.7.0 26.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/babelfish-17-5.7.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el10.x86_64.rpm pigsty 5.7.0 26.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/babelfish-17-5.7.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 babelfish-17 babelfish-17-5.7.0-1PGSTY.el10.aarch64.rpm pigsty 5.7.0 26.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/babelfish-17-5.7.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~bookworm_amd64.deb pigsty 5.7.0 24.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~bookworm_arm64.deb pigsty 5.7.0 23.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~trixie_amd64.deb pigsty 5.7.0 24.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~trixie_arm64.deb pigsty 5.7.0 23.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~jammy_amd64.deb pigsty 5.7.0 29.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~jammy_arm64.deb pigsty 5.7.0 28.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~noble_amd64.deb pigsty 5.7.0 26.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~noble_arm64.deb pigsty 5.7.0 25.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~resolute_amd64.deb pigsty 5.7.0 26.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 babelfish-17 babelfish-17_5.7.0-1PGSTY~resolute_arm64.deb pigsty 5.7.0 25.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/b/babelfish-17/babelfish-17_5.7.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

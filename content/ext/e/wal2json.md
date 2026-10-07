@@ -11,11 +11,6 @@ weight: 9630
     <div class="ext-card__title">eulerto/wal2json</div>
     <div class="ext-card__desc">https://github.com/eulerto/wal2json</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/wal2json-2.6.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">wal2json-2.6.tar.gz</div>
-    <div class="ext-card__desc">wal2json-2.6.tar.gz</div>
-  </a>
 </div>
 
 

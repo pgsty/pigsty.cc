@@ -11,11 +11,6 @@ weight: 8610
     <div class="ext-card__title">laurenz/oracle_fdw</div>
     <div class="ext-card__desc">https://github.com/laurenz/oracle_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/oracle_fdw-ORACLE_FDW_2_8_0.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">oracle_fdw-ORACLE_FDW_2_8_0.tar.gz</div>
-    <div class="ext-card__desc">oracle_fdw-ORACLE_FDW_2_8_0.tar.gz</div>
-  </a>
 </div>
 
 

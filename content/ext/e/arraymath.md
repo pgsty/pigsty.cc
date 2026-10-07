@@ -2,7 +2,7 @@
 title: "arraymath"
 linkTitle: "arraymath"
 description: "数组逐元素数学运算符包"
-weight: 4770
+weight: 4780
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4770
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4770  | [**`arraymath`**](/ext/e/arraymath) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4780  | [**`arraymath`**](/ext/e/arraymath) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`intarray`](/ext/e/intarray) [`floatvec`](/ext/e/floatvec) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`collection`](/ext/e/collection) [`hstore`](/ext/e/hstore) [`pgbson`](/ext/e/pgbson) |

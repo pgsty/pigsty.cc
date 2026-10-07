@@ -1,7 +1,7 @@
 ---
 title: "pgroonga_database"
 linkTitle: "pgroonga_database"
-description: "PGGroonga 数据库管理模块"
+description: "清理损坏的 PGroonga 内部数据库文件的恢复辅助扩展"
 weight: 2111
 ---
 

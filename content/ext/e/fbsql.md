@@ -2,7 +2,7 @@
 title: "fbsql"
 linkTitle: "fbsql"
 description: "在 SQL 中保持关系闭包的公式化统计建模扩展"
-weight: 4695
+weight: 4705
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4695
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4695  | [**`fbsql`**](/ext/e/fbsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fbsql` |
+| 4705  | [**`fbsql`**](/ext/e/fbsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fbsql` |
 {.ext-table}
 
 | **相关扩展** | [`plr`](/ext/e/plr) [`weighted_statistics`](/ext/e/weighted_statistics) [`pg_math`](/ext/e/pg_math) [`vasco`](/ext/e/vasco) [`xicor`](/ext/e/xicor) |

@@ -2,7 +2,7 @@
 title: "collection"
 linkTitle: "collection"
 description: "在PlPGSQL中使用的内存优化高性能集合数据结构"
-weight: 3690
+weight: 3700
 ---
 
 <div class="ext-cards">
@@ -30,10 +30,10 @@ weight: 3690
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3690  | [**`collection`**](/ext/e/collection) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3700  | [**`collection`**](/ext/e/collection) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgbson`](/ext/e/pgbson) [`intarray`](/ext/e/intarray) [`hstore`](/ext/e/hstore) [`arraymath`](/ext/e/arraymath) [`pgjq`](/ext/e/pgjq) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsonschema`](/ext/e/jsonschema) [`floatvec`](/ext/e/floatvec) [`pg_projection`](/ext/e/pg_projection) |
+| **相关扩展** | [`pgbson`](/ext/e/pgbson) [`intarray`](/ext/e/intarray) [`hstore`](/ext/e/hstore) [`arraymath`](/ext/e/arraymath) [`pgjq`](/ext/e/pgjq) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsonschema`](/ext/e/jsonschema) [`floatvec`](/ext/e/floatvec) [`pg_projection`](/ext/e/pg_projection) [`istore`](/ext/e/istore) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -2,7 +2,7 @@
 title: "postbis"
 linkTitle: "postbis"
 description: "提供压缩的 DNA、RNA、氨基酸及比对序列类型，以及类型转换、运算符、索引和生物信息学函数。"
-weight: 3760
+weight: 3780
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3760
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3760  | [**`postbis`**](/ext/e/postbis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3780  | [**`postbis`**](/ext/e/postbis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`rdkit`](/ext/e/rdkit) [`vector`](/ext/e/vector) [`pg_similarity`](/ext/e/pg_similarity) [`smlar`](/ext/e/smlar) [`pg_trgm`](/ext/e/pg_trgm) [`pgcontext`](/ext/e/pgcontext) [`vectorize`](/ext/e/vectorize) [`imgsmlr`](/ext/e/imgsmlr) |

@@ -2,7 +2,7 @@
 title: "pgpcre"
 linkTitle: "pgpcre"
 description: "PCRE/Perl风格的正则表达式支持"
-weight: 4230
+weight: 4240
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4230
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4230  | [**`pgpcre`**](/ext/e/pgpcre) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4240  | [**`pgpcre`**](/ext/e/pgpcre) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_trgm`](/ext/e/pg_trgm) [`re2`](/ext/e/re2) [`omni_regex`](/ext/e/omni_regex) [`pg_similarity`](/ext/e/pg_similarity) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`smlar`](/ext/e/smlar) [`biscuit`](/ext/e/biscuit) [`pg_bigm`](/ext/e/pg_bigm) |

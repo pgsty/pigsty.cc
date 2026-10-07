@@ -2,7 +2,7 @@
 title: "pg_math"
 linkTitle: "pg_math"
 description: "使用GSL库的数学统计函数"
-weight: 4780
+weight: 4790
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4780
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4780  | [**`pg_math`**](/ext/e/pg_math) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4790  | [**`pg_math`**](/ext/e/pg_math) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`weighted_statistics`](/ext/e/weighted_statistics) [`vasco`](/ext/e/vasco) [`xicor`](/ext/e/xicor) [`fbsql`](/ext/e/fbsql) [`pgsql_tweaks`](/ext/e/pgsql_tweaks) [`pg_extra_time`](/ext/e/pg_extra_time) [`pgcalendar`](/ext/e/pgcalendar) |

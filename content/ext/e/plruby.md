@@ -36,7 +36,7 @@ weight: 3160
 | 3163  | [**`ltree_plruby`**](/ext/e/ltree_plruby) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`jsonb_plruby`](/ext/e/jsonb_plruby) [`hstore_plruby`](/ext/e/hstore_plruby) [`ltree_plruby`](/ext/e/ltree_plruby) [`plperl`](/ext/e/plperl) [`plpython3u`](/ext/e/plpython3u) [`pllua`](/ext/e/pllua) [`plv8`](/ext/e/plv8) `plrust` |
+| **相关扩展** | [`jsonb_plruby`](/ext/e/jsonb_plruby) [`hstore_plruby`](/ext/e/hstore_plruby) [`ltree_plruby`](/ext/e/ltree_plruby) [`plperl`](/ext/e/plperl) [`plpython3u`](/ext/e/plpython3u) [`pllua`](/ext/e/pllua) [`plv8`](/ext/e/plv8) `plrust` [`plphp`](/ext/e/plphp) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`hstore_plruby`](/ext/e/hstore_plruby) [`jsonb_plruby`](/ext/e/jsonb_plruby) [`ltree_plruby`](/ext/e/ltree_plruby) |
 {.ext-table .ext-table--rel}

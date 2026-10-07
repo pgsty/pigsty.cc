@@ -30,7 +30,7 @@ weight: 1070
 
 | **相关扩展** | [`pgagent`](/ext/e/pgagent) [`pg_task`](/ext/e/pg_task) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_later`](/ext/e/pg_later) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_durable`](/ext/e/pg_durable) [`pg_background`](/ext/e/pg_background) [`pg_when`](/ext/e/pg_when) [`cron_utils`](/ext/e/cron_utils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`documentdb`](/ext/e/documentdb) [`pg_dispatch`](/ext/e/pg_dispatch) [`pglock`](/ext/e/pglock) [`pgmb`](/ext/e/pgmb) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) |
+| **下游依赖** | [`documentdb`](/ext/e/documentdb) [`pg_dispatch`](/ext/e/pg_dispatch) [`pgfr_record`](/ext/e/pgfr_record) [`pglock`](/ext/e/pglock) [`pgmb`](/ext/e/pgmb) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) |
 {.ext-table .ext-table--rel}
 
 
@@ -471,7 +471,7 @@ CREATE EXTENSION pg_cron;
 
 请注意，`cron.database` 必须在将 `pg_cron` 添加到 `shared_preload_libraries` 之前设置好。
 
-```
+```sql
 -- 每周六凌晨 3:30（GMT）删除过期数据
 SELECT cron.schedule('30 3 * * 6', $$DELETE FROM events WHERE event_time < now() - interval '1 week'$$);
  schedule
@@ -516,7 +516,7 @@ SELECT cron.schedule('process-payroll', '0 12 $ * *', 'CALL process_payroll()');
 
 Crontab 格式说明：
 
-```
+```text
  ┌───────────── 分钟 (0 - 59)
  │ ┌────────────── 小时 (0 - 23)
  │ │ ┌─────────────── 日期 (1 - 31) 或月末最后一天 ($)

@@ -6,10 +6,10 @@ weight: 9820
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/enova/pg_fact_loader">
+  <a class="ext-card ext-card--repo" href="https://sources.debian.org/src/pg-fact-loader/2.0.1-5/">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">enova/pg_fact_loader</div>
-    <div class="ext-card__desc">https://github.com/enova/pg_fact_loader</div>
+    <div class="ext-card__title">https://sources.debian.org/src/pg-fact-loader/2.0.1-5/</div>
+    <div class="ext-card__desc">https://sources.debian.org/src/pg-fact-loader/2.0.1-5/</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_fact_loader-2.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -25,12 +25,12 @@ weight: 9820
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_fact_loader`**](/ext/e/pg_fact_loader) | `2.0.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_fact_loader`**](/ext/e/pg_fact_loader) | `2.0.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang plpgsql" href="/ext/language#plpgsql">PLpgSQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9820  | [**`pg_fact_loader`**](/ext/e/pg_fact_loader) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fact_loader` |
+| 9820  | [**`pg_fact_loader`**](/ext/e/pg_fact_loader) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fact_loader` |
 {.ext-table}
 
 | **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_parquet`](/ext/e/pg_parquet) [`aws_s3`](/ext/e/aws_s3) [`pg_lake`](/ext/e/pg_lake) [`pg_ducklake`](/ext/e/pg_ducklake) [`pg_csv`](/ext/e/pg_csv) [`omni_csv`](/ext/e/omni_csv) |
@@ -38,7 +38,7 @@ weight: 9820
 {.ext-table .ext-table--rel}
 
 
-> PGDG provides the regular DEB channel; Pigsty fills the missing PostgreSQL 18 packages on Debian/Ubuntu and builds PG14-18 for Ubuntu 26.04 (Resolute).
+> PGDG provides the regular DEB channel; Pigsty fills the missing PostgreSQL 18 packages on Debian/Ubuntu and builds PG14-18 for Ubuntu 26.04 (Resolute). Upstream GitHub repository is unavailable; Debian preserves the 2.0.1 source. SQL/control version is 2.0; this is a pure SQL/PLpgSQL extension without a shared library.
 
 
 ## 版本

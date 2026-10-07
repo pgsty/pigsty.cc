@@ -2,7 +2,7 @@
 title: "block_copy_command"
 linkTitle: "block_copy_command"
 description: "通过可配置的 ProcessUtility hook 阻止 COPY 命令"
-weight: 7430
+weight: 7440
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 7430
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7430  | [**`block_copy_command`**](/ext/e/block_copy_command) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 7440  | [**`block_copy_command`**](/ext/e/block_copy_command) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_command_fw`](/ext/e/pg_command_fw) [`noset`](/ext/e/noset) [`safeupdate`](/ext/e/safeupdate) [`pg_kpart`](/ext/e/pg_kpart) [`pgextwlist`](/ext/e/pgextwlist) [`supautils`](/ext/e/supautils) [`pg_strict`](/ext/e/pg_strict) [`plan_filter`](/ext/e/plan_filter) |

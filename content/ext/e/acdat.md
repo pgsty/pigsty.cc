@@ -2,7 +2,7 @@
 title: "acdat"
 linkTitle: "acdat"
 description: "在 PostgreSQL 中编译 Aho-Corasick 双数组机，实现精确多模式匹配与替换"
-weight: 2250
+weight: 2260
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2250
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2250  | [**`acdat`**](/ext/e/acdat) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `acdat` |
+| 2260  | [**`acdat`**](/ext/e/acdat) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `acdat` |
 {.ext-table}
 
 | **相关扩展** | [`pg_trgm`](/ext/e/pg_trgm) [`pg_bigm`](/ext/e/pg_bigm) [`pgroonga`](/ext/e/pgroonga) [`pg_search`](/ext/e/pg_search) |

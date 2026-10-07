@@ -35,6 +35,7 @@ weight: 1110
 
 | **相关扩展** | [`pg_task`](/ext/e/pg_task) [`pg_durable`](/ext/e/pg_durable) [`pg_later`](/ext/e/pg_later) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_retry`](/ext/e/pg_retry) [`pglock`](/ext/e/pglock) [`pgmq`](/ext/e/pgmq) [`ulak`](/ext/e/ulak) [`omni_worker`](/ext/e/omni_worker) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pg_dbms_lock`](/ext/e/pg_dbms_lock) |
 {.ext-table .ext-table--rel}
 
 

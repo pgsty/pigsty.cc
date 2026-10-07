@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **130** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **131** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -92,6 +92,7 @@ weight: 10
 | [`pgnodemx`](/ext/e/pgnodemx) | `pgnodemx` | 使用SQL查询获取操作系统指标 |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | `bgw_replstatus` | 用于汇报本机主从状态的后台工作进程 |
 | [`pg_relusage`](/ext/e/pg_relusage) | `pg_relusage` | 打印查询引用的表与列 |
+| [`powa`](/ext/e/powa) | `powa` | PostgreSQL 工作负载分析器-核心 |
 | [`pg_overexplain`](/ext/e/pg_overexplain) | `pg_overexplain` | 允许 EXPLAIN 转储更多详细 |
 | [`auto_explain`](/ext/e/auto_explain) | `auto_explain` | 提供一种自动记录执行计划的手段 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | `pg_stat_statements` | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |

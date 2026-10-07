@@ -2,7 +2,7 @@
 title: "pg_csv"
 linkTitle: "pg_csv"
 description: "灵活的CSV聚合处理函数"
-weight: 4760
+weight: 4770
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4760
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4760  | [**`pg_csv`**](/ext/e/pg_csv) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4770  | [**`pg_csv`**](/ext/e/pg_csv) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_bulkload`](/ext/e/pg_bulkload) [`omni_csv`](/ext/e/omni_csv) [`aws_s3`](/ext/e/aws_s3) [`pg_parquet`](/ext/e/pg_parquet) [`log_fdw`](/ext/e/log_fdw) [`pg_lake`](/ext/e/pg_lake) [`pg_sqlog`](/ext/e/pg_sqlog) [`pg_fact_loader`](/ext/e/pg_fact_loader) [`pg_ducklake`](/ext/e/pg_ducklake) |

@@ -11,11 +11,6 @@ weight: 2770
     <div class="ext-card__title">postgrespro/jsquery</div>
     <div class="ext-card__desc">https://github.com/postgrespro/jsquery</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/jsquery-1.2.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">jsquery-1.2.tar.gz</div>
-    <div class="ext-card__desc">jsquery-1.2.tar.gz</div>
-  </a>
 </div>
 
 

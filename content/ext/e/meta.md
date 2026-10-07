@@ -2,7 +2,7 @@
 title: "meta"
 linkTitle: "meta"
 description: "标准化，更友好的PostgreSQL系统目录视图"
-weight: 6430
+weight: 6440
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 6430
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6430  | [**`meta`**](/ext/e/meta) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `meta` |
+| 6440  | [**`meta`**](/ext/e/meta) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `meta` |
 {.ext-table}
 
 | **相关扩展** | [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pgdd`](/ext/e/pgdd) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_checksums`](/ext/e/pg_checksums) [`pg_render`](/ext/e/pg_render) [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`amcheck`](/ext/e/amcheck) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`schedoc`](/ext/e/schedoc) |

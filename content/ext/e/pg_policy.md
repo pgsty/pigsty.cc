@@ -2,7 +2,7 @@
 title: "pg_policy"
 linkTitle: "pg_policy"
 description: "面向 AI 智能体的 PostgreSQL 策略语言，提供护栏、软性引导与会话级控制"
-weight: 7440
+weight: 7450
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 7440
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7440  | [**`pg_policy`**](/ext/e/pg_policy) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `policy` |
+| 7450  | [**`pg_policy`**](/ext/e/pg_policy) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `policy` |
 {.ext-table}
 
 | **相关扩展** | [`pg_command_fw`](/ext/e/pg_command_fw) [`pgextwlist`](/ext/e/pgextwlist) [`set_user`](/ext/e/set_user) [`noset`](/ext/e/noset) [`block_copy_command`](/ext/e/block_copy_command) [`supautils`](/ext/e/supautils) [`anon`](/ext/e/anon) [`pgaudit`](/ext/e/pgaudit) |

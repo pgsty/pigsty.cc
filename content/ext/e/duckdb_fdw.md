@@ -11,10 +11,10 @@ weight: 2470
     <div class="ext-card__title">alitrack/duckdb_fdw</div>
     <div class="ext-card__desc">https://github.com/alitrack/duckdb_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/duckdb_fdw-2.0.1+git20260529.9354241.tar.gz pg_duckdb-1.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz</div>
-    <div class="ext-card__desc">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz duckdb-1.5.5-headers.tar.gz</div>
+    <div class="ext-card__title">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz pg_duckdb-1.1.1.tar.gz</div>
+    <div class="ext-card__desc">duckdb_fdw-2.0.1+git20260529.9354241.tar.gz pg_duckdb-1.1.1.tar.gz</div>
   </a>
 </div>
 
@@ -46,8 +46,8 @@ weight: 2470
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `duckdb_fdw` | - |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `duckdb_fdw_$v` | `libduckdb` |
-| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1+git20260529.9354241` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-duckdb-fdw` | `libduckdb` |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `duckdb_fdw_$v` | `pg_duckdb_$v` |
+| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1+git20260529.9354241` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-duckdb-fdw` | `postgresql-$v-pg-duckdb` |
 {.ext-table}
 
 {{< pgext_matrix >}}

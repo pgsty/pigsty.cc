@@ -2,7 +2,7 @@
 title: "acl"
 linkTitle: "acl"
 description: "ACL数据类型"
-weight: 3810
+weight: 3820
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3810
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3810  | [**`acl`**](/ext/e/acl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3820  | [**`acl`**](/ext/e/acl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pgaudit`](/ext/e/pgaudit) [`pg_permissions`](/ext/e/pg_permissions) [`set_user`](/ext/e/set_user) [`pg_roast`](/ext/e/pg_roast) [`table_log`](/ext/e/table_log) [`pgmemento`](/ext/e/pgmemento) [`pg_auditor`](/ext/e/pg_auditor) [`pgelog`](/ext/e/pgelog) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_readonly`](/ext/e/pg_readonly) |
@@ -229,7 +229,7 @@ ACL 以 ACE 类型的 PostgreSQL 数组形式存储（例如 `ace[]`）。
 
 ### ACE 格式
 
-```
+```text
 [type]/[flags]/[who]=[mask]
 ```
 

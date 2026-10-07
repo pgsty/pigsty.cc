@@ -2,7 +2,7 @@
 title: "extra_window_functions"
 linkTitle: "extra_window_functions"
 description: "额外的窗口函数"
-weight: 4720
+weight: 4730
 ---
 
 <div class="ext-cards">
@@ -25,7 +25,7 @@ weight: 4720
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4720  | [**`extra_window_functions`**](/ext/e/extra_window_functions) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4730  | [**`extra_window_functions`**](/ext/e/extra_window_functions) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`tablefunc`](/ext/e/tablefunc) [`first_last_agg`](/ext/e/first_last_agg) [`pg_duckdb`](/ext/e/pg_duckdb) [`argm`](/ext/e/argm) [`pg_lake`](/ext/e/pg_lake) [`duckdb_fdw`](/ext/e/duckdb_fdw) |

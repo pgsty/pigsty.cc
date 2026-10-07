@@ -2,7 +2,7 @@
 title: "datasketches"
 linkTitle: "datasketches"
 description: "PostgreSQL 近似分析摘要数据结构与聚合函数"
-weight: 4690
+weight: 4700
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4690
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4690  | [**`datasketches`**](/ext/e/datasketches) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4700  | [**`datasketches`**](/ext/e/datasketches) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`ddsketch`](/ext/e/ddsketch) [`count_distinct`](/ext/e/count_distinct) [`tdigest`](/ext/e/tdigest) [`topn`](/ext/e/topn) [`omnisketch`](/ext/e/omnisketch) [`hll`](/ext/e/hll) |
