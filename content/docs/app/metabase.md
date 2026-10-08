@@ -10,6 +10,8 @@ categories: [参考]
 
 Metabase 提供友好的用户界面和丰富的图表类型，支持连接多种数据库，是企业数据分析的理想选择。
 
+模板默认使用 `metabase/metabase:v0.64.1.x`，通过单一 `METABASE_IMAGE` 参数覆盖完整镜像名。2026-10-08 验证时该标签解析为 `0.64.1.1`，已在 PostgreSQL 18.6 上验证元数据库备份恢复后升级、登录和已有问题查询。
+
 
 
 ## 快速开始
@@ -26,6 +28,8 @@ cd ~/pigsty/app/metabase
 vim .env    # 检查配置，建议修改默认凭据
 ```
 
+启动前先创建专用 `metabase` 数据库及 `dbuser_metabase` 用户，并与 `.env` 中的连接信息保持一致；不要共用 Pigsty CMDB 数据库。
+
 启动服务：
 
 ```bash
@@ -34,8 +38,8 @@ make up     # 使用 Docker Compose 启动 Metabase
 
 访问 Metabase：
 
-- 默认地址： http://metabase.pigsty
-- 备用地址： http://10.10.10.10:3001
+- 默认地址： http://mtbs.pigsty
+- 备用地址： http://10.10.10.10:9004
 - 首次访问需要完成初始化设置
 
 
@@ -46,13 +50,13 @@ Pigsty 提供了便捷的 Makefile 命令来管理 Metabase 服务：
 
 ```bash
 make up      # 启动 Metabase 服务
-make run     # 使用 Docker 启动（连接外部 PostgreSQL）
+make run     # make up 的别名
 make view    # 显示 Metabase 访问地址
 make log     # 查看容器日志
 make info    # 查看服务详细信息
 make stop    # 停止服务
 make clean   # 停止并移除容器
-make pull    # 拉取最新镜像
+make pull    # 拉取配置指定的镜像
 make rmi     # 移除 Metabase 镜像
 make save    # 保存镜像到文件
 make load    # 从文件加载镜像
@@ -98,7 +102,11 @@ Metabase 可以连接到 Pigsty 管理的 PostgreSQL 数据库。
 Metabase 的配置在 `.env` 文件中：
 
 ```bash
-# Metabase 元数据库（建议使用 PostgreSQL）
+# 镜像与宿主机端口
+METABASE_IMAGE=metabase/metabase:v0.64.1.x
+MB_PORT=9004
+
+# Metabase 元数据库
 MB_DB_TYPE=postgres
 MB_DB_DBNAME=metabase
 MB_DB_PORT=5432
@@ -106,8 +114,6 @@ MB_DB_USER=dbuser_metabase
 MB_DB_PASS=DBUser.Metabase
 MB_DB_HOST=10.10.10.10
 
-# 应用配置
-JAVA_OPTS=-Xmx2g
 ```
 
 **建议**：为 Metabase 使用独立的 PostgreSQL 数据库存储元数据。
@@ -118,14 +124,16 @@ JAVA_OPTS=-Xmx2g
 
 Metabase 的元数据（用户、问题、仪表板等）存储在配置的数据库中。
 
-如果使用 H2 数据库（默认），数据会保存在 `/data/metabase` 目录。强烈建议在生产环境中使用 PostgreSQL 作为元数据库。
+当前模板默认使用外部 PostgreSQL 元数据库，没有为 H2 配置 `/data/metabase` 持久化目录。容器健康检查通过 `/api/health` 同时检查应用与元数据库；首次迁移期间请等待服务变为 healthy。
+
+从 Metabase 63 升级到 64 会自动迁移元数据库。升级前备份数据库并记录旧镜像 digest，先在备份恢复副本上验证。回滚需要配套的数据库备份与旧镜像，仅替换镜像不能撤销数据库迁移。参见 [升级指南](https://www.metabase.com/docs/latest/installation-and-operation/upgrading-metabase)。
 
 
 
 ## 性能优化
 
-- **使用 PostgreSQL**：替代默认的 H2 数据库
-- **增加内存**：通过 `JAVA_OPTS=-Xmx4g` 增加 JVM 内存
+- **使用 PostgreSQL**：为元数据库分配独立资源并监控负载
+- **增加内存**：如需调整 JVM 内存，在 Compose 的 `environment` 中显式传入 `JAVA_OPTS`；仅向 `.env` 添加该变量不会自动传入容器
 - **数据库索引**：为常查询的字段创建索引
 - **结果缓存**：启用 Metabase 的查询结果缓存
 - **定时更新**：合理设置仪表板的自动刷新频率
