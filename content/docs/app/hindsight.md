@@ -37,8 +37,11 @@ vi pigsty.yml                 # 修改域名、数据库密码与 LLM 设置
 - `HINDSIGHT_API_VECTOR_EXTENSION`：默认 `pgvector`
 - `HINDSIGHT_API_TEXT_SEARCH_EXTENSION`：默认 `native`
 - `HINDSIGHT_API_LLM_PROVIDER`：默认 `none`
+- `HF_HUB_OFFLINE`：默认 `1`，使用镜像预置模型；需要下载未缓存的模型时设为 `0` 并提供出站网络
 
-默认 `none` LLM Provider 只保证服务可启动；事实抽取、反思与整合能力需要配置 Ollama 或 OpenAI 兼容 API。
+默认 `none` LLM Provider 可以保留文本并使用本地 embedding/reranker 模型召回；事实抽取、反思与整合能力需要配置 Ollama 或 OpenAI 兼容 API。
+
+模板使用 `hindsight-cache` 命名卷保留预置及下载的模型。数据库需启用 `vector` 和位于 `public` 的 `pg_trgm`；复用其他模板数据库时先检查 `pg_trgm` 的位置，`CREATE EXTENSION IF NOT EXISTS` 不会移动已有扩展。
 
 ## 运维命令
 
