@@ -11,6 +11,8 @@ categories: [参考]
 
 ![Wiki.js](/img/docs/app/wiki.jpg)
 
+当前 Compose 使用未指定标签的 `requarks/wiki` 镜像；稳定 2.x 发布维护在 [`requarks/wiki-v2`](https://github.com/requarks/wiki-v2/releases)，原 `requarks/wiki` 仓库包含 3.x Beta。2026-10-08 验证时镜像解析为 2.5.316；生产升级前应记录并核对实际镜像版本。
+
 
 ## 太长;不看
 
@@ -34,11 +36,10 @@ bin/pgsql-db   pg-meta wiki
 ## 容器配置
 
 ```yaml
-version: "3"
 services:
   wiki:
     container_name: wiki
-    image: requarks/wiki:2
+    image: requarks/wiki
     environment:
       DB_TYPE: postgres
       DB_HOST: 10.10.10.10
@@ -56,8 +57,8 @@ services:
 * Default Port for wiki: 9002
 
 ```yaml
-# add to nginx_upstream
-- { name: wiki  , domain: wiki.pigsty.cc , endpoint: "127.0.0.1:9002"   }
+infra_portal:
+  wiki: { domain: wiki.pigsty.cc, endpoint: "127.0.0.1:9002" }
 ```
 
 ```bash
