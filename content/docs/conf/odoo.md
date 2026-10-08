@@ -6,7 +6,7 @@ icon: fa-solid fa-building
 categories: [参考]
 ---
 
-`app/odoo` 配置模板提供了自建 Odoo 开源 ERP 系统的参考配置，使用 Pigsty 托管的 PostgreSQL 作为数据库。
+`app/odoo` 配置模板提供了自建 Odoo Community 19 开源 ERP 系统的参考配置，使用 Pigsty 托管的 PostgreSQL 作为数据库。
 
 更多细节，请参考 **[Odoo 部署教程](/docs/app/odoo/)**
 
@@ -42,37 +42,28 @@ categories: [参考]
 
 ## 配置解读
 
-`app/odoo` 模板提供了 Odoo 开源 ERP 系统的一键部署方案。
-
-**Odoo 是什么**：
-- 全球最流行的开源 ERP 系统
-- 覆盖 CRM、销售、采购、库存、财务、HR 等企业管理模块
-- 支持数千个社区和官方应用扩展
-- 提供 Web 界面和移动端支持
+此单节点模板使用 Docker 运行 Odoo Community 19，由 Pigsty 管理 PostgreSQL。
 
 **关键特性**：
-- 使用 Pigsty 管理的 PostgreSQL 替代 Odoo 自带的数据库
-- 支持 Odoo 19.0 最新版本
-- 数据持久化到独立目录 `/data/odoo`
-- 支持自定义插件目录 `/data/odoo/addons`
+
+- 使用 Odoo `19.0` 镜像和 PostgreSQL 18，预建专用角色、数据库及 `unaccent`、`pg_trgm` 扩展
+- 默认监听所有地址的 8069 端口，支持直接访问和 Nginx 门户访问
+- 文件存储位于 `/data/odoo/webdata`，插件目录为 `/data/odoo/addons`
 
 **访问方式**：
 
 ```bash
-# Odoo Web 界面
-http://<IP>:8069
+http://<ip>:8069
 http://odoo.pigsty
-
-# 首次进入 Web 页面后按提示创建或设置管理员账号
 ```
 
-**适用场景**：
-- 中小企业 ERP 系统
-- 替代 SAP、Oracle ERP 等商业解决方案
-- 需要自定义业务流程的企业应用
+将 `odoo.pigsty` 解析到 Nginx 主机。应用初始登录为 `admin` / `admin`，首次登录后修改密码。
 
 **注意事项**：
-- Odoo 容器以 uid=100, gid=101 运行，数据目录需要正确的权限
-- 首次访问时需要创建数据库和设置管理员密码
-- 生产环境建议启用 HTTPS
-- 可通过 `/data/odoo/addons` 安装自定义模块
+
+- 部署前修改数据库密码和 `ODOO_ADMIN_PASSWORD`；数据库管理主密码与应用登录密码不同
+- `./app.yml` 初始化已有空库后启动 Web 容器，数据库管理页面默认关闭
+- `ODOO_PORT` 只填写发布端口号；修改后同步调整 Nginx `endpoint` 端口
+- 代理访问使用 `ODOO_PROXY_MODE=true`，仅直连时设为 `false`；生产环境使用 HTTPS
+- 数据目录归属 uid=100、gid=101
+- 文件存储和插件目录由用户自行使用 Restic 或 PGFS 备份

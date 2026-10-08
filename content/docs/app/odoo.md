@@ -2,126 +2,117 @@
 title: Odoo：自建开源 ERP
 weight: 560
 date: 2024-06-23
-description: 如何拉起开箱即用的企业级应用全家桶 Odoo，并使用 Pigsty 管理其后端 PostgreSQL 数据库。
+description: 使用 Pigsty 托管的 PostgreSQL 部署 Odoo Community 19。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-[Odoo](https://www.odoo.com/) 是一个开源企业资源规划 (ERP) 软件，提供一整套业务应用程序，包括 CRM、销售、采购、库存、生产、会计和其他管理功能。Odoo 是一个典型的 Web 应用程序，使用 PostgreSQL 作为底层数据库。
+[Odoo](https://www.odoo.com/) 是开源 ERP 软件，提供 CRM、销售、库存等业务应用。本模板使用 Odoo Community `19.0` 和 PostgreSQL 18，保持 19 系列插件兼容性。
 
-> 您的所有业务，都在一个平台上，简单、高效且实惠
-
-公开演示（不一定开放）：http://odoo.pigsty.io, 用户名: `test@pigsty.io`, 密码: `pigsty`
-
-
-
---------
+Odoo 19 要求 PostgreSQL 13 或更高版本、Python 3.10 或更高版本；官方 Docker 镜像提供 Python。
 
 ## 快速开始
 
-在运行兼容操作系统的全新 Linux x86 / ARM 服务器上执行：
+在运行兼容操作系统的全新 Linux x86_64 / ARM64 服务器上执行：
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
-./bootstrap                # 安装 ansible
-./configure -c app/odoo    # 使用 odoo 配置（请在 pigsty.yml 中更改凭据）
-./deploy.yml               # 安装 pigsty
-./docker.yml               # 安装 docker compose
-./app.yml                  # 使用 docker 启动 odoo 无状态部分
+./bootstrap                # 安装 Ansible
+./configure -c app/odoo    # 生成 Odoo 配置
+vi pigsty.yml              # 修改默认密码
+./deploy.yml               # 安装 Pigsty 和 PostgreSQL
+./docker.yml               # 安装 Docker Compose
+./app.yml                  # 初始化 Odoo 数据库并启动 Web 容器
 ```
 
-Odoo 默认监听在 8069 端口，您可以通过浏览器访问 `http://<ip>:8069`。默认的用户名和密码都是 `admin`。
+默认监听所有宿主机地址的 8069 端口，可直接访问 `http://<ip>:8069`。应用初始登录为 `admin` / `admin`，首次登录后修改密码。
 
-您可以在浏览器所在主机（`/etc/hosts`）添加一条解析记录 `odoo.pigsty` 指向您的服务器，这样您就可以通过 `http://odoo.pigsty` 访问 Odoo 网络界面了。
-
-如果您想要通过 SSL/HTTPS 访问 Odoo，您需要使用真正的 SSL 证书，或者信任 Pigsty 自动生成的自签名 CA 证书。（当然，在 Chrome 浏览器中，您也可以使用敲击键入 `thisisunsafe` 来绕过证书验证）
-
-
-
-
---------
+模板预建 `odoo` 数据库，关闭数据库管理页面。`ODOO_ADMIN_PASSWORD` 是数据库管理主密码，与应用登录密码不同。
 
 ## 配置模板
 
-[`conf/app/odoo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/odoo.yml) 定义了一个模板配置文件，包含单个 Odoo 实例所需的资源。
+源文件：[`conf/app/odoo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/odoo.yml)。
 
 ```yaml
 all:
   children:
 
-    # Odoo 应用程序（默认用户名和密码：admin/admin）
+    # the odoo application (default username & password: admin/admin)
     odoo:
       hosts: { 10.10.10.10: {} }
       vars:
-        app: odoo   # 指定要安装的应用程序名称（在 apps 中）
-        apps:       # 定义所有应用程序
-          odoo:     # 应用程序名称，应该有对应的 ~/pigsty/app/odoo 文件夹
-            file:   # 要创建的可选目录
+        app: odoo   # specify app name to be installed (in the apps)
+        apps:       # define all applications
+          odoo:     # app name, should have corresponding ~/pigsty/app/odoo folder
+            file:   # optional directory to be created
               - { path: /data/odoo         ,state: directory, owner: 100, group: 101 }
               - { path: /data/odoo/webdata ,state: directory, owner: 100, group: 101 }
               - { path: /data/odoo/addons  ,state: directory, owner: 100, group: 101 }
-            conf:   # 覆盖 /opt/<app>/.env 配置文件
-              PG_HOST: 10.10.10.10            # postgres 主机
-              PG_PORT: 5432                   # postgres 端口
-              PG_USERNAME: odoo               # postgres 用户
-              PG_PASSWORD: DBUser.Odoo        # postgres 密码
-              ODOO_PORT: 8069                 # odoo 应用程序端口
-              ODOO_DATA: /data/odoo/webdata   # odoo webdata
-              ODOO_ADDONS: /data/odoo/addons  # odoo 插件
-              ODOO_DBNAME: odoo               # odoo 数据库名称
-              ODOO_VERSION: 19.0              # odoo 镜像版本
+            conf:   # override /opt/<app>/.env config file
+              PG_HOST: 10.10.10.10            # postgres host
+              PG_PORT: 5432                   # postgres port
+              PG_USERNAME: odoo               # postgres user
+              PG_PASSWORD: DBUser.Odoo        # postgres password
+              ODOO_PORT: 8069                 # published HTTP port on all host interfaces
+              ODOO_PROXY_MODE: true           # trust this node's Nginx forwarded headers
+              ODOO_DATA: /data/odoo/webdata    # filestore and sessions
+              ODOO_ADDONS: /data/odoo/addons   # Odoo 19 addons
+              ODOO_DBNAME: odoo               # odoo database name
+              ODOO_ADMIN_PASSWORD: change-this-master-password # CHANGE ME: database manager master password
+              ODOO_VERSION: "19.0"            # stay on Odoo 19 for addon compatibility
 
-    # Odoo 数据库
+    # the odoo database
     pg-odoo:
       hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
       vars:
         pg_cluster: pg-odoo
         pg_users:
-          - { name: odoo    ,password: DBUser.Odoo ,pgbouncer: true ,roles: [ dbrole_admin ] ,createdb: true ,comment: admin user for odoo service }
+          - { name: odoo    ,password: DBUser.Odoo ,pgbouncer: true ,roles: [ dbrole_admin ] ,comment: admin user for odoo service }
           - { name: odoo_ro ,password: DBUser.Odoo ,pgbouncer: true ,roles: [ dbrole_readonly ]  ,comment: read only user for odoo service  }
           - { name: odoo_rw ,password: DBUser.Odoo ,pgbouncer: true ,roles: [ dbrole_readwrite ] ,comment: read write user for odoo service }
         pg_databases:
-          - { name: odoo ,owner: odoo ,revokeconn: true ,comment: odoo main database  }
+          - { name: odoo ,owner: odoo ,revokeconn: true ,extensions: [unaccent, pg_trgm] ,comment: odoo main database }
         pg_hba_rules:
-          - { user: all ,db: all ,addr: 172.17.0.0/16  ,auth: pwd ,title: 'allow access from local docker network' }
+          - { user: odoo ,db: odoo ,addr: 172.16.0.0/12 ,auth: pwd ,title: 'allow odoo access from local docker networks' }
           - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
-        pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行完整备份
+        pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # make a full backup every 1am
 
     infra: { hosts: { 10.10.10.10: { infra_seq: 1 } } }
     etcd:  { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
-  vars:                               # 全局变量
-    admin_ip: 10.10.10.10             # 管理节点 ip 地址
-    region: default                   # 上游镜像区域：default|china|europe
-    node_tune: oltp                   # 节点调优规格：oltp,olap,tiny,crit
-    pg_conf: oltp.yml                 # pgsql 调优规格：{oltp,olap,tiny,crit}.yml
+  vars:                               # global variables
+    version: v4.5.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: default                   # upstream mirror region: default|china|europe
+    node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit
+    pg_conf: oltp.yml                 # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
 
-    docker_enabled: true              # 在应用程序组上启用 docker
+    docker_enabled: true              # enable docker on app group
     #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
 
-    proxy_env:                        # 下载包和拉取 docker 镜像时的全局代理环境
+    proxy_env:                        # global proxy env when downloading packages & pull docker images
       no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.tsinghua.edu.cn"
-      #http_proxy:  127.0.0.1:12345   # 在此处添加代理环境以下载包或拉取镜像
-      #https_proxy: 127.0.0.1:12345   # 通常代理格式为 http://user:pass@proxy.xxx.com
+      #http_proxy:  127.0.0.1:12345 # add your proxy env here for downloading packages or pull images
+      #https_proxy: 127.0.0.1:12345 # usually the proxy is format as http://user:pass@proxy.xxx.com
       #all_proxy:   127.0.0.1:12345
 
-    infra_portal:                      # 域名和上游服务器
+    infra_portal:                     # domain names and upstream servers
       home  : { domain: i.pigsty }
       minio : { domain: m.pigsty ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
-      odoo:                            # nginx server config for odoo
-        domain: odoo.pigsty            # 替换为您自己的域名！
-        endpoint: "10.10.10.10:8069"   # odoo 服务端点：IP:PORT
-        websocket: true                # 添加 websocket 支持
-        certbot: odoo.pigsty           # certbot 证书名称，使用 `make cert` 申请
+      odoo:                           # nginx server config for odoo
+        domain: odoo.pigsty           # REPLACE WITH YOUR OWN DOMAIN!
+        endpoint: "10.10.10.10:8069"  # Odoo host IP and published HTTP port
+        websocket: true               # HTTP and WebSocket share 8069 with the default workers=0
+        certbot: odoo.pigsty          # cert name; use your real domain for public certificates
 
     repo_enabled: false
     node_repo_modules: node,infra,pgsql
-    pg_version: 18
+    pg_version: 18                    # Odoo 19 requires PostgreSQL 13 or later
 
-    #----------------------------------#
-    # 凭据：务必更改这些密码！
-    #----------------------------------#
+    #----------------------------------------------#
+    # PASSWORD : https://pigsty.io/docs/setup/security/
+    #----------------------------------------------#
     grafana_admin_password: pigsty
     grafana_view_password: DBUser.Viewer
     pg_admin_password: DBUser.DBA
@@ -133,115 +124,111 @@ all:
     etcd_root_password: Etcd.Root
 ```
 
---------
-
 ## 基础
 
-检查 `.env` 文件中的可配置环境变量：
+部署配置位于 `/opt/odoo/.env`：
 
 ```bash
-# https://hub.docker.com/_/odoo#
 PG_HOST=10.10.10.10
 PG_PORT=5432
-PG_USER=dbuser_odoo
-PG_PASS=DBUser.Odoo
+PG_USERNAME=odoo
+ODOO_DBNAME=odoo
+PG_PASSWORD=DBUser.Odoo
 ODOO_PORT=8069
+ODOO_PROXY_MODE=true
+ODOO_DATA=/data/odoo/webdata
+ODOO_ADDONS=/data/odoo/addons
+ODOO_ADMIN_PASSWORD=change-this-master-password
+ODOO_VERSION=19.0
 ```
 
-然后使用以下命令启动 odoo：
+`ODOO_PORT` 只填写宿主机发布端口号，Compose 通过 `"${ODOO_PORT}:8069"` 映射到容器内固定的 8069 端口。`ODOO_DBNAME` 指定单个数据库，名称不含逗号。
+
+手动部署时，先创建数据库角色、数据库及扩展，再在 Docker 主机上执行以下命令。Make 工具需要 Docker Compose、`jq` 和设置目录权限的权限。
 
 ```bash
-make up  # docker compose up
+cd /opt/odoo
+make init  # 初始化已有空库
+make up    # 启动 Web 服务
 ```
-
-访问 [http://ddl.pigsty](http://ddl.pigsty/) 或 http://10.10.10.10:8887
 
 ## Makefile
 
 ```bash
-make up         # 在最小模式下使用 docker compose 启动 odoo
-make run        # 使用 docker 启动 odoo，本地数据目录和外部 PostgreSQL
-make view       # 打印 odoo 访问点
-make log        # tail -f odoo 日志
-make info       # 使用 jq 检查 odoo
-make stop       # 停止 odoo 容器
-make clean      # 移除 odoo 容器
-make pull       # 拉取最新的 odoo 镜像
-make rmi        # 移除 odoo 镜像
-make save       # 保存 odoo 镜像到 /tmp/docker/odoo.tgz
-make load       # 从 /tmp/docker/odoo.tgz 加载 odoo 镜像
+make            # 初始化成功后启动服务，并打印访问地址
+make init       # 准备目录，初始化已有空库
+make up         # 启动或重新创建 Web 容器
+make view       # 打印访问地址
+make logs       # 持续查看容器日志
+make info       # 查看容器详情
+make stop       # 停止容器
+make down       # 移除 Compose 容器和网络
+make pull       # 拉取 ODOO_VERSION 指定的镜像
+make restart    # 重启现有容器
+make port       # 查看发布端口
+make save       # 保存镜像到 /tmp/docker/odoo.tgz
+make load       # 从 /tmp/docker/odoo.tgz 加载镜像
 ```
-
---------
 
 ## 使用外部 PostgreSQL
 
-您可以为 Odoo 使用外部 PostgreSQL。Odoo 将在设置期间创建自己的数据库，因此您不需要这样做
+支持 PostgreSQL 13 及以上版本。请先创建专用角色、数据库及 `unaccent`、`pg_trgm` 扩展：
 
 ```yaml
-pg_users: [ { name: dbuser_odoo ,password: DBUser.Odoo ,pgbouncer: true ,roles: [ dbrole_admin ]    ,comment: admin user for odoo database } ]
-pg_databases: [ { name: odoo ,owner: dbuser_odoo ,revokeconn: true ,comment: odoo primary database } ]
+pg_users: [ { name: odoo ,password: DBUser.Odoo ,roles: [ dbrole_admin ] ,comment: admin user for odoo service } ]
+pg_databases: [ { name: odoo ,owner: odoo ,revokeconn: true ,extensions: [unaccent, pg_trgm] ,comment: odoo main database } ]
 ```
 
-并使用以下命令创建业务用户和数据库：
+将以下命令中的 `pg-meta` 替换为实际数据库集群名：
 
 ```bash
-bin/pgsql-user  pg-meta  dbuser_odoo
-#bin/pgsql-db    pg-meta  odoo     # odoo 将在设置期间创建数据库
+bin/pgsql-user  pg-meta  odoo
+bin/pgsql-db    pg-meta  odoo
 ```
 
-检查连接性：
+将 `.env` 的 `PG_HOST`、`PG_PORT`、`PG_USERNAME`、`PG_PASSWORD` 指向该数据库，并配置 HBA 允许应用访问。此单库模板无需授予 Odoo 角色 `CREATEDB` 或 `SUPERUSER`。
+
+检查连接（按提示输入密码）：
 
 ```bash
-psql postgres://dbuser_odoo:DBUser.Odoo@10.10.10.10:5432/odoo
+psql -h 10.10.10.10 -p 5432 -U odoo -d odoo -W -c 'SELECT version();'
 ```
-
-------
 
 ## 暴露 Odoo 服务
 
-通过 nginx 门户 [暴露](/docs/infra/admin/portal/) odoo Web 服务：
+也可通过 Nginx [门户](/docs/infra/admin/portal/) 访问 Odoo。代理访问使用 `ODOO_PROXY_MODE=true`，仅直连时设为 `false`；修改 `.env` 后运行 `make up` 应用配置。
 
 ```yaml
-    infra_portal:                     # 域名和上游服务器
-      home         : { domain: i.pigsty }
-      grafana      : { domain: g.pigsty    ,endpoint: "${admin_ip}:3000" , websocket: true }
-      vmetrics     : { domain: v.pigsty    ,endpoint: "${admin_ip}:8428" }
-      alertmanager : { domain: a.pigsty    ,endpoint: "${admin_ip}:9059" }
-      blackbox     : { endpoint: "${admin_ip}:9115" }
-      vlogs        : { endpoint: "${admin_ip}:9428" }
-      odoo         : { domain: odoo.pigsty, endpoint: "127.0.0.1:8069", websocket: true }  # <------ 添加这一行
+infra_portal:
+  odoo:
+    domain: odoo.pigsty
+    endpoint: "10.10.10.10:8069"
+    websocket: true
+    certbot: odoo.pigsty  # 申请公开证书时使用真实域名
 ```
+
+将 `domain` 解析到 Nginx 主机，将 `endpoint` 指向 Odoo 主机和发布端口。修改 `ODOO_PORT` 后，同步调整此处的端口。
 
 ```bash
-./infra.yml -t nginx   # 设置 nginx 基础设施门户
+./infra.yml -t nginx   # 更新 Nginx 门户配置
 ```
 
-------
+默认 `workers=0`，HTTP 与 WebSocket 共用 8069。启用多进程后需另行配置 8072 和 `/websocket` 转发，参见 [Odoo 19 部署说明](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html)。
+
+生产环境使用 HTTPS，并在客户端信任 Pigsty 的 `files/pki/ca/ca.crt`，或配置公开可信的证书。
 
 ## Odoo 插件
 
-社区中有很多 Odoo 模块可用，您可以通过下载并将它们放在 `addons` 文件夹中来安装它们。
+选择适配 Odoo 19 的插件，将其解压到 `/data/odoo/addons`（容器内为 `/mnt/extra-addons`），并安装所需依赖。目录权限为 uid=100、gid=101。
 
-```yaml
-volumes:
-  - ./addons:/mnt/extra-addons
-```
+修改插件代码后运行 `make restart`。启用 [开发者模式](https://www.odoo.com/documentation/19.0/applications/general/developer_mode.html)，在“应用程序 → 更新应用程序列表”中刷新并安装插件。更多插件见 [Odoo Apps](https://apps.odoo.com/apps/modules/browse?order=Downloads)。
 
-您可以将 `./addons` 目录挂载到容器中的 `/mnt/extra-addons`，然后下载并解压到 `addons` 文件夹，
+## 更新与备份
 
-要启用插件模块，首先进入 [开发者模式](https://www.odoo.com/documentation/19.0/applications/general/developer_mode.html)
+更新 Odoo 19 镜像时，运行 `make pull`，再运行 `make up`。`make restart` 不应用新镜像或环境变量。需要固定版本时，将 `ODOO_VERSION` 设为已发布的 19.0 日期标签。跨主版本升级需要数据库迁移和插件适配。
 
-> 设置 -> 通用设置 -> 开发者工具 -> 激活开发者模式
-
-然后转到 > 应用程序 -> 更新应用程序列表，然后您可以找到额外的插件并从面板安装。
-
-常用的 [免费](https://apps.odoo.com/apps/modules/browse?order=Downloads) 插件：[会计套件](https://apps.odoo.com/apps/modules/19.0/base_accounting_kit/)
-
-------
+数据库由 Pigsty/pgBackRest 备份；文件存储和插件目录由用户自行使用 Restic 或 PGFS 备份。
 
 ## 演示
 
-查看公共演示：[http://odoo.pigsty.io](http://odoo.pigsty.io/)，用户名：`test@pigsty.io`，密码：`pigsty`
-
-如果您想通过 SSL 访问 odoo，您必须在浏览器中信任 `files/pki/ca/ca.crt`（或在 chrome 中使用肮脏的黑客 `thisisunsafe`）
+公共演示（不一定开放）：[http://odoo.pigsty.io](http://odoo.pigsty.io/)，用户名 `test@pigsty.io`，密码 `pigsty`。
