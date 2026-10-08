@@ -23,7 +23,7 @@ make up
 默认入口：
 
 - Web：`http://git.pigsty` 或 `http://<IP>:8889`
-- SSH：`<IP>:2222`
+- SSH：`<IP>:222`
 
 ## 数据库准备
 
@@ -37,6 +37,17 @@ bin/pgsql-db   pg-meta gitea
 ```bash
 postgres://dbuser_gitea:DBUser.Gitea@10.10.10.10:5432/gitea
 ```
+
+## 反向代理与升级
+
+Gitea 28 使用 `/-/ws` 提供通知，Nginx 入口需要开启 WebSocket：
+
+```yaml
+infra_portal:
+  gitea: { domain: git.pigsty, endpoint: "127.0.0.1:8889", websocket: true }
+```
+
+升级前一并备份 PostgreSQL 和 `/data/gitea`，记录正在运行的镜像 digest；回滚时恢复配套的数据库与文件备份。Gitea 28 默认在 400 天后删除已完成的 Actions 运行、日志和制品，需长期保留时应检查保留设置。参见 [Gitea 28 发布说明](https://blog.gitea.com/release-of-28.0.0/)。
 
 ## 常用命令
 
