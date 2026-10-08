@@ -10,7 +10,7 @@ categories: [参考]
 它提供 Web 与移动端上传、相册共享、时间线、地图、EXIF、RAW、LivePhoto、语义搜索、人脸识别与自动备份等能力，采用 AGPL-3.0 许可证。
 
 Pigsty 的 `app/immich` 模板使用 Docker Compose 拉起 Immich 应用层，并使用 Pigsty 托管的 PostgreSQL 保存元数据。
-当前模板按 Immich v3 组织，默认使用 VectorChord 作为相似图片、智能搜索与人脸检索的向量扩展。
+当前模板跟随 Immich `v3`，默认使用 VectorChord 作为相似图片、智能搜索与人脸检索的向量扩展。2026-10-08 验证时 Server/ML 均解析为 `3.3.0`，在 Linux amd64、PostgreSQL 18.6 的新媒体库上完成上传、缩略图和真实机器学习推理验证。
 
 相比 Immich 官方的单机 Compose 模板，这里的关键差异是：PostgreSQL 不再跑在应用容器里，而是交给 Pigsty 管理，从而获得监控、备份、PITR、扩展管理与高可用接入能力。
 
@@ -91,6 +91,7 @@ DB_VECTOR_EXTENSION=vectorchord
 ```sql
 CREATE EXTENSION vchord CASCADE;
 CREATE EXTENSION earthdistance CASCADE;
+CREATE EXTENSION pg_trgm WITH SCHEMA public;
 ```
 
 `vchord` 需要通过 `pg_libs` 加入 `shared_preload_libraries`，模板已经配置：
@@ -99,6 +100,8 @@ CREATE EXTENSION earthdistance CASCADE;
 pg_extensions: [ pgvector, vchord ]
 pg_libs: 'vchord.so, pg_stat_statements, auto_explain'
 ```
+
+`pg_trgm` 必须位于 `public`，因为 Immich 迁移使用未限定 schema 的 `gin_trgm_ops`。复用其他模板的数据库时，先核对该扩展位置；`CREATE EXTENSION IF NOT EXISTS` 不会移动已安装的扩展。
 
 这里默认使用直连 PostgreSQL 的 `5432` 端口。不要把 Immich 指向事务池模式的 PgBouncer；迁移、索引和预备语句场景下，直连 PostgreSQL 或 session pooling 更稳妥。
 
@@ -132,10 +135,12 @@ PostgreSQL 只保存元数据和文件路径。媒体文件不在 PostgreSQL 中
 ```bash
 docker pull ghcr.io/immich-app/immich-server:v3
 docker pull ghcr.io/immich-app/immich-machine-learning:v3
-docker pull docker.io/valkey/valkey:9
+docker pull docker.io/valkey/valkey:9@sha256:c123e3715db63d06d4ad6964884037aa0d5d4d703939b9929954112889708e1d
 ```
 
-如果拉取镜像较慢或受限，请在 `pigsty.yml` 中配置 `proxy_env` 或 `docker_registry_mirrors`。
+Valkey digest 与 [Immich 3.3.0 发布 Compose](https://github.com/immich-app/immich/releases/download/v3.3.0/docker-compose.yml) 一致；`make pull` 与 `make save` 都从 Compose 解析同一镜像引用。
+
+如果拉取镜像较慢或受限，请配置 Docker daemon 的代理；只有 shell `proxy_env` 不会配置 Docker 拉取代理。Docker Hub 镜像加速不覆盖 GHCR。可用 `docker compose config --images` 核对最终镜像集合。
 
 ------
 
@@ -157,7 +162,7 @@ make down     # 停止并移除容器
 如需固定具体 Immich 版本，在 `pigsty.yml` 中设置：
 
 ```yaml
-IMMICH_VERSION: v3.0.1
+IMMICH_VERSION: v3.3.0  # 可选固定版本；模板默认跟随 v3
 ```
 
 升级 Immich 或 VectorChord 前，请先阅读上游 release notes。VectorChord 包升级后，通常还需要在 `immich` 数据库中更新扩展并重建相关索引：
