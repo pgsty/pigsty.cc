@@ -6,14 +6,14 @@ module: [SOFTWARE]
 categories: [参考]
 ---
 
-[**FerretDB**](https://www.ferretdb.com/) 在 PostgreSQL 与 DocumentDB 扩展之上提供 MongoDB 兼容协议。Pigsty 的 `app/ferretdb` 只运行无状态协议代理；PostgreSQL、`postgres` 数据库、DocumentDB 扩展与后端登录用户必须预先存在，[`mongo` 配置模板](/docs/conf/mongo/) 会一次性准备这些依赖。
+[**FerretDB**](https://www.ferretdb.com/) 在 PostgreSQL 与 DocumentDB 扩展之上提供 MongoDB 兼容协议。Pigsty 的 `app/ferretdb` 只运行无状态协议代理；PostgreSQL、`postgres` 数据库、DocumentDB 扩展与后端登录用户必须预先存在，[`fork/mongo` 配置模板](/docs/conf/mongo/) 会一次性准备这些依赖。
 
 ## 快速开始
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./bootstrap
-./configure -c mongo
+./configure -c fork/mongo
 ./deploy.yml
 ./docker.yml -l pg-meta
 ./app.yml -l pg-meta
@@ -50,10 +50,10 @@ FerretDB 发行版会指定首选 DocumentDB 版本，而 Pigsty 可能提供更
 
 ## 可选三节点拓扑
 
-[`mongo` 模板](/docs/conf/mongo/) 包含一段默认注释的三节点 PostgreSQL / DocumentDB 集群：每个节点运行一个 FerretDB 容器，由 HAProxy 通过浮动入口 `10.10.10.4:27017`（`mongo.pigsty`）暴露标准端口。启用完整的 `pg-mongo` 与额外 etcd 成员后执行：
+[`fork/mongo` 模板](/docs/conf/mongo/) 包含一段默认注释的三节点 PostgreSQL / DocumentDB 集群：每个节点运行一个 FerretDB 容器，由 HAProxy 通过浮动入口 `10.10.10.4:27017`（`mongo.pigsty`）暴露标准端口。启用完整的 `pg-mongo` 与额外 etcd 成员后执行：
 
 ```bash
-./configure -c mongo
+./configure -c fork/mongo
 ./deploy.yml
 ./docker.yml -l pg-mongo
 ./app.yml -l pg-mongo

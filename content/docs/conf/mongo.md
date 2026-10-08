@@ -35,7 +35,7 @@ aliases:  # /docs/ferret/ 根路径重定向到内核页 /docs/pgsql/kernel/docu
 如果尚未安装 `mongosh`，请单独安装，或使用其他兼容 MongoDB 协议的客户端。
 
 ```bash
-./configure -c mongo
+./configure -c fork/mongo
 ./deploy.yml
 ./docker.yml -l pg-meta
 ./app.yml -l pg-meta
@@ -62,7 +62,7 @@ mongosh 'mongodb://mongod:DBUser.Mongo@127.0.0.1:27017/'
 
 ## 配置
 
-源文件：[`pigsty/conf/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mongo.yml)
+源文件：[`pigsty/conf/fork/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/mongo.yml)
 
 {{< include file="yaml/mongo.yml" code=true lang="yaml" >}}
 
