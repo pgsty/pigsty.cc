@@ -17,9 +17,10 @@ Pigsty 提供对自托管 Dify 的支持，允许您使用单个命令部署 Dif
 - [配置](#配置)
 - [检查清单](#检查清单)
 - [域名和 SSL](#域名和-ssl)
+- [升级](#升级)
 - [文件备份](#文件备份)
 
-> `app/dify` 模板最后验证的 Dify 版本：`v1.15.0`（2026-07-09）。模板包含一份针对 PostgreSQL 18 内置 `uuidv7()` 的 Dify 迁移脚本兼容补丁。
+> 当前模板使用 Dify `v1.17.1`，配套 plugin daemon `v0.6.10-local` 与 sandbox `v0.2.15`。2026-10-08 已在 Linux amd64、PostgreSQL 18.6 上验证登录、已有 Code 工作流及相关服务连接。Dify v1.16 起原生支持 PostgreSQL 18 的 `uuidv7()`，不再需要本地迁移补丁。
 
 ------
 
@@ -52,7 +53,7 @@ Pigsty 为 Dify 提供声明式部署，并可使用镜像解决中国地区的�
 部署 Compose Redis、VictoriaMetrics/Grafana 监控与 Nginx 反向代理；满足公网 DNS、端口和 Certbot 配置后，还可申请 Let's Encrypt 证书。
 文件默认保存到 `DIFY_DATA`（`/data/dify`），也可按需接入 Silo/S3 对象存储。
 
-当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件与插件数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Compose 内置 Redis 的数据仍位于 `/opt/dify/volumes/redis/data`，Sandbox 依赖与 Certbot 数据也位于 `/opt/dify/volumes/`，因此整套应用并非完全无状态，备份时不能只保留数据库。
+当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件与插件数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Compose 内置 Redis 的数据仍位于 `/opt/dify/volumes/redis/data`，Sandbox 依赖与 Certbot 数据也位于 `/opt/dify/volumes/`，Agent 本地沙箱的 `/home/dify` 与 `/workspace` 还使用独立命名卷，因此备份时不能只保留数据库和宿主机目录。
 
 ------
 
@@ -118,6 +119,7 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
   - 在 Dify 的配置块中，请相应修改 `DB_USERNAME`、`DB_PASSWORD`、`PGVECTOR_USER`、`PGVECTOR_PASSWORD` 等参数
 - 您是否修改了 Dify 的默认加密密钥？
   - 您可以使用 `openssl rand -base64 42` 随机生成密码字符串并填入 `SECRET_KEY` 参数
+  - 同时替换 `DIFY_AGENT_API_TOKEN`、`DIFY_AGENT_SERVER_SECRET_KEY`、`DIFY_AGENT_LOCAL_SANDBOX_AUTH_TOKEN` 三个 Agent 示例密钥；分别生成独立随机值，服务器密钥使用 `secrets.token_urlsafe(32)` 生成的格式
 - 您是否修改了 Dify 使用的域名？
   - 将占位符域名 `dify.pigsty` 替换为您的实际域名，例如 `dify.pigsty.cc`
   - 您可以使用 `sed -ie 's/dify.pigsty/dify.pigsty.cc/g' pigsty.yml` 修改 Dify 的域名
@@ -168,9 +170,31 @@ all:
 
 ------
 
+## 升级
+
+升级前确认 PostgreSQL 备份有效，并备份下文列出的文件与命名卷。`MIGRATION_ENABLED=true` 时，API 容器启动会自动执行数据库迁移。更新配置、拉取新镜像并重建 API 容器，确认其运行新版本后，也可显式运行：
+
+```bash
+docker compose exec api flask db upgrade
+```
+
+Dify 1.17.1 已将 1.15 之前的旧模型类型迁移纳入上述流程，不再单独运行 `flask data-migrate legacy-model-types`。从 1.15 之前升级且尚未完成插件自动升级回填的部署，仍需执行一次：
+
+```bash
+docker compose exec api flask backfill-plugin-auto-upgrade
+```
+
+从 1.16 升级时，将部署覆盖项中的 `EDITION` 改为 `DEPLOYMENT_EDITION`，`DIFY_AGENT_SHELLCTL_AUTH_TOKEN` 改为 `DIFY_AGENT_LOCAL_SANDBOX_AUTH_TOKEN`，`DIFY_AGENT_SHELLCTL_ENTRYPOINT` 改为 `DIFY_AGENT_LOCAL_SANDBOX_ENDPOINT`，`AGENT_BACKEND_RUN_TIMEOUT_SECONDS` 改为 `DIFY_AGENT_RUN_TIMEOUT_SECONDS`。内置自托管沙箱使用 `DIFY_AGENT_RUNTIME_BACKEND=local`。
+
+1.17.1 修复了文档提取、Human Input、协作和 Agent 问题；此前错误提取的 CSV、Notion、XLS 文档需要重新导入，升级镜像不会修复已索引的文本。参见 [1.17.1 发布说明](https://github.com/langgenius/dify/releases/tag/1.17.1)。
+
+Agent 功能仍为 Beta，只应向可信用户开放。`SSRF_PROXY_ALLOW_PRIVATE_IPS` 与 `SSRF_PROXY_ALLOW_PRIVATE_DOMAINS` 同时用于工作流和 Agent 代理，默认留空以拒绝私网访问。显式放行 `api`、`agent_backend` 或覆盖其地址的网段，会放行这些服务的其他普通路径；应使用精确目标。Agent 的 shellctl 控制网络仍允许本地沙箱直接访问 `agent_backend`。
+
+------
+
 ## 文件备份
 
-您可以使用 `restic` 备份 Dify 的文件状态。当前模板至少需要保留 `/data/dify`、`/opt/dify/.env` 与 `/opt/dify/volumes/`；其中后者包含 Compose Redis、Sandbox 依赖和可能存在的 Certbot 数据。PostgreSQL 中的 Dify 数据仍应使用 Pigsty/pgBackRest 单独备份。
+您可以使用 `restic` 备份 Dify 的文件状态。当前模板至少需要保留 `/data/dify`、`/opt/dify/.env` 与 `/opt/dify/volumes/`；其中后者包含 Compose Redis、Sandbox 依赖和可能存在的 Certbot 数据。PostgreSQL 中的 Dify 数据仍应使用 Pigsty/pgBackRest 单独备份。还需单独备份 `dify_agent_local_sandbox_home` 与 `dify_agent_local_sandbox_workspace` 命名卷（实际名称带 Compose 项目前缀）；下面的 Restic 命令不包含这两个卷。
 
 ```bash
 export RESTIC_REPOSITORY=/data/backups/dify   # 指定 dify 备份目录
