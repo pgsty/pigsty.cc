@@ -10,7 +10,7 @@ categories: [参考]
 
 Pigsty 提供 `app/insforge` 配置模板，将 InsForge OSS 的无状态服务运行在 Docker Compose 中，并把最关键的状态放入 Pigsty 托管的 PostgreSQL。这样可以继续使用 Pigsty 的高可用、备份恢复、监控、入口域名与基础设施能力，而不是把数据库藏在临时容器卷里。
 
-当前模板面向 InsForge OSS `v2.2.6`，使用外部 PostgreSQL，默认暴露 InsForge Dashboard/API、PostgREST 和 Deno Runtime 三个服务。
+当前模板面向 InsForge OSS `v2.3.3`，使用外部 PostgreSQL，默认运行 InsForge Dashboard/API、PostgREST 和 Deno Runtime 三个服务；后两者只绑定宿主机回环地址。
 
 ------
 
@@ -24,10 +24,18 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c app/insforge  # 使用 InsForge 配置模板
 vi pigsty.yml                # 必改：密钥、管理员账号、数据库密码、域名
 
-./deploy.yml                 # 安装 Pigsty、Infra、Etcd、PostgreSQL
+./infra.yml                  # 先创建 CA 并初始化基础设施
+./node.yml -l pg-meta         # 准备 PostgreSQL 节点
+./pgsql.yml -l pg-meta -t pg_install # 只安装 PostgreSQL 软件包
+# 在每个 PostgreSQL 节点安装工具库，以下为 Debian/Ubuntu PG18 示例
+sudo apt-get install -y postgresql-server-dev-18 build-essential curl patch
+sudo env PG_CONFIG=/usr/lib/postgresql/18/bin/pg_config bash app/insforge/pgutils/install.sh
+./deploy.yml                 # 预加载工具库后初始化 PostgreSQL 并部署 Pigsty
 ./docker.yml                 # 安装 Docker 和 Compose
 ./app.yml                    # 安装 InsForge
 ```
+
+新部署必须先执行 `infra.yml`，后续 `node.yml` 才能使用其 CA。已有 Pigsty 环境应保留现有 INFRA/ETCD 清单，不要重复初始化；工具库在每个数据库节点的安装要求见 [数据库与权限](#数据库与权限)。
 
 安装完成后，默认访问地址为：
 
@@ -54,7 +62,7 @@ vi pigsty.yml                # 必改：密钥、管理员账号、数据库密�
 - [ ] 用 `openssl rand -base64 32` 分别生成新的 `JWT_SECRET` 与 `ENCRYPTION_KEY`。
 - [ ] 将 `POSTGRES_PASSWORD` 与 `pg_users` 中的 `dbuser_insforge` 用户密码保持一致。
 - [ ] 如果通过公网访问，配置真实域名、HTTPS 证书和防火墙访问策略。
-- [ ] 确认 PostgreSQL 扩展包安装正常，部署后检查 `pig pb info`。
+- [ ] 在每个 PostgreSQL 节点安装并预加载 `insforge_pg_utils`，确认扩展包安装正常，部署后检查 `pig pb info`。
 
 ------
 
@@ -82,9 +90,9 @@ InsForge 模板默认将数据库和应用容器分离：
 
 组件说明：
 
-- **InsForge App**：`ghcr.io/insforge/insforge-oss:v2.2.6`，提供 Dashboard 和主 API，监听 `7130`。
-- **PostgREST**：`postgrest/postgrest:v12.2.12`，从 PostgreSQL schema 自动生成 REST API，宿主机端口为 `5430`。
-- **Deno Runtime**：`ghcr.io/insforge/deno-runtime:latest`，用于边缘函数运行时，监听 `7133`。
+- **InsForge App**：`ghcr.io/insforge/insforge-oss:v2.3.3`，提供 Dashboard 和主 API，监听 `7130`。
+- **PostgREST**：`postgrest/postgrest:v12.2.12`，从 PostgreSQL schema 自动生成 REST API，宿主机入口为 `127.0.0.1:5430`。
+- **Deno Runtime**：`denoland/deno:alpine-2.0.6`，运行模板内固定版本的函数服务，宿主机入口为 `127.0.0.1:7133`。
 - **PostgreSQL**：由 Pigsty 管理，负责持久化状态、备份、监控和高可用。
 
 ------
@@ -132,11 +140,14 @@ pg-meta:
         owner: dbuser_insforge
         baseline: insforge.sql
         extensions: [pgcrypto, http, pg_cron]
-    pg_libs: 'pg_cron, pg_stat_statements, auto_explain'
+    pg_libs: 'pg_cron, insforge_pg_utils, pg_stat_statements, auto_explain'
     pg_parameters:
       cron.database_name: insforge
+      cron.use_background_workers: true
       app.encryption_key: your-encryption-key-here-must-be-32-char-or-above
       insforge.policy_grant_role: project_admin
+      insforge.extension_grant_role: project_admin
+      insforge.policy_grant_tables: 'storage.objects,realtime.channels,realtime.messages,payments.stripe_checkout_sessions,payments.stripe_customer_portal_sessions,payments.razorpay_orders,payments.razorpay_subscriptions'
       insforge.internal_schemas: 'ai,auth,compute,deployments,email,functions,memory,payments,realtime,schedules,storage,system'
     pg_extensions: [ pg_cron, pg_http ]
     pg_hba_rules:
@@ -159,11 +170,12 @@ pg-meta:
 | `POSTGRES_DB` | `insforge` | InsForge 数据库 |
 | `POSTGRES_USER` | `dbuser_insforge` | InsForge 连接 PostgreSQL 的业务用户 |
 | `POSTGRES_PASSWORD` | `DBUser.Insforge` | 业务用户密码，生产必须替换 |
-| `INSFORGE_VERSION` | `v2.2.6` | InsForge OSS 镜像标签 |
-| `DENO_RUNTIME_VERSION` | `latest` | Deno Runtime 镜像标签 |
+| `INSFORGE_VERSION` | `v2.3.3` | InsForge OSS 镜像标签 |
+| `DENO_RUNTIME_IMAGE` | `denoland/deno:alpine-2.0.6` | Deno Runtime 完整镜像名 |
+| `INSFORGE_IMAGE` | 空 | 可选完整应用镜像覆盖，优先于 `INSFORGE_VERSION` |
 | `APP_PORT` | `7130` | InsForge App 对外端口 |
-| `POSTGREST_PORT` | `5430` | PostgREST 对外端口 |
-| `DENO_PORT` | `7133` | Deno Runtime 对外端口 |
+| `POSTGREST_PORT` | `5430` | PostgREST 回环监听端口 |
+| `DENO_PORT` | `7133` | Deno Runtime 回环监听端口 |
 | `ACCESS_API_KEY` | 空 | 可选 MCP / API 访问密钥，为空时由 InsForge 生成 |
 | `ACCESS_ANON_KEY` | 空 | 可选前端匿名访问密钥，设置时应以 `anon_` 开头 |
 | `OPENROUTER_API_KEY` | 空 | 可选 OpenRouter 模型网关密钥 |
@@ -213,7 +225,11 @@ NOTIFY pgrst, 'reload schema';
 
 用于通知 PostgREST 重新加载 schema。
 
-InsForge 上游的 PostgreSQL 镜像会预置 `insforge_pg_utils`。Pigsty 当前模板没有依赖这个扩展包，而是使用 Pigsty 已提供的 `pgcrypto`、`http`、`pg_cron`，并让 InsForge 应用迁移负责运行时 schema。
+`insforge_pg_utils` 是必需的 PostgreSQL 工具库，使 `project_admin` 能管理受管表的 RLS 策略和扩展；应用迁移不能替代它。将完整的 `app/insforge/pgutils/` 目录复制到每个数据库节点，在 PostgreSQL 初始化前安装并通过 `pg_libs` 预加载。它不提供 SQL 对象，无需 `CREATE EXTENSION`。
+
+`pgutils/install.sh` 下载并校验固定的官方源码，应用 PG16–18 兼容补丁后用 PGXS 编译。Debian/Ubuntu 的 PG18 使用 `postgresql-server-dev-18` 和 `/usr/lib/postgresql/18/bin/pg_config`；EL/RPM 使用 `postgresql18-devel`、`gcc`、`make`、`curl`、`patch` 和 `/usr/pgsql-18/bin/pg_config`。脚本不修改配置或重启集群；已有部署需要单独安排预加载配置与重启。
+
+`cron.use_background_workers: true` 让计划任务使用后台工作进程，无需增加回环 `trust` 规则；为 cron、复制及其他扩展预留足够的 `max_worker_processes`。
 
 ------
 
@@ -224,8 +240,10 @@ InsForge 上游的 PostgreSQL 镜像会预置 `insforge_pg_utils`。Pigsty 当�
 | 服务 | 容器 | 宿主机端口 | 说明 |
 |------|------|------------|------|
 | InsForge App | `insforge` | `7130` | Dashboard 与主 API |
-| PostgREST | `insforge-postgrest` | `5430` | 自动生成 REST API |
-| Deno Runtime | `insforge-deno` | `7133` | 边缘函数运行时 |
+| PostgREST | `insforge-postgrest` | `127.0.0.1:5430` | 自动生成 REST API |
+| Deno Runtime | `insforge-deno` | `127.0.0.1:7133` | 边缘函数运行时 |
+
+远程客户端通过 InsForge 主 API 访问数据与函数，不直接暴露 PostgREST 和 Deno。Docker compute provider 为可选功能，模板默认不挂载 Docker socket；启用该挂载将授予容器相当于宿主机 root 的能力。
 
 默认 Docker 卷如下：
 
@@ -301,6 +319,16 @@ make clean    # 删除已停止容器
 make edit     # 编辑 .env
 ```
 
+### 升级至 v2.3.3
+
+升级前备份 PostgreSQL（包含 `system.migrations`）、文件存储与部署覆盖配置，并保留现有 JWT 和凭据加密密钥。拉取新镜像并重建 InsForge 容器后，启动迁移器会自动执行并记录 `065_restrict-http-extension-to-admin`。
+
+该迁移撤销 `http` 扩展 13 个外连及 curl 选项函数签名的 `PUBLIC EXECUTE`，保留 `project_admin` 执行权限，阻止普通用户和匿名 API 密钥借 RPC 调用它们。新库的 `files/insforge.sql` 已含对应限制；**不要对既有数据库重放完整 baseline，也不需要另行手工执行一份 065 SQL**。
+
+升级后检查迁移记录及实际函数权限；默认应为 `anon=false`、`authenticated=false`、`project_admin=true`。自定义角色成员关系或显式授权仍可能赋予额外权限。参见 [模板升级检查](https://github.com/pgsty/pigsty/tree/main/app/insforge#upgrade-to-v233) 与 [官方迁移](https://github.com/InsForge/InsForge/blob/636d1e207d2bca246f7b8ccd0e0b6572528809fa/backend/src/infra/database/migrations/065_restrict-http-extension-to-admin.sql)。
+
+### 离线部署
+
 离线环境可以提前保存镜像：
 
 ```bash
@@ -309,6 +337,8 @@ make pull
 make save
 make tarball
 ```
+
+Deno 首次启动需要访问 `deno.land` 和 `registry.npmjs.org` 预缓存函数服务及 worker 依赖，SDK 固定为 `@insforge/sdk@1.5.2`，依赖图由 `functions/deno.lock` 锁定。可使用 `DENO_HTTP_PROXY` / `DENO_HTTPS_PROXY`。`make save` 只保存镜像，不包含 `deno_cache` 卷；离线环境还需单独准备并转移该缓存。
 
 默认产物位置：
 

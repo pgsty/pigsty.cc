@@ -44,14 +44,16 @@ categories: [参考]
 
 `app/insforge` 模板默认部署：
 
-- InsForge 主服务：`ghcr.io/insforge/insforge-oss:v2.2.6`，端口 `7130`
-- PostgREST：`postgrest/postgrest:v12.2.12`，端口 `5430`
-- Deno Runtime：端口 `7133`
+- InsForge 主服务：`ghcr.io/insforge/insforge-oss:v2.3.3`，端口 `7130`
+- PostgREST：`postgrest/postgrest:v12.2.12`，回环入口 `127.0.0.1:5430`
+- Deno Runtime：`denoland/deno:alpine-2.0.6`，回环入口 `127.0.0.1:7133`
 - PostgreSQL 数据库：`insforge`
-- 扩展：`pgcrypto`、`http`、`pg_cron`
+- 扩展：`pgcrypto`、`http`、`pg_cron`；另需在每个数据库节点安装并预加载 `insforge_pg_utils`
 - PostgreSQL 18，并为 `project_admin` 开启 `BYPASSRLS`
 - 本机 Docker 网段 HBA：`172.16.0.0/12`
 - Nginx 入口：`isf.pigsty` -> `10.10.10.10:7130`
+
+首次部署须先初始化 INFRA，再安装 PostgreSQL 软件包和 `pgutils` 工具库，最后初始化数据库，详见 [部署步骤](/docs/app/insforge/#快速开始)。既有库升级到 v2.3.3 时由应用自动执行迁移 065，不重放 `files/insforge.sql`。
 
 **访问方式**：
 
