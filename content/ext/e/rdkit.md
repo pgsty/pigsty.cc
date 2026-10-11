@@ -38,7 +38,7 @@ weight: 2930
 {.ext-table .ext-table--rel}
 
 
-> RDKit 2026.09.1 (package 202609.1) installs SQL extension 4.8.0. Modern recipes target EL9+, Trixie, Noble and Resolute; DEB supports PG14-18 across suppliers. Legacy Bookworm/Jammy recipes use 202303.3 with librdkit1; modern DEB uses librdkit1t64. Local modern recipes retain the 4.7.0-to-4.8.0 fmcs_smiles upgrade fix. Repository publication of 202609.1 is pending; public indexes checked on 2026-10-06 still expose 202503.6 and legacy 202303.3.
+> RDKit 2026.09.1 (package 202609.1) installs SQL extension 4.8.0. Modern recipes target EL9+, Trixie, Noble and Resolute; DEB supports PG14-18 across suppliers. Legacy Bookworm/Jammy recipes use 202303.3 with librdkit1; modern DEB uses librdkit1t64.
 
 
 ## 版本

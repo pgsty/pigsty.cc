@@ -11,10 +11,10 @@ weight: 2910
     <div class="ext-card__title">orioledb/orioledb</div>
     <div class="ext-card__desc">https://github.com/orioledb/orioledb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/orioledb-beta16.tar.gz postgres-patches16_47.tar.gz postgres-patches17_20.tar.gz postgres-patches18_1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">orioledb-beta16.tar.gz postgres-patches16_47.tar.gz postgres-patches17_20.tar.gz postgres-patches18_1.tar.gz</div>
-    <div class="ext-card__desc">orioledb-beta16.tar.gz postgres-patches16_47.tar.gz postgres-patches17_20.tar.gz postgres-patches18_1.tar.gz</div>
+    <div class="ext-card__title">orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz</div>
+    <div class="ext-card__desc">orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz</div>
   </a>
 </div>
 
@@ -38,7 +38,7 @@ weight: 2910
 {.ext-table .ext-table--rel}
 
 
-> Upstream beta19 uses SQL 1.10 and patched kernels patches16_49/patches17_22/patches18_3; public beta, not recommended upstream for production. Published RPM/DEB packages and retained Pigsty sources remain 1.8/beta16 (patches16_47/patches17_20/patches18_1).
+> Upstream beta19 installs SQL 1.10 and requires patched kernels patches16_49/patches17_22/patches18_3. Retained Pigsty recipes, source archives and local RPM/DEB matrix use beta19 (package 1.10). Public beta, not recommended upstream for production; repository publication is checked separately.
 
 
 ## 版本
@@ -46,8 +46,8 @@ weight: 2910
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16" >}} | `orioledb` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

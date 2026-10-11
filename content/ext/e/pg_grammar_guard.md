@@ -11,10 +11,10 @@ weight: 1890
     <div class="ext-card__title">Manuelreyesbravo/pg_grammar_guard</div>
     <div class="ext-card__desc">https://github.com/Manuelreyesbravo/pg_grammar_guard</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_grammar_guard-0.4.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_grammar_guard-0.4.9.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_grammar_guard-0.4.1.tar.gz</div>
-    <div class="ext-card__desc">pg_grammar_guard-0.4.1.tar.gz</div>
+    <div class="ext-card__title">pg_grammar_guard-0.4.9.tar.gz</div>
+    <div class="ext-card__desc">pg_grammar_guard-0.4.9.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1890
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_grammar_guard`**](/ext/e/pg_grammar_guard) | `0.4.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pg_grammar_guard`**](/ext/e/pg_grammar_guard) | `0.4.9` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 1890
 {.ext-table .ext-table--rel}
 
 
-> Requires pg_living_assertions, despite older README text claiming no dependencies.
+> Requires pg_living_assertions >= 0.5.9.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_grammar_guard` | `pg_living_assertions` |
-| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_grammar_guard_$v` | `pg_living_assertions_$v` |
-| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-grammar-guard` | `postgresql-$v-pg-living-assertions` |
+| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.9` | {{< pgvers "18,17,16,15,14" >}} | `pg_grammar_guard` | `pg_living_assertions` |
+| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.9` | {{< pgvers "18,17,16,15,14" >}} | `pg_grammar_guard_$v` | `pg_living_assertions_$v` |
+| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-grammar-guard` | `postgresql-$v-pg-living-assertions` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -209,11 +209,13 @@ CREATE EXTENSION pg_grammar_guard CASCADE;  -- 依赖: pg_living_assertions
 
 来源：
 
-- [PGXN 0.4.1](https://pgxn.org/dist/pg_grammar_guard/0.4.1/)
+- [README.md](https://api.pgxn.org/src/pg_grammar_guard/pg_grammar_guard-0.4.8/README.md)
+- [pg_grammar_guard.control](https://api.pgxn.org/src/pg_grammar_guard/pg_grammar_guard-0.4.8/pg_grammar_guard.control)
+- [CHANGELOG.md](https://api.pgxn.org/src/pg_grammar_guard/pg_grammar_guard-0.4.8/CHANGELOG.md)
 
-`pg_grammar_guard` 根据目录中的标识符生成 GBNF 或 JSON Schema，并检测已批准语法的漂移。它是无需预加载的纯 SQL 扩展，本包支持 PostgreSQL 14–18。control 文件明确依赖 `pg_living_assertions`。
+`pg_grammar_guard` 0.4.8 根据目录标识符生成 GBNF 或 JSON Schema，并监测已批准语法的漂移。它以纯 SQL 实现，要求 `pg_living_assertions` 0.5.9 或更新版本。
 
-### 生成语法
+### 核心用法
 
 ```sql
 CREATE EXTENSION pg_grammar_guard CASCADE;
@@ -224,10 +226,6 @@ SELECT grammar_guard.grammar_for_json(ARRAY[
 ]::grammar_guard.grammar_field[]);
 ```
 
-目录辅助函数枚举实际存在的表、列和枚举标签。生成器支持嵌套对象和有界数组；任意 SQL、文件路径等开放集合仍需单独验证。
+### 运行边界
 
-### 检测变化
-
-`grammar_guard.watch()` 保存用于重建语法的查询，`grammar_guard.check_grammar()` 依据实时目录执行检查。可通过 `living_assertions.status` 查看结果及其年龄。
-
-只有受信任的管理员才应登记基线 SQL。语法能限制合法标识符，无法证明选择的表、关联或答案在语义上正确。旧 0.2 系列基线缺少原始生成查询，升级时需要人工重新批准。
+`grammar_guard.catalog_tables()` 与 `grammar_guard.catalog_columns()` 提供目录名称，`grammar_guard.grammar_for_json()` 组合带类型的字段、嵌套结构与有界数组。`grammar_guard.watch()` 保存重建语法的 SQL，`grammar_guard.check_grammar()` 与认可状态比较，结果见 `living_assertions.status`。生成查询使用作者的搜索路径并以作者身份执行。NULL 输入、空或重复字段名、空 pivot 及无效边界会被拒绝，`max_items` 上限为 1000。0.4.8 改变了规范化指纹，有序目录列表也可能使已有监测首次检查失效，应核实后重新批准。语法只约束合法词元，不保证语义正确或访问授权；仅登记可信 SQL。无需预加载。Apache-2.0 从 0.4.4 开始适用，更早版本保留原许可证。

@@ -49,7 +49,7 @@ weight: 10
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
 | [`pg_disorder`](/ext/e/pg_disorder) | `pg_disorder` | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
-| [`pg_local_cache`](/ext/e/pg_local_cache) | `pg_local_cache` | 为普通 PostgreSQL 主键读取提供事务感知的共享内存缓存 |
+| [`pg_local_cache`](/ext/e/pg_local_cache) | `pg_local_cache` | 通过 RESP2 MGET 提供 PostgreSQL 主键整行读取的事务感知共享内存缓存 |
 | [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |

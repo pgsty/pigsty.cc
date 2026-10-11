@@ -42,7 +42,7 @@ icon: fas fa-bank
 | [`online_advisor`](/ext/e/online_advisor) | [`online_advisor`](https://github.com/knizhnik/online_advisor) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在线建议缺失索引、扩展统计信息与预备语句 |
 | [`pg_column_tetris`](/ext/e/pg_column_tetris) | [`pg_column_tetris`](https://github.com/rogerwelin/pg_column_tetris) | `0.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 强制采用最优列对齐顺序，以减少 PostgreSQL 行数据中的填充浪费。 |
 | [`cat_tools`](/ext/e/cat_tools) | [`cat_tools`](https://github.com/Postgres-Extensions/cat_tools) | `0.3.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用于操作 PostgreSQL 系统目录的工具集 |
-| [`pg_living_assertions`](/ext/e/pg_living_assertions) | [`pg_living_assertions`](https://github.com/Manuelreyesbravo/pg_living_assertions) | `0.5.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 保存可执行 SQL 检查、核验日期和断言变更历史 |
+| [`pg_living_assertions`](/ext/e/pg_living_assertions) | [`pg_living_assertions`](https://github.com/Manuelreyesbravo/pg_living_assertions) | `0.5.10` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 保存可执行 SQL 检查、核验日期和断言变更历史 |
 | [`pg_savior`](/ext/e/pg_savior) | [`pg_savior`](https://github.com/viggy28/pg_savior) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止不带条件的全表更新以避免意外事故 |
 | [`pg_circuit`](/ext/e/pg_circuit) | [`pg_circuit`](https://github.com/PG-Circuit/pg-circuit) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 针对危险 SQL 语句提供运行时观察、告警和拦截 |
 | [`safeupdate`](/ext/e/safeupdate) | [`safeupdate`](https://github.com/eradman/pg-safeupdate) | `1.7` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
@@ -53,8 +53,8 @@ icon: fas fa-bank
 | [`pgagent`](/ext/e/pgagent) | [`pgagent`](https://www.pgadmin.org/docs/pgadmin4/development/pgagent.html) | `4.2.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL任务调度工具，与PGADMIN配合使用 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | [`pg_prewarm`](https://www.postgresql.org/docs/current/pgprewarm.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 预热关系数据 |
 | [`pgpool_adm`](/ext/e/pgpool_adm) | [`pgpool`](https://pgpool.net/) | `4.7.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGPool 管理函数 |
-| [`pgpool_recovery`](/ext/e/pgpool_recovery) | [`pgpool`](https://pgpool.net/) | `4.7.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGPool辅助扩展，从v4.3提供的恢复函数 |
-| [`pgpool_regclass`](/ext/e/pgpool_regclass) | [`pgpool`](https://pgpool.net/) | `4.7.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGPool辅助扩展，RegClass替代 |
+| [`pgpool_recovery`](/ext/e/pgpool_recovery) | [`pgpool`](https://pgpool.net/) | `4.7.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGPool辅助扩展，从v4.3提供的恢复函数 |
+| [`pgpool_regclass`](/ext/e/pgpool_regclass) | [`pgpool`](https://pgpool.net/) | `4.7.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGPool辅助扩展，RegClass替代 |
 | [`lo`](/ext/e/lo) | [`lo`](https://www.postgresql.org/docs/current/lo.html) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 大对象维护 |
 | [`basic_archive`](/ext/e/basic_archive) | [`basic_archive`](https://www.postgresql.org/docs/current/basic-archive.html) | `-` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 归档模块样例 |
 | [`basebackup_to_shell`](/ext/e/basebackup_to_shell) | [`basebackup_to_shell`](https://www.postgresql.org/docs/current/basebackup-to-shell.html) | `-` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 添加一种备份到Shell终端到基础备份方式 |
@@ -639,7 +639,7 @@ icon: fas fa-bank
 
 ## pg_living_assertions {#pg_living_assertions}
 
-[**`pg_living_assertions`**](/ext/e/pg_living_assertions) - `0.5.1` : 保存可执行 SQL 检查、核验日期和断言变更历史
+[**`pg_living_assertions`**](/ext/e/pg_living_assertions) - `0.5.10` : 保存可执行 SQL 检查、核验日期和断言变更历史
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -649,7 +649,7 @@ icon: fas fa-bank
 | **DEB** | `postgresql-$v-pg-living-assertions` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
@@ -848,7 +848,7 @@ icon: fas fa-bank
 
 ## pgpool_recovery {#pgpool_recovery}
 
-[**`pgpool`**](/ext/e/pgpool_recovery) - `4.7.2` : PGPool辅助扩展，从v4.3提供的恢复函数
+[**`pgpool`**](/ext/e/pgpool_recovery) - `4.7.3` : PGPool辅助扩展，从v4.3提供的恢复函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -867,7 +867,7 @@ icon: fas fa-bank
 
 ## pgpool_regclass {#pgpool_regclass}
 
-[**`pgpool`**](/ext/e/pgpool_regclass) - `4.7.2` : PGPool辅助扩展，RegClass替代
+[**`pgpool`**](/ext/e/pgpool_regclass) - `4.7.3` : PGPool辅助扩展，RegClass替代
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

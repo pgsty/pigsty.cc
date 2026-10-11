@@ -1,0 +1,64 @@
+// Native OINK appearance for the standalone Pigsty homepage.
+@import '../third_party/bootstrap/scss/functions';
+@import 'td/variables_forward';
+@import 'variables_project';
+@import 'td/variables';
+@import '../third_party/bootstrap/scss/variables';
+@import '../third_party/bootstrap/scss/variables-dark';
+@import '../third_party/bootstrap/scss/maps';
+@import '../third_party/bootstrap/scss/mixins';
+@import '../third_party/bootstrap/scss/root';
+@import '../third_party/bootstrap/scss/helpers/visually-hidden';
+@import 'td/tokens-typography';
+@import '../third_party/inter/normal';
+@import '../third_party/inter/italic';
+@import '../third_party/ibm-plex-sans/normal';
+@import '../third_party/ibm-plex-sans/italic';
+@import 'td/brand';
+
+@import 'td/shell/tokens';
+@import 'td/language-selector';
+@import 'td/site-navbar';
+@import 'td/theme-toggle';
+@import 'td/appearance';
+@import 'td/presets';
+@import 'td/experimental-presets';
+
+// Bridge the existing landing components to the published OINK palettes.
+html[data-td-preset][data-bs-theme] {
+  --bg: var(--bs-body-bg);
+  --bg-soft: var(--bs-secondary-bg);
+  --bg-elev: var(--td-brand-elev);
+  --bg-elev-2: var(--bs-tertiary-bg);
+  --ink: var(--bs-body-color);
+  --ink-soft: var(--bs-secondary-color);
+  --ink-mute: var(--bs-tertiary-color);
+  --pg: var(--bs-link-color);
+  --pg-strong: var(--bs-link-hover-color);
+  --line: var(--bs-border-color);
+  --line-strong: var(--td-brand-line-strong);
+  --header-bg: var(--td-brand-header-bg);
+  --font-body: var(--td-body-font-family);
+  --font-head: var(--td-heading-font-family);
+  --font-display: var(--td-display-font-family);
+  --font-mono: var(--td-code-font-family);
+  --copper: var(--td-brand-copper);
+  --copper-dim: var(--td-brand-copper-dim);
+  --silk: var(--td-brand-silk);
+  --shadow-sm: var(--td-brand-shadow-sm);
+  --shadow-md: var(--td-brand-shadow-md);
+  --shadow-lg: var(--td-shell-shadow-lg);
+}
+html[data-td-preset='ink'], html[data-td-preset='terminal'] {
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+html[data-td-preset='terminal'] {
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+}

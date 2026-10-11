@@ -16,7 +16,7 @@ icon: fas fa-icons
 | [`pg_liquid`](/ext/e/pg_liquid) | [`pg_liquid`](https://github.com/michael-golfi/pg_liquid) | `0.1.7` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 受 Liquid 启发的 Datalog 图查询扩展 |
 | [`onesparse`](/ext/e/onesparse) | [`one_sparse`](https://github.com/OneSparse/OneSparse) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
 | [`graph`](/ext/e/graph) | [`pggraph`](https://github.com/evokoa/pggraph) | `1.2.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 图查询与遍历扩展 |
-| [`pgrdf`](/ext/e/pgrdf) | [`pgrdf`](https://github.com/styk-tv/pgRDF) | `0.6.39` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展 |
+| [`pgrdf`](/ext/e/pgrdf) | [`pgrdf`](https://github.com/styk-tv/pgRDF) | `0.6.40` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展 |
 | [`pgq`](/ext/e/pgq) | [`pgq`](https://github.com/pgq/pgq) | `3.5.2` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通用队列的PG实现 |
 | [`pgmq`](/ext/e/pgmq) | [`pgmq`](https://github.com/pgmq/pgmq) | `1.13.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
 | [`pgmb`](/ext/e/pgmb) | [`pgmb`](https://github.com/fraruiz/pgmb) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一个简单的PostgreSQL消息代理系统 |
@@ -39,10 +39,10 @@ icon: fas fa-icons
 | [`imgsmlr`](/ext/e/imgsmlr) | [`imgsmlr`](https://github.com/postgrespro/imgsmlr) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用Haar小波分析计算图片相似度 |
 | [`pg_ivm`](/ext/e/pg_ivm) | [`pg_ivm`](https://github.com/sraoss/pg_ivm) | `1.16` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量维护的物化视图 |
 | [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.5.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
-| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/trickle-labs/pg-trickle) | `0.108.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
+| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/trickle-labs/pg-trickle) | `0.108.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`pg_durable`](/ext/e/pg_durable) | [`pg_durable`](https://github.com/microsoft/pg_durable) | `0.2.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
 | [`pg_disorder`](/ext/e/pg_disorder) | [`pg_disorder`](https://github.com/viralpraxis/pg_disorder) | `0.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
-| [`pg_local_cache`](/ext/e/pg_local_cache) | [`pg_local_cache`](https://github.com/profundium/pg_local_cache) | `2.0.4` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为普通 PostgreSQL 主键读取提供事务感知的共享内存缓存 |
+| [`pg_local_cache`](/ext/e/pg_local_cache) | [`pg_local_cache`](https://github.com/profundium/pg_local_cache) | `3.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通过 RESP2 MGET 提供 PostgreSQL 主键整行读取的事务感知共享内存缓存 |
 | [`provsql`](/ext/e/provsql) | [`provsql`](https://github.com/PierreSenellart/provsql) | `1.12.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.10` | <a class="ext-badge ext-badge--license apache20 or postgresql" href="/ext/license#apache20orpostgresql">Apache-2.0 OR PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
 | [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
@@ -87,7 +87,7 @@ icon: fas fa-icons
 | [`omni_worker`](/ext/e/omni_worker) | [`omnigres`](https://docs.omnigres.org/omni_worker/intro/) | `0.2.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 通用Worker池 |
 | [`omni_xml`](/ext/e/omni_xml) | [`omnigres`](https://docs.omnigres.org/omni_xml/overview/) | `0.1.2` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres XML工具包 |
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omnigres`](https://docs.omnigres.org/omni_yaml/yaml/) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres YAML工具包 |
-| [`pg_mentat`](/ext/e/pg_mentat) | [`pg_mentat`](https://codeberg.org/gregburd/mentat) | `1.10.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在 PostgreSQL 内提供兼容 Datomic 的数据模型与 Datalog 查询引擎 |
+| [`pg_mentat`](/ext/e/pg_mentat) | [`pg_mentat`](https://codeberg.org/gregburd/mentat) | `1.11.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在 PostgreSQL 内提供兼容 Datomic 的数据模型与 Datalog 查询引擎 |
 | [`bloom`](/ext/e/bloom) | [`bloom`](https://www.postgresql.org/docs/current/bloom.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | bloom 索引-基于指纹的索引 |
 {.ext-table}
 
@@ -172,7 +172,7 @@ icon: fas fa-icons
 
 ## pgrdf {#pgrdf}
 
-[**`pgrdf`**](/ext/e/pgrdf) - `0.6.39` : PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展
+[**`pgrdf`**](/ext/e/pgrdf) - `0.6.40` : PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -609,7 +609,7 @@ icon: fas fa-icons
 
 ## pg_trickle {#pg_trickle}
 
-[**`pg_trickle`**](/ext/e/pg_trickle) - `0.108.1` : 为 PostgreSQL 18 提供流式表与差分视图维护
+[**`pg_trickle`**](/ext/e/pg_trickle) - `0.108.3` : 为 PostgreSQL 18 提供流式表与差分视图维护
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -666,7 +666,7 @@ icon: fas fa-icons
 
 ## pg_local_cache {#pg_local_cache}
 
-[**`pg_local_cache`**](/ext/e/pg_local_cache) - `2.0.4` : 为普通 PostgreSQL 主键读取提供事务感知的共享内存缓存
+[**`pg_local_cache`**](/ext/e/pg_local_cache) - `3.1.0` : 通过 RESP2 MGET 提供 PostgreSQL 主键整行读取的事务感知共享内存缓存
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -1521,7 +1521,7 @@ icon: fas fa-icons
 
 ## pg_mentat {#pg_mentat}
 
-[**`pg_mentat`**](/ext/e/pg_mentat) - `1.10.3` : 在 PostgreSQL 内提供兼容 Datomic 的数据模型与 Datalog 查询引擎
+[**`pg_mentat`**](/ext/e/pg_mentat) - `1.11.1` : 在 PostgreSQL 内提供兼容 Datomic 的数据模型与 Datalog 查询引擎
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

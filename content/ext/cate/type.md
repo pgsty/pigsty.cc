@@ -13,7 +13,7 @@ icon: fas fa-cubes
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`prefix`](/ext/e/prefix) | [`pg_prefix`](https://github.com/dimitri/prefix) | `1.2.11` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 前缀树数据类型 |
-| [`semver`](/ext/e/semver) | [`pg_semver`](https://github.com/theory/pg-semver) | `0.41.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 语义版本号数据类型 |
+| [`semver`](/ext/e/semver) | [`pg_semver`](https://github.com/theory/pg-semver) | `0.42.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 语义版本号数据类型 |
 | [`pg_text_semver`](/ext/e/pg_text_semver) | [`pg_text_semver`](https://github.com/bigsmoke/pg_text_semver) | `1.2.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 语义版本域类型与比较运算符 |
 | [`pg_lexo`](/ext/e/pg_lexo) | [`pg_lexo`](https://github.com/Blad3Mak3r/pg_lexo) | `0.6.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 用于列表插入与重排的字典序位置类型 |
 | [`unit`](/ext/e/unit) | [`pgunit`](https://github.com/df7cb/postgresql-unit) | `7.10` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SI 国标单位扩展 |
@@ -83,7 +83,7 @@ icon: fas fa-cubes
 
 ## semver {#semver}
 
-[**`pg_semver`**](/ext/e/semver) - `0.41.0` : 语义版本号数据类型
+[**`pg_semver`**](/ext/e/semver) - `0.42.0` : 语义版本号数据类型
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

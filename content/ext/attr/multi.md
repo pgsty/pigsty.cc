@@ -95,8 +95,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.0.9` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
-| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.9` | `--s-d--` | - | 清理损坏的 PGroonga 内部数据库文件的恢复辅助扩展 |
+| 2110 | [**`pgroonga`**](/ext/e/pgroonga) | `4.1.0` | `-bs-d--` | - | 使用Groonga，面向所有语言的高速全文检索平台 |
+| 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.1.0` | `--s-d--` | - | 清理损坏的 PGroonga 内部数据库文件的恢复辅助扩展 |
 {.ext-table}
 
 ## hunspell
@@ -284,9 +284,9 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.3` | `----d-r` | - | PGPool 管理函数 |
-| 5910 | [`pgpool_recovery`](/ext/e/pgpool_recovery) | `4.7.2` | `----d--` | - | PGPool辅助扩展，从v4.3提供的恢复函数 |
-| 5920 | [`pgpool_regclass`](/ext/e/pgpool_regclass) | `4.7.2` | `----d--` | - | PGPool辅助扩展，RegClass替代 |
+| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.3` | `--s-d-r` | - | PGPool 管理函数 |
+| 5910 | [`pgpool_recovery`](/ext/e/pgpool_recovery) | `4.7.3` | `--s-d-r` | - | PGPool辅助扩展，从v4.3提供的恢复函数 |
+| 5920 | [`pgpool_regclass`](/ext/e/pgpool_regclass) | `4.7.3` | `--s-d-r` | - | PGPool辅助扩展，RegClass替代 |
 {.ext-table}
 
 ## pg_flight_recorder

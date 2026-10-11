@@ -38,7 +38,7 @@ weight: 6020
 {.ext-table .ext-table--rel}
 
 
-> Release/package 0.4.0 installs SQL extension 0.4. PG16-18; requires preload. Local RPM builds cover both EL8 architectures, using a private Bison 3.8.2 build tool there. Repository publication of 0.4.0 is pending; public indexes checked on 2026-10-06 still expose 0.3.6.
+> Maintained release/package 0.4.0 installs SQL extension 0.4. PG16-18; requires preload. Local RPM builds cover both EL8 architectures with a private Bison 3.8.2 build tool. Local matrix on 2026-10-10 has RPM 0.4.0 and DEB 0.3.6; retain maintained DEB 0.4.0. Repository publication is checked separately.
 
 
 ## 版本

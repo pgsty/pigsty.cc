@@ -2,17 +2,6 @@
 // The homepage keeps its own token system but shares the theme's markup,
 // search index, search engine, accessibility behavior, and keyboard controls.
 
-html[data-theme] {
-  --bs-border-color: var(--line);
-  --bs-body-bg: var(--bg);
-  --bs-body-color: var(--ink);
-  --td-shell-popover: var(--bg-elev);
-  --td-shell-muted-fg: var(--ink-mute);
-  --td-shell-primary: var(--pg);
-  --td-shell-primary-dim: color-mix(in srgb, var(--pg) 11%, transparent);
-  --td-shell-shadow-lg: var(--shadow-md);
-  --td-shell-ease-dialog: cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 html[data-td-shell-lock] {
   overflow: hidden;

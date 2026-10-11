@@ -11,10 +11,10 @@ weight: 5300
     <div class="ext-card__title">Manuelreyesbravo/pg_living_assertions</div>
     <div class="ext-card__desc">https://github.com/Manuelreyesbravo/pg_living_assertions</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_living_assertions-0.5.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_living_assertions-0.5.10.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_living_assertions-0.5.1.tar.gz</div>
-    <div class="ext-card__desc">pg_living_assertions-0.5.1.tar.gz</div>
+    <div class="ext-card__title">pg_living_assertions-0.5.10.tar.gz</div>
+    <div class="ext-card__desc">pg_living_assertions-0.5.10.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 5300
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_living_assertions`**](/ext/e/pg_living_assertions) | `0.5.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pg_living_assertions`**](/ext/e/pg_living_assertions) | `0.5.10` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -46,9 +46,9 @@ weight: 5300
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_living_assertions` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_living_assertions_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-living-assertions` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_living_assertions` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_living_assertions_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-living-assertions` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -210,15 +210,14 @@ CREATE EXTENSION pg_living_assertions;
 
 来源：
 
-- [README.md](https://github.com/Manuelreyesbravo/pg_living_assertions/blob/7bf075c6de879b05ec0ed8d135304ece83519317/README.md)
-- [pg_living_assertions.control](https://github.com/Manuelreyesbravo/pg_living_assertions/blob/7bf075c6de879b05ec0ed8d135304ece83519317/pg_living_assertions.control)
-- [pg_living_assertions--0.4.1--0.5.0.sql](https://github.com/Manuelreyesbravo/pg_living_assertions/blob/7bf075c6de879b05ec0ed8d135304ece83519317/pg_living_assertions--0.4.1--0.5.0.sql)
-- [pg_living_assertions--0.5.0--0.5.1.sql](https://github.com/Manuelreyesbravo/pg_living_assertions/blob/7bf075c6de879b05ec0ed8d135304ece83519317/pg_living_assertions--0.5.0--0.5.1.sql)
-- [test/sql/read_only.sql](https://github.com/Manuelreyesbravo/pg_living_assertions/blob/7bf075c6de879b05ec0ed8d135304ece83519317/test/sql/read_only.sql)
+- [README.md](https://api.pgxn.org/src/pg_living_assertions/pg_living_assertions-0.5.10/README.md)
+- [pg_living_assertions.control](https://api.pgxn.org/src/pg_living_assertions/pg_living_assertions-0.5.10/pg_living_assertions.control)
+- [CHANGELOG.md](https://api.pgxn.org/src/pg_living_assertions/pg_living_assertions-0.5.10/CHANGELOG.md)
+- [pg_living_assertions--0.5.9--0.5.10.sql](https://api.pgxn.org/src/pg_living_assertions/pg_living_assertions-0.5.10/pg_living_assertions--0.5.9--0.5.10.sql)
 
-`pg_living_assertions` 0.5.1 保存 SQL 检查、结论、核验时间与替换历史。检查按需运行，并非每次写入都求值的 SQL ASSERTION 约束。此扩展为纯 SQL 实现，无需预加载。
+`pg_living_assertions` 0.5.10 保存具名 SQL 断言、结果与替换历史。检查按需运行，并非每次写入都执行的约束。这是无需预加载的纯 SQL 扩展。
 
-### 注册与核验
+### 核心用法
 
 ```sql
 CREATE EXTENSION pg_living_assertions;
@@ -229,16 +228,10 @@ SELECT living_assertions.run('simple_check');
 SELECT name, state, age FROM living_assertions.status;
 ```
 
-### 结果与历史
+### 运行边界
 
-每个检查必须返回恰好一行，包含布尔列 `holds` 和可选文本列 `detail`。`living_assertions.run_all()` 执行已注册检查。`living_assertions.state()` 区分成立、失效、未知、报错、未检查、已退役与未注册；`living_assertions.stale()` 区分从未检查与结果过期。`living_assertions.declare_unchanged()` 保存表达式以供后续文本比较，因此作者必须自行规范化输出。定义通过附带原因的替换保留历史，结果与注册表数据包含在数据库备份中。
+检查返回一个布尔列 `holds` 和可选文本列 `detail`。`living_assertions.run_all()` 执行注册表中的检查；`living_assertions.state()`、`living_assertions.status` 和 `living_assertions.stale()` 区分失效、未知、报错，以及过期或未执行的检查。`living_assertions.declare_unchanged()` 对规范化表达式计算指纹，原有值变成 NULL 时判为失效。检查以记录的作者身份，在只读且回滚的子事务中执行，采用作者搜索路径并将临时模式放在最后。调用者须有权 `SET ROLE` 到该作者。求值时取得的会话咨询锁会被释放，但外部副作用和临时序列变化不在沙箱控制范围内，只有可信作者应登记 SQL。注册和检查时间由服务器确定，表拒绝 TRUNCATE，退役与替换仅限作者或有权代理的角色。升级须安装完整匹配的 SQL 链；旧断言保留原有指纹算法。当前版本采用 Apache-2.0，截至 0.5.3 的已发布版本仍保留原来的 PostgreSQL License。
 
-### 执行与权限
+### 0.5.10 的角色隔离
 
-从 0.5.0 起，求值器以只读方式在始终回滚的子事务中执行，并保留检查结论。这修复了旧求值器仅依赖 STABLE、无法阻止易变函数副作用的问题。它不是不可信 SQL 的沙箱：临时序列变更、会话级咨询锁与外部副作用仍可能保留。仅应授权可信管理员注册检查；检查使用后续调用者的权限执行。注册表属于扩展所有者，写入函数默认撤销 `PUBLIC` 执行权限。
-
-### 升级
-
-安装匹配的文件后，执行 `ALTER EXTENSION pg_living_assertions UPDATE TO '0.5.1'`。0.4.1→0.5.0→0.5.1 升级链替换求值函数，不修改注册表结构。最后的补丁在 `run()` 中限定行类型名称，防止类型缓存失效后在断言自身的无关搜索路径中重新解析类型。
-
-全新安装也使用较早的基础 SQL 脚本并依次应用包内升级链，因此必须安装完整且版本匹配的脚本集。
+0.5.10 在需要角色隔离时，将检查放入由记录作者拥有的临时 `SECURITY DEFINER` 函数。PostgreSQL 会拒绝在该执行环境中重置角色或会话授权；函数与只读检查在同一子事务中创建并回滚。需要该执行环境时，作者必须拥有数据库的 `TEMP` 权限，调用者仍须有权代理该作者。`SECURITY DEFINER` 调用者现可凭此权限执行其他作者的检查。这修复了 0.5.8/0.5.9 中重置角色的逃逸路径，但不会使外部副作用变得安全。

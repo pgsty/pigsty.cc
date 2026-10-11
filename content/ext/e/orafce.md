@@ -33,7 +33,7 @@ weight: 9100
 {.ext-table .ext-table--rel}
 
 
-> Upstream distribution 4.16.13 fixes possible dbms_sql crashes; SQL/control version is 4.16. Published PGDG RPM/DEB baseline remains 4.16.12.
+> Upstream distribution 4.16.13 fixes possible dbms_sql crashes; SQL/control version is 4.16. Local PGDG package matrix has RPM 4.16.12 and DEB 4.16.13 on 2026-10-10.
 
 
 ## 版本
@@ -42,7 +42,7 @@ weight: 9100
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.13` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.12` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.12` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.13` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

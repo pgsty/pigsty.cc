@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
+<html{{ partial "shell/document-attrs.html" (dict "page" . "theme_init" false) }} data-bs-theme="light" data-theme="light" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,10 +49,28 @@
     (function () {
       var t = null;
       try { t = window.localStorage.getItem('pigsty-landing-theme'); } catch (e) {}
-      if (t !== 'light' && t !== 'dark') {
+      if (t !== 'light' && t !== 'dark' || t === 'auto') {
         t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       }
       document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('data-bs-theme', t);
+      var root = document.documentElement;
+      var allowed = {{ (partialCached "preset-config.html" "preset-global").offered | jsonify | safeJS }};
+      var canvases = {{ partialCached "_funcs/preset-canvases.html" "preset-canvases" | jsonify | safeJS }};
+      var preset = root.getAttribute('data-td-site-preset');
+      try {
+        var stored = localStorage.getItem('td-preset');
+        if (allowed.indexOf(stored) >= 0) preset = stored;
+        else if (stored !== null) localStorage.removeItem('td-preset');
+      } catch (e) {}
+      root.setAttribute('data-td-preset', preset);
+      var canvas = canvases[preset];
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta && canvas) {
+        meta.setAttribute('data-td-canvas-light', canvas.light);
+        meta.setAttribute('data-td-canvas-dark', canvas.dark);
+        meta.setAttribute('content', t === 'dark' ? canvas.dark : canvas.light);
+      }
       document.documentElement.classList.remove('no-js');
       document.documentElement.classList.add('js');
     })();
@@ -67,6 +85,8 @@
   <!-- Landing Page CSS（指纹化：改动后 URL 变化，避免 CDN / 浏览器缓存旧样式） -->
   {{ $landingCss := resources.Get "css/landing-v3.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}">
+  {{ $appearanceCss := resources.Get "scss/landing-appearance.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $appearanceCss.RelPermalink }}" integrity="{{ $appearanceCss.Data.Integrity }}">
   {{ $localSearch := partial "shell/search-enabled.html" . }}
   {{ if $localSearch }}
   {{ $searchCss := resources.Get "scss/landing-search.scss" | toCSS | minify | fingerprint }}
@@ -218,10 +238,7 @@
               {{- partialCached "silo/icon.html" "search" "landing-search" -}}
             </button>
             {{- end }}
-            <button type="button" class="nav-util" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
-              {{- partialCached "silo/icon.html" "moon" "moon" -}}
-              {{- partialCached "silo/icon.html" "sun" "sun" -}}
-            </button>
+{{ partial "shell/appearance-menu.html" (dict "page" . "context" "navbar" "trigger" "nav-util") }}
             <a href="https://pigsty.io" class="nav-util" title="English Site" aria-label="切换到英文站">
               {{- partialCached "silo/icon.html" "languages" "languages" -}}
             </a>
@@ -252,9 +269,7 @@
     </button>
     {{- end }}
     <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
-    <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-theme-toggle>
-      <i class="fas fa-moon"></i> 亮暗切换
-    </button>
+{{ partial "shell/appearance-menu.html" (dict "page" . "context" "drawer" "trigger" "mobile-menu-link mobile-menu-link--btn" "label" (T "ui_appearance")) }}
     <a href="https://github.com/pgsty/pigsty" class="mobile-menu-link" target="_blank" rel="noopener">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -1346,6 +1361,8 @@
     </div>
   </footer>
 
+{{ $appearanceJs := resources.Get "js/appearance.js" | minify | fingerprint }}
+<script src="{{ $appearanceJs.RelPermalink }}" integrity="{{ $appearanceJs.Data.Integrity }}"></script>
 {{ $landingJs := resources.Get "js/landing-v3.js" | minify | fingerprint }}
 <script src="{{ $landingJs.RelPermalink }}" integrity="{{ $landingJs.Data.Integrity }}"></script>
 

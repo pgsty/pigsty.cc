@@ -18,7 +18,7 @@
   function getStoredTheme() {
     try {
       var v = window.localStorage.getItem(THEME_KEY);
-      return v === 'light' || v === 'dark' ? v : null;
+      return v === 'light' || v === 'dark' || v === 'auto' ? v : null;
     } catch (err) { return null; }
   }
 
@@ -33,6 +33,7 @@
   function applyTheme(theme) {
     var isLight = theme === 'light';
     document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-bs-theme', theme);
 
     document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
       var icon = btn.querySelector('i');
@@ -46,7 +47,13 @@
     });
 
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', isLight ? LIGHT_THEME_COLOR : DARK_THEME_COLOR);
+    if (meta) {
+      var canvas = meta.getAttribute(isLight ? 'data-td-canvas-light' : 'data-td-canvas-dark');
+      meta.setAttribute('content', canvas || (isLight ? LIGHT_THEME_COLOR : DARK_THEME_COLOR));
+    }
+    document.querySelectorAll('input[data-bs-theme-value]').forEach(function (input) {
+      input.checked = input.getAttribute('data-bs-theme-value') === (getStoredTheme() || 'auto');
+    });
 
     // 主题感知图片（如扩展生态全景图的深浅两版）
     document.querySelectorAll('img[data-theme-src-light]').forEach(function (img) {
@@ -59,8 +66,28 @@
     } catch (err) { /* ignore */ }
   }
 
+  function applyPreference(preference, store) {
+    if (preference !== 'light' && preference !== 'dark' && preference !== 'auto') return;
+    if (store) setStoredTheme(preference);
+    var resolved = preference === 'auto'
+      ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+      : preference;
+    applyTheme(resolved);
+  }
+
   function initThemeToggle() {
     applyTheme(currentTheme()); // 同步按钮图标 / 主题图片（data-theme 已由内联脚本设置）
+    document.querySelectorAll('input[data-bs-theme-value]').forEach(function (input) {
+      input.addEventListener('change', function () {
+        if (input.checked) applyPreference(input.getAttribute('data-bs-theme-value'), true);
+      });
+    });
+    window.addEventListener('storage', function (event) {
+      if (event.key === THEME_KEY || event.key === null) applyPreference(getStoredTheme() || 'auto', false);
+    });
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+      if (!getStoredTheme() || getStoredTheme() === 'auto') applyPreference('auto', false);
+    });
     document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var next = currentTheme() === 'light' ? 'dark' : 'light';

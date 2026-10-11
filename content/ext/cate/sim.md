@@ -33,7 +33,7 @@ icon: fas fa-user-ninja
 | [`pg_dbms_lock`](/ext/e/pg_dbms_lock) | [`pg_dbms_lock`](https://github.com/HexaCluster/pg_dbms_lock) | `2.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 为PG添加对 Oracle DBMS_LOCK 的完整兼容性支持 |
 | [`pg_dbms_job`](/ext/e/pg_dbms_job) | [`pg_dbms_job`](https://github.com/HexaCluster/pg_dbms_job) | `2.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 添加 Oracle DBMS_JOB 兼容性支持的扩展 |
 | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | [`pg_dbms_errlog`](https://github.com/HexaCluster/pg_dbms_errlog) | `2.4` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
-| [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`pg_utl_smtp`](https://github.com/hexacluster/pg_utl_smtp) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
+| [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`pg_utl_smtp`](https://github.com/hexacluster/pg_utl_smtp) | `2.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfish`](https://babelfishpg.org/) | `6.2.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfish`](https://babelfishpg.org/) | `6.2.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SQL Server SQL语法兼容性扩展 |
 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | [`babelfish`](https://babelfishpg.org/) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SQL Server TDS线缆协议兼容扩展 |
@@ -448,7 +448,7 @@ icon: fas fa-user-ninja
 
 ## pg_utl_smtp {#pg_utl_smtp}
 
-[**`pg_utl_smtp`**](/ext/e/pg_utl_smtp) - `1.0.0` : Oracle UTL_SMTP 兼容扩展（基于 plperlu）
+[**`pg_utl_smtp`**](/ext/e/pg_utl_smtp) - `2.0.0` : Oracle UTL_SMTP 兼容扩展（基于 plperlu）
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">main/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/main/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.26.0.tar.gz pg_search_collect_third_party_licenses.py">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.26.1.tar.gz pg_search_collect_third_party_licenses.py">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.26.0.tar.gz pg_search_collect_third_party_licenses.py</div>
-    <div class="ext-card__desc">pg_search-0.26.0.tar.gz pg_search_collect_third_party_licenses.py</div>
+    <div class="ext-card__title">pg_search-0.26.1.tar.gz pg_search_collect_third_party_licenses.py</div>
+    <div class="ext-card__desc">pg_search-0.26.1.tar.gz pg_search_collect_third_party_licenses.py</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_search`**](/ext/e/pg_search) | `0.26.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_search`**](/ext/e/pg_search) | `0.26.1` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 2100
 {.ext-table .ext-table--rel}
 
 
-> Requires preload and pgvector; conflicts with pg_textsearch and vchord_bm25. pgrx 0.19.3. Upgrading to 0.26.0 requires REINDEX of every vector-bearing index; recreate indexes with obsolete centroid_ratio/training_samples_per_centroid options.
+> Requires preload and pgvector; conflicts with pg_textsearch and vchord_bm25. Built with pgrx 0.19.3.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.0` | {{< pgvers "18,17,16,15" >}} | `pg_search` | `vector` |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.0` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | `pgvector_$v`, `openblas` |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | `postgresql-$v-pgvector`, `libopenblas0` |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.1` | {{< pgvers "18,17,16,15" >}} | `pg_search` | `vector` |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.1` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | `pgvector_$v`, `openblas` |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | `postgresql-$v-pgvector`, `libopenblas0` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -197,6 +197,9 @@ CREATE EXTENSION pg_search CASCADE;  -- 依赖: vector
 
 来源：
 
+- [Release 0.26.1](https://github.com/paradedb/paradedb/releases/tag/v0.26.1)
+- [Control](https://github.com/paradedb/paradedb/blob/529c77e9dffe4bd86b6b7971c019bb26b8eadbfa/pg_search/pg_search.control)
+
 - [0.26.0 migration notes](https://github.com/paradedb/paradedb/blob/aa7f9dd407018036d144a54a3f875c5a00d20cda/docs/project/changelog/0.26.0.mdx)
 - [0.26.0 SQL upgrade](https://github.com/paradedb/paradedb/blob/aa7f9dd407018036d144a54a3f875c5a00d20cda/pg_search/sql/pg_search--0.25.11--0.26.0.sql)
 - [pg_search v0.25.11 README](https://github.com/paradedb/paradedb/blob/v0.25.11/pg_search/README.md)
@@ -306,3 +309,7 @@ LIMIT 20;
 0.26.0 将向量存储改为格式 4。更新库与 SQL 扩展后，必须重建所有包含向量列的索引，包括关闭量化的索引。在完成重建前，向量查询会报需重建错误，写入仍可继续，并支持 `REINDEX CONCURRENTLY`。至少 64 维的向量默认启用量化，其设置仅在创建或重建索引时生效。保存了 `centroid_ratio` 或 `training_samples_per_centroid` 的索引需使用 `training_sample_ratio` 和 `max_leaf_size` 重新创建。含多个正则分词列的索引也应重建以修正模式选择。
 
 此版本新增 beta 状态的 `partition_by` 索引分区、连接上的窗口聚合下推，以及可选的 `paradedb.spill_to_disk`。聚合的 `visibility` 默认是 `transaction`，`raw` 跳过 MVCC 检查，不能将其结果当作事务可见结果。应用上线前应复核排序、召回率、执行计划与存储需求。
+
+### 0.26.1 版本
+
+0.26.1 修复聚合与过滤结果、通用计划中的 RLS 行为及缓存处理。它未取消 0.26.0 的迁移要求：跨越该版本升级时，应重建每个含向量字段的索引，使用已移除向量选项的索引须重新创建。仍须保留 vector 依赖及服务器预加载、重启配置。

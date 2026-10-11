@@ -50,12 +50,12 @@ weight: 1820
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
+| el8.x86_64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
+| el8.aarch64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
+| el9.aarch64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
+| el10.x86_64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 | AVAIL PIGSTY 0.9.1 2 |
 | d12.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
@@ -67,11 +67,17 @@ weight: 1820
 | u26.x86_64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 | AVAIL PIGSTY 0.9.1 1 |
 @ el8.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el8.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_18-0.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.9.1 450.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgvectorscale_18-0.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el8.aarch64.rpm pigsty 0.9.1 919.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_18-0.9.1-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.9.1 388.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgvectorscale_18-0.9.1-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el9.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_18-0.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.9.1 460.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvectorscale_18-0.9.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el9.aarch64.rpm pigsty 0.9.1 987.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvectorscale_18-0.9.1-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.9.1 416.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvectorscale_18-0.9.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el10.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvectorscale_18-0.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.9.1 459.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvectorscale_18-0.9.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGSTY.el10.aarch64.rpm pigsty 0.9.1 967.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvectorscale_18-0.9.1-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.9.1 416.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvectorscale_18-0.9.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb pigsty 0.9.1 903.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb pigsty 0.9.1 743.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb pigsty 0.9.1 903.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb
@@ -83,11 +89,17 @@ weight: 1820
 @ u26.x86_64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb pigsty 0.9.1 988.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb pigsty 0.9.1 868.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el8.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_17-0.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.9.1 450.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvectorscale_17-0.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el8.aarch64.rpm pigsty 0.9.1 916.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_17-0.9.1-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.9.1 388.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvectorscale_17-0.9.1-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el9.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_17-0.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.9.1 461.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvectorscale_17-0.9.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el9.aarch64.rpm pigsty 0.9.1 983.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvectorscale_17-0.9.1-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.9.1 415.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvectorscale_17-0.9.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el10.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvectorscale_17-0.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.9.1 458.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvectorscale_17-0.9.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGSTY.el10.aarch64.rpm pigsty 0.9.1 966.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvectorscale_17-0.9.1-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.9.1 415.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvectorscale_17-0.9.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb pigsty 0.9.1 902.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb pigsty 0.9.1 742.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb pigsty 0.9.1 901.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb
@@ -99,11 +111,17 @@ weight: 1820
 @ u26.x86_64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb pigsty 0.9.1 984.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb pigsty 0.9.1 865.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el8.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_16-0.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.9.1 450.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvectorscale_16-0.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el8.aarch64.rpm pigsty 0.9.1 915.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_16-0.9.1-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.9.1 389.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvectorscale_16-0.9.1-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el9.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_16-0.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.9.1 460.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvectorscale_16-0.9.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el9.aarch64.rpm pigsty 0.9.1 982.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvectorscale_16-0.9.1-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.9.1 415.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvectorscale_16-0.9.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el10.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvectorscale_16-0.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.9.1 459.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvectorscale_16-0.9.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGSTY.el10.aarch64.rpm pigsty 0.9.1 966.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvectorscale_16-0.9.1-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.9.1 416.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvectorscale_16-0.9.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb pigsty 0.9.1 900.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb pigsty 0.9.1 740.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb pigsty 0.9.1 900.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb
@@ -115,11 +133,17 @@ weight: 1820
 @ u26.x86_64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb pigsty 0.9.1 984.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb pigsty 0.9.1 864.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el8.x86_64.rpm pigsty 0.9.1 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_15-0.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.9.1 450.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvectorscale_15-0.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el8.aarch64.rpm pigsty 0.9.1 906.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_15-0.9.1-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.9.1 388.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvectorscale_15-0.9.1-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el9.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_15-0.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.9.1 461.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvectorscale_15-0.9.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el9.aarch64.rpm pigsty 0.9.1 973.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvectorscale_15-0.9.1-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.9.1 416.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvectorscale_15-0.9.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el10.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvectorscale_15-0.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.9.1 459.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvectorscale_15-0.9.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGSTY.el10.aarch64.rpm pigsty 0.9.1 961.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvectorscale_15-0.9.1-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.9.1 415.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvectorscale_15-0.9.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb pigsty 0.9.1 895.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb pigsty 0.9.1 736.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb pigsty 0.9.1 895.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb
@@ -131,11 +155,17 @@ weight: 1820
 @ u26.x86_64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb pigsty 0.9.1 978.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb pigsty 0.9.1 858.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el8.x86_64.rpm pigsty 0.9.1 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_14-0.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.9.1 449.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvectorscale_14-0.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el8.aarch64.rpm pigsty 0.9.1 903.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_14-0.9.1-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.9.1 388.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvectorscale_14-0.9.1-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el9.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_14-0.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.9.1 459.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvectorscale_14-0.9.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el9.aarch64.rpm pigsty 0.9.1 969.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvectorscale_14-0.9.1-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.9.1 414.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvectorscale_14-0.9.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el10.x86_64.rpm pigsty 0.9.1 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvectorscale_14-0.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.9.1 459.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvectorscale_14-0.9.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGSTY.el10.aarch64.rpm pigsty 0.9.1 960.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvectorscale_14-0.9.1-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.9.1 415.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvectorscale_14-0.9.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb pigsty 0.9.1 892.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.1-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb pigsty 0.9.1 733.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.1-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb pigsty 0.9.1 892.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.1-1PGSTY~trixie_amd64.deb
@@ -261,4 +291,4 @@ ALTER EXTENSION vectorscale UPDATE TO '0.9.1';
 
 升级会将运算符类绑定到 pgvector 的实际安装模式，并检查已有绑定。若已有运算符类指向错误的类型或运算符，升级会中止；应依照发布说明删除受影响的运算符类并重新创建扩展对象，同时处理依赖索引。
 
-**DiskANN 现在要求列类型具有有效的 `vector(N)` 维度。** 没有维度约束的向量列无法建立索引。持久化维度无效的旧索引会在扫描、插入和清理时报告错误。修正列类型后，必须**删除并重新创建受影响的索引**，`REINDEX` 无法修复这一问题。有效索引无需仅因安装 0.9.1 就全面重建。扩展创建后，SQL 对象不可重定位。
+**DiskANN 现在要求列类型具有有效的 `vector(N)` 维度。** 没有维度约束的向量列无法建立索引。持久化维度无效的旧索引会在扫描、插入和清理时报告错误。修正列类型后，必须 **删除并重新创建受影响的索引**，`REINDEX` 无法修复这一问题。有效索引无需仅因安装 0.9.1 就全面重建。扩展创建后，SQL 对象不可重定位。

@@ -8,6 +8,115 @@ categories: [参考]
 
 ------
 
+## 2026-10-11
+
+| 名称 | 旧版本 | 新版本 | 备注 |
+|:---|:---|:---|:---|
+| arrow | 22.0.0 | 25.0.1 | 含 compute/devel；ABI 2500；本地已入库 |
+| groonga | 15.1.8 | 16.1.3 | 含 libs/devel；上游包；本地已入库 |
+| groonga-tokenizer-mecab | 15.1.8 | 16.1.3 | MeCab 分词插件；本地已入库 |
+| pg_background | 2.0.4-1PGSTY | 2.0.4-2PGSTY | PG14-18；移除下游升级补丁；已构建，待入库 |
+| pg_fts | 1.9.0 | 1.12.0 | PG17-18；已构建，待入库 |
+| pg_grammar_guard | 0.4.1 | 0.4.9 | PG14-18；Apache-2.0；已构建，待入库 |
+| pg_living_assertions | 0.5.1 | 0.5.10 | PG14-18；纯 SQL；Apache-2.0；已构建，待入库 |
+| pg_local_cache | 2.0.4 | 3.1.0 | PG14-18；OpenSSL 依赖；已构建，待入库 |
+| pg_mentat | 1.10.3 | 1.11.1 | PG14-18；pgrx 0.19.3；已构建，待入库 |
+| pg_search | 0.26.0 | 0.26.1 | PG15-18；pgrx 0.19.3；已构建，待入库 |
+| pg_semver | 0.41.0 | 0.42.0 | PG14-18；本地已入库 |
+| pg_tle | 1.5.2 | 1.5.3 | PG14-18；已构建，待入库 |
+| pg_trickle | 0.108.1 | 0.108.3 | PG18；pgrx 0.19.3；已构建，待入库 |
+| pg_turbovec | 2.10.3 | 2.12.0 | PG14-18；pgrx 0.19.3；已构建，待入库 |
+| pgrdf | 0.6.39 | 0.6.40 | PG14-18；pgrx 0.19.3；已构建，待入库 |
+| pgroonga | 4.0.9 | 4.1.0 | PG14-18；含 pgroonga_database；本地已入库 |
+| plpgsql_check | 2.10.11 | 2.10.14 | PG14-18；SQL 版本 2.10；本地已入库 |
+| rdkit | 202609.1-1PGSTY | 202609.1-2PGSTY | PG14-18；EL9/10；移除下游升级补丁；已构建，待入库 |
+| timescaledb | 2.30.2 | 2.30.2 | PG16-18；TSL；同版本重构建；待入库 |
+{.stretch-last}
+
+------
+
+## 2026-10-06
+
+| 名称 | 旧版本 | 新版本 | 备注 |
+|:---|:---|:---|:---|
+| acdat | 0.1.1 | 0.1.1 | PG14-18；已有扩展首次正式全量入库；80 主包 |
+| addressing_dictionary | - | 1.1 | PG14-18；纯 SQL |
+| agensgraph-18 | - | 2.18.4.0 | PG18.4；保留 AgensGraph 17 |
+| babelfish-17 | 5.4.0 | 5.7.0 | PG17.11；含四个配套扩展 |
+| babelfish-18 | 6.0.0 | 6.2.0 | PG18.6；含四个配套扩展 |
+| colnames | - | 1.7.1 | PG14-18；SQL 1.7.0 |
+| edtf_postgres | - | 1.2.3 | PG14-18 |
+| is_jsonb_valid | - | 0.1.4 | PG14-18 |
+| istore | - | 0.1.12 | PG14-18 |
+| jev | 0.2.0 | 0.2.1 | PG14-17 |
+| jsonschema | 0.1.9 | 0.1.10 | PG14-18 |
+| kafgres | 0.1.0 | 0.3.0 | PG16 |
+| libx509pq | - | 1.3 | PG14-18 |
+| lolor | 1.2.2 | 1.2.2 | PG15-18；随 pgEdge 重构建；SQL 版本不变 |
+| macavity | 0.1.0 | 0.2.0 | PG16-18；故障注入；仅限测试 |
+| mobilitydb | 1.3.0 | 1.3.1 | PG14-18；含 mobilitydb_datagen；补齐 32 个 DEB |
+| nominatim_fdw | 2.2.0 | 2.3 | PG14-18；RPM 主供 PGDG；同版本 Pigsty 补位包并存 |
+| orioledb-16 | 1.8-beta16 | 1.10~beta19 | PG16.15；含 OrioleDB 扩展 |
+| orioledb-17 | 1.8-beta16 | 1.10~beta19 | PG17.11；含 OrioleDB 扩展 |
+| orioledb-18 | 1.8-beta16 | 1.10~beta19 | PG18.6；含 OrioleDB 扩展 |
+| passwordcheck_cracklib | 3.2.0 | 3.2.1 | PG14-18 |
+| pg_anon | 3.2.2 | 3.2.3 | PG14-18；扩展名 anon；按上游 drop/recreate 流程升级 |
+| pg_background | 2.0.3 | 2.0.4 | PG14-18；恢复最新主包，补齐全平台 |
+| pg_clickhouse | 0.10.0 | 0.11.0 | PG14-18；SQL 版本 0.11 |
+| pg_eviltransform | 0.0.5 | 0.0.7 | PG14-18 |
+| pg_fts | 1.8.3 | 1.9.0 | PG17-18 |
+| pg_h3 | 4.2.3 | 4.5.0 | PG14-18；含 h3_postgis；新增 50 个 DEB；按上游迁移指南升级 |
+| pg_ivm | 1.15 | 1.16 | PG14-18；恢复最新主包，补齐全平台 |
+| pg_json_diff | - | 1.0 | PG14-18 |
+| pg_lake | 3.5.1 | 3.5.3 | PG16-18；含 8 个 SQL 扩展；SQL 仍为 3.5；仅 EL9/10 |
+| pg_lexo | - | 0.6.1 | PG16-18；SQL 0.6.0；修复序号生成与排序 |
+| pg_living_assertions | 0.4.2 | 0.5.1 | PG14-18 |
+| pg_mentat | 1.6.0 | 1.10.3 | PG14-18 |
+| pg_money | - | 0.3.0 | PG14-18 |
+| pg_pinyin | 0.0.6 | 0.0.8 | PG14-18 |
+| pg_profile | 4.16 | 4.16 | PG14-18；恢复 30 个 RPM；纯 SQL；版本不变 |
+| pg_rusage | - | 1.0 | PG14-18 |
+| pg_search | 0.25.9 | 0.26.0 | PG15-18；需预加载 |
+| pg_stat_ch | 0.3.6 | 0.4.0 | PG16-18；新增 EL8 覆盖；DEB 保留 0.3.6 |
+| pg_statkit | - | 1.1.0 | PG14-17 |
+| pg_statvfs | - | 1.0 | PG14-18 |
+| pg_statviz | 0.9 / 1.2 | 1.2.1 | PG14-18；正式 RPM 从 PGDG 旧版切换至 Pigsty 1.2.1；SQL 版本 1.2；补齐 30 个 RPM |
+| pg_textsearch | 1.4.0 | 1.5.1 | PG17-18；RPM 采用 PGDG；DEB 由 Pigsty 提供 |
+| pg_trickle | 0.107.0 | 0.108.1 | PG18 |
+| pg_turbovec | 2.2.2 | 2.10.3 | PG14-18；2.x 保持 wire v8；从 1.x 升级需 REINDEX |
+| pg_vault_tde | 1.7.1 | 1.7.2 | PG17-18；EL9/10 |
+| pgedge-15 | 15.19-1PGSTY | 15.19-2PGSTY | PG15；内核版本不变；更新内置 Spock |
+| pgedge-16 | 16.15-1PGSTY | 16.15-2PGSTY | PG16；内核版本不变；更新内置 Spock |
+| pgedge-17 | 17.11-1PGSTY | 17.11-2PGSTY | PG17；内核版本不变；更新内置 Spock |
+| pgedge-18 | 18.6-1PGSTY | 18.6-2PGSTY | PG18；内核版本不变；更新内置 Spock |
+| pgextwlist | 1.19 | 1.20 | PG14-18；RPM 配方更新；正式包采用 PGDG |
+| pggraph | 1.2.0 | 1.2.1 | PG14-18；扩展名 graph；修正 DEB SQL 文件验收 |
+| pgmqtt | 0.5.0 | 0.5.1 | PG14-18；需预加载；CDC 需 logical WAL |
+| pgrdf | 0.6.36 | 0.6.39 | PG14-18 |
+| pgroonga | 4.0.8 | 4.0.9 | PG14-18；EL8/9 与 PostGIS Raster 同后端共存限制仍在 |
+| pgs3 | 0.1.1 | 0.1.1 | PG17-18；已有扩展首次正式全量入库；32 主包；alpha |
+| pgsentinel | 1.5.0 | 1.5.1 | PG14-18；配方更新；正式包采用 PGDG；移出重复 Pigsty 包 |
+| pgtde-18 | 18.4 | 18.6 | Percona 18.6.1；pg_tde 2.2.2 |
+| pgtde-18-contrib | 18.4 | 18.6 | pg_stat_monitor 2.4.0；vector 0.8.6 |
+| pgtelemetry | - | 1.7 | PG14-18；纯 SQL；依赖 pg_stat_statements |
+| pgvector | 0.8.6 | 0.8.7 | PG14-18；RPM 0.8.7 采用 PGDG；按约定移出 Pigsty 包 |
+| pgvectorscale | 0.9.1 | 0.9.1 | PG14-18；扩展名 vectorscale；同版本重构建、订正目录旧标签 |
+| plpgsql_check | 2.10.10 | 2.10.11 | PG14-18；配方更新；正式包采用 PGDG |
+| plphp | - | 2.6 | PG14-18；修正嵌入运行库依赖 |
+| plv8 | 3.2.4 | 3.2.5 | PG14-18；修复 EL10 LTO 构建 |
+| polardb-17 | 17.10.1.0 | 17.11.1.0 | PG17.11；含配套扩展 |
+| rdf_fdw | 2.7.0 | 3.0.0 | PG14-18；SQL 版本 3.0 |
+| rdkit | 202303.3 / 202503.6 | 202609.1 | PG14-18；EL9/10；EL8 保留 202303.3 |
+| session_variable | 3.5 | 3.6 | PG14-18 |
+| snowflake | 2.6.0 | 2.6.0 | PG15-18；随 pgEdge 重构建；订正旧目录 2.5.0 标签 |
+| spock | 5.0.11 | 5.0.12 | PG15-18；随 pgEdge 内核分发；修复 DEB 文件归属冲突 |
+| supautils | 3.4.3 | 3.4.4 | PG14-18 |
+| timescaledb | 2.30.1 | 2.30.2 | PG16-18；TSL；PG14 固定 2.19.3，PG15 固定 2.28.3 |
+| vgram | - | 1.0 | PG14-18 |
+{.stretch-last}
+
+------
+
 ## 2026-09-24
 
 | 名称 | 旧版本 | 新版本 | 备注 |

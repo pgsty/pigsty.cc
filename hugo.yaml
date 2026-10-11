@@ -283,6 +283,8 @@ params:
 
   # UI settings
   ui:
+    preset: paper
+    preset_menu: [paper, slate, ink, terminal]
     blog_index_size: 10
     breadcrumb: true
     navbar_logo: true
