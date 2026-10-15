@@ -668,7 +668,7 @@ html[data-theme="dark"] .ini-s { color: #8b93a0; }
   flex: none;
   border: none;
   background: none;
-  color: rgba(200, 215, 235, 0.55);
+  color: rgba(200, 215, 235, 0.70);
   font-size: 0.95rem;
   cursor: pointer;
   padding: 4px 6px;
@@ -1009,7 +1009,7 @@ html[data-theme="light"] .module-img img {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.12em;
-  color: rgba(200, 215, 235, 0.55);
+  color: rgba(200, 215, 235, 0.70);
 }
 .code-body {
   margin: 0;
@@ -1020,7 +1020,7 @@ html[data-theme="light"] .module-img img {
   color: #c9d6e8;
   overflow-x: auto;
 }
-.code-body .c { color: #64748b; }
+.code-body .c { color: #94a3b8; }
 .code-body .k { color: #6fb1e8; }
 .code-body .v { color: #e0a35c; }
 .code-body .s { color: #7fd39a; }
@@ -1094,7 +1094,7 @@ html[data-theme="light"] .module-img img {
   gap: 8px 18px;
   margin-bottom: 14px;
 }
-.extidx-head > .silkscreen { flex: none; margin-right: auto; }
+.extidx-head > .silkscreen { flex: 0 1 auto; min-width: 0; max-width: 100%; margin-right: auto; }
 .extidx-legend {
   display: flex;
   flex-wrap: wrap;
@@ -1512,7 +1512,7 @@ a.stat-item:hover { transform: translateY(-3px); border-color: var(--card-hover-
   flex: none;
   border: none;
   background: none;
-  color: rgba(200, 215, 235, 0.55);
+  color: rgba(200, 215, 235, 0.70);
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 5px;
@@ -1722,3 +1722,10 @@ html.js [data-reveal].revealed { opacity: 1; transform: none; }
   .pin-dot::after,
   .eyebrow-mark { animation: none !important; }
 }
+
+/* Keep inline attribution links recognizable in every appearance preset. */
+.footer-copyright a, .footer-bottom a { text-decoration: underline; text-underline-offset: 0.15em; }
+
+/* Keyboard users can pause and inspect the moving testimonial rows. */
+.testimonials-row:focus-within .testimonials-content { animation-play-state: paused; }
+.extidx-chip { min-height: 24px; }

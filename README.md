@@ -8,13 +8,13 @@ This is the website repo for http://pigsty.cc
 - https://github.com/pgsty/pigsty.cc (Chinese)
 - https://github.com/pgsty/pigsty.io (English)
 
-Powered by [**Hugo**](https://gohugo.io/) and [**OINK 1.2.0**](https://github.com/pgsty/oink/releases/tag/v1.2.0)
+Powered by [**Hugo**](https://gohugo.io/) and [**OINK 1.3.0**](https://github.com/pgsty/oink/releases/tag/v1.3.0)
 
 ---------------
 
 ## Build
 
-Install Git, Go, and Hugo Extended (v0.160.1 or newer):
+Install Git, Go, and Hugo Extended (v0.166.0 or newer):
 
 ```bash
 brew install git go hugo

@@ -10,7 +10,7 @@ d:dev
 # Use `make dev DEV_SEARCH=true` when testing the local search experience.
 dev:
 	@test -f "$(LOCAL_OINK)/go.mod" || { echo "local OINK not found: $(abspath $(LOCAL_OINK))" >&2; exit 1; }
-	HUGO_MODULE_REPLACEMENTS="github.com/pgsty/oink -> $(abspath $(LOCAL_OINK))" \
+	GOWORK=off HUGO_MODULE_WORKSPACE=off HUGO_MODULE_REPLACEMENTS="github.com/pgsty/oink -> $(abspath $(LOCAL_OINK))" \
 	HUGOxPARAMSxOFFLINE_SEARCH=$(DEV_SEARCH) \
 	HUGOxPARAMSxOFFLINE_SEARCH_ON_SERVE=$(DEV_SEARCH) \
 	$(HUGO) serve --ignoreVendorPaths "**" --disableKinds RSS,sitemap \
@@ -38,6 +38,7 @@ check:
 	GOWORK=off $(HUGO) build --ignoreVendorPaths "**" --cleanDestinationDir \
 		--printPathWarnings --printI18nWarnings --panicOnWarning
 	python3 bin/check-markdown.py --rendered public
+	python3 -m unittest discover -s bin -p 'test_internal_links.py'
 	python3 bin/check_internal_links.py public
 
 s: sync

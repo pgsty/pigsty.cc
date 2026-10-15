@@ -174,7 +174,7 @@ pig ext scan [-v version]
 
 ## ext add
 
-安装一个或多个 PostgreSQL 扩展。`pig ext add` 的同级别名包括 `pig ext install`、`pig ext ins` 与 `pig ext a`。顶层 [`pig install`](/docs/pig/cmd/#install) 是另一个原生包管理器包装命令，也支持 PostgreSQL 与扩展包 alias 翻译。
+安装一个或多个 PostgreSQL 扩展。`pig ext add` 的同级别名包括 `pig ext install`、`pig ext ins` 与 `pig ext a`。顶层 [`pig install`](/docs/pig/cmd/#pig-install) 是另一个原生包管理器包装命令，也支持 PostgreSQL 与扩展包 alias 翻译。
 
 ```bash
 pig ext add pg_duckdb            # 安装 pg_duckdb

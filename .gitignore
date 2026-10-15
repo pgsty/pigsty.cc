@@ -53,6 +53,7 @@ play/
 bin/*
 !bin/check-markdown.py
 !bin/check_internal_links.py
+!bin/test_internal_links.py
 !bin/update-star-history.py
 
 # ==============================================================================

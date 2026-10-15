@@ -26,6 +26,7 @@ class DocumentParser(html.parser.HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.ids: set[str] = set()
+        self.duplicate_ids: set[str] = set()
         self.links: list[str] = []
         self.redirect_target: str | None = None
 
@@ -39,6 +40,8 @@ class DocumentParser(html.parser.HTMLParser):
             if value is None:
                 continue
             if key == "id" or (tag == "a" and key == "name"):
+                if key == "id" and value in self.ids:
+                    self.duplicate_ids.add(value)
                 self.ids.add(value)
             if key in LINK_ATTRIBUTES:
                 self.links.append(value.strip())
@@ -69,9 +72,7 @@ def target_candidates(public: pathlib.Path, route: str) -> list[pathlib.Path]:
     route = urllib.parse.unquote(route)
     relative = route.lstrip("/")
     direct = public / relative
-    candidates = [direct]
-    if route.endswith("/") or direct.suffix == "":
-        candidates.append(direct / "index.html")
+    candidates = [direct, direct / "index.html"]
     if direct.suffix == "":
         candidates.append(public / f"{relative}.html")
     return candidates
@@ -119,10 +120,13 @@ def main() -> int:
 
     failures: dict[str, list[str]] = collections.defaultdict(list)
     checked = 0
+    resolved_paths: dict[str, pathlib.Path | None] = {}
     for source_path in html_files:
         source_path = source_path.resolve()
         document = document_for(source_path)
         source_route = route_for_file(public, source_path)
+        for identifier in sorted(document.duplicate_ids):
+            failures[f"duplicate id {identifier}"].append(source_route)
         if source_route.startswith("/_print/"):
             continue
         for raw_url in document.links:
@@ -131,8 +135,10 @@ def main() -> int:
                 continue
             checked += 1
             route, fragment = target
-            candidates = target_candidates(public, route)
-            existing = next((candidate.resolve() for candidate in candidates if candidate.exists()), None)
+            if route not in resolved_paths:
+                candidates = target_candidates(public, route)
+                resolved_paths[route] = next((candidate.resolve() for candidate in candidates if candidate.is_file()), None)
+            existing = resolved_paths[route]
             if existing is None:
                 failures[f"missing target {route}"].append(source_route)
                 continue

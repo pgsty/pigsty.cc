@@ -20,7 +20,7 @@ categories: [概念]
 | [**ADMIN 节点**](#admin节点) | 使用 Ansible 发出管理指令的节点                   |
 | [**INFRA 节点**](#infra节点) | 安装 [**INFRA**](/docs/infra/) 模块的基础设施节点 |
 |  [**ETCD 节点**](#etcd节点)  | 安装 [**ETCD**](/docs/etcd/) 模块的分布式共识节点  |
-| [**MINIO 节点**](#minio节点) | 安装 [**MINIO**](/docs/minio/) 模块的对象存储节点 |
+| [**MINIO 节点**](#minio-节点) | 安装 [**MINIO**](/docs/minio/) 模块的对象存储节点 |
 | [**PGSQL 节点**](#pgsql节点) | 安装 [**PGSQL**](/docs/pgsql/) 模块的数据库节点  |
 |            ……            | 安装了其他各类模块的节点……                         |
 {.full-width}

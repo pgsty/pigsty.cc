@@ -187,4 +187,4 @@ psql -p 15432 -Atqc \
 - [PITR 手工演练](/docs/pgsql/tutorial/pitr/)
 - [恢复操作与 `pgsql-pitr.yml`](/docs/pgsql/backup/restore/)
 - [`pig pitr`](/docs/pig/pitr/)
-- [`pig pb restore`](/docs/pig/pb/#pb-restore/)
+- [`pig pb restore`](/docs/pig/pb/#pb-restore)
