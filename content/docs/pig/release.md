@@ -7,10 +7,11 @@ module: [PIG]
 categories: [参考]
 ---
 
-最新稳定版本是 [v1.9.0](https://github.com/pgsty/pig/releases/tag/v1.9.0)。
+最新稳定版本是 [v1.10.0](https://github.com/pgsty/pig/releases/tag/v1.10.0)。
 
 |       版本        |     日期     | 摘要                                              |                                                     GitHub |
 |:---------------:|:----------:|-------------------------------------------------|-----------------------------------------------------------:|
+| [v1.10.0](#v1100) | 2026-10-17 | 603 条目录记录，PostgreSQL 目标与恢复安全、Inventory 保真、自动化修复 | [v1.10.0](https://github.com/pgsty/pig/releases/tag/v1.10.0) |
 | [v1.9.0](#v190) | 2026-10-06 | 600 条扩展记录、Xray 角色、公钥准备、pgrx 0.19.3 | [v1.9.0](https://github.com/pgsty/pig/releases/tag/v1.9.0) |
 | [v1.8.1](#v181) | 2026-09-03 | CLI 与仓库安全、默认调试包、pgrx 0.19.2 | [v1.8.1](https://github.com/pgsty/pig/releases/tag/v1.8.1) |
 | [v1.8.0](#v180) | 2026-08-14 | 原生 `sty boot` 与 `sty conf`，575 个已打包扩展           | [v1.8.0](https://github.com/pgsty/pig/releases/tag/v1.8.0) |
@@ -29,8 +30,11 @@ categories: [参考]
 | [v1.3.1](#v131) | 2026-03-05 | PG13 退役，支持窗口统一为 PG14-18，扩展增至 464                | [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1) |
 | [v1.3.0](#v130) | 2026-02-27 | 构建链路强化，扩展增至 461，新内核支持                           | [v1.3.0](https://github.com/pgsty/pig/releases/tag/v1.3.0) |
 | [v1.2.0](#v120) | 2026-02-23 | 统一别名，例行更新，计划模式，仓库修复                             | [v1.2.0](https://github.com/pgsty/pig/releases/tag/v1.2.0) |
+| [v1.1.1](#v111) | 2026-02-14 | 修复路径、符号链接与构建目录迁移问题 | [v1.1.1](https://github.com/pgsty/pig/releases/tag/v1.1.1) |
 | [v1.1.0](#v110) | 2026-02-12 | 451 扩展，Agent-Native CLI 框架                      | [v1.1.0](https://github.com/pgsty/pig/releases/tag/v1.1.0) |
 | [v1.0.0](#v100) | 2026-01-26 | 444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵                 | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
+| [v0.9.0](#v090) | 2025-12-28 | 重命名 sty deploy 并扩展 sty conf 参数 | [v0.9.0](https://github.com/pgsty/pig/releases/tag/v0.9.0) |
+| [v0.8.1](#v081) | 2025-12-27 | 将 llvmjit 恢复到 pgsql-full 别名 | [v0.8.1](https://github.com/pgsty/pig/releases/tag/v0.8.1) |
 | [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库                  | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
 | [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                              | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
 | [v0.7.4](#v074) | 2025-12-01 | 更新 ivory/pgtde 内核与 pgdg extras 仓库               | [v0.7.4](https://github.com/pgsty/pig/releases/tag/v0.7.4) |
@@ -63,6 +67,110 @@ categories: [参考]
 
 --------
 
+## v1.10.0
+
+Pig `v1.10.0` 集中修复现有命令的正确性与安全边界：操作前验证 PostgreSQL 目标，
+保留 Inventory 来源与 YAML 类型，让仓库、扩展及自动化结果准确反映实际执行情况。
+内嵌目录从 **600 条增至 603 条记录**。内置 Pigsty 保持 `4.5.0`，默认 `cargo-pgrx` 保持 `0.19.3`。
+
+### PostgreSQL 目标与维护命令
+
+- 显式 `-D` 将 `psql`、`ps`、`kill`、`vacuum`、`analyze`、`freeze`、`repack` 绑定到所选实例，
+  包括 `--all` 枚举数据库的连接。启动 SQL 客户端前，PIG 检查 PID、数据目录、端口、socket
+  与进程身份。运行元数据无效、过期、来自其他目录或无法确认时直接失败，不回退到另一实例。
+- 未指定 `-D` 时，这些 SQL 命令保留原生客户端的连接默认值。`pg clone` 与 `pg fork`
+  继续使用各自的端口参数。提升后的时间线检查使用所选实例或其控制数据；无法解析时保留未知状态。
+- 计划与确认重试命令保留数据目录、PostgreSQL 版本、操作系统用户和维护选项。
+  `VACUUM FULL` 计划正确标明必须确认。
+- 维护命令的位置参数只接受数据库名称。包含 `=` 或以 `postgres://`、`postgresql://`
+  开头的值在规划或执行前被拒绝，错误信息不回显该值。空格和非 ASCII 名称继续受支持。
+  生成的命令将名称放在 `--` 后，避免把名为 `--all` 的数据库解释成命令选项。
+- `vacuum`、`analyze`、`freeze --all` 在开始维护前验证完整数据库列表。
+  需要连接串或被此边界拒绝的数据库名时，请使用原生客户端。
+
+目标选择见 [`pig pg`](/docs/pig/pg/#全局参数)，数据库名称规则见
+[维护命令](/docs/pig/pg/#数据库维护命令)。
+
+### 运行状态、恢复与 fork 安全
+
+- 权限失败、PID 元数据损坏、进程身份无法验证时，报告错误或未知状态，不能据此授权强制初始化、
+  恢复或 fork 替换。`pg status` 对权限失败返回 `130201`（退出码 `3`），其他运行探测失败
+  返回 `130808`（退出码 `1`）。计划将无法确认的前置条件标为 `unknown`。
+- 拒绝 PITR 确认或输入到达 EOF 时，在停止服务、恢复、启动之前返回 `161001`（退出码 `7`）。
+  未知状态不能提供可用于强制终止的 PID，也不能视为启动成功。恢复后的 SQL 检查要求目标已验证。
+- 替换非空的非托管 fork 目录，需要有效的归属元数据，且其中显式记录的目标路径必须匹配。
+  缺失、损坏或不匹配的元数据不能授权删除。运行中目标以及源目标路径关系的保护继续有效。
+- Clone 与 fork 必要时以所选数据库操作系统用户执行路径检查，支持权限为 `0700` 的私有数据目录。
+  无法访问或解析的路径不能绕过校验。托管孤儿副本仍可通过其托管名称清理。
+- 以数据库用户写文件时，使用私有的同目录临时文件并精确替换目标。新文件权限为 `0600`；
+  拒绝目录与符号链接目标，替换时不会覆盖指向旧文件的其他硬链接所见的内容。
+
+[PITR 参考](/docs/pig/pitr/) 介绍托管恢复流程；[`pig pb restore`](/docs/pig/pb/#pb-restore) 仍是独立的恢复原语。
+
+### Inventory 与 Pigsty
+
+- `sty deploy` 与 `do` 显式向 Ansible 传递已解析的 Inventory 路径。命令行和环境变量中的
+  相对路径以调用者工作目录为基准；带引号的 `~/` 路径在解析前展开。选中的来源缺失或无效时，
+  不会静默回退到其他清单。
+- `pg_users[].roles` 同时保留角色名称字符串与结构化授权，包括授权状态及可选的
+  `admin`、`set`、`inherit` 属性。
+- 编辑、序列化与 CMDB 导出保留可能被 YAML 消费端解释成数字、日期或时间戳的字符串。
+  已有时间戳标量保留原始源码表示。独立 PyYAML 检查验证输出仍为字符串类型。
+- `sty conf --proxy` 接受 HTTP、HTTPS、ALL、NO 代理变量的大写与小写形式；HTTP、HTTPS
+  缺失时都会回退到 ALL_PROXY。版本补全按点分段匹配，指定 `1.1` 不会误选 `1.10`。
+
+详情见 [Inventory 来源选择](/docs/pig/inventory/#source-selection) 与 [`pig sty`](/docs/pig/sty/)。
+
+### 软件仓库与扩展
+
+- 仓库命令在改文件前验证完整操作数列表。空值、逗号列表中的空项、不安全的仓库名在修改前失败。
+  只有真正不带参数的 `repo rm` 才备份全部仓库文件；`repo rm all` 展开为 `node`、`pgsql`、
+  `infra` 三个模块。删除结果保留原始请求，区分不存在的目标和实际删除的文件。
+  备份全部仓库后也会按 `--update` 刷新缓存。
+- 创建仓库时保留文档 RPM。调试包仍通过 `--nodbg` 排除，包名含 `-docs` 或 `-doc`
+  本身不会将其判为调试包。
+- 默认扩展列表、可用性摘要、刷新结果统计全部目录记录，包括 SQL 工具和保留的生命周期记录。
+  总数表示目录覆盖范围，不表示某台主机可以安装或能通过 `CREATE EXTENSION` 启用的扩展数。
+- 文本、JSON、YAML 共用可用性规则。已覆盖的 Linux 平台以包矩阵为准，矩阵缺项即不可用，
+  架构别名统一处理。macOS 状态仅表示声明的 PostgreSQL 版本支持，不承诺存在 RPM/DEB 包。
+  `ext list -v` 选择判断状态时使用的版本，不会过滤掉不可用记录。
+- `ext import` 在任何请求包无法解析或下载时返回失败，同时保留已成功下载的文件，报告完成与
+  失败部分。APT 虚拟依赖标记不再进入下载包名列表。已安装库扫描也能识别没有控制文件的目录条目。
+- 目录新增 `pg_icu_parser`、`pg_vectorsearch`、`textsearch_intl` 三条记录，同时刷新已有条目的
+  版本和平台元数据。安装前可用 `pig ext avail NAME` 检查目标。
+
+详情见 [`pig repo`](/docs/pig/repo/)与 [`pig ext`](/docs/pig/ext/)。
+
+### 构建与自动化
+
+- 多版本构建依赖按每个选定的 PostgreSQL 大版本展开包名，去重后安装。默认构建目标继续遵循
+  扩展元数据与本地安装规则，不会因包矩阵缺包而丢失。
+- Debian/Ubuntu 构建保留继承的 `PATH` 顺序，当前用户的 `~/.cargo/bin` 存在时追加到末尾，
+  保留用户已选工具链的优先级。
+- Xray 设置识别完整旧服务定义，包括旧渲染器生成的无 marker macOS plist。
+  注释本身不能证明归属；被修改或外来的定义仍需要显式替换。配置一致的重复执行保留运行中的服务。
+- JSON/YAML 输出及 `PIG_NON_INTERACTIVE=1` 在 PIG 管理的适配器中一致禁用提示输入，
+  使用非交互 sudo。明确的数据输入通道仍可用；原生 Patronictl 转发保留交互和退出契约。
+- CMDB 连接串、旧 VMess 凭据、许可证密钥不会进入常规参数与失败详情。
+  显式凭据导出与 Inventory 原文显示保留文档约定的敏感输出行为。
+- Exporter HTTP 4xx/5xx 返回失败，仅包含数字状态码与标准说明，不包含响应体或自定义状态文本。
+  `pig update` 在不支持的平台上明确报错。命令帮助与中英文参考文档同步校准。
+- 更新 Go 依赖与验证工具。CI 增加 Linux 权限、实例边界和独立 YAML 消费端验收。
+
+详情见 [`pig build`](/docs/pig/build/)、[`pig pe`](/docs/pig/pe/)与 [全局命令行为](/docs/pig/cmd/)。
+
+### 升级注意事项
+
+已有命令名和参数继续可用。自动化脚本需要处理部分导入失败、HTTP 错误、恢复取消和
+PostgreSQL 状态无法确定时纠正后的失败状态。仓库操作数必须有效，需要确认的操作仍须显式确认，
+维护命令应传入数据库名称。名称以 `-` 开头时，把全部选项放在前面，再写 `--` 和数据库名。
+
+按 [安装文档](/docs/pig/install/) 升级。
+
+发布制品：[v1.10.0](https://github.com/pgsty/pig/releases/tag/v1.10.0)
+
+--------
+
 ## v1.9.0
 
 Pig `v1.9.0` 新增一键配置 Xray 客户端与服务端、自动准备 Pigsty 仓库签名公钥，
@@ -78,7 +186,7 @@ Pig `v1.9.0` 新增一键配置 Xray 客户端与服务端、自动准备 Pigsty
   `127.0.0.1:12345`，首次直连服务端监听 `0.0.0.0:443`；重复执行保留已有监听端点与服务端凭据。
 - 配置、属主、权限与服务状态一致时不改写文件、不重启服务。客户端连通性检查失败会恢复
   原有受管文件与服务状态。替换不同的客户端配置需要 `--replace --yes`；两种角色均支持 `--plan`。
-- `server --export-only --export -` 只导出已有连接，不改变部署。导出文件权限为 `0600`；
+- `server --export-only --host HOST --export -` 只导出已有连接，不改变部署。导出文件权限为 `0600`；
   显式导出到 stdout 要求文本输出。普通结果与计划不包含凭据。历史 VMess 位置参数形式
   继续使用 V2Ray。
 
@@ -87,7 +195,8 @@ sudo pig build proxy server --host proxy.example.com --target www.sraoss.co.jp:4
 sudo pig build proxy client --from ./client.uri
 ```
 
-前置条件、macOS 配置、凭据处理与公网入口边界见 [**`pig build`**](https://pig.pgsty.com/zh/build/#build-proxy)。
+在服务端执行第一条命令，将 `client.uri` 安全传到客户端，再在客户端执行第二条命令。
+前置条件与 macOS 配置见 [`pig build`](/docs/pig/build/#build-proxy)。
 
 ### 仓库签名公钥
 
@@ -99,7 +208,7 @@ sudo pig build proxy client --from ./client.uri
 - 显式指定的签名公钥引用必须有效；无效或不可用的公钥在仓库替换、缓存刷新之前报错。
   EL 通过 `rpm --import` 导入显式引用。仅选择其他仓库时，不准备 Pigsty 公钥。
 
-签名检查默认值、公钥准备与元数据刷新的区别见 [**`pig repo`**](https://pig.pgsty.com/zh/repo/#仓库定义)。
+签名检查默认值、公钥准备与元数据刷新的区别见 [**`pig repo`**](/docs/pig/repo/#仓库定义)。
 
 ### 扩展目录与构建默认值
 
@@ -108,7 +217,7 @@ sudo pig build proxy client --from ./client.uri
   `pg_statkit`、`pgtelemetry`、`pg_rusage`、`pgexporter_ext`、`pg_statvfs` 与 `libx509pq`，
   同时刷新软件包版本与平台可用性元数据。
 - 目录总数包含保留的生命周期记录。能否安装取决于扩展状态与操作系统、架构、PostgreSQL
-  版本矩阵；600 并非每个平台都能安装的扩展数量。
+  版本矩阵。使用 `pig ext avail NAME` 检查目标平台。
 - `pig build pgrx` 默认使用 `cargo-pgrx 0.19.3`；显式 `-v` 与扩展目录中的专用版本要求继续有效。
 - 延续 v1.8.1 的平台调试包默认策略。`--nodbg` 可禁用 RPM 的 `debuginfo`/`debugsource`
   与 DEB 的 `dbgsym`；`-s|--symbol` 保留为已弃用的兼容空操作。
@@ -116,8 +225,8 @@ sudo pig build proxy client --from ./client.uri
 ### 兼容性
 
 没有移除已有命令或参数。新增 Xray 角色命令使用 VLESS/REALITY/Vision，历史 VMess
-位置参数命令保持 V2Ray 行为。服务端配置成功只证明本地监听与服务就绪；防火墙、Nginx、
-云安全组与公网连通性仍由操作者单独配置和验证。
+位置参数命令保持 V2Ray 行为。服务端设置检查本地监听与服务。
+按所选公网端口配置防火墙、云安全组和所用的 Nginx 前端，再从客户端验证连接。
 
 发布制品：[v1.9.0](https://github.com/pgsty/pig/releases/tag/v1.9.0)
 
@@ -144,7 +253,7 @@ c175b37552147e64590309801800826a0075ae8285ed78178c2adcaec3741471  pig_1.9.0-1_ar
 
 ## v1.8.1
 
-Pig `v1.8.1` 是 [v1.8.0](https://pig.pgsty.com/zh/release/pig-1.8.0/) 之上的安全、正确性与维护版本。
+Pig `v1.8.1` 是 [v1.8.0](#v180) 之上的安全、正确性与维护版本。
 本版本加固命令初始化、提权日志访问、仓库与构建流程、发布完整性，以及结构化输出脱敏；
 同时刷新内置扩展目录，并将构建工具链升级到 Go `1.27.1` 与 `cargo-pgrx 0.19.2`。
 内置 Pigsty 版本仍为 `4.5.0`。
@@ -537,14 +646,14 @@ c536c324e40a861217e31f4699ee5f0e6c2daeb4e6f0f0e8cc5f606da9d787eb  pig-v1.4.2.lin
 **校验和**
 
 ```bash
-2b96e06d26e7425b13ac1f27d620b24b258f232bfc1d84c0b3aa2ee6505ea8aa  pig-1.4.1-1.aarch64.rpm
-30a68d2fb97bb1d146ec57bcec2f279ce7fa4cf075fdcc9afc3d143f9a365896  pig-1.4.1-1.x86_64.rpm
-ff4ac1a15f6a1e0aa935922a4e402a428fd3579c0143a5e411e835089a55cc2c  pig-v1.4.1.darwin-amd64.tar.gz
-a23048d854bc2bef74a2b5cf42bd2f4aae79f3c9df3181a829ddf2167d939dc2  pig-v1.4.1.darwin-arm64.tar.gz
-74feec28ee879853633d8e9f3722c95aa25c47a3d3f6fb5bde3f3609b5c09378  pig-v1.4.1.linux-amd64.tar.gz
-d50d1ce2b0d682a4ced72a4a11e6bddbd90f9dccbd16eae886045845eec83104  pig-v1.4.1.linux-arm64.tar.gz
-3fe640c3b6678fe4cef527a58dca54285f15d56c8fe0b3c2ed8b6879e1e91d41  pig_1.4.1-1_amd64.deb
-d09fd6e747cb65acda225ffd5448a8fba3f676ce8044f4237d75a59b3d6a5b4e  pig_1.4.1-1_arm64.deb
+cbfbb04b9640dcf39fcd9ccfa49e500dd0e65b72c0326c0d166e6f43e52b6dc3  pig-1.4.1-1.aarch64.rpm
+c3325c7c68559b3149567eddd5963c4bc3bb4b39622740ca469f9d5d274e462b  pig-1.4.1-1.x86_64.rpm
+c82e8a5e010aed198748576a3740479ac73eaa4a05f50cd4afc82fbcc9075d4d  pig-v1.4.1.darwin-amd64.tar.gz
+a62e223a9f3fb6755cfeabfed2b9241d1be8aad42251917ddb2a4757fa5df6bd  pig-v1.4.1.darwin-arm64.tar.gz
+65938e1158deb8a795c32ae99ff09178b7dec6b09743f8bdfbd9fd09a522e89f  pig-v1.4.1.linux-amd64.tar.gz
+0fe4172dd1f03ac1b6ac73a28cdfe78b70c6613996252a230710b291faf8db58  pig-v1.4.1.linux-arm64.tar.gz
+bdcc318ed50bff505f193f3a265d8fd2c7b093a104d5e5728b8c070e3580827e  pig_1.4.1-1_amd64.deb
+1a1acb69d41bcfb9df8fb86c8d3c076050df5a242b639c1215833cd6394e112d  pig_1.4.1-1_arm64.deb
 ```
 
 发布：https://github.com/pgsty/pig/releases/tag/v1.4.1
@@ -853,9 +962,37 @@ b67baa404d877b37004331041cb270c85b8f9a3f8a92a5083390a54d76553d2a  pig_1.2.0-1_ar
 
 --------
 
+## v1.1.1
+
+**修复**
+
+- 在迁移构建目录时保留符号链接语义，并支持跨文件系统移动。
+- 正确处理被配置为文件系统根目录的 PostgreSQL 日志目录，防止解析到预期目录之外的文件。
+- 允许 `pig repo rm` 删除名称中带点号的仓库模块，同时保留安全路径校验。
+- `pig sty init` 解压 Pigsty 发布包时允许安全的相对符号链接。
+
+**校验和**
+
+```checksums {base="https://github.com/pgsty/pig/releases/download/v1.1.1"}
+22fe5e951f09e7cfa46ab22781199b3209792992940eb5615ace4928e41a7429  pig-1.1.1-1.aarch64.rpm
+7f5a10bbefdc39e5d66a7e688fa78c5ba566c8140458b9f4b1536ff0d7ed457a  pig-1.1.1-1.x86_64.rpm
+b90aec9dc559df81c46d32575a8d231fa6d7eeb8b25f4d2e0b6076cc0a9c0e59  pig-v1.1.1.darwin-amd64.tar.gz
+3063e3a72e68371a082b4e629d12aafda46d96eddc22976beb2049881854f4ea  pig-v1.1.1.darwin-arm64.tar.gz
+081ff8c81bf61108a35ca4cdc51007d4ddf1de8a041d8be087e58e7068e7e177  pig-v1.1.1.linux-amd64.tar.gz
+9a81e868699f92d73f8aeb7752206b6eaac8d42d1688089a1f543b12ee0d272d  pig-v1.1.1.linux-arm64.tar.gz
+85ce861cfbff846be2ba912ba8dfc766121dad14a59937387d9c5e26b0b6f541  pig_1.1.1-1_amd64.deb
+3a108f0544af4d1f98acee55c06c5b5af3b856e3be2b18767e6db0b8a1cc664f  pig_1.1.1-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.1.1
+
+
+--------
+
+
 ## v1.1.0
 
-该版本是从 `v1.0.0` 到 `v1.1.0` 的一次规划中架构级升级（79 commits，193 files 变更），
+该版本是从 `v1.0.0` 到 `v1.1.0` 的一次架构级升级（79 commits，193 files 变更），
 核心目标是把 pig 从“人类可用 CLI”推进到“Agent-native 可编排 CLI”。
 
 新增七个扩展，总可用扩展数量达到 451 个。
@@ -998,6 +1135,58 @@ a543882aa905713a0c50088d4e848951b6957a37a1594d7e9f3fe46453d5ce66  pig_1.0.0-1_am
 
 --------
 
+## v0.9.0
+
+**变更**
+
+- 将 `pig sty install` 重命名为 `pig sty deploy`，使命令名称准确表达其执行 Pigsty 部署 playbook 的行为。
+- 为 `pig sty conf` 增加 `-g`、`-p` 与 `-o` 参数，与该版本中的 configure 脚本保持一致。
+- 在 `pgsql-full` 软件包别名中保留 `llvmjit`。
+
+**校验和**
+
+```checksums {base="https://github.com/pgsty/pig/releases/download/v0.9.0"}
+ea0c098d0829720b6e364d2f2a91328876962c7f0ae94eee7bdcde0bd43313fa  pig-0.9.0-1.aarch64.rpm
+707f4e1fde76d3faa05165ac11e97969c22a8740c97ef84da52727d0328990cc  pig-0.9.0-1.x86_64.rpm
+56aeb61674ddfb64368e6f5535e06a38b76f62e3d6c9536a63be7df6babed93e  pig-v0.9.0.darwin-amd64.tar.gz
+a213d16817d6124ffa83d93ad880a040598b6ed3fe23a74d43420c095ed43de4  pig-v0.9.0.darwin-arm64.tar.gz
+6a1a1836217fa723ca42bc2276ecf1453cd2ee0acacddfc313164701b24a452f  pig-v0.9.0.linux-amd64.tar.gz
+5e5728aa5922138c61c900a731f97cdc1b9653c14d7fe804b6753fb6f222b8b0  pig-v0.9.0.linux-arm64.tar.gz
+e80d2cb3ceb5fd58fc0262ab4b39b44e8dcccb7712151c73a41ba50cb510353b  pig_0.9.0-1_amd64.deb
+ecb504efffde8d696b765579332fc0b3304751fa8077c4c0394e7f3c44aa0fe2  pig_0.9.0-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v0.9.0
+
+
+--------
+
+
+## v0.8.1
+
+**修复**
+
+- 将 v0.8.0 中移除的 `llvmjit` 恢复到 `pgsql-full` 软件包别名。
+
+**校验和**
+
+```checksums {base="https://github.com/pgsty/pig/releases/download/v0.8.1"}
+fd9291b15953e8e5f579de7e0256b88ca742e11fc0ed578bf181d2ce4cf5258c  pig-0.8.1-1.aarch64.rpm
+c2ec07d18eeae6ad831950da44d6bb797fad3ca4d0b1f7b0e82d715a22baedec  pig-0.8.1-1.x86_64.rpm
+b07017d257089166377fb4deffe167c952ae1dcacb6203de26a11a89097dfc34  pig-v0.8.1.darwin-amd64.tar.gz
+090889ba1447693e3ace0b18222f6852448738fc4baa4964a27acc87ce560501  pig-v0.8.1.darwin-arm64.tar.gz
+64cfd28d98c41776c83949b2ffb3b789c66835ccb522a346ea1b53966e9f9544  pig-v0.8.1.linux-amd64.tar.gz
+6216612ab63c2c9006466834222bdbdcd9e7e8e112c52a6f17e26d0ebb24fbe4  pig-v0.8.1.linux-arm64.tar.gz
+29a2109af6141fa990144f0ebcf3bbbe13030c75af6fb3c6bf89eb8da956d387  pig_0.8.1-1_amd64.deb
+7d8728658c942e57df259acd1da0d2655d9132ab7bffcc109527ed184784f882  pig_0.8.1-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v0.8.1
+
+
+--------
+
+
 ## v0.8.0
 
 **扩展更新**
@@ -1114,14 +1303,14 @@ d2b80af89ed42601716f6b41eda3f8bee16db34023527df9deef8a43aa25a498  pig_0.7.4-1_ar
 **校验和**
 
 ```bash
-786d72f6b685d6d6abf5f255f0a7de9204988a05630a26a53bfc7631823c0c6f  pig-0.7.3-1.aarch64.rpm
-da59e24ef79d1164e348bacc43e3222e8e2778ec0e103e7ffc0c6df064758e8f  pig-0.7.3-1.x86_64.rpm
-73062a979749095e89abc07dd583d34d4f57908bb4ee935cf7640f129ca6a2cb  pig-v0.7.3.darwin-amd64.tar.gz
-ca5f5576f6d0d9be1d10cad769821be9daa62220b2fb56b94d6e4c0cede6da61  pig-v0.7.3.darwin-arm64.tar.gz
-d193b4b87cf9a6e4775b1b07709802d30f0233ccb1b728843a09decb545168d3  pig-v0.7.3.linux-amd64.tar.gz
-e7f612df0e8e4d9fac6df3765862b9e491bb50aad651856abf7a6935986e6f99  pig-v0.7.3.linux-arm64.tar.gz
-3d5306ce95dcf704dd498b05325d942637564b13115f1e5a5bb9ef6781df1ba6  pig_0.7.3-1_amd64.deb
-32e695ba2d49a741d8cd92008f8f2dec29f10754d35b732035f48517b382c30d  pig_0.7.3-1_arm64.deb
+83e1b491b58793859caaccb0600a8ad7f7c0ea71dfcbc1dc348bf4666f7dc742  pig-0.7.3-1.aarch64.rpm
+00671775c22918b6e92c8f39972fa2e6e78536ba0ca1e23f9bb9752a2910a974  pig-0.7.3-1.x86_64.rpm
+d6ac6164a09a7b2aac210b898c8729df6cbcef6462207a896caf08b1511c9cdb  pig-v0.7.3.darwin-amd64.tar.gz
+c595df851cc76b93fe2692e880909aed316db00cfdcd75c0c5667141915e49b7  pig-v0.7.3.darwin-arm64.tar.gz
+baa875895623f073204d0ff8fbcb76bd37da6e5806e70aae43aaa2cb14355186  pig-v0.7.3.linux-amd64.tar.gz
+b6d75f7e0474341990e2cf64b5006fb7b145839f8b54c12f70657c166bfeeb14  pig-v0.7.3.linux-arm64.tar.gz
+5ddfd410c6d6c2546804bf948aab3b7978fa719d92c1477d7a33889e7b1006dd  pig_0.7.3-1_amd64.deb
+2996c06fda272e01fea72bb8eec51dca8f4b9e8526d9833dcda1cf7549d1e01a  pig_0.7.3-1_arm64.deb
 ```
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.7.3
@@ -1141,14 +1330,14 @@ e7f612df0e8e4d9fac6df3765862b9e491bb50aad651856abf7a6935986e6f99  pig-v0.7.3.lin
 **校验和**
 
 ```bash
-f303c391fc28bc74832712e0aa58319abe0ebcae4f6c07fdf9a9e542b735d2ec  pig-0.7.2-1.aarch64.rpm
-c096a61a4e3a49b1238659664bbe2cd7f29954c43fb6bb8e8e9fb271f95a612e  pig-0.7.2-1.x86_64.rpm
-5e037c891dff23b46856485108d6f64bede5216dfbd4f38a481f0d0672ee910b  pig-v0.7.2.darwin-amd64.tar.gz
-736b4b47999c543c3c886781f4d8dddbf4276f363c35c7bf50094b6f18d14600  pig-v0.7.2.darwin-arm64.tar.gz
-20b13f059efed29dd76f6927b3e8d7b597c0c8d734f9e22ba3d0a2af6dbcd3bf  pig-v0.7.2.linux-amd64.tar.gz
-9548b530c05f2ffdc8d73b8f890718d47b74a51eb62852a99c08b1b52e47f014  pig-v0.7.2.linux-arm64.tar.gz
-b6faad9f92b926546a10f590274f2cb2afff21b9cea878094cfc5caf09e67d2c  pig_0.7.2-1_amd64.deb
-452f73f1fa035e5417ab49fc51d797925550179ffcc023e8f03d80144309212a  pig_0.7.2-1_arm64.deb
+080dd93c33faf81e8f9d3b9d543b9949604b834ccd55331cce697df79049a9af  pig-0.7.2-1.aarch64.rpm
+b91056230d3a790ab0190b3680fc5dbc3eb1306b7a1c2416fb6ef421bf48dcf7  pig-0.7.2-1.x86_64.rpm
+9b294e58b8c3629066b905e25dda4f51eacc1eb4b6d5d87fab32d17fb13a9cb7  pig-v0.7.2.darwin-amd64.tar.gz
+74f3276752d826c8130ca22a791da48548608378a453908e7cdd095c0564a1eb  pig-v0.7.2.darwin-arm64.tar.gz
+0c9f6e6bf930e70206df2c6d58d1296f1a7a77ca7d89d27d47112bc44544cda4  pig-v0.7.2.linux-amd64.tar.gz
+f62842217be958569ca09051e8cad0d674ee9446245e45655b91f9918927b340  pig-v0.7.2.linux-arm64.tar.gz
+091d12d5d5c3c8e52b8b60ab180b88b7aeaff512aa344af0e039c7d4b73c75a0  pig_0.7.2-1_amd64.deb
+53346bd96538a20b0bb3bb4161ba117bca7b5cf6633f5d3c357fe9e560b06ff5  pig_0.7.2-1_arm64.deb
 ```
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.7.2
@@ -1158,7 +1347,7 @@ b6faad9f92b926546a10f590274f2cb2afff21b9cea878094cfc5caf09e67d2c  pig_0.7.2-1_am
 
 ## v0.7.1
 
-- 全新的网站： /ext/
+- 全新的 [PGEXT.CLOUD 扩展目录](https://pgext.cloud/zh/)。
 - 修复了不必要的 sudo 使用问题，现在可以方便的在容器中使用
 - 允许 pig ext link 命令使用形如 pg17 pg18 的参数形式
 - 新增环境变量 `PIG_NO_SUDO`，强制不使用 sudo 执行命令
@@ -1244,7 +1433,7 @@ ad4f02993c7d7d8eec142f0224551bb4  pig-v0.6.2.linux-amd64.tar.gz
 ## v0.6.1
 
 - 新增 el10 与 debian 13 trixie 的支持存根
-- 专门的新文档网站： /ext/pig/
+- 独立的 [PIG 文档网站](https://pig.pgsty.com/zh/)。
 - 使用 go 1.25 重新构建，新增 CI/CD 管道
 - 在中国大陆使用 PIGSTY PGDG 镜像
 - 移除空的 `pgdg-el10fix` 仓库
@@ -1425,7 +1614,7 @@ curl https://repo.pigsty.io/pig | bash -s 0.3.4
 
 ## v0.3.0
 
-[`pig`](/docs/pig/) 项目现在有了新的 [主页](/ext/pig/)，以及 PostgreSQL 扩展 [目录](/ext/list/)。
+本次发布为 [PIG 项目](/docs/pig/) 增加了主页，并提供 PostgreSQL 扩展 [目录](/ext/list/)。
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.3.0
 
@@ -1441,11 +1630,67 @@ Pig v0.2.2 中提供 [**404**](/docs/pgsql/ext) 个扩展
 
 ## v0.2.0
 
+**新增扩展**
+
+- [pg_documentdb_core](https://github.com/microsoft/documentdb/tree/main/pg_documentdb_core)，以及 FerretDB
+- [VectorChord-bm25](https://github.com/tensorchord/VectorChord-bm25) (vchord_bm25) 0.1.0
+- [pg_tracing](https://github.com/DataDog/pg_tracing) 0.1.2
+- [pg_curl](https://github.com/RekGRpth/pg_curl) 2.4
+- [pgxicor](https://github.com/Florents-Tselai/pgxicor) 0.1.0
+- [pgsparql](https://github.com/lacanoid/pgsparql) 1.0
+- [pgjq](https://github.com/Florents-Tselai/pgJQ) 0.1.0
+- [hashtypes](https://github.com/adjust/hashtypes/) 0.1.5
+- [db_migrator](https://github.com/cybertec-postgresql/db_migrator) 1.0.0
+- [pg_cooldown](https://github.com/rbergm/pg_cooldown) 0.1
+
+**扩展更新**
+
+- citus 13.0.0 -> 13.0.1
+- pg_mooncake 0.1.0 -> 0.1.1
+- timescaledb 2.17.2 -> 2.18.1
+- supautils 2.5.0 -> 2.6.0
+- VectorChord 0.1.0 -> 0.2.0
+- pg_bulkload 3.1.22 (+pg17)
+- pg_store_plan 1.8 (+pg17)
+- pg_search 0.14 -> 0.15.1
+- pg_analytics 0.3.0 -> 0.3.2
+- pgroonga 3.2.5 -> 4.0.0
+- zhparser 2.2 -> 2.3
+- pg_vectorize 0.20.0 -> 0.21.1
+
 发布：https://github.com/pgsty/pig/releases/tag/v0.2.0
 
 ------
 
 ## v0.1.4
+
+**新增扩展**
+
+- [pg_documentdb_core](https://github.com/microsoft/documentdb/tree/main/pg_documentdb_core)，以及 FerretDB
+- [VectorChord-bm25](https://github.com/tensorchord/VectorChord-bm25) (vchord_bm25) 0.1.0
+- [pg_tracing](https://github.com/DataDog/pg_tracing) 0.1.2
+- [pg_curl](https://github.com/RekGRpth/pg_curl) 2.4
+- [pgxicor](https://github.com/Florents-Tselai/pgxicor) 0.1.0
+- [pgsparql](https://github.com/lacanoid/pgsparql) 1.0
+- [pgjq](https://github.com/Florents-Tselai/pgJQ) 0.1.0
+- [hashtypes](https://github.com/adjust/hashtypes/) 0.1.5
+- [db_migrator](https://github.com/cybertec-postgresql/db_migrator) 1.0.0
+- [pg_cooldown](https://github.com/rbergm/pg_cooldown) 0.1
+
+**扩展更新**
+
+- citus 13.0.0 -> 13.0.1
+- pg_mooncake 0.1.0 -> 0.1.1
+- timescaledb 2.17.2 -> 2.18.1
+- supautils 2.5.0 -> 2.6.0
+- VectorChord 0.1.0 -> 0.2.0
+- pg_bulkload 3.1.22 (+pg17)
+- pg_store_plan 1.8 (+pg17)
+- pg_search 0.14 -> 0.15.1
+- pg_analytics 0.3.0 -> 0.3.2
+- pgroonga 3.2.5 -> 4.0.0
+- zhparser 2.2 -> 2.3
+- pg_vectorize 0.20.0 -> 0.21.1
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.1.4
 
