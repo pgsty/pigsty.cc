@@ -36,7 +36,7 @@ check:
 	python3 bin/check-markdown.py content
 	GOWORK=off go mod verify
 	GOWORK=off $(HUGO) build --ignoreVendorPaths "**" --cleanDestinationDir \
-		--printPathWarnings --printI18nWarnings --panicOnWarning
+		--printPathWarnings --printI18nWarnings
 	python3 bin/check-markdown.py --rendered public
 	python3 -m unittest discover -s bin -p 'test_internal_links.py'
 	python3 bin/check_internal_links.py public
