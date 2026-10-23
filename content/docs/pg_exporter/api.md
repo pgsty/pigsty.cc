@@ -21,7 +21,7 @@ categories: [参考]
 | `/`                        | GET      | 落地页，链接到指标端点                                 |
 {.full-width}
 
-健康与路由端点的判定基于后台探测缓存的角色状态（`primary` / `replica` / `down` / `starting` / `unknown`），不会在每次 HTTP 请求时同步查询数据库——探针风暴不会穿透到数据库。
+健康与路由端点的判定基于后台探测缓存的角色状态（`primary` / `replica` / `down` / `starting` / `unknown`），不会在每次 HTTP 请求时同步查询数据库。v1.5.0 每次响应只读取一个原子状态快照，HTTP 状态码和正文始终对应同一状态；状态仍可能落后于数据库的最新变化。PgBouncer 探测成功映射为 `primary`，不代表其后端 PostgreSQL 的主从角色。
 
 
 --------
@@ -55,7 +55,7 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="v1.4.1",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.26.5",goos="linux",goarch="amd64"} 1
+pg_exporter_build_info{version="v1.5.0",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.3",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```
@@ -291,7 +291,7 @@ server reloaded
 - 添加或移除采集器
 
 > [!NOTE] 注意
-> 重载会刷新采集器配置和查询计划；如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
+> 重载会刷新采集器配置、查询计划、缓存与查询统计；解析失败时保留原计划及缓存。空 YAML 是合法空配置，成功重载后会清空采集器。目录模式允许部分文件成功加载，详见 [配置加载](/docs/pg_exporter/config/#配置加载)。如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
 
 > [!WARNING] 安全建议
 > `/reload`、`/explain`、`/stat` 都属于管理端点。若 exporter 不仅在本机或可信内网使用，建议通过 `--web.config.file` 启用认证/TLS，或在反向代理 / 防火墙层限制访问。

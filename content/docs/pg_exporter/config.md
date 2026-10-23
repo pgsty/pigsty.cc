@@ -8,7 +8,7 @@ categories: [参考]
 
 `pg_exporter` 的所有业务指标都由 YAML **采集器**（Collector）定义驱动：每个采集器就是一条 SQL 查询，外加它的执行条件（版本、角色、标签、谓词）与运行控制（缓存、超时）。本页是采集器定义的完整参考。
 
-配置可以是单个 YAML 文件（如默认的 `pg_exporter.yml`），也可以是包含多个 YAML 文件的目录——官方默认配置包正是由 [`config/`](https://github.com/pgsty/pg_exporter/tree/main/config) 目录下 58 个定义文件合并而来。
+配置可以是单个 YAML 文件（如默认的 `pg_exporter.yml`），也可以是包含多个 YAML 文件的目录——官方默认配置包正是由 [`config/`](https://github.com/pgsty/pg_exporter/tree/main/config) 目录下 58 个 YAML 文件（57 个采集器文件与 1 个配置参考文件）按字典序合并而来；共 96 个分支、59 个命名空间、460 个去重后的指标定义，包含默认禁用的采集器与 2 个尚未展开的直方图定义。
 
 
 --------
@@ -28,6 +28,8 @@ PG Exporter 按以下顺序搜索配置：
 - 仅加载该目录下的 `.yml` / `.yaml` 文件（非递归）
 - 按文件名字典序合并；同名采集器以后加载者覆盖先前定义
 - 如果目录中有 YAML 文件但全部解析失败，导出器会直接返回错误而不是静默忽略
+- 部分文件解析失败时记录错误，仍加载其余有效文件；目录加载并非全有或全无
+- 空的单个 YAML 文件是合法空配置；重载它会清空采集器。解析失败的重载则保留原计划与缓存
 
 
 --------
@@ -181,6 +183,7 @@ pg_table_bloat:
 - 将 TTL 设置为小于您的抓取间隔
 - 对昂贵的查询使用较长的 TTL
 - TTL 为 0 表示禁用缓存
+- `ttl` 与谓词 `ttl` 必须为非负有限数，且转换为 Go `time.Duration` 后不能溢出；v1.5.0 拒绝 NaN、无穷大和过大的值
 
 ### 超时控制
 
@@ -191,6 +194,8 @@ timeout: 0.1   # 默认 100ms
 timeout: 1.0   # 复杂查询使用 1 秒
 timeout: -1    # 禁用超时（不推荐）
 ```
+
+`timeout: 0` 或省略该字段使用默认 100ms；有限负值关闭查询期限。v1.5.0 拒绝 NaN、无穷大和转换后会溢出的正超时。超时覆盖本次谓词与主查询的总执行时间。
 
 ### 版本兼容性
 
@@ -204,8 +209,8 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 版本号使用 PostgreSQL 内部 `server_version_num` 规则：
 
 - `100000` 表示 10.0
-- `130200` 表示 13.2
-- `160100` 表示 16.1
+- `130002` 表示 13.2
+- `160001` 表示 16.1
 - `190000` 表示 19.0
 - `90600` 表示 9.6（Legacy 配置场景）
 
@@ -216,9 +221,11 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 
 理解一个采集器从定义到产出指标的完整路径，有助于回答"为什么这个指标没出来"：
 
-1. **规划**（建立连接或热重载时）：对每个采集器分支依次检查——目标类型（PostgreSQL / pgBouncer）、`min_version` / `max_version` 版本门槛、`tags` 与服务器角色及 exporter 标签的匹配、`skip` 开关。未通过的分支不会安装到该目标上。`curl localhost:9630/explain` 展示的正是这一步的裁决结果。
+1. **规划**（首次抓取、热重载或元数据变化时）：对每个采集器分支依次检查——目标类型（PostgreSQL / pgBouncer）、`min_version` / `max_version` 版本门槛、`tags` 与服务器角色及 exporter 标签的匹配、`skip` 开关。未通过的分支不会安装到该目标上。`curl localhost:9630/explain` 展示的正是这一步的裁决结果。
 2. **抓取**（每次 `/metrics` 请求）：对已安装的采集器——缓存在 `ttl` 内则直接返回缓存结果；否则先执行 `predicate_queries`（任一返回假则本轮跳过，`pg_exporter_query_scrape_predicate_skip_count` 计数），再在 `timeout` 限制下执行主查询，结果转为指标并写入缓存。
 3. **失败语义**：普通采集器失败只影响自身（`pg_exporter_query_scrape_error_count` 上升，本轮缺失该组指标）；标记 `fatal: true` 的采集器失败会使整次服务器抓取被判定为失败。
+
+v1.5.0 在成功预检后比较用户名、Schema 与扩展集合；变化时重新规划，新增／删除扩展或 Schema 无需手动重载。集合不变时保留计划与缓存，重新规划会重置查询缓存和统计。
 
 --------
 
@@ -363,7 +370,7 @@ pg_table_stats:
   query: |
     SELECT
       schemaname,
-      tablename,
+      relname AS tablename,
       n_tup_ins,
       n_tup_upd,
       n_tup_del,
@@ -385,8 +392,9 @@ pg_table_stats:
 
 ```yaml
 pg_wal_stats:
-  desc: "WAL 统计信息（PG 14+）"
+  desc: "WAL 统计信息（PG 14–17）"
   min_version: 140000
+  max_version: 180000
   query: |
     SELECT
       wal_records,

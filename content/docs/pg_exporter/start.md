@@ -30,7 +30,7 @@ sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_export
 
 ```bash
 pg_exporter --version
-# pg_exporter v1.4.1 (built with go1.26.5 on linux/amd64)
+# pg_exporter v1.5.0 (built with go1.27.3 on linux/amd64)
 ```
 
 
@@ -38,11 +38,17 @@ pg_exporter --version
 
 ## 第 2 步：创建监控用户
 
-在目标 PostgreSQL 上创建一个专用监控用户。PostgreSQL 10+ 内置的 `pg_monitor` 角色已覆盖默认采集器所需的全部读取权限：
+在目标 PostgreSQL 上创建一个专用监控用户。首先授予 PostgreSQL 10+ 内置的 `pg_monitor` 角色：
 
 ```sql
 CREATE USER monitor WITH PASSWORD 'S3cret';
 GRANT pg_monitor TO monitor;
+```
+
+PostgreSQL 10–13 还需要管理员在 Exporter 的 **主连接数据库** 中执行以下授权，以读取订阅 OID；仅在订阅所在数据库执行不足以覆盖主连接。这不会开放含密码的 `subconninfo` 列。PG14+ 在标准目录 ACL 下无需额外授权。
+
+```sql
+GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;
 ```
 
 如果你只是在本机以 `postgres` 等超级用户试用，可以跳过这一步。
@@ -77,7 +83,7 @@ pg_version 170000    # server_version_num 格式的版本号
 pg_in_recovery 0     # 从库为 1，主库为 0
 ```
 
-`pg_up` 为 `1` 说明链路已通，其余 600+ 指标（`pg_db_*`、`pg_table_*`、`pg_wal_*`……）都来自 `pg_exporter.yml` 中的声明式采集器定义。如果 `pg_up` 为 `0`，用 `pg_exporter --log.level=debug` 重启并观察连接错误。
+`pg_up` 为 `1` 说明链路已通，`pg_exporter.yml` 提供 460 个去重后的指标定义（`pg_db_*`、`pg_table_*`、`pg_wal_*` 等），按版本、角色与对象情况输出其中适用的指标。如果 `pg_up` 为 `0`，用 `pg_exporter --log.level=debug` 重启并观察连接错误。
 
 
 --------

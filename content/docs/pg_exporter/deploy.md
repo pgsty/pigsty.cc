@@ -62,17 +62,21 @@ Flags:
 两点部署相关的行为说明：
 
 - **启动策略**：默认非阻塞启动——目标库暂时不可达时，HTTP 端点照常拉起，后台持续探测直到恢复；如果希望"连不上就失败退出"（例如交由 systemd/编排器重启决策），设置 `--fail-fast`。
-- **telemetry path 校验**：自 v1.4.0 起，`--web.telemetry-path` 在启动时严格校验，空路径、与内置端点冲突、或 `//metrics` 这类永远无法命中的非规范路径会直接报错退出。
+- **指标路径校验**：`--web.telemetry-path` 拒绝空路径、内置端点冲突与 `//metrics` 等非规范路径。v1.5.0 还验证当前 HTTP mux 实际选中指标处理器，避免某些转义路径被接受却返回首页或重定向。建议使用 `/metrics` 这样的未转义路径。
 
 ### 连接 URL 的来源
 
-连接串按以下优先级解析，取第一个非空值：
+连接串按以下优先级解析，命令行与环境变量取第一个非空值：
 
 1. `--url` / `-u` 命令行参数
 2. `PG_EXPORTER_URL` 环境变量
 3. `PGURL` 环境变量
 4. `PG_EXPORTER_URL_FILE` 指向文件的内容（适合容器 Secret 挂载）
 5. 默认值 `postgresql:///?sslmode=disable`（本地优先，适配同机部署）
+
+选用 `PG_EXPORTER_URL_FILE` 后，文件不可读、为空或只含空白都会阻止启动，不会回退到本机默认目标。
+
+v1.5.0 严格校验 URL、百分号转义和查询参数名：参数名不能为空，不能包含空白或 `=`，URL 不能包含未转义的 `#`。错误会使用不含原始连接串的固定诊断并停止启动，避免泄露密码或静默丢弃 TLS 设置。有效 URL 的用户信息中的密码与 `password=` 参数在日志中会被遮盖。
 
 URL 中未指定 `sslmode` 时会自动补 `sslmode=disable`。另外，`PGSERVICE` / `PGSERVICEFILE` 等 libpq 服务文件环境变量会在启动时被清除并记录日志——服务文件可能覆盖显式指定的连接目标，`pg_exporter` 要求"日志里宣告的 URL 就是实际连接的 URL"。
 
@@ -85,10 +89,16 @@ URL 中未指定 `sslmode` 时会自动补 `sslmode=disable`。另外，`PGSERVI
 
 ```sql
 CREATE ROLE monitor WITH LOGIN PASSWORD 'S3cret' CONNECTION LIMIT 5;
-GRANT pg_monitor TO monitor;   -- PostgreSQL 10+ 内置监控角色，覆盖默认采集器全部所需权限
+GRANT pg_monitor TO monitor;   -- PostgreSQL 10+ 内置监控角色
 ```
 
-`CONNECTION LIMIT` 建议保留：exporter 正常只占用一至数个连接（自动发现时每库一个），限流可以防止配置错误时耗尽连接。
+PostgreSQL 10–13 还需要管理员在 Exporter 的 **主连接数据库** 中执行以下授权，以读取订阅 OID；仅在订阅所在数据库执行不足以覆盖主连接。这不会开放含密码的 `subconninfo` 列。PG14+ 在标准目录 ACL 下无需额外授权。
+
+```sql
+GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;
+```
+
+`CONNECTION LIMIT` 应按自动发现库数调整，避免过低限制导致额外数据库无法连接。建议保留连接数上限：exporter 正常只占用一至数个连接（自动发现时每库一个），限流可以防止配置错误时耗尽连接。
 
 ### 使用 .pgpass 管理密码
 
@@ -181,7 +191,7 @@ docker run -d \
   --restart unless-stopped \
   -p 9630:9630 \
   -e PG_EXPORTER_URL="postgres://monitor:S3cret@host:5432/postgres" \
-  pgsty/pg_exporter:latest
+  pgsty/pg_exporter:1.5.0
 ```
 
 Docker Compose：
@@ -189,7 +199,7 @@ Docker Compose：
 ```yaml
 services:
   pg_exporter:
-    image: pgsty/pg_exporter:latest
+    image: pgsty/pg_exporter:1.5.0
     container_name: pg_exporter
     restart: unless-stopped
     ports:
@@ -226,7 +236,7 @@ spec:
     spec:
       containers:
       - name: pg-exporter
-        image: pgsty/pg_exporter:latest
+        image: pgsty/pg_exporter:1.5.0
         ports:
         - containerPort: 9630
         env:
@@ -269,15 +279,18 @@ spec:
 
 ```bash
 pg_exporter --auto-discovery \
-  --exclude-database="template0,template1,postgres" \  # 默认排除清单
-  --include-database=""                                # 设置后改为白名单模式
+  --exclude-database="template0,template1,postgres" \
+  --include-database=""
+# --exclude-database 上述值是默认排除清单；设置 --include-database 后改用白名单模式
 ```
 
 行为规则：
 
 - 集群级采集器（`tags: [cluster]`）只在主连接上执行一次
 - 数据库级采集器在每个被发现的库上分别执行，指标带 `datname` 标签区分
-- 新建/删除的数据库会在后续规划周期被自动纳入/移除
+- 新建／删除的数据库会在后续预检中被自动纳入／移除
+- v1.5.0 复用 `lib/pq` 解析实际数据库身份；替换库名时清除 URL 查询中冲突的 `dbname` / `database` 参数，正确保留特殊字符，防止多个发现连接落到同一个库
+- 多库采集仍为串行执行，抓取超时预算应覆盖预检与各数据库的查询总耗时
 
 
 --------

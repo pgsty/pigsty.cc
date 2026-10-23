@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1)
+`pg_exporter` 的最新稳定版本是 [v1.5.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.5.0](#v150) | 2026-10-23 | 连接安全、自动发现、健康检查与复制指标修复，Go 1.27.3 | [v1.5.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0) |
 | [v1.4.1](#v141) | 2026-07-29 | 修复逻辑订阅计数与标签列校验，统一 RPM 包名                  | [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1) |
 | [v1.4.0](#v140) | 2026-07-18 | 快照直方图支持，新增 pg_xact_age 采集器，HTTP 路由加固         | [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0) |
 | [v1.3.0](#v130) | 2026-06-24 | PostgreSQL 19 支持，新增 PG19 采集器与分支              | [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0) |
@@ -43,6 +44,71 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.5.0
+
+发布日期：2026-10-23。此版本聚焦连接安全、采集准确性和运行状态一致性，构建工具链升级到 **Go 1.27.3**。
+
+### 修复与改进
+
+- 严格校验 PostgreSQL URL 与查询参数，拒绝错误转义和含空白、`=` 的参数名。安全诊断避免把错误连接串中的密码写入日志，也避免显式 TLS 设置在规范化时被静默丢弃。选用 `PG_EXPORTER_URL_FILE` 后，空文件或只含空白的文件会使启动失败。
+- 自动发现复用 `lib/pq` 的数据库身份解析；替换数据库名时移除冲突的 `dbname` / `database` 参数并保留特殊字符，修复重复采集同一数据库及重复指标导致的 HTTP 500。
+- 健康检查从同一个原子状态生成 HTTP 状态码与正文，修复并发切换时的矛盾响应；仍使用后台缓存状态。
+- 成功预检后，用户名、Schema 或扩展集合变化会触发重新规划；没有变化时保留计划和缓存。安装或删除扩展、Schema 后无需手动重载。
+- 配置加载拒绝 NaN、无穷大以及溢出的 TTL／正超时；保留 TTL 为 0 禁用缓存、超时为 0 使用默认值、有限负超时关闭期限的既有语义。
+- 启动时确认指标路径在实际 HTTP mux 下命中指标处理器，拒绝旧版 mux 中返回首页或重定向的不可达转义路径。
+- 为 `pg_sub_*` 新增订阅所属数据库的 `datname` 标签，避免跨数据库同名订阅冲突。修正当前与 legacy 配置的 `pg_recv_state` 状态编码，以及 PG9.6 receiver 地址提取 SQL。
+- 校准 `pg_origin` 的权限说明、`pg_pubrel_count` 的表计数范围、`pg_subrel_count` 的同步状态和 PG19 序列语义，以及 `pg_backend` 的描述。
+
+### 升级注意事项
+
+- PG10–13 必须由管理员在 Exporter 的 **主连接数据库** 中执行 `GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;`，将 `monitor` 替换为实际监控用户。该授权不开放 `subconninfo`；PG14+ 标准目录 ACL 下无需额外授权。
+- `pg_sub_*` 新增标签会建立新时序。检查依赖该指标标签匹配的 PromQL 连接、聚合与告警；`pg_sub_id` gauge 保留。
+- `pg_recv_state` 使用下表；1–3 保留不用。没有 receiver 行时不输出样本。PG9.6 对普通监控用户隐藏的详情仍表现为未知状态，不扩大数据库权限。
+
+| 状态 | 编码 | 状态 | 编码 |
+|:---|---:|:---|---:|
+| streaming | 0 | starting | 6 |
+| stopping | 4 | waiting | 7 |
+| connecting（PG19+） | 5 | restarting | 8 |
+| 未知／NULL | -1 | stopped | 9 |
+{.full-width}
+
+- 同时升级二进制与采集器配置。软件包会保留本地配置修改，升级后应合并新版 `pg_exporter.yml`，再检查 `/metrics` 的查询错误计数，不能只看 HTTP 200。
+- 空 YAML 重载仍会清空采集器；目录加载仍允许部分有效文件生效。SIGTERM 沿用直接退出行为，不等待活跃抓取结束。
+
+### 工具链与验证
+
+保留 `lib/pq` 1.12.3，升级 Prometheus client_golang 至 1.25.0、common 至 0.72.1、exporter-toolkit 至 0.20.0；YAML 使用 `go.yaml.in/yaml/v3` 3.0.5。PostgreSQL 驱动仍为 `lib/pq`。
+
+默认配置仍包含 58 个 YAML 文件、96 个分支、59 个命名空间和 460 个去重后的指标定义（含 2 个未展开直方图）。已验证非超级用户运行 PG9.1–9.6、10–18、19 RC1 与 PgBouncer 1.26.1；另验证物理备库晋升、重载、断连恢复、竞态、新旧 HTTP mux、六平台构建、ARM64 RPM／DEB 安装及 Docker 镜像。PG19 验证对象为 RC1，不代表所有扩展或生产负载已经验证。
+
+### Go 与依赖的安全更新
+
+**Go 1.27.3** 在 `crypto/x509` 中加入不可信中间证书拒绝列表，修复 [CVE-2026-111943](https://pkg.go.dev/vuln/GO-2026-6809)。它也包含从旧构建工具链 Go 1.26.5 升级所跨越的安全修复，包括 TLS 的 [CVE-2026-56862](https://pkg.go.dev/vuln/GO-2026-6090)、[CVE-2026-97031](https://pkg.go.dev/vuln/GO-2026-6607)，HTTP 的 [CVE-2026-56853](https://pkg.go.dev/vuln/GO-2026-6089)、[CVE-2026-94439](https://pkg.go.dev/vuln/GO-2026-6613)，以及模板、ASN.1、multipart 等修复。完整上游范围见 [Go 1.26.6](https://groups.google.com/g/golang-announce/c/94pEornpRlI)、[Go 1.27.2](https://groups.google.com/g/golang-announce/c/U2fTuyDJznI) 和 [Go 1.27.3](https://groups.google.com/g/golang-announce/c/66pojueaQek) 公告。
+
+`golang.org/x/net` 从 0.57.0 升至 **0.61.0**，包含 0.60.0 的五项 HTTP/2 修复：
+
+| CVE | 修复内容 |
+|:---|:---|
+| [CVE-2026-78659](https://pkg.go.dev/vuln/GO-2026-6603) | Trailer 头导致的内存放大 |
+| [CVE-2026-78669](https://pkg.go.dev/vuln/GO-2026-6611) | 窗口更新导致的 CPU 消耗 |
+| [CVE-2026-78663](https://pkg.go.dev/vuln/GO-2026-6612) | 重复返还流控额度 |
+| [CVE-2026-97032](https://pkg.go.dev/vuln/GO-2026-6617) | HPACK 编码器竞态崩溃 |
+| [CVE-2026-78660](https://pkg.go.dev/vuln/GO-2026-6610) | 畸形 framing 响应头 |
+{.full-width}
+
+`x/crypto` 0.58.0 也跨过 SSH [CVE-2026-56854](https://pkg.go.dev/vuln/GO-2026-6303)、[CVE-2026-56855](https://pkg.go.dev/vuln/GO-2026-6355)、[CVE-2026-78662](https://pkg.go.dev/vuln/GO-2026-6354) 的修复版本；`x/text` 0.43.0 包含 precis [CVE-2026-56851](https://pkg.go.dev/vuln/GO-2026-6629) 的修复。本程序未导入这些 SSH／precis 包，这些是依赖版本层面的更新，不能写成已证实的 exporter 运行时漏洞。
+
+2026-10-23 的 `govulncheck` 对照核验中，新候选在 Darwin、Linux、Windows 目标均无符号级或已导入包级已知漏洞；仅保留未导入的 OpenPGP 包 [GO-2026-5932](https://pkg.go.dev/vuln/GO-2026-5932) 的模块级提示。静态符号匹配不等于攻击复现，上述修复也不表示每项漏洞都可在 exporter 中利用。其他依赖升级按维护更新处理。应更新重新构建的发行二进制；只更新主机上的 Go 不会改变旧二进制。
+
+
+完整逐项 CVE、首个修复版本与扫描层级见 [安全更新核验表](https://exp.pgsty.com/zh/release/v1.5.0/#安全更新)。
+
+[GitHub 发布](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0) · [SHA256 校验和](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/checksums.txt) · [完整变更](https://github.com/pgsty/pg_exporter/compare/v1.4.1...v1.5.0) · [完整采集器文档](https://exp.pgsty.com/zh/collectors/)
 
 
 --------

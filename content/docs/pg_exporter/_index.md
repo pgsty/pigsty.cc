@@ -1,5 +1,5 @@
 ---
-title: "PG Exporter 1.4 中文文档"
+title: "PG Exporter 1.5.0 中文文档"
 linktitle: "pg_exporter 文档"
 weight: 8400
 icon: fas fa-chart-line
@@ -7,7 +7,7 @@ module: [PG_EXPORTER]
 description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 ---
 
-为 Prometheus / Victoria 打造的极致 PostgreSQL 监控体验：超过 **600+** 监控指标、**声明式配置** 与 **动态规划** 能力。
+为 Prometheus / Victoria 打造的极致 PostgreSQL 监控体验：**460 个指标定义**、**声明式配置** 与 **动态规划** 能力。
 
 [**快速上手**](/docs/pg_exporter/start) | [**GitHub**](https://github.com/pgsty/pg_exporter) | [**在线演示**](https://g.pgsty.com)
 
@@ -18,7 +18,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 | 特性        | 描述                                                          |
 |-----------|-------------------------------------------------------------|
-| **全指标覆盖** | 600+ 指标覆盖 PostgreSQL（10-19+）与 pgBouncer（1.8-1.25+）的几乎全部统计视图 |
+| **全指标覆盖** | 460 个指标定义覆盖 PostgreSQL（10-19+）与 pgBouncer（1.8-1.26+）的几乎全部统计视图 |
 | **声明式采集** | 每个指标都来自 YAML 采集器定义——SQL 查询加执行条件，可自由增删改，无需改代码                |
 | **动态规划**  | 按目标的版本、主从角色、已装扩展与标签自动裁决每个采集器是否执行、执行哪个分支                     |
 | **自动发现**  | 自动发现实例内的所有数据库并分别采集，指标以 `datname` 标签区分                       |
@@ -34,10 +34,12 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.4.1`](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1)
+- 当前稳定版本：[`v1.5.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0)
 - 默认配置支持：PostgreSQL **10-19+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
-- PgBouncer 支持：**1.8-1.25+**
+- PgBouncer 支持：**1.8-1.26+**
+
+v1.5.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1 个配置参考文件）、**96 个版本／角色分支** 和 **59 个指标命名空间**。460 按指标名跨分支去重，包含默认禁用的采集器与 2 个尚未展开的 `HISTOGRAM` 定义；实际时序数取决于版本、对象数量、标签与直方图桶。
 
 完整版本历史见 [发布注记](/docs/pg_exporter/release)。
 
@@ -64,7 +66,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 PG Exporter 提供多种 [**安装方式**](/docs/pg_exporter/install)，适配各种基础设施：
 
 ```bash {tab="Docker"}
-docker run -d --name pg_exporter -p 9630:9630 -e PG_EXPORTER_URL="postgres://user:pass@host:5432/postgres" pgsty/pg_exporter:latest
+docker run -d --name pg_exporter -p 9630:9630 -e PG_EXPORTER_URL="postgres://user:pass@host:5432/postgres" pgsty/pg_exporter:1.5.0
 ```
 
 ```bash {tab="YUM"}
