@@ -228,9 +228,9 @@ params:
   stable_version: v4.4.0    # 当前公开稳定版；安装与 Git tag 示例使用此参数
   stable_version_short: v4.4
   pg_version: '18.6'        # PostgreSQL 最新小版本，正文用 {{< param pg_version >}}
-  pig_version: 1.10.0        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
+  pig_version: 1.10.1        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
   pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
-  pig_catalog_count: 603    # PIG 内嵌目录记录总数
+  pig_catalog_count: 615    # PIG 内嵌目录记录总数
   pgext_count: 600          # Pigsty 在线已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
   pgext_url: https://pgext.cloud  # PG 扩展目录站点，首页扩展索引格点与指标卡片链接前缀
   github_stars: '5.66 K'      # GitHub Star 数（约数），正文兼容参数
