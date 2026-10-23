@@ -537,6 +537,28 @@ curl -s http://localhost:9630/metrics | grep -E 'pg_exporter_query_scrape_(durat
 
 --------
 
+## 指标与告警的升级检查 {#metric-compatibility}
+
+升级 Exporter 时，应合并并部署配套采集器 YAML。只替换二进制不会应用 SQL、标签或状态编码修正；在 Pigsty 管理的实例上，还应确认最终部署的配置包含这些定义。升级 PostgreSQL 大版本时，必须重新检查按版本选中的采集器分支。
+
+- **Exporter v1.4.1 → v1.5.0：** 内置 SQL 指标名、类型与单位不变，但 `pg_sub_*` 增加 `datname`，`pg_recv_state` 修正状态编码。检查跨库同名订阅的连接／聚合，以及 Grafana 值映射。
+- **PG18 → PG19：** 已有指标没有删除或改名，但 `pg_sub_sync_error_count` 扩大为表与序列同步错误之和，`pg_subrel_count` 也包含序列。`pg_sub_has_worker` 可区分订阅行存在与 apply worker 运行；不能只看 `pg_sub_id` 是否存在。
+- **跨越 PG17／18：** 部分 `pg_bgwriter_*` 指标需要改用 `pg_checkpointer_*` 或按后端筛选的 I/O 指标；`pg_wal_write`、`pg_wal_sync`、`pg_wal_write_time`、`pg_wal_sync_time` 自 PG18 起需要迁移到 `pg_io_*{object="wal"}`，并调整标签聚合。逐项替代关系见 [**兼容性对照表**](https://exp.pgsty.com/zh/compatibility/#older-postgresql-metrics)。
+
+完整变更见 [**v1.5.0 发布说明**](/docs/pg_exporter/release/#v150-metric-compatibility) 和 [**PG19 指标对照表**](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics)。PG19 支持最早随 v1.3.0 发布，验收证据对应 19 RC1；这些说明不表示所有仪表盘已通过运行验收。
+
+部署前后检查 `/metrics`、`/explain`、`/stat`、`pg_exporter_query_scrape_error_count` 和日志，再执行实际仪表盘、记录规则与告警表达式，检查返回时序、标签、单位和状态映射。用 `promtool check rules` 检查规则语法，并用 `promtool test rules` 覆盖正常输入和时序缺失。HTTP 200、`up == 1` 或 `pg_up == 1` 都不能证明每个预期指标存在；空向量也不等于健康的零值。
+
+对预期启用内置 WAL 采集器的 PG19 目标，可使用以下逐目标缺失检查，并在告警规则中设置 `for: 5m`：
+
+```promql
+(pg_up{job="pg19"} == 1)
+unless on (job, instance)
+pg_wal_bytes{job="pg19"}
+```
+
+`job="pg19"` 只是示例，须替换为实际目标选择器，并按部署方式补齐匹配标签；分别监控 `up` 和 `pg_up` 故障。缺失检查须考虑版本、主备角色与对象是否存在，例如主库不应要求 `pg_recovery_state_*`。不要用无条件 `or vector(0)` 掩盖缺失；整个集群的 `absent(metric)` 也无法识别其他目标仍有数据时的单目标缺失。完整规则见 [**缺失指标检查**](https://exp.pgsty.com/zh/compatibility/#missing-metric-alerts)。
+
 ## 配置故障排查
 
 ### 验证配置

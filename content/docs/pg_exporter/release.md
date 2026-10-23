@@ -63,6 +63,26 @@ description: PG Exporter 版本发布历史
 - 为 `pg_sub_*` 新增订阅所属数据库的 `datname` 标签，避免跨数据库同名订阅冲突。修正当前与 legacy 配置的 `pg_recv_state` 状态编码，以及 PG9.6 receiver 地址提取 SQL。
 - 校准 `pg_origin` 的权限说明、`pg_pubrel_count` 的表计数范围、`pg_subrel_count` 的同步状态和 PG19 序列语义，以及 `pg_backend` 的描述。
 
+### 指标、仪表盘与告警兼容性 {#v150-metric-compatibility}
+
+与同一 PostgreSQL 版本上的 v1.4.1 相比，**v1.5.0 没有新增、删除或改名内置 SQL 指标**。类型和单位不变，但标签与状态映射有变化。PostgreSQL 19 支持最早随 [v1.3.0](https://exp.pgsty.com/zh/release/v1.3.0/) 发布；升级数据库还可能改变所选 SQL 分支与指标含义。
+
+| 变化来源 | 指标 | 兼容性处理 |
+|:---|:---|:---|
+| v1.5.0 配置 | `pg_sub_*` | 每条样本增加 `datname`。连接与聚合时保留数据库和订阅身份；新标签集会产生新时序。 |
+| v1.5.0 配置 | `pg_recv_state` | 真实接收器状态 `starting`、`waiting`、`restarting`、`stopped` 从 `-1` 改为 6–9。更新值映射和状态告警；编码 1–3 保留。 |
+| PG18 → PG19 | PG18 已有的指标名 | 本配置的 PG19 分支没有删除或改名这些指标；这不保证 PostgreSQL 自身提供的语义和标签取值不变。 |
+| PG19 | `pg_sub_sync_error_count` | 名称保留，值变为表与序列同步错误之和。只监控表同步时用 `pg_sub_sync_table_error_count`，序列分量由 `pg_sub_sync_seq_error_count` 提供。不要把分量和总和重复相加。 |
+| PG19 | `pg_sub_has_worker`、`pg_sub_reset_time`、`pg_sub_confl_*` | 新增 worker 存在标记、重置时间与八个冲突计数器。没有 apply worker 时仍可能保留订阅行，不能仅凭指标存在判断 worker 健康。 |
+| PG19 | `pg_subrel_count` | 同时包含表和序列；`pg_pubrel_count` 仍只统计表。检查面板名称与数量比较规则。 |
+| PG19 | `pg_wal_fpi_bytes`、`pg_lock_stat_*`、`pg_recovery_state_*`、`pg_vacuum_score_*` | 属于新增指标。恢复状态仅用于备库，自动清理评分仅用于主库；原有 WAL、锁分布和恢复指标族保留。 |
+{.full-width}
+
+从 PG17 或更早版本升级的用户还需迁移旧名：检查点指标自 PG17 起移出 `pg_bgwriter_*`，而 `pg_wal_write`、`pg_wal_sync`、`pg_wal_write_time`、`pg_wal_sync_time` 自 PG18 起不再输出。[完整兼容性指南](https://exp.pgsty.com/zh/compatibility/#older-postgresql-metrics) 逐项列出替代指标、标签／聚合差异与混合版本 PromQL。
+
+部署前应执行实际仪表盘和告警表达式，并测试时序缺失的情况。抓取成功不代表所有预期指标都存在；告警表达式返回空结果时可能静默失效。[缺失指标检查](https://exp.pgsty.com/zh/compatibility/#missing-metric-alerts) 提供逐目标规则，并说明哪些缺失属于正常情况。[PG19 指标对照表](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics) 链接到发布标签中的精确定义；PostgreSQL 验证范围仍为 19 RC1。
+
+
 ### 升级注意事项
 
 - PG10–13 必须由管理员在 Exporter 的 **主连接数据库** 中执行 `GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;`，将 `monitor` 替换为实际监控用户。该授权不开放 `subconninfo`；PG14+ 标准目录 ACL 下无需额外授权。

@@ -43,6 +43,8 @@ v1.5.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1
 
 完整版本历史见 [发布注记](/docs/pg_exporter/release)。
 
+升级前请检查 [**v1.5.0 指标变化**](/docs/pg_exporter/release/#v150-metric-compatibility) 与 [**仪表盘／告警迁移检查**](/docs/pg_exporter/config/#metric-compatibility)。指标名保留不代表标签、状态编码或统计口径不变；PostgreSQL 大版本升级还会切换采集器分支。
+
 
 --------
 
