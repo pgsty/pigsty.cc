@@ -37,13 +37,15 @@ vi pigsty.yml                 # 修改域名、数据库密码与 LLM 设置
 - `HINDSIGHT_API_VECTOR_EXTENSION`：默认 `pgvector`
 - `HINDSIGHT_API_TEXT_SEARCH_EXTENSION`：默认 `native`
 - `HINDSIGHT_API_LLM_PROVIDER`：默认 `none`
-- `HF_HUB_OFFLINE`：默认 `1`，使用镜像预置模型；需要下载未缓存的模型时设为 `0` 并提供出站网络
+- `HINDSIGHT_MODEL_CACHE`：宿主机模型缓存目录，默认 `/data/hindsight`
 
 默认 `none` LLM Provider 可以保留文本并使用本地 embedding/reranker 模型召回；事实抽取、反思与整合能力需要配置 Ollama 或 OpenAI 兼容 API。
 
-模板使用 `hindsight-cache` 命名卷保留预置及下载的模型。数据库需启用 `vector` 和位于 `public` 的 `pg_trgm`；复用其他模板数据库时先检查 `pg_trgm` 的位置，`CREATE EXTENSION IF NOT EXISTS` 不会移动已有扩展。
+模板将宿主机模型缓存目录挂载到 `/home/hindsight/.cache`，没有 `hindsight-cache` 命名卷。空目录可能遮住镜像预置模型，因此首次启动应检查模型是否可用，并按需允许下载。
 
-健康检查通过容器内 Python 同时请求 API 的 `/health/ready` 和 UI 代理的 `/api/banks?limit=1`，确认代理能实际访问 API。修改容器内 `HINDSIGHT_API_PORT` 时，控制面使用的 `HINDSIGHT_CP_DATAPLANE_API_URL` 也会随之调整；宿主机发布端口可独立设置。
+数据库需启用 `vector` 和位于 `public` 的 `pg_trgm`；模板只显式声明 `vector`，部署前请补齐并检查 `pg_trgm` 的位置，`CREATE EXTENSION IF NOT EXISTS` 不会移动已有扩展。
+
+开发模板改用了保留镜像预置模型的命名卷，设置 `HF_HUB_OFFLINE=1`，并增加 API/UI 联合健康检查与 `make health`，使用这些功能需要更新配套文件。修改容器内 API 端口后，应同步检查控制面连接地址。
 
 ## 运维命令
 
@@ -52,10 +54,11 @@ cd /opt/hindsight
 make up
 make log
 make info
-make health
 make down
 make pull
 ```
+
+可分别请求 API 的 `/health/ready` 和 UI 代理的 `/api/banks?limit=1`，确认应用就绪且控制面能够访问 API。
 
 ## 参考
 

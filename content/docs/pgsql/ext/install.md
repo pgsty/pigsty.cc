@@ -92,7 +92,7 @@ sudo apt install -y postgresql-18-pg-duckdb
 
 ## 使用包别名
 
-Pigsty 支持使用标准化的包别名，自动翻译为对应 PG 版本的包名：
+Pigsty 支持使用标准化的包别名，自动翻译为对应 PG 版本的包名。以下示例使用 `pg_version: 18`，EL 以 `el9.x86_64`、Debian 系以 `u24.x86_64` 为例：
 
 ```yaml
 pg_extensions:

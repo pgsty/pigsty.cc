@@ -434,7 +434,7 @@ Pigsty 会根据实际启用的组件自动配置相应的反向代理，用户�
   - 本地 Web 服务器使用默认 Access 日志
 - `conf`：Nginx 模板文件名
   - 显式指定使用的配置模板文件，位于 [roles/infra/templates/nginx](https://github.com/pgsty/pigsty/tree/main/roles/infra/templates/nginx) 或 [templates/nginx](https://github.com/pgsty/pigsty/tree/main/templates/nginx) 目录
-  - 优先于 `home` / `path` / `endpoint` 自动选择；除通用模板外，还有 `repo.conf`、`beta.conf`、`demo.conf`、`pgext.conf`、`pgweb.conf`，见 [**专用门户模板**](/docs/infra/admin/portal#专用门户模板)
+  - 优先于 `home` / `path` / `endpoint` 自动选择；开发版另有 `repo.conf`、`beta.conf`、`demo.conf`、`pgext.conf`、`pgweb.conf` 等专用站点模板，见 [**开发版维护参考**](/docs/infra/admin/portal#开发版维护参考)
   - 如果未指定此参数，将使用默认配置模板
 - `cache_dir`：门户缓存目录；非空时角色会创建目录，并设置所有者 `nginx:nginx`、权限 `0750`。目录管理于 2026-09-01 加入开发源码，`v4.5.0` 发布包不包含此行为
 - `domains`：额外域名列表，会参与 Certbot 域名集合；2026-09-01 起的开发源码在新签发自签名证书时还将其加入 SAN。具体模板是否监听这些别名仍取决于模板的 `server_name`

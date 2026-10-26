@@ -1,14 +1,16 @@
 ---
-title: fork/mssql
+title: mssql
 weight: 420
-description: 固定使用 PostgreSQL 17 兼容 Babelfish 内核，提供 SQL Server 协议与 T-SQL 兼容能力
+description: 默认使用 PostgreSQL 17 兼容的 Babelfish 内核，提供 SQL Server 协议与 T-SQL 兼容能力
 icon: fa-brands fa-windows
 categories: [参考]
 ---
 
 开发版配置路径为 `conf/fork/mssql.yml`；v4.5.0 使用 `conf/mssql.yml`，配置命令相应为 `-c mssql`。
 
-`fork/mssql` 配置模板使用 **PostgreSQL 17 兼容的 Babelfish** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。当前模板固定 `pg_version: 17`；`configure` 不会用 `-v` 覆盖此固定内核版本。
+`mssql` 配置模板使用 Babelfish 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。软件仓库提供 PG17、PG18 兼容包，模板默认选择 `pg_version: 17`；具体平台的可用版本见 [**软件包清单**](/docs/repo/pgsql/)。
+
+`./configure -c mssql` 会忽略 `-v`。如需使用 PG18，应在生成的 `pigsty.yml` 中显式修改 `pg_version`，并确认对应平台的内核包与扩展可用。开发版的 `fork/mssql` 路径不受这条旧名称判断保护，`-v` 会覆盖版本。
 
 从 Pigsty v4.2 以来，Babelfish 由 Pigsty 直接构建，不再使用 WiltonDB 仓库，可在所有 [支持的 Linux 平台](/docs/ref/linux) 上使用。
 
@@ -19,7 +21,7 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `fork/mssql`
+- 配置名称： `mssql`
 - 节点数量： 单节点
 - 配置说明：Babelfish（PG17）配置模板，提供 SQL Server 协议兼容
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -29,7 +31,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c fork/mssql [-i <primary_ip>]
+./configure -c mssql [-i <primary_ip>]
 ```
 
 
@@ -46,7 +48,7 @@ categories: [参考]
 
 ## 配置解读
 
-`fork/mssql` 模板让您可以使用 SQL Server Management Studio (SSMS) 或其他 SQL Server 客户端工具连接 PostgreSQL（Babelfish 协议层）。
+`mssql` 模板让您可以使用 SQL Server Management Studio (SSMS) 或其他 SQL Server 客户端工具连接 PostgreSQL（Babelfish 协议层）。
 
 **关键特性**：
 - 使用 TDS 协议（端口 1433），兼容 SQL Server 客户端
@@ -76,7 +78,7 @@ sqlcmd -S 10.10.10.10,1433 -U dbuser_mssql -P DBUser.MSSQL -d mssql
 - 希望利用 PostgreSQL 生态同时保持 T-SQL 兼容性
 
 **注意事项**：
-- 当前 `fork/mssql` 模板固定使用 PostgreSQL 17 兼容内核；不要依赖 `-v` 切换该模板的大版本
+- 默认模板使用 PostgreSQL 17 兼容内核；切换版本后，部署前检查生成清单中的 `pg_version` 与软件包支持范围
 - 默认迁移模式为 `multi-db`（`babelfishpg_tsql.migration_mode`），可按需改为 `single-db`
 - 部分 T-SQL 语法可能存在兼容性差异，请参考 Babelfish 兼容性文档
 - 需要使用 `md5` 认证方式（而非 `scram-sha-256`）

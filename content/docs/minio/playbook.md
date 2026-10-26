@@ -41,7 +41,14 @@ MINIO 模块提供两个内置剧本：
 - `minio_register`：写入 VictoriaMetrics FileSD 目标
 - `minio_provision`：由集群首个成员执行一次 `mcli` 别名、存储桶与用户置备
 
-`minio_launch` 使用非阻塞 systemd 重启，让分布式成员可以并行启动；随后每 5 秒检查一次 `ActiveState=active` 与新的 `InvocationID`，最多重试 120 次。进入置备前还会执行 `silo healthcheck --url <本机端点> cluster`，最多重试 5 次、间隔 5 秒，确认集群就绪。
+`minio_launch` 并行重启集群成员，随后等待服务启动并检查集群就绪，再创建存储桶与用户。若启动超时，应检查服务日志与成员间连通性。
+
+<details>
+<summary>启动超时排查：就绪检查细节</summary>
+
+角色每 5 秒检查一次 `ActiveState=active` 与新的 `InvocationID`，最多重试 120 次；进入置备前，`silo healthcheck --url <本机端点> cluster` 最多重试 5 次、间隔 5 秒。
+
+</details>
 
 重新执行 `minio.yml` 可能重启正在运行的对象存储服务，但不会主动重建数据。生产环境应按集群故障预算安排执行窗口。
 

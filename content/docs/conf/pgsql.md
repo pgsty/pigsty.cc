@@ -1,5 +1,5 @@
 ---
-title: fork/pgsql
+title: pgsql
 weight: 410
 description: 原生 PostgreSQL 内核，稳定支持 PostgreSQL 14 到 18，并提供 PG19 Beta 试用
 icon: fa-brands fa-linux
@@ -8,14 +8,14 @@ categories: [参考]
 
 开发版配置路径为 `conf/fork/pgsql.yml`；v4.5.0 使用 `conf/pgsql.yml`，配置命令相应为 `-c pgsql`。
 
-`fork/pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，稳定支持 PostgreSQL 14 到 18。当前 `configure` 也接受版本 19，但 PG19 仍是 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板试用。
+`pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，稳定支持 PostgreSQL 14 到 18。当前 `configure` 也接受版本 19，但 PG19 仍是 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板试用。
 
 
 --------
 
 ## 配置概览
 
-- 配置名称： `fork/pgsql`
+- 配置名称： `pgsql`
 - 节点数量： 单节点
 - 配置说明：原生 PostgreSQL 内核配置模板
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -25,13 +25,13 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c fork/pgsql [-i <primary_ip>]
+./configure -c pgsql [-i <primary_ip>]
 ```
 
 如需指定非默认 PostgreSQL 版本（如 16）：
 
 ```bash
-./configure -c fork/pgsql -v 16
+./configure -c pgsql -v 16
 ```
 
 
@@ -48,7 +48,7 @@ categories: [参考]
 
 ## 配置解读
 
-`fork/pgsql` 模板是 Pigsty 的 **标准内核配置**，使用社区原生 PostgreSQL。
+`pgsql` 模板是 Pigsty 的 **标准内核配置**，使用社区原生 PostgreSQL。
 
 **版本支持**：
 - PostgreSQL 18（默认）
@@ -62,5 +62,5 @@ categories: [参考]
 - 与 `meta` 模板功能相同，显式声明使用原生内核
 
 **与 meta 的区别**：
-- `fork/pgsql` 模板显式声明使用原生 PostgreSQL 内核
+- `pgsql` 模板显式声明使用原生 PostgreSQL 内核
 - 适合需要明确区分不同内核类型的场景

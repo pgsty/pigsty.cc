@@ -13,7 +13,7 @@ categories: [参考]
 
 ```bash
 cd ~/pigsty/app/pgweb
-vi .env                    # PGWEB_PORT 默认为 8886
+vi docker-compose.yml      # 端口映射写在 Compose 文件中
 make up                    # docker compose up -d
 ```
 
@@ -38,7 +38,6 @@ postgres://test:test@10.10.10.11:5432/test?sslmode=disable
 
 ```bash
 make up         # 使用 docker compose 启动
-make run        # 与 make up 相同，使用 Compose 配置启动
 make view       # 打印本地访问入口与示例 URL
 make log        # 跟踪容器日志
 make info       # 使用 jq 检查容器
@@ -51,3 +50,5 @@ make load       # 从 /tmp/docker/pgweb.tgz 加载镜像
 ```
 
 当前模板使用未固定版本的 `sosedoff/pgweb` 镜像；若正式环境要求部署可复现，应在 `app/pgweb/docker-compose.yml` 中固定镜像版本或摘要。
+
+`make run` 是固定端口的独立 `docker run` 命令，不采用 Compose 修改。开发模板增加了 `PGWEB_PORT` 并将 `make run` 统一为 Compose 入口，使用时需配套更新。

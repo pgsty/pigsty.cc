@@ -16,7 +16,7 @@ categories: [概念]
 
 ## 快速开始
 
-使用 [`fork/pgsql`](/docs/conf/pgsql/) 配置模板 [**安装**](/docs/setup/install) Pigsty。
+使用 [`pgsql`](/docs/conf/pgsql/) 配置模板 [**安装**](/docs/setup/install) Pigsty。
 
 以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgsql.yml)；开发版已迁移至 `conf/fork/pgsql.yml`，对应使用 `-c fork/pgsql`。
 
@@ -31,7 +31,7 @@ categories: [概念]
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
 - [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
 - [`ha/full`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)：用于 HA 演示的 4 节点沙盒
-- [`fork/pgsql`](/docs/conf/pgsql/)：最小的 postgres 内核配置示例
+- [`pgsql`](/docs/conf/pgsql/)：最小的 postgres 内核配置示例
 
 
 ------

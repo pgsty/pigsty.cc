@@ -98,9 +98,9 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 `mysql-rm.yml` 下线时保留全部数据并写入退役标记；复活 = 删除各成员的 `/var/lib/mysql/.pigsty-mysql-retired` 后重跑 `mysql.yml`（见 [下线与复活集群](/docs/mysql/admin#下线与复活集群)）。单机两步即可；HA 集群还需按 [完全停机恢复](/docs/mysql/admin#完全停机恢复) 重建仲裁。标记的意义是防止「下线后被无意重新拉起」；数据目录属主校验（`.pigsty-mysql-initialized`）独立存在，删除退役标记不会让别的集群接管这份数据。
 
 
-## `conf/fork/mysql.yml` 模板怎么和这个模块对不上？
+## `conf/mysql.yml` 模板怎么和这个模块对不上？
 
-那是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与本模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 生态兼容用本模块；PG 基础设施上跑 MySQL 协议应用可考虑 OpenHalo。
+该模板在开发版中位于 `conf/fork/mysql.yml`。它是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与本模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 生态兼容用本模块；PG 基础设施上跑 MySQL 协议应用可考虑 OpenHalo。
 
 
 ## 剧本失败显示 `no ONLINE member holds the cluster`？

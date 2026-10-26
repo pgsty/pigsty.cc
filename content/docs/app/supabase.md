@@ -14,8 +14,9 @@ Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务�
 
 本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
 
-当前模板跟随 Supabase [`self-hosted/v0.8.2`](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker)（提交 `564eab8`）的协调版本，默认使用 Envoy `1.39.1`，Studio 为 `2026.09.07-sha-7996410`。
-数据库使用外置的 Pigsty PostgreSQL，模板默认 PG18；开发源码记录了该组合在 PG18.6 上的基本功能验证。本文的 `0.8.2` 模板与升级脚本属于开发版，需要配套的 `app/supabase/` 与 `conf/supabase.yml`；v4.5.0 发布包不包含这些更新。既有部署请先阅读 [升级说明](#升级现有部署)。
+下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，默认使用 Kong 网关和外置 PG18。
+
+Supabase `self-hosted/v0.8.2` 的 Envoy 适配与迁移脚本仍是开发预览，尚未提供完整的公开 Pigsty 配套版本。下方保留相关变化供升级规划参考，不能只复制新 YAML 或 SQL 就按该版本部署。
 
 
 
@@ -133,7 +134,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase �
 让我们先从单节点 Supabase 部署开始，我们会在后面进一步介绍多节点高可用部署的方法。
 
 [准备](/docs/deploy/prepare) 一台全新 [Linux 服务器](/docs/deploy/prepare)，使用 Pigsty 提供的 [`supabase`](/docs/conf/supabase/) 配置模板执行 [标准安装](/docs/setup/install)，
-然后额外运行 [`docker.yml`](/docs/docker/playbook#dockeryml) 与 `app.yml` 拉起无状态部分的 Supabase 容器即可（默认 Envoy HTTP 端口 `8000`，HTTPS 由 Nginx 门户提供）。
+然后额外运行 [`docker.yml`](/docs/docker/playbook#dockeryml) 与 `app.yml` 拉起无状态部分的 Supabase 容器即可（默认 Kong HTTP 端口为 `8000`，可通过 Nginx 门户接入 HTTPS）。
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
@@ -155,7 +156,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 **注意事项：**
 
 - 在中国大陆地区，Pigsty 默认使用 1Panel 与 1ms 提供的 DockerHub 镜像站点下载 Supabase 相关镜像，可能会较慢。
-- 你也可以自行配置 [代理](/docs/docker/usage#代理) 与 [镜像站](/docs/docker/usage#镜像站)，`cd /opt/supabase; make pull` 手动拉取镜像。离线导出前先执行 `make pull`，再执行 `make save`；完整镜像包包含默认 Envoy 和可选 Kong。我们亦提供包含完整离线安装方案的 Supabase 自建专家咨询服务。
+- 你也可以自行配置 [代理](/docs/docker/usage#代理) 与 [镜像站](/docs/docker/usage#镜像站)，`cd /opt/supabase; make pull` 手动拉取镜像。离线导出前先执行 `make pull`，再执行 `make save`，镜像集合以所用版本的 Compose 为准。我们亦提供包含完整离线安装方案的 Supabase 自建专家咨询服务。
 - 如果你需要使用的对象存储功能，那么需要通过域名与 HTTPS 访问 Supabase，否则会出现报错。
 - 对于严肃的生产部署，请 **务必** 修改所有默认密码！
 
@@ -180,13 +181,20 @@ Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` �
 Supabase Studio 的 Query Performance 页面会在 `public, extensions` 搜索路径下访问 `pg_stat_statements`。
 Pigsty 仍然将 `pg_stat_statements` 扩展对象保留在 `monitor` 模式中，以兼容 `pg_exporter` 与现有监控面板；模板会在 `extensions` 模式中创建兼容视图与函数，供 Studio 使用。
 
-默认网关是 Envoy，Compose 服务名为 `api-gw`；Kong `3.9.3` 作为可选过渡方案保留。在应用目录中使用以下组合启用 Kong：
+网关服务名为 `kong`。开发版适配 [**`self-hosted/v0.8.2`**](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker) 后，默认网关改为 Envoy `1.39.1`，服务名为 `api-gw`，并保留 Kong `3.9.3` 作为可选方案。
+
+<details>
+<summary>开发版网关切换方式</summary>
+
+仅在已取得配套的开发版应用文件时，使用以下组合启用 Kong：
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.kong.yml up -d
 ```
 
 两个网关的 HTTP 端口均由 `API_GW_HTTP_PORT` 控制，默认 `8000`；只有 Kong 配置额外暴露 `KONG_HTTPS_PORT`（默认 `8443`）。
+
+</details>
 
 如果您只有一台服务器，或者选择在云服务器上自建，Pigsty 建议您使用外部的 S3 替代本地的 Silo 作为对象存储，存放 PostgreSQL 的备份，并承载 Supabase Storage 服务。
 这样的部署可在单机故障后提供小时级恢复的兜底路径；实际 RPO 取决于最近一次可恢复备份、WAL 归档状态与对象存储可用性，不能仅凭该拓扑承诺固定数值。
@@ -205,13 +213,18 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 
 ## 升级现有部署
 
+同版本维护时保留配套的应用配置。下面是开发版 `0.8.2` 的升级准备说明；须先取得完整且经过验证的 Pigsty 应用版本，包括 `app/supabase/`、`conf/supabase.yml` 与相关 SQL，再安排停机与迁移。当前公开应用模板尚未包含这些开发改动。
+
+<details>
+<summary>0.8.2 开发版迁移参考：网关、JWT 设置与授权</summary>
+
 升级前备份 PostgreSQL、对象存储和应用卷，并检查本地定制。旧模板的网关服务名为 `kong`，新模板为 `api-gw`；**替换旧 Compose 文件前**，在旧应用目录执行 `docker compose down`，不要加 `-v`，以停止旧网关并释放端口，同时保留卷和外置数据。只用新文件执行 `up -d` 可能留下旧 `kong` 容器并造成端口或容器名冲突。
 
 `files/supabase.sql` 是新安装基线，**不要在现有数据库上整体重放**。仅更新容器不会应用新增 SQL 授权，也不会移除旧数据库设置。`0.8.2` 移除了 SQL 可读的 `app.settings.jwt_secret` 和 PostgREST 的 `PGRST_APP_SETTINGS_JWT_SECRET`；应用层 JWT 验证配置和 `app.settings.jwt_exp` 保留。
 
 先检查依赖 `current_setting('app.settings.jwt_secret')` 的自定义 SQL 函数。如仍需签名密钥，按 [上游迁移说明](https://github.com/supabase/supabase/pull/45003) 改用受限的 Vault secret，仅授权函数所有者读取，避免通过公开 RPC 返回解密后的密钥。
 
-完成依赖处理和备份后，在 Pigsty 安装根目录下，以管理员身份连接目标 Supabase 数据库，执行开发树中的幂等窄升级脚本 `files/supabase-0.8.2.sql`。该文件尚未出现在公开 GitHub `main`；其完整 SQL 逻辑如下，可保存为该文件后审查执行：
+完成配套文件准备、依赖处理和备份后，开发版使用 `files/supabase-0.8.2.sql` 执行以下窄升级。这里保留 SQL 供审查；它不能单独完成应用升级：
 
 ```sql
 \set ON_ERROR_STOP on
@@ -241,6 +254,8 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 ```
 
 较旧的部署还应检查 `supabase_storage_admin` 是否拥有目标数据库的 `CREATE` 权限，以及是否已应用上游 [2026-07-30 pg_cron 权限迁移](https://github.com/supabase/postgres/blob/develop/migrations/db/migrations/20260730000000_revoke_trigger_on_cron_tables_from_postgres.sql)。具体检查与补齐方法见 [模板升级说明](https://github.com/pgsty/pigsty/tree/main/app/supabase#existing-deployments)。新安装与同版本容器重建验证不能替代现有业务库的升级演练。
+
+</details>
 
 
 ------

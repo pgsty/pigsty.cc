@@ -13,14 +13,17 @@ Pigsty 的 `app/kong` 模板使用 PostgreSQL 作为配置存储。新空库需�
 
 ## 快速开始
 
+Admin API 默认发布到宿主机所有接口。启动前，将 `docker-compose.yml` 中 Admin API 的端口映射改为 `"127.0.0.1:${KONG_ADMIN_PORT}:${KONG_ADMIN_PORT}"`，保留另外两个代理端口映射。
+
 ```bash
 cd ~/pigsty/app/kong
 vi .env         # 检查 KONG_PG_* 与端口配置
+vi docker-compose.yml # 限制 Admin API 的宿主机监听地址
 make bootstrap  # 仅首次初始化全新空库时执行
 make up
 ```
 
-默认端口：
+完成上述修改后的端口：
 
 - Proxy HTTP：`8000`
 - Proxy HTTPS：`8443`

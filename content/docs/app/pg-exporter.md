@@ -14,10 +14,10 @@ categories: [参考]
 cd ~/pigsty/app/pg_exporter
 vi .env                    # 修改数据库连接与端口
 make up
-make view                  # 请求实际发布端口上的指标
+make view                  # 检查默认 /metrics 入口
 ```
 
-默认镜像为 `pgsty/pg_exporter`，未固定版本；默认通过 `dbuser_monitor` 连接 `10.10.10.10:5432/postgres`，指标入口为 `http://127.0.0.1:9632/metrics`。
+默认镜像为 `pgsty/pg_exporter`，未固定版本。`.env` 使用 `dbuser_dba`，建议改用具备监控权限的 `dbuser_monitor`；默认指标入口为 `http://127.0.0.1:9632/metrics`，宿主机端口映射并不限于回环地址。
 
 ## 端口与指标
 
@@ -28,8 +28,10 @@ PG_EXPORTER_TELEMETRY_PATH=/metrics
 PG_EXPORTER_URL=postgres://dbuser_monitor:DBUser.Monitor@10.10.10.10:5432/postgres?sslmode=disable
 ```
 
-`PG_EXPORTER_PORT` 控制宿主机发布端口，`PG_EXPORTER_LISTEN_ADDRESS` 控制容器监听端口，并同时传给二进制的 `--web.listen-address` 参数与 Compose 的目标端口。此模板要求监听地址使用 `:PORT` 格式，例如 `:9730`，不要在其中填写 IP 或主机名。
+`PG_EXPORTER_PORT` 控制宿主机发布端口，Compose 的容器目标端口固定为 `9630`。若要修改容器监听端口，应在 Compose 中显式设置二进制的 `--web.listen-address` 参数，并同步修改端口映射，不能只改 `.env`。
 
-`make view` 需要 Python 3，会请求实际发布端口与指标路径。修改后可用 `docker compose config` 检查端口映射，再将该地址加入监控采集配置。
+`make view` 读取 `.env` 中的发布端口，但路径固定为 `/metrics`。修改后用 `docker compose config` 检查映射，并直接请求实际指标地址。
+
+开发模板才会联动 `PG_EXPORTER_LISTEN_ADDRESS`（要求 `:PORT` 格式）与 Compose 端口，并让 `make view` 根据最终配置选择地址和路径。
 
 数据库账号需具备所选采集器需要的监控权限。部署前替换示例口令，按实际网络设置 TLS 与 HBA，并限制指标端口的访问来源。

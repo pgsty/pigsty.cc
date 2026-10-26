@@ -1,5 +1,5 @@
 ---
-title: fork/oriole
+title: oriole
 weight: 490
 description: OrioleDB 内核，提供基于 UNDO 的 OLTP 存储引擎
 icon: fa-solid fa-feather
@@ -8,14 +8,14 @@ categories: [参考]
 
 开发版配置路径为 `conf/fork/oriole.yml`；v4.5.0 使用 `conf/oriole.yml`，配置命令相应为 `-c oriole`。
 
-`fork/oriole` 配置模板使用 OrioleDB 存储引擎替代 PostgreSQL 默认的 Heap 存储，使用 UNDO 日志保存旧版本，减少主存储中的膨胀。
+`oriole` 配置模板使用 OrioleDB 存储引擎替代 PostgreSQL 默认的 Heap 存储，使用 UNDO 日志保存旧版本，减少主存储中的膨胀。
 
 
 --------
 
 ## 配置概览
 
-- 配置名称： `fork/oriole`
+- 配置名称： `oriole`
 - 节点数量： 单节点
 - 配置说明：OrioleDB 存储引擎配置
 - PostgreSQL 大版本：`16`、`17`、`18`
@@ -26,7 +26,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c fork/oriole [-i <primary_ip>]
+./configure -c oriole [-i <primary_ip>]
 ```
 
 
@@ -43,7 +43,7 @@ categories: [参考]
 
 ## 配置解读
 
-`fork/oriole` 模板启用 OrioleDB 存储引擎，原理见 [**内核说明**](/docs/pgsql/kernel/orioledb/)。
+`oriole` 模板启用 OrioleDB 存储引擎，原理见 [**内核说明**](/docs/pgsql/kernel/orioledb/)。
 
 **关键特性**：
 - **版本管理**：使用 UNDO 日志保存 MVCC 旧版本，减少主存储中的膨胀
@@ -71,7 +71,7 @@ CREATE TABLE orders (
 ```
 
 **注意事项**：
-- OrioleDB 支持 PostgreSQL 16、17、18，默认模板使用 PG18，可通过 `./configure -c fork/oriole -v 16/17/18` 指定大版本
+- OrioleDB 支持 PostgreSQL 16、17、18，默认模板使用 PG18，可通过 `./configure -c oriole -v 16/17/18` 指定大版本
 - 需要将 `orioledb` 添加到 `shared_preload_libraries`
 - 部分 PostgreSQL 特性可能不完全支持
 - 请为所选 PostgreSQL 大版本与 OS 架构安装匹配的 OrioleDB 包

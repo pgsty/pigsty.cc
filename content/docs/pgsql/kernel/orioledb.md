@@ -19,7 +19,7 @@ OrioleDB 当前在 Pigsty 中支持 PostgreSQL 16、17、18 三个兼容系，�
 
 ## 快速开始
 
-按照 Pigsty [**标准安装**](/docs/setup/install) 流程，使用 [`fork/oriole`](/docs/conf/oriole/) 配置模板。
+按照 Pigsty [**标准安装**](/docs/setup/install) 流程，使用 [`oriole`](/docs/conf/oriole/) 配置模板。
 
 以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/oriole.yml)；开发版已迁移至 `conf/fork/oriole.yml`，对应使用 `-c fork/oriole`。
 

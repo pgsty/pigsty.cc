@@ -30,7 +30,7 @@ Pigsty PGSQL 仓库直接提供 IvorySQL 5.4 软件包，兼容 PostgreSQL 18.4�
 
 ## 安装
 
-使用 Pigsty 内置的 `fork/ivory` 配置模板安装：
+使用 Pigsty 内置的 `ivory` 配置模板安装：
 
 以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/ivory.yml)；开发版已迁移至 `conf/fork/ivory.yml`，对应使用 `-c fork/ivory`。
 

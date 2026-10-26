@@ -134,6 +134,8 @@ tofu apply
 
 更多详情请参考 [**OpenTofu**](/docs/deploy/terraform/) 文档。
 
+以上直接使用 OpenTofu CLI。使用 `make` 与 `./ssh` 前，应检查辅助脚本实际调用的是 `tofu` 还是 `terraform`，详见 [**OpenTofu 快速开始**](/docs/deploy/terraform/#快速开始)。
+
 
 
 ----------------

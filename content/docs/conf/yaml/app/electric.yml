@@ -1,4 +1,5 @@
 ---
+# Development preview: requires matching app/electric/ resources.
 #==============================================================#
 # File      :   electric.yml
 # Desc      :   pigsty config for running 1-node electric app

@@ -8,6 +8,7 @@ categories: [参考]
 
 `app/mattermost` 配置模板用于部署 Mattermost，默认将应用与数据库放在同一节点，使用 Pigsty 提供 PostgreSQL、Nginx 与监控能力。
 
+下方预览保留了 Bleve 路径等修正，新增的 Calls 端口映射和目录准备脚本需配套更新，详见 [**Mattermost 应用说明**](/docs/app/mattermost/)。
 
 --------
 
@@ -34,10 +35,14 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/app/mattermost.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/mattermost.yml)
+源文件：[**`conf/app/mattermost.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/app/mattermost.yml)。
+
+<details>
+<summary>开发版配置预览：Calls 需要同步修改 Compose 端口映射</summary>
 
 {{< include file="yaml/app/mattermost.yml" code=true lang="yaml" >}}
 
+</details>
 
 --------
 
@@ -54,7 +59,7 @@ categories: [参考]
 - 默认开启 `docker_enabled: true`，并通过 `./docker.yml` 完成容器运行时准备。
 - Nginx 门户默认暴露 `mm.pigsty`（`infra_portal.mattermost`），支持 WebSocket。
 - 预置本地 Docker 网段 HBA 规则（`172.16.0.0/12`），仅允许应用账号访问 `mattermost` 数据库。
-- Calls 同时发布 `8443/TCP` 与 `8443/UDP`，数据目录由应用准备脚本设置为 `2000:2000`。
+- `apps.mattermost.file` 创建数据目录并设置为 `2000:2000`；开发模板另外增加 Calls 的 `8443/TCP` 与 `8443/UDP` 映射。
 - 可选启用 JuiceFS（注释块）将 `/data/mattermost` 挂载到 PostgreSQL 后端存储。
 
 注意事项：

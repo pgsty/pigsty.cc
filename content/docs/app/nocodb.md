@@ -42,7 +42,6 @@ Pigsty 提供了便捷的 Makefile 命令来管理 NocoDB 服务：
 
 ```bash
 make up      # 启动 NocoDB 服务
-make run     # 与 make up 使用相同 Compose 配置
 make view    # 显示 NocoDB 访问地址
 make log     # 查看容器日志
 make info    # 查看服务详细信息
@@ -53,6 +52,8 @@ make rmi     # 移除 NocoDB 镜像
 make save    # 保存镜像到 /tmp/docker/nocodb.tgz
 make load    # 从 /tmp/docker/nocodb.tgz 加载镜像
 ```
+
+`make run` 使用独立的 `docker run` 命令，连接串与密钥写死在 Makefile 中；使用上面的 `make up` 才会读取 Compose 配置。
 
 
 

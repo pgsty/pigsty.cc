@@ -194,7 +194,7 @@ Infra Nginx 默认可在 `http://<infra_ip>/ca.crt` 提供公开 CA 证书。下
 
 每个 `infra_portal` 条目都可以指定 `certbot` 证书名称。Pigsty 的 `/etc/nginx/sign-cert` 使用 Certbot `webroot` 模式，聚合同一证书名下的 `domain` 与 `domains`，签发后由 `/etc/nginx/link-cert` 将证书链接到 Nginx。
 
-`sign-cert` 对已有证书使用 `--renew-with-new-domains` 收敛域名集合，包括移除旧别名；`link-cert` 只有在证书与私钥存在、证书未过期且匹配主域名时才链接到 Certbot 证书，否则回退到 Pigsty CA 证书。新签发 Pigsty 自签名证书时，额外 `domains` 也会加入 SAN，但 `link-cert` 的主机名检查只针对条目的主 `domain`。
+`sign-cert` 对已有证书使用 `--expand`，移除旧别名时需要另外核对证书的域名集合；`link-cert` 只按私钥文件是否存在选择 Certbot 证书，不会自动验证证书有效期与主机名。部署后应检查实际证书的 SAN 和有效期。
 
 前置条件：
 
@@ -243,7 +243,7 @@ systemctl list-timers --all | grep -i certbot
 certbot renew --dry-run
 ```
 
-包含 2026-09-01 门户改进的开发源码会安装 `/etc/letsencrypt/renewal-hooks/deploy/10-reload-nginx`（`v4.5.0` 发布标签不含此 Hook）：续期成功后先执行 `nginx -t`，验证通过才调用 `systemctl reload nginx.service`。升级旧部署后应执行 `nginx_dir,nginx_config` 标签，以创建 Hook 目录并安装脚本，并检查实际续期调度与 Hook 是否正常执行。
+仅更新证书文件不会让 Nginx 自动加载新证书。应检查续期 Hook 是否会在签发成功后执行 `nginx -t && systemctl reload nginx.service`；尚未配置时，将该步骤补入现有 Certbot 续期任务。
 
 --------
 

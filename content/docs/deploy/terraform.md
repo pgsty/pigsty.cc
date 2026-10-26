@@ -9,7 +9,7 @@ categories: [教程]
 
 [**OpenTofu**](https://opentofu.org/) 是一个开源的“基础设施即代码”工具，您可以使用它在公有云上一键创建虚拟机。
 
-Pigsty 当前开发源码自 2026-08-24 起默认使用 OpenTofu；`v4.5.0` 发布归档的辅助脚本仍默认使用 Terraform。源码提供兼容两者的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
+下面直接使用 `tofu` 命令操作云模板。使用 Makefile 与 `./ssh` 辅助脚本前，应检查其实际调用的是 `tofu` 还是 `terraform`；不支持 `IAC_CLI` 的脚本不能通过该变量切换。源码提供兼容两者的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
 
 
 ----------------
@@ -59,7 +59,7 @@ tofu output -raw ssh_command
 
 仓库中的 `./ssh` 是面向旧式“全部输出都是 IP、root 密码为 `PigstyDemo4`”模板的兼容脚本：它会遍历 IaC 输出，将其当作 IP 写入 `~/.ssh/pigsty_config`，再用 `sshpass` 分发密钥。因此它适用于 `aliyun.tf`、`aliyun-full.tf`、`aliyun-oss.tf`、`aliyun-pro.tf` 这类兼容模板；不要对包含 `ssh_command`、私网 IP 或访问密钥输出的现代模板运行它。
 
-使用兼容脚本时：
+如果所用 `./ssh` 仍调用 Terraform，则需要安装 Terraform；若只安装 OpenTofu，请根据 `tofu output` 配置 SSH。使用兼容脚本时：
 
 ```bash
 ./ssh       # 写入 SSH 配置并分发密钥
@@ -86,7 +86,7 @@ tofu destroy
 
 ## Terraform 兼容与迁移
 
-目录和文件名继续保留为 `terraform/`、`.tf`、`terraform.tfvars`、`.terraform.lock.hcl` 与 `terraform.tfstate`，因为 OpenTofu 正式支持这些兼容名称。需要使用 Terraform 时，应显式指定：
+目录和文件名继续保留为 `terraform/`、`.tf`、`terraform.tfvars`、`.terraform.lock.hcl` 与 `terraform.tfstate`，因为 OpenTofu 正式支持这些兼容名称。若所用 Makefile 支持 `IAC_CLI`，可按下面的方式选择 Terraform；否则直接执行 `terraform plan`：
 
 ```bash
 make IAC_CLI=terraform plan

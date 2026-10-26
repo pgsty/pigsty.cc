@@ -7,29 +7,29 @@ module: [REDIS]
 categories: [参考]
 ---
 
-本页区分 **采集端点的原始指标** 与 **vmalert 计算生成的记录指标**。截至 2026-10-13，当前源码的 [`files/victoria/rules/redis.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/redis.yml) 定义了 **96 条记录规则**；完整名称和表达式见该规则文件，下表列出常用示例。记录指标由规则求值得到，不应在 Exporter 的 `/metrics` 端点中查找。
+本页区分 **采集端点的原始指标** 与 **vmalert 计算生成的记录指标**。[**`files/victoria/rules/redis.yml`**](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/redis.yml) 定义了 **96 条记录规则**；常用示例见下表，完整名称与表达式见 [**记录指标索引**](#记录指标索引)。记录指标应在 VictoriaMetrics 中查询，不在 Exporter 的 `/metrics` 端点中。
 
 原始指标会随软件版本、采集器、权限、实例角色与运行状态变化。页末保留历史抓取样本，仅供识别指标，不代表当前版本的完整接口。
 
 ## 当前记录规则
 
-表达式保留源码语义；`ins`、`cls`、`env` 一般分别表示实例、集群与环境聚合层级，实际保留的标签以 `by` / `without` 和向量匹配子句为准。记录规则没有独立的 Prometheus `TYPE` 元数据，不应将它们统一标成 Counter 或 Gauge。
+`ins`、`cls`、`env` 分别用于实例、集群与环境层级，实际聚合标签以表达式为准。记录指标与原始指标的类型、计数区别见 [**指标口径**](/docs/infra/metric/#指标口径)。
 
-| 记录指标 | 表达式 |
-|:---|:---|
-| `redis:ins:cpu_usage` | `rate(redis_cpu_sys_seconds_total[1m]) + rate(redis_cpu_user_seconds_total[1m])` |
-| `redis:ins:mem_usage` | `redis_memory_used_bytes / redis_memory_max_bytes` |
-| `redis:ins:qps` | `rate(redis_commands_processed_total[1m])` |
-| `redis:cls:qps` | `sum by (job, cls) (redis:ins:qps)` |
-| `redis:ins:key_hit_rate` | `redis:ins:key_hit / (redis:ins:key_hit + redis:ins:key_miss)` |
-| `redis:ins:clients` | `redis_connected_clients` |
-| `redis:ins:blocked_clients` | `rate(redis_blocked_clients[1m])` |
-| `redis:ins:lsn_rate` | `rate(redis_master_repl_offset[1m])` |
+| 记录指标 | 表达式 | 含义或单位 |
+|:---|:---|:---|
+| `redis:ins:cpu_usage` | `rate(redis_cpu_sys_seconds_total[1m]) + rate(redis_cpu_user_seconds_total[1m])` | CPU 消耗，CPU 秒/秒 |
+| `redis:ins:mem_usage` | `redis_memory_used_bytes / redis_memory_max_bytes` | 已用内存与配置上限之比 |
+| `redis:ins:qps` | `rate(redis_commands_processed_total[1m])` | 命令执行速率，次/秒 |
+| `redis:cls:qps` | `sum by (job, cls) (redis:ins:qps)` | 集群命令执行速率，次/秒 |
+| `redis:ins:key_hit_rate` | `redis:ins:key_hit / (redis:ins:key_hit + redis:ins:key_miss)` | 键查询命中比例 |
+| `redis:ins:clients` | `redis_connected_clients` | 已连接客户端数量 |
+| `redis:ins:key_miss` | `rate(redis_keyspace_misses_total[1m])` | 键查询未命中速率，次/秒 |
+| `redis:ins:lsn_rate` | `rate(redis_master_repl_offset[1m])` | 复制偏移推进速率，字节/秒 |
 {.full-width}
 
 ## 历史抓取样本
 
-以下保留 **177 个指标名称** 的既有样本，已移除记录规则和告警状态序列。样本未记录抓取时间与软件版本，类型和标签仅供参考；`Unknown` 表示类型元数据缺失。其中 `up` 与 `scrape_*` 由采集系统生成，不属于 Exporter 原始输出。Histogram / Summary 的多个样本名会分别占行，不能用行数统计指标族。
+以下保留 **177 个指标名称** 的既有样本，已移除记录规则和告警状态序列。样本未记录抓取时间与软件版本，类型和标签仅供参考；`Unknown` 表示类型元数据缺失。统计方式见 [**指标口径**](/docs/infra/metric/#指标口径)。
 
 | Metric Name                                           | Type    | Labels                                                                                                                                                       | Description                                                     |
 |-------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
@@ -211,3 +211,112 @@ categories: [参考]
 | scrape_series_added                                   | Unknown | `cls`, `ip`, `instance`, `ins`, `job`                                                                                                                        | N/A                                                             |
 | up                                                    | Unknown | `cls`, `ip`, `instance`, `ins`, `job`                                                                                                                        | N/A                                                             |
 {.full-width}
+
+## 记录指标索引
+
+以下按规则文件的分组列出完整名称与表达式，可用页面搜索查找指标。若规则有变，以部署到 `/infra/rules/` 的文件为准。
+
+<details>
+<summary>REDIS：96 条记录规则</summary>
+
+| 记录指标 | 表达式 |
+|:---|:---|
+| `redis:ins` | `max by (id, ins, instance, cls, job) (   label_replace(redis_up, "id", "$1", "ins", "(.+)") OR   label_replace(redis_up, "id", "$1", "instance", "(.+)") )` |
+| `redis:node:ip` | `label_replace(redis_up, "ip", "$1", "instance", "(.*)\\:\\d+")` |
+| `redis:node:mem_total` | `max by (job,cls,ip) (label_replace(redis_total_system_memory_bytes, "ip", "$1", "instance", "(.*)\\:\\d+"))` |
+| `redis:node:mem_alloc` | `sum by (job,cls,ip) (label_replace(redis_config_maxmemory, "ip", "$1", "instance", "(.*)\\:\\d+"))` |
+| `redis:node:mem_used` | `sum by (job,cls,ip) (label_replace(redis_memory_used_bytes, "ip", "$1", "instance", "(.*)\\:\\d+"))` |
+| `redis:node:qps` | `sum by (job,cls,ip) (label_replace(redis:ins:qps, "ip", "$1", "instance", "(.*)\\:\\d+"))` |
+| `redis:ins:cpu_sys` | `rate(redis_cpu_sys_seconds_total[1m])` |
+| `redis:ins:cpu_user` | `rate(redis_cpu_user_seconds_total[1m])` |
+| `redis:ins:cpu_usage` | `rate(redis_cpu_sys_seconds_total[1m]) + rate(redis_cpu_user_seconds_total[1m])` |
+| `redis:cls:cpu_sys` | `avg by (job, cls) (redis:ins:cpu_sys)` |
+| `redis:cls:cpu_user` | `avg by (job, cls) (redis:ins:cpu_user)` |
+| `redis:cls:cpu_usage` | `avg by (job, cls) (redis:ins:cpu_usage)` |
+| `redis:env:cpu_usage` | `avg by (job)(redis:ins:cpu_usage)` |
+| `redis:ins:cpu_sys_child` | `rate(redis_cpu_sys_children_seconds_total[1m])` |
+| `redis:ins:cpu_user_child` | `rate(redis_cpu_user_children_seconds_total[1m])` |
+| `redis:ins:cpu_usage_child` | `rate(redis_cpu_sys_children_seconds_total[1m]) + rate(redis_cpu_user_children_seconds_total[1m])` |
+| `redis:cls:cpu_sys_child` | `avg by (job, cls) (redis:ins:cpu_sys_child)` |
+| `redis:cls:cpu_user_child` | `avg by (job, cls) (redis:ins:cpu_user_child)` |
+| `redis:cls:cpu_usage_child` | `avg by (job, cls) (redis:ins:cpu_usage_child)` |
+| `redis:env:cpu_usage_child` | `avg by (job) (redis:ins:cpu_usage_child)` |
+| `redis:ins:mem_usage` | `redis_memory_used_bytes / redis_memory_max_bytes` |
+| `redis:cls:mem_used` | `sum by (job, cls) (redis_memory_used_bytes)` |
+| `redis:cls:mem_max` | `sum by (job, cls) (redis_memory_max_bytes)` |
+| `redis:cls:mem_usage` | `redis:cls:mem_used / redis:cls:mem_max` |
+| `redis:cls:mem_usage_max` | `max by (job, cls) (redis:ins:mem_usage)` |
+| `redis:env:mem_usage` | `sum by (job)(redis:cls:mem_used) / sum by (job)(redis:cls:mem_max)` |
+| `redis:ins:rx` | `rate(redis_net_input_bytes_total[1m])` |
+| `redis:cls:rx` | `sum by (job, cls) (redis:ins:rx)` |
+| `redis:env:rx` | `sum by (job) (redis:cls:rx)` |
+| `redis:ins:tx` | `rate(redis_net_output_bytes_total[1m])` |
+| `redis:cls:tx` | `sum by (job, cls) (redis:ins:tx)` |
+| `redis:env:tx` | `sum by (job) (redis:cls:tx)` |
+| `redis:ins:net_traffic` | `redis:ins:rx + redis:ins:tx` |
+| `redis:cls:net_traffic` | `redis:cls:rx + redis:cls:tx` |
+| `redis:env:net_traffic` | `redis:env:rx + redis:env:tx` |
+| `redis:ins:qps_realtime` | `irate(redis_commands_processed_total[1m])` |
+| `redis:cls:qps_realtime` | `sum by (job, cls) (redis:ins:qps_realtime)` |
+| `redis:env:qps_realtime` | `sum by (job) (redis:cls:qps_realtime)` |
+| `redis:ins:qps` | `rate(redis_commands_processed_total[1m])` |
+| `redis:cls:qps` | `sum by (job, cls) (redis:ins:qps)` |
+| `redis:env:qps` | `sum by (job) (redis:cls:qps)` |
+| `redis:ins:qps_mu` | `avg_over_time(redis:ins:qps[30m])` |
+| `redis:cls:qps_mu` | `avg_over_time(redis:cls:qps[30m])` |
+| `redis:env:qps_mu` | `avg_over_time(redis:env:qps[30m])` |
+| `redis:ins:qps_sigma` | `stddev_over_time(redis:ins:qps[30m])` |
+| `redis:cls:qps_sigma` | `stddev_over_time(redis:cls:qps[30m])` |
+| `redis:env:qps_sigma` | `stddev_over_time(redis:env:qps[30m])` |
+| `redis:ins:key_expire` | `rate(redis_expired_keys_total[1m])` |
+| `redis:cls:key_expire` | `sum by (job, cls) (redis:ins:key_expire)` |
+| `redis:env:key_expire` | `sum by (job) (redis:cls:key_expire)` |
+| `redis:ins:key_evict` | `rate(redis_evicted_keys_total[1m])` |
+| `redis:cls:key_evict` | `sum by (job, cls) (redis:ins:key_evict)` |
+| `redis:env:key_evict` | `sum by (job) (redis:cls:key_evict)` |
+| `redis:ins:key_hit` | `rate(redis_keyspace_hits_total[1m])` |
+| `redis:cls:key_hit` | `sum by (job, cls) (redis:ins:key_hit)` |
+| `redis:env:key_hit` | `sum by (job) (redis:cls:key_hit)` |
+| `redis:ins:key_miss` | `rate(redis_keyspace_misses_total[1m])` |
+| `redis:cls:key_miss` | `sum by (job, cls) (redis:ins:key_miss)` |
+| `redis:env:key_miss` | `sum by (job) (redis:cls:key_miss)` |
+| `redis:ins:key_hit_rate` | `redis:ins:key_hit / (redis:ins:key_hit + redis:ins:key_miss)` |
+| `redis:cls:key_hit_rate` | `redis:cls:key_hit / (redis:cls:key_hit + redis:cls:key_miss)` |
+| `redis:env:key_hit_rate` | `redis:env:key_hit / (redis:env:key_hit + redis:env:key_miss)` |
+| `redis:ins:cmd_time` | `rate(redis_commands_duration_seconds_total[1m])` |
+| `redis:cls:cmd_time` | `sum by (job,cls,cmd) (redis:ins:cmd_time)` |
+| `redis:env:cmd_time` | `sum by (job,cmd) (redis:ins:cmd_time)` |
+| `redis:ins:cmd_qps` | `rate(redis_commands_total[1m])` |
+| `redis:cls:cmd_qps` | `sum by (job,cls,cmd) (redis:ins:cmd_qps)` |
+| `redis:env:cmd_qps` | `sum by (job,cmd) (redis:cls:cmd_qps)` |
+| `redis:ins:cmd_rt` | `redis:ins:cmd_time / redis:ins:cmd_qps` |
+| `redis:cls:cmd_rt` | `redis:cls:cmd_time / redis:cls:cmd_qps` |
+| `redis:env:cmd_rt` | `redis:env:cmd_time / redis:env:cmd_qps` |
+| `redis:ins:rt` | `sum without (cmd) (redis:ins:cmd_time) / sum without (cmd) (redis:ins:cmd_qps)` |
+| `redis:cls:rt` | `sum without (cmd) (redis:cls:cmd_time) / sum without (cmd) (redis:cls:cmd_qps)` |
+| `redis:env:rt` | `sum without (cmd) (redis:env:cmd_time) / sum without (cmd) (redis:env:cmd_qps)` |
+| `redis:ins:rt_mu` | `avg_over_time(redis:ins:rt[30m])` |
+| `redis:cls:rt_mu` | `avg_over_time(redis:cls:rt[30m])` |
+| `redis:env:rt_mu` | `avg_over_time(redis:env:rt[30m])` |
+| `redis:ins:rt_sigma` | `stddev_over_time(redis:ins:rt[30m])` |
+| `redis:cls:rt_sigma` | `stddev_over_time(redis:cls:rt[30m])` |
+| `redis:env:rt_sigma` | `stddev_over_time(redis:env:rt[30m])` |
+| `redis:ins:clients` | `redis_connected_clients` |
+| `redis:cls:clients` | `sum by (job, cls) (redis:ins:clients)` |
+| `redis:env:clients` | `sum by (job)(redis:cls:clients)` |
+| `redis:ins:blocked_clients` | `rate(redis_blocked_clients[1m])` |
+| `redis:cls:blocked_clients` | `sum by (job, cls) (redis:ins:blocked_clients)` |
+| `redis:env:blocked_clients` | `sum by (job)(redis:cls:blocked_clients)` |
+| `redis:ins:conn_rate` | `rate(redis_connections_received_total[1m])` |
+| `redis:cls:conn_rate` | `sum by (job, cls) (redis:ins:conn_rate)` |
+| `redis:env:conn_rate` | `sum by (job)(redis:cls:conn_rate)` |
+| `redis:ins:conn_reject` | `rate(redis_rejected_connections_total[1m])` |
+| `redis:cls:conn_reject` | `sum by (job, cls) (redis:ins:conn_reject)` |
+| `redis:env:conn_reject` | `sum by (job)(redis:cls:conn_reject)` |
+| `redis:ins:lsn_rate` | `rate(redis_master_repl_offset[1m])` |
+| `redis:cls:fork_time` | `max by (job, cls) (redis_latest_fork_seconds)` |
+| `redis:cls:aof_rewrite_time` | `max by (job, cls) (redis_aof_last_rewrite_duration_sec)` |
+| `redis:cls:size` | `count by (job, cls) (redis_up)` |
+{.full-width}
+
+</details>

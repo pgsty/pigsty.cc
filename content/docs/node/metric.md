@@ -7,31 +7,31 @@ module: [NODE]
 categories: [参考]
 ---
 
-本页区分 **采集端点的原始指标** 与 **vmalert 计算生成的记录指标**。截至 2026-10-13，当前源码的 [`files/victoria/rules/node.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/node.yml) 定义了 **163 条记录规则**；完整名称和表达式见该规则文件，下表列出常用示例。记录指标由规则求值得到，不应在 Exporter 的 `/metrics` 端点中查找。
+本页区分 **采集端点的原始指标** 与 **vmalert 计算生成的记录指标**。[**`files/victoria/rules/node.yml`**](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/node.yml) 定义了 **163 条记录规则**；常用示例见下表，完整名称与表达式见 [**记录指标索引**](#记录指标索引)。记录指标应在 VictoriaMetrics 中查询，不在 Exporter 的 `/metrics` 端点中。
 
 原始指标会随软件版本、采集器、权限、实例角色与运行状态变化。页末保留历史抓取样本，仅供识别指标，不代表当前版本的完整接口。
 
 ## 当前记录规则
 
-表达式保留源码语义；`ins`、`cls`、`env` 一般分别表示实例、集群与环境聚合层级，实际保留的标签以 `by` / `without` 和向量匹配子句为准。记录规则没有独立的 Prometheus `TYPE` 元数据，不应将它们统一标成 Counter 或 Gauge。
+`ins`、`cls`、`env` 分别用于实例、集群与环境层级，实际聚合标签以表达式为准。记录指标与原始指标的类型、计数区别见 [**指标口径**](/docs/infra/metric/#指标口径)。
 
-| 记录指标 | 表达式 |
-|:---|:---|
-| `node:ins:uptime` | `time() - node_boot_time_seconds` |
-| `node:ins:cpu_count` | `count without (cpu) (node:cpu:usage)` |
-| `node:ins:cpu_usage` | `avg without (cpu) (node:cpu:usage)` |
-| `node:ins:mem_usage` | `1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes` |
-| `node:fs:space_usage` | `1 - node:fs:avail_bytes / node:fs:size_bytes` |
-| `node:ins:network_io_bytes_rate1m` | `node:ins:network_tx_bytes_rate1m + node:ins:network_rx_bytes_rate1m` |
-| `node:ins:time_drift` | `abs(node_timex_offset_seconds)` |
-| `haproxy:ins:service_up` | `sum by (ins,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` |
+| 记录指标 | 表达式 | 含义或单位 |
+|:---|:---|:---|
+| `node:ins:uptime` | `time() - node_boot_time_seconds` | 节点运行时间，秒 |
+| `node:ins:cpu_count` | `count without (cpu) (node:cpu:usage)` | CPU 逻辑核数 |
+| `node:ins:cpu_usage` | `avg without (cpu) (node:cpu:usage)` | CPU 使用比例 |
+| `node:ins:mem_usage` | `1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes` | 内存使用比例 |
+| `node:fs:space_usage` | `1 - node:fs:avail_bytes / node:fs:size_bytes` | 文件系统空间使用比例 |
+| `node:ins:network_io_bytes_rate1m` | `node:ins:network_tx_bytes_rate1m + node:ins:network_rx_bytes_rate1m` | 网络收发总速率，字节/秒 |
+| `node:ins:time_drift` | `abs(node_timex_offset_seconds)` | 时间偏移绝对值，秒 |
+| `haproxy:ins:service_up` | `sum by (ins,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` | 服务后端是否至少有一个 UP 实例，0 或 1 |
 {.full-width}
 
 此外，`node_up`、`haproxy_up`、`keepalived_exporter_up`、`docker_up`、`vector_up` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)，不包含在上面的模块规则数量中，也不是 Exporter 的原始指标。它们反映抓取状态，不能代替服务功能检查。
 
 ## 历史抓取样本
 
-以下保留 **566 个指标名称** 的既有样本，已移除记录规则和告警状态序列。样本未记录抓取时间与软件版本，类型和标签仅供参考；`Unknown` 表示类型元数据缺失。其中 `up` 与 `scrape_*` 由采集系统生成，不属于 Exporter 原始输出。Histogram / Summary 的多个样本名会分别占行，不能用行数统计指标族。
+以下保留 **566 个指标名称** 的既有样本，已移除记录规则和告警状态序列。样本未记录抓取时间与软件版本，类型和标签仅供参考；`Unknown` 表示类型元数据缺失。统计方式见 [**指标口径**](/docs/infra/metric/#指标口径)。
 
 | Metric Name                                                             | Type    | Labels                                                                                                                                                                                                                         | Description                                                                                                                                                                                                                                                                                                                                                               |
 |-------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -601,3 +601,179 @@ categories: [参考]
 | tcp_connections                                                         | gauge   | `instance`, `ins`, `job`, `protocol`, `ip`, `cls`                                                                                                                                                                              | Current number of accepted TCP connections.                                                                                                                                                                                                                                                                                                                               |
 | tcp_connections_limit                                                   | gauge   | `instance`, `ins`, `job`, `protocol`, `ip`, `cls`                                                                                                                                                                              | The max number of TCP connections that can be accepted (0 means no limit).                                                                                                                                                                                                                                                                                                |
 | up                                                                      | Unknown | `instance`, `ins`, `job`, `ip`, `cls`                                                                                                                                                                                          | N/A                                                                                                                                                                                                                                                                                                                                                                       |
+
+## 记录指标索引
+
+以下按规则文件的分组列出完整名称与表达式，可用页面搜索查找指标。若规则有变，以部署到 `/infra/rules/` 的文件为准。
+
+<details>
+<summary>NODE：163 条记录规则</summary>
+
+| 记录指标 | 表达式 |
+|:---|:---|
+| `node:ins:uptime` | `time() - node_boot_time_seconds` |
+| `node:ins` | `sum without (machine, release, version, sysname, domainname) (   label_replace(node_uname_info, "id", "$1", "nodename", "(.+)") OR   label_replace(node_uname_info, "id", "$1", "instance", "(.+)\\:\\d+") OR   label_replace(node_uname_info, "id", "$1", "ins", "(.+)") )` |
+| `node:cpu:time_irate1m` | `irate(node_cpu_seconds_total[1m])` |
+| `node:cpu:total_time_irate1m` | `sum without (mode) (node:cpu:time_irate1m)` |
+| `node:cpu:idle_time_irate1m` | `sum without (mode) (node:cpu:time_irate1m{mode="idle"})` |
+| `node:cpu:usage` | `1 - node:cpu:idle_time_irate1m / node:cpu:total_time_irate1m` |
+| `node:cpu:usage_avg1m` | `avg_over_time(node:cpu:usage[1m])` |
+| `node:cpu:usage_avg5m` | `avg_over_time(node:cpu:usage[5m])` |
+| `node:cpu:usage_avg15m` | `avg_over_time(node:cpu:usage[15m])` |
+| `node:ins:cpu_count` | `count without (cpu) (node:cpu:usage)` |
+| `node:cls:cpu_count` | `sum by (cls, job) (node:ins:cpu_count)` |
+| `node:env:cpu_count` | `sum by (job) (node:ins:cpu_count)` |
+| `node:ins:cpu_usage` | `avg without (cpu) (node:cpu:usage)` |
+| `node:cls:cpu_usage` | `avg by (cls, job) (node:cpu:usage)` |
+| `node:env:cpu_usage` | `sum by (job) (node:cls:cpu_usage * node:cls:cpu_count) / sum by (job) (node:cls:cpu_count)` |
+| `node:ins:cpu_usage_1m` | `avg_over_time(node:ins:cpu_usage[1m])` |
+| `node:ins:cpu_usage_5m` | `avg_over_time(node:ins:cpu_usage[5m])` |
+| `node:ins:cpu_usage_15m` | `avg_over_time(node:ins:cpu_usage[15m])` |
+| `node:cls:cpu_usage_1m` | `avg_over_time(node:cls:cpu_usage[1m])` |
+| `node:cls:cpu_usage_5m` | `avg_over_time(node:cls:cpu_usage[5m])` |
+| `node:cls:cpu_usage_15m` | `avg_over_time(node:cls:cpu_usage[15m])` |
+| `node:env:cpu_usage_1m` | `avg_over_time(node:env:cpu_usage[1m])` |
+| `node:env:cpu_usage_5m` | `avg_over_time(node:env:cpu_usage[5m])` |
+| `node:env:cpu_usage_15m` | `avg_over_time(node:env:cpu_usage[15m])` |
+| `node:cpu:sched_timeslices_rate1m` | `rate(node_schedstat_timeslices_total[1m])` |
+| `node:ins:sched_timeslices_rate1m` | `sum without (cpu) (node:cpu:sched_timeslices)` |
+| `node:cpu:sched_wait_rate1m` | `rate(node_schedstat_waiting_seconds_total[1m])` |
+| `node:ins:sched_wait_rate1m` | `avg without (cpu) (node:cpu:sched_wait_rate1m)` |
+| `node:ins:forks_rate1m` | `rate(node_forks_total[1m])` |
+| `node:ins:interrupt_rate1m` | `rate(node_intr_total[1m])` |
+| `node:ins:ctx_switch_rate1m` | `rate(node_context_switches_total{}[1m])` |
+| `node:ins:stdload1` | `node_load1 / node:ins:cpu_count` |
+| `node:ins:stdload5` | `node_load5 / node:ins:cpu_count` |
+| `node:ins:stdload15` | `node_load15 / node:ins:cpu_count` |
+| `node:cls:stdload1` | `sum by (cls, job) (node_load1) / node:cls:cpu_count` |
+| `node:cls:stdload5` | `sum by (cls, job) (node_load5) / node:cls:cpu_count` |
+| `node:cls:stdload15` | `sum by (cls, job) (node_load15) / node:cls:cpu_count` |
+| `node:env:stdload1` | `sum by (job) (node:cls:stdload1) / node:env:cpu_count` |
+| `node:env:stdload5` | `sum by (job) (node:cls:stdload5) / node:env:cpu_count` |
+| `node:env:stdload15` | `sum by (job) (node:cls:stdload15) / node:env:cpu_count` |
+| `node:ins:mem_kernel` | `node_memory_KernelStack_bytes + node_memory_VmallocUsed_bytes + node_memory_HardwareCorrupted_bytes + node_memory_PageTables_bytes + node_memory_Slab_bytes + node_memory_PageTables_bytes` |
+| `node:ins:mem_rss` | `node_memory_MemTotal_bytes - (node_memory_KernelStack_bytes + node_memory_VmallocUsed_bytes + node_memory_HardwareCorrupted_bytes + node_memory_PageTables_bytes + node_memory_Slab_bytes + node_memory_PageTables_bytes) -  node_memory_Buffers_bytes - (node_memory_Hugepagesize_bytes * node_memory_HugePages_Total) - (node_memory_Cached_bytes - node_memory_Mapped_bytes ) - node_memory_MemFree_bytes` |
+| `node:ins:mem_avail` | `node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes` |
+| `node:ins:mem_usage` | `1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes` |
+| `node:ins:swap_usage` | `1 - node_memory_SwapFree_bytes / node_memory_SwapTotal_bytes` |
+| `node:ins:mem_commit_ratio` | `node_memory_Committed_AS_bytes / node_memory_CommitLimit_bytes` |
+| `node:cls:mem_usage` | `1 - sum by (cls, job) (node_memory_MemAvailable_bytes) / sum by (cls, job) (node_memory_MemTotal_bytes)` |
+| `node:env:mem_total` | `sum by (job) (node_memory_MemTotal_bytes)` |
+| `node:env:mem_avail` | `sum by (job) (node_memory_MemAvailable_bytes)` |
+| `node:env:mem_usage` | `1 - node:env:mem_avail / node:env:mem_total` |
+| `node:ins:pagefault_rate1m` | `rate(node_vmstat_pgfault[1m])` |
+| `node:ins:pgmajfault_rate1m` | `rate(node_vmstat_pgmajfault[1m])` |
+| `node:ins:pagein_rate1m` | `rate(node_vmstat_pgpgin[1m])` |
+| `node:ins:pageout_rate1m` | `rate(node_vmstat_pgpgout[1m])` |
+| `node:ins:swapin_rate1m` | `rate(node_vmstat_pswpin[1m])` |
+| `node:ins:swapout_rate1m` | `rate(node_vmstat_pswpout[1m])` |
+| `node:dev:disk_util_1m` | `rate(node_disk_io_time_seconds_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:dev:disk_avg_queue_size` | `rate(node_disk_io_time_weighted_seconds_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:dev:disk_reads_rate1m` | `rate(node_disk_reads_completed_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_reads_rate1m` | `sum without (device) (node:dev:disk_reads_rate1m)` |
+| `node:cls:disk_reads_rate1m` | `sum by (cls, job) (node:ins:disk_reads_rate1m)` |
+| `node:dev:disk_writes_rate1m` | `rate(node_disk_writes_completed_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_writes_rate1m` | `sum without (device) (node:dev:disk_writes_rate1m)` |
+| `node:cls:disk_writes_rate1m` | `sum by (cls, job) (node:ins:disk_writes_rate1m)` |
+| `node:dev:disk_mreads_rate1m` | `rate(node_disk_reads_merged_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_mreads_rate1m` | `sum without (device) (node:dev:disk_mreads_rate1m)` |
+| `node:cls:disk_mreads_rate1m` | `sum by (cls, job) (node:ins:disk_mreads_rate1m)` |
+| `node:dev:disk_mwrites_rate1m` | `rate(node_disk_writes_merged_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_mwrites_rate1m` | `sum without (device) (node:dev:disk_mwrites_rate1m)` |
+| `node:cls:disk_mwrites_rate1m` | `sum by (cls, job) (node:ins:disk_mwrites_rate1m)` |
+| `node:dev:disk_iops_1m` | `node:dev:disk_reads_rate1m + node:dev:disk_writes_rate1m` |
+| `node:ins:disk_iops_1m` | `node:ins:disk_reads_rate1m + node:ins:disk_writes_rate1m` |
+| `node:cls:disk_iops_1m` | `node:cls:disk_reads_rate1m + node:cls:disk_writes_rate1m` |
+| `node:dev:disk_mreads_ratio1m` | `node:dev:disk_mreads_rate1m / (node:dev:disk_reads_rate1m + node:dev:disk_mreads_rate1m)` |
+| `node:ins:disk_mreads_ratio1m` | `node:ins:disk_mreads_rate1m / (node:ins:disk_reads_rate1m + node:ins:disk_mreads_rate1m)` |
+| `node:cls:disk_mreads_ratio1m` | `node:cls:disk_mreads_rate1m / (node:cls:disk_reads_rate1m + node:cls:disk_mreads_rate1m)` |
+| `node:dev:disk_mwrites_ratio1m` | `node:dev:disk_mwrites_rate1m / (node:dev:disk_writes_rate1m + node:dev:disk_mwrites_rate1m)` |
+| `node:ins:disk_mwrites_ratio1m` | `node:ins:disk_mwrites_rate1m / (node:ins:disk_writes_rate1m + node:ins:disk_mwrites_rate1m)` |
+| `node:cls:disk_mwrites_ratio1m` | `node:cls:disk_mwrites_rate1m / (node:cls:disk_writes_rate1m + node:cls:disk_mwrites_rate1m)` |
+| `node:dev:disk_read_bytes_rate1m` | `rate(node_disk_read_bytes_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_read_bytes_rate1m` | `sum without (device) (node:dev:disk_read_bytes_rate1m)` |
+| `node:cls:disk_read_bytes_rate1m` | `sum by (cls, job) (node:ins:disk_read_bytes_rate1m)` |
+| `node:dev:disk_write_bytes_rate1m` | `rate(node_disk_written_bytes_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:ins:disk_write_bytes_rate1m` | `sum without (device) (node:dev:disk_write_bytes_rate1m)` |
+| `node:cls:disk_write_bytes_rate1m` | `sum by (cls, job) (node:ins:disk_write_bytes_rate1m)` |
+| `node:dev:disk_io_bytes_rate1m` | `node:dev:disk_read_bytes_rate1m + node:dev:disk_write_bytes_rate1m` |
+| `node:ins:disk_io_bytes_rate1m` | `node:ins:disk_read_bytes_rate1m + node:ins:disk_write_bytes_rate1m` |
+| `node:cls:disk_io_bytes_rate1m` | `node:cls:disk_read_bytes_rate1m + node:cls:disk_write_bytes_rate1m` |
+| `node:dev:disk_read_time_rate1m` | `rate(node_disk_read_time_seconds_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:dev:disk_write_time_rate1m` | `rate(node_disk_write_time_seconds_total{device=~"[a-z0-9A-Z-_]+"}[1m])` |
+| `node:dev:disk_io_time_rate1m` | `node:dev:disk_read_time_rate1m + node:dev:disk_write_time_rate1m` |
+| `node:dev:disk_read_rt_1m` | `node:dev:disk_read_time_rate1m / node:dev:disk_reads_rate1m` |
+| `node:dev:disk_write_rt_1m` | `node:dev:disk_write_time_rate1m / node:dev:disk_writes_rate1m` |
+| `node:dev:disk_io_rt_1m` | `node:dev:disk_io_time_rate1m / node:dev:disk_iops_1m` |
+| `node:dev:disk_read_batch_1m` | `node:dev:disk_read_bytes_rate1m / node:dev:disk_reads_rate1m` |
+| `node:dev:disk_write_batch_1m` | `node:dev:disk_write_bytes_rate1m / node:dev:disk_writes_rate1m` |
+| `node:dev:disk_io_batch_1m` | `node:dev:disk_io_bytes_rate1m / node:dev:disk_iops_1m` |
+| `node:fs:free_bytes` | `node_filesystem_free_bytes{fstype!~"(n\|root\|tmp)fs.*"}` |
+| `node:fs:avail_bytes` | `node_filesystem_avail_bytes{fstype!~"(n\|root\|tmp)fs.*"}` |
+| `node:fs:size_bytes` | `node_filesystem_size_bytes{fstype!~"(n\|root\|tmp)fs.*"}` |
+| `node:ins:free_bytes` | `sum without(device,mountpoint,fstype) (node:fs:free_bytes{fstype!~"fuse.juicefs"})` |
+| `node:ins:avail_bytes` | `sum without(device,mountpoint,fstype) (node:fs:avail_bytes{fstype!~"fuse.juicefs"})` |
+| `node:ins:size_bytes` | `sum without(device,mountpoint,fstype) (node:fs:size_bytes{fstype!~"fuse.juicefs"})` |
+| `node:cls:free_bytes` | `sum by (job,cls) (node:ins:free_bytes)` |
+| `node:cls:avail_bytes` | `sum by (job,cls) (node:ins:avail_bytes)` |
+| `node:cls:size_bytes` | `sum by (job,cls) (node:ins:size_bytes)` |
+| `node:env:free_bytes` | `sum by(job) (node:ins:free_bytes)` |
+| `node:env:avail_bytes` | `sum by(job) (node:ins:avail_bytes)` |
+| `node:env:size_bytes` | `sum by(job) (node:ins:size_bytes)` |
+| `node:fs:space_usage` | `1 - node:fs:avail_bytes / node:fs:size_bytes` |
+| `node:cls:space_usage` | `1 - node:cls:avail_bytes / node:cls:size_bytes` |
+| `node:env:space_usage` | `1 - node:env:avail_bytes / node:env:size_bytes` |
+| `node:ins:space_usage_max` | `max without (device, fstype, mountpoint) (node:fs:space_usage)` |
+| `node:cls:space_usage_max` | `max by (job, cls) (node:ins:space_usage_max)` |
+| `node:env:device_space_usage_max` | `max by (job, device, fstype, mountpoint) (node:fs:space_usage)` |
+| `node:fs:space_deriv1h` | `deriv(node:fs:avail_bytes[1h])` |
+| `node:fs:space_exhaust` | `clamp(node:fs:avail_bytes / - node:fs:space_deriv1h, -1, 126230400)` |
+| `node:fs:space_predict_1d` | `predict_linear(node:fs:avail_bytes[1h], 86400)` |
+| `node:fs:inode_free` | `node_filesystem_files_free{fstype!~"(n\|root\|tmp)fs.*"}` |
+| `node:fs:inode_total` | `node_filesystem_files{fstype!~"(n\|root\|tmp)fs.*"}` |
+| `node:fs:inode_used` | `node:fs:inode_total - node:fs:inode_free` |
+| `node:fs:inode_usage` | `1 - (node:fs:inode_free / node:fs:inode_total)` |
+| `node:ins:inode_usage` | `sum without (fstype, device, mountpoint) (node:fs:inode_used{fstype!~"fuse.juicefs"}) / sum without (fstype, device, mountpoint) (node:fs:inode_total{fstype!~"fuse.juicefs"})` |
+| `node:ins:fd_usage` | `node_filefd_allocated / node_filefd_maximum` |
+| `node:ins:fd_alloc_rate1m` | `rate(node_filefd_allocated[1m])` |
+| `node:dev:network_tx_pps1m` | `rate(node_network_transmit_packets_total[1m])` |
+| `node:ins:network_tx_pps1m` | `sum without (device) (node:dev:network_tx_pps1m{device!~"lo\|bond.*"})` |
+| `node:cls:network_tx_pps1m` | `sum by (cls, job) (node:ins:network_tx_pps1m)` |
+| `node:dev:network_rx_pps1m` | `rate(node_network_receive_packets_total[1m])` |
+| `node:ins:network_rx_pps1m` | `sum without (device) (node:dev:network_rx_pps1m{device!~"lo\|bond.*"})` |
+| `node:cls:network_rx_pps1m` | `sum by (cls, job) (node:ins:network_rx_pps1m)` |
+| `node:dev:network_tx_bytes_rate1m` | `rate(node_network_transmit_bytes_total[1m])` |
+| `node:ins:network_tx_bytes_rate1m` | `sum without (device) (node:dev:network_tx_bytes_rate1m{device!~"lo\|bond.*"})` |
+| `node:cls:network_tx_bytes_rate1m` | `sum by (cls, job) (node:ins:network_tx_bytes_rate1m)` |
+| `node:dev:network_rx_bytes_rate1m` | `rate(node_network_receive_bytes_total[1m])` |
+| `node:ins:network_rx_bytes_rate1m` | `sum without (device) (node:dev:network_rx_bytes_rate1m{device!~"lo\|bond.*"})` |
+| `node:cls:network_rx_bytes_rate1m` | `sum by (cls, job) (node:ins:network_rx_bytes_rate1m)` |
+| `node:dev:network_io_bytes_rate1m` | `node:dev:network_tx_bytes_rate1m + node:dev:network_rx_bytes_rate1m` |
+| `node:ins:network_io_bytes_rate1m` | `node:ins:network_tx_bytes_rate1m + node:ins:network_rx_bytes_rate1m` |
+| `node:cls:network_io_bytes_rate1m` | `node:cls:network_tx_bytes_rate1m + node:cls:network_rx_bytes_rate1m` |
+| `node:ins:tcp_insegs_rate1m` | `rate(node_netstat_Tcp_InSegs[1m])` |
+| `node:ins:tcp_outsegs_rate1m` | `rate(node_netstat_Tcp_OutSegs[1m])` |
+| `node:ins:tcp_retranssegs_rate1m` | `rate(node_netstat_Tcp_RetransSegs[1m])` |
+| `node:ins:tcp_segs_rate1m` | `node:ins:tcp_insegs_rate1m + node:ins:tcp_outsegs_rate1m` |
+| `node:ins:tcp_retrans_ratio1m` | `node:ins:tcp_retranssegs_rate1m / node:ins:tcp_outsegs_rate1m` |
+| `node:ins:tcp_error` | `node_netstat_TcpExt_ListenOverflows + node_netstat_TcpExt_ListenDrops + node_netstat_Tcp_InErrs` |
+| `node:ins:tcp_error_rate1m` | `rate(node:ins:tcp_error[1m])` |
+| `node:ins:tcp_passive_opens_rate1m` | `rate(node_netstat_Tcp_PassiveOpens[1m])` |
+| `node:ins:tcp_active_opens_rate1m` | `rate(node_netstat_Tcp_ActiveOpens[1m])` |
+| `node:ins:tcp_attempt_fails_rate1m` | `rate(node_netstat_Tcp_AttemptFails[1m])` |
+| `node:ins:tcp_estab_resets_rate1m` | `rate(node_netstat_Tcp_EstabResets[1m])` |
+| `node:ins:tcp_overflow_rate1m` | `rate(node_netstat_TcpExt_ListenOverflows[1m])` |
+| `node:ins:tcp_dropped_rate1m` | `rate(node_netstat_TcpExt_ListenDrops[1m])` |
+| `node:ins:udp_in_rate1m` | `rate(node_netstat_Udp_InDatagrams{}[1m])` |
+| `node:ins:udp_out_rate1m` | `rate(node_netstat_Udp_OutDatagrams[1m])` |
+| `node:ins:time_drift` | `abs(node_timex_offset_seconds)` |
+| `node:cls:time_drift_max` | `max by (cls, job) (node:ins:time_drift)` |
+| `node:cls:time_drift_range` | `max by (cls, job) (node_ntp_offset_seconds) - min by (cls, job) (node_ntp_offset_seconds)` |
+| `haproxy:ins:usage` | `(100 - haproxy_process_idle_time_percent) / 100` |
+| `haproxy:cls:usage` | `avg by (cls, job) (haproxy:ins:usage)` |
+| `haproxy:ins:uptime` | `time() - haproxy_process_start_time_seconds` |
+| `haproxy:ins:service_up` | `sum by (ins,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` |
+| `haproxy:cls:service_up` | `sum by (cls,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` |
+{.full-width}
+
+</details>

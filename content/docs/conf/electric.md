@@ -8,6 +8,7 @@ categories: [参考]
 
 `app/electric` 配置模板提供了部署 Electric SQL 实时同步服务的参考配置，实现 PostgreSQL 到客户端的实时数据同步。
 
+下方配置预览包含尚未发布的应用模板更新。端口、指标和缓存配置的要求见 [**Electric 应用说明**](/docs/app/electric/)。
 
 --------
 
@@ -31,16 +32,22 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/app/electric.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/electric.yml)
+源文件：[**`conf/app/electric.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/app/electric.yml)。
+
+<details>
+<summary>开发版配置预览：需要配套的 Electric Compose 更新</summary>
+
+此配置拆分了监听与发布端口，并设置持久化参数，需要同步更新 Compose。
 
 {{< include file="yaml/app/electric.yml" code=true lang="yaml" >}}
 
+</details>
 
 --------
 
-## 配置解读
+## 开发版配置解读
 
-`app/electric` 模板提供了 Electric SQL 实时同步服务的一键部署方案。
+以下说明对应上面的开发版预览及其配套 Compose。
 
 **Electric 是什么**：
 - PostgreSQL 到客户端的实时数据同步服务

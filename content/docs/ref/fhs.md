@@ -21,8 +21,9 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
 - bin/   {open=false}
   - 管理与运维脚本
 - conf/
-  - fork/   {open=false}
-    - PostgreSQL 内核变体模板
+  - pgsql.yml
+  - mssql.yml
+  - … · 其他内核变体模板
   - ha/   {open=false}
     - 高可用拓扑模板
   - build/   {open=false}
@@ -51,6 +52,8 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
 - pigsty.yml
 - *.yml
 ```
+
+内核模板位于 `conf/` 根目录；开发版迁入 `conf/fork/`。选择配置时以所用源码中的实际路径为准，见 [**配置模板**](/docs/conf/)。
 
 `/infra` 是 `/data/infra` 的运行时软链接，集中存放可观测性数据与生成的配置：
 

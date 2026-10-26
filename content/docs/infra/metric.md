@@ -9,7 +9,15 @@ categories: [参考]
 
 INFRA 对 VictoriaMetrics、VictoriaLogs、VictoriaTraces、VMAlert、Alertmanager、Grafana、Nginx Exporter 与 Blackbox Exporter 进行自监控。采集目标来自 [`roles/infra/templates/prometheus/infra.yml.j2`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/prometheus/infra.yml.j2)，采集任务定义在 [`roles/infra/templates/victoria/prometheus.yml`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/victoria/prometheus.yml)。
 
-组件版本与启用状态会改变原始指标集合。旧版 Prometheus / Loki 抓取快照不能作为 Victoria 套件的完整接口；本页列出当前源码明确配置的目标、规则和仪表盘使用的指标。全站仪表盘、记录规则与告警数量的统计口径见 [**监控体系**](/docs/concept/monitor/)。
+组件版本与启用状态会改变原始指标集合。本页列出 Victoria 套件的采集目标、规则和常用指标；全站数量统计见 [**监控体系**](/docs/concept/monitor/)。
+
+## 指标口径
+
+- **原始指标**：由组件或 Exporter 输出，类型与含义查看 `/metrics` 中的 `TYPE` 和 `HELP`。
+- **记录指标**：由 vmalert 对表达式求值得到，应在 VictoriaMetrics 中查询；没有独立的 `TYPE` 元数据，不能统一归为 Counter 或 Gauge。
+- **抓取状态**：`up` 与 `scrape_*` 由采集系统生成，`up=1` 只代表抓取成功；数据库或应用是否可用还需功能检查。
+
+Histogram / Summary 的 `_bucket`、`_sum`、`_count` 是同一指标族的不同样本。历史表格的行数、记录规则数与实时序列数代表不同对象，不能直接相加。
 
 ## 采集入口与标签
 

@@ -133,12 +133,12 @@ fbd4d01ce39e13016343badc3258b32e0ce5088b1604b0f62ef8b4aafca82d65  pigsty-pkg-v4.
 
    ```bash
    cd ~/pigsty
-   ./cache.yml -l <infra-host> -e 'cache_pkg_dir=/var/tmp/pigsty-dist/${version}'
+   ./cache.yml -l '<infra-host>,localhost' -e 'cache_pkg_dir=/var/tmp/pigsty-dist/${version}'
    ```
 
 4. 从管理节点的 `/var/tmp/pigsty-dist/<version>/` 取出 `pigsty-pkg-<version>.<os>.<arch>.tgz`，传到离线环境的 `/var/tmp/pkg.tgz`，再运行 `./bootstrap -p /var/tmp/pkg.tgz`。
 
-管理节点与目标节点都需要 rsync。同系统、同架构的节点生成相同文件名，因此每次只选择一个对应平台的构建节点。
+将 `<infra-host>` 替换为清单中的一个 Infra 主机。本地目录准备与校验步骤运行在 `localhost`，因此主机限制中需要保留它。管理节点与目标节点都需要 rsync；同平台节点生成相同文件名，每次只选择一个构建节点。
 
 `cache.yml` 的主要参数如下，可使用额外变量覆盖：
 
@@ -151,7 +151,7 @@ fbd4d01ce39e13016343badc3258b32e0ce5088b1604b0f62ef8b4aafca82d65  pigsty-pkg-v4.
 
 输出目录同时包含 MD5 格式的 `checksums` 校验文件。源码发布包需另外准备，`cache.yml` 不会自动从工作树制作源码归档。
 
-我们也提供 [**付费服务**](/docs/about/service/)，按指定 Linux 基线制作并验证离线软件包。
+我们也提供 [**付费服务**](/docs/about/service/)，按指定 Linux 基线制作并验证离线软件包，参考价格为 **¥200**，具体范围与报价请联系确认。
 
 
 

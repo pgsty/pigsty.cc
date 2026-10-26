@@ -1,4 +1,6 @@
 ---
+# Development preview for self-hosted/v0.8.2.
+# Requires matching app/supabase/ resources and database migration files.
 #==============================================================#
 # File      :   supabase.yml
 # Desc      :   Pigsty configuration for self-hosting supabase

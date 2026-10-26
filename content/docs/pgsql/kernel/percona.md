@@ -21,7 +21,7 @@ pgaudit、pg_stat_monitor 等常用组件。
 
 ## 快速开始
 
-使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`fork/pgtde`](/docs/conf/pgtde/) 配置模板。
+使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`pgtde`](/docs/conf/pgtde/) 配置模板。
 
 以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgtde.yml)；开发版已迁移至 `conf/fork/pgtde.yml`，对应使用 `-c fork/pgtde`。
 

@@ -19,7 +19,7 @@ aliases:  # /docs/ferret/ 根路径重定向到内核页 /docs/pgsql/kernel/docu
 
 开发版配置路径为 `conf/fork/mongo.yml`；v4.5.0 使用 `conf/mongo.yml`，配置命令相应为 `-c mongo`。
 
-`fork/mongo` 配置模板是一个 **PostgreSQL 部署模式**，而不是独立的 Pigsty 模块。它由以下组件组成：
+`mongo` 配置模板是一个 **PostgreSQL 部署模式**，而不是独立的 Pigsty 模块。它由以下组件组成：
 
 - 由标准 `PGSQL` 模块管理的 PostgreSQL 18
 - `documentdb` 扩展及其预加载库
@@ -37,7 +37,7 @@ aliases:  # /docs/ferret/ 根路径重定向到内核页 /docs/pgsql/kernel/docu
 如果尚未安装 `mongosh`，请单独安装，或使用其他兼容 MongoDB 协议的客户端。
 
 ```bash
-./configure -c fork/mongo
+./configure -c mongo
 ./deploy.yml
 ./docker.yml -l pg-meta
 ./app.yml -l pg-meta

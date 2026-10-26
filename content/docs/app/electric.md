@@ -8,7 +8,7 @@ categories: [参考]
 
 [**Electric**](https://electric-sql.com/) 是 PostgreSQL 同步引擎，专注于将数据库变更高效分发到前端/边缘应用。
 
-Pigsty 提供了 `app/electric` 配置模板（`conf/app/electric.yml`），可一键完成数据库、容器与入口配置。
+Pigsty 提供 `app/electric` 配置模板（`conf/app/electric.yml`），用于配置数据库、容器与访问入口。
 
 ## 快速开始
 
@@ -27,24 +27,26 @@ vi pigsty.yml                 # 修改域名、密码、密钥
 - `http://<IP>:8002`
 - `http://elec.pigsty`（按模板默认域名）
 
-Prometheus 指标默认关闭。只有已经配置定期抓取时，才设置 `ELECTRIC_PROMETHEUS_PORT`，并按抓取端所在网络配置端口访问；默认 Compose 不发布指标端口。启用而不抓取的 reporter 会持续保留指标，可能耗尽内存。
+模板默认还启用并发布 `8003` 指标端口。应配置定期抓取；不需要指标时，在启动前从 `pigsty.yml` 与应用 `.env` 中移除 `ELECTRIC_PROMETHEUS_PORT`，并删除 Compose 对应的端口映射。启用而不抓取的 reporter 可能持续积累指标。
 
 ## 关键配置
 
 `conf/app/electric.yml` 会在 `apps.electric.conf` 中覆盖 `/opt/electric/.env`。常见参数：
 
 - `DATABASE_URL`：Electric 使用的 PostgreSQL 连接串（需要复制权限）
-- `ELECTRIC_PORT`：容器内 HTTP 监听端口，默认 `3000`
-- `ELECTRIC_PUBLISH_PORT`：宿主机 HTTP 发布端口，默认 `8002`
-- `ELECTRIC_PERSISTENT_STATE`：默认 `FILE`，持久化 shape 元数据
-- `ELECTRIC_STORAGE`：默认 `FAST_FILE`，持久化 shape 日志；旧值 `FILE` 已不适用于当前模板验证的版本
-- `ELECTRIC_STORAGE_DIR`：容器内绝对路径，默认 `/var/lib/electric`，`electric-data` 命名卷随此参数挂载
-- `ELECTRIC_PROMETHEUS_PORT`：可选指标监听端口，默认不启用
+- `ELECTRIC_PORT`：容器监听端口与宿主机发布端口，默认均为 `8002`
+- `ELECTRIC_PROMETHEUS_PORT`：默认启用的指标端口，值为 `8003`
 - `ELECTRIC_INSECURE`：开发环境可设为 `true`，生产环境建议关闭并使用密钥
 
-模板默认使用未固定标签的 `electricsql/electric` 镜像；源码记录的 2026-08-27 验证版本为 `1.7.12`。需要可控升级与回滚时，部署前固定经过验证的标签或摘要。
+模板使用未固定标签的 `electricsql/electric` 镜像，部署前应固定与配置兼容的版本或摘要。
 
-`electric-data` 卷保存缓存，PostgreSQL 保存权威业务数据。相同版本、相同 PostgreSQL 时间线下重建容器可以保留 shape；丢失缓存卷或 PostgreSQL 时间线、身份变化时，客户端仍须处理 `409` / `must-refetch`，清空本地 shape 后重新同步。数据库与缓存需要按各自用途管理。
+## 缓存与版本差异
+
+Compose 没有配置缓存持久卷。需要在容器重建后保留 shape 缓存时，应同时设置存储参数和卷挂载，不能只在 `.env` 中指定目录。
+
+开发模板增加了 `electric-data` 卷，将容器监听端口设为 `3000`、宿主机端口设为 `ELECTRIC_PUBLISH_PORT=8002`，并默认关闭指标端口，需要配套更新 Compose。其 Electric 1.7.12 配置使用 `ELECTRIC_PERSISTENT_STATE=FILE`、`ELECTRIC_STORAGE=FAST_FILE` 和 `ELECTRIC_STORAGE_DIR=/var/lib/electric`；该版本不接受旧的 `ELECTRIC_STORAGE=FILE`。
+
+PostgreSQL 保存权威业务数据，缓存卷不能替代数据库备份。缓存丢失或 PostgreSQL 时间线变化时，客户端仍须处理 `409` / `must-refetch` 并重新同步。
 
 ## 运维命令
 

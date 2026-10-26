@@ -15,7 +15,7 @@ categories: [概念]
 
 Pigsty 允许使用 PolarDB 创建带有 “国产化信创资质” 的 PostgreSQL 集群！
 
-PolarDB for PostgreSQL 当前以 PostgreSQL 17 为基线，Pigsty 中的 `fork/polar` 模板、默认路径与扩展说明也已经同步到 PG17。任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 PolarDB 集群。
+PolarDB for PostgreSQL 当前以 PostgreSQL 17 为基线，Pigsty 中的 `polar` 模板、默认路径与扩展说明也已经同步到 PG17。任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 PolarDB 集群。
 
 Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在 Pigsty 安装时下载到本地软件仓库。
 

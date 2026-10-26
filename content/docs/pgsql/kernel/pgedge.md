@@ -49,14 +49,14 @@ psql -d meta -c "SELECT version();"
 psql -d meta -c "SELECT extname, extversion FROM pg_extension WHERE extname IN ('spock','snowflake','lolor') ORDER BY 1;"
 ```
 
-> 模板与完整参数见：[`fork/pgedge` 配置模板](/docs/conf/pgedge/)。
+> 模板与完整参数见：[`pgedge` 配置模板](/docs/conf/pgedge/)。
 
 
 --------
 
 ## 配置
 
-`fork/pgedge` 模板的关键参数如下（与 `conf/fork/pgedge.yml` 一致）：
+`pgedge` 模板的关键参数如下（与 `conf/pgedge.yml` 一致）：
 
 ```yaml
 pg_mode: pgedge
@@ -115,7 +115,7 @@ CREATE EXTENSION IF NOT EXISTS lolor;
 ## 相关文档
 
 - [PGSQL 内核总览](/docs/pgsql/kernel/)
-- [`fork/pgedge` 配置模板](/docs/conf/pgedge/)
+- [`pgedge` 配置模板](/docs/conf/pgedge/)
 - [PGSQL 内核模式参数](/docs/pgsql/config/kernel/)
 - [`spock` 扩展](/ext/e/spock/)
 - [`snowflake` 扩展](/ext/e/snowflake/)

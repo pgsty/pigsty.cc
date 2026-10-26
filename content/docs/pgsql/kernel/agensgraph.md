@@ -20,7 +20,7 @@ Pigsty 通过 `pg_mode: agens` 接入 AgensGraph，并保留标准 PostgreSQL �
 - 模式标识：`pg_mode: agens`
 - 本文版本示例：`AgensGraph 2.17.0`
 - 版本字符串示例：`PostgreSQL 17.10 (AgensGraph 2.17.0)`，实际补丁版本以安装包与 `SELECT version()` 为准
-- 当前内置模板：`fork/agens`
+- 当前内置模板：`agens`
 - 适用场景：关系数据之上叠加图关系分析、路径查询、知识图谱、风控关联
 
 对客户端来说，AgensGraph 仍然暴露 PostgreSQL 线缆协议，常规 PG 客户端、驱动与连接池都可以直接接入。
@@ -40,7 +40,7 @@ AgensGraph 增加了图模型对象、Cypher 语法，以及顶点、边等图�
 ./deploy.yml
 ```
 
-`fork/agens` 模板会自动启用 `pg_mode: agens` 并安装 `agensgraph` 内核包。部署完成后可直接核对内核版本：
+`agens` 模板会自动启用 `pg_mode: agens` 并安装 `agensgraph` 内核包。部署完成后可直接核对内核版本：
 
 ```bash
 psql -d meta -c "SELECT version();"
@@ -101,7 +101,7 @@ MATCH (v:person {name: 'Jack'})
 SET v.age = '24';
 ```
 
-如需在 SQL 中处理 Cypher 的结果，可把图查询作为 `FROM` 子查询，参见 [**AgensGraph 混合查询手册**](https://tech.skaiworldwide.com/docs/en/agensgraph/latest/developer_manual/hybrid.html)：
+如需在 SQL 中处理 Cypher 的结果，可把图查询作为 `FROM` 子查询，参见 [**AgensGraph 混合查询手册**](https://tech.skaiworldwide.com/docs/en/agensgraph/17/developer_manual/hybrid.html)：
 
 ```sql
 SELECT person->>'name' AS name
@@ -117,7 +117,7 @@ FROM (MATCH (v:person) RETURN v AS person) AS people;
 ## 注意事项
 
 - AgensGraph 当前固定在 PG17 兼容系，规划扩展生态时不要按 PG18 的可用性来假定。
-- `fork/agens` 默认模板为单节点快速启用，生产环境建议按需扩展为高可用拓扑。
+- `agens` 默认模板为单节点快速启用，生产环境建议按需扩展为高可用拓扑。
 - 并非所有 PostgreSQL 三方扩展都保证可直接用于 AgensGraph 内核，建议先做兼容性验证。
 - 图对象与关系对象可以共存于同一数据库中，但生产上通常更建议规划清晰的数据库或命名约定，避免图模型与普通业务对象互相污染。
 - 请结合业务图模型规模调优内存与代价参数，避免直接沿用默认值。
@@ -128,7 +128,7 @@ FROM (MATCH (v:person) RETURN v AS person) AS people;
 
 ## 相关文档
 
-- Pigsty 配置模板：[`conf/fork/agens`](/docs/conf/agens/)
+- Pigsty 配置模板：[`conf/agens`](/docs/conf/agens/)
 - [PGSQL 内核模式参数](/docs/pgsql/config/kernel/)
 - AgensGraph 官方仓库：<https://github.com/skaiworldwide-oss/agensgraph>
 - AgensGraph 官方手册：<https://tech.skaiworldwide.com/docs/en/agensgraph/latest/>

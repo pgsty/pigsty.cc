@@ -1,5 +1,6 @@
 ---
 title: Silo：S3 对象存储
+draft: true
 weight: 615
 description: 使用 Docker Compose 部署独立 Silo 对象存储，提供 S3 API 与 Web 控制台。
 module: [SOFTWARE]
@@ -8,7 +9,7 @@ categories: [参考]
 
 [**Silo**](https://github.com/pgsty/silo) 是 Pigsty 维护的 S3 兼容对象存储。`app/silo` 自 2026 年 8 月起替代原 `app/minio`，适合应用专用的单节点存储。共享备份仓库、存储桶与用户初始化、监控、TLS 或多节点集群使用 [**MINIO 模块**](/docs/minio/)。
 
-本模板尚未包含在 v4.5.0 发布包中，需要配套的开发版 `app/silo/` 与 `conf/app/silo.yml`。
+本页为开发草稿。配套的 `app/silo/` 和 `conf/app/silo.yml` 尚未公开，以下步骤暂不作为公开部署入口；待完整模板发布后再启用本页。
 
 ## 使用配置模板
 
