@@ -11,11 +11,12 @@ weight: 4080
     <div class="ext-card__title">supabase/pg_net</div>
     <div class="ext-card__desc">https://github.com/supabase/pg_net</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_net-0.20.5.tar.gz pg_net-0.9.2.tar.gz">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_net-0.20.5.tar.gz pg_net-0.9.2.tar.gz</div>
-    <div class="ext-card__desc">pg_net-0.20.5.tar.gz pg_net-0.9.2.tar.gz</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_net-0.20.5.tar.gz">pg_net-0.20.5.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/pg_net-0.9.2.tar.gz">pg_net-0.9.2.tar.gz</a>
+    </div>
+  </div>
 </div>
 
 

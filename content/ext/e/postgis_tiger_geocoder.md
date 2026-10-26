@@ -11,11 +11,12 @@ weight: 1504
     <div class="ext-card__title">https://git.osgeo.org/gitea/postgis/postgis</div>
     <div class="ext-card__desc">https://git.osgeo.org/gitea/postgis/postgis</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
-    <div class="ext-card__desc">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/postgis-3.6.4.tar.gz">postgis-3.6.4.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/postgis-3.6.4-en.pdf">postgis-3.6.4-en.pdf</a><br><a href="https://repo.pigsty.cc/ext/src/postgis36-filter-requires-perl-Pg.sh">postgis36-filter-requires-perl-Pg.sh</a>
+    </div>
+  </div>
 </div>
 
 

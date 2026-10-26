@@ -11,11 +11,12 @@ weight: 2100
     <div class="ext-card__title">main/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/main/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.26.3.tar.gz pg_search_collect_third_party_licenses-0.26.3.py">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.26.3.tar.gz pg_search_collect_third_party_licenses-0.26.3.py</div>
-    <div class="ext-card__desc">pg_search-0.26.3.tar.gz pg_search_collect_third_party_licenses-0.26.3.py</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_search-0.26.3.tar.gz">pg_search-0.26.3.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/pg_search_collect_third_party_licenses-0.26.3.py">pg_search_collect_third_party_licenses-0.26.3.py</a>
+    </div>
+  </div>
 </div>
 
 

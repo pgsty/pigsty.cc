@@ -11,11 +11,12 @@ weight: 9300
     <div class="ext-card__title">https://babelfishpg.org/</div>
     <div class="ext-card__desc">https://babelfishpg.org/</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/babelfish-18-18.6-6.2.0.tar.gz babelfish-17-17.11-5.7.0.tar.gz">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">babelfish-18-18.6-6.2.0.tar.gz babelfish-17-17.11-5.7.0.tar.gz</div>
-    <div class="ext-card__desc">babelfish-18-18.6-6.2.0.tar.gz babelfish-17-17.11-5.7.0.tar.gz</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/babelfish-18-18.6-6.2.0.tar.gz">babelfish-18-18.6-6.2.0.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/babelfish-17-17.11-5.7.0.tar.gz">babelfish-17-17.11-5.7.0.tar.gz</a>
+    </div>
+  </div>
 </div>
 
 

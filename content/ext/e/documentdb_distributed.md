@@ -11,11 +11,12 @@ weight: 9020
     <div class="ext-card__title">documentdb/documentdb</div>
     <div class="ext-card__desc">https://github.com/documentdb/documentdb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.116-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">documentdb-0.116-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
-    <div class="ext-card__desc">documentdb-0.116-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/documentdb-0.116-0.tar.gz">documentdb-0.116-0.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/intelrdfpmath-applied-2.0u3-1.tar.gz">intelrdfpmath-applied-2.0u3-1.tar.gz</a>
+    </div>
+  </div>
 </div>
 
 

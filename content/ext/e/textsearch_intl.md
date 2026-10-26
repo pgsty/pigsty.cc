@@ -11,11 +11,12 @@ weight: 2290
     <div class="ext-card__title">benjaminsanborn/textsearch_intl</div>
     <div class="ext-card__desc">https://github.com/benjaminsanborn/textsearch_intl</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.1.tar.gz textsearch_intl-1.0.0.tar.gz">
+  <div class="ext-card ext-card--source">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">textsearch_intl-1.0.1.tar.gz textsearch_intl-1.0.0.tar.gz</div>
-    <div class="ext-card__desc">textsearch_intl-1.0.1.tar.gz textsearch_intl-1.0.0.tar.gz</div>
-  </a>
+    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.1.tar.gz">textsearch_intl-1.0.1.tar.gz</a></div>
+    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.0.tar.gz">textsearch_intl-1.0.0.tar.gz</a>
+    </div>
+  </div>
 </div>
 
 
