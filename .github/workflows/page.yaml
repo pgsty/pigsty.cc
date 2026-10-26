@@ -37,12 +37,14 @@ jobs:
       - name: Setup Go # Hugo Module 依赖：github.com/pgsty/oink
         uses: actions/setup-go@v7
         with:
-          go-version-file: 'go.mod'
+          go-version: 1.27.3
+          check-latest: true
 
-      - name: Setup Hugo
-        run: |
-          wget -q -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Install Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
