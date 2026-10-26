@@ -1,21 +1,28 @@
-# 首页「内核与扩展」指标卡片，按顺序渲染，每张卡片点击前往 href
-# 字段：label 标签 · value 数值（或 param 引用 hugo.yaml params 中的参数名，两者取其一）· href 目标链接
-#       以 http 开头的外链在新标签页打开；数值来自 pgext.cloud 首页，更新目录快照后请同步核对
+# bin/gen-pgext.py 生成，日期 2026-10-13；来源 pgsty/pgext 的 db/*.csv。
+# 扩展软件包：lead 且非 contrib 的独立包族；Linux 平台：OS 大版本 × 架构。
+# 矩阵槽位：431 包族 × 16 平台 × 5 PG 大版本；包含不适用与缺失组合，不代表已交付二进制包数。
+# universe.csv SHA-256: 0c711f4a29be80cbee5dd9a5aa4509f5e7131f296afbab4f9712aec1b837f30f
+# extension.csv SHA-256: ee7a02b9852f9051bbc828ad4b2901b83f5e9da50e509f905962c2555e4eaab5
+# os.csv SHA-256: 6085f351770ff2a951f174f933a5494a3e12d67bd7bad55e1f08a1d4e16402c8
+# pg.csv SHA-256: 35875bd75678e927bba58e67c2df2ebb7cd1ee0f6fdfccb38921725cdc54a17b
 - label: 内核分支
   value: 12
   href: /docs/pgsql/kernel/
 - label: 收录在册扩展
-  value: 2241
+  value: 2622
   href: https://pgext.cloud/
 - label: 已打包扩展
-  param: pgext_count
+  value: 600
   href: https://pgext.cloud/?scope=packaged
 - label: 扩展软件包
-  value: 407
+  value: 431
   href: https://pgext.cloud/?scope=packaged&entity=pkg
-- label: OS/PG 组合
-  value: 60
+  title: 不含 contrib 的独立扩展包族，按主扩展去重
+- label: Linux 平台
+  value: 16
   href: https://pgext.cloud/list/os
-- label: 构建槽位
-  value: 32560
+  title: 操作系统大版本与 CPU 架构的组合
+- label: 构建矩阵槽位
+  value: 34480
   href: https://pgext.cloud/matrix
+  title: 431 包族 × 16 平台 × 5 PG 大版本，包含不适用及缺失组合

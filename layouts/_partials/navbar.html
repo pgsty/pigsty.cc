@@ -144,7 +144,7 @@
           </a>
           <a href="https://github.com/pgsty/pigsty" class="nav-github" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
             {{- partialCached "shell/icon.html" "github" "pigsty-navbar-github" -}}
-            <span class="nav-star">{{ .Site.Params.github_stars }}</span>
+            <span class="nav-star">{{ partial "landing/github-stars.html" . }}</span>
           </a>
         </div>
       </div>

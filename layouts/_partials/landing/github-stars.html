@@ -1,0 +1,3 @@
+{{- /* 首页与 OINK 导航共用 GitHub 快照，避免多个硬编码数字漂移。 */ -}}
+{{- $project := index (where hugo.Data.star_history.repositories "repo" "pgsty/pigsty") 0 -}}
+{{- return (printf "%.2f K" (div (float $project.current) 1000)) -}}

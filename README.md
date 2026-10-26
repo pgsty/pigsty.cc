@@ -27,6 +27,21 @@ hugo serve
 hugo build --minify
 ```
 
+Run `make check` before publishing to validate Markdown, Hugo rendering, and internal links.
+
+## Refresh catalog and GitHub data
+
+```bash
+# Refresh the landing-page extension index and six metric cards from the local catalog.
+python3 bin/gen-pgext.py --src ~/pgsty/pgext/db
+# Append a dated GitHub API snapshot; both navigation and homepage read this dataset.
+python3 bin/update-star-history.py
+```
+
+When packaged counts change, also update `params.pgext_count` and descriptions in
+`hugo.yaml` and `content/_index.md`. Refresh the comparison tables and bar chart in
+`content/docs/about/compare/impact.md` from the same dated GitHub API snapshot.
+
 ## License
 
 [CC-BY 4.0](LICENSE)

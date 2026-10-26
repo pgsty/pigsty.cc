@@ -12,7 +12,7 @@
   {{- with .param }}{{ $v = index site.Params . }}{{ end }}
   {{- $v = int $v }}
   {{- $ext := hasPrefix .href "http" }}
-  <a class="stat-item" href="{{ .href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
+  <a class="stat-item" href="{{ .href }}"{{ with .title }} title="{{ . }}"{{ end }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>
     <span class="stat-value" data-count="{{ $v }}">{{ lang.FormatNumberCustom 0 $v }}</span>
     <span class="stat-label">{{ .label }}{{ if $ext }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>{{ end }}</span>
   </a>

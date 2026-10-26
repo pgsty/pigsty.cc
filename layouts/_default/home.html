@@ -244,7 +244,7 @@
             </a>
             <a href="https://github.com/pgsty/pigsty" class="nav-github" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
               {{- partialCached "silo/icon.html" "github" "github" -}}
-              <span class="nav-star">{{ .Site.Params.github_stars }}</span>
+              <span class="nav-star">{{ partial "landing/github-stars.html" . }}</span>
             </a>
           </div>
         </div>
@@ -324,9 +324,9 @@
               <span class="pin-dot"></span>
               <span class="pin-tip"><b>{{ .Site.Params.pgext_count }} 扩展</b><i>即插即用</i></span>
             </a>
-            <a class="board-pin" data-pin="grafana" style="--x:31.9%; --y:33%; --i:1" href="https://demo.pigsty.cc" target="_blank" rel="noopener" aria-label="Grafana 观测 · 3000+ 监控指标">
+            <a class="board-pin" data-pin="grafana" style="--x:31.9%; --y:33%; --i:1" href="https://demo.pigsty.cc" target="_blank" rel="noopener" aria-label="Grafana 观测 · 67 个监控仪表盘">
               <span class="pin-dot"></span>
-              <span class="pin-tip"><b>Grafana 观测</b><i>3000+ 监控指标</i></span>
+              <span class="pin-tip"><b>Grafana 观测</b><i>67 个监控仪表盘</i></span>
             </a>
             <a class="board-pin" data-pin="victoria" style="--x:43%; --y:19.5%; --i:2" href="/docs/infra/" aria-label="Victoria 遥测 · VictoriaMetrics 与 VictoriaLogs">
               <span class="pin-dot"></span>
@@ -456,7 +456,7 @@
           <p class="module-motto"><i class="fas fa-chart-line"></i> 洞若观火，尽在掌握</p>
           <ul class="module-list">
             <li>基于 <strong>Grafana + Victoria</strong> 的 SOTA 可观测性技术栈</li>
-            <li><strong>3000+</strong> 监控指标，<strong>40+</strong> 精调仪表盘，免配置开箱即用</li>
+            <li><strong>67</strong> 个仪表盘、<strong>773</strong> 条预计算规则与 <strong>92</strong> 条告警规则，开箱即用</li>
             <li>可独立部署使用，监控现有 RDS / PostgreSQL 实例</li>
           </ul>
           <p class="module-value">快速定位问题，数据驱动决策，告别空对空无效扯皮</p>
@@ -475,7 +475,7 @@
           <h3 class="module-title"><a href="/ext/">数据库扩展生态</a></h3>
           <p class="module-motto"><i class="fas fa-cubes"></i> 海纳百川，开箱即用</p>
           <ul class="module-list">
-            <li><strong>{{ .Site.Params.pgext_count }}</strong> 个 PostgreSQL 扩展，覆盖 <strong>16</strong> 个 Linux 系统，即装即用</li>
+            <li><strong>{{ .Site.Params.pgext_count }}</strong> 个已打包 PostgreSQL 扩展，覆盖 <strong>16</strong> 个 Linux 平台</li>
             <li><strong>12 种 PG 内核</strong>：兼容 Oracle, SQL Server, MySQL, Mongo…</li>
             <li>功能模块：MinIO、Redis、Docker、Supabase 自建</li>
           </ul>
@@ -500,7 +500,7 @@
       <div class="section-head" data-reveal>
         <p class="section-eyebrow"><span class="silkscreen">SOCKETS · 内核与扩展</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">12+ 内核分支，{{ .Site.Params.pgext_count }} 扩展插件</h2>
-        <p class="section-subtitle">Pigsty 为您解锁 PostgreSQL 与数据基础设施的无限可能</p>
+        <p class="section-subtitle">pgext.cloud 共收录 {{ lang.FormatNumberCustom 0 (len hugo.Data.pgext.extension) }} 个扩展，其中 {{ .Site.Params.pgext_count }} 个已打包</p>
       </div>
 
       {{ partial "landing/pgext-stats.html" . }}
@@ -579,7 +579,7 @@
     <div class="landing-container">
       <div class="dashwall-head" data-reveal>
         <p class="section-eyebrow"><span class="silkscreen">SIGNAL OUT · 观测输出</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
-        <h2 class="section-title section-title--sm">40+ 精调仪表盘，实时呈现每一个细节</h2>
+        <h2 class="section-title section-title--sm">67 个监控仪表盘，呈现服务运行状态</h2>
         <a href="https://demo.pigsty.cc/ui/d/pigsty" class="dashwall-link" target="_blank" rel="noopener">打开在线演示 <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
     </div>
@@ -716,7 +716,8 @@
 
       <div class="stats-grid" data-reveal>
         <a href="https://github.com/pgsty/pigsty/stargazers" target="_blank" rel="noopener" class="stat-item">
-          <span class="stat-value" data-count="5660">5660</span>
+          {{ $pigsty := index (where hugo.Data.star_history.repositories "repo" "pgsty/pigsty") 0 }}
+          <span class="stat-value" data-count="{{ $pigsty.current }}" title="GitHub 快照：{{ hugo.Data.star_history.updated_at }}">{{ $pigsty.current }}</span>
           <span class="stat-label">GitHub Stars</span>
         </a>
         <div class="stat-item">
