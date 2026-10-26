@@ -21,7 +21,9 @@ pgaudit、pg_stat_monitor 等常用组件。
 
 ## 快速开始
 
-使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`pgtde`](https://github.com/pgsty/pigsty/blob/main/conf/pgtde.yml) 配置模板。
+使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`fork/pgtde`](/docs/conf/pgtde/) 配置模板。
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgtde.yml)；开发版已迁移至 `conf/fork/pgtde.yml`，对应使用 `-c fork/pgtde`。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -70,7 +72,7 @@ pg-meta:
 
 ## 可用扩展
 
-Percona Postgres 内核共有 **73** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                                                                 | 版本号     | 说明                                                                                                                                                                                                                                                        |
 |:--------------------------------------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

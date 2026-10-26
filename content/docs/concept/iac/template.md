@@ -22,7 +22,7 @@ categories: [概念]
 
 Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/configure) 脚本作为可选的配置向导，它将根据您的环境和输入，生成具有良好默认值的 [**配置清单**](/docs/setup/config/)。
 
-使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 是相对于 `conf` 目录的路径（可省略 `.yml` 后缀）。
+使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 是相对于 `conf` 目录的路径（可省略 `.yml` 后缀）。下表按开发版本列出模板路径；使用 `v4.5.0` 发布包时，内核模板仍位于 `conf/` 根目录，应去掉 `fork/` 前缀。
 
 ```bash
 ./configure                     # 默认使用 meta.yml 配置模板
@@ -31,16 +31,16 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c slim             # 使用最小化的单节点模板
 
 # 使用不同的数据库内核
-./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
+./configure -c fork/pgsql       # 原生 PostgreSQL 内核，基础功能 (14~18)
 ./configure -c pg19             # PostgreSQL 19 Beta 专用试用模板
-./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17/18)
-./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
-./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
-./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
-./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
-./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
-./configure -c agens            # AgensGraph 图数据库内核 (17)
-./configure -c pgedge           # pgEdge 分布式数据库内核 (15~18，默认 18)
+./configure -c fork/mssql       # Babelfish 内核，兼容 SQL Server 协议 (17/18)
+./configure -c fork/polar       # PolarDB PG 内核，Aurora/RAC 风格 (17)
+./configure -c fork/ivory       # IvorySQL 内核，兼容 Oracle 语法 (18)
+./configure -c fork/mysql       # OpenHalo 内核，兼容 MySQL (14)
+./configure -c fork/pgtde       # Percona PostgreSQL Server 透明加密 (18)
+./configure -c fork/oriole      # OrioleDB 内核，OLTP 增强 (16~18)
+./configure -c fork/agens       # AgensGraph 图数据库内核 (17)
+./configure -c fork/pgedge      # pgEdge 分布式数据库内核 (15~18，默认 18)
 ./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
 
@@ -74,16 +74,16 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 | 模板                                         | 说明                                    |
 |--------------------------------------------|---------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)         |
+| [**`fork/pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)         |
 | [**`pg19.yml`**](/docs/conf/pg19/)         | PostgreSQL 19 Beta 专用试用模板             |
-| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
-| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)         |
-| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
-| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
-| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
-| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)                |
-| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
+| [**`fork/mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
+| [**`fork/polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
+| [**`fork/ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)         |
+| [**`fork/mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
+| [**`fork/pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
+| [**`fork/oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
+| [**`fork/agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)                |
+| [**`fork/pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)                |
 {.full-width}
 
@@ -126,6 +126,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库    |
 | [**`maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用      |
 | [**`registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry |
+| [**`app/silo.yml`**](/docs/app/silo/) | 启动独立 Silo 对象存储容器 |
 {.full-width}
 
 
@@ -143,12 +144,12 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | **`redis.yml`**                        | Redis 集群示例配置                                           |
 | [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
 | [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
-| [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
+| [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/fork/mysql.yml` |
 | [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件           |
 | [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                                    |
 | [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                              |
 | [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                                |
-| [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                                |
+| [**`fork/mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                                |
 | [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                          |
 {.full-width}
 

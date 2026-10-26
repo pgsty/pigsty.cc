@@ -8,6 +8,8 @@ categories: [参考]
 
 `app/maybe` 配置模板提供了部署 Maybe 开源个人财务管理系统的参考配置，使用 Pigsty 托管的 PostgreSQL 作为数据库。
 
+上游仓库已归档，模板保留 `ghcr.io/maybe-finance/maybe:stable` 通道供现有部署使用；源码验证快照为 `v0.6.0`。`stable` 不意味着上游仍持续发布维护版本，详见 [Maybe 应用说明](/docs/app/maybe/)。
+
 
 --------
 

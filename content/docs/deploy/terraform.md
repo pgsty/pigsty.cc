@@ -9,7 +9,7 @@ categories: [教程]
 
 [**OpenTofu**](https://opentofu.org/) 是一个开源的“基础设施即代码”工具，您可以使用它在公有云上一键创建虚拟机。
 
-Pigsty 默认使用 OpenTofu，并提供兼容 Terraform 的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
+Pigsty 当前开发源码自 2026-08-24 起默认使用 OpenTofu；`v4.5.0` 发布归档的辅助脚本仍默认使用 Terraform。源码提供兼容两者的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
 
 
 ----------------

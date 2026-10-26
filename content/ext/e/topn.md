@@ -38,6 +38,9 @@ weight: 4600
 {.ext-table .ext-table--rel}
 
 
+> Some package coordinates may lag 2.7.1.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |

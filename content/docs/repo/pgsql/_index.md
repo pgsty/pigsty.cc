@@ -38,6 +38,7 @@ pig repo add -u                             # all = node + pgsql (pgdg + pigsty)
 
 ```bash {tab="默认" group="tab1-tab2" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
 # 获取 Debian / Ubuntu 发行版代号（bookworm, trixie, jammy, noble, resolute），并将相应的上游仓库地址写入 APT List 文件
@@ -53,6 +54,7 @@ sudo apt update
 ```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
 # 获取 Debian 发行版代号，并将相应的上游仓库地址写入 APT List 文件

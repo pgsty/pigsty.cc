@@ -9,7 +9,7 @@ categories: [参考]
 
 [PostgREST](https://postgrest.org/) 可以将 PostgreSQL schema 直接暴露为 REST API。
 
-Pigsty 提供 `app/postgrest` 模板，默认端口 `8884`。
+Pigsty 提供 `app/postgrest` 模板，默认只监听宿主机 `127.0.0.1:8884`，以只读用户 `dbuser_view` 提供 Pigsty CMDB API 示例。
 
 ## 快速开始
 
@@ -21,8 +21,8 @@ make up
 
 默认入口：
 
-- `http://<IP>:8884`
-- 若配置了入口域名，可通过 `http://api.pigsty` 访问
+- `http://127.0.0.1:8884`
+- 远程访问使用 SSH 隧道，或配置带认证的 Nginx 门户 `http://api.pigsty`
 
 ## 关键配置
 
@@ -33,17 +33,23 @@ make up
 - `POSTGREST_DB_ANON_ROLE`：匿名角色
 - `POSTGREST_JWT_SECRET`：JWT 密钥
 
+将 `POSTGREST_JWT_SECRET` 改为至少 32 字符的随机值。配置 JWT 密钥本身不会禁止匿名访问；`POSTGREST_DB_ANON_ROLE` 仍决定未认证请求的数据库权限。`make run` 与 `make up` 使用同一份 Compose 配置，数据库 URI 中的查询参数与密钥中的空格会完整传入容器。
+
 ## Swagger UI（可选）
 
 可单独拉起 Swagger UI 预览 API：
 
 ```bash
-docker run --rm --name swagger -p 8882:8080 \
-  -e API_URL=http://10.10.10.10:8884 \
+docker run --rm --name swagger -p 127.0.0.1:8883:8080 \
+  -e API_URL=http://127.0.0.1:8884 \
   swaggerapi/swagger-ui
 ```
 
-访问 `http://<IP>:8882`。
+访问 `http://127.0.0.1:8883`。服务位于远程主机时，先转发两个端口：
+
+```bash
+ssh -L 8883:127.0.0.1:8883 -L 8884:127.0.0.1:8884 your-server
+```
 
 ## 常用命令
 

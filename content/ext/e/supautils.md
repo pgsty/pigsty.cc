@@ -38,7 +38,7 @@ weight: 7010
 {.ext-table .ext-table--rel}
 
 
-> Hook library only; no CREATE EXTENSION objects.
+> Module-only; no CREATE EXTENSION.
 
 
 ## 版本

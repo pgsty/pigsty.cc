@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 575 个扩展的原版 PostgreSQL 内核
+description: 带有 600 个扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]
@@ -16,7 +16,9 @@ categories: [概念]
 
 ## 快速开始
 
-使用 [`pgsql`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml) 配置模板 [**安装**](/docs/setup/install) Pigsty。
+使用 [`fork/pgsql`](/docs/conf/pgsql/) 配置模板 [**安装**](/docs/setup/install) Pigsty。
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgsql.yml)；开发版已迁移至 `conf/fork/pgsql.yml`，对应使用 `-c fork/pgsql`。
 
 ```bash
 ./configure -c pgsql     # 使用 postgres 内核
@@ -29,7 +31,7 @@ categories: [概念]
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
 - [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
 - [`ha/full`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)：用于 HA 演示的 4 节点沙盒
-- [`pgsql`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml)：最小的 postgres 内核配置示例
+- [`fork/pgsql`](/docs/conf/pgsql/)：最小的 postgres 内核配置示例
 
 
 ------
@@ -72,11 +74,7 @@ pg-meta:
 ./configure -c pgsql -v 14      # 使用 postgresql 14
 ```
 
-如果 PostgreSQL 集群已经安装，您需要在安装新版本之前卸载它：
-
-```bash
-./pgsql-rm.yml -l pg-meta # 卸载 pg-meta 集群
-```
+`-v` 用于生成新部署的配置，不会升级已有数据目录。已有集群需要切换主版本时，请按 [**PostgreSQL 大版本升级**](/docs/pgsql/admin/upgrade/) 流程规划兼容性检查、备份与迁移。
 
 
 ------

@@ -33,7 +33,7 @@ weight: 9410
 {.ext-table .ext-table--rel}
 
 
-> PGDG packages remain absent for PG14 on EL8 aarch64.
+> PGDG gap: PG14/EL8/aarch64.
 
 
 ## 版本

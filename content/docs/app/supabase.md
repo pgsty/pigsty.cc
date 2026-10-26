@@ -1,7 +1,7 @@
 ---
 title: Supabase 企业级自建
 weight: 555
-description: 使用 Pigsty 自托管企业级 supabase，带有监控、高可用、PITR、IaC 以及 575 个 PG 扩展。
+description: 使用 Pigsty 自托管企业级 supabase，带有监控、高可用、PITR、IaC 以及 600 个已打包 PG 扩展。
 module: [SOFTWARE]
 categories: [参考]
 ---
@@ -15,7 +15,7 @@ Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务�
 本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
 
 当前模板跟随 Supabase [`self-hosted/v0.8.2`](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker)（提交 `564eab8`）的协调版本，默认使用 Envoy `1.39.1`，Studio 为 `2026.09.07-sha-7996410`。
-数据库使用外置的 Pigsty PostgreSQL，模板默认 PG18；该组合已在 PG18.6 上完成基本功能验证。完整镜像版本以 [`docker-compose.yml`](https://github.com/pgsty/pigsty/blob/main/app/supabase/docker-compose.yml) 为准，既有部署请先阅读 [升级说明](#升级现有部署)。
+数据库使用外置的 Pigsty PostgreSQL，模板默认 PG18；开发源码记录了该组合在 PG18.6 上的基本功能验证。本文的 `0.8.2` 模板与升级脚本属于开发版，需要配套的 `app/supabase/` 与 `conf/supabase.yml`；v4.5.0 发布包不包含这些更新。既有部署请先阅读 [升级说明](#升级现有部署)。
 
 
 
@@ -132,7 +132,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase �
 
 让我们先从单节点 Supabase 部署开始，我们会在后面进一步介绍多节点高可用部署的方法。
 
-[准备](/docs/deploy/prepare) 一台全新 [Linux 服务器](/docs/deploy/prepare)，使用 Pigsty 提供的 [`supabase`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml) 配置模板执行 [标准安装](/docs/setup/install)，
+[准备](/docs/deploy/prepare) 一台全新 [Linux 服务器](/docs/deploy/prepare)，使用 Pigsty 提供的 [`supabase`](/docs/conf/supabase/) 配置模板执行 [标准安装](/docs/setup/install)，
 然后额外运行 [`docker.yml`](/docs/docker/playbook#dockeryml) 与 `app.yml` 拉起无状态部分的 Supabase 容器即可（默认 Envoy HTTP 端口 `8000`，HTTPS 由 Nginx 门户提供）。
 
 ```bash
@@ -211,7 +211,21 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 
 先检查依赖 `current_setting('app.settings.jwt_secret')` 的自定义 SQL 函数。如仍需签名密钥，按 [上游迁移说明](https://github.com/supabase/supabase/pull/45003) 改用受限的 Vault secret，仅授权函数所有者读取，避免通过公开 RPC 返回解密后的密钥。
 
-完成依赖处理和备份后，在 Pigsty 安装根目录下，以管理员身份连接目标 Supabase 数据库，执行幂等的 [窄升级脚本](https://github.com/pgsty/pigsty/blob/main/files/supabase-0.8.2.sql)：
+完成依赖处理和备份后，在 Pigsty 安装根目录下，以管理员身份连接目标 Supabase 数据库，执行开发树中的幂等窄升级脚本 `files/supabase-0.8.2.sql`。该文件尚未出现在公开 GitHub `main`；其完整 SQL 逻辑如下，可保存为该文件后审查执行：
+
+```sql
+\set ON_ERROR_STOP on
+BEGIN;
+
+DO $$
+BEGIN
+    EXECUTE format('ALTER DATABASE %I RESET "app.settings.jwt_secret"', current_database());
+END
+$$;
+
+GRANT USAGE ON SCHEMA extensions TO supabase_functions_admin;
+COMMIT;
+```
 
 ```bash
 psql -X -v ON_ERROR_STOP=1 -d '<target-supabase-database>' -f files/supabase-0.8.2.sql
@@ -245,7 +259,7 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 - [`haproxy_admin_password`](/docs/node/param/#haproxy_admin_password): `pigsty`，负载均衡器管控密码
 - [`minio_secret_key`](/docs/minio/param/#minio_secret_key): `S3User.MinIO`，Silo 根用户密钥
 - [`etcd_root_password`](/docs/etcd/param/#etcd_root_password): `Etcd.Root`，Etcd 根用户密码
-- 此外，强烈建议您修改 Supabase 使用的 [PostgreSQL 业务用户](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L72) 密码，默认为 `DBUser.Supa`
+- 此外，强烈建议您修改 Supabase 使用的 [PostgreSQL 业务用户](/docs/conf/supabase/) 密码，默认为 `DBUser.Supa`
 
 以上密码为 Pigsty 组件模块的密码，强烈建议在安装部署前就设置完毕。
 
@@ -253,20 +267,20 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 
 除了 Pigsty 组件的密码，你还需要 [修改 Supabase 的密钥](https://supabase.com/docs/guides/self-hosting/docker#securing-your-services)，包括
 
-- [`JWT_SECRET`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L143)：JWT 签名密钥，长度至少 32 个字符
-- [`ANON_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L144)：匿名用户的 JWT 凭据
-- [`SERVICE_ROLE_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L145)：服务角色的 JWT 凭据
-- [`SUPABASE_PUBLISHABLE_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L146) / [`SUPABASE_SECRET_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L147)：新版不透明 API Key，未启用时可以留空
-- [`JWT_KEYS`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L148) / [`JWT_JWKS`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L149)：非对称 JWT 密钥与 JWKS，未启用时可以留空
-- [`ANON_KEY_ASYMMETRIC`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L150) / [`SERVICE_ROLE_KEY_ASYMMETRIC`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L151)：非对称签名 JWT，未启用时可以留空
-- [`PG_META_CRYPTO_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L152)：PostgreSQL Meta 服务的加密密钥，长度至少 32 个字符
-- [`SECRET_KEY_BASE`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L153)：Realtime 使用的随机密钥
-- [`REALTIME_DB_ENC_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L154)：Realtime 数据库加密密钥
-- [`DASHBOARD_USERNAME`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L156)：Supabase Studio Web 界面的默认用户名，默认为 `supabase`
-- [`DASHBOARD_PASSWORD`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L157)：Supabase Studio Web 界面的默认密码，默认为 `pigsty`
-- [`LOGFLARE_PUBLIC_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L160)：Logflare 公开访问令牌，至少 32 个随机字符
-- [`LOGFLARE_PRIVATE_ACCESS_TOKEN`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L161)：Logflare 私有访问令牌，至少 32 个随机字符
-- [`LOGFLARE_DB`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L162) / [`LOGFLARE_SCHEMA`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L163)：Logflare / Analytics 使用的内部数据库与模式，默认是 `_supabase` / `_analytics`
+- [`JWT_SECRET`](/docs/conf/supabase/)：JWT 签名密钥，长度至少 32 个字符
+- [`ANON_KEY`](/docs/conf/supabase/)：匿名用户的 JWT 凭据
+- [`SERVICE_ROLE_KEY`](/docs/conf/supabase/)：服务角色的 JWT 凭据
+- [`SUPABASE_PUBLISHABLE_KEY`](/docs/conf/supabase/) / [`SUPABASE_SECRET_KEY`](/docs/conf/supabase/)：新版不透明 API Key，未启用时可以留空
+- [`JWT_KEYS`](/docs/conf/supabase/) / [`JWT_JWKS`](/docs/conf/supabase/)：非对称 JWT 密钥与 JWKS，未启用时可以留空
+- [`ANON_KEY_ASYMMETRIC`](/docs/conf/supabase/) / [`SERVICE_ROLE_KEY_ASYMMETRIC`](/docs/conf/supabase/)：非对称签名 JWT，未启用时可以留空
+- [`PG_META_CRYPTO_KEY`](/docs/conf/supabase/)：PostgreSQL Meta 服务的加密密钥，长度至少 32 个字符
+- [`SECRET_KEY_BASE`](/docs/conf/supabase/)：Realtime 使用的随机密钥
+- [`REALTIME_DB_ENC_KEY`](/docs/conf/supabase/)：Realtime 数据库加密密钥
+- [`DASHBOARD_USERNAME`](/docs/conf/supabase/)：Supabase Studio Web 界面的默认用户名，默认为 `supabase`
+- [`DASHBOARD_PASSWORD`](/docs/conf/supabase/)：Supabase Studio Web 界面的默认密码，默认为 `pigsty`
+- [`LOGFLARE_PUBLIC_ACCESS_TOKEN`](/docs/conf/supabase/)：Logflare 公开访问令牌，至少 32 个随机字符
+- [`LOGFLARE_PRIVATE_ACCESS_TOKEN`](/docs/conf/supabase/)：Logflare 私有访问令牌，至少 32 个随机字符
+- [`LOGFLARE_DB`](/docs/conf/supabase/) / [`LOGFLARE_SCHEMA`](/docs/conf/supabase/)：Logflare / Analytics 使用的内部数据库与模式，默认是 `_supabase` / `_analytics`
 
 这里请您务必参照 [Supabase教程：保护你的服务](https://supabase.com/docs/guides/self-hosting/docker#generate-api-keys) 里的说明：
 
@@ -277,11 +291,11 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 - 指定一个32个字符以上的随机字符串密钥 `PG_META_CRYPTO_KEY`，用于加密 Studio UI 与 meta 服务的交互
 - `SECRET_KEY_BASE` 至少 64 个字符；`REALTIME_DB_ENC_KEY` 必须恰好 16 个字符。
 - 为 `S3_PROTOCOL_ACCESS_KEY_ID` 与 `S3_PROTOCOL_ACCESS_KEY_SECRET` 生成独立随机凭据，不要复用对象存储管理员密码。
-- 如果您使用的 PostgreSQL 业务用户使用了不同于默认值的密码，请相应修改 [`POSTGRES_PASSWORD`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L169) 的值
-- 如果您的对象存储使用了不同于默认值的密码，请相应修改 [`S3_ACCESS_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L180) 与 [`S3_SECRET_KEY`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L181) 的值
-- 如果您将 Edge Functions 暴露给不可信客户端，请按需将 [`FUNCTIONS_VERIFY_JWT`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L194) 改为 `true`。
-- [`API_EXTERNAL_URL`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L173) 现在应填写 Auth 服务的外部 URL，保留 `/auth/v1` 后缀，例如 `https://supa.pigsty.cc/auth/v1`；`SITE_URL` 与 `SUPABASE_PUBLIC_URL` 保持站点根 URL。
-- 当前模板的 [`PGRST_DB_SCHEMAS`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml#L190) 默认为 `public,graphql_public`；`storage` 模式由 Storage API 使用，不再通过 PostgREST 默认暴露。
+- 如果您使用的 PostgreSQL 业务用户使用了不同于默认值的密码，请相应修改 [`POSTGRES_PASSWORD`](/docs/conf/supabase/) 的值
+- 如果您的对象存储使用了不同于默认值的密码，请相应修改 [`S3_ACCESS_KEY`](/docs/conf/supabase/) 与 [`S3_SECRET_KEY`](/docs/conf/supabase/) 的值
+- 如果您将 Edge Functions 暴露给不可信客户端，请按需将 [`FUNCTIONS_VERIFY_JWT`](/docs/conf/supabase/) 改为 `true`。
+- [`API_EXTERNAL_URL`](/docs/conf/supabase/) 现在应填写 Auth 服务的外部 URL，保留 `/auth/v1` 后缀，例如 `https://supa.pigsty.cc/auth/v1`；`SITE_URL` 与 `SUPABASE_PUBLIC_URL` 保持站点根 URL。
+- 当前模板的 [`PGRST_DB_SCHEMAS`](/docs/conf/supabase/) 默认为 `public,graphql_public`；`storage` 模式由 Storage API 使用，不再通过 PostgREST 默认暴露。
 
 启用非对称认证时，需同时配置 `JWT_KEYS`、`JWT_JWKS` 和上述四个不透明/非对称 API Key 变量，并启用对应的 Compose 覆盖文件；默认不启用时保留 HS256 模式：
 
@@ -289,7 +303,7 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 docker compose -f docker-compose.yml -f docker-compose.asymmetric.yml up -d
 ```
 
-若同时选择 Kong，在 `-f docker-compose.asymmetric.yml` 前加入 `-f docker-compose.kong.yml`，后续启动与更新也使用同一组覆盖文件。Edge Functions 通过 `SUPABASE_JWKS` 接收 `JWT_JWKS`，为空时回退到 HS256。升级时将 worker 与共享导入映射 `volumes/functions/deno.jsonc` 一起更新，以支持 `@supabase/functions-js`、`@supabase/server` 与按请求设置的 `SUPABASE_FUNCTION_SLUG`；来源见 [固定版本说明](https://github.com/pgsty/pigsty/blob/main/app/supabase/volumes/functions/SOURCE.md)。
+若同时选择 Kong，在 `-f docker-compose.asymmetric.yml` 前加入 `-f docker-compose.kong.yml`，后续启动与更新也使用同一组覆盖文件。Edge Functions 通过 `SUPABASE_JWKS` 接收 `JWT_JWKS`，为空时回退到 HS256。升级时将 worker 与共享导入映射 `volumes/functions/deno.jsonc` 一起更新，以支持 `@supabase/functions-js`、`@supabase/server` 与按请求设置的 `SUPABASE_FUNCTION_SLUG`。上游文件来源为 [Supabase 固定提交 `564eab8` 的 Functions 目录](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker/volumes/functions)。
 
 修改 Supabase 凭据后，需要更新配置并重建容器。以下命令及后文未指定 Compose 覆盖文件的启动示例仅适用于默认 **Envoy + HS256**：
 

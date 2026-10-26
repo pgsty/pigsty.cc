@@ -38,7 +38,7 @@ weight: 7500
 {.ext-table .ext-table--rel}
 
 
-> Percona PostgreSQL 18.6 only; requires preload.
+> Percona PG18.6 kernel + preload; pkg 2.2.2; SQL 2.2.
 
 
 ## 版本

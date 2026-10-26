@@ -38,7 +38,7 @@ weight: 8760
 {.ext-table .ext-table--rel}
 
 
-> Package 3.0.0; SQL extension 3.0. Upgrades from 2.x require the upstream rdfnode index and dependent-object migration; REINDEX alone is insufficient.
+> pkg 3.0.0; SQL 3.0; recreate rdfnode indexes + sort/group dependents (REINDEX insufficient); sparql.uri returns rdfnode; request_max_redirect=-1 removed.
 
 
 ## 版本

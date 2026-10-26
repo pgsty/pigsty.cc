@@ -46,7 +46,7 @@ weight: 2564
 {.ext-table .ext-table--rel}
 
 
-> Query engine using pgduck_server. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; auto-loaded; DuckDB needs matching PG-major pgduck_server.
 
 
 ## 版本

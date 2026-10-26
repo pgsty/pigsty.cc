@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [概念]
 ---
 
-[OrioleDB](https://orioledb.com/) 是一个 PostgreSQL 存储引擎扩展，声称能够提供 4 倍 OLTP 性能，没有 xid 环绕和表膨胀问题，并具有"云原生"（数据存储在 S3）能力。
+[OrioleDB](https://orioledb.com/) 是一个 PostgreSQL 存储引擎扩展，支持将数据存储在 S3。其 MVCC 使用 UNDO 日志保存旧版本，减少主存储中的膨胀，并通过 64 位事务 ID 避免传统 XID 环绕问题；实现细节见 [**OrioleDB 上游说明**](https://github.com/orioledb/orioledb)。
 
 OrioleDB 当前在 Pigsty 中支持 PostgreSQL 16、17、18 三个兼容系，当前基线版本为 OrioleDB 1.8 beta16。
 
@@ -19,7 +19,9 @@ OrioleDB 当前在 Pigsty 中支持 PostgreSQL 16、17、18 三个兼容系，�
 
 ## 快速开始
 
-按照 Pigsty [**标准安装**](/docs/setup/install) 流程，使用 [`oriole`](https://github.com/pgsty/pigsty/blob/main/conf/oriole.yml) 配置模板。
+按照 Pigsty [**标准安装**](/docs/setup/install) 流程，使用 [`fork/oriole`](/docs/conf/oriole/) 配置模板。
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/oriole.yml)；开发版已迁移至 `conf/fork/oriole.yml`，对应使用 `-c fork/oriole`。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -114,7 +116,7 @@ ALTER TABLE pgbench_tellers_o RENAME TO pgbench_tellers;
 
 ## 可用扩展
 
-OrioleDB 内核共有 **53** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                         | 版本号   | 说明                                                   |
 |:----------------------------|:------|:-----------------------------------------------------|

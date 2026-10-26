@@ -1,19 +1,41 @@
 ---
 title: 指标列表
 weight: 3460
-description: Pigsty ETCD 模块提供的完整监控指标列表与释义
+description: ETCD 当前记录规则与原始指标的获取方式、历史抓取样本。
 icon: fa-solid fa-list-check
 module: [ETCD]
 categories: [参考]
 ---
 
-本页快照记录 [**`ETCD`**](/docs/etcd) 模块的 177 类监控指标；实际运行时的指标集合会随软件包版本、启用的采集器和目标状态变化。
+本页区分 **采集端点的原始指标** 与 **vmalert 计算生成的记录指标**。截至 2026-10-13，当前源码的 [`files/victoria/rules/etcd.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/etcd.yml) 定义了 **9 条记录规则**；下表逐项列出名称与实际表达式。记录指标由规则求值得到，不应在 Exporter 的 `/metrics` 端点中查找。
+
+原始指标会随软件版本、采集器、权限、实例角色与运行状态变化。页末保留历史抓取样本，仅供识别指标，不代表当前版本的完整接口。
+
+## 当前记录规则
+
+表达式保留源码语义；`ins`、`cls`、`env` 一般分别表示实例、集群与环境聚合层级，实际保留的标签以 `by` / `without` 和向量匹配子句为准。记录规则没有独立的 Prometheus `TYPE` 元数据，不应将它们统一标成 Counter 或 Gauge。
+
+| 记录指标 | 表达式 |
+|:---|:---|
+| `etcd:ins:rpm` | `sum without (type, client_api_version) (increase(etcd_server_client_requests_total{job="etcd"}[1m]))` |
+| `etcd:ins:wpm` | `increase(etcd_server_proposals_committed_total{job="etcd"}[1m])` |
+| `etcd:ins:quota_usage` | `etcd_mvcc_db_total_size_in_bytes{job="etcd"} / etcd_server_quota_backend_bytes{job="etcd"}` |
+| `etcd:cls:quota_usage` | `max by (job,cls) (etcd_mvcc_db_total_size_in_bytes{job="etcd"} / etcd_server_quota_backend_bytes{job="etcd"})` |
+| `etcd:ins:age` | `etcd_debugging_mvcc_current_revision{job="etcd"} - etcd_debugging_mvcc_compact_revision{job="etcd"}` |
+| `etcd:cls:age` | `max by (job,cls) (etcd_debugging_mvcc_current_revision{job="etcd"} - etcd_debugging_mvcc_compact_revision{job="etcd"})` |
+| `etcd:ins:wal_fsync_rt_p95_5m` | `histogram_quantile(0.95, rate(etcd_disk_wal_fsync_duration_seconds_bucket{job="etcd"}[5m]))` |
+| `etcd:ins:backend_commit_rt_p95_5m` | `histogram_quantile(0.95, rate(etcd_disk_backend_commit_duration_seconds_bucket{job="etcd"}[5m]))` |
+| `etcd:ins:network_peer_rt_p95_5m` | `histogram_quantile(0.95, rate(etcd_network_peer_round_trip_time_seconds_bucket{job="etcd"}[5m]))` |
+{.full-width}
+
+此外，`etcd_up` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)，不包含在上面的模块规则数量中，也不是 Exporter 的原始指标。它们反映抓取状态，不能代替服务功能检查。
+
+## 历史抓取样本
+
+以下保留 **173 个指标名称** 的既有样本，已移除记录规则和告警状态序列。样本未记录抓取时间与软件版本，类型和标签仅供参考；`Unknown` 表示类型元数据缺失。其中 `up` 与 `scrape_*` 由采集系统生成，不属于 Exporter 原始输出。Histogram / Summary 的多个样本名会分别占行，不能用行数统计指标族。
 
 | Metric Name                                                             | Type    | Labels                                                                                         | Description                                                                                          |
 |-------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| etcd:ins:backend_commit_rt_p95_5m                                       | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
-| etcd:ins:wal_fsync_rt_p95_5m                                            | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
-| etcd:ins:network_peer_rt_p95_5m                                         | Unknown | `cls`, `To`, `ins`, `instance`, `job`, `ip`                                                    | N/A                                                                                                  |
 | etcd_cluster_version                                                    | gauge   | `cls`, `cluster_version`, `ins`, `instance`, `job`, `ip`                                       | Which version is running. 1 for 'cluster_version' label with current cluster version                 |
 | etcd_debugging_auth_revision                                            | gauge   | `cls`, `ins`, `instance`, `job`, `ip`                                                          | The current revision of auth store.                                                                  |
 | etcd_debugging_disk_backend_commit_rebalance_duration_seconds_bucket    | Unknown | `cls`, `ins`, `instance`, `job`, `le`, `ip`                                                    | N/A                                                                                                  |
@@ -137,7 +159,6 @@ categories: [参考]
 | etcd_snap_fsync_duration_seconds_bucket                                 | Unknown | `cls`, `ins`, `instance`, `job`, `le`, `ip`                                                    | N/A                                                                                                  |
 | etcd_snap_fsync_duration_seconds_count                                  | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
 | etcd_snap_fsync_duration_seconds_sum                                    | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
-| etcd_up                                                                 | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
 | go_gc_duration_seconds                                                  | summary | `cls`, `ins`, `instance`, `quantile`, `job`, `ip`                                              | A summary of the pause duration of garbage collection cycles.                                        |
 | go_gc_duration_seconds_count                                            | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
 | go_gc_duration_seconds_sum                                              | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |

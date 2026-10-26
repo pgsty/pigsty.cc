@@ -20,6 +20,13 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
   - 应用模板资源
 - bin/   {open=false}
   - 管理与运维脚本
+- conf/
+  - fork/   {open=false}
+    - PostgreSQL 内核变体模板
+  - ha/   {open=false}
+    - 高可用拓扑模板
+  - build/   {open=false}
+    - 多平台构建清单
 - files/
   - victoria/   {open=false}
     - 规则与运维脚本
@@ -38,7 +45,7 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
 - vagrant/   {open=false}
   - Vagrant 沙箱定义
 - terraform/   {open=false}
-  - Terraform 云资源模板
+  - OpenTofu 云资源模板（兼容 Terraform）
 - configure
 - ansible.cfg
 - pigsty.yml
@@ -169,6 +176,7 @@ rsync -avz ./ meta-2:~/pigsty
 上述结构由以下实现生成：`roles/infra/tasks/dir.yml`、`roles/infra/tasks/victoria.yml`、`roles/infra/tasks/register.yml`、`roles/infra/tasks/dns.yml`、`roles/infra/tasks/env.yml`。
 
 
+开发版本的 Certbot 集成还会写入 `/etc/letsencrypt/renewal-hooks/deploy/10-reload-nginx`，在证书续签完成后重载 Nginx。
 
 ----------------
 
@@ -189,6 +197,10 @@ rsync -avz ./ meta-2:~/pigsty
 - kafka · kafka:kafka 0700，kafka_data/   {open=false}
 - … · 其他组件的数据目录/   {open=false}
 ```
+
+### Chrony 与 tuned
+
+Chrony 使用操作系统原生配置路径：EL 为 `/etc/chrony.conf`，Debian / Ubuntu 为 `/etc/chrony/chrony.conf`。tuned 的自定义配置目录由 `node_tuned_profile_dir` 决定：EL 10、Debian 13、Ubuntu 26 使用 `/etc/tuned/profiles`，其余当前支持平台使用 `/etc/tuned`。
 
 ### HAProxy
 

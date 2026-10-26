@@ -23,7 +23,7 @@ PGSQL 是 Pigsty 的核心模块：通过 Ansible 清单声明 PostgreSQL 集群
 - [内核](/docs/pgsql/config/kernel/)：PostgreSQL 大版本、发行版与软件包选择。
 - [用户](/docs/pgsql/config/user/)、[数据库](/docs/pgsql/config/db/)、[HBA](/docs/pgsql/config/hba/) 与 [ACL](/docs/pgsql/config/acl/)：业务对象与访问控制。
 - [服务接入](/docs/pgsql/service/)：读写/只读服务、HAProxy、VIP、DNS 与连接池。
-- [扩展目录](/ext/list/)：当前打包的 575 个扩展及平台覆盖。
+- [扩展目录](/ext/list/)：当前打包的 {{< param pgext_count >}} 个扩展及平台覆盖。
 
 
 ----------------

@@ -6,7 +6,7 @@ icon: fa-solid fa-clipboard-list
 categories: [参考]
 ---
 
-Pigsty 当前最新版本为 [**v4.5.0**](#v450)。
+Pigsty 当前公开稳定版为 [**v4.5.0**](#v450)，发布于北京时间 **2026-08-15**。尚未发布的源码更新见 [**开发分支变更**](#开发分支发布后变更)。
 
 |       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
 |:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
@@ -74,11 +74,25 @@ Pigsty 当前最新版本为 [**v4.5.0**](#v450)。
 
 ------
 
+## 开发分支发布后变更
+
+以下内容对应截至 **2026-10-09** 的开发源码 `2fb8b5bd`，尚未包含在 `v4.5.0` 发布包中。截至 2026-10-13，公开 GitHub `main` 为 `745a4eab`，尚未包含下列全部变更。
+
+- **云资源工具切换到 OpenTofu**：`terraform/` 的 Makefile 和辅助脚本默认使用 `tofu`，可通过 `IAC_CLI=terraform` 继续使用 Terraform；现有 state 迁移步骤见 [**OpenTofu**](/docs/deploy/terraform/)。
+- **离线包流程完善**：远端缓存归档与 `bootstrap` 默认路径改为 `/var/tmp/pkg.tgz`，默认路径缺失时兼容旧 `/tmp/pkg.tgz`；解包失败或缺少 `repo_complete` 会清理不完整输出并终止。构建机引导按阶段等待全部传输与远程操作，并传播失败状态。详见 [**离线安装**](/docs/setup/offline/)。
+- **内核模板归位**：`agens`、`ivory`、`mongo`、`mssql`、`mysql`、`oriole`、`pgedge`、`pgsql`、`pgtde`、`polar` 从 `conf/` 移至 `conf/fork/`，配置向导使用 `-c fork/<name>`；`demo/mysql` 仍表示独立的原生 MySQL 试点。
+- **基础设施与服务配置**：INFRA 新增生产 Nginx 门户模板选择与缓存目录配置；PostgreSQL HAProxy 健康检查把 RTO 转换为合法时长。Docker 上游仓库从 `infra` 移至 `docker`；EL 平台的 Nginx 仓库也从 `infra` 移至 `nginx`，与 Debian / Ubuntu 保持一致。
+- **Kafka JMX 可选**：新增 `kafka_jmx_exporter_enabled`，默认启用，可关闭内嵌 Java Agent 及其对应抓取；协议 Exporter 仍独立工作。详见 [**Kafka 参数**](/docs/kafka/param/#kafka_jmx_exporter_enabled)。
+- **应用部署与模板更新**：保留 APP 配置中的字面量值，完善健康检查、持久化目录、初始化依赖、凭据与端口处理；以 Silo 替换独立 MinIO Compose 应用。Supabase 更新到自托管 0.8.2、Dify 到 1.17.1、InsForge 到 2.3.3、JumpServer 到 5.0.0、Registry 到 3.1.2；其他模板与具体约束见 [**应用目录**](/docs/app/)。
+- **软件包映射与自动化**：刷新各平台 PostgreSQL 扩展包别名，补齐移除扩展、包名与许可证筛选规则，并更新 GitHub Actions 依赖。
+
+------
+
 ## v4.5.0
 
 Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份编排、可观测性和软件供应链为重点的功能版本。
 它引入 Kafka KRaft 与 MySQL 8.4 模块，为 REDIS 增加 Valkey 引擎，将 MINIO 模块收敛到 Silo，并把已打包扩展目录从 531 个推进到 575 个。
-已提交的完整源码差异见 [`v4.4.0...61f62e6e`](https://github.com/pgsty/pigsty/compare/v4.4.0...61f62e6e48129b88d0529bf6ebcffc039656415f)。
+该版本发布时的完整源码差异见 [`v4.4.0...v4.5.0`](https://github.com/pgsty/pigsty/compare/v4.4.0...v4.5.0)。下文软件包、扩展与模板数量均为发布时快照。
 
 **亮点特性**
 
@@ -89,7 +103,7 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 - **51 个独立配置模板**：在 v4.4.0 的 48 个独立模板基础上新增 `demo/kafka`、`demo/mysql` 与八节点 `ha/octo` 仿真模板；另保留 `conf/app/supa.yml` → `../supabase.yml` 兼容软链接。
 - **更安全的集群身份编排**：PGSQL、REDIS、MINIO、KAFKA 及 MYSQL 的初始化剧本，以及除 `mysql-rm.yml` 外的对应移除剧本，都会按显式集群身份跳过无关主机；`mysql-rm.yml` 则对任何误选主机失败关闭。etcd 委派和 DBSU 密钥交换也改用实际集群成员。
 - **可观测性与供应链**：Grafana 仪表盘重导出为 Dashboard API v2，MinIO/Silo 改采 Metrics V3；本地仓库由 SOW 原子生成，不再写入伪造的 ModuleMD 元数据。
-- **内核与工具链更新**：完善 PostgreSQL 19 beta2 的 pgBackRest 支持，启用 Percona PostgreSQL TDE 集群模式，修正 IvorySQL 初始化与 WAL 压缩，并更新 PostgreSQL 扩展包映射、Exporter 与构建工具链。
+- **内核与工具链更新**：完善 PostgreSQL 19 Beta 模板的 pgBackRest 支持，启用 Percona PostgreSQL TDE 集群模式，修正 IvorySQL 初始化与 WAL 压缩，并更新 PostgreSQL 扩展包映射、Exporter 与构建工具链。
 
 **新模块与数据服务**
 
@@ -111,9 +125,9 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 - RPM Exporter 包名由下划线形式统一为连字符形式，例如 `node_exporter` → `node-exporter`；同时修复 Debian 仓库名与 PGDG YUM 扩展包名映射。
 - 针对不同系统版本选择 tuned 配置目录：EL 10、Debian 13 与 Ubuntu 26 使用 `/etc/tuned/profiles`，EL 8/9、Debian 12 与 Ubuntu 22/24 继续使用 `/etc/tuned`；Debian/Ubuntu 安装包时还会阻止 Silo、Redis/Valkey 及遗留日志服务被软件包脚本提前启动。
 - 中国区域的软件源路由完成一次系统性刷新：操作系统、Docker、Grafana、Percona、受支持的 MongoDB APT 与 uv/PyPI 路径优先使用腾讯云；EL 与 Docker 条目按平台保留华为云、阿里云回退，MySQL/Kubernetes 使用中科大镜像，ClickHouse 使用华为云。MongoDB RPM 不再声明已经不可用的中国区替代地址；每个平台的最终选择仍以 `roles/node_id/vars/<os>.<arch>.yml` 为准。
-- Docker 镜像更新到 Debian 13.6 并标记 v4.5.0；Vagrant 强制 32GB 根盘并支持固定 box 版本，新增八节点 `ha/octo` 实验环境。`docker/Makefile` 的数据目录固定为 `./data`，`make purge` 会直接删除该目录。
+- Docker 镜像更新到 Debian 13.6 并标记 v4.5.0；Vagrant 新增 `root_disk`，默认 64 GiB、构建矩阵 128 GiB，并支持固定 Box 版本，新增八节点 `ha/octo` 实验环境。`docker/Makefile` 的数据目录固定为 `./data`，`make purge` 会直接删除该目录。
 - GitHub Actions 的 checkout、CodeQL、Docker build/login 与 Cosign 动作批量升级；发布、引导、安装和校验脚本同步收紧文件与参数处理。发布归档现在从 `conf/meta.yml` 生成顶层 `pigsty.yml`，纳入 Kafka/MySQL 剧本并移除旧 Mongo 剧本。
-- 发布签名工作流现在要求从 `main` 分支发起，并且只为 `pigsty-<tag>.tgz` 源码包生成 Cosign 签名；多 GB 离线包不在该工作流的签名范围内。构建机引导矩阵与 `conf/build/oss.yml` 对齐为 EL 9/10、Debian 12/13、Ubuntu 22/24/26。
+- 源码中的 Cosign 工作流要求从 `main` 分支发起，仅处理 `pigsty-<tag>.tgz`。GitHub 发布页面另外提供源码、14 个离线包与 `checksums` 的 GPG 分离签名，共 32 个上传资产；下载与校验见 [**离线安装**](/docs/setup/offline/)。构建机矩阵与 `conf/build/oss.yml` 对齐为 EL 9/10、Debian 12/13、Ubuntu 22/24/26。
 
 **可观测性**
 
@@ -544,6 +558,7 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 - MySQL 的 `mysql_databases` 条目只接受 `name`、`encoding` 与 `collate`，数据库固定以 `DEFAULT ENCRYPTION='N'` 创建；`mysql_parameters` 不能通过 `loose_`、`skip_`、`disable_` 或 `enable_` 前缀绕过平台保留项与复制/TLS 选项保护。
 - 自建 RPM 仓库或外部自动化如果仍引用 `node_exporter`、`redis_exporter` 等旧下划线包名，需要迁移到 `node-exporter`、`redis-exporter` 等连字符名称。
 - `docker/Makefile` 不再允许用 `DATA` 把清理目标指向其他路径；`make purge` 会无倒计时直接删除仓库内的 `./data`，执行前应自行确认需要保留的数据。
+- `ha/trio` 的新部署改为三节点、每节点单数据盘的 Silo 池，采用 EC:1；已有单节点池不能直接扩展成该拓扑，应建立新池并迁移对象。
 - KAFKA 与 MYSQL 仍是试点模块；Kafka 客户端必须直连并解析各 Broker，不能把数据平面置于 HAProxy/VIP/L4 负载均衡器之后。MySQL 当前只接受 1 或 3 个成员。
 
 

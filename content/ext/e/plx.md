@@ -38,7 +38,7 @@ weight: 3140
 {.ext-table .ext-table--rel}
 
 
-> Package 2.0.1; SQL version 2.0.0.
+> pkg 2.0.1; SQL 2.0.0; changed NULL interpolation needs function DDL redeployment.
 
 
 ## 版本

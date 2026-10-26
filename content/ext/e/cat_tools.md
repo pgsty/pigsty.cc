@@ -33,9 +33,8 @@ weight: 5290
 | 5290  | [**`cat_tools`**](/ext/e/cat_tools) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `cat_tools` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) `pg_catalog_get_defs` `pg_global_catalog` `meta_triggers` [`pg_catcheck`](/ext/e/pg_catcheck) [`pgdd`](/ext/e/pgdd) [`ddlx`](/ext/e/ddlx) [`meta`](/ext/e/meta) `object_reference` |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_catcheck`](/ext/e/pg_catcheck) [`pgdd`](/ext/e/pgdd) [`ddlx`](/ext/e/ddlx) [`meta`](/ext/e/meta) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | `extension_drop` `object_reference` |
 {.ext-table .ext-table--rel}
 
 

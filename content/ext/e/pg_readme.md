@@ -39,7 +39,7 @@ weight: 4300
 {.ext-table .ext-table--rel}
 
 
-> RPM: PGDG 0.7.1; DEB: PIGSTY 0.7.1.
+> PGDG RPM/Pigsty DEB; Pigsty RPM fills gaps only.
 
 
 ## 版本

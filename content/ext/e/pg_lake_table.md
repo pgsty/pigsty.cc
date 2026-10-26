@@ -46,7 +46,7 @@ weight: 2566
 {.ext-table .ext-table--rel}
 
 
-> Lake table component. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; auto-loaded by pg_extension_base in dependency order.
 
 
 ## 版本

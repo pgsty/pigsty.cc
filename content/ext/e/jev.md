@@ -38,7 +38,7 @@ weight: 1900
 {.ext-table .ext-table--rel}
 
 
-> Requires plpython3u; TypeSafe endpoints require an API key, while local/other Jev-compatible endpoints can be keyless. Selected row contents are sent to the configured service. PG14-17.
+> typesafe.ai needs an API key; configured endpoints receive row contents.
 
 
 ## 版本

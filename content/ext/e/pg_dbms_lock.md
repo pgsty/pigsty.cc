@@ -38,7 +38,7 @@ weight: 9250
 {.ext-table .ext-table--rel}
 
 
-> Requires pg_background >= 2.0; the PIGSTY DEB carries a downstream pg_background v2 API compatibility patch.
+> pkg 2.0; SQL 2.0.0; pg_background>=2.0; Pigsty DEB patches the v2 API.
 
 
 ## 版本

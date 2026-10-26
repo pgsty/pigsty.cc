@@ -46,7 +46,7 @@ weight: 2563
 {.ext-table .ext-table--rel}
 
 
-> Snowflake pg_lake provider. Package 3.5.3; SQL 3.5.
+> pg_lake provider, not semenikhind/pg_map; pkg 3.5.3; SQL 3.5.
 
 
 ## 版本

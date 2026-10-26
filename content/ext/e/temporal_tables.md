@@ -38,7 +38,7 @@ weight: 1040
 {.ext-table .ext-table--rel}
 
 
-> PGDG packages remain absent for PG17 on EL8 x86_64/aarch64.
+> PGDG gap: PG17/EL8/{x86_64,aarch64}.
 
 
 ## 版本

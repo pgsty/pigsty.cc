@@ -39,7 +39,7 @@ weight: 2110
 {.ext-table .ext-table--rel}
 
 
-> Requires Groonga >= 15.1.7, MessagePack and xxHash.
+> Requires Groonga >= 15.1.7, MessagePack and xxHash. EL9 RPM release 3PGSTY requires groonga-libs >= 16.1.4-1PGSTY.el9, rebuilt for system simdjson ABI 34.
 
 
 ## 版本
@@ -72,8 +72,8 @@ weight: 2110
 | u26.aarch64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 @ el8.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el8.x86_64.rpm pigsty 4.1.0 242.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_18-4.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el8.aarch64.rpm pigsty 4.1.0 229.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_18-4.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_18-4.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_18-4.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-3PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_18-4.1.0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-3PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_18-4.1.0-3PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el10.x86_64.rpm pigsty 4.1.0 249.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_18-4.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-1PGSTY.el10.aarch64.rpm pigsty 4.1.0 240.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_18-4.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
@@ -88,8 +88,8 @@ weight: 2110
 @ u26.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el8.x86_64.rpm pigsty 4.1.0 242.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_17-4.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el8.aarch64.rpm pigsty 4.1.0 229.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_17-4.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_17-4.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_17-4.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-3PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_17-4.1.0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-3PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_17-4.1.0-3PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_17-4.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-1PGSTY.el10.aarch64.rpm pigsty 4.1.0 240.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_17-4.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
@@ -104,8 +104,8 @@ weight: 2110
 @ u26.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el8.x86_64.rpm pigsty 4.1.0 240.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_16-4.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el8.aarch64.rpm pigsty 4.1.0 227.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_16-4.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el9.x86_64.rpm pigsty 4.1.0 244.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_16-4.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_16-4.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-3PGSTY.el9.x86_64.rpm pigsty 4.1.0 245.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_16-4.1.0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-3PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_16-4.1.0-3PGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el10.x86_64.rpm pigsty 4.1.0 247.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_16-4.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-1PGSTY.el10.aarch64.rpm pigsty 4.1.0 238.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_16-4.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
@@ -120,8 +120,8 @@ weight: 2110
 @ u26.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 182.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el8.x86_64.rpm pigsty 4.1.0 239.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_15-4.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el8.aarch64.rpm pigsty 4.1.0 226.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_15-4.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el9.x86_64.rpm pigsty 4.1.0 244.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_15-4.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el9.aarch64.rpm pigsty 4.1.0 236.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_15-4.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-3PGSTY.el9.x86_64.rpm pigsty 4.1.0 244.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_15-4.1.0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-3PGSTY.el9.aarch64.rpm pigsty 4.1.0 236.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_15-4.1.0-3PGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el10.x86_64.rpm pigsty 4.1.0 247.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_15-4.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-1PGSTY.el10.aarch64.rpm pigsty 4.1.0 238.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_15-4.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
@@ -136,8 +136,8 @@ weight: 2110
 @ u26.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 182.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el8.x86_64.rpm pigsty 4.1.0 221.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_14-4.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el8.aarch64.rpm pigsty 4.1.0 211.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_14-4.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el9.x86_64.rpm pigsty 4.1.0 226.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_14-4.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el9.aarch64.rpm pigsty 4.1.0 220.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_14-4.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-3PGSTY.el9.x86_64.rpm pigsty 4.1.0 227.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_14-4.1.0-3PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-3PGSTY.el9.aarch64.rpm pigsty 4.1.0 220.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_14-4.1.0-3PGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el10.x86_64.rpm pigsty 4.1.0 230.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_14-4.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-1PGSTY.el10.aarch64.rpm pigsty 4.1.0 221.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_14-4.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 163.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb

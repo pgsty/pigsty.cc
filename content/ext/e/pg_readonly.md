@@ -38,7 +38,7 @@ weight: 5120
 {.ext-table .ext-table--rel}
 
 
-> Requires preload.
+> Preload required; pkg 1.0.6, repos may retain 1.0.5.
 
 
 ## 版本

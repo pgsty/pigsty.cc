@@ -38,7 +38,7 @@ weight: 7170
 {.ext-table .ext-table--rel}
 
 
-> PG18 only; configure oauth_validator_libraries. RPM: PGDG; DEB: PIGSTY.
+> oauth_validator_libraries=pg_oidc_validator.
 
 
 ## 版本

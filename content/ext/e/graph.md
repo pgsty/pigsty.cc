@@ -38,7 +38,7 @@ weight: 2630
 {.ext-table .ext-table--rel}
 
 
-> PGXN distribution and package are pggraph; installed extension name is graph.
+> pkg pggraph; 1.2.1: update extension, rebuild all registered graphs.
 
 
 ## 版本

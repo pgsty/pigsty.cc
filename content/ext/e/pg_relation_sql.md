@@ -38,7 +38,7 @@ weight: 4220
 {.ext-table .ext-table--rel}
 
 
-> Upstream intentionally ships no control file or CREATE EXTENSION path; execute the packaged relation_sql.sql in each database; relation_sql('install') requires superuser only for its optional event trigger.
+> No control; run relation_sql.sql per DB; auto-sync needs superuser, otherwise sync manually.
 
 
 ## 版本

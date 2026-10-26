@@ -10,7 +10,9 @@ categories: [参考]
 
 ----------------
 
-## 正式模块
+## 核心与扩展模块
+
+下表列出有独立配置与文档入口的模块；状态分别标明 GA、BETA 或 PILOT，模块数量不代表全部达到生产成熟度。
 
 |              模块              |   类别   |  状态  |      文档入口      | 简介                                                                  |
 |:----------------------------:|:------:|:----:|:--------------:|:--------------------------------------------------------------------|
@@ -23,7 +25,7 @@ categories: [参考]
 | [**`DOCKER`**](/docs/docker) |   扩展   |  GA  | `/docs/docker` | Docker Daemon 及容器化应用运行基础能力。                                         |
 |  [**`JUICE`**](/docs/juice)  |   扩展   | BETA | `/docs/juice`  | JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎。                              |
 |   [**`VIBE`**](/docs/vibe)   |   扩展   | BETA |  `/docs/vibe`  | 浏览器化开发环境，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。 |
-|  [**`KAFKA`**](/docs/kafka)  |   扩展   | BETA | `/docs/kafka`  | Apache Kafka 4.x dynamic KRaft 集群部署、安全基线与监控。                        |
+|  [**`KAFKA`**](/docs/kafka)  |   扩展   | PILOT | `/docs/kafka`  | Apache Kafka 4.x dynamic KRaft 集群部署、安全基线与监控。                        |
 {.stretch-last}
 
 
@@ -59,11 +61,11 @@ Pigsty 提供了六个 <span class="text-secondary"><b>扩展</b></span> 功能�
 
 ## 生态模块
 
-以下模块与 PostgreSQL 生态紧密相关，属于可选生态能力，不计入上述 10 个正式模块：
+以下模块与 PostgreSQL 生态紧密相关，属于可选生态能力，不计入上述 10 个核心与扩展模块：
 
 - [**`SUPABASE`**](/docs/pgsql/kernel/supabase)、[**`DUCKDB`**](/docs/pilot/duckdb)：外围生态整合能力。
 - [**`MSSQL`**](/docs/pgsql/kernel/babelfish)、[**`IVORY`**](/docs/pgsql/kernel/ivorysql)、[**`POLAR`**](/docs/pgsql/kernel/polardb)、[**`CITUS`**](/docs/pgsql/kernel/citus)、[**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)、[**`PGEDGE`**](/docs/pgsql/kernel/pgedge)：内核替代、分布式与 MPP 形态。
 - [**`MYSQL` 兼容内核（OpenHalo）**](/docs/pgsql/kernel/openhalo)、[**`ORIOLE`**](/docs/pgsql/kernel/orioledb)、[**`PGTDE`**](/docs/pgsql/kernel/percona)、[**`AGENS`**](/docs/pgsql/kernel/agensgraph)：协议兼容、存储引擎、透明加密与图数据库内核。这里的 `MYSQL` 是 `pg_mode=mysql` 的 PostgreSQL 兼容内核，不是原生 MySQL 服务。
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)、[**`NEON`**](/docs/pgsql/kernel/neon)：保留历史文档，不再作为默认开放能力。
-- [**`MYSQL` 原生试点**](/docs/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 10 个正式模块。
+- [**`MYSQL` 原生试点**](/docs/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，其参数和部署约束单独列示。
 - [**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：其他试点模块，当前不对外开放使用。

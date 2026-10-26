@@ -22,7 +22,7 @@ categories: [参考]
 如果您没有互联网访问权限，可以使用以下方式，确保所有环境内的节点与管理节点时间是同步的，或者使用其他内网环境的 NTP 授时服务。
 
 ```bash
-node_ntp_servers:                 # /etc/chrony.conf 中的 ntp 服务器列表
+node_ntp_servers:                 # Chrony 配置中的 NTP 服务器列表
   - pool cn.pool.ntp.org iburst
   - pool ${admin_ip} iburst       # 假设其他节点都没有互联网访问，那么至少与 Admin 节点保持时间同步。
 ```

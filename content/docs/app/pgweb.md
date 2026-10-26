@@ -13,6 +13,7 @@ categories: [参考]
 
 ```bash
 cd ~/pigsty/app/pgweb
+vi .env                    # PGWEB_PORT 默认为 8886
 make up                    # docker compose up -d
 ```
 
@@ -37,7 +38,7 @@ postgres://test:test@10.10.10.11:5432/test?sslmode=disable
 
 ```bash
 make up         # 使用 docker compose 启动
-make run        # 使用 docker run 启动
+make run        # 与 make up 相同，使用 Compose 配置启动
 make view       # 打印本地访问入口与示例 URL
 make log        # 跟踪容器日志
 make info       # 使用 jq 检查容器

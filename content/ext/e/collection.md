@@ -1,7 +1,7 @@
 ---
 title: "collection"
 linkTitle: "collection"
-description: "在PlPGSQL中使用的内存优化高性能集合数据结构"
+description: "面向高性能 PL/pgSQL 工作流的关联数组数据类型"
 weight: 3700
 ---
 
@@ -36,6 +36,9 @@ weight: 3700
 | **相关扩展** | [`pgbson`](/ext/e/pgbson) [`intarray`](/ext/e/intarray) [`hstore`](/ext/e/hstore) [`arraymath`](/ext/e/arraymath) [`pgjq`](/ext/e/pgjq) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsonschema`](/ext/e/jsonschema) [`floatvec`](/ext/e/floatvec) [`pg_projection`](/ext/e/pg_projection) [`istore`](/ext/e/istore) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
+
+
+> PGXN misnames it pgcollection; pkg 2.1.3, repos may lag.
 
 
 ## 版本

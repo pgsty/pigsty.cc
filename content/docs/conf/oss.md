@@ -47,9 +47,11 @@ cp conf/build/oss.yml pigsty.yml
 
 **构建内容**：
 - PostgreSQL 18 及所有分类扩展包
-- 基础设施软件包（Prometheus、Grafana、Nginx 等）
+- 基础设施软件包（VictoriaMetrics、Grafana、Nginx 等）
 - 节点软件包（监控代理、工具等）
 - 额外模块（extra-modules）
+
+模板还声明了虚拟机默认规格 `vm_cpu: 2`、`vm_mem: 4096`，并为每个节点设置对应的 `vm_image` 与 `nodename`，便于按操作系统创建构建环境。
 
 **支持的操作系统**：
 - EL9 (Rocky/Alma/RHEL 9)

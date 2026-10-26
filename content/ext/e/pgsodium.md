@@ -35,11 +35,10 @@ weight: 7020
 
 | **相关扩展** | [`pgcrypto`](/ext/e/pgcrypto) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pguecc`](/ext/e/pguecc) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgsmcrypto`](/ext/e/pgsmcrypto) [`column_encrypt`](/ext/e/column_encrypt) [`supabase_vault`](/ext/e/supabase_vault) [`pg_tde`](/ext/e/pg_tde) [`pg_enigma`](/ext/e/pg_enigma) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`supabase_vault`](/ext/e/supabase_vault) |
 {.ext-table .ext-table--rel}
 
 
-> Uses private libsodium 1.0.22; no external runtime dependency.
+> Private libsodium 1.0.22; no external runtime dependency.
 
 
 ## 版本

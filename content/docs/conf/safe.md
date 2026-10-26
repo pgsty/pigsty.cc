@@ -37,13 +37,13 @@ categories: [参考]
 | PostgreSQL HBA | 主要 TCP 规则使用 `ssl`，公网管理员使用 `cert` | 本地 `ident` 和部分 localhost `pwd` 规则保留 |
 | PgBouncer | `pgbouncer_sslmode: require` | 客户端仍需按需要验证服务端证书 |
 | Patroni | REST API 启用 HTTPS，并限制监听地址 | 仍使用 Basic Auth，应轮换口令 |
-| 口令检查 | 在 `pg_libs` 中预加载 `passwordcheck` | 只影响新设置或修改的口令 |
+| 口令检查 | 在 `pg_libs` 中预加载 `$libdir/passwordcheck_cracklib` | 只影响新设置或修改的口令 |
 | 用户有效期 | 内置用户和示例业务用户设置 `expire_in: 7300` | 20 年不是轮换策略，应按组织要求缩短 |
 | 监听地址 | PostgreSQL 收敛到 `${ip},${vip},${lo}` | 仍需配合防火墙和 HBA |
 | 备份 | 使用 Silo，启用 AES-256-CBC | `pgBR.${pg_cluster}` 是可预测示例值，必须替换 |
 | PostgreSQL 参数 | `pg-meta` 使用 `crit.yml` | 严格同步模式可能在无同步副本时阻塞写入 |
 | 日志 | CRIT 记录连接和断开事件 | SQL 细粒度审计需另行启用 `pgaudit` |
-| 安全扩展 | 安装 `passwordcheck`、`credcheck`、`pgaudit` 等软件包 | 安装不等于预加载、创建或配置 |
+| 安全扩展 | 安装 `passwordcheck_cracklib`、`credcheck`、`pgaudit` 等软件包 | 安装不等于预加载、创建或配置 |
 | 延迟副本 | 提供注释掉的 1 小时延迟集群示例 | 默认不会创建，需要显式启用 |
 {.full-width}
 

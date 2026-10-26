@@ -27,7 +27,7 @@ Pigsty v4.5.0 提供两个本机 Shell 工具：
 
 ```bash
 pg-fork 1                         # /pg/data -> /pg/data1，目标端口 15432
-pg-fork 2 -d /pg/data1            # /pg/data1 -> /pg/data2，目标端口 25432
+pg-fork 2 -d /pg/data1 -p 15432   # /pg/data1 -> /pg/data2，目标端口 25432
 pg-fork 3 -D /srv/pg-clone -P 55432
 ```
 
@@ -52,7 +52,7 @@ pg-fork <FORK_ID> [options]
 
 ### 热备份与冷拷贝
 
-默认情况下，脚本用目标端口连接源实例，在同一个 `psql` 会话中执行：
+默认情况下，脚本用源端口（`-p` / `PG_PORT`）连接源实例，在同一个 `psql` 会话中执行：
 
 1. `CHECKPOINT`；
 2. `pg_backup_start()`；

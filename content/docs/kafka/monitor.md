@@ -20,7 +20,7 @@ KAFKA 模块使用两个互补的 Exporter：
 
 | 采集面            | 服务/方式                            | Job                  | 节点范围                                  | 主要内容                                             |
 |:---------------|:---------------------------------|:---------------------|:--------------------------------------|:-------------------------------------------------|
-| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404`  | `kafka`（带 `role` 标签） | 所有 Kafka 节点                           | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller           |
+| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404`  | `kafka`（带 `role` 标签） | 启用 JMX 的 Kafka 节点（默认全部）            | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller           |
 | Kafka 协议视角     | `kafka_exporter :9308`           | `kafka`（无 `role` 标签） | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
 | 主机资源           | node_exporter                    | `node`               | 纳管节点                                  | CPU、内存、磁盘、网络、文件系统                                |
 | 日志             | Journald → Vector → VictoriaLogs | `syslog`             | 所有 Kafka 节点                           | Kafka 与 Exporter 结构化检索日志                         |
@@ -32,7 +32,7 @@ KAFKA 模块使用两个互补的 Exporter：
 /infra/targets/kafka/<kafka_instance>.yml
 ```
 
-单 Broker 集群只运行一个协议 Exporter；多 Broker 集群最多运行两个。纯 Controller 只注册 JMX 目标；未被选择的 Broker 与纯 Controller 都没有协议 Exporter 目标，这是预期行为。Target 文件每次完整运行按当前放置刷新；实例 Target 的删除由 `kafka-rm.yml` 的注销步骤完成。
+单 Broker 集群只运行一个协议 Exporter；多 Broker 集群最多运行两个。启用 JMX 时，纯 Controller 只注册 JMX 目标；未被选择的 Broker 与纯 Controller 都没有协议 Exporter 目标，这是预期行为。Target 文件每次完整运行按当前放置刷新；实例 Target 的删除由 `kafka-rm.yml` 的注销步骤完成。
 
 
 --------
@@ -40,6 +40,16 @@ KAFKA 模块使用两个互补的 Exporter：
 ## 标签模型
 
 两类目标都注册在同一 `job=kafka` 采集任务下，通过有无 `role` 标签区分。
+
+### 关闭 JMX 的影响
+
+此功能适用于包含 2026-09-01 JMX 开关变更的开发源码；`v4.5.0` 发布标签仍始终启用 JMX。
+
+[`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 默认 `true`。关闭后需完整运行 `kafka.yml`，通过滚动重启移除 Java Agent 并更新监控目标；`-t register` 只刷新 Target 文件。
+
+关闭 JMX 的实例没有 JVM、KRaft、Broker 内部状态或实例存活指标，相应告警也失去数据。如果集群全部关闭 JMX，Kafka Overview / Kafka Instance 无法再发现该集群，`KafkaDown` 不能检测它。协议 Exporter 继续运行，因此 Topic、Partition 与 Consumer Group 监控仍可使用。
+
+同时没有 JMX 和协议 Exporter 的实例，其 Target 文件是合法的空列表 `[]`。不要将此状态误判为目标文件损坏。
 
 ### JMX 目标
 
@@ -260,7 +270,7 @@ curl -fsS http://<kafka-ip>:9404/metrics | grep '^jmx_scrape_error'
 curl -fsS http://127.0.0.1:9308/metrics | grep '^kafka_brokers'
 ```
 
-在 Infra 节点检查文件发现（每实例一个文件，被选中节点的文件含 JMX 与协议 Exporter 两个目标）：
+在 Infra 节点检查文件发现（每实例一个文件，默认被选中节点的文件含 JMX 与协议 Exporter 两个目标；关闭 JMX 后仅保留协议目标或空列表）：
 
 ```bash
 ls -l /infra/targets/kafka/

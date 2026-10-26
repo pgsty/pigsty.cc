@@ -39,6 +39,9 @@ weight: 2111
 {.ext-table .ext-table--rel}
 
 
+> Recovery helper bundled with PGroonga 4.1.0; EL9 RPM release 3PGSTY requires groonga-libs >= 16.1.4-1PGSTY.el9.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |

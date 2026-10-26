@@ -118,7 +118,7 @@ categories: [参考]
 |:----------------------------------------------------|:-----------:|:-------:|:------------------------------|
 | [`node_timezone`](#node_timezone)                   |  `string`   |   `C`   | 设置主机节点时区，空字符串跳过               |
 | [`node_ntp_enabled`](#node_ntp_enabled)             |   `bool`    |   `C`   | 启用 chronyd 时间同步服务吗？           |
-| [`node_ntp_servers`](#node_ntp_servers)             | `string[]`  |   `C`   | /etc/chrony.conf 中的 ntp 服务器列表 |
+| [`node_ntp_servers`](#node_ntp_servers)             | `string[]`  |   `C`   | Chrony 配置中的 NTP 服务器列表 |
 | [`node_crontab_overwrite`](#node_crontab_overwrite) |   `bool`    |   `C`   | 写入 /etc/crontab 时，追加写入还是全部覆盖？ |
 | [`node_crontab`](#node_crontab)                     | `string[]`  |   `C`   | 在 /etc/crontab 中的 crontab 条目  |
 {.full-width}
@@ -997,7 +997,7 @@ node_aliases:
 ```yaml
 node_timezone: ''                 # 设置节点时区，空字符串表示跳过
 node_ntp_enabled: true            # 启用chronyd时间同步服务？
-node_ntp_servers:                 # `/etc/chrony.conf`中的ntp服务器
+node_ntp_servers:                 # Chrony 配置中的 NTP 服务器
   - pool pool.ntp.org iburst
 node_crontab_overwrite: true      # 覆盖还是追加到`/etc/crontab`？
 node_crontab: [ ]                 # `/etc/crontab`中的crontab条目
@@ -1021,7 +1021,7 @@ node_crontab: [ ]                 # `/etc/crontab`中的crontab条目
 
 启用 chronyd 时间同步服务？默认值为：`true`
 
-此时 Pigsty 将使用 [`node_ntp_servers`](#node_ntp_servers) 中指定的 NTP 服务器列表覆盖节点的 `/etc/chrony.conf`。
+此时 Pigsty 将使用 [`node_ntp_servers`](#node_ntp_servers) 中指定的 NTP 服务器列表覆盖节点的 Chrony 配置：EL 使用 `/etc/chrony.conf`，Debian / Ubuntu 使用 `/etc/chrony/chrony.conf`。
 
 如果您的节点已经配置好了 NTP 服务器，那么可以将此参数设置为 `false` 跳过时间同步配置。
 
@@ -1032,7 +1032,7 @@ node_crontab: [ ]                 # `/etc/crontab`中的crontab条目
 
 参数名称： `node_ntp_servers`， 类型： `string[]`， 层次：`C`
 
-在 `/etc/chrony.conf` 中使用的 NTP 服务器列表。默认值为：`["pool pool.ntp.org iburst"]`
+在 Chrony 配置中使用的 NTP 服务器列表，EL 的路径为 `/etc/chrony.conf`，Debian / Ubuntu 为 `/etc/chrony/chrony.conf`。默认值为：`["pool pool.ntp.org iburst"]`
 
 本参数是一个数组，每一个数组元素是一个字符串，代表一行 NTP 服务器配置。仅当 [`node_ntp_enabled`](#node_ntp_enabled) 启用时生效。
 

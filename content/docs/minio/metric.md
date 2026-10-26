@@ -32,13 +32,16 @@ MINIO 模块通过 `/minio/metrics/v3` 采集 Silo 指标。指标集合会随�
 
 --------
 
+## 存活指标的来源
+
+`minio_up = up{job="minio"}` 来自 [`roles/infra/templates/victoria/agent.yml`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/victoria/agent.yml) 的记录规则，不属于 Silo Metrics V3 原始输出。它只表示抓取成功，不能直接证明集群具备读写仲裁。模块自身的 `files/victoria/rules/minio.yml` 提供 5 条告警规则，没有额外的记录规则。
+
 ## Silo Metrics V3
 
 每个 Silo 实例只抓取 V3 根端点 `/minio/metrics/v3`。当前关键指标如下：
 
 | 类别  | 关键指标                                                                                                 | 含义                  |
 |:----|:-----------------------------------------------------------------------------------------------------|:--------------------|
-| 存活  | `minio_up`                                                                                           | Pigsty 对该实例的抓取/健康状态 |
 | 节点  | `minio_cluster_health_nodes_online_count`、`minio_cluster_health_nodes_offline_count`                 | 在线与离线节点数            |
 | 磁盘  | `minio_cluster_health_drives_online_count`、`minio_cluster_health_drives_offline_count`               | 在线与离线磁盘数            |
 | 容量  | `minio_cluster_health_capacity_raw_total_bytes`                                                      | 原始总容量               |

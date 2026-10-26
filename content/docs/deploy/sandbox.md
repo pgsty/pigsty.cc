@@ -118,7 +118,7 @@ make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
 
 当前 Vagrant 配置统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box。可用镜像、源码固定的版本以及架构说明以 [**Vagrant 文档**](/docs/deploy/vagrant/#支持的镜像) 为准；未在源码中固定版本的 Box 会由 Vagrant 解析其当前可用版本。
 
-### 云沙箱（Terraform）
+### 云沙箱（OpenTofu）
 
 云沙箱使用公有云 API 创建虚拟机，可以轻松创建和销毁，按需付费，非常适合快速测试。
 
@@ -127,8 +127,9 @@ make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
 ```bash
 cd ~/pigsty/terraform
 cp spec/aliyun-full.tf terraform.tf
-terraform init
-terraform apply
+tofu init
+tofu plan
+tofu apply
 ```
 
 更多详情请参考 [**OpenTofu**](/docs/deploy/terraform/) 文档。

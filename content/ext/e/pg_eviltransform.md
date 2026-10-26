@@ -38,6 +38,9 @@ weight: 1580
 {.ext-table .ext-table--rel}
 
 
+> PG19 support is beta.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |

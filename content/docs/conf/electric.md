@@ -52,16 +52,17 @@ categories: [参考]
 - 使用 Pigsty 管理的 PostgreSQL 作为数据源
 - 通过逻辑复制 (Logical Replication) 捕获数据变更
 - 支持 SSL 加密连接
-- 内置 Prometheus 指标端点
+- 使用 `electric-data` 命名卷持久化 shape 元数据与日志
+- 可选 Prometheus 指标端点，默认关闭，仅在配置定期抓取后启用
 
 **访问方式**：
 
 ```bash
 # Electric API 端点
-http://elec.pigsty:8002
+http://<IP>:8002
 
-# Prometheus 指标
-http://elec.pigsty:8003/metrics
+# Nginx 门户
+http://elec.pigsty
 ```
 
 **适用场景**：
@@ -74,3 +75,7 @@ http://elec.pigsty:8003/metrics
 - Electric 用户需要 `replication` 权限
 - 需要启用 PostgreSQL 逻辑复制
 - 生产环境建议使用 SSL 连接（已配置 `sslmode=require`）
+- 容器内监听 `ELECTRIC_PORT=3000`，宿主机发布 `ELECTRIC_PUBLISH_PORT=8002`
+- 默认 `ELECTRIC_STORAGE=FAST_FILE`，缓存卷挂载到 `/var/lib/electric`
+- 默认 `ELECTRIC_INSECURE=true` 仅适合可信开发网络；对外部署前关闭并设置 `ELECTRIC_SECRET`
+- 指标端口既未启用，也未发布；启用后必须持续抓取，避免未消费指标积累

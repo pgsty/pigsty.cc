@@ -96,15 +96,17 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 | [citus.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/citus.rb) | 13 节点 |       混合        | Citus 协调节点与 6 组双副本 Worker |         |
 |   [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb)   | 7 节点  |    2c2g x 7     |       7 平台 OSS 构建环境       |         |
 |   [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb)   | 7 节点  |    2c2g x 7     |       7 平台 PRO 构建环境       |         |
-|   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 2 节点  |    1c2g x 2     |       2 节点 EL 构建环境        |         |
-|   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 5 节点  |    1c2g x 5     |       5 节点 Deb 构建环境       |         |
-|   [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb)   | 7 节点  |    1c2g x 7     |        7 节点全量构建环境         |         |
+|   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 2 节点  |    2c2g x 2     |       2 节点 EL 构建环境        |         |
+|   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 5 节点  |    2c2g x 5     |       5 节点 Deb 构建环境       |         |
+|   [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb)   | 7 节点  |    2c4g x 7     |        7 节点全量构建环境         |         |
 {.full-width}
 
 每个规格文件包含一个描述虚拟机节点的 `Specs` 变量。例如，`full.rb` 包含 4 节点沙箱的定义：
 
-当前 Vagrant 模板会为每台虚拟机显式置备 **32 GB 主系统盘**。普通节点另外创建一个数据盘，容量由规格中的 `disk` 指定、未指定时为 128 GB；
+当前 Vagrant 模板通过规格中的 `root_disk` 设置主系统盘，默认 **64 GiB**；`oss`、`pro`、`rpm`、`deb`、`all` 构建矩阵显式使用 **128 GiB** 根盘。普通节点另外创建一个数据盘，容量由 `disk` 指定，未指定时为 128 GiB；
 名称以 `minio` 开头的对象存储节点则创建四块 32 GB 数据盘并挂载到 `/data1` 至 `/data4`。
+`root_disk` 与 `disk` 分别控制系统盘和额外数据盘，互不替代；已创建虚拟机的磁盘调整能力取决于虚拟化提供商。默认 VirtualBox 模板还会把 `vagrant` 用户的登录 Shell 设置为 `/bin/bash`。
+
 这些磁盘依赖 Vagrant 的实验性 disks 功能：使用仓库 Makefile 时已自动导出 `VAGRANT_EXPERIMENTAL=disks`，直接运行 `vagrant` 时需自行设置。
 
 ```ruby

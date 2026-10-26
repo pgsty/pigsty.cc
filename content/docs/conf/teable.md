@@ -53,6 +53,8 @@ categories: [参考]
 - 数据实际存储在真实的 PostgreSQL 表中
 - 支持 SQL 直接查询数据
 - 可与其他 PostgreSQL 工具和扩展集成
+- Compose 自带认证 Redis 缓存（默认 `redis:7-alpine`），启用 AOF 持久卷，不发布 Redis 端口
+- 等待 Redis 就绪后启动应用，并检查后端 `/health` 状态
 
 **访问方式**：
 
@@ -77,3 +79,5 @@ psql postgresql://dbuser_teable:DBUser.Teable@10.10.10.10:5432/teable
 - Teable 用户需要 superuser 权限
 - 需要正确配置 `PUBLIC_ORIGIN` 为外部访问地址
 - 支持邮件通知（可选配置 SMTP）
+- 修改 `REDIS_PASSWORD`；默认由 Compose 生成 `BACKEND_CACHE_REDIS_URI`，无需单独部署 Redis 模块
+- 同时备份 PostgreSQL 与 `/data/teable` 应用资产目录

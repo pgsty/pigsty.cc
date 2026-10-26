@@ -19,14 +19,16 @@ Pigsty 使用 **模块化架构** 与 **声明式接口**，您可以像 [**搭�
 
 ## 模块
 
-Pigsty 采用模块化设计，有六个主要的默认模块：[`PGSQL`](/docs/pgsql)、[`INFRA`](/docs/infra)、[`NODE`](/docs/node)、[`ETCD`](/docs/etcd)、[`REDIS`](/docs/redis) 和 [`MINIO`](/docs/minio)。
+Pigsty 采用模块化设计，基础架构通常围绕以下六个模块组合：[`PGSQL`](/docs/pgsql)、[`INFRA`](/docs/infra)、[`NODE`](/docs/node)、[`ETCD`](/docs/etcd)、[`REDIS`](/docs/redis) 和 [`MINIO`](/docs/minio)。
 
 * [**`PGSQL`**](/docs/pgsql)：由 Patroni、Pgbouncer、HAproxy、PgBackrest 等驱动的自治高可用 Postgres 集群。
 * [**`INFRA`**](/docs/infra)：本地软件仓库、Nginx、Grafana、Victoria、AlertManager、Blackbox Exporter 可观测性全家桶。
 * [**`NODE`**](/docs/node)：调整节点到所需状态、名称、时区、NTP、ssh、sudo、haproxy、docker、vector、keepalived
 * [**`ETCD`**](/docs/etcd)：分布式键值存储，用作高可用 Postgres 集群的 DCS：共识选主/配置管理/服务发现。
-* [**`REDIS`**](/docs/redis)：Redis 服务器，支持独立主从、哨兵、集群模式，并带有完整的监控支持。
-* [**`MINIO`**](/docs/minio)：与 S3 兼容的简单对象存储服务器，可作为 PG 数据库备份的可选目的地。
+* [**`REDIS`**](/docs/redis)：Redis / Valkey 服务器，支持独立主从、哨兵、集群模式，并带有完整的监控支持。
+* [**`MINIO`**](/docs/minio)：以 Silo 为后端的 S3 兼容对象存储服务器，可作为 PG 数据库备份的可选目的地。
+
+此外，还有 [**DOCKER**](/docs/docker)、[**JUICE**](/docs/juice)、[**VIBE**](/docs/vibe)、[**KAFKA**](/docs/kafka) 与 [**MYSQL**](/docs/mysql) 等扩展与试点模块，部署状态和成熟度见 [**模块列表**](/docs/ref/module/)。
 
 你可以声明式地自由组合它们。如果你想要主机监控，在基础设施节点上安装 [`INFRA`](/docs/infra) 模块，并在纳管节点上安装 [`NODE`](/docs/node) 模块就足够了。
 [`ETCD`](/docs/etcd) 和 [`PGSQL`](/docs/pgsql) 模块用于搭建高可用 PG 集群，将模块安装在多个节点上，可以自动形成一个高可用的数据库集群。

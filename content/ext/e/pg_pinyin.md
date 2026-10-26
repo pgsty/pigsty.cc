@@ -38,7 +38,7 @@ weight: 2200
 {.ext-table .ext-table--rel}
 
 
-> optional tokenizer-input overload can integrate with pg_search.
+> PG19 beta; optional pg_search tokenizer overload.
 
 
 ## 版本

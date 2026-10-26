@@ -1,12 +1,14 @@
 ---
-title: pgedge
+title: fork/pgedge
 weight: 460
 description: pgEdge 内核模板，提供面向边缘场景的多主分布式 PostgreSQL 能力
 icon: fa-solid fa-network-wired
 categories: [参考]
 ---
 
-`pgedge` 配置模板使用 pgEdge 数据库内核替代原生 PostgreSQL，提供面向边缘场景的分布式与多主复制能力。
+开发版配置路径为 `conf/fork/pgedge.yml`；v4.5.0 使用 `conf/pgedge.yml`，配置命令相应为 `-c pgedge`。
+
+`fork/pgedge` 配置模板使用 pgEdge 数据库内核替代原生 PostgreSQL，提供面向边缘场景的分布式与多主复制能力。
 
 完整教程请参考：**[pgEdge 内核使用说明](/docs/pgsql/kernel/pgedge/)**；所有内核分支的差异与版本口径见 [PGSQL 内核总览](/docs/pgsql/kernel/)。
 
@@ -15,17 +17,17 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `pgedge`
+- 配置名称： `fork/pgedge`
 - 节点数量： 单节点
 - 配置说明：pgEdge（PG18）分布式内核配置模板
 - 适用系统：`d12`, `d13`, `u22`, `u24`, `u26`（PG18 包）；EL/RPM 平台请以当前 PGSQL 仓库的 `pgedge_18` 包可用性为准
 - 适用架构：`x86_64`, `aarch64`
-- 相关配置：[`meta`](/docs/conf/meta/)、[`pgsql`](/docs/conf/pgsql/)
+- 相关配置：[`meta`](/docs/conf/meta/)、[`fork/pgsql`](/docs/conf/pgsql/)
 
 启用方式：
 
 ```bash
-./configure -c pgedge [-i <primary_ip>]
+./configure -c fork/pgedge [-i <primary_ip>]
 ```
 
 
@@ -33,7 +35,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/pgedge.yml`](https://github.com/pgsty/pigsty/blob/main/conf/pgedge.yml)
+开发版源文件：`conf/fork/pgedge.yml`；发布版：[`v4.5.0：conf/pgedge.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgedge.yml)。
 
 {{< include file="yaml/pgedge.yml" code=true lang="yaml" >}}
 
@@ -42,7 +44,7 @@ categories: [参考]
 
 ## 配置解读
 
-`pgedge` 模板在 `pg-meta` 集群中启用 `pg_mode: pgedge`，并预装 pgEdge 核心扩展用于逻辑复制与边缘分布式场景。
+`fork/pgedge` 模板在 `pg-meta` 集群中启用 `pg_mode: pgedge`，并预装 pgEdge 核心扩展用于逻辑复制与边缘分布式场景。
 
 **关键特性**：
 - 使用 `pgedge` 内核包替代标准 PostgreSQL（兼容 PG15/16/17/18，默认 PG18）

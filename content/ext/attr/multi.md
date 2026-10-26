@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **27** 个扩展包中包含多个扩展，共计 **132** 个扩展。
+以下 **27** 个扩展包中包含多个扩展，共计 **135** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -123,8 +123,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2400 | [**`citus`**](/ext/e/citus) | `14.2.0` | `--sLd--` | `pg_catalog` | 将 PostgreSQL 横向扩展为分布式数据库 |
-| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.2.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
+| 2400 | [**`citus`**](/ext/e/citus) | `14.3-1` | `--sLd--` | `pg_catalog` | 将 PostgreSQL 横向扩展为分布式数据库 |
+| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.3-1` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
 {.ext-table}
 
 ## pg_lake
@@ -145,7 +145,7 @@ weight: 40
 
 ## omnigres
 
-[`omnigres`](/ext/e/omni) 扩展包共有 **37** 个扩展：
+[`omnigres`](/ext/e/omni) 扩展包共有 **40** 个扩展：
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
@@ -155,6 +155,8 @@ weight: 40
 | 2943 | [`omni_cloudevents`](/ext/e/omni_cloudevents) | `0.1.0` | `----dt-` | `omni_cloudevents` | Omnigres CloudEvents 支持 |
 | 2944 | [`omni_containers`](/ext/e/omni_containers) | `0.2.0` | `--s-d--` | `omni_containers` | Omnigres Docker容器管理模块 |
 | 2945 | [`omni_credentials`](/ext/e/omni_credentials) | `0.2.0` | `----d--` | `omni_credentials` | Omnigres 应用密钥管理模块 |
+| 2946 | [`omni_csv`](/ext/e/omni_csv) | `0.1.1` | `--s-d--` | `omni_csv` | Omnigres CSV 工具箱 |
+| 2947 | [`omni_datasets`](/ext/e/omni_datasets) | `0.1.0` | `----d--` | `omni_datasets` | Omnigres 数据库置备工具 |
 | 2948 | [`omni_email`](/ext/e/omni_email) | `0.1.0` | `----d--` | `omni_email` | Omnigres Email 框架 |
 | 2949 | [`omni_http`](/ext/e/omni_http) | `0.1.0` | `----d--` | `omni_http` | Omnigres 基本HTTP类型 |
 | 2950 | [`omni_httpc`](/ext/e/omni_httpc) | `0.1.11` | `--s-d--` | `omni_httpc` | Omnigres HTTP客户端 |
@@ -174,6 +176,7 @@ weight: 40
 | 2964 | [`omni_seq`](/ext/e/omni_seq) | `0.1.1` | `--s-d--` | `omni_seq` | Omnigres 分布式整型序列号 |
 | 2965 | [`omni_service`](/ext/e/omni_service) | `0.1.0` | `----d--` | `omni_service` | Omnigres 服务管理器 |
 | 2966 | [`omni_session`](/ext/e/omni_session) | `0.2.0` | `----d--` | `omni_session` | Omnigres 会话管理器 |
+| 2967 | [`omni_shmem`](/ext/e/omni_shmem) | `0.1.0` | `--s-d--` | `omni_shmem` | Omnigres 共享内存管理 |
 | 2968 | [`omni_sql`](/ext/e/omni_sql) | `0.5.3` | `--s-d--` | `omni_sql` | Omnigres SQL编程组件 |
 | 2969 | [`omni_sqlite`](/ext/e/omni_sqlite) | `0.2.2` | `--s-d--` | `omni_sqlite` | Omnigres 嵌入的SQLite支持 |
 | 2970 | [`omni_test`](/ext/e/omni_test) | `0.4.0` | `----d--` | `omni_test` | Omnigres 测试框架 |
@@ -197,7 +200,7 @@ weight: 40
 | 3020 | [**`pllua`**](/ext/e/pllua) | `2.0.12` | `--s-d--` | `pg_catalog` | Lua 程序语言 |
 | 3021 | [`hstore_pllua`](/ext/e/hstore_pllua) | `2.0.12` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展 |
 | 3030 | [`plluau`](/ext/e/plluau) | `2.0.12` | `--s-d--` | `pg_catalog` | Lua 程序语言（不受信任的） |
-| 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `2.0.12` | `--s-d-r` | `pg_catalog` | Lua 程序语言的Hstore适配扩展（不受信任的） |
+| 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `2.0.12` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展（不受信任的） |
 {.ext-table}
 
 ## plruby
@@ -315,10 +318,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.117` | `--sLd--` | - | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.117` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.0` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.0` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
 | 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.116` | `--sLd--` | - | DocumentDB多节点模式的API层 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.117` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.0` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
 ## ivorysql

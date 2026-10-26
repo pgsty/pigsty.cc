@@ -38,7 +38,7 @@ weight: 7070
 {.ext-table .ext-table--rel}
 
 
-> ALTER EXTENSION UPDATE is unsupported; follow the upstream drop/recreate and masking-rule migration guide for 3.2.
+> No in-place update; drop/recreate and migrate masking rules.
 
 
 ## 版本

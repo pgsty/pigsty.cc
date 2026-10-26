@@ -30,8 +30,8 @@ make up     # 使用 Docker Compose 启动 NocoDB
 
 访问 NocoDB：
 
-- 默认地址： http://nocodb.pigsty
-- 备用地址： http://10.10.10.10:8080
+- 配置门户后的地址： http://noco.pigsty
+- 默认直连地址： http://10.10.10.10:9003
 - 首次访问需要创建管理员账户
 
 
@@ -42,7 +42,7 @@ Pigsty 提供了便捷的 Makefile 命令来管理 NocoDB 服务：
 
 ```bash
 make up      # 启动 NocoDB 服务
-make run     # 使用 Docker 启动（连接外部 PostgreSQL）
+make run     # 与 make up 使用相同 Compose 配置
 make view    # 显示 NocoDB 访问地址
 make log     # 查看容器日志
 make info    # 查看服务详细信息
@@ -50,8 +50,8 @@ make stop    # 停止服务
 make clean   # 停止并移除容器
 make pull    # 拉取最新镜像
 make rmi     # 移除 NocoDB 镜像
-make save    # 保存镜像到 /tmp/nocodb.tgz
-make load    # 从 /tmp/nocodb.tgz 加载镜像
+make save    # 保存镜像到 /tmp/docker/nocodb.tgz
+make load    # 从 /tmp/docker/nocodb.tgz 加载镜像
 ```
 
 
@@ -93,15 +93,14 @@ NocoDB 的配置在 `.env` 文件中：
 
 ```bash
 # 数据库连接（NocoDB 元数据存储）
-NC_DB=pg://postgres:DBUser.Postgres@10.10.10.10:5432/nocodb
+DATABASE_URL=postgres://dbuser_noco:DBUser.Noco@10.10.10.10:5432/noco
+NC_PORT=9003
 
 # JWT 密钥（建议修改）
-NC_AUTH_JWT_SECRET=your-secret-key
-
-# 其他配置
-NC_PUBLIC_URL=http://nocodb.pigsty
-NC_DISABLE_TELE=true
+NC_AUTH_JWT_SECRET=change-this-nocodb-jwt-secret-at-least-32-chars
 ```
+
+启动前创建专用 `noco` 数据库与 `dbuser_noco` 用户，并替换示例密码与 JWT 密钥。当前 Compose 仅显式传入 `DATABASE_URL` 和 `NC_AUTH_JWT_SECRET`；其他 NocoDB 参数需要加入 Compose 的 `environment`，仅写入 `.env` 不会自动传入容器。
 
 
 

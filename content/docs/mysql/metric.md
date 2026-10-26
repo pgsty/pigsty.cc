@@ -12,6 +12,8 @@ MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀�
 
 --------
 
+当前 [`files/victoria/rules/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/mysql.yml) 提供 **68 条** 模块记录规则，本页均有列出；另有 `mysql_exporter_up = up{job="mysql"}` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)。这些记录指标不会出现在 `mysqld_exporter` 原始端点中，`mysql_up` 才是 Exporter 对数据库连接的探测结果。
+
 ## 公共标签
 
 所有指标携带 `job=mysql` 与身份标签 `cls` / `ins` / `ip` / `topology`（取值 `standalone` 或 `innodb_cluster`）。实例级衍生指标保留全部身份标签，集群级指标聚合到 `cls` + `topology`。

@@ -35,7 +35,7 @@ weight: 2510
 
 | **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`timescaledb`](/ext/e/timescaledb) [`pg_ttl_index`](/ext/e/pg_ttl_index) [`citus`](/ext/e/citus) [`pg_fkpart`](/ext/e/pg_fkpart) [`timeseries`](/ext/e/timeseries) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | `partman_to_cstore` [`timeseries`](/ext/e/timeseries) |
+| **下游依赖** | [`timeseries`](/ext/e/timeseries) |
 {.ext-table .ext-table--rel}
 
 

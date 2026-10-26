@@ -9,7 +9,7 @@ aliases: [/docs/pilot/kafka/config]
 ---
 
 
-KAFKA 模块使用 15 项持久公开参数表达集群意图，其余拓扑、监听器、存储子目录、复制安全、授权与 Exporter 放置由角色统一推导。首次部署建议先完成 [快速上手](/docs/kafka/start)；完整字段见 [参数参考](/docs/kafka/param)。
+KAFKA 模块使用 16 项持久公开参数表达集群意图，其余拓扑、监听器、存储子目录、复制安全、授权与 Exporter 放置由角色统一推导。首次部署建议先完成 [快速上手](/docs/kafka/start)；完整字段见 [参数参考](/docs/kafka/param)。
 
 > [!WARNING] 先规划，后格式化
 > `kafka_seq` 会写入 KRaft `node.id`；新集群的随机 Cluster ID、初始 Controller Identity、安全模式与初始复制策略会写入 Bootstrap Manifest。存储格式化后，不要随意修改身份、安全模式或 Controller 集合。角色会验证现场与 Manifest 并在冲突时失败关闭，不会自动覆盖或重新格式化数据。
@@ -43,6 +43,8 @@ KAFKA 模块使用 15 项持久公开参数表达集群意图，其余拓扑、�
 | `broker` | `broker` | ✓ | － | ✓ | 可被选择 |
 | `controller` | `controller` | － | ✓ | ✓ | － |
 {.full-width}
+
+表中的 JMX 默认启用，可用 [`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 按实例关闭；关闭后会失去对应的 JVM、Broker、KRaft 指标及告警。
 
 `kafka_role` 是全有或全无的：集群成员要么全部省略（一致使用 `combined`），要么全部显式声明——混写会在身份预检阶段被拒绝。集群必须至少包含一个 Controller-capable 节点和一个 Broker-capable 节点；偶数 Controller 会给出警告，生产通常使用 3 个 Controller。
 
@@ -116,7 +118,7 @@ kf-main:
     kafka_security: scram
 ```
 
-纯 Controller 不监听 `9092`，也不运行协议 Exporter；它仍通过 JMX 暴露 KRaft 与 JVM 状态。最多两个 `kafka_exporter` 会放在 `kafka_seq` 最小的 Broker-capable 节点上。
+纯 Controller 不监听 `9092`，也不运行协议 Exporter；默认通过 JMX 暴露 KRaft 与 JVM 状态。最多两个 `kafka_exporter` 会放在 `kafka_seq` 最小的 Broker-capable 节点上。
 
 
 --------
@@ -344,7 +346,7 @@ kafka_topics:
 | `/etc/kafka/admin.properties` | 角色生成的 Broker 管理通道；CLI 应始终使用 |
 | `/etc/kafka/controller.properties` | 角色生成的 Controller 管理通道 |
 | `/etc/kafka/log4j2.yaml` | Journald 日志配置 |
-| `/etc/kafka/jmx_exporter.yml` | 有界 JMX 指标规则 |
+| `/etc/kafka/jmx_exporter.yml` | 启用 JMX 时渲染的有界指标规则 |
 | `/etc/kafka/manifest.yml` | 节点上的 Bootstrap Manifest 权威副本 |
 | `/etc/kafka/secrets.yml` | `scram` 节点上的内部 Secret 副本 |
 | `/etc/kafka/.pigsty-applied-static.sha256` | 已证明生效的静态配置指纹，滚动重启的判定依据 |

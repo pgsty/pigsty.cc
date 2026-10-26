@@ -38,7 +38,7 @@ weight: 6410
 {.ext-table .ext-table--rel}
 
 
-> Requires preload alongside pg_stat_statements.
+> Preload with pg_stat_statements; restart; SQL update revokes PUBLIC EXECUTE on get_parsedinfo(int).
 
 
 ## 版本

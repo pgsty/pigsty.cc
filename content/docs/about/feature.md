@@ -21,7 +21,7 @@ categories: [参考]
 - [**可观测性**](/img/pigsty/dashboard.jpg)：基于 [**Victoria**](/docs/infra#victoria-可观测性套件) 与 [**Grafana**](/docs/infra#grafana) 的可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**OpenTofu**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
-- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis)、[**Silo 对象存储**](/docs/minio)、[**ETCD**](/docs/etcd)、[**DuckDB**](/docs/pilot/duckdb/)、[**Docker**](/docs/app/)、[**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
+- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis)、[**Silo 对象存储**](/docs/minio)、[**ETCD**](/docs/etcd)、[**DuckDB**](/docs/pilot/duckdb/)、[**Docker**](/docs/app/)、[**Supabase**](https://github.com/pgsty/pigsty/tree/main/app/supabase)。
 
 ![Pigsty 功能概览](/img/pigsty/banner.png)
 
@@ -50,7 +50,7 @@ PostgreSQL 整合了生态中的工具与最佳实践：
 - 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [Silo 对象存储](/docs/minio/) 提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
 - 基于 [Ansible](https://www.ansible.com/) 提供声明式的 API 对复杂度进行抽象，以 **Database-as-Code** 的方式极大简化了日常运维管理操作。
 - Pigsty 用途广泛，可用作完整应用运行时，开发演示数据/可视化应用，大量使用 PG 的软件可用 [Docker](https://www.docker.com/) 模板一键拉起。
-- 提供基于 [Vagrant](https://www.vagrantup.com/) 的本地开发测试沙箱环境，与基于 [Terraform](https://www.terraform.io/) 的云端自动部署方案，开发测试生产保持环境一致。
+- 提供基于 [Vagrant](https://www.vagrantup.com/) 的本地开发测试沙箱环境，与基于 [OpenTofu](https://opentofu.org/) 的云端自动部署方案，开发测试生产保持环境一致。
 - 使用 DocumentDB 与 FerretDB Docker APP 运行 [PostgreSQL Mongo 兼容模式](/docs/conf/mongo/)
 
 
@@ -129,12 +129,12 @@ Pigsty 所管理的任何组件都会被自动纳入监控之中，包括主机�
 
 无论是故障分析还是慢查询优化、无论是水位评估还是资源规划，Pigsty 为您提供全面的数据支撑，真正做到数据驱动。在 Pigsty 中，超过三千类监控指标被用于描述整个系统的方方面面，并被进一步加工、聚合、处理、分析、提炼并以符合直觉的可视化模式呈现在您的面前。从全局大盘总览，到某个数据库实例中单个对象（表，索引，函数）的增删改查详情都能一览无余。您可以随意上卷下钻横向跳转，浏览系统现状与历史趋势，并预测未来的演变。
 
-[![pigsty-dashboard.jpg](/img/pigsty/dashboard.jpg)](https://github.com/Vonng/pigsty/wiki/Gallery)
+[![pigsty-dashboard.jpg](/img/pigsty/dashboard.jpg)](https://github.com/pgsty/pigsty/wiki/Gallery)
 
 
 此外，Pigsty 的监控系统模块部分还可以 [**独立使用**](/docs/pgsql/monitor/#监控rds) ——用它来监控现有的主机节点与数据库实例，或者是云上的 RDS 服务。只需要一个连接串一行命令，您就可以获得极致的 PostgreSQL 可观测性体验。
 
-访问 [**截图画廊**](https://github.com/Vonng/pigsty/wiki/Gallery) 与 [**在线演示**](https://demo.pigsty.cc) 获取更多详情。
+访问 [**截图画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) 与 [**在线演示**](https://demo.pigsty.cc) 获取更多详情。
 
 
 
@@ -167,7 +167,7 @@ Pigsty 使用声明式的接口对外提供服务，将系统的可控制性拔�
 无论是创建/销毁集群，添加/移除从库，还是新增数据库/用户/服务/扩展/黑白名单规则，您只需要修改配置清单并运行 Pigsty 提供的幂等剧本，而 Pigsty 负责将系统调整到您期望的状态。
 用户无需操心配置的细节，Pigsty 将自动根据机器的硬件配置进行调优，您只需要关心诸如集群叫什么名字，有几个实例放在哪几台机器上，使用什么配置模版：事务/分析/核心/微型，这些基础信息，研发也可以自助服务。但如果您愿意跳入兔子洞中，Pigsty 也提供了丰富且精细的控制参数，满足最龟毛 DBA 的苛刻定制需求。
 
-除此之外，Pigsty 本身的安装部署也是一键傻瓜式的，所有依赖被预先打包，在安装时可以无需互联网访问。而安装所需的机器资源，也可以通过 Vagrant 或 Terraform 模板自动获取，让您在十几分钟内就可以从零在本地笔记本或云端虚拟机上拉起一套完整的 Pigsty 部署。本地沙箱环境可以跑在1核2G 的微型虚拟机中，提供与生产环境完全一致的功能模拟，可以用于开发、测试、演示与学习。
+除此之外，Pigsty 本身的安装部署也是一键傻瓜式的，所有依赖被预先打包，在安装时可以无需互联网访问。而安装所需的机器资源，也可以通过 Vagrant 或 OpenTofu 模板自动获取，让您在十几分钟内就可以从零在本地笔记本或云端虚拟机上拉起一套完整的 Pigsty 部署。本地沙箱环境可以跑在1核2G 的微型虚拟机中，提供与生产环境完全一致的功能模拟，可以用于开发、测试、演示与学习。
 
 [![pigsty-iac.jpg](/img/pigsty/iac.jpg)](/docs/setup/config)
 

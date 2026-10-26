@@ -38,7 +38,7 @@ weight: 1560
 {.ext-table .ext-table--rel}
 
 
-> no pg17 on el9, no legacy branch on el8
+> pkg 0.3.0; source/SQL 0.4.0; rebuild needed; PGDG gaps: EL9 PG17, legacy EL8.
 
 
 ## 版本

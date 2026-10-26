@@ -33,7 +33,7 @@ weight: 2270
 | 2270  | [**`addressing_dictionary`**](/ext/e/addressing_dictionary) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`address_standardizer`](/ext/e/address_standardizer) [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) `postal` [`unaccent`](/ext/e/unaccent) [`hunspell_en_us`](/ext/e/hunspell_en_us) |
+| **相关扩展** | [`address_standardizer`](/ext/e/address_standardizer) [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) [`unaccent`](/ext/e/unaccent) [`hunspell_en_us`](/ext/e/hunspell_en_us) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

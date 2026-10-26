@@ -21,7 +21,9 @@ Pigsty 在所有支持的 Linux 平台上为 OpenHalo 提供部署支持。
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mysql`](/docs/conf/mysql) 配置模板。
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`fork/mysql`](/docs/conf/mysql) 配置模板。
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml)；开发版已迁移至 `conf/fork/mysql.yml`，对应使用 `-c fork/mysql`。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -75,7 +77,7 @@ OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容�
 
 OpenHalo 提供 MySQL 线协议兼容性，默认监听端口 3306，允许 MySQL 客户端和驱动程序直接连接。
 
-Pigsty 的 [`conf/mysql`](https://github.com/pgsty/pigsty/blob/main/conf/mysql.yml) 配置默认安装 `mysql` 客户端工具。
+Pigsty 的 [`conf/fork/mysql`](/docs/conf/mysql/) 配置默认安装 `mysql` 客户端工具。
 
 您可以使用以下命令访问 MySQL：
 
@@ -121,7 +123,7 @@ Pigsty 安装的 [OpenHalo](https://github.com/pgsty/openHalo) 内核基于 [Hal
 
 ## 可用扩展
 
-OpenHalo 内核共有 **59** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                           | 版本号   | 说明                                      |
 |:------------------------------|:------|:----------------------------------------|

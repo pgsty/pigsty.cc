@@ -309,7 +309,7 @@ Pigsty 使用 pgBackRest 实现 PostgreSQL 的 [**PITR**](/docs/concept/pitr) �
 
 ## pg_exporter
 
-[**pg_exporter**](https://github.com/Vonng/pg_exporter) 导出 [PostgreSQL](#postgresql) 监控指标，默认监听 `9630` 端口。
+[**pg_exporter**](https://github.com/pgsty/pg_exporter) 导出 [PostgreSQL](#postgresql) 监控指标，默认监听 `9630` 端口。
 
 **pg_exporter** 运行在每个 PG 节点上，通过本地 Unix Socket 连接 [**PostgreSQL**](#postgresql)，
 导出覆盖会话、缓冲命中、复制延迟、事务率等丰富指标，供 INFRA 节点上的 **VictoriaMetrics** 抓取。

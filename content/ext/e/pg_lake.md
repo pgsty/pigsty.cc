@@ -45,7 +45,7 @@ weight: 2560
 {.ext-table .ext-table--rel}
 
 
-> PG16-18; preload pg_extension_base and run pgduck_server. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; upstream 3.5.7; SQL 3.5; PG16-18; OpenSSL 3/no EL8; preload pg_extension_base; run matching pgduck_server; DuckDB hook/COPY order matters.
 
 
 ## 版本

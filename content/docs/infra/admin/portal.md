@@ -66,13 +66,48 @@ infra_portal:
 
 | 参数          | 说明               |
 |-------------|------------------|
-| `config`    | 自定义 Nginx 配置片段   |
+| `conf`      | 指定 `roles/infra/templates/nginx` 中的模板文件 |
+| `cache_dir` | 缓存目录；角色创建并设为 `nginx:nginx`、权限 `0750` |
+| `config`    | 通用模板中的自定义 Nginx 配置片段 |
 | `index`     | 启用目录列表（用于静态服务）   |
 | `log`       | 自定义日志文件名称        |
 | `websocket` | 启用 WebSocket 支持  |
 | `auth`      | 启用 Basic Auth 认证 |
 | `realm`     | Basic Auth 认证提示语 |
 {.full-width}
+
+
+----------------
+
+## 专用门户模板
+
+`conf` 优先于 `home`、`path`、`endpoint` 的自动模板选择。以下五个专用模板于 2026-09-01 加入开发源码，不包含在 `v4.5.0` 发布标签中；使用前请确认源码版本包含对应文件：
+
+| `conf` | 用途与配置 |
+|:---|:---|
+| `repo.conf` | 公共软件仓库；`path` 指向发布目录，只公开模板列出的目录和文件，关闭目录列表，拒绝未知 Host / SNI |
+| `beta.conf` | Pigsty、PGDG、发行版与 Docker 仓库代理缓存；`cache_dir` 指定缓存目录，缓存上限 80 GiB，保留至少 100 GiB 空闲空间 |
+| `demo.conf` | 演示服务反向代理；使用 `endpoint`，启用 WebSocket，读写超时 1 小时，关闭响应缓冲 |
+| `pgext.conf` | 扩展目录应用反向代理；使用 `endpoint`，启用连接复用与响应缓冲 |
+| `pgweb.conf` | PostgreSQL 中文社区站点；使用 `endpoint`，可另设 `admin_static`、`media_root`、`files_root` 三个静态目录 |
+{.full-width}
+
+模板源码见 [`roles/infra/templates/nginx`](https://github.com/pgsty/pigsty/tree/main/roles/infra/templates/nginx)。这些模板都将 HTTP 重定向至 HTTPS，并保留 ACME 验证路径。`beta.conf` 的上游域名、缓存限制及 CA 文件路径是模板内配置；其中 CA 默认路径为 EL 的 `/etc/pki/tls/certs/ca-bundle.crt`，迁移到 Debian / Ubuntu 前应适配模板。`pgweb.conf` 服务的是社区网站，并非同名的 PostgreSQL 数据浏览器应用。
+
+`repo.conf` 自带默认服务器与 `127.0.0.1:9180/nginx` 状态端点，部署时不要同时生成占用同一监听地址的 `home.conf` 默认服务器。使用此模板时应设置 `nginx_exporter_scrape_uri: http://127.0.0.1:9180/nginx`；若覆盖模板使用的 `nginx_status_port`，也要同步调整抓取地址。
+
+```yaml
+# 专用公共仓库节点的示例
+nginx_exporter_scrape_uri: http://127.0.0.1:9180/nginx
+infra_portal:
+  repo:
+    domain: repo.example.com
+    conf: repo.conf
+    path: /data/nginx/repo
+    certbot: repo.example.com
+```
+
+缓存目录只会在配置中显式提供非空 `cache_dir` 时由角色创建。使用 `beta.conf` 时建议显式配置该字段，例如 `/data/beta`；设置前需确认数据盘有足够空间。
 
 
 ----------------

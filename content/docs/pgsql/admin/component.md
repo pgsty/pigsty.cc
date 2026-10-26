@@ -231,7 +231,7 @@ http://<node_ip>:9101/haproxy
 
 ## pg_exporter
 
-[**pg_exporter**](https://github.com/Vonng/pg_exporter) 是 PostgreSQL 的 Prometheus 监控指标导出器，负责采集数据库性能指标。
+[**pg_exporter**](https://github.com/pgsty/pg_exporter) 是 PostgreSQL 的 Prometheus 监控指标导出器，负责采集数据库性能指标。
 
 **启动 pg_exporter**
 

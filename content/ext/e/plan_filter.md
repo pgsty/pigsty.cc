@@ -1,7 +1,7 @@
 ---
 title: "plan_filter"
 linkTitle: "plan_filter"
-description: "使用执行计划代价过滤阻止特定查询语句"
+description: "基于计划估算成本的语句与事务负载保护"
 weight: 2810
 ---
 
@@ -38,7 +38,7 @@ weight: 2810
 {.ext-table .ext-table--rel}
 
 
-> Maintained RPM/DEB recipes and versioned source are 1.0.0; local package matrix on 2026-10-10 has RPM 1.0.0 and DEB 0.0.1. Retain maintained DEB 1.0.0; repository publication is a separate check.
+> Not a security boundary: planner costs are user-settable; limits default off; DEB indexed 0.0.1/recipe 1.0.0.
 
 
 ## 版本
@@ -58,7 +58,7 @@ weight: 2810
 | el9.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el9.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el10.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
-| el10.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | d12.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
@@ -79,7 +79,6 @@ weight: 2810
 @ el9.aarch64 18 pg_plan_filter_18 pg_plan_filter_18-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_plan_filter_18-0.0.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pg_plan_filter_18 pg_plan_filter_18-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_plan_filter_18-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_plan_filter_18 pg_plan_filter_18-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_plan_filter_18-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_plan_filter_18 pg_plan_filter_18-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_plan_filter_18-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_plan_filter_18 pg_plan_filter_18-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 10.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_plan_filter_18-0.0.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-plan-filter postgresql-18-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-18-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-plan-filter postgresql-18-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 10.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-18-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb
@@ -101,7 +100,6 @@ weight: 2810
 @ el9.aarch64 17 pg_plan_filter_17 pg_plan_filter_17-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_plan_filter_17-0.0.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pg_plan_filter_17 pg_plan_filter_17-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_plan_filter_17-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_plan_filter_17 pg_plan_filter_17-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_plan_filter_17-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_plan_filter_17 pg_plan_filter_17-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_plan_filter_17-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_plan_filter_17 pg_plan_filter_17-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 10.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_plan_filter_17-0.0.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-plan-filter postgresql-17-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-17-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-plan-filter postgresql-17-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 10.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-17-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb
@@ -123,7 +121,6 @@ weight: 2810
 @ el9.aarch64 16 pg_plan_filter_16 pg_plan_filter_16-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_plan_filter_16-0.0.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 pg_plan_filter_16 pg_plan_filter_16-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_plan_filter_16-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_plan_filter_16 pg_plan_filter_16-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_plan_filter_16-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_plan_filter_16 pg_plan_filter_16-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_plan_filter_16-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_plan_filter_16 pg_plan_filter_16-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 10.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_plan_filter_16-0.0.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-plan-filter postgresql-16-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-16-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-plan-filter postgresql-16-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 10.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-16-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb
@@ -145,7 +142,6 @@ weight: 2810
 @ el9.aarch64 15 pg_plan_filter_15 pg_plan_filter_15-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_plan_filter_15-0.0.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 pg_plan_filter_15 pg_plan_filter_15-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_plan_filter_15-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_plan_filter_15 pg_plan_filter_15-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_plan_filter_15-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_plan_filter_15 pg_plan_filter_15-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_plan_filter_15-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_plan_filter_15 pg_plan_filter_15-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 10.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_plan_filter_15-0.0.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-plan-filter postgresql-15-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-15-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-plan-filter postgresql-15-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 10.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-15-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb
@@ -167,7 +163,6 @@ weight: 2810
 @ el9.aarch64 14 pg_plan_filter_14 pg_plan_filter_14-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_plan_filter_14-0.0.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 pg_plan_filter_14 pg_plan_filter_14-1.0.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_plan_filter_14-1.0.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_plan_filter_14 pg_plan_filter_14-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 10.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_plan_filter_14-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_plan_filter_14 pg_plan_filter_14-1.0.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 16.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_plan_filter_14-1.0.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_plan_filter_14 pg_plan_filter_14-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 10.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_plan_filter_14-0.0.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-plan-filter postgresql-14-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-14-pg-plan-filter_0.0.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-plan-filter postgresql-14-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 10.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-plan-filter/postgresql-14-pg-plan-filter_0.0.1-1PIGSTY~bookworm_arm64.deb

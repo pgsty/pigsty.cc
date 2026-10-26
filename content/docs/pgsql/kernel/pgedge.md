@@ -35,6 +35,8 @@ Pigsty 提供的是“先验证单节点内核，再扩展到多节点复制拓�
 
 使用 Pigsty 内置模板：
 
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgedge.yml)；开发版已迁移至 `conf/fork/pgedge.yml`，对应使用 `-c fork/pgedge`。
+
 ```bash
 ./configure -c pgedge
 ./deploy.yml
@@ -47,14 +49,14 @@ psql -d meta -c "SELECT version();"
 psql -d meta -c "SELECT extname, extversion FROM pg_extension WHERE extname IN ('spock','snowflake','lolor') ORDER BY 1;"
 ```
 
-> 模板与完整参数见：[`pgedge` 配置模板](/docs/conf/pgedge/)。
+> 模板与完整参数见：[`fork/pgedge` 配置模板](/docs/conf/pgedge/)。
 
 
 --------
 
 ## 配置
 
-`pgedge` 模板的关键参数如下（与 `conf/pgedge.yml` 一致）：
+`fork/pgedge` 模板的关键参数如下（与 `conf/fork/pgedge.yml` 一致）：
 
 ```yaml
 pg_mode: pgedge
@@ -113,7 +115,7 @@ CREATE EXTENSION IF NOT EXISTS lolor;
 ## 相关文档
 
 - [PGSQL 内核总览](/docs/pgsql/kernel/)
-- [`pgedge` 配置模板](/docs/conf/pgedge/)
+- [`fork/pgedge` 配置模板](/docs/conf/pgedge/)
 - [PGSQL 内核模式参数](/docs/pgsql/config/kernel/)
 - [`spock` 扩展](/ext/e/spock/)
 - [`snowflake` 扩展](/ext/e/snowflake/)
@@ -127,7 +129,7 @@ CREATE EXTENSION IF NOT EXISTS lolor;
 
 ## 可用扩展
 
-pgEdge 内核共有 **63** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                           | 版本号      | 说明                                            |
 |:------------------------------|:---------|:----------------------------------------------|

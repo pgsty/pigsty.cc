@@ -121,7 +121,7 @@ Topic 会幂等创建、Partition 只增加、只更新声明的配置；RF 变�
 
 ## JMX Exporter 与 kafka_exporter 有什么区别？
 
-JMX Exporter 注入每个 Kafka JVM，采集 JVM、Broker、复制、请求路径与 KRaft 内部指标，注册为带 `role` 标签的 `job=kafka` 目标。
+JMX Exporter 默认注入每个 Kafka JVM，采集 JVM、Broker、复制、请求路径与 KRaft 内部指标，注册为带 `role` 标签的 `job=kafka` 目标。
 
 `kafka_exporter` 通过 Kafka 协议查询逻辑集群、Topic、Partition、Offset、Consumer Group 与 Lag，注册为同一 `job=kafka` 下不带 `role` 标签的目标。角色只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群运行一个，纯 Controller 不运行。
 
@@ -142,6 +142,15 @@ grep 9308 /infra/targets/kafka/*.yml
 ```
 
 完整运行会按当前放置刷新每个实例的 Target 文件，不应只针对单节点运行注册标签。注意：若 Exporter 放置因拓扑变化而转移，曾被选中节点上的旧 `kafka_exporter` 服务不会被普通剧本自动停止，需要手工或通过 `kafka-rm.yml` 清理。
+
+
+--------
+
+## 如何关闭 JMX Exporter？
+
+设置 [`kafka_jmx_exporter_enabled: false`](/docs/kafka/param#kafka_jmx_exporter_enabled)，然后对完整集群执行 `./kafka.yml -l <cls>`。这会通过滚动重启移除 JVM 中的 Java Agent；`-t register` 只更新目标，不能代替这次完整收敛。
+
+关闭实例 JMX 后，JVM、KRaft、Broker 内部指标及对应告警不再可用。集群所有成员都关闭时，Kafka Overview / Kafka Instance 无法发现该集群，`KafkaDown` 也无法检测它。独立协议 Exporter 继续提供 Topic、Partition 与消费组指标，生命周期健康门禁仍通过 Kafka 管理通道执行。
 
 
 --------
@@ -217,6 +226,6 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 如何安全清空 Kafka 数据？
 
-`kafka.yml` 永远不执行清理，删除动作只在独立的 `kafka-rm.yml` 中：`-l` 选中整个集群（或裸跑选中全部集群）即为集群下线，选中真子集则是成员退役。默认 `kafka_rm_data=true` 会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；`kafka_rm_data=false` 保留数据与恢复状态，`kafka_safeguard=true` 中止一切删除。
+`kafka.yml` 永远不执行清理，删除动作只在独立的 `kafka-rm.yml` 中：剧本强制要求显式非空 `-l/--limit`，裸跑会失败；`-l` 选中整个集群即为集群下线，选中真子集则是成员退役。默认 `kafka_rm_data=true` 会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；`kafka_rm_data=false` 保留数据与恢复状态，`kafka_safeguard=true` 中止一切删除。
 
 该剧本没有确认字符串等额外闸门。命令会直接执行删除；运行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。成员退役中的 Broker 注销命令会容忍失败，真实运行后还必须核对 Quorum、Broker 注册与副本健康。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。

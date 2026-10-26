@@ -6,13 +6,13 @@ description: 用于交付 PostgreSQL 扩展的基础设施和软件包仓库
 weight: 610
 ---
 
-Pigsty 为主流 [Linux 发行版](/docs/ref/linux/) 提供了 PostgreSQL 扩展仓库，其中包含 340+ 额外的 PostgreSQL 扩展。
+Pigsty 为主流 [**Linux 发行版**](/docs/ref/linux/) 提供 PostgreSQL 扩展软件包，补充 PGDG 官方仓库未覆盖的扩展；每个扩展的来源、版本与平台覆盖见 [**扩展目录**](/ext/list/)。
 
-Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [{{< param pgext_count >}} 个已打包 PostgreSQL 扩展](https://ext.pigsty.io)。
+Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [{{< param pgext_count >}} 个已打包 PostgreSQL 扩展](https://pgext.cloud)。
 
 |   PGSQL 仓库   |                      描述                       |              链接               |
 |:------------:|:---------------------------------------------:|:-----------------------------:|
-| **PGSQL** 仓库 | [Pigsty PG 扩展仓库](/docs/repo/pgsql/)，340+ 额外扩展 | [pgsql.md](/docs/repo/pgsql/) |
+| **PGSQL** 仓库 | [Pigsty PG 扩展仓库](/docs/repo/pgsql/)，扩展与内核变体 | [pgsql.md](/docs/repo/pgsql/) |
 | **INFRA** 仓库 |  [Pigsty 基础设施仓库](/docs/repo/infra/)，监控/工具软件   | [infra.md](/docs/repo/infra/) |
 | **PGDG** 仓库  |     [PGDG 官方仓库镜像](/docs/repo/pgdg/)，PG 内核     |  [pgdg.md](/docs/repo/pgdg/)  |
 |  **GPG** 密钥  |        [GPG 公钥](/docs/repo/gpg/)，签名验证         |   [gpg.md](/docs/repo/gpg/)   |
@@ -35,6 +35,14 @@ Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 
 | Ubuntu 26.04 | u26  | **18** **17** **16** **15** **14** | **18** **17** **16** **15** **14** |
 {.full-width}
 
+
+---------
+
+## Pigsty 中的仓库模块
+
+Pigsty 的 `repo_modules` 与 `node_repo_modules` 按 `roles/node_id/vars/<os>.<arch>.yml` 中的 `module` 字段选择软件源。开发版本中，Nginx 与 Docker 官方仓库分别使用 `nginx`、`docker`；`v4.5.0` 发布版中，Docker 仓库和 EL 平台的 Nginx 仓库仍属于 `infra`。
+
+需要这些上游仓库时，可显式添加，例如 `node_repo_modules: node,infra,pgsql,nginx,docker`。本地离线仓库使用 `local`。完整参数见 [**REPO**](/docs/infra/param/#repo) 与 [**node_repo_modules**](/docs/node/param/#node_repo_modules)。
 
 ---------
 
@@ -61,6 +69,7 @@ pig repo add -u                             # 添加 Linux / PGDG / Pigsty 仓�
 
 ```bash {tab="APT" group="apt-yum" value="apt"}
 # 将 Pigsty 的 GPG 公钥添加到系统密钥链中，以验证软件包签名
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
 # 获取 Debian / Ubuntu 发行版的代号（bookworm, trixie, jammy, noble, resolute），并将相应的上游仓库地址写入 /etc/apt/sources.list.d/ 中

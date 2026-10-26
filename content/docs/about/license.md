@@ -65,7 +65,7 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 |  PGSQL   |               [pgbackrest](https://pgbackrest.org/)               | [MIT License](https://github.com/pgbackrest/pgbackrest/blob/main/LICENSE)                                 | 提供 PITR 备份/恢复管理能力                |   建议   |
 |  PGSQL   |       [pgbouncer](https://www.pgbouncer.org/community.html)       | [ISC License](https://github.com/pgbouncer/pgbouncer/blob/master/COPYRIGHT)                               | 提供 PostgreSQL 连接池化能力             |   建议   |
 |  PGSQL   | [vip-manager](https://github.com/cybertec-postgresql/vip-manager) | [BSD 2-Clause License](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)            | 提供自动将 L2 VIP 绑定到 PG 集群主库的能力      |   建议   |
-|  PGSQL   |        [pg_exporter](https://github.com/Vonng/pg_exporter)        | [Apache License 2.0](https://github.com/Vonng/pg_exporter/blob/master/LICENSE)                            | 提供监控 PostgreSQL 与 PgBouncer 的能力  |   建议   |
+|  PGSQL   |        [pg_exporter](https://github.com/pgsty/pg_exporter)        | [Apache License 2.0](https://github.com/pgsty/pg_exporter/blob/main/LICENSE)                            | 提供监控 PostgreSQL 与 PgBouncer 的能力  |   建议   |
 |   NODE   |   [node_exporter](https://github.com/prometheus/node_exporter)    | [Apache License 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE)                     | 提供主机节点监控能力                       |   建议   |
 |   NODE   |                [haproxy](https://www.haproxy.org/)                | [HAPROXY's License](https://www.haproxy.org/download/1.3/doc/LICENSE) (GPLv2)                             | 提供负载均衡，对外暴露服务的能力                 |   建议   |
 |  INFRA   |                  [Grafana](https://grafana.com/)                  | [AGPLv3](https://github.com/grafana/grafana/blob/main/LICENSE)                                            | 提供数据库可视化平台                       |   建议   |
@@ -84,7 +84,8 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 |  CLOUD   |   [SealOS](https://github.com/labring/sealos/blob/main/LICENSE)   | [Apache License 2.0](https://github.com/labring/sealos/blob/main/LICENSE)                                 | 提供快速部署，复制，打包 K8S 集群的能力           |   可选   |
 |  DUCKDB  |            [DuckDB](https://github.com/duckdb/duckdb)             | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                                                 | 提供简单易用的高性能分析能力                   |   可选   |
 | External |               [Vagrant](https://www.vagrantup.com/)               | [Business Source License 1.1](https://github.com/hashicorp/vagrant/blob/main/LICENSE)                     | 拉起本地测试环境虚拟机                      |   可选   |
-| External |              [Terraform](https://www.terraform.io/)               | [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE)                   | 一键申请云资源用于部署                      |   可选   |
+| External | [OpenTofu](https://opentofu.org/) | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE) | 当前云资源模板默认使用的 IaC 工具 | 可选 |
+| External |              [Terraform](https://www.terraform.io/)               | [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE)                   | 兼容的 IaC CLI，可通过 `IAC_CLI=terraform` 选择                      |   可选   |
 | External |             [Virtualbox](https://www.virtualbox.org/)             | [GPLv2](https://www.virtualbox.org/wiki/Licensing_FAQ)                                                    | 虚拟机管理软件                          |   可选   |
 {.full-width}
 

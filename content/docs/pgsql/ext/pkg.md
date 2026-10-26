@@ -20,8 +20,8 @@ Pigsty 使用 **包别名** 机制简化扩展的安装与管理。
 |:-------|:-------------------------|:-----------------------------------|
 | 扩展名    | `vector`                 | `postgis`, `postgis_topology`, ... |
 | 包别名    | `pgvector`               | `postgis`                          |
-| RPM 包名 | `pgvector_18`            | `postgis36_18*`                    |
-| DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3*`         |
+| RPM 包名 | `pgvector_18`            | `postgis36_18`                    |
+| DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3`         |
 {.full-width}
 
 Pigsty 提供 **包别名** 抽象层，让用户无需关心具体的 RPM/DEB 包名：
@@ -49,7 +49,9 @@ pg_extensions: [ pgsql-gis, pgsql-rag, pgsql-fts ]
 pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 ```
 
-除 `olap` 类别外，所有类别的扩展都可以同时安装。`olap` 类别中存在互斥：`pg_duckdb` 与 `pg_mooncake` 冲突。
+类别别名展开为各平台 `package_map` 中的包组，并不包含该类别的全部扩展，也不保证支持所有 PostgreSQL 版本。具体成员与版本支持见 [**别名映射**](/docs/pgsql/config/alias/) 和 [**可用性矩阵**](/ext/os/)。
+
+扩展之间的依赖与兼容性应按所用版本核对。例如当前 [`pg_mooncake`](https://github.com/Mooncake-Labs/pg_mooncake/blob/main/pg_mooncake.control) 依赖 `pg_duckdb`，需要同时安装并预加载二者。
 
 
 --------

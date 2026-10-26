@@ -38,7 +38,7 @@ weight: 1010
 {.ext-table .ext-table--rel}
 
 
-> PG16-18; trusted; pgrx 0.19.2.
+> 1.26.0 builds PG16-18; older packages: PG14 DEB 1.19.0, PG15 RPM/DEB 1.23.0.
 
 
 ## 版本
@@ -46,8 +46,8 @@ weight: 1010
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "16,17,18" >}} | `timescaledb_toolkit` | - |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16" >}} | `timescaledb-toolkit_$v` | - |
-| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-timescaledb-toolkit` | - |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16,15" >}} | `timescaledb-toolkit_$v` | - |
+| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-timescaledb-toolkit` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

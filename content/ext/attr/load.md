@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **131** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **133** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -44,12 +44,13 @@ weight: 10
 | [`ulak`](/ext/e/ulak) | `ulak` | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
 | [`pg_ttl_index`](/ext/e/pg_ttl_index) | `pg_ttl_index` | 基于TTL索引的自动数据过期清理 |
 | [`pg_hint_plan`](/ext/e/pg_hint_plan) | `pg_hint_plan` | 添加强制指定执行计划的能力 |
-| [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 使用执行计划代价过滤阻止特定查询语句 |
+| [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 基于计划估算成本的语句与事务负载保护 |
 | [`pg_ivm`](/ext/e/pg_ivm) | `pg_ivm` | 增量维护的物化视图 |
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
-| [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
+| [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | PostgreSQL 内的 SQL 原生持久化工作流编排扩展 |
 | [`pg_disorder`](/ext/e/pg_disorder) | `pg_disorder` | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
 | [`pg_local_cache`](/ext/e/pg_local_cache) | `pg_local_cache` | 通过 RESP2 MGET 提供 PostgreSQL 主键整行读取的事务感知共享内存缓存 |
+| [`pg_kv`](/ext/e/pg_kv) | `pg_kv` | 共享内存键值缓存、令牌桶限流与有序集合。 |
 | [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
@@ -92,7 +93,7 @@ weight: 10
 | [`pgnodemx`](/ext/e/pgnodemx) | `pgnodemx` | 使用SQL查询获取操作系统指标 |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | `bgw_replstatus` | 用于汇报本机主从状态的后台工作进程 |
 | [`pg_relusage`](/ext/e/pg_relusage) | `pg_relusage` | 打印查询引用的表与列 |
-| [`powa`](/ext/e/powa) | `powa` | PostgreSQL 工作负载分析器-核心 |
+| [`powa`](/ext/e/powa) | `powa,pg_stat_statements` | PostgreSQL 工作负载分析器-核心 |
 | [`pg_overexplain`](/ext/e/pg_overexplain) | `pg_overexplain` | 允许 EXPLAIN 转储更多详细 |
 | [`auto_explain`](/ext/e/auto_explain) | `auto_explain` | 提供一种自动记录执行计划的手段 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | `pg_stat_statements` | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
@@ -100,6 +101,7 @@ weight: 10
 | [`supautils`](/ext/e/supautils) | `supautils` | 用于在云环境中确保数据库集群的安全 |
 | [`pgsodium`](/ext/e/pgsodium) | `pgsodium` | 表数据加密存储 TDE |
 | [`column_encrypt`](/ext/e/column_encrypt) | `column_encrypt` | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
+| [`encsearch`](/ext/e/encsearch) | `encsearch` | 使用 AEAD 加密与盲索引的实验性密文文本搜索 |
 | [`passwordpolicy`](/ext/e/passwordpolicy) | `$libdir/passwordpolicy` | 可动态配置的 PostgreSQL 密码复杂度检查扩展。 |
 | [`anon`](/ext/e/anon) | `anon` | 数据匿名化处理工具 |
 | [`pgaudit`](/ext/e/pgaudit) | `pgaudit` | 提供审计功能 |
@@ -122,8 +124,8 @@ weight: 10
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | `auth_delay` | 在返回认证失败前暂停一会，避免爆破 |
 | [`passwordcheck`](/ext/e/passwordcheck) | `$libdir/passwordcheck` | 用于强制拒绝修改弱密码的扩展 |
-| [`documentdb`](/ext/e/documentdb) | `pg_documentdb,pg_documentdb_core` | 微软DocumentDB的API层 |
-| [`documentdb_core`](/ext/e/documentdb_core) | `pg_documentdb,pg_documentdb_core` | 微软DocumentDB的核心API层实现 |
+| [`documentdb`](/ext/e/documentdb) | `pg_cron,pg_documentdb_core,pg_documentdb` | 微软DocumentDB的API层 |
+| [`documentdb_core`](/ext/e/documentdb_core) | `pg_documentdb_core` | 微软DocumentDB的核心API层实现 |
 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `pg_documentdb,pg_documentdb_core` | DocumentDB多节点模式的API层 |
 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `pg_documentdb_extended_rum` | DocumentDB扩展RUM索引访问方法 |
 | [`pgtt`](/ext/e/pgtt) | `pgtt` | 类似Oracle的全局临时表功能 |

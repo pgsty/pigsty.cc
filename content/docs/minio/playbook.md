@@ -41,6 +41,8 @@ MINIO 模块提供两个内置剧本：
 - `minio_register`：写入 VictoriaMetrics FileSD 目标
 - `minio_provision`：由集群首个成员执行一次 `mcli` 别名、存储桶与用户置备
 
+`minio_launch` 使用非阻塞 systemd 重启，让分布式成员可以并行启动；随后每 5 秒检查一次 `ActiveState=active` 与新的 `InvocationID`，最多重试 120 次。进入置备前还会执行 `silo healthcheck --url <本机端点> cluster`，最多重试 5 次、间隔 5 秒，确认集群就绪。
+
 重新执行 `minio.yml` 可能重启正在运行的对象存储服务，但不会主动重建数据。生产环境应按集群故障预算安排执行窗口。
 
 
@@ -54,7 +56,7 @@ MINIO 模块提供两个内置剧本：
 - `minio_pause`：暂停 3 秒，允许 Ctrl+C 中止
 - `minio_deregister`：删除 VictoriaMetrics 目标与 DNS 记录
 - `minio_svc`：停止并禁用 Silo 服务
-- `minio_data`：按 [`minio_rm_data`](/docs/minio/param#minio_rm_data) 删除数据与配置
+- `minio_data`：按 [`minio_rm_data`](/docs/minio/param#minio_rm_data) 删除数据与配置，同时清理遗留的 `/etc/default/minio` 与 `minio.service` Unit 文件
 - `minio_pkg`：按 [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg) 卸载 Silo 与 `mcli`
 
 > [!CAUTION] 危险操作

@@ -44,6 +44,7 @@ categories: [参考]
 
 - `kf-meta` 创建 `quickstart.events`，用于单机开发与连通性测试。
 - `kf-test` 创建 `test-app` SCRAM 用户、前缀 ACL 与 `test.events` 三副本 Topic。
+- `kf-test` 显式使用 `kafka_heap_opts: '-Xms512M -Xmx512M'`，适配 2 GiB 演示节点；生产规格应按负载重新规划。
 - 在线安装时由平台映射安装 `kafka-stack` 与 `java-runtime`；若只使用本地仓库，必须先把这两个包组完整纳入仓库。
 - 模板中的地址和密码均为演示值，部署前应按实际拓扑与安全要求修改。
 

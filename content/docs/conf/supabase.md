@@ -36,7 +36,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/supabase.yml`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)
+开发版源文件：`conf/supabase.yml`，完整配置见下方。本文对应 Supabase `0.8.2`，需要配套的应用文件与迁移脚本，详见 [**应用说明**](/docs/app/supabase/)。
 
 {{< include file="yaml/supabase.yml" code=true lang="yaml" >}}
 

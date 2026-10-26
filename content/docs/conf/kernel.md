@@ -18,7 +18,7 @@ categories: [参考]
 - 配置说明：PostgreSQL 内核矩阵演示，覆盖 Citus、IvorySQL、Babelfish、PolarDB、Percona TDE、OrioleDB、OpenHalo、DocumentDB、AgensGraph、pgEdge
 - 适用系统：以各内核包实际支持的平台为准
 - 适用架构：以各内核包实际支持的平台为准
-- 相关配置：[`pgsql`](/docs/conf/pgsql/)、[`mssql`](/docs/conf/mssql/)、[`mongo`](/docs/conf/mongo/)
+- 相关配置：[`fork/pgsql`](/docs/conf/pgsql/)、[`fork/mssql`](/docs/conf/mssql/)、[`fork/mongo`](/docs/conf/mongo/)
 
 启用方式：
 

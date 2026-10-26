@@ -38,7 +38,7 @@ weight: 5210
 {.ext-table .ext-table--rel}
 
 
-> Preload failure-testing module; official source version 0.3 replaces historical Pigsty pseudo-version 1.0 via epoch 1 and empty compatibility SQL. New packages require rebuild.
+> Upstream module-only; Pigsty adds control/empty SQL; epoch 1 retains 1.0 upgrades; rebuild 0.3.
 
 
 ## 版本

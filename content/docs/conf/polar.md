@@ -1,12 +1,14 @@
 ---
-title: polar
+title: fork/polar
 weight: 430
 description: PolarDB for PostgreSQL 内核，提供 Aurora 风格的存算分离能力
 icon: fa-solid fa-snowflake
 categories: [参考]
 ---
 
-`polar` 配置模板使用阿里云 PolarDB for PostgreSQL 数据库内核替代原生 PostgreSQL，提供"云原生" Aurora 风格的存算分离能力。
+开发版配置路径为 `conf/fork/polar.yml`；v4.5.0 使用 `conf/polar.yml`，配置命令相应为 `-c polar`。
+
+`fork/polar` 配置模板使用阿里云 PolarDB for PostgreSQL 数据库内核替代原生 PostgreSQL，提供"云原生" Aurora 风格的存算分离能力。
 
 完整教程请参考：**[PolarDB for PostgreSQL (POLAR) 内核使用说明](/docs/pgsql/kernel/polardb/)**；所有内核分支的差异与版本口径见 [PGSQL 内核总览](/docs/pgsql/kernel/)。
 
@@ -15,7 +17,7 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `polar`
+- 配置名称： `fork/polar`
 - 节点数量： 单节点
 - 配置说明：使用 PolarDB for PostgreSQL 内核
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -25,7 +27,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c polar [-i <primary_ip>]
+./configure -c fork/polar [-i <primary_ip>]
 ```
 
 
@@ -33,7 +35,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/polar.yml`](https://github.com/pgsty/pigsty/blob/main/conf/polar.yml)
+开发版源文件：`conf/fork/polar.yml`；发布版：[`v4.5.0：conf/polar.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/polar.yml)。
 
 {{< include file="yaml/polar.yml" code=true lang="yaml" >}}
 
@@ -42,7 +44,7 @@ categories: [参考]
 
 ## 配置解读
 
-`polar` 模板使用阿里云开源的 PolarDB for PostgreSQL 内核，提供云原生数据库能力。
+`fork/polar` 模板使用阿里云开源的 PolarDB for PostgreSQL 内核，提供云原生数据库能力。
 
 **关键特性**：
 - 存算分离架构，计算节点和存储节点可独立扩展

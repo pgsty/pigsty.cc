@@ -38,7 +38,7 @@ weight: 3750
 {.ext-table .ext-table--rel}
 
 
-> no pg14 for el8/el9 pgdg repo
+> pkg 1.20260630; SQL 0; PGDG gap: PG14 RPM/EL8-9.
 
 
 ## 版本

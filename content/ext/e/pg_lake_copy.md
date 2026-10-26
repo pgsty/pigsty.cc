@@ -46,7 +46,7 @@ weight: 2567
 {.ext-table .ext-table--rel}
 
 
-> Lake COPY component. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; auto-loaded by pg_extension_base in dependency order.
 
 
 ## 版本

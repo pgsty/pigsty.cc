@@ -168,13 +168,13 @@ Bootstrap Manifest 的权威副本位于每个集群成员上：
 5. 在按 `kafka_seq` 排序后的前两个 Broker-capable 节点配置并启动协议 Exporter；
 6. 在全部 Infra 节点刷新文件发现 Target。
 
-每个实例对应一个 Target 文件，JMX 目标与（被选中节点的）协议 Exporter 目标都在同一 `kafka` 采集任务下：
+每个实例对应一个 Target 文件，启用时的 JMX 目标与（被选中节点的）协议 Exporter 目标都在同一 `kafka` 采集任务下。关闭 JMX 且未放置协议 Exporter 的实例会写入空列表 `[]`：
 
 ```text
 /infra/targets/kafka/<kafka_instance>.yml
 ```
 
-Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删除由 `kafka-rm.yml` 的注销步骤完成。
+Target 文件每次完整运行按当前 Exporter 放置与 JMX 开关刷新；Target 的删除由 `kafka-rm.yml` 的注销步骤完成。修改 `kafka_jmx_exporter_enabled` 后必须完整运行剧本以滚动重启 JVM；单独注册不会改变 Java Agent 的运行状态。
 
 
 --------

@@ -38,7 +38,7 @@ weight: 2460
 {.ext-table .ext-table--rel}
 
 
-> Release v0.11.0; SQL version 0.11; preloading is optional.
+> pkg 0.11.0; SQL 0.11; update drops clickhouse_raw_query(); fetch_size removed; encoding_check=fail.
 
 
 ## 版本

@@ -153,7 +153,7 @@ mysql_parameters:
 约束与行为：
 
 - 键名 `[A-Za-z][A-Za-z0-9_.-]{0,63}`，值为单行标量；渲染后仍经 `mysqld --validate-config` 校验，写错参数在部署阶段失败而不影响运行中的实例；
-- **保留参数拒绝覆盖**（`-`/`_` 写法同判）：`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`require_secure_transport`、`ssl_ca`、`ssl_cert`、`ssl_key`、`plugin_load`、`plugin_load_add`、`clone`、`plugin_clone`、`mysqlx`、`plugin_mysqlx`，以及 `group_replication_*`、`plugin_group_replication*`、`plugin_mysqlx_bind_address` 与 `ssl_*` 全族；
+- **保留参数拒绝覆盖**（`-`/`_` 写法同判，校验前还会剥离 `loose_`、`skip_`、`disable_`、`enable_` 前缀及其组合）：`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`require_secure_transport`、`ssl_ca`、`ssl_cert`、`ssl_key`、`plugin_load`、`plugin_load_add`、`clone`、`plugin_clone`、`mysqlx`、`plugin_mysqlx`，以及 `group_replication_*`、`plugin_group_replication*`、`plugin_mysqlx_bind_address` 与 `ssl_*` 全族；
 - 变更后重跑 `mysql.yml` 触发编排式滚动重启（从库先行、主库殿后），HA 集群预期仅主库切换瞬间有秒级写中断；
 - 平台默认值中可覆盖的典型项：`sql_require_primary_key`（默认 `ON`）、`long_query_time`（默认 `1`）、`binlog_expire_logs_seconds`（默认 7 天）、内存类参数。
 
@@ -229,7 +229,7 @@ mysql_exporter_enabled: true
 | 项目     | 值                                                                                                                                                                    |
 |:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 软件版本   | MySQL Server/Client/Shell/Router 8.4 LTS、Percona XtraBackup 8.4                                                                                                      |
-| 端口     | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO）、`9104`（Exporter）；INFRA 角色以只读参考常量 `mysql_exporter_port: 9104` 生成监控配置，它不是 MYSQL 的公开参数 |
+| 端口     | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO）、`9104`（Exporter）；Exporter 服务与 MySQL 目标注册均固定使用 `9104`，`mysql_exporter_port` 已从 INFRA 参考变量中移除，也不是 MYSQL 的公开参数 |
 | 数据目录   | `/var/lib/mysql`（Binlog 于 `binlog/` 子目录，7 天过期）                                                                                                                       |
 | 配置文件   | EL：`/etc/my.cnf.d/pigsty.cnf`；Debian/Ubuntu：`/etc/mysql/mysql.conf.d/pigsty.cnf`                                                                                     |
 | 服务单元   | MySQL：EL 为 `mysqld`，Debian/Ubuntu 为 `mysql`；Router：`mysqlrouter`；Exporter：`mysqld_exporter`                                                                          |

@@ -38,7 +38,7 @@ weight: 1950
 {.ext-table .ext-table--rel}
 
 
-> PG17-18; requires pgvector 0.7.0 or newer.
+> pgvector>=0.7; 0.20 changes recall_hybrid()/stats() returns; expansion defaults off; mark_recalled() updates recency.
 
 
 ## 版本

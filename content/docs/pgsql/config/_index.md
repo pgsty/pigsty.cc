@@ -18,9 +18,9 @@ Pigsty 是一个“配置驱动”的 PostgreSQL 平台：所有行为都来自 
 
 1. **准备清单**：复制 `pigsty/conf/*.yml` 模板或从零开始编写 Ansible Inventory，将集群分组（`all.children.<cls>.hosts`）与全局变量（`all.vars`）写入同一个文件。
 2. **定义参数**：在 `vars` 区块中覆盖需要的 [`PGSQL` 参数](/docs/pgsql/param)。全局 → 集群 → 主机的覆盖顺序决定了最终值。
-3. **应用配置**：运行 `./configure -c <conf>` 或 `bin/pgsql-add <cls>` 等剧本让配置落地。Pigsty 会根据参数生成 Patroni/pgbouncer/pgbackrest 等服务所需的配置文件。
+3. **生成与应用清单**：`./configure -c <conf>` 用所选模板生成 `pigsty.yml`；随后对尚未初始化的目标运行 `./pgsql.yml -l <cls>` 或 `bin/pgsql-add <cls>`，部署所需服务。已初始化集群的维护应使用对应专项剧本或标签。
 
-Pigsty 默认的 Demo 清单 `conf/pgsql.yml` 就是一份最小化示例：一个 `pg-meta` 集群、全局 `pg_version: 18`、少量业务用户与数据库定义。你可以在此基础上扩展更多集群。
+PostgreSQL 内核示例清单 `conf/fork/pgsql.yml` 就是一份最小化示例：一个 `pg-meta` 集群、全局 `pg_version: 18`、少量业务用户与数据库定义。你可以在此基础上扩展更多集群。
 
 
 ---------------------

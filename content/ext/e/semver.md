@@ -38,6 +38,9 @@ weight: 3510
 {.ext-table .ext-table--rel}
 
 
+> 0.42.0 changes hashing; REINDEX all semver hash indexes.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -50,39 +53,44 @@ weight: 3510
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 6 |
-| el8.aarch64 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 3 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 4 |
-| el9.x86_64 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 7 | AVAIL PIGSTY 0.42.0 6 |
-| el9.aarch64 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 |
-| el10.x86_64 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 |
+| el8.x86_64 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 7 |
+| el8.aarch64 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 4 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 |
+| el9.x86_64 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 8 | AVAIL PIGSTY 0.42.0 7 |
+| el9.aarch64 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 7 | AVAIL PIGSTY 0.42.0 7 |
+| el10.x86_64 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 | AVAIL PIGSTY 0.42.0 6 |
 | el10.aarch64 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 | AVAIL PIGSTY 0.42.0 5 |
-| d12.x86_64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| d12.aarch64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| d13.x86_64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| d13.aarch64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u22.x86_64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u22.aarch64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u24.x86_64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u24.aarch64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u26.x86_64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
-| u26.aarch64 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 | AVAIL PIGSTY 0.42.0 2 |
+| d12.x86_64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| d12.aarch64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| d13.x86_64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| d13.aarch64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u22.x86_64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u22.aarch64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u24.x86_64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u24.aarch64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u26.x86_64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
+| u26.aarch64 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 | AVAIL PGDG 0.42.0 3 |
 @ el8.x86_64 18 semver_18 semver_18-0.42.0-1PGSTY.el8.x86_64.rpm pigsty 0.42.0 45.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_18-0.42.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 semver_18 semver_18-0.42.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.42.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/semver_18-0.42.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/semver_18-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 semver_18 semver_18-0.40.0-1PGDG.rhel8.x86_64.rpm pgdg 0.40.0 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/semver_18-0.40.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 semver_18 semver_18-0.42.0-1PGSTY.el8.aarch64.rpm pigsty 0.42.0 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/semver_18-0.42.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 semver_18 semver_18-0.42.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.42.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/semver_18-0.42.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.41.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/semver_18-0.41.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel8.aarch64.rpm pgdg 0.40.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/semver_18-0.40.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.42.0-1PGSTY.el9.x86_64.rpm pigsty 0.42.0 45.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_18-0.42.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 semver_18 semver_18-0.42.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.42.0 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.42.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.40.0-1PGDG.rhel9.x86_64.rpm pgdg 0.40.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.40.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.42.0-1PGSTY.el9.aarch64.rpm pigsty 0.42.0 44.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_18-0.42.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 semver_18 semver_18-0.42.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.42.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.42.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel9.aarch64.rpm pgdg 0.40.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.40.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.42.0-1PGSTY.el10.x86_64.rpm pigsty 0.42.0 45.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_18-0.42.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 semver_18 semver_18-0.42.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.42.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.42.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.0.x86_64.rpm
@@ -92,43 +100,58 @@ weight: 3510
 @ el10.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.41.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.41.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.40.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg12+1_amd64.deb pgdg 0.42.0 42.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~bookworm_amd64.deb pigsty 0.42.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 39.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg12+1_arm64.deb pgdg 0.42.0 42.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~bookworm_arm64.deb pigsty 0.42.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg13+1_amd64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~trixie_amd64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg13+1_arm64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~trixie_arm64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg13+1_arm64.deb pgdg 0.41.0 38.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg22.04+1_amd64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~jammy_amd64.deb pigsty 0.42.0 36.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg22.04+1_amd64.deb pgdg 0.41.0 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg22.04+1_arm64.deb pgdg 0.42.0 42.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~jammy_arm64.deb pigsty 0.42.0 36.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg24.04+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~noble_amd64.deb pigsty 0.42.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg24.04+1_arm64.deb pgdg 0.42.0 42.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~noble_arm64.deb pigsty 0.42.0 36.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg26.04+1_amd64.deb pgdg 0.42.0 41.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~resolute_amd64.deb pigsty 0.42.0 35.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1.pgdg26.04+1_arm64.deb pgdg 0.42.0 41.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-semver postgresql-18-semver_0.42.0-1PGSTY~resolute_arm64.deb pigsty 0.42.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-18-semver_0.42.0-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 semver_17 semver_17-0.42.0-1PGSTY.el8.x86_64.rpm pigsty 0.42.0 44.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_17-0.42.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 semver_17 semver_17-0.42.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.42.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/semver_17-0.42.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/semver_17-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 semver_17 semver_17-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/semver_17-0.32.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 semver_17 semver_17-0.42.0-1PGSTY.el8.aarch64.rpm pigsty 0.42.0 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/semver_17-0.42.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 semver_17 semver_17-0.42.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.42.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/semver_17-0.42.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.41.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/semver_17-0.41.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 semver_17 semver_17-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/semver_17-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.42.0-1PGSTY.el9.x86_64.rpm pigsty 0.42.0 45.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_17-0.42.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 semver_17 semver_17-0.42.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.42.0 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.42.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.32.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.42.0-1PGSTY.el9.aarch64.rpm pigsty 0.42.0 44.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_17-0.42.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 semver_17 semver_17-0.42.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.42.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.42.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.42.0-1PGSTY.el10.x86_64.rpm pigsty 0.42.0 45.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_17-0.42.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 semver_17 semver_17-0.42.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.42.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.42.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.0.x86_64.rpm
@@ -138,43 +161,58 @@ weight: 3510
 @ el10.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.41.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.41.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 semver_17 semver_17-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.40.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg12+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~bookworm_amd64.deb pigsty 0.42.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg12+1_arm64.deb pgdg 0.42.0 42.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~bookworm_arm64.deb pigsty 0.42.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg13+1_amd64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~trixie_amd64.deb pigsty 0.42.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg13+1_arm64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~trixie_arm64.deb pigsty 0.42.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg13+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg22.04+1_amd64.deb pgdg 0.42.0 43.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~jammy_amd64.deb pigsty 0.42.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg22.04+1_amd64.deb pgdg 0.41.0 39.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg22.04+1_arm64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~jammy_arm64.deb pigsty 0.42.0 36.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg24.04+1_amd64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~noble_amd64.deb pigsty 0.42.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg24.04+1_arm64.deb pgdg 0.42.0 42.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~noble_arm64.deb pigsty 0.42.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg26.04+1_amd64.deb pgdg 0.42.0 41.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~resolute_amd64.deb pigsty 0.42.0 35.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1.pgdg26.04+1_arm64.deb pgdg 0.42.0 41.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-semver postgresql-17-semver_0.42.0-1PGSTY~resolute_arm64.deb pigsty 0.42.0 35.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-17-semver_0.42.0-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 semver_16 semver_16-0.42.0-1PGSTY.el8.x86_64.rpm pigsty 0.42.0 44.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_16-0.42.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 semver_16 semver_16-0.42.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.42.0 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/semver_16-0.42.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/semver_16-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 semver_16 semver_16-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/semver_16-0.32.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 semver_16 semver_16-0.42.0-1PGSTY.el8.aarch64.rpm pigsty 0.42.0 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/semver_16-0.42.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 semver_16 semver_16-0.42.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.42.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/semver_16-0.42.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.41.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/semver_16-0.41.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 semver_16 semver_16-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/semver_16-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.42.0-1PGSTY.el9.x86_64.rpm pigsty 0.42.0 45.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_16-0.42.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 semver_16 semver_16-0.42.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.42.0 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.42.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.32.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.42.0-1PGSTY.el9.aarch64.rpm pigsty 0.42.0 44.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_16-0.42.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 semver_16 semver_16-0.42.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.42.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.42.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.42.0-1PGSTY.el10.x86_64.rpm pigsty 0.42.0 45.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_16-0.42.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 semver_16 semver_16-0.42.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.42.0 29.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.42.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.0.x86_64.rpm
@@ -184,36 +222,49 @@ weight: 3510
 @ el10.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.41.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.41.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 semver_16 semver_16-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.40.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg12+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~bookworm_amd64.deb pigsty 0.42.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg12+1_arm64.deb pgdg 0.42.0 42.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~bookworm_arm64.deb pigsty 0.42.0 40.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg13+1_amd64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~trixie_amd64.deb pigsty 0.42.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg13+1_arm64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~trixie_arm64.deb pigsty 0.42.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg13+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg22.04+1_amd64.deb pgdg 0.42.0 43.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~jammy_amd64.deb pigsty 0.42.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg22.04+1_amd64.deb pgdg 0.41.0 39.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg22.04+1_arm64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~jammy_arm64.deb pigsty 0.42.0 36.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg24.04+1_amd64.deb pgdg 0.42.0 42.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~noble_amd64.deb pigsty 0.42.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg24.04+1_arm64.deb pgdg 0.42.0 42.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~noble_arm64.deb pigsty 0.42.0 35.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg26.04+1_amd64.deb pgdg 0.42.0 41.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~resolute_amd64.deb pigsty 0.42.0 35.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1.pgdg26.04+1_arm64.deb pgdg 0.42.0 41.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-semver postgresql-16-semver_0.42.0-1PGSTY~resolute_arm64.deb pigsty 0.42.0 35.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-16-semver_0.42.0-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 semver_15 semver_15-0.42.0-1PGSTY.el8.x86_64.rpm pigsty 0.42.0 45.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_15-0.42.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 semver_15 semver_15-0.42.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.42.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.42.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.32.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.32.0-1.rhel8.x86_64.rpm pgdg 0.32.0 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.32.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.31.2-1.rhel8.x86_64.rpm pgdg 0.31.2 40.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.31.2-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 semver_15 semver_15-0.42.0-1PGSTY.el8.aarch64.rpm pigsty 0.42.0 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/semver_15-0.42.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 semver_15 semver_15-0.42.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.42.0 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/semver_15-0.42.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.41.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/semver_15-0.41.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 semver_15 semver_15-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/semver_15-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 semver_15 semver_15-0.32.0-1.rhel8.aarch64.rpm pgdg 0.32.0 41.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/semver_15-0.32.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.42.0-1PGSTY.el9.x86_64.rpm pigsty 0.42.0 45.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_15-0.42.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.42.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.42.0 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.42.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.6.x86_64.rpm
@@ -221,12 +272,14 @@ weight: 3510
 @ el9.x86_64 15 semver_15 semver_15-0.32.0-1.rhel9.x86_64.rpm pgdg 0.32.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.32.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.31.2-1.rhel9.x86_64.rpm pgdg 0.31.2 40.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.31.2-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.42.0-1PGSTY.el9.aarch64.rpm pigsty 0.42.0 44.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_15-0.42.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 semver_15 semver_15-0.42.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.42.0 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.42.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.32.0-1.rhel9.aarch64.rpm pgdg 0.32.0 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.32.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.42.0-1PGSTY.el10.x86_64.rpm pigsty 0.42.0 46.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_15-0.42.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 semver_15 semver_15-0.42.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.42.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.42.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.0.x86_64.rpm
@@ -236,49 +289,64 @@ weight: 3510
 @ el10.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.41.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.41.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 semver_15 semver_15-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.40.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg12+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~bookworm_amd64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg12+1_arm64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~bookworm_arm64.deb pigsty 0.42.0 41.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg13+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~trixie_amd64.deb pigsty 0.42.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg13+1_arm64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~trixie_arm64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg13+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg22.04+1_amd64.deb pgdg 0.42.0 43.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~jammy_amd64.deb pigsty 0.42.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg22.04+1_amd64.deb pgdg 0.41.0 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg22.04+1_arm64.deb pgdg 0.42.0 42.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~jammy_arm64.deb pigsty 0.42.0 36.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg24.04+1_amd64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~noble_amd64.deb pigsty 0.42.0 36.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg24.04+1_arm64.deb pgdg 0.42.0 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~noble_arm64.deb pigsty 0.42.0 36.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg26.04+1_amd64.deb pgdg 0.42.0 41.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~resolute_amd64.deb pigsty 0.42.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1.pgdg26.04+1_arm64.deb pgdg 0.42.0 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-semver postgresql-15-semver_0.42.0-1PGSTY~resolute_arm64.deb pigsty 0.42.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-15-semver_0.42.0-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 semver_14 semver_14-0.42.0-1PGSTY.el8.x86_64.rpm pigsty 0.42.0 45.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_14-0.42.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 semver_14 semver_14-0.42.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.42.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.42.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.32.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.32.0-1.rhel8.x86_64.rpm pgdg 0.32.0 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.32.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.31.2-1.rhel8.x86_64.rpm pgdg 0.31.2 40.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.31.2-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.31.1-2.rhel8.x86_64.rpm pgdg 0.31.1 39.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.31.1-2.rhel8.x86_64.rpm
 @ el8.aarch64 14 semver_14 semver_14-0.42.0-1PGSTY.el8.aarch64.rpm pigsty 0.42.0 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/semver_14-0.42.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 semver_14 semver_14-0.42.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.42.0 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/semver_14-0.42.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.41.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/semver_14-0.41.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 semver_14 semver_14-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/semver_14-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 semver_14 semver_14-0.32.0-1.rhel8.aarch64.rpm pgdg 0.32.0 41.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/semver_14-0.32.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.42.0-1PGSTY.el9.x86_64.rpm pigsty 0.42.0 45.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_14-0.42.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 semver_14 semver_14-0.42.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.42.0 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.42.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.32.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.32.0-1.rhel9.x86_64.rpm pgdg 0.32.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.32.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.42.0-1PGSTY.el9.aarch64.rpm pigsty 0.42.0 44.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_14-0.42.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 semver_14 semver_14-0.42.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.42.0 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.42.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.32.0-1.rhel9.aarch64.rpm pgdg 0.32.0 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.32.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.42.0-1PGSTY.el10.x86_64.rpm pigsty 0.42.0 46.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_14-0.42.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 semver_14 semver_14-0.42.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.42.0 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.42.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.0.x86_64.rpm
@@ -288,24 +356,34 @@ weight: 3510
 @ el10.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.41.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.41.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 semver_14 semver_14-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.40.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg12+1_amd64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~bookworm_amd64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg12+1_arm64.deb pgdg 0.42.0 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~bookworm_arm64.deb pigsty 0.42.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg13+1_amd64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~trixie_amd64.deb pigsty 0.42.0 40.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg13+1_arm64.deb pgdg 0.42.0 42.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~trixie_arm64.deb pigsty 0.42.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg13+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg22.04+1_amd64.deb pgdg 0.42.0 43.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~jammy_amd64.deb pigsty 0.42.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg22.04+1_amd64.deb pgdg 0.41.0 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg22.04+1_arm64.deb pgdg 0.42.0 42.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~jammy_arm64.deb pigsty 0.42.0 36.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg24.04+1_amd64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~noble_amd64.deb pigsty 0.42.0 36.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~noble_amd64.deb
 @ u24.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg24.04+1_arm64.deb pgdg 0.42.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~noble_arm64.deb pigsty 0.42.0 36.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg26.04+1_amd64.deb pgdg 0.42.0 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~resolute_amd64.deb pigsty 0.42.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1.pgdg26.04+1_arm64.deb pgdg 0.42.0 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-semver postgresql-14-semver_0.42.0-1PGSTY~resolute_arm64.deb pigsty 0.42.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresql-semver/postgresql-14-semver_0.42.0-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
@@ -364,55 +442,32 @@ apt install -y postgresql-14-semver   # PG 14
 CREATE EXTENSION semver;
 ```
 
-
-
-
 ## 用法
 
-> [semver: 语义版本号数据类型](https://github.com/theory/pg-semver)
+来源：
 
-`semver` 扩展提供了实现 [语义版本号 2.0.0](https://semver.org/spec/v2.0.0.html) 的数据类型。
+- [doc/semver.md](https://github.com/theory/pg-semver/blob/fdaf74754e704897b4632b211d9b7740930ebe69/doc/semver.md)
+- [Changes](https://github.com/theory/pg-semver/blob/fdaf74754e704897b4632b211d9b7740930ebe69/Changes)
+- [semver.control](https://github.com/theory/pg-semver/blob/fdaf74754e704897b4632b211d9b7740930ebe69/semver.control)
+- [sql/semver--0.41.0--0.42.0.sql](https://github.com/theory/pg-semver/blob/fdaf74754e704897b4632b211d9b7740930ebe69/sql/semver--0.41.0--0.42.0.sql)
+
+`semver` 提供符合语义版本 2.0.0 的数据类型、比较运算符及 `semverrange` 范围类型。0.42.0 修改了哈希算法，升级后必须重建所有基于 semver 值的哈希索引。
+
+### 核心用法
 
 ```sql
 CREATE EXTENSION semver;
-
-SELECT '1.2.1'::semver;
-SELECT '1.2.0'::semver > '1.2.0-b1'::semver;  -- true（预发布版 < 正式版）
+SELECT '1.2.0'::semver > '1.2.0-b1'::semver;
+SELECT '1.2.0'::semver = '1.2.0+build1'::semver;
+SELECT to_semver('1.0'), is_semver('1.2.0');
+SELECT get_semver_major('4.2.0'::semver);
+SELECT '1.0.5'::semver <@ '[1.0.0,2.0.0)'::semverrange;
 ```
 
-### 运算符
+### 运行边界
 
-| 运算符 | 说明 | 示例 | 结果 |
-|----------|-------------|---------|--------|
-| `=` | 等于 | `'1.2.0'::semver = '1.2.00'::semver` | `t` |
-| `<>` | 不等于 | `'1.2.0'::semver <> '1.2.00'::semver` | `f` |
-| `<` | 小于 | `'3.4.0-b1'::semver < '3.4.0'::semver` | `t` |
-| `<=` | 小于等于 | `'3.4.0-b1'::semver <= '3.4.0'::semver` | `t` |
-| `>` | 大于 | `'3.4.0-b1'::semver > '3.4.0'::semver` | `f` |
-| `>=` | 大于等于 | `'3.4.0-b1'::semver >= '3.4.0'::semver` | `f` |
+`semver(text)` 及从 `text` 进行的类型转换要求合法的语义版本，`to_semver(text)` 提供较宽松的转换，`is_semver(text)` 检查格式有效性。`get_semver_major`、`get_semver_minor` 和 `get_semver_patch` 返回整数形式的版本部分，`get_semver_prerelease` 返回预发布文本。也支持从 `numeric`、`real`、`double precision`、`integer`、`bigint` 和 `smallint` 转换。0.42.0 会拒绝 Infinity 和 NaN，而不再产生格式错误的版本。
 
-### 函数
+比较运算符 `=`、`<>`、`<`、`<=`、`>`、`>=` 以及 `MIN(semver)` 和 `MAX(semver)` 遵循语义版本顺序。预发布版排在对应正式版之前，构建元数据不影响优先级。支持 Btree 和哈希索引，`semverrange` 支持标准范围操作。
 
-| 函数 | 说明 | 示例 | 结果 |
-|----------|-------------|---------|--------|
-| `to_semver(text)` | 宽松解析 | `to_semver('1.0')` | `1.0.0` |
-| `is_semver(text)` | 验证格式 | `is_semver('1.2.0')` | `true` |
-| `semver(text)` | 严格转换 | `semver('1.2.1')` | `1.2.1` |
-| `get_semver_major(semver)` | 主版本号 | `get_semver_major('4.2.0')` | `4` |
-| `get_semver_minor(semver)` | 次版本号 | `get_semver_minor('4.2.0')` | `2` |
-| `get_semver_patch(semver)` | 补丁版本号 | `get_semver_patch('4.2.0')` | `0` |
-| `get_semver_prerelease(semver)` | 预发布部分 | `get_semver_prerelease('2.1.0-b2+bfb13')` | `b2` |
-
-支持从 `text`、`numeric`、`real`、`double precision`、`integer`、`bigint`、`smallint` 类型的转换。
-
-### 范围类型
-
-`semverrange` 类型支持标准范围运算符：
-
-```sql
-SELECT '1.0.5'::semver <@ '[1.0.0, 2.0.0)'::semverrange;  -- true
-```
-
-### 聚合函数
-
-支持 `MIN(semver)` 和 `MAX(semver)`。可使用 Btree 和 Hash 索引。
+此原生扩展不受信任，需要管理员安装。安装 0.42.0 后，执行 `ALTER EXTENSION semver UPDATE`，并对所有包含 semver 键的已有哈希索引执行 REINDEX。仅更新扩展的 SQL 定义不会修复哈希变化带来的索引不兼容。本版还修正了以数字开头的字母数字预发布标识符排序，以及含多个加号的字符串校验。从较老版本升级时，还需检查上游兼容性说明，处理旧版曾接受的非法值。

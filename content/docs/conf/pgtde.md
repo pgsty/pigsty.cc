@@ -1,19 +1,21 @@
 ---
-title: pgtde
+title: fork/pgtde
 weight: 480
 description: Percona PostgreSQL 内核，提供透明数据加密 (pg_tde) 能力
 icon: fa-solid fa-lock
 categories: [参考]
 ---
 
-`pgtde` 配置模板使用 Percona PostgreSQL 数据库内核，提供透明数据加密 (Transparent Data Encryption, TDE) 能力。
+开发版配置路径为 `conf/fork/pgtde.yml`；v4.5.0 使用 `conf/pgtde.yml`，配置命令相应为 `-c pgtde`。
+
+`fork/pgtde` 配置模板使用 Percona PostgreSQL 数据库内核，提供透明数据加密 (Transparent Data Encryption, TDE) 能力。
 
 
 --------
 
 ## 配置概览
 
-- 配置名称： `pgtde`
+- 配置名称： `fork/pgtde`
 - 节点数量： 单节点
 - 配置说明：Percona PostgreSQL 透明数据加密配置
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -23,7 +25,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c pgtde [-i <primary_ip>]
+./configure -c fork/pgtde [-i <primary_ip>]
 ```
 
 
@@ -31,7 +33,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/pgtde.yml`](https://github.com/pgsty/pigsty/blob/main/conf/pgtde.yml)
+开发版源文件：`conf/fork/pgtde.yml`；发布版：[`v4.5.0：conf/pgtde.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgtde.yml)。
 
 {{< include file="yaml/pgtde.yml" code=true lang="yaml" >}}
 
@@ -40,7 +42,7 @@ categories: [参考]
 
 ## 配置解读
 
-`pgtde` 模板设置 `pg_mode: pgtde` 并安装 `pgtde` 包别名。Pigsty 会将私有
+`fork/pgtde` 模板设置 `pg_mode: pgtde` 并安装 `pgtde` 包别名。Pigsty 会将私有
 FHS 前缀 `/usr/pgtde-$v`（PostgreSQL 18 对应 `/usr/pgtde-18`）链接到稳定
 入口 `/usr/pgsql`。
 

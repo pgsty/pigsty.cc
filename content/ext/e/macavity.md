@@ -34,7 +34,7 @@ weight: 5215
 {.ext-table}
 
 
-> Testing release; destructive crash action affects the entire instance. Disposable test clusters only.
+> Test clusters only; a crash affects the instance; 0.2 breaks arm/disarm/status; reconnect, restore grants.
 
 
 ## 版本

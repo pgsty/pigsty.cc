@@ -38,7 +38,7 @@ weight: 7150
 {.ext-table .ext-table--rel}
 
 
-> SQL version 1.1; requires preload.
+> pkg 5.0; SQL 1.1; preload required.
 
 
 ## 版本

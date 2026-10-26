@@ -36,10 +36,10 @@ categories: [参考]
 |    [**`REDIS`**](/docs/redis)     |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |        **`code-server`**         | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用  |
-|    [**`KAFKA`**](/docs/kafka)     |           **`broker`**           | `9092`  | [**`kafka_port`**](/docs/kafka/param#kafka_port)                             | 🧪 BETA  |
-|    [**`KAFKA`**](/docs/kafka)     |      **`KRaft controller`**      | `9093`  | [**`kafka_controller_port`**](/docs/kafka/param#kafka_controller_port)       | 🧪 BETA  |
-|    [**`KAFKA`**](/docs/kafka)     |       **`kafka_exporter`**       | `9308`  | [**`kafka_exporter_port`**](/docs/kafka/param#kafka_exporter_port)           | 🧪 BETA  |
-|    [**`KAFKA`**](/docs/kafka)     |        **`JMX exporter`**        | `9404`  | [**`kafka_jmx_exporter_port`**](/docs/kafka/param#kafka_jmx_exporter_port)   | 🧪 BETA  |
+|    [**`KAFKA`**](/docs/kafka)     |           **`broker`**           | `9092`  | [**`kafka_port`**](/docs/kafka/param#kafka_port)                             | 🧪 PILOT  |
+|    [**`KAFKA`**](/docs/kafka)     |      **`KRaft controller`**      | `9093`  | [**`kafka_controller_port`**](/docs/kafka/param#kafka_controller_port)       | 🧪 PILOT  |
+|    [**`KAFKA`**](/docs/kafka)     |       **`kafka_exporter`**       | `9308`  | [**`kafka_exporter_port`**](/docs/kafka/param#kafka_exporter_port)           | 🧪 PILOT  |
+|    [**`KAFKA`**](/docs/kafka)     |        **`JMX exporter`**        | `9404`  | [**`kafka_jmx_exporter_port`**](/docs/kafka/param#kafka_jmx_exporter_port)   | 🧪 PILOT  |
 | [**`MYSQL`**](/docs/mysql/) |           **`mysqld`**           | `3306`  | 固定值（当前试点不提供端口参数）                                                             | 🧪 PILOT |
 | [**`MYSQL`**](/docs/mysql/) |      **`MySQL X Protocol`**      | `33060` | 固定值；单节点仅绑定回环地址，三节点拓扑对成员地址监听                                                  | 🧪 PILOT |
 | [**`MYSQL`**](/docs/mysql/) |     **`Group Replication`**      | `33061` | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
@@ -58,6 +58,8 @@ categories: [参考]
 |    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-offline`**  | `5438`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
 |    [**`PGSQL`**](/docs/pgsql)     | **`{{ pg_cluster }}-<service>`** | `543x`  | [**`pg_services`**](/docs/pgsql/param#pg_services)                           | ⚠️ 按需启用  |
 {.full-width}
+
+Kafka 的 `9404` 端口仅在 [`kafka_jmx_exporter_enabled`](/docs/kafka/param/#kafka_jmx_exporter_enabled) 为 `true` 时启用；`9308` 协议 Exporter 不受该开关控制。
 
 原生 MySQL 试点的 MySQL Shell AdminAPI 复用 `3306`，XtraBackup 由本机 Systemd 定时任务调用，没有独立监听端口；MySQL Router 的 REST 管理接口被角色显式禁用。上表只列出当前角色实际管理的网络入口。
 

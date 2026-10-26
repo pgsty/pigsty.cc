@@ -13,7 +13,7 @@ weight: 5420
 
 ## 摘要
 
-Pigsty 仓库中所有的 RPM / DEB 软件包都使用 GPG 密钥（指纹：`B9BD8B20`）进行签名，以确保软件包的完整性和来源的可信度。
+Pigsty 仓库使用以下 GPG 密钥验证发布来源：RPM 验证软件包签名，APT 验证仓库的 Release / InRelease 签名与包校验链；这不表示每个 DEB 文件都带有独立 GPG 签名。密钥短 ID 为 `B9BD8B20`，核验身份时应使用完整指纹。
 
 完整摘要： `9592A7BC7A682E7333376E09E7935D8DB9BD8B20` Ruohang Feng (Pigsty) [rh@vonng.com](mailto:rh@vonng.com)
 
@@ -47,13 +47,30 @@ curl -fsSL https://repo.pigsty.cc/key | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pi
 在 Debian / Ubuntu 兼容的 Linux 发行版上，你可以使用以下命令导入此密钥：
 
 ```bash {tab="默认" group="tab1-tab2" value="tab1"}
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 ```
 
 ```bash {tab="镜像" value="tab2"}
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 ```
 
+
+---------
+
+## GitHub 发布资产验证
+
+从 `v4.5.0` 的 [**GitHub 发布页面**](https://github.com/pgsty/pigsty/releases/tag/v4.5.0) 下载的源码、离线包和 `checksums` 都有同名 `.asc` 签名。先下载目标文件、对应 `.asc` 与该 tag 的 `KEYS`，再验证：
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/pgsty/pigsty/v4.5.0/KEYS
+gpg --import KEYS
+gpg --fingerprint B9BD8B20
+gpg --verify pigsty-v4.5.0.tgz.asc pigsty-v4.5.0.tgz
+```
+
+完整指纹应与上方列出的 `9592A7BC7A682E7333376E09E7935D8DB9BD8B20` 一致。离线包同样使用 `gpg --verify <包名>.asc <包名>`；SHA-256 列表见 [**离线安装**](/docs/setup/offline/#离线软件包)。
 
 ---------
 

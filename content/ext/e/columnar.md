@@ -38,7 +38,7 @@ weight: 2410
 {.ext-table .ext-table--rel}
 
 
-> conflict with citus columnar, obsolete, no longer maintained
+> Unmaintained; conflicts with citus_columnar; pkg 1.1.2, SQL 11.1-11.
 
 
 ## 版本

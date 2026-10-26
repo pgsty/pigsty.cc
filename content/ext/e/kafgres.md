@@ -34,7 +34,7 @@ weight: 9440
 {.ext-table}
 
 
-> PGSTY targets PG16; requires preload and broker readiness before topic SQL; segment logs need separate replication and archiving.
+> Preload/restart; broker readiness required; replicate/archive segment data separately.
 
 
 ## 版本

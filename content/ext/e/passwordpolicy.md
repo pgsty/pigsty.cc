@@ -38,7 +38,7 @@ weight: 7040
 {.ext-table .ext-table--rel}
 
 
-> Requires preload and cracklib dictionaries.
+> Preload and cracklib runtime required.
 
 
 ## 版本

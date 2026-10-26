@@ -1,7 +1,7 @@
 ---
 title: Babelfish
 weight: 2104
-description: 在 Pigsty 中使用 Babelfish（PG17/18）提供 SQL Server 协议/T-SQL 兼容能力
+description: 在 Pigsty 中使用 Babelfish 内核提供 SQL Server 协议/T-SQL 兼容能力
 icon: fab fa-microsoft
 module: [PGSQL]
 categories: [概念]
@@ -19,7 +19,7 @@ Pigsty 允许您使用 `mssql` 模式部署 Babelfish 内核，在 PostgreSQL �
 - T-SQL 语法兼容
 - 与 Pigsty 现有能力（高可用、备份、监控、IaC）统一集成
 
-在 Pigsty v4 中，Babelfish 支持 **PostgreSQL 17/18**，默认模板使用 `pg_version: 17`，并已经纳入 Pigsty 标准交付链路。支持所有 Linux 平台。
+默认模板固定使用 **PostgreSQL 17** 兼容的 Babelfish 内核，`configure -v` 不会覆盖模板中的 `pg_version: 17`。
 
 
 --------
@@ -28,8 +28,10 @@ Pigsty 允许您使用 `mssql` 模式部署 Babelfish 内核，在 PostgreSQL �
 
 使用 Pigsty 内置模板：
 
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mssql.yml)；开发版已迁移至 `conf/fork/mssql.yml`，对应使用 `-c fork/mssql`。
+
 ```bash
-./configure -c mssql [-v 17/18]
+./configure -c mssql
 ./deploy.yml
 ```
 
@@ -44,11 +46,11 @@ sqlcmd -S <ip>,1433 -U dbuser_mssql -P DBUser.MSSQL -d mssql
 
 ## 关键配置
 
-`mssql` 模板中的核心参数如下：
+`fork/mssql` 模板中的核心参数如下：
 
 ```yaml
 pg_mode: mssql
-pg_version: 17  # optional: 18
+pg_version: 17
 pg_packages: [ babelfish, pgsql-common, sqlcmd ]
 pg_libs: 'babelfishpg_tds, pg_stat_statements, auto_explain'
 
@@ -112,7 +114,7 @@ sqlcmd -S <任意节点IP>,5434 -U dbuser_mssql -P DBUser.MSSQL
 
 ## 相关文档
 
-- [`mssql` 配置模板](/docs/conf/mssql/)
+- [`fork/mssql` 配置模板](/docs/conf/mssql/)
 - [PGSQL 内核模式说明](/docs/pgsql/config/kernel/)
 - [SQL Server 官方 `sqlcmd` 文档](https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility)
 
@@ -121,7 +123,7 @@ sqlcmd -S <任意节点IP>,5434 -U dbuser_mssql -P DBUser.MSSQL
 
 ## 可用扩展
 
-Babelfish 内核共有 **55** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                                             | 版本号     | 说明                            |
 |:------------------------------------------------|:--------|:------------------------------|

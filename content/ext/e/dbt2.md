@@ -38,7 +38,7 @@ weight: 3220
 {.ext-table .ext-table--rel}
 
 
-> Package 0.62.0; SQL version 0.46.0.
+> pkg 0.62.0; SQL 0.46.0; stored functions only.
 
 
 ## 版本

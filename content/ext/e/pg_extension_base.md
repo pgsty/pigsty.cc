@@ -46,7 +46,7 @@ weight: 2561
 {.ext-table .ext-table--rel}
 
 
-> pg_lake preload entry point. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; preload manages pg_lake modules/workers.
 
 
 ## 版本

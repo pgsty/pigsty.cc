@@ -63,6 +63,7 @@ pig repo set all            # 删除现有仓库，添加上述仓库并更新�
 
 ```bash {tab="默认" group="tab1-tab2-tab3" value="tab1"}
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名，或者直接信任
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
 # 获取 Debian / Ubuntu 发行版代号（bookworm, trixie, jammy, noble, resolute）
@@ -79,6 +80,7 @@ sudo apt update
 ```bash {tab="镜像" value="tab2"}
 # 在中国大陆或 Cloudflare 不可用时使用
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名，或者直接信任
+sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
 # 获取 Debian / Ubuntu 发行版代号（bookworm, trixie, jammy, noble, resolute）
@@ -96,7 +98,7 @@ sudo apt update
 # 如果您不想信任任何 GPG 密钥，直接信任仓库
 distro_codename=$(lsb_release -cs)
 sudo tee /etc/apt/sources.list.d/pigsty-infra.list > /dev/null <<EOF
-deb [trust=yes] https://repo.pigsty.io/apt/infra generic main
+deb [trusted=yes] https://repo.pigsty.io/apt/infra generic main
 EOF
 
 sudo apt update

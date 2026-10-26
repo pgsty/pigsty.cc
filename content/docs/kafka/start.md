@@ -474,7 +474,7 @@ kafka_parameters:
   listeners: ...                  # 错误：角色拥有
 ```
 
-全部 15 项公开参数、默认值和保留键见 [参数参考](/docs/kafka/param)。
+全部 16 项公开参数、默认值和保留键见 [参数参考](/docs/kafka/param)。
 
 
 --------
@@ -524,7 +524,7 @@ kafka_parameters:
 | 您接下来要做什么                                           | 对应文档                         |
 |:---------------------------------------------------|:-----------------------------|
 | 规划 combined 或 Controller/Broker 分离拓扑、网络、Rack、存储与安全 | [集群配置](/docs/kafka/config)   |
-| 查找 15 项公开参数、默认值、Schema 和保留键                        | [参数参考](/docs/kafka/param)    |
+| 查找 16 项公开参数、默认值、Schema 和保留键                        | [参数参考](/docs/kafka/param)    |
 | 查看 Quorum、Topic、用户、消息、Consumer Group 与扩缩容操作        | [日常管理](/docs/kafka/admin)    |
 | 理解 `kafka.yml` 生命周期、严格滚动、轮换与集群下线                   | [预置剧本](/docs/kafka/playbook) |
 | 使用 Dashboard、告警、PromQL 和 VictoriaLogs              | [监控告警](/docs/kafka/monitor)  |

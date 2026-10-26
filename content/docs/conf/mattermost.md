@@ -17,7 +17,7 @@ categories: [参考]
 - 节点数量： 单节点（默认）
 - 配置说明：Mattermost + PostgreSQL + Docker 的开箱即用模板。
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
-- 适用架构：`x86_64`, `aarch64`
+- 应用镜像架构：`x86_64`（官方 Team Edition 镜像仅提供 `linux/amd64`；ARM64 模拟运行仅供测试）
 - 相关配置：[`app/odoo`](/docs/conf/odoo/)、[`app/registry`](/docs/conf/registry/)、[`supabase`](/docs/conf/supabase/)
 
 启用方式：
@@ -53,10 +53,12 @@ categories: [参考]
 
 - 默认开启 `docker_enabled: true`，并通过 `./docker.yml` 完成容器运行时准备。
 - Nginx 门户默认暴露 `mm.pigsty`（`infra_portal.mattermost`），支持 WebSocket。
-- 预置本地 Docker 网段 HBA 规则（`172.17.0.0/16`）供应用访问数据库。
+- 预置本地 Docker 网段 HBA 规则（`172.16.0.0/12`），仅允许应用账号访问 `mattermost` 数据库。
+- Calls 同时发布 `8443/TCP` 与 `8443/UDP`，数据目录由应用准备脚本设置为 `2000:2000`。
 - 可选启用 JuiceFS（注释块）将 `/data/mattermost` 挂载到 PostgreSQL 后端存储。
 
 注意事项：
 
 - 请在部署前修改数据库口令、域名与应用密码等敏感信息。
 - 若开放公网访问，建议配合 HTTPS、ACL 与防火墙规则。
+- Calls 媒体流量需放行 TCP 与 UDP；`node_firewall_public_port` 仅打开 TCP，详细要求见 [应用说明](/docs/app/mattermost/)。

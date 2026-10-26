@@ -45,7 +45,7 @@ weight: 2562
 {.ext-table .ext-table--rel}
 
 
-> Optional startup updater. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; optional startup updater via pg_extension_base, outside pg_lake CASCADE.
 
 
 ## 版本

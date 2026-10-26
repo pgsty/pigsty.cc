@@ -8,6 +8,8 @@ categories: [参考]
 aliases: [/docs/pilot/kafka]
 ---
 
+> [!NOTE] 源码版本范围
+> 本页按当前开发源码快照校对。`kafka_jmx_exporter_enabled` 于 2026-09-01 加入；已发布的 `v4.5.0` 标签尚不包含此参数，始终启用 JMX，持久公开参数仍为 15 项。本文的 16 项参数与关闭 JMX 的操作适用于包含该变更的源码版本。
 
 [Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.1+ 动态 KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
@@ -58,7 +60,7 @@ flowchart LR
     style grafana fill:#F29C64,stroke:#c77845,color:#fff
 ```
 
-每个 Kafka JVM 都注入 JMX Exporter 并注册为 `job=kafka`。协议型 `kafka_exporter` 只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群只运行一个，纯 Controller 不运行。它们返回的是同一逻辑集群视图，Recording Rule 会先去重再聚合。
+默认每个 Kafka JVM 都注入 JMX Exporter 并注册为 `job=kafka`，可通过 [`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 按实例关闭。协议型 `kafka_exporter` 只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群只运行一个，纯 Controller 不运行。它们返回的是同一逻辑集群视图，Recording Rule 会先去重再聚合。
 
 
 --------
@@ -69,7 +71,7 @@ flowchart LR
 |:-----------------------------|:--------------------------------------|
 | [快速上手](/docs/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
 | [集群配置](/docs/kafka/config)   | 拓扑、动态 KRaft、网络、存储、安全与资源声明             |
-| [参数参考](/docs/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
+| [参数参考](/docs/kafka/param)    | 16 项持久公开参数及临时运维变量                     |
 | [日常管理](/docs/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
 | [预置剧本](/docs/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |
 | [监控告警](/docs/kafka/monitor)  | 指标链路、Dashboard、日志查询与告警规则              |
@@ -96,7 +98,7 @@ flowchart LR
 | `9092` | Kafka Broker     | Broker-capable 节点      | PLAINTEXT   | SASL_SSL + SCRAM-SHA-512 |
 | `9093` | KRaft Controller | Controller-capable 节点  | PLAINTEXT   | 双向 TLS                   |
 | `9308` | kafka_exporter   | 最多两个 Broker-capable 节点 | HTTP 指标     | HTTP 指标，后端使用 TLS/SCRAM   |
-| `9404` | JMX Exporter     | 所有 Kafka 节点            | HTTP 指标     | HTTP 指标                  |
+| `9404` | JMX Exporter     | 启用 JMX 的 Kafka 节点     | HTTP 指标     | HTTP 指标                  |
 {.full-width}
 
 四个端口必须彼此不同，均可通过参数调整。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。

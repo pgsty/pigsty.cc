@@ -38,7 +38,7 @@ weight: 7180
 {.ext-table .ext-table--rel}
 
 
-> Configure oauth_validator_libraries='oidc_validator'. no valid license, distribution suspend
+> Distribution suspended: no upstream license grant; oauth_validator_libraries=oidc_validator.
 
 
 ## 版本

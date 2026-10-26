@@ -11,10 +11,14 @@ aliases: [/docs/pilot/kafka/metric]
 
 KAFKA 模块使用两类指标源，都注册在同一 `job=kafka` 采集任务下：JMX 目标（带 `role` 标签）采集每个 JVM 的内部状态；协议 Exporter 目标（无 `role` 标签）通过 Kafka 协议采集逻辑集群、Topic、Partition 与 Consumer Group 状态。协议 Exporter 只放在 `kafka_seq` 最小的至多两个 Broker-capable 节点上，单 Broker 集群只运行一个。
 
+JMX 默认启用，也可通过 [`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 按实例关闭；关闭后的指标与发现能力变化见 [**监控告警**](/docs/kafka/monitor#关闭-jmx-的影响)。
+
 JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、请求路径与 KRaft 指标；高基数的 per-client 与 per-partition JMX MBean 被有意排除，Partition 详情由协议 Exporter 提供。
 
 
 --------
+
+当前 [`files/victoria/rules/kafka.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/kafka.yml) 提供 **19 条** 模块记录规则；`kafka_up` 与 `kafka_exporter_up` 另由 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则) 生成，不计入这 19 条。JMX 白名单定义 **52 个不同的 Kafka 指标名**，不含 JVM 与采集器自身指标；是否实际出现取决于节点角色和对应 MBean。
 
 ## 公共标签
 

@@ -10,7 +10,7 @@ categories: [参考]
 
 Pigsty 提供 `app/maybe` 模板，将 Maybe 的无状态 Web / Worker 容器接入 Pigsty 托管的 PostgreSQL，并用本地 Redis 承载 Sidekiq 队列。这样您可以把最重要的财务数据放在可备份、可监控、可恢复的 PostgreSQL 集群中，而不是放在一个临时 Docker 数据卷里。
 
-> Maybe 上游仓库已经归档，最新 release 为 `v0.6.0`。GHCR 目前发布 `stable` 与 `latest` 镜像标签；Pigsty 默认使用 `stable`，即最新 release 语义的镜像。
+> Maybe 上游仓库已经归档。Pigsty 默认保留 `ghcr.io/maybe-finance/maybe:stable` 通道，源码验证快照为 `v0.6.0`；该通道不代表上游仍持续维护，需要可控回滚时记录并固定实际镜像摘要。
 
 ------
 

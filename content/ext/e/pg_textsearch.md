@@ -38,7 +38,7 @@ weight: 2190
 {.ext-table .ext-table--rel}
 
 
-> bm25 am conflicts with pg_search and vchord_bm25
+> bm25 conflicts with pg_search/vchord_bm25; optional compaction needs pg_durable>=0.2.8; PG19 experimental.
 
 
 ## 版本

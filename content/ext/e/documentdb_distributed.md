@@ -30,10 +30,10 @@ weight: 9020
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9000  | [**`documentdb`**](/ext/e/documentdb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-| 9010  | [**`documentdb_core`**](/ext/e/documentdb_core) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 9000  | [**`documentdb`**](/ext/e/documentdb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `documentdb_api` |
+| 9010  | [**`documentdb_core`**](/ext/e/documentdb_core) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `documentdb_core` |
 | 9020  | [**`documentdb_distributed`**](/ext/e/documentdb_distributed) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-| 9030  | [**`documentdb_extended_rum`**](/ext/e/documentdb_extended_rum) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 9030  | [**`documentdb_extended_rum`**](/ext/e/documentdb_extended_rum) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | `documentdb_extended_rum_catalog` |
 {.ext-table}
 
 | **相关扩展** | [`citus`](/ext/e/citus) [`documentdb_core`](/ext/e/documentdb_core) [`documentdb`](/ext/e/documentdb) [`mongo_fdw`](/ext/e/mongo_fdw) [`citus`](/ext/e/citus) [`pg_projection`](/ext/e/pg_projection) [`jsquery`](/ext/e/jsquery) [`pgbson`](/ext/e/pgbson) |
@@ -41,34 +41,37 @@ weight: 9020
 {.ext-table .ext-table--rel}
 
 
+> Internal Citus component; not shipped in the PGSTY DocumentDB 1.0 OSS packages. Historical 0.116 package metadata is retained; no current packaged availability is claimed. PGSTY DocumentDB supports PostgreSQL 16-18.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `documentdb` | `citus`, `documentdb_core`, `documentdb` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis36_$v` |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | {{< pgvers "18,17,16" >}} | `documentdb` | `citus`, `documentdb_core`, `documentdb` |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | - | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis36_$v` |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.116` | - | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PIGSTY 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -98,28 +101,25 @@ pig install documentdb;          # 当前活跃 PG 版本安装
 pig ext install -y documentdb -v 18  # PG 18
 pig ext install -y documentdb -v 17  # PG 17
 pig ext install -y documentdb -v 16  # PG 16
-pig ext install -y documentdb -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
 dnf install -y documentdb_18       # PG 18
 dnf install -y documentdb_17       # PG 17
 dnf install -y documentdb_16       # PG 16
-dnf install -y documentdb_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-documentdb   # PG 18
 apt install -y postgresql-17-documentdb   # PG 17
 apt install -y postgresql-16-documentdb   # PG 16
-apt install -y postgresql-15-documentdb   # PG 15
 ```
 
 
 **预加载配置**：
 
 ```bash
-shared_preload_libraries = 'citus, pg_documentdb, pg_documentdb_core';
+shared_preload_libraries = 'citus, pg_documentdb_core, pg_cron, pg_documentdb';
 ```
 
 
@@ -133,10 +133,10 @@ CREATE EXTENSION documentdb_distributed CASCADE;  -- 依赖: citus, documentdb_c
 
 来源：
 
-- [`documentdb_distributed` v0.117-0 控制文件](https://github.com/documentdb/documentdb/blob/v0.117-0/internal/pg_documentdb_distributed/documentdb_distributed.control)
-- [DocumentDB 包范围](https://github.com/documentdb/documentdb/blob/v0.117-0/packaging/README.md)
-- [官方预加载助手](https://github.com/documentdb/documentdb/blob/v0.117-0/scripts/preload_libraries.sh)
-- [DocumentDB v0.117-0 更新日志](https://github.com/documentdb/documentdb/blob/v0.117-0/CHANGELOG.md)
+- [`documentdb_distributed` v1.0-0 控制文件](https://github.com/documentdb/documentdb/blob/v1.0-0/internal/pg_documentdb_distributed/documentdb_distributed.control)
+- [DocumentDB 包范围](https://github.com/documentdb/documentdb/blob/v1.0-0/packaging/README.md)
+- [官方预加载助手](https://github.com/documentdb/documentdb/blob/v1.0-0/scripts/preload_libraries.sh)
+- [DocumentDB v1.0-0 更新日志](https://github.com/documentdb/documentdb/blob/v1.0-0/CHANGELOG.md)
 
 `documentdb_distributed` 是 DocumentDB 的内部多节点执行层。它将公共 `documentdb` API 与 Citus 集成；它不是一个独立的文档 API，并不会增加单独的客户端工作流程。
 
@@ -144,7 +144,7 @@ CREATE EXTENSION documentdb_distributed CASCADE;  -- 依赖: citus, documentdb_c
 
 所有节点需要匹配版本的 Citus、`documentdb_core`、`documentdb` 和 `documentdb_distributed`。官方助手会将库按预加载顺序放置；在更改后，请重启每个节点：
 
-```conf
+```ini
 shared_preload_libraries = 'pg_cron, citus, pg_documentdb_core, pg_documentdb, pg_documentdb_distributed, pg_documentdb_extended_rum'
 ```
 

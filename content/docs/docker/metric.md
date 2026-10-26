@@ -1,19 +1,20 @@
 ---
 title: 指标列表
 weight: 4240
-description: Pigsty Docker 模块提供的完整监控指标列表与释义
+description: Docker 指标采集入口与历史抓取样本。
 icon: fa-solid fa-list-check
 module: [DOCKER]
 categories: [参考]
 ---
 
-本页快照记录 [**`DOCKER`**](/docs/docker) 模块的 123 类监控指标；实际运行时的指标集合会随软件包版本、启用的采集器和目标状态变化。
+本页保留 [**`DOCKER`**](/docs/docker) 模块历史抓取中的 **122 个指标名称**。原始采集时间和 Docker Engine 版本未记录，不能作为当前版本的完整接口。其中 `up` 与 `scrape_*` 由采集系统生成，不属于 Docker Engine 原始输出。Histogram / Summary 的多个样本名称会分别占行，行数不等于指标族数量。
+
+当前抓取配置来自 [`roles/infra/templates/victoria/prometheus.yml`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/victoria/prometheus.yml)：任务从 `/infra/targets/docker/*.yml` 发现 Docker Engine 的 `/metrics` 端点，并将 `job` 重标记为 `node`。因此应按实际目标的 `instance` 与 `job="node"` 查询；不要仅用 `job="docker"` 判断采集是否存在。实际名称、类型与标签以运行中端点为准。`docker_up` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)，按 Docker 指标端口匹配抓取状态，不是 Docker Engine 原始指标。
 
 | Metric Name                                                  | Type    | Labels                                                                                                                                          | Description                                                          |
 |--------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | builder_builds_failed_total                                  | counter | `ip`, `cls`, `reason`, `ins`, `job`, `instance`                                                                                                 | Number of failed image builds                                        |
 | builder_builds_triggered_total                               | counter | `ip`, `cls`, `ins`, `job`, `instance`                                                                                                           | Number of triggered image builds                                     |
-| docker_up                                                    | Unknown | `ip`, `cls`, `ins`, `job`, `instance`                                                                                                           | N/A                                                                  |
 | engine_daemon_container_actions_seconds_bucket               | Unknown | `ip`, `cls`, `ins`, `job`, `instance`, `le`, `action`                                                                                           | N/A                                                                  |
 | engine_daemon_container_actions_seconds_count                | Unknown | `ip`, `cls`, `ins`, `job`, `instance`, `action`                                                                                                 | N/A                                                                  |
 | engine_daemon_container_actions_seconds_sum                  | Unknown | `ip`, `cls`, `ins`, `job`, `instance`, `action`                                                                                                 | N/A                                                                  |

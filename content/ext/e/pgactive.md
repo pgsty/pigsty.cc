@@ -38,7 +38,7 @@ weight: 9560
 {.ext-table .ext-table--rel}
 
 
-> Package 2.1.9; SQL version 2.1.8.
+> pkg 2.1.9; SQL 2.1.8; build needs libpgfeutils.
 
 
 ## 版本

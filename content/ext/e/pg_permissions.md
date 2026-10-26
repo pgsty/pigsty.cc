@@ -38,7 +38,7 @@ weight: 5140
 {.ext-table .ext-table--rel}
 
 
-> Package 1.4.1; SQL version 1.4.
+> pkg 1.4.1; SQL 1.4.
 
 
 ## 版本

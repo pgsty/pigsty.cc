@@ -38,7 +38,7 @@ weight: 8680
 {.ext-table .ext-table--rel}
 
 
-> SQL/control and tagged release version 2.3; PGXN distribution 2.3.0. Maintained in the local RPM and DEB recipes.
+> SQL/tag 2.3; PGXN 2.3.0; foreign-server USAGE required.
 
 
 ## 版本

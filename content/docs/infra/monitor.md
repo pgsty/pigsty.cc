@@ -14,7 +14,7 @@ categories: [参考]
 
 ## 监控面板
 
-Pigsty 针对 Infra 模块提供了以下监控面板：
+当前 [`files/grafana/infra`](https://github.com/pgsty/pigsty/tree/main/files/grafana/infra) 包含 **11 个** 监控面板；下表还列出根目录的 **Pigsty Home**。全站仪表盘与规则统计见 [**监控体系**](/docs/concept/monitor/)，指标入口与标签见 [**指标列表**](/docs/infra/metric/)。
 
 | 面板 | 描述 |
 |:-----|:-----|
@@ -44,6 +44,8 @@ Pigsty 针对 INFRA 模块提供了以下两条告警规则：
 | `InfraDown` | 基础设施组件出现宕机 |
 | `AgentDown` | 监控 Agent 代理出现宕机 |
 {.full-width}
+
+两条告警都在对应记录指标 `<1` 持续 1 分钟时触发，级别为 `CRIT`。其中 `AgentDown` 的范围由 `agent_up` 的实际排除列表决定，详见 [**当前记录规则**](/docs/infra/metric#当前记录规则)；不是所有 Exporter 都由这条告警覆盖。源码注释和告警摘要中仍有旧组件名称与 `type` 标签，当前注册模板使用 `cls` / `ins`，排查时以表达式和实际标签为准。
 
 可在 [`files/victoria/rules/infra.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/infra.yml) 中修改或添加新的基础设施告警规则。
 

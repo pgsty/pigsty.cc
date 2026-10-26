@@ -254,4 +254,4 @@ all:
     mysql_cluster_password: MySQL.Cluster
 ```
 
-完整模板见 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。注意 [`conf/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mysql.yml) 是 OpenHalo（PostgreSQL 内核的 MySQL 兼容方案）模板，与本模块无关。
+完整模板见 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。注意 `conf/fork/mysql.yml`（[**v4.5.0 对应模板**](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml) 位于 `conf/mysql.yml`） 是 OpenHalo（PostgreSQL 内核的 MySQL 兼容方案）模板，与本模块无关。

@@ -12,6 +12,10 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-08-15**：**Pigsty v4.5.0 正式发布！575 个扩展，Silo、Valkey，以及 Kafka / MySQL 试点模块**
+  - 发布说明：[**v4.5.0**](/docs/about/release#v450)
+  - 新增安全编排与可观测性改进，提供七个平台、双架构共 14 个离线包。
+
 - **2026-07-10**: **Pigsty v4.4.0 正式发布！支持 PG19 Beta，扩展总数达到 531**
   - 发布说明：[v4.4.0](/docs/about/release#v440)
   - 主要变化：PostgreSQL 18.4 / 19 beta 支持、531 个扩展、内核与软件包更新，以及 Pig CLI 改进。
@@ -113,6 +117,7 @@ categories: [参考]
 
 | 版本                                 |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:-----------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.5.0](/docs/about/release#v450) | 2026-08-15 | 575 个扩展，Silo / Valkey，Kafka / MySQL 试点，安全编排与监控更新 | [v4.5.0](https://github.com/pgsty/pigsty/releases/tag/v4.5.0) |
 | [v4.4.0](/docs/about/release#v440) | 2026-07-10 | PG19 Beta，531 个扩展，内核与软件包更新，Pig CLI 改进                      | [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)                             |
 | [v4.3.0](/docs/about/release#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持                | [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)                             |
 | [v4.2.2](/docs/about/release#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog                     | [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)                             |

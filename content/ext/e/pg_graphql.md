@@ -38,7 +38,7 @@ weight: 2740
 {.ext-table .ext-table--rel}
 
 
-> not an official release by Vonng.
+> Source/recipes use pgrx 0.19.2.
 
 
 ## 版本

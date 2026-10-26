@@ -64,7 +64,7 @@ curl -fsS http://<kafka-ip>:9404/metrics | grep -E '^(jmx_scrape_error|kafka_ser
 curl -fsS http://<exporter-ip>:9308/metrics | grep -E '^(kafka_brokers|kafka_topic_partitions)'
 ```
 
-`kafka_up` 与 `kafka_exporter_up` 是 VictoriaMetrics 侧的记录指标，不一定出现在原始端点。JMX 端点应包含 `jmx_scrape_error 0.0`、JVM 指标和与节点角色匹配的 `kafka_` 指标。
+`kafka_up` 与 `kafka_exporter_up` 是 VictoriaMetrics 侧的记录指标，不一定出现在原始端点。启用 JMX 时，端点应包含 `jmx_scrape_error 0.0`、JVM 指标和与节点角色匹配的 `kafka_` 指标；若已显式关闭 JMX，跳过 `9404` 检查，并按 [**监控告警**](/docs/kafka/monitor#关闭-jmx-的影响) 核对指标缺失范围。
 
 
 --------

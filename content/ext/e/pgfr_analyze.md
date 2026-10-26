@@ -39,7 +39,7 @@ weight: 6061
 {.ext-table .ext-table--rel}
 
 
-> Analyzer component from package 2.32.1.
+> pkg 2.32.1 overrides upstream control 0.0.0.
 
 
 ## 版本

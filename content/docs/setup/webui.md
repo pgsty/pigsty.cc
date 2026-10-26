@@ -21,7 +21,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 您可以通过在浏览器中键入部署节点 IP 地址来访问这个图形界面。在默认配置下，Nginx 将通过 `80/443` 标准端口对外提供服务。
 
 |           IP 直接访问           |     域名（HTTP）      | 域名（HTTPS）| Demo |
-|:----------------------:|:-----------:|:---------:|:-----------:|:------:|
+|:----------------------:|:-----------:|:---------:|:-----------:|
 | [**`http://10.10.10.10`**](http://10.10.10.10) | [**`http://i.pigsty`**](http://i.pigsty) | [**`https://i.pigsty`**](https://i.pigsty) | [**`https://demo.pigsty.cc`**](https://demo.pigsty.cc/zh) |
 {.full-width}
 
@@ -36,7 +36,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 要访问 Pigsty 的监控系统大盘（Grafana），您可以访问服务器的 `/ui` 端点。
 
 |           IP 直接访问           |     域名（HTTP）      | 域名（HTTPS）| Demo |
-|:----------------------:|:-----------:|:---------:|:-----------------------:|:----:|
+|:----------------------:|:-----------:|:---------:|:-----------------------:|
 | [**`http://10.10.10.10/ui`**](http://10.10.10.10/ui) | [**`http://i.pigsty/ui`**](http://i.pigsty/ui) | [**`https://i.pigsty/ui`**](https://i.pigsty/ui) | [**`https://demo.pigsty.cc/ui`**](https://demo.pigsty.cc/ui) |
 {.full-width}
 
@@ -76,7 +76,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 
 如果您有自己的域名，可以将其解析到 Pigsty 服务器的 IP 地址，从而通过域名访问 Pigsty 提供的各项服务。
 
-如果您希望启用 HTTPS，则应当修改 [**`infra_portal`**](/docs/infra/param#infra_portal) 参数中 [**`home`**](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml#L139) 服务器的配置：
+如果您希望启用 HTTPS，则应当修改 [**`infra_portal`**](/docs/infra/param#infra_portal) 参数中 [**`home`**](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) 服务器的配置：
 
 ```yaml
 all:

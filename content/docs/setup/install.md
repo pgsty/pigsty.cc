@@ -141,11 +141,13 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c rich          # 创建本地软件仓库，下载所有扩展，安装主要扩展
 ./configure -c slim          # 最小安装模板，与 ./slim.yml 剧本一起使用
 ./configure -c app/supa      # 使用 app/supa 自托管 supabase 配置模板
-./configure -c ivory         # 使用 ivorysql 内核而非原生 PG
+./configure -c ivory         # 使用 IvorySQL 内核
 ./configure -i 10.11.12.13   # 显式指定主 IP 地址
 ./configure -r china         # 使用中国镜像而非默认仓库
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
+
+开发版本将内核模板迁入 `conf/fork/`，对应命令为 `./configure -c fork/ivory`；上面的命令适用于 `v4.5.0` 发布包。
 
 下面展示的是当前 `main` 分支（{{< param version >}}）的输出；若安装其他版本，首行会显示对应版本号。
 
@@ -242,7 +244,7 @@ Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/pl
 > localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 > ```
 >
-> 当您看到输出尾部如果带有 `pgsql init done`，`PLAY RECAP` 等字样，说明安装已经完成！
+> 确认 `PLAY RECAP` 中所有目标主机的 `failed=0`、`unreachable=0`，再按需检查服务状态；单独出现 `pgsql init done` 或 `PLAY RECAP` 不代表整个部署成功。
 
 > [!WARNING] 上游软件仓库变更可能导致在线安装失败！
 > Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为不恰当的更新，进入崩溃状态并导致部署失败（有过多次先例）！

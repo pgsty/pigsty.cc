@@ -39,6 +39,9 @@ weight: 9130
 {.ext-table .ext-table--rel}
 
 
+> Module-only pkg 1.6; source control 1.6.0 is not installed.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |

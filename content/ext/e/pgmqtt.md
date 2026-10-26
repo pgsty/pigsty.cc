@@ -38,7 +38,7 @@ weight: 9620
 {.ext-table .ext-table--rel}
 
 
-> Requires preload for broker/CDC. CDC requires logical WAL; affected PostgreSQL releases also require pgmqtt in output_plugin_libraries.
+> CDC: preload, wal_level=logical; allow pgmqtt in output_plugin_libraries if exposed; upstream 0.5.1/pkg 0.4.1.
 
 
 ## 版本

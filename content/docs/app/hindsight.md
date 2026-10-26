@@ -43,6 +43,8 @@ vi pigsty.yml                 # 修改域名、数据库密码与 LLM 设置
 
 模板使用 `hindsight-cache` 命名卷保留预置及下载的模型。数据库需启用 `vector` 和位于 `public` 的 `pg_trgm`；复用其他模板数据库时先检查 `pg_trgm` 的位置，`CREATE EXTENSION IF NOT EXISTS` 不会移动已有扩展。
 
+健康检查通过容器内 Python 同时请求 API 的 `/health/ready` 和 UI 代理的 `/api/banks?limit=1`，确认代理能实际访问 API。修改容器内 `HINDSIGHT_API_PORT` 时，控制面使用的 `HINDSIGHT_CP_DATAPLANE_API_URL` 也会随之调整；宿主机发布端口可独立设置。
+
 ## 运维命令
 
 ```bash
@@ -50,6 +52,7 @@ cd /opt/hindsight
 make up
 make log
 make info
+make health
 make down
 make pull
 ```

@@ -6,10 +6,10 @@ weight: 1960
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://pgxn.org/dist/pgContext/0.2.0/">
+  <a class="ext-card ext-card--repo" href="https://pgxn.org/dist/pgcontext/0.3.0/">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">https://pgxn.org/dist/pgContext/0.2.0/</div>
-    <div class="ext-card__desc">https://pgxn.org/dist/pgContext/0.2.0/</div>
+    <div class="ext-card__title">https://pgxn.org/dist/pgcontext/0.3.0/</div>
+    <div class="ext-card__desc">https://pgxn.org/dist/pgcontext/0.3.0/</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgcontext-0.3.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -36,10 +36,11 @@ weight: 1960
 
 | **相关扩展** | [`vector`](/ext/e/vector) [`vectorize`](/ext/e/vectorize) [`vchord`](/ext/e/vchord) [`vectorscale`](/ext/e/vectorscale) [`pg_rrf`](/ext/e/pg_rrf) [`pg_search`](/ext/e/pg_search) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`vchord_bm25`](/ext/e/vchord_bm25) [`pgmnemo`](/ext/e/pgmnemo) [`pg_summarize`](/ext/e/pg_summarize) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) |
 {.ext-table .ext-table--rel}
 
 
-> PG17-18; 0.3.0 is clean-install-only and retires pgcontext_pgvector.
+> 0.3.0 requires clean install; no 0.1/0.2 upgrade; pgcontext_pgvector retired.
 
 
 ## 版本

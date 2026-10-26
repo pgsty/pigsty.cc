@@ -15,7 +15,7 @@ categories: [概念]
 
 Pigsty 允许使用 PolarDB 创建带有 “国产化信创资质” 的 PostgreSQL 集群！
 
-PolarDB for PostgreSQL 当前以 PostgreSQL 17 为基线，Pigsty 中的 `polar` 模板、默认路径与扩展说明也已经同步到 PG17。任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 PolarDB 集群。
+PolarDB for PostgreSQL 当前以 PostgreSQL 17 为基线，Pigsty 中的 `fork/polar` 模板、默认路径与扩展说明也已经同步到 PG17。任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 PolarDB 集群。
 
 Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在 Pigsty 安装时下载到本地软件仓库。
 
@@ -28,6 +28,8 @@ Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在
 ## 安装
 
 使用 Pigsty 内置模板：
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/polar.yml)；开发版已迁移至 `conf/fork/polar.yml`，对应使用 `-c fork/polar`。
 
 ```bash
 ./configure -c polar
@@ -45,7 +47,6 @@ Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在
 | 内核基线          | PostgreSQL 15               | PostgreSQL 17                      |
 | 默认 PolarDB 路径 | `/u01/polardb_pg`           | `/usr/polar-17`                    |
 | 支持架构          | `x86_64`                    | `x86_64`, `aarch64`                |
-| 可用扩展数         | 旧文档正文写为 61                  | `pg_available_extensions` 查询结果为 93，过滤 contrib 后为 34 |
 | 复制用户要求        | `replicator` 需要 `SUPERUSER` | 保持不变                               |
 {.full-width}
 
@@ -84,7 +85,7 @@ pg_default_roles:
 
 ## 扩展列表
 
-PolarDB PG 内核共有 **93** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+以下列出部分非 Contrib 扩展供参考；实际可用性与版本请在目标实例上 [**查询确认**](/docs/pgsql/kernel/#版本)。
 
 | 扩展名                                                       | 版本号       | 说明                                                                   |
 |:----------------------------------------------------------|:----------|:---------------------------------------------------------------------|

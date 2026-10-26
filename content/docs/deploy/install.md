@@ -202,7 +202,7 @@ Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/pl
 > localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 > ```
 >
-> 当您看到输出尾部如果带有 `pgsql init done`，`PLAY RECAP` 等字样，说明安装已经完成！
+> 确认 `PLAY RECAP` 中所有目标主机的 `failed=0`、`unreachable=0`，再按需检查服务状态；单独出现 `pgsql init done` 或 `PLAY RECAP` 不代表整个部署成功。
 
 > [!WARNING] 上游软件仓库变更可能导致在线安装失败！
 > Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为不恰当的更新，进入崩溃状态并导致部署失败（相当常见）！

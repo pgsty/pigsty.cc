@@ -1,15 +1,17 @@
 ---
 title: 参数参考
 weight: 4903
-description: KAFKA 模块 15 项持久公开参数与临时受保护运维变量。
+description: KAFKA 模块 16 项持久公开参数与临时受保护运维变量。
 icon: fa-solid fa-sliders
 module: [KAFKA]
 categories: [参考]
 aliases: [/docs/pilot/kafka/param]
 ---
 
+> [!NOTE] 源码版本范围
+> 本页按当前开发源码快照校对。`kafka_jmx_exporter_enabled` 于 2026-09-01 加入；已发布的 `v4.5.0` 标签尚不包含此参数，始终启用 JMX，持久公开参数仍为 15 项。本文的 16 项参数与关闭 JMX 的操作适用于包含该变更的源码版本。
 
-KAFKA 角色刻意只公开 15 项持久参数。拓扑、Listener、安全实现、存储子目录、复制安全与 Exporter 放置等细节由角色统一推导，不能作为额外持久变量覆盖。
+KAFKA 角色刻意只公开 16 项持久参数。拓扑、Listener、安全实现、存储子目录、复制安全与 Exporter 放置等细节由角色统一推导，不能作为额外持久变量覆盖。
 
 
 --------
@@ -28,6 +30,7 @@ KAFKA 角色刻意只公开 15 项持久参数。拓扑、Listener、安全实�
 | [`kafka_controller_port`](#kafka_controller_port)     |  实例   | `9093`          | KRaft Controller 端口                |
 | [`kafka_rack`](#kafka_rack)                           |  实例   | 未设置             | Broker 故障域标签                       |
 | [`kafka_parameters`](#kafka_parameters)               | 集群/实例 | `{}`            | 非角色自有 Broker 参数                    |
+| [`kafka_jmx_exporter_enabled`](#kafka_jmx_exporter_enabled) | 实例 | `true` | 启用内嵌 JMX Exporter Java Agent |
 | [`kafka_jmx_exporter_port`](#kafka_jmx_exporter_port) |  实例   | `9404`          | JMX Exporter HTTP 端口               |
 | [`kafka_exporter_port`](#kafka_exporter_port)         |  实例   | `9308`          | 协议 Exporter HTTP 端口                |
 | [`kafka_security`](#kafka_security)                   |  集群   | `plaintext`     | `plaintext` 或生产 `scram` 档位         |
@@ -190,9 +193,18 @@ listener.*
 
 ## 可观测性
 
+### `kafka_jmx_exporter_enabled`
+
+是否在该实例的 Kafka JVM 中启用 JMX Exporter Java Agent，默认 `true`。设为 `false` 后不加载 Java Agent，也不注册该实例的 JMX 抓取目标；独立的协议 Exporter 仍按原有规则运行。
+
+修改此参数后需要针对完整集群运行 `./kafka.yml -l <cls>`，让 JVM 通过滚动重启加载新配置。只运行 `-t register` 仅更新监控目标，不会改变已经运行的 JVM。
+
+关闭后，该实例的 JVM、KRaft、Broker 内部状态与实例存活指标及相应告警不可用。若整个集群都关闭 JMX，该集群还会从 Kafka Overview / Kafka Instance 的发现列表中消失，`KafkaDown` 无法继续检测它；Topic、Partition 与 Consumer Group 指标仍由协议 Exporter 提供。生命周期健康门禁使用 Kafka CLI/metadata 通道，不依赖 JMX。
+
+
 ### `kafka_jmx_exporter_port`
 
-JMX Exporter HTTP 端口，默认 `9404`。角色为每个 Kafka JVM 无条件注入 JMX Exporter Java Agent，并注册为 `job=kafka`；没有单独的开关参数。生命周期健康门禁使用角色自有 Kafka CLI/metadata 通道，不依赖 JMX。Infra 监控节点必须可以访问该端口；端点不因 `kafka_security: scram` 自动启用 HTTPS，应通过监控网络和防火墙保护。
+JMX Exporter HTTP 端口，默认 `9404`。仅在 [`kafka_jmx_exporter_enabled`](#kafka_jmx_exporter_enabled) 为 `true` 时监听并注册为 `job=kafka`。Infra 监控节点必须可以访问该端口；端点不因 `kafka_security: scram` 自动启用 HTTPS，应通过监控网络和防火墙保护。
 
 
 ### `kafka_exporter_port`
@@ -286,7 +298,7 @@ kafka_topics:
 
 ## 临时受保护运维变量
 
-以下变量只通过命令行 `-e` 用于一次性运维动作，不属于 15 项持久 API，也不应写入 `pigsty.yml`：
+以下变量只通过命令行 `-e` 用于一次性运维动作，不属于 16 项持久 API，也不应写入 `pigsty.yml`：
 
 | 动作     | 剧本             | 临时变量                                                                                | 保护条件                                     |
 |:-------|:---------------|:------------------------------------------------------------------------------------|:-----------------------------------------|

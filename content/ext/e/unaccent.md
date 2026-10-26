@@ -30,6 +30,7 @@ weight: 4990
 
 | **相关扩展** | [`dict_xsyn`](/ext/e/dict_xsyn) [`dict_int`](/ext/e/dict_int) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pgroonga`](/ext/e/pgroonga) [`icu_ext`](/ext/e/icu_ext) [`pg_xenophile`](/ext/e/pg_xenophile) [`citext`](/ext/e/citext) [`pg_trgm`](/ext/e/pg_trgm) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`textsearch_intl`](/ext/e/textsearch_intl) |
 {.ext-table .ext-table--rel}
 
 

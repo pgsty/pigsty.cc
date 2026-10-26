@@ -1,19 +1,21 @@
 ---
-title: mysql
+title: fork/mysql
 weight: 470
 description: OpenHalo 内核，提供 MySQL 协议与语法兼容能力
 icon: fa-solid fa-database
 categories: [参考]
 ---
 
-`mysql` 配置模板使用 OpenHalo 数据库内核替代原生 PostgreSQL，提供 MySQL 线缆协议与 SQL 语法兼容能力。
+开发版配置路径为 `conf/fork/mysql.yml`；v4.5.0 使用 `conf/mysql.yml`，配置命令相应为 `-c mysql`。
+
+`fork/mysql` 配置模板使用 OpenHalo 数据库内核替代原生 PostgreSQL，提供 MySQL 线缆协议与 SQL 语法兼容能力。
 
 
 --------
 
 ## 配置概览
 
-- 配置名称： `mysql`
+- 配置名称： `fork/mysql`
 - 节点数量： 单节点
 - 配置说明：OpenHalo MySQL 兼容内核配置
 - 适用系统：EL 8/9/10、Debian 12/13、Ubuntu 22/24/26
@@ -23,7 +25,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c mysql [-i <primary_ip>]
+./configure -c fork/mysql [-i <primary_ip>]
 ```
 
 
@@ -31,7 +33,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mysql.yml)
+开发版源文件：`conf/fork/mysql.yml`；发布版：[`v4.5.0：conf/mysql.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml)。
 
 {{< include file="yaml/mysql.yml" code=true lang="yaml" >}}
 
@@ -40,7 +42,7 @@ categories: [参考]
 
 ## 配置解读
 
-`mysql` 模板使用 OpenHalo 内核，让您可以使用 MySQL 客户端工具连接 PostgreSQL。
+`fork/mysql` 模板使用 OpenHalo 内核，让您可以使用 MySQL 客户端工具连接 PostgreSQL。
 
 **关键特性**：
 - 使用 MySQL 协议（端口 3306），兼容 MySQL 客户端

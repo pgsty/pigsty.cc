@@ -38,7 +38,7 @@ weight: 7410
 {.ext-table .ext-table--rel}
 
 
-> PGDG packages remain absent for PG18 on EL8 x86_64.
+> Source/recipe 1.4.1; indexed packages lag; PGDG gap: PG18/EL8/x86_64; rebuild needed.
 
 
 ## 版本

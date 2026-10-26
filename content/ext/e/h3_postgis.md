@@ -39,7 +39,7 @@ weight: 1531
 {.ext-table .ext-table--rel}
 
 
-> RPM and DEB 4.5.0 require h3, postgis and postgis_raster; point coordinates use longitude, latitude.
+> Points use longitude,latitude.
 
 
 ## 版本

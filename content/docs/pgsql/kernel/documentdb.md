@@ -15,14 +15,16 @@ aliases: [/docs/ferret/]
 持久化、事务、高可用、备份、监控与访问控制均由 PostgreSQL 侧负责；FerretDB 以 Pigsty Docker APP 的形式部署，只承担协议转换。
 
 Pigsty 是 FerretDB 社区的合作伙伴，提供 FerretDB 与 DocumentDB 扩展的二进制打包，
-并通过 [**`mongo`**](/docs/conf/mongo/) 配置模板开箱即用地交付整套组合。
+并通过 [**`fork/mongo`**](/docs/conf/mongo/) 配置模板开箱即用地交付整套组合。
 
 
 ------
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mongo`](/docs/conf/mongo/) 配置模板：
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`fork/mongo`](/docs/conf/mongo/) 配置模板：
+
+以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mongo.yml)；开发版已迁移至 `conf/fork/mongo.yml`，对应使用 `-c fork/mongo`。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -43,7 +45,7 @@ mongosh 'mongodb://mongod:DBUser.Mongo@127.0.0.1:27017/'
 
 ## 配置
 
-源文件：[`pigsty/conf/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mongo.yml)，完整模板说明见 [**Mongo 配置模板**](/docs/conf/mongo/) 文档。
+源文件：[`pigsty/conf/fork/mongo.yml`](/docs/conf/mongo/)，完整模板说明见 [**Mongo 配置模板**](/docs/conf/mongo/) 文档。
 
 PostgreSQL 侧的关键配置是 `documentdb` 扩展及其预加载库，以及供 FerretDB 使用的后端超级用户：
 

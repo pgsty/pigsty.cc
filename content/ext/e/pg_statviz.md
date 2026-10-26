@@ -33,12 +33,12 @@ weight: 6090
 | 6090  | [**`pg_statviz`**](/ext/e/pg_statviz) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgstatviz` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) `pgsampler` [`pgmonitor`](/ext/e/pgmonitor) `pg_mon` [`timescaledb`](/ext/e/timescaledb) `town` [`pg_stl`](/ext/e/pg_stl) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pgmonitor`](/ext/e/pgmonitor) [`timescaledb`](/ext/e/timescaledb) [`pg_stl`](/ext/e/pg_stl) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
 
-> Package/source 1.2.1 installs SQL extension 1.2. PIGSTY provides all RPM targets and Ubuntu 22.04 DEB; other DEB targets use PGDG 1.2.1. Pure SQL/PLpgSQL; no preload or Python CLI in the extension package.
+> Excluded from default package groups; pkg 1.2.1/SQL 1.2; no Python CLI; RPM Pigsty; DEB Pigsty u22/PGDG elsewhere.
 
 
 ## 版本
@@ -58,7 +58,7 @@ weight: 6090
 | el9.x86_64 | AVAIL PIGSTY 1.2.1 2 | AVAIL PIGSTY 1.2.1 2 | AVAIL PIGSTY 1.2.1 5 | AVAIL PIGSTY 1.2.1 7 | AVAIL PIGSTY 1.2.1 7 |
 | el9.aarch64 | AVAIL PIGSTY 1.2.1 2 | AVAIL PIGSTY 1.2.1 2 | AVAIL PIGSTY 1.2.1 5 | AVAIL PIGSTY 1.2.1 7 | AVAIL PIGSTY 1.2.1 7 |
 | el10.x86_64 | AVAIL PIGSTY 1.2.1 6 | AVAIL PIGSTY 1.2.1 3 | AVAIL PIGSTY 1.2.1 7 | AVAIL PIGSTY 1.2.1 7 | AVAIL PIGSTY 1.2.1 7 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.1 5 | AVAIL PIGSTY 1.2.1 3 | AVAIL PIGSTY 1.2.1 6 | AVAIL PIGSTY 1.2.1 6 | AVAIL PIGSTY 1.2.1 6 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.1 4 | AVAIL PIGSTY 1.2.1 2 | AVAIL PIGSTY 1.2.1 5 | AVAIL PIGSTY 1.2.1 5 | AVAIL PIGSTY 1.2.1 5 |
 | d12.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
 | d12.aarch64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
 | d13.x86_64 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 | AVAIL PGDG 1.2.1 3 |
@@ -82,7 +82,6 @@ weight: 6090
 @ el10.x86_64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.x86_64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 15.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-1.2.1-1PGSTY.el10.noarch.rpm pigsty 1.2.1 21.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statviz_extension_18-1.2.1-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-1.2-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 18 pg_statviz_extension_18 pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_statviz_extension_18-0.9-1PGDG.rhel10.0.noarch.rpm
@@ -122,7 +121,6 @@ weight: 6090
 @ el10.x86_64 17 pg_statviz_extension_17 pg_statviz_extension_17-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_statviz_extension_17-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 pg_statviz_extension_17 pg_statviz_extension_17-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_statviz_extension_17-1.2-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_statviz_extension_17 pg_statviz_extension_17-1.2.1-1PGSTY.el10.noarch.rpm pigsty 1.2.1 21.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statviz_extension_17-1.2.1-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 17 pg_statviz_extension_17 pg_statviz_extension_17-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_statviz_extension_17-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_statviz_extension_17 pg_statviz_extension_17-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_statviz_extension_17-1.2-2PGDG.rhel10.2.noarch.rpm
 @ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb pgdg 1.2.1 13.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.2.1-1.pgdg12+1_all.deb
 @ d12.x86_64 17 postgresql-17-statviz postgresql-17-statviz_1.1-1.pgdg12+1_all.deb pgdg 1.1 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-statviz/postgresql-17-statviz_1.1-1.pgdg12+1_all.deb
@@ -174,7 +172,6 @@ weight: 6090
 @ el10.x86_64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 15.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.x86_64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_statviz_extension_16-0.6-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-1.2.1-1PGSTY.el10.noarch.rpm pigsty 1.2.1 21.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statviz_extension_16-1.2.1-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-1.2-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 16 pg_statviz_extension_16 pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_statviz_extension_16-0.9-1PGDG.rhel10.0.noarch.rpm
@@ -237,7 +234,6 @@ weight: 6090
 @ el10.x86_64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 15.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.x86_64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_statviz_extension_15-0.6-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-1.2.1-1PGSTY.el10.noarch.rpm pigsty 1.2.1 21.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statviz_extension_15-1.2.1-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-1.2-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 15 pg_statviz_extension_15 pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_statviz_extension_15-0.9-1PGDG.rhel10.0.noarch.rpm
@@ -300,7 +296,6 @@ weight: 6090
 @ el10.x86_64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 15.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm
 @ el10.x86_64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.6-1PGDG.rhel10.noarch.rpm pgdg 0.6 12.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_statviz_extension_14-0.6-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-1.2.1-1PGSTY.el10.noarch.rpm pigsty 1.2.1 21.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statviz_extension_14-1.2.1-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-1.2-3PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-1.2-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-1.2-2PGDG.rhel10.2.noarch.rpm pgdg 1.2 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-1.2-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel10.1.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-0.9-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 14 pg_statviz_extension_14 pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm pgdg 0.9 14.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_statviz_extension_14-0.9-1PGDG.rhel10.0.noarch.rpm

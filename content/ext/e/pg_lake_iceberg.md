@@ -46,7 +46,7 @@ weight: 2565
 {.ext-table .ext-table--rel}
 
 
-> Iceberg component. Package 3.5.3; SQL 3.5.
+> pkg 3.5.3; SQL 3.5; plpgsql required by install SQL, absent from control.
 
 
 ## 版本

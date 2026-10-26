@@ -104,8 +104,8 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 
 > [!TIP] 推荐使用 Debian 12.15 / 13.6
 
-> [!CAUTION] Debian 11 EOL @ 2024-07
-> Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩展支持，请考虑我们的 [专业订阅服务](/docs/about/service)。
+> [!CAUTION] Debian 11 LTS 已结束
+> Debian 11 的常规支持于 2024-08-14 结束，LTS 于 **2026-08-31** 结束，详见 [**Debian 官方生命周期说明**](https://www.debian.org/releases/bullseye/)。当前 Pigsty 基线为 Debian 12 / 13；旧系统支持范围请咨询 [**专业订阅服务**](/docs/about/service)。
 
 
 ----------------
@@ -129,9 +129,9 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 
 ----------------
 
-## Terraform
+## OpenTofu
 
-当您使用云服务器部署 Pigsty 时，可以考虑在 Terraform 中使用以下操作系统基础镜像，以 [**阿里云**](https://help.aliyun.com/zh/ecs/release-notes-2/) 为例：
+当您使用云服务器部署 Pigsty 时，可以考虑在 [**OpenTofu**](/docs/deploy/terraform/) 模板中使用以下操作系统基础镜像，以 [**阿里云**](https://help.aliyun.com/zh/ecs/release-notes-2/) 为例：
 
 | **x86_64**     | 阿里云镜像前缀                |
 |:---------------|:-----------------------|

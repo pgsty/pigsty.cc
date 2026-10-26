@@ -1,12 +1,14 @@
 ---
-title: mssql
+title: fork/mssql
 weight: 420
 description: 固定使用 PostgreSQL 17 兼容 Babelfish 内核，提供 SQL Server 协议与 T-SQL 兼容能力
 icon: fa-brands fa-windows
 categories: [参考]
 ---
 
-`mssql` 配置模板使用 **PostgreSQL 17 兼容的 Babelfish** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。当前模板固定 `pg_version: 17`；`configure` 不会用 `-v` 覆盖此固定内核版本。
+开发版配置路径为 `conf/fork/mssql.yml`；v4.5.0 使用 `conf/mssql.yml`，配置命令相应为 `-c mssql`。
+
+`fork/mssql` 配置模板使用 **PostgreSQL 17 兼容的 Babelfish** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。当前模板固定 `pg_version: 17`；`configure` 不会用 `-v` 覆盖此固定内核版本。
 
 从 Pigsty v4.2 以来，Babelfish 由 Pigsty 直接构建，不再使用 WiltonDB 仓库，可在所有 [支持的 Linux 平台](/docs/ref/linux) 上使用。
 
@@ -17,7 +19,7 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `mssql`
+- 配置名称： `fork/mssql`
 - 节点数量： 单节点
 - 配置说明：Babelfish（PG17）配置模板，提供 SQL Server 协议兼容
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -27,7 +29,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c mssql [-i <primary_ip>]
+./configure -c fork/mssql [-i <primary_ip>]
 ```
 
 
@@ -35,7 +37,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/mssql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mssql.yml)
+开发版源文件：`conf/fork/mssql.yml`；发布版：[`v4.5.0：conf/mssql.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mssql.yml)。
 
 {{< include file="yaml/mssql.yml" code=true lang="yaml" >}}
 
@@ -44,7 +46,7 @@ categories: [参考]
 
 ## 配置解读
 
-`mssql` 模板让您可以使用 SQL Server Management Studio (SSMS) 或其他 SQL Server 客户端工具连接 PostgreSQL（Babelfish 协议层）。
+`fork/mssql` 模板让您可以使用 SQL Server Management Studio (SSMS) 或其他 SQL Server 客户端工具连接 PostgreSQL（Babelfish 协议层）。
 
 **关键特性**：
 - 使用 TDS 协议（端口 1433），兼容 SQL Server 客户端
@@ -74,7 +76,7 @@ sqlcmd -S 10.10.10.10,1433 -U dbuser_mssql -P DBUser.MSSQL -d mssql
 - 希望利用 PostgreSQL 生态同时保持 T-SQL 兼容性
 
 **注意事项**：
-- 当前 `mssql` 模板固定使用 PostgreSQL 17 兼容内核；不要依赖 `-v` 切换该模板的大版本
+- 当前 `fork/mssql` 模板固定使用 PostgreSQL 17 兼容内核；不要依赖 `-v` 切换该模板的大版本
 - 默认迁移模式为 `multi-db`（`babelfishpg_tsql.migration_mode`），可按需改为 `single-db`
 - 部分 T-SQL 语法可能存在兼容性差异，请参考 Babelfish 兼容性文档
 - 需要使用 `md5` 认证方式（而非 `scram-sha-256`）
