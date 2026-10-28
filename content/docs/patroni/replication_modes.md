@@ -5,28 +5,31 @@ icon: fa-solid fa-share-nodes
 description: "Patroni 管理的异步与同步复制模式。"
 module: [PATRONI]
 categories: [概念]
+upstream_link: "https://patroni.readthedocs.io/en/latest/replication_modes.html"
 ---
 
-> 原始页面： https://patroni.readthedocs.io/en/latest/replication_modes.html
-
 <a id="replication_modes"></a>
-Patroni 使用 PostgreSQL 流复制。关于流复制的更多信息，请参阅 [Postgres 文档](http://www.postgresql.org/docs/current/static/warm-standby.html#STREAMING-REPLICATION)。默认情况下，Patroni 将 PostgreSQL 配置为异步复制。选择哪种复制方案取决于你的业务需求。建议同时研究异步和同步复制，以及其他高可用方案，以确定最适合自己的解决方案。
+Patroni 使用 PostgreSQL 流复制。关于流复制的更多信息，请参阅 [Postgres 文档](http://www.postgresql.org/docs/current/static/warm-standby.html#STREAMING-REPLICATION)。默认情况下，Patroni 将 PostgreSQL 配置为异步复制。选择哪种复制方案取决于你的业务需求。请同时研究异步和同步复制，以及其他高可用方案，以确定最适合自己的解决方案。
 
 --------
 
-## 异步模式的持久性
+<div id="异步模式的持久性"></div>
+
+## 异步模式的持久性 {#asynchronous-mode-durability}
 
 在异步模式下，集群允许丢失部分已提交的事务以保证可用性。当主库故障或因任何其他原因变得不可用时，Patroni 会自动将一个足够健康的备库提升为主库。尚未复制到该备库的事务将残留在主库的"分叉时间线"中，实际上无法恢复[^1]。
 
 可能丢失的事务量通过 **`maximum_lag_on_failover`** 参数控制。由于主库事务日志位置不是实时采样的，故障转移时实际丢失数据量的最坏情况上限为：**`maximum_lag_on_failover`** 字节的事务日志，加上最后 **`ttl`** 秒内写入的数据量（平均情况约为 **`loop_wait`**/2 秒内的写入量）。然而，在典型的稳定状态下，复制延迟通常远低于一秒。
 
-默认情况下，执行领导者选举时，Patroni 不考虑从库的当前时间线，这在某些情况下可能并不合适。将 **`check_timeline`** 参数改为 **`true`**，可以防止时间线与前主库不同的节点成为新的领导者。
+默认情况下，执行领导者选举时，Patroni 不考虑从库的当前时间线，这在某些情况下可能并不合适。将 **`check_timeline`** 参数改为 **`true`**，可以防止时间线早于集群最后已知时间线、或无法确定时间线的节点成为新的领导者。
 
 --------
 
-## PostgreSQL 同步复制
+<div id="postgresql-同步复制"></div>
 
-你可以将 Postgres 的 [同步复制](http://www.postgresql.org/docs/current/static/warm-standby.html#SYNCHRONOUS-REPLICATION) 与 Patroni 配合使用。同步复制通过确认写入已写到从库后再向客户端返回成功，来保证集群的一致性。代价是写入延迟增加、写入吞吐量降低——吞吐量完全取决于网络性能。
+## PostgreSQL 同步复制 {#postgresql-synchronous-replication}
+
+你可以将 Postgres 的 [同步复制](http://www.postgresql.org/docs/current/static/warm-standby.html#SYNCHRONOUS-REPLICATION) 与 Patroni 配合使用。同步复制通过确认写入已写到从库后再向客户端返回成功，来保证集群的一致性。代价是写入延迟增加、写入吞吐量降低——吞吐量会受到网络性能的影响。
 
 在托管数据中心环境（如 AWS、Rackspace 或任何你无法控制的网络）中，同步复制会显著增加写入性能的波动性。如果从库无法从主库访问，主库实际上将变为只读。
 
@@ -37,7 +40,7 @@ synchronous_commit: "on"
 synchronous_standby_names: "*"
 ```
 
-使用 PostgreSQL 同步复制时，建议至少使用三个 Postgres 数据节点，以确保一台主机故障时写入仍然可用。
+使用 PostgreSQL 同步复制时，应至少使用三个 Postgres 数据节点，以确保一台主机故障时写入仍然可用。
 
 在所有情况下，使用 PostgreSQL 同步复制并不能保证零事务丢失。当主库和当前充当同步从库的备库同时故障时，可能会提升一个不包含所有事务的第三个节点。
 
@@ -45,31 +48,39 @@ synchronous_standby_names: "*"
 
 --------
 
-## 同步模式
+<div id="同步模式"></div>
 
-对于不允许丢失已提交事务的使用场景，你可以开启 Patroni 的 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode)。开启后，Patroni 只有在确认备库包含所有可能已向客户端返回成功提交状态的事务后，才会将其提升为主库[^2]。这意味着即使部分服务器可用，系统也可能无法进行写入。系统管理员仍然可以使用手动故障转移命令来提升备库，即使这会导致事务丢失。
+## 同步模式 {#synchronous-mode}
+
+对于不允许丢失已提交事务的使用场景，你可以开启 Patroni 的 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode)。开启 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 后，Patroni 只有在确认备库包含所有可能已向客户端返回成功提交状态的事务后，才会将其提升为主库[^2]。这意味着即使部分服务器可用，系统也可能无法进行写入。系统管理员仍然可以使用手动故障转移命令来提升备库，即使这会导致事务丢失。
 
 开启 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 并不能在所有情况下保证多节点的提交持久性。当没有合适的备库可用时，主库仍然会接受写入，但不保证数据已复制。此模式下主库故障时不会有备库被自动提升。当原主库重新上线后，它会被自动提升，除非系统管理员执行了手动故障转移。这一行为使得同步模式可以在两节点集群中使用。
 
-[`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 开启时，若备库崩溃，提交操作将阻塞，直到 Patroni 下一次迭代运行并将主库切换为独立模式（写入最坏延迟为 **`ttl`** 秒，平均情况约为 **`loop_wait`**/2 秒）。手动关闭或重启备库不会导致提交服务中断——备库会在 PostgreSQL 关闭启动前通知主库解除其同步备库职责。
+[`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 开启、严格模式关闭时，若唯一的同步备库崩溃，提交操作将阻塞，直到 Patroni 下一次迭代运行并将主库切换为独立模式（写入最坏延迟为 **`ttl`** 秒，平均情况约为 **`loop_wait`**/2 秒）。手动关闭或重启备库不会导致提交服务中断——备库会在 PostgreSQL 开始关闭之前通知主库解除其同步备库职责。
 
-当绝对有必要保证每次写入都持久存储在至少两个节点上时，请在开启 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 的同时启用 **`synchronous_mode_strict`**。该参数防止 Patroni 在没有同步备库候选节点时关闭主库上的同步复制。其缺点是，在至少一个同步从库上线之前，主库将不可用于写入（除非 Postgres 事务显式关闭 **`synchronous_commit`**），所有客户端写入请求都会被阻塞。
+当绝对有必要保证每次写入都持久存储在至少两个节点上时，请在开启 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 的同时启用 **`synchronous_mode_strict`**。该参数防止 Patroni 在没有同步备库候选节点时关闭主库上的同步复制。同步提交会一直阻塞，直到有同步从库可用；**`synchronous_commit`** 值为 **`off`** 或 **`local`** 的事务会绕过这段等待。
 
-将 **`nosync`** 标签设为 **`true`** 可以确保某个备库永远不会成为同步备库。建议对位于低速网络连接后方、成为同步备库时会导致性能下降的备库设置此标签。将 **`nostream`** 标签设为 **`true`** 也有相同效果。
+在基于优先级的同步模式（`synchronous_mode: on`）中，若启用了严格模式且没有合适的同步备库，Patroni 4.1.5 会将 **`synchronous_standby_names`** 设置为 `*`，并发出警告 `"No standbys available!"`。这会让提交继续等待同步备库。该通配符不会将确认限制在 **`/sync`** 中此前记录的成员名称范围内。
+
+将 **`nosync`** 标签设为 **`true`** 时，Patroni 会将该备库排除在同步备库选择范围之外。建议对位于低速网络连接后方、成为同步备库时会导致性能下降的备库设置此标签。将 **`nostream`** 标签设为 **`true`** 也有相同效果。
 
 同步模式可以通过 **`patronictl edit-config`** 命令或 Patroni REST 接口来开启和关闭。详见 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中的说明。
 
-注意：由于 PostgreSQL 中同步复制的实现方式，即使使用 **`synchronous_mode_strict`**，仍然有可能丢失事务。如果 PostgreSQL 后端在等待确认复制时被取消（由于客户端超时或后端故障导致的数据包取消），事务变更对其他后端已经可见。此类变更尚未完成复制，在备库提升的情况下可能会丢失。
+注意：由于 PostgreSQL 中同步复制的实现方式，即使使用 **`synchronous_mode_strict`**，仍然有可能丢失事务。如果 PostgreSQL 后端在等待确认复制时被取消（由于客户端超时发出取消请求或后端发生故障），事务变更对其他后端已经可见。此类变更尚未完成复制，在备库提升的情况下可能会丢失。
 
 --------
 
-## 同步复制因子
+<div id="同步复制因子"></div>
 
-参数 **`synchronous_node_count`** 用于 Patroni 管理同步备库数量，默认值为 **`1`**。当 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设置为 **`off`** 时，此参数无效。启用后，Patroni 根据 **`synchronous_node_count`** 精确管理同步备库数量，并随着成员的加入和离开调整 DCS 中的状态及 PostgreSQL 中的 **`synchronous_standby_names`**。如果该参数设置的值高于符合条件的节点数，Patroni 将自动降低该值。
+## 同步复制因子 {#synchronous-replication-factor}
+
+参数 **`synchronous_node_count`** 用于 Patroni 管理同步备库数量，默认值为 **`1`**。当 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设置为 **`off`** 时，此参数无效。启用后，Patroni 根据 **`synchronous_node_count`** 精确管理同步备库数量，并随着成员的加入和离开调整 DCS 中的状态及 PostgreSQL 中的 **`synchronous_standby_names`**。当符合条件的节点不足时，Patroni 可以使用少于请求数量的同步备库；但在严格的法定人数模式中，提交仍会等待配置数量的备库确认。
 
 --------
 
-## 同步节点的最大延迟
+<div id="同步节点的最大延迟"></div>
+
+## 同步节点的最大延迟 {#maximum-lag-on-synchronous-node}
 
 默认情况下，Patroni 会坚持使用根据 **`pg_stat_replication`** 视图已声明为 **`synchronous`** 的节点，即使存在其他进度更靠前的节点。这样做是为了尽量减少 **`synchronous_standby_names`** 的变更次数。要改变此行为，可以使用 **`maximum_lag_on_syncnode`** 参数，它控制从库最多可以落后多少，仍被视为"同步"状态。
 
@@ -77,7 +88,9 @@ Patroni 在存在多个备库时使用最大从库 LSN，否则使用主库当�
 
 --------
 
-## 同步模式的实现原理
+<div id="同步模式的实现原理"></div>
+
+## 同步模式的实现原理 {#synchronous-mode-implementation}
 
 在同步模式下，Patroni 在 DCS 的 **`/sync`** 键中维护同步状态，其中包含最新的主库及当前的同步备库。该状态的更新遵循严格的顺序约束，以确保以下不变式：
 
@@ -85,13 +98,17 @@ Patroni 在存在多个备库时使用最大从库 LSN，否则使用主库当�
 - 只要节点在 DCS 的 **`/sync`** 键中被发布为同步备库，它就必须在 PostgreSQL 中被设置为同步备库。
 - 既不是领导者也不是当前同步备库的节点，不允许自动提升自身。
 
-Patroni 将根据 **`synchronous_node_count`** 参数，仅将一个或多个同步备库分配给 **`synchronous_standby_names`**。
+对于非空的同步备库集合，Patroni 会根据 **`synchronous_node_count`**，将一个或多个同步备库分配给 **`synchronous_standby_names`**。
 
 在每次 HA 循环迭代中，Patroni 都会重新评估同步备库的选择。如果当前同步备库列表处于连接状态，且没有请求解除其同步状态，则继续保留。否则，将选择可用于同步且复制进度最靠前的集群成员。
 
-### 示例：
+<div id="示例"></div>
 
-#### DCS 中的 **`/config`** 键
+### 示例： {#example}
+
+<div id="dcs-中的-config-键"></div>
+
+#### DCS 中的 **`/config`** 键 {#config-key-in-dcs}
 
 ```yaml
 synchronous_mode: on
@@ -99,7 +116,9 @@ synchronous_node_count: 2
 ...
 ```
 
-#### DCS 中的 **`/sync`** 键
+<div id="dcs-中的-sync-键"></div>
+
+#### DCS 中的 **`/sync`** 键 {#sync-key-in-dcs}
 
 ```json
 {
@@ -108,7 +127,7 @@ synchronous_node_count: 2
 }
 ```
 
-#### postgresql.conf
+#### postgresql.conf {#postgresqlconf}
 
 ```ini
 synchronous_standby_names = 'FIRST 2 (node1,node2)'
@@ -120,7 +139,9 @@ synchronous_standby_names = 'FIRST 2 (node1,node2)'
 
 --------
 
-## 法定人数提交模式
+<div id="法定人数提交模式"></div>
+
+## 法定人数提交模式 {#quorum-commit-mode}
 
 从 PostgreSQL v10 起，Patroni 支持基于法定人数的同步复制。
 
@@ -132,11 +153,17 @@ synchronous_standby_names = 'FIRST 2 (node1,node2)'
 
 基于法定人数的同步模式可以通过 **`patronictl edit-config`** 命令或 Patroni REST 接口，将 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设置为 **`quorum`** 来启用。详见 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中的说明。
 
-其他参数如 **`synchronous_node_count`**、**`maximum_lag_on_syncnode`** 和 **`synchronous_mode_strict`**，在 **`synchronous_mode=on`** 下的工作方式与此相同。
+其他参数如 **`synchronous_node_count`**、**`maximum_lag_on_syncnode`** 和 **`synchronous_mode_strict`**，工作方式与 **`synchronous_mode=on`** 时相同。
 
-### 示例：
+在法定人数提交模式中，若同步备库集合为空，且严格模式要求 `N` 个备库确认，Patroni 4.1.5 会将 **`synchronous_standby_names`** 设置为 `ANY N (*)`。
 
-#### DCS 中的 **`/config`** 键
+<div id="示例-1"></div>
+
+### 示例： {#example-1}
+
+<div id="dcs-中的-config-键-1"></div>
+
+#### DCS 中的 **`/config`** 键 {#config-key-in-dcs-1}
 
 ```yaml
 synchronous_mode: quorum
@@ -144,7 +171,9 @@ synchronous_node_count: 2
 ...
 ```
 
-#### DCS 中的 **`/sync`** 键
+<div id="dcs-中的-sync-键-1"></div>
+
+#### DCS 中的 **`/sync`** 键 {#sync-key-in-dcs-1}
 
 ```json
 {
@@ -154,7 +183,7 @@ synchronous_node_count: 2
 }
 ```
 
-#### postgresql.conf
+#### postgresql.conf {#postgresqlconf-1}
 
 ```ini
 synchronous_standby_names = 'ANY 2 (node1,node2,node3)'

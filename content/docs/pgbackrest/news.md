@@ -6,9 +6,134 @@ description: "pgBackRest 项目新闻、版本发布公告与维护动态。"
 icon: fa-solid fa-newspaper
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/news.html"
 ---
 
-> 原始页面： <https://pgbackrest.org/news.html>
+--------
+
+## pgBackRest 2.60.0 正式发布 {#release-2-60-0}
+
+**2026 年 10 月 18 日**
+
+pgBackRest 社区很高兴地宣布 [pgBackRest](https://pgbackrest.org) 2.60.0 正式发布。pgBackRest 是一款可靠、易用的备份与恢复解决方案，可无缝扩展以应对超大规模数据库和工作负载。
+
+pgBackRest 为管理备份与恢复基础设施提供了丰富而强大的功能，包括：并行备份与恢复、全量/差异/增量备份、块级增量备份、多仓库、delta 恢复、并行异步归档、恶意软件/勒索软件防护、逐文件校验和、备份期间验证页面校验和（启用时）、多种压缩类型、加密、部分备份/失败备份续传、从备库执行备份、表空间与链接支持、S3/Azure/GCS/SFTP 支持、备份过期、本地或通过 SSH/TLS 进行远程操作、灵活配置，以及更多功能。
+
+pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org) 或 [PostgreSQL APT 仓库](https://apt.postgresql.org) 安装，许多其他发行版也提供相应软件包。源码可从 [版本发布](/docs/pgbackrest/release/) 页面下载。
+
+### 主要新功能与改进 {#release-2-60-0-feature}
+
+- 新增 checksum-page-error 选项，在页面校验和无效时报错 (Andrew Pogrebnoi)
+- 支持 GCS 工作负载身份联合 (Adol Rodriguez)
+- 从对象存储预取多个文件/范围的读取请求 (David Steele)
+- 减少发送给远程进程的保活请求 (David Steele)
+- 重试 Azure 响应中缺失的批处理子请求 (David Steele)
+- 减少重建 backup.info 时的清单检查 (David Steele)
+- 支持在 illumos 上构建 (Kalevi Kolttonen)
+- 支持 OpenSSL 4 (David Steele)
+- 更新网站设计 (David Steele, Jan Wieremjewicz)
+
+更多功能与改进请参阅 [2.60.0 版本说明](/docs/pgbackrest/release/#v2600-release-notes)。
+
+### 重要提示 {#release-2-60-0-note}
+
+- restore 命令现在会在任一恢复文件包含无效页面校验和时报错并停止，此时集群不完整、无法启动，必须重新执行恢复。如果保留的最旧备份将包含校验和错误，expire 命令现在会拒绝执行过期操作，该仓库中的归档也因此无法过期。设置 checksum-page-error=n 可改为仅发出警告。
+- 从 Git 检出目录构建时需要 PyYAML，不再需要 libyaml。发行版 tar 包包含生成的代码，两者均不需要。
+- v2.59.2 及后续版本（包括本版本）支持 PostgreSQL 19rc1。
+
+### 相关链接 {#release-2-60-0-link}
+
+- [网站](/docs/pgbackrest/)
+- [用户指南](/docs/pgbackrest/user-guide/)
+- [版本说明](/docs/pgbackrest/release/)
+
+### 赞助 {#release-2-60-0-sponsorship}
+
+感谢 [AWS](https://aws.amazon.com)、[Supabase](https://supabase.com)、[pgEdge](https://pgedge.com)、[Tiger Data](https://tigerdata.com)、[Percona](https://percona.com)、[Eon](https://eon.io)、[Xata](https://xata.io)、[Dalibo](https://dalibo.com) 和 [Data Egret](https://dataegret.com/) 的慷慨赞助，使本次发布成为可能。
+
+
+--------
+
+## 弱加密子密钥和盐值 {#weak-encryption}
+
+**2026 年 10 月 4 日**
+
+pgBackRest 2.59.3 之前的版本在生成加密所需的随机数据时，未检查是否发生错误。如果 OpenSSL 无法从操作系统获取随机数据，就会使用内存中已有的数据生成加密子密钥和盐值，且不报告错误。未启用加密的仓库不受影响。
+
+这种错误应该很少见。可能的原因包括沙箱或 seccomp 策略阻止 `getrandom()` 系统调用，以及 OpenSSL 配置无效。
+
+主要需要关注 `archive.info` 和 `backup.info` 中的子密钥。它们由 `stanza-create` 一次性生成，在 stanza 的整个生命周期内使用，因此升级不会替换弱子密钥。弱备份子密钥和盐值会随着备份与 WAL 的过期而被移除。
+
+### 影响 {#weak-encryption-impact}
+
+WAL 子密钥存储在 `archive.info` 中，清单子密钥存储在 `backup.info` 中。弱子密钥比随机子密钥更容易被猜出；猜出子密钥后，无需 `repo-cipher-pass` 即可解密用该子密钥加密的文件。具体容易多少取决于内存中的数据，而这些数据因平台和构建而异。`archive.info` 中的弱子密钥会使仓库中的所有 WAL 面临泄露风险。`backup.info` 中的弱子密钥会使所有备份面临泄露风险，因为清单使用它加密，而每份清单都存储着对应备份中文件的子密钥。这也包括升级后新增的 WAL 和备份。
+
+每次全量备份都会生成一个用于加密备份文件的子密钥，基于该全量备份的差异备份和增量备份也使用这个子密钥。弱备份子密钥会使这些备份中的文件面临泄露风险。
+
+弱盐值不会泄露子密钥。使用相同子密钥和盐值加密的文件会使用相同的密钥和 IV，因此这些文件中的相同数据会产生相同的密文。盐值以明文存储在每个文件的开头，弱盐值可能包含最多 8 字节此前位于内存中的数据。
+
+### 检查子密钥 {#weak-encryption-check-subkey}
+
+在能够访问仓库的主机上运行以下命令，将 `STANZA` 设为 stanza 名称。若要检查第一个仓库以外的仓库，请为 `pgbackrest` 命令添加 `--repo`。
+
+```bash
+STANZA=demo
+
+for file in archive/$STANZA/archive.info backup/$STANZA/backup.info; do
+    for key in $(pgbackrest --stanza=$STANZA repo-get $file | grep '^cipher-pass=' | grep -oE '[A-Za-z0-9+/]{64}'); do
+        echo "$(printf '%s' $key | base64 -d | od -An -v -tx1 | tr -s ' ' '\n' | grep -c '^00$') $file"
+    done
+done
+```
+
+第一列是子密钥中零字节的数量。随机子密钥包含 6 个或更多零字节的概率低于 25,000,000 分之一，而测试中发现的弱子密钥包含 13 个或更多零字节。包含 6 个或更多零字节的子密钥应视为弱子密钥。
+
+### OpenSSL 1.0 {#weak-encryption-openssl-1-0}
+
+pgBackRest 2.53 之前的版本可以使用 OpenSSL 1.0 构建。当其无法从操作系统获取随机数据时，会使用未经随机数据播种的状态生成随机数据。上述检查无法检测以这种方式生成的弱子密钥。
+
+### 修复措施 {#weak-encryption-remediation}
+
+- 升级到 pgBackRest 2.59.3 或更高版本；这些版本会在无法生成随机数据时报错。
+- 如果 `archive.info` 或 `backup.info` 中的子密钥是弱子密钥，请在新仓库中创建 stanza，旧仓库仅保留到不再需要其中备份为止。
+- 考虑在升级后执行一次新的全量备份，因为差异备份和增量备份会使用其全量备份的子密钥。
+- 弱备份子密钥和盐值会随着升级前的备份与 WAL 过期而被移除。保留期较长的备份会一直保留它们，直到这些备份过期。
+
+
+--------
+
+## pgBackRest 2.59.3 正式发布 {#release-2-59-3}
+
+**2026 年 10 月 4 日**
+
+pgBackRest 社区很高兴地宣布 [pgBackRest](https://pgbackrest.org) 2.59.3 正式发布。pgBackRest 是一款可靠、易用的备份与恢复解决方案，可无缝扩展以应对超大规模数据库和工作负载。
+
+pgBackRest 为管理备份与恢复基础设施提供了丰富而强大的功能，包括：并行备份与恢复、全量/差异/增量备份、块级增量备份、多仓库、delta 恢复、并行异步归档、恶意软件/勒索软件防护、逐文件校验和、备份期间验证页面校验和（启用时）、多种压缩类型、加密、部分备份/失败备份续传、从备库执行备份、表空间与链接支持、S3/Azure/GCS/SFTP 支持、备份过期、本地或通过 SSH/TLS 进行远程操作、灵活配置，以及更多功能。
+
+pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org) 或 [PostgreSQL APT 仓库](https://apt.postgresql.org) 安装，许多其他发行版也提供相应软件包。源码可从 [版本发布](/docs/pgbackrest/release/) 页面下载。
+
+### 缺陷修复 {#release-2-59-3-feature}
+
+- 修复可能生成弱加密子密钥或盐值的问题 (j0uinim)
+- 修复加载加密的信息文件和清单文件时可能出现校验和错误的问题 (j0uinim)
+
+其他修复和改进请参阅 [2.59.3 版本说明](/docs/pgbackrest/release/#v2593-release-notes)。
+
+### 重要提示 {#release-2-59-3-note}
+
+- 旧版本在访问系统随机数据出错时，可能生成弱加密子密钥和盐值。详情请参阅 [弱加密子密钥和盐值](/docs/pgbackrest/news/#weak-encryption)。
+
+### 相关链接 {#release-2-59-3-link}
+
+- [网站](/docs/pgbackrest/)
+- [用户指南](/docs/pgbackrest/user-guide/)
+- [版本说明](/docs/pgbackrest/release/)
+
+### 赞助 {#release-2-59-3-sponsorship}
+
+感谢 [AWS](https://aws.amazon.com)、[Supabase](https://supabase.com)、[pgEdge](https://pgedge.com)、[Tiger Data](https://tigerdata.com)、[Percona](https://percona.com)、[Eon](https://eon.io)、[Xata](https://xata.io)、[Dalibo](https://dalibo.com) 和 [Data Egret](https://dataegret.com) 的慷慨赞助，使本次发布成为可能。
+
+
 
 --------
 
@@ -165,7 +290,7 @@ pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org) 或 [Postg
 
 [Tiger Data](https://tigerdata.com) 是 TimescaleDB 的创建者，负责开发基于 PostgreSQL 构建的开源时序数据库，并运营面向时序、分析和 AI 工作负载的托管平台 Tiger Cloud。无论自主管理还是使用云服务，组织都可以大规模采集、存储和分析时序数据，覆盖从边缘到集中式云端的部署场景。
 
-[Percona](https://percona.com) 是一家开源数据库软件、支持与服务公司，致力于帮助组织完全掌控自己的数据基础设施。他们通过免费提供的开源软件、全天候专家支持和实际数据库经验，帮助企业安全高效地运行 MySQL、PostgreSQL、MongoDB、Valkey 和 Redis。
+[Percona](https://percona.com) 是一家开源数据库软件、支持与服务公司，致力于帮助组织完全掌控自己的数据基础设施。他们通过免费提供的开源软件、全天候（24/7）专家支持和实际数据库经验，帮助企业安全高效地运行 MySQL、PostgreSQL、MongoDB、Valkey 和 Redis。
 
 [Eon.io](https://eon.io) 提供面向备份、恢复和数据管理的智能云基础设施，帮助团队更高效地存储和访问备份，并使数据可用于分析和 AI 工作流。它为各类云环境中的 Postgres 和数据密集型工作负载提供快速、细粒度的恢复能力并显著降低存储成本，也能应对误删数据和 AI 智能体回归问题。
 

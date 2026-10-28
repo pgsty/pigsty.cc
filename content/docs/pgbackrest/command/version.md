@@ -6,9 +6,8 @@ description: "pgBackRest `version` 命令的选项与行为参考。"
 icon: fa-solid fa-tag
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-version"
 ---
-
-> 原始页面： [pgBackRest Command Docs: version](https://pgbackrest.org/command.html#command-version)
 
 显示已安装的 pgBackRest 版本。
 

@@ -6,9 +6,8 @@ description: "pgBackRest `repo-get` 命令选项与行为参考。"
 icon: fa-solid fa-file-arrow-down
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-repo-get"
 ---
-
-> 原始页面： [pgBackRest Command Docs: repo-get](https://pgbackrest.org/command.html#command-repo-get)
 
 `repo-get` 命令类似于 Unix 的 `cat` 命令，但支持所有仓库类型。使用此命令需要提供完整的文件名，主要用于管理、排查和测试目的，不是常规 pgBackRest 使用流程中的必需命令。
 
@@ -182,7 +181,7 @@ example: --raw
 
 启用保活（keep-alive）。
 
-在套接字连接上启用保活消息。
+在 socket 连接上启用保活消息。
 
 ```yaml
 default: y
@@ -191,11 +190,11 @@ example: --no-sck-keep-alive
 
 ### TCP 保活计数选项（`--tcp-keep-alive-count`）
 
-保活（keep-alive）计数。
+保活计数。
 
 在判定连接已断开之前，允许丢失的 TCP 保活消息数量。
 
-此选项仅在支持 `TCP_KEEPCNT` 套接字选项的系统上可用。
+此选项仅在支持 `TCP_KEEPCNT` socket 选项的系统上可用。
 
 ```yaml
 allowed: [1, 32]
@@ -204,11 +203,11 @@ example: --tcp-keep-alive-count=3
 
 ### TCP 保活空闲时间选项（`--tcp-keep-alive-idle`）
 
-保活（keep-alive）空闲时间。
+保活空闲时间。
 
 无网络活动持续多少秒后，操作系统开始发送 TCP 保活消息。
 
-此选项仅在支持 `TCP_KEEPIDLE` 套接字选项的系统上可用。
+此选项仅在支持 `TCP_KEEPIDLE` socket 选项的系统上可用。
 
 ```yaml
 allowed: [1, 3600]
@@ -217,11 +216,11 @@ example: --tcp-keep-alive-idle=60
 
 ### TCP 保活间隔选项（`--tcp-keep-alive-interval`）
 
-保活（keep-alive）间隔时间。
+保活间隔时间。
 
 未收到确认的 TCP 保活消息在多少秒后重新发送。
 
-此选项仅在支持 `TCP_KEEPINTVL` 套接字选项的系统上可用。
+此选项仅在支持 `TCP_KEEPINTVL` socket 选项的系统上可用。
 
 ```yaml
 allowed: [1, 900]
@@ -415,7 +414,7 @@ example: --repo1-azure-uri-style=path
 - `none` - 仓库不加密
 - `aes-256-cbc` - 256 位密钥长度的高级加密标准
 
-注意，即使仓库类型（如 S3）支持服务端加密，pgBackRest 也始终在客户端执行加密。
+注意，即使仓库类型（如 S3）本身支持加密，pgBackRest 也始终在客户端执行加密。
 
 ```yaml
 default: none
@@ -454,8 +453,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账号授权。
 - `service` - 使用本地存储的服务账号密钥。
 - `token` - 用于本地测试，例如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，认证令牌续期时将重新加载凭证。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -574,7 +578,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-设置了 `repo-host` 时仓库主机使用的端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 使用此选项为仓库主机协议指定非默认端口。
 
@@ -582,7 +586,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -596,7 +600,7 @@ example: --repo1-host-port=25
 
 支持以下协议类型：
 
-- `ssh` - Secure Shell。
+- `ssh` - 安全外壳协议（Secure Shell）。
 - `tls` - pgBackRest TLS 服务器。
 
 ```yaml
@@ -606,7 +610,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-设置了 `repo-host` 时仓库主机使用的用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义在仓库主机上执行操作的用户。建议使用非 `postgres` 用户，例如 `pgbackrest`。如果 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库拥有只读权限，避免意外损坏仓库内容。
 
@@ -623,7 +627,7 @@ example: --repo1-host-user=repo-user
 
 仓库是 pgBackRest 存储备份和归档 WAL 段的地方。
 
-事先估算所需空间可能比较困难。最佳做法是先执行几次备份，记录不同备份类型（全量/增量/差异）的大小，并测量每天生成的 WAL 量，以此作为空间规划的参考。随着数据库的演进，需求也会随时间变化。
+事先估算所需空间可能比较困难。最佳做法是先执行几次备份，记录不同备份类型（全量/增量/差异）的大小，并测量每天生成的 WAL 量，以此作为空间规划的参考。随着数据库的演进，需求也很可能随时间变化。
 
 ```yaml
 default: /var/lib/pgbackrest
@@ -658,13 +662,13 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
 - `web-id` - 自动获取 Web 身份凭据
 - `pod-id` - 自动获取 EKS Pod 身份凭据
-- `process` - 通过外部进程获取凭据
+- `process` - 通过执行进程获取凭据
 
 ```yaml
 default: shared
@@ -800,7 +804,7 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除支持 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
@@ -832,7 +836,7 @@ example: --repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-认证期间用于搜索 SFTP 主机匹配项的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号（~）开头的路径。该选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参见 `repo-sftp-host-check-type` 选项。
+认证期间用于搜索 SFTP 主机匹配项的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号（~）开头的路径。`repo-sftp-known-host` 选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参见 `repo-sftp-host-check-type` 选项。
 
 ```yaml
 example: --repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -908,6 +912,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port、repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -934,14 +964,14 @@ example: --repo1-storage-tag=key1=value1
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```
@@ -967,7 +997,7 @@ example: --no-repo1-storage-verify-tls
 
 S3、GCS 和 Azure 均支持版本化存储，但通常默认不启用。除了启用版本控制外，还可考虑为 S3 启用对象锁定，为 GCS 或 Azure 启用软删除。
 
-使用 `repo-target-time` 选项时，还必须同时指定 `repo` 选项。并非所有仓库类型都支持版本控制，通常针对单个仓库进行恢复更为合理。
+使用 `repo-target-time` 选项时，还必须同时指定 `repo` 选项。很可能并非所有仓库类型都支持版本控制，通常针对单个仓库进行恢复更为合理。
 
 注意，与存储时间戳的比较为 <=（小于等于）所提供的时间戳，且提供的时间戳中的毫秒部分将被截断。
 
@@ -988,7 +1018,7 @@ example: --repo-target-time=2024-08-08 12:12:12+00
 - `s3` - AWS 简单存储服务
 - `sftp` - 安全文件传输协议
 
-将 NFS 挂载用作 `posix` 仓库时，pgBackRest 遵循的规则与 PostgreSQL 文档中描述的相同，详见 [Creating a Database Cluster - File Systems](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+将 NFS 挂载用作 `posix` 仓库时，pgBackRest 遵循的规则与 PostgreSQL 文档中描述的相同，详见 [**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

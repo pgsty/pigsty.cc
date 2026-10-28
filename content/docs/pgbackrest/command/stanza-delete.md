@@ -6,13 +6,12 @@ description: "pgBackRest `stanza-delete` 命令的选项与行为参考。"
 icon: fa-solid fa-trash
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-stanza-delete"
 ---
-
-> 原始页面： [pgBackRest Command Docs: stanza-delete](https://pgbackrest.org/command.html#command-stanza-delete)
 
 `stanza-delete` 命令用于删除仓库中与指定 stanza 关联的所有数据。stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称。
 
-**警告：**
+警告：
 
 此命令会永久删除指定 stanza 在 pgBackRest 仓库中的所有备份和归档数据，请谨慎使用。
 
@@ -58,7 +57,7 @@ example: --allow-root
 
 I/O 操作的缓冲区大小。
 
-此选项设置用于复制、压缩、加密及其他操作的缓冲区大小。实际使用的缓冲区数量取决于具体操作，部分操作可能额外占用内存，例如 `gz` 压缩可能额外占用 256KiB。
+此选项设置用于复制、压缩、加密及其他操作的缓冲区大小。实际使用的缓冲区数量取决于具体选项，每个操作都可能额外占用内存，例如 `gz` 压缩可能额外占用 256KiB 内存。
 
 允许的值为 `16KiB`、`32KiB`、`64KiB`、`128KiB`、`256KiB`、`512KiB`、`1MiB`、`2MiB`、`4MiB`、`8MiB` 和 `16MiB`。
 
@@ -105,7 +104,7 @@ example: --config=/conf/pgbackrest/pgbackrest.conf
 
 附加 pgBackRest 配置文件的路径。
 
-该路径下扩展名为 `.conf` 的配置文件将与 pgBackRest 主配置文件合并，最终形成完整配置。
+该路径下扩展名为 `.conf` 的配置文件将与 pgBackRest 主配置文件拼接，合并为一个完整的配置文件。
 
 ```yaml
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
@@ -219,7 +218,7 @@ example: --no-sck-keep-alive
 
 stanza 是对一个 PostgreSQL 数据库集群的备份配置，定义了集群位置、备份方式、归档选项等。大多数数据库主机只有一个 PostgreSQL 集群，因此只有一个 stanza；备份主机则会为每个需要备份的数据库集群各配置一个 stanza。
 
-命名建议：相比使用本地集群名称（如 `main` 或 `prod`），更好的做法是根据集群中实际存放的数据来命名 stanza（如 `app` 或 `dw`），因为 stanza 名称同时用于主库和所有副本。
+用主集群名称命名 stanza 看似直观，但更好的做法是用名称描述集群中存储的数据库。由于 stanza 名称同时用于主库和所有副本，选用描述集群实际用途的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
 
 ```yaml
 example: --stanza=main
@@ -394,7 +393,7 @@ example: --no-log-timestamp
 
 使用此选项指定的版本，替代从 `pg_control` 或 WAL 头部自动检测的版本。此选项主要用于 PostgreSQL 分支版本或开发版本——这些版本中的相关值可能与发布版本不同。PostgreSQL 通过 `server_version_num` 上报的版本号必须与强制指定的版本一致。
 
-**警告：**
+警告：
 
 使用此选项需谨慎。`pg_control` 和 WAL 头部仍会按照指定版本的预期格式（即官方开源 PostgreSQL 的格式）读取。若分支版本或开发版本更改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常，只有当分支将所有自定义结构成员添加在标准 PostgreSQL 成员 *之后* 时，此选项才能按预期工作。
 
@@ -408,7 +407,9 @@ example: --pg-version-force=15
 
 设置仓库。
 
-指定命令操作的目标仓库。例如，可使用此选项从特定仓库执行恢复，而非由 pgBackRest 自动选择。
+指定命令操作的目标仓库。
+
+例如，可使用此选项从特定仓库执行恢复，而非由 pgBackRest 自动选择。
 
 ```yaml
 allowed: [1, 256]
@@ -504,8 +505,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账号自动授权。
 - `service` - 使用本地存储的密钥文件中的服务账号。
 - `token` - 用于本地测试，例如使用 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，凭据将在认证令牌续期时重新加载。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -624,7 +630,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-设置了 `repo-host` 时仓库主机的端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 使用此选项为仓库主机协议指定非默认端口。
 
@@ -632,7 +638,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -656,7 +662,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-设置了 `repo-host` 时仓库主机的用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义用于仓库主机操作的用户。建议使用非 `postgres` 的专用用户（如 `pgbackrest`）。若 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库具有读取权限，同时避免意外损坏仓库内容。
 
@@ -708,7 +714,7 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -850,13 +856,15 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希算法。较新版本的 `libssh2` 在支持 md5 和 sha1 的基础上，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
 ```
 
 ### SFTP 仓库主机端口选项（`--repo-sftp-host-port`）
+
+SFTP 仓库主机端口。
 
 SFTP 仓库主机端口。
 
@@ -880,7 +888,7 @@ example: --repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-认证过程中用于匹配 SFTP 主机的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将仅在这些文件中搜索匹配项。文件路径必须为绝对路径或以波浪号开头。此选项可多次传入以指定多个文件。若要使用已知主机文件检查，不得同时指定 `repo-sftp-host-fingerprint`。另请参见 `repo-sftp-host-check-type` 选项。
+认证过程中用于匹配 SFTP 主机的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将仅在这些文件中搜索匹配项。文件路径必须为绝对路径或以波浪号开头。`repo-sftp-known-host` 选项可多次传入以指定多个文件。若要使用已知主机文件检查，不得同时指定 `repo-sftp-host-fingerprint`。另请参见 `repo-sftp-host-check-type` 选项。
 
 ```yaml
 example: --repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -956,6 +964,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port、repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -982,14 +1016,14 @@ example: --repo1-storage-tag=key1=value1
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```
@@ -1020,7 +1054,7 @@ example: --no-repo1-storage-verify-tls
 - `s3` - AWS 简单存储服务
 - `sftp` - 安全文件传输协议
 
-使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中的描述相同，参见 [**Creating a Database Cluster - File Systems**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中的描述相同，参见 [创建数据库集群 - 文件系统](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix
@@ -1144,7 +1178,7 @@ example: --pg1-host-key-file=/path/to/client.key
 
 ### PostgreSQL 主机端口选项（`--pg-host-port`）
 
-设置了 `pg-host` 时 PostgreSQL 主机的端口。
+设置 `pg-host` 时，用于连接 PostgreSQL 主机的端口。
 
 使用此选项为 PostgreSQL 主机协议指定非默认端口。
 
@@ -1152,7 +1186,7 @@ example: --pg1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on pg-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --pg1-host-port=25
@@ -1176,7 +1210,7 @@ example: --pg1-host-type=tls
 
 ### PostgreSQL 主机用户选项（`--pg-host-user`）
 
-设置了 `pg-host` 时 PostgreSQL 主机的登录用户。
+设置 `pg-host` 时，用于登录 PostgreSQL 主机的用户。
 
 此用户同时作为远程 pgBackRest 进程的所有者，并负责发起与 PostgreSQL 的连接。为使其正常工作，该用户通常应为 PostgreSQL 数据库集群的所有者，默认为 `postgres`。
 

@@ -6,9 +6,8 @@ description: "PgBouncer 命令行用法与管理控制台"
 icon: fa-solid fa-bell-concierge
 module: [PGBOUNCER]
 categories: [任务]
+upstream_link: "https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/doc/usage.md"
 ---
-
-> 原始页面： <https://www.pgbouncer.org/usage.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/doc/usage.md)
 
 --------
 
@@ -221,20 +220,20 @@ avg_wait_time
 :   客户端等待服务端的时间（微秒），为当前 `stats_period` 内被分配到后端的客户端等待时间的平均值。
 
 avg_client_parse_count
-:   客户端创建预处理语句的平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
+:   客户端每秒创建的预处理语句平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
 
 avg_server_parse_count
-:   **pgbouncer** 在服务端创建预处理语句的平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
+:   **pgbouncer** 每秒在服务端创建的预处理语句平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
 
 avg_bind_count
-:   客户端准备执行并由 **pgbouncer** 转发给 PostgreSQL 的预处理语句平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
+:   客户端准备执行并由 **pgbouncer** 转发给 PostgreSQL 的预处理语句每秒平均数量。仅适用于命名预处理语句跟踪模式，参见 `max_prepared_statements`。
 
 avg_client_login_count
 :   每秒平均客户端成功登录次数。
 
 #### SHOW STATS_TOTALS
 
-**SHOW STATS** 的子集，仅显示总计值（**total_** 前缀字段）。
+显示按数据库累计的统计值，对应 **SHOW STATS** 中的 **total_** 字段。输出列名不带 **total_** 前缀，例如 **total_query_count** 在此命令中名为 **query_count**。
 
 
 #### SHOW STATS_AVERAGES
@@ -405,7 +404,7 @@ sv_active_cancel
 :   当前正在转发取消请求的服务端连接数。
 
 sv_being_canceled
-:   正常情况下可变为空闲，但正在等待所有发送到该服务端以取消查询的飞行中取消请求完成后才能变为空闲的服务端连接数。
+:   原本可转为空闲、但仍需等待发往该服务端的所有在途取消请求完成的服务端连接数。
 
 sv_idle
 :   未使用且可立即用于客户端查询的服务端连接数。
@@ -452,7 +451,7 @@ sv_login
 
 #### SHOW LISTS
 
-以列（而非行）形式显示以下内部信息：
+显示以下内部列表及其条目数，每个列表占一行，分别在 **list** 和 **items** 两列中输出列表名称与条目数。
 
 databases
 :   数据库数量。
@@ -460,8 +459,14 @@ databases
 users
 :   用户数量。
 
+peers
+:   已配置的对等节点数量。
+
 pools
 :   连接池数量。
+
+peer_pools
+:   对等连接池数量。
 
 free_clients
 :   空闲客户端数量。这些客户端已断开连接，但 PgBouncer 保留了为其分配的内存，以便后续客户端复用，避免重复分配。
@@ -485,7 +490,7 @@ dns_zones
 :   DNS 缓存中的 DNS 区域数量。
 
 dns_queries
-:   飞行中的 DNS 查询数量。
+:   在途 DNS 查询数量。
 
 dns_pending
 :   未使用。
@@ -496,13 +501,13 @@ name
 :   用户名。
 
 pool_size
-:   用户的覆盖 pool_size，未设置则为 NULL。
+:   用户单独设置的 pool_size，未设置时返回空字符串。
 
 reserve_pool_size
-:   用户的覆盖 reserve_pool_size，未设置则为 NULL。
+:   用户单独设置的 reserve_pool_size，未设置时返回空字符串。
 
 pool_mode
-:   用户的覆盖 pool_mode，未设置则为 NULL。
+:   用户单独设置的 pool_mode，未设置时返回 NULL。
 
 max_user_connections
 :   用户的 max_user_connections 设置。若未为该用户单独设置，则显示默认值。
@@ -546,7 +551,7 @@ server_lifetime
 :   此数据库服务端连接的最大生命周期。
 
 pool_mode
-:   数据库的覆盖 pool_mode，为 NULL 时使用默认值。
+:   数据库单独设置的 pool_mode，为 NULL 时使用默认值。
 
 load_balance_hosts
 :   若 host 包含逗号分隔列表，则显示数据库的 load_balance_hosts。
@@ -558,7 +563,7 @@ current_connections
 :   此数据库当前的服务端连接数。
 
 max_client_connections
-:   此 PgBouncer 实例允许的最大客户端连接数，由 max_db_client_connections 按数据库设置。
+:   此数据库允许的最大客户端连接数，由全局或数据库级 max_db_client_connections 设置。
 
 current_client_connections
 :   此数据库当前的客户端连接数。
@@ -749,13 +754,11 @@ SIGUSR2
 
 来自 Libevent 文档：
 
-> It is possible to disable support for epoll, kqueue, devpoll, poll
-> or select by setting the environment variable EVENT_NOEPOLL,
-> EVENT_NOKQUEUE, EVENT_NODEVPOLL, EVENT_NOPOLL or EVENT_NOSELECT,
-> respectively.
+> 可分别设置环境变量 EVENT_NOEPOLL、EVENT_NOKQUEUE、EVENT_NODEVPOLL、
+> EVENT_NOPOLL 或 EVENT_NOSELECT，禁用对 epoll、kqueue、devpoll、poll
+> 或 select 的支持。
 >
-> By setting the environment variable EVENT_SHOW_METHOD, libevent
-> displays the kernel notification method that it uses.
+> 设置环境变量 EVENT_SHOW_METHOD 后，Libevent 会显示其使用的内核通知机制。
 
 --------
 

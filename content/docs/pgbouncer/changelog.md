@@ -6,13 +6,21 @@ description: "PgBouncer 版本历史与发布说明"
 icon: fa-solid fa-scroll
 module: [PGBOUNCER]
 categories: [参考]
+upstream_link: "https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/NEWS.md"
 ---
-
-> 来源： <https://www.pgbouncer.org/changelog.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/NEWS.md)
 
 --------
 
 ## PgBouncer 1.26.x
+
+**2026-10-14  -  PgBouncer 1.26.1  -  "Only startup once（只启动一次）"**
+
+- 安全
+    * 修复 CVE-2026-107350：当客户端连接到不存在的数据库时，PgBouncer 1.17.0 至 1.26.0 会处理在 SCRAM 身份验证期间发送的第二条 StartupMessage。知道 `auth_file` 中某个用户密码的攻击者可利用此问题，以任何其他使用 SCRAM 身份验证的用户身份登录，包括管理员和后端超级用户。这要求两个用户均使用 SCRAM 身份验证。被冒充的用户既可以来自 `auth_file`，也可以来自 `auth_query`。
+    * 修复 CVE-2026-107349：未经身份验证的客户端可发送包含空选项名（如 `-c=`）的启动参数 `options`，使 PgBouncer 1.20.0 至 1.26.0 在一个 CPU 核心上无限循环，从而停止为所有客户端提供服务。只有在 `ignore_startup_parameters` 非空且不包含 `options` 时，此问题才可被利用。
+    * 修复 CVE-2026-107348：PgBouncer 1.21.0 至 1.26.0 的数据包缓冲区扩容逻辑存在整数溢出；当客户端发送声明长度超过 2^31 的数据包头时，可能使 PgBouncer 陷入无限循环。只有在 `max_packet_size` 设为 2147483649 或更大值时，此问题才可被利用；默认值 2147483647 不受影响。自 1.23.0 起，未经身份验证即可触发此问题。这与 CVE-2026-6668 属于同类缺陷，但位于另一种缓冲区实现中。
+- 修复
+    * 使 `ignore_startup_parameters` 优先于被跟踪的参数。自 1.26.0 起，`search_path` 默认被跟踪，导致 `ignore_startup_parameters = search_path` 悄然失效。该版本发布后，陆续收到多项有关 `search_path` 参数跟踪的缺陷报告。这些缺陷将在后续版本中解决。现在，将 `search_path` 加入 `ignore_startup_parameters` 可恢复 1.25 中忽略它的行为。（引入自 1.26.0）
 
 **2026-09-23  -  PgBouncer 1.26.0  -  "Ignore all previous search_path（忽略此前所有 search_path）"**
 
@@ -151,14 +159,14 @@ categories: [参考]
 - 功能
     * 新增 LDAP 认证支持！可通过 HBA 文件或使用 `auth_ldap_options` 进行配置。（[#731]）
     * 新增客户端侧直连 TLS 支持。这使客户端能够使用 PostgreSQL 17 引入的更快速的 TLS 连接建立方式。PgBouncer 暂不支持通过此更快方式连接 PostgreSQL 服务器。（[#1359]）
-    * 在 `SHOW CLIENTS` 中新增空闲状态字段。（[#1191]）
+    * 在 `SHOW CLIENTS` 中新增空闲（idle）状态。（[#1191]）
     * 新增 `transaction_timeout` 设置，支持全局配置及用户级别配置。（[#1242]）
     * 若客户端排队等待超过 5 秒仍未获得连接，则向客户端发送 NOTICE 消息。此时长可通过 `query_wait_notify` 修改或禁用。（[#1264]）
     * 新增 `scram_iterations` 设置，允许运维人员在安全性与认证速度之间做出权衡。（[#1339]）
     * 新增 `client_tls13_ciphers` 与 `server_tls13_ciphers`，用于选择启用哪些 TLSv1.3 加密套件。（[#1352]）
 - 变更
     * 大幅提升临时 SCRAM 认证的性能。（[#1338]）
-    * 允许 `KILL` 命令不指定数据库，此时表示终止所有数据库。（[#1317]）
+    * 允许 `KILL` 命令不指定数据库，此时表示对所有数据库执行 `KILL`。（[#1317]）
     * 健康检查查询默认改为发送空查询，而非 `SELECT 1`。（[#1233]）
     * 将完整的 PAM 队列记录为警告日志，便于排查由此引起的慢查询原因。（[#1297]）
     * `RELOAD` 命令现在会报告重载过程中发生的任何错误。（[#1231]）
@@ -229,14 +237,14 @@ categories: [参考]
   * 新增 `max_db_client_connections` 设置，支持全局配置及数据库级别配置。（[#1138]）
   * 在 `SHOW USERS` 和 `SHOW DATABASES` 输出中新增 `current_client_connections` 计数器。（[#1137]，[#1138]）
   * 新增 `load_balance_hosts` 参数，支持 **禁止** 在多个主机之间进行负载均衡。（[#736]）
-  * 在 `SHOW STATS` 中暴露预备语句使用计数器。（[#1192]）
+  * 在 `SHOW STATS` 中暴露预处理语句使用计数器。（[#1192]）
   * 新增 `client_idle_timeout` 设置。（[#1189]）
   * 新增用户级别的 `query_timeout` 和 `reserve_pool_size`。（[#1180]，[#1228]）
   * 在 HBA 文件中启用 `pam` 认证支持。（[#326]）
 
 - 变更
   * TLS 配置未发生变更时，`RELOAD` 不再回收连接。此前只要执行 RELOAD，所有 TLS 连接都会被回收，可能导致短暂但严重的性能下降。现在仅在 TLS 设置实际发生变更时才会触发回收。（[#1157]）
-  * 默认启用预备语句支持，`max_prepared_statements` 默认值现为 200。此默认值变更仅影响实际使用预备语句的客户端。如果您使用预备语句，建议阅读 [文档][prepared-docs] 中关于预备语句支持限制的说明。（[#1144]）
+  * 默认启用预处理语句支持，`max_prepared_statements` 默认值现为 200。此默认值变更仅影响实际使用预处理语句的客户端。如果您使用预处理语句，建议阅读 [文档][prepared-docs] 中关于预处理语句支持限制的说明。（[#1144]）
   * 套接字、客户端和服务器现在可通过唯一 ID 在管理输出中进行标识。此前使用指针标识，但指针在断开连接后常被新客户端复用。（[#1172]）
   * 对空 pidfile 提供更清晰的错误提示。（[#1195]）
   * `server_login_retry` 失败时，将原始错误返回给客户端。（[#1152]）
@@ -343,7 +351,7 @@ categories: [参考]
 **2024-03-04  -  PgBouncer 1.22.1  -  "It's summer in Bangalore（班加罗尔的夏天）"**
 
 - 修复
-  * 修复部分客户端使用 `COPY FROM STDIN` 查询时引发的问题。此类查询可能导致内存泄漏、性能回退以及预备语句行为异常。 ([#1025])
+  * 修复部分客户端使用 `COPY FROM STDIN` 查询时引发的问题。此类查询可能导致内存泄漏、性能回退以及预处理语句行为异常。 ([#1025])
     （漏洞引入自 1.21.0）
   * 在发布压缩包中补充缺失的测试用例 ([#1026])
     （测试文件缺失问题引入自 1.19.0 和 1.21.0）
@@ -379,10 +387,10 @@ categories: [参考]
 
 ## PgBouncer 1.21.x
 
-**2023-10-16  -  PgBouncer 1.21.0  -  "The one with prepared statements（预备语句版本）"**
+**2023-10-16  -  PgBouncer 1.21.0  -  "The one with prepared statements（预处理语句版本）"**
 
 - 功能
-  * 新增对协议层命名预备语句的支持！这可能是 PgBouncer 呼声最高的功能之一。将预备语句与 PgBouncer 配合使用，可以大幅降低系统的 CPU 负载（PgBouncer 侧和 PostgreSQL 侧均如此）。在合成基准测试中，该功能能够将查询吞吐量提升 15% 至 250%，具体幅度取决于工作负载。要使用此新功能，需要将新参数 `max_prepared_statements` 设置为非零值（具体数值取决于您的工作负载，100 通常是一个合理的起点）。有关该功能的工作原理、限制及调优方法，请参阅 [`max_prepared_statements` 文档](/docs/pgbouncer/config/#max_prepared_statements)。完成配置后，还需确保您的客户端库实际使用了预备语句，具体方式因客户端而异，请参阅所使用客户端的文档。该功能在发布前经过了充分测试，但由于其复杂性，仍可能存在性能问题或缺陷，如有发现请及时反馈。 ([#845])
+  * 新增对协议层命名预处理语句的支持！这可能是 PgBouncer 呼声最高的功能之一。将预处理语句与 PgBouncer 配合使用，可以大幅降低系统的 CPU 负载（PgBouncer 侧和 PostgreSQL 侧均如此）。在合成基准测试中，该功能能够将查询吞吐量提升 15% 至 250%，具体幅度取决于工作负载。要使用此新功能，需要将新参数 `max_prepared_statements` 设置为非零值（具体数值取决于您的工作负载，100 通常是一个合理的起点）。有关该功能的工作原理、限制及调优方法，请参阅 [`max_prepared_statements` 文档](/docs/pgbouncer/config/#max_prepared_statements)。完成配置后，还需确保您的客户端库实际使用了预处理语句，具体方式因客户端而异，请参阅所使用客户端的文档。该功能在发布前经过了充分测试，但由于其复杂性，仍可能存在性能问题或缺陷，如有发现请及时反馈。 ([#845])
 
 - 变更
   * 改进 OpenSSL 安全设置，之前使用的默认值已严重过时。此版本起默认值与运行 PgBouncer 的系统 OpenSSL 默认值保持一致。 ([#948] 及 [libusual/#41])
@@ -441,7 +449,7 @@ categories: [参考]
   * 引入 `track_extra_parameters` 参数，允许在事务池化模式下追踪更多参数。此前 PgBouncer 仅追踪 `application_name`、`DateStyle`、`TimeZone` 和 `standard_conforming_strings`。此版本起，PgBouncer 默认还追踪 `IntervalStyle`。通过修改 `track_extra_parameters`，可以追踪更多设置，但仅限于 [PostgreSQL 会向客户端回报的参数][guc_report]。如果使用 Citus 12.0 及以上版本，Citus 会确保 PostgreSQL 也将 `search_path` 回报给客户端，因此可以将 `search_path` 添加到 `track_extra_parameters` 设置中。 ([#867])
   * 在认证阶段转发 SQLSTATE，这允许检测数据库不存在的情况，该功能由 Npgsql（.NET 的 PostgreSQL 数据提供程序）使用。 ([#814])
   * 将 `server_tls_sslmode` 的默认值更改为 `prefer`。 ([#866])
-  * 新增对 `options` 启动参数的支持，允许使用 [psql 和 libpq 所支持的 `PGOPTIONS` 环境变量][pgoptions]，通过该变量可以在启动时设置任意 PostgreSQL 参数。此功能仅适用于 PgBouncer 通过 `track_extra_parameters` 追踪的 PostgreSQL 参数。 ([#878])
+  * 新增对 `options` 启动参数的支持，允许使用 [`psql` 和 `libpq` 所支持的 `PGOPTIONS` 环境变量][pgoptions]，通过该变量可以在启动时设置任意 PostgreSQL 参数。此功能仅适用于 PgBouncer 通过 `track_extra_parameters` 追踪的 PostgreSQL 参数。 ([#878])
 
 - 修复
   * 修复将 `pgbouncer` 管理数据库用作 `auth_dbname` 时的崩溃问题。该用法仍不受支持，但现在会给出明确的错误提示而非直接崩溃。 ([#817])
@@ -534,7 +542,7 @@ categories: [参考]
   * 修复若干可能导致崩溃的问题。
     ([#700](https://github.com/pgbouncer/pgbouncer/pull/700)，
     [#730](https://github.com/pgbouncer/pgbouncer/pull/730))
-  * 修复逗号分隔主机列表功能中的整数溢出缺陷，该缺陷会导致连接被错误路由到 UNIX 套接字。
+  * 修复逗号分隔主机列表功能中的溢出缺陷，该缺陷会导致连接被错误路由到 UNIX 套接字。
     ([#747](https://github.com/pgbouncer/pgbouncer/pull/747))
   * 不再为维持 `min_pool_size` 而驱逐现有连接。
     ([#648](https://github.com/pgbouncer/pgbouncer/pull/648))
@@ -598,7 +606,7 @@ categories: [参考]
 - 功能
   * 支持 TLS 设置的热重载。重载配置文件时，变更的 TLS 设置会自动生效。
   * 新增对抽象 UNIX 域套接字的支持。在 UNIX 域套接字路径前加 `@` 前缀即可使用抽象命名空间中的套接字。这与 PostgreSQL 14 中的对应功能保持一致。
-  * 密码和用户名的最大长度分别提升至 996 和 128 个字符。多种云服务有此需求。
+  * 密码和用户名的最大长度分别提升至 996 和 128。多种云服务有此需求。
   * 最小连接池大小现在可以按数据库单独配置，与常规连接池大小和保留连接池大小的配置方式相同。
   * `SHOW POOLS` 中新增显示待处理查询取消请求的数量。
 
@@ -608,7 +616,7 @@ categories: [参考]
   * 修复了通过 HBA 混用 md5 和 scram 认证的问题。
   * 修复了 Windows 上使用 c-ares 的构建问题。
   * 修复了令人头疼的"FIXME: query end, but query_start == 0"日志信息。我们现在已知其成因，您不应再看到这条信息。（[#565](https://github.com/pgbouncer/pgbouncer/pull/565)）
-  * 修复 `default_pool_size`、`min_pool_size` 和 `res_pool_size` 的热重载问题。此前重载这些配置项不会生效。
+  * 修复 `default_pool_size`、`min_pool_size` 和 `reserve_pool_size` 的热重载问题。此前重载这些配置项不会生效。
 
 - 清理
   * 现已改用 [Cirrus CI](https://cirrus-ci.com/github/pgbouncer/pgbouncer)，不再使用 Travis CI。
@@ -670,7 +678,7 @@ categories: [参考]
 
 - 修复
   * 修复多行日志消息问题（[libusual #24](https://github.com/libusual/libusual/pull/24)）
-  * 正确处理 `auth_query` 返回的空用户名（[#340](https://github.com/pgbouncer/pgbouncer/pull/340)）
+  * 正确处理 `auth_query` 返回的 NULL 用户名（[#340](https://github.com/pgbouncer/pgbouncer/pull/340)）
 
 - 清理
   * 移除了 `debian` 目录下的 Debian 打包文件，建议使用来自 https://apt.postgresql.org/ 的软件包。
@@ -994,7 +1002,8 @@ categories: [参考]
 
   * 过长的数据库名称可能导致崩溃。若启用了 autodb，此问题可被远程触发。
 
-    原有检查假定所有名称均来自配置文件，因此使用 fatal() 是安全的。但当启用 autodb 时——即在 [databases] 节中设置 '*'——数据库名称可来自网络，从而使远程关闭成为可能。
+    原有检查假定所有名称均来自配置文件，因此使用 fatal() 是安全的。但启用 autodb 后，情况有所不同：
+    - 在 [databases] 节中设置 '*' 即会启用 autodb；此时数据库名称可来自网络，从而使远程关闭成为可能。
 
     [CVE-2012-4575](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4575)
 
@@ -1267,7 +1276,7 @@ categories: [参考]
 
     要使用 Windows 事件日志，需要先注册事件 DLL：
 
-        > regsrv32 pgbevent.dll
+        > regsvr32 pgbevent.dll
 
     之后即可在配置中设置 "syslog = 1"。
 
@@ -1315,7 +1324,7 @@ categories: [参考]
   * 在 tgz 中包含示例 etc/userlist.txt。
   * 在递归调用中使用 '$(MAKE)' 而非 'make'（Jørgen Austvik）
   * 定义 _GNU_SOURCE，否则 glibc 形同虚设。
-  * 允许 libevent 1.1 通过链接测试，以便稍后报告"需要 1.3b+"。
+  * 允许 libevent 1.1 通过链接测试，以便稍后报告"1.3b+ needed"。
   * 检测并移除过期的 pidfile。
 
 感谢 Devrim GÜNDÜZ 和 Bjoern Metzdorf 的问题报告和测试。

@@ -6,13 +6,12 @@ description: "pgBackRest `restore` 命令的选项与行为参考。"
 icon: fa-solid fa-clock-rotate-left
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-restore"
 ---
-
-> Source: [pgBackRest Command Docs: restore](https://pgbackrest.org/command.html#command-restore)
 
 `restore` 命令默认从第一个存有备份的仓库中自动选取最新备份（参见 [**快速开始 - 恢复备份**](/docs/pgbackrest/user-guide/#恢复备份)）。仓库的检查顺序由 `pgbackrest.conf` 决定（例如先检查 repo1，再检查 repo2）。若要从特定仓库恢复，可使用 `--repo` 选项（例如 `--repo=1`）。若需恢复非最新的备份，可传入 `--set` 选项。
 
-使用 `--type=time` 或 `--type=lsn` 进行 PITR（时间点恢复）时，必须通过 `--target` 选项指定目标时间或目标 LSN。若未通过 `--set` 选项指定备份集，系统将依次检查各仓库，查找包含所请求时间或 LSN 的备份。若未找到匹配备份，`--type=time` 将使用第一个存有备份的仓库中的最新备份，而 `--type=lsn` 则不会选择任何备份。对于其他类型的 PITR（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项明确指定备份集。详情及示例请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#时间点恢复)。
+指定 `--type=time` 或 `--type=lsn` 进行 PITR 时，必须通过 `--target` 选项提供目标时间或 LSN。若未指定 `--set`，pgBackRest 会按顺序检查已配置的仓库，选择结束时间早于目标时间，或结束 LSN 小于等于目标 LSN 的备份。若找不到匹配的备份，`--type=time` 和 `--type=lsn` 都会报错，不会回退到最新备份。对于其他 PITR 类型（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项指定备份集。更多说明和示例请参阅 [时间点恢复](/docs/pgbackrest/user-guide/#时间点恢复)。
 
 按照 PostgreSQL 的建议，复制槽不包含在恢复中。更多信息请参阅 PostgreSQL 文档中的 [**Backing Up The Data Directory**](https://www.postgresql.org/docs/current/continuous-archiving.html#BACKUP-LOWLEVEL-BASE-BACKUP-DATA)。
 
@@ -20,7 +19,7 @@ categories: [参考]
 
 ### 归档模式选项（`--archive-mode`）
 
-恢复后集群的归档模式设置。
+在恢复后的集群上保留或禁用归档。
 
 此选项用于在恢复后的集群上保留或禁用归档功能。当集群必须被提升（promote）以执行某些操作，但并非打算成为新主库时，此选项非常有用——在这种情况下，将 WAL 从该集群推送到仓库并不合适。
 
@@ -34,6 +33,19 @@ categories: [参考]
 ```yaml
 default: preserve
 example: --archive-mode=off
+```
+
+### 页面校验和无效时报错选项（`--checksum-page-error`） {#error-on-invalid-page-checksums-option---checksum-page-error}
+
+页面校验和无效时报错。
+
+启用时，`restore` 命令遇到包含校验和错误的文件就会报错并终止。
+
+禁用时，每个包含校验和错误的文件都会产生一条警告。
+
+```yaml
+default: y
+example: --no-checksum-page-error
 ```
 
 ### 排除数据库选项（`--db-exclude`）
@@ -100,7 +112,7 @@ example: --link-map=pg_xlog=/data/xlog
 
 在 `postgresql.auto.conf` 或 `recovery.conf` 中设置选项。
 
-各选项的详细说明请参阅 PostgreSQL 的 [**服务器配置**](https://www.postgresql.org/docs/current/runtime-config.html) 文档（请确保选择对应的 PostgreSQL 版本）。此选项可多次使用。
+`postgresql.auto.conf` 或 `recovery.conf` 中各选项的详细说明请参阅 PostgreSQL 的 [**服务器配置**](https://www.postgresql.org/docs/current/runtime-config.html) 文档（请确保选择对应的 PostgreSQL 版本）。此选项可多次使用。
 
 对于 PostgreSQL >= 12，选项将写入 `postgresql.auto.conf`；对于旧版本，选项将写入 `recovery.conf`。
 
@@ -139,7 +151,7 @@ example: --tablespace-map=ts_01=/db/ts_01
 
 将所有表空间恢复到指定目录。
 
-默认情况下，表空间将恢复到其原始位置。可通过 `--tablespace-map` 选项为每个表空间单独修改，但有时将所有表空间一次性重新映射到同一个新目录更为方便，在存储布局与原始备份系统不同的开发或测试环境中尤为如此。
+默认情况下，表空间将恢复到其原始位置。可通过 `tablespace-map` 选项为每个表空间单独修改，但有时将所有表空间一次性重新映射到同一个新目录更为方便，在存储布局与原始备份系统不同的开发或测试环境中尤为如此。
 
 指定的路径将作为父路径，备份中所有表空间的子目录都将在其下创建。
 
@@ -260,7 +272,7 @@ example: --buffer-size=2MiB
 
 pgBackRest 命令。
 
-pgBackRest 在某些情况下需要生成命令字符串，例如 `restore` 命令生成 `restore_command` 设置时。此时将使用运行当前 pgBackRest 进程的命令，除非通过 `--cmd` 选项另行指定。
+pgBackRest 在某些情况下需要生成命令字符串，例如 `restore` 命令生成 `restore_command` 设置时。此时将使用运行当前 pgBackRest 进程的命令，除非通过 `cmd` 选项另行指定。
 
 注意：
 
@@ -409,7 +421,7 @@ example: --process-max=4
 
 本地或远程进程在协议层等待接收新消息的超时时间（秒）。此设置可防止进程无限期等待消息。
 
-> **注意：** `--protocol-timeout` 选项的值必须大于 `--db-timeout` 选项的值。
+> **注意：** `protocol-timeout` 选项的值必须大于 `db-timeout` 选项的值。
 
 ```yaml
 default: 31m
@@ -432,9 +444,9 @@ example: --no-sck-keep-alive
 
 定义 stanza。
 
-stanza（stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称）是对一个 PostgreSQL 数据库集群的配置，定义了集群所在位置、备份方式、归档选项等。大多数数据库服务器只有一个 PostgreSQL 集群，因此只有一个 stanza；备份服务器则为每个需要备份的集群各配置一个 stanza。
+stanza 是对一个 PostgreSQL 数据库集群的配置，定义了集群所在位置、备份方式、归档选项等。大多数数据库服务器只有一个 PostgreSQL 集群，因此只有一个 stanza；备份服务器则为每个需要备份的集群各配置一个 stanza。
 
-stanza 命名时容易直接使用主集群名称，但更好的做法是使用描述该集群中数据库用途的名称。由于 stanza 名称同时用于主库和所有副本，选择一个描述集群实际功能的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
+stanza 命名时容易直接使用主集群名称，但更好的名称应描述该集群所包含的数据库。由于 stanza 名称同时用于主库和所有副本，选择一个描述集群实际功能的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
 
 ```yaml
 example: --stanza=main
@@ -551,7 +563,7 @@ example: --log-level-file=debug
 
 标准错误输出日志级别。
 
-指定哪些日志级别输出到 `stderr` 而非 `stdout`（由 `--log-level-console` 指定）。时间戳和进程信息不会输出到 `stderr`。
+指定哪些日志级别输出到 `stderr` 而非 `stdout`（由 `log-level-console` 指定）。时间戳和进程信息不会输出到 `stderr`。
 
 支持以下日志级别：
 
@@ -583,7 +595,7 @@ example: --log-path=/backup/db/log
 
 启用子进程日志记录。
 
-为当前进程创建的所有子进程启用文件日志记录，日志级别使用 `--log-level-file` 指定的值。
+为当前进程创建的所有子进程启用文件日志记录，日志级别使用 `log-level-file` 指定的值。
 
 ```yaml
 default: n
@@ -719,10 +731,15 @@ GCS 仓库密钥类型。
 支持以下授权类型：
 
 - `auto` - 使用实例服务账号自动授权。
-- `service` - 使用本地存储的密钥文件中的服务账号。
+- `service` - 使用本地存储密钥的服务账号。
 - `token` - 用于本地测试，如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，凭据将在身份验证令牌续期时重新加载。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -841,15 +858,15 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-设置了 `--repo-host` 时的仓库主机端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 使用此选项为仓库主机协议指定非默认端口。
 
-> **注意：** 当 `repo-host-type=ssh` 时，`--repo-host-port` 没有默认值，端口将使用 `--cmd-ssh` 指定命令所配置的端口。
+> **注意：** 当 `repo-host-type=ssh` 时，`repo-host-port` 没有默认值，端口将使用 `cmd-ssh` 指定命令所配置的端口。
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -873,7 +890,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-设置了 `--repo-host` 时的仓库主机用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义在仓库主机上执行操作所使用的用户。建议不要使用 `postgres` 用户，而改用 `pgbackrest` 等专用用户。若 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库具有读权限，同时避免意外损坏仓库内容。
 
@@ -890,7 +907,7 @@ example: --repo1-host-user=repo-user
 
 仓库是 pgBackRest 存储备份和归档 WAL 段的位置。
 
-提前估算所需空间可能比较困难。建议先进行几次备份，记录不同类型备份（全量/增量/差异）的大小，并测量每天产生的 WAL 量。这将给出大致的空间需求，但实际需求会随数据库的演变而变化。
+提前估算所需空间可能比较困难。建议先进行几次备份，记录不同类型备份（全量/增量/差异）的大小，并测量每天产生的 WAL 量。这将给出大致的空间需求，但实际需求也很可能随数据库的演变而变化。
 
 ```yaml
 default: /var/lib/pgbackrest
@@ -915,7 +932,7 @@ S3 仓库端点。
 
 AWS 端点应与所选区域匹配。
 
-对于自定义或测试配置，可使用 `--repo-storage-ca-file`、`--repo-storage-ca-path`、`--repo-storage-host`、`--repo-storage-port` 和 `--repo-storage-verify-tls` 选项。
+对于自定义或测试配置，可使用 `repo-storage-ca-file`、`repo-storage-ca-path`、`repo-storage-host`、`repo-storage-port` 和 `repo-storage-verify-tls` 选项。
 
 ```yaml
 example: --repo1-s3-endpoint=s3.amazonaws.com
@@ -925,7 +942,7 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -1041,7 +1058,7 @@ example: --repo1-sftp-host=sftprepo.domain
 
 SFTP 仓库主机指纹。
 
-SFTP 仓库主机指纹的生成方式应与 `--repo-sftp-host-key-hash-type` 匹配。通过以下命令生成指纹：`awk '{print $2}' ssh_host_xxx_key.pub | base64 -d | (md5sum or sha1sum) -b`。SSH 主机密钥通常位于 `/etc/ssh` 目录中。
+SFTP 仓库主机指纹的生成方式应与 `repo-sftp-host-key-hash-type` 匹配。通过以下命令生成指纹：`awk '{print $2}' ssh_host_xxx_key.pub | base64 -d | (md5sum or sha1sum) -b`。SSH 主机密钥通常位于 `/etc/ssh` 目录中。
 
 ```yaml
 example: --repo1-sftp-host-fingerprint=f84e172dfead7aeeeae6c1fdfb5aa8cf
@@ -1055,7 +1072,7 @@ SFTP 主机密钥检查类型。
 
 - `strict` - pgBackRest 不会自动将主机密钥添加到 `~/.ssh/known_hosts` 文件，且拒绝连接主机密钥已更改或不在已知主机文件中的主机。此选项强制用户手动添加所有新主机。
 - `accept-new` - pgBackRest 将自动将新主机密钥添加到用户的已知主机文件，但不允许连接主机密钥已更改的主机。
-- `fingerprint` - pgBackRest 将根据 `--repo-sftp-host-fingerprint` 选项指定的指纹来验证主机密钥。
+- `fingerprint` - pgBackRest 将根据 `repo-sftp-host-fingerprint` 选项指定的指纹来验证主机密钥。
 - `none` - 不执行主机密钥检查。
 
 ```yaml
@@ -1067,7 +1084,7 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除支持 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
@@ -1076,6 +1093,8 @@ example: --repo1-sftp-host-key-hash-type=sha256
 ### SFTP 仓库主机端口选项（`--repo-sftp-host-port`）
 
 SFTP 仓库主机端口。
+
+SFTP 仓库主机的端口号。
 
 ```yaml
 default: 22
@@ -1097,7 +1116,7 @@ example: --repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-身份验证期间用于搜索 SFTP 主机匹配项的已知主机文件。若未指定，pgBackRest 将默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号开头的路径。可多次传入 `--repo-sftp-known-host` 选项以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `--repo-sftp-host-fingerprint`。另请参阅 `--repo-sftp-host-check-type` 选项。
+身份验证期间用于搜索 SFTP 主机匹配项的已知主机文件。若未指定，pgBackRest 将默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号开头的路径。可多次传入 `repo-sftp-known-host` 选项以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
 
 ```yaml
 example: --repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -1173,6 +1192,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port, repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -1191,7 +1236,7 @@ example: --repo1-storage-tag=key1=value1
 
 对象存储（如 S3）允许在文件过大无法存入内存时分块上传。即使文件可以存入内存，限制单次上传占用的内存量也更为高效。
 
-较大的块大小通常可以带来更好的性能，因为它减少了上传请求数量，允许在单个请求中上传更多数据而非分块处理。其缺点是内存占用更高——由于块缓冲区必须按进程分配，`--process-max` 值越大，整体内存消耗越多。
+较大的块大小通常可以带来更好的性能，因为它减少了上传请求数量，允许在单个请求中上传更多数据而非分块处理。其缺点是内存占用更高——由于块缓冲区必须按进程分配，`process-max` 值越大，整体内存消耗越多。
 
 请注意，有效的块大小因存储类型和平台而异。例如，AWS S3 的最小块大小为 5MiB。各存储类型对块大小的术语也不同，因此搜索最小/最大值时，AWS S3 请使用"part size"，GCS 请使用"chunk size"，Azure 请使用"block size"。
 
@@ -1199,14 +1244,14 @@ example: --repo1-storage-tag=key1=value1
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```
@@ -1232,7 +1277,7 @@ example: --no-repo1-storage-verify-tls
 
 S3、GCS 和 Azure 均支持版本化存储，但通常默认不启用。除启用版本控制外，还可以考虑为 S3 启用对象锁定，为 GCS 或 Azure 启用软删除。
 
-指定 `--repo-target-time` 时，还必须提供 `--repo` 选项。并非所有仓库类型都支持版本控制，通常针对单个仓库进行恢复更为合理。
+指定 `repo-target-time` 时，还必须提供 `repo` 选项。很可能并非所有仓库类型都支持版本控制，通常针对单个仓库进行恢复更为合理。
 
 请注意，与存储时间戳的比较使用 `<=` 关系，且提供的时间戳中的毫秒部分将被截断。
 
@@ -1268,7 +1313,7 @@ PostgreSQL 数据目录。
 
 此路径应与 PostgreSQL 报告的 `data_directory` 一致。尽管可以从多处读取此值，但在恢复或离线备份场景中这些来源可能不可用，因此建议在配置文件中明确设置。
 
-`--pg-path` 选项在每次在线备份时都会与 PostgreSQL 报告的值进行验证，因此应始终保持最新。
+`pg-path` 选项在每次在线备份时都会与 PostgreSQL 报告的值进行验证，因此应始终保持最新。
 
 ```yaml
 example: --pg1-path=/data/db

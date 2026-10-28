@@ -5,29 +5,28 @@ icon: fas fa-lemon
 description: "Patroni 与 Citus 协调节点及工作节点组的集成详情。"
 module: [PATRONI]
 categories: [概念]
+upstream_link: "https://patroni.readthedocs.io/en/latest/citus.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/citus.html
 
 <a id="citus"></a>
 Patroni 使部署 [多节点 Citus](https://docs.citusdata.com/en/stable/installation/multi_node.html) 集群变得极为简单。
 
 --------
 
-## TL;DR
+## 要点 {#tldr}
 
 只需遵循以下几条简单规则：
 
-1. 所有节点上必须安装 [Citus](https://github.com/citusdata/citus) 数据库扩展。最低支持的 Citus 版本为 10.0，但为了充分利用工作节点透明主从切换和重启的特性，建议使用至少 Citus 11.2。
+1. PostgreSQL 的 [Citus](https://github.com/citusdata/citus) 数据库扩展必须在所有节点上可用。最低支持的 Citus 版本为 10.0，但为了充分利用工作节点透明主从切换和重启的特性，建议使用至少 Citus 11.2。
 2. 集群名称（**`scope`**）在所有 Citus 节点上必须相同！
 3. 超级用户凭据在协调节点和所有工作节点上必须相同，且 **`pg_hba.conf`** 应允许所有节点之间的超级用户访问。
-4. 工作节点到协调节点的 [**REST API**](/docs/patroni/config/yaml#restapi_settings) 访问必须被允许。例如，凭据应相同，如果配置了客户端证书，工作节点的客户端证书必须被协调节点接受。
+4. 应允许从工作节点访问协调节点的 [**REST API**](/docs/patroni/config/yaml#restapi_settings)。例如，凭据应相同，如果配置了客户端证书，工作节点的客户端证书必须被协调节点接受。
 5. 在 **`patroni.yaml`** 中添加以下配置节：
 
 ```yaml
 citus:
-  group: X  # 0 表示协调节点，工作节点使用 1、2、3 等
-  database: citus  # 所有节点上必须相同
+  group: X  # 0 for coordinator and 1, 2, 3, etc for workers
+  database: citus  # must be the same on all nodes
 ```
 
 之后只需启动 Patroni，它会处理其余的一切：
@@ -43,13 +42,13 @@ citus:
 
 --------
 
-## patronictl
+## patronictl {#patronictl}
 
 协调节点和工作节点集群是物理上独立的 PostgreSQL/Patroni 集群，仅通过 [Citus](https://github.com/citusdata/citus) 数据库扩展在逻辑上组合在一起。因此，在大多数情况下无法将它们作为单一实体进行管理。
 
 当 **`patroni.yaml`** 中包含 [`citus`](/docs/patroni/citus#citus) 配置节时，与通常情况相比，[`patronictl`](/docs/patroni/patronictl#patronictl) 的行为存在两个主要差异：
 
-1. **`list`** 和 **`topology`** 命令默认输出 Citus formation 的所有成员（协调节点和工作节点），新增的 **`Group`** 列表明它们所属的 Citus 组。
+1. **`list`** 和 **`topology`** 命令默认输出 Citus 集群的所有成员（协调节点和工作节点），新增的 **`Group`** 列表明它们所属的 Citus 组。
 2. 所有 [`patronictl`](/docs/patroni/patronictl#patronictl) 命令都引入了新选项 **`--group`**。对于某些命令，组的默认值可以从 **`patroni.yaml`** 中获取。例如，[`patronictl pause`](/docs/patroni/patronictl#patronictl_pause) 默认会为 [`citus`](/docs/patroni/citus#citus) 配置节中设置的 **`group`** 启用维护模式，但对于 [`patronictl switchover`](/docs/patroni/patronictl#patronictl_switchover) 或 [`patronictl remove`](/docs/patroni/patronictl#patronictl_remove) 等命令，则必须显式指定 group。
 
 以下是 Citus 集群的 [`patronictl list`](/docs/patroni/patronictl#patronictl_list) 输出示例：
@@ -88,9 +87,11 @@ citus:
 
 --------
 
-## Citus 工作节点主从切换
+<div id="citus-工作节点主从切换"></div>
 
-当对 Citus 工作节点编排主从切换时，Citus 提供了使切换对应用程序接近透明的能力。由于应用程序连接到协调节点，再由协调节点连接工作节点，因此 Citus 能够在协调节点上 [**暂停**](/docs/patroni/pause#pause) 对某个工作节点组所承载分片的 SQL 流量。主从切换在流量保持在协调节点的同时进行，并在新的工作节点主库准备好接受读写查询后立即恢复。
+## Citus 工作节点主从切换 {#citus-worker-switchover}
+
+当对 Citus 工作节点编排主从切换时，Citus 提供了使切换对应用程序接近透明的能力。由于应用程序连接到协调节点，再由协调节点连接工作节点，因此 Citus 能够在协调节点上 **暂停** 对某个工作节点所承载分片的 SQL 流量。主从切换在流量保持在协调节点的同时进行，并在新的工作节点主库准备好接受读写查询后立即恢复。
 
 以下是在工作节点集群上执行 [`patronictl switchover`](/docs/patroni/patronictl#patronictl_switchover) 的示例：
 
@@ -141,41 +142,45 @@ citus:
 
 以下是协调节点侧的日志：
 
-    # 工作节点主库通知协调节点，它即将执行 "pg_ctl stop"。
+    # The worker primary notifies the coordinator that it is going to execute "pg_ctl stop".
     2024-08-26 07:02:38,636 DEBUG: query(BEGIN, ())
     2024-08-26 07:02:38,636 DEBUG: query(SELECT pg_catalog.citus_update_node(%s, %s, %s, true, %s), (3, '172.19.0.7-demoted', 5432, 10000))
-    # 从此刻起，协调节点上发往工作节点组 2 的所有应用流量被暂停。
+    # From this moment all application traffic on the coordinator to the worker group 2 is paused.
 
-    # 旧的工作节点主库被指定为从库。
+    # The old worker primary is assigned as a secondary.
     2024-08-26 07:02:40,084 DEBUG: query(SELECT pg_catalog.citus_update_node(%s, %s, %s, true, %s), (7, '172.19.0.7', 5432, 10000))
 
-    # 未来的工作节点主库通知协调节点，它已在 DCS 中获取了 leader 锁，即将运行 "pg_ctl promote"。
+    # The future worker primary notifies the coordinator that it acquired the leader lock in DCS and about to run "pg_ctl promote".
     2024-08-26 07:02:40,085 DEBUG: query(SELECT pg_catalog.citus_update_node(%s, %s, %s, true, %s), (3, '172.19.0.5', 5432, 10000))
 
-    # 新的工作节点主库刚完成提升，通知协调节点它已准备好接受读写流量。
+    # The new worker primary just finished promote and notifies coordinator that it is ready to accept read-write traffic.
     2024-08-26 07:02:41,485 DEBUG: query(COMMIT, ())
-    # 从此刻起，协调节点上发往工作节点组 2 的应用流量被解除阻塞。
+    # From this moment the application traffic on the coordinator to the worker group 2 is unblocked.
 
 --------
 
-## 从节点（Secondary nodes）
+<div id="从节点secondary-nodes"></div>
+
+## 从节点（Secondary nodes） {#secondary-nodes}
 
 从 Patroni v4.0.0 起，没有 **`noloadbalance`** [**标签**](/docs/patroni/config/yaml#tags_settings) 的 Citus 从节点也会被注册到 **`pg_dist_node`** 中。但若要将从节点用于只读查询，应用程序需要修改 [citus.use_secondary_nodes](https://docs.citusdata.com/en/latest/develop/api_guc.html#citus-use-secondary-nodes-enum) GUC。
 
 --------
 
-## 查看 DCS 结构
+<div id="查看-dcs-结构"></div>
+
+## 查看 DCS 结构 {#peek-into-dcs}
 
 Citus 集群（协调节点和工作节点）在 DCS 中以逻辑分组的 Patroni 集群群组方式存储：
 
     /service/batman/              # scope=batman
-    /service/batman/0/            # citus.group=0，协调节点
+    /service/batman/0/            # citus.group=0, coordinator
     /service/batman/0/initialize
     /service/batman/0/leader
     /service/batman/0/members/
     /service/batman/0/members/m1
     /service/batman/0/members/m2
-    /service/batman/1/            # citus.group=1，工作节点
+    /service/batman/1/            # citus.group=1, worker
     /service/batman/1/initialize
     /service/batman/1/leader
     /service/batman/1/members/
@@ -187,20 +192,22 @@ Citus 集群（协调节点和工作节点）在 DCS 中以逻辑分组的 Patro
 
 --------
 
-## Kubernetes 上的 Citus
+<div id="kubernetes-上的-citus"></div>
 
-由于 Kubernetes 不支持层级结构，我们必须在 Patroni 创建的所有 K8s 对象中包含 citus group：
+## Kubernetes 上的 Citus {#citus-on-kubernetes}
 
-    batman-0-leader  # 协调节点的 leader ConfigMap
-    batman-0-config  # 存储 initialize、config 和 history "键"的 ConfigMap
+由于 Kubernetes 不支持层级结构，我们必须在 Patroni 创建的所有 K8s 对象中包含 Citus 组编号：
+
+    batman-0-leader  # the leader config map for the coordinator
+    batman-0-config  # the config map holding initialize, config, and history "keys"
     ...
-    batman-1-leader  # 工作节点组 1 的 leader ConfigMap
+    batman-1-leader  # the leader config map for worker group 1
     batman-1-config
     ...
 
 命名规则为：**`${scope}-${citus.group}-${type}`**。
 
-Patroni 使用 [标签选择器](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) 来发现所有 Kubernetes 对象，因此带有 Patroni&Citus 的所有 Pod 以及 Endpoints/ConfigMaps 必须具有相同的标签，且必须通过 Kubernetes [**Kubernetes 配置**](/docs/patroni/config/yaml#kubernetes_settings) 或环境变量来配置 Patroni 使用这些标签。
+Patroni 使用 [标签选择器](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) 来发现所有 Kubernetes 对象，因此带有 Patroni&Citus 的所有 Pod 以及 Endpoints/ConfigMaps 必须带有匹配公共标签选择器的标签，且必须通过 [**Kubernetes 配置**](/docs/patroni/config/yaml#kubernetes_settings) 或 [**环境变量**](/docs/patroni/config/env#kubernetes_environment) 将 Patroni 配置为使用这些标签。
 
 以下是使用 Pod 环境变量配置 Patroni 的两个示例：
 
@@ -292,11 +299,11 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: citusdemo-0-leader  # 由 ${env.PATRONI_SCOPE}-${env.PATRONI_CITUS_GROUP}-leader 生成
+  name: citusdemo-0-leader  # Is generated as ${env.PATRONI_SCOPE}-${env.PATRONI_CITUS_GROUP}-leader
   labels:
-    application: patroni    # 从 ${env.PATRONI_KUBERNETES_LABELS} 中设置
-    cluster-name: citusdemo # 从 ${env.PATRONI_SCOPE} 自动设置
-    citus-group: '0'        # 从 ${env.PATRONI_CITUS_GROUP} 自动设置
+    application: patroni    # Is set from the ${env.PATRONI_KUBERNETES_LABELS}
+    cluster-name: citusdemo # Is automatically set from the ${env.PATRONI_SCOPE}
+    citus-group: '0'        # Is automatically set from the ${env.PATRONI_CITUS_GROUP}
 ```
 
 你可以在 Patroni 仓库的 [kubernetes](https://github.com/patroni/patroni/tree/master/kubernetes) 目录中找到支持 Citus 的 Patroni Kubernetes 部署完整示例。
@@ -308,8 +315,10 @@ metadata:
 
 --------
 
-## Citus 升级与 PostgreSQL 大版本升级
+<div id="citus-升级与-postgresql-大版本升级"></div>
+
+## Citus 升级与 PostgreSQL 大版本升级 {#citus-upgrades-and-postgresql-major-upgrades}
 
 首先，请阅读 Citus [文档](https://docs.citusdata.com/en/latest/admin_guide/upgrading_citus.html) 中关于升级 Citus 版本的内容。流程中有一处小变化：在执行升级时，必须使用 [`patronictl restart`](/docs/patroni/patronictl#patronictl_restart) 代替 **`systemctl restart`** 来重启 PostgreSQL。
 
-包含 Citus 的 PostgreSQL 大版本升级相对复杂。你需要结合 Citus 文档中关于大版本升级的技术，以及 Patroni 文档中关于 **`PostgreSQL major upgrade<major_upgrade>`** 的内容。请记住，Citus 集群由多个 Patroni 集群（协调节点和工作节点）组成，它们都需要独立升级。
+包含 Citus 的 PostgreSQL 大版本升级相对复杂。你需要结合 Citus 文档中关于大版本升级的技术，以及 Patroni 文档中关于 **[PostgreSQL 大版本升级](/docs/patroni/existing_data#major_upgrade)** 的内容。请记住，Citus 集群由多个 Patroni 集群（协调节点和工作节点）组成，它们都需要独立升级。

@@ -6,9 +6,8 @@ description: "PgBouncer 常见问题解答"
 icon: fa-solid fa-circle-question
 module: [PGBOUNCER]
 categories: [参考]
+upstream_link: "https://www.pgbouncer.org/faq.html"
 ---
-
-> 原始页面： <https://www.pgbouncer.org/faq.html>
 
 --------
 
@@ -29,7 +28,7 @@ app = host=pg1,pg2 port=5432 dbname=app load_balance_hosts=round-robin
 
 也可以使用外部工具：
 
-1.  DNS 轮询。在一个 DNS 名称后面配置多个 IP。PgBouncer 不会在每次新建连接时查询 DNS，而是缓存所有 IP 并在内部进行轮询。注意：若一个名称后有 8 个以上的 IP，则 DNS 后端必须支持 EDNS0 协议。详情参见 [DNS 查询支持](/docs/pgbouncer/install/#dns-查询支持)。
+1.  DNS 轮询。在一个 DNS 名称后面配置多个 IP。PgBouncer 不会在每次新建连接时查询 DNS，而是缓存所有 IP 并在内部进行轮询。注意：若一个名称后有超过 8 个 IP，则 DNS 后端必须支持 EDNS0 协议。详情参见 [DNS 查询支持](/docs/pgbouncer/install/#dns-查询支持)。
 
 2.  使用 TCP 连接负载均衡器。 [**LVS**](http://www.linuxvirtualserver.org/) 或 [**HAProxy**](https://www.haproxy.org/) 都是不错的选择。在 PgBouncer 一侧，建议适当减小 `server_lifetime` 的值并开启 `server_round_robin`：默认情况下，空闲连接按 LIFO 算法复用，在需要负载均衡时效果可能不佳。
 

@@ -6,9 +6,8 @@ description: "pgBackRest `stop` 命令选项与行为参考。"
 icon: fa-solid fa-stop
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-stop"
 ---
-
-> 原始页面： [pgBackRest Command Docs: stop](https://pgbackrest.org/command.html#command-stop)
 
 禁止任何新的 pgBackRest 进程运行。默认情况下，正在运行的进程将被允许正常完成。使用 `--force` 选项可强制终止正在运行的进程。
 
@@ -16,7 +15,9 @@ categories: [参考]
 
 ## 命令选项
 
-### 强制停止选项（`--force`）
+<div id="强制停止选项--force"></div>
+
+### 强制选项（`--force`）
 
 强制停止所有 pgBackRest 进程。
 
@@ -57,7 +58,7 @@ example: --config=/conf/pgbackrest/pgbackrest.conf
 
 附加 pgBackRest 配置文件的路径。
 
-该路径下扩展名为 `.conf` 的配置文件将与主配置文件合并，形成统一的配置文件。
+该路径下扩展名为 `.conf` 的配置文件将与主配置文件拼接，合并为一个完整的配置文件。
 
 ```yaml
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
@@ -116,9 +117,9 @@ example: --priority=19
 
 定义 stanza。
 
-stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称，包括集群位置、备份方式、归档选项等。大多数数据库主机只有一个 PostgreSQL 集群，因此只有一个 stanza；备份服务器则需要为每个待备份的集群分别配置一个 stanza。
+stanza 是针对某个 PostgreSQL 数据库集群的配置，定义了集群的位置、备份方式、归档选项等。大多数数据库主机只有一个 PostgreSQL 集群，因此只有一个 stanza；备份服务器则需要为每个待备份的集群分别配置一个 stanza。
 
-命名 stanza 时，以主集群名称命名看似直观，但更好的做法是用集群所承载数据库的功能来命名。由于 stanza 名称会同时用于主库和所有副本，因此选择能描述集群实际用途的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
+命名 stanza 时，以主集群名称命名看似直观，但更好的名称应描述集群所包含的数据库。由于 stanza 名称会同时用于主库和所有副本，因此选择能描述集群实际用途的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
 
 ```yaml
 example: --stanza=main

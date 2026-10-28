@@ -5,18 +5,19 @@ icon: fa-solid fa-circle-question
 description: "关于 Patroni 运维与故障排查的常见问题解答。"
 module: [PATRONI]
 categories: [参考]
+upstream_link: "https://patroni.readthedocs.io/en/latest/faq.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/faq.html
 
 <a id="faq"></a>
 本节收录了关于 Patroni 最常见问题的解答，各子节聚焦于不同类别的问题。
 
-希望这些内容能帮你解答大多数疑问。如果仍有疑问或遇到意外问题，请参阅 [`chatting`](/docs/patroni/contributing_guidelines#chatting) 和 [`reporting_bugs`](/docs/patroni/contributing_guidelines#reporting_bugs)，了解如何获取帮助或提交问题报告。
+希望这些内容能帮你解答大多数疑问。如果仍有疑问或遇到意外问题，请参阅 [交流](/docs/patroni/contributing_guidelines#chatting) 和 [报告问题](/docs/patroni/contributing_guidelines#reporting_bugs)，了解如何获取帮助或提交问题报告。
 
 --------
 
-## 与其他高可用方案的比较
+<div id="与其他高可用方案的比较"></div>
+
+## 与其他高可用方案的比较 {#comparison-with-other-ha-solutions}
 
 **为什么 Patroni 需要独立的 DCS 节点集群，而 `repmgr` 等其他方案不需要？**
 
@@ -24,7 +25,7 @@ categories: [参考]
 
 **`repmgr`** 等软件通过节点间通信来决定何时采取行动。
 
-而 Patroni 则依赖存储在 DCS 中的状态，DCS 是 Patroni 决策的唯一可信来源。
+而 Patroni 则依赖存储在 DCS 中的状态，DCS 是 Patroni 决定自身行为的事实来源。
 
 虽然独立的 DCS 集群会使架构变得复杂，但这种方式也降低了 Postgres 集群发生脑裂（split-brain）的可能性。
 
@@ -34,13 +35,13 @@ Patroni 不仅管理 Postgres 集群的高可用，还全面管理 Postgres 本�
 
 如果 Postgres 节点尚不存在，Patroni 会负责引导主库和备库节点，并管理各节点的 Postgres 配置。如果 Postgres 节点已存在，Patroni 将接管集群的管理。
 
-除此之外，Patroni 还具备自愈能力。若主库故障，Patroni 不仅会故障转移到从库，还会尝试将原主库以从库身份重新加入新主库。同样，若从库故障，Patroni 也会尝试重新加入该从库。
+除此之外，Patroni 还具备自愈能力。若主库故障，Patroni 不仅会故障转移到从库，还会尝试将原主库重新加入集群，作为新主库的从库。同样，若从库故障，Patroni 也会尝试重新加入该从库。
 
 这就是我们将 Patroni 称为"高可用方案模板"的原因——它不仅仅管理物理复制，而是对 Postgres 进行整体管理。
 
 --------
 
-## DCS
+## DCS {#dcs}
 
 **可以使用同一个 `etcd` 集群存储两个或多个 Patroni 集群的数据吗？**
 
@@ -52,7 +53,7 @@ Patroni 集群的信息以 **`namespace`** 和 **`scope`** 为路径前缀存储
 
 **如果为指向同一 DCS 集群的不同 Patroni 集群使用相同的 `namespace` 和 `scope` 组合，会发生什么？**
 
-第二个尝试使用相同 **`namespace`** 和 **`scope`** 的 Patroni 集群将无法管理 Postgres，因为它会在 DCS 中找到与该组合相关的信息，但 Postgres 系统标识符不匹配。系统标识符不匹配会导致 Patroni 中止对第二个集群的管理——Patroni 会认为这是一个不同的集群，用户配置了错误的 Patroni。
+如果第二个集群的 Postgres 系统标识符不同，Patroni 就会发现该 DCS 路径下的数据与之不兼容。在非暂停模式下，Patroni 会退出，不再管理第二个集群，因为它认为已存储的状态属于另一个集群，且 Patroni 配置有误。
 
 在处理共享同一 DCS 集群的不同 Patroni 集群时，请确保使用不同的 **`namespace`** / **`scope`**。
 
@@ -60,7 +61,7 @@ Patroni 集群的信息以 **`namespace`** 和 **`scope`** 为路径前缀存储
 
 DCS 主要用于存储 Patroni 集群的状态和动态配置。
 
-最直接的后果是，所有依赖该 DCS 的 Patroni 集群将进入只读模式——除非启用了 [`dcs_failsafe_mode`](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode)。
+最直接的后果是，所有依赖该 DCS 的 Patroni 集群将进入只读模式——除非启用了 [DCS 故障安全模式](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode)。
 
 **DCS 集群丢失后该怎么做？**
 
@@ -78,17 +79,17 @@ DCS 将变得无响应，这会导致 Patroni 将当前的读写 Postgres 节点
 
 请记住：Patroni 依赖 DCS 的状态来对集群采取行动。
 
-你可以使用 [`dcs_failsafe_mode`](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode) 来缓解这种情况。
+你可以使用 [DCS 故障安全模式](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode) 来缓解这种情况。
 
 --------
 
-## patronictl
+## patronictl {#patronictl}
 
-**必须在 Patroni 主机上运行 [`patronictl`](/docs/patroni/patronictl#patronictl) 吗？**
+**需要在 Patroni 主机上运行 [`patronictl`](/docs/patroni/patronictl#patronictl) 吗？**
 
 不需要。
 
-在 Patroni 主机上运行 [`patronictl`](/docs/patroni/patronictl#patronictl) 很方便，因为可以直接使用 **`patroni`** 代理的配置文件。
+如果你能访问 Patroni 主机，在其上运行 [`patronictl`](/docs/patroni/patronictl#patronictl) 会很方便，因为可以直接将 **`patroni`** 代理的同一份配置文件用于 [`patronictl`](/docs/patroni/patronictl#patronictl) 应用。
 
 但 [`patronictl`](/docs/patroni/patronictl#patronictl) 本质上是一个客户端，可以从远程机器上执行。只需提供足够的配置，使其能够访问 DCS 和 Patroni 成员的 REST API 即可。
 
@@ -110,7 +111,9 @@ DCS 将变得无响应，这会导致 Patroni 将当前的读写 Postgres 节点
 
 --------
 
-## 配置
+<div id="配置"></div>
+
+## 配置 {#configuration}
 
 **动态配置与本地配置有什么区别？**
 
@@ -138,7 +141,7 @@ DCS 将变得无响应，这会导致 Patroni 将当前的读写 Postgres 节点
 
 你可以使用 **`patroni --generate-sample-config`** 或 **`patroni --generate-config`** 命令，分别生成示例 Patroni 配置文件，或基于现有 Postgres 实例生成 Patroni 配置文件。
 
-详情请参阅 [`generate_sample_config`](/docs/patroni/config#generate_sample_config) 和 [`generate_config`](/docs/patroni/config#generate_config)。
+详情请参阅 [生成示例配置](/docs/patroni/config#generate_sample_config) 和 [生成配置](/docs/patroni/config#generate_config)。
 
 **我修改了 `bootstrap.dcs` 下的参数，但 Patroni 没有将更改应用到集群成员。哪里出了问题？**
 
@@ -153,13 +156,13 @@ DCS 将变得无响应，这会导致 Patroni 将当前的读写 Postgres 节点
 需要在 DCS 中修改配置，可以通过以下方式实现：
 
 - [`patronictl edit-config`](/docs/patroni/patronictl#patronictl_edit_config)；或
-- 向 [`config_endpoint`](/docs/patroni/rest_api#config_endpoint) 发送 **`PATCH`** 请求。
+- 向 [配置端点](/docs/patroni/rest_api#config_endpoint) 发送 **`PATCH`** 请求。
 
 **如何修改本地配置？**
 
 需要修改对应 Patroni 成员的配置文件，并向 Patroni 代理发送 **`SIGHUP`** 信号。可以通过以下任一方式实现：
 
-- 向 REST API 的 [`reload_endpoint`](/docs/patroni/rest_api#reload_endpoint) 发送 **`POST`** 请求；或
+- 向 REST API 的 [重载端点](/docs/patroni/rest_api#reload_endpoint) 发送 **`POST`** 请求；或
 
 - 运行 [`patronictl reload`](/docs/patroni/patronictl#patronictl_reload)；或
 
@@ -181,6 +184,14 @@ DCS 将变得无响应，这会导致 Patroni 将当前的读写 Postgres 节点
 
 注意不要导致集群发生故障转移！你可能需要先查看 [`patronictl pause`](/docs/patroni/patronictl#patronictl_pause)。
 
+**如何在正常运行期间减少重复的心跳日志行？**
+
+如果日志中反复出现 **`Lock owner: ...`** 和 **`no action. I am ...`** 这样的行，导致日志过于嘈杂，可以配置 **`log.deduplicate_heartbeat_logs: true`**。
+
+你可以在 Patroni YAML 文件（[**日志设置**](/docs/patroni/config/yaml#log_settings)）中设置它，也可以通过 **`PATRONI_LOG_DEDUPLICATE_HEARTBEAT_LOGS=true`** 来设置。
+
+请注意，这会通过抑制重复的心跳消息来减少日志量，但你也会失去每轮循环的心跳可见性，而这些信息在故障转移诊断时可能会有所帮助。
+
 **修改需要重载的 Postgres GUC 时会发生什么？**
 
 当你按照上述方法修改动态配置或本地配置时，Patroni 会自动帮你重载 Postgres 配置。
@@ -192,9 +203,9 @@ Patroni 会在受影响的成员上标记 **`pending restart`** 标志。
 由你决定何时以何种方式重启成员。可以通过以下方式实现：
 
 - [`patronictl restart`](/docs/patroni/patronictl#patronictl_restart)；或
-- 向 [`restart_endpoint`](/docs/patroni/rest_api#restart_endpoint) 发送 **`POST`** 请求。
+- 向 [重启端点](/docs/patroni/rest_api#restart_endpoint) 发送 **`POST`** 请求。
 
-**注意：** 某些 Postgres GUC 在重启 Postgres 节点的顺序上需要特别处理。详情请参阅 [`shared_memory_gucs`](/docs/patroni/config#shared_memory_gucs)。
+**注意：** 某些 Postgres GUC 在重启 Postgres 节点的顺序上需要特别处理。详情请参阅 [共享内存参数](/docs/patroni/config#shared_memory_gucs)。
 
 **Patroni 配置中 `etcd` 和 `etcd3` 有什么区别？**
 
@@ -204,8 +215,8 @@ Patroni 会在受影响的成员上标记 **`pending restart`** 标志。
 
 我们建议配置 **`etcd3`** 而不是 **`etcd`**，原因如下：
 
-- API 版本 2 从 Etcd v3.4 起默认禁用；
-- API 版本 2 将在 Etcd v3.6 中被完全移除。
+- API 版本 2 从 etcd v3.4 起默认禁用；
+- API 版本 2 已在 etcd v3.6 中被完全移除。
 
 **我在 Patroni 配置中启用了 `use_slots`，但当集群某个成员下线一段时间后，其在上游节点上使用的复制槽被删除了。如何避免这个问题？**
 
@@ -216,11 +227,11 @@ Patroni 会在受影响的成员上标记 **`pending restart`** 标志。
 
 自 Patroni **`3.2.0`** 起，成员槽可以作为由 Patroni 管理的永久槽存在。
 
-Patroni 会在所有节点上创建永久物理复制槽，确保不删除这些槽，并根据成员已消费的 LSN 在所有节点上推进槽的 LSN。
+在 PostgreSQL 11 及更高版本中，Patroni 会在所有节点上创建永久物理复制槽，确保不删除这些槽，并根据成员已消费的 LSN 在所有节点上推进槽的 LSN。
 
 之后，如果你决定移除相应成员，需要 **由你负责** 调整永久槽配置，否则 Patroni 将永久保留这些槽。
 
-**注意：** 在 Patroni **`3.2.0`** 之前的版本中，成员槽仍可配置为永久物理复制槽，但仅由当前主库管理。也就是说，在故障转移/主从切换时，这些槽会在新主库上创建，但不能保证新主库拥有缺席节点所需的全部 WAL 段。
+**注意：** 在 Patroni **`3.2.0`** 之前的版本中，成员槽仍可配置为永久物理复制槽，但仅由当前领导者管理。也就是说，在故障转移/主从切换时，这些槽会在新领导者上创建，但不能保证新领导者拥有缺席节点所需的全部 WAL 段。
 
 **注意：** 即使使用 Patroni **`3.2.0`**，也可能存在小的竞态条件。在最初阶段，从库上创建的槽可能领先于主库上的同名槽，如果没有人消费该槽，在故障转移后仍有可能缺少某些文件。因此建议配置持续归档，以便能够恢复所需的 WAL 或执行 PITR。
 
@@ -232,13 +243,15 @@ Patroni 会定期执行我们所称的 HA 循环。在每次 HA 循环中，它�
 
 **`retry_timeout`** 设置 DCS 和 Postgres 上重试操作的超时时间。例如：如果 DCS 无响应超过 **`retry_timeout`** 秒，Patroni 可能会将主库降级作为安全措施。
 
-**`ttl`** 设置 DCS 中 **`leader`** 锁的租约时间。如果当前集群主库在多于 **`ttl`** 秒的 HA 循环中无法续租，租约将过期，并触发集群中的 **`leader race`**（领导者竞选）。
+**`ttl`** 设置 DCS 中 **`leader`** 锁的租约时间。如果当前集群领导者在超过 **`ttl`** 的时间内无法在其 HA 循环中续租，租约就会过期，进而触发集群中的 **`leader race`**（领导者竞选）。
 
 **注意：** 修改这些配置时，请记住 Patroni 在 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 文档节中规定了最小值和强制规则。
 
 --------
 
-## Postgres 管理
+<div id="postgres-管理"></div>
+
+## Postgres 管理 {#postgres-management}
 
 **可以直接在 Postgres 配置文件中修改 Postgres GUC 吗？**
 
@@ -252,13 +265,13 @@ Postgres 配置由 Patroni 管理，直接编辑配置文件的尝试可能会�
 - 定义一个 **`postgresql.custom_conf`**，用于替代 **`postgresql.base.conf`**，以便在外部管理；或
 - 使用 **`ALTER SYSTEM`** / **`ALTER DATABASE`** / **`ALTER USER`** 修改 GUC。
 
-更多信息请参阅 [`important_configuration_rules`](/docs/patroni/config#important_configuration_rules) 节。
+更多信息请参阅 [重要配置规则](/docs/patroni/config#important_configuration_rules) 节。
 
 无论如何，我们建议通过 Patroni 统一管理所有 Postgres 配置。这样可以集中管理，并在需要调试 Patroni 时更加方便。
 
 **可以直接重启 Postgres 节点吗？**
 
-不，你 **不应该** 直接管理 Postgres！
+不，你 **不应该** 尝试直接管理 Postgres！
 
 任何绕过 Patroni 直接重启 Postgres 服务器的尝试都可能导致集群发生故障转移。
 
@@ -278,7 +291,9 @@ Patroni 通过运行 Postgres 二进制文件（如 **`pg_ctl`** 和 **`postgres
 
 --------
 
-## 概念与要求
+<div id="概念与要求"></div>
+
+## 概念与要求 {#concepts-and-requirements}
 
 **Patroni 包含哪些应用？**
 
@@ -323,7 +338,9 @@ Patroni 中的 **`leader`** 类似于集群的协调者。
 
 --------
 
-## 自动故障转移
+<div id="自动故障转移"></div>
+
+## 自动故障转移 {#automatic-failover}
 
 **Patroni 的自动故障转移机制是如何工作的？**
 
@@ -331,9 +348,9 @@ Patroni 的自动故障转移基于我们所称的 **`leader race`**（领导者
 
 Patroni 将集群状态存储在 DCS 中，其中包含一个 **`leader`** 锁，保存着当前集群 **`leader`** 的成员名称。
 
-该 **`leader`** 锁具有关联的生存时间（TTL）。如果主库未能及时续租 **`leader`** 锁，该键最终会从 DCS 中过期。
+该 **`leader`** 锁具有关联的生存时间（TTL）。如果领导者节点未能及时更新 **`leader`** 锁的租约，该键最终会从 DCS 中过期。
 
-**`leader`** 锁过期后，会触发 Patroni 所称的 **`leader race`**：所有节点开始执行检查，以确定自己是否是接管 **`leader`** 角色的最佳候选人。这些检查包括调用所有其他 Patroni 成员的 REST API。
+**`leader`** 锁过期后，会触发 Patroni 所称的 **`leader race`**：所有节点开始执行检查，以确定自己是否是接管 **`leader`** 角色的最佳候选人。其中一些检查会调用所有其他 Patroni 成员的 REST API。
 
 所有认为自己是接管 **`leader`** 锁最佳候选人的 Patroni 成员都会尝试获取该锁。第一个成功获取 **`leader`** 锁的成员将把自身提升为可读写节点（或 **`standby leader`**），其他节点则被配置为跟随它。
 
@@ -349,9 +366,11 @@ Patroni 将集群状态存储在 DCS 中，其中包含一个 **`leader`** 锁�
 
 --------
 
-## 引导与从库创建
+<div id="引导与从库创建"></div>
 
-**Patroni 如何创建主库 Postgres 节点？从库 Postgres 节点又是如何创建的？**
+## 引导与备库创建 {#bootstrapping-and-standbys-creation}
+
+**Patroni 如何创建主库 Postgres 节点？备库 Postgres 节点又是如何创建的？**
 
 默认情况下，Patroni 使用 **`initdb`** 引导全新集群，并使用 **`pg_basebackup`** 从 **`leader`** 成员创建备库节点。
 
@@ -363,13 +382,15 @@ Patroni 将集群状态存储在 DCS 中，其中包含一个 **`leader`** 锁�
 
 --------
 
-## 监控
+<div id="监控"></div>
+
+## 监控 {#monitoring}
 
 **如何监控我的 Patroni 集群？**
 
 Patroni 在其 [**REST API**](/docs/patroni/rest_api#rest_api) 中提供了几个便捷端点：
 
 - **`/metrics`**：以 Prometheus 可使用的格式提供监控指标；
-- **`/patroni`**：以 JSON 格式提供集群状态信息，与 **`/metrics`** 端点显示的信息非常相似。
+- **`/patroni`**：以 JSON 格式提供本地 Patroni/Postgres 节点的状态信息，与 **`/metrics`** 端点显示的信息非常相似。
 
 你可以使用这些端点来实现监控检查。

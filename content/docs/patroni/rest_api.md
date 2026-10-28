@@ -5,16 +5,17 @@ icon: fa-solid fa-book
 description: "Patroni REST API 端点与操作行为参考。"
 module: [PATRONI]
 categories: [参考]
+upstream_link: "https://patroni.readthedocs.io/en/latest/rest_api.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/rest_api.html
 
 <a id="rest_api"></a>
 Patroni 提供了丰富的 REST API，供 Patroni 自身在主库竞选期间调用，也供 [patronictl](/docs/patroni/patronictl#patronictl) 工具执行故障转移、主从切换、重新初始化、重启和重载等操作，还可供 HAProxy 或其他负载均衡器执行 HTTP 健康检查，以及用于监控目的。以下是 Patroni REST API 端点的完整列表。
 
 --------
 
-## 健康检查端点
+<div id="健康检查端点"></div>
+
+## 健康检查端点 {#health-check-endpoints}
 
 对于所有健康检查 **`GET`** 请求，Patroni 返回描述节点状态的 JSON 文档，并附带相应的 HTTP 状态码。若不需要 JSON 响应体，可使用 **`HEAD`** 或 **`OPTIONS`** 方法代替 **`GET`**。
 
@@ -26,7 +27,7 @@ Patroni 提供了丰富的 REST API，供 Patroni 自身在主库竞选期间调
 
 - **`GET /standby-leader`**：仅当 Patroni 节点作为 [备用集群](/docs/patroni/standby_cluster#standby_cluster) 中的领导者运行时，返回 HTTP 状态码 **`200`**。
 
-- **`GET /leader`**：当 Patroni 节点持有领导者锁时返回 HTTP 状态码 **`200`**。与前两个端点的主要区别在于，它不区分 PostgreSQL 以 **`primary`** 还是 **`standby_leader`** 身份运行。
+- **`GET /leader`**：当 Patroni 节点持有领导者锁时返回 HTTP 状态码 **`200`**。与 **`GET /primary`** 和 **`GET /standby-leader`** 不同，该检查不要求 PostgreSQL 以 **`primary`** 或 **`standby_leader`** 身份运行。
 
 - **`GET /replica`**：从库健康检查端点，仅当 Patroni 节点状态为 **`running`**、角色为 **`replica`** 且未设置 **`noloadbalance`** 标签时返回 HTTP 状态码 **`200`**。
 
@@ -41,7 +42,7 @@ Patroni 提供了丰富的 REST API，供 Patroni 自身在主库竞选期间调
 
 - **`GET /replica?tag_key1=value1&tag_key2=value2`**：从库检查端点，还会检查 YAML 配置 **`tags`** 节中用户自定义的 **`key1`** 和 **`key2`** 标签及其对应值。若实例未定义该标签，或 YAML 配置中的值与查询值不匹配，则返回 HTTP 503。
 
-  以下请求检查的是 leader 或 standby-leader 状态，Patroni 不会应用任何用户自定义标签，这些标签将被忽略：
+  以下请求检查的是领导者或 standby-leader 状态，Patroni 不会应用任何用户自定义标签，这些标签将被忽略：
 
   - **`GET /?tag_key1=value1&tag_key2=value2`**
   - **`GET /leader?tag_key1=value1&tag_key2=value2`**
@@ -62,7 +63,7 @@ Patroni 提供了丰富的 REST API，供 Patroni 自身在主库竞选期间调
 
 - **`GET /asynchronous`** 或 **`GET /async`**：仅当 Patroni 节点作为异步备库运行时返回 HTTP 状态码 **`200`**。
 
-- **`GET /asynchronous?lag=<max-lag>`** 或 **`GET /async?lag=<max-lag>`**：异步备库检查端点，在 **`asynchronous`** 或 **`async`** 检查的基础上还会检查复制延迟，仅当延迟低于指定值时才返回 **`200`**。出于性能考虑，延迟计算使用 DCS 中的 **`cluster.last_leader_operation`** 键。**`max-lag`** 可用字节数（整数）或可读格式指定，例如 16kB、64MB、1GB。
+- **`GET /asynchronous?lag=<max-lag>`** 或 **`GET /async?lag=<max-lag>`**：异步备库检查端点，在 **`asynchronous`** 或 **`async`** 检查的基础上还会检查复制延迟，仅当延迟低于指定值时才返回 **`200`**。出于性能考虑，延迟计算使用 DCS 中的 **`cluster.last_leader_operation`** 键作为领导者的 WAL 位置。**`max-lag`** 可用字节数（整数）或可读格式指定，例如 16kB、64MB、1GB。
 
   - **`GET /async?lag=1048576`**
   - **`GET /async?lag=1024kB`**
@@ -104,7 +105,9 @@ livenessProbe:
 
 --------
 
-## 监控端点
+<div id="监控端点"></div>
+
+## 监控端点 {#monitoring-endpoint}
 
 **`GET /patroni`** 由 Patroni 在主库竞选期间内部调用，也可供监控系统使用。此端点返回的 JSON 文档与健康检查端点结构相同。
 
@@ -377,7 +380,9 @@ patroni_postgres_state{scope="batman",name="patroni1"} 5
 patroni_failover_priority{scope="batman",name="patroni1"} 1
 ```
 
-### PostgreSQL 状态值
+<div id="postgresql-状态值"></div>
+
+### PostgreSQL 状态值 {#postgresql-state-values}
 
 **`patroni_postgres_state`** 指标以数值形式表示当前 PostgreSQL 实例的状态，对于需要跟踪状态随时间变化的监控和告警系统很有用。数值由 **`PostgresqlState.get_metrics_description()`** 静态方法生成。
 
@@ -404,7 +409,9 @@ patroni_failover_priority{scope="batman",name="patroni1"} 1
 
 --------
 
-## 集群状态端点
+<div id="集群状态端点"></div>
+
+## 集群状态端点 {#cluster-status-endpoints}
 
 - **`GET /cluster`**：返回描述当前集群拓扑和状态的 JSON 文档：
 
@@ -488,7 +495,9 @@ $ curl -s http://localhost:8008/history | jq .
 
 --------
 
-## 配置端点
+<div id="配置端点"></div>
+
+## 配置端点 {#config-endpoint}
 
 **`GET /config`**：获取当前动态配置：
 
@@ -545,7 +554,6 @@ $ curl -s -XPATCH -d \
 ``` bash
 $ curl -s http://localhost:8008/patroni | jq .
 {
-  "database_system_identifier": "6287881213849985952",
   "postmaster_start_time": "2024-08-28 19:39:26.352526+00:00",
   "xlog": {
     "location": 2197818976
@@ -626,11 +634,15 @@ $ curl -s -XPUT -d \
 
 --------
 
-## 主从切换与故障转移端点
+<div id="主从切换与故障转移端点"></div>
+
+## 主从切换与故障转移端点 {#switchover-and-failover-endpoints}
 
 <a id="switchover_api"></a>
 
-### 主从切换（Switchover）
+<div id="主从切换switchover"></div>
+
+### 主从切换（Switchover） {#switchover}
 
 **`/switchover`** 端点仅在集群健康（存在领导者）时有效，也支持在指定时间调度主从切换。
 
@@ -665,7 +677,9 @@ $ curl -s http://localhost:8008/switchover -XPOST -d \
 Switchover scheduled
 ```
 
-### 故障转移（Failover）
+<div id="故障转移failover"></div>
+
+### 故障转移（Failover） {#failover}
 
 **`/failover`** 端点可在没有健康节点时执行手动故障转移（例如，当所有同步备库均无法提升时，可将一个异步备库提升为主库）。集群不一定要处于无主状态——故障转移也可以在健康集群上执行。
 
@@ -679,7 +693,7 @@ Successfully failed over to "postgresql1"
 ```
 
 > [!WARNING]
-> 使用此端点时请 [格外谨慎](/docs/patroni/rest_api#failover_healthcheck)，在某些情况下可能造成数据丢失。大多数情况下，使用 [主从切换端点](/docs/patroni/rest_api#switchover_api) 即可满足需求。
+> 使用此端点时请 [格外谨慎](/docs/patroni/rest_api#failover_healthcheck)，在某些情况下可能造成数据丢失。大多数情况下，使用 [主从切换端点](/docs/patroni/rest_api#switchover_api) 即可满足管理员的需求。
 
 **`POST /switchover`** 和 **`POST /failover`** 端点分别由 [patronictl_switchover](/docs/patroni/patronictl#patronictl_switchover) 和 [patronictl_failover](/docs/patroni/patronictl#patronictl_failover) 使用。
 
@@ -694,9 +708,11 @@ Successfully failed over to "postgresql1"
 
 <a id="failover_healthcheck"></a>
 
-### 健康备库
+<div id="健康备库"></div>
 
-集群成员需满足以下所有条件，才能在主从切换期间参与主库竞选，或被选为故障转移/主从切换的候选节点：
+### 健康备库 {#healthy-standby}
+
+集群成员需满足以下所有条件，才能在主从切换期间参与主库竞选，或作为故障转移/主从切换的候选节点成为领导者：
 
 - 可通过 Patroni API 访问；
 - 未将 **`nofailover`** 标签设为 **`true`**；
@@ -708,16 +724,22 @@ Successfully failed over to "postgresql1"
   - 故障转移场景（无论集群是否健康）：跳过此检查。
 
 > [!WARNING]
-> 在无领导者的集群中执行手动故障转移时，候选节点即便存在以下情况也将被允许提升：同步模式下该节点不在 **`/sync`** 键成员中；复制延迟超过允许的最大值；时间线编号小于已知的最后集群时间线。
+> 在无领导者的集群中执行手动故障转移时，候选节点即便存在以下情况也将被允许提升：
+>
+> - 启用同步模式时，该节点不在 **`/sync`** 键成员中；
+> - 复制延迟超过允许的最大值；
+> - 时间线编号小于已知的最后集群时间线。
 
 <a id="restart_endpoint"></a>
 
 --------
 
-## 重启端点
+<div id="重启端点"></div>
+
+## 重启端点 {#restart-endpoint}
 
 - **`POST /restart`**：重启指定节点上的 PostgreSQL。**`POST`** 请求体中可选择指定以下重启条件：
-  - **`restart_pending`**：布尔值，若设为 **`true`**，仅在有待应用的 PostgreSQL 配置变更时才执行重启。
+  - **`restart_pending`**：布尔值，若设为 **`true`**，仅在需要通过重启应用 PostgreSQL 配置变更时才执行重启。
   - **`role`**：仅当节点当前角色与请求中指定的角色匹配时才执行重启。
   - **`postgres_version`**：仅当当前 PostgreSQL 版本低于请求中指定的版本时才执行重启。
   - **`timeout`**：等待 PostgreSQL 开始接受连接的时长，覆盖 **`primary_start_timeout`**。
@@ -730,7 +752,9 @@ Successfully failed over to "postgresql1"
 
 --------
 
-## 重载端点
+<div id="重载端点"></div>
+
+## 重载端点 {#reload-endpoint}
 
 **`POST /reload`** 指示 Patroni 重新读取并应用配置文件，等同于向 Patroni 进程发送 **`SIGHUP`** 信号。若修改了需要重启才能生效的 PostgreSQL 参数（如 **`shared_buffers`**），仍需通过 **`POST /restart`** 端点或 [patronictl_restart](/docs/patroni/patronictl#patronictl_restart) 显式重启 PostgreSQL。
 
@@ -738,11 +762,13 @@ Successfully failed over to "postgresql1"
 
 --------
 
-## 重新初始化端点
+<div id="重新初始化端点"></div>
+
+## 重新初始化端点 {#reinitialize-endpoint}
 
 **`POST /reinitialize`**：重新初始化指定节点上的 PostgreSQL 数据目录，仅允许在从库上执行。调用后，将删除数据目录并启动 **`pg_basebackup`** 或其他 [从库创建方法](/docs/patroni/replica_bootstrap#custom_replica_creation)。
 
-若 Patroni 正处于循环尝试恢复失败 PostgreSQL 的过程中，此调用可能失败。解决方法是在请求体中指定 **`{"force":true}`**。
+若 Patroni 正处于循环尝试恢复（重启）失败 PostgreSQL 的过程中，此调用可能失败。解决方法是在请求体中指定 **`{"force":true}`**。
 
 也可在请求体中指定 **`{"from-leader":true}`**，直接从领导者节点获取基础备份，在所有从库均已失败的情况下执行重新初始化时尤为有用。
 

@@ -6,15 +6,14 @@ description: "关于 pgBackRest 备份、恢复、配置与故障排查的常见
 icon: fa-solid fa-circle-question
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/faq.html"
 ---
-
-> 原始页面： <https://pgbackrest.org/faq.html>
 
 --------
 
 ## 简介
 
-常见问题解答旨在针对一些具体问题提供详细说明，这些问题可能未在用户指南、配置参考或命令参考中涵盖。如果在此处找不到您的问题，pgBackRest 在 GitHub 上的 [**Issues List**](https://github.com/pgbackrest/pgbackrest/issues) 也是一个宝贵的资源。
+常见问题解答旨在针对一些具体问题提供详细说明，这些问题可能未在用户指南、配置参考或命令参考中涵盖。如果在此处找不到您的问题，pgBackRest 在 GitHub 上的 [**问题列表**](https://github.com/pgbackrest/pgbackrest/issues) 也是一个宝贵的资源。
 
 
 --------
@@ -53,23 +52,23 @@ pgBackRest 支持在配置文件中为每个命令单独设置选项。 [**配�
 
 ```ini
 [global]
-# 未被覆盖时的通用配置
+# used where not overridden
 process-max=2
 
 [global:backup]
-# 备份时使用更多核心
+# more cores for backup
 process-max=4
 
 [global:restore]
-# 恢复时使用全部核心
+# all the cores for restore
 process-max=8
 
 [global:archive-push]
-# 归档推送时使用更多核心
+# more cores for archive-push
 process-max=3
 
 [global:archive-get]
-# 归档获取时使用较少核心
+# fewer cores for archive-get
 process-max=1
 ```
 
@@ -78,7 +77,7 @@ process-max=1
 
 ## S3 存储桶名称中可以使用点号（句点）吗？
 
-RFC-2818 不允许通配符匹配点号（.），因此使用默认 URI 样式时，S3 存储桶名称不得包含点号。若存储桶名称中含有点号，将会出现类似"unable to find hostname 'my.backup.bucket.s3.amazonaws.com' in certificate common name or subject alternative names"的错误。
+RFC-2818 不允许通配符匹配点号（.），因此 S3 存储桶名称不得包含点号。若 S3 存储桶名称中含有点号，将会出现类似"unable to find hostname 'my.backup.bucket.s3.amazonaws.com' in certificate common name or subject alternative names"的错误。
 
 `repo-s3-uri-style=path` 是一个例外：它会将存储桶名称放在 URI 路径而不是主机名中。由于存储桶名称不再属于主机名，证书只需与端点匹配，因此桶名中的点号不会造成问题。请注意，并非所有 S3 兼容对象存储都支持 path-style URI。
 
@@ -112,7 +111,7 @@ RFC-2818 不允许通配符匹配点号（.），因此使用默认 URI 样式�
 
 ## 基于时间的时间点恢复（PITR）似乎不起作用，为什么？
 
-使用基于时间的 PITR 时，最常见的错误是忘记选择目标时间点之前的备份集。若未指定 `--set` 选项，pgBackRest 会从 `--target=` 所指定的时间点往前查找可用的备份集；若找不到合适的备份集，则默认使用最新备份。然而，若最新备份的时间晚于目标时间，PostgreSQL 会认为 `--target=` 指定的时间无效而忽略它，最终恢复到可用的最新时间点。
+使用基于时间的时间点恢复（PITR）时，最常见的错误是选择了结束时间晚于目标时间的备份。使用 `--type=time` 且未指定 `--set` 选项时，pgBackRest 会在已配置的仓库中查找结束时间早于 `--target=` 所指定时间的备份。若找不到合适的备份，pgBackRest 会报错，不会改为恢复最新备份。结束时间晚于目标时间的备份无法通过重放 WAL 恢复到那个更早的时间点。
 
 要使用 `--set` 选项，请先运行 `info` 命令查看备份列表，找到停止时间戳早于目标时间的备份集，然后在执行恢复时指定 `--set=BACKUP_LABEL`，其中 `BACKUP_LABEL` 为所选备份集的标签。
 
@@ -141,6 +140,6 @@ pgBackRest 不仅使用仓库存储备份和 WAL 归档，还依赖仓库维护�
 
 如果目的是创建一个可转移的自包含数据库副本（例如通过 USB 传输），可以采用如下变通方法：使用启用了 [`--archive-copy`](/docs/pgbackrest/command/backup/#归档复制选项--archive-copy) 选项的 `backup` 命令，确保所需的 WAL 段随备份一同存储；然后使用 [`--type=none`](/docs/pgbackrest/command/restore/#类型选项--type) 配合 `--pg1-path=/your/target/path` 执行恢复。这将生成一个已恢复的 PostgreSQL 数据目录，所有必要的 WAL 文件已就位于 `pg_wal` 中，效果类似于 `pg_basebackup` 的输出结果。
 
-之后可将该目录复制到另一台系统，PostgreSQL 无需访问 pgBackRest 仓库即可从中启动。
+之后可将该目录复制到另一台系统，PostgreSQL 应能直接从中完成恢复，无需访问 pgBackRest 仓库。
 
 请注意，从此备份恢复不会产生时间线切换，这意味着新集群不应向导出源所在的原始仓库推送 WAL。若新集群处于网络隔离环境中，这一点通常不成问题。

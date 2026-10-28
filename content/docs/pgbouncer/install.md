@@ -6,9 +6,8 @@ description: "PgBouncer 编译与安装说明"
 icon: fa-solid fa-cloud-arrow-down
 module: [PGBOUNCER]
 categories: [教程]
+upstream_link: "https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/README.md"
 ---
-
-> 原始页面： <https://www.pgbouncer.org/install.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/README.md)
 
 --------
 
@@ -61,7 +60,7 @@ PgBouncer 在每次连接时执行主机名查询，而非仅在配置加载时�
 | getaddrinfo_a, glibc 2.9+    | 是    | 是 (3)    | 是         | 否           | 非 glibc 环境不可用                    |
 | getaddrinfo, libc            | 否    | 是 (3)    | 是         | 否           | 需要 pthreads                         |
 
-1. 若需要一个主机名对应 8 个以上 IP 地址，则需要 EDNS0 支持。
+1. 若需要一个主机名对应超过 8 个 IP 地址，则需要 EDNS0 支持。
 2. SOA 查询用于在区域序列号变更时重新检查主机名。
 3. 要启用 EDNS0，请在 `/etc/resolv.conf` 中添加 `options edns0`。
 
@@ -99,7 +98,7 @@ systemd 支持允许使用 `Type=notify`（若使用 systemd 253 或更高版本
 
 使用 Autoconf 构建时，需要在运行 `configure` 之前先生成头文件和配置文件：
 
-	$ git clone --branch pgbouncer_1_26_0 https://github.com/pgbouncer/pgbouncer.git
+	$ git clone --branch pgbouncer_1_26_1 https://github.com/pgbouncer/pgbouncer.git
 	$ cd pgbouncer
 	$ ./autogen.sh
 	$ ./configure
@@ -124,7 +123,7 @@ Meson 可直接从检出的源码构建；构建 man 手册需要 pandoc：
 
 如需了解如何运行测试，请参阅 [**测试目录中的 `README.md` 文件**][1]。
 
-[1]: https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/test/README.md
+[1]: https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/test/README.md
 
 --------
 

@@ -6,25 +6,31 @@ icon: fa-solid fa-house-crack
 description: "用于覆盖 Patroni 配置文件参数的环境变量。"
 module: [PATRONI]
 categories: [参考]
+upstream_link: "https://patroni.readthedocs.io/en/latest/ENVIRONMENT.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/ENVIRONMENT.html
 
 <a id="env"></a>
 可以使用系统环境变量覆盖 Patroni 配置文件中定义的部分配置参数。本文档列出了 Patroni 处理的所有环境变量。通过环境变量设置的值始终优先于配置文件中的值。
 
 --------
 
-## 全局/通用
+<div id="全局通用"></div>
+
+## 全局/通用 {#globaluniversal}
 
 - **`PATRONI_CONFIGURATION`**：可通过 [`PATRONI_CONFIGURATION`](/docs/patroni/config#config) 环境变量为 Patroni 提供完整配置。设置此变量后，其他所有环境变量将被忽略！
+- **`PATRONI_THREAD_POOL_SIZE`**：Patroni 用于执行异步任务，以及在领导者竞选或 failsafe 检查期间通过 REST API 与其他成员通信的线程池大小。最小值为 **`5`**，默认值为 **`5`**。
+- **`PATRONI_THREAD_STACK_SIZE`**：指定 Patroni 所启动线程使用的栈大小，值必须按 **`64kB`** 对齐。最小值为 **`64kB`**，默认值（由 Patroni 设置）为 **`512kB`**。
 - **`PATRONI_NAME`**：运行当前 Patroni 实例的节点名称，在集群内必须唯一。
 - **`PATRONI_NAMESPACE`**：Patroni 在配置存储中保存集群信息的路径。默认值："/service"。
 - **`PATRONI_SCOPE`**：集群名称。
+- **`PG_MALLOC_ARENA_MAX`**：为 **`postmaster`** 进程自定义的 **`MALLOC_ARENA_MAX`** 环境变量值。若未设置，**`postmaster`** 将继承 **`MALLOC_ARENA_MAX`** 的值。
 
 --------
 
-## 日志
+<div id="日志"></div>
+
+## 日志 {#log}
 
 - **`PATRONI_LOG_TYPE`**：日志格式，可为 **`plain`** 或 **`json`**。使用 **`json`** 格式需要安装 [`jsonlogger`](/docs/patroni/installation#extras)。默认值为 **`plain`**。
 - **`PATRONI_LOG_LEVEL`**：全局日志级别。默认值为 **`INFO`**（参见 [Python logging 文档](https://docs.python.org/3.6/library/logging.html#levels)）。
@@ -45,7 +51,7 @@ categories: [参考]
 
 --------
 
-## Citus
+## Citus {#citus}
 
 启用 Patroni 与 [Citus](https://docs.citusdata.com) 的集成。配置后，Patroni 将负责在协调器上注册 Citus 工作节点。更多关于 Citus 支持的信息请参阅 [**此处**](/docs/patroni/citus#citus)。
 
@@ -54,7 +60,7 @@ categories: [参考]
 
 --------
 
-## Consul
+## Consul {#consul}
 
 - **`PATRONI_CONSUL_HOST`**：Consul 本地代理的 host:port。
 - **`PATRONI_CONSUL_URL`**：Consul 本地代理的 URL，格式为：http(s)://host:port。
@@ -75,7 +81,7 @@ categories: [参考]
 
 --------
 
-## Etcd
+## Etcd {#etcd}
 
 - **`PATRONI_ETCD_PROXY`**：etcd 的代理 URL。若通过代理连接 etcd，请使用此参数而非 **`PATRONI_ETCD_URL`**。
 - **`PATRONI_ETCD_URL`**：etcd 的 URL，格式为：http(s)://(username:password@)host:port。
@@ -84,7 +90,7 @@ categories: [参考]
 - **`PATRONI_ETCD_PROTOCOL`**：http 或 https，未指定时使用 http。若指定了 **`url`** 或 **`proxy`**，将从中提取协议。
 - **`PATRONI_ETCD_HOST`**：etcd 端点的 host:port。
 - **`PATRONI_ETCD_SRV`**：用于集群自动发现的 SRV 记录搜索域。Patroni 将按以下顺序查询指定域的 SRV 服务名（直到第一次成功）：**`_etcd-client-ssl`**、**`_etcd-client`**、**`_etcd-ssl`**、**`_etcd`**、**`_etcd-server-ssl`**、**`_etcd-server`**。若检索到 **`_etcd-server-ssl`** 或 **`_etcd-server`** 的 SRV 记录，则使用 ETCD peer 协议查询可用成员；否则使用 SRV 记录中的主机。
-- **`PATRONI_ETCD_SRV_SUFFIX`**：发现期间查询的 SRV 名称后缀，用于区分同一域下的多个 etcd 集群，仅与 **`PATRONI_ETCD_SRV`** 联合使用时生效。例如，设置 **`PATRONI_ETCD_SRV_SUFFIX=foo`** 和 **`PATRONI_ETCD_SRV=example.org`** 后，将进行如下 DNS SRV 查询：**`_etcd-client-ssl-foo._tcp.example.com`**（以及所有其他可能的 ETCD SRV 服务名）。
+- **`PATRONI_ETCD_SRV_SUFFIX`**：发现期间查询的 SRV 名称后缀，用于区分同一域下的多个 etcd 集群，仅与 **`PATRONI_ETCD_SRV`** 联合使用时生效。例如，设置 **`PATRONI_ETCD_SRV_SUFFIX=foo`** 和 **`PATRONI_ETCD_SRV=example.org`** 后，将进行如下 DNS SRV 查询：**`_etcd-client-ssl-foo._tcp.example.org`**（以及所有其他可能的 ETCD SRV 服务名）。
 - **`PATRONI_ETCD_USERNAME`**：etcd 认证用户名。
 - **`PATRONI_ETCD_PASSWORD`**：etcd 认证密码。
 - **`PATRONI_ETCD_CACERT`**：CA 证书文件，存在时将启用验证。
@@ -93,7 +99,7 @@ categories: [参考]
 
 --------
 
-## Etcdv3
+## Etcdv3 {#etcdv3}
 
 Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** 替换为 **`ETCD3`** 即可。例如：**`PATRONI_ETCD3_HOST`**、**`PATRONI_ETCD3_CACERT`** 等。
 
@@ -102,7 +108,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 --------
 
-## ZooKeeper
+## ZooKeeper {#zookeeper}
 
 - **`PATRONI_ZOOKEEPER_HOSTS`**：ZooKeeper 集群成员的逗号分隔列表，格式为：**`'host1:port1','host2:port2','etc...'`**。每一项均须加引号！
 - **`PATRONI_ZOOKEEPER_USE_SSL`**：（可选）是否启用 SSL，默认为 **`false`**。设置为 **`false`** 时，所有 SSL 相关参数将被忽略。
@@ -119,7 +125,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 --------
 
-## Exhibitor
+## Exhibitor {#exhibitor}
 
 - **`PATRONI_EXHIBITOR_HOSTS`**：Exhibitor（ZooKeeper）节点的初始列表，格式为：'host1,host2,etc...'。每当 Exhibitor（ZooKeeper）集群拓扑变化时，该列表会自动更新。
 - **`PATRONI_EXHIBITOR_PORT`**：Exhibitor 端口。
@@ -128,7 +134,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 --------
 
-## Kubernetes
+## Kubernetes {#kubernetes}
 
 - **`PATRONI_KUBERNETES_BYPASS_API_SERVICE`**：（可选）与 Kubernetes API 通信时，Patroni 通常依赖 [`kubernetes`](/docs/patroni/kubernetes#kubernetes) 服务，该服务的地址通过 **`KUBERNETES_SERVICE_HOST`** 环境变量暴露给 Pod。若将此参数设置为 **`true`**，Patroni 将解析该服务后端的 API 节点列表并直接与之连接。
 - **`PATRONI_KUBERNETES_NAMESPACE`**：（可选）Patroni Pod 所在的 Kubernetes 命名空间，默认值为 **`default`**。
@@ -148,17 +154,28 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 --------
 
-## Raft（已弃用）
+<div id="raft已弃用"></div>
+
+## Raft（已弃用） {#raft-deprecated}
 
 - **`PATRONI_RAFT_SELF_ADDR`**：监听 Raft 连接的 **`ip:port`**，必须可从集群的其他节点访问。若未设置，该节点将不参与共识。
 - **`PATRONI_RAFT_BIND_ADDR`**：（可选）监听 Raft 连接的 **`ip:port`**，若未指定，将使用 **`self_addr`**。
 - **`PATRONI_RAFT_PARTNER_ADDRS`**：集群中其他 Patroni 节点的列表，格式为 **`"'ip1:port1','ip2:port2'"`**。每一项均须加引号！
 - **`PATRONI_RAFT_DATA_DIR`**：存储 Raft 日志和快照的目录，若未指定，使用当前工作目录。
 - **`PATRONI_RAFT_PASSWORD`**：（可选）使用指定密码加密 Raft 流量，需要安装 Python 的 **`cryptography`** 模块。
+- **`PATRONI_RAFT_MIN_TIMEOUT`**：（可选）底层 pysyncobj Raft 实现的最小选举超时（秒）。必须大于 3 * **`PATRONI_RAFT_APPEND_ENTRIES_PERIOD`**。默认值：**`0.4`**。
+- **`PATRONI_RAFT_MAX_TIMEOUT`**：（可选）底层 pysyncobj Raft 实现的最大选举超时（秒）。必须大于 **`PATRONI_RAFT_MIN_TIMEOUT`**。默认值：**`1.4`**。
+- **`PATRONI_RAFT_CONNECTION_TIMEOUT`**：（可选）连接在多少秒内未收到任何数据即视为失效。必须大于或等于 **`PATRONI_RAFT_MAX_TIMEOUT`**。默认值：**`3.5`**。
+- **`PATRONI_RAFT_APPEND_ENTRIES_PERIOD`**：（可选）发送心跳命令的间隔（秒）。必须小于 **`PATRONI_RAFT_MIN_TIMEOUT`** 的三分之一。默认值：**`0.1`**。
+- **`PATRONI_RAFT_CONNECTION_RETRY_TIME`**：（可选）重连离线节点的尝试间隔（秒）。默认值：**`5.0`**。
+- **`PATRONI_RAFT_LEADER_FALLBACK_TIMEOUT`**：（可选）领导者未获多数节点响应多少秒后退回 follower 状态。必须大于 **`PATRONI_RAFT_APPEND_ENTRIES_PERIOD`**。默认值：**`30.0`**。
+
+> [!NOTE]
+> Patroni 会在启动时验证这些约束，若违反将拒绝启动。这些值无法在运行时更改，需要重启才能生效。详情（包括高延迟限制）请参阅 [Raft 设置](/docs/patroni/config/yaml#raft_settings)。
 
 --------
 
-## PostgreSQL
+## PostgreSQL {#postgresql}
 
 - **`PATRONI_POSTGRESQL_LISTEN`**：PostgreSQL 监听的 IP 地址和端口。支持多个逗号分隔的地址，端口须附加在最后一个地址后并以冒号分隔，例如 **`listen: 127.0.0.1,127.0.0.2:5432`**。Patroni 将使用列表中的第一个地址建立到 PostgreSQL 节点的本地连接。
 - **`PATRONI_POSTGRESQL_CONNECT_ADDRESS`**：其他节点和应用程序访问 PostgreSQL 所用的 IP 地址和端口。
@@ -173,7 +190,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 - **`PATRONI_POSTGRESQL_BIN_POSTGRES`**：（可选）**`postgres`** 可执行文件的自定义名称。
 - **`PATRONI_POSTGRESQL_BIN_IS_READY`**：（可选）**`pg_isready`** 可执行文件的自定义名称。
 - **`PATRONI_POSTGRESQL_BIN_PG_REWIND`**：（可选）**`pg_rewind`** 可执行文件的自定义名称。
-- **`PATRONI_POSTGRESQL_PGPASS`**：[.pgpass](https://www.postgresql.org/docs/current/static/libpq-pgpass.html) 密码文件的路径。Patroni 在执行 pg_basebackup 及某些其他情况下会创建此文件，该位置必须对 Patroni 可写。
+- **`PATRONI_POSTGRESQL_PGPASS`**：[.pgpass](https://www.postgresql.org/docs/current/static/libpq-pgpass.html) 密码文件的路径。Patroni 会在执行 pg_basebackup 之前及某些其他情况下创建此文件，该位置必须对 Patroni 可写。
 - **`PATRONI_REPLICATION_USERNAME`**：复制用户名，在初始化期间创建，从库将使用此用户通过流复制访问复制源。
 - **`PATRONI_REPLICATION_PASSWORD`**：复制密码，在初始化期间创建。
 - **`PATRONI_REPLICATION_SSLMODE`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，用于指定客户端与服务器的 TLS 协商模式。各模式详见 [PostgreSQL 文档](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-SSLMODE-STATEMENTS)，默认模式为 **`prefer`**。
@@ -213,8 +230,9 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 --------
 
-## REST API
+## REST API {#rest-api}
 
+- **`PATRONI_RESTAPI_THREAD_POOL_SIZE`**：Patroni 用于处理 REST API 请求的线程池大小。最小值为 **`5`**，默认值为 **`5`**。
 - **`PATRONI_RESTAPI_CONNECT_ADDRESS`**：访问 REST API 所用的 IP 地址和端口。
 - **`PATRONI_RESTAPI_LISTEN`**：Patroni 监听的 IP 地址和端口，用于为 HAProxy 提供健康检查信息。
 - **`PATRONI_RESTAPI_USERNAME`**：用于保护不安全 REST API 端点的 Basic-auth 用户名。
@@ -225,7 +243,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 - **`PATRONI_RESTAPI_CAFILE`**：包含受信任 CA 证书的 CA_BUNDLE 文件，用于验证客户端证书。
 - **`PATRONI_RESTAPI_CIPHERS`**：（可选）允许使用的密码套件（例如 "ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:!SSLv1:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1"）。
 - **`PATRONI_RESTAPI_VERIFY_CLIENT`**：**`none`**（默认）、**`optional`** 或 **`required`**。**`none`**：不检查客户端证书；**`required`**：所有 REST API 调用均须提供客户端证书，证书签名验证通过即认证成功；**`optional`**：仅不安全的 REST API 端点需要客户端证书，且只对 **`PUT`**、**`POST`**、**`PATCH`** 和 **`DELETE`** 请求检查。
-- **`PATRONI_RESTAPI_ALLOWLIST`**：（可选）允许调用不安全 REST API 端点的主机集合。单个元素可为主机名、IP 地址或 CIDR 网络地址，默认允许所有来源。若设置了 **`allowlist`** 或 **`allowlist_include_members`**，不在列表中的请求将被拒绝。
+- **`PATRONI_RESTAPI_ALLOWLIST`**：（可选）允许调用不安全 REST API 端点的主机集合。单个元素可为主机名、IP 地址或 CIDR 网络地址，默认使用 **`allow all`**，即允许所有来源。若设置了 **`allowlist`** 或 **`allowlist_include_members`**，不在列表中的请求将被拒绝。
 - **`PATRONI_RESTAPI_ALLOWLIST_INCLUDE_MEMBERS`**：（可选）设置为 **`true`** 时，允许从 DCS 中注册的其他集群成员（IP 地址或主机名取自成员的 **`api_url`**）访问不安全的 REST API 端点。注意：操作系统可能为出站连接使用不同的 IP 地址。
 - **`PATRONI_RESTAPI_HTTP_EXTRA_HEADERS`**：（可选）允许 REST API 服务器在 HTTP 响应中附加额外的 HTTP 头信息。
 - **`PATRONI_RESTAPI_HTTPS_EXTRA_HEADERS`**：（可选）启用 TLS 时，允许 REST API 服务器在 HTTP 响应中附加额外的 HTTPS 头信息，同时也会附加 **`http_extra_headers`** 中设置的头信息。
@@ -236,7 +254,7 @@ Etcdv3 的环境变量名与 Etcd 类似，只需将变量名中的 **`ETCD`** �
 
 <div class="title">
 
-Warning
+警告
 
 </div>
 
@@ -247,7 +265,7 @@ Warning
 
 --------
 
-## CTL
+## CTL {#ctl}
 
 - **`PATRONICTL_CONFIG_FILE`**：（可选）配置文件的位置。
 - **`PATRONI_CTL_USERNAME`**：（可选）访问受保护 REST API 端点的 Basic-auth 用户名。若未提供， [`patronictl`](/docs/patroni/patronictl#patronictl) 将使用 REST API "username" 参数中的值。

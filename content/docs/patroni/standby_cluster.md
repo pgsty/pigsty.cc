@@ -5,9 +5,8 @@ icon: fa-solid fa-clone
 description: "备用集群的搭建、行为及从远程主库复制的说明。"
 module: [PATRONI]
 categories: [任务]
+upstream_link: "https://patroni.readthedocs.io/en/latest/standby_cluster.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/standby_cluster.html
 
 <a id="standby_cluster"></a>
 Patroni 还支持通过"备用集群"功能向远程数据中心（Region）运行级联复制。这类集群具有以下特点：
@@ -36,9 +35,9 @@ bootstrap:
 
 请注意，这些选项仅在集群引导期间生效一次，之后只能通过 DCS 修改。
 
-Patroni 会在远程主库的 PGDATA 目录中查找 **`postgresql.conf`** 或 **`postgresql.conf.backup`**，若在 basebackup 后找不到该文件，Patroni 将无法启动。如果远程主库将 **`postgresql.conf`** 存放在其他位置，需要手动将其复制到 PGDATA 目录。
+Patroni 会在远程主库的 PGDATA 目录中查找 **`postgresql.conf`** 或 **`postgresql.conf.backup`**，若在 basebackup 后找不到该文件，Patroni 将无法启动。如果远程主库将 **`postgresql.conf`** 存放在其他位置，则需要自行将其复制到 PGDATA 目录。
 
-若在备用集群上使用复制槽，还必须在主集群上手动创建对应的复制槽——备用集群不会自动完成此操作。可以在主集群上使用 Patroni 的永久复制槽功能，维护一个与 **`primary_slot_name`** 同名的复制槽（若未设置 **`primary_slot_name`**，则使用其默认值）。
+若在备用集群上使用复制槽，还必须在主集群上创建对应的复制槽——备用集群不会自动完成此操作。可以在主集群上使用 Patroni 的永久复制槽功能，维护一个与 **`primary_slot_name`** 同名的复制槽（若未设置 **`primary_slot_name`**，则使用其默认值）。
 
 如果远端站点没有提供连接到主库的单一端点，可以在 **`standby_cluster.host`** 中列出源集群的所有主机地址。当 **`standby_cluster.host`** 包含多个以逗号分隔的主机时，Patroni 将：
 
@@ -47,3 +46,10 @@ Patroni 会在远程主库的 PGDATA 目录中查找 **`postgresql.conf`** 或 *
 - 注意：要使 **`pg_rewind`** 正常运行，集群必须在初始化时启用了 **`data page checksums`**（即 **`initdb`** 的 **`--data-checksums`** 选项）和/或将 **`wal_log_hints`** 设置为 **`on`**，否则 **`pg_rewind`** 将无法正常工作。
 
 备用集群也可以配置为从另一个备用集群或主集群的备库成员进行复制：只需在 **`standby_cluster.host`** 中定义单个主机即可。但请注意，这种情况下 **`pg_rewind`** 将无法在备用集群上执行。
+
+> [!WARNING]
+> 成员名称（每个节点 Patroni 配置中的 **`name`** 字段）必须在主集群及与其相连的所有备用集群范围内保持唯一。
+>
+> Patroni 在主库上使用成员名称设置 **`synchronous_standby_names`**，这些名称同时会成为 **`pg_stat_replication`** 中每条复制连接的 **`application_name`**。如果备用集群的节点与主集群成员同名，PostgreSQL 将看到两条具有相同 **`application_name`** 值的连接。这种歧义可能使 PostgreSQL 使用备用集群的连接（而非原本预期的主集群成员）来满足同步复制要求，导致 PostgreSQL 在事务尚未持久化到正确的备库上时，就过早地将其确认为同步提交。
+>
+> 这是一种静默失败：复制仍在继续，也不会记录任何错误，但集群实际上是在没有有效同步备库的情况下运行；一旦主库发生故障，这将成为潜在的数据丢失场景。

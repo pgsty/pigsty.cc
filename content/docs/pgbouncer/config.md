@@ -2,13 +2,12 @@
 title: "配置：pgbouncer.ini"
 linkTitle: "配置"
 weight: 20
-description: "PgBouncer 配置文件（pgbouncer.ini）完整参考"
+description: "PgBouncer 配置文件（pgbouncer.ini）参考"
 icon: fa-solid fa-code
 module: [PGBOUNCER]
 categories: [参考]
+upstream_link: "https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/doc/config.md"
 ---
-
-> 原始页面： <https://www.pgbouncer.org/config.html> · [1.26.0 源码](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/doc/config.md)
 
 --------
 
@@ -116,7 +115,7 @@ max_client_conn + (max pool_size * total databases)
 
 仅在以下至少一个条件满足时才强制执行：
 
-* `[database]` 节中该连接池的条目设置了 `user` 键（即强制用户）
+* `[databases]` 节中该连接池的条目设置了 `user` 键（即强制用户）
 * 该连接池中至少有一个客户端连接
 
 默认值：0（禁用）
@@ -212,6 +211,8 @@ Postgres 协议支持通过两种方式指定参数设置：直接作为启动�
 
 Postgres 协议支持通过两种方式指定参数设置：直接作为启动包中的参数，或在 [`options` 启动包][options-startup] 中指定。这两种方式指定的参数均受 `ignore_startup_parameters` 支持。甚至可以将 `options` 本身包含在 `ignore_startup_parameters` 中，这样 `options` 中包含的所有未知参数都会被忽略。
 
+在此处显式列出的参数，即使原本会被 PgBouncer 跟踪，也会被忽略。可用此设置停止跟踪默认被跟踪的参数，例如 PostgreSQL 18 之前版本中的 `search_path`，因为这些版本不会上报该参数的变化。列出 `options` 本身不会使其中被跟踪的参数被忽略。
+
 [options-startup]: https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-OPTIONS
 
 默认值：空
@@ -282,7 +283,7 @@ PgBouncer 内部会检查客户端作为预处理语句发送的所有查询，�
 200 x 5kB + 1000 x 4 x 4kB = ~17MB of memory.
 ```
 
-跟踪预处理语句不仅有内存开销，还会增加 CPU 使用率，因为 PgBouncer 需要检查和改写查询。多个 PgBouncer 实例可以监听同一端口，以使用多个核心进行处理，详情参见 [so_reuseport 选项的文档](#so_reuseport)。
+跟踪预处理语句不仅有内存开销，还会增加 CPU 使用率，因为 PgBouncer 需要检查和改写查询。多个 PgBouncer 实例可以监听同一端口，以使用多个核心进行处理，详情参见 [`so_reuseport` 选项的文档](#so_reuseport)。
 
 当然，预处理语句也有性能优势。就像直接连接 PostgreSQL 一样，通过预先准备一个多次执行的查询，可以减少总体的解析和规划开销。PgBouncer 跟踪预处理语句的方式对性能尤其有益，特别是当多个客户端准备相同查询时。因为客户端连接会自动在服务端连接上复用预处理语句，即使该语句是由其他客户端准备的。例如，如果 `pool_size` 为 20，且有 100 个客户端都准备了完全相同的查询，那么该查询在 PostgreSQL 服务器上只会被准备（即解析）20 次。
 
@@ -298,7 +299,7 @@ ERROR:  cached plan must not change result type
 
 ### scram_iterations
 
-使用 SCRAM-SHA-256 加密密码时执行的计算迭代次数。迭代次数越多，对已存储密码的暴力破解攻击的防护越强，但也会使认证速度变慢。
+使用 SCRAM-SHA-256 对密码进行哈希计算时的迭代次数。迭代次数越多，对已存储密码的暴力破解攻击的防护越强，但也会使认证速度变慢。
 
 默认值：4096
 
@@ -313,7 +314,7 @@ PgBouncer 处理自己的客户端认证，并维护自己的用户数据库。�
 用户认证方式。
 
 - **`cert`**：客户端必须通过 TLS 连接并提供有效的客户端证书。用户名从证书的 CommonName 字段中获取。
-- **`md5`**：使用基于 MD5 的密码验证。这是默认的认证方式。`auth_file` 可以同时包含 MD5 加密和明文密码。若配置了 `md5` 但某用户拥有 SCRAM 密钥，则自动使用 SCRAM 认证。
+- **`md5`**：使用基于 MD5 的密码验证。这是默认的认证方式。`auth_file` 可以同时包含 MD5 哈希密码和明文密码。若配置了 `md5` 但某用户拥有 SCRAM 密钥，则自动使用 SCRAM 认证。
 - **`scram-sha-256`**：使用 SCRAM-SHA-256 进行密码验证。`auth_file` 必须包含 SCRAM 密钥或明文密码。
 - **`plain`**：明文密码通过网络传输。已弃用。
 - **`trust`**：不进行认证。用户名仍必须存在于 `auth_file` 中。
@@ -364,7 +365,7 @@ PgBouncer 处理自己的客户端认证，并维护自己的用户数据库。�
 
 ### auth_dbname
 
-`[database]` 节中用于认证目的的数据库名称。此选项可以是全局设置，也可以在连接字符串中指定该参数来覆盖全局设置。
+`[databases]` 节中用于认证目的的数据库名称。此选项可以是全局设置，也可以在连接字符串中指定该参数来覆盖全局设置。
 
 ### auth_ldap_options
 
@@ -432,7 +433,7 @@ auth_ldap_options = ldapurl="ldap://127.0.0.1:12345/dc=example,dc=net?uid?sub"
 
 ### admin_users
 
-允许连接并在控制台执行所有命令的数据库用户（逗号分隔列表）。当 `auth_type=any` 时，此列表仍决定哪些用户获得管理员权限；其他用户可作为统计用户登录。详见 [1.26.0 控制台访问检查](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/src/admin.c#L1572-L1609)。
+允许连接并在控制台执行所有命令的数据库用户（逗号分隔列表）。当 `auth_type=any` 时，此列表仍决定哪些用户获得管理员权限；其他用户可作为统计用户登录。详见 [1.26.1 控制台访问检查](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/src/admin.c#L1572-L1609)。
 
 默认值：空
 
@@ -673,7 +674,7 @@ DHE 密钥交换类型。
 用于连接 PostgreSQL 服务器的 TLS 模式。默认模式为 `prefer`。
 
 - **`disable`**：纯 TCP 连接。甚至不向服务器请求 TLS。
-- **`allow`**：待定：若服务器拒绝明文连接，则尝试 TLS？
+- **`allow`**：与 `prefer` 的行为相同：首先请求 TLS，若服务器拒绝 TLS，则回退到明文 TCP 连接。不验证服务器证书。
 - **`prefer`**：始终首先向 PostgreSQL 请求 TLS 连接。若被拒绝，则通过纯 TCP 建立连接。不验证服务器证书。默认值。
 - **`require`**：连接必须使用 TLS。若服务器拒绝，则不尝试纯 TCP。不验证服务器证书。
 - **`verify-ca`**：连接必须使用 TLS，且服务器证书必须根据 `server_tls_ca_file` 有效。不检查服务器主机名与证书是否匹配。
@@ -746,7 +747,7 @@ PgBouncer 用于向 PostgreSQL 服务器进行认证的私钥。
 
 此设置用于防止无响应的服务器占用连接。在服务器宕机或因任何原因拒绝连接时也有帮助。
 
-此设置也可在数据库级和用户级配置，优先级依次为用户、数据库、全局。实际选用的配置层级若显式设为 0，则禁用此超时。详见 [1.26.0 超时选择逻辑](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_0/src/janitor.c#L328-L336)。
+此设置也可在数据库级和用户级配置，优先级依次为用户、数据库、全局。实际选用的配置层级若显式设为 0，则禁用此超时。详见 [1.26.1 超时选择逻辑](https://github.com/pgbouncer/pgbouncer/blob/pgbouncer_1_26_1/src/janitor.c#L328-L336)。
 
 默认值：120.0
 
@@ -957,7 +958,7 @@ host=192.168.0.1,192.168.0.2,192.168.0.3
 
 仅在以下至少一个条件满足时才强制执行：
 
-* `[database]` 节中此条目设置了 `user` 键（即强制用户）
+* `[databases]` 节中此条目设置了 `user` 键（即强制用户）
 * 该连接池中至少有一个客户端连接
 
 ### reserve_pool_size
@@ -1035,7 +1036,7 @@ user1 = pool_mode=session
 
 此处仅支持少数几项设置。
 
-注意：当配置了 `auth_file` 时，若某用户在本节中有定义但未列于 `auth_file` 中，且已设置 `auth_user`，则 PgBouncer 将尝试使用 `auth_query` 为该用户查找密码。若未设置 `auth_user`，PgBouncer 将假装该用户存在，但不会向客户端返回"无此用户"消息，也不会接受任何提供的密码。
+注意：当配置了 `auth_file` 时，若某用户在本节中有定义但未列于 `auth_file` 中，且已设置 `auth_user`，则 PgBouncer 将尝试使用 `auth_query` 为该用户查找密码。若未设置 `auth_user`，PgBouncer 将假装该用户存在，但不会向客户端返回"no such user"消息，也不会接受任何提供的密码。
 
 ### pool_size
 
@@ -1268,13 +1269,13 @@ stats_users = stat_collector
 ```ini
 [databases]
 
-; foodb 通过 Unix 套接字连接
+; foodb over Unix socket
 foodb =
 
-; 将 bardb 重定向到 localhost 上的 bazdb
+; redirect bardb to bazdb on localhost
 bardb = host=localhost dbname=bazdb
 
-; 到目标数据库的访问将以单一用户进行
+; access to destination database will go with single user
 forcedb = host=localhost port=300 user=baz password=foo client_encoding=UNICODE datestyle=ISO
 ```
 
@@ -1292,7 +1293,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql
    SECURITY DEFINER
-   -- 设置安全的 search_path：受信任的模式，然后是 'pg_temp'。
+   -- Set a secure search_path: trusted schema(s), then 'pg_temp'.
    SET search_path = pg_catalog, pg_temp;
 REVOKE ALL ON FUNCTION pgbouncer.user_lookup(text) FROM public, pgbouncer;
 GRANT EXECUTE ON FUNCTION pgbouncer.user_lookup(text) TO pgbouncer;
@@ -1330,7 +1331,7 @@ postgres = host=localhost dbname=postgres
 listen_addr=127.0.0.1
 auth_file=auth_file.conf
 so_reuseport=1
-; 只有 unix_socket_dir 和 peer_id 不同
+; only unix_socket_dir and peer_id are different
 unix_socket_dir=/tmp/pgbouncer2
 peer_id=2
 ```
@@ -1340,3 +1341,5 @@ peer_id=2
 ## 另请参阅
 
 pgbouncer(1) - 通用用法及控制台命令的 man 手册页
+
+<https://www.pgbouncer.org/>

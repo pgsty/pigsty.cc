@@ -6,9 +6,8 @@ description: "面向 Debian 和 Ubuntu 系统的 pgBackRest 安装配置与使�
 icon: fa-brands fa-ubuntu
 module: [PGBACKREST]
 categories: [教程]
+upstream_link: "https://pgbackrest.org/user-guide.html"
 ---
-
-> 原始页面：[pgBackRest 2.59.2 用户指南](https://pgbackrest.org/user-guide.html)。
 
 --------
 
@@ -67,6 +66,7 @@ pgBackRest 根据用户提供的密码对仓库进行加密，防止未经授权
 ## 升级 pgBackRest
 
 
+
 ### 从 v2.x 升级到 v2.y
 
 从 v2.x 升级到 v2.y 非常简单。仓库格式没有变化，大多数情况下只需安装新版本的二进制文件即可。如果未使用旧版本不支持的新功能，也可以回滚降级。
@@ -84,26 +84,26 @@ pgBackRest 根据用户提供的密码对仓库进行加密，防止未经授权
 
 如需从源码构建，建议在专用构建主机上进行，而非生产环境——构建所需的许多工具不应出现在生产系统上。pgBackRest 由单个可执行文件构成，构建完成后可方便地复制到目标主机。
 
-build **⇒** 将 pgBackRest 版本 `2.59.2` 下载到 `/build` 路径
+build **⇒** 将 pgBackRest 版本 `2.60.0` 下载到 `/build` 路径
 
 ```bash
 mkdir -p /build
 curl -fsSL \
-       https://github.com/pgbackrest/pgbackrest/releases/download/release%2F2.59.2/pgbackrest-2.59.2.tar.gz | \
+       https://github.com/pgbackrest/pgbackrest/releases/download/release%2F2.60.0/pgbackrest-2.60.0.tar.gz | \
        tar zx -C /build
 ```
 
 build **⇒** 安装构建依赖
 
 ```bash
-sudo apt-get install python3-distutils meson gcc libpq-dev libssl-dev libxml2-dev \
-       pkg-config liblz4-dev libzstd-dev libbz2-dev libz-dev libssh2-1-dev libsystemd-dev
+sudo apt-get install meson gcc libpq-dev libssl-dev libxml2-dev pkg-config \
+       liblz4-dev libzstd-dev libbz2-dev libz-dev libssh2-1-dev libsystemd-dev
 ```
 
 build **⇒** 配置并编译 pgBackRest
 
 ```bash
-meson setup /build/pgbackrest /build/pgbackrest-2.59.2
+meson setup /build/pgbackrest /build/pgbackrest-2.60.0
 ninja -C /build/pgbackrest
 ```
 
@@ -116,10 +116,11 @@ meson test -C /build/pgbackrest --suite smoke
 ```text
 ninja: Entering directory `/build/pgbackrest'
 ninja: no work to do.
-1/1 smoke OK               10.91s
-       [filtered 7 lines of output]
-```
+1/1 smoke OK               10.21s
 
+Ok:                 1
+       [filtered 6 lines of output]
+```
 
 --------
 
@@ -169,7 +170,7 @@ sudo -u postgres pgbackrest
 ```
 
 ```text
-pgBackRest 2.59.2 - General help
+pgBackRest 2.60.0 - General help
 
 Usage:
     pgbackrest [options] [command]
@@ -199,7 +200,6 @@ Commands:
 Use 'pgbackrest help [command]' for more information.
 ```
 
-
 --------
 
 ## 快速开始
@@ -216,16 +216,14 @@ pg-primary **⇒** 创建演示集群
 ```bash
 sudo -u postgres /usr/lib/postgresql/17/bin/initdb \
        -D /var/lib/postgresql/17/demo -k -A peer
-
 sudo pg_createcluster 17 demo
 ```
 
 ```text
-Configuring already existing cluster (configuration: /etc/postgresql/17/demo, data: /var/lib/postgresql/17/demo, owner: 102:103)
+Configuring already existing cluster (configuration: /etc/postgresql/17/demo, data: /var/lib/postgresql/17/demo, owner: 101:103)
 Ver Cluster Port Status Owner    Data directory              Log file
 17  demo    5432 down   postgres /var/lib/postgresql/17/demo /var/log/postgresql/postgresql-17-demo.log
 ```
-
 
 ### 配置集群 Stanza
 
@@ -280,17 +278,16 @@ sudo -u postgres bash -c ' \
 ```
 
 ```text
-pgBackRest 2.59.2 - 'backup' command - 'log-path' option help
+pgBackRest 2.60.0 - 'backup' command - 'log-path' option help
 
 Path where log files are stored.
 
 The log path provides a location for pgBackRest to store log files. Note that
 if log-level-file=off then no log path is required.
-current: /path/set/by/env
 
+current: /path/set/by/env
 default: /var/log/pgbackrest
 ```
-
 
 ### 创建仓库
 
@@ -315,6 +312,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 pgBackRest 仓库路
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-path=/var/lib/pgbackrest
 ```
@@ -352,14 +350,18 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `archive-push` 使�
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-path=/var/lib/pgbackrest
+
 [global:archive-push]
 compress-level=3
 ```
 
 这种配置方式适用于任何命令，也可以针对特定 stanza，例如 `demo:archive-push`。
 
+
+<span id="configure-retention"></span>
 
 ### 配置保留策略
 
@@ -370,9 +372,11 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置保留 2 个全量备
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
+
 [global:archive-push]
 compress-level=3
 ```
@@ -391,11 +395,13 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 pgBackRest 仓库加
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
 repo1-cipher-type=aes-256-cbc
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
+
 [global:archive-push]
 compress-level=3
 ```
@@ -418,16 +424,14 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info stanza-create
 ```
 
 ```text
-P00   INFO: stanza-create command begin 2.59.2: --exec-id=418-ea48493a --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
+P00   INFO: stanza-create command begin 2.60.0: --exec-id=417-1e9f3ac1 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
 P00   INFO: stanza-create for stanza 'demo' on repo1
-
 P00   INFO: stanza-create command end: completed successfully
 ```
 
-
 ### 检查配置
 
-`check` 命令用于验证 pgBackRest 和 `archive_command` 是否为指定 stanza 的归档和备份正确配置。它会检查运行该命令的主机上所有已配置的仓库和数据库，可发现配置错误——尤其是因所需 WAL 段未能到达归档而导致备份不完整的问题。该命令可在 PostgreSQL 主机或仓库主机上运行，也可在备库主机上运行，但由于备库无法执行 `pg_switch_xlog()`/`pg_switch_wal()`，在备库上仅能测试仓库配置。
+`check` 命令用于验证 pgBackRest 和 `archive_command` 是否为指定 stanza 的归档和备份正确配置。它会尝试检查运行该命令的主机上所有已配置的仓库和数据库，可发现配置错误——尤其是因所需 WAL 段未能到达归档而导致备份不完整的问题。该命令可在 PostgreSQL 主机或仓库主机上运行，也可在备库主机上运行，但由于备库无法执行 `pg_switch_xlog()`/`pg_switch_wal()`，在备库上仅能测试仓库配置。
 
 注意：执行该命令时，pgBackRest 会调用 `pg_create_restore_point('pgBackRest Archive Check')` 和 `pg_switch_xlog()`/`pg_switch_wal()` 来强制 PostgreSQL 归档一个 WAL 段。
 
@@ -438,14 +442,12 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info check
 ```
 
 ```text
-P00   INFO: check command begin 2.59.2: --exec-id=427-13fc86bf --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
+P00   INFO: check command begin 2.60.0: --exec-id=426-0731b746 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
 P00   INFO: check repo1 configuration (primary)
 P00   INFO: check repo1 archive for WAL (primary)
-P00   INFO: WAL segment 000000010000000000000001 successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000100000000/000000010000000000000001-d90c1b216d8173f5bcfd18f31ea16e25f9e9d786.gz' on repo1
-
+P00   INFO: WAL segment 000000010000000000000001 successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000100000000/000000010000000000000001-33f92705c1adbff8d478e7083380b65fcb876f1c.gz' on repo1
 P00   INFO: check command end: completed successfully
 ```
-
 
 ### 性能调优
 
@@ -453,7 +455,7 @@ pgBackRest 提供了许多性能选项，为保持仓库的向后兼容性，这
 
 - `compress-type` — 控制 `backup` 和 `archive-push` 命令使用的压缩算法。默认为 `gz`（Gzip），推荐改用 `zst`（Zstandard），速度更快且压缩率与 `gz` 相当。`zst` 自 [v2.27](/docs/pgbackrest/release/#v227-版本说明) 起支持。详情请参阅 [**压缩类型**](/docs/pgbackrest/configuration/#压缩类型选项--compress-type)。
 - `repo-bundle` — 备份时将小文件合并打包，节省空间并提升 `backup` 和 `restore` 速度，在 S3 等对象存储上效果尤为明显。`repo-bundle` 选项在 [v2.39](/docs/pgbackrest/release/#v239-版本说明) 中引入。详情请参阅 [**文件打包**](#文件打包)。
-- `repo-block` — 执行 `diff`/`incr` 备份时，仅存储文件中发生变化的数据块，而非整个文件，从而节省空间并提升备份速度。`repo-block` 选项在 [v2.46](/docs/pgbackrest/release/#v246-版本说明) 中引入，建议至少使用 [v2.52.1](/docs/pgbackrest/release/#v2521-版本说明)。详情请参阅 [**块级增量备份**](#块级增量备份)。
+- `repo-block` — 执行 `diff`/`incr` 类型的 `backup` 操作时，仅存储文件中发生变化的数据块，而非整个文件，从而节省空间并提升备份速度。`repo-block` 选项在 [v2.46](/docs/pgbackrest/release/#v246-版本说明) 中引入，建议至少使用 [v2.52.1](/docs/pgbackrest/release/#v2521-版本说明)。详情请参阅 [**块级增量备份**](#块级增量备份)。
 
 还有一些性能选项因需要额外配置或默认值已足够安全（但未必最优）而默认未启用，这些选项在所有 v2 版本中均可用：
 
@@ -471,12 +473,14 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置备份快速启动
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
 repo1-cipher-type=aes-256-cbc
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -491,20 +495,16 @@ sudo -u postgres pgbackrest --stanza=demo \
 ```
 
 ```text
-P00   INFO: backup command begin 2.59.2: --exec-id=454-23b0197b --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo --start-fast
-
+P00   INFO: backup command begin 2.60.0: --exec-id=453-1927d312 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo --start-fast
 P00   WARN: no prior backup exists, incr backup has been changed to full
-
 P00   INFO: execute backup start: backup begins after the requested immediate checkpoint completes
 P00   INFO: backup start archive = 000000010000000000000002, lsn = 0/2000028
        [filtered 3 lines of output]
 P00   INFO: check archive for segment(s) 000000010000000000000002:000000010000000000000003
-P00   INFO: new backup label = 20260927-101911F
-
-P00   INFO: full backup size = 22MB, file total = 963
-
+P00   INFO: new backup label = 20261015-070743F
+P00   INFO: full backup size = 22.1MB, file total = 963
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=454-23b0197b --log-level-console=info --no-log-timestamp --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo
+P00   INFO: expire command begin 2.60.0: --exec-id=453-1927d312 --log-level-console=info --no-log-timestamp --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo
 ```
 
 默认情况下，pgBackRest 会尝试执行增量备份。由于增量备份必须基于全量备份，而此时不存在全量备份，pgBackRest 自动改为执行全量备份。
@@ -521,15 +521,13 @@ sudo -u postgres pgbackrest --stanza=demo --type=diff \
 ```text
        [filtered 7 lines of output]
 P00   INFO: check archive for segment(s) 000000010000000000000004:000000010000000000000005
-P00   INFO: new backup label = 20260927-101911F_20260927-101914D
-
+P00   INFO: new backup label = 20261015-070743F_20261015-070745D
 P00   INFO: diff backup size = 8.3KB, file total = 963
-
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=480-6911e174 --log-level-console=info --no-log-timestamp --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo
+P00   INFO: expire command begin 2.60.0: --exec-id=480-1ccf1661 --log-level-console=info --no-log-timestamp --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-full=2 --stanza=demo
 ```
 
-这次未出现警告，因为全量备份已存在。增量备份可以基于全量备份 *或* 差异备份，而差异备份只能基于全量备份。可通过 `--type=full` 选项执行全量备份。
+这次未出现警告，因为全量备份已存在。增量备份可以基于全量备份 *或* 差异备份，而差异备份只能基于全量备份。可运行带有 `--type=full` 选项的 `backup` 命令执行全量备份。
 
 在线备份期间，pgBackRest 会等待备份一致性所需的 WAL 段完成归档。等待超时由 `archive-timeout` 选项控制，默认为 60 秒。若已知归档单个 WAL 段需要更长时间，应适当增大该选项的值。
 
@@ -566,16 +564,18 @@ stanza: demo
 
     db (current)
         wal archive min/max (17): 000000010000000000000001/000000010000000000000005
-        full backup: 20260927-101911F
-            timestamp start/stop: 2026-09-27 10:19:11+00 / 2026-09-27 10:19:14+00
+
+        full backup: 20261015-070743F
+            timestamp start/stop: 2026-10-15 07:07:43+00 / 2026-10-15 07:07:45+00
             wal start/stop: 000000010000000000000002 / 000000010000000000000003
-            database size: 22MB, database backup size: 22MB
+            database size: 22.1MB, database backup size: 22.1MB
             repo1: backup set size: 2.9MB, backup size: 2.9MB
-        diff backup: 20260927-101911F_20260927-101914D
-            timestamp start/stop: 2026-09-27 10:19:14+00 / 2026-09-27 10:19:16+00
+
+        diff backup: 20261015-070743F_20261015-070745D
+            timestamp start/stop: 2026-10-15 07:07:45+00 / 2026-10-15 07:07:46+00
             wal start/stop: 000000010000000000000004 / 000000010000000000000005
-            database size: 22MB, database backup size: 8.3KB
-            repo1: backup set size: 2.9MB, backup size: 464B
+            database size: 22.1MB, database backup size: 8.3KB
+            repo1: backup set size: 2.9MB, backup size: 448B
             backup reference total: 1 full
 ```
 
@@ -623,12 +623,10 @@ sudo pg_ctlcluster 17 demo start
 
 ```text
 Error: /usr/lib/postgresql/17/bin/pg_ctl /usr/lib/postgresql/17/bin/pg_ctl start -D /var/lib/postgresql/17/demo -l /var/log/postgresql/postgresql-17-demo.log -s -o  -c config_file="/etc/postgresql/17/demo/postgresql.conf"  exited with status 1:
-
 postgres: could not find the database system
-
 Expected to find it in the directory "/var/lib/postgresql/17/demo",
 but could not open file "/var/lib/postgresql/17/demo/global/pg_control": No such file or directory
-Examine the log output.
+       [filtered 2 lines of output]
 ```
 
 使用 `restore` 命令恢复 PostgreSQL 集群备份。执行前集群必须处于停止状态（本例中已停止），并且需要清空 PostgreSQL 数据目录中的所有文件。
@@ -655,7 +653,7 @@ sudo pg_ctlcluster 17 demo start
 
 ## 监控
 
-监控是任何生产系统不可或缺的组成部分。市面上有许多可用的监控工具，稍加处理即可将 pgBackRest 纳入其中。
+监控是任何生产系统的重要组成部分。市面上有许多可用的监控工具，稍加处理即可将 pgBackRest 纳入其中。
 
 pgBackRest 支持以 JSON 格式输出仓库信息，包含每个 stanza 的完整备份列表和 WAL 归档信息。
 
@@ -746,10 +744,9 @@ sudo -u postgres psql -f \
 ```text
   name  | last_successful_backup |    last_archived_wal
 --------+------------------------+--------------------------
- "demo" | 2026-09-27 10:19:16+00 | 000000010000000000000005
+ "demo" | 2026-10-15 07:07:46+00 | 000000010000000000000005
 (1 row)
 ```
-
 
 ### 使用 jq
 
@@ -771,7 +768,7 @@ sudo -u postgres pgbackrest --output=json --stanza=demo info | \
 ```
 
 ```text
-1790504356
+1792048066
 ```
 
 或查询最后归档的 WAL。
@@ -818,6 +815,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-bundle`
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-bundle=y
 repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
@@ -825,6 +823,7 @@ repo1-cipher-type=aes-256-cbc
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -863,6 +862,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-block`
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-block=y
 repo1-bundle=y
@@ -871,10 +871,10 @@ repo1-cipher-type=aes-256-cbc
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
-
 
 ### 备份注解
 
@@ -892,7 +892,7 @@ sudo -u postgres pgbackrest --stanza=demo --annotation=source="demo backup" \
 pg-primary **⇒** 获取演示集群的信息
 
 ```bash
-sudo -u postgres pgbackrest --stanza=demo --set=20260927-101930F info
+sudo -u postgres pgbackrest --stanza=demo --set=20261015-070756F info
 ```
 
 ```text
@@ -903,16 +903,14 @@ stanza: demo
     db (current)
         wal archive min/max (17): 000000020000000000000007/000000020000000000000009
 
-        full backup: 20260927-101930F
-            timestamp start/stop: 2026-09-27 10:19:30+00 / 2026-09-27 10:19:31+00
+        full backup: 20261015-070756F
+            timestamp start/stop: 2026-10-15 07:07:56+00 / 2026-10-15 07:07:57+00
             wal start/stop: 000000020000000000000008 / 000000020000000000000009
             lsn start/stop: 0/8000028 / 0/9000050
-            database size: 22MB, database backup size: 22MB
+            database size: 22.1MB, database backup size: 22.1MB
             repo1: backup size: 2.9MB
             database list: postgres (5)
-
             annotation(s)
-
                 key: value
                 source: demo backup
 ```
@@ -922,9 +920,9 @@ stanza: demo
 pg-primary **⇒** 修改备份注解
 
 ```bash
-sudo -u postgres pgbackrest --stanza=demo --set=20260927-101930F \
+sudo -u postgres pgbackrest --stanza=demo --set=20261015-070756F \
        --annotation=key= --annotation=new_key=new_value annotate
-sudo -u postgres pgbackrest --stanza=demo --set=20260927-101930F info
+sudo -u postgres pgbackrest --stanza=demo --set=20261015-070756F info
 ```
 
 ```text
@@ -935,20 +933,17 @@ stanza: demo
     db (current)
         wal archive min/max (17): 000000020000000000000007/000000020000000000000009
 
-        full backup: 20260927-101930F
-            timestamp start/stop: 2026-09-27 10:19:30+00 / 2026-09-27 10:19:31+00
+        full backup: 20261015-070756F
+            timestamp start/stop: 2026-10-15 07:07:56+00 / 2026-10-15 07:07:57+00
             wal start/stop: 000000020000000000000008 / 000000020000000000000009
             lsn start/stop: 0/8000028 / 0/9000050
-            database size: 22MB, database backup size: 22MB
+            database size: 22.1MB, database backup size: 22.1MB
             repo1: backup size: 2.9MB
             database list: postgres (5)
-
             annotation(s)
-
                 new_key: new_value
                 source: demo backup
 ```
-
 
 --------
 
@@ -967,24 +962,7 @@ pgBackRest 根据保留策略类型（数量或时间段）对全量备份进行
 
 `repo1-retention-full-type` 决定 `repo1-retention-full` 的解释方式：可以是保留的全量备份数量，也可以是保留全量备份的天数。过期操作只在新备份完成后触发——若 `repo1-retention-full-type=count` 且 `repo1-retention-full=2`，则需要存储第三个全量备份时才会过期最旧的一个；若 `repo1-retention-full-type=time` 且 `repo1-retention-full=20`，则至少要有一个全量备份已经超过 20 天才会触发过期。
 
-pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-retention-full`
-
-```ini
-[demo]
-pg1-path=/var/lib/postgresql/17/demo
-[global]
-repo1-block=y
-repo1-bundle=y
-repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
-repo1-cipher-type=aes-256-cbc
-repo1-path=/var/lib/pgbackrest
-repo1-retention-full=2
-start-fast=y
-[global:archive-push]
-compress-level=3
-```
-
-目前已配置 `repo1-retention-full=2`，但当前只有一个全量备份，因此下次执行全量备份时不会触发任何过期操作。
+已在 [配置保留策略](#configure-retention) 中设置 `repo1-retention-full=2`，但当前只有一个全量备份，因此下次执行全量备份时不会使任何全量备份过期。
 
 pg-primary **⇒** 执行全量备份
 
@@ -995,11 +973,9 @@ sudo -u postgres pgbackrest --stanza=demo --type=full \
 
 ```text
        [filtered 975 lines of output]
-P00   INFO: repo1: remove expired backup 20260927-101928F
-P00 DETAIL: repo1: 17-1 archive retention on backup 20260927-101930F, start = 000000020000000000000008
-
+P00   INFO: repo1: remove expired backup 20261015-070753F
+P00 DETAIL: repo1: 17-1 archive retention on backup 20261015-070756F, start = 000000020000000000000008
 P00   INFO: repo1: 17-1 remove archive, start = 000000020000000000000007, stop = 000000020000000000000007
-
 P00   INFO: expire command end: completed successfully
 ```
 
@@ -1014,14 +990,13 @@ sudo -u postgres pgbackrest --stanza=demo --type=full \
 
 ```text
        [filtered 11 lines of output]
-P00   INFO: repo1: expire full backup 20260927-101930F
-P00   INFO: repo1: remove expired backup 20260927-101930F
+P00   INFO: repo1: expire full backup 20261015-070756F
+P00   INFO: repo1: remove expired backup 20261015-070756F
 P00   INFO: repo1: 17-1 remove archive, start = 000000020000000000000008, stop = 000000020000000000000009
-
 P00   INFO: expire command end: completed successfully
 ```
 
-全量备份 `20260927-101911F` 已被过期，归档保留策略现在以 `20260927-101932F` 为基准——该备份是当前最旧的全量备份。
+全量备份 `20261015-070743F` 已被过期，归档保留策略现在以 `20261015-070758F` 为基准——该备份是当前最旧的全量备份。
 
 
 ### 差异备份保留策略
@@ -1033,6 +1008,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-retention-dif
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-block=y
 repo1-bundle=y
@@ -1042,6 +1018,7 @@ repo1-path=/var/lib/pgbackrest
 repo1-retention-diff=1
 repo1-retention-full=2
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -1067,13 +1044,12 @@ sudo -u postgres pgbackrest --stanza=demo --type=diff \
 ```text
        [filtered 10 lines of output]
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=957-5a78b9e0 --log-level-console=info --no-log-timestamp --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-diff=1 --repo1-retention-full=2 --stanza=demo
-P00   INFO: repo1: expire diff backup set 20260927-101935F_20260927-101937D, 20260927-101935F_20260927-101938I
-P00   INFO: repo1: remove expired backup 20260927-101935F_20260927-101938I
-P00   INFO: repo1: remove expired backup 20260927-101935F_20260927-101937D
+P00   INFO: expire command begin 2.60.0: --exec-id=945-4ca6fd47 --log-level-console=info --no-log-timestamp --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-diff=1 --repo1-retention-full=2 --stanza=demo
+P00   INFO: repo1: expire diff backup set 20261015-070800F_20261015-070802D, 20261015-070800F_20261015-070803I
+P00   INFO: repo1: remove expired backup 20261015-070800F_20261015-070803I
+P00   INFO: repo1: remove expired backup 20261015-070800F_20261015-070802D
 P00   INFO: expire command end: completed successfully
 ```
-
 
 ### 归档保留策略
 
@@ -1086,6 +1062,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-retention-dif
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-block=y
 repo1-bundle=y
@@ -1095,6 +1072,7 @@ repo1-path=/var/lib/pgbackrest
 repo1-retention-diff=2
 repo1-retention-full=2
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -1110,8 +1088,7 @@ sudo -u postgres pgbackrest --stanza=demo --type=diff \
        [filtered 6 lines of output]
 P00   INFO: backup stop archive = 000000020000000000000017, lsn = 0/17000050
 P00   INFO: check archive for segment(s) 000000020000000000000016:000000020000000000000017
-P00   INFO: new backup label = 20260927-101935F_20260927-101941D
-
+P00   INFO: new backup label = 20261015-070800F_20261015-070805D
 P00   INFO: diff backup size = 8.3KB, file total = 963
 P00   INFO: backup command end: completed successfully
        [filtered 2 lines of output]
@@ -1125,19 +1102,17 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=detail \
 ```
 
 ```text
-P00   INFO: expire command begin 2.59.2: --exec-id=1039-a1b1a5e3 --log-level-console=detail --no-log-timestamp --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-archive=1 --repo1-retention-archive-type=diff --repo1-retention-diff=2 --repo1-retention-full=2 --stanza=demo
-P00 DETAIL: repo1: 17-1 archive retention on backup 20260927-101932F, start = 00000002000000000000000A, stop = 00000002000000000000000B
-P00 DETAIL: repo1: 17-1 archive retention on backup 20260927-101935F, start = 00000002000000000000000C, stop = 00000002000000000000000D
-P00 DETAIL: repo1: 17-1 archive retention on backup 20260927-101935F_20260927-101939D, start = 000000020000000000000012, stop = 000000020000000000000013
-P00 DETAIL: repo1: 17-1 archive retention on backup 20260927-101935F_20260927-101941D, start = 000000020000000000000016
-
+P00   INFO: expire command begin 2.60.0: --exec-id=1026-cfe5c422 --log-level-console=detail --no-log-timestamp --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo1-retention-archive=1 --repo1-retention-archive-type=diff --repo1-retention-diff=2 --repo1-retention-full=2 --stanza=demo
+P00 DETAIL: repo1: 17-1 archive retention on backup 20261015-070758F, start = 00000002000000000000000A, stop = 00000002000000000000000B
+P00 DETAIL: repo1: 17-1 archive retention on backup 20261015-070800F, start = 00000002000000000000000C, stop = 00000002000000000000000D
+P00 DETAIL: repo1: 17-1 archive retention on backup 20261015-070800F_20261015-070804D, start = 000000020000000000000012, stop = 000000020000000000000013
+P00 DETAIL: repo1: 17-1 archive retention on backup 20261015-070800F_20261015-070805D, start = 000000020000000000000016
 P00   INFO: repo1: 17-1 remove archive, start = 00000002000000000000000E, stop = 000000020000000000000011
 P00   INFO: repo1: 17-1 remove archive, start = 000000020000000000000014, stop = 000000020000000000000015
-
 P00   INFO: expire command end: completed successfully
 ```
 
-差异备份 `20260927-101935F_20260927-101939D` 保留了部分 WAL 段，即使这些 WAL 段无法用于更早备份的 PITR 向前回放，也必须保留以确保旧备份的一致性。`20260927-101935F_20260927-101939D` 之后、`20260927-101935F_20260927-101941D` 之前生成的 WAL 段已被删除。最新备份 `20260927-101935F_20260927-101941D` 之后生成的 WAL 段仍然保留，可用于 PITR。
+差异备份 `20261015-070800F_20261015-070804D` 保留了部分 WAL 段，即使这些 WAL 段无法用于更早备份的 PITR 向前回放，也必须保留以确保旧备份的一致性。`20261015-070800F_20261015-070804D` 之后、`20261015-070800F_20261015-070805D` 之前生成的 WAL 段已被删除。最新备份 `20261015-070800F_20261015-070805D` 之后生成的 WAL 段仍然保留，可用于 PITR。
 
 由于差异归档保留策略中全量备份被视为差异备份，若以相同设置执行一次全量备份，则只保留该全量备份对应的归档用于 PITR。
 
@@ -1148,7 +1123,7 @@ P00   INFO: expire command end: completed successfully
 
 `restore` 命令默认从第一个存在备份的仓库中自动选取最新备份（参见 [**快速开始 - 恢复备份**](#恢复备份)）。检查仓库的顺序由 `pgbackrest.conf` 决定（如 repo1 先于 repo2 被检查）。若要从特定仓库选取备份，可传入 `--repo` 选项（如 `--repo=1`）；若需选取非最新的备份，可传入 `--set` 选项。
 
-当 PITR 类型为 `--type=time` 或 `--type=lsn` 时，必须通过 `--target` 选项指定目标时间或 lsn。若未通过 `--set` 指定备份，pgBackRest 会按顺序检查各已配置仓库，寻找包含所请求时间或 lsn 的备份。若未找到匹配备份，`--type=time` 会使用第一个有备份的仓库中的最新备份，而 `--type=lsn` 则不会选取任何备份。对于其他 PITR 类型（如 `xid`），若目标在最新备份之前，则必须提供 `--set` 选项。详情与示例请参见 [**时间点恢复**](#时间点恢复)。
+指定 `--type=time` 或 `--type=lsn` 进行 PITR 时，必须通过 `--target` 选项提供目标时间或 LSN。若未指定 `--set`，pgBackRest 会按顺序检查已配置的仓库，选择结束时间早于目标时间，或结束 LSN 小于等于目标 LSN 的备份。若找不到匹配的备份，`--type=time` 和 `--type=lsn` 都会报错，不会回退到最新备份。对于其他 PITR 类型（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项指定备份集。更多说明和示例请参阅 [时间点恢复](#时间点恢复)。
 
 按照 PostgreSQL 的建议，复制槽不包含在备份中。详情请参阅 PostgreSQL 文档的 [**备份数据目录**](https://www.postgresql.org/docs/current/continuous-archiving.html#BACKUP-LOWLEVEL-BASE-BACKUP-DATA) 章节。
 
@@ -1164,7 +1139,7 @@ P00   INFO: expire command end: completed successfully
 
 ### Delta 选项
 
-[**快速开始**](#快速开始) 中的 [**恢复备份**](#恢复备份) 章节要求在执行 `restore` 前先清空数据库集群目录。`delta` 选项允许 pgBackRest 自动判断哪些文件可以保留、哪些需要从备份中恢复——同时 *删除* 不在备份清单中的文件，从而清除差异变更。该功能通过计算集群目录中每个文件的 [SHA-1](https://en.wikipedia.org/wiki/SHA-1) 哈希来实现，若哈希与备份中存储的不匹配，则恢复该文件。与 `process-max` 选项结合使用时效率极高。恢复期间 PostgreSQL 服务器已关闭，因此可以使用比备份时更多的并行进程。
+[**快速开始**](#快速开始) 中的 [**恢复备份**](#恢复备份) 章节要求在执行 `restore` 前先清空数据库集群目录。`delta` 选项允许 pgBackRest 自动判断哪些文件可以保留、哪些需要从备份中恢复——同时 *删除* 不在备份清单中的文件，从而清除差异变更。该功能通过计算集群目录中每个文件的 [SHA-1](https://en.wikipedia.org/wiki/SHA-1) 哈希来实现，若 `SHA-1` 哈希与备份中存储的不匹配，则恢复该文件。与 `process-max` 选项结合使用时效率极高。恢复期间 PostgreSQL 服务器已关闭，因此可以使用比备份时更多的并行进程。
 
 pg-primary **⇒** 停止 demo 集群，执行 delta 恢复
 
@@ -1178,18 +1153,16 @@ sudo -u postgres pgbackrest --stanza=demo --delta \
        [filtered 2 lines of output]
 P00 DETAIL: check '/var/lib/postgresql/17/demo' exists
 P00 DETAIL: remove 'global/pg_control' so cluster will not start if restore does not complete
-
 P00   INFO: remove invalid files/links/paths from '/var/lib/postgresql/17/demo'
-
 P00 DETAIL: remove invalid file '/var/lib/postgresql/17/demo/backup_label.old'
 P00 DETAIL: remove invalid file '/var/lib/postgresql/17/demo/base/1/pg_internal.init'
-       [filtered 133 lines of output]
-P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/1/113 - exists and matches backup (bundle 20260927-101935F/1/58424, 8KB, 5.90%) checksum 1cd643347b87a472ff001ae124e4b532ce998d2f
-P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/1/112 - exists and matches backup (bundle 20260927-101935F/1/58512, 8KB, 5.94%) checksum 2cbd5cf8fb22ef627eb539776c5ec7457bdb2890
-P01 DETAIL: restore file /var/lib/postgresql/17/demo/PG_VERSION - exists and matches backup (bundle 20260927-101935F/1/58600, 3B, 5.94%) checksum ad48103e4fc71796e9708cafc43adeed0d1076b7
-P01 DETAIL: restore file /var/lib/postgresql/17/demo/global/6303 - exists and matches backup (bundle 20260927-101935F/1/58624, 16KB, 6.01%) checksum f5bab995185b4b5cc2a02777c157dff2937879bf
-P01 DETAIL: restore file /var/lib/postgresql/17/demo/global/6302 - exists and matches backup (bundle 20260927-101935F/1/58832, 16KB, 6.08%) checksum eb54339bce7ce3a899043e950ba88034d2450218
-       [filtered 869 lines of output]
+       [filtered 383 lines of output]
+P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/1/1255 - exists and matches backup (bundle 20261015-070800F/1/2464720, 792KB, 73.62%) checksum 7be9b18ae9e21c9583e5c9c35b662ce530a92e14
+P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/4/1255 - exists and matches backup (bundle 20261015-070800F/1/2568896, 792KB, 77.13%) checksum 7be9b18ae9e21c9583e5c9c35b662ce530a92e14
+P01 DETAIL: restore file /var/lib/postgresql/17/demo/PG_VERSION - exists and matches backup (bundle 20261015-070800F/1/2673072, 3B, 77.13%) checksum ad48103e4fc71796e9708cafc43adeed0d1076b7
+P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/1/PG_VERSION - exists and matches backup (bundle 20261015-070800F/1/2673096, 3B, 77.13%) checksum ad48103e4fc71796e9708cafc43adeed0d1076b7
+P01 DETAIL: restore file /var/lib/postgresql/17/demo/base/4/PG_VERSION - exists and matches backup (bundle 20261015-070800F/1/2673120, 3B, 77.13%) checksum ad48103e4fc71796e9708cafc43adeed0d1076b7
+       [filtered 619 lines of output]
 ```
 
 pg-primary **⇒** 重启 PostgreSQL
@@ -1197,7 +1170,6 @@ pg-primary **⇒** 重启 PostgreSQL
 ```bash
 sudo pg_ctlcluster 17 demo start
 ```
-
 
 ### 选择性数据库恢复
 
@@ -1264,7 +1236,7 @@ sudo -u postgres du -sh /var/lib/postgresql/17/demo/base/32768
 ```
 
 ```text
-7.4M	/var/lib/postgresql/17/demo/base/32768
+7.4M    /var/lib/postgresql/17/demo/base/32768
 ```
 
 若不清楚要恢复的数据库名称，可使用 `info` 命令的 `--set` 选项查看该备份集包含的数据库列表。
@@ -1273,14 +1245,13 @@ pg-primary **⇒** 查看备份的数据库列表
 
 ```bash
 sudo -u postgres pgbackrest --stanza=demo \
-       --set=20260927-101935F_20260927-101948I info
+       --set=20261015-070800F_20261015-070809I info
 ```
 
 ```text
        [filtered 12 lines of output]
             repo1: backup size: 1.9MB
-            backup reference list: 20260927-101935F, 20260927-101935F_20260927-101941D
-
+            backup reference list: 20261015-070800F, 20261015-070800F_20261015-070805D
             database list: postgres (5), test1 (32768), test2 (32769)
 ```
 
@@ -1296,11 +1267,10 @@ pg-primary **⇒** 从最新备份恢复，仅包含 test2 数据库
 sudo pg_ctlcluster 17 demo stop
 sudo -u postgres pgbackrest --stanza=demo --delta \
        --db-include=test2 --type=immediate --target-action=promote restore
-
 sudo pg_ctlcluster 17 demo start
 ```
 
-恢复完成后，test2 数据库将包含之前创建的所有表和数据，可正常访问。
+恢复完成后，test2 数据库将包含之前创建的所有表和数据。
 
 pg-primary **⇒** 验证 test2 数据库已成功恢复
 
@@ -1338,7 +1308,7 @@ sudo -u postgres du -sh /var/lib/postgresql/17/demo/base/32768
 ```
 
 ```text
-8.0K	/var/lib/postgresql/17/demo/base/32768
+8.0K    /var/lib/postgresql/17/demo/base/32768
 ```
 
 此时对无效的 test1 数据库唯一可执行的操作是 `drop database`。pgBackRest 不会自动删除该数据库，因为这一操作必须在恢复完成、集群可访问之后才能进行。
@@ -1367,12 +1337,9 @@ sudo -u postgres psql -c "select oid, datname from pg_database order by oid;"
      1 | template1
      4 | template0
      5 | postgres
-
  32769 | test2
-
 (4 rows)
 ```
-
 
 --------
 
@@ -1396,9 +1363,7 @@ sudo -u postgres psql -c "begin; \
        [filtered 4 lines of output]
     message
 ----------------
-
  Important Data
-
 (1 row)
 ```
 
@@ -1411,7 +1376,7 @@ sudo -u postgres psql -Atc "select current_timestamp"
 ```
 
 ```text
-2026-09-27 10:19:58.808792+00
+2026-10-15 07:08:16.882666+00
 ```
 
 记录时间后，删除该表。实际场景中，找到表被删除的确切时间远比此示例困难——可能无法精确定位，但通过一些排查工作通常能接近实际时间。
@@ -1429,7 +1394,6 @@ sudo -u postgres psql -c "begin; \
 BEGIN
 DROP TABLE
 COMMITERROR:  relation "important_table" does not exist
-
 LINE 1: ...le important_table;     commit;     select * from important_...
                                                              ^
 ```
@@ -1446,8 +1410,9 @@ sudo -u postgres pgbackrest info
 ```text
        [filtered 38 lines of output]
             backup reference total: 1 full, 1 diff
-        incr backup: 20260927-101935F_20260927-102000I
-            timestamp start/stop: 2026-09-27 10:20:00+00 / 2026-09-27 10:20:01+00
+
+        incr backup: 20261015-070800F_20261015-070818I
+            timestamp start/stop: 2026-10-15 07:08:18+00 / 2026-10-15 07:08:19+00
             wal start/stop: 00000004000000000000001A / 00000004000000000000001A
        [filtered 2 lines of output]
 ```
@@ -1459,21 +1424,19 @@ pg-primary **⇒** 尝试从错误的备份中恢复
 ```bash
 sudo pg_ctlcluster 17 demo stop
 sudo -u postgres pgbackrest --stanza=demo --delta \
-       --set=20260927-101935F_20260927-102000I --target-timeline=current \
-       --type=time "--target=2026-09-27 10:19:58.808792+00" --target-action=promote restore
-
+       --set=20261015-070800F_20261015-070818I --target-timeline=current \
+       --type=time "--target=2026-10-15 07:08:16.882666+00" --target-action=promote restore
 sudo pg_ctlcluster 17 demo start
 ```
 
 ```text
        [filtered 13 lines of output]
 LOG:  database system is ready to accept read-only connections
-LOG:  redo done at 0/1A000120 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.03 s
-
+LOG:  redo done at 0/1A000120 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.02 s
 FATAL:  recovery ended before configured recovery target was reached
-LOG:  startup process (PID 1440) exited with exit code 1
+LOG:  startup process (PID 1433) exited with exit code 1
 LOG:  terminating any other active server processes
-LOG:  database system is shut down
+       [filtered 4 lines of output]
 ```
 
 一种可靠的方法是让 pgBackRest 自动选择能够恢复到目标时间的备份，即在指定时间之前完成的备份。
@@ -1482,21 +1445,20 @@ LOG:  database system is shut down
 
 当恢复类型为 `xid` 或 `name` 时，pgBackRest 无法自动选择备份，必须手动指定。
 
-pg-primary **⇒** 将 demo 集群恢复至 `2026-08-17 04:51:24.23782+00`
+pg-primary **⇒** 将 demo 集群恢复至 `2026-10-15 07:08:16.882666+00`
 
 ```bash
 sudo -u postgres pgbackrest --stanza=demo --delta \
-       --type=time "--target=2026-09-27 10:19:58.808792+00" \
+       --type=time "--target=2026-10-15 07:08:16.882666+00" \
        --target-action=promote restore
-
 sudo -u postgres cat /var/lib/postgresql/17/demo/postgresql.auto.conf
 ```
 
 ```text
        [filtered 9 lines of output]
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:20:03
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:08:20
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
-recovery_target_time = '2026-09-27 10:19:58.808792+00'
+recovery_target_time = '2026-10-15 07:08:16.882666+00'
 recovery_target_action = 'promote'
 ```
 
@@ -1512,9 +1474,7 @@ sudo -u postgres psql -c "select * from important_table"
 ```text
     message
 ----------------
-
  Important Data
-
 (1 row)
 ```
 
@@ -1530,20 +1490,19 @@ sudo -u postgres cat /var/log/postgresql/postgresql-17-demo.log
        [filtered 7 lines of output]
 LOG:  restored log file "00000004.history" from archive
 LOG:  restored log file "000000040000000000000019" from archive
-LOG:  starting point-in-time recovery to 2026-09-27 10:19:58.808792+00
+LOG:  starting point-in-time recovery to 2026-10-15 07:08:16.882666+00
 LOG:  restored log file "00000003.history" from archive
 LOG:  redo starts at 0/19000028
        [filtered 2 lines of output]
 LOG:  database system is ready to accept read-only connections
 LOG:  restored log file "00000004000000000000001A" from archive
-LOG:  recovery stopping before commit of transaction 748, time 2026-09-27 10:20:00.041047+00
-LOG:  redo done at 0/1901CC00 system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.07 s
-LOG:  last completed transaction was at log time 2026-09-27 10:19:57.537628+00
+LOG:  recovery stopping before commit of transaction 748, time 2026-10-15 07:08:18.066935+00
+LOG:  redo done at 0/1901CC00 system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.05 s
+LOG:  last completed transaction was at log time 2026-10-15 07:08:15.697241+00
 LOG:  restored log file "000000040000000000000019" from archive
 LOG:  selected new timeline ID: 5
-       [filtered 5 lines of output]
+       [filtered 4 lines of output]
 ```
-
 
 --------
 
@@ -1578,8 +1537,7 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info stop
 ```
 
 ```text
-P00   INFO: stop command begin 2.59.2: --exec-id=1572-06fe3d27 --log-level-console=info --no-log-timestamp --stanza=demo
-
+P00   INFO: stop command begin 2.60.0: --exec-id=1568-be450376 --log-level-console=info --no-log-timestamp --stanza=demo
 P00   INFO: stop command end: completed successfully
 ```
 
@@ -1591,11 +1549,9 @@ sudo -u postgres pgbackrest --stanza=demo --repo=1 \
 ```
 
 ```text
-P00   INFO: stanza-delete command begin 2.59.2: --exec-id=1580-c06f14e0 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=1 --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
-
+P00   INFO: stanza-delete command begin 2.60.0: --exec-id=1576-579aad05 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=1 --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --stanza=demo
 P00   INFO: stanza-delete command end: completed successfully
 ```
-
 
 --------
 
@@ -1627,6 +1583,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 Azure
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-block=y
 repo1-bundle=y
@@ -1642,6 +1599,7 @@ repo2-path=/demo-repo
 repo2-retention-full=4
 repo2-type=azure
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -1657,10 +1615,9 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info stanza-create
 ```
 
 ```text
-P00   INFO: stanza-create command begin 2.59.2: --exec-id=1661-eeb7ca7a --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo2-type=azure --stanza=demo
+P00   INFO: stanza-create command begin 2.60.0: --exec-id=1669-276a1ddb --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo2-type=azure --stanza=demo
 P00   INFO: stanza-create for stanza 'demo' on repo1
 P00   INFO: stanza-create for stanza 'demo' on repo2
-
 P00   INFO: stanza-create command end: completed successfully
 ```
 
@@ -1674,22 +1631,17 @@ sudo -u postgres pgbackrest --stanza=demo --repo=2 \
 ```
 
 ```text
-P00   INFO: backup command begin 2.59.2: --exec-id=1670-de551bc3 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=2 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-block --repo1-bundle --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo2-type=azure --stanza=demo --start-fast
-
+P00   INFO: backup command begin 2.60.0: --exec-id=1678-229e5c4c --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=2 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-block --repo1-bundle --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo2-type=azure --stanza=demo --start-fast
 P00   WARN: no prior backup exists, incr backup has been changed to full
-
 P00   INFO: execute backup start: backup begins after the requested immediate checkpoint completes
 P00   INFO: backup start archive = 00000005000000000000001B, lsn = 0/1B000028
        [filtered 3 lines of output]
 P00   INFO: check archive for segment(s) 00000005000000000000001B:00000005000000000000001B
-P00   INFO: new backup label = 20260927-102014F
-
-P00   INFO: full backup size = 29.2MB, file total = 1265
-
+P00   INFO: new backup label = 20261015-070828F
+P00   INFO: full backup size = 29.3MB, file total = 1265
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=1670-de551bc3 --log-level-console=info --no-log-timestamp --repo=2 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo2-type=azure --stanza=demo
+P00   INFO: expire command begin 2.60.0: --exec-id=1678-229e5c4c --log-level-console=info --no-log-timestamp --repo=2 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo2-type=azure --stanza=demo
 ```
-
 
 --------
 
@@ -1702,6 +1654,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 S3
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-block=y
 repo1-bundle=y
@@ -1725,6 +1678,7 @@ repo3-s3-key-secret=verySecretKey1
 repo3-s3-region=us-east-1
 repo3-type=s3
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -1806,7 +1760,6 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info stanza-create
        [filtered 4 lines of output]
 P00   INFO: stanza 'demo' already exists on repo2 and is valid
 P00   INFO: stanza-create for stanza 'demo' on repo3
-
 P00   INFO: stanza-create command end: completed successfully
 ```
 
@@ -1820,22 +1773,17 @@ sudo -u postgres pgbackrest --stanza=demo --repo=3 \
 ```
 
 ```text
-P00   INFO: backup command begin 2.59.2: --exec-id=1773-e5dfef6d --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=3 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-block --repo1-bundle --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key=<redacted> --repo3-s3-key-secret=<redacted> --repo3-s3-region=us-east-1 --repo2-type=azure --repo3-type=s3 --stanza=demo --start-fast
-
+P00   INFO: backup command begin 2.60.0: --exec-id=1886-57ff5545 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo=3 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-block --repo1-bundle --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key= --repo3-s3-key-secret= --repo3-s3-region=us-east-1 --repo2-type=azure --repo3-type=s3 --stanza=demo --start-fast
 P00   WARN: no prior backup exists, incr backup has been changed to full
-
 P00   INFO: execute backup start: backup begins after the requested immediate checkpoint completes
 P00   INFO: backup start archive = 00000005000000000000001D, lsn = 0/1D000028
        [filtered 3 lines of output]
 P00   INFO: check archive for segment(s) 00000005000000000000001D:00000005000000000000001D
-P00   INFO: new backup label = 20260927-102029F
-
-P00   INFO: full backup size = 29.2MB, file total = 1265
-
+P00   INFO: new backup label = 20261015-070845F
+P00   INFO: full backup size = 29.3MB, file total = 1265
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=1773-e5dfef6d --log-level-console=info --no-log-timestamp --repo=3 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key=<redacted> --repo3-s3-key-secret=<redacted> --repo3-s3-region=us-east-1 --repo2-type=azure --repo3-type=s3 --stanza=demo
+P00   INFO: expire command begin 2.60.0: --exec-id=1886-57ff5545 --log-level-console=info --no-log-timestamp --repo=3 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key= --repo3-s3-key-secret= --repo3-s3-region=us-east-1 --repo2-type=azure --repo3-type=s3 --stanza=demo
 ```
-
 
 --------
 
@@ -1848,6 +1796,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 SFTP
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 process-max=4
 repo1-block=y
@@ -1880,6 +1829,7 @@ repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp
 repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub
 repo4-type=sftp
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -1898,7 +1848,6 @@ sftp-server **⇒** 将 pg-primary 的 SFTP 备份公钥复制到 sftp-server
 
 ```bash
 sudo -u pgbackrest mkdir -m 750 -p /home/pgbackrest/.ssh
-
 (sudo ssh root@pg-primary cat /var/lib/postgresql/.ssh/id_rsa_sftp.pub) | \
        sudo -u pgbackrest tee -a /home/pgbackrest/.ssh/authorized_keys
 ```
@@ -1921,7 +1870,6 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info stanza-create
        [filtered 6 lines of output]
 P00   INFO: stanza 'demo' already exists on repo3 and is valid
 P00   INFO: stanza-create for stanza 'demo' on repo4
-
 P00   INFO: stanza-create command end: completed successfully
 ```
 
@@ -1933,25 +1881,20 @@ sudo -u postgres pgbackrest --stanza=demo --repo=4 \
 ```
 
 ```text
-P00   INFO: backup command begin 2.59.2: --exec-id=1862-9e493c8b --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=4 --repo=4 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-block --repo1-bundle --repo4-bundle --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key=<redacted> --repo3-s3-key-secret=<redacted> --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --stanza=demo --start-fast
+P00   INFO: backup command begin 2.60.0: --exec-id=1973-b6b04e3d --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=4 --repo=4 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-block --repo1-bundle --repo4-bundle --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key= --repo3-s3-key-secret= --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --stanza=demo --start-fast
 P00   WARN: option 'repo4-retention-full' is not set for 'repo4-retention-full-type=count', the repository may run out of space
             HINT: to retain full backups indefinitely (without warning), set option 'repo4-retention-full' to the maximum.
-
 P00   WARN: no prior backup exists, incr backup has been changed to full
-
 P00   INFO: execute backup start: backup begins after the requested immediate checkpoint completes
 P00   INFO: backup start archive = 00000005000000000000001E, lsn = 0/1E000028
        [filtered 3 lines of output]
 P00   INFO: check archive for segment(s) 00000005000000000000001E:00000005000000000000001F
-P00   INFO: new backup label = 20260927-102048F
-
-P00   INFO: full backup size = 29.2MB, file total = 1265
-
+P00   INFO: new backup label = 20261015-070853F
+P00   INFO: full backup size = 29.3MB, file total = 1265
 P00   INFO: backup command end: completed successfully
-P00   INFO: expire command begin 2.59.2: --exec-id=1862-9e493c8b --log-level-console=info --no-log-timestamp --repo=4 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key=<redacted> --repo3-s3-key-secret=<redacted> --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --stanza=demo
+P00   INFO: expire command begin 2.60.0: --exec-id=1973-b6b04e3d --log-level-console=info --no-log-timestamp --repo=4 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo1-retention-diff=2 --repo1-retention-full=2 --repo2-retention-full=4 --repo3-retention-full=4 --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key= --repo3-s3-key-secret= --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --stanza=demo
 P00   INFO: expire command end: completed successfully
 ```
-
 
 --------
 
@@ -1964,6 +1907,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 GCS
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 process-max=4
 repo1-block=y
@@ -2000,6 +1944,7 @@ repo5-gcs-key=/etc/pgbackrest/gcs-key.json
 repo5-path=/demo-repo
 repo5-type=gcs
 start-fast=y
+
 [global:archive-push]
 compress-level=3
 ```
@@ -2043,7 +1988,6 @@ sudo -u postgres pgbackrest --stanza=demo --repo=3 info
 
 ```text
 stanza: demo
-
     status: error (missing stanza path)
 ```
 
@@ -2062,15 +2006,15 @@ key=demo-repo/backup/demo/backup.info; \
 ```
 
 ```text
------------------------------------------------------------------------------
-|                            ListObjectVersions                             |
-+--------+----------------------------+-------------------------------------+
-| Action |         Modified           |               Object                |
-+--------+----------------------------+-------------------------------------+
-|  PUT   |  2026-09-27T10:20:29.313Z  |  demo-repo/backup/demo/backup.info  |
-|  PUT   |  2026-09-27T10:20:43.618Z  |  demo-repo/backup/demo/backup.info  |
-|  DELETE|  2026-09-27T10:20:53.763Z  |  demo-repo/backup/demo/backup.info  |
-+--------+----------------------------+-------------------------------------+
+------------------------------------------------------------------------------
+|                             ListObjectVersions                             |
++--------+-----------------------------+-------------------------------------+
+| Action |          Modified           |               Object                |
++--------+-----------------------------+-------------------------------------+
+|  PUT   |  2026-10-15T07:08:45+00:00  |  demo-repo/backup/demo/backup.info  |
+|  PUT   |  2026-10-15T07:08:49+00:00  |  demo-repo/backup/demo/backup.info  |
+|  DELETE|  2026-10-15T07:08:58+00:00  |  demo-repo/backup/demo/backup.info  |
++--------+-----------------------------+-------------------------------------+
 ```
 
 现在可以使用目标时间运行 `info` 命令，查看仓库被删除之前的状态。
@@ -2079,14 +2023,15 @@ pg-primary **⇒** 带目标时间的 info 命令
 
 ```bash
 sudo -u postgres pgbackrest --stanza=demo --repo=3 \
-       --repo-target-time="2026-09-27 10:20:43+00" info
+       --repo-target-time="2026-10-15 07:08:49+00" info
 ```
 
 ```text
        [filtered 5 lines of output]
         wal archive min/max (17): 00000005000000000000001C/00000005000000000000001D
-        full backup: 20260927-102029F
-            timestamp start/stop: 2026-09-27 10:20:29+00 / 2026-09-27 10:20:43+00
+
+        full backup: 20261015-070845F
+            timestamp start/stop: 2026-10-15 07:08:45+00 / 2026-10-15 07:08:49+00
             wal start/stop: 00000005000000000000001D / 00000005000000000000001D
             repo3: backup set size: 3.8MB, backup size: 3.8MB
 ```
@@ -2097,13 +2042,12 @@ pg-primary **⇒** 带目标时间的 restore 命令
 
 ```bash
 sudo -u postgres pgbackrest --stanza=demo --repo=3 --delta \
-       --repo-target-time="2026-09-27 10:20:43+00" --log-level-console=info restore
+       --repo-target-time="2026-10-15 07:08:49+00" --log-level-console=info restore
 ```
 
 ```text
-P00   INFO: restore command begin 2.59.2: --delta --exec-id=1956-05298d4c --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=4 --repo=3 --repo2-azure-account=<redacted> --repo2-azure-container=demo-container --repo2-azure-key=<redacted> --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo5-gcs-bucket=demo-bucket --repo5-gcs-key=<redacted> --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo5-path=/demo-repo --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key=<redacted> --repo3-s3-key-secret=<redacted> --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo-target-time="2026-09-27 10:20:43+00" --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --repo5-type=gcs --stanza=demo
-P00   INFO: repo3: restore backup set 20260927-102029F, recovery will start at 2026-09-27 10:20:29
-
+P00   INFO: restore command begin 2.60.0: --delta --exec-id=2085-6787dc85 --log-level-console=info --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=4 --repo=3 --repo2-azure-account= --repo2-azure-container=demo-container --repo2-azure-key= --repo1-cipher-pass= --repo1-cipher-type=aes-256-cbc --repo5-gcs-bucket=demo-bucket --repo5-gcs-key= --repo1-path=/var/lib/pgbackrest --repo2-path=/demo-repo --repo3-path=/demo-repo --repo4-path=/demo-repo --repo5-path=/demo-repo --repo3-s3-bucket=demo-bucket --repo3-s3-endpoint=s3.us-east-1.amazonaws.com --repo3-s3-key= --repo3-s3-key-secret= --repo3-s3-region=us-east-1 --repo4-sftp-host=sftp-server --repo4-sftp-host-key-hash-type=sha1 --repo4-sftp-host-user=pgbackrest --repo4-sftp-private-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp --repo4-sftp-public-key-file=/var/lib/postgresql/.ssh/id_rsa_sftp.pub --repo-target-time="2026-10-15 07:08:49+00" --repo2-type=azure --repo3-type=s3 --repo4-type=sftp --repo5-type=gcs --stanza=demo
+P00   INFO: repo3: restore backup set 20261015-070845F, recovery will start at 2026-10-15 07:08:45
 P00   INFO: remove invalid files/links/paths from '/var/lib/postgresql/17/demo'
 P00   INFO: write updated /var/lib/postgresql/17/demo/postgresql.auto.conf
        [filtered 2 lines of output]
@@ -2112,7 +2056,6 @@ P00   INFO: write updated /var/lib/postgresql/17/demo/postgresql.auto.conf
 ```bash
 sudo pg_ctlcluster 17 demo start
 ```
-
 
 --------
 
@@ -2184,7 +2127,6 @@ sudo chmod 750 /var/lib/pgbackrest
 sudo chown pgbackrest:pgbackrest /var/lib/pgbackrest
 ```
 
-
 ### 配置免密 SSH
 
 pgBackRest 支持使用免密 SSH 实现主机间通信。也可以使用 TLS，请参见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#配置)。
@@ -2254,6 +2196,7 @@ repository:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `pg1-host`/`pg1-host
 [demo]
 pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
@@ -2267,6 +2210,7 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `repo1-host`/`repo1-
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 log-level-file=detail
 repo1-host=repository
@@ -2301,7 +2245,6 @@ repository **⇒** 检查配置
 sudo -u pgbackrest pgbackrest --stanza=demo check
 ```
 
-
 ### 执行备份
 
 在仓库主机上使用 `backup` 命令对 PostgreSQL 集群执行备份。
@@ -2331,7 +2274,6 @@ sudo -u postgres pgbackrest --stanza=demo --delta restore
 sudo pg_ctlcluster 17 demo start
 ```
 
-
 --------
 
 ## 并行备份与恢复
@@ -2354,6 +2296,7 @@ repository:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 pgBackRest 使用多
 [demo]
 pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 process-max=3
 repo1-path=/var/lib/pgbackrest
@@ -2381,18 +2324,16 @@ stanza: demo
     db (current)
         wal archive min/max (17): 000000070000000000000023/000000070000000000000025
 
-        full backup: 20260927-102128F
-            timestamp start/stop: 2026-09-27 10:21:28+00 / 2026-09-27 10:21:32+00
-
+        full backup: 20261015-070929F
+            timestamp start/stop: 2026-10-15 07:09:29+00 / 2026-10-15 07:09:33+00
             wal start/stop: 000000070000000000000023 / 000000070000000000000023
-            database size: 29.2MB, database backup size: 29.2MB
+            database size: 29.3MB, database backup size: 29.3MB
             repo1: backup set size: 3.8MB, backup size: 3.8MB
 
-        full backup: 20260927-102135F
-            timestamp start/stop: 2026-09-27 10:21:35+00 / 2026-09-27 10:21:38+00
-
+        full backup: 20261015-070934F
+            timestamp start/stop: 2026-10-15 07:09:34+00 / 2026-10-15 07:09:36+00
             wal start/stop: 000000070000000000000024 / 000000070000000000000025
-            database size: 29.2MB, database backup size: 29.2MB
+            database size: 29.3MB, database backup size: 29.3MB
             repo1: backup set size: 3.8MB, backup size: 3.8MB
 ```
 
@@ -2423,7 +2364,6 @@ sudo -u pgbackrest pgbackrest --stanza=demo backup
 
 ```text
 P00   WARN: unable to check pg1: [StopError] raised from remote-0 ssh protocol on 'pg-primary': stop file exists for all stanzas
-
 P00  ERROR: [056]: unable to find primary cluster - cannot proceed
             HINT: are all available clusters in recovery?
 ```
@@ -2466,7 +2406,6 @@ sudo -u pgbackrest pgbackrest --stanza=demo backup
 
 ```text
 P00   WARN: unable to check pg1: [StopError] raised from remote-0 ssh protocol on 'pg-primary': stop file exists for stanza demo
-
 P00  ERROR: [056]: unable to find primary cluster - cannot proceed
             HINT: are all available clusters in recovery?
 ```
@@ -2478,7 +2417,6 @@ pg-primary **⇒** 启动 `demo` stanza 的 pgBackRest 写入命令
 ```bash
 sudo -u postgres pgbackrest --stanza=demo start
 ```
-
 
 --------
 
@@ -2523,7 +2461,6 @@ sudo touch /etc/pgbackrest/pgbackrest.conf
 sudo chmod 640 /etc/pgbackrest/pgbackrest.conf
 sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
 ```
-
 
 ### 配置免密 SSH
 
@@ -2571,7 +2508,6 @@ pg-standby **⇒** 测试从 pg-standby 到 repository 的连接
 sudo -u postgres ssh pgbackrest@repository
 ```
 
-
 ### 热备库
 
 热备库通过 WAL 归档进行复制，并允许只读查询。
@@ -2583,6 +2519,7 @@ pg-standby:`/etc/pgbackrest/pgbackrest.conf` **⇒** 在备库上配置 pgBackRe
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 log-level-file=detail
 repo1-host=repository
@@ -2600,7 +2537,7 @@ sudo pg_createcluster 17 demo
 
 重要提示：
 
-若集群要在不成为新主库的情况下被提升（例如用于报表或测试），请使用 `--archive-mode=off` 或在 `postgresql.conf` 中设置 `archive_mode=off` 来禁用归档。若不禁用归档，仓库中可能会被大量 WAL 污染，使后续恢复更加困难。
+若集群要在不成为新主库的情况下被提升（例如用于报表或测试），请使用 `--archive-mode=off` 或在 `postgresql.conf` 中设置 `archive_mode=off` 来禁用归档。若不禁用归档，仓库可能会被 WAL 污染，使后续恢复更加困难。
 
 pg-standby **⇒** 恢复 demo 备库集群
 
@@ -2610,28 +2547,27 @@ sudo -u postgres cat /var/lib/postgresql/17/demo/postgresql.auto.conf
 ```
 
 ```text
-
 # Do not edit this file manually!
 # It will be overwritten by the ALTER SYSTEM command.
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:19:18
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:07:47
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:19:43
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:08:06
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:20:03
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:08:20
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
-# Removed by pgBackRest restore on 2026-09-27 10:20:57 # recovery_target_time = '2026-09-27 10:19:58.808792+00'
-# Removed by pgBackRest restore on 2026-09-27 10:20:57 # recovery_target_action = 'promote'
+# Removed by pgBackRest restore on 2026-10-15 07:09:02 # recovery_target_time = '2026-10-15 07:08:16.882666+00'
+# Removed by pgBackRest restore on 2026-10-15 07:09:02 # recovery_target_action = 'promote'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:20:57
-restore_command = 'pgbackrest --repo=3 --repo-target-time="2026-09-27 10:20:43+00" --stanza=demo archive-get %f "%p"'
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:09:02
+restore_command = 'pgbackrest --repo=3 --repo-target-time="2026-10-15 07:08:49+00" --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:21:22
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:09:24
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:21:53
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:09:49
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 ```
 
@@ -2662,9 +2598,7 @@ sudo -u postgres cat /var/log/postgresql/postgresql-17-demo.log
        [filtered 6 lines of output]
 LOG:  restored log file "00000007.history" from archive
 LOG:  restored log file "000000070000000000000024" from archive
-
 LOG:  entering standby mode
-
 LOG:  redo starts at 0/24000028
 LOG:  restored log file "000000070000000000000025" from archive
        [filtered 3 lines of output]
@@ -2687,13 +2621,11 @@ sudo -u postgres psql -c " \
        [filtered 4 lines of output]
     message
 ----------------
-
  Important Data
-
 (1 row)
 ```
 
-然后在 pg-standby 上查询同一张表，验证数据是否已同步。
+然后在 pg-standby 上查询同一张表。
 
 pg-standby **⇒** 在备库上查询新表
 
@@ -2703,7 +2635,6 @@ sudo -u postgres psql -c "select * from replicated_table;"
 
 ```text
 ERROR:  relation "replicated_table" does not exist
-
 LINE 1: select * from replicated_table;
                       ^
 ```
@@ -2721,11 +2652,11 @@ sudo -u postgres psql -c "select *, current_timestamp from pg_switch_wal()";
 ```text
  pg_switch_wal |       current_timestamp
 ---------------+-------------------------------
- 0/260195C8    | 2026-09-27 10:22:00.645267+00
+ 0/260195C8    | 2026-10-15 07:09:54.192224+00
 (1 row)
 ```
 
-稍等片刻后，表将出现在 pg-standby 上（可能需要等待 WAL 段完成归档和应用）。
+稍等片刻后，表将出现在 pg-standby 上。
 
 pg-standby **⇒** 新表现在已出现在备库上（可能需要重试几次）
 
@@ -2737,8 +2668,7 @@ sudo -u postgres psql -c " \
 ```text
     message     |       current_timestamp
 ----------------+-------------------------------
- Important Data | 2026-09-27 10:22:02.144747+00
-
+ Important Data | 2026-10-15 07:09:58.574123+00
 (1 row)
 ```
 
@@ -2751,14 +2681,11 @@ sudo -u postgres pgbackrest --stanza=demo --log-level-console=info check
 ```
 
 ```text
-P00   INFO: check command begin 2.59.2: --exec-id=515-943c4c3c --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo
+P00   INFO: check command begin 2.60.0: --exec-id=527-f4cba4de --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo
 P00   INFO: check repo1 (standby)
-
 P00   INFO: switch wal not performed because this is a standby
-
 P00   INFO: check command end: completed successfully
 ```
-
 
 ### 流复制
 
@@ -2785,7 +2712,6 @@ pg-primary **⇒** 为复制用户创建 `pg_hba.conf` 条目
 sudo -u postgres sh -c 'echo \
        "host    replication     replicator      172.17.0.8/32           md5" \
        >> /etc/postgresql/17/demo/pg_hba.conf'
-
 sudo pg_ctlcluster 17 demo reload
 ```
 
@@ -2797,6 +2723,7 @@ pg-standby:`/etc/pgbackrest/pgbackrest.conf` **⇒** 设置 primary_conninfo
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
 recovery-option=primary_conninfo=host=172.17.0.6 port=5432 user=replicator
+
 [global]
 log-level-file=detail
 repo1-host=repository
@@ -2810,7 +2737,6 @@ pg-standby **⇒** 在 `.pgpass` 文件中配置复制密码
 sudo -u postgres sh -c 'echo \
        "172.17.0.6:*:replication:replicator:jw8s0F4" \
        >> /var/lib/postgresql/.pgpass'
-
 sudo -u postgres chmod 600 /var/lib/postgresql/.pgpass
 ```
 
@@ -2825,28 +2751,27 @@ sudo -u postgres cat /var/lib/postgresql/17/demo/postgresql.auto.conf
 ```
 
 ```text
-
 # Do not edit this file manually!
 # It will be overwritten by the ALTER SYSTEM command.
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:19:18
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:07:47
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:19:43
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:08:06
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:20:03
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:08:20
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
-# Removed by pgBackRest restore on 2026-09-27 10:20:57 # recovery_target_time = '2026-09-27 10:19:58.808792+00'
-# Removed by pgBackRest restore on 2026-09-27 10:20:57 # recovery_target_action = 'promote'
+# Removed by pgBackRest restore on 2026-10-15 07:09:02 # recovery_target_time = '2026-10-15 07:08:16.882666+00'
+# Removed by pgBackRest restore on 2026-10-15 07:09:02 # recovery_target_action = 'promote'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:20:57
-restore_command = 'pgbackrest --repo=3 --repo-target-time="2026-09-27 10:20:43+00" --stanza=demo archive-get %f "%p"'
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:09:02
+restore_command = 'pgbackrest --repo=3 --repo-target-time="2026-10-15 07:08:49+00" --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:21:22
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:09:24
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 
-# Recovery settings generated by pgBackRest restore on 2026-09-27 10:22:05
+# Recovery settings generated by pgBackRest restore on 2026-10-15 07:10:01
 primary_conninfo = 'host=172.17.0.6 port=5432 user=replicator'
 restore_command = 'pgbackrest --stanza=demo archive-get %f "%p"'
 ```
@@ -2871,9 +2796,8 @@ sudo -u postgres cat /var/log/postgresql/postgresql-17-demo.log
 
 ```text
        [filtered 13 lines of output]
-LOG:  consistent recovery state reached at 0/25000088
+LOG:  consistent recovery state reached at 0/25000050
 LOG:  database system is ready to accept read-only connections
-
 LOG:  started streaming WAL from primary at 0/27000000 on timeline 7
 ```
 
@@ -2894,8 +2818,7 @@ sudo -u postgres psql -c " \
        [filtered 4 lines of output]
     message     |       current_timestamp
 ----------------+-------------------------------
- Important Data | 2026-09-27 10:22:11.713263+00
-
+ Important Data | 2026-10-15 07:10:05.777744+00
 (1 row)
 ```
 
@@ -2907,13 +2830,11 @@ sudo -u postgres psql -c " \
 ```
 
 ```text
-    message     |      current_timestamp
-----------------+------------------------------
- Important Data | 2026-09-27 10:22:11.89181+00
-
+    message     |       current_timestamp
+----------------+-------------------------------
+ Important Data | 2026-10-15 07:10:05.882375+00
 (1 row)
 ```
-
 
 --------
 
@@ -2958,7 +2879,6 @@ sudo touch /etc/pgbackrest/pgbackrest.conf
 sudo chmod 640 /etc/pgbackrest/pgbackrest.conf
 sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
 ```
-
 
 ### 配置免密 SSH
 
@@ -3006,7 +2926,6 @@ pg-alt **⇒** 测试从 pg-alt 到仓库主机的连接
 sudo -u postgres ssh pgbackrest@repository
 ```
 
-
 ### 配置
 
 pg-alt 上的 pgBackRest 配置与 pg-primary 基本相同，区别在于使用 `demo-alt` stanza，从而将备份和归档存储在独立的位置。
@@ -3016,6 +2935,7 @@ pg-alt:`/etc/pgbackrest/pgbackrest.conf` **⇒** 在新主库上配置 pgBackRes
 ```ini
 [demo-alt]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 log-level-file=detail
 repo1-host=repository
@@ -3027,16 +2947,17 @@ repository:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 `pg1-host`/`pg1-host
 [demo]
 pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/17/demo
+
 [demo-alt]
 pg1-host=pg-alt
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 process-max=3
 repo1-path=/var/lib/pgbackrest
 repo1-retention-full=2
 start-fast=y
 ```
-
 
 ### 初始化演示集群
 
@@ -3045,12 +2966,11 @@ pg-alt **⇒** 创建演示集群
 ```bash
 sudo -u postgres /usr/lib/postgresql/17/bin/initdb \
        -D /var/lib/postgresql/17/demo -k -A peer
-
 sudo pg_createcluster 17 demo
 ```
 
 ```text
-Configuring already existing cluster (configuration: /etc/postgresql/17/demo, data: /var/lib/postgresql/17/demo, owner: 102:103)
+Configuring already existing cluster (configuration: /etc/postgresql/17/demo, data: /var/lib/postgresql/17/demo, owner: 101:103)
 Ver Cluster Port Status Owner    Data directory              Log file
 17  demo    5432 down   postgres /var/lib/postgresql/17/demo /var/log/postgresql/postgresql-17-demo.log
 ```
@@ -3068,7 +2988,6 @@ pg-alt **⇒** 启动演示集群
 sudo pg_ctlcluster 17 demo restart
 ```
 
-
 ### 创建 Stanza 并检查配置
 
 必须运行 `stanza-create` 命令初始化 stanza。建议随后运行 `check` 命令，确认归档与备份配置均正确无误。
@@ -3080,9 +2999,8 @@ sudo -u postgres pgbackrest --stanza=demo-alt --log-level-console=info stanza-cr
 ```
 
 ```text
-P00   INFO: stanza-create command begin 2.59.2: --exec-id=382-63e4cb56 --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo-alt
+P00   INFO: stanza-create command begin 2.60.0: --exec-id=383-926d83c6 --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo-alt
 P00   INFO: stanza-create for stanza 'demo-alt' on repo1
-
 P00   INFO: stanza-create command end: completed successfully
 ```
 
@@ -3091,14 +3009,11 @@ sudo -u postgres pgbackrest --log-level-console=info check
 ```
 
 ```text
-P00   INFO: check command begin 2.59.2: --exec-id=392-ff851d84 --log-level-console=info --log-level-file=detail --no-log-timestamp --repo1-host=repository
-
+P00   INFO: check command begin 2.60.0: --exec-id=393-ca3e0098 --log-level-console=info --log-level-file=detail --no-log-timestamp --repo1-host=repository
 P00   INFO: check stanza 'demo-alt'
-
 P00   INFO: check repo1 configuration (primary)
 P00   INFO: check repo1 archive for WAL (primary)
-P00   INFO: WAL segment 000000010000000000000001 successfully archived to '/var/lib/pgbackrest/archive/demo-alt/17-1/0000000100000000/000000010000000000000001-2e1aa7ba9df559c7d086abb2822a205a3877abee.gz' on repo1
-
+P00   INFO: WAL segment 000000010000000000000001 successfully archived to '/var/lib/pgbackrest/archive/demo-alt/17-1/0000000100000000/000000010000000000000001-42e768a79e0022564a2c378e7beb646154378858.gz' on repo1
 P00   INFO: check command end: completed successfully
 ```
 
@@ -3111,22 +3026,17 @@ sudo -u pgbackrest pgbackrest --log-level-console=info check
 ```
 
 ```text
-P00   INFO: check command begin 2.59.2: --exec-id=1256-3298101d --log-level-console=info --no-log-timestamp --repo1-path=/var/lib/pgbackrest
-
+P00   INFO: check command begin 2.60.0: --exec-id=1261-3d28e169 --log-level-console=info --no-log-timestamp --repo1-path=/var/lib/pgbackrest
 P00   INFO: check stanza 'demo'
-
 P00   INFO: check repo1 configuration (primary)
 P00   INFO: check repo1 archive for WAL (primary)
-P00   INFO: WAL segment 000000070000000000000027 successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000700000000/000000070000000000000027-7ed0b35e117b8c41cd74c613408ad2908ae67ffd.gz' on repo1
+P00   INFO: WAL segment 000000070000000000000027 successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000700000000/000000070000000000000027-7a7e51240e75814494d1baf706cd0ccbc34e0a20.gz' on repo1
 P00   INFO: check stanza 'demo-alt'
-
 P00   INFO: check repo1 configuration (primary)
 P00   INFO: check repo1 archive for WAL (primary)
-P00   INFO: WAL segment 000000010000000000000002 successfully archived to '/var/lib/pgbackrest/archive/demo-alt/17-1/0000000100000000/000000010000000000000002-9a51918560e4a3eb1eb9878b3842f95520ee13a0.gz' on repo1
-
+P00   INFO: WAL segment 000000010000000000000002 successfully archived to '/var/lib/pgbackrest/archive/demo-alt/17-1/0000000100000000/000000010000000000000002-eb6548b6d19132f0460998587116870ef72ae694.gz' on repo1
 P00   INFO: check command end: completed successfully
 ```
-
 
 --------
 
@@ -3157,13 +3067,16 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置缓冲区路径和异
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 archive-async=y
 log-level-file=detail
 repo1-host=repository
 spool-path=/var/spool/pgbackrest
+
 [global:archive-get]
 process-max=2
+
 [global:archive-push]
 process-max=2
 ```
@@ -3174,13 +3087,16 @@ pg-standby:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置缓冲区路径和异
 [demo]
 pg1-path=/var/lib/postgresql/17/demo
 recovery-option=primary_conninfo=host=172.17.0.6 port=5432 user=replicator
+
 [global]
 archive-async=y
 log-level-file=detail
 repo1-host=repository
 spool-path=/var/spool/pgbackrest
+
 [global:archive-get]
 process-max=2
+
 [global:archive-push]
 process-max=2
 ```
@@ -3207,7 +3123,6 @@ pg-standby **⇒** 重启备库以中断连接
 sudo pg_ctlcluster 17 demo restart
 ```
 
-
 ### 归档推送（Archive Push）
 
 异步 `archive-push` 命令将 WAL 归档工作转交给独立进程（或多进程）处理，以提升吞吐量。其工作原理是"向前预读"——扫描除 PostgreSQL 当前通过 `archive_command` 请求的文件外，还有哪些 WAL 段已就绪可归档。WAL 段直接从 `pg_xlog`/`pg_wal` 目录传输到归档存储，只有确认 WAL 段已安全入库后，`archive_command` 才返回成功。
@@ -3229,16 +3144,14 @@ sudo -u postgres psql -c " \
        select pg_create_restore_point('test async push'); select pg_switch_wal(); \
        select pg_create_restore_point('test async push'); select pg_switch_wal(); \
        select pg_create_restore_point('test async push'); select pg_switch_wal();"
-
 sudo -u postgres pgbackrest --stanza=demo --log-level-console=info check
 ```
 
 ```text
-P00   INFO: check command begin 2.59.2: --exec-id=2592-53cb1c02 --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo
+P00   INFO: check command begin 2.60.0: --exec-id=2721-c7d903d7 --log-level-console=info --log-level-file=detail --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --repo1-host=repository --stanza=demo
 P00   INFO: check repo1 configuration (primary)
 P00   INFO: check repo1 archive for WAL (primary)
-P00   INFO: WAL segment 00000007000000000000002D successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000700000000/00000007000000000000002D-064d3920b7f65a78eadb35930be56d0b1aeb59fb.gz' on repo1
-
+P00   INFO: WAL segment 00000007000000000000002D successfully archived to '/var/lib/pgbackrest/archive/demo/17-1/0000000700000000/00000007000000000000002D-0d4c29773b9d645c758b34c45433b612863e0611.gz' on repo1
 P00   INFO: check command end: completed successfully
 ```
 
@@ -3252,30 +3165,24 @@ sudo -u postgres cat /var/log/pgbackrest/demo-archive-push-async.log
 
 ```text
 -------------------PROCESS START-------------------
-P00   INFO: archive-push:async command begin 2.59.2: [/var/lib/postgresql/17/demo/pg_wal] --archive-async --exec-id=2579-4f897cce --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
-
+P00   INFO: archive-push:async command begin 2.60.0: [/var/lib/postgresql/17/demo/pg_wal] --archive-async --exec-id=2710-237a82c1 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
 P00   INFO: push 1 WAL file(s) to archive: 000000070000000000000028
 P01 DETAIL: pushed WAL file '000000070000000000000028' to the archive
-
 P00   INFO: archive-push:async command end: completed successfully
 
 -------------------PROCESS START-------------------
-P00   INFO: archive-push:async command begin 2.59.2: [/var/lib/postgresql/17/demo/pg_wal] --archive-async --exec-id=2596-db8c73d8 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
-
+P00   INFO: archive-push:async command begin 2.60.0: [/var/lib/postgresql/17/demo/pg_wal] --archive-async --exec-id=2728-64e54d04 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
 P00   INFO: push 5 WAL file(s) to archive: 000000070000000000000029...00000007000000000000002D
 P01 DETAIL: pushed WAL file '000000070000000000000029' to the archive
 P02 DETAIL: pushed WAL file '00000007000000000000002A' to the archive
-P02 DETAIL: pushed WAL file '00000007000000000000002C' to the archive
 P01 DETAIL: pushed WAL file '00000007000000000000002B' to the archive
-P02 DETAIL: pushed WAL file '00000007000000000000002D' to the archive
-
-P00   INFO: archive-push:async command end: completed successfully
+P02 DETAIL: pushed WAL file '00000007000000000000002C' to the archive
+P01 DETAIL: pushed WAL file '00000007000000000000002D' to the archive
 ```
-
 
 ### 归档获取（Archive Get）
 
-异步 `archive-get` 命令通过维护本地 WAL 队列来提升吞吐量。若队列中找不到所需的 WAL 段，则会从仓库获取该段及足够多的后续 WAL 来填满队列。队列的最大容量由 `archive-get-queue-max` 定义，当队列剩余容量不足一半时，会自动补充获取。
+异步 `archive-get` 命令通过维护本地 WAL 队列来提升吞吐量。若队列中找不到所需的 WAL 段，则会从仓库获取该段及足够多的后续 WAL 来填满队列。队列的最大容量由 `archive-get-queue-max` 定义，当队列中的 WAL 不足容量一半时，会获取更多 WAL 将队列填满。
 
 在 WAL 生成量较大、或与仓库存储（如 S3 等对象存储）连接延迟较高的环境中，异步模式的收益最为显著。高延迟场景下，适当调大 `process-max` 通常有助于进一步提升性能。
 
@@ -3289,28 +3196,13 @@ sudo -u postgres cat /var/log/pgbackrest/demo-archive-get-async.log
 
 ```text
 -------------------PROCESS START-------------------
-P00   INFO: archive-get:async command begin 2.59.2: [000000070000000000000024, 000000070000000000000025, 000000070000000000000026, 000000070000000000000027, 000000070000000000000028, 000000070000000000000029, 00000007000000000000002A, 00000007000000000000002B] --archive-async --exec-id=736-1978b097 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
+P00   INFO: archive-get:async command begin 2.60.0: [000000070000000000000024, 000000070000000000000025, 000000070000000000000026, 000000070000000000000027, 000000070000000000000028, 000000070000000000000029, 00000007000000000000002A, 00000007000000000000002B] --archive-async --exec-id=738-f822f931 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
 P00   INFO: get 8 WAL file(s) from archive: 000000070000000000000024...00000007000000000000002B
-P01 DETAIL: found 000000070000000000000024 in the repo1: 17-1 archive
-
 P02 DETAIL: found 000000070000000000000025 in the repo1: 17-1 archive
-P01 DETAIL: found 000000070000000000000026 in the repo1: 17-1 archive
-P02 DETAIL: found 000000070000000000000027 in the repo1: 17-1 archive
-
+P01 DETAIL: found 000000070000000000000024 in the repo1: 17-1 archive
+P02 DETAIL: found 000000070000000000000026 in the repo1: 17-1 archive
+P01 DETAIL: found 000000070000000000000027 in the repo1: 17-1 archive
 P00 DETAIL: unable to find 000000070000000000000028 in the archive
-P00   INFO: archive-get:async command end: completed successfully
-       [filtered 14 lines of output]
-P00   INFO: archive-get:async command begin 2.59.2: [000000070000000000000028, 000000070000000000000029, 00000007000000000000002A, 00000007000000000000002B, 00000007000000000000002C, 00000007000000000000002D, 00000007000000000000002E, 00000007000000000000002F] --archive-async --exec-id=789-38affa51 --log-level-console=off --log-level-file=detail --log-level-stderr=off --no-log-timestamp --pg1-path=/var/lib/postgresql/17/demo --process-max=2 --repo1-host=repository --spool-path=/var/spool/pgbackrest --stanza=demo
-P00   INFO: get 8 WAL file(s) from archive: 000000070000000000000028...00000007000000000000002F
-
-P02 DETAIL: found 000000070000000000000029 in the repo1: 17-1 archive
-P01 DETAIL: found 000000070000000000000028 in the repo1: 17-1 archive
-P02 DETAIL: found 00000007000000000000002A in the repo1: 17-1 archive
-P01 DETAIL: found 00000007000000000000002B in the repo1: 17-1 archive
-P02 DETAIL: found 00000007000000000000002C in the repo1: 17-1 archive
-P01 DETAIL: found 00000007000000000000002D in the repo1: 17-1 archive
-
-P00 DETAIL: unable to find 00000007000000000000002E in the archive
 P00   INFO: archive-get:async command end: completed successfully
        [filtered 11 lines of output]
 ```
@@ -3324,7 +3216,6 @@ sudo -u postgres psql -c "alter user replicator password 'jw8s0F4'"
 ```text
 ALTER ROLE
 ```
-
 
 --------
 
@@ -3340,9 +3231,11 @@ pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/17/demo
 pg2-host=pg-standby
 pg2-path=/var/lib/postgresql/17/demo
+
 [demo-alt]
 pg1-host=pg-alt
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 backup-standby=y
 process-max=3
@@ -3366,9 +3259,9 @@ P00   INFO: backup start archive = 00000007000000000000002F, lsn = 0/2F000028
 P00   INFO: wait for replay on the standby to reach 0/2F000028
 P00   INFO: replay on the standby reached 0/2F000028
 P00   INFO: check archive for prior segment 00000007000000000000002E
-P01 DETAIL: backup file pg-primary:/var/lib/postgresql/17/demo/global/pg_control (8KB, 0.53%) checksum 7d84baa1f0b16cc8652b16c41ef075f5df25d016
+P01 DETAIL: backup file pg-primary:/var/lib/postgresql/17/demo/global/pg_control (8KB, 0.53%) checksum 8904c4227b3209010e9fa7a5826fc8691fb9a317
 P01 DETAIL: match file from prior backup pg-primary:/var/lib/postgresql/17/demo/pg_logical/replorigin_checkpoint (8B, 0.53%) checksum 347fc8f2df71bd4436e38bd1516ccd7ea0d46532
-P02 DETAIL: backup file pg-standby:/var/lib/postgresql/17/demo/base/5/1249 (448KB, 30.16%) checksum 3b6f5ca3b766aa5972894958f6b2f4d0d98f0228
+P02 DETAIL: backup file pg-standby:/var/lib/postgresql/17/demo/base/5/1249 (448KB, 30.16%) checksum bcc99e003ab9acafa9dcae4abf14879526f8658f
        [filtered 1278 lines of output]
 ```
 
@@ -3383,7 +3276,7 @@ pgBackRest 从备库创建的备份与在主库上创建的备份完全等效。
 
 将 PostgreSQL 升级到新的主版本后，必须立即将所有 pgBackRest 配置中的 `pg-path` 更新为新的数据目录路径，并运行 `stanza-upgrade` 命令。若主机上配置了多个仓库，则每个仓库上的 stanza 都会一并升级。若数据库处于离线状态，请加上 `--no-online` 选项。
 
-以下步骤并非 PostgreSQL 升级的完整指南，而是概要介绍了升级主库和备库的一般流程，重点展示重新配置 pgBackRest 所需的操作。建议在升级前先执行一次全量备份。
+以下步骤并非 PostgreSQL 升级的完整指南，而是概要介绍了升级主库和备库的一般流程，重点展示重新配置 pgBackRest 所需的操作。建议在升级前先执行备份。
 
 pg-primary **⇒** 停止旧集群
 
@@ -3406,7 +3299,6 @@ pg-primary **⇒** 创建新集群并执行升级
 ```bash
 sudo -u postgres /usr/lib/postgresql/18/bin/initdb \
        -D /var/lib/postgresql/18/demo -k -A peer
-
 sudo pg_createcluster 18 demo
 sudo -u postgres sh -c 'cd /var/lib/postgresql && \
        /usr/lib/postgresql/18/bin/pg_upgrade \
@@ -3423,13 +3315,12 @@ sudo -u postgres sh -c 'cd /var/lib/postgresql && \
 Checking for extension updates                                ok
 
 Upgrade Complete
-
 ----------------
 Some statistics are not transferred by pg_upgrade.
        [filtered 4 lines of output]
 ```
 
-配置新集群的参数。
+配置新集群的设置与端口。
 
 pg-primary:`/etc/postgresql/18/demo/postgresql.conf` **⇒** 配置 PostgreSQL
 
@@ -3445,13 +3336,16 @@ pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 升级 `pg1-path`
 ```ini
 [demo]
 pg1-path=/var/lib/postgresql/18/demo
+
 [global]
 archive-async=y
 log-level-file=detail
 repo1-host=repository
 spool-path=/var/spool/pgbackrest
+
 [global:archive-get]
 process-max=2
+
 [global:archive-push]
 process-max=2
 ```
@@ -3462,13 +3356,16 @@ pg-standby:`/etc/pgbackrest/pgbackrest.conf` **⇒** 升级 `pg-path`
 [demo]
 pg1-path=/var/lib/postgresql/18/demo
 recovery-option=primary_conninfo=host=172.17.0.6 port=5432 user=replicator
+
 [global]
 archive-async=y
 log-level-file=detail
 repo1-host=repository
 spool-path=/var/spool/pgbackrest
+
 [global:archive-get]
 process-max=2
+
 [global:archive-push]
 process-max=2
 ```
@@ -3481,9 +3378,11 @@ pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/18/demo
 pg2-host=pg-standby
 pg2-path=/var/lib/postgresql/18/demo
+
 [demo-alt]
 pg1-host=pg-alt
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 backup-standby=n
 process-max=3
@@ -3509,13 +3408,12 @@ sudo -u postgres pgbackrest --stanza=demo --no-online \
 ```
 
 ```text
-P00   INFO: stanza-upgrade command begin 2.59.2: --exec-id=3018-a8daf62d --log-level-console=info --log-level-file=detail --no-log-timestamp --no-online --pg1-path=/var/lib/postgresql/18/demo --repo1-host=repository --stanza=demo
+P00   INFO: stanza-upgrade command begin 2.60.0: --exec-id=3148-2038b641 --log-level-console=info --log-level-file=detail --no-log-timestamp --no-online --pg1-path=/var/lib/postgresql/18/demo --repo1-host=repository --stanza=demo
 P00   INFO: stanza-upgrade for stanza 'demo' on repo1
-
 P00   INFO: stanza-upgrade command end: completed successfully
 ```
 
-启动新集群并验证配置。
+启动新集群，并确认其已成功安装。
 
 pg-primary **⇒** 启动新集群
 
@@ -3532,7 +3430,7 @@ sudo pg_lsclusters
 sudo -u postgres pgbackrest --stanza=demo check
 ```
 
-确认无误后，删除旧版本集群。
+删除旧版本集群。
 
 pg-primary **⇒** 删除旧集群
 
@@ -3549,7 +3447,7 @@ sudo pg_dropcluster 17 demo
 sudo pg_createcluster 18 demo
 ```
 
-在仓库主机上运行 `check` 命令。由于备库集群尚未启动，出现备库不可用的警告属于预期行为。执行此命令是为了确认仓库主机已感知到备库的存在，且主库端配置正确。
+在仓库主机上运行 `check` 命令。由于备库集群尚未启动，出现备库不可用的警告属于预期行为。执行此命令是为了确认仓库主机已感知到备库的存在，且针对主库的配置正确。
 
 repository **⇒** 检查配置
 
@@ -3562,7 +3460,7 @@ P00   WARN: unable to check pg2: [DbConnectError] raised from remote-0 ssh proto
                 Is the server running locally and accepting connections on that socket?
 ```
 
-对新集群执行全量备份，再从备份中恢复备库。若指定 `incr` 或 `diff` 类型，pgBackRest 会自动将其升级为 `full`。
+对新集群执行全量备份，再从备份中恢复备库。若指定 `incr` 或 `diff` 类型，pgBackRest 会自动将其改为 `full`。
 
 repository **⇒** 运行全量备份
 
@@ -3593,9 +3491,11 @@ pg1-host=pg-primary
 pg1-path=/var/lib/postgresql/18/demo
 pg2-host=pg-standby
 pg2-path=/var/lib/postgresql/18/demo
+
 [demo-alt]
 pg1-host=pg-alt
 pg1-path=/var/lib/postgresql/17/demo
+
 [global]
 backup-standby=y
 process-max=3

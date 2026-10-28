@@ -1,5 +1,5 @@
 ---
-title: "pgBackRest 2.59.2 中文文档"
+title: "pgBackRest 2.60.0 中文文档"
 linkTitle: "pgbackrest 文档"
 weight: 8200
 icon: fas fa-couch
@@ -7,10 +7,12 @@ sidebar_root_for: self
 description: "可靠的 PostgreSQL 备份与恢复工具 —— pgBackRest 文档与参考手册。"
 module: [PGBACKREST]
 categories: [概念]
+upstream_link: "https://pgbackrest.org/"
+upstream_source: "pgbackrest"
+upstream_ref: "v2.60.0"
+search_keywords: ["v2.60.0"]
+cascade: {"upstream_source": "pgbackrest"}
 ---
-
-> pgBackRest 2.59.2 文档快照： <https://pgbackrest.org/>
-
 
 --------
 
@@ -18,7 +20,11 @@ categories: [概念]
 
 pgBackRest 是一款可靠的 PostgreSQL 备份与恢复解决方案，可无缝扩展以应对超大规模数据库和各类工作负载。
 
-pgBackRest [`v2.59.2`](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.59.2) 是当前稳定版本。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
+本站文档对应 pgBackRest [`v2.60.0`](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.60.0)。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
+
+2.60.0 新增了可配置的页面校验和错误处理、对象存储读取预取和 GCS 工作负载身份联合。`restore` 和 `expire` 现在默认在页面校验和无效时停止；详见 [2.60.0 版本说明](/docs/pgbackrest/release/#v2600-release-notes)。
+
+2.59.3 修复了可能生成弱加密子密钥和盐值的问题。升级不会替换 stanza 已有的弱子密钥；检查方法与修复措施请参阅 [弱加密子密钥和盐值](/docs/pgbackrest/news/#weak-encryption)。
 
 如果您喜欢 pgBackRest，欢迎在 [**GitHub**](https://github.com/pgbackrest/pgbackrest) 上给我们点星！
 
@@ -27,16 +33,20 @@ pgBackRest [`v2.59.2`](https://github.com/pgbackrest/pgbackrest/releases/tag/rel
 
 ## 新闻
 
+**2026 年 10 月 18 日** - [pgBackRest 2.60.0 正式发布](/docs/pgbackrest/news/#release-2-60-0)
+
+**2026 年 10 月 4 日** - [弱加密子密钥和盐值](/docs/pgbackrest/news/#weak-encryption)
+
+**2026 年 10 月 4 日** - [pgBackRest 2.59.3 正式发布](/docs/pgbackrest/news/#release-2-59-3)
+
 **2026 年 9 月 27 日** - [pgBackRest 2.59.2 正式发布](/docs/pgbackrest/news/#release-2-59-2)
-
-**2026 年 8 月 17 日** - [pgBackRest 2.59.1 正式发布](/docs/pgbackrest/news/#release-2-59-1)
-
-**2026 年 7 月 20 日** - [新的发行版 tarball](/docs/pgbackrest/news/#distribution-tarball)
 
 
 --------
 
-## 赞助商
+<div id="赞助商"></div>
+
+## 赞助商 {#sponsors}
 
 没有赞助就不会有 pgBackRest。开发新功能、修复缺陷、审核贡献、回答社区问题以及日常维护都需要投入大量时间。如果您在企业中使用 pgBackRest，请考虑 [**赞助**](https://github.com/sponsors/dwsteele) 项目。
 
@@ -67,6 +77,11 @@ pgBackRest 采用自定义协议，仅需极少配置即可通过 TLS/SSH 在本
 多仓库支持让用户可以灵活组合，例如：用一个保留周期较短的本地仓库快速恢复，同时用一个保留周期较长的远程仓库实现冗余备份和企业级访问。
 
 
+### 从备库备份 {#backup-from-standby}
+
+可从备库执行备份，以降低主库负载。只有少数未被复制的文件需要从主库复制。
+
+
 ### 全量、差异与增量备份（文件级或块级）
 
 pgBackRest 支持全量备份（full backup）、差异备份（differential backup）和增量备份（incremental backup）。pgBackRest 不受 `rsync` 时间精度问题的影响，因此无需对每个文件都做校验和计算，差异备份和增量备份同样安全可靠。块级备份通过仅复制文件中发生变化的部分来节省存储空间。
@@ -90,7 +105,7 @@ pgBackRest 为备份中的每个文件计算校验和，并在恢复或验证时
 
 若启用了页面校验和，pgBackRest 在备份时会对每个复制的文件进行校验和验证。全量备份时验证所有页面的校验和，差异备份和增量备份时仅验证已变更文件的校验和。
 
-校验和验证失败不会中止备份进程，而是将包含具体失败页面详情的警告信息输出到控制台和日志文件。
+默认情况下，校验和验证失败不会中止备份进程，而是将包含具体失败页面详情的警告信息输出到控制台和日志文件。默认情况下，备份含有无效页面校验和时，restore 会报错；expire 也不会让含有无效页面校验和的备份成为保留的最旧备份。
 
 此功能可在包含有效数据副本的备份过期之前，提前发现页面级损坏。
 
@@ -105,6 +120,11 @@ pgBackRest 为备份中的每个文件计算校验和，并在恢复或验证时
 无论仓库位于本地还是远程，压缩和校验和计算均在文件复制到仓库的过程中以流式方式同步进行。
 
 若仓库位于仓库主机上，压缩在数据库主机上执行，文件以压缩格式传输并直接存储到仓库主机。若禁用压缩，则采用较低级别的压缩，在最大程度降低 CPU 开销的同时有效利用可用带宽。
+
+
+### 文件打包 {#file-bundling}
+
+仓库中的小文件会合并成文件包，以减少备份时创建的文件数量。这对对象存储尤其有效。
 
 
 ### Delta 恢复
@@ -130,9 +150,11 @@ pgBackRest 完全支持表空间，恢复时可将表空间重新映射到任意
 pgBackRest 支持 PostgreSQL 集群中任意文件或目录的文件链接和目录链接。恢复时，可将所有链接还原到原始位置、重新映射部分或全部链接，也可将部分或全部链接以普通文件或目录的形式恢复到集群目录中。
 
 
-### 兼容 S3、Azure 和 GCS 对象存储
+<span id="兼容-s3azure-和-gcs-对象存储"></span>
 
-pgBackRest 仓库可存储在兼容 S3、Azure 和 GCS 的对象存储中，从而实现近乎无限的存储容量和保留期限。
+### S3、Azure、GCS 和 SFTP 支持 {#s3-azure-and-gcs-compatible-object-store-support}
+
+pgBackRest 仓库可存储在兼容 S3、Azure 和 GCS 的对象存储中，从而实现近乎无限的存储容量和保留期限。仓库也可以存储在 SFTP 服务器上。在云环境中，可使用多种身份验证方式自动获取对象存储凭据。
 
 
 ### 加密
@@ -159,7 +181,7 @@ pgBackRest 支持十个 PostgreSQL 版本，包括五个仍在官方支持期内
 pgBackRest 致力于提供简便的配置和操作体验：
 
 - 针对各种操作系统和 PostgreSQL 版本的 [**用户指南**](/docs/pgbackrest/user-guide/)。
-- 常用命令行操作参考： [**`backup`**](/docs/pgbackrest/command/backup/)、 [**`restore`**](/docs/pgbackrest/command/restore/)、 [**`check`**](/docs/pgbackrest/command/check/) 和 [**`info`**](/docs/pgbackrest/command/info/)。
+- 命令行操作的命令页面： [**`backup`**](/docs/pgbackrest/command/backup/)、 [**`restore`**](/docs/pgbackrest/command/restore/)、 [**`check`**](/docs/pgbackrest/command/check/) 和 [**`info`**](/docs/pgbackrest/command/info/)。
 - 创建 pgBackRest 配置的 [**配置参考**](/docs/pgbackrest/configuration/)。
 
 
@@ -178,4 +200,10 @@ pgBackRest 基于 [**MIT**](https://github.com/pgbackrest/pgbackrest/blob/main/L
 
 制定完善的容灾方案（包含合理的复制和备份策略）可能是一项复杂而艰巨的任务。在架构设计阶段和持续运营中，您可能需要专业支持以确保企业业务平稳运行。
 
-我们的 [赞助商](#赞助商) 所提供的产品和服务包含 pgBackRest 支持，可协助您满足容灾需求。
+我们的 [赞助商](#sponsors) 所提供的产品和服务包含 pgBackRest 支持，可协助您满足容灾需求。
+
+## 来源与许可 {#upstream-attribution}
+
+本手册以 pgBackRest 2.60.0 为基准，于 2026-10-28 从 [PG.CENTER 中文文档](https://doc.pg.center/zh/pgbackrest/) 同步，并适配本站路径与导航。
+
+Copyright (c) 2015-2026 The PostgreSQL Global Development Group and David Steele。原始文档采用 [MIT 许可证](https://opensource.org/license/mit)，完整版权与许可声明见 [上游文件](https://github.com/pgbackrest/pgbackrest/blob/release/2.60.0/LICENSE)。

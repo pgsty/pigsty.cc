@@ -5,9 +5,8 @@ description: "PgBouncer 特性——池化模式与 SQL 兼容性"
 icon: fa-solid fa-wand-magic-sparkles
 module: [PGBOUNCER]
 categories: [概念]
+upstream_link: "https://www.pgbouncer.org/features.html"
 ---
-
-> 原始页面： <https://www.pgbouncer.org/features.html>
 
 - 连接轮换时，按激进程度分为以下几种策略：
 
@@ -36,19 +35,19 @@ categories: [概念]
 
 | 特性                             | 会话池化          |  事务池化             |
 |----------------------------------|:----------------:|:---------------------:|
-| Startup parameters [^0]          | 是               |          是           |
+| 启动参数 [^0]          | 是               |          是           |
 | SET/RESET                        | 是               | 已跟踪参数支持 [^0] |
 | LISTEN                           | 是               |         不支持         |
 | NOTIFY                           | 是               |          是           |
 | WITHOUT HOLD CURSOR              | 是               |          是           |
 | WITH HOLD CURSOR                 | 是               |         不支持         |
-| Protocol-level prepared plans    | 是               |       是 [^1]         |
+| 协议级预处理语句    | 是               |       是 [^1]         |
 | PREPARE / DEALLOCATE             | 是               |         不支持         |
-| ON COMMIT DROP temp tables       | 是               |          是           |
-| PRESERVE/DELETE ROWS temp tables | 是               |         不支持         |
-| Cached plan reset                | 是               |          是           |
-| LOAD statement                   | 是               |         不支持         |
-| Session-level advisory locks     | 是               |         不支持         |
+| ON COMMIT DROP 临时表       | 是               |          是           |
+| PRESERVE/DELETE ROWS 临时表 | 是               |         不支持         |
+| 缓存执行计划重置                | 是               |          是           |
+| LOAD 语句                   | 是               |         不支持         |
+| 会话级咨询锁     | 是               |         不支持         |
 
 [^0]: 自 1.26.0 起，PgBouncer 会跟踪所有由服务端上报且客户端可修改的参数：`application_name`、`client_encoding`、`DateStyle`、`default_transaction_read_only`（PostgreSQL 14+）、`IntervalStyle`、`scram_iterations`（PostgreSQL 16+）、`search_path`（PostgreSQL 18+）、`session_authorization`、`standard_conforming_strings` 和 `TimeZone`。对于服务端不报告的参数，只能跟踪启动时指定的值，后续的 `SET` 修改不会被跟踪。相关细节及扩展上报的参数，请参阅 [`track_extra_parameters`](/docs/pgbouncer/config/#track_extra_parameters) 和 [`ignore_startup_parameters`](/docs/pgbouncer/config/#ignore_startup_parameters)。
 

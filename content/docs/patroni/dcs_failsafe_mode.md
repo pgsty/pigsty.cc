@@ -5,38 +5,45 @@ icon: fa-solid fa-shield-halved
 description: "DCS 故障安全模式的行为机制、启用条件与操作注意事项。"
 module: [PATRONI]
 categories: [概念]
+upstream_link: "https://patroni.readthedocs.io/en/latest/dcs_failsafe_mode.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/dcs_failsafe_mode.html
 
 <a id="dcs_failsafe_mode"></a>
 
 --------
 
-## 问题背景
+<div id="问题背景"></div>
 
-Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检测网络分区。具体而言，节点只有在能够成功更新 DCS 中的领导者锁时，才被允许以主库身份运行 PostgreSQL。一旦领导者锁更新失败，PostgreSQL 将立即被降级并以只读模式启动。触发该"问题"的概率因所使用的 DCS 而异——例如，当 Etcd 专用于 Patroni 时，发生概率接近于零；而当使用以 Etcd 为后端的 Kubernetes API 时，则可能更为频繁。
+## 问题背景 {#the-problem}
+
+Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检测网络分区。具体而言，节点只有在能够成功更新 DCS 中的领导者锁时，才被允许以主库身份运行 PostgreSQL。一旦领导者锁更新失败，PostgreSQL 将立即被降级并以只读模式启动。触发该"问题"的概率因所使用的 DCS 而异——例如，当 etcd 专用于 Patroni 时，发生概率接近于零；而当使用以 etcd 为后端的 Kubernetes API 时，则可能更为频繁。
 
 --------
 
-## 现有实现的设计原因
+<div id="现有实现的设计原因"></div>
 
-领导者锁更新失败通常由以下两种原因导致：
+## 现有实现的设计原因 {#reasons-for-the-current-implementation}
+
+领导者锁更新失败可能由以下两种主要原因导致：
 
 1.  网络分区
 2.  DCS 宕机
 
-单个节点通常无法区分这两种情况，因此 Patroni 默认假设最坏情况——网络分区。在网络分区的情形下，Patroni 集群的其他节点可能成功获取领导者锁并将 PostgreSQL 提升为主库。为避免脑裂，旧主库将在领导者锁过期之前主动降级。
+单个节点通常无法区分这两种情况，因此 Patroni 默认假设最坏情况——网络分区。在网络分区的情形下，Patroni 集群的其他节点可能成功获取领导者锁并将 PostgreSQL 提升为主库。为避免脑裂，旧主库会在领导者锁过期之前被降级。
 
 --------
 
-## DCS 故障安全模式
+<div id="dcs-故障安全模式"></div>
+
+## DCS 故障安全模式 {#dcs-failsafe-mode}
 
 我们引入了一个新的特殊选项：**`failsafe_mode`**。该选项只能通过存储在 DCS **`/config`** 键中的全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 来启用。启用故障安全模式后，若领导者锁更新失败的原因并非版本/值/索引不匹配，且主库能够通过 Patroni REST API 访问集群中所有已知成员，则 PostgreSQL 可以继续以主库身份运行。
 
 --------
 
-## 底层实现细节
+<div id="底层实现细节"></div>
+
+## 底层实现细节 {#low-level-implementation-details}
 
 - 在 DCS 中引入一个新的永久键 **`/failsafe`**。
 - **`/failsafe`** 键记录给定时刻该 Patroni 集群所有已知成员的信息。
@@ -49,7 +56,9 @@ Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检
 
 --------
 
-## 常见问题
+<div id="常见问题"></div>
+
+## 常见问题 {#faq}
 
 - **为什么当前主库必须能访问所有其他成员？不能依赖法定人数吗？**
 
@@ -63,7 +72,7 @@ Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检
 
   Patroni 可以配置为在集群无领导者时从备份中创建新的从库。但如果新成员不在 **`/failsafe`** 键中，它将无法获取领导者锁并执行提升操作。
 
-- **如果主库失去了对 DCS 的访问权限，而从库没有，会发生什么？**
+- **如果主库无法访问 DCS，而从库仍可访问，会发生什么？**
 
   主库将执行故障安全代码，联系所有已知从库。从库将把这一信息视为主库仍然存活的信号，即使 DCS 中的领导者锁已经过期，它们也不会发起领导者竞选。
 

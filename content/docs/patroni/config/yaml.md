@@ -6,16 +6,19 @@ icon: fa-solid fa-file-code
 description: "Patroni YAML 配置选项与各配置节的完整参考。"
 module: [PATRONI]
 categories: [参考]
+upstream_link: "https://patroni.readthedocs.io/en/latest/yaml_configuration.html"
 ---
-
-> 原始页面： https://patroni.readthedocs.io/en/latest/yaml_configuration.html
 
 <a id="yaml"></a>
 
 --------
 
-## 全局/通用
+<div id="全局通用"></div>
 
+## 全局/通用 {#globaluniversal}
+
+- **`thread_pool_size`**：Patroni 用于执行异步任务，以及在主库竞选或 failsafe 检查期间通过 REST API 与其他成员通信的线程池大小。最小值为 **`5`**，默认值为 **`5`**。
+- **`thread_stack_size`**：指定 Patroni 启动的线程所使用的栈大小，取值必须按 **`64kB`** 对齐。最小值为 **`64kB`**，默认值（由 Patroni 设置）为 **`512kB`**。
 - **`name`**：主机名称，在集群中必须唯一。
 - **`namespace`**：Patroni 在配置存储中保存集群信息的路径，默认值为 **`/service`**。
 - **`scope`**：集群名称。
@@ -24,7 +27,9 @@ categories: [参考]
 
 --------
 
-## 日志
+<div id="日志"></div>
+
+## 日志 {#log}
 
 - **`type`**：设置日志格式，可选 **`plain`** 或 **`json`**。使用 **`json`** 格式时，必须安装 [`jsonlogger`](/docs/patroni/installation#extras)。默认值为 **`plain`**。
 - **`level`**：设置通用日志级别，默认值为 **`INFO`**（参见 [Python logging 文档](https://docs.python.org/3.6/library/logging.html#levels)）。
@@ -63,13 +68,15 @@ log:
 
 --------
 
-## 引导配置
+<div id="引导配置"></div>
+
+## 引导配置 {#bootstrap-configuration}
 
 > [!NOTE]
 > 一旦 Patroni 完成集群的首次初始化并将配置写入 DCS，此后对 YAML 配置文件中 **`bootstrap.dcs`** 节所做的任何修改将不再生效！如需更改，请使用 [`patronictl edit-config`](/docs/patroni/patronictl#patronictl_edit_config) 或 Patroni [**REST API**](/docs/patroni/rest_api#rest_api)。
 
 - **`bootstrap`**：
-  - **`dcs`**：本节内容将在新集群初始化完成后写入配置存储的 <span class="title-ref">/\<namespace\>/\<scope\>/config</span>，作为集群的全局动态配置。可将 [**动态配置参数**](/docs/patroni/config/dynamic#dynamic) 中描述的任意参数放在 **`bootstrap.dcs`** 下，Patroni 完成集群引导后会将本节写入该路径。
+  - **`dcs`**：本节内容将在新集群初始化完成后写入配置存储的 `/<namespace>/<scope>/config`，作为集群的全局动态配置。可将 [**动态配置参数**](/docs/patroni/config/dynamic#dynamic) 中描述的任意参数放在 **`bootstrap.dcs`** 下，Patroni 完成集群引导后会将本节写入该路径。
 
   - **`method`**：用于引导本集群的自定义脚本。
 
@@ -87,7 +94,7 @@ log:
 
 --------
 
-## Citus
+## Citus {#citus}
 
 启用 Patroni 与 [Citus](https://docs.citusdata.com) 的集成。配置后，Patroni 将负责在协调节点上注册 Citus 工作节点。关于 Citus 支持的更多信息，参见 [**此处**](/docs/patroni/citus#citus)。
 
@@ -98,7 +105,7 @@ log:
 
 --------
 
-## Consul
+## Consul {#consul}
 
 大多数参数为可选，但必须指定 **`host`** 或 **`url`** 之一。
 
@@ -133,7 +140,7 @@ log:
 
 --------
 
-## Etcd
+## Etcd {#etcd}
 
 大多数参数为可选，但必须指定 **`host`**、**`hosts`**、**`url`**、**`proxy`** 或 **`srv`** 之一。
 
@@ -143,7 +150,7 @@ log:
 - **`url`**：etcd 的 URL。
 - **`proxy`**：etcd 的代理 URL，若通过代理连接 etcd，请使用此参数而非 **`url`**。
 - **`srv`**：用于集群自动发现的 SRV 记录搜索域。Patroni 将按以下顺序查询指定域的 SRV 服务名，找到第一个有效结果即止：**`_etcd-client-ssl`**、**`_etcd-client`**、**`_etcd-ssl`**、**`_etcd`**、**`_etcd-server-ssl`**、**`_etcd-server`**。若查到 **`_etcd-server-ssl`** 或 **`_etcd-server`** 的 SRV 记录，将通过 ETCD peer 协议查询可用成员；否则直接使用 SRV 记录中的主机。
-- **`srv_suffix`**：配置用于自动发现时 SRV 查询名称的后缀，可在同一域下区分多个 etcd 集群，仅与 **`srv`** 联用。例如，设置 **`srv_suffix: foo`** 且 **`srv: example.org`** 时，将发起 **`_etcd-client-ssl-foo._tcp.example.com`** 等 DNS SRV 查询（所有可能的 ETCD SRV 服务名均以相同方式处理）。
+- **`srv_suffix`**：配置用于自动发现时 SRV 查询名称的后缀，可在同一域下区分多个 etcd 集群，仅与 **`srv`** 联用。例如，设置 **`srv_suffix: foo`** 且 **`srv: example.org`** 时，将发起 **`_etcd-client-ssl-foo._tcp.example.org`** 等 DNS SRV 查询（所有可能的 ETCD SRV 服务名均以相同方式处理）。
 - **`protocol`**：（可选）http 或 https，未指定时默认使用 http。若已指定 **`url`** 或 **`proxy`**，则从中获取协议。
 - **`username`**：（可选）etcd 认证的用户名。
 - **`password`**：（可选）etcd 认证的密码。
@@ -153,7 +160,7 @@ log:
 
 --------
 
-## Etcdv3
+## Etcdv3 {#etcdv3}
 
 若要让 Patroni 通过协议版本 3 与 Etcd 集群通信，在 Patroni 配置文件中使用 **`etcd3`** 节即可，所有配置参数与 **`etcd`** 相同。
 
@@ -162,7 +169,7 @@ log:
 
 --------
 
-## ZooKeeper
+## ZooKeeper {#zookeeper}
 
 - **`hosts`**：ZooKeeper 集群成员列表，格式为 \['host1:port1', 'host2:port2', 'etc...'\]。
 - **`use_ssl`**：（可选）是否使用 SSL，默认为 **`false`**。若为 **`false`**，所有 SSL 相关参数将被忽略。
@@ -179,7 +186,7 @@ log:
 
 --------
 
-## Exhibitor
+## Exhibitor {#exhibitor}
 
 - **`hosts`**：Exhibitor（ZooKeeper）节点的初始列表，格式为 'host1,host2,etc...'，当 Exhibitor（ZooKeeper）集群拓扑变化时自动更新。
 - **`poll_interval`**：从 Exhibitor 更新 ZooKeeper 和 Exhibitor 节点列表的频率。
@@ -189,7 +196,7 @@ log:
 
 --------
 
-## Kubernetes
+## Kubernetes {#kubernetes}
 
 - **`bypass_api_service`**：（可选）与 Kubernetes API 通信时，Patroni 通常依赖 [`kubernetes`](/docs/patroni/kubernetes#kubernetes) 服务——该服务地址通过 **`KUBERNETES_SERVICE_HOST`** 环境变量暴露给 Pod。若将 **`bypass_api_service`** 设为 **`true`**，Patroni 将解析该服务背后的 API 节点列表并直接连接。
 - **`namespace`**：（可选）Patroni Pod 运行所在的 Kubernetes namespace，默认值为 **`default`**。
@@ -211,7 +218,9 @@ log:
 
 --------
 
-## Raft（已弃用）
+<div id="raft已弃用"></div>
+
+## Raft（已弃用） {#raft-deprecated}
 
 - **`self_addr`**：用于 Raft 连接监听的 **`ip:port`**，**`self_addr`** 必须可从集群其他节点访问。若未设置，该节点将不参与共识。
 
@@ -222,6 +231,18 @@ log:
 - **`data_dir`**：存储 Raft 日志和快照的目录，若未指定则使用当前工作目录。
 
 - **`password`**：（可选）使用指定密码加密 Raft 流量，需要 **`cryptography`** Python 模块。
+- **`min_timeout`**：（可选）底层 pysyncobj Raft 实现的最小选举超时（秒）。必须大于 3 * **`append_entries_period`**。默认值：**`0.4`**。
+- **`max_timeout`**：（可选）底层 pysyncobj Raft 实现的最大选举超时（秒）。必须大于 **`min_timeout`**。默认值：**`1.4`**。
+- **`connection_timeout`**：（可选）连接上持续未收到数据达到该时长（秒）后即视为失效。必须大于等于 **`max_timeout`**。默认值：**`3.5`**。
+- **`append_entries_period`**：（可选）发送心跳（append_entries）命令的间隔（秒）。必须小于 **`min_timeout`** 的三分之一。默认值：**`0.1`**。
+- **`connection_retry_time`**：（可选）向离线节点发起重连尝试的间隔（秒）。默认值：**`5.0`**。
+- **`leader_fallback_timeout`**：（可选）领导者持续未收到多数节点响应达到该时长（秒）后，回退为 follower 状态。必须大于 **`append_entries_period`**。默认值：**`30.0`**。
+
+> [!NOTE]
+> 这些超时参数适用于默认 pysyncobj 超时过于激进的高延迟网络。必须满足以下约束：**`min_timeout`** > 3 * **`append_entries_period`**、**`max_timeout`** > **`min_timeout`**、**`connection_timeout`** >= **`max_timeout`**、**`leader_fallback_timeout`** > **`append_entries_period`**。Patroni 会在启动时校验这些约束，违反时将拒绝启动。这些值无法在运行时更改，需要重启才能生效。
+>
+> [!WARNING]
+> 这些参数只会放宽 pysyncobj 的选举与连接超时，并不会延长 Patroni 为 Raft 操作设定的单命令截止时间。每条 Raft 命令（领导者锁刷新、集群状态写入）仍必须在 **`retry_timeout`**（默认 **`10`**）内完成。在极高延迟链路上（往返时间大约超过几秒），即使 **`connection_timeout`** 已提高到远大于 RTT，单条命令仍可能超出 **`retry_timeout`**，DCS 将表现为不可达，主库可能因此被降级。在此类链路上，还必须相应调大 **`retry_timeout`** 和 **`ttl`**，并保持 **`loop_wait + 2 * retry_timeout <= ttl`**。
 
   关于 Raft 实现的简短 FAQ：
 
@@ -249,7 +270,7 @@ log:
 
 --------
 
-## PostgreSQL
+## PostgreSQL {#postgresql}
 
 - **`postgresql`**：
   - **`authentication`**：
@@ -257,39 +278,39 @@ log:
     - **`superuser`**：
       - **`username`**：超级用户名，在初始化（initdb）时设置，后续由 Patroni 用于连接 PostgreSQL。
       - **`password`**：超级用户密码，在初始化（initdb）时设置。
-      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，允许客户端指定与服务器的 TLS 协商模式，默认模式为 **`prefer`**。
+      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，允许客户端指定与服务器的 TLS 协商模式。各模式的行为详见 [PostgreSQL 文档](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-SSLMODE-STATEMENTS)，默认模式为 **`prefer`**。
       - **`sslkey`**：（可选）映射到 [sslkey](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLKEY) 连接参数，指定与客户端证书配套的私钥位置。
       - **`sslpassword`**：（可选）映射到 [sslpassword](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLPASSWORD) 连接参数，指定 **`sslkey`** 中私钥的密码。
       - **`sslcert`**：（可选）映射到 [sslcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCERT) 连接参数，指定客户端证书的位置。
-      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个受信任 CA 证书的文件位置，客户端将用其验证服务器证书。
-      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置，客户端将拒绝连接证书出现在该列表中的服务器。
-      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置，客户端将拒绝连接证书出现在该列表中的服务器。
+      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个 CA 证书的文件位置，客户端将用其验证服务器证书。
+      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置。客户端将拒绝连接证书出现在该列表中的服务器。
+      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置。客户端将拒绝连接证书出现在这些列表中的服务器。
       - **`sslnegotiation`**：（可选）映射到 [sslnegotiation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLNEGOTIATION) 连接参数，控制在使用 SSL 时与服务器协商 SSL 加密的方式。
       - **`gssencmode`**：（可选）映射到 [gssencmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-GSSENCMODE) 连接参数，决定是否以及以何种优先级与服务器建立安全的 GSS TCP/IP 连接。
       - **`channel_binding`**：（可选）映射到 [channel_binding](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-CHANNEL-BINDING) 连接参数，控制客户端对通道绑定的使用。
     - **`replication`**：
       - **`username`**：复制用户名，在初始化时创建，从库通过流复制连接复制源时使用该用户。
       - **`password`**：复制用户密码，在初始化时创建。
-      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，默认模式为 **`prefer`**。
+      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，允许客户端指定与服务器的 TLS 协商模式。各模式的行为详见 [PostgreSQL 文档](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-SSLMODE-STATEMENTS)，默认模式为 **`prefer`**。
       - **`sslkey`**：（可选）映射到 [sslkey](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLKEY) 连接参数，指定与客户端证书配套的私钥位置。
       - **`sslpassword`**：（可选）映射到 [sslpassword](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLPASSWORD) 连接参数，指定 **`sslkey`** 中私钥的密码。
       - **`sslcert`**：（可选）映射到 [sslcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCERT) 连接参数，指定客户端证书的位置。
-      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个受信任 CA 证书的文件位置。
-      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置。
-      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置。
+      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个 CA 证书的文件位置，客户端将用其验证服务器证书。
+      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置。客户端将拒绝连接证书出现在该列表中的服务器。
+      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置。客户端将拒绝连接证书出现在这些列表中的服务器。
       - **`sslnegotiation`**：（可选）映射到 [sslnegotiation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLNEGOTIATION) 连接参数，控制在使用 SSL 时协商 SSL 加密的方式。
       - **`gssencmode`**：（可选）映射到 [gssencmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-GSSENCMODE) 连接参数，决定是否以及以何种优先级建立安全的 GSS TCP/IP 连接。
       - **`channel_binding`**：（可选）映射到 [channel_binding](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-CHANNEL-BINDING) 连接参数，控制客户端对通道绑定的使用。
     - **`rewind`**：
       - **`username`**：（可选）用于 **`pg_rewind`** 的用户名，在初始化 PostgreSQL 11+ 时创建，并授予所有必要的 [权限](https://www.postgresql.org/docs/11/app-pgrewind.html#id-1.9.5.8.8)。
       - **`password`**：（可选）用于 **`pg_rewind`** 的用户密码，在初始化时创建。
-      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，默认模式为 **`prefer`**。
+      - **`sslmode`**：（可选）映射到 [sslmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE) 连接参数，允许客户端指定与服务器的 TLS 协商模式。各模式的行为详见 [PostgreSQL 文档](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-SSLMODE-STATEMENTS)，默认模式为 **`prefer`**。
       - **`sslkey`**：（可选）映射到 [sslkey](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLKEY) 连接参数，指定与客户端证书配套的私钥位置。
       - **`sslpassword`**：（可选）映射到 [sslpassword](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLPASSWORD) 连接参数，指定 **`sslkey`** 中私钥的密码。
       - **`sslcert`**：（可选）映射到 [sslcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCERT) 连接参数，指定客户端证书的位置。
-      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个受信任 CA 证书的文件位置。
-      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置。
-      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置。
+      - **`sslrootcert`**：（可选）映射到 [sslrootcert](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLROOTCERT) 连接参数，指定包含一个或多个 CA 证书的文件位置，客户端将用其验证服务器证书。
+      - **`sslcrl`**：（可选）映射到 [sslcrl](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRL) 连接参数，指定证书吊销列表文件的位置。客户端将拒绝连接证书出现在该列表中的服务器。
+      - **`sslcrldir`**：（可选）映射到 [sslcrldir](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLCRLDIR) 连接参数，指定包含证书吊销列表文件的目录位置。客户端将拒绝连接证书出现在这些列表中的服务器。
       - **`sslnegotiation`**：（可选）映射到 [sslnegotiation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLNEGOTIATION) 连接参数，控制在使用 SSL 时协商 SSL 加密的方式。
       - **`gssencmode`**：（可选）映射到 [gssencmode](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-GSSENCMODE) 连接参数，决定是否以及以何种优先级建立安全的 GSS TCP/IP 连接。
       - **`channel_binding`**：（可选）映射到 [channel_binding](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-CHANNEL-BINDING) 连接参数，控制客户端对通道绑定的使用。
@@ -318,17 +339,17 @@ log:
 
     - **`pg_ctl`**：（可选）**`pg_ctl`** 的自定义名称。
     - **`initdb`**：（可选）**`initdb`** 的自定义名称。
-    - **`pgcontroldata`**：（可选）**`pg_controldata`** 的自定义名称。
+    - **`pg_controldata`**：（可选）**`pg_controldata`** 的自定义名称。
     - **`pg_basebackup`**：（可选）**`pg_basebackup`** 的自定义名称。
     - **`postgres`**：（可选）**`postgres`** 的自定义名称。
     - **`pg_isready`**：（可选）**`pg_isready`** 的自定义名称。
     - **`pg_rewind`**：（可选）**`pg_rewind`** 的自定义名称。
 
-  - **`listen`**：PostgreSQL 监听的 IP 地址和端口，使用流复制时必须可从集群其他节点访问。支持多个逗号分隔的地址，端口附加在最后一个地址之后，例如 **`listen: 127.0.0.1,127.0.0.2:5432`**。Patroni 将使用列表中的第一个地址建立到 PostgreSQL 节点的本地连接。
+  - **`listen`**：PostgreSQL 监听的 IP 地址和端口，使用流复制时必须可从集群其他节点访问。支持多个逗号分隔的地址，只要端口部分以冒号附加在最后一个地址之后即可，例如 **`listen: 127.0.0.1,127.0.0.2:5432`**。Patroni 将使用列表中的第一个地址建立到 PostgreSQL 节点的本地连接。
 
   - **`use_unix_socket`**：指定 Patroni 优先使用 Unix 套接字连接 PostgreSQL，默认值为 **`false`**。若已定义 **`unix_socket_directories`**，Patroni 将从中选取第一个合适的路径用于连接，无合适值时回退到 TCP。若 **`postgresql.parameters`** 中未指定 **`unix_socket_directories`**，Patroni 将假设使用默认值并在连接参数中省略 **`host`**。
 
-  - **`use_unix_socket_repl`**：指定 Patroni 优先使用 Unix 套接字建立复制用户连接，默认值为 **`false`**，行为与 **`use_unix_socket`** 相同。
+  - **`use_unix_socket_repl`**：指定 Patroni 优先使用 Unix 套接字建立复制用户连接，默认值为 **`false`**。若已定义 **`unix_socket_directories`**，Patroni 将从中选取第一个合适的路径用于连接，无合适值时回退到 TCP。若 **`postgresql.parameters`** 中未指定 **`unix_socket_directories`**，Patroni 将假设使用默认值，并在连接参数中省略 **`host`**。
 
   - **`pgpass`**：[.pgpass](https://www.postgresql.org/docs/current/static/libpq-pgpass.html) 密码文件的路径。Patroni 在执行 pg_basebackup、post_init 脚本及其他某些情况下会创建此文件，该路径必须对 Patroni 可写。
 
@@ -337,16 +358,25 @@ log:
   - **`custom_conf`**：可选的自定义 **`postgresql.conf`** 文件路径，将代替 **`postgresql.base.conf`** 使用。该文件必须存在于所有集群节点上且对 PostgreSQL 可读，实际的 **`postgresql.conf`** 将从其所在位置包含该文件。注意 Patroni 不会监控此文件的变更，也不会备份它，但其中的设置仍可被 Patroni 自身的配置机制覆盖，详见 [**动态配置**](/docs/patroni/config#config)。
 
   - **`parameters`**：Postgres 的配置参数（GUC），格式为 **`{ssl: "on", ssl_cert_file: "cert_file"}`**。
+  - **`parameters_primary`**：（可选）主库（primary）角色的专属参数覆盖，这些值会与基础 **`parameters`** 合并并覆盖后者。
+  - **`parameters_replica`**：（可选）从库（replica）角色的专属参数覆盖，这些值会与基础 **`parameters`** 合并并覆盖后者。
+  - **`parameters_standby_leader`**：（可选）standby_leader 角色的专属参数覆盖，这些值会与基础 **`parameters`** 合并并覆盖后者。
 
   - **`pg_hba`**：Patroni 用于生成 **`pg_hba.conf`** 的行列表。若 PostgreSQL 的 **`hba_file`** 参数设为非默认值，Patroni 将忽略此参数。与 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 **`pg_hba.conf`** 的管理。
 
     - **`- host all all 0.0.0.0/0 md5`**
     - **`- host replication replicator 127.0.0.1/32 md5`**：复制所需的规则行。
+  - **`pg_hba_primary`**：（可选）主库（primary）角色的专属 pg_hba 条目，将完全替换 **`pg_hba`**（不做合并）。若未定义，则使用 **`pg_hba`**。
+  - **`pg_hba_replica`**：（可选）从库（replica）角色的专属 pg_hba 条目，将完全替换 **`pg_hba`**（不做合并）。若未定义，则使用 **`pg_hba`**。
+  - **`pg_hba_standby_leader`**：（可选）standby_leader 角色的专属 pg_hba 条目，将完全替换 **`pg_hba`**（不做合并）。若未定义，则使用 **`pg_hba`**。
 
   - **`pg_ident`**：Patroni 用于生成 **`pg_ident.conf`** 的行列表。若 PostgreSQL 的 **`ident_file`** 参数设为非默认值，Patroni 将忽略此参数。与 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 **`pg_ident.conf`** 的管理。
 
     - **`- mapname1 systemname1 pguser1`**
     - **`- mapname1 systemname2 pguser2`**
+  - **`pg_ident_primary`**：（可选）主库（primary）角色的专属 pg_ident 条目，将完全替换 **`pg_ident`**（不做合并）。若未定义，则使用 **`pg_ident`**。
+  - **`pg_ident_replica`**：（可选）从库（replica）角色的专属 pg_ident 条目，将完全替换 **`pg_ident`**（不做合并）。若未定义，则使用 **`pg_ident`**。
+  - **`pg_ident_standby_leader`**：（可选）standby_leader 角色的专属 pg_ident 条目，将完全替换 **`pg_ident`**（不做合并）。若未定义，则使用 **`pg_ident`**。
 
   - **`pg_ctl_timeout`**：pg_ctl 执行 **`start`**、**`stop`** 或 **`restart`** 时的等待时长，默认值为 60 秒。
 
@@ -376,9 +406,10 @@ log:
 
 --------
 
-## REST API
+## REST API {#rest-api}
 
 - **`restapi`**：
+  - **`thread_pool_size`**：Patroni 用于处理 REST API 请求的线程池大小。最小值为 **`5`**，默认值为 **`5`**。
   - **`connect_address`**：访问 Patroni [**REST API**](/docs/patroni/rest_api#rest_api) 所用的 IP 地址（或主机名）和端口。集群中所有成员必须能够访问此地址，因此除非 Patroni 仅用于本地演示，否则不能使用回环地址（如 "localhost" 或 "127.0.0.1"）。该地址可作为 HTTP 健康检查端点（详见下文 REST API 的 "listen" 参数），也用于用户查询（直接访问或通过 REST API）以及集群成员在主库选举期间的健康检查（例如，判断当前主库是否仍在运行，或是否存在 WAL 位置超前于查询节点的节点）。**`connect_address`** 写入 DCS 的成员键，从而可通过成员名称解析出其 REST API 连接地址。
   - **`listen`**：Patroni 监听 REST API 请求的 IP 地址（或主机名）和端口，同样提供上述健康检查与集群节点间通信功能，也可为 HAProxy 等支持 HTTP **`OPTIONS`** 或 **`GET`** 检查的负载均衡器提供健康检查端点。
   - **`authentication`**：（可选）
@@ -390,7 +421,7 @@ log:
   - **`cafile`**：（可选）包含受信任 CA 证书的 CA_BUNDLE 文件，用于验证客户端证书。
   - **`ciphers`**：（可选）允许的密码套件（例如 "ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:!SSLv1:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1"）。
   - **`verify_client`**：（可选）**`none`**（默认）、**`optional`** 或 **`required`**。**`none`** 时不检查客户端证书；**`required`** 时所有 REST API 调用均需提供客户端证书；**`optional`** 时仅对不安全的 REST API 端点要求客户端证书。使用 **`required`** 时，证书签名验证通过即视为认证成功；使用 **`optional`** 时，仅对 **`PUT`**、**`POST`**、**`PATCH`** 和 **`DELETE`** 请求检查客户端证书。
-  - **`allowlist`**：（可选）允许调用不安全 REST API 端点的主机列表，每个元素可以是主机名、IP 地址或 CIDR 格式的网络地址，默认允许所有来源。一旦设置了 **`allowlist`** 或 **`allowlist_include_members`**，不在列表中的请求将被拒绝。
+  - **`allowlist`**：（可选）允许调用不安全 REST API 端点的主机列表，每个元素可以是主机名、IP 地址或 CIDR 格式的网络地址，默认使用 **`allow all`**，即允许所有来源。一旦设置了 **`allowlist`** 或 **`allowlist_include_members`**，不在列表中的请求将被拒绝。
   - **`allowlist_include_members`**：（可选）若设为 **`true`**，DCS 中已注册的其他集群成员（IP 地址或主机名取自成员的 **`api_url`**）也被允许访问不安全 REST API 端点。注意操作系统可能为出站连接使用不同的 IP 地址。
   - **`http_extra_headers`**：（可选）允许 REST API 服务器在 HTTP 响应中传递额外信息的 HTTP 头。
   - **`https_extra_headers`**：（可选）启用 TLS 时，允许 REST API 服务器在 HTTP 响应中传递额外信息的 HTTPS 头，同时也会传递 **`http_extra_headers`** 中设置的额外信息。
@@ -424,7 +455,7 @@ restapi:
 
 <div class="title">
 
-Warning
+警告
 
 </div>
 
@@ -437,7 +468,7 @@ Warning
 
 --------
 
-## CTL
+## CTL {#ctl}
 
 - **`ctl`**：（可选）
   - **`authentication`**：
@@ -451,7 +482,7 @@ Warning
 
 --------
 
-## Watchdog
+## Watchdog {#watchdog}
 
 - **`mode`**：**`off`**、**`automatic`** 或 **`required`**。**`off`** 时禁用 watchdog；**`automatic`** 时如有可用的 watchdog 则启用，否则忽略；**`required`** 时节点必须在 watchdog 成功启用后才能成为主库。
 - **`device`**：watchdog 设备路径，默认为 **`/dev/watchdog`**。
@@ -461,15 +492,17 @@ Warning
 
 --------
 
-## 标签（Tags）
+<div id="标签tags"></div>
+
+## 标签（Tags） {#tags}
 
 - **`clonefrom`**：**`true`** 或 **`false`**。若设为 **`true`**，其他节点在引导时可能优先从此节点克隆（**`pg_basebackup`**）。若多个节点的 **`clonefrom`** 均为 **`true`**，将随机选择引导源节点，默认值为 **`false`**。
 - **`noloadbalance`**：**`true`** 或 **`false`**。若设为 **`true`**，该节点在 **`GET /replica`** REST API 健康检查时将返回 HTTP 503，从而被排除在负载均衡之外，默认为 **`false`**。
 - **`replicatefrom`**：另一个从库的名称，用于支持级联复制。
 - **`nosync`**：**`true`** 或 **`false`**。若设为 **`true`**，该节点永远不会被选为同步从库。
 - **`sync_priority`**：整数，控制 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设为 **`on`** 时此节点在同步从库选择中的优先级，数值越高越优先。若 **`sync_priority`** 为 0 或负数，该节点不会被写入 **`synchronous_standby_names`** 参数（效果类似于 **`nosync: true`**）。注意此参数的含义与 **`pg_stat_replication`** 视图中报告的 **`sync_priority`** 值相反。
-- **`nofailover`**：**`true`** 或 **`false`**，控制此节点是否允许参与主库竞选，默认为 **`false`**，即此节点 <span id="can">可以</span> 参与主库竞选。
-- **`failover_priority`**：整数，控制此节点在故障转移时的优先级。在接收/回放相同 WAL 量的前提下，优先级高的节点优先被选为新主库；但无论优先级高低，接收/回放 LSN 更大的节点始终优先。若 **`failover_priority`** 为 0 或负数，该节点不允许参与主库竞选（效果类似于 **`nofailover: true`**）。已知限制：**`failover_priority`** 目前不支持 [**基于法定人数的同步复制**](/docs/patroni/replication_modes#quorum_mode)。
+- **`nofailover`**：**`true`** 或 **`false`**，控制此节点是否允许参与领导者竞选并成为领导者，默认为 **`false`**，即此节点 <span id="can">可以</span> 参与主库竞选。
+- **`failover_priority`**：整数，控制此节点在故障转移时的优先级。在接收/回放相同 WAL 量的前提下，优先级高的节点优先被选为新主库；但无论优先级高低，接收/回放 LSN 更大的节点始终优先。若 **`failover_priority`** 为 0 或负数，该节点不允许参与领导者竞选或成为领导者（效果类似于 **`nofailover: true`**）。已知限制：**`failover_priority`** 目前不支持 [**基于法定人数的同步复制**](/docs/patroni/replication_modes#quorum_mode)。
 - **`nostream`**：**`true`** 或 **`false`**。若设为 **`true`**，该节点将不使用复制协议流式传输 WAL，而依赖归档恢复（需配置 **`restore_command`**）和 **`pg_wal`**/**`pg_xlog`** 轮询。同时将禁用该节点本身及其所有级联从库上永久逻辑复制槽的复制与同步，在主库上设置此标签无效。
 
 > [!WARNING]

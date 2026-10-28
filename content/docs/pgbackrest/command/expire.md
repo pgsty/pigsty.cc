@@ -6,9 +6,8 @@ description: "pgBackRest `expire` 命令的选项与行为参考。"
 icon: fa-solid fa-hourglass-end
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-expire"
 ---
-
-> 原始页面： [pgBackRest Command Docs: expire](https://pgbackrest.org/command.html#command-expire)
 
 pgBackRest 基于保留策略对全量备份进行轮换，策略可按数量或时间段定义。按数量保留时，过期操作只关注需要保留的备份数量，不考虑备份的创建时间。差异备份按数量进行保留，但当其依赖的全量备份过期时，差异备份也会随之过期。增量备份没有独立的保留策略——它们始终随关联的全量备份或差异备份一同过期。详情及示例请参见 [**全量备份保留策略**](/docs/pgbackrest/user-guide/#全量备份保留策略) 和 [**差异备份保留策略**](/docs/pgbackrest/user-guide/#差异备份保留策略) 章节。
 
@@ -30,13 +29,26 @@ pgBackRest 基于保留策略对全量备份进行轮换，策略可按数量或
 example: --archive-expire-before=000000010000000000000010
 ```
 
+### 页面校验和无效时报错选项（`--checksum-page-error`） {#error-on-invalid-page-checksums-option---checksum-page-error}
+
+页面校验和无效时报错。
+
+启用时，如果保留的最旧备份将包含校验和错误，`expire` 命令会在做出任何更改之前报错并终止。禁用时，`expire` 会继续执行，并在保留的最旧备份包含校验和错误时发出警告。
+
+使用 `--set` 时，即使启用此选项，`expire` 也会继续执行。如果保留的最旧备份包含校验和错误，则会发出警告。
+
+```yaml
+default: y
+example: --no-checksum-page-error
+```
+
 ### 最旧备份选项（`--oldest`）
 
 过期最旧的可删除备份集。
 
 过期可以删除的最旧全量备份集（即至少保留一个比它更新的全量备份）。这等价于将保留数量临时减一，但由系统自动计算。与该过期全量备份集关联的所有备份（差异备份和增量备份）也会一同过期。
 
-使用此选项时，归档保留策略也会相应调整，以便在同一次运行中删除已过期备份的 WAL。
+使用此选项时，归档保留策略也会临时调整，以便在同一次运行中删除已过期备份的 WAL。
 
 若配置了基于时间的全量保留策略（`--repo-retention-full-type=time`），则本次执行中 `--oldest` 将改用基于数量的过期方式。
 
@@ -129,7 +141,7 @@ example: --config=/conf/pgbackrest/pgbackrest.conf
 
 附加 pgBackRest 配置文件的路径。
 
-指定路径下扩展名为 `.conf` 的配置文件将与主配置文件合并，构成完整的配置。
+指定路径下扩展名为 `.conf` 的配置文件将与 pgBackRest 主配置文件拼接，合并为一个完整的配置文件。
 
 ```yaml
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
@@ -166,7 +178,7 @@ I/O 超时时间。
 
 用于连接和读写操作的超时时间（秒）。
 
-请注意，整个读写操作无需在此时间内完成，但 *必须* 持续有所进展，哪怕每次只传输一个字节。
+请注意，整个读写操作无需在此时间内完成，但必须有 *一定* 进展，哪怕只传输了一个字节。
 
 ```yaml
 default: 1m
@@ -240,7 +252,7 @@ example: --no-sck-keep-alive
 
 stanza 是 PostgreSQL 数据库集群的配置，定义了集群的位置、备份方式、归档选项等。大多数数据库服务器只有一个 PostgreSQL 集群，因此只有一个 stanza；而备份服务器则需要为每个待备份的数据库集群分别配置一个 stanza。
 
-命名 stanza 时，很容易直接使用主集群的名称，但更好的做法是根据集群承载的数据库功能来命名。由于 stanza 名称同时用于主库和所有副本，建议选择能描述集群实际用途的名称（如 `app` 或 `dw`），而非本地集群名称（如 `main` 或 `prod`）。
+命名 stanza 时，很容易直接使用主集群的名称，但更好的做法是用名称描述集群所包含的数据库。由于 stanza 名称同时用于主库和所有副本，建议选择能描述集群实际用途的名称（如 `app` 或 `dw`），而非本地集群名称（如 `main` 或 `prod`）。
 
 ```yaml
 example: --stanza=main
@@ -411,7 +423,7 @@ example: --no-log-timestamp
 
 ### 指定仓库选项（`--repo`）
 
-指定操作仓库。
+设置仓库。
 
 指定命令操作的目标仓库。
 
@@ -511,8 +523,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账号授权。
 - `service` - 使用本地存储的服务账号密钥。
 - `token` - 用于本地测试，如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，认证令牌续期时会重新加载凭据。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -631,7 +648,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-`repo-host` 已设置时的仓库主机端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 使用此选项为仓库主机协议指定非默认端口。
 
@@ -639,7 +656,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -663,7 +680,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-`repo-host` 已设置时的仓库主机用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义在仓库主机上执行操作所用的用户。建议不要使用 `postgres` 用户，而是使用专用用户（如 `pgbackrest`）。若 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库拥有读取权限，但无法意外损坏仓库内容。
 
@@ -695,7 +712,7 @@ example: --repo1-path=/backup/db/backrest
 
 若未设置此值且 `repo-retention-full-type` 为 `count`（默认值），则归档过期策略默认与 `repo-retention-archive-type` 对应的 `repo-retention-full`（或 `repo-retention-diff`）值一致——前提是 `repo-retention-archive-type` 设为 `full`（或 `diff`）。这确保了 WAL 仅在对应备份过期时才同步过期。若 `repo-retention-full-type` 为 `time`，则此值默认删除比满足 `repo-retention-full` 设置后所保留的最旧全量备份更早的归档。
 
-若 `repo-retention-archive-type` 设为 `incr`，则必须设置此选项。在磁盘空间紧张时，此选项与 `repo-retention-archive-type` 配合可更激进地过期 WAL 段，但代价是相关备份将无法执行 PITR，因此 **不推荐**。
+若 `repo-retention-archive-type` 设为 `incr`，则必须设置此选项。在磁盘空间紧张时，此选项与 `repo-retention-archive-type` 配合可更激进地过期 WAL 段，但这样一来，WAL 已过期的备份将无法执行 PITR，因此 **不推荐**。
 
 ```yaml
 allowed: [1, 9999999]
@@ -708,11 +725,13 @@ example: --repo1-retention-archive=2
 
 WAL 保留的备份类型。
 
-- 设为 `full` 时，pgBackRest 将为 `repo-retention-archive` 指定数量的全量备份保留归档日志。
-- 设为 `diff`（差异）时，pgBackRest 将为 `repo-retention-archive` 指定数量的全量和差异备份保留归档日志；若最后一次备份是全量备份，它也会被计入差异备份数量。
-- 设为 `incr`（增量）时，pgBackRest 将为 `repo-retention-archive` 指定数量的全量、差异和增量备份保留归档日志。
+支持以下备份类型：
 
-建议保持默认值，即仅在全量备份过期时才过期 WAL。
+- `full` - pgBackRest 将为 `repo-retention-archive` 定义的全量备份数量保留归档日志。
+- `diff` - （差异）pgBackRest 将为 `repo-retention-archive` 定义的全量备份和差异备份数量保留归档日志，即若最近一次备份是全量备份，则在计算 repo-retention 时将其视为差异备份。
+- `incr` - （增量）pgBackRest 将为 `repo-retention-archive` 定义的全量、差异和增量备份数量保留归档日志。
+
+建议保留此设置的默认值——默认行为仅在全量备份过期时才清理 WAL。
 
 ```yaml
 default: full
@@ -755,8 +774,10 @@ example: --repo1-retention-full=2
 
 决定 `repo-retention-full` 表示的是天数（时间段）还是全量备份数量。
 
-- 设为 `time` 时，创建时间早于 `repo-retention-full` 天的全量备份将被删除，但前提是仓库中至少有一个不早于该天数的备份。例如，若 `repo-retention-full` 为 30，且存在两个全量备份（一个 25 天前，一个 35 天前），则不会过期任何备份——因为删除 35 天前的备份后只剩 25 天前的备份，而 25 天未满足"至少有一个 30 天以内备份"的条件，因此不允许过期更旧的备份。比最旧保留全量备份更早的归档 WAL 将自动过期，除非显式设置了 `repo-retention-archive-type` 和 `repo-retention-archive`。
-- 设为 `count` 时，超出 `repo-retention-full` 数量的全量备份将被过期。例如，若 `repo-retention-full` 为 `4`，完成第五个全量备份后，最旧的全量备份将被过期以保持数量为 4。
+支持以下保留类型：
+
+- `time` - 年龄超过 `repo-retention-full` 天的全量备份会从仓库中删除，前提是至少还存在另一个年龄达到或超过 `repo-retention-full` 天的备份。例如，若 `repo-retention-full` 为 30（天），且有 2 个全量备份，分别创建于 25 天前和 35 天前，则两者均不会过期：删除 35 天前的备份后只剩 25 天前的备份，这会违反 30 天保留策略，即必须至少保留一个年龄达到 30 天的备份，才能删除更旧的备份。早于所保留的最旧全量备份的归档 WAL 会自动过期，除非显式设置了 `repo-retention-archive-type` 和 `repo-retention-archive`。
+- `count` - 超过 `repo-retention-full` 数量的全量备份将过期。例如，若 `repo-retention-full` 为 `4`，完成第五个全量备份后，最旧的全量备份将过期，使数量保持在 4 个。
 
 请注意，只有成功完成的备份才会纳入保留计算。例如，若 `repo-retention-full-type` 为 `count` 且 `repo-retention-full` 为 `2`，则必须存在 3 个完整的全量备份，最旧的才会被过期。
 
@@ -808,7 +829,7 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -950,7 +971,7 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
@@ -960,7 +981,7 @@ example: --repo1-sftp-host-key-hash-type=sha256
 
 SFTP 仓库主机端口。
 
-SFTP 仓库主机的端口号。
+SFTP 仓库主机端口。
 
 ```yaml
 default: 22
@@ -982,7 +1003,7 @@ example: --repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-认证过程中用于搜索 SFTP 主机匹配的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将只在这些文件中搜索匹配项。文件路径必须为完整路径或以波浪号开头的路径。此选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
+认证过程中用于搜索 SFTP 主机匹配的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将只在这些文件中搜索匹配项。文件路径必须为完整路径或以波浪号开头的路径。`repo-sftp-known-host` 选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
 
 ```yaml
 example: --repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -1058,6 +1079,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port、repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -1084,14 +1131,14 @@ S3 等对象存储支持在文件过大无法全部载入内存时分块上传�
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```

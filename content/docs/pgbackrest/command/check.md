@@ -6,11 +6,10 @@ description: "pgBackRest `check` 命令的选项与行为参考。"
 icon: fa-solid fa-circle-check
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-check"
 ---
 
-> 原始页面： [pgBackRest Command Docs: check](https://pgbackrest.org/command.html#command-check)
-
-`check` 命令用于验证 pgBackRest 及 `archive_command` 的配置是否正确，确保指定 stanza（stanza 是 pgBackRest 中用于标识 PostgreSQL 集群备份配置的逻辑名称）的归档与备份能够正常运作。该命令会对当前主机上为该 stanza 配置的所有仓库和数据库逐一检查，可检测出配置错误——尤其是归档配置问题，此类问题会导致所需的 WAL 段无法进入归档，从而造成备份不完整。此命令可在 PostgreSQL 主机或仓库主机上运行；也可在备库主机上运行，但由于备库无法执行 `pg_switch_xlog()`/`pg_switch_wal()`，命令仅会测试仓库配置。
+`check` 命令用于验证 pgBackRest 及 `archive_command` 的配置是否正确，确保指定 stanza 的归档与备份能够正常运作。该命令会对当前主机上为该 stanza 配置的所有仓库和数据库逐一检查，可检测出配置错误——尤其是归档配置问题，此类问题会导致所需的 WAL 段无法进入归档，从而造成备份不完整。此命令可在 PostgreSQL 主机或仓库主机上运行；也可在备库主机上运行，但由于备库无法执行 `pg_switch_xlog()`/`pg_switch_wal()`，命令仅会测试仓库配置。
 
 请注意，该命令会调用 `pg_create_restore_point('pgBackRest Archive Check')` 和 `pg_switch_xlog()`/`pg_switch_wal()` 来强制 PostgreSQL 归档一个 WAL 段。
 
@@ -35,7 +34,7 @@ example: --no-archive-check
 
 此选项默认启用，作用是禁止 PostgreSQL 使用 `archive_mode=always`。
 
-从备库推送的 WAL 段与从主库推送的 WAL 段在逻辑上可能相同，但校验和不同。禁止多源归档可以避免潜在冲突。
+从备库推送的 WAL 段与从主库推送的 WAL 段在逻辑上可能相同，但校验和不同。建议禁用多源归档以避免冲突。
 
 注意：
 
@@ -244,7 +243,7 @@ example: --no-sck-keep-alive
 
 stanza 是 PostgreSQL 数据库集群的配置，定义了集群的位置、备份方式、归档选项等。大多数数据库服务器只有一个 PostgreSQL 集群，因此只有一个 stanza；而备份服务器则需要为每个待备份的数据库集群分别配置一个 stanza。
 
-命名 stanza 时，很容易直接使用主集群的名称，但更好的做法是根据集群承载的数据库功能来命名。由于 stanza 名称同时用于主库和所有副本，建议选择能描述集群实际用途的名称（如 `app` 或 `dw`），而非本地集群名称（如 `main` 或 `prod`）。
+命名 stanza 时，很容易直接使用主集群的名称，但更好的名称应描述集群所包含的数据库。由于 stanza 名称同时用于主库和所有副本，建议选择能描述集群实际用途的名称（如 `app` 或 `dw`），而非本地集群名称（如 `main` 或 `prod`）。
 
 ```yaml
 example: --stanza=main
@@ -518,8 +517,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账号授权。
 - `service` - 使用本地存储的服务账号密钥。
 - `token` - 用于本地测试，如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，认证令牌续期时会重新加载凭据。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -638,7 +642,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-`repo-host` 已设置时的仓库主机端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 使用此选项为仓库主机协议指定非默认端口。
 
@@ -646,7 +650,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -670,7 +674,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-`repo-host` 已设置时的仓库主机用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义在仓库主机上执行操作所用的用户。建议不要使用 `postgres` 用户，而是使用专用用户（如 `pgbackrest`）。若 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库拥有读取权限，但无法意外损坏仓库内容。
 
@@ -687,7 +691,7 @@ example: --repo1-host-user=repo-user
 
 仓库是 pgBackRest 存储备份和归档 WAL 段的地方。
 
-预先估算所需空间可能比较困难。建议先执行若干次备份，记录不同备份类型（全量/增量/差异）的大小，并衡量每天产生的 WAL 量，从而得出大致的空间需求。随着数据库持续增长，需求也会相应变化。
+预先估算所需空间可能比较困难。建议先执行若干次备份，记录不同备份类型（全量/增量/差异）的大小，并衡量每天产生的 WAL 量，从而得出大致的空间需求。随着数据库的演进，需求也很可能随时间变化。
 
 ```yaml
 default: /var/lib/pgbackrest
@@ -722,7 +726,7 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -864,7 +868,7 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
@@ -896,7 +900,7 @@ example: --repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-认证过程中用于搜索 SFTP 主机匹配的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将只在这些文件中搜索匹配项。文件路径必须为完整路径或以波浪号开头的路径。此选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
+认证过程中用于搜索 SFTP 主机匹配的已知主机文件。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将只在这些文件中搜索匹配项。文件路径必须为完整路径或以波浪号开头的路径。`repo-sftp-known-host` 选项可多次传入以指定多个已知主机文件。使用已知主机文件检查时，不得同时指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
 
 ```yaml
 example: --repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -972,6 +976,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port、repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -998,14 +1028,14 @@ S3 等对象存储支持在文件过大无法全部载入内存时分块上传�
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```
@@ -1160,7 +1190,7 @@ example: --pg1-host-key-file=/path/to/client.key
 
 ### PostgreSQL 主机端口选项（`--pg-host-port`）
 
-`pg-host` 已设置时的 PostgreSQL 主机端口。
+设置 `pg-host` 时，用于连接 PostgreSQL 主机的端口。
 
 使用此选项为 PostgreSQL 主机协议指定非默认端口。
 
@@ -1168,7 +1198,7 @@ example: --pg1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on pg-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --pg1-host-port=25
@@ -1192,7 +1222,7 @@ example: --pg1-host-type=tls
 
 ### PostgreSQL 主机用户选项（`--pg-host-user`）
 
-`pg-host` 已设置时的 PostgreSQL 主机登录用户。
+设置 `pg-host` 时，用于登录 PostgreSQL 主机的用户。
 
 此用户还将作为远程 pgBackRest 进程的所有者，并负责发起到 PostgreSQL 的连接。为使其正常工作，该用户应为 PostgreSQL 数据库集群的所有者，通常即默认值 `postgres`。
 

@@ -6,9 +6,8 @@ description: "pgBackRest `archive-push` 命令的选项与行为参考。"
 icon: fa-solid fa-cloud-arrow-up
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-archive-push"
 ---
-
-> 原始页面： [pgBackRest Command Docs: archive-push](https://pgbackrest.org/command.html#command-archive-push)
 
 接收来自 PostgreSQL 的 WAL 段，并将其归档到各个仓库中（仓库路径由带索引的 `repo-path` 选项定义，详见 [**仓库选项**](/docs/pgbackrest/configuration/#仓库选项) 章节）。WAL 段可以立即推送到归档，也可以根据 `archive-async` 的值先暂存在本地。配置了多个仓库时，`archive-push` 会尽量向所有仓库推送。
 
@@ -184,16 +183,16 @@ example: --no-compress
 
 ```yaml
 default (depending on compress-type):
-   bz2 - 9
-   gz - 6
-   lz4 - 1
-   zst - 3
+    bz2 - 9
+    gz - 6
+    lz4 - 1
+    zst - 3
 
 allow range (depending on compress-type):
-   bz2 - [1, 9]
-   gz - [-1, 9]
-   lz4 - [-5, 12]
-   zst - [-7, 22]
+    bz2 - [1, 9]
+    gz - [-1, 9]
+    lz4 - [-5, 12]
+    zst - [-7, 22]
 
 example: --compress-level=9
 ```
@@ -371,9 +370,9 @@ example: --spool-path=/backup/db/spool
 
 定义 stanza。
 
-stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称，定义了集群的位置、备份方式、归档选项等。大多数数据库服务器只有一个 PostgreSQL 集群，因此只有一个 stanza；备份服务器则为每个需要备份的数据库集群各配置一个 stanza。
+一个 stanza 包含某个 PostgreSQL 数据库集群的完整配置，定义了集群的位置、备份方式、归档选项等。大多数数据库主机只有一个 PostgreSQL 集群，因此只有一个 stanza；而备份服务器通常为每个需要备份的数据库集群单独配置一个 stanza。
 
-命名 stanza 时，以主集群名称命名虽然直观，但更好的做法是描述集群中所承载的数据库内容。由于 stanza 名称同时适用于主库和所有副本，选用描述集群实际功能的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
+命名 stanza 时，常见做法是以主集群名称命名，但更好的名称应描述集群所包含的数据库。由于 stanza 名称同时适用于主库和所有副本，选择能反映集群实际功能的名称（如 `app` 或 `dw`）比使用本地集群名称（如 `main` 或 `prod`）更为合适。
 
 ```yaml
 example: --stanza=main
@@ -660,8 +659,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账号授权。
 - `service` - 使用本地存储的服务账号密钥。
 - `token` - 用于本地测试，例如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 设置 `repo-gcs-key-type=service` 时，认证令牌续期时会重新加载凭证。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```yaml
 default: service
@@ -780,7 +784,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-设置了 `repo-host` 时使用的仓库主机端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 为仓库主机协议指定非默认端口。
 
@@ -788,7 +792,7 @@ example: --repo1-host-key-file=/path/to/client.key
 
 ```yaml
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: --repo1-host-port=25
@@ -812,7 +816,7 @@ example: --repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-设置了 `repo-host` 时使用的仓库主机用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 定义在仓库主机上执行操作的用户。建议使用非 `postgres` 的专用用户（如 `pgbackrest`）。若 PostgreSQL 运行在仓库主机上，可将 `postgres` 用户加入 `pgbackrest` 组，使其具有仓库读取权限，同时避免意外损坏仓库内容。
 
@@ -829,7 +833,7 @@ example: --repo1-host-user=repo-user
 
 pgBackRest 在此仓库中存储备份并归档 WAL 段。
 
-预估所需空间并不容易。建议先执行几次备份，记录不同类型（全量/增量/差异）的备份大小及每天产生的 WAL 量，从而大致估算所需空间。当然，随着数据库规模增长，需求也会相应变化。
+预估所需空间并不容易。建议先执行几次备份，记录不同类型（全量/增量/差异）的备份大小及每天产生的 WAL 量，从而大致估算所需空间。当然，随着数据库的演进，实际需求也很可能随时间变化。
 
 ```yaml
 default: /var/lib/pgbackrest
@@ -854,7 +858,7 @@ S3 仓库端点地址。
 
 AWS 端点应与所选区域匹配。
 
-对于自定义或测试配置，可参考 `repo-storage-ca-file`、`repo-storage-ca-path`、`repo-storage-host`、`repo-storage-port` 和 `repo-storage-verify-tls` 选项。
+对于自定义或测试配置，`repo-storage-ca-file`、`repo-storage-ca-path`、`repo-storage-host`、`repo-storage-port` 和 `repo-storage-verify-tls` 选项可能有所帮助。
 
 ```yaml
 example: --repo1-s3-endpoint=s3.amazonaws.com
@@ -864,7 +868,7 @@ example: --repo1-s3-endpoint=s3.amazonaws.com
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -1006,7 +1010,7 @@ example: --repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明 SSH 启动时计算远端系统主机密钥摘要所使用的哈希类型。较新版本的 `libssh2` 除 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```yaml
 example: --repo1-sftp-host-key-hash-type=sha256
@@ -1114,6 +1118,32 @@ example: --repo1-storage-port=9000
 
 已弃用名称：repo-azure-port, repo-s3-port
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```yaml
+default: 3
+allowed: [0, 1024]
+example: --repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```yaml
+default: 64KiB
+allowed: [0B, 1MiB]
+example: --repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -1140,14 +1170,14 @@ example: --repo1-storage-tag=key1=value1
 
 ```yaml
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: --repo1-storage-upload-chunk-size=16MiB
 ```
@@ -1178,7 +1208,7 @@ example: --no-repo1-storage-verify-tls
 - `s3` - AWS Simple Storage Service
 - `sftp` - 安全文件传输协议
 
-将 NFS 挂载用作 `posix` 仓库时，适用的规则与 PostgreSQL 文档中描述的规则相同，详见 [**Creating a Database Cluster - File Systems**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+使用 NFS 挂载作为 `posix` 仓库时，适用规则与 PostgreSQL 文档中描述的相同：[**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

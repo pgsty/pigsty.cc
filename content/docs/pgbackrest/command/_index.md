@@ -7,19 +7,18 @@ icon: fa-solid fa-terminal
 sidebar_expanded: true
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html"
 ---
-
-> 原始页面： <https://pgbackrest.org/command.html>
 
 ## 简介
 
 pgBackRest 通过命令来执行各项功能。本文档对每个命令的选项进行了详尽列举——即每个适用于某命令的选项都会随该命令一并列出，即便该选项同样适用于其他命令。所有可在 `pgbackrest.conf` 中配置的选项均包含在内。
 
-在 `pgbackrest.conf` 中配置的非布尔型选项，可在命令行上使用 `reset-` 前缀将其重置为默认值。这一功能在直接于仓库主机上执行恢复时很有用。通常情况下，pgBackRest 检测到数据库主机是远程主机后会报错，因为恢复操作无法远程执行。在命令行添加 `--reset-pg1-host` 后，pgBackRest 将忽略远程数据库主机并在本地执行恢复。此时可能还需要传入新的 `--pg1-path`，将恢复操作强制指向特定路径，而非使用数据库主机上的原有路径。
+在 `pgbackrest.conf` 中配置的非布尔型选项，可在命令行上使用 `reset-` 前缀将其重置为默认值。这一功能可用于在仓库主机上直接恢复备份。通常情况下，pgBackRest 检测到数据库主机是远程主机后会报错，因为恢复操作无法远程执行。在命令行添加 `--reset-pg1-host` 后，pgBackRest 将忽略远程数据库主机并在本地执行恢复。此时可能还需要传入新的 `--pg1-path`，将恢复操作强制指向特定路径，而非使用数据库主机上的原有路径。
 
 在命令行上，可使用 `no-` 前缀将布尔型选项设置为 `false`。
 
-任何选项均可通过环境变量设置，方法是加上 `PGBACKREST_` 前缀，将选项名称全部大写，并将 `-` 替换为 `_`，例如 `pg1-path` 对应 `PGBACKREST_PG1_PATH`，`stanza` 对应 `PGBACKREST_STANZA`。布尔型选项的表示方式与配置文件中相同，例如 `PGBACKREST_COMPRESS="n"`，且不支持 `reset-*` 变体。可在命令行或配置文件中多次指定的选项，可通过冒号分隔多个值来设置，例如 `PGBACKREST_DB_INCLUDE="db1:db2"`。
+任何选项均可通过环境变量设置，方法是加上 `PGBACKREST_` 前缀，将选项名称全部大写，并将 `-` 替换为 `_`，例如 `pg1-path` 对应 `PGBACKREST_PG1_PATH`，`stanza` 对应 `PGBACKREST_STANZA`。布尔型选项的表示方式与配置文件中相同，例如 `PGBACKREST_COMPRESS="n"`，且不允许使用 `reset-*` 变体。可在命令行或配置文件中多次指定的选项，可通过冒号分隔多个值来设置，例如 `PGBACKREST_DB_INCLUDE="db1:db2"`。
 
 命令行选项优先于环境变量选项，环境变量选项优先于配置文件选项。
 

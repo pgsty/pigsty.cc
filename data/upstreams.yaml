@@ -1,0 +1,43 @@
+# Adapted component manuals; documentation editions and license notices are pinned here.
+patroni:
+  name: Patroni documentation
+  repository: https://github.com/patroni/patroni
+  documentation: https://patroni.readthedocs.io/en/latest/
+  source_ref: v4.1.5
+  copyright: Copyright (c) 2025 Compose, Zalando SE, Patroni Contributors
+  license: MIT
+  notice: /docs/patroni/#upstream-attribution
+  ref: v4.1.5
+  modified: true
+  edition_repository: https://github.com/pgsty/doc.pg.center
+  edition_commit: 0d9b192710e85beccb057b0b0e2034e8d23355b0
+pgbouncer:
+  name: PgBouncer documentation
+  repository: https://github.com/pgbouncer/pgbouncer
+  documentation: https://www.pgbouncer.org/
+  source_ref: pgbouncer_1_26_1
+  source_commit: f03e9bf263d7ccd5d1d152a61811bf3258dd6b87
+  archive_url: https://www.pgbouncer.org/downloads/files/1.26.1/pgbouncer-1.26.1.tar.gz
+  archive_sha256: 00886a2994b4844cd37110970df777772cfc42a74c400522c82fba509a3f42d9
+  copyright: Copyright (c) 2007-2009 Marko Kreen, Skype Technologies OÜ
+  license: ISC
+  notice: /docs/pgbouncer/#upstream-attribution
+  ref: v1.26.1
+  modified: true
+  edition_repository: https://github.com/pgsty/doc.pg.center
+  edition_commit: 0d9b192710e85beccb057b0b0e2034e8d23355b0
+pgbackrest:
+  name: pgBackRest documentation
+  repository: https://github.com/pgbackrest/pgbackrest
+  documentation: https://pgbackrest.org/
+  source_ref: release/2.60.0
+  source_commit: 2e1c4f2ba727c45a0a23d4b326905088dc15b1a1
+  archive_url: https://github.com/pgbackrest/pgbackrest/releases/download/release/2.60.0/pgbackrest-2.60.0.tar.gz
+  archive_sha256: 6d3ee1b5defdadc85228969b4be804096f5e65e54707bb95c7c4c4ce41f5d007
+  copyright: Copyright (c) 2015-2026 The PostgreSQL Global Development Group and David Steele
+  license: MIT
+  notice: /docs/pgbackrest/#upstream-attribution
+  ref: v2.60.0
+  modified: true
+  edition_repository: https://github.com/pgsty/doc.pg.center
+  edition_commit: 0d9b192710e85beccb057b0b0e2034e8d23355b0

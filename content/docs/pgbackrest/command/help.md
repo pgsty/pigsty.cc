@@ -6,9 +6,8 @@ description: "pgBackRest `help` 命令的选项与行为参考。"
 icon: fa-solid fa-circle-question
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/command.html#command-help"
 ---
-
-> 原始页面： [pgBackRest Command Docs: help](https://pgbackrest.org/command.html#command-help)
 
 `help` 命令提供三个层级的帮助信息：未指定命令时显示通用帮助；指定命令（例如 `pgbackrest help backup`）时显示该命令的完整说明及有效选项列表；在命令之外还指定了某个选项（例如 `pgbackrest help backup type`）时显示该选项在此命令下的完整说明。
 

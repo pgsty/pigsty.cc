@@ -6,9 +6,8 @@ description: "pgBackRest 完整配置参考，涵盖归档、备份、仓库、�
 icon: fa-solid fa-code
 module: [PGBACKREST]
 categories: [参考]
+upstream_link: "https://pgbackrest.org/configuration.html"
 ---
-
-> 原始页面： <https://pgbackrest.org/configuration.html>
 
 --------
 
@@ -249,7 +248,7 @@ example: backup-standby=y
 
 指示 pgBackRest 在备份集群时验证所有数据页面的校验和。当集群启用了数据页面校验和时，此选项会自动启用。
 
-校验和验证失败不会中止备份，而是会在日志中（以及使用默认设置时在控制台中）输出警告，并将无效页面列表存储在备份的清单文件（manifest）中。
+默认情况下，校验和验证失败不会中止备份，而是在日志中（默认也在控制台）输出警告，并将无效页面列表记录到备份的清单文件（manifest）中。设置 `checksum-page-error=y` 可改为终止备份。
 
 ```text
 example: checksum-page=n
@@ -403,16 +402,16 @@ example: compress=n
 
 ```text
 default (depending on compress-type):
-   bz2 - 9
-   gz - 6
-   lz4 - 1
-   zst - 3
+    bz2 - 9
+    gz - 6
+    lz4 - 1
+    zst - 3
 
 allow range (depending on compress-type):
-   bz2 - [1, 9]
-   gz - [-1, 9]
-   lz4 - [-5, 12]
-   zst - [-7, 22]
+    bz2 - [1, 9]
+    gz - [-1, 9]
+    lz4 - [-5, 12]
+    zst - [-7, 22]
 
 example: compress-level=9
 ```
@@ -421,7 +420,7 @@ example: compress-level=9
 
 网络传输压缩级别。
 
-当 `compress-type=none` 且命令不在与仓库相同的主机上运行时，设置网络传输的压缩级别，以减少网络流量。当 `compress-type` 不等于 `none` 时，此设置将被忽略，改用 `compress-level`，从而只对文件压缩一次。
+当 `compress-type=none` 且命令不在仓库所在主机上运行时，设置网络传输的压缩级别，以减少网络流量。当 `compress-type` 不等于 `none` 时，`compress-level-network` 设置会被忽略，改用 `compress-level`，使文件只压缩一次。
 
 ```text
 default: 1
@@ -815,7 +814,7 @@ example: pg-version-force=15
 
 **索引**：所有 `repo-` 选项均带有索引，以支持配置多个仓库。例如，单个仓库通过 `repo1-path`、`repo1-host` 等选项进行配置。若配置了多个仓库且命令未指定 `--repo` 选项，则按优先级从高到低依次操作各仓库（例如先 repo1 再 repo2）。
 
-`repo-retention-*` 选项定义备份的保留时长。过期操作仅在完整备份数量超过允许的保留数量时才会发生。换言之，若 `repo1-retention-full-type` 设置为 `count`（默认），且 `repo1-retention-full` 设置为 2，则必须存在 3 个完整备份才会使最旧的备份过期。若 `repo1-retention-full-type` 设置为 `time`，则 `repo1-retention-full` 表示天数，只有当全量备份的累计天数超过此值时才会触发过期。请确保始终为"保留数量 + 1"个备份预留足够的存储空间。
+`repo-retention-*` 选项定义备份的保留时长。过期操作仅在完整备份数量超过允许的保留数量时才会发生。换言之，若 `repo1-retention-full-type` 设置为 `count`（默认），且 `repo1-retention-full` 设置为 2，则必须存在 3 个完整备份才会使最旧的备份过期。若 `repo1-retention-full-type` 设置为 `time`，则 `repo1-retention-full` 表示天数，只有当全量备份的累计天数超过此值时才会触发过期。请确保始终为“保留数量 + 1”个备份预留足够的存储空间。
 
 ### Azure 仓库账户选项（`--repo-azure-account`）
 
@@ -1006,7 +1005,7 @@ example: repo1-gcs-endpoint=localhost
 
 GCS 仓库密钥。
 
-根据 `repo-gcs-key-type` 选项的设置，此选项为令牌或服务密钥文件。
+根据 `repo-gcs-key-type` 选项的设置，此选项为令牌、服务密钥文件或外部账户凭据文件。
 
 ```text
 example: repo1-gcs-key=/etc/pgbackrest/gcs-key.json
@@ -1021,8 +1020,13 @@ GCS 仓库密钥类型。
 - `auto` - 使用实例服务账户授权。
 - `service` - 使用本地存储的服务账户密钥。
 - `token` - 用于本地测试，例如 `fakegcs`。
+- `web-id` - 使用工作负载身份联合（Workload Identity Federation）进行授权。
 
 当 `repo-gcs-key-type=service` 时，身份验证令牌续期时将重新加载凭据。
+
+当 `repo-gcs-key-type=web-id` 时，`repo-gcs-key` 选项必须指定外部账户凭据文件；每次续期身份验证令牌时，都会重新加载 Web 身份令牌。
+
+不支持 `service_account_impersonation_url`。仅支持 `credential_source.file`，且指定 `credential_source.format` 时，其类型必须为 `text`。
 
 ```text
 default: service
@@ -1154,7 +1158,7 @@ example: repo1-host-key-file=/path/to/client.key
 
 ### 仓库主机端口选项（`--repo-host-port`）
 
-仓库主机端口。
+设置 `repo-host` 时，用于连接仓库主机的端口。
 
 设置 `repo-host` 时，使用此选项为仓库主机协议指定非默认端口。
 
@@ -1164,7 +1168,7 @@ example: repo1-host-key-file=/path/to/client.key
 
 ```text
 default (depending on repo-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: repo1-host-port=25
@@ -1188,7 +1192,7 @@ example: repo1-host-type=tls
 
 ### 仓库主机用户选项（`--repo-host-user`）
 
-仓库主机登录用户。
+设置 `repo-host` 时，用于登录仓库主机的用户。
 
 设置 `repo-host` 时，定义在仓库主机上执行操作的用户。最好不要使用 `postgres` 用户，而是使用 `pgbackrest` 等其他用户。若 PostgreSQL 运行在仓库主机上，可以将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库拥有读取权限，同时避免意外损坏仓库内容。
 
@@ -1235,7 +1239,13 @@ example: repo1-retention-archive=2
 
 WAL 归档保留所依据的备份类型。
 
-若设置为 `full`，pgBackRest 将为 `repo-retention-archive` 定义的全量备份数量保留归档日志。若设置为 `diff`（差异），pgBackRest 将为 `repo-retention-archive` 定义的全量备份和差异备份数量保留归档日志，即若最近一次备份是全量备份，则在计算 repo-retention 时将其视为差异备份。若设置为 `incr`（增量），pgBackRest 将为 `repo-retention-archive` 定义的全量、差异和增量备份数量保留归档日志。建议保留此设置的默认值——默认行为仅在全量备份过期时才清理 WAL。
+支持以下备份类型：
+
+- `full` - pgBackRest 将为 `repo-retention-archive` 定义的全量备份数量保留归档日志。
+- `diff` - （差异）pgBackRest 将为 `repo-retention-archive` 定义的全量备份和差异备份数量保留归档日志，即若最近一次备份是全量备份，则在计算 repo-retention 时将其视为差异备份。
+- `incr` - （增量）pgBackRest 将为 `repo-retention-archive` 定义的全量、差异和增量备份数量保留归档日志。
+
+建议保留此设置的默认值——默认行为仅在全量备份过期时才清理 WAL。
 
 ```text
 default: full
@@ -1278,9 +1288,10 @@ example: repo1-retention-full=2
 
 确定 `repo-retention-full` 设置表示时间周期（天数）还是要保留的全量备份数量。
 
-若设置为 `time`，则早于 `repo-retention-full` 天数的全量备份将从仓库中删除，前提是至少还存在另一个满足或超过 `repo-retention-full` 设置的备份。例如，若 `repo-retention-full` 为 30（天），且存在两个全量备份：一个 25 天前，一个 35 天前，则不会过期任何全量备份，因为使 35 天前的备份过期将只剩下 25 天前的备份，违反了在过期较旧备份之前至少保留一个 30 天备份的策略。早于保留的最旧全量备份的归档 WAL 将自动过期，除非显式设置了 `repo-retention-archive-type` 和 `repo-retention-archive`。
+支持以下保留类型：
 
-若设置为 `count`，则超过 `repo-retention-full` 数量的全量备份将过期。例如，若 `repo-retention-full` 为 `4`，完成第五个全量备份后，最旧的全量备份将过期，使数量保持在 4 个。
+- `time` - 年龄超过 `repo-retention-full` 天的全量备份会从仓库中删除，前提是至少还存在另一个年龄达到或超过 `repo-retention-full` 天的备份。例如，若 `repo-retention-full` 为 30（天），且有 2 个全量备份，分别创建于 25 天前和 35 天前，则两者均不会过期：删除 35 天前的备份后只剩 25 天前的备份，这会违反 30 天保留策略，即必须至少保留一个年龄达到 30 天的备份，才能删除更旧的备份。早于所保留的最旧全量备份的归档 WAL 会自动过期，除非显式设置了 `repo-retention-archive-type` 和 `repo-retention-archive`。
+- `count` - 超过 `repo-retention-full` 数量的全量备份将过期。例如，若 `repo-retention-full` 为 `4`，完成第五个全量备份后，最旧的全量备份将过期，使数量保持在 4 个。
 
 注意，备份必须成功完成后才会纳入保留计算。例如，若 `repo-retention-full-type` 为 `count` 且 `repo-retention-full` 为 `2`，则必须有 3 个完整的全量备份，最旧的才会过期。
 
@@ -1352,7 +1363,7 @@ example: repo1-s3-key-secret=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 S3 仓库密钥类型。
 
-支持以下类型：
+支持以下授权类型：
 
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
@@ -1516,13 +1527,15 @@ example: repo1-sftp-host-key-check-type=accept-new
 
 SFTP 仓库主机密钥哈希类型。
 
-声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除 md5 和 sha1 外，还支持 `sha256`。
+声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。允许值为 `md5`、`sha1` 和 `sha256`，其中 `sha256` 仅受较新版本的 `libssh2` 支持。
 
 ```text
 example: repo1-sftp-host-key-hash-type=sha256
 ```
 
 ### SFTP 仓库主机端口选项（`--repo-sftp-host-port`）
+
+SFTP 仓库主机端口。
 
 SFTP 仓库主机端口。
 
@@ -1546,7 +1559,7 @@ example: repo1-sftp-host-user=pg-backup
 
 SFTP 已知主机文件。
 
-身份验证期间，在此文件中搜索 SFTP 主机匹配项。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号开头的路径。此选项可以多次传入，以指定多个已知主机文件进行搜索。要使用已知主机文件检查，不得指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
+身份验证期间，在此文件中搜索 SFTP 主机匹配项。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号开头的路径。`repo-sftp-known-host` 选项可以多次传入，以指定多个已知主机文件进行搜索。要使用已知主机文件检查，不得指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
 
 ```text
 example: repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
@@ -1632,6 +1645,32 @@ example: repo1-storage-port=9000
 
 已弃用名称：`repo-azure-port`、`repo-s3-port`
 
+### 仓库存储预取选项（`--repo-storage-prefetch`） {#repository-storage-prefetch-option---repo-storage-prefetch}
+
+仓库存储预取。
+
+确定从对象存储（如 S3）读取时预取的请求数量。这并非真正的并发，但能减少提交请求带来的延迟。
+
+每次读取时，未完成的请求数会比预取数多一个，因为初始读取无法预取。
+
+```text
+default: 3
+allowed: [0, 1024]
+example: repo1-storage-prefetch=7
+```
+
+### 仓库存储连续读取跳过选项（`--repo-storage-read-over`） {#repository-storage-read-over-option---repo-storage-read-over}
+
+仓库存储连续读取跳过。
+
+文件包可能包含恢复时不需要的数据，例如已存在的文件。此选项通过继续读取并丢弃不需要的数据来跳过它们，无需向对象存储发起新的读取请求。由于新读取请求的延迟高于继续已有读取，这通常更快。对于大多数存储类别，这也能降低费用。
+
+```text
+default: 64KiB
+allowed: [0B, 1MiB]
+example: repo1-storage-read-over=128KiB
+```
+
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
 仓库存储标签。
@@ -1652,20 +1691,20 @@ example: repo1-storage-tag=key1=value1
 
 较大的块大小通常可以提升性能，因为它会减少上传请求次数，并允许在单个请求中上传更多文件而非分块上传。缺点是内存使用量会更高——由于块缓冲区需要按进程分配，较大的 `process-max` 值将导致整体内存消耗更多。
 
-请注意，有效的块大小因存储类型和平台而异。例如，AWS S3 的最小块大小为 5MiB。块大小的术语因存储类型而异，因此在搜索最小/最大值时，AWS S3 使用"part size"，GCS 使用"chunk size"，Azure 使用"block size"。
+请注意，有效的块大小因存储类型和平台而异。例如，AWS S3 的最小块大小为 5MiB。块大小的术语因存储类型而异，因此在搜索最小/最大值时，AWS S3 使用“part size”，GCS 使用“chunk size”，Azure 使用“block size”。
 
 若文件大于 1GiB（PostgreSQL 默认创建的最大文件大小），则块大小将逐步增加直至允许的最大值，以完成文件上传。
 
 ```text
 default (depending on repo-type):
-   azure - 4MiB
-   gcs - 4MiB
-   s3 - 5MiB
+    azure - 4MiB
+    gcs - 4MiB
+    s3 - 5MiB
 
 allow range (depending on repo-type):
-   azure - [4MiB, 1GiB]
-   gcs - [4MiB, 1GiB]
-   s3 - [5MiB, 1GiB]
+    azure - [4MiB, 1GiB]
+    gcs - [4MiB, 1GiB]
+    s3 - [5MiB, 1GiB]
 
 example: repo1-storage-upload-chunk-size=16MiB
 ```
@@ -1725,7 +1764,7 @@ example: repo-target-time=2024-08-08 12:12:12+00
 - `s3` - AWS 简单存储服务（Simple Storage Service）
 - `sftp` - 安全文件传输协议（SFTP）
 
-当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中描述的相同，请参阅 [**Creating a Database Cluster - File Systems**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中描述的相同，请参阅 [**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```text
 default: posix
@@ -1742,7 +1781,7 @@ example: repo1-type=cifs
 
 在已恢复的集群上保留或禁用归档。
 
-此选项允许在已恢复的集群上保留或禁用归档。当集群必须被提升以执行某些操作，但不打算成为新的主库时，此选项很有用。在这种情况下，不应从该集群向仓库推送 WAL。
+此选项允许在已恢复的集群上保留或禁用归档。当集群必须被提升以执行某些操作，但不打算成为新的主库时，此选项很有用。在这种情况下，不宜从该集群向仓库推送 WAL。
 
 支持以下模式：
 
@@ -1760,7 +1799,7 @@ example: archive-mode=off
 
 排除指定数据库进行恢复。
 
-被排除的数据库将以稀疏零填充文件的形式恢复，以节省空间，同时仍允许 PostgreSQL 执行恢复。恢复完成后，这些数据库将无法访问，但可以使用 `drop database` 命令将其删除。此选项可以多次传入，以指定多个要排除的数据库。
+被排除的数据库将以稀疏零填充文件的形式恢复，以节省空间，同时仍允许 PostgreSQL 执行恢复。恢复完成后，这些数据库将无法访问，但可以使用 `drop database` 命令将其删除。`--db-exclude` 选项可以多次传入，以指定多个要排除的数据库。
 
 与 `--db-include` 选项一起使用时，`--db-exclude` 仅适用于标准系统数据库（`template0`、`template1` 和 `postgres`）。
 
@@ -1778,7 +1817,7 @@ example: db-exclude=db_main
 
 内置数据库（`template0`、`template1` 和 `postgres`）始终会被恢复，除非被明确排除。
 
-此选项可以多次传入，以指定多个要包含的数据库。
+`--db-include` 选项可以多次传入，以指定多个要包含的数据库。
 
 详细信息和注意事项请参阅 [**选择性数据库恢复**](/docs/pgbackrest/user-guide/#选择性数据库恢复)。
 
@@ -1811,7 +1850,7 @@ example: link-map=pg_xlog=/data/xlog
 
 在 `postgresql.auto.conf` 或 `recovery.conf` 中设置选项。
 
-有关 `postgresql.auto.conf` 或 `recovery.conf` 选项的详情，请参阅 [**Server Configuration**](https://www.postgresql.org/docs/current/runtime-config.html)（请选择对应的 PostgreSQL 版本）。此选项可以多次使用。
+有关 `postgresql.auto.conf` 或 `recovery.conf` 选项的详情，请参阅 [**服务器配置**](https://www.postgresql.org/docs/current/runtime-config.html)（请选择对应的 PostgreSQL 版本）。此选项可以多次使用。
 
 对于 PostgreSQL >= 12，选项将写入 `postgresql.auto.conf`。对于所有其他版本，选项将写入 `recovery.conf`。
 
@@ -1829,9 +1868,9 @@ example: recovery-option=primary_conninfo=db.mydomain.com
 
 将表空间恢复到指定目录。
 
-在恢复期间将表空间移动到新位置。当副本或升级后的系统挂载点不同时，此功能很有用。
+在恢复期间将表空间移动到新位置。当备库上的表空间位置不同，或升级后的系统挂载点不同时，此功能很有用。
 
-表空间位置不存储在 `pg_tablespace` 中，因此可以随意移动表空间。但不建议将表空间移动到 `data_directory`，这可能会导致问题。有关移动表空间的更多信息，[**Moving Tablespaces**](http://www.databasesoup.com/2013/11/moving-tablespaces.html) 是一个很好的参考资源。
+表空间位置不存储在 `pg_tablespace` 中，因此可以随意移动表空间。但不建议将表空间移动到 `data_directory`，这可能会导致问题。有关移动表空间的更多信息，http://www.databasesoup.com/2013/11/moving-tablespaces.html 是一个很好的参考资源。
 
 ```text
 example: tablespace-map=ts_01=/db/ts_01
@@ -1841,7 +1880,7 @@ example: tablespace-map=ts_01=/db/ts_01
 
 将所有表空间恢复到指定目录。
 
-默认情况下，表空间被恢复到其原始位置。可以使用 `tablespace-map` 选项为每个表空间单独修改此行为，但有时将所有表空间一次性重新映射到新目录更为方便。这在开发或测试环境中尤为有用，因为这些环境的存储布局可能与生产环境不同。
+默认情况下，表空间被恢复到其原始位置。可以使用 `tablespace-map` 选项为每个表空间单独修改此行为，但有时将所有表空间一次性重新映射到新目录更为方便。这在开发或测试环境中尤为有用，因为这些环境的存储布局可能与生成备份的原始系统不同。
 
 指定的路径将作为父路径，用于创建备份中的所有表空间。
 
@@ -1928,7 +1967,7 @@ example: tls-server-port=8000
 
 ## Stanza 选项
 
-stanza（stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称）定义了特定 PostgreSQL 数据库集群的备份配置。stanza 部分必须定义数据库集群路径，若数据库集群为远程，则还需定义主机/用户信息。此外，任何全局配置部分均可被覆盖，以定义 stanza 特定的设置。
+stanza 定义了特定 PostgreSQL 数据库集群的备份配置。stanza 部分必须定义数据库集群路径，若数据库集群为远程，则还需定义主机/用户信息。此外，任何全局配置部分均可被覆盖，以定义 stanza 特定的设置。
 
 **索引**：所有 `pg-` 选项均带有索引，以支持配置多个 PostgreSQL 主机。例如，单个主库通过 `pg1-path`、`pg1-port` 等选项进行配置。若配置了备库，则在仓库主机上将 `pg-` 选项索引为 `pg2-`（如 `pg2-host`、`pg2-path` 等）。
 
@@ -2047,7 +2086,7 @@ example: pg1-host-key-file=/path/to/client.key
 
 ### PostgreSQL 主机端口选项（`--pg-host-port`）
 
-PostgreSQL 主机端口。
+设置 `pg-host` 时，用于连接 PostgreSQL 主机的端口。
 
 设置 `pg-host` 时，使用此选项为 PostgreSQL 主机协议指定非默认端口。
 
@@ -2057,7 +2096,7 @@ PostgreSQL 主机端口。
 
 ```text
 default (depending on pg-host-type):
-   tls - 8432
+    tls - 8432
 
 allowed: [0, 65535]
 example: pg1-host-port=25
@@ -2081,7 +2120,7 @@ example: pg1-host-type=tls
 
 ### PostgreSQL 主机用户选项（`--pg-host-user`）
 
-PostgreSQL 主机登录用户。
+设置 `pg-host` 时，用于登录 PostgreSQL 主机的用户。
 
 设置 `pg-host` 时，指定此用户。该用户还将拥有远程 pgBackRest 进程，并将发起到 PostgreSQL 的连接。为使其正常工作，该用户应为 PostgreSQL 数据库集群的所有者，通常为 `postgres`（即默认值）。
 
