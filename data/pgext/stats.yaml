@@ -1,21 +1,22 @@
-# bin/gen-pgext.py 生成，日期 2026-10-13；来源 pgsty/pgext 的 db/*.csv。
+# bin/gen-pgext.py 生成，日期 2026-10-28；来源 pgsty/pgext 的 db/*.csv。
 # 扩展软件包：lead 且非 contrib 的独立包族；Linux 平台：OS 大版本 × 架构。
-# 矩阵槽位：431 包族 × 16 平台 × 5 PG 大版本；包含不适用与缺失组合，不代表已交付二进制包数。
-# universe.csv SHA-256: 0c711f4a29be80cbee5dd9a5aa4509f5e7131f296afbab4f9712aec1b837f30f
-# extension.csv SHA-256: ee7a02b9852f9051bbc828ad4b2901b83f5e9da50e509f905962c2555e4eaab5
+# 矩阵槽位：451 包族 × 16 平台 × 5 PG 大版本；包含不适用与缺失组合，不代表已交付二进制包数。
+# universe.csv SHA-256: 0465d81d995ca1f3eddc429b79b0b004c4a006735c9d66f77a53a6bb90f3f946
+# extension.csv SHA-256: 869889885a801cfc1d9878517a09a37469da27abb476d5379d714653805b1a76
 # os.csv SHA-256: 6085f351770ff2a951f174f933a5494a3e12d67bd7bad55e1f08a1d4e16402c8
 # pg.csv SHA-256: 35875bd75678e927bba58e67c2df2ebb7cd1ee0f6fdfccb38921725cdc54a17b
-- label: 内核分支
-  value: 12
+- label: 内核与方案
+  param: pg_kernel_count
   href: /docs/pgsql/kernel/
+  title: 不含原生 PostgreSQL；包含内核分支、Supabase、Citus 和 DocumentDB
 - label: 收录在册扩展
-  value: 2622
+  value: 2695
   href: https://pgext.cloud/
 - label: 已打包扩展
-  value: 600
+  value: 620
   href: https://pgext.cloud/?scope=packaged
-- label: 扩展软件包
-  value: 431
+- label: 独立扩展包族
+  value: 451
   href: https://pgext.cloud/?scope=packaged&entity=pkg
   title: 不含 contrib 的独立扩展包族，按主扩展去重
 - label: Linux 平台
@@ -23,6 +24,6 @@
   href: https://pgext.cloud/list/os
   title: 操作系统大版本与 CPU 架构的组合
 - label: 构建矩阵槽位
-  value: 34480
+  value: 36080
   href: https://pgext.cloud/matrix
-  title: 431 包族 × 16 平台 × 5 PG 大版本，包含不适用及缺失组合
+  title: 451 包族 × 16 平台 × 5 PG 大版本，包含不适用及缺失组合

@@ -8,7 +8,7 @@ icon: fas fa-file-waveform
 
 ## 扩展列表
 
-共有 **48** 个扩展，位于 **46** 个扩展包中。
+共有 **49** 个扩展，位于 **47** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -40,6 +40,7 @@ icon: fas fa-file-waveform
 | [`pgnodemx`](/ext/e/pgnodemx) | [`pgnodemx`](https://github.com/CrunchyData/pgnodemx) | `2.0.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用SQL查询获取操作系统指标 |
 | [`pg_proctab`](/ext/e/pg_proctab) | [`pgnodemx`](https://github.com/markwkm/pg_proctab) | `2.0.1` | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通过SQL接口访问操作系统进程表 |
 | [`pg_statvfs`](/ext/e/pg_statvfs) | [`pg_statvfs`](https://github.com/michaelpq/pg_plugins/tree/ae57c1f3df697fb942f4576f873a655187193ace/pg_statvfs) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通过 statvfs 查询服务器文件系统容量与 inode 统计 |
+| [`pg_stat_tcpinfo`](/ext/e/pg_stat_tcpinfo) | [`pg_stat_tcpinfo`](https://github.com/jakubwartakEDB/pg_stat_tcpinfo) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Linux TCP 连接统计、延迟与重传观测 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`pg_sqlog`](https://github.com/kouber/pg_sqlog) | `1.7` | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 提供访问PostgreSQL日志的SQL接口 |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | [`bgw_replstatus`](https://github.com/mhagander/bgw_replstatus) | `1.0.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于汇报本机主从状态的后台工作进程 |
 | [`pgmeminfo`](/ext/e/pgmeminfo) | [`pgmeminfo`](https://github.com/okbob/pgmeminfo) | `1.0.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 显示内存使用情况 |
@@ -50,16 +51,16 @@ icon: fas fa-file-waveform
 | [`powa`](/ext/e/powa) | [`powa`](https://github.com/powa-team/powa-archivist) | `5.3.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang plpgsql" href="/ext/language#plpgsql">PLpgSQL</a> | PostgreSQL 工作负载分析器-核心 |
 | [`pg_overexplain`](/ext/e/pg_overexplain) | [`pg_overexplain`](https://www.postgresql.org/docs/devel/pgoverexplain.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 允许 EXPLAIN 转储更多详细 |
 | [`pg_logicalinspect`](/ext/e/pg_logicalinspect) | [`pg_logicalinspect`](https://www.postgresql.org/docs/devel/pglogicalinspect.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检视逻辑解码组件详情 |
-| [`pageinspect`](/ext/e/pageinspect) | [`pageinspect`](https://www.postgresql.org/docs/current/pageinspect.html) | `1.12` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查数据库页面二进制内容 |
+| [`pageinspect`](/ext/e/pageinspect) | [`pageinspect`](https://www.postgresql.org/docs/current/pageinspect.html) | `1.13` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查数据库页面二进制内容 |
 | [`pgrowlocks`](/ext/e/pgrowlocks) | [`pgrowlocks`](https://www.postgresql.org/docs/current/pgrowlocks.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 显示行级锁信息 |
 | [`sslinfo`](/ext/e/sslinfo) | [`sslinfo`](https://www.postgresql.org/docs/current/sslinfo.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 关于 SSL 证书的信息 |
-| [`pg_buffercache`](/ext/e/pg_buffercache) | [`pg_buffercache`](https://www.postgresql.org/docs/current/pgbuffercache.html) | `1.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查共享缓冲区缓存 |
+| [`pg_buffercache`](/ext/e/pg_buffercache) | [`pg_buffercache`](https://www.postgresql.org/docs/current/pgbuffercache.html) | `1.6` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查共享缓冲区缓存 |
 | [`pg_walinspect`](/ext/e/pg_walinspect) | [`pg_walinspect`](https://www.postgresql.org/docs/current/pgwalinspect.html) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于检查 PostgreSQL WAL 日志内容的函数 |
-| [`pg_freespacemap`](/ext/e/pg_freespacemap) | [`pg_freespacemap`](https://www.postgresql.org/docs/current/pgfreespacemap.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查自由空间映射的内容（FSM） |
+| [`pg_freespacemap`](/ext/e/pg_freespacemap) | [`pg_freespacemap`](https://www.postgresql.org/docs/current/pgfreespacemap.html) | `1.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查自由空间映射的内容（FSM） |
 | [`pg_visibility`](/ext/e/pg_visibility) | [`pg_visibility`](https://www.postgresql.org/docs/current/pgvisibility.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查可见性图（VM）和页面级可见性信息 |
 | [`pgstattuple`](/ext/e/pgstattuple) | [`pgstattuple`](https://www.postgresql.org/docs/current/pgstattuple.html) | `1.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 显示元组级统计信息 |
 | [`auto_explain`](/ext/e/auto_explain) | [`auto_explain`](https://www.postgresql.org/docs/current/auto-explain.html) | `-` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供一种自动记录执行计划的手段 |
-| [`pg_stat_statements`](/ext/e/pg_stat_statements) | [`pg_stat_statements`](https://www.postgresql.org/docs/current/pgstatstatements.html) | `1.11` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
+| [`pg_stat_statements`](/ext/e/pg_stat_statements) | [`pg_stat_statements`](https://www.postgresql.org/docs/current/pgstatstatements.html) | `1.12` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
 {.ext-table}
 
 
@@ -597,6 +598,25 @@ icon: fas fa-file-waveform
 
 ---------
 
+## pg_stat_tcpinfo {#pg_stat_tcpinfo}
+
+[**`pg_stat_tcpinfo`**](/ext/e/pg_stat_tcpinfo) - `1.1` : Linux TCP 连接统计、延迟与重传观测
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_stat_tcpinfo`](/ext/e/pg_stat_tcpinfo) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_stat_tcpinfo`](https://github.com/jakubwartakEDB/pg_stat_tcpinfo) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_stat_tcpinfo_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-stat-tcpinfo` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
 ## pg_sqlog {#pg_sqlog}
 
 [**`pg_sqlog`**](/ext/e/pg_sqlog) - `1.7` : 提供访问PostgreSQL日志的SQL接口
@@ -789,7 +809,7 @@ icon: fas fa-file-waveform
 
 ## pageinspect {#pageinspect}
 
-[**`pageinspect`**](/ext/e/pageinspect) - `1.12` : 检查数据库页面二进制内容
+[**`pageinspect`**](/ext/e/pageinspect) - `1.13` : 检查数据库页面二进制内容
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -846,7 +866,7 @@ icon: fas fa-file-waveform
 
 ## pg_buffercache {#pg_buffercache}
 
-[**`pg_buffercache`**](/ext/e/pg_buffercache) - `1.5` : 检查共享缓冲区缓存
+[**`pg_buffercache`**](/ext/e/pg_buffercache) - `1.6` : 检查共享缓冲区缓存
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -884,7 +904,7 @@ icon: fas fa-file-waveform
 
 ## pg_freespacemap {#pg_freespacemap}
 
-[**`pg_freespacemap`**](/ext/e/pg_freespacemap) - `1.2` : 检查自由空间映射的内容（FSM）
+[**`pg_freespacemap`**](/ext/e/pg_freespacemap) - `1.3` : 检查自由空间映射的内容（FSM）
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -960,7 +980,7 @@ icon: fas fa-file-waveform
 
 ## pg_stat_statements {#pg_stat_statements}
 
-[**`pg_stat_statements`**](/ext/e/pg_stat_statements) - `1.11` : 跟踪所有执行的 SQL 语句的计划和执行统计信息
+[**`pg_stat_statements`**](/ext/e/pg_stat_statements) - `1.12` : 跟踪所有执行的 SQL 语句的计划和执行统计信息
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

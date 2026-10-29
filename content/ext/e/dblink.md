@@ -25,7 +25,7 @@ weight: 8970
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 8970  | [**`dblink`**](/ext/e/dblink) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 8970  | [**`dblink`**](/ext/e/dblink) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`postgres_fdw`](/ext/e/postgres_fdw) [`db_migrator`](/ext/e/db_migrator) [`pgspider_ext`](/ext/e/pgspider_ext) [`pglogical`](/ext/e/pglogical) [`citus`](/ext/e/citus) [`pgclone`](/ext/e/pgclone) [`plproxy`](/ext/e/plproxy) [`mimeo`](/ext/e/mimeo) [`mysql_fdw`](/ext/e/mysql_fdw) [`db2_fdw`](/ext/e/db2_fdw) |

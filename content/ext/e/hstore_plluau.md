@@ -69,6 +69,14 @@ weight: 3031
 | u26.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pllua` 扩展的 RPM 包：
+
+```bash
+pig build pkg pllua         # 构建 RPM 包
+```
+
 
 ## 安装
 

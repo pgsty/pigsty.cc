@@ -11,12 +11,11 @@ weight: 2910
     <div class="ext-card__title">orioledb/orioledb</div>
     <div class="ext-card__desc">https://github.com/orioledb/orioledb</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/orioledb-beta19.tar.gz">orioledb-beta19.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/postgres-patches16_49.tar.gz">postgres-patches16_49.tar.gz</a><br><a href="https://repo.pigsty.cc/ext/src/postgres-patches17_22.tar.gz">postgres-patches17_22.tar.gz</a><br><a href="https://repo.pigsty.cc/ext/src/postgres-patches18_3.tar.gz">postgres-patches18_3.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz</div>
+    <div class="ext-card__desc">orioledb-beta19.tar.gz postgres-patches16_49.tar.gz postgres-patches17_22.tar.gz postgres-patches18_3.tar.gz</div>
+  </a>
 </div>
 
 

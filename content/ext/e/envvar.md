@@ -30,7 +30,7 @@ weight: 4270
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4270  | [**`envvar`**](/ext/e/envvar) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 4270  | [**`envvar`**](/ext/e/envvar) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`external_file`](/ext/e/external_file) [`fio`](/ext/e/fio) [`omni_os`](/ext/e/omni_os) [`byteamagic`](/ext/e/byteamagic) [`floatfile`](/ext/e/floatfile) [`file_fdw`](/ext/e/file_fdw) [`basic_archive`](/ext/e/basic_archive) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) [`aws_s3`](/ext/e/aws_s3) |

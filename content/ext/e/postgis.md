@@ -11,12 +11,11 @@ weight: 1500
     <div class="ext-card__title">https://git.osgeo.org/gitea/postgis/postgis</div>
     <div class="ext-card__desc">https://git.osgeo.org/gitea/postgis/postgis</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/postgis-3.6.4.tar.gz">postgis-3.6.4.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/postgis-3.6.4-en.pdf">postgis-3.6.4-en.pdf</a><br><a href="https://repo.pigsty.cc/ext/src/postgis36-filter-requires-perl-Pg.sh">postgis36-filter-requires-perl-Pg.sh</a>
-    </div>
-  </div>
+    <div class="ext-card__title">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
+    <div class="ext-card__desc">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
+  </a>
 </div>
 
 
@@ -58,12 +57,12 @@ weight: 1500
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 3.6.4 6 | AVAIL PGDG 3.6.4 6 | AVAIL PGDG 3.6.4 6 | AVAIL PGDG 3.6.4 6 | AVAIL PGDG 3.6.4 6 |
-| el8.aarch64 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 |
-| el9.x86_64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
-| el9.aarch64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
-| el10.x86_64 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 |
-| el10.aarch64 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 | AVAIL PGDG 3.6.4 12 |
+| el8.x86_64 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 |
+| el8.aarch64 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 |
+| el9.x86_64 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 |
+| el9.aarch64 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 |
+| el10.x86_64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
+| el10.aarch64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
 | d12.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
 | d12.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
 | d13.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
@@ -74,12 +73,14 @@ weight: 1500
 | u24.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
 | u26.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
 | u26.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+@ el8.x86_64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.4-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.4-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.3-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel8.1.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.0-1PGDG.rhel8.1.x86_64.rpm
+@ el8.aarch64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.4-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.4-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel8.10.aarch64.rpm pgdg 3.6.3 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.3-4PGDG.rhel8.10.aarch64.rpm
@@ -87,6 +88,7 @@ weight: 1500
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.0-6PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.0-6PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel8.1.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgis36_18-3.6.0-1PGDG.rhel8.1.aarch64.rpm
+@ el9.x86_64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.4-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.4-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel9.8.x86_64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.3-4PGDG.rhel9.8.x86_64.rpm
@@ -100,6 +102,7 @@ weight: 1500
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.0-6PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.0-6PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.0-4PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.0-4PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel9.1.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis36_18-3.6.0-1PGDG.rhel9.1.x86_64.rpm
+@ el9.aarch64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.4-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.4-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel9.8.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.3-4PGDG.rhel9.8.aarch64.rpm
@@ -113,6 +116,7 @@ weight: 1500
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.0-6PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.0-6PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.0-4PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.0-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel9.1.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis36_18-3.6.0-1PGDG.rhel9.1.aarch64.rpm
+@ el10.x86_64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.4-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel10.2.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.3-4PGDG.rhel10.2.x86_64.rpm
@@ -125,6 +129,7 @@ weight: 1500
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.6.1 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.0-4PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.0-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel10.1.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis36_18-3.6.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 18 postgis36_18 postgis36_18-3.6.4-8PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgis36_18-3.6.4-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgis36_18 postgis36_18-3.6.4-5PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgis36_18-3.6.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgis36_18 postgis36_18-3.6.4-1PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgis36_18-3.6.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgis36_18 postgis36_18-3.6.3-4PGDG.rhel10.2.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgis36_18-3.6.3-4PGDG.rhel10.2.aarch64.rpm
@@ -167,12 +172,14 @@ weight: 1500
 @ u26.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb pgdg 3.6.4 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.4-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.4-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.3-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.4-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.4-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel8.10.aarch64.rpm pgdg 3.6.3 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.3-4PGDG.rhel8.10.aarch64.rpm
@@ -180,6 +187,7 @@ weight: 1500
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.0-6PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.0-6PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgis36_17-3.6.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.4-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.4-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel9.8.x86_64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.3-4PGDG.rhel9.8.x86_64.rpm
@@ -193,6 +201,7 @@ weight: 1500
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.0-6PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.0-6PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.0-4PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.0-4PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis36_17-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.4-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.4-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel9.8.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.3-4PGDG.rhel9.8.aarch64.rpm
@@ -206,6 +215,7 @@ weight: 1500
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.0-6PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.0-6PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.0-4PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.0-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis36_17-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.4-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel10.2.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.3-4PGDG.rhel10.2.x86_64.rpm
@@ -218,6 +228,7 @@ weight: 1500
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.6.1 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.0-4PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.0-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis36_17-3.6.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 postgis36_17 postgis36_17-3.6.4-8PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgis36_17-3.6.4-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgis36_17 postgis36_17-3.6.4-5PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgis36_17-3.6.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgis36_17 postgis36_17-3.6.4-1PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgis36_17-3.6.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgis36_17 postgis36_17-3.6.3-4PGDG.rhel10.2.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgis36_17-3.6.3-4PGDG.rhel10.2.aarch64.rpm
@@ -260,12 +271,14 @@ weight: 1500
 @ u26.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb pgdg 3.6.4 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.4-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.4-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.3-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.4-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.4-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel8.10.aarch64.rpm pgdg 3.6.3 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.3-4PGDG.rhel8.10.aarch64.rpm
@@ -273,6 +286,7 @@ weight: 1500
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.0-6PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.0-6PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgis36_16-3.6.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.4-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.4-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel9.8.x86_64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.3-4PGDG.rhel9.8.x86_64.rpm
@@ -286,6 +300,7 @@ weight: 1500
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.0-6PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.0-6PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.0-4PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.0-4PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis36_16-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.4-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.4-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel9.8.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.3-4PGDG.rhel9.8.aarch64.rpm
@@ -299,6 +314,7 @@ weight: 1500
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.0-6PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.0-6PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.0-4PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.0-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis36_16-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.4-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel10.2.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.3-4PGDG.rhel10.2.x86_64.rpm
@@ -311,6 +327,7 @@ weight: 1500
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.6.1 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.0-4PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.0-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis36_16-3.6.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 postgis36_16 postgis36_16-3.6.4-8PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgis36_16-3.6.4-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgis36_16 postgis36_16-3.6.4-5PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgis36_16-3.6.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgis36_16 postgis36_16-3.6.4-1PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgis36_16-3.6.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgis36_16 postgis36_16-3.6.3-4PGDG.rhel10.2.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgis36_16-3.6.3-4PGDG.rhel10.2.aarch64.rpm
@@ -353,12 +370,14 @@ weight: 1500
 @ u26.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb pgdg 3.6.4 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.4-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.4-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.3-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.4-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.4-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel8.10.aarch64.rpm pgdg 3.6.3 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.3-4PGDG.rhel8.10.aarch64.rpm
@@ -366,6 +385,7 @@ weight: 1500
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.0-6PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.0-6PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgis36_15-3.6.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.4-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.4-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel9.8.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.3-4PGDG.rhel9.8.x86_64.rpm
@@ -379,6 +399,7 @@ weight: 1500
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.0-6PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.0-6PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.0-4PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.0-4PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgis36_15-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.4-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.4-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel9.8.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.3-4PGDG.rhel9.8.aarch64.rpm
@@ -392,6 +413,7 @@ weight: 1500
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.0-6PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.0-6PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.0-4PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.0-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgis36_15-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.4-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel10.2.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.3-4PGDG.rhel10.2.x86_64.rpm
@@ -404,6 +426,7 @@ weight: 1500
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.6.1 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.0-4PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.0-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgis36_15-3.6.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 postgis36_15 postgis36_15-3.6.4-8PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgis36_15-3.6.4-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgis36_15 postgis36_15-3.6.4-5PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgis36_15-3.6.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgis36_15 postgis36_15-3.6.4-1PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgis36_15-3.6.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgis36_15 postgis36_15-3.6.3-4PGDG.rhel10.2.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgis36_15-3.6.3-4PGDG.rhel10.2.aarch64.rpm
@@ -446,12 +469,14 @@ weight: 1500
 @ u26.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb pgdg 3.6.4 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.4+dfsg-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.4-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.4-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.4 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.3-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.4-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.4-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.4 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel8.10.aarch64.rpm pgdg 3.6.3 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.3-4PGDG.rhel8.10.aarch64.rpm
@@ -459,6 +484,7 @@ weight: 1500
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.6.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.0-6PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.0-6PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel8.aarch64.rpm pgdg 3.6.0 5.0MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgis36_14-3.6.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.4-8PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.4-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel9.8.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel9.8.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.3-4PGDG.rhel9.8.x86_64.rpm
@@ -472,6 +498,7 @@ weight: 1500
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.0-6PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.0-6PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.0-4PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.0-4PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgis36_14-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.4-8PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.4-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel9.8.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel9.8.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.3-4PGDG.rhel9.8.aarch64.rpm
@@ -485,6 +512,7 @@ weight: 1500
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.0-6PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.0-6PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.0-4PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.0-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgis36_14-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.4-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel10.2.x86_64.rpm pgdg 3.6.4 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel10.2.x86_64.rpm pgdg 3.6.3 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.3-4PGDG.rhel10.2.x86_64.rpm
@@ -497,6 +525,7 @@ weight: 1500
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.6.1 4.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.0-4PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.0-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel10.x86_64.rpm pgdg 3.6.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgis36_14-3.6.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 postgis36_14 postgis36_14-3.6.4-8PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgis36_14-3.6.4-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 postgis36_14 postgis36_14-3.6.4-5PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgis36_14-3.6.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 postgis36_14 postgis36_14-3.6.4-1PGDG.rhel10.2.aarch64.rpm pgdg 3.6.4 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgis36_14-3.6.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 postgis36_14 postgis36_14-3.6.3-4PGDG.rhel10.2.aarch64.rpm pgdg 3.6.3 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgis36_14-3.6.3-4PGDG.rhel10.2.aarch64.rpm

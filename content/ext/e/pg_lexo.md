@@ -11,12 +11,11 @@ weight: 3530
     <div class="ext-card__title">Blad3Mak3r/pg_lexo</div>
     <div class="ext-card__desc">https://github.com/Blad3Mak3r/pg_lexo</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_lexo-0.6.1.tar.gz pg_lexo-0.6.1-Cargo.lock">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_lexo-0.6.1.tar.gz">pg_lexo-0.6.1.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/pg_lexo-0.6.1-Cargo.lock">pg_lexo-0.6.1-Cargo.lock</a>
-    </div>
-  </div>
+    <div class="ext-card__title">pg_lexo-0.6.1.tar.gz pg_lexo-0.6.1-Cargo.lock</div>
+    <div class="ext-card__desc">pg_lexo-0.6.1.tar.gz pg_lexo-0.6.1-Cargo.lock</div>
+  </a>
 </div>
 
 

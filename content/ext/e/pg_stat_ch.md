@@ -11,12 +11,11 @@ weight: 6020
     <div class="ext-card__title">ClickHouse/pg_stat_ch</div>
     <div class="ext-card__desc">https://github.com/ClickHouse/pg_stat_ch</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_stat_ch-0.4.0.tar.gz bison-3.8.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_stat_ch-0.4.0.tar.gz">pg_stat_ch-0.4.0.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/bison-3.8.2.tar.gz">bison-3.8.2.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">pg_stat_ch-0.4.0.tar.gz bison-3.8.2.tar.gz</div>
+    <div class="ext-card__desc">pg_stat_ch-0.4.0.tar.gz bison-3.8.2.tar.gz</div>
+  </a>
 </div>
 
 

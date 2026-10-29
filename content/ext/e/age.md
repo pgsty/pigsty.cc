@@ -11,12 +11,11 @@ weight: 2600
     <div class="ext-card__title">apache/age</div>
     <div class="ext-card__desc">https://github.com/apache/age</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/age-PG18-v1.8.0-rc0.tar.gz">age-PG18-v1.8.0-rc0.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/age-1.7.0.tar.gz">age-1.7.0.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz</div>
+    <div class="ext-card__desc">age-PG18-v1.8.0-rc0.tar.gz age-1.7.0.tar.gz</div>
+  </a>
 </div>
 
 

@@ -39,7 +39,7 @@ weight: 4301
 {.ext-table .ext-table--rel}
 
 
-> Bundled test fixture; its control default_version is forever and it does not require hstore; package ownership follows pg_readme: PGDG RPM 0.7.0 and PIGSTY DEB 0.7.1.
+> Bundled test fixture; control default_version is forever and it does not require hstore. Catalog version follows pg_readme 0.7.1; principal suppliers remain PGDG RPM and PIGSTY DEB.
 
 
 ## 版本
@@ -47,7 +47,7 @@ weight: 4301
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.7.1` | {{< pgvers "14,15,16,17,18" >}} | `pg_readme` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_readme_$v` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.7.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_readme_$v` | - |
 | [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.7.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-readme` | - |
 {.ext-table}
 
@@ -74,10 +74,10 @@ weight: 4301
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_readme` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `pg_readme` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_readme         # 构建 DEB 包
+pig build pkg pg_readme         # 构建 RPM / DEB 包
 ```
 
 

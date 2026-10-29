@@ -11,12 +11,11 @@ weight: 8660
     <div class="ext-card__title">cybertec-postgresql/etcd_fdw</div>
     <div class="ext-card__desc">https://github.com/cybertec-postgresql/etcd_fdw</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/etcd_fdw-0.0.1.tar.gz wrappers-0.6.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/etcd_fdw-0.0.1.tar.gz">etcd_fdw-0.0.1.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/wrappers-0.6.2.tar.gz">wrappers-0.6.2.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">etcd_fdw-0.0.1.tar.gz wrappers-0.6.2.tar.gz</div>
+    <div class="ext-card__desc">etcd_fdw-0.0.1.tar.gz wrappers-0.6.2.tar.gz</div>
+  </a>
 </div>
 
 

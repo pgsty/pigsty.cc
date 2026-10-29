@@ -52,8 +52,8 @@ weight: 9410
 | el8.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PIGSTY 2.3.0 1 | AVAIL PIGSTY 2.3.0 1 |
 | el9.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 1 |
 | el9.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
-| el10.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| el10.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
+| el10.x86_64 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| el10.aarch64 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
 | d12.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
 | d12.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
 | d13.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
@@ -70,8 +70,10 @@ weight: 9410
 @ el9.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm pgdg 2.3.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmemcache_18-2.3.0-11PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel9.aarch64.rpm pgdg 2.3.0 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-15PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-11PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
@@ -100,8 +102,10 @@ weight: 9410
 @ el9.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmemcache_17-2.3.0-11PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel9.aarch64.rpm pgdg 2.3.0 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmemcache_17-2.3.0-8PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-15PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-11PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-9PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
@@ -130,8 +134,10 @@ weight: 9410
 @ el9.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm
 @ el9.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmemcache_16-2.3.0-11PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel9.1.aarch64.rpm pgdg 2.3.0 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmemcache_16-2.3.0-6.rhel9.1.aarch64.rpm
+@ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-15PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-11PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-9PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
@@ -159,8 +165,10 @@ weight: 9410
 @ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-11PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm pgdg 2.3.0 57.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmemcache_15-2.3.0-11PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-15PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-11PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-9PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
@@ -187,8 +195,10 @@ weight: 9410
 @ el8.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-5PIGSTY.el8.aarch64.rpm pigsty 2.3.0 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmemcache_14-2.3.0-5PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmemcache_14-2.3.0-11PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmemcache_14-2.3.0-11PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-15PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-11PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
@@ -212,6 +222,14 @@ weight: 9410
 @ u26.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgmemcache` 扩展的 RPM 包：
+
+```bash
+pig build pkg pgmemcache         # 构建 RPM 包
+```
 
 
 ## 安装

@@ -63,7 +63,7 @@ icon: fas fa-square-root-variable
 | [`tsm_system_rows`](/ext/e/tsm_system_rows) | [`tsm_system_rows`](https://www.postgresql.org/docs/current/tsm-system-rows.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 接受行数限制的 TABLESAMPLE 方法 |
 | [`tcn`](/ext/e/tcn) | [`tcn`](https://www.postgresql.org/docs/current/tcn.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用触发器通知变更 |
 | [`uuid-ossp`](/ext/e/uuid-ossp) | [`uuid-ossp`](https://www.postgresql.org/docs/current/uuid-ossp.html) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 生成通用唯一标识符（UUIDs） |
-| [`btree_gist`](/ext/e/btree_gist) | [`btree_gist`](https://www.postgresql.org/docs/current/btree-gist.html) | `1.7` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用GiST索引常见数据类型 |
+| [`btree_gist`](/ext/e/btree_gist) | [`btree_gist`](https://www.postgresql.org/docs/current/btree-gist.html) | `1.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用GiST索引常见数据类型 |
 | [`btree_gin`](/ext/e/btree_gin) | [`btree_gin`](https://www.postgresql.org/docs/current/btree-gin.html) | `1.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用GIN索引常见数据类型 |
 | [`intarray`](/ext/e/intarray) | [`intarray`](https://www.postgresql.org/docs/current/intarray.html) | `1.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 1维整数数组的额外函数、运算符和索引支持 |
 | [`intagg`](/ext/e/intagg) | [`intagg`](https://www.postgresql.org/docs/current/intagg.html) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 整数聚合器和枚举器（过时） |
@@ -1045,7 +1045,7 @@ icon: fas fa-square-root-variable
 
 ## btree_gist {#btree_gist}
 
-[**`btree_gist`**](/ext/e/btree_gist) - `1.7` : 用GiST索引常见数据类型
+[**`btree_gist`**](/ext/e/btree_gist) - `1.8` : 用GiST索引常见数据类型
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

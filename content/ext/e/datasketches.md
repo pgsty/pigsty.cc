@@ -11,12 +11,11 @@ weight: 4700
     <div class="ext-card__title">apache/datasketches-postgresql</div>
     <div class="ext-card__desc">https://github.com/apache/datasketches-postgresql</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/apache-datasketches-postgresql-1.7.0-src.tar.gz apache-datasketches-cpp-5.2.0-src.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/apache-datasketches-postgresql-1.7.0-src.tar.gz">apache-datasketches-postgresql-1.7.0-src.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/apache-datasketches-cpp-5.2.0-src.tar.gz">apache-datasketches-cpp-5.2.0-src.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">apache-datasketches-postgresql-1.7.0-src.tar.gz apache-datasketches-cpp-5.2.0-src.tar.gz</div>
+    <div class="ext-card__desc">apache-datasketches-postgresql-1.7.0-src.tar.gz apache-datasketches-cpp-5.2.0-src.tar.gz</div>
+  </a>
 </div>
 
 

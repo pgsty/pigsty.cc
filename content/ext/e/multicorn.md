@@ -30,7 +30,7 @@ weight: 8510
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 8510  | [**`multicorn`**](/ext/e/multicorn) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 8510  | [**`multicorn`**](/ext/e/multicorn) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`odbc_fdw`](/ext/e/odbc_fdw) [`wrappers`](/ext/e/wrappers) [`jdbc_fdw`](/ext/e/jdbc_fdw) |
@@ -271,6 +271,14 @@ weight: 8510
 @ u26.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 86.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 85.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `multicorn` 扩展的 DEB 包：
+
+```bash
+pig build pkg multicorn         # 构建 DEB 包
+```
 
 
 ## 安装

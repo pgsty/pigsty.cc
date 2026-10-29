@@ -20,12 +20,12 @@ weight: 6990
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_stat_statements`**](/ext/e/pg_stat_statements) | `1.11` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_stat_statements`**](/ext/e/pg_stat_statements) | `1.12` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6990  | [**`pg_stat_statements`**](/ext/e/pg_stat_statements) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 6990  | [**`pg_stat_statements`**](/ext/e/pg_stat_statements) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_store_plans`](/ext/e/pg_store_plans) [`auto_explain`](/ext/e/auto_explain) [`pg_show_plans`](/ext/e/pg_show_plans) [`powa`](/ext/e/powa) [`explain_ui`](/ext/e/explain_ui) [`pg_qualstats`](/ext/e/pg_qualstats) [`online_advisor`](/ext/e/online_advisor) [`pg_relusage`](/ext/e/pg_relusage) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) |
@@ -34,11 +34,14 @@ weight: 6990
 {.ext-table .ext-table--rel}
 
 
+> SQL/control baseline 1.12 in PostgreSQL 18; older PostgreSQL majors may ship older extension versions.
+
+
 ## 版本
 
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
-| <span class="ext-badge ext-badge--avail">1.11</span> | <span class="ext-badge ext-badge--avail">1.11</span> | <span class="ext-badge ext-badge--avail">1.11</span> | <span class="ext-badge ext-badge--avail">1.11</span> | <span class="ext-badge ext-badge--avail">1.11</span> |
+| <span class="ext-badge ext-badge--avail">1.12</span> | <span class="ext-badge ext-badge--avail">1.12</span> | <span class="ext-badge ext-badge--avail">1.12</span> | <span class="ext-badge ext-badge--avail">1.12</span> | <span class="ext-badge ext-badge--avail">1.12</span> |
 {.ext-table}
 
 

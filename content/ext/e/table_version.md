@@ -205,10 +205,10 @@ weight: 1060
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `table_version` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `table_version` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg table_version         # 构建 DEB 包
+pig build pkg table_version         # 构建 RPM / DEB 包
 ```
 
 

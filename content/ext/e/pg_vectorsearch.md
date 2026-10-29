@@ -11,12 +11,11 @@ weight: 1990
     <div class="ext-card__title">timescale/pg_vectorsearch</div>
     <div class="ext-card__desc">https://github.com/timescale/pg_vectorsearch</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_vectorsearch-0.1.0.tar.gz meson-0.63.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_vectorsearch-0.1.0.tar.gz">pg_vectorsearch-0.1.0.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/meson-0.63.3.tar.gz">meson-0.63.3.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">pg_vectorsearch-0.1.0.tar.gz meson-0.63.3.tar.gz</div>
+    <div class="ext-card__desc">pg_vectorsearch-0.1.0.tar.gz meson-0.63.3.tar.gz</div>
+  </a>
 </div>
 
 

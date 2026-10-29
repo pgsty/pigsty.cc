@@ -11,10 +11,10 @@ weight: 2800
     <div class="ext-card__title">supabase/index_advisor</div>
     <div class="ext-card__desc">https://github.com/supabase/index_advisor</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/index_advisor-0.2.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/index_advisor-0.2.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">index_advisor-0.2.0.tar.gz</div>
-    <div class="ext-card__desc">index_advisor-0.2.0.tar.gz</div>
+    <div class="ext-card__title">index_advisor-0.2.1.tar.gz</div>
+    <div class="ext-card__desc">index_advisor-0.2.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2800
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`index_advisor`**](/ext/e/index_advisor) | `0.2.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`index_advisor`**](/ext/e/index_advisor) | `0.2.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,117 +38,147 @@ weight: 2800
 {.ext-table .ext-table--rel}
 
 
-> Upstream 0.2.1; pkg 0.2.0; planner estimates only.
+> Package and SQL version 0.2.1; requires HypoPG; planner estimates only.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `index_advisor` | `hypopg` |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `index_advisor_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-index-advisor` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `index_advisor` | `hypopg` |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `index_advisor_$v` | `hypopg_$v` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-index-advisor` | `postgresql-$v-hypopg` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el8.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el8.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el9.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el10.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| d12.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+@ el8.x86_64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_18-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_18-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_18-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_18-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_18-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.x86_64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_18-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_18-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.aarch64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_18-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_18-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.x86_64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_18-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 index_advisor_18 index_advisor_18-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_18-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 index_advisor_18 index_advisor_18-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_18-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-index-advisor postgresql-18-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-18-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_17-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_17-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_17-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_17-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_17-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.x86_64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_17-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_17-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.aarch64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_17-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_17-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.x86_64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_17-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 index_advisor_17 index_advisor_17-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_17-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 index_advisor_17 index_advisor_17-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_17-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-index-advisor postgresql-17-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-17-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_16-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_16-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_16-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_16-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_16-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.x86_64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_16-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_16-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.aarch64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_16-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_16-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.x86_64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_16-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 index_advisor_16 index_advisor_16-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_16-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 index_advisor_16 index_advisor_16-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_16-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-index-advisor postgresql-16-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-16-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_15-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_15-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_15-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_15-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_15-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.x86_64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_15-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_15-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.aarch64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_15-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_15-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.x86_64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_15-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 index_advisor_15 index_advisor_15-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_15-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 index_advisor_15 index_advisor_15-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_15-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-index-advisor postgresql-15-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-15-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_14-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/index_advisor_14-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el8.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_14-0.2.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/index_advisor_14-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_14-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.x86_64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/index_advisor_14-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el9.noarch.rpm pigsty 0.2.1 10.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_14-0.2.1-1PGSTY.el9.noarch.rpm
 @ el9.aarch64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 10.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/index_advisor_14-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_14-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.x86_64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/index_advisor_14-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 index_advisor_14 index_advisor_14-0.2.1-1PGSTY.el10.noarch.rpm pigsty 0.2.1 10.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_14-0.2.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 14 index_advisor_14 index_advisor_14-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 10.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/index_advisor_14-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 5.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~bookworm_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~trixie_all.deb pigsty 0.2.1 6.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~jammy_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~noble_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-index-advisor postgresql-14-index-advisor_0.2.1-1PGSTY~resolute_all.deb pigsty 0.2.1 6.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/index-advisor/postgresql-14-index-advisor_0.2.1-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

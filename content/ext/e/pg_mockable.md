@@ -150,10 +150,10 @@ weight: 3120
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_mockable` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `pg_mockable` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_mockable         # 构建 DEB 包
+pig build pkg pg_mockable         # 构建 RPM / DEB 包
 ```
 
 

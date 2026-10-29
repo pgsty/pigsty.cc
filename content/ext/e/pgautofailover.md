@@ -232,6 +232,14 @@ weight: 5150
 @ u26.aarch64 14 postgresql-14-auto-failover postgresql-14-auto-failover_2.2-3.pgdg26.04+1_arm64.deb pgdg 2.2 353.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-14-auto-failover_2.2-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgautofailover` 扩展的 RPM 包：
+
+```bash
+pig build pkg pgautofailover         # 构建 RPM 包
+```
+
 
 ## 安装
 

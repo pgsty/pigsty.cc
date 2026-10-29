@@ -11,12 +11,11 @@ weight: 2930
     <div class="ext-card__title">rdkit/rdkit</div>
     <div class="ext-card__desc">https://github.com/rdkit/rdkit</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/rdkit-Release_2026_09_1.tar.gz">rdkit-Release_2026_09_1.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/better-enums-0.11.3-enum.h">better-enums-0.11.3-enum.h</a><br><a href="https://repo.pigsty.cc/ext/src/RingDecomposerLib-1.1.3_rdkit.tar.gz">RingDecomposerLib-1.1.3_rdkit.tar.gz</a><br><a href="https://repo.pigsty.cc/ext/src/rdkit_202303.3.orig.tar.xz">rdkit_202303.3.orig.tar.xz</a><br><a href="https://repo.pigsty.cc/ext/src/rdkit_202303.3-3.pgdg120+1.dsc">rdkit_202303.3-3.pgdg120+1.dsc</a><br><a href="https://repo.pigsty.cc/ext/src/rdkit_202303.3-3.pgdg120+1.debian.tar.xz">rdkit_202303.3-3.pgdg120+1.debian.tar.xz</a><br><a href="https://repo.pigsty.cc/ext/src/rdkit_202303.3-3.pgdg22.04+1.dsc">rdkit_202303.3-3.pgdg22.04+1.dsc</a><br><a href="https://repo.pigsty.cc/ext/src/rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz">rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
+    <div class="ext-card__desc">rdkit-Release_2026_09_1.tar.gz better-enums-0.11.3-enum.h RingDecomposerLib-1.1.3_rdkit.tar.gz rdkit_202303.3.orig.tar.xz rdkit_202303.3-3.pgdg120+1.dsc rdkit_202303.3-3.pgdg120+1.debian.tar.xz rdkit_202303.3-3.pgdg22.04+1.dsc rdkit_202303.3-3.pgdg22.04+1.debian.tar.xz</div>
+  </a>
 </div>
 
 

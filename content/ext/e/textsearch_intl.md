@@ -11,12 +11,11 @@ weight: 2290
     <div class="ext-card__title">benjaminsanborn/textsearch_intl</div>
     <div class="ext-card__desc">https://github.com/benjaminsanborn/textsearch_intl</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.1.tar.gz">textsearch_intl-1.0.1.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/textsearch_intl-1.0.0.tar.gz">textsearch_intl-1.0.0.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">textsearch_intl-1.0.1.tar.gz</div>
+    <div class="ext-card__desc">textsearch_intl-1.0.1.tar.gz</div>
+  </a>
 </div>
 
 
@@ -39,7 +38,7 @@ weight: 2290
 {.ext-table .ext-table--rel}
 
 
-> Renamed from icu_parser; PGXN distribution 1.0.1 retains SQL/control 1.0. No direct upgrade from the old name. PostgreSQL 14-18, UTF8 and unaccent required; rebuild affected indexes after an ICU major-version change. Pigsty RPM packages are 1.0.1 on EL8-10, both architectures; DEB remains 1.0.0.
+> Renamed from icu_parser; PGXN distribution 1.0.1 retains SQL/control 1.0. No direct upgrade from the old name. PostgreSQL 14-18, UTF8 and unaccent required; rebuild affected indexes after an ICU major-version change. Pigsty RPM and DEB packages are 1.0.1.
 
 
 ## 版本
@@ -48,7 +47,7 @@ weight: 2290
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `textsearch_intl` | `unaccent` |
 | [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `textsearch_intl_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-textsearch-intl` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-textsearch-intl` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -60,96 +59,96 @@ weight: 2290
 | el9.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el10.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 @ el8.x86_64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/textsearch_intl_18-1.0.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 52.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/textsearch_intl_18-1.0.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 55.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/textsearch_intl_18-1.0.1-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/textsearch_intl_18-1.0.1-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 55.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/textsearch_intl_18-1.0.1-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 textsearch_intl_18 textsearch_intl_18-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 54.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/textsearch_intl_18-1.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 45.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 45.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 44.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 47.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 46.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 46.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 44.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 45.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 44.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 46.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 47.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-textsearch-intl postgresql-18-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 46.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-18-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 53.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/textsearch_intl_17-1.0.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 52.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/textsearch_intl_17-1.0.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 55.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/textsearch_intl_17-1.0.1-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/textsearch_intl_17-1.0.1-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 55.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/textsearch_intl_17-1.0.1-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 textsearch_intl_17 textsearch_intl_17-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 54.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/textsearch_intl_17-1.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 45.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 45.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 44.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 48.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 46.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 46.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 49.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 46.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-textsearch-intl postgresql-17-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 46.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-17-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 53.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/textsearch_intl_16-1.0.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 52.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/textsearch_intl_16-1.0.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 55.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/textsearch_intl_16-1.0.1-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/textsearch_intl_16-1.0.1-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 55.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/textsearch_intl_16-1.0.1-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 textsearch_intl_16 textsearch_intl_16-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 54.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/textsearch_intl_16-1.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 45.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 45.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 48.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 46.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 46.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 45.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 49.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 46.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-textsearch-intl postgresql-16-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 46.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-16-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 53.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/textsearch_intl_15-1.0.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 52.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/textsearch_intl_15-1.0.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 55.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/textsearch_intl_15-1.0.1-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/textsearch_intl_15-1.0.1-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 55.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/textsearch_intl_15-1.0.1-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 textsearch_intl_15 textsearch_intl_15-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 54.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/textsearch_intl_15-1.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 45.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 45.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 45.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 49.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 48.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 46.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 46.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 45.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 49.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 46.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-textsearch-intl postgresql-15-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 46.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-15-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 53.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/textsearch_intl_14-1.0.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 52.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/textsearch_intl_14-1.0.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 55.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/textsearch_intl_14-1.0.1-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 53.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/textsearch_intl_14-1.0.1-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 55.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/textsearch_intl_14-1.0.1-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 textsearch_intl_14 textsearch_intl_14-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 54.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/textsearch_intl_14-1.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 45.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 45.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 44.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 48.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 46.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 46.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 46.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 45.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 44.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 49.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 48.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 46.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-textsearch-intl postgresql-14-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 45.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/textsearch-intl/postgresql-14-textsearch-intl_1.0.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

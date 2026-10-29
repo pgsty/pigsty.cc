@@ -450,10 +450,10 @@ weight: 1540
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `q3c` 扩展的 RPM 包：
+您可以使用 `pig build` 命令构建 `q3c` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg q3c         # 构建 RPM 包
+pig build pkg q3c         # 构建 RPM / DEB 包
 ```
 
 

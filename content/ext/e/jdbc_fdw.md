@@ -159,10 +159,10 @@ weight: 8530
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `jdbc_fdw` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `jdbc_fdw` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg jdbc_fdw         # 构建 DEB 包
+pig build pkg jdbc_fdw         # 构建 RPM / DEB 包
 ```
 
 

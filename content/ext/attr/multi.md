@@ -222,7 +222,7 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 3240 | [**`pltcl`**](/ext/e/pltcl) | `1.0` | `c-s-dt-` | `pg_catalog` | PL/TCL 存储过程语言 |
-| 3250 | [`pltclu`](/ext/e/pltclu) | `1.0` | `c---d--` | `pg_catalog` | PL/TCL 存储过程语言（未受信/高权限） |
+| 3250 | [`pltclu`](/ext/e/pltclu) | `1.0` | `c-s-d--` | `pg_catalog` | PL/TCL 存储过程语言（未受信/高权限） |
 {.ext-table}
 
 ## plperl
@@ -232,9 +232,9 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 3260 | [**`plperl`**](/ext/e/plperl) | `1.0` | `c-s-dt-` | `pg_catalog` | PL/Perl 存储过程语言 |
-| 3261 | [`bool_plperl`](/ext/e/bool_plperl) | `1.0` | `c-s-dt-` | - | 在 bool 和 plperl 之间转换 |
-| 3262 | [`hstore_plperl`](/ext/e/hstore_plperl) | `1.0` | `c-s-d--` | - | 在 hstore 和 plperl 之间转换适配类型 |
-| 3263 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | `1.0` | `c---dt-` | - | 在 jsonb 和 plperl 之间转换 |
+| 3261 | [`bool_plperl`](/ext/e/bool_plperl) | `1.0` | `c-s-dtr` | - | 在 bool 和 plperl 之间转换 |
+| 3262 | [`hstore_plperl`](/ext/e/hstore_plperl) | `1.0` | `c-s-d-r` | - | 在 hstore 和 plperl 之间转换适配类型 |
+| 3263 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | `1.0` | `c-s-dtr` | - | 在 jsonb 和 plperl 之间转换 |
 {.ext-table}
 
 ## plperlu
@@ -244,9 +244,9 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 3270 | [**`plperlu`**](/ext/e/plperlu) | `1.0` | `c-s-d--` | `pg_catalog` | PL/PerlU 存储过程语言（未受信/高权限） |
-| 3271 | [`bool_plperlu`](/ext/e/bool_plperlu) | `1.0` | `c---d--` | - | 在 bool 和 plperlu 之间转换 |
-| 3272 | [`jsonb_plperlu`](/ext/e/jsonb_plperlu) | `1.0` | `c---d--` | - | 在 jsonb 和 plperlu 之间转换 |
-| 3273 | [`hstore_plperlu`](/ext/e/hstore_plperlu) | `1.0` | `c---d--` | - | 在 hstore 和 plperlu 之间转换适配类型 |
+| 3271 | [`bool_plperlu`](/ext/e/bool_plperlu) | `1.0` | `c-s-d-r` | - | 在 bool 和 plperlu 之间转换 |
+| 3272 | [`jsonb_plperlu`](/ext/e/jsonb_plperlu) | `1.0` | `c-s-d-r` | - | 在 jsonb 和 plperlu 之间转换 |
+| 3273 | [`hstore_plperlu`](/ext/e/hstore_plperlu) | `1.0` | `c-s-d-r` | - | 在 hstore 和 plperlu 之间转换适配类型 |
 {.ext-table}
 
 ## plpython3u
@@ -256,9 +256,9 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 3290 | [**`plpython3u`**](/ext/e/plpython3u) | `1.0` | `c-s-d--` | `pg_catalog` | PL/Python3 存储过程语言（未受信/高权限） |
-| 3291 | [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) | `1.0` | `c---d-r` | - | 在 jsonb 和 plpython3u 之间转换 |
+| 3291 | [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) | `1.0` | `c-s-d-r` | - | 在 jsonb 和 plpython3u 之间转换 |
 | 3292 | [`ltree_plpython3u`](/ext/e/ltree_plpython3u) | `1.0` | `c-s-d-r` | - | 在 ltree 和 plpython3u 之间转换 |
-| 3293 | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) | `1.0` | `c---d-r` | - | 在 hstore 和 plpython3u 之间转换 |
+| 3293 | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) | `1.0` | `c-s-d-r` | - | 在 hstore 和 plpython3u 之间转换 |
 {.ext-table}
 
 ## pg_xenophile
@@ -357,5 +357,5 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
-| 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `2.4.7` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
+| 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `2.4.8` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 {.ext-table}

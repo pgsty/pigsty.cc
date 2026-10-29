@@ -20,7 +20,7 @@ weight: 3100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`plr`**](/ext/e/plr) | `8.4.8.9` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`plr`**](/ext/e/plr) | `8.4.8.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -34,16 +34,16 @@ weight: 3100
 {.ext-table .ext-table--rel}
 
 
-> Release/control and current RPM/DEB matrix use 8.4.8.9. Control declares relocatable=true. Local package matrix includes both EL10 architectures for PostgreSQL 14-18.
+> Release/control and verified PG18 RPM/DEB packages are 8.4.8.10. Control declares relocatable=true; package versions may vary by platform and PostgreSQL major.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.9` | {{< pgvers "18,17,16,15,14" >}} | `plr` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.9` | {{< pgvers "18,17,16,15,14" >}} | `plr_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plr` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.10` | {{< pgvers "18,17,16,15,14" >}} | `plr` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.10` | {{< pgvers "18,17,16,15,14" >}} | `plr_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `8.4.8.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plr` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

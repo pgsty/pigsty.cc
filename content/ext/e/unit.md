@@ -192,6 +192,14 @@ weight: 3550
 @ u26.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgunit` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pgunit         # 构建 RPM / DEB 包
+```
+
 
 ## 安装
 

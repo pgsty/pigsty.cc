@@ -169,6 +169,14 @@ weight: 9520
 @ u26.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb pigsty 2.2.1 59.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgl_ddl_deploy` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pgl_ddl_deploy         # 构建 RPM / DEB 包
+```
+
 
 ## 安装
 

@@ -11,10 +11,10 @@ weight: 9440
     <div class="ext-card__title">RayElg/kafgres</div>
     <div class="ext-card__desc">https://github.com/RayElg/kafgres</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafgres-0.3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafgres-0.3.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">kafgres-0.3.0.tar.gz</div>
-    <div class="ext-card__desc">kafgres-0.3.0.tar.gz</div>
+    <div class="ext-card__title">kafgres-0.3.1.tar.gz</div>
+    <div class="ext-card__desc">kafgres-0.3.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9440
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`kafgres`**](/ext/e/kafgres) | `0.3.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`kafgres`**](/ext/e/kafgres) | `0.3.1` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -41,46 +41,46 @@ weight: 9440
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "16" >}} | `kafgres` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "16" >}} | `kafgres_$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "16" >}} | `postgresql-$v-kafgres` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "16" >}} | `kafgres` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "16" >}} | `kafgres_$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "16" >}} | `postgresql-$v-kafgres` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 2.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafgres_16-0.3.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 2.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafgres_16-0.3.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 2.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafgres_16-0.3.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el9.aarch64.rpm pigsty 0.3.0 2.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafgres_16-0.3.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el10.x86_64.rpm pigsty 0.3.0 2.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafgres_16-0.3.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 kafgres_16 kafgres_16-0.3.0-1PGSTY.el10.aarch64.rpm pigsty 0.3.0 2.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafgres_16-0.3.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~bookworm_amd64.deb pigsty 0.3.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~bookworm_arm64.deb pigsty 0.3.0 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~trixie_amd64.deb pigsty 0.3.0 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~trixie_arm64.deb pigsty 0.3.0 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~jammy_amd64.deb pigsty 0.3.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~jammy_arm64.deb pigsty 0.3.0 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~noble_amd64.deb pigsty 0.3.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 2.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafgres/postgresql-16-kafgres_0.3.0-1PGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el8.x86_64.rpm pigsty 0.3.1 4.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafgres_16-0.3.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el8.aarch64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafgres_16-0.3.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el9.x86_64.rpm pigsty 0.3.1 4.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafgres_16-0.3.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el9.aarch64.rpm pigsty 0.3.1 4.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafgres_16-0.3.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el10.x86_64.rpm pigsty 0.3.1 4.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafgres_16-0.3.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 kafgres_16 kafgres_16-0.3.1-1PGSTY.el10.aarch64.rpm pigsty 0.3.1 4.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafgres_16-0.3.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~bookworm_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~bookworm_arm64.deb pigsty 0.3.1 3.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~trixie_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~trixie_arm64.deb pigsty 0.3.1 3.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~jammy_amd64.deb pigsty 0.3.1 4.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~jammy_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~noble_amd64.deb pigsty 0.3.1 4.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~noble_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~resolute_amd64.deb pigsty 0.3.1 4.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-kafgres postgresql-16-kafgres_0.3.1-1PGSTY~resolute_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafgres/postgresql-16-kafgres_0.3.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -138,12 +138,12 @@ CREATE EXTENSION kafgres;
 
 - [extension/sql/kafgres--0.2.0--0.3.0.sql](https://github.com/RayElg/kafgres/blob/8def1919c65f71217665cdc9b72df4c693811cc2/extension/sql/kafgres--0.2.0--0.3.0.sql)
 - [.github/workflows/ci.yml](https://github.com/RayElg/kafgres/blob/8def1919c65f71217665cdc9b72df4c693811cc2/.github/workflows/ci.yml)
-- [README 0.3.0](https://github.com/RayElg/kafgres/blob/8def1919c65f71217665cdc9b72df4c693811cc2/README.md)
-- [Configuration 0.3.0](https://github.com/RayElg/kafgres/blob/8def1919c65f71217665cdc9b72df4c693811cc2/docs/configuration.md)
+- [README 0.3.1](https://github.com/RayElg/kafgres/blob/451a7f622a10bcf28b3ba4ae63c372a7f15c5aeb/README.md)
+- [Configuration 0.3.1](https://github.com/RayElg/kafgres/blob/451a7f622a10bcf28b3ba4ae63c372a7f15c5aeb/docs/configuration.md)
 
-- [0.3.0 release](https://github.com/RayElg/kafgres/releases/tag/0.3.0)
+- [0.3.0 release](https://github.com/RayElg/kafgres/releases/tag/0.3.1)
 
-`kafgres` 在 PostgreSQL 中提供 Kafka 协议代理。上游 0.3.0 构建并测试 PostgreSQL 13–18。需要超级用户安装、共享预加载及重启，许可为 Elastic License 2.0。
+`kafgres` 在 PostgreSQL 中提供 Kafka 协议代理。上游 0.3.1 构建并测试 PostgreSQL 13–18。需要超级用户安装、共享预加载及重启，许可为 Elastic License 2.0。
 
 ### 启用代理
 
@@ -179,3 +179,7 @@ CDC 还需要 `wal_level = logical`；部分 PostgreSQL 构建另外要求配置
 ### 0.3.0 升级
 
 安装匹配的 0.3.0 库并重启后，在 broker 数据库执行 `ALTER EXTENSION kafgres UPDATE`。SQL 升级收紧管理函数授权，并固定生产函数的 search_path。段存储引擎首次启动时会移除 0.2.0 的旧时间戳索引；旧段仍可通过扫描读取，新段生成当前格式的索引。
+
+### 0.3.1 的 CDC 安装边界
+
+CDC 需要 wal_level = logical。若 PostgreSQL 构建启用了输出插件允许列表，且代理报告不能把 kafgres 用作输出插件，应将其加入 output_plugin_libraries 并重载配置。库预加载仍需重启。已有事务式段记录应按上游 0.3.1 升级说明处理；单纯替换库不是存储迁移。

@@ -11,12 +11,11 @@ weight: 2490
     <div class="ext-card__title">relytcloud/pg_ducklake</div>
     <div class="ext-card__desc">https://github.com/relytcloud/pg_ducklake</div>
   </a>
-  <div class="ext-card ext-card--source">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_ducklake-1.0.3.tar.gz CRoaring-4.7.1-amalgamation.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title"><a href="https://repo.pigsty.cc/ext/src/pg_ducklake-1.0.2.tar.gz">pg_ducklake-1.0.2.tar.gz</a></div>
-    <div class="ext-card__desc"><a href="https://repo.pigsty.cc/ext/src/CRoaring-4.7.1-amalgamation.tar.gz">CRoaring-4.7.1-amalgamation.tar.gz</a>
-    </div>
-  </div>
+    <div class="ext-card__title">pg_ducklake-1.0.3.tar.gz CRoaring-4.7.1-amalgamation.tar.gz</div>
+    <div class="ext-card__desc">pg_ducklake-1.0.3.tar.gz CRoaring-4.7.1-amalgamation.tar.gz</div>
+  </a>
 </div>
 
 
@@ -26,7 +25,7 @@ weight: 2490
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_ducklake`**](/ext/e/pg_ducklake) | `1.0.2` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`pg_ducklake`**](/ext/e/pg_ducklake) | `1.0.3` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -43,9 +42,9 @@ weight: 2490
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_ducklake` | - |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_ducklake_$v` | - |
-| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-ducklake` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_ducklake` | - |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_ducklake_$v` | - |
+| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-ducklake` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -53,90 +52,90 @@ weight: 2490
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-@ el9.x86_64 18 pg_ducklake_18 pg_ducklake_18-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 16.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_18-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_ducklake_18 pg_ducklake_18-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_18-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_ducklake_18 pg_ducklake_18-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_18-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_ducklake_18 pg_ducklake_18-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 12.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_18-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 14.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 11.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 11.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb
-@ el9.x86_64 17 pg_ducklake_17 pg_ducklake_17-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 16.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_17-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_ducklake_17 pg_ducklake_17-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_17-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_ducklake_17 pg_ducklake_17-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_17-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_ducklake_17 pg_ducklake_17-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 12.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_17-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 14.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 11.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 11.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb
-@ el9.x86_64 16 pg_ducklake_16 pg_ducklake_16-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 16.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_16-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_ducklake_16 pg_ducklake_16-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_16-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_ducklake_16 pg_ducklake_16-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_16-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_ducklake_16 pg_ducklake_16-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 12.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_16-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 14.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 11.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 11.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb
-@ el9.x86_64 15 pg_ducklake_15 pg_ducklake_15-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 16.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_15-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_ducklake_15 pg_ducklake_15-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_15-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_ducklake_15 pg_ducklake_15-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_15-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_ducklake_15 pg_ducklake_15-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 12.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_15-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 14.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 11.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 11.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb
-@ el9.x86_64 14 pg_ducklake_14 pg_ducklake_14-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 16.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_14-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_ducklake_14 pg_ducklake_14-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_14-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_ducklake_14 pg_ducklake_14-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_14-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_ducklake_14 pg_ducklake_14-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 12.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_14-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 13.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 11.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 14.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 11.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 11.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 12.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.0-1PIGSTY~resolute_arm64.deb
+| el9.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+@ el9.x86_64 18 pg_ducklake_18 pg_ducklake_18-1.0.3-1PGSTY.el9.x86_64.rpm pigsty 1.0.3 25.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_18-1.0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_ducklake_18 pg_ducklake_18-1.0.3-1PGSTY.el9.aarch64.rpm pigsty 1.0.3 23.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_18-1.0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_ducklake_18 pg_ducklake_18-1.0.3-1PGSTY.el10.x86_64.rpm pigsty 1.0.3 26.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_18-1.0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_ducklake_18 pg_ducklake_18-1.0.3-1PGSTY.el10.aarch64.rpm pigsty 1.0.3 24.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_18-1.0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb pigsty 1.0.3 15.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb pigsty 1.0.3 16.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb pigsty 1.0.3 14.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb pigsty 1.0.3 14.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb pigsty 1.0.3 14.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb pigsty 1.0.3 13.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb pigsty 1.0.3 15.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-ducklake postgresql-18-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb pigsty 1.0.3 14.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-18-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb
+@ el9.x86_64 17 pg_ducklake_17 pg_ducklake_17-1.0.3-1PGSTY.el9.x86_64.rpm pigsty 1.0.3 25.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_17-1.0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_ducklake_17 pg_ducklake_17-1.0.3-1PGSTY.el9.aarch64.rpm pigsty 1.0.3 23.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_17-1.0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_ducklake_17 pg_ducklake_17-1.0.3-1PGSTY.el10.x86_64.rpm pigsty 1.0.3 26.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_17-1.0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_ducklake_17 pg_ducklake_17-1.0.3-1PGSTY.el10.aarch64.rpm pigsty 1.0.3 24.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_17-1.0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb pigsty 1.0.3 15.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb pigsty 1.0.3 16.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb pigsty 1.0.3 14.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb pigsty 1.0.3 14.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb pigsty 1.0.3 14.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb pigsty 1.0.3 13.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb pigsty 1.0.3 15.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-ducklake postgresql-17-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb pigsty 1.0.3 14.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-17-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb
+@ el9.x86_64 16 pg_ducklake_16 pg_ducklake_16-1.0.3-1PGSTY.el9.x86_64.rpm pigsty 1.0.3 25.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_16-1.0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_ducklake_16 pg_ducklake_16-1.0.3-1PGSTY.el9.aarch64.rpm pigsty 1.0.3 23.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_16-1.0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_ducklake_16 pg_ducklake_16-1.0.3-1PGSTY.el10.x86_64.rpm pigsty 1.0.3 26.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_16-1.0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_ducklake_16 pg_ducklake_16-1.0.3-1PGSTY.el10.aarch64.rpm pigsty 1.0.3 24.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_16-1.0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb pigsty 1.0.3 15.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb pigsty 1.0.3 16.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb pigsty 1.0.3 14.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb pigsty 1.0.3 14.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb pigsty 1.0.3 14.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb pigsty 1.0.3 13.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb pigsty 1.0.3 15.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-ducklake postgresql-16-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb pigsty 1.0.3 14.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-16-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb
+@ el9.x86_64 15 pg_ducklake_15 pg_ducklake_15-1.0.3-1PGSTY.el9.x86_64.rpm pigsty 1.0.3 25.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_15-1.0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_ducklake_15 pg_ducklake_15-1.0.3-1PGSTY.el9.aarch64.rpm pigsty 1.0.3 23.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_15-1.0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_ducklake_15 pg_ducklake_15-1.0.3-1PGSTY.el10.x86_64.rpm pigsty 1.0.3 26.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_15-1.0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_ducklake_15 pg_ducklake_15-1.0.3-1PGSTY.el10.aarch64.rpm pigsty 1.0.3 24.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_15-1.0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb pigsty 1.0.3 15.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb pigsty 1.0.3 13.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb pigsty 1.0.3 16.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb pigsty 1.0.3 14.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb pigsty 1.0.3 14.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb pigsty 1.0.3 14.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb pigsty 1.0.3 13.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb pigsty 1.0.3 15.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-ducklake postgresql-15-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb pigsty 1.0.3 14.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-15-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb
+@ el9.x86_64 14 pg_ducklake_14 pg_ducklake_14-1.0.3-1PGSTY.el9.x86_64.rpm pigsty 1.0.3 24.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ducklake_14-1.0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_ducklake_14 pg_ducklake_14-1.0.3-1PGSTY.el9.aarch64.rpm pigsty 1.0.3 23.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ducklake_14-1.0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_ducklake_14 pg_ducklake_14-1.0.3-1PGSTY.el10.x86_64.rpm pigsty 1.0.3 26.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ducklake_14-1.0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_ducklake_14 pg_ducklake_14-1.0.3-1PGSTY.el10.aarch64.rpm pigsty 1.0.3 24.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ducklake_14-1.0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb pigsty 1.0.3 15.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb pigsty 1.0.3 13.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb pigsty 1.0.3 16.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb pigsty 1.0.3 14.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb pigsty 1.0.3 14.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb pigsty 1.0.3 13.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb pigsty 1.0.3 14.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb pigsty 1.0.3 13.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb pigsty 1.0.3 15.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-ducklake postgresql-14-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb pigsty 1.0.3 14.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ducklake/postgresql-14-pg-ducklake_1.0.3-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -205,7 +204,11 @@ CREATE EXTENSION pg_ducklake;
 
 ## 用法
 
-来源：[README](https://github.com/relytcloud/pg_ducklake/blob/v1.0.0/README.md)、[v1.0.0 版本](https://github.com/relytcloud/pg_ducklake/releases/tag/v1.0.0)、[项目文档](https://github.com/relytcloud/pg_ducklake/tree/v1.0.0/pg_ducklake/docs)
+来源：
+
+- [README](https://github.com/relytcloud/pg_ducklake/blob/v1.0.3/README.md)
+- [Release 1.0.3](https://github.com/relytcloud/pg_ducklake/releases/tag/v1.0.3)
+- [Documentation](https://github.com/relytcloud/pg_ducklake/tree/v1.0.3/pg_ducklake/docs)
 
 `pg_ducklake` 为 PostgreSQL 增加 DuckLake 表。DuckLake 元数据存储在 PostgreSQL 中，表数据以 Parquet 格式存储并通过 DuckDB 查询，让 PostgreSQL SQL 客户端可以使用快照、时间旅行查询、分区、排序键和外部对象存储等湖仓功能。
 
@@ -311,3 +314,7 @@ SELECT * FROM my_ducklake.public.events;
 - README 列出的源码构建目标包括 Ubuntu 22.04-24.04 和 macOS。
 - 云凭据通过 `ducklake_secret` 外部服务器和逐用户映射存储；应像保护其他数据库密钥一样保护这些目录对象。
 - 对于从堆表到 DuckLake 的增量转换，上游指向单独的 `pg_duckpipe` 项目。
+
+### 1.0.3 的正确性与快照修复
+
+1.0.3 修复 auto_explain 导致查询失败、INSERT 执行两次或进程崩溃的问题，并修复非 C 文本排序规则下的过滤、连接及 real 列裁剪。后台维护会将替换后的文件保留到 delete_older_than 允许删除，以保护旧快照读者。直接插入及 COPY FROM STDIN 现在正确保存 numeric、数组值并维护列统计信息。再次运行凭据辅助函数会替换同类型、同范围的 secret，避免旧副本遮蔽新凭据。
