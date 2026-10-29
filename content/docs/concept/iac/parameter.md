@@ -28,7 +28,7 @@ categories: [概念]
 | [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                      |
 | [**VIBE**](/docs/vibe/param)     |  1  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
 | [**KAFKA**](/docs/kafka/param)   |  2  | 18  | Kafka 部署参数与移除保护参数                    |
-{.stretch-last}
+{.wide .expand}
 
 
 ------

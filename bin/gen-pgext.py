@@ -67,10 +67,10 @@ def main():
     platforms = sum(row["active"] == "t" for row in tables["os"])
     majors = sum(row["active"] == "t" for row in tables["pg"])
     stats = [
-        dict(label="内核分支", value=12, href="/docs/pgsql/kernel/"),
+        dict(label="内核与方案", param="pg_kernel_count", href="/docs/pgsql/kernel/", title="不含原生 PostgreSQL；包含内核分支、Supabase、Citus 和 DocumentDB"),
         dict(label="收录在册扩展", value=len(rows), href="https://pgext.cloud/"),
         dict(label="已打包扩展", value=len(packaged), href="https://pgext.cloud/?scope=packaged"),
-        dict(label="扩展软件包", value=len(packages), href="https://pgext.cloud/?scope=packaged&entity=pkg", title="不含 contrib 的独立扩展包族，按主扩展去重"),
+        dict(label="独立扩展包族", value=len(packages), href="https://pgext.cloud/?scope=packaged&entity=pkg", title="不含 contrib 的独立扩展包族，按主扩展去重"),
         dict(label="Linux 平台", value=platforms, href="https://pgext.cloud/list/os", title="操作系统大版本与 CPU 架构的组合"),
         dict(label="构建矩阵槽位", value=len(packages) * platforms * majors, href="https://pgext.cloud/matrix", title=f"{len(packages)} 包族 × {platforms} 平台 × {majors} PG 大版本，包含不适用及缺失组合"),
     ]
@@ -80,10 +80,11 @@ def main():
         f"# 矩阵槽位：{len(packages)} 包族 × {platforms} 平台 × {majors} PG 大版本；包含不适用与缺失组合，不代表已交付二进制包数。",
     ] + [f"# {name}.csv SHA-256: {digest}" for name, digest in hashes.items()]
     if args.lang == "en":
-        labels = ["Kernel Forks", "Extensions Catalogued", "Packaged Extensions",
-                  "Extension Packages", "Linux Platforms", "Build Matrix Slots"]
+        labels = ["Kernels & Solutions", "Extensions Catalogued", "Packaged Extensions",
+                  "Package Families", "Linux Platforms", "Build Matrix Slots"]
         for row, label in zip(stats, labels):
             row["label"] = label
+        stats[0]["title"] = "Excludes vanilla PostgreSQL; includes kernel forks, Supabase, Citus, and DocumentDB"
         stats[3]["title"] = "Independent non-contrib package families, counted by lead extension"
         stats[4]["title"] = "Operating system major version and CPU architecture combinations"
         stats[5]["title"] = (

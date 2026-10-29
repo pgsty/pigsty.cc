@@ -1,0 +1,69 @@
+// Pigsty's two grouped dropdowns, inside OINK's native navbar and disclosure.
+// All colors and type roles follow the reader's selected OINK preset.
+.td-site-header .td-nav-menu__panel:has(> .pigsty-nav-groups) {
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - var(--td-shell-nav-h, 50px) - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  padding: 16px;
+}
+
+.pigsty-nav-groups {
+  display: flex;
+  gap: 18px;
+
+  .pigsty-nav-group + .pigsty-nav-group {
+    border-inline-start: 1px solid var(--bs-border-color);
+    padding-inline-start: 18px;
+  }
+
+  .pigsty-nav-group__title {
+    margin: 0 0 8px;
+    padding-inline-start: 9px;
+    font: 600 0.7rem var(--td-meta-font-family);
+    letter-spacing: 0.18em;
+    color: var(--td-brand-copper);
+  }
+
+  .pigsty-nav-group__columns { display: flex; gap: 2px; }
+  .pigsty-nav-group__column { margin: 0; padding: 0; list-style: none; }
+  .td-nav-menu__item-link {
+    gap: 9px;
+    height: 33px;
+    min-height: 33px;
+    padding: 0 9px;
+    font-size: 0.86rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .pigsty-nav-group--mono .td-nav-menu__item-link {
+    font-family: var(--td-code-font-family);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .td-site-header .td-nav-menu__panel:has(> .pigsty-nav-groups) {
+    position: fixed;
+    inset-inline-start: 16px;
+    top: var(--td-shell-nav-h, 50px);
+    transform: none;
+  }
+  .pigsty-nav-groups {
+    flex-direction: column;
+    gap: 14px;
+
+    .pigsty-nav-group + .pigsty-nav-group {
+      border-inline-start: 0;
+      border-top: 1px solid var(--bs-border-color);
+      padding-inline-start: 0;
+      padding-top: 14px;
+    }
+    .pigsty-nav-group__columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .td-nav-menu__item-link { white-space: normal; }
+  }
+}

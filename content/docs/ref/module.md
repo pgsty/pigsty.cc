@@ -26,7 +26,7 @@ categories: [参考]
 |  [**`JUICE`**](/docs/juice)  |   扩展   | BETA | `/docs/juice`  | JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎。                              |
 |   [**`VIBE`**](/docs/vibe)   |   扩展   | BETA |  `/docs/vibe`  | 浏览器化开发环境，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。 |
 |  [**`KAFKA`**](/docs/kafka)  |   扩展   | PILOT | `/docs/kafka`  | Apache Kafka 4.x dynamic KRaft 集群部署、安全基线与监控。                        |
-{.stretch-last}
+{.wide .expand}
 
 
 ----------------

@@ -42,86 +42,533 @@ module:
 #=======================================#
 # Menu Customization
 #=======================================#
+# 首页与文档共用 OINK 导航；菜单链接与分组在这里配置。
 menus:
   main:
-    - identifier: docs
-      name: 文档
-      weight: 10
-      pageRef: /docs
-      params:
-        columns: 2
-    - identifier: docs-setup
-      parent: docs
-      name: 快速上手
-      pageRef: /docs/setup
-      weight: 10
-      params:
-        icon: fa-solid fa-rocket
-        description: 从一台 Linux 主机开始安装 Pigsty
-    - identifier: docs-deploy
-      parent: docs
-      name: 生产部署
-      pageRef: /docs/deploy
-      weight: 20
-      params:
-        icon: fa-solid fa-server
-        description: 规划并交付多节点高可用数据库服务
-    - identifier: docs-pgsql
-      parent: docs
-      name: PostgreSQL
-      pageRef: /docs/pgsql
-      weight: 30
-      params:
-        icon: fa-solid fa-database
-        description: 集群、服务、备份、监控与日常管理
-    - identifier: docs-components
-      parent: docs
-      name: 组件手册
-      pageRef: /docs/pig
-      weight: 40
-      params:
-        icon: fa-solid fa-toolbox
-        description: Pig、Patroni、PgBouncer、PgBackRest 等组件
-
-    - identifier: ext
-      name: 扩展
-      weight: 20
-      pageRef: /ext
-      params:
-        columns: 2
-    - identifier: ext-list
-      parent: ext
-      name: 扩展目录
-      pageRef: /ext/list
-      weight: 10
-      params:
-        icon: fa-solid fa-puzzle-piece
-        description: 浏览 600 个已打包 PostgreSQL 扩展
-    - identifier: ext-os
-      parent: ext
-      name: 系统支持
-      pageRef: /ext/os
-      weight: 20
-      params:
-        icon: fa-brands fa-linux
-        description: 查看操作系统与 PostgreSQL 版本兼容矩阵
-    - identifier: ext-repo
-      parent: ext
-      name: 软件仓库
-      pageRef: /docs/repo
-      weight: 30
-      params:
-        icon: fa-solid fa-box-archive
-        description: 配置 Pigsty 软件源并安装扩展包
-
-    - identifier: blog
-      name: 博客
-      pageRef: /blog
-      weight: 30
-    - identifier: price
-      name: 服务
-      pageRef: /price
-      weight: 40
+  - identifier: docs
+    name: 文档
+    weight: 10
+    pageRef: /docs
+    params:
+      icon: fa-solid fa-book
+      pigsty_groups:
+      - name: 文档
+        columns:
+        - 1
+        - 2
+      - name: 模块
+        columns:
+        - 1
+        - 2
+        mono: true
+  - identifier: docs-docs
+    parent: docs
+    name: Pigsty v4.5
+    url: /docs/
+    weight: 10
+    params:
+      icon: fas fa-book
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-doc-pgsty-com
+    parent: docs
+    name: Pigsty v3.7
+    url: https://doc.pgsty.com
+    weight: 20
+    params:
+      icon: fas fa-book-open
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-docs-about-release
+    parent: docs
+    name: 发布注记
+    url: /docs/about/release/
+    weight: 30
+    params:
+      icon: fas fa-clipboard-list
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-docs-repo
+    parent: docs
+    name: PG 软件仓库
+    url: /docs/repo/
+    weight: 40
+    params:
+      icon: fas fa-warehouse
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-docs-pgsql-kernel
+    parent: docs
+    name: PG 内核分支
+    url: /docs/pgsql/kernel/
+    weight: 50
+    params:
+      icon: fas fa-microchip
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-ext
+    parent: docs
+    name: PG 扩展目录
+    url: /ext/
+    weight: 60
+    params:
+      icon: fas fa-puzzle-piece
+      pigsty_group: 文档
+      pigsty_column: 1
+  - identifier: docs-pgsql-manual
+    parent: docs
+    name: PG 中文文档
+    url: https://pgsql.cc/docs/18/
+    weight: 70
+    params:
+      icon: fas fa-republican
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-pig
+    parent: docs
+    name: PIG 命令行
+    url: /docs/pig/
+    weight: 80
+    params:
+      icon: fas fa-piggy-bank
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-pgbouncer
+    parent: docs
+    name: PgBouncer
+    url: /docs/pgbouncer/
+    weight: 90
+    params:
+      icon: fas fa-baseball
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-patroni
+    parent: docs
+    name: Patroni
+    url: /docs/patroni/
+    weight: 100
+    params:
+      icon: fas fa-yin-yang
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-pgbackrest
+    parent: docs
+    name: pgBackRest
+    url: /docs/pgbackrest/
+    weight: 110
+    params:
+      icon: fas fa-couch
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-pg-exporter
+    parent: docs
+    name: pg_exporter
+    url: /docs/pg_exporter/
+    weight: 120
+    params:
+      icon: fas fa-chart-line
+      pigsty_group: 文档
+      pigsty_column: 2
+  - identifier: docs-docs-pgsql
+    parent: docs
+    name: PGSQL
+    url: /docs/pgsql/
+    weight: 130
+    params:
+      icon: fas fa-database
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-infra
+    parent: docs
+    name: INFRA
+    url: /docs/infra/
+    weight: 140
+    params:
+      icon: fas fa-bank
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-node
+    parent: docs
+    name: NODE
+    url: /docs/node/
+    weight: 150
+    params:
+      icon: fas fa-server
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-etcd
+    parent: docs
+    name: ETCD
+    url: /docs/etcd/
+    weight: 160
+    params:
+      icon: fas fa-gears
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-minio
+    parent: docs
+    name: MINIO
+    url: /docs/minio/
+    weight: 170
+    params:
+      icon: fas fa-boxes-stacked
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-redis
+    parent: docs
+    name: REDIS
+    url: /docs/redis/
+    weight: 180
+    params:
+      icon: fas fa-layer-group
+      pigsty_group: 模块
+      pigsty_column: 1
+  - identifier: docs-docs-docker
+    parent: docs
+    name: DOCKER
+    url: /docs/docker/
+    weight: 190
+    params:
+      icon: fa-brands fa-docker
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-juice
+    parent: docs
+    name: JUICE
+    url: /docs/juice/
+    weight: 200
+    params:
+      icon: fas fa-folder-tree
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-vibe
+    parent: docs
+    name: VIBE
+    url: /docs/vibe/
+    weight: 210
+    params:
+      icon: fas fa-laptop-code
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-kafka
+    parent: docs
+    name: KAFKA
+    url: /docs/kafka/
+    weight: 220
+    params:
+      icon: fas fa-share-nodes
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-mysql
+    parent: docs
+    name: MYSQL
+    url: /docs/mysql/
+    weight: 230
+    params:
+      icon: fas fa-fish
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-pilot
+    parent: docs
+    name: PILOT
+    url: /docs/pilot/
+    weight: 240
+    params:
+      icon: fas fa-flask-vial
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: ext
+    name: 扩展
+    weight: 20
+    pageRef: /ext
+    params:
+      icon: fa-solid fa-puzzle-piece
+      pigsty_groups:
+      - name: 扩展
+        columns:
+        - 1
+      - name: 分类
+        columns:
+        - 1
+        - 2
+        mono: true
+  - identifier: ext-ext-list
+    parent: ext
+    name: 扩展列表
+    url: /ext/list/
+    weight: 10
+    params:
+      icon: fas fa-puzzle-piece
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-rpm
+    parent: ext
+    name: RPM 列表
+    url: /ext/rpm/
+    weight: 20
+    params:
+      icon: fa-brands fa-redhat
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-deb
+    parent: ext
+    name: DEB 列表
+    url: /ext/deb/
+    weight: 30
+    params:
+      icon: fa-brands fa-debian
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-repo
+    parent: ext
+    name: 归属仓库
+    url: /ext/repo/
+    weight: 40
+    params:
+      icon: fas fa-warehouse
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-language
+    parent: ext
+    name: 编程语言
+    url: /ext/language/
+    weight: 50
+    params:
+      icon: fas fa-code
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-license
+    parent: ext
+    name: 开源协议
+    url: /ext/license/
+    weight: 60
+    params:
+      icon: fas fa-scale-balanced
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-docs-ref-linux
+    parent: ext
+    name: 操作系统
+    url: /docs/ref/linux/
+    weight: 70
+    params:
+      icon: fa-brands fa-linux
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-docs-repo
+    parent: ext
+    name: 更新日志
+    url: /docs/repo/
+    weight: 80
+    params:
+      icon: fas fa-clipboard-list
+      pigsty_group: 扩展
+      pigsty_column: 1
+  - identifier: ext-ext-cate-time
+    parent: ext
+    name: TIME
+    url: /ext/cate/time/
+    weight: 90
+    params:
+      icon: fas fa-clock
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-gis
+    parent: ext
+    name: GIS
+    url: /ext/cate/gis/
+    weight: 100
+    params:
+      icon: fas fa-globe
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-rag
+    parent: ext
+    name: RAG
+    url: /ext/cate/rag/
+    weight: 110
+    params:
+      icon: fas fa-brain
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-fts
+    parent: ext
+    name: FTS
+    url: /ext/cate/fts/
+    weight: 120
+    params:
+      icon: fas fa-magnifying-glass
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-olap
+    parent: ext
+    name: OLAP
+    url: /ext/cate/olap/
+    weight: 130
+    params:
+      icon: fas fa-chart-line
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-feat
+    parent: ext
+    name: FEAT
+    url: /ext/cate/feat/
+    weight: 140
+    params:
+      icon: fas fa-icons
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-lang
+    parent: ext
+    name: LANG
+    url: /ext/cate/lang/
+    weight: 150
+    params:
+      icon: fas fa-language
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-type
+    parent: ext
+    name: TYPE
+    url: /ext/cate/type/
+    weight: 160
+    params:
+      icon: fas fa-cubes
+      pigsty_group: 分类
+      pigsty_column: 1
+  - identifier: ext-ext-cate-util
+    parent: ext
+    name: UTIL
+    url: /ext/cate/util/
+    weight: 170
+    params:
+      icon: fas fa-wrench
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-func
+    parent: ext
+    name: FUNC
+    url: /ext/cate/func/
+    weight: 180
+    params:
+      icon: fas fa-square-root-variable
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-admin
+    parent: ext
+    name: ADMIN
+    url: /ext/cate/admin/
+    weight: 190
+    params:
+      icon: fas fa-bank
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-stat
+    parent: ext
+    name: STAT
+    url: /ext/cate/stat/
+    weight: 200
+    params:
+      icon: fas fa-file-waveform
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-sec
+    parent: ext
+    name: SEC
+    url: /ext/cate/sec/
+    weight: 210
+    params:
+      icon: fas fa-shield-halved
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-fdw
+    parent: ext
+    name: FDW
+    url: /ext/cate/fdw/
+    weight: 220
+    params:
+      icon: fas fa-file-import
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-sim
+    parent: ext
+    name: SIM
+    url: /ext/cate/sim/
+    weight: 230
+    params:
+      icon: fas fa-user-ninja
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: ext-ext-cate-etl
+    parent: ext
+    name: ETL
+    url: /ext/cate/etl/
+    weight: 240
+    params:
+      icon: fas fa-truck
+      pigsty_group: 分类
+      pigsty_column: 2
+  - identifier: blog
+    name: 博客
+    weight: 30
+    pageRef: /blog
+    params:
+      icon: fa-solid fa-blog
+  - identifier: blog-blog-pigsty
+    parent: blog
+    name: Pigsty
+    url: /blog/pigsty/
+    weight: 10
+    params:
+      icon: fas fa-newspaper
+  - identifier: blog-blog-pg
+    parent: blog
+    name: PostgreSQL
+    url: /blog/pg/
+    weight: 20
+    params:
+      icon: fas fa-republican
+  - identifier: blog-blog-cloud
+    parent: blog
+    name: 云计算
+    url: /blog/cloud/
+    weight: 30
+    params:
+      icon: fas fa-cloud
+  - identifier: blog-blog-db
+    parent: blog
+    name: 数据库
+    url: /blog/db/
+    weight: 40
+    params:
+      icon: fas fa-database
+  - identifier: blog-blog-ai
+    parent: blog
+    name: AI Agent
+    url: /blog/ai/
+    weight: 50
+    params:
+      icon: fas fa-robot
+  - identifier: blog-vonng-com
+    parent: blog
+    name: Vonng 博客
+    url: https://vonng.com
+    weight: 60
+    params:
+      icon: fas fa-blog
+  - identifier: blog-img-pigsty-addvon-jpg
+    parent: blog
+    name: 老冯云数
+    url: /img/pigsty/addvon.jpg
+    weight: 70
+    params:
+      icon: fab fa-weixin
+  - identifier: price
+    name: 服务
+    pageRef: /price
+    weight: 40
+    params:
+      icon: fa-solid fa-handshake
 
 #=======================================#
 # Taxonomies Support
@@ -222,7 +669,7 @@ cascade:
 #=======================================#
 params:
   # metadata
-  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的 RDS，以及开箱即用的监控、管控、IaC、高可用，以及 PG 生态的 600 款插件与 12 款内核'
+  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的 RDS，以及开箱即用的监控、管控、IaC、高可用，以及 620 个已打包 PG 扩展与 12 种内核及方案'
   version: v4.5.0           # 当前文档版本；发布后的开发源码功能以各页适用范围为准
   version_short: v4.5       # 当前源码/文档基线的短版本号（major.minor）
   stable_version: v4.5.0    # GitHub 最新公开稳定版，2026-10-13 核验；安装与 Git tag 示例使用此参数
@@ -230,8 +677,13 @@ params:
   pg_version: '18.6'        # PostgreSQL 最新小版本，正文用 {{< param pg_version >}}
   pig_version: 1.10.2        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
   pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
-  pig_catalog_count: 616    # PIG 内嵌目录记录总数
-  pgext_count: 600          # Pigsty 在线已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
+  pig_catalog_count: 616    # PIG v1.10.2 发布版内嵌目录记录总数
+  pgext_count: 620          # 2026-10-28 PGEXT 已打包扩展数，与 data/pgext/extension.yaml 一致
+  pg_kernel_count: 12      # 首页列出的内核与方案，不含原生 PG，包含 Supabase、Citus、DocumentDB
+  # 2026-10-28 核对 pgsty/pigsty e7a77472：files/grafana/*.json（递归）、files/victoria/rules/*.yml。
+  dashboard_count: 67
+  recording_rule_count: 759
+  alert_rule_count: 92
   pgext_url: https://pgext.cloud  # PG 扩展目录站点，首页扩展索引格点与指标卡片链接前缀
   copyright:
     authors: Ruohang Feng
@@ -243,6 +695,7 @@ params:
   time_format_default: '2006-01-02'
 
   # Project info
+  logo: img/logo/logo.svg
   archived_version: false
   url_latest_version: 'https://pigsty.cc'
   github_repo: 'https://github.com/pgsty/pigsty.cc'
@@ -251,8 +704,6 @@ params:
   # Version dropdown menu
   version_menu: "版本"
   versions:
-    - version: "Pigsty English Site"
-      url: 'https://pigsty.io'
     - version: "Pigsty v3.7 文档"
       url: 'https://doc.pgsty.com/zh'
     - version: "Pigsty v3.4 文档"

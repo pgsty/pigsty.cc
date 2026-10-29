@@ -27,7 +27,7 @@ categories: [参考]
 |  [**`JUICE`**](/docs/juice/param)  |  1  |  2  | JuiceFS 实例与缓存参数                      |
 |   [**`VIBE`**](/docs/vibe/param)   |  1  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
 |  [**`KAFKA`**](/docs/kafka/param)  |  2  | 19  | Kafka 部署参数与移除保护参数                    |
-{.stretch-last}
+{.wide .expand}
 
 试点模块：[**原生 `MYSQL` 8.4**](/docs/mysql/param/#参数概览) 当前公开 13 个参数，其中 11 个用于部署、2 个用于受保护移除；固定的端口、路径、软件版本和定时器不属于公开参数。
 
@@ -47,7 +47,7 @@ categories: [参考]
 |  [**`JUICE`**](/docs/juice/param)  | [`JUICE`](/docs/juice/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |   [**`VIBE`**](/docs/vibe/param)   | [`VIBE`](/docs/vibe/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |  [**`KAFKA`**](/docs/kafka/param)  | [`KAFKA`](/docs/kafka/param/#参数概览)、[`KAFKA_REMOVE`](/docs/kafka/param/#临时受保护运维变量)                                                                                                                                                                                                                                                                                                                                                                                                       |
-{.stretch-last}
+{.wide .expand}
 
 --------
 

@@ -1,0 +1,57 @@
+{{- /* Pigsty keeps its grouped Docs / Extensions dropdowns. OINK still owns
+     the navbar, parent panel, keyboard navigation, appearance and language UI.
+     Keep the fallback below aligned with OINK v1.4.0 navbar-group-items.html. */ -}}
+{{- if and (eq .depth 1) .top.Params.pigsty_groups -}}
+<div class="pigsty-nav-groups">
+  {{- range .top.Params.pigsty_groups -}}
+  {{- $group := . -}}
+  <div class="pigsty-nav-group{{ if .mono }} pigsty-nav-group--mono{{ end }}" role="group" aria-label="{{ .name }}">
+    <p class="pigsty-nav-group__title">{{ .name }}</p>
+    <div class="pigsty-nav-group__columns">
+      {{- range .columns -}}
+      {{- $column := . -}}
+      <ul class="pigsty-nav-group__column">
+        {{- range $.items -}}
+          {{- if and (eq .Params.pigsty_group $group.name) (eq (int .Params.pigsty_column) (int $column)) -}}
+          {{- $class := "td-nav-menu__item-link" -}}
+          {{- if eq $.mode "mobile" }}{{ $class = printf "%s td-site-nav__menu-link td-site-nav__menu-child" $class }}{{ end -}}
+          <li>{{ partial "navbar-entry-link.html" (dict "page" $.page "entry" . "class" $class "level" 1 "region" $.mode) }}</li>
+          {{- end -}}
+        {{- end -}}
+      </ul>
+      {{- end -}}
+    </div>
+  </div>
+  {{- end -}}
+</div>
+{{- else -}}
+{{- /* Deeper levels flatten into linked group headings. Every rendered row
+     is one icon and one title; menu descriptions are configuration-only. */ -}}
+{{- $page := .page -}}
+{{- $mode := .mode -}}
+{{- $top := .top -}}
+{{- $depth := .depth -}}
+{{- range .items -}}
+  {{- $entry := . -}}
+  {{- $hasChildren := $entry.HasChildren -}}
+  {{- if $hasChildren -}}
+    {{- warnf "navbar menu %q: only one interactive child level is supported; nested entry %q is rendered as a flat group heading" $top.Name $entry.Name -}}
+    <div class="td-navbar-group" data-td-navbar-group data-td-navbar-depth="{{ $depth }}">
+      {{- if eq $mode "desktop" -}}
+        {{ partial "navbar-entry-link.html" (dict "page" $page "entry" $entry "class" "td-nav-menu__group-title" "level" $depth "kind" "group") }}
+      {{- else -}}
+        {{ partial "navbar-entry-link.html" (dict "page" $page "entry" $entry "class" "td-site-nav__menu-link td-site-nav__menu-group-title" "level" $depth "kind" "group" "region" "mobile") }}
+      {{- end -}}
+      <div class="td-navbar-group__items">
+      {{ partial "navbar-group-items.html" (dict "page" $page "items" $entry.Children "mode" $mode "top" $top "depth" (add $depth 1)) }}
+      </div>
+    </div>
+  {{- else -}}
+    {{- if eq $mode "desktop" -}}
+      {{ partial "navbar-entry-link.html" (dict "page" $page "entry" $entry "class" "td-nav-menu__item-link" "level" $depth) }}
+    {{- else -}}
+      {{ partial "navbar-entry-link.html" (dict "page" $page "entry" $entry "class" "td-site-nav__menu-link td-site-nav__menu-child" "level" $depth "region" "mobile") }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- end -}}

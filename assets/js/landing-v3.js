@@ -1,100 +1,16 @@
 /**
  * Pigsty Landing v3 — "The Powered Board"
- * Vanilla JS：主题切换 / 复制命令 / 板卡引脚 / 滚动揭示 / 画廊懒加载
+ * Vanilla JS：复制命令 / 板卡引脚 / 滚动揭示 / 画廊懒加载
  */
 
 (function () {
   'use strict';
 
-  var DARK_THEME_COLOR = '#0b1119';
-  var LIGHT_THEME_COLOR = '#f1f4f8';
-  var THEME_KEY = 'pigsty-landing-theme';
-
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ============================================
-  // Theme
-  // ============================================
-  function getStoredTheme() {
-    try {
-      var v = window.localStorage.getItem(THEME_KEY);
-      return v === 'light' || v === 'dark' || v === 'auto' ? v : null;
-    } catch (err) { return null; }
-  }
-
-  function setStoredTheme(theme) {
-    try { window.localStorage.setItem(THEME_KEY, theme); } catch (err) { /* ignore */ }
-  }
-
+  // OINK owns appearance state; Pigsty components only consume the resolved mode.
   function currentTheme() {
-    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  }
-
-  function applyTheme(theme) {
-    var isLight = theme === 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-    document.documentElement.setAttribute('data-bs-theme', theme);
-
-    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
-      var icon = btn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-sun', !isLight);
-        icon.classList.toggle('fa-moon', isLight);
-      }
-      var label = isLight ? '切换暗色模式' : '切换亮色模式';
-      btn.setAttribute('title', label);
-      btn.setAttribute('aria-label', label);
-    });
-
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) {
-      var canvas = meta.getAttribute(isLight ? 'data-td-canvas-light' : 'data-td-canvas-dark');
-      meta.setAttribute('content', canvas || (isLight ? LIGHT_THEME_COLOR : DARK_THEME_COLOR));
-    }
-    document.querySelectorAll('input[data-bs-theme-value]').forEach(function (input) {
-      input.checked = input.getAttribute('data-bs-theme-value') === (getStoredTheme() || 'auto');
-    });
-
-    // 主题感知图片（如扩展生态全景图的深浅两版）
-    document.querySelectorAll('img[data-theme-src-light]').forEach(function (img) {
-      var src = isLight ? img.dataset.themeSrcLight : img.dataset.themeSrcDark;
-      if (src && img.getAttribute('src') !== src) img.setAttribute('src', src);
-    });
-
-    try {
-      window.dispatchEvent(new CustomEvent('pigsty-theme-change', { detail: { theme: theme } }));
-    } catch (err) { /* ignore */ }
-  }
-
-  function applyPreference(preference, store) {
-    if (preference !== 'light' && preference !== 'dark' && preference !== 'auto') return;
-    if (store) setStoredTheme(preference);
-    var resolved = preference === 'auto'
-      ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
-      : preference;
-    applyTheme(resolved);
-  }
-
-  function initThemeToggle() {
-    applyTheme(currentTheme()); // 同步按钮图标 / 主题图片（data-theme 已由内联脚本设置）
-    document.querySelectorAll('input[data-bs-theme-value]').forEach(function (input) {
-      input.addEventListener('change', function () {
-        if (input.checked) applyPreference(input.getAttribute('data-bs-theme-value'), true);
-      });
-    });
-    window.addEventListener('storage', function (event) {
-      if (event.key === THEME_KEY || event.key === null) applyPreference(getStoredTheme() || 'auto', false);
-    });
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
-      if (!getStoredTheme() || getStoredTheme() === 'auto') applyPreference('auto', false);
-    });
-    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var next = currentTheme() === 'light' ? 'dark' : 'light';
-        applyTheme(next);
-        setStoredTheme(next);
-      });
-    });
+    return document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
   }
 
   // ============================================
@@ -205,45 +121,6 @@
   }
 
   // ============================================
-  // Header scroll state
-  // ============================================
-  function initHeaderScroll() {
-    var header = document.querySelector('.landing-header');
-    if (!header) return;
-    var update = function () {
-      header.classList.toggle('scrolled', window.pageYOffset > 60);
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    update();
-  }
-
-  // ============================================
-  // Mobile menu
-  // ============================================
-  function initMobileMenu() {
-    var toggle = document.querySelector('.mobile-menu-toggle');
-    var menu = document.querySelector('.mobile-menu');
-    if (!toggle || !menu) return;
-
-    toggle.addEventListener('click', function () {
-      var active = menu.classList.toggle('active');
-      toggle.classList.toggle('active', active);
-      toggle.setAttribute('aria-expanded', active ? 'true' : 'false');
-    });
-
-    // 链接与搜索按钮点击后收起菜单（主题切换按钮保持菜单打开）。
-    menu
-      .querySelectorAll('a, [data-td-shell-search-open]')
-      .forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.remove('active');
-          toggle.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-  }
-
-  // ============================================
   // Dashboard gallery lazy loading
   // ============================================
   function initDashboardGallery() {
@@ -319,7 +196,7 @@
 
     renderAsciinema(container, currentTheme());
 
-    window.addEventListener('pigsty-theme-change', function (event) {
+    window.addEventListener('td-theme-change', function (event) {
       var theme = event && event.detail ? event.detail.theme : currentTheme();
       renderAsciinema(container, theme);
     });
@@ -482,7 +359,7 @@
       window.addEventListener('resize', function () {
         if (box.clientWidth !== drawnWidth) scheduleDraw();
       }, { passive: true });
-      window.addEventListener('pigsty-theme-change', function () { palette(); scheduleDraw(); });
+      window.addEventListener('td-theme-change', function () { palette(); scheduleDraw(); });
     }
 
     var loading = false;
@@ -510,13 +387,10 @@
   // Init
   // ============================================
   function init() {
-    initThemeToggle();
     initCopyButtons();
     initBoardLegend();
     initScrollReveal();
     initCounters();
-    initHeaderScroll();
-    initMobileMenu();
     initDashboardGallery();
     initAsciinema();
     initExtIndex();
