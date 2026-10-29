@@ -37,7 +37,7 @@ icon: fas fa-chart-line
 | [`pg_lake_table`](/ext/e/pg_lake_table) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_table) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数据湖表和 Iceberg 表 |
 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_copy) | `3.5` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`pg_table_range`](/ext/e/pg_table_range) | [`pg_table_range`](https://github.com/bitner/pg_table_range) | `0.1.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于每个分区的数据范围在规划阶段裁剪分区，并支持非分区键列。 |
-| [`pg_improv`](/ext/e/pg_improv) | [`pg_improv`](https://codeberg.org/gregburd/improv) | `0.10.0` | <a class="ext-badge ext-badge--license apache20 or mit" href="/ext/license#apache20ormit">Apache-2.0 OR MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于 PostgreSQL 表的增量多维模型与公式函数。 |
+| [`pg_improv`](/ext/e/pg_improv) | [`pg_improv`](https://codeberg.org/gregburd/improv) | `0.12.1` | <a class="ext-badge ext-badge--license apache20 or mit" href="/ext/license#apache20ormit">Apache-2.0 OR MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于 PostgreSQL 表的增量多维模型与公式函数。 |
 | [`tablefunc`](/ext/e/tablefunc) | [`tablefunc`](https://www.postgresql.org/docs/current/tablefunc.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 交叉表函数 |
 {.ext-table}
 
@@ -521,7 +521,7 @@ icon: fas fa-chart-line
 
 ## pg_improv {#pg_improv}
 
-[**`pg_improv`**](/ext/e/pg_improv) - `0.10.0` : 基于 PostgreSQL 表的增量多维模型与公式函数。
+[**`pg_improv`**](/ext/e/pg_improv) - `0.12.1` : 基于 PostgreSQL 表的增量多维模型与公式函数。
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

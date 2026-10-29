@@ -5,12 +5,12 @@ weight: 120
 icon: fas fa-puzzle-piece
 ---
 
-在 Pigsty 扩展目录中共有 **616** 个 PostgreSQL 扩展可用，共计 **447** 个扩展包。
+在 Pigsty 扩展目录中共有 **620** 个 PostgreSQL 扩展可用，共计 **451** 个扩展包。
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--------:|:------:|:--------:|:----------:|:-----------:|:---:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| [**EXT**](/ext/list) | 616 | 145 | 443 | 71 | | 606 | 595 | 576 | 544 | 522 |
-| [**PKG**](/ext/repo) | 447 | 134 | 355 | 0 | | 440 | 435 | 418 | 397 | 379 |
+| [**EXT**](/ext/list) | 620 | 146 | 446 | 71 | | 610 | 598 | 579 | 547 | 525 |
+| [**PKG**](/ext/repo) | 451 | 135 | 358 | 0 | | 444 | 438 | 421 | 400 | 382 |
 {.ext-table}
 
 
@@ -101,7 +101,7 @@ icon: fas fa-puzzle-piece
 | [`pgmnemo`](/ext/e/pgmnemo) | [`pgmnemo`](https://github.com/pgmnemo/pgmnemo) | `0.20.0` | <span style="white-space:nowrap"><code>----dt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | [`vector`](/ext/e/vector) |
 | [`pgcontext`](/ext/e/pgcontext) | [`pgcontext`](https://pgxn.org/dist/pgcontext/0.3.0/) | `0.3.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | [`pgcontext`](https://pgxn.org/dist/pgContext/0.2.0/) | `0.2.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "17" >}} | [`pgcontext`](/ext/e/pgcontext), [`vector`](/ext/e/vector) |
-| [`pg_turbovec`](/ext/e/pg_turbovec) | [`pg_turbovec`](https://codeberg.org/gregburd/pg_turbovec) | `2.14.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_turbovec`](/ext/e/pg_turbovec) | [`pg_turbovec`](https://codeberg.org/gregburd/pg_turbovec) | `2.15.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_vectorsearch`](/ext/e/pg_vectorsearch) | [`pg_vectorsearch`](https://github.com/timescale/pg_vectorsearch) | `0.1.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18" >}} | - |
 {.ext-table}
 
@@ -126,7 +126,7 @@ icon: fas fa-puzzle-piece
 | [`pg_pinyin`](/ext/e/pg_pinyin) | [`pg_pinyin`](https://github.com/aiyou178/pg_pinyin) | `0.0.8` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_kazsearch`](/ext/e/pg_kazsearch) | [`pg_kazsearch`](https://github.com/darkhanakh/pg-kazsearch) | `2.3.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | - |
 | [`psql_bm25s`](/ext/e/psql_bm25s) | [`psql_bm25s`](https://github.com/Intelligent-Internet/Evoke) | `0.4.14` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
-| [`pg_fts`](/ext/e/pg_fts) | [`pg_fts`](https://codeberg.org/gregburd/pg_fts) | `1.14.1` | <span style="white-space:nowrap"><code>--s-dtr</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
+| [`pg_fts`](/ext/e/pg_fts) | [`pg_fts`](https://codeberg.org/gregburd/pg_fts) | `1.14.3` | <span style="white-space:nowrap"><code>--s-dtr</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
 | [`pg_cjk_parser`](/ext/e/pg_cjk_parser) | [`pg_cjk_parser`](https://github.com/huangjimmy/pg_cjk_parser) | `0.1.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_jieba`](/ext/e/pg_jieba) | [`pg_jieba`](https://github.com/jaiminpan/pg_jieba) | `1.1.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`acdat`](/ext/e/acdat) | [`acdat`](https://github.com/pgsty/acdat) | `0.1.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -145,7 +145,7 @@ icon: fas fa-puzzle-piece
 | [`pg_icu_parser`](/ext/e/pg_icu_parser) | [`pg_icu_parser`](https://github.com/IgKh/pg_icu_parser) | `1.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`tin`](/ext/e/tin) | [`lead`](https://github.com/planetscale/lead) | `1.0.6` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
 | [`stannum`](/ext/e/stannum) | [`stannum`](https://github.com/TeamSpringbird/stannum) | `0.1.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
-| [`pg_tre`](/ext/e/pg_tre) | [`pg_tre`](https://codeberg.org/gregburd/pg_tre) | `4.5.2` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "17,18" >}} | - |
+| [`pg_tre`](/ext/e/pg_tre) | [`pg_tre`](https://codeberg.org/gregburd/pg_tre) | `4.5.3` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "17,18" >}} | - |
 {.ext-table}
 
 
@@ -180,7 +180,7 @@ icon: fas fa-puzzle-piece
 | [`pg_lake_table`](/ext/e/pg_lake_table) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_table) | `3.5` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | [`btree_gist`](/ext/e/btree_gist), [`pg_lake_engine`](/ext/e/pg_lake_engine), [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) |
 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](https://github.com/Snowflake-Labs/pg_lake/tree/main/pg_lake_copy) | `3.5` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | [`pg_lake_engine`](/ext/e/pg_lake_engine), [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg), [`pg_lake_table`](/ext/e/pg_lake_table) |
 | [`pg_table_range`](/ext/e/pg_table_range) | [`pg_table_range`](https://github.com/bitner/pg_table_range) | `0.1.2` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "16,17,18" >}} | - |
-| [`pg_improv`](/ext/e/pg_improv) | [`pg_improv`](https://codeberg.org/gregburd/improv) | `0.10.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "15,16,17,18" >}} | - |
+| [`pg_improv`](/ext/e/pg_improv) | [`pg_improv`](https://codeberg.org/gregburd/improv) | `0.12.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "15,16,17,18" >}} | - |
 {.ext-table}
 
 
@@ -216,7 +216,7 @@ icon: fas fa-puzzle-piece
 | [`pg_variables`](/ext/e/pg_variables) | [`pg_variables`](https://github.com/postgrespro/pg_variables) | `1.2.5` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`imgsmlr`](/ext/e/imgsmlr) | [`imgsmlr`](https://github.com/postgrespro/imgsmlr) | `1.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_ivm`](/ext/e/pg_ivm) | [`pg_ivm`](https://github.com/sraoss/pg_ivm) | `1.17` | <span style="white-space:nowrap"><code>-bsLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.5.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | - |
+| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.6` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | - |
 | [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/trickle-labs/pg-trickle) | `0.108.3` | <span style="white-space:nowrap"><code>-bsLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18" >}} | - |
 | [`pg_durable`](/ext/e/pg_durable) | [`pg_durable`](https://github.com/microsoft/pg_durable) | `0.2.9` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_disorder`](/ext/e/pg_disorder) | [`pg_disorder`](https://github.com/viralpraxis/pg_disorder) | `0.1.0` | <span style="white-space:nowrap"><code>--sL---</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "14,15,16,17,18" >}} | - |
@@ -477,6 +477,7 @@ icon: fas fa-puzzle-piece
 | [`pglinter`](/ext/e/pglinter) | [`pglinter`](https://github.com/pmpetit/pglinter) | `2.0.0` | <span style="white-space:nowrap"><code>--s-dt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`prioritize`](/ext/e/prioritize) | [`pg_prioritize`](https://github.com/schmiddy/pg_prioritize) | `1.0.4` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_checksums`](/ext/e/pg_checksums) | [`pg_checksums`](https://github.com/credativ/pg_checksums) | `1.4` | <span style="white-space:nowrap"><code>--s---r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_integrity_checksums`](/ext/e/pg_integrity_checksums) | [`pg_integrity_checksums`](https://github.com/VictorNagibator/pg_integrity_checksums) | `2.0.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "14,15,16,17,18" >}} | - |
 | [`pg_readonly`](/ext/e/pg_readonly) | [`pg_readonly`](https://github.com/pierreforstmann/pg_readonly) | `1.0.6` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgdd`](/ext/e/pgdd) | [`pgdd`](https://github.com/rustprooflabs/pgdd) | `0.6.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_permissions`](/ext/e/pg_permissions) | [`pg_permissions`](https://github.com/cybertec-postgresql/pg_permissions) | `1.4.1` | <span style="white-space:nowrap"><code>----d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -545,6 +546,7 @@ icon: fas fa-puzzle-piece
 | [`pgnodemx`](/ext/e/pgnodemx) | [`pgnodemx`](https://github.com/CrunchyData/pgnodemx) | `2.0.1` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_proctab`](/ext/e/pg_proctab) | [`pgnodemx`](https://github.com/markwkm/pg_proctab) | `2.0.1` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_statvfs`](/ext/e/pg_statvfs) | [`pg_statvfs`](https://github.com/michaelpq/pg_plugins/tree/ae57c1f3df697fb942f4576f873a655187193ace/pg_statvfs) | `1.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_stat_tcpinfo`](/ext/e/pg_stat_tcpinfo) | [`pg_stat_tcpinfo`](https://github.com/jakubwartakEDB/pg_stat_tcpinfo) | `1.1` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`pg_sqlog`](https://github.com/kouber/pg_sqlog) | `1.7` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`file_fdw`](/ext/e/file_fdw) |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | [`bgw_replstatus`](https://github.com/mhagander/bgw_replstatus) | `1.0.8` | <span style="white-space:nowrap"><code>--sL---</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgmeminfo`](/ext/e/pgmeminfo) | [`pgmeminfo`](https://github.com/okbob/pgmeminfo) | `1.0.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -597,6 +599,7 @@ icon: fas fa-puzzle-piece
 | [`block_copy_command`](/ext/e/block_copy_command) | [`block_copy_command`](https://github.com/rustwizard/block_copy_command) | `0.1.5` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_policy`](/ext/e/pg_policy) | [`pg_policy`](https://github.com/rahiakil/pg-policy) | `0.1.0` | <span style="white-space:nowrap"><code>----d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "14,15,16,17,18" >}} | - |
 | [`pg_kpart`](/ext/e/pg_kpart) | [`pg_kpart`](https://github.com/hexacluster/pg_kpart) | `1.0` | <span style="white-space:nowrap"><code>--sL--r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_agent_gate`](/ext/e/pg_agent_gate) | [`pg_agent_gate`](https://github.com/Manuelreyesbravo/pg_agent_gate) | `0.3.0` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18" >}} | - |
 | [`pg_tde`](/ext/e/pg_tde) | [`pg_tde`](https://github.com/percona/pg_tde) | `2.2.2` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18" >}} | - |
 | [`pg_vault_tde`](/ext/e/pg_vault_tde) | [`pg_vault_tde`](https://github.com/labmiriade/pg_vault_tde) | `1.7.2` | <span style="white-space:nowrap"><code>-bsLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "17,18" >}} | - |
 {.ext-table}
@@ -629,6 +632,7 @@ icon: fas fa-puzzle-piece
 | [`hdfs_fdw`](/ext/e/hdfs_fdw) | [`hdfs_fdw`](https://github.com/EnterpriseDB/hdfs_fdw) | `2.0.5` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`firebird_fdw`](/ext/e/firebird_fdw) | [`firebird_fdw`](https://github.com/ibarwick/firebird_fdw) | `1.4.2` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`rdf_fdw`](/ext/e/rdf_fdw) | [`rdf_fdw`](https://github.com/jimjonesbr/rdf_fdw) | `3.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`oai_fdw`](/ext/e/oai_fdw) | [`oai_fdw`](https://github.com/jimjonesbr/oai_fdw) | `1.16` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "14,15,16,17,18" >}} | - |
 | [`aws_s3`](/ext/e/aws_s3) | [`aws_s3`](https://github.com/chimpler/postgres-aws-s3) | `0.0.1` | <span style="white-space:nowrap"><code>----d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`log_fdw`](/ext/e/log_fdw) | [`log_fdw`](https://github.com/aws/postgresql-logfdw) | `1.5` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 {.ext-table}

@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **133** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **134** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -119,6 +119,7 @@ weight: 10
 | [`noset`](/ext/e/noset) | `noset` | 阻止非超级用户使用SET/RESET设置变量 |
 | [`block_copy_command`](/ext/e/block_copy_command) | `block_copy_command` | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`pg_kpart`](/ext/e/pg_kpart) | `pg_kpart` | 拒绝未使用分区键的全分区扫描查询 |
+| [`pg_agent_gate`](/ext/e/pg_agent_gate) | `pg_agent_gate` | 为 Agent 数据库角色提供 SQL 提议、校验、受控执行与人工审批。 |
 | [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona 透明加密存储引擎 |
 | [`pg_vault_tde`](/ext/e/pg_vault_tde) | `pg_vault_tde` | 通过自定义表与索引访问方法为 PostgreSQL 提供透明数据加密 |
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |

@@ -8,7 +8,7 @@ icon: fas fa-shield-halved
 
 ## 扩展列表
 
-共有 **41** 个扩展，位于 **41** 个扩展包中。
+共有 **42** 个扩展，位于 **42** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -47,6 +47,7 @@ icon: fas fa-shield-halved
 | [`block_copy_command`](/ext/e/block_copy_command) | [`block_copy_command`](https://github.com/rustwizard/block_copy_command) | `0.1.5` | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`pg_policy`](/ext/e/pg_policy) | [`pg_policy`](https://github.com/rahiakil/pg-policy) | `0.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 面向 AI 智能体的 PostgreSQL 策略语言，提供护栏、软性引导与会话级控制 |
 | [`pg_kpart`](/ext/e/pg_kpart) | [`pg_kpart`](https://github.com/hexacluster/pg_kpart) | `1.0` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 拒绝未使用分区键的全分区扫描查询 |
+| [`pg_agent_gate`](/ext/e/pg_agent_gate) | [`pg_agent_gate`](https://github.com/Manuelreyesbravo/pg_agent_gate) | `0.3.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 Agent 数据库角色提供 SQL 提议、校验、受控执行与人工审批。 |
 | [`pg_tde`](/ext/e/pg_tde) | [`pg_tde`](https://github.com/percona/pg_tde) | `2.2.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Percona 透明加密存储引擎 |
 | [`pg_vault_tde`](/ext/e/pg_vault_tde) | [`pg_vault_tde`](https://github.com/labmiriade/pg_vault_tde) | `1.7.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通过自定义表与索引访问方法为 PostgreSQL 提供透明数据加密 |
 | [`sepgsql`](/ext/e/sepgsql) | [`sepgsql`](https://www.postgresql.org/docs/current/sepgsql.html) | `-` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 基于SELinux标签的强制访问控制 |
@@ -718,6 +719,25 @@ icon: fas fa-shield-halved
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_agent_gate {#pg_agent_gate}
+
+[**`pg_agent_gate`**](/ext/e/pg_agent_gate) - `0.3.0` : 为 Agent 数据库角色提供 SQL 提议、校验、受控执行与人工审批。
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_agent_gate`](/ext/e/pg_agent_gate) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **扩展包** | [`pg_agent_gate`](https://github.com/Manuelreyesbravo/pg_agent_gate) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **RPM** | `pg_agent_gate_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **DEB** | `postgresql-$v-pg-agent-gate` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
