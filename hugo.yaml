@@ -675,9 +675,9 @@ params:
   stable_version: v4.5.0    # GitHub 最新公开稳定版，2026-10-13 核验；安装与 Git tag 示例使用此参数
   stable_version_short: v4.5
   pg_version: '18.6'        # PostgreSQL 最新小版本，正文用 {{< param pg_version >}}
-  pig_version: 1.10.2        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
+  pig_version: 1.10.3        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
   pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
-  pig_catalog_count: 616    # PIG v1.10.2 发布版内嵌目录记录总数
+  pig_catalog_count: 620    # PIG v1.10.3 发布版内嵌目录记录总数
   pgext_count: 620          # 2026-10-28 PGEXT 已打包扩展数，与 data/pgext/extension.yaml 一致
   pg_kernel_count: 12      # 首页列出的内核与方案，不含原生 PG，包含 Supabase、Citus、DocumentDB
   # 2026-10-28 核对 pgsty/pigsty e7a77472：files/grafana/*.json（递归）、files/victoria/rules/*.yml。
