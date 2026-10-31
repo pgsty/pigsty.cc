@@ -38,7 +38,7 @@ weight: 2780
 {.ext-table .ext-table--rel}
 
 
-> PG14-18 release lines: 1.4.5/1.5.4/1.6.3/1.7.2/1.8.1; PG18 RPM/DEB baseline 1.8.1, with older RPM builds on some platforms; 1.9.0 is PG19-only.
+> PGDG PG14-18: 1.4.5/1.5.4/1.6.3/1.7.2/1.8.1; EL8 coverage refreshed. 1.9.0 is PG19-only.
 
 
 ## 版本
@@ -53,8 +53,8 @@ weight: 2780
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
-| el8.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
+| el8.x86_64 | AVAIL PGDG 1.8.1 2 | AVAIL PGDG 1.7.2 3 | AVAIL PGDG 1.6.3 4 | AVAIL PGDG 1.5.4 4 | AVAIL PGDG 1.4.5 4 |
+| el8.aarch64 | AVAIL PGDG 1.8.1 2 | AVAIL PGDG 1.7.2 3 | AVAIL PGDG 1.6.3 4 | AVAIL PGDG 1.5.4 4 | AVAIL PGDG 1.4.5 4 |
 | el9.x86_64 | AVAIL PGDG 1.8.1 3 | AVAIL PGDG 1.7.2 4 | AVAIL PGDG 1.6.3 5 | AVAIL PGDG 1.5.4 5 | AVAIL PGDG 1.4.5 5 |
 | el9.aarch64 | AVAIL PGDG 1.8.1 3 | AVAIL PGDG 1.7.2 4 | AVAIL PGDG 1.6.3 5 | AVAIL PGDG 1.5.4 5 | AVAIL PGDG 1.4.5 5 |
 | el10.x86_64 | AVAIL PGDG 1.8.1 3 | AVAIL PGDG 1.7.2 4 | AVAIL PGDG 1.6.3 4 | AVAIL PGDG 1.5.4 4 | AVAIL PGDG 1.4.5 4 |
@@ -69,7 +69,9 @@ weight: 2780
 | u24.aarch64 | AVAIL PGDG 1.8.1 2 | AVAIL PGDG 1.7.2 2 | AVAIL PGDG 1.6.3 2 | AVAIL PGDG 1.5.4 2 | AVAIL PGDG 1.4.5 2 |
 | u26.x86_64 | AVAIL PGDG 1.8.1 2 | AVAIL PGDG 1.7.2 2 | AVAIL PGDG 1.6.3 2 | AVAIL PGDG 1.5.4 2 | AVAIL PGDG 1.4.5 2 |
 | u26.aarch64 | AVAIL PGDG 1.8.1 2 | AVAIL PGDG 1.7.2 2 | AVAIL PGDG 1.6.3 2 | AVAIL PGDG 1.5.4 2 | AVAIL PGDG 1.4.5 2 |
+@ el8.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.8.1 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_hint_plan_18-1.8.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.8.1 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_hint_plan_18-1.8.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.8.1 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_hint_plan_18-1.8.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.8.0 54.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.x86_64.rpm
@@ -103,8 +105,10 @@ weight: 2780
 @ u26.x86_64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_amd64.deb pgdg 1.8.0 130.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.1-1.pgdg26.04+1_arm64.deb pgdg 1.8.1 124.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_arm64.deb pgdg 1.8.0 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.7.2 55.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel8.x86_64.rpm pgdg 1.7.1 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 51.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.7.2 52.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm pgdg 1.7.1 50.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.7.2 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_hint_plan_17-1.7.2-1PGDG.rhel9.8.x86_64.rpm
@@ -143,9 +147,11 @@ weight: 2780
 @ u26.x86_64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_amd64.deb pgdg 1.7.1 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.2-1.pgdg26.04+1_arm64.deb pgdg 1.7.2 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_arm64.deb pgdg 1.7.1 121.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6.3 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel8.x86_64.rpm pgdg 1.6.2 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel8.x86_64.rpm pgdg 1.6.1 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6.3 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel8.aarch64.rpm pgdg 1.6.2 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel8.aarch64.rpm pgdg 1.6.1 41.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel8.aarch64.rpm pgdg 1.6.0 40.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.0-1PGDG.rhel8.aarch64.rpm
@@ -187,9 +193,11 @@ weight: 2780
 @ u26.x86_64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_amd64.deb pgdg 1.6.2 103.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.3-1.pgdg26.04+1_arm64.deb pgdg 1.6.3 100.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_arm64.deb pgdg 1.6.2 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.4 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.4 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 43.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel8.aarch64.rpm pgdg 1.5.1 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.1-1PGDG.rhel8.aarch64.rpm
@@ -231,9 +239,11 @@ weight: 2780
 @ u26.x86_64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.4-1.pgdg26.04+1_arm64.deb pgdg 1.5.4 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.4-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4.4 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel8.x86_64.rpm pgdg 1.4.3 43.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel8.x86_64.rpm pgdg 1.4.2 42.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4.4 42.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel8.aarch64.rpm pgdg 1.4.3 41.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel8.aarch64.rpm pgdg 1.4.2 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.2-1PGDG.rhel8.aarch64.rpm
@@ -334,12 +344,13 @@ CREATE EXTENSION pg_hint_plan;
 
 来源：
 
-- [README.md](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/README.md)
-- [pg_hint_plan.control](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/pg_hint_plan.control)
-- [docs/hint_list.md](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/docs/hint_list.md)
-- [docs/installation.md](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/docs/installation.md)
-- [docs/requirements.md](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/docs/requirements.md)
-- [docs/functional_limitations.md](https://github.com/ossc-db/pg_hint_plan/blob/4d3e9164dc2dc1b10dfe0c5e7a3cfe7983a8688d/docs/functional_limitations.md)
+- [PG18 1.8.1 发布](https://github.com/ossc-db/pg_hint_plan/releases/tag/REL18_1_8_1)
+- [PG17 1.7.2 发布](https://github.com/ossc-db/pg_hint_plan/releases/tag/REL17_1_7_2)
+- [PG16 1.6.3 发布](https://github.com/ossc-db/pg_hint_plan/releases/tag/REL16_1_6_3)
+- [PG15 1.5.4 发布](https://github.com/ossc-db/pg_hint_plan/releases/tag/REL15_1_5_4)
+- [PG14 1.4.5 发布](https://github.com/ossc-db/pg_hint_plan/releases/tag/REL14_1_4_5)
+- [提示列表](https://github.com/ossc-db/pg_hint_plan/blob/master/docs/hint_list.md)
+- [安装与要求](https://github.com/ossc-db/pg_hint_plan/blob/master/docs/installation.md)
 
 
 `pg_hint_plan` 通过 SQL 注释提示覆盖 PostgreSQL 查询规划器的决策，允许你强制指定扫描方法、连接策略和连接顺序。

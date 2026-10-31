@@ -25,7 +25,7 @@ weight: 6410
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgsentinel`**](/ext/e/pgsentinel) | `1.5.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgsentinel`**](/ext/e/pgsentinel) | `1.5.2` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,16 +38,16 @@ weight: 6410
 {.ext-table .ext-table--rel}
 
 
-> Preload with pg_stat_statements; restart; SQL update revokes PUBLIC EXECUTE on get_parsedinfo(int).
+> PGDG D/U 1.5.2; EL 1.5.1. Preload with pg_stat_statements; 1.5.2 hardens search_path and ProcEntryArray.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel` | - |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsentinel` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsentinel` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,16 @@ weight: 6410
 | el9.aarch64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
 | el10.x86_64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
 | el10.aarch64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
-| d12.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| d12.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| d13.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| d13.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u22.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u22.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u24.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u24.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u26.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
-| u26.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 3 |
+| d12.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| d12.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| d13.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| d13.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u22.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u22.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u24.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u24.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u26.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| u26.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -99,36 +99,36 @@ weight: 6410
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.4.0 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.4.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.3.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel10.0.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.3.1-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb
-@ d12.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb pgdg 1.5.1 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb pgdg 1.5.0 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb
-@ d12.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb pgdg 1.5.0 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb
-@ d13.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb
-@ d13.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 50.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb pgdg 1.5.1 46.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb pgdg 1.5.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb
-@ u22.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb pgdg 1.5.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb pgdg 1.5.1 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb
-@ u22.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 49.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb pgdg 1.5.1 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb
-@ u24.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb
-@ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb pgdg 1.5.1 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb
-@ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
-@ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -165,36 +165,36 @@ weight: 6410
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.3.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel10.0.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.3.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel10.aarch64.rpm pgdg 1.2.0 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.2.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb
-@ d12.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb pgdg 1.5.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb
-@ d12.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb pgdg 1.5.1 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb pgdg 1.5.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb
-@ d13.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb pgdg 1.5.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb
-@ d13.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 58.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb pgdg 1.5.1 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb pgdg 1.5.0 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb
-@ u22.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb pgdg 1.5.0 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 57.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb pgdg 1.5.1 53.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb pgdg 1.5.0 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb
-@ u22.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb pgdg 1.5.0 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb
-@ u24.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb
-@ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb pgdg 1.5.1 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb
-@ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
-@ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -231,36 +231,36 @@ weight: 6410
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.3.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel10.0.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.3.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel10.aarch64.rpm pgdg 1.2.0 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.2.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb
-@ d12.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb pgdg 1.5.1 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb
-@ d12.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb pgdg 1.5.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb
-@ d13.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb
-@ d13.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 58.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb pgdg 1.5.1 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb pgdg 1.5.0 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb
-@ u22.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb pgdg 1.5.0 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 57.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb pgdg 1.5.1 53.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb pgdg 1.5.0 52.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb
-@ u22.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb pgdg 1.5.0 52.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 49.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb pgdg 1.5.1 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb
-@ u24.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb
-@ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb pgdg 1.5.0 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb pgdg 1.5.1 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb
-@ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb pgdg 1.5.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
-@ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -297,36 +297,36 @@ weight: 6410
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.3.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel10.0.aarch64.rpm pgdg 1.3.1 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.3.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel10.aarch64.rpm pgdg 1.2.0 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.2.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb pgdg 1.5.1 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb pgdg 1.5.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb
-@ d12.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb pgdg 1.5.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb pgdg 1.5.1 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb pgdg 1.5.0 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb
-@ d12.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb pgdg 1.5.0 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb pgdg 1.5.1 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb pgdg 1.5.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb
-@ d13.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb pgdg 1.5.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb pgdg 1.5.1 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb pgdg 1.5.0 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb
-@ d13.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb pgdg 1.5.0 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 58.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb pgdg 1.5.1 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb pgdg 1.5.0 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb
-@ u22.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb pgdg 1.5.0 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb pgdg 1.5.1 53.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb pgdg 1.5.0 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb
-@ u22.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb pgdg 1.5.0 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb pgdg 1.5.1 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb pgdg 1.5.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb
-@ u24.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb pgdg 1.5.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb pgdg 1.5.1 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb pgdg 1.5.0 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb
-@ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb pgdg 1.5.0 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb pgdg 1.5.1 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb
-@ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb pgdg 1.5.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
-@ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb pgdg 1.5.0 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -363,36 +363,36 @@ weight: 6410
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.0.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel10.aarch64.rpm pgdg 1.2.0 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.2.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb pgdg 1.5.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg12+3_amd64.deb
-@ d12.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg12+2_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb pgdg 1.5.1 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb pgdg 1.5.0 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg12+3_arm64.deb
-@ d12.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb pgdg 1.5.0 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg12+2_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb pgdg 1.5.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg13+3_amd64.deb
-@ d13.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg13+2_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb pgdg 1.5.1 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb pgdg 1.5.0 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg13+3_arm64.deb
-@ d13.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb pgdg 1.5.0 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg13+2_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 56.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb pgdg 1.5.1 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb pgdg 1.5.0 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+3_amd64.deb
-@ u22.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb pgdg 1.5.0 52.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb pgdg 1.5.1 51.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb pgdg 1.5.0 50.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+3_arm64.deb
-@ u22.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb pgdg 1.5.0 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb pgdg 1.5.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+3_amd64.deb
-@ u24.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb pgdg 1.5.1 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb pgdg 1.5.0 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+3_arm64.deb
-@ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb pgdg 1.5.0 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb pgdg 1.5.1 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb pgdg 1.5.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+3_amd64.deb
-@ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb pgdg 1.5.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
-@ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb pgdg 1.5.0 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.5.0-1.pgdg26.04+2_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -460,12 +460,12 @@ CREATE EXTENSION pgsentinel;
 
 来源：
 
-- [pgsentinel 1.5.1 README](https://github.com/pgsentinel/pgsentinel/blob/v1.5.1/README.md)
-- [pgsentinel 1.5.1 发行版](https://github.com/pgsentinel/pgsentinel/releases/tag/v1.5.1)
-- [1.5.1 upgrade SQL](https://github.com/pgsentinel/pgsentinel/blob/v1.5.1/src/pgsentinel--1.5.0--1.5.1.sql)
-- [pgsentinel 控制文件](https://github.com/pgsentinel/pgsentinel/blob/v1.5.1/src/pgsentinel.control)
+- [v1.5.2 README](https://github.com/pgsentinel/pgsentinel/blob/v1.5.2/README.md)
+- [v1.5.2 发布](https://github.com/pgsentinel/pgsentinel/releases/tag/v1.5.2)
+- [1.5.1 至 1.5.2 SQL](https://github.com/pgsentinel/pgsentinel/blob/v1.5.2/src/pgsentinel--1.5.1--1.5.2.sql)
+- [v1.5.2 控制文件](https://github.com/pgsentinel/pgsentinel/blob/v1.5.2/src/pgsentinel.control)
 
-`pgsentinel` 通过在固定时间间隔内采样 `pg_stat_activity` 并将活动与 `pg_stat_statements` 查询统计信息关联来记录活跃会话历史。它最近的样本存储在由后台工作进程管理的共享内存环形缓冲区中。
+`pgsentinel` 1.5.2 通过在固定时间间隔内采样 `pg_stat_activity` 并将活动与 `pg_stat_statements` 查询统计信息关联来记录活跃会话历史。它最近的样本存储在由后台工作进程管理的共享内存环形缓冲区中。1.5.2 版固定了工作进程的搜索路径，为查询补充模式限定，并限制 `ProcEntryArray` 的大小。
 
 ```ini
 shared_preload_libraries = 'pg_stat_statements,pgsentinel'
@@ -547,10 +547,10 @@ ORDER BY 3 DESC;
 
 1.5.0 将 `queryid` 与 `nested_queryid` 分开：PostgreSQL 16 及以上的前者来自活动查询标识，后者来自内层解析语句；更早版本中二者一致。升级会重建历史视图，须先检查依赖视图及授权。
 
-1.5.1 撤销 `get_parsedinfo(int)` 的 PUBLIC 执行权限，因为它能返回其他后端的查询文本及字面量。安装新文件后必须应用 SQL 升级，并仅向确有需要的角色授权：
+1.5.2 保留 1.5.1 的权限加固，并进一步收紧工作进程的搜索路径处理、查询模式限定和 `ProcEntryArray` 大小。安装新文件后必须应用 SQL 升级，并仅向确有需要的角色授权：
 
 ```sql
-ALTER EXTENSION pgsentinel UPDATE TO '1.5.1';
+ALTER EXTENSION pgsentinel UPDATE TO '1.5.2';
 ```
 
 历史记录位于有限的共享内存环形缓冲区中，需要长期保留时应另行导出。采样查询文本可能包含敏感值，还应检查历史视图的访问权限。上游 CI 覆盖 PostgreSQL 10–19。

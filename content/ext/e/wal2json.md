@@ -33,7 +33,7 @@ weight: 9630
 {.ext-table .ext-table--rel}
 
 
-> Upstream/current RPM matrix 2.7; DEB matrix 2.6. Headless logical decoding plugin, no CREATE EXTENSION or preload. Requires wal2json in output_plugin_libraries on PostgreSQL 18.6/17.11/16.15/15.19/14.24 and later minors.
+> Headless logical-decoding plugin; no CREATE EXTENSION/preload. PGDG 2.7 on D/U/most EL; EL10 aarch64 remains 2.6; use output_plugin_libraries.
 
 
 ## 版本
@@ -42,7 +42,7 @@ weight: 9630
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.7` | {{< pgvers "18,17,16,15,14" >}} | `wal2json` | - |
 | [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.7` | {{< pgvers "18,17,16,15,14" >}} | `wal2json_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-wal2json` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-wal2json` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,16 +54,16 @@ weight: 9630
 | el9.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 4 | AVAIL PGDG 2.7 5 | AVAIL PGDG 2.7 5 |
 | el10.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
 | el10.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| d12.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| d12.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| d13.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| d13.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u22.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u22.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u24.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u24.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u26.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| u26.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
+| d12.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| d12.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| d13.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| d13.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u22.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u22.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u24.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u24.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u26.x86_64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
+| u26.aarch64 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 | AVAIL PGDG 2.7 3 |
 @ el8.x86_64 18 wal2json_18 wal2json_18-2.7-1PGDG.rhel8.10.x86_64.rpm pgdg 2.7 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/wal2json_18-2.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm pgdg 2.6 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 wal2json_18 wal2json_18-2.7-1PGDG.rhel8.10.aarch64.rpm pgdg 2.7 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/wal2json_18-2.7-1PGDG.rhel8.10.aarch64.rpm
@@ -79,24 +79,34 @@ weight: 9630
 @ el10.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/wal2json_18-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 wal2json_18 wal2json_18-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/wal2json_18-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/wal2json_18-2.6-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg12+1_amd64.deb pgdg 2.7 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg12+1_amd64.deb pgdg 2.6 56.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg12+1_arm64.deb pgdg 2.7 56.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg12+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg13+1_amd64.deb pgdg 2.7 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg13+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg13+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg13+1_arm64.deb pgdg 2.7 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg13+1_arm64.deb pgdg 2.6 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg13+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg22.04+1_amd64.deb pgdg 2.7 60.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg22.04+1_amd64.deb pgdg 2.6 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg22.04+1_amd64.deb pgdg 2.6 57.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg22.04+1_arm64.deb pgdg 2.7 57.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg22.04+1_arm64.deb pgdg 2.6 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 54.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg24.04+1_amd64.deb pgdg 2.7 59.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg24.04+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg24.04+1_arm64.deb pgdg 2.7 56.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg24.04+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg26.04+1_amd64.deb pgdg 2.7 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg26.04+1_amd64.deb pgdg 2.6 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.7-1.pgdg26.04+1_arm64.deb pgdg 2.7 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-4.pgdg26.04+1_arm64.deb pgdg 2.6 53.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-4.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 wal2json_17 wal2json_17-2.7-1PGDG.rhel8.10.x86_64.rpm pgdg 2.7 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/wal2json_17-2.7-1PGDG.rhel8.10.x86_64.rpm
@@ -114,24 +124,34 @@ weight: 9630
 @ el10.x86_64 17 wal2json_17 wal2json_17-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/wal2json_17-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 wal2json_17 wal2json_17-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/wal2json_17-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 wal2json_17 wal2json_17-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/wal2json_17-2.6-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg12+1_amd64.deb pgdg 2.7 58.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg12+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg12+1_arm64.deb pgdg 2.7 56.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg12+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg13+1_amd64.deb pgdg 2.7 58.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg13+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg13+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg13+1_arm64.deb pgdg 2.7 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg13+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg13+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg22.04+1_amd64.deb pgdg 2.7 67.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg22.04+1_amd64.deb pgdg 2.6 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg22.04+1_amd64.deb pgdg 2.6 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg22.04+1_arm64.deb pgdg 2.7 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg22.04+1_arm64.deb pgdg 2.6 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg24.04+1_amd64.deb pgdg 2.7 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg24.04+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg24.04+1_arm64.deb pgdg 2.7 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg24.04+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg26.04+1_amd64.deb pgdg 2.7 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg26.04+1_amd64.deb pgdg 2.6 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.7-1.pgdg26.04+1_arm64.deb pgdg 2.7 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-4.pgdg26.04+1_arm64.deb pgdg 2.6 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-4.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 wal2json_16 wal2json_16-2.7-1PGDG.rhel8.10.x86_64.rpm pgdg 2.7 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/wal2json_16-2.7-1PGDG.rhel8.10.x86_64.rpm
@@ -152,24 +172,34 @@ weight: 9630
 @ el10.x86_64 16 wal2json_16 wal2json_16-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/wal2json_16-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 wal2json_16 wal2json_16-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2json_16-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 wal2json_16 wal2json_16-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2json_16-2.6-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg12+1_amd64.deb pgdg 2.7 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg12+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg12+1_arm64.deb pgdg 2.7 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg12+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg13+1_amd64.deb pgdg 2.7 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg13+1_amd64.deb pgdg 2.6 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg13+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg13+1_arm64.deb pgdg 2.7 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg13+1_arm64.deb pgdg 2.6 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg13+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg22.04+1_amd64.deb pgdg 2.7 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg22.04+1_amd64.deb pgdg 2.6 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg22.04+1_amd64.deb pgdg 2.6 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg22.04+1_arm64.deb pgdg 2.7 64.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg22.04+1_arm64.deb pgdg 2.6 61.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg24.04+1_amd64.deb pgdg 2.7 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg24.04+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg24.04+1_arm64.deb pgdg 2.7 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg24.04+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg26.04+1_amd64.deb pgdg 2.7 58.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg26.04+1_amd64.deb pgdg 2.6 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.7-1.pgdg26.04+1_arm64.deb pgdg 2.7 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-4.pgdg26.04+1_arm64.deb pgdg 2.6 53.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-4.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 wal2json_15 wal2json_15-2.7-1PGDG.rhel8.10.x86_64.rpm pgdg 2.7 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/wal2json_15-2.7-1PGDG.rhel8.10.x86_64.rpm
@@ -192,24 +222,34 @@ weight: 9630
 @ el10.x86_64 15 wal2json_15 wal2json_15-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/wal2json_15-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 wal2json_15 wal2json_15-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2json_15-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 wal2json_15 wal2json_15-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2json_15-2.6-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg12+1_amd64.deb pgdg 2.7 59.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg12+1_amd64.deb pgdg 2.6 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg12+1_arm64.deb pgdg 2.7 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg12+1_arm64.deb pgdg 2.6 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg13+1_amd64.deb pgdg 2.7 59.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg13+1_amd64.deb pgdg 2.6 56.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg13+1_amd64.deb pgdg 2.6 56.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg13+1_arm64.deb pgdg 2.7 56.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg13+1_arm64.deb pgdg 2.6 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg13+1_arm64.deb pgdg 2.6 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg22.04+1_amd64.deb pgdg 2.7 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg22.04+1_amd64.deb pgdg 2.6 64.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg22.04+1_amd64.deb pgdg 2.6 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg22.04+1_arm64.deb pgdg 2.7 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg22.04+1_arm64.deb pgdg 2.6 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg24.04+1_amd64.deb pgdg 2.7 59.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg24.04+1_amd64.deb pgdg 2.6 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg24.04+1_arm64.deb pgdg 2.7 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg24.04+1_arm64.deb pgdg 2.6 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg26.04+1_amd64.deb pgdg 2.7 58.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg26.04+1_amd64.deb pgdg 2.6 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.7-1.pgdg26.04+1_arm64.deb pgdg 2.7 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-4.pgdg26.04+1_arm64.deb pgdg 2.6 53.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-4.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 wal2json_14 wal2json_14-2.7-1PGDG.rhel8.10.x86_64.rpm pgdg 2.7 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/wal2json_14-2.7-1PGDG.rhel8.10.x86_64.rpm
@@ -233,24 +273,34 @@ weight: 9630
 @ el10.x86_64 14 wal2json_14 wal2json_14-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2json_14-2.6-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 wal2json_14 wal2json_14-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2json_14-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 wal2json_14 wal2json_14-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2json_14-2.6-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg12+1_amd64.deb pgdg 2.7 59.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg12+1_amd64.deb pgdg 2.6 56.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg12+1_arm64.deb pgdg 2.7 56.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg12+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg13+1_amd64.deb pgdg 2.7 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg13+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg13+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg13+1_arm64.deb pgdg 2.7 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg13+1_arm64.deb pgdg 2.6 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg13+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg22.04+1_amd64.deb pgdg 2.7 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg22.04+1_amd64.deb pgdg 2.6 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg22.04+1_amd64.deb pgdg 2.6 64.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg22.04+1_arm64.deb pgdg 2.7 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg22.04+1_arm64.deb pgdg 2.6 61.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg24.04+1_amd64.deb pgdg 2.7 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg24.04+1_amd64.deb pgdg 2.6 56.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg24.04+1_arm64.deb pgdg 2.7 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg24.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg26.04+1_amd64.deb pgdg 2.7 58.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg26.04+1_amd64.deb pgdg 2.6 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.7-1.pgdg26.04+1_arm64.deb pgdg 2.7 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-4.pgdg26.04+1_arm64.deb pgdg 2.6 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-4.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
@@ -296,14 +346,16 @@ apt install -y postgresql-14-wal2json   # PG 14
 
 > 此扩展不需要执行 `CREATE EXTENSION` 语句
 
-
-
-
 ## 用法
 
-> [wal2json: JSON 格式的变更数据捕获](https://github.com/eulerto/wal2json)
+来源：
 
-一个逻辑解码输出插件，从 PostgreSQL WAL 生成 JSON 格式的变更数据捕获。
+- [wal2json 2.7 发布](https://github.com/eulerto/wal2json/releases/tag/wal2json_2_7)
+- [官方 README](https://github.com/eulerto/wal2json)
+
+`wal2json` 2.7 是一个逻辑解码输出插件，从 PostgreSQL WAL 生成 JSON 格式的变更数据捕获。它支持当前 PostgreSQL 18 和 19 开发分支，并作为输出插件加载，因此不使用 `CREATE EXTENSION` 或 `shared_preload_libraries`。
+
+对于受 CVE-2026-6471 影响的 PostgreSQL 18.6、17.11、16.15、15.19、14.24 及后续小版本，应按上游发布说明将 `wal2json` 加入 `output_plugin_libraries`。
 
 ### 配置
 

@@ -34,7 +34,7 @@ weight: 6930
 {.ext-table .ext-table--rel}
 
 
-> SQL/control baseline 1.6 in PostgreSQL 18; older PostgreSQL majors may ship older extension versions.
+> PG18 SQL/control baseline 1.6; older PostgreSQL majors may differ.
 
 
 ## 版本

@@ -39,7 +39,7 @@ weight: 4301
 {.ext-table .ext-table--rel}
 
 
-> Bundled test fixture; control default_version is forever and it does not require hstore. Catalog version follows pg_readme 0.7.1; principal suppliers remain PGDG RPM and PIGSTY DEB.
+> Test fixture; control default_version=forever; no hstore dependency. Catalog 0.7.1; PGDG RPM/PIGSTY DEB.
 
 
 ## 版本

@@ -17,7 +17,7 @@ icon: fas fa-clock
 | [`timeseries`](/ext/e/timeseries) | [`pg_timeseries`](https://github.com/ChuckHend/pg_timeseries) | `0.2.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 时序数据API封装 |
 | [`periods`](/ext/e/periods) | [`periods`](https://github.com/xocolatl/periods) | `1.2.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为 PERIODs 和 SYSTEM VERSIONING 提供标准 SQL 功能 |
 | [`temporal_tables`](/ext/e/temporal_tables) | [`temporal_tables`](https://pgxn.org/dist/temporal_tables/) | `1.2.2` | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 时态表功能支持 |
-| [`emaj`](/ext/e/emaj) | [`emaj`](https://github.com/dalibo/emaj) | `5.0.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 让数据库的子集具有细粒度日志和时间旅行功能 |
+| [`emaj`](/ext/e/emaj) | [`emaj`](https://github.com/dalibo/emaj) | `5.0.1` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 让数据库的子集具有细粒度日志和时间旅行功能 |
 | [`table_version`](/ext/e/table_version) | [`table_version`](https://github.com/linz/postgresql-tableversion) | `1.11.1` | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 版本控制表扩展 |
 | [`pg_cron`](/ext/e/pg_cron) | [`pg_cron`](https://github.com/citusdata/pg_cron) | `1.6.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 定时任务调度器 |
 | [`pg_task`](/ext/e/pg_task) | [`pg_task`](https://github.com/RekGRpth/pg_task) | `3.0.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在特定时间点在后台执行SQL命令 |
@@ -130,7 +130,7 @@ icon: fas fa-clock
 
 ## emaj {#emaj}
 
-[**`emaj`**](/ext/e/emaj) - `5.0.0` : 让数据库的子集具有细粒度日志和时间旅行功能
+[**`emaj`**](/ext/e/emaj) - `5.0.1` : 让数据库的子集具有细粒度日志和时间旅行功能
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

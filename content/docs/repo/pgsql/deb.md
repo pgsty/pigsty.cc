@@ -6,6 +6,24 @@ icon: fa-brands fa-ubuntu
 categories: [参考]
 ---
 
+## 2026-10-31
+
+| 名称                    | 旧版本 | 新版本 | 说明                                         |
+|:------------------------|:-------|:-------|:---------------------------------------------|
+| emaj                    | 5.0.0  | 5.0.1  | PG14-18；仅 RPM；未构建 DEB；DEB 保持 5.0.0  |
+| groonga                 | 16.1.4 | 16.1.5 | 仅 RPM；未构建 DEB；DEB 保持原有版本         |
+| groonga-tokenizer-mecab | 16.1.4 | 16.1.5 | 仅 RPM；未构建 DEB；DEB 保持原有版本         |
+| pg_anon                 | 3.2.3  | 3.3.2  | PG14-18；仅 RPM；未构建 DEB；DEB 保持 3.2.3  |
+| pg_fts                  | 1.14.3 | 1.15.1 | PG17-18；仅 RPM；未构建 DEB；DEB 保持 1.14.3 |
+| pg_improv               | 0.12.1 | 0.12.2 | PG15-18；仅 RPM；未构建 DEB；DEB 保持 0.12.1 |
+| pg_integrity_checksums  | 2.0.0  | 2.0.2  | PG14-18；仅 RPM；未构建 DEB；DEB 保持 2.0.0  |
+| pg_search               | 0.26.3 | 0.26.4 | PG15-18；仅 RPM；未构建 DEB；DEB 保持 0.26.3 |
+| pgmnemo                 | 0.20.0 | 0.21.0 | PG17-18；仅 RPM；未构建 DEB；DEB 保持 0.20.0 |
+| pgroonga                | 4.1.0  | 4.1.0  | 仅 RPM 重建；未构建 DEB；DEB 保持 4.1.0      |
+{.wide .expand}
+
+
+
 ## 2026-10-29
 
 | 名称                   | 旧版本 | 新版本 | 备注                              |

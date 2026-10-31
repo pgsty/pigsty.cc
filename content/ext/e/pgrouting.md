@@ -33,6 +33,9 @@ weight: 1510
 {.ext-table .ext-table--rel}
 
 
+> PGDG 4.0.2; this round adds D12/D13/U22/U24/U26 coverage.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -51,16 +54,16 @@ weight: 1510
 | el9.aarch64 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 10 | AVAIL PGDG 4.0.2 11 | AVAIL PGDG 4.0.2 16 | AVAIL PGDG 4.0.2 18 |
 | el10.x86_64 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 |
 | el10.aarch64 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 | AVAIL PGDG 4.0.2 5 |
-| d12.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| d12.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| d13.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| d13.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u22.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u22.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u24.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u24.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u26.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| u26.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
+| d12.x86_64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| d12.aarch64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| d13.x86_64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| d13.aarch64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u22.x86_64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u22.aarch64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u24.x86_64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u24.aarch64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u26.x86_64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
+| u26.aarch64 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 | AVAIL PGDG 4.0.2 2 |
 @ el8.x86_64 18 pgrouting_18 pgrouting_18-4.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.2 905.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgrouting_18-4.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgrouting_18-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgrouting_18-3.8.0-1PGDG.rhel8.x86_64.rpm
@@ -87,15 +90,25 @@ weight: 1510
 @ el10.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-4.0.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-4.0.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-3.8.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg12+1_amd64.deb pgdg 4.0.2 814.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg12+1_arm64.deb pgdg 4.0.2 695.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg13+1_amd64.deb pgdg 4.0.2 902.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg13+1_arm64.deb pgdg 4.0.2 773.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg13+1_arm64.deb pgdg 4.0.1 773.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb pgdg 4.0.2 614.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb pgdg 4.0.1 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb pgdg 4.0.2 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb pgdg 4.0.2 596.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb pgdg 4.0.2 518.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb pgdg 4.0.2 640.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb pgdg 4.0.2 566.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgrouting_17 pgrouting_17-4.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.2 905.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgrouting_17-4.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgrouting_17-4.0.1-1PGDG.rhel8.10.x86_64.rpm
@@ -143,15 +156,25 @@ weight: 1510
 @ el10.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-4.0.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-4.0.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 719.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-3.8.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg12+1_amd64.deb pgdg 4.0.2 813.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg12+1_arm64.deb pgdg 4.0.2 696.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg13+1_amd64.deb pgdg 4.0.2 902.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg13+1_arm64.deb pgdg 4.0.2 773.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg13+1_arm64.deb pgdg 4.0.1 772.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb pgdg 4.0.2 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb pgdg 4.0.1 614.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb pgdg 4.0.2 521.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb pgdg 4.0.2 596.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb pgdg 4.0.2 518.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb pgdg 4.0.2 640.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb pgdg 4.0.2 566.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgrouting_16 pgrouting_16-4.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.2 905.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgrouting_16-4.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgrouting_16-4.0.1-1PGDG.rhel8.10.x86_64.rpm
@@ -203,15 +226,25 @@ weight: 1510
 @ el10.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-4.0.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-4.0.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-3.8.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg12+1_amd64.deb pgdg 4.0.2 813.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg12+1_arm64.deb pgdg 4.0.2 695.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg13+1_amd64.deb pgdg 4.0.2 902.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg13+1_arm64.deb pgdg 4.0.2 773.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg13+1_arm64.deb pgdg 4.0.1 772.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb pgdg 4.0.2 614.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb pgdg 4.0.1 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb pgdg 4.0.2 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb pgdg 4.0.2 596.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb pgdg 4.0.2 518.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb pgdg 4.0.2 640.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb pgdg 4.0.2 566.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgrouting_15 pgrouting_15-4.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.2 905.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgrouting_15-4.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgrouting_15-4.0.1-1PGDG.rhel8.10.x86_64.rpm
@@ -287,15 +320,25 @@ weight: 1510
 @ el10.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-4.0.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-4.0.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-3.8.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg12+1_amd64.deb pgdg 4.0.2 813.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg12+1_arm64.deb pgdg 4.0.2 695.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg13+1_amd64.deb pgdg 4.0.2 902.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg13+1_arm64.deb pgdg 4.0.2 773.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg13+1_arm64.deb pgdg 4.0.1 772.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb pgdg 4.0.2 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb pgdg 4.0.1 614.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb pgdg 4.0.2 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb pgdg 4.0.2 596.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb pgdg 4.0.2 518.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb pgdg 4.0.2 640.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb pgdg 4.0.2 566.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgrouting_14 pgrouting_14-4.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.2 905.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgrouting_14-4.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgrouting_14-4.0.1-1PGDG.rhel8.10.x86_64.rpm
@@ -379,15 +422,25 @@ weight: 1510
 @ el10.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-4.0.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-4.0.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-3.8.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg12+1_amd64.deb pgdg 4.0.2 813.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg12+1_arm64.deb pgdg 4.0.2 695.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg13+1_amd64.deb pgdg 4.0.2 902.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg13+1_arm64.deb pgdg 4.0.2 773.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg13+1_arm64.deb pgdg 4.0.1 773.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb pgdg 4.0.2 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb pgdg 4.0.1 614.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb pgdg 4.0.2 522.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb pgdg 4.0.2 596.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb pgdg 4.0.2 518.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb pgdg 4.0.2 640.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb pgdg 4.0.2 566.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
@@ -437,14 +490,15 @@ apt install -y postgresql-14-pgrouting   # PG 14
 CREATE EXTENSION pgrouting CASCADE;  -- 依赖: plpgsql, postgis
 ```
 
-
-
-
 ## 用法
 
-> [pgRouting - 基于 PostgreSQL 的路径规划](https://github.com/pgRouting/pgrouting)
+来源：
 
-pgRouting 扩展 PostGIS/PostgreSQL 地理空间数据库，提供地理空间路径规划和其他网络分析功能。
+- [v4.0.2 发布](https://github.com/pgRouting/pgrouting/releases/tag/v4.0.2)
+- [v4.0.2 README](https://github.com/pgRouting/pgrouting/blob/v4.0.2/README.md)
+- [官方文档](https://docs.pgrouting.org/latest/en/index.html)
+
+pgRouting 4.0.2 扩展 PostGIS/PostgreSQL 地理空间数据库，提供地理空间路径规划和其他网络分析功能。此版本修复了 `pgr_dijkstraVia` 与 `pgr_withPointsVia` 的分配失败问题，并统一了行驶距离相关函数对负距离的处理。
 
 该库包含以下特性：
 
@@ -510,7 +564,7 @@ SELECT * FROM pgr_dijkstra(
 
 --------
 
-## 函数族
+### 函数族
 
 ### Dijkstra - 最短路径
 
@@ -818,7 +872,7 @@ pgr_full_version()
 
 --------
 
-## 使用几何体
+### 使用几何体
 
 ### 构建路由拓扑
 
@@ -865,7 +919,7 @@ LEFT JOIN edges AS e ON r.edge = e.id;
 
 --------
 
-## 性能优化
+### 性能优化
 
 将查询限制在感兴趣的区域内，减少处理的边数：
 
@@ -881,7 +935,7 @@ SELECT * FROM pgr_dijkstra($$
 
 --------
 
-## 全对最短路径
+### 全对最短路径
 
 用于计算所有顶点对之间的距离：
 

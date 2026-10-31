@@ -33,7 +33,7 @@ weight: 9650
 {.ext-table .ext-table--rel}
 
 
-> Headless logical-decoding output plugin; no CREATE EXTENSION required. PGDG DEB package 3.7.0, RPM 3.5.0; bundled control version 0.1.0.
+> Headless output plugin; no CREATE EXTENSION. PGDG DEB 3.7.0, RPM 3.5.0; bundled control 0.1.0.
 
 
 ## 版本

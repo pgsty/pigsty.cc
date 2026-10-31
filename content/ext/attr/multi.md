@@ -5,23 +5,30 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **27** 个扩展包中包含多个扩展，共计 **135** 个扩展。
+以下 **28** 个扩展包中包含多个扩展，共计 **134** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
 ## postgis
 
-[`postgis`](/ext/e/postgis) 扩展包共有 **7** 个扩展：
+[`postgis`](/ext/e/postgis) 扩展包共有 **4** 个扩展：
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1500 | [**`postgis`**](/ext/e/postgis) | `3.6.4` | `-bs-d--` | - | PostGIS 几何和地理空间扩展 |
-| 1501 | [`postgis_topology`](/ext/e/postgis_topology) | `3.6.4` | `--s-d--` | `topology` | PostGIS 拓扑空间类型和函数 |
-| 1502 | [`postgis_raster`](/ext/e/postgis_raster) | `3.6.4` | `--s-d--` | - | PostGIS 光栅类型和函数 |
-| 1503 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | `3.6.4` | `--s-d-r` | - | PostGIS SFCGAL 函数 |
-| 1504 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | `3.6.4` | `----dt-` | `tiger` | PostGIS tiger 地理编码器和反向地理编码器 |
-| 1505 | [`address_standardizer`](/ext/e/address_standardizer) | `3.6.4` | `--s-d-r` | - | 地址标准化函数。 |
-| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.4` | `----d-r` | - | 地址标准化函数：美国数据集示例 |
+| 1500 | [**`postgis`**](/ext/e/postgis) | `3.7.0` | `-bs-d--` | - | PostGIS 几何和地理空间扩展 |
+| 1501 | [`postgis_topology`](/ext/e/postgis_topology) | `3.7.0` | `--s-d--` | `topology` | PostGIS 拓扑空间类型和函数 |
+| 1502 | [`postgis_raster`](/ext/e/postgis_raster) | `3.7.0` | `--s-d--` | - | PostGIS 光栅类型和函数 |
+| 1503 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | `3.7.0` | `--s-d-r` | - | PostGIS SFCGAL 函数 |
+{.ext-table}
+
+## address_standardizer
+
+[`address_standardizer`](/ext/e/address_standardizer) 扩展包共有 **2** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 1505 | [**`address_standardizer`**](/ext/e/address_standardizer) | `3.7` | `--s-d-r` | - | 地址标准化函数。 |
+| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.7` | `----d-r` | - | 地址标准化函数：美国数据集示例 |
 {.ext-table}
 
 ## pointcloud
@@ -197,10 +204,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 3020 | [**`pllua`**](/ext/e/pllua) | `2.0.12` | `--s-d--` | `pg_catalog` | Lua 程序语言 |
-| 3021 | [`hstore_pllua`](/ext/e/hstore_pllua) | `2.0.12` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展 |
-| 3030 | [`plluau`](/ext/e/plluau) | `2.0.12` | `--s-d--` | `pg_catalog` | Lua 程序语言（不受信任的） |
-| 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `2.0.12` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展（不受信任的） |
+| 3020 | [**`pllua`**](/ext/e/pllua) | `2.0` | `--s-d--` | `pg_catalog` | Lua 程序语言 |
+| 3021 | [`hstore_pllua`](/ext/e/hstore_pllua) | `1.0` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展 |
+| 3030 | [`plluau`](/ext/e/plluau) | `2.0` | `--s-d--` | `pg_catalog` | Lua 程序语言（不受信任的） |
+| 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `1.0` | `--s-d-r` | - | Lua 程序语言的Hstore适配扩展（不受信任的） |
 {.ext-table}
 
 ## plruby
@@ -320,7 +327,7 @@ weight: 40
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.0` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
 | 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.0` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.116` | `--sLd--` | - | DocumentDB多节点模式的API层 |
+| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `1.0-0` | `--sLd--` | - | DocumentDB多节点模式的API层 |
 | 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.0` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
@@ -357,5 +364,5 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
-| 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `2.4.8` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
+| 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `1.0.0` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 {.ext-table}

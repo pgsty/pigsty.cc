@@ -38,27 +38,27 @@ weight: 6290
 {.ext-table .ext-table--rel}
 
 
-> Package version 1.1.11; SQL/control version 1.1. shared_preload_libraries=pg_wait_sampling is required; Pigsty DEB builds are pending.
+> PGDG 1.1.11 covers EL8-10 and current D/U; local build capability retained; preload required.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-wait-sampling` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-wait-sampling` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 6 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 8 |
-| el8.aarch64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 6 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 |
-| el9.x86_64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 6 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 |
-| el9.aarch64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 6 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 | AVAIL PIGSTY 1.1.11 7 |
-| el10.x86_64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 |
-| el10.aarch64 | AVAIL PIGSTY 1.1.11 3 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 | AVAIL PIGSTY 1.1.11 4 |
+| el8.x86_64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 7 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 9 |
+| el8.aarch64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 7 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 |
+| el9.x86_64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 7 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 |
+| el9.aarch64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 7 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 | AVAIL PGDG 1.1.11 8 |
+| el10.x86_64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 |
+| el10.aarch64 | AVAIL PGDG 1.1.11 4 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 5 |
 | d12.x86_64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
 | d12.aarch64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
 | d13.x86_64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
@@ -69,21 +69,27 @@ weight: 6290
 | u24.aarch64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
 | u26.x86_64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
 | u26.aarch64 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 | AVAIL PGDG 1.1.11 3 |
+@ el8.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel8.10.x86_64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_wait_sampling_18-1.1.11-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el8.x86_64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_wait_sampling_18-1.1.11-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PGDG8.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_wait_sampling_18-1.1.11-1PGDG8.x86_64.rpm
 @ el8.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_wait_sampling_18-1.1.9-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel8.10.aarch64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_wait_sampling_18-1.1.11-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el8.aarch64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_wait_sampling_18-1.1.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PGDG8.aarch64.rpm pgdg 1.1.11 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_wait_sampling_18-1.1.11-1PGDG8.aarch64.rpm
 @ el8.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_wait_sampling_18-1.1.9-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel9.8.x86_64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_wait_sampling_18-1.1.11-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el9.x86_64.rpm pigsty 1.1.11 24.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_wait_sampling_18-1.1.11-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-3PGDG.rhel9.8.x86_64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_wait_sampling_18-1.1.9-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.1.9 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_wait_sampling_18-1.1.9-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel9.8.aarch64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_wait_sampling_18-1.1.11-4PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el9.aarch64.rpm pigsty 1.1.11 25.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_wait_sampling_18-1.1.11-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-3PGDG.rhel9.8.aarch64.rpm pgdg 1.1.9 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_wait_sampling_18-1.1.9-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.1.9 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_wait_sampling_18-1.1.9-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel10.2.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_wait_sampling_18-1.1.11-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el10.x86_64.rpm pigsty 1.1.11 25.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_wait_sampling_18-1.1.11-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-3PGDG.rhel10.2.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_wait_sampling_18-1.1.9-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel10.x86_64.rpm pgdg 1.1.9 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_wait_sampling_18-1.1.9-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-4PGDG.rhel10.2.aarch64.rpm pgdg 1.1.11 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_wait_sampling_18-1.1.11-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.11-1PIGSTY.el10.aarch64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_wait_sampling_18-1.1.11-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-3PGDG.rhel10.2.aarch64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_wait_sampling_18-1.1.9-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_wait_sampling_18 pg_wait_sampling_18-1.1.9-1PGDG.rhel10.aarch64.rpm pgdg 1.1.9 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_wait_sampling_18-1.1.9-1PGDG.rhel10.aarch64.rpm
@@ -117,34 +123,40 @@ weight: 6290
 @ u26.aarch64 18 postgresql-18-pg-wait-sampling postgresql-18-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb pgdg 1.1.11 37.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-18-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-wait-sampling postgresql-18-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb pgdg 1.1.10 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-18-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-wait-sampling postgresql-18-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb pgdg 1.1.9 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-18-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel8.10.x86_64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.11-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el8.x86_64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_wait_sampling_17-1.1.11-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PGDG8.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.11-1PGDG8.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.9-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.8-1PGDG.rhel8.x86_64.rpm pgdg 1.1.8 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.8-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_wait_sampling_17-1.1.6-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel8.10.aarch64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.11-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el8.aarch64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_wait_sampling_17-1.1.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PGDG8.aarch64.rpm pgdg 1.1.11 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.11-1PGDG8.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.9-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.8-1PGDG.rhel8.aarch64.rpm pgdg 1.1.8 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.8-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.1.7 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.1.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_wait_sampling_17-1.1.6-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel9.8.x86_64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.11-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el9.x86_64.rpm pigsty 1.1.11 24.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_wait_sampling_17-1.1.11-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-3PGDG.rhel9.8.x86_64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.9-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.1.9 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.9-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.1.8 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.8-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.1.7 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.1.6 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_wait_sampling_17-1.1.6-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel9.8.aarch64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.11-4PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el9.aarch64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_wait_sampling_17-1.1.11-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-3PGDG.rhel9.8.aarch64.rpm pgdg 1.1.9 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.9-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.1.9 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.9-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.1.8 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.8-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.1.7 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.1.6 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_wait_sampling_17-1.1.6-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel10.2.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_wait_sampling_17-1.1.11-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el10.x86_64.rpm pigsty 1.1.11 25.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_wait_sampling_17-1.1.11-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-3PGDG.rhel10.2.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_wait_sampling_17-1.1.9-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel10.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_wait_sampling_17-1.1.9-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.8-1PGDG.rhel10.x86_64.rpm pgdg 1.1.8 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_wait_sampling_17-1.1.8-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-4PGDG.rhel10.2.aarch64.rpm pgdg 1.1.11 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_wait_sampling_17-1.1.11-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.11-1PIGSTY.el10.aarch64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_wait_sampling_17-1.1.11-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-3PGDG.rhel10.2.aarch64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_wait_sampling_17-1.1.9-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_wait_sampling_17 pg_wait_sampling_17-1.1.9-1PGDG.rhel10.aarch64.rpm pgdg 1.1.9 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_wait_sampling_17-1.1.9-1PGDG.rhel10.aarch64.rpm
@@ -179,6 +191,7 @@ weight: 6290
 @ u26.aarch64 17 postgresql-17-pg-wait-sampling postgresql-17-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb pgdg 1.1.11 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-17-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-wait-sampling postgresql-17-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb pgdg 1.1.10 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-17-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-wait-sampling postgresql-17-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb pgdg 1.1.9 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-17-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel8.10.x86_64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.11-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el8.x86_64.rpm pigsty 1.1.11 25.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_wait_sampling_16-1.1.11-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PGDG8.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.11-1PGDG8.x86_64.rpm
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.9-1PGDG.rhel8.x86_64.rpm
@@ -186,6 +199,7 @@ weight: 6290
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.1.5 22.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_wait_sampling_16-1.1.5-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel8.10.aarch64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.11-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el8.aarch64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_wait_sampling_16-1.1.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PGDG8.aarch64.rpm pgdg 1.1.11 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.11-1PGDG8.aarch64.rpm
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.9-1PGDG.rhel8.aarch64.rpm
@@ -193,6 +207,7 @@ weight: 6290
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.1.7 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.1.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.1.5 21.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_wait_sampling_16-1.1.5-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel9.8.x86_64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.11-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el9.x86_64.rpm pigsty 1.1.11 24.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_wait_sampling_16-1.1.11-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-3PGDG.rhel9.8.x86_64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.9-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.1.9 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.9-1PGDG.rhel9.x86_64.rpm
@@ -200,6 +215,7 @@ weight: 6290
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.1.7 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.1.6 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.6-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.1.5 22.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_wait_sampling_16-1.1.5-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel9.8.aarch64.rpm pgdg 1.1.11 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.11-4PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el9.aarch64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_wait_sampling_16-1.1.11-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-3PGDG.rhel9.8.aarch64.rpm pgdg 1.1.9 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.9-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.1.9 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.9-1PGDG.rhel9.aarch64.rpm
@@ -207,10 +223,12 @@ weight: 6290
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.1.7 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.1.6 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.6-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.1.5 21.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_wait_sampling_16-1.1.5-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel10.2.x86_64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_wait_sampling_16-1.1.11-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el10.x86_64.rpm pigsty 1.1.11 25.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_wait_sampling_16-1.1.11-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-3PGDG.rhel10.2.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_wait_sampling_16-1.1.9-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel10.x86_64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_wait_sampling_16-1.1.9-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.8-1PGDG.rhel10.x86_64.rpm pgdg 1.1.8 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_wait_sampling_16-1.1.8-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-4PGDG.rhel10.2.aarch64.rpm pgdg 1.1.11 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_wait_sampling_16-1.1.11-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.11-1PIGSTY.el10.aarch64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_wait_sampling_16-1.1.11-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-3PGDG.rhel10.2.aarch64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_wait_sampling_16-1.1.9-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_wait_sampling_16 pg_wait_sampling_16-1.1.9-1PGDG.rhel10.aarch64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_wait_sampling_16-1.1.9-1PGDG.rhel10.aarch64.rpm
@@ -245,6 +263,7 @@ weight: 6290
 @ u26.aarch64 16 postgresql-16-pg-wait-sampling postgresql-16-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb pgdg 1.1.11 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-16-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-wait-sampling postgresql-16-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb pgdg 1.1.10 37.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-16-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-wait-sampling postgresql-16-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb pgdg 1.1.9 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-16-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel8.10.x86_64.rpm pgdg 1.1.11 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.11-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el8.x86_64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_wait_sampling_15-1.1.11-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PGDG8.x86_64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.11-1PGDG8.x86_64.rpm
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.9-1PGDG.rhel8.x86_64.rpm
@@ -252,6 +271,7 @@ weight: 6290
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.4-1.rhel8.x86_64.rpm pgdg 1.1.4 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_wait_sampling_15-1.1.4-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel8.10.aarch64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.11-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el8.aarch64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_wait_sampling_15-1.1.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PGDG8.aarch64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.11-1PGDG8.aarch64.rpm
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.9-1PGDG.rhel8.aarch64.rpm
@@ -259,6 +279,7 @@ weight: 6290
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.1.7 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.1.6 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.4-1.rhel8.aarch64.rpm pgdg 1.1.4 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_wait_sampling_15-1.1.4-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel9.8.x86_64.rpm pgdg 1.1.11 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.11-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el9.x86_64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_wait_sampling_15-1.1.11-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-3PGDG.rhel9.8.x86_64.rpm pgdg 1.1.9 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.9-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.1.9 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.9-1PGDG.rhel9.x86_64.rpm
@@ -266,6 +287,7 @@ weight: 6290
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.1.7 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.1.6 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.6-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.4-1.rhel9.x86_64.rpm pgdg 1.1.4 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_wait_sampling_15-1.1.4-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel9.8.aarch64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.11-4PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el9.aarch64.rpm pigsty 1.1.11 25.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_wait_sampling_15-1.1.11-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-3PGDG.rhel9.8.aarch64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.9-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.1.9 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.9-1PGDG.rhel9.aarch64.rpm
@@ -273,10 +295,12 @@ weight: 6290
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.1.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.1.6 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.6-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.4-1.rhel9.aarch64.rpm pgdg 1.1.4 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_wait_sampling_15-1.1.4-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel10.2.x86_64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_wait_sampling_15-1.1.11-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el10.x86_64.rpm pigsty 1.1.11 25.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_wait_sampling_15-1.1.11-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-3PGDG.rhel10.2.x86_64.rpm pgdg 1.1.9 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_wait_sampling_15-1.1.9-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel10.x86_64.rpm pgdg 1.1.9 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_wait_sampling_15-1.1.9-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.8-1PGDG.rhel10.x86_64.rpm pgdg 1.1.8 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_wait_sampling_15-1.1.8-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-4PGDG.rhel10.2.aarch64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_wait_sampling_15-1.1.11-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.11-1PIGSTY.el10.aarch64.rpm pigsty 1.1.11 25.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_wait_sampling_15-1.1.11-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-3PGDG.rhel10.2.aarch64.rpm pgdg 1.1.9 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_wait_sampling_15-1.1.9-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_wait_sampling_15 pg_wait_sampling_15-1.1.9-1PGDG.rhel10.aarch64.rpm pgdg 1.1.9 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_wait_sampling_15-1.1.9-1PGDG.rhel10.aarch64.rpm
@@ -311,6 +335,7 @@ weight: 6290
 @ u26.aarch64 15 postgresql-15-pg-wait-sampling postgresql-15-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb pgdg 1.1.11 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-15-pg-wait-sampling_1.1.11-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-wait-sampling postgresql-15-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb pgdg 1.1.10 37.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-15-pg-wait-sampling_1.1.10-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-wait-sampling postgresql-15-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb pgdg 1.1.9 37.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-wait-sampling/postgresql-15-pg-wait-sampling_1.1.9-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel8.10.x86_64.rpm pgdg 1.1.11 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.11-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el8.x86_64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_wait_sampling_14-1.1.11-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PGDG8.x86_64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.11-1PGDG8.x86_64.rpm
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.1.9 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.9-1PGDG.rhel8.x86_64.rpm
@@ -319,6 +344,7 @@ weight: 6290
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.4-1.rhel8.x86_64.rpm pgdg 1.1.4 46.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.3-1.rhel8.x86_64.rpm pgdg 1.1.3 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_wait_sampling_14-1.1.3-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel8.10.aarch64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.11-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el8.aarch64.rpm pigsty 1.1.11 25.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_wait_sampling_14-1.1.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PGDG8.aarch64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.11-1PGDG8.aarch64.rpm
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.9-1PGDG.rhel8.aarch64.rpm
@@ -326,6 +352,7 @@ weight: 6290
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.1.7 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.1.6 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.4-1.rhel8.aarch64.rpm pgdg 1.1.4 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_wait_sampling_14-1.1.4-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel9.8.x86_64.rpm pgdg 1.1.11 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.11-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el9.x86_64.rpm pigsty 1.1.11 25.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_wait_sampling_14-1.1.11-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-3PGDG.rhel9.8.x86_64.rpm pgdg 1.1.9 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.9-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.1.9 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.9-1PGDG.rhel9.x86_64.rpm
@@ -333,6 +360,7 @@ weight: 6290
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.1.7 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.7-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.1.6 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.6-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.4-1.rhel9.x86_64.rpm pgdg 1.1.4 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_wait_sampling_14-1.1.4-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel9.8.aarch64.rpm pgdg 1.1.11 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.11-4PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el9.aarch64.rpm pigsty 1.1.11 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_wait_sampling_14-1.1.11-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-3PGDG.rhel9.8.aarch64.rpm pgdg 1.1.9 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.9-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.1.9 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.9-1PGDG.rhel9.aarch64.rpm
@@ -340,10 +368,12 @@ weight: 6290
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.1.7 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.7-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.1.6 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.6-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.4-1.rhel9.aarch64.rpm pgdg 1.1.4 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_wait_sampling_14-1.1.4-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel10.2.x86_64.rpm pgdg 1.1.11 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_wait_sampling_14-1.1.11-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el10.x86_64.rpm pigsty 1.1.11 25.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_wait_sampling_14-1.1.11-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-3PGDG.rhel10.2.x86_64.rpm pgdg 1.1.9 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_wait_sampling_14-1.1.9-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel10.x86_64.rpm pgdg 1.1.9 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_wait_sampling_14-1.1.9-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.8-1PGDG.rhel10.x86_64.rpm pgdg 1.1.8 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_wait_sampling_14-1.1.8-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-4PGDG.rhel10.2.aarch64.rpm pgdg 1.1.11 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_wait_sampling_14-1.1.11-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.11-1PIGSTY.el10.aarch64.rpm pigsty 1.1.11 25.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_wait_sampling_14-1.1.11-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-3PGDG.rhel10.2.aarch64.rpm pgdg 1.1.9 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_wait_sampling_14-1.1.9-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_wait_sampling_14 pg_wait_sampling_14-1.1.9-1PGDG.rhel10.aarch64.rpm pgdg 1.1.9 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_wait_sampling_14-1.1.9-1PGDG.rhel10.aarch64.rpm
@@ -391,10 +421,10 @@ pig build pkg pg_wait_sampling         # 构建 RPM 包
 
 ## 安装
 
-您可以直接安装 `pg_wait_sampling` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+您可以直接安装 `pg_wait_sampling` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgsql -u          # 添加仓库并更新缓存
+pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
 使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
@@ -441,14 +471,15 @@ shared_preload_libraries = 'pg_wait_sampling';
 CREATE EXTENSION pg_wait_sampling;
 ```
 
-
-
-
 ## 用法
 
-> [pg_wait_sampling: 基于采样的等待事件统计](https://github.com/postgrespro/pg_wait_sampling)
+来源：
 
-pg_wait_sampling 通过定期采样每个后端正在等待的事件来收集等待事件统计。它提供近期历史环形缓冲区和累积统计两种视图。
+- [官方 README](https://github.com/postgrespro/pg_wait_sampling)
+- [发布历史](https://github.com/postgrespro/pg_wait_sampling/releases)
+- [扩展控制文件](https://github.com/postgrespro/pg_wait_sampling/blob/master/pg_wait_sampling.control)
+
+`pg_wait_sampling` 1.1.11 通过定期采样每个后端正在等待的事件来收集等待事件统计。它提供近期历史环形缓冲区和累积统计两种视图；此版本修复了 `profile_period` 配置处理和采样频率取整问题。
 
 ### 视图
 

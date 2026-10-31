@@ -34,7 +34,7 @@ weight: 3100
 {.ext-table .ext-table--rel}
 
 
-> Release/control and verified PG18 RPM/DEB packages are 8.4.8.10. Control declares relocatable=true; package versions may vary by platform and PostgreSQL major.
+> Release/control 8.4.8.10; PG18 RPM/DEB verified. Relocatable=true; package versions vary by platform and PG major.
 
 
 ## 版本

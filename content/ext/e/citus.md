@@ -56,7 +56,7 @@ weight: 2400
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 14.3.0 5 | AVAIL PIGSTY 14.3.0 11 | AVAIL PIGSTY 14.3.0 18 | AVAIL PIGSTY 13.5.0 22 | AVAIL PGDG 13.0.0 28 |
-| el8.aarch64 | AVAIL PIGSTY 14.3.0 4 | AVAIL PIGSTY 14.3.0 10 | AVAIL PIGSTY 14.3.0 17 | AVAIL PIGSTY 13.5.0 21 | AVAIL PGDG 13.0.0 15 |
+| el8.aarch64 | AVAIL PIGSTY 14.3.0 5 | AVAIL PIGSTY 14.3.0 11 | AVAIL PIGSTY 14.3.0 18 | AVAIL PIGSTY 13.5.0 21 | AVAIL PGDG 13.0.0 15 |
 | el9.x86_64 | AVAIL PIGSTY 14.3.0 7 | AVAIL PIGSTY 14.3.0 13 | AVAIL PIGSTY 14.3.0 20 | AVAIL PIGSTY 13.5.0 22 | AVAIL PGDG 13.0.0 25 |
 | el9.aarch64 | AVAIL PIGSTY 14.3.0 7 | AVAIL PIGSTY 14.3.0 13 | AVAIL PIGSTY 14.3.0 20 | AVAIL PIGSTY 13.5.0 22 | AVAIL PGDG 13.0.0 15 |
 | el10.x86_64 | AVAIL PIGSTY 14.3.0 7 | AVAIL PIGSTY 14.3.0 11 | AVAIL PIGSTY 14.3.0 11 | AVAIL PIGSTY 13.5.0 5 | AVAIL PIGSTY 13.0.0 1 |
@@ -77,6 +77,7 @@ weight: 2400
 @ el8.x86_64 18 citus_18 citus_18-14.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 14.1.0 871.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/citus_18-14.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 citus_18 citus_18-14.0.0-1PGDG.rhel8.10.x86_64.rpm pgdg 14.0.0 859.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/citus_18-14.0.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 citus_18 citus_18-14.3.0-9PGSTY.el8.aarch64.rpm pigsty 14.3.0 2.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/citus_18-14.3.0-9PGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 citus_18 citus_18-14.3.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.3.0 840.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/citus_18-14.3.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 citus_18 citus_18-14.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 14.2.0 829.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/citus_18-14.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 citus_18 citus_18-14.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.1.0 822.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/citus_18-14.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 citus_18 citus_18-14.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.0.0 810.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/citus_18-14.0.0-1PGDG.rhel8.10.aarch64.rpm
@@ -130,6 +131,7 @@ weight: 2400
 @ el8.x86_64 17 citus_17 citus_17-13.0.2-1PGDG.rhel8.x86_64.rpm pgdg 13.0.2 805.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/citus_17-13.0.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 citus_17 citus_17-13.0.0-1PGDG.rhel8.x86_64.rpm pgdg 13.0.0 803.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/citus_17-13.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 citus_17 citus_17-14.3.0-9PGSTY.el8.aarch64.rpm pigsty 14.3.0 2.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/citus_17-14.3.0-9PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 citus_17 citus_17-14.3.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.3.0 838.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/citus_17-14.3.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 citus_17 citus_17-14.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 14.2.0 826.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/citus_17-14.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 citus_17 citus_17-14.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.1.0 819.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/citus_17-14.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 citus_17 citus_17-14.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.0.0 808.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/citus_17-14.0.0-1PGDG.rhel8.10.aarch64.rpm
@@ -216,6 +218,7 @@ weight: 2400
 @ el8.x86_64 16 citus_16 citus_16-12.1.1-1PGDG.rhel8.x86_64.rpm pgdg 12.1.1 795.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/citus_16-12.1.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 citus_16 citus_16-12.1.0-2PGDG.rhel8.x86_64.rpm pgdg 12.1.0 794.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/citus_16-12.1.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 citus_16 citus_16-14.3.0-9PGSTY.el8.aarch64.rpm pigsty 14.3.0 2.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/citus_16-14.3.0-9PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 citus_16 citus_16-14.3.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.3.0 832.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/citus_16-14.3.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 citus_16 citus_16-14.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 14.2.0 820.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/citus_16-14.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 citus_16 citus_16-14.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.1.0 813.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/citus_16-14.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 citus_16 citus_16-14.0.0-1PGDG.rhel8.10.aarch64.rpm pgdg 14.0.0 801.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/citus_16-14.0.0-1PGDG.rhel8.10.aarch64.rpm

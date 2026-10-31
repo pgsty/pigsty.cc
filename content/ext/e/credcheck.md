@@ -48,8 +48,8 @@ weight: 7310
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 6.0 9 | AVAIL PIGSTY 6.0 10 | AVAIL PIGSTY 6.0 13 | AVAIL PIGSTY 6.0 18 | AVAIL PIGSTY 6.0 18 |
-| el8.aarch64 | AVAIL PIGSTY 6.0 9 | AVAIL PIGSTY 6.0 10 | AVAIL PIGSTY 6.0 13 | AVAIL PIGSTY 6.0 18 | AVAIL PIGSTY 6.0 18 |
+| el8.x86_64 | AVAIL PIGSTY 6.0 10 | AVAIL PIGSTY 6.0 11 | AVAIL PIGSTY 6.0 14 | AVAIL PIGSTY 6.0 19 | AVAIL PIGSTY 6.0 19 |
+| el8.aarch64 | AVAIL PIGSTY 6.0 10 | AVAIL PIGSTY 6.0 11 | AVAIL PIGSTY 6.0 14 | AVAIL PIGSTY 6.0 19 | AVAIL PIGSTY 6.0 19 |
 | el9.x86_64 | AVAIL PGDG 6.0 15 | AVAIL PGDG 6.0 16 | AVAIL PGDG 6.0 19 | AVAIL PGDG 6.0 24 | AVAIL PGDG 6.0 23 |
 | el9.aarch64 | AVAIL PGDG 6.0 15 | AVAIL PGDG 6.0 16 | AVAIL PGDG 6.0 19 | AVAIL PGDG 6.0 24 | AVAIL PGDG 6.0 24 |
 | el10.x86_64 | AVAIL PGDG 6.0 14 | AVAIL PGDG 6.0 14 | AVAIL PGDG 6.0 14 | AVAIL PGDG 6.0 14 | AVAIL PGDG 6.0 14 |
@@ -65,6 +65,7 @@ weight: 7310
 | u26.x86_64 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 |
 | u26.aarch64 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 | AVAIL PGDG 6.0 3 |
 @ el8.x86_64 18 credcheck_18 credcheck_18-6.0-1PGSTY.el8.x86_64.rpm pigsty 6.0 108.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/credcheck_18-6.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 credcheck_18 credcheck_18-6.0-1PGDG.rhel8.10.x86_64.rpm pgdg 6.0 55.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-6.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.5-1PGDG.rhel8.10.x86_64.rpm
@@ -74,6 +75,7 @@ weight: 7310
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel8.x86_64.rpm pgdg 4.1 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel8.x86_64.rpm pgdg 3.0 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-3.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-6.0-1PGSTY.el8.aarch64.rpm pigsty 6.0 106.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/credcheck_18-6.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 credcheck_18 credcheck_18-6.0-1PGDG.rhel8.10.aarch64.rpm pgdg 6.0 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-6.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.5-1PGDG.rhel8.10.aarch64.rpm
@@ -172,6 +174,7 @@ weight: 7310
 @ u26.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_5.0-2.pgdg26.04+2_arm64.deb pgdg 5.0 72.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_5.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_5.0-2.pgdg26.04+1_arm64.deb pgdg 5.0 72.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_5.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 credcheck_17 credcheck_17-6.0-1PGSTY.el8.x86_64.rpm pigsty 6.0 108.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/credcheck_17-6.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 credcheck_17 credcheck_17-6.0-1PGDG.rhel8.10.x86_64.rpm pgdg 6.0 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-6.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.5-1PGDG.rhel8.10.x86_64.rpm
@@ -182,6 +185,7 @@ weight: 7310
 @ el8.x86_64 17 credcheck_17 credcheck_17-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 35.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-2.8-1PGDG.rhel8.x86_64.rpm pgdg 2.8 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-2.8-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-6.0-1PGSTY.el8.aarch64.rpm pigsty 6.0 106.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/credcheck_17-6.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 credcheck_17 credcheck_17-6.0-1PGDG.rhel8.10.aarch64.rpm pgdg 6.0 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-6.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.5-1PGDG.rhel8.10.aarch64.rpm
@@ -283,6 +287,7 @@ weight: 7310
 @ u26.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_5.0-2.pgdg26.04+2_arm64.deb pgdg 5.0 71.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_5.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_5.0-2.pgdg26.04+1_arm64.deb pgdg 5.0 71.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_5.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 credcheck_16 credcheck_16-6.0-1PGSTY.el8.x86_64.rpm pigsty 6.0 108.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/credcheck_16-6.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 credcheck_16 credcheck_16-6.0-1PGDG.rhel8.10.x86_64.rpm pgdg 6.0 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-6.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.5-1PGDG.rhel8.10.x86_64.rpm
@@ -296,6 +301,7 @@ weight: 7310
 @ el8.x86_64 16 credcheck_16 credcheck_16-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.1 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-6.0-1PGSTY.el8.aarch64.rpm pigsty 6.0 106.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/credcheck_16-6.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 credcheck_16 credcheck_16-6.0-1PGDG.rhel8.10.aarch64.rpm pgdg 6.0 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-6.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.5-1PGDG.rhel8.10.aarch64.rpm
@@ -406,6 +412,7 @@ weight: 7310
 @ u26.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_5.0-2.pgdg26.04+2_arm64.deb pgdg 5.0 71.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_5.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_5.0-2.pgdg26.04+1_arm64.deb pgdg 5.0 71.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_5.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 credcheck_15 credcheck_15-6.0-1PGSTY.el8.x86_64.rpm pigsty 6.0 108.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/credcheck_15-6.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 credcheck_15 credcheck_15-6.0-1PGDG.rhel8.10.x86_64.rpm pgdg 6.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-6.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.5-1PGDG.rhel8.10.x86_64.rpm
@@ -424,6 +431,7 @@ weight: 7310
 @ el8.x86_64 15 credcheck_15 credcheck_15-0.2.0-3.rhel8.x86_64.rpm pgdg 0.2.0 18.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-0.2.0-3.rhel8.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-0.2.0-1.rhel8.x86_64.rpm pgdg 0.2.0 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-0.2.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-6.0-1PGSTY.el8.aarch64.rpm pigsty 6.0 106.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/credcheck_15-6.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 credcheck_15 credcheck_15-6.0-1PGDG.rhel8.10.aarch64.rpm pgdg 6.0 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-6.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.5-1PGDG.rhel8.10.aarch64.rpm
@@ -549,6 +557,7 @@ weight: 7310
 @ u26.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_5.0-2.pgdg26.04+2_arm64.deb pgdg 5.0 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_5.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_5.0-2.pgdg26.04+1_arm64.deb pgdg 5.0 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_5.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 credcheck_14 credcheck_14-6.0-1PGSTY.el8.x86_64.rpm pigsty 6.0 102.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/credcheck_14-6.0-1PGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 credcheck_14 credcheck_14-6.0-1PGDG.rhel8.10.x86_64.rpm pgdg 6.0 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-6.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.5-1PGDG.rhel8.10.x86_64.rpm
@@ -567,6 +576,7 @@ weight: 7310
 @ el8.x86_64 14 credcheck_14 credcheck_14-0.2.0-3.rhel8.x86_64.rpm pgdg 0.2.0 18.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-0.2.0-3.rhel8.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-0.2.0-1.rhel8.x86_64.rpm pgdg 0.2.0 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-0.2.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-6.0-1PGSTY.el8.aarch64.rpm pigsty 6.0 101.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/credcheck_14-6.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 credcheck_14 credcheck_14-6.0-1PGDG.rhel8.10.aarch64.rpm pgdg 6.0 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-6.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.5-1PGDG.rhel8.10.aarch64.rpm

@@ -33,24 +33,27 @@ weight: 6220
 {.ext-table .ext-table--rel}
 
 
+> PGDG 2.3.2 covers listed EL/D/U x86_64/aarch64; requires pg_stat_statements and preload.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_stat_kcache` | `pg_stat_statements` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_stat_kcache_$v` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_stat_kcache_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-stat-kcache` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 4 | AVAIL PGDG 2.3.1 5 | AVAIL PGDG 2.3.1 6 |
-| el8.aarch64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 4 | AVAIL PGDG 2.3.1 5 | AVAIL PGDG 2.3.1 5 |
-| el9.x86_64 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 5 | AVAIL PGDG 2.3.1 6 | AVAIL PGDG 2.3.1 6 |
-| el9.aarch64 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 5 | AVAIL PGDG 2.3.1 6 | AVAIL PGDG 2.3.1 6 |
-| el10.x86_64 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 |
-| el10.aarch64 | AVAIL PGDG 2.3.1 2 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 | AVAIL PGDG 2.3.1 3 |
+| el8.x86_64 | AVAIL PGDG 2.3.2 2 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 5 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 7 |
+| el8.aarch64 | AVAIL PGDG 2.3.2 2 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 5 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 6 |
+| el9.x86_64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 7 | AVAIL PGDG 2.3.2 7 |
+| el9.aarch64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 7 | AVAIL PGDG 2.3.2 7 |
+| el10.x86_64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 |
+| el10.aarch64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 | AVAIL PGDG 2.3.2 4 |
 | d12.x86_64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
 | d12.aarch64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
 | d13.x86_64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
@@ -61,14 +64,20 @@ weight: 6220
 | u24.aarch64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
 | u26.x86_64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
 | u26.aarch64 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 | AVAIL PGDG 2.3.2 3 |
+@ el8.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_kcache_18-2.3.2-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_kcache_18-2.3.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.3.2 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_stat_kcache_18-2.3.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_stat_kcache_18-2.3.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.3.2 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_kcache_18-2.3.2-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-3PGDG.rhel9.8.x86_64.rpm pgdg 2.3.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_kcache_18-2.3.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_kcache_18-2.3.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_kcache_18-2.3.2-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-3PGDG.rhel9.8.aarch64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_kcache_18-2.3.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel9.aarch64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_kcache_18-2.3.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_kcache_18-2.3.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_kcache_18-2.3.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel10.x86_64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_kcache_18-2.3.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_kcache_18-2.3.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_kcache_18-2.3.1-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel10.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_kcache_18-2.3.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.2-1.pgdg12+2_amd64.deb pgdg 2.3.2 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.2-1.pgdg12+2_amd64.deb
@@ -101,19 +110,25 @@ weight: 6220
 @ u26.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_kcache_17-2.3.2-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_kcache_17-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_kcache_17-2.3.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_stat_kcache_17-2.3.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_stat_kcache_17-2.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-1PGDG.rhel8.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_stat_kcache_17-2.3.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.3.2 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_kcache_17-2.3.2-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-3PGDG.rhel9.8.x86_64.rpm pgdg 2.3.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_kcache_17-2.3.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_kcache_17-2.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-1PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_kcache_17-2.3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_kcache_17-2.3.2-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-3PGDG.rhel9.8.aarch64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_kcache_17-2.3.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel9.aarch64.rpm pgdg 2.3.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_kcache_17-2.3.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-1PGDG.rhel9.aarch64.rpm pgdg 2.3.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_kcache_17-2.3.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_kcache_17-2.3.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_kcache_17-2.3.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel10.x86_64.rpm pgdg 2.3.1 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_kcache_17-2.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-2PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_kcache_17-2.3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_kcache_17-2.3.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_kcache_17-2.3.1-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel10.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_kcache_17-2.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-2PGDG.rhel10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_kcache_17-2.3.0-2PGDG.rhel10.aarch64.rpm
@@ -147,27 +162,33 @@ weight: 6220
 @ u26.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.3.2-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.2.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_kcache_16-2.3.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_kcache_16-2.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-1PGDG.rhel8.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_kcache_16-2.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.3-1PGDG.rhel8.aarch64.rpm pgdg 2.2.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_kcache_16-2.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_kcache_16-2.2.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.3.2 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.3.2-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-3PGDG.rhel9.8.x86_64.rpm pgdg 2.3.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.3.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-1PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.3-1PGDG.rhel9.x86_64.rpm pgdg 2.2.3 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.2.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2.2 25.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_kcache_16-2.2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.3.2 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.3.2-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-3PGDG.rhel9.8.aarch64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.3.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel9.aarch64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.3.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-1PGDG.rhel9.aarch64.rpm pgdg 2.3.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.3-1PGDG.rhel9.aarch64.rpm pgdg 2.2.3 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.2.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2.2 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_kcache_16-2.2.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_kcache_16-2.3.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_kcache_16-2.3.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel10.x86_64.rpm pgdg 2.3.1 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_kcache_16-2.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-2PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_kcache_16-2.3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_kcache_16-2.3.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_kcache_16-2.3.1-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel10.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_kcache_16-2.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-2PGDG.rhel10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_kcache_16-2.3.0-2PGDG.rhel10.aarch64.rpm
@@ -201,31 +222,37 @@ weight: 6220
 @ u26.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.3.2-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.1-2.rhel8.x86_64.rpm pgdg 2.2.1 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.2.1-2.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.3.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-1PGDG.rhel8.aarch64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.3-1PGDG.rhel8.aarch64.rpm pgdg 2.2.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.1-2.rhel8.aarch64.rpm pgdg 2.2.1 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_stat_kcache_15-2.2.1-2.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.3.2 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.3.2-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-3PGDG.rhel9.8.x86_64.rpm pgdg 2.3.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.3.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-1PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.3-1PGDG.rhel9.x86_64.rpm pgdg 2.2.3 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.2.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2.2 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.2.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.1-2.rhel9.x86_64.rpm pgdg 2.2.1 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_stat_kcache_15-2.2.1-2.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.3.2-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-3PGDG.rhel9.8.aarch64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.3.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel9.aarch64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.3.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-1PGDG.rhel9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.3-1PGDG.rhel9.aarch64.rpm pgdg 2.2.3 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.2.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2.2 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.2.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.1-2.rhel9.aarch64.rpm pgdg 2.2.1 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_stat_kcache_15-2.2.1-2.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.3.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_stat_kcache_15-2.3.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_stat_kcache_15-2.3.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel10.x86_64.rpm pgdg 2.3.1 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_stat_kcache_15-2.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-2PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_stat_kcache_15-2.3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_stat_kcache_15-2.3.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_stat_kcache_15-2.3.1-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel10.aarch64.rpm pgdg 2.3.1 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_stat_kcache_15-2.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-2PGDG.rhel10.aarch64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_stat_kcache_15-2.3.0-2PGDG.rhel10.aarch64.rpm
@@ -259,32 +286,38 @@ weight: 6220
 @ u26.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb pgdg 2.3.2 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.3.2-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.1-2.rhel8.x86_64.rpm pgdg 2.2.1 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.2.1-2.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.0-2.rhel8.x86_64.rpm pgdg 2.2.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.2.0-2.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.3.2 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.3.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-1PGDG.rhel8.aarch64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.3-1PGDG.rhel8.aarch64.rpm pgdg 2.2.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2.2 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.1-2.rhel8.aarch64.rpm pgdg 2.2.1 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_stat_kcache_14-2.2.1-2.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.3.2 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.3.2-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-3PGDG.rhel9.8.x86_64.rpm pgdg 2.3.1 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.3.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-1PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.3-1PGDG.rhel9.x86_64.rpm pgdg 2.2.3 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.2.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2.2 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.2.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.1-2.rhel9.x86_64.rpm pgdg 2.2.1 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_stat_kcache_14-2.2.1-2.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.3.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.3.2-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-3PGDG.rhel9.8.aarch64.rpm pgdg 2.3.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.3.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel9.aarch64.rpm pgdg 2.3.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.3.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-1PGDG.rhel9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.3-1PGDG.rhel9.aarch64.rpm pgdg 2.2.3 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.2.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2.2 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.2.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.1-2.rhel9.aarch64.rpm pgdg 2.2.1 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_stat_kcache_14-2.2.1-2.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.3.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_kcache_14-2.3.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_kcache_14-2.3.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel10.x86_64.rpm pgdg 2.3.1 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_kcache_14-2.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-2PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_kcache_14-2.3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_kcache_14-2.3.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_kcache_14-2.3.1-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel10.aarch64.rpm pgdg 2.3.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_kcache_14-2.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-2PGDG.rhel10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_kcache_14-2.3.0-2PGDG.rhel10.aarch64.rpm
@@ -373,14 +406,15 @@ shared_preload_libraries = 'pg_stat_statements, pg_stat_kcache';
 CREATE EXTENSION pg_stat_kcache CASCADE;  -- 依赖: pg_stat_statements
 ```
 
-
-
-
 ## 用法
 
-> [pg_stat_kcache: PostgreSQL 内核缓存统计](https://github.com/powa-team/pg_stat_kcache)
+来源：
 
-pg_stat_kcache 收集文件系统层实际读写的统计信息，以及每个查询的 CPU 使用情况。它依赖 `pg_stat_statements`。
+- [v2.3.2 发布](https://github.com/powa-team/pg_stat_kcache/releases/tag/REL2_3_2)
+- [官方 README](https://github.com/powa-team/pg_stat_kcache)
+- [扩展控制文件](https://github.com/powa-team/pg_stat_kcache/blob/master/pg_stat_kcache.control)
+
+`pg_stat_kcache` 2.3.2 收集文件系统层实际读写的统计信息，以及每个查询的 CPU 使用情况。它依赖 `pg_stat_statements`；此版本增加了 PostgreSQL 19 兼容性，并修复了 RHEL 系列系统上的安装问题。
 
 ### 视图
 

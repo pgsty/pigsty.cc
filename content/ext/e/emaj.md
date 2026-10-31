@@ -11,10 +11,10 @@ weight: 1050
     <div class="ext-card__title">dalibo/emaj</div>
     <div class="ext-card__desc">https://github.com/dalibo/emaj</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/emaj-5.0.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/emaj-5.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">emaj-5.0.0.tar.gz</div>
-    <div class="ext-card__desc">emaj-5.0.0.tar.gz</div>
+    <div class="ext-card__title">emaj-5.0.1.tar.gz</div>
+    <div class="ext-card__desc">emaj-5.0.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1050
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`emaj`**](/ext/e/emaj) | `5.0.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`emaj`**](/ext/e/emaj) | `5.0.1` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,27 +38,27 @@ weight: 1050
 {.ext-table .ext-table--rel}
 
 
-> Requires max_prepared_transactions
+> Requires max_prepared_transactions; 5.0.1 fixes privilege escalation and PREPARE TRANSACTION errors.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.0` | {{< pgvers "18,17,16,15,14" >}} | `emaj` | `btree_gist`, `dblink` |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.0` | {{< pgvers "18,17,16,15,14" >}} | `e-maj_$v` | - |
+| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `emaj` | `btree_gist`, `dblink` |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `e-maj_$v` | - |
 | [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-emaj` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 5.0.0 4 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 12 | AVAIL PIGSTY 5.0.0 13 | AVAIL PIGSTY 5.0.0 13 |
-| el8.aarch64 | AVAIL PIGSTY 5.0.0 4 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 12 | AVAIL PIGSTY 5.0.0 13 | AVAIL PIGSTY 5.0.0 13 |
-| el9.x86_64 | AVAIL PIGSTY 5.0.0 4 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 12 | AVAIL PIGSTY 5.0.0 13 | AVAIL PIGSTY 5.0.0 13 |
-| el9.aarch64 | AVAIL PIGSTY 5.0.0 5 | AVAIL PIGSTY 5.0.0 8 | AVAIL PIGSTY 5.0.0 13 | AVAIL PIGSTY 5.0.0 14 | AVAIL PIGSTY 5.0.0 14 |
-| el10.x86_64 | AVAIL PIGSTY 5.0.0 5 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 |
-| el10.aarch64 | AVAIL PIGSTY 5.0.0 5 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 | AVAIL PIGSTY 5.0.0 7 |
+| el8.x86_64 | AVAIL PIGSTY 5.0.1 5 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 13 | AVAIL PIGSTY 5.0.1 14 | AVAIL PIGSTY 5.0.1 14 |
+| el8.aarch64 | AVAIL PIGSTY 5.0.1 5 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 13 | AVAIL PIGSTY 5.0.1 14 | AVAIL PIGSTY 5.0.1 14 |
+| el9.x86_64 | AVAIL PIGSTY 5.0.1 5 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 13 | AVAIL PIGSTY 5.0.1 14 | AVAIL PIGSTY 5.0.1 14 |
+| el9.aarch64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 9 | AVAIL PIGSTY 5.0.1 14 | AVAIL PIGSTY 5.0.1 15 | AVAIL PIGSTY 5.0.1 15 |
+| el10.x86_64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 |
+| el10.aarch64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 |
 | d12.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
@@ -69,29 +69,35 @@ weight: 1050
 | u24.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-@ el8.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_18-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_18-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/e-maj_18-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_18-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_18-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_18-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_18-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-5.0.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_18-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_18-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_18-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_18-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm
@@ -106,28 +112,32 @@ weight: 1050
 @ u24.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb
 @ u26.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb
 @ u26.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_17-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-4.7.1-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel8.noarch.rpm pgdg 4.7.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-4.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm pgdg 4.6.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm pgdg 4.5.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_17-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.7.1-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel8.noarch.rpm pgdg 4.7.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm pgdg 4.6.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm pgdg 4.5.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_17-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_17-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_17-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_17-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-5.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-5.0.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm
@@ -135,14 +145,16 @@ weight: 1050
 @ el9.aarch64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_17-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_17-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_17-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_17-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm
@@ -159,7 +171,8 @@ weight: 1050
 @ u24.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb
 @ u26.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb
 @ u26.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_16-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -171,7 +184,8 @@ weight: 1050
 @ el8.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel8.x86_64.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-4.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel8.noarch.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-4.3.0-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-4.2.0-1.rhel8.x86_64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-4.2.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_16-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -183,7 +197,8 @@ weight: 1050
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel8.noarch.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.3.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel8.aarch64.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.2.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_16-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_16-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm
@@ -195,7 +210,8 @@ weight: 1050
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.x86_64.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.2.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_16-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_16-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-5.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-5.0.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm
@@ -208,14 +224,16 @@ weight: 1050
 @ el9.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.2.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_16-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_16-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_16-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_16-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm
@@ -232,7 +250,8 @@ weight: 1050
 @ u24.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb
 @ u26.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb
 @ u26.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_15-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -245,7 +264,8 @@ weight: 1050
 @ el8.x86_64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel8.noarch.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-4.3.0-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-4.2.0-1.rhel8.x86_64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-4.2.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-4.1.0-1.rhel8.x86_64.rpm pgdg 4.1.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-4.1.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_15-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -258,7 +278,8 @@ weight: 1050
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel8.aarch64.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.1.0-1.rhel8.aarch64.rpm pgdg 4.1.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_15-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_15-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm
@@ -271,7 +292,8 @@ weight: 1050
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.2.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.1.0-1.rhel9.x86_64.rpm pgdg 4.1.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.1.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_15-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_15-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-5.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-5.0.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm
@@ -285,14 +307,16 @@ weight: 1050
 @ el9.aarch64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.2.0-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-4.1.0-1.rhel9.aarch64.rpm pgdg 4.1.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_15-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_15-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_15-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_15-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm
@@ -309,7 +333,8 @@ weight: 1050
 @ u24.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb
 @ u26.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb
 @ u26.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_14-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -322,7 +347,8 @@ weight: 1050
 @ el8.x86_64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel8.noarch.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-4.3.0-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-4.2.0-1.rhel8.x86_64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-4.2.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-4.1.0-1.rhel8.x86_64.rpm pgdg 4.1.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-4.1.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el8.noarch.rpm pigsty 5.0.0 314.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_14-5.0.0-2PIGSTY.el8.noarch.rpm
+@ el8.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-5.0.0-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-5.0.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.7.1-1PGDG.rhel8.noarch.rpm
@@ -335,7 +361,8 @@ weight: 1050
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel8.aarch64.rpm pgdg 4.3.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.1.0-1.rhel8.aarch64.rpm pgdg 4.1.0 4.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_14-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/e-maj_14-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm
@@ -348,7 +375,8 @@ weight: 1050
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.2.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.1.0-1.rhel9.x86_64.rpm pgdg 4.1.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.1.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el9.noarch.rpm pigsty 5.0.0 219.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_14-5.0.0-2PIGSTY.el9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el9.noarch.rpm pigsty 5.0.1 220.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/e-maj_14-5.0.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-5.0.1-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-5.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-5.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-5.0.0-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm
@@ -362,14 +390,16 @@ weight: 1050
 @ el9.aarch64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.2.0-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-4.1.0-1.rhel9.aarch64.rpm pgdg 4.1.0 4.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_14-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/e-maj_14-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PIGSTY.el10.noarch.rpm pigsty 5.0.0 219.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_14-5.0.0-2PIGSTY.el10.noarch.rpm
+@ el10.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el10.noarch.rpm pigsty 5.0.1 220.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/e-maj_14-5.0.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.1 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-5.0.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-5.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm
@@ -446,11 +476,11 @@ CREATE EXTENSION emaj CASCADE;  -- 依赖: btree_gist, dblink
 
 来源：
 
-- [E-Maj 5.0.0 README](https://github.com/dalibo/emaj/blob/v5.0.0/README.md)
-- [E-Maj 5.0.0 变更日志](https://github.com/dalibo/emaj/blob/v5.0.0/CHANGES.md)
-- [E-Maj 快速入门](https://github.com/dalibo/emaj/blob/v5.0.0/docs/en/quickStart.rst)
-- [E-Maj 升级指南](https://github.com/dalibo/emaj/blob/v5.0.0/docs/en/upgrade.rst)
-- [E-Maj 设置指南](https://github.com/dalibo/emaj/blob/v5.0.0/docs/en/setup.rst)
+- [E-Maj 5.0.1 README](https://github.com/dalibo/emaj/blob/v5.0.1/README.md)
+- [E-Maj 5.0.1 变更日志](https://github.com/dalibo/emaj/blob/v5.0.1/CHANGES.md)
+- [E-Maj 快速入门](https://github.com/dalibo/emaj/blob/v5.0.1/docs/en/quickStart.rst)
+- [E-Maj 升级指南](https://github.com/dalibo/emaj/blob/v5.0.1/docs/en/upgrade.rst)
+- [E-Maj 设置指南](https://github.com/dalibo/emaj/blob/v5.0.1/docs/en/setup.rst)
 
 规范扩展名是 `emaj`；E-Maj 为一个协调表组记录表与序列变更，并可把整个表组回滚到命名标记。它适用于可重复测试、批处理保存点、变更检查与定向恢复，但 E-Maj 回滚不能替代 PostgreSQL 事务回滚或备份。
 
@@ -502,6 +532,10 @@ ALTER EXTENSION emaj UPDATE;
 - PHP 命令行客户端与 `emaj_uninstall.sql` 已移除。
 
 通过独立 SQL 脚本安装的环境没有相同的就地扩展升级路径；应遵循官方删除并重装流程。
+
+### 5.0.1 版本
+
+E-Maj 5.0.1 修复了 `emaj_adm` 获取超级用户能力的权限提升路径；现在 `emaj` schema 及其中的对象由 `emaj_adm` 所有。同时修复 `emajParallelRollback.pl` 围绕 `PREPARE TRANSACTION` 的错误。安装匹配文件后按正常扩展升级流程执行更新。
 
 ### 要求与注意事项
 

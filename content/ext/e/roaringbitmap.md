@@ -39,7 +39,7 @@ weight: 3630
 {.ext-table .ext-table--rel}
 
 
-> PGDG RPM package 1.3.0 installs SQL/control 1.3; the DEB package baseline remains 1.2.0. Local 1.3.0 recipes do not establish DEB publication.
+> RPM 1.3.0 installs SQL/control 1.3; DEB baseline 1.2.0. Local 1.3.0 recipes do not imply DEB publication.
 
 
 ## 版本
