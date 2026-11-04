@@ -140,6 +140,8 @@ Pigsty 预置了针对 VictoriaMetrics / Logs / Traces 的数据源（`vmetrics-
 
 Grafana 也可作为通用低代码可视化平台使用，因此 Pigsty 默认安装了 ECharts、victoriametrics-datasource 等插件，方便构建监控大屏或巡检报表。
 
+Grafana 默认允许匿名用户以 `Viewer` 角色访问。将 [`grafana_auth_anon`](/docs/infra/param#grafana_auth_anon) 设置为 `false`，并重新渲染配置、重启 Grafana，可要求访客完成身份认证。
+
 Grafana 相关配置参数位于：[配置：INFRA - GRAFANA](/docs/infra/param#grafana)。
 
 

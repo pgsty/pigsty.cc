@@ -144,6 +144,27 @@ Nginx 相关的管理任务：
 
 ----------------
 
+## 管理 Grafana 匿名访问
+
+Grafana 默认允许匿名用户以 `Viewer` 角色访问。使用支持 [`grafana_auth_anon`](/docs/infra/param#grafana_auth_anon) 的版本，在配置清单的 `all.vars` 或 `infra` 分组变量中设置：
+
+```yaml
+grafana_auth_anon: false
+```
+
+然后重新渲染配置并重启 Grafana：
+
+```bash
+./infra.yml -l infra -t grafana_config,grafana_launch
+```
+
+仅执行 `grafana_config` 不会立即生效。针对单个节点操作时，将 `-l infra` 替换为 `-l <infra-node>`。
+配置清单中的设置会在后续重跑时保留；直接编辑 `/etc/grafana/grafana.ini` 会被模板覆盖。
+此开关与 [`grafana_auth_proxy`](/docs/infra/param#grafana_auth_proxy) 独立，只保护 Grafana 的访问入口。
+
+
+----------------
+
 ## 管理 Grafana 密码
 
 Grafana 有两个密码参数：[**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)（默认 `pigsty`）和 [**`grafana_view_password`**](/docs/infra/param#grafana_view_password)（默认 `DBUser.Viewer`）：
@@ -154,7 +175,7 @@ Grafana 有两个密码参数：[**`grafana_admin_password`**](/docs/infra/param
 | `grafana_view_password`  | `/etc/grafana/provisioning/datasources/pigsty.yml` |
 {.full-width}
 
-这两个密码一旦初始化之后，就只能通过 grafana 界面进行修改。
+初始化后，仅修改配置清单中的 `grafana_admin_password` 不会重设现有 Grafana 账号密码。请通过 Grafana 界面或其管理工具修改，并同步更新配置清单。
 
 Pigsty 会在初始化 Grafana 监控面板，注册 Grafana 数据源的时候，使用 [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)。
 所以如果你通过 Grafana GUI 修改了这个密码，请相应调整配置文件里面的配置。另外，您可以使用以下命令渲染新的密码到环境变量中。
@@ -164,4 +185,4 @@ Pigsty 会在初始化 Grafana 监控面板，注册 Grafana 数据源的时候�
 ```
 
 [**`grafana_view_password`**](/docs/infra/param#grafana_view_password) 是 Grafana 中默认的 Meta PostgreSQL 数据源用户 `dbuser_view` 的密码。
-如果你修改了这个密码，请在 Grafana 数据源管理界面中同步修改密码。
+如果数据库用户密码发生变化，应同步更新 `grafana_view_password`，并重新渲染数据源配置、重启 Grafana；只修改其中一端会导致数据源连接失败。它不是 Grafana 访客的登录密码。

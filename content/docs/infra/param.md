@@ -1,7 +1,7 @@
 ---
 title: 参数列表
 weight: 3030
-description: INFRA 模块提供了 10 组共 70+ 个配置参数
+description: INFRA 模块提供了 10 组共 74 个配置参数
 icon: fa-solid fa-sliders
 categories: [参考]
 ---
@@ -159,6 +159,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`grafana_clean`](#grafana_clean)                   |   `bool`   | `G/A` | 初始化 Grafana 期间清除数据？                   |
 | [`grafana_admin_username`](#grafana_admin_username) | `username` |  `G`  | Grafana 管理员用户名，默认为 `admin`            |
 | [`grafana_admin_password`](#grafana_admin_password) | `password` |  `G`  | Grafana 管理员密码，默认为 `pigsty`            |
+| [`grafana_auth_anon`](#grafana_auth_anon)           |   `bool`   | `G/I` | 允许匿名用户以 Viewer 角色访问，默认为 `true`    |
 | [`grafana_auth_proxy`](#grafana_auth_proxy)         |   `bool`   |  `G`  | 启用 Grafana 身份代理？                      |
 | [`grafana_pgurl`](#grafana_pgurl)                   |   `url`    |  `G`  | 外部 PostgreSQL 数据库 URL（用于 Grafana 持久化） |
 | [`grafana_view_password`](#grafana_view_password)   | `password` |  `G`  | Grafana 元数据库 PG 数据源密码                 |
@@ -1360,6 +1361,7 @@ grafana_port: 3000                # Grafana 监听端口
 grafana_clean: false              # 初始化时清理数据？
 grafana_admin_username: admin     # 管理员用户名
 grafana_admin_password: pigsty    # 管理员密码
+grafana_auth_anon: true           # 允许匿名用户以 Viewer 角色访问？
 grafana_auth_proxy: false         # 启用身份代理？
 grafana_pgurl: ''                 # 外部 PostgreSQL URL
 grafana_view_password: DBUser.Viewer  # PG 数据源密码
@@ -1421,6 +1423,34 @@ Grafana 管理员密码，默认为 `pigsty`。
 
 
 
+### `grafana_auth_anon`
+
+参数名称： `grafana_auth_anon`， 类型： `bool`， 层次：`G/I`
+
+是否允许匿名访问 Grafana？默认值为 `true`，匿名用户以 `Pigsty` 组织的 `Viewer` 角色访问。
+
+此参数为开发版本新增，v4.5.0 及更早版本尚不支持。
+
+设置为 `false` 后，用户需要通过 Grafana 登录或已配置的认证代理完成身份认证，才能访问仪表盘和数据源。
+可以在 `all.vars`、`infra` 分组或具体基础设施节点上设置：
+
+```yaml
+grafana_auth_anon: false
+```
+
+修改配置清单后，重新渲染配置并重启 Grafana：
+
+```bash
+./infra.yml -l infra -t grafana_config,grafana_launch
+```
+
+将 `-l infra` 替换为 `-l <infra-node>` 可仅应用到指定节点。`grafana_config` 只写入配置文件，必须重启 Grafana 才会生效。
+
+此开关与 [`grafana_auth_proxy`](#grafana_auth_proxy) 独立；只允许通过认证代理访问时，需要同时关闭匿名访问。
+[`grafana_view_password`](#grafana_view_password) 是 PostgreSQL 数据源密码，不控制访客登录。
+此参数只控制 Grafana，其他基础设施端点仍需通过防火墙或门户认证保护。
+
+
 ### `grafana_auth_proxy`
 
 参数名称： `grafana_auth_proxy`， 类型： `bool`， 层次：`G`
@@ -1429,7 +1459,7 @@ Grafana 管理员密码，默认为 `pigsty`。
 
 当启用时，Grafana 会信任反向代理（Nginx）传递的用户身份信息，实现单点登录（SSO）功能。
 
-这通常用于与外部身份认证系统集成的场景。
+这通常用于与外部身份认证系统集成的场景。若要求所有访客经过认证，还需将 [`grafana_auth_anon`](#grafana_auth_anon) 设置为 `false`。
 
 
 
@@ -1453,4 +1483,4 @@ Grafana 管理员密码，默认为 `pigsty`。
 
 Grafana 元数据库 PG 数据源使用的只读用户密码，默认为 `DBUser.Viewer`。
 
-此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据。
+此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据。它不是 Grafana 访客的登录密码；匿名访问由 [`grafana_auth_anon`](#grafana_auth_anon) 控制。

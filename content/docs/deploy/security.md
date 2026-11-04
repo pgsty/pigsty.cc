@@ -76,6 +76,8 @@ HBA 的 `auth: ssl` 只要求加密连接。客户端还应使用 `sslmode=verif
 
 Grafana、VictoriaMetrics 等组件可能监听节点端口，默认防火墙不会将其直接开放到公网。对外访问应优先通过 Nginx，并限制管理页面的来源地址和身份。
 
+Grafana 默认允许匿名访问，修改管理员密码不会关闭此入口。需要身份认证时，设置 [`grafana_auth_anon`](/docs/infra/param#grafana_auth_anon) 为 `false`，并重新渲染配置、重启 Grafana；其他基础设施端点仍需单独保护。
+
 
 ----------------
 
