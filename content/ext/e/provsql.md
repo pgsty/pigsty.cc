@@ -26,12 +26,12 @@ weight: 2900
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`provsql`**](/ext/e/provsql) | `1.13.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 2900  | [**`provsql`**](/ext/e/provsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `provsql` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`uuid-ossp`](/ext/e/uuid-ossp) [`pgmemento`](/ext/e/pgmemento) [`ddl_historization`](/ext/e/ddl_historization) [`table_log`](/ext/e/table_log) [`data_historization`](/ext/e/data_historization) [`table_version`](/ext/e/table_version) [`pgaudit`](/ext/e/pgaudit) [`pgmnemo`](/ext/e/pgmnemo) [`pgcontext`](/ext/e/pgcontext) [`vectorize`](/ext/e/vectorize) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 2900
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.0` | {{< pgvers "14,15,16,17,18" >}} | `provsql` | `uuid-ossp` |
 | [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.0` | {{< pgvers "18,17,16,15,14" >}} | `provsql_$v` | - |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-provsql` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

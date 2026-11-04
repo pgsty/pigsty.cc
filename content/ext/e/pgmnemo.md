@@ -26,12 +26,12 @@ weight: 1950
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pgmnemo`**](/ext/e/pgmnemo) | `0.21.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1950  | [**`pgmnemo`**](/ext/e/pgmnemo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmnemo` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`vector`](/ext/e/vector) [`pgcontext`](/ext/e/pgcontext) [`vector`](/ext/e/vector) [`vectorize`](/ext/e/vectorize) [`pgml`](/ext/e/pgml) [`pg4ml`](/ext/e/pg4ml) [`pg_summarize`](/ext/e/pg_summarize) [`provsql`](/ext/e/provsql) [`pg_rrf`](/ext/e/pg_rrf) [`pg_search`](/ext/e/pg_search) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 1950
 | [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.21.0` | {{< pgvers "18,17" >}} | `pgmnemo` | `vector` |
 | [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.21.0` | {{< pgvers "18,17" >}} | `pgmnemo_$v` | `pgvector_$v` |
 | [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.20.0` | {{< pgvers "18,17" >}} | `postgresql-$v-pgmnemo` | `postgresql-$v-pgvector` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

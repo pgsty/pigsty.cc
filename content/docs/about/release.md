@@ -69,7 +69,7 @@ Pigsty 当前公开稳定版为 [**v4.5.0**](#v450)，发布于北京时间 **20
 |     v0.0.3      | 2020-06-22 | 接口设计改进                                                   | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
 |     v0.0.2      | 2020-04-30 | 首次提交                                                     | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
 |     v0.0.1      | 2019-05-15 | 概念原型                                                     |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
-{.full-width-full .release-index}
+{.full-width-full .release-index .wide .expand}
 
 
 ------
@@ -949,6 +949,7 @@ d092c48ee55116ed5e2c99a3d909ccdd  pigsty-pkg-v4.4.0.u24.aarch64.tgz
 | `vector`                     | 0.54.0         | 0.55.0         | 直链元数据更新               |
 | `v2ray`                      | 5.47.0         | 5.48.0         |                       |
 | `xray`                       | 26.2.6         | 26.3.27        |                       |
+{.wide .expand}
 
 **校验和**
 
@@ -1046,6 +1047,7 @@ fd1ea5cd5554bfe91fadd51ad80860e3  pigsty-pkg-v4.3.0.u26.x86_64.tgz
 | `mcli`                     | 20260213       | 20260321       |    |
 | `claude`                   | 2.1.68         | 2.1.81         |    |
 | `ivroysql`                 | 5.1            | 5.3            |    |
+{.wide .expand}
 
 **校验和**
 
@@ -1132,6 +1134,7 @@ PGDG YUM 仓库已经归档移除 [pg13](https://yum.postgresql.org/news/pg13-en
 | `gost`                       | -              | 2.12.0         | 新增 |
 | `sabiql`                     | -              | 1.6.2          | 新增 |
 | `agentsview`                 | -              | 0.10.0         | 新增 |
+{.wide .expand}
 
 
 **校验和**
@@ -1206,6 +1209,7 @@ a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.1.u24.aarch64.tgz
 | `antlr4-runtime413` | -               | 4.13     | 新增 Babelfish 依赖运行时    |
 | `cloudberry`        | -               | 2.0.0    | 仅 RPM 构建              |
 | `pg_background`     | -               | 1.8      | 仅 DEB 构建              |
+{.wide .expand}
 
 **基础设施软件更新**
 
@@ -1249,6 +1253,7 @@ a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.1.u24.aarch64.tgz
 | `pig`                        | 1.1.2          | 1.3.0          |
 | `stalwart`                   | -              | 0.15.5         |
 | `maddy`                      | -              | 0.8.2          |
+{.wide .expand}
 
 
 **API 变化**
@@ -1539,7 +1544,7 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 | code-server         | 4.100.2 | caddy             | 2.10.2   |
 | hugo                | 0.154.5 | cloudflared       | 2026.1.1 |
 | headscale           | 0.27.1  |                   |          |
-{.full-width}
+{.full-width .wide .expand}
 
 **新增模块**
 
@@ -1751,7 +1756,7 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 | `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像              |
 | `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                  |
 | `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                  |
-{.full-width}
+{.full-width .wide .expand}
 
 **兼容性**
 
@@ -2674,6 +2679,7 @@ e62f9ce9f89a58958609da7b234bf2f2  pigsty-v3.1.0.tgz
 | Deb 系统扩展 | 326 | 109  |  143   |  74  |  19  | 290  | 322  | 324  | 316  | 307  | 300  |
 | RPM 软件包 | 313 | 122  |  129   |  4   |  6   | 275  | 309  | 311  | 303  | 294  | 285  |
 | DEB 软件包 | 298 |  93  |  142   |  64  |  19  | 264  | 294  | 296  | 288  | 279  | 272  |
+{.wide .expand}
 
 **版本升级**
 

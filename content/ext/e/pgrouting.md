@@ -21,12 +21,12 @@ weight: 1510
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pgrouting`**](/ext/e/pgrouting) | `4.0.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1510  | [**`pgrouting`**](/ext/e/pgrouting) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`postgis`](/ext/e/postgis) [`mobilitydb`](/ext/e/mobilitydb) [`h3`](/ext/e/h3) [`pg_polyline`](/ext/e/pg_polyline) [`q3c`](/ext/e/q3c) [`pointcloud`](/ext/e/pointcloud) [`qdgc`](/ext/e/qdgc) [`pg_geohash`](/ext/e/pg_geohash) [`pg_sphere`](/ext/e/pg_sphere) [`pg_eviltransform`](/ext/e/pg_eviltransform) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ weight: 1510
 | [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.0.2` | {{< pgvers "18,17,16,15,14" >}} | `pgrouting` | `plpgsql`, `postgis` |
 | [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.0.2` | {{< pgvers "18,17,16,15,14" >}} | `pgrouting_$v` | - |
 | [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.0.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgrouting` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

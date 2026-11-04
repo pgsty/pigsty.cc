@@ -56,7 +56,7 @@ Grafana Dashboard
 |:-----------------------------------------------------|:---------:|:---------|
 | `juicefs_object_request_durations_histogram_seconds` | histogram | 对象存储请求延迟 |
 | `juicefs_object_request_errors`                      |  counter  | 对象存储错误数  |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 缓存
 
@@ -72,7 +72,7 @@ Grafana Dashboard
 |:--------------------------------------------------------|:---------:|:-------------|
 | `juicefs_transaction_durations_histogram_seconds`       | histogram | 元数据事务延迟（直方图） |
 | `juicefs_transaction_durations_histogram_seconds_count` |  counter  | 元数据事务请求计数    |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 

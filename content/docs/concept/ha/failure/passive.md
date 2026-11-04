@@ -69,7 +69,7 @@ series:
 | **从库检测** |          `0`           |             `loop`             |            `loop / 2`            | 最好：恰好在检测点<br/>最坏：刚错过检测点        |
 | **抢锁提拔** |          `0`           |              `2`               |               `1`                | 最好：直接抢锁提升<br/>最坏：API 超时+Promote |
 | **健康检查** | `(rise-1) × fastinter` | `(rise-1) × fastinter + inter` | `(rise-1) × fastinter + inter/2` | 最好：检查前状态变化<br/>最坏：检查后瞬间状态变化    |
-{.full-width}
+{.full-width .wide .expand}
 
 **被动故障与主动故障的核心区别**：
 
@@ -239,4 +239,4 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 |  抢锁提拔  |  `0` / `1` / `2`   |  `0` / `1` / `2`   |   `0` / `1` / `2`   |    `0` / `1` / `2`    |
 |  健康检查  |  `1` / `2` / `2`   |  `2` / `3` / `4`   |   `3` / `5` / `6`   |    `4` / `6` / `8`    |
 | **总计** | `16` / `23` / `29` | `27` / `34` / `41` | `53` / `66` / `78`  | `104` / `127` / `150` |
-{.full-width}
+{.full-width .wide .expand}

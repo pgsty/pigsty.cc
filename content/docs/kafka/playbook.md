@@ -45,7 +45,7 @@ Limit 规则是：**每个被选中的集群必须完整**。可以选择一个�
 | 启动   | `kafka_launch`    | 收敛不健康集群、逐个加入 Controller 与准入 Broker、严格滚动，确认 Manifest 与已生效静态状态      |
 | 资源收敛 | `kafka_provision` | 收敛动态 minISR、用户凭据、ACL、Quota 与声明式 Topic，报告内部 Topic RF 漂移 |
 | 监控   | `kafka_monitor`   | 配置协议 Exporter 并注册 VictoriaMetrics Target               |
-{.full-width}
+{.full-width .wide .expand}
 
 Play 使用 `any_errors_fatal: true`。某个阶段失败时，后续危险推进会停止；修正原因后可以重跑完整集群，角色会从现场状态和持久指纹恢复，而不是盲目重复格式化。
 

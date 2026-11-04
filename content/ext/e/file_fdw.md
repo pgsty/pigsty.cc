@@ -21,12 +21,12 @@ weight: 8980
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`file_fdw`**](/ext/e/file_fdw) | `1.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 8980  | [**`file_fdw`**](/ext/e/file_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`aws_s3`](/ext/e/aws_s3) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_parquet`](/ext/e/pg_parquet) [`pg_lake`](/ext/e/pg_lake) [`pg_csv`](/ext/e/pg_csv) [`pg_ducklake`](/ext/e/pg_ducklake) [`pg_fact_loader`](/ext/e/pg_fact_loader) [`log_fdw`](/ext/e/log_fdw) [`omni_csv`](/ext/e/omni_csv) [`pg_sqlog`](/ext/e/pg_sqlog) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ weight: 8980
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装
@@ -140,6 +140,7 @@ OPTIONS (program 'ps aux | tail -n +2', format 'text', delimiter ' ');
 | `encoding` | 数据编码 |
 | `on_error` | 类型转换时的错误处理 |
 | `reject_limit` | 最大容忍错误数 |
+{.wide .expand}
 
 ### 列选项
 

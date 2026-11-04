@@ -25,4 +25,4 @@ sidebar_expanded: true
 | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | 27 | 27 | 外部数据源包装器：FDW开发框架 Wrappers，Multicorn，访问外部的 Mongo，MySQL，SQLite，HDFS，MSSQL，Oracle，DB2，…… |
 | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | 31 | 20 | 数据库兼容扩展：仿真其他 DBMS 的行为：MySQL，Memcache，Mongo，Oracle，Babelfish for Microsoft SQL Server…… |
 | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | 22 | 21 | 数据复制扩展：逻辑复制，逻辑解码，DDL复制，JSON/BSON/Protobuf 变更抽取，数据迁移，数据导入，数据比对等 |
-{.ext-table}
+{.ext-table .wide .expand}

@@ -156,7 +156,7 @@ etcdctl --user root:YourSecurePassword member list
 | etcdctl 环境变量   | `/etc/profile.d/etcdctl.sh`    | `./etcd.yml -t etcd_config`    |
 | Patroni DCS 配置 | `/etc/patroni/patroni.yml`     | `./pgsql.yml -t pg_conf`       |
 | VIP-Manager 配置 | `/etc/default/vip-manager.yml` | `./pgsql.yml -t pg_vip_config` |
-{.full-width}
+{.full-width .wide .expand}
 
 **刷新 etcd 成员配置文件**：
 

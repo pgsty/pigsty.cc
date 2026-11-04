@@ -65,7 +65,7 @@ series:
 | **命令执行** |          `0`           |              `2`               |               `1`                | 最好：API 立即响应<br/>最坏：网络延迟或 API 超时      |
 | **从库提升** |          `0`           |              `1`               |               `0`                | 最好：promote 瞬间完成<br/>最坏：checkpoint 开销 |
 | **健康检查** | `(rise-1) × fastinter` | `(rise-1) × fastinter + inter` | `(rise-1) × fastinter + inter/2` | 最好：检查前状态变化<br/>最坏：检查后瞬间状态变化          |
-{.full-width}
+{.full-width .wide .expand}
 
 **人工切换与自动切换的核心区别**：
 
@@ -74,7 +74,7 @@ series:
 | **自动切换**（过期故障） | 等待 TTL | 等待循环唤醒 | 租约过期 + 从库检测 | 16s ~ 150s  |
 | **自动切换**（崩溃故障） | 等待重启超时 | 等待循环唤醒 | 重启超时 + 从库检测 | 1s ~ 111s   |
 | **人工切换**（Failover） | **跳过** | **跳过** |    健康检查     | **1s ~ 11s** |
-{.full-width}
+{.full-width .wide .expand}
 
 人工切换跳过了最耗时的 **租约过期** 和 **从库检测** 阶段，RTO 大幅缩短。
 
@@ -212,7 +212,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 |  从库提升  | `0` / `0` / `1` | `0` / `0` / `1` | `0` / `0` / `1` | `0` / `0` / `1`  |
 |  健康检查  | `1` / `2` / `2` | `2` / `3` / `4` | `3` / `5` / `6` | `4` / `6` / `8`  |
 | **总计** | `1` / `3` / `5` | `2` / `4` / `7` | `3` / `6` / `9` | `4` / `7` / `11` |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -255,7 +255,7 @@ theme light
 |:----------:|:------------:|:------:|:------:|:-----:|:--------------:|
 | Switchover | 计划维护、滚动升级、迁移 |  正常运行  |   等待   |   无   | ≈ Failover RTO |
 |  Failover  |  主库故障、紧急切换   | 故障或不可达 |   跳过   | 可能有少量 |    1s ~ 11s    |
-{.full-width}
+{.full-width .wide .expand}
 
 **WAL 追平时间** 取决于从库的复制延迟。在正常运维场景下，从库通常保持同步或接近同步状态，追平可在毫秒到秒级完成。
 使用同步复制时，WAL 追平时间为 0，此时 Switchover 与 Failover 的 RTO 几乎相同。
@@ -275,4 +275,4 @@ theme light
 | **norm** |     4s      |    34s     |    30s     |   **8x**   |
 | **safe** |     6s      |    66s     |    46s     | **8~11x**  |
 | **wide** |     7s      |    127s    |    87s     | **12~18x** |
-{.full-width}
+{.full-width .wide .expand}

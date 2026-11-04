@@ -21,12 +21,12 @@ weight: 2390
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_trgm`**](/ext/e/pg_trgm) | `1.6` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 2390  | [**`pg_trgm`**](/ext/e/pg_trgm) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_similarity`](/ext/e/pg_similarity) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`smlar`](/ext/e/smlar) [`pg_bigm`](/ext/e/pg_bigm) [`pgpcre`](/ext/e/pgpcre) [`re2`](/ext/e/re2) [`biscuit`](/ext/e/biscuit) [`citext`](/ext/e/citext) [`unaccent`](/ext/e/unaccent) [`pgroonga`](/ext/e/pgroonga) [`vgram`](/ext/e/vgram) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ weight: 2390
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">1.6</span> | <span class="ext-badge ext-badge--avail">1.6</span> | <span class="ext-badge ext-badge--avail">1.6</span> | <span class="ext-badge ext-badge--avail">1.6</span> | <span class="ext-badge ext-badge--avail">1.6</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装
@@ -97,6 +97,7 @@ SELECT show_trgm('word');
 | `text <->> text` → `real` | `<<->` 的交换子 |
 | `text <<<-> text` → `real` | 严格词距离 |
 | `text <->>> text` → `real` | `<<<->` 的交换子 |
+{.wide .expand}
 
 ### GUC 参数
 
@@ -105,6 +106,7 @@ SELECT show_trgm('word');
 | `pg_trgm.similarity_threshold` | 0.3 | `%` 运算符的阈值 |
 | `pg_trgm.word_similarity_threshold` | 0.6 | `<%` 和 `%>` 运算符的阈值 |
 | `pg_trgm.strict_word_similarity_threshold` | 0.5 | `<<%` 和 `%>>` 运算符的阈值 |
+{.wide .expand}
 
 ### 索引支持
 

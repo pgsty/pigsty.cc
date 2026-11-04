@@ -52,7 +52,7 @@ Pigsty 默认从互联网上游 [**安装**](/docs/setup/install/) 所需软件�
 | Ubuntu 22.04 | `u22` | `22.04.5` | [**下载（1.97 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u22.x86_64.tgz) | [**下载（1.84 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u22.aarch64.tgz) |
 | Ubuntu 24.04 | `u24` | `24.04.4` | [**下载（1.76 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u24.x86_64.tgz) | [**下载（1.64 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u24.aarch64.tgz) |
 | Ubuntu 26.04 | `u26` | `26.04.0` | [**下载（1.88 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u26.x86_64.tgz) | [**下载（1.77 GB）**](https://github.com/pgsty/pigsty/releases/download/v4.5.0/pigsty-pkg-v4.5.0.u26.aarch64.tgz) |
-{.full-width}
+{.full-width .wide .expand}
 
 发布页面还提供源码包、`checksums` 和对应的 `.asc` GPG 签名，验证方法见 [**GPG 签名**](/docs/repo/gpg/#github-发布资产验证)。旧版离线包可从 [**历史发布页面**](https://github.com/pgsty/pigsty/releases) 获取。
 
@@ -148,6 +148,7 @@ fbd4d01ce39e13016343badc3258b32e0ce5088b1604b0f62ef8b4aafca82d65  pigsty-pkg-v4.
 | `cache_pkg_dir`  | `dist/${version}`                         | 管理节点上的输出目录             |
 | `cache_tmp_dir`  | `/var/tmp`                                | 开发版本新增；目标节点生成归档的临时目录，覆盖时需先创建。v4.5.0 固定使用 `/tmp` |
 | `cache_repo`     | `pigsty`                                  | 从目标节点打包的本地仓库；多个仓库用逗号分隔 |
+{.wide .expand}
 
 输出目录同时包含 MD5 格式的 `checksums` 校验文件。源码发布包需另外准备，`cache.yml` 不会自动从工作树制作源码归档。
 

@@ -74,7 +74,7 @@ series:
 | **从库检测** |           `0`            |           `loop`            |          `loop/2`           | 最好：恰好在检测点<br/>最坏：刚错过检测点          |
 | **抢锁提拔** |           `0`            |            `2`              |             `1`             | 最好：直接抢锁提升<br/>最坏：API 超时+Promote   |
 | **健康检查** |  `(rise-1) × fastinter`  | `(rise-1) × fastinter + inter` | `(rise-1) × fastinter + inter/2` | 最好：检查前状态变化<br/>最坏：检查后瞬间状态变化 |
-{.full-width}
+{.full-width .wide .expand}
 
 **网络分区与节点宕机的核心区别**：
 
@@ -82,7 +82,7 @@ series:
 |:---------------:|:----------:|:--------------------:|:---------------:|:----------:|
 | **节点宕机**（过期故障）  |  随节点死亡   |        完全不可用         | 被动等待 TTL 过期 |     无      |
 | **网络分区**（本文场景）  | 存活但无法访问 DCS |   可能仍在运行（需要主动降级）   | 被动等待 TTL 过期 | **有，需防护** |
-{.full-width}
+{.full-width .wide .expand}
 
 在网络分区场景中，主库 PostgreSQL 可能仍在运行并接受写入，这会导致 **脑裂** 问题。
 Patroni 通过 **主动降级** 机制解决：当无法刷新 Leader Key 时，主动将 PostgreSQL 降级为只读或关闭。
@@ -264,7 +264,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 | **norm** |  5   |  10   |  30s  |      25s       |   ✓ 安全    |
 | **safe** |  10  |  20   |  60s  |      50s       |   ✓ 安全    |
 | **wide** |  20  |  30   | 120s  |      80s       |   ✓ 安全    |
-{.full-width}
+{.full-width .wide .expand}
 
 **四种模式计算结果**（单位：秒，格式：min / avg / max）
 
@@ -276,7 +276,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 |  抢锁提拔  |  `0` / `1` / `2`   |  `0` / `1` / `2`   |   `0` / `1` / `2`   |    `0` / `1` / `2`    |
 |  健康检查  |  `1` / `2` / `2`   |  `2` / `3` / `4`   |   `3` / `5` / `6`   |    `4` / `6` / `8`    |
 | **总计** | `16` / `23` / `29` | `27` / `34` / `41` | `53` / `66` / `78`  | `104` / `127` / `150` |
-{.full-width}
+{.full-width .wide .expand}
 
 **结论**：网络分区的 RTO 与过期故障（节点宕机）相同，因为瓶颈都是 TTL 过期时间。
 
@@ -391,7 +391,7 @@ watchdog:
 |  **崩溃故障**  | PG 崩溃，Patroni 存活 | 重启超时后主动释放 | 1s ~ 111s  |    无     |
 |  **网络分区**  | 存活但与 DCS 隔离 | 被动等待 TTL 过期 | 16s ~ 150s | **有，需防护** |
 |  **人工切换**  |  正常或故障  |  直接释放/获取  |  1s ~ 11s  |    无     |
-{.full-width}
+{.full-width .wide .expand}
 
 **关键洞察**：网络分区的 RTO 与过期故障相同，但需要额外的脑裂防护机制。
 确保满足 `loop_wait + 2 × retry_timeout ≤ ttl` 约束是防止脑裂的关键设计。

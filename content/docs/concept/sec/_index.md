@@ -63,7 +63,7 @@ pg-meta:
 | 备份恢复                                              | [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest) 默认启用，本地仓库保留两份全量备份 | [`pgbackrest_enabled`](/docs/pgsql/param#pgbackrest_enabled)     |
 | 防火墙                                               | zone 模式：信任内网网段，公网仅放行必要端口                                                | [`node_firewall_mode`](/docs/node/param#node_firewall_mode)      |
 | 受限 sudo                                           | 数据库系统用户的 sudo 被限制在必要命令集内                                                | [`pg_dbsu_sudo`](/docs/pgsql/param#pg_dbsu_sudo)                 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

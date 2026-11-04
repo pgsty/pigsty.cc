@@ -120,6 +120,7 @@ admin / ChangeMe
 | `ANSIBLE_DOCKER_ENABLED` | `false` | 在 Celery 容器内执行 Ansible，使用当前数据目录布局 |
 | `CORE_WORKER` | `2` | Core Gunicorn worker 数 |
 | `CELERY_WORKER_COUNT` | `2` | 每个 Celery 队列 worker 并发数 |
+{.wide .expand}
 
 使用网站资产代理时，在 `WEB_PROXY_ALLOWED_HOSTS` 中添加目标网站的主机名或 IP，并保留 `localhost,127.0.0.1`。JumpServer Endpoint 中的网站代理端口应与 `KOKO_WEB_PROXY_PORT` 一致。
 

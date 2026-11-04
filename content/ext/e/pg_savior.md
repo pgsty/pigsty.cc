@@ -26,12 +26,12 @@ weight: 5810
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_savior`**](/ext/e/pg_savior) | `0.1.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 5810  | [**`pg_savior`**](/ext/e/pg_savior) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`table_log`](/ext/e/table_log) [`safeupdate`](/ext/e/safeupdate) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_strict`](/ext/e/pg_strict) [`pgmemento`](/ext/e/pgmemento) [`pgaudit`](/ext/e/pgaudit) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) [`pg_crash`](/ext/e/pg_crash) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`block_copy_command`](/ext/e/block_copy_command) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 5810
 | [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_savior` | - |
 | [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_savior_$v` | - |
 | [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-savior` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -303,6 +303,7 @@ TRUNCATE big_emp;
 | `pg_savior.bypass` | `off` | 允许当前 session 跳过保护。 |
 | `pg_savior.max_rows_affected` | `0` | 当估计的 `DELETE`/`UPDATE` 行数高于该值时阻止；`0` 禁用该检查。 |
 | `pg_savior.large_table_threshold_rows` | `1000000` | 为受保护的大表 DDL 操作定义 "large"。 |
+{.wide .expand}
 
 有意绕过一个事务时使用 `SET LOCAL`：
 

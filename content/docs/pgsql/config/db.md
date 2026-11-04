@@ -128,7 +128,7 @@ pg-meta:
 | [**`pool_connlimit`**](#pool_connlimit)           | 连接池 | `int`                | 可变  | 最大数据库连接数，默认 `100`                      |
 | [**`pool_auth_user`**](#pool_auth_user)           | 连接池 | `string`             | 可变  | 认证查询用户                                 |
 | [**`register_datasource`**](#register_datasource) | 监控  | `bool`               | 可变  | 是否注册到 Grafana 数据源，默认 `true`            |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

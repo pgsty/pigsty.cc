@@ -74,7 +74,7 @@ all:  # 不要忘了将 10.10.10.10 替换为您的实际 IP 地址
 | ID | [NODE](/docs/node/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) | [PGSQL](/docs/pgsql/) | 说明   |
 |:--:|:-------------------:|:---------------------:|:-----------------------:|:---------------------:|:-----|
 | 1  |    `10.10.10.10`    |           -           |            -            |           -           | 添加节点 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -126,7 +126,7 @@ Pigsty 中的一切都是 **模块化** 的：您可以只部署监控基础设�
 | ID | [NODE](/docs/node/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) | [PGSQL](/docs/pgsql/) | 说明       |
 |:--:|:-------------------:|:---------------------:|:-----------------------:|:---------------------:|:---------|
 | 1  |    `10.10.10.10`    |       `infra-1`       |            -            |           -           | 添加基础设施模块 |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -168,7 +168,7 @@ all:
 | ID | [NODE](/docs/node/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) | [PGSQL](/docs/pgsql/) | 说明                      |
 |:--:|:-------------------:|:---------------------:|:-----------------------:|:---------------------:|:------------------------|
 | 1  |    `10.10.10.10`    |       `infra-1`       |        `etcd-1`         |      `pg-meta-1`      | 添加 etcd 与 PostgreSQL 集群 |
-{.full-width}
+{.full-width .wide .expand}
 
 至此，我们用 [**`node.yml`**](/docs/node/playbook#nodeyml), [**`infra.yml`**](/docs/infra/playbook#infrayml), [**`etcd.yml`**](/docs/etcd/playbook#etcdyml) 和 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 四个 [**剧本**](/docs/setup/playbook)，
 在单机上部署了完整的四个核心功能模块。

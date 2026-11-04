@@ -26,12 +26,12 @@ weight: 1840
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_similarity`**](/ext/e/pg_similarity) | `1.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1840  | [**`pg_similarity`**](/ext/e/pg_similarity) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_trgm`](/ext/e/pg_trgm) [`smlar`](/ext/e/smlar) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`pgpcre`](/ext/e/pgpcre) [`re2`](/ext/e/re2) [`pg_bigm`](/ext/e/pg_bigm) [`biscuit`](/ext/e/biscuit) [`vector`](/ext/e/vector) [`imgsmlr`](/ext/e/imgsmlr) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ weight: 1840
 | [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_similarity` | - |
 | [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_similarity_$v` | - |
 | [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-similarity` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -296,6 +296,7 @@ CREATE EXTENSION pg_similarity;
 | Smith-Waterman 系数 | `smithwaterman(text, text) returns float8` | `~=~` | 否 | `pg_similarity.sw_threshold`, `pg_similarity.sw_is_normalized` |
 | Smith-Waterman-Gotoh 系数 | `smithwatermangotoh(text, text) returns float8` | `~!~` | 否 | `pg_similarity.swg_threshold`, `pg_similarity.swg_is_normalized` |
 | Soundex 距离 | `soundex(text, text) returns float8` | `~*~` | 否 | |
+{.wide .expand}
 
 
 --------

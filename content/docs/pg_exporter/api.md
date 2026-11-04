@@ -91,7 +91,7 @@ pg_exporter_build_info{version="v1.5.0",branch="main",revision="<git-sha>",build
 | `pg_exporter_query_scrape_hit_count` / `_metric_count` | datname, query | 每个采集器返回的行数 / 产出的指标数 |
 | `pg_exporter_query_scrape_predicate_skip_count` | datname, query | 因谓词不满足而跳过的次数 |
 | `pg_exporter_query_cache_ttl` | datname, query | 采集器结果缓存的 TTL |
-{.full-width}
+{.full-width .wide .expand}
 
 用 `pg_exporter_query_scrape_duration` 与 `_error_count` 可以直接定位慢采集器与故障采集器，等价于 `/stat` 的机器可读版本。
 

@@ -26,12 +26,12 @@ weight: 6280
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_track_optimizer`**](/ext/e/pg_track_optimizer) | `0.9.2` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 6280  | [**`pg_track_optimizer`**](/ext/e/pg_track_optimizer) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`online_advisor`](/ext/e/online_advisor) [`pg_qualstats`](/ext/e/pg_qualstats) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`plan_filter`](/ext/e/plan_filter) [`pg_relusage`](/ext/e/pg_relusage) [`pg_strom`](/ext/e/pg_strom) [`pg_orca`](/ext/e/pg_orca) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ weight: 6280
 | [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.9.2` | {{< pgvers "18,17" >}} | `pg_track_optimizer` | - |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.9.2` | {{< pgvers "18,17" >}} | `pg_track_optimizer_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.9.2` | {{< pgvers "18,17" >}} | `postgresql-$v-pg-track-optimizer` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -226,3 +226,4 @@ SELECT * FROM pg_track_optimizer_status;
 | `pg_track_optimizer.log_min_error` | (无) | 触发 EXPLAIN 日志的误差阈值 |
 | `pg_track_optimizer.hash_mem` | (默认) | 共享内存限制（KB） |
 | `pg_track_optimizer.auto_flush` | `on` | 后端关闭时自动保存统计 |
+{.wide .expand}

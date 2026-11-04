@@ -30,7 +30,7 @@ Pigsty 支持多种 PostgreSQL 内核和兼容分支，让您能够在同一套�
 | [**Cloudberry**](/docs/pgsql/kernel/cloudberry) |   **开源 MPP 数仓**   | 以 `gpsql` 模式接入的 Cloudberry 分支                 |
 | [**AgensGraph**](/docs/pgsql/kernel/agensgraph) | **属性图 + Cypher**  | 在 PostgreSQL 体系内提供图查询能力                       |
 |     [**pgEdge**](/docs/pgsql/kernel/pgedge)     |  **Spock 多主复制**   | 面向边缘场景的分布式 PostgreSQL 发行版                     |
-{.full-width}
+{.full-width .wide .expand}
 
 ![PostgreSQL 分支与兼容内核](/img/pigsty/pg-forks.webp)
 
@@ -62,4 +62,4 @@ FROM pg_available_extensions ORDER BY name;
 | [**AgensGraph**](/docs/pgsql/kernel/agensgraph)    | `PostgreSQL 17.10 (AgensGraph 2.17.0) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, 64-bit`                                                | `PostgreSQL 17.10 (AgensGraph 2.17.0) on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4), 64-bit`                                |
 | [**pgEdge**](/docs/pgsql/kernel/pgedge)            | `PostgreSQL 18.4 (pgEdge 5.0.10) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, 64-bit`                                                     | `PostgreSQL 18.4 (pgEdge 5.0.10) on x86_64-pc-linux-gnu, compiled by gcc (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4), 64-bit`                                     |
 | [**Cloudberry**](/docs/pgsql/kernel/cloudberry)    |                                                                                                                                                                        | `PostgreSQL 14.4 (Apache Cloudberry 2.0.0-incubating build 1) on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11), 64-bit` |
-{.full-width}
+{.full-width .wide .expand}

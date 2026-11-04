@@ -26,12 +26,12 @@ weight: 6290
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_wait_sampling`**](/ext/e/pg_wait_sampling) | `1.1.11` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 6290  | [**`pg_wait_sampling`**](/ext/e/pg_wait_sampling) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_profile`](/ext/e/pg_profile) [`pgsentinel`](/ext/e/pgsentinel) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`powa`](/ext/e/powa) [`pgrowlocks`](/ext/e/pgrowlocks) [`pg_visibility`](/ext/e/pg_visibility) [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_stat_plans`](/ext/e/pg_stat_plans) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 6290
 | [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling` | - |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_wait_sampling_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-wait-sampling` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -546,6 +546,7 @@ SELECT pg_wait_sampling_reset_profile();
 | `pg_wait_sampling.profile_pid` | `true` | 按进程收集剖析 |
 | `pg_wait_sampling.profile_queries` | `top` | 按查询剖析：`none`、`top`、`all` |
 | `pg_wait_sampling.sample_cpu` | `true` | 采样 CPU 上的后端（事件列为 NULL） |
+{.wide .expand}
 
 ### 示例：热点等待事件
 

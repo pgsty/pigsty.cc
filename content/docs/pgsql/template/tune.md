@@ -67,7 +67,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_parallel_workers`             | `max(ceil(50% CPU), 2)`        | 1/2 CPU 上取整，最少两个        |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`        | 1/3 CPU 上取整，最少两个        |
 | `max_parallel_workers_per_gather`  | `min(max(ceil(20% CPU), 2),8)` | 1/5 CPU 下取整，最少两个，最多 8 个 |
-{.full-width}
+{.full-width .wide .expand}
 
 | OLAP                               | 设置逻辑                     | 范围限制                  |
 |------------------------------------|--------------------------|-----------------------|
@@ -75,7 +75,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_parallel_workers`             | `max(ceil(80% CPU, 2))`  | 4/5 CPU 上取整，最少两个      |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`  | 1/3 CPU 上取整，最少两个      |
 | `max_parallel_workers_per_gather`  | `max(floor(50% CPU), 2)` | 1/2 CPU 上取整，最少两个      |
-{.full-width}
+{.full-width .wide .expand}
 
 | CRIT                               | 设置逻辑                    | 范围限制                  |
 |------------------------------------|-------------------------|-----------------------|
@@ -83,7 +83,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_parallel_workers`             | `max(ceil(50% CPU), 2)` | 1/2 CPU 上取整，最少两个      |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)` | 1/3 CPU 上取整，最少两个      |
 | `max_parallel_workers_per_gather`  | `0`, 按需启用               |                       |
-{.full-width}
+{.full-width .wide .expand}
 
 | TINY                               | 设置逻辑                     | 范围限制                  |
 |------------------------------------|--------------------------|-----------------------|
@@ -91,7 +91,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_parallel_workers`             | `max(floor(50% CPU), 1)` | 50% CPU 下取整，最少 1 个    |
 | `max_parallel_maintenance_workers` | `max(floor(33% CPU), 1)` | 33% CPU 下取整，最少 1 个    |
 | `max_parallel_workers_per_gather`  | `0`，按需启用                 | 禁用单个查询的并行 gather      |
-{.full-width}
+{.full-width .wide .expand}
 
 请注意，CRIT 和 TINY 模板直接通过设置 `max_parallel_workers_per_gather = 0` 关闭了并行查询。
 用户可以按需在需要时设置此参数以启用并行查询。

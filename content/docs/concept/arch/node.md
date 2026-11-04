@@ -88,7 +88,7 @@ categories: [概念]
 |      `dnsmasq`      |   `53`   | 内部 DNS 域名解析        |
 |      `chronyd`      |  `123`   | NTP 时间服务器          |
 |      `ansible`      |   `-`    | 执行剧本，发起管理          |
-{.full-width}
+{.full-width .wide .expand}
 
 其中，Nginx 作为当前模块的入口，提供 Web 图形界面和本地软件仓库服务。
 如果你部署多个 INFRA 节点，每个 Infra 节点上的服务是相互独立的。
@@ -152,7 +152,7 @@ PGSQL 节点在 [**普通节点**](#普通节点) 的基础上，还会额外运
 |  **`{{ pg_cluster }}-default`**  | `5436` | 通过 `haproxy` 对外暴露数据库服务：主直连服务           | ✅ 默认启用  |
 |  **`{{ pg_cluster }}-offline`**  | `5438` | 通过 `haproxy` 对外暴露数据库服务：离线直连：离线读服务      | ✅ 默认启用  |
 | **`{{ pg_cluster }}-<service>`** | `543x` | 通过 `haproxy` 对外暴露数据库服务：PostgreSQL 定制服务 | ⚠️按需定制  |
-{.full-width}
+{.full-width .wide .expand}
 
 其中，`vip-manager` 只有当用户配置了 **PG VIP** 时才会启用。
 在 [**`pg_services`**](/docs/pgsql/service) 中可以定义更多的 [**自定义服务**](/docs/pgsql/service#定义服务)，这些服务会被 `haproxy` 对外暴露，并使用更多的服务端口。

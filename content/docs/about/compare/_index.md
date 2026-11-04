@@ -39,7 +39,7 @@ categories: [参考]
 | 日志采集   | <i class="fas fa-circle-check text-success"></i> VictoriaLogs / Vector      | <i class="fas fa-circle-check text-success"></i>  基础支持                     | <i class="fas fa-circle-check text-success"></i> 基础支持                            |
 | 可视化系统  | <i class="fas fa-circle-check text-success"></i> Grafana / Echarts          | <i class="fas fa-circle-check text-secondary"></i> 提供基本监控                  | <i class="fas fa-circle-check text-secondary"></i> 提供基本监控                        |
 | 告警聚合通知 | <i class="fas fa-circle-check text-success"></i> Alertmanager               | <i class="fas fa-circle-check text-success"></i> 基础支持                      | <i class="fas fa-circle-check text-success"></i> 基础支持                            |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------
@@ -71,7 +71,7 @@ categories: [参考]
 | 模糊分词     | <i class="fas fa-circle-check text-success"></i> zhparser 1.1 / pg_bigm 1.2     |  <i class="fas fa-circle-check text-success"></i> zhparser 1.0 / pg_jieba  |   <i class="fas fa-circle-check text-success"></i> pg_bigm 1.2   |
 | CDC 抽取   | <i class="fas fa-circle-check text-success"></i> wal2json 2.5.3                 |              <i class="fas fa-circle-xmark text-danger"></i>               |  <i class="fas fa-circle-check text-success"></i> wal2json 2.5   |
 | 膨胀治理     | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0                |      <i class="fas fa-circle-check text-success"></i> pg_repack 1.4.8      | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0 |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!DETAILS]- AWS RDS PG 可用扩展
 > AWS RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展）
@@ -237,7 +237,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 |----|-----------|----------------------|-----------------|------------------|
 | 成本 | 软件授权/服务费用 | 免费，硬件约 20 - 40 ¥/核·月 | 200 ～ 400 ¥/核·月 | 400 ~ 1300 ¥/核·月 |
 |    | 服务支持费用    | 服务约 100 ¥/ 核·月       | 包含在 RDS 成本中     |                  |
-{.full-width}
+{.full-width .wide .expand}
 
 ------------------
 

@@ -9,7 +9,7 @@ icon: fas fa-code
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | <a class="ext-badge ext-badge--lang plpgsql" href="/ext/language#plpgsql">PLpgSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> | <a class="ext-badge ext-badge--lang java" href="/ext/language#java">Java</a> |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | **扩展数** | 438 | 80 | 70 | 15 | 10 | 4 | 2 | 1 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -458,7 +458,7 @@ C 语言编写的扩展（438 个）
 | [`pg_bulkload`](/ext/e/pg_bulkload) | [`pg_bulkload`](https://github.com/ossc-db/pg_bulkload) | `3.1.23` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | 向 PostgreSQL 中高速加载数据 |
 | [`test_decoding`](/ext/e/test_decoding) | [`test_decoding`](https://www.postgresql.org/docs/current/test-decoding.html) | `-` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 基于SQL的WAL逻辑解码样例 |
 | [`pgoutput`](/ext/e/pgoutput) | [`pgoutput`](https://www.postgresql.org/docs/current/protocol-logical-replication.html) | `-` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | PG内置的逻辑解码输出插件 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -549,7 +549,7 @@ SQL 语言编写的扩展（80 个）
 | [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`pg_utl_smtp`](https://github.com/hexacluster/pg_utl_smtp) | `2.0.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`db_migrator`](/ext/e/db_migrator) | [`db_migrator`](https://github.com/cybertec-postgresql/db_migrator) | `1.0.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | 使用FDW从其他DBMS迁移到PostgreSQL |
 | [`mimeo`](/ext/e/mimeo) | [`mimeo`](https://github.com/omniti-labs/mimeo) | `1.5.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 在PostgreSQL实例间进行表级复制 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -630,7 +630,7 @@ Rust 语言编写的扩展（70 个）
 | [`pgs3`](/ext/e/pgs3) | [`pgs3`](https://github.com/pgsty/pgs3) | `0.1.1` | `0.19.2` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | 在 PostgreSQL 内实现的 S3 兼容对象存储端点 |
 | [`kafgres`](/ext/e/kafgres) | [`kafgres`](https://github.com/RayElg/kafgres) | `0.3.1` | `0.19.3` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | 在 PostgreSQL 中运行 Kafka 协议消息代理 |
 | [`pgmqtt`](/ext/e/pgmqtt) | [`pgmqtt`](https://github.com/RayElg/pgmqtt) | `0.5.1` | `0.19.2` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | PostgreSQL 的 CDC 到 MQTT 代理扩展 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -656,7 +656,7 @@ C++ 语言编写的扩展（15 个）
 | [`datasketches`](/ext/e/datasketches) | [`datasketches`](https://github.com/apache/datasketches-postgresql) | `1.7.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | PostgreSQL 近似分析摘要数据结构与聚合函数 |
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.4.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_oidc_validator`](/ext/e/pg_oidc_validator) | [`pg_oidc_validator`](https://github.com/percona/pg_oidc_validator) | `1.1.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | PostgreSQL 18 OAuth 与 OIDC 令牌验证模块 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -677,7 +677,7 @@ Data 语言编写的扩展（10 个）
 | [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt) | [`hunspell`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | Hunspell葡萄牙语全文检索词典 |
 | [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru) | [`hunspell`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | Hunspell俄语全文检索词典 |
 | [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) | [`hunspell`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | Hunspell俄语全文检索词典（来自AOT.ru小组） |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -692,7 +692,7 @@ PLpgSQL 语言编写的扩展（4 个）
 | [`pg_relation_sql`](/ext/e/pg_relation_sql) | [`pg_relation_sql`](https://github.com/asmgit/pg_relation_sql) | `0.2.2` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 根据 PostgreSQL 外键生成可内联的关系导航 SQL 函数 |
 | [`powa`](/ext/e/powa) | [`powa`](https://github.com/powa-team/powa-archivist) | `5.3.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | PostgreSQL 工作负载分析器-核心 |
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | [`pg_fact_loader`](https://sources.debian.org/src/pg-fact-loader/2.0.1-5/) | `2.0.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | 在 Postgres 中构建事实表 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -705,7 +705,7 @@ Python 语言编写的扩展（2 个）
 |:---------|:-------|:--------:|:--------:|:----------:|:---------|
 | [`jev`](/ext/e/jev) | [`jev`](https://github.com/realZachi/pg-jev) | `0.2.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 通过兼容 Jev 的 API 实现自然语言行过滤、排序和分类 |
 | [`faker`](/ext/e/faker) | [`faker`](https://gitlab.com/dalibo/postgresql_faker) | `0.5.3` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | 插入生成的测试伪造数据，Python库的包装 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 --------
@@ -717,4 +717,4 @@ Java 语言编写的扩展（1 个）
 | **扩展** | **包** | **版本** | **分类** | **许可证** | **描述** |
 |:---------|:-------|:--------:|:--------:|:----------:|:---------|
 | [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | Java 程序语言 |
-{.ext-table}
+{.ext-table .wide .expand}

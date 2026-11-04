@@ -26,12 +26,12 @@ weight: 1050
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`emaj`**](/ext/e/emaj) | `5.0.1` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1050  | [**`emaj`**](/ext/e/emaj) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `emaj` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`btree_gist`](/ext/e/btree_gist) [`dblink`](/ext/e/dblink) [`table_version`](/ext/e/table_version) [`pgmemento`](/ext/e/pgmemento) [`data_historization`](/ext/e/data_historization) [`table_log`](/ext/e/table_log) [`ddl_historization`](/ext/e/ddl_historization) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 1050
 | [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `emaj` | `btree_gist`, `dblink` |
 | [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `e-maj_$v` | - |
 | [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-emaj` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

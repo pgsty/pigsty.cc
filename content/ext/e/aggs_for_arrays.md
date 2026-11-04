@@ -26,12 +26,12 @@ weight: 4760
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`aggs_for_arrays`**](/ext/e/aggs_for_arrays) | `1.3.3` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 4760  | [**`aggs_for_arrays`**](/ext/e/aggs_for_arrays) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`intarray`](/ext/e/intarray) [`arraymath`](/ext/e/arraymath) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`floatvec`](/ext/e/floatvec) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ weight: 4760
 | [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.3` | {{< pgvers "18,17,16,15,14" >}} | `aggs_for_arrays` | - |
 | [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.3` | {{< pgvers "18,17,16,15,14" >}} | `aggs_for_arrays_$v` | - |
 | [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-aggs-for-arrays` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -235,6 +235,7 @@ CREATE EXTENSION aggs_for_arrays;
 | `array_to_min_max(values T[])` | `{min, max}` 元组 |
 | `array_to_skewness(values T[])` | 偏度 |
 | `array_to_kurtosis(values T[])` | 峰度 |
+{.wide .expand}
 
 ### 示例
 

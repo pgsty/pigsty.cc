@@ -73,7 +73,7 @@ Blackbox Exporter 的自身指标属于 `job=infra`；ICMP 探测经 `/probe` �
 | `mysql_exporter_up` | `up{job="mysql"}` |
 | `kafka_up` | `up{job="kafka",role=~".+"}` |
 | `kafka_exporter_up` | `up{job="kafka",role=""}` |
-{.full-width}
+{.full-width .wide .expand}
 
 这些记录指标同样不在原始 `/metrics` 端点中。按端口匹配的规则没有限定 `job`，因此相关端口覆盖需要在 Infra 的规则模板与服务配置之间保持一致。
 
@@ -92,7 +92,7 @@ Blackbox Exporter 的自身指标属于 `job=infra`；ICMP 探测经 `/probe` �
 | Alertmanager | `alertmanager_alerts`、`alertmanager_silences`、`alertmanager_notifications_total`、`alertmanager_notifications_failed_total` | 告警聚合、静默与通知 |
 | Grafana | `grafana_build_info`、`grafana_http_request_duration_seconds_count`、`grafana_stat_active_sessions` | 版本、HTTP 请求与会话 |
 | Nginx | `nginx_up`、`nginx_http_requests_total`、`nginx_connections_active`、`nginx_connections_waiting` | Nginx 状态、流量与连接 |
-{.full-width}
+{.full-width .wide .expand}
 
 这些是原始指标名，Counter 通常需要 `rate()` / `increase()` 后再分析。Histogram / Summary 的 `_bucket`、`_sum`、`_count` 是一个指标族的不同样本，不能按行数视作互不相关的指标族。
 

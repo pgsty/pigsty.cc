@@ -26,12 +26,12 @@ weight: 2530
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_strom`**](/ext/e/pg_strom) | `6.1` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 2530  | [**`pg_strom`**](/ext/e/pg_strom) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_mooncake`](/ext/e/pg_mooncake) [`pg_orca`](/ext/e/pg_orca) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) [`pg_clickhouse`](/ext/e/pg_clickhouse) [`storage_engine`](/ext/e/storage_engine) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ weight: 2530
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15" >}} | `pg_strom` | - |
 | [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15" >}} | `pg_strom_$v` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -199,6 +199,7 @@ PG-Strom 是一个 PostgreSQL 扩展，可将分析型 SQL 工作负载卸载到
 | [SQL 对象](https://heterodb.github.io/pg-strom/ref_sqlfuncs/) | 系统视图和工具函数 |
 | [GUC 参数](https://heterodb.github.io/pg-strom/ref_params/) | 所有配置参数 |
 | [故障排查](https://heterodb.github.io/pg-strom/troubles/) | 诊断与常见问题 |
+{.wide .expand}
 
 
 ### 前置条件
@@ -468,6 +469,7 @@ SELECT pgstrom.gpucache_recovery('realtime_metrics'::regclass);
 | `pg_strom.enable_brin` | `on` | 启用/禁用 GPU 扫描的 BRIN 索引 |
 | `pg_strom.enable_gpucache` | `on` | 启用/禁用 GPU 缓存 |
 | `pg_strom.cpu_fallback` | `notice` | GPU 复核错误时的 CPU 回退行为 |
+{.wide .expand}
 
 **优化器代价参数：**
 
@@ -484,6 +486,7 @@ SELECT pgstrom.gpucache_recovery('realtime_metrics'::regclass);
 | `pg_strom.gpudirect_enabled` | `on` | 启用/禁用 GPUDirect SQL |
 | `pg_strom.gpudirect_threshold` | 自动 | 触发 GPUDirect SQL 的最小表大小 |
 | `pg_strom.gpu_direct_seq_page_cost` | `seq_page_cost / 4` | 通过 GPUDirect SQL 的扫描代价 |
+{.wide .expand}
 
 **Arrow_Fdw：**
 
@@ -508,3 +511,4 @@ SELECT pgstrom.gpucache_recovery('realtime_metrics'::regclass);
 | `pg_strom.max_async_tasks` | `12` | 每个查询的最大并发 GPU 任务数 |
 | `pg_strom.enable_partitionwise_gpujoin` | `on` | 将 GpuJoin 下推到分区 |
 | `pg_strom.enable_partitionwise_gpupreagg` | `on` | 将 GpuPreAgg 下推到分区 |
+{.wide .expand}

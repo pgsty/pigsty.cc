@@ -21,12 +21,12 @@ weight: 5970
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`adminpack`**](/ext/e/adminpack) | `2.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 5970  | [**`adminpack`**](/ext/e/adminpack) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_checksums`](/ext/e/pg_checksums) [`amcheck`](/ext/e/amcheck) [`pg_repack`](/ext/e/pg_repack) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_surgery`](/ext/e/pg_surgery) [`pg_orphaned`](/ext/e/pg_orphaned) [`pg_pathcheck`](/ext/e/pg_pathcheck) [`pg_isok`](/ext/e/pg_isok) [`pageinspect`](/ext/e/pageinspect) [`pg_squeeze`](/ext/e/pg_squeeze) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ weight: 5970
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--miss">✗</span> | <span class="ext-badge ext-badge--miss">✗</span> | <span class="ext-badge ext-badge--avail">2.1</span> | <span class="ext-badge ext-badge--avail">2.1</span> | <span class="ext-badge ext-badge--avail">2.1</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装

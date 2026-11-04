@@ -61,7 +61,7 @@ juice_register  : 注册到 VictoriaMetrics 目标文件
 | `juice_config`   | 渲染配置文件                     |
 | `juice_launch`   | 启动服务                       |
 | `juice_register` | 写入 VictoriaMetrics 目标文件    |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 

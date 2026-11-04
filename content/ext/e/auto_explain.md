@@ -21,12 +21,12 @@ weight: 6980
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`auto_explain`**](/ext/e/auto_explain) | `-` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 6980  | [**`auto_explain`**](/ext/e/auto_explain) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_show_plans`](/ext/e/pg_show_plans) [`explain_ui`](/ext/e/explain_ui) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_overexplain`](/ext/e/pg_overexplain) [`pg_qualstats`](/ext/e/pg_qualstats) [`online_advisor`](/ext/e/online_advisor) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_profile`](/ext/e/pg_profile) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ weight: 6980
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装
@@ -88,6 +88,7 @@ auto_explain.log_min_duration = '3s'
 | `auto_explain.log_nested_statements` | `off` | 记录函数内部语句的计划 |
 | `auto_explain.log_parameter_max_length` | `-1` | 参数日志：`-1` = 完整，`0` = 不记录 |
 | `auto_explain.sample_rate` | `1` | 要分析的语句比例（0.0 到 1.0） |
+{.wide .expand}
 
 ### 日志输出示例
 

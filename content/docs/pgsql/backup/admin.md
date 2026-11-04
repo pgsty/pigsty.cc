@@ -32,7 +32,7 @@ categories: [任务]
 | `pig pb start`                   | `up` | [**`start`**](/docs/pgbackrest/command/start)                   | 恢复 pgbackrest 操作                                                        |
 | `pig pb stop`                    | `dw` | [**`stop`**](/docs/pgbackrest/command/stop)                     | 暂停 pgbackrest 操作                                                        |
 | `pig pb log [list/show/tail]`    | `l`  | —                                                               | 查看 pgbackrest 日志                                                        |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

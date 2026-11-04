@@ -82,7 +82,7 @@ Pigsty 的服务交付边界止步于集群的 HAProxy，用户可以用各种�
 | 集群 VIP 地址 | `10.10.10.3`  | 启用 `pg_vip_enabled` 后，由 `vip-manager` 管理并绑定到主节点的 L2 VIP |
 | 实例主机名     | `pg-test-1`   | 通过任何实例主机名访问（由 dnsmasq @ infra 节点解析）      |
 | 实例 IP 地址  | `10.10.10.11` | 访问任何实例的 IP 地址                            |
-{.full-width}
+{.full-width .wide .expand}
 
 **端口**
 

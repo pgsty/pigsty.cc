@@ -38,7 +38,7 @@ INFRA 节点通常承担管理节点（Admin Node）的角色，是 Pigsty 的�
 | [**Blackbox Exporter**](/docs/concept/arch/infra#blackboxexporter) | `9115`   | ICMP/TCP/HTTP 黑盒探测              |
 | [**DNSMASQ**](/docs/concept/arch/infra#dnsmasq)                    | `53`     | DNS 服务器，提供内部域名解析                |
 | [**Chronyd**](/docs/concept/arch/infra#chronyd)                    | `123`    | NTP 时间服务器                       |
-{.full-width}
+{.full-width .wide .expand}
 
 这些组件共同构成了 Pigsty 的可观测性基础设施。
 
@@ -80,7 +80,7 @@ Pigsty 使用 [**`INFRA_ID`**](/docs/infra/param#infra_id) 参数组为 INFRA �
 | 参数                                             |  类型   | 级别 | 说明                | 形式                  |
 |:-----------------------------------------------|:-----:|:--:|:------------------|:--------------------|
 | [**`infra_seq`**](/docs/infra/param#infra_seq) | `int` | 节点 | INFRA 节点序号，必选身份参数 | 自然数，从 1 开始分配，分组内不重复 |
-{.full-width}
+{.full-width .wide .expand}
 
 只要在节点层面分配了节点序号，Pigsty 就能自动根据规则为每个实体生成唯一标识符。
 

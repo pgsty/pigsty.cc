@@ -21,12 +21,12 @@ weight: 2650
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pgq`**](/ext/e/pgq) | `3.5.2` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 2650  | [**`pgq`**](/ext/e/pgq) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pgmq`](/ext/e/pgmq) [`pgmb`](/ext/e/pgmb) [`ulak`](/ext/e/ulak) [`pgmqtt`](/ext/e/pgmqtt) [`redis`](/ext/e/redis) [`kafka_fdw`](/ext/e/kafka_fdw) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`tcn`](/ext/e/tcn) [`pg_durable`](/ext/e/pg_durable) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ weight: 2650
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgq` | - |
 | [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pgq_$v` | - |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.5.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgq3` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -333,6 +333,7 @@ PgQ 需要在后台运行心跳守护进程（`pgqd`），用于创建批次边�
 | `pgq.finish_batch(batch_id)` | 标记批次已处理 |
 | `pgq.get_queue_info([name])` | 获取队列统计信息 |
 | `pgq.get_consumer_info(queue)` | 获取消费者统计信息 |
+{.wide .expand}
 
 ### 版本与访问边界
 

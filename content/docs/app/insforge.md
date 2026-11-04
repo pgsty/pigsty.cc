@@ -183,6 +183,7 @@ pg-meta:
 | `DENO_DEPLOY_TOKEN` | 空 | 可选 Deno Deploy 集成 |
 | `VERCEL_TOKEN` / `FLY_API_TOKEN` | 空 | 可选站点部署与计算平台集成 |
 | `STRIPE_*` / `RAZORPAY_*` | 空 | 可选支付集成 |
+{.wide .expand}
 
 生成生产密钥：
 

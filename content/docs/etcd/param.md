@@ -33,7 +33,7 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 | [`etcd_election_timeout`](#etcd_election_timeout)     |   `int`    |  `C`  | etcd 选举超时，默认为 1000ms       |
 | [`etcd_heartbeat_interval`](#etcd_heartbeat_interval) |   `int`    |  `C`  | etcd 心跳间隔，默认为 100ms        |
 | [`etcd_root_password`](#etcd_root_password)           | `password` |  `G`  | etcd root 用户密码，用于 RBAC 认证  |
-{.full-width}
+{.full-width .wide .expand}
 
 [`ETCD_REMOVE`](#etcd_remove) 参数组控制 etcd 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 

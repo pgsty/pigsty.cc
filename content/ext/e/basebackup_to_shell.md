@@ -21,12 +21,12 @@ weight: 5950
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`basebackup_to_shell`**](/ext/e/basebackup_to_shell) | `-` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 5950  | [**`basebackup_to_shell`**](/ext/e/basebackup_to_shell) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`basic_archive`](/ext/e/basic_archive) [`aws_s3`](/ext/e/aws_s3) [`external_file`](/ext/e/external_file) [`file_fdw`](/ext/e/file_fdw) [`repmgr`](/ext/e/repmgr) [`pg_parquet`](/ext/e/pg_parquet) [`pg_bulkload`](/ext/e/pg_bulkload) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ weight: 5950
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--miss">✗</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装
@@ -75,6 +75,7 @@ basebackup_to_shell.required_role = 'backup_admin'
 |-----------|------|-------------|
 | `basebackup_to_shell.command` | 字符串 | 要执行的 Shell 命令；通过 stdin 接收归档 |
 | `basebackup_to_shell.required_role` | 字符串 | 使用 shell 目标所需的角色（空 = 任何复制用户） |
+{.wide .expand}
 
 ### 命令占位符
 

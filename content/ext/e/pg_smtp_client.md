@@ -26,12 +26,12 @@ weight: 4180
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_smtp_client`**](/ext/e/pg_smtp_client) | `0.2.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 4180  | [**`pg_smtp_client`**](/ext/e/pg_smtp_client) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `smtp_client` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`emailaddr`](/ext/e/emailaddr) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`omni_email`](/ext/e/omni_email) [`uri`](/ext/e/uri) [`ip4r`](/ext/e/ip4r) [`url_encode`](/ext/e/url_encode) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 4180
 | [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_smtp_client` | - |
 | [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_smtp_client_$v` | - |
 | [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-smtp-client` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -236,6 +236,7 @@ CREATE EXTENSION IF NOT EXISTS pg_smtp_client CASCADE;
 | smtp_tls      | boolean | 是否使用 TLS 加密                                  | `smtp_client.tls`               |
 | smtp_username | text    | SMTP 服务器登录用户名                              | `smtp_client.username`          |
 | smtp_password | text    | SMTP 服务器登录密码                                | `smtp_client.password`          |
+{.wide .expand}
 
 ### 默认配置
 

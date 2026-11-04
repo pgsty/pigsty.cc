@@ -42,7 +42,7 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 | Tarball (macOS amd64)   | [pg_exporter-1.5.0.darwin-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.darwin-amd64.tar.gz)     |
 | Tarball (macOS arm64)   | [pg_exporter-1.5.0.darwin-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.darwin-arm64.tar.gz)     |
 | Tarball (Windows amd64) | [pg_exporter-1.5.0.windows-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.windows-amd64.tar.gz)   |
-{.full-width}
+{.full-width .wide .expand}
 
 您可以直接使用操作系统的包管理器（`rpm`/`dpkg`）安装，或者将二进制文件放入 `$PATH` 中。当前归档文件还会附带 `pg_exporter.yml`、`package/pg_exporter.default`、`package/pg_exporter.service` 与 `LICENSE`，便于按 tarball 手工部署。
 

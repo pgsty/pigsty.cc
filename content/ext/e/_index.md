@@ -51,7 +51,7 @@ Pigsty 中扩展的完整清单，请参考 [**扩展列表**](/ext/list)，[**R
 |   5   |  `d`   |   DDL   | `need_load`   | 需要创建   | 是否需要执行 `CREATE EXTENSION` DDL 语句完成安装     |
 |   6   |  `t`   |  Trust  | `trusted`     | 信任扩展   | 是否为受信任的扩展，普通用户（非超级用户）可直接创建               |
 |   7   |  `r`   |  Reloc  | `relocatable` | 可重定位   | 扩展是否可以被安装到指定的 Schema 中                   |
-{.ext-table}
+{.ext-table .wide .expand}
 
 当该属性为真时，显示对应字母；为假时，显示短横线 `-`。
 

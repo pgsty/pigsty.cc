@@ -97,7 +97,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 |    部署使用剧本     | `bin/pgmon-add <cls>` | 部分执行 `pgsql.yml`/`node.yml` |     `pgsql.yml`     |
 |     所需权限      |   Infra 节点可达的 PGURL   |    DB 节点 ssh 与 sudo 权限     | DB 节点 ssh 与 sudo 权限 |
 |     功能概述      |     PGCAT + PGRDS     |           大部分功能            |        完整功能         |
-{.full-width}
+{.full-width .wide .expand}
 
 由 Pigsty 完全管理的数据库会自动纳入监控，并拥有最好的监控支持，通常不需要任何配置。对于现有的 PostgreSQL 集群或者 RDS 服务，如果目标 DB 节点 **可以被 Pigsty 所管理**（ssh 可达，sudo 可用），那么您可以考虑 [托管部署](#监控现有集群)，实现与 Pigsty 基本类似的监控管理体验。如果您 **只能通过 PGURL**（数据库连接串）的方式访问目标数据库，例如远程的 RDS 服务，则可以考虑使用 [精简模式](#监控rds) 监控目标数据库。
 

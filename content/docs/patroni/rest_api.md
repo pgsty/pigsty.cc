@@ -403,6 +403,7 @@ patroni_failover_priority{scope="batman",name="patroni1"} 1
 | 12  | stopped                  | PostgreSQL 已停止        |
 | 13  | stop_failed              | PostgreSQL 停止失败      |
 | 14  | crashed                  | PostgreSQL 已崩溃        |
+{.wide .expand}
 
 > [!NOTE]
 > 上述数值固定不变，以保持与现有监控系统的向后兼容性。未来如需新增状态，将分配新的数值，已有数值不会改变。

@@ -26,12 +26,12 @@ weight: 3640
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pgfaceting`**](/ext/e/pgfaceting) | `0.2.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 3640  | [**`pgfaceting`**](/ext/e/pgfaceting) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `faceting` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`roaringbitmap`](/ext/e/roaringbitmap) [`pg_search`](/ext/e/pg_search) [`pgroonga`](/ext/e/pgroonga) [`roaringbitmap`](/ext/e/roaringbitmap) [`rum`](/ext/e/rum) [`hll`](/ext/e/hll) [`bloom`](/ext/e/bloom) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pg_textsearch`](/ext/e/pg_textsearch) [`pg_fts`](/ext/e/pg_fts) [`vchord_bm25`](/ext/e/vchord_bm25) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ weight: 3640
 | [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting` | `roaringbitmap` |
 | [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting_$v` | - |
 | [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgfaceting` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

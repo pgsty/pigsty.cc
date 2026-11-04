@@ -55,7 +55,7 @@ categories: [参考]
 | [`gp_role`](#gp_role)                   |  `enum`  | `C` | 这个集群的 greenplum 角色，可以是 master 或 segment                     |
 | [`pg_exporters`](#pg_exporters)         |  `dict`  | `C` | 在该节点上设置额外的 pg_exporters 用于监控远程 postgres 实例                  |
 | [`pg_offline_query`](#pg_offline_query) |  `bool`  | `I` | 设置为 true 将此只读实例标记为特殊的离线从库，承载 Offline 服务，允许离线查询              |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -76,7 +76,7 @@ categories: [参考]
 | [`pg_monitor_username`](#pg_monitor_username)         |  `username`   |  `G`   | postgres 监控用户名，默认为 `dbuser_monitor`        |
 | [`pg_monitor_password`](#pg_monitor_password)         |  `password`   |  `G`   | postgres 监控密码，默认为 `DBUser.Monitor`         |
 | [`pg_dbsu_password`](#pg_dbsu_password)               |  `password`   | `G/C`  | dbsu 密码，默认为空字符串意味着不设置 dbsu 密码，最好不要设置。      |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -94,7 +94,7 @@ categories: [参考]
 | [`pg_log_dir`](#pg_log_dir)                     |   `path`   | `C` | postgres 日志目录，默认为 `/pg/log/postgres`         |
 | [`pg_packages`](#pg_packages)                   | `string[]` | `C` | 要安装的 pg 包，`${pg_version}` 将被替换为实际主版本号        |
 | [`pg_extensions`](#pg_extensions)               | `string[]` | `C` | 要安装的 pg 扩展，`${pg_version}` 将被替换为实际主版本号       |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -140,7 +140,7 @@ categories: [参考]
 | [`pg_etcd_password`](#pg_etcd_password)             | `password` |  `C`  | 此 PostgreSQL 集群在 etcd 中使用的密码，默认使用集群名                  |
 | [`pgsodium_key`](#pgsodium_key)                     |  `string`  |  `C`  | pgsodium 加密主密钥，64 位十六进制数字，默认使用 sha256(pg_cluster)     |
 | [`pgsodium_getkey_script`](#pgsodium_getkey_script) |   `path`   |  `C`  | pgsodium 获取密钥脚本路径，默认使用模板中的 pgsodium_getkey            |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -194,7 +194,7 @@ categories: [参考]
 | [`pg_vip_interface`](#pg_vip_interface)               |  `string`   | `C/I` | 监听的 vip 网络接口，默认为 auto                               |
 | [`pg_dns_suffix`](#pg_dns_suffix)                     |  `string`   |  `C`  | pgsql dns 后缀，默认为空                                   |
 | [`pg_dns_target`](#pg_dns_target)                     |   `enum`    |  `C`  | PG DNS 解析到哪里？auto、primary、vip、none 或者特定的 IP 地址      |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -220,7 +220,7 @@ categories: [参考]
 | [`pgbackrest_exporter_enabled`](#pgbackrest_exporter_enabled)   |  `bool`  | `C` | 在 pgsql 主机上启用 pgbackrest_exporter 吗？       |
 | [`pgbackrest_exporter_port`](#pgbackrest_exporter_port)         |  `port`  | `C` | pgbackrest_exporter 监听端口，默认为 9854          |
 | [`pgbackrest_exporter_options`](#pgbackrest_exporter_options)   |  `arg`   | `C` | pgbackrest_exporter 的额外命令行参数选项             |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -1439,6 +1439,7 @@ Pigsty 提供四种预设的 RTO 模式，分别针对不同的网络条件与�
 | `norm` | 同机房（默认）  | 1-5ms，正常      | **< 45s**  | 30s         | 中等   |
 | `safe` | 同省跨机房    | 10-50ms，跨机房   | **< 90s**  | 60s         | 较低   |
 | `wide` | 跨地域/跨洲   | 100-200ms，公网  | **< 150s** | 120s        | 极低   |
+{.wide .expand}
 
 减小 RTO 可以加快故障恢复速度，但会增加误切风险（网络抖动被误判为故障）。您需要根据实际网络条件选择合适的模式。
 更多详情请参阅 [**RTO 利弊权衡**](/docs/concept/ha/rto/) 文档。
@@ -1482,6 +1483,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 | 7  | `downinter`             | HAProxy | 服务器宕机时的检查间隔            |
 | 8  | `rise`                  | HAProxy | 标记为 UP 所需的连续成功检查次数     |
 | 9  | `fall`                  | HAProxy | 标记为 DOWN 所需的连续失败检查次数   |
+{.wide .expand}
 
 此参数允许用户通过覆盖默认值来自定义 RTO 行为，或添加新的 RTO 模式。例如，如果您需要一个更激进的 RTO 配置：
 

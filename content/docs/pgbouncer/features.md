@@ -48,6 +48,7 @@ upstream_link: "https://www.pgbouncer.org/features.html"
 | 缓存执行计划重置                | 是               |          是           |
 | LOAD 语句                   | 是               |         不支持         |
 | 会话级咨询锁     | 是               |         不支持         |
+{.wide .expand}
 
 [^0]: 自 1.26.0 起，PgBouncer 会跟踪所有由服务端上报且客户端可修改的参数：`application_name`、`client_encoding`、`DateStyle`、`default_transaction_read_only`（PostgreSQL 14+）、`IntervalStyle`、`scram_iterations`（PostgreSQL 16+）、`search_path`（PostgreSQL 18+）、`session_authorization`、`standard_conforming_strings` 和 `TimeZone`。对于服务端不报告的参数，只能跟踪启动时指定的值，后续的 `SET` 修改不会被跟踪。相关细节及扩展上报的参数，请参阅 [`track_extra_parameters`](/docs/pgbouncer/config/#track_extra_parameters) 和 [`ignore_startup_parameters`](/docs/pgbouncer/config/#ignore_startup_parameters)。
 

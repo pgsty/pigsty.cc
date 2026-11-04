@@ -27,7 +27,7 @@ categories: [参考]
 | `pg:cls:xact_total_rate1m` | `sum by (job, cls) (pg:ins:xact_total_rate1m)` | 集群事务速率，次/秒 |
 | `pgbouncer:ins:query_rate1m` | `sum without(datname) (pgbouncer:db:query_rate1m)` | 连接池查询速率，次/秒 |
 | `pgbouncer:ins:query_rt_1m` | `pgbouncer:ins:query_time_rate1m / pgbouncer:ins:query_rate1m` | 查询累计耗时速率与查询速率之比 |
-{.full-width}
+{.full-width .wide .expand}
 
 此外，`pg_exporter_agent_up`、`pgbouncer_exporter_agent_up`、`pgbackrest_exporter_agent_up`、`patroni_up` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)，不包含在上面的模块规则数量中，也不是 Exporter 的原始指标。它们反映抓取状态，不能代替服务功能检查。
 
@@ -442,7 +442,7 @@ categories: [参考]
 | scrape_samples_scraped                         | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
 | scrape_series_added                            | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
 | up                                             | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
-{.full-width}
+{.full-width .wide .expand}
 
 ## 记录指标索引
 
@@ -686,7 +686,7 @@ categories: [参考]
 | `pg:table:scan_rate1m` | `rate(pg_table_tbl_scan[1m])` |
 | `pg:query:call_rate1m` | `rate(pg_query_calls[1m])` |
 | `pg:query:rt_1m` | `rate(pg_query_exec_time[1m]) / pg:query:call_rate1m` |
-{.full-width}
+{.full-width .wide .expand}
 
 </details>
 
@@ -864,7 +864,7 @@ categories: [参考]
 | `cls:pressure1` | `clamp_min(max by (job, cls) (pg:cls:cpu_usage_1m > pg:cls:saturation1 or pg:cls:saturation1), 0)` |
 | `cls:pressure5` | `clamp_min(max by (job, cls) (pg:cls:cpu_usage_5m > pg:cls:saturation5 or pg:cls:saturation5), 0)` |
 | `cls:pressure15` | `clamp_min(max by (job, cls) (pg:cls:cpu_usage_15m > pg:cls:saturation15 or pg:cls:saturation15), 0)` |
-{.full-width}
+{.full-width .wide .expand}
 
 </details>
 
@@ -961,6 +961,6 @@ categories: [参考]
 | [`pg_tsdb_hypertable`](https://github.com/pgsty/pigsty/blob/main/roles/pg_monitor/templates/pg_exporter.yml#L2443) | `pg_tsdb_hypertable` | 10 | — | `extension:timescaledb, schema:timescaledb_information` | 4 |
 | [`pg_citus_node`](https://github.com/pgsty/pigsty/blob/main/roles/pg_monitor/templates/pg_exporter.yml#L2473) | `pg_citus_node` | 10 | — | `extension:citus` | 6 |
 | [`pg_heartbeat`](https://github.com/pgsty/pigsty/blob/main/roles/pg_monitor/templates/pg_exporter.yml#L2504) | `pg_heartbeat` | 9.1 | — | `dbname:postgres, schema:monitor` | 3 |
-{.full-width}
+{.full-width .wide .expand}
 
 版本范围为左闭右开，见 [Exporter 版本匹配逻辑](https://github.com/pgsty/pg_exporter/blob/main/exporter/server.go)；无上界时以 `—` 表示。`predicate_queries` 会先探测 TimescaleDB、Citus、监控辅助视图等依赖是否存在；不能只凭 PostgreSQL 大版本就断定全部可选指标可采集。

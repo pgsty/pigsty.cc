@@ -87,7 +87,7 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 | External | [OpenTofu](https://opentofu.org/) | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE) | 当前云资源模板默认使用的 IaC 工具 | 可选 |
 | External |              [Terraform](https://www.terraform.io/)               | [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE)                   | 兼容的 IaC CLI，可通过 `IAC_CLI=terraform` 选择                      |   可选   |
 | External |             [Virtualbox](https://www.virtualbox.org/)             | [GPLv2](https://www.virtualbox.org/wiki/Licensing_FAQ)                                                    | 虚拟机管理软件                          |   可选   |
-{.full-width}
+{.full-width .wide .expand}
 
 必要性等级说明：
 

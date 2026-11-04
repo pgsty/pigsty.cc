@@ -26,7 +26,7 @@ categories: [参考]
 | AWS C5D.METAL 96C 200G (按月无预付) |    100    | AWS RDS PostgreSQL db.T2 (2x)  |   440   |
 | AWS C5D.METAL 96C 200G (预付三年)  |    80     | AWS RDS PostgreSQL db.M5 (4x)  |   611   |
 | AWS C7A.METAL 192C 384G (预付三年) |   104.8   | AWS RDS PostgreSQL db.R6G (8x) |   786   |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------------------
@@ -47,7 +47,7 @@ categories: [参考]
 | AWS 中国/宁夏按需      | ¥197,489 / 月    | 237       |
 | AWS 中国/宁夏1年不预付   | ¥143,176 / 月    | 171       |
 | AWS 中国/宁夏3年全预付   | ¥647k + 116k/月  | 160.6     |
-{.full-width}
+{.full-width .wide .expand}
 
 我们可以对比一下自建与云数据库的成本差异：
 
@@ -80,7 +80,7 @@ categories: [参考]
 |            |           |         |            |
 | DHH @ 2023 |  ¥ 22.0   |         |            |
 | 探探 IDC 自建  |  ¥ 18.0   |         |            |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ### 含 NVMe SSD / ESSD PL3 情况下的等效价格对比
@@ -99,7 +99,7 @@ categories: [参考]
 |            |           |                 |             |
 | DHH @ 2023 |  ¥ 25.3   |                 |             |
 | 探探 IDC 自建  |  ¥ 19.5   |                 |             |
-{.full-width}
+{.full-width .wide .expand}
 
 > DHH 案例：192核配12.8TB Gen4 SSD (1c:66)；探探案例： 64核配3.2T Gen3 MLC SSD (1c:50)。
 >
@@ -137,7 +137,7 @@ categories: [参考]
 |                                                       **其他参考价**                                                        |  **高性能存储**   | **顶配底折价** | **与采购 NVMe SSD** | **价格参考** |
 |                                                       S3 Express                                                       |    0.160     |   67200   |     DHH 12T      |   1400   |
 |                                                        EBS io2                                                         | 0.125 + IOPS |  114000   |   Shannon 3.2T   |   900    |
-{.full-width}
+{.full-width .wide .expand}
 
 --------------------
 

@@ -24,7 +24,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`VICTORIA`](#victoria)           | VictoriaMetrics/Logs/Traces 可观测性套件 |
 | [`PROMETHEUS`](#prometheus)       | Alertmanager 与 Blackbox Exporter   |
 | [`GRAFANA`](#grafana)             | Grafana 可视化平台配置                    |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------
@@ -76,7 +76,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`repo_packages`](#repo_packages)             |  `string[]`  |   `G`   | 从上游仓库下载哪些软件包？           |
 | [`repo_extra_packages`](#repo_extra_packages) |  `string[]`  | `G/C/I` | 从上游仓库下载哪些额外的软件包？        |
 | [`repo_url_packages`](#repo_url_packages)     |  `string[]`  |   `G`   | 使用 URL 下载的额外软件包列表       |
-{.full-width}
+{.full-width .wide .expand}
 
 [`INFRA_PACKAGE`](#infra_package) 参数组用于定义在基础设施节点上安装的软件包（RPM/DEB）。
 
@@ -103,7 +103,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`certbot_sign`](#certbot_sign)                     |   `bool`   | `G/A` | 是否使用 certbot 签署证书？                    |
 | [`certbot_email`](#certbot_email)                   |  `string`  | `G/A` | certbot 通知邮箱地址                        |
 | [`certbot_options`](#certbot_options)               |  `string`  | `G/A` | certbot 额外的命令行参数                      |
-{.full-width}
+{.full-width .wide .expand}
 
 [`DNS`](#dns) 参数组用于配置 DNSMasq 域名解析服务，包括启用开关、监听端口以及动态 DNS 记录。
 
@@ -135,7 +135,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`vmalert_enabled`](#vmalert_enabled)                   |   `bool`   | `G/I` | 在此基础设施节点上启用 VMAlert？          |
 | [`vmalert_port`](#vmalert_port)                         |   `port`   |  `G`  | VMAlert 监听端口，默认为 8880         |
 | [`vmalert_options`](#vmalert_options)                   |   `arg`    |  `G`  | VMAlert 额外命令行参数               |
-{.full-width}
+{.full-width .wide .expand}
 
 [`PROMETHEUS`](#prometheus) 参数组用于配置 Alertmanager 与 Blackbox Exporter，提供告警管理和网络探测功能。
 

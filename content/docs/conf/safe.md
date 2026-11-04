@@ -45,7 +45,7 @@ categories: [参考]
 | 日志 | CRIT 记录连接和断开事件 | SQL 细粒度审计需另行启用 `pgaudit` |
 | 安全扩展 | 安装 `passwordcheck_cracklib`、`credcheck`、`pgaudit` 等软件包 | 安装不等于预加载、创建或配置 |
 | 延迟副本 | 提供注释掉的 1 小时延迟集群示例 | 默认不会创建，需要显式启用 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

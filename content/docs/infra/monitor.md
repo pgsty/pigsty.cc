@@ -30,7 +30,7 @@ categories: [参考]
 | [VictoriaTraces Instance](https://demo.pigsty.cc/d/vtraces-instance) | Trace 存储与查询 |
 | [Inventory CMDB](https://demo.pigsty.cc/d/inventory-cmdb) | CMDB 可视化 |
 | [ETCD Overview](https://demo.pigsty.cc/d/etcd-overview) | etcd 集群监控 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

@@ -99,7 +99,7 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 |   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 2 节点  |    2c2g x 2     |       2 节点 EL 构建环境        |         |
 |   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 5 节点  |    2c2g x 5     |       5 节点 Deb 构建环境       |         |
 |   [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb)   | 7 节点  |    2c4g x 7     |        7 节点全量构建环境         |         |
-{.full-width}
+{.full-width .wide .expand}
 
 每个规格文件包含一个描述虚拟机节点的 `Specs` 变量。例如，`full.rb` 包含 4 节点沙箱的定义：
 
@@ -168,6 +168,7 @@ config 脚本支持多种镜像别名：
 | AlmaLinux 10       | `alma10`                                  | `cloud-image/almalinux-10`           |
 | RHEL 8 / 9         | `rhel8`, `rhel9`                          | `generic/rhel8`, `generic/rhel9`     |
 | Oracle Linux 8 / 9 | `oracle8`, `oracle9`                      | `generic/oracle8`, `generic/oracle9` |
+{.wide .expand}
 
 历史别名 `d11`/`debian11`/`deb11` 与 `u20`/`ubuntu20`/`ubuntu2004` 仍可在脚本映射表中看到，但当前会被显式拒绝，不属于支持镜像。
 
@@ -249,7 +250,7 @@ VirtualBox 与 libvirt 使用同一套映射。`vagrant/config` 会为所有受�
 | AlmaLinux 8  | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |  `8.10.20260803`  |
 | AlmaLinux 9  | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9)   |  `9.8.20260810`   |
 | AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.2.20260526.0` |
-{.full-width}
+{.full-width .wide .expand}
 
 已停止支持但仍保留显式别名的 Debian 11 与 Ubuntu 20.04 也分别固定为 `20260618.2513.0` 与 `20250624.0.0`；`generic/*` 的 RHEL、Oracle Linux 与 CentOS 7 兼容实验镜像固定为其最后发布的 `4.3.12`。这些旧镜像不属于当前支持矩阵。
 

@@ -115,7 +115,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase �
 | [`pgsodium`](/ext/e/pgsodium/)           | 表数据加密存储 TDE，扩展，由 PIGSTY 提供                                 |
 | [`supautils`](/ext/e/supautils/)         | 用于在云环境中确保数据库集群的安全，C 扩展，由 PIGSTY 提供                         |
 | [`pg_plan_filter`](/ext/e/plan_filter/)  | 使用执行计划代价过滤阻止特定查询语句，C 扩展，由 PIGSTY 提供                        |
-{.full-width}
+{.full-width .wide .expand}
 
 同时，我们在 Supabase 自建部署中默认 [安装](/docs/pgsql/ext/install) 绝大多数扩展，您可以参考可用扩展列表按需 [启用](/docs/pgsql/ext/create)。
 新版模板会安装 `pg_graphql` 扩展包，但不再默认创建 `pg_graphql` 扩展对象；如果需要 GraphQL API，可以在目标数据库中执行 `CREATE EXTENSION IF NOT EXISTS pg_graphql;`，模板中的事件触发器会自动重建 `graphql_public.graphql` 入口与访问权限。

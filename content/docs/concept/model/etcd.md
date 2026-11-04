@@ -64,7 +64,7 @@ Pigsty 使用 [**`ETCD`**](/docs/etcd/param#etcd) 参数组为 ETCD 模块的每
 |:----------------------------------------------------|:--------:|:--:|:-----------------|:-------------------------|
 | [**`etcd_cluster`**](/docs/etcd/param#etcd_cluster) | `string` | 集群 | ETCD 集群名称，必选身份参数 | 有效的 DNS 名称，默认为固定值 `etcd` |
 | [**`etcd_seq`**](/docs/etcd/param#etcd_seq)         |  `int`   | 实例 | ETCD 实例编号，必选身份参数 | 自然数，从 1 开始分配，集群内不重复      |
-{.full-width}
+{.full-width .wide .expand}
 
 只要在集群层面定义了集群名称，实例层面分配了实例编号，Pigsty 就能自动根据规则为每个实体生成唯一标识符。
 

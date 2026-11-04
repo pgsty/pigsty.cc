@@ -146,7 +146,7 @@ weight: 30
 | [`pglogical_ticker`](/ext/e/pglogical_ticker) | [`pglogical`](/ext/e/pglogical) | pglogical复制延迟以秒计的精确视图 |
 | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) | [`pglogical`](/ext/e/pglogical) | 使用 pglogical 执行自动 DDL 部署 |
 | [`mimeo`](/ext/e/mimeo) | [`dblink`](/ext/e/dblink) | 在PostgreSQL实例间进行表级复制 |
-{.ext-table}
+{.ext-table .wide .expand}
 
 ## 下游依赖
 
@@ -233,4 +233,4 @@ weight: 30
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |
 | [`pglogical`](/ext/e/pglogical) | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`pglogical_ticker`](/ext/e/pglogical_ticker) | PostgreSQL逻辑复制：三方扩展实现 |
-{.ext-table}
+{.ext-table .wide .expand}

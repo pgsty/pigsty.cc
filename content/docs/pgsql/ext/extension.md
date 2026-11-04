@@ -56,7 +56,7 @@ Pigsty 在初始化 PostgreSQL 集群时，会默认安装和启用一些核心�
 | `intagg`             | `public`  | 整数聚合器              |
 | `intarray`           | `public`  | 整数数组函数             |
 | `pg_repack`          | `repack`  | 在线重组表              |
-{.full-width}
+{.full-width .wide .expand}
 
 这些扩展提供基础的监控、运维和功能增强能力。
 

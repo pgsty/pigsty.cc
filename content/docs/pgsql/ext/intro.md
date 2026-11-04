@@ -69,7 +69,7 @@ Pigsty 将扩展划分为 16 个类别：
 | 外联 | `fdw`   | 外部数据访问   | postgres_fdw, mysql_fdw, oracle_fdw            |
 | 兼容 | `sim`   | 数据库兼容    | orafce, babelfish                              |
 | 同步 | `etl`   | 数据同步     | pglogical, wal2json, decoderbufs               |
-{.full-width}
+{.full-width .wide .expand}
 
 使用类别别名可以批量安装整个类别的扩展，例如 `pg_extensions: [ pgsql-gis, pgsql-rag ]`。
 

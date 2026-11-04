@@ -123,4 +123,4 @@ pg_default_roles:
 | [roaringbitmap](/ext/e/roaringbitmap)                     | `0.5`     | support for Roaring Bitmaps                                          |
 | [sequential_uuids](/ext/e/sequential_uuids)               | `1.0.3`   | generator of sequential UUIDs                                        |
 | varbitx                                                   | `1.1`     | varbit functions pack                                                |
-{.full-width}
+{.full-width .wide .expand}

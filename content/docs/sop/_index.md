@@ -61,6 +61,7 @@ hide: true
 | 维护基础设施           | [**INFRA 管理预案**](/docs/infra/admin/)                                                                   | `infra.yml`，`infra-rm.yml`                                                         |
 | 维护 Etcd          | [**ETCD 配置**](/docs/etcd/config/)                                                                      | [**ETCD 管理**](/docs/etcd/admin/)，[**ETCD FAQ**](/docs/etcd/faq/)                   |
 | 部署应用模板           | [**应用**](/docs/app/)                                                                                   | [**Docker 模块**](/docs/docker/usage/)，`./app.yml`                                   |
+{.wide .expand}
 
 
 ----------------
@@ -109,6 +110,7 @@ hide: true
 | 管理备份、校验、清理、恢复                            | [**备份恢复**](/docs/pgsql/backup/)                                           |
 | 配置备份、Vacuum、Analyze 等定时任务                | [**定时任务**](/docs/pgsql/admin/crontab/)                                    |
 | 升级版本与扩展                                  | [**版本升级**](/docs/pgsql/admin/upgrade/)，[**扩展管理**](/docs/pgsql/admin/ext/) |
+{.wide .expand}
 
 PostgreSQL 例行维护的背景文章可以看 [**PostgreSQL 例行维护**](https://vonng.com/pg/routine-maintain/)。
 

@@ -109,6 +109,6 @@ IvorySQL 5 等效于 PostgreSQL 18，任何兼容 PostgreSQL 线缆协议的客�
 | [system_stats](/ext/e/system_stats)                                 | `3.0`   | EnterpriseDB system statistics for PostgreSQL                                                                                                                                                                                                             |
 | [vector](/ext/e/vector)                                             | `0.8.1` | vector data type and ivfflat and hnsw access methods                                                                                                                                                                                                      |
 | [zhparser](/ext/e/zhparser)                                         | `2.3`   | a parser for full-text search of Chinese                                                                                                                                                                                                                  |
-{.full-width}
+{.full-width .wide .expand}
 
 请注意，Pigsty 不对使用 IvorySQL 内核承担任何质保责任，使用此内核遇到的任何问题与需求请联系原厂解决。

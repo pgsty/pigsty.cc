@@ -63,7 +63,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 | `/haproxy/*` | [**HAProxy**](/docs/node/)                 | `9101`   | 负载均衡管理 Web UI      |                                                                |
 | `/pev`       | [**PEV2**](https://github.com/dalibo/pev2) | `80`     | PostgreSQL 执行计划可视化 | [`demo.pigsty.cc/pev`](https://demo.pigsty.cc/pev)             |
 | `/nginx`     | [**Nginx**](/docs/infra/)                  | `80`     | Nginx 状态页（指标采集用）   |                                                                |
-{.full-width}
+{.full-width .wide .expand}
 
 
 

@@ -89,7 +89,7 @@ pg-meta:
 | [postgis_topology](/ext/e/postgis_topology)                         | `3.5.7` | PostGIS topology spatial types and functions                                                                                                                                                                                                              |
 | [set_user](/ext/e/set_user)                                         | `4.2.0` | similar to SET ROLE but with added logging                                                                                                                                                                                                                |
 | [vector](/ext/e/vector)                                             | `0.8.3` | vector data type and ivfflat and hnsw access methods                                                                                                                                                                                                      |
-{.full-width}
+{.full-width .wide .expand}
 
 ------
 

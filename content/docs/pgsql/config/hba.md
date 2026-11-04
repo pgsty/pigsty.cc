@@ -140,6 +140,7 @@ Pgbouncer 集群/实例级 HBA 追加规则。
 | `role`  | string | 否  | `common` | 实例角色过滤，见 [**角色过滤**](#角色过滤)       |
 | `order` | int    | 否  | `1000`   | 排序权重，数字小的排前面，见 [**排序机制**](#排序机制) |
 | `rules` | list   | 是* | -        | 原始 HBA 文本行列表，与 `addr` 二选一        |
+{.wide .expand}
 
 > `addr` 和 `rules` 必须指定其一。使用 `rules` 时可以直接写原始 HBA 格式。
 
@@ -263,6 +264,7 @@ PostgreSQL HBA 是 **首条匹配生效**，规则顺序至关重要。Pigsty �
 | 550   | dbrole_readonly localhost    |
 | 600   | dbrole_readonly intra        |
 | 650   | dbrole_offline intra         |
+{.wide .expand}
 
 **Pgbouncer 默认规则 Order 分配**
 

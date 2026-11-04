@@ -37,7 +37,7 @@ categories: [参考]
 | [`supervc-stack/pg_tokenizer.rs`](https://github.com/supervc-stack/pg_tokenizer.rs)                     |      [**46**](https://github.com/supervc-stack/pg_tokenizer.rs/stargazers)       | TensorChord        |  扩展  | 全文检索 tokenizer 扩展                |
 | [`jaiminpan/pg_scws`](https://github.com/jaiminpan/pg_scws)                                             |            [**41**](https://github.com/jaiminpan/pg_scws/stargazers)             | Pan Jiamin         |  扩展  | 基于 SCWS 的中文分词扩展               |
 | [`pgsty/pgext`](https://github.com/pgsty/pgext)                                                         |               [**37**](https://github.com/pgsty/pgext/stargazers)                | 冯若航 @ **PGSTY** |  工具  | PG 扩展目录与元数据工具                |
-{.full-width .impact-table}
+{.full-width .impact-table .wide .expand}
 
 <script>
 window.OinkEchartsFunctions = window.OinkEchartsFunctions || {};
@@ -180,7 +180,7 @@ media:
 | [CYBERTEC PGEE](https://www.cybertec-postgresql.com/en/products/cybertec-postgresql-enterprise-edition/)  |                                      -                                       | CYBERTEC      | Linux 原生 | 商业                                                                             | 企业增强 PG 发行版，侧重安全与性能。                |
 | [Crunchy Postgres for Ansible](https://www.crunchydata.com/)                                              |                                      -                                       | Crunchy Data  | Linux 原生 | 商业                                                                             | Crunchy 的裸机/VM PG 自动化方案。                   |
 | [EDB Postgres Advanced Server (EPAS)](https://www.enterprisedb.com/products/edb-postgres-advanced-server) |                                      -                                       | EDB           | Linux 原生 | 商业                                                                             | EDB 旗舰发行版，含 Oracle 兼容特性。                |
-{.full-width .impact-table}
+{.full-width .impact-table .wide .expand}
 
 ### Star 历史与增量对比
 

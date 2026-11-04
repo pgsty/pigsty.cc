@@ -48,4 +48,4 @@ pgBackRest 通过命令来执行各项功能。本文档对每个命令的选项
 | [**`stop`**](/docs/pgbackrest/command/stop/) | 阻止新的 pgBackRest 进程启动，并可选择强制停止正在运行的进程。 |
 | [**`verify`**](/docs/pgbackrest/command/verify/) | 验证仓库中的备份和归档数据是否有效。 |
 | [**`version`**](/docs/pgbackrest/command/version/) | 显示已安装的 pgBackRest 版本。 |
-{.full-width}
+{.full-width .wide .expand}

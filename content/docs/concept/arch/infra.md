@@ -32,6 +32,7 @@ Pigsty 提供了 [**INFRA 模块**](/docs/infra) 来解决这个问题 —— �
 | [**Chronyd**](#chronyd)                   | 时间同步    | 提供 NTP 时间同步服务，确保所有节点时间一致。 【可选】                                      |
 | [**CA**](/docs/concept/sec/ca)            | 证书签发    | 签发环境内的加密证书                                                          |
 | [**Ansible**](/docs/setup/playbook)       | 发起管理    | 批量，声明式，无 Agent 管理大量服务器的工具                                           |
+{.wide .expand}
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/infra/)
 
@@ -70,7 +71,7 @@ infra_portal:
 | `/vmalert/`  | [**VMAlert**](/docs/infra/)                | `8880`   | 告警规则管理             | [`demo.pigsty.cc/vmalert/`](https://demo.pigsty.cc/vmalert/)   |
 | `/alertmgr/` | [**AlertManager**](/docs/infra/)           | `9059`   | 告警管理 Web UI        | [`demo.pigsty.cc/alertmgr/`](https://demo.pigsty.cc/alertmgr/) |
 | `/blackbox/` | [**Blackbox**](/docs/infra/)               | `9115`   | 黑盒探测器              |                                                                |
-{.full-width}
+{.full-width .wide .expand}
 
 [![Pigsty 在线演示首页](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
 

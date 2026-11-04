@@ -63,7 +63,7 @@ Pigsty 提供四种 RTO 模式，以帮助用户在不同的网络条件下进�
 | **目标 RTO** | <span class="text-success">**30s**</span>  | <span class="text-primary">**45s**</span> | <span class="text-warning">**90s**</span> | <span class="text-danger">**150s**</span> |
 | **误切风险**   | <span class="text-secondary">**较高**</span> | <span class="text-primary">**中等**</span>  | <span class="text-success">**较低**</span>  | <span class="text-success">**极低**</span>  |
 | **配置方法**   |               `pg_rto: fast`               |              `pg_rto: norm`               |              `pg_rto: safe`               |              `pg_rto: wide`               |
-{.full-width}
+{.full-width .wide .expand}
 
 
 > [!IMPORTANT] fast：同机柜/同交换机
@@ -137,7 +137,7 @@ series:
 |               |       **`downinter`**       |    1s    |    2s    |    3s    |    4s    | DOWN 状态检查间隔      |
 |               |         **`rise`**          |    3     |    3     |    3     |    3     | 标记 UP 所需连续成功次数   |
 |               |         **`fall`**          |    3     |    3     |    3     |    3     | 标记 DOWN 所需连续失败次数 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ### Patroni 参数
@@ -194,7 +194,7 @@ loop\_wait + 2 \times retry\_timeout \leq ttl
 |  `safe`   | `90`  |  `53` / `66` / `78`   |  `3` / `61` / `73`  | 同城双活 / 跨机房容灾 |
 |  `wide`   | `150` | `104` / `127` / `150` | `4` / `122` / `145` | 异地容灾 / 跨国部署  |
 | `default` | `326` |  `22` / `34` / `46`   | `2` / `314` / `326` | Patroni 默认参数 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 通常只需将 [**`pg_rto`**](/docs/pgsql/param#pg_rto) 设为模式名称，Pigsty 会自动配置 Patroni 与 HAProxy 参数。

@@ -21,12 +21,12 @@ weight: 7370
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`set_user`**](/ext/e/set_user) | `4.2.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 7370  | [**`set_user`**](/ext/e/set_user) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_permissions`](/ext/e/pg_permissions) [`login_hook`](/ext/e/login_hook) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_session_jwt`](/ext/e/pg_session_jwt) [`auth_delay`](/ext/e/auth_delay) [`pgaudit`](/ext/e/pgaudit) [`pg_roast`](/ext/e/pg_roast) [`pg_readonly`](/ext/e/pg_readonly) [`acl`](/ext/e/acl) [`pg_command_fw`](/ext/e/pg_command_fw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ weight: 7370
 | [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.0` | {{< pgvers "18,17,16,15,14" >}} | `set_user` | - |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.0` | {{< pgvers "18,17,16,15,14" >}} | `set_user_$v` | - |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-set-user` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -318,6 +318,7 @@ shared_preload_libraries = 'set_user'
 | `set_user.superuser_allowlist` | `*` | 允许提升为超级用户的角色 |
 | `set_user.nosuperuser_target_allowlist` | `*` | 允许作为非超级用户目标的角色 |
 | `set_user.superuser_audit_tag` | `AUDIT` | 提升权限时附加到 log_line_prefix 的标签 |
+{.wide .expand}
 
 ### 函数
 

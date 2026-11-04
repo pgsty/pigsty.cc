@@ -34,7 +34,7 @@ categories: [概念]
 | 4级 | 电子传输 + 完整设备 | 数小时 ~ 12小时  | 数小时      | 异步复制 + 完整设备 |
 | 5级 | 实时传输 + 完整设备 | 数分钟 ~ 2小时   | 0 ~ 30分钟 | 同步复制 + 热备   |
 | 6级 | 零丢失 + 远程集群  | 分钟级         | 0        | 同步复制 + 备用集群 |
-{.full-width}
+{.full-width .wide .expand}
 
 第 6 级要求客户数据得到实时同步更新，保证业务数据的一致性和完整性；备份中心的远程集群系统及网络系统可自动进行负载均衡和系统切换，业务恢复时间可控制在分钟级，实现数据零丢失。
 
@@ -63,7 +63,7 @@ categories: [概念]
 | 银行 | [**《分布式数据库技术金融应用规范》**](http://www.caict.ac.cn/kxyj/qwfb/ztbg/202011/P020201116397348788498.pdf)（JR/T 0205-2020）                                            | ≤ 30分钟 ~ ≤ 1分钟  | 0              | 分布式数据库 4-6 级要求，RPO 均为零 |
 | 证券 | [**《证券期货业信息系统备份能力标准》**](https://neris.csrc.gov.cn/falvfagui/rdqsHeader/mainbody?navbarId=3&secFutrsLawId=ac60afab583f475bb84bfd5fb3d0e7d7)（JR/T 0059-2021） | ≤ 15分钟          | 0              | 核心交易系统要求达到国标 5-6 级     |
 | 保险 | [**《保险业信息系统灾难恢复管理指引》**](https://www.gov.cn/gzdt/2008-05/20/content_980596.htm)（保监发〔2008〕20号）                                                               | ≤ 36小时 ~ ≤ 72小时 | ≤ 8小时 ~ ≤ 24小时 | 按系统重要性分为 3-4 级，要求相对宽松  |
-{.full-width}
+{.full-width .wide .expand}
 
 根据金融行业标准，应用于金融领域的分布式事务数据库 **RPO 要求均为 0**。
 
@@ -78,7 +78,7 @@ categories: [概念]
 | 证券-一般 | 行情、资讯     | ≤ 4小时  | ≤ 1小时  | 4-5级 |
 | 保险-核心 | 出单、理赔     | ≤ 36小时 | ≤ 8小时  | 4级   |
 | 保险-重要 | 客服、财务     | ≤ 72小时 | ≤ 24小时 | 3级   |
-{.full-width}
+{.full-width .wide .expand}
 
 
 -----------
@@ -118,7 +118,7 @@ SHARE 78 是由 IBM 用户组织 SHARE 在 1978 年提出的容灾能力分级�
 | Tier 5 | 双活/两阶段提交    | 1 ~ 4小时   | 分钟级      | 同步复制（`synchronous_commit=on`） |
 | Tier 6 | 零数据丢失       | 分钟级       | 0        | 同步复制 + 自动故障检测（Patroni + sync） |
 | Tier 7 | 自动故障转移      | 秒级        | 0        | 同步复制 + 自动 Failover + 应用透明切换   |
-{.full-width}
+{.full-width .wide .expand}
 
 **PostgreSQL/Patroni 配置对照**：
 
@@ -286,7 +286,7 @@ Basel III 是国际银行业监管的核心框架，由巴塞尔银行监管委�
 | SOX               | 上市公司 | ≤ 4小时    | ≤ 1小时    | 定期必需 | 7年   |
 | HIPAA             | 医疗   | ≤ 1小时    | ≤ 15分钟   | 定期必需 | 6年   |
 | Basel III         | 银行   | ≤ 15分钟   | 0        | 定期必需 | 3-7年 |
-{.full-width}
+{.full-width .wide .expand}
 
 ### PostgreSQL/Patroni 能力覆盖
 

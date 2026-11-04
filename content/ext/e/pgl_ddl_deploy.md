@@ -21,12 +21,12 @@ weight: 9520
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pgl_ddl_deploy`**](/ext/e/pgl_ddl_deploy) | `2.2.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 9520  | [**`pgl_ddl_deploy`**](/ext/e/pgl_ddl_deploy) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgl_ddl_deploy` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical`](/ext/e/pglogical) [`logical_ddl`](/ext/e/logical_ddl) [`spock`](/ext/e/spock) [`pgactive`](/ext/e/pgactive) [`mimeo`](/ext/e/mimeo) [`pgoutput`](/ext/e/pgoutput) [`lolor`](/ext/e/lolor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ weight: 9520
 | [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pgl_ddl_deploy` | `pglogical` |
 | [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pgl_ddl_deploy_$v` | `pglogical_$v` |
 | [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgl-ddl-deploy` | `postgresql-$v-pglogical` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

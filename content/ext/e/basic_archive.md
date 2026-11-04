@@ -21,12 +21,12 @@ weight: 5940
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`basic_archive`**](/ext/e/basic_archive) | `-` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 5940  | [**`basic_archive`**](/ext/e/basic_archive) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`aws_s3`](/ext/e/aws_s3) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) [`external_file`](/ext/e/external_file) [`file_fdw`](/ext/e/file_fdw) [`repmgr`](/ext/e/repmgr) [`pg_parquet`](/ext/e/pg_parquet) [`pg_bulkload`](/ext/e/pg_bulkload) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ weight: 5940
 | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--avail">-</span> | <span class="ext-badge ext-badge--miss">✗</span> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 
 ## 安装
@@ -70,6 +70,7 @@ basic_archive.archive_directory = '/path/to/archive/directory'
 | 参数 | 类型 | 描述 |
 |-----------|------|-------------|
 | `basic_archive.archive_directory` | 字符串 | 复制 WAL 文件的目标目录（必须已存在） |
+{.wide .expand}
 
 如果启用了 `archive_mode` 但 `basic_archive.archive_directory` 为空（默认值），服务器将持续累积 WAL 文件，直到配置目录路径。
 

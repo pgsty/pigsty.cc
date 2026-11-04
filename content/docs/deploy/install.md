@@ -224,7 +224,7 @@ Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/pl
 | 2  |    `10.10.10.11`    |      `pg-test-1`      |           -           |            -            |
 | 3  |    `10.10.10.12`    |      `pg-test-2`      |           -           |            -            |
 | 4  |    `10.10.10.13`    |      `pg-test-3`      |           -           |            -            |
-{.full-width}
+{.full-width .wide .expand}
 
 [**`INFRA`**](/docs/infra) 模块通过浏览器提供了一个 [**图形化管理界面**](/docs/setup/webui)，您可以直接通过这台节点上的 Nginx 的 **80/443** 端口访问。
 

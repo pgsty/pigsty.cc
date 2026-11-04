@@ -125,7 +125,7 @@ pgbouncer=# SHOW SERVERS;
 | [**`RELOAD`**](#reload)           | 重载   | 重新加载配置文件                      |
 | [**`WAIT_CLOSE`**](#wait_close)   | 等待关闭 | 等待 RECONNECT/RELOAD 后的服务端连接释放 |
 | [**监控命令**](#监控命令)                 | 监控   | 查看连接池状态、客户端、服务端等信息            |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------
@@ -386,7 +386,7 @@ Pgbouncer 提供了丰富的 `SHOW` 命令用于监控连接池状态：
 | `SHOW FDS`            | 显示文件描述符使用情况       |
 | `SHOW STATE`          | 显示 Pgbouncer 运行状态 |
 | `SHOW VERSION`        | 显示 Pgbouncer 版本   |
-{.full-width}
+{.full-width .wide .expand}
 
 常用监控示例：
 

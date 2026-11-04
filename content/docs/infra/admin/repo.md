@@ -62,7 +62,7 @@ Pigsty 的 REPO 角色会下载所需软件包，并在 `/www/pigsty` 创建可�
 | `repo_create` | 执行 SOW，清理并原子发布仓库元数据 |
 | `repo_use` | 写入本机的 Pigsty local repo 定义 |
 | `repo_nginx` | 在没有现有服务时启动临时 Nginx |
-{.full-width}
+{.full-width .wide .expand}
 
 `repo_create` 的实际命令是：
 

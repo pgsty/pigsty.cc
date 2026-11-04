@@ -84,7 +84,7 @@ OLTP 模板的内存分配策略：
 | `maintenance_work_mem` | shared_buffers × 25% | 用于 VACUUM、CREATE INDEX |
 | `work_mem` | 64MB - 1GB | 根据 shared_buffers/max_connections 计算 |
 | `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
-{.full-width}
+{.full-width .wide .expand}
 
 **work_mem 计算逻辑**：
 ```text

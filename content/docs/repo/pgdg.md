@@ -116,4 +116,4 @@ PGDG YUM 仓库使用 `https://ftp.postgresql.org/pub/repos/yum/keys/` 中的一
 | u24.aarch64  | Ubuntu | 24  | **18** **17** **16** **15** **14** |   OK   |
 |  u26.x86_64  | Ubuntu | 26  | **18** **17** **16** **15** **14** |   OK   |
 | u26.aarch64  | Ubuntu | 26  | **18** **17** **16** **15** **14** |   OK   |
-{.full-width}
+{.full-width .wide .expand}

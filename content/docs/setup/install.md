@@ -264,7 +264,7 @@ Pigsty 单机安装完成后，您在当前节点上通常会安装有四个功�
 | ID | [NODE](/docs/node/) | [PGSQL](/docs/pgsql/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) |
 |:--:|:-------------------:|:---------------------:|:---------------------:|:-----------------------:|
 | 1  |    `10.10.10.10`    |      `pg-meta-1`      |       `infra-1`       |        `etcd-1`         |
-{.full-width}
+{.full-width .wide .expand}
 
 [**`INFRA`**](/docs/infra) 模块通过浏览器提供了一个 [**图形化管理界面**](/docs/setup/webui)，您可以直接通过这台节点上的 Nginx 的 **80/443** 端口访问。
 

@@ -161,7 +161,7 @@ Pigsty 开源软件支持七个当前验证基线：EL 9.8 / 10.2、Debian 12.15
 | **U22**  | Ubuntu 22.04 (`jammy`)     | `u22.x86_64`  | `u22.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D13**  | Debian 13 (`trixie`)       | `d13.x86_64`  | `d13.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D12**  | Debian 12 (`bookworm`)     | `d12.x86_64`  | `d12.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
-{.full-width}
+{.full-width .wide .expand}
 
 > <i class="fas fa-circle-check text-primary"></i> = 首要支持，<i class="fas fa-check text-primary"></i> = 选配支持
 
@@ -197,7 +197,7 @@ Pigsty 专业版的起售价格 **¥150,000 / 年**，相当于 **9** vCPU 的 A
 | **U22**  | Ubuntu 22.04 (`jammy`)            | `u22.x86_64`  | `u22.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D13**  | Debian 13 (`trixie`)              | `d13.x86_64`  | `d13.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D12**  | Debian 12 (`bookworm`)            | `d12.x86_64`  | `d12.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------
@@ -232,7 +232,7 @@ Pigsty 企业版的起步价格为 **¥400,000 / 年**，相当于 **24** vCPU �
 | **D12**  | Debian 12 (`bookworm`)            | `d12.x86_64`  | `d12.aarch64`  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D11**  | Debian 11 (`bullseye`)            | `d11.x86_64`  | `d11.aarch64`  |                                                  |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     | <i class="fas fa-check text-primary"></i> |
 | **EL7**  | RHEL7 / CentOS7 / UOS ...         | `el7.x86_64`  |      `-`       |                                                  |                                                  |                                                  |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     | <i class="fas fa-check text-primary"></i> |
-{.full-width}
+{.full-width .wide .expand}
 
 
 

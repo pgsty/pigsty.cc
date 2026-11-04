@@ -57,7 +57,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 |                      **`node-1`**                       | `10.10.10.11`  1 号节点，对应 `pg-test-1` PG 实例       |
 |                      **`node-2`**                       | `10.10.10.12`  2 号节点，对应 `pg-test-2` PG 实例       |
 |                      **`node-3`**                       | `10.10.10.13`  3 号节点，对应 `pg-test-3` PG 实例       |
-{.full-width}
+{.full-width .wide .expand}
 
 ![ha](/img/pigsty/ha.png)
 
@@ -73,7 +73,7 @@ Pigsty 使用 [**`PG_ID`**](/docs/pgsql/param#pg_id) 参数组为 PGSQL 模块�
 | [**`pg_cluster`**](/docs/pgsql/param#pg_cluster) | `string` | 集群 | PG 集群名称，必选身份参数 | 有效的 DNS 名称，满足正则表达式 `[a-zA-Z0-9-]+`   |
 | [**`pg_seq`**](/docs/pgsql/param#pg_seq)         |  `int`   | 实例 | PG 实例编号，必选身份参数 | 自然数，可从 0 或 1 开始分配，集群内不重复             |
 | [**`pg_role`**](/docs/pgsql/param#pg_role)       |  `enum`  | 实例 | PG 实例角色，必选身份参数 | 枚举值，可为 `primary`，`replica`，`offline` |
-{.full-width}
+{.full-width .wide .expand}
 
 只要在集群层面定义了集群名称，实例层面分配了实例编号与角色，Pigsty 就能自动根据规则为每个实体生成唯一标识符。
 

@@ -8,19 +8,15 @@ This is the website repo for http://pigsty.cc
 - https://github.com/pgsty/pigsty.cc (Chinese)
 - https://github.com/pgsty/pigsty.io (English)
 
-Powered by [**Hugo**](https://gohugo.io/) and [**OINK 1.4.0**](https://github.com/pgsty/oink/releases/tag/v1.4.0)
+Powered by [**Hugo**](https://gohugo.io/) and [**OINK 1.5.0**](https://github.com/pgsty/oink/releases/tag/v1.5.0)
 
 ---------------
 
 ## Build
 
-Install Git and Go:
+Install Git and [Go 1.27.3](https://go.dev/dl/#go1.27.3).
 
-```bash
-brew install git go
-```
-
-Use Hugo Extended v0.168.0, matching CI, with the OINK v1.4.0 dependency pinned in
+Use Go 1.27.3 and Hugo Extended v0.168.0, matching CI, with the OINK v1.5.0 dependency pinned in
 `go.mod`. Install the matching binary from the [Hugo v0.168.0 release](https://github.com/gohugoio/hugo/releases/tag/v0.168.0).
 
 Run the local preview or production build:
@@ -41,7 +37,7 @@ dark, and system mode share `td-color-theme` across pages.
 
 | Site customization | Ownership |
 | --- | --- |
-| Docs / Extensions dropdowns | `navbar-group-items.html` preserves the original groups and columns through `params.pigsty_groups`, `pigsty_group`, and `pigsty_column`. Its ungrouped fallback follows OINK v1.4.0. `_pigsty-navbar.scss` styles only these panels. |
+| Docs / Extensions dropdowns | `navbar-group-items.html` preserves the original groups and columns through `params.pigsty_groups`, `pigsty_group`, and `pigsty_column`. Its ungrouped fallback follows OINK v1.5.0. `_pigsty-navbar.scss` styles only these panels. |
 | Language link | Native `params.ui.alt_site` points to the independent English site. It does not imply per-page translation mapping. |
 | Homepage | Custom content, extension canvas, and player remain local. Images and components follow OINK's theme state and events. |
 | Extension catalog | Domain-specific tables, badges, and shortcodes remain local. General content and shell styling belong to OINK. |
@@ -52,7 +48,7 @@ homepage theme controller. When upgrading OINK, review the small menu-body
 override and check both grouped menus, all four styles, language/search controls,
 and mobile drawers on the homepage and documentation.
 
-OINK 1.4's Mermaid viewer and `.wide .expand` table reader are inherited by
+OINK 1.5.0's Mermaid viewer and `.wide .expand` table reader are inherited by
 existing content. Keep summary search for this large site; enable local PlantUML
 or blog galleries only when the content needs them. Legacy static vendor files
 require a separate reference audit before removal.

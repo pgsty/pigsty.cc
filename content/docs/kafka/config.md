@@ -42,7 +42,7 @@ KAFKA 模块使用 16 项持久公开参数表达集群意图，其余拓扑、�
 | `combined` | `broker,controller` | ✓ | ✓ | ✓ | 可被选择 |
 | `broker` | `broker` | ✓ | － | ✓ | 可被选择 |
 | `controller` | `controller` | － | ✓ | ✓ | － |
-{.full-width}
+{.full-width .wide .expand}
 
 表中的 JMX 默认启用，可用 [`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 按实例关闭；关闭后会失去对应的 JVM、Broker、KRaft 指标及告警。
 
@@ -354,6 +354,6 @@ kafka_topics:
 | `${kafka_data}/data/` | Topic 日志数据 |
 | `${kafka_data}/metadata/` | KRaft 元数据与 `meta.properties` |
 | `files/pki/kafka/` | 管理节点上签发的节点证书（`<cluster>-<seq>.key/.crt`，CSR 在 `files/pki/csr/`） |
-{.full-width}
+{.full-width .wide .expand}
 
 这些文件由角色管理。持久意图应写入 `pigsty.yml`，不要在节点上直接编辑生成文件，也不要把密码、私钥或角色自有 Secret 内容复制到清单、日志或工单。

@@ -31,7 +31,7 @@ Pigsty 推荐使用的操作系统版本：Rocky Linux 9.8 / 10.2、Debian 12.15
 | Debian 13 (`trixie`)      | <b class="text-danger">aarch64</b> |  [`d13.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d13.aarch64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
 | Debian 12 (`bookworm`)    | <b class="text-sky-600">x86_64</b> |   [`d12.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.x86_64.yml)   | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
 | Debian 12 (`bookworm`)    | <b class="text-danger">aarch64</b> |  [`d12.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.aarch64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
-{.full-width}
+{.full-width .wide .expand}
 
 以上七个小版本是当前验证基线。扩展仓库仍保留 EL8 双架构兼容性，因此完整软件包矩阵共有 16 个 Linux 平台；EL8 已进入退役过渡期，不再属于推荐部署基线。
 
@@ -52,7 +52,7 @@ Pigsty 支持 RHEL / Rocky / Alma / Anolis / CentOS 8、9、10 版本。
 | RHEL8 / Rocky8 / Alma8    | <b class="text-danger">aarch64</b> |  [`el8.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/el8.aarch64.yml)  | <i class="fas fa-circle-check text-secondary"></i> | <i class="fas fa-circle-check text-secondary"></i> | <i class="fas fa-circle-check text-secondary"></i> |   <i class="fas fa-circle-check text-secondary"></i>    |   <i class="fas fa-circle-check text-secondary"></i>    |
 | RHEL7 / CentOS7           | <b class="text-sky-600">x86_64</b> |   [`el7.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/el7.x86_64.yml)   |                                                    |                                                    |                                                    | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | RHEL7 / CentOS7           | <b class="text-danger">aarch64</b> |                                                -                                                |                                                    |                                                    |                                                    |                                                         |                                                         |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!TIP] 推荐使用 Rocky Linux 9.8 / 10.2
 > 请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前建议使用的小版本为：9.8 / 10.2。
@@ -80,7 +80,7 @@ Pigsty 支持 Ubuntu 26.04 / 24.04 / 22.04：
 | Ubuntu 24.04 (`noble`)    | <b class="text-danger">aarch64</b> | [`u24.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u24.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Ubuntu 22.04 (`jammy`)    | <b class="text-sky-600">x86_64</b> |  [`u22.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.x86_64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Ubuntu 22.04 (`jammy`)    | <b class="text-danger">aarch64</b> | [`u22.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!TIP] 推荐使用 Ubuntu 22.04.5 / 24.04.4 / 26.04.0 LTS
 > Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生产环境基线，也可以继续使用 Ubuntu 24.04。
@@ -100,7 +100,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Debian 12 (`bookworm`) | <b class="text-danger">aarch64</b> | [`d12.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Debian 11 (`bullseye`) | <b class="text-sky-600">x86_64</b> |                                    `d11.x86_64`（历史）                                    |                                                  |                                                  | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!TIP] 推荐使用 Debian 12.15 / 13.6
 

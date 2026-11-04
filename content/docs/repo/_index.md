@@ -161,7 +161,7 @@ Pigsty 仓库由两个主要部分组成：[**INFRA**](/docs/repo/infra/) 和 [*
 | `u24.aarch64`  | Ubuntu | 24  | 24.04.5 | Ubuntu 24.04 ARM  | **18** **17** **16** **15** **14** |   OK   |
 |  `u26.x86_64`  | Ubuntu | 26  | 26.04.1 | Ubuntu 26.04 x86  | **18** **17** **16** **15** **14** |   OK   |
 | `u26.aarch64`  | Ubuntu | 26  | 26.04.1 | Ubuntu 26.04 ARM  | **18** **17** **16** **15** **14** |   OK   |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ---------

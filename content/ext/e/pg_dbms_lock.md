@@ -26,12 +26,12 @@ weight: 9250
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_dbms_lock`**](/ext/e/pg_dbms_lock) | `2.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 9250  | [**`pg_dbms_lock`**](/ext/e/pg_dbms_lock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_lock` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_background`](/ext/e/pg_background) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) [`orafce`](/ext/e/orafce) [`pg_cron`](/ext/e/pg_cron) [`pgagent`](/ext/e/pgagent) [`pg_task`](/ext/e/pg_task) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 9250
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_lock` | `pg_background` |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_lock_$v` | `pg_background_$v` |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-dbms-lock` | `postgresql-$v-pg-background` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

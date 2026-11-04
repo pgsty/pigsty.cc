@@ -40,7 +40,7 @@ VIBE 模块共有 **18** 个参数，分为：
 | [`claude_package`](#claude_package)     |  `string`  | `C` | `@anthropic-ai/claude-code` | Claude Code npm 包 |
 | [`claude_env`](#claude_env)             |   `dict`   | `C` | `{}`                        | Claude 环境变量       |
 | [`codex_enabled`](#codex_enabled)       |   `bool`   | `C` | `true`                      | 安装 Codex CLI      |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 

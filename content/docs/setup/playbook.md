@@ -31,7 +31,7 @@ Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一
 | `etcd.yml`  | `./etcd.yml`  | `-l etcd`  |         |           |   ✓    |         |           |
 | `minio.yml` | `./minio.yml` | `-l minio` |         |           |        |    ✓    |           |
 | `pgsql.yml` | `./pgsql.yml` |            |         |           |        |         |     ✓     |
-{.full-width}
+{.full-width .wide .expand}
 
 这是最简单的部署方式，您也可以参考 [**定制指南**](/docs/setup/config/) 里的说明，一步来增量式地完成所有模块与节点的部署。
 
@@ -248,4 +248,4 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 |  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml)               | 移除 Kafka 集群或成员               |
 |            **MYSQL（试点）**             | [**`mysql.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql.yml)                     | 部署原生 MySQL 8.4 单节点或三节点集群     |
 |            **MYSQL（试点）**             | [**`mysql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml)               | 停止并退役原生 MySQL，保留本地状态         |
-{.full-width}
+{.full-width .wide .expand}

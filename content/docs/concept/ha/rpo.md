@@ -108,7 +108,7 @@ Pigsty 提供三种保护模式，以帮助用户在不同的 RPO 要求下进�
 | **最大性能** | <span class="text-danger">**`false`**</span> |                      -                       | **异步复制**   | <span class="text-success">**无影响**</span>     |
 | **最大可用** | <span class="text-success">**`true`**</span> | <span class="text-danger">**`false`**</span> | **同步复制**   | <span class="text-primary">**自动降级为异步**</span> |
 | **最大保护** | <span class="text-success">**`true`**</span> | <span class="text-success">**`true`**</span> | **严格同步复制** | <span class="text-danger">**主库拒绝写入**</span>   |
-{.full-width}
+{.full-width .wide .expand}
 
 通常情况下，您只需要将 [**`pg_rpo`**](/docs/pgsql/param#pg_rpo) 参数设置为 `0`，即可打开 `synchronous_mode` 开关，启用 **最大可用性模式**。
 如果您使用 [**`pg_conf`**](/docs/pgsql/param#pg_conf) = [**`crit.yml`**](/docs/pgsql/template/crit) 模板，则会同时额外打开 `synchronous_mode_strict` 严格模式开关，启用 **最大保护模式**。

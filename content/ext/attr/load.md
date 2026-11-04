@@ -145,4 +145,4 @@ weight: 10
 | [`pgmqtt`](/ext/e/pgmqtt) | `pgmqtt` | PostgreSQL 的 CDC 到 MQTT 代理扩展 |
 | [`decoderbufs`](/ext/e/decoderbufs) | `decoderbufs` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`repmgr`](/ext/e/repmgr) | `repmgr` | PostgreSQL复制管理组件 |
-{.ext-table}
+{.ext-table .wide .expand}

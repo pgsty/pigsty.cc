@@ -101,7 +101,7 @@ pg-meta:
 | [**`pgbouncer`**](#pgbouncer)           | 连接池 | `bool`   | 可变 | 是否加入连接池，默认 `false`               |
 | [**`pool_mode`**](#pool_mode)           | 连接池 | `enum`   | 可变 | 池化模式：`transaction`（默认）           |
 | [**`pool_connlimit`**](#pool_connlimit) | 连接池 | `int`    | 可变 | 连接池用户最大连接数                       |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------
@@ -500,7 +500,7 @@ ALTER USER "dbuser_app" SET "statement_timeout" = '30s';
 | `search_path`                         | Schema 搜索路径 | `'app,public'` |
 | `log_statement`                       | 日志记录级别      | `'ddl'`        |
 | `temp_file_limit`                     | 临时文件大小限制    | `'10GB'`       |
-{.full-width}
+{.full-width .wide .expand}
 
 您可以从数据库的 [**`pg_db_role_setting`**](https://www.postgresql.org/docs/current/view-pg-db-role-setting.html) 系统视图查询用户级别的参数设置。
 

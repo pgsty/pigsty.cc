@@ -27,7 +27,7 @@ MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保�
 | [`mysql_backup_enabled`](#mysql_backup_enabled) | 集群 | `true` | 每日全量备份定时器 |
 | [`mysql_backup_repo`](#mysql_backup_repo) | 集群 | 见下文 | 本地备份目录与保留份数 |
 | [`mysql_exporter_enabled`](#mysql_exporter_enabled) | 集群 | `true` | Exporter 与监控 Target |
-{.full-width}
+{.full-width .wide .expand}
 
 移除参数由 `mysql-rm.yml` 使用：
 
@@ -240,4 +240,4 @@ mysql_exporter_enabled: true
 | 内存基线   | 缓冲池 = max(节点内存 × 25%, 256MB)；Redo = clamp(缓冲池 × 50%, 128MB, 4GB)                                                                                                     |
 | 复制     | GTID 强制、`sql_require_primary_key=ON`、MGR 单主、故障切换读一致性 `BEFORE_ON_PRIMARY_FAILOVER`                                                                                    |
 | 数据目录标记 | `.pigsty-mysql-initialized`（属主校验）与 `.pigsty-mysql-retired`（退役防护）                                                                                                     |
-{.full-width}
+{.full-width .wide .expand}

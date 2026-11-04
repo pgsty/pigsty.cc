@@ -36,7 +36,7 @@ KAFKA 角色刻意只公开 16 项持久参数。拓扑、Listener、安全实�
 | [`kafka_security`](#kafka_security)                   |  集群   | `plaintext`     | `plaintext` 或生产 `scram` 档位         |
 | [`kafka_users`](#kafka_users)                         |  集群   | `[]`            | 用户凭据、ACL 与 Quota                   |
 | [`kafka_topics`](#kafka_topics)                       |  集群   | `[]`            | 声明式 Topic                          |
-{.full-width}
+{.full-width .wide .expand}
 
 `kafka_cluster` 与 `kafka_seq` 必须定义；`kafka_role` 有真实默认值。集群角色要么全部省略，要么全部显式声明。
 
@@ -226,7 +226,7 @@ Exporter 使用的 Kafka 协议版本、TLS/SCRAM 参数和副本放置均为角
 |:------------|:-------------------------|:-----------|:------------------------|:----------|
 | `plaintext` | PLAINTEXT                | PLAINTEXT  | 无                       | 开发或可信隔离网络 |
 | `scram`     | SASL_SSL + SCRAM-SHA-512 | 双向 TLS     | StandardAuthorizer，默认拒绝 | 生产安全基线    |
-{.full-width}
+{.full-width .wide .expand}
 
 `scram` 同时配置 Pigsty CA 签发的节点证书、角色自有管理/监控/内部身份、TLS/SCRAM 与 ACL 启用顺序。安全模式写入 Bootstrap Manifest；集群格式化后，普通重跑不能把 `plaintext` 切换成 `scram`，也不能反向切换。
 
@@ -305,7 +305,7 @@ kafka_topics:
 | 轮换内部凭据 | `kafka.yml`    | `kafka_rotate_credentials=true`、`kafka_rotate_confirm=<cluster>`                    | 健康、全员已格式化的 `scram` 集群                    |
 | 轮换证书   | `kafka.yml`    | `kafka_rotate_certificates=true`、`kafka_rotate_confirm=<cluster>`                   | 健康、全员已格式化的 `scram` 集群                    |
 | 下线集群   | `kafka-rm.yml` | `kafka_rm_data`（默认 `true`）、`kafka_rm_pkg`（默认 `false`）、`kafka_safeguard`（默认 `false`） | 强制显式 `-l`；`kafka_safeguard=true` 时中止一切删除 |
-{.full-width}
+{.full-width .wide .expand}
 
 两种轮换动作互斥，且必须以精确完整集群为目标。`kafka-rm.yml` 默认删除数据目录与节点上的 `/etc/kafka` 恢复状态；`kafka_rm_data=false` 会同时保留二者。执行前必须显式确认目标集群与备份/重建意图，命令与完整语义见 [预置剧本](/docs/kafka/playbook)。
 

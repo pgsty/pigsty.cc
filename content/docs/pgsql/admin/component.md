@@ -398,6 +398,7 @@ journalctl -u <service> --since "5 min ago"  # 查看最近 5 分钟日志
 | 配置文件语法错误        | INI 格式错误    | 检查 `/etc/pgbouncer/pgbouncer.ini`       |
 | 端口被占用           | 6432 端口已被使用 | `lsof -i :6432`                         |
 | userlist.txt 权限 | 文件权限不正确     | `chmod 600 /etc/pgbouncer/userlist.txt` |
+{.wide .expand}
 
 **HAProxy 无法启动**
 

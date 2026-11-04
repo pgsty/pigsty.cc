@@ -59,6 +59,7 @@ PgBouncer 在每次连接时执行主机名查询，而非仅在配置加载时�
 | evdns, libevent 2.x          | 是    | 否        | 是         | 否           | 不检查 /etc/hosts 更新                |
 | getaddrinfo_a, glibc 2.9+    | 是    | 是 (3)    | 是         | 否           | 非 glibc 环境不可用                    |
 | getaddrinfo, libc            | 否    | 是 (3)    | 是         | 否           | 需要 pthreads                         |
+{.wide .expand}
 
 1. 若需要一个主机名对应超过 8 个 IP 地址，则需要 EDNS0 支持。
 2. SOA 查询用于在区域序列号变更时重新检查主机名。

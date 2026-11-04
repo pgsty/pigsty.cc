@@ -222,7 +222,7 @@ idle_in_transaction_session_timeout: 0   # OLTP: 10min，禁用
 | log_min_duration_statement          | 1000ms                                 | 100ms                                  | 放宽慢查询阈值   |
 | default_statistics_target           | 1000                                   | 400                                    | 更精确统计     |
 | idle_in_transaction_session_timeout | 禁用                                     | 10min                                  | 允许长事务     |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

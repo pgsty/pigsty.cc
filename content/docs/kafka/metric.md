@@ -70,7 +70,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_topic_partition_in_sync_replica`            | Gauge | `topic`, `partition`, `broker` | 当前 ISR 成员                            |
 | `kafka_topic_partition_under_replicated_partition` | Gauge | `topic`, `partition`           | Partition 是否处于副本不足状态                 |
 | `kafka_topic_partition_leader_is_preferred`        | Gauge | `topic`, `partition`           | 当前 Leader 是否为 Preferred Replica      |
-{.full-width}
+{.full-width .wide .expand}
 
 `current_offset - oldest_offset` 可以估计当前可保留的 Offset Span，但 Offset 数量不等于字节数，Compact Topic 也不等于精确消息条数。
 
@@ -84,7 +84,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_consumergroup_current_offset_sum` | Gauge | `consumergroup`, `topic`              | 已提交 Offset 汇总      |
 | `kafka_consumergroup_lag`                | Gauge | `consumergroup`, `topic`, `partition` | Partition 级消费滞后    |
 | `kafka_consumergroup_lag_sum`            | Gauge | `consumergroup`, `topic`              | Group/Topic 消费滞后汇总 |
-{.full-width}
+{.full-width .wide .expand}
 
 没有提交 Offset 的临时消费者、使用外部 Offset 存储的客户端，或尚未消费某 Topic 的 Group，不一定产生这些时间序列。
 
@@ -119,7 +119,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `process_cpu_seconds_total`            | Kafka JVM 累计 CPU 时间                   |
 | `process_open_fds` / `process_max_fds` | 已打开与最大文件描述符                           |
 | `process_start_time_seconds`           | Kafka JVM 启动时间                        |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -137,7 +137,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_server_broker_failed_produce_requests_total` | Counter | 失败 Produce 请求总数   |
 | `kafka_server_broker_fetch_requests_total`          | Counter | Fetch 请求总数        |
 | `kafka_server_broker_failed_fetch_requests_total`   | Counter | 失败 Fetch 请求总数     |
-{.full-width}
+{.full-width .wide .expand}
 
 这些是 Broker 总量，不包含 Topic 维度，避免 JMX Series 随 Topic 数膨胀。Topic 级 Offset 与进展来自协议 Exporter。
 
@@ -160,7 +160,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_server_replica_manager_reassigning_partitions`      |  Gauge  | 正在进行 Reassignment 的 Leader Partition 数       |
 | `kafka_server_delayed_operation_purgatory_size`            |  Gauge  | 按 `operation` 划分的延迟操作等待数                     |
 | `kafka_log_manager_offline_log_directories`                |  Gauge  | Kafka 标记为离线的日志目录数                            |
-{.full-width}
+{.full-width .wide .expand}
 
 `Under Replicated` 表示副本没有全部同步；`Under Min ISR` 更严重，表示写入可用性或持久性条件已经低于设置的最小 ISR。`At Min ISR` 虽未越线，但已经没有额外副本余量。
 
@@ -178,7 +178,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_network_response_queue_size`        |  Gauge  | －                                | 等待 Network Processor 的响应数 |
 | `kafka_server_request_handler_idle_ratio`  |  Gauge  | －                                | Request Handler 平均空闲比例    |
 | `kafka_network_processor_idle_ratio`       |  Gauge  | －                                | Network Processor 平均空闲比例  |
-{.full-width}
+{.full-width .wide .expand}
 
 排查高延迟时，应同时查看请求量、错误码、P95/P99、两个队列、Handler/Processor Idle、GC、CPU、磁盘 I/O 与网络。单独看到低 Idle 不足以判断瓶颈位置。
 
@@ -199,7 +199,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_server_broker_metadata_apply_errors_total`              | Counter | Broker 应用元数据镜像错误总数                |
 | `kafka_server_metadata_snapshot_bytes`                         |  Gauge  | 最近生成或加载的元数据 Snapshot 大小           |
 | `kafka_server_metadata_snapshot_age_seconds`                   |  Gauge  | 最近元数据 Snapshot 的年龄                |
-{.full-width}
+{.full-width .wide .expand}
 
 `log_end_offset - high_watermark` 可辅助判断元数据提交滞后；还应结合成员角色、当前 Leader、Epoch 和 Controller 事件延迟判断。
 
@@ -226,7 +226,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_controller_unclean_leader_elections_total`    | Counter | 不干净 Leader 选举总数                              |
 | `kafka_controller_event_queue_time_seconds`          |  Gauge  | Controller 事件排队 P50/P95/P99                  |
 | `kafka_controller_event_processing_time_seconds`     |  Gauge  | Controller 事件处理 P50/P95/P99                  |
-{.full-width}
+{.full-width .wide .expand}
 
 健康集群应恰好存在一个 Active Controller。`offline_partition_count`、`metadata_errors_total` 与 `unclean_leader_elections_total` 的增加都应优先处理。
 
@@ -264,7 +264,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka:ins:request_error_rate5m`        | 5 分钟非 `NONE` 请求错误速率              |
 | `kafka:cls:under_replicated_partitions` | 集群 Under Replicated Partition 总数 |
 | `kafka:cls:offline_partitions`          | 集群 Offline Partition 数           |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

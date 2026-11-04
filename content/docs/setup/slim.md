@@ -72,7 +72,7 @@ curl https://repo.pigsty.cc/get | bash
 | ID | [NODE](/docs/node/) | [PGSQL](/docs/pgsql/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) |
 |:--:|:-------------------:|:---------------------:|:---------------------:|:-----------------------:|
 | 1  |    `10.10.10.10`    |      `pg-meta-1`      |     **不安装基础设施模块**     |        `etcd-1`         |
-{.full-width}
+{.full-width .wide .expand}
 
 
 {{< include file="/docs/conf/yaml/slim.yml" code=true lang="yaml" >}}
@@ -100,7 +100,7 @@ curl https://repo.pigsty.cc/get | bash
 | 1  |    `10.10.10.10`    |      `pg-meta-1`      |     **不安装基础设施模块**     |        `etcd-1`         |
 | 2  |    `10.10.10.11`    |      `pg-meta-2`      |     **不安装基础设施模块**     |        `etcd-2`         |
 | 3  |    `10.10.10.12`    |      `pg-meta-3`      |     **不安装基础设施模块**     |        `etcd-3`         |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ```yaml

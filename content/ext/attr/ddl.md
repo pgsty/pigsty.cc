@@ -42,4 +42,4 @@ slug: ddl
 | [`decoder_raw`](/ext/e/decoder_raw) | [`decoder_raw`](https://github.com/michaelpq/pg_plugins/blob/main/decoder_raw/) | `1.0` | `--s----` | 逻辑复制解码输出插件：RAW SQL格式 |
 | [`test_decoding`](/ext/e/test_decoding) | [`test_decoding`](https://www.postgresql.org/docs/current/test-decoding.html) | `-` | `c-s----` | 基于SQL的WAL逻辑解码样例 |
 | [`pgoutput`](/ext/e/pgoutput) | [`pgoutput`](https://www.postgresql.org/docs/current/protocol-logical-replication.html) | `-` | `c-s----` | PG内置的逻辑解码输出插件 |
-{.ext-table}
+{.ext-table .wide .expand}

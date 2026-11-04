@@ -26,12 +26,12 @@ weight: 7360
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`login_hook`**](/ext/e/login_hook) | `1.8` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 7360  | [**`login_hook`**](/ext/e/login_hook) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `login_hook` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_session_jwt`](/ext/e/pg_session_jwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`pgjwt`](/ext/e/pgjwt) [`oidc_validator`](/ext/e/oidc_validator) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`auth_delay`](/ext/e/auth_delay) [`set_user`](/ext/e/set_user) [`pgsodium`](/ext/e/pgsodium) [`sslinfo`](/ext/e/sslinfo) [`sslutils`](/ext/e/sslutils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 7360
 | [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `login_hook` | - |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `login_hook_$v` | - |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-login-hook` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -326,6 +326,7 @@ GRANT EXECUTE ON FUNCTION login_hook.login() TO PUBLIC;
 | `login_hook.is_executing_login_hook()` | `boolean` | 仅在登录钩子执行期间调用时返回 true |
 | `login_hook.get_login_hook_version()` | `text` | 返回 login_hook 的编译版本 |
 | `login_hook.login()` | `void` | 用户提供的在登录时执行的函数 |
+{.wide .expand}
 
 ### 重要说明
 

@@ -334,7 +334,7 @@ PG Exporter 自带预先组织好的采集器：
 | 8xx   | 可选        | 昂贵/可选指标       |
 | 9xx   | pgBouncer | 连接池指标         |
 | 10xx+ | 扩展        | 扩展特定指标        |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

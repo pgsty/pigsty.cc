@@ -136,7 +136,7 @@ watchdog:
 | `track_activity_query_size` | `32KiB` | `8KiB` | 保留更长查询文本 |
 | `log_connections` | 详细连接事件 | PostgreSQL 18 默认记录授权 | 增加连接审计信息 |
 | `log_disconnections` | `on` | `off` | 记录断开事件 |
-{.full-width}
+{.full-width .wide .expand}
 
 CRIT 还会禁用单个查询的并行 gather，并调整并行成本、autovacuum、WAL 和统计参数。完整值以实际版本的 `roles/pgsql/templates/crit.yml` 为准。
 

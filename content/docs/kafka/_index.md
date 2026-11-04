@@ -99,7 +99,7 @@ flowchart LR
 | `9093` | KRaft Controller | Controller-capable 节点  | PLAINTEXT   | 双向 TLS                   |
 | `9308` | kafka_exporter   | 最多两个 Broker-capable 节点 | HTTP 指标     | HTTP 指标，后端使用 TLS/SCRAM   |
 | `9404` | JMX Exporter     | 启用 JMX 的 Kafka 节点     | HTTP 指标     | HTTP 指标                  |
-{.full-width}
+{.full-width .wide .expand}
 
 四个端口必须彼此不同，均可通过参数调整。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
 

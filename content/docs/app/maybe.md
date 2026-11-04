@@ -128,6 +128,7 @@ pg-maybe:
 | `POSTGRES_PASSWORD`   | `MaybeFinance2026`            | 业务用户密码，生产必须替换             |
 | `POSTGRES_DB`         | `maybe_production`            | Maybe 生产数据库               |
 | `REDIS_VERSION`       | `7-alpine`                    | 本地 Redis 镜像标签             |
+{.wide .expand}
 
 生成生产密钥：
 

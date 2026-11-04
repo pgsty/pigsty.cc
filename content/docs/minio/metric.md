@@ -56,6 +56,6 @@ MINIO 模块通过 `/minio/metrics/v3` 采集 Silo 指标。指标集合会随�
 | 进程  | `minio_system_process_cpu_total_seconds`、`minio_system_process_resident_memory_bytes`                | 进程 CPU 与常驻内存        |
 | 系统  | `minio_system_drive_free_bytes`、`minio_system_drive_used_bytes`、`minio_system_drive_health`          | 单盘容量与健康状态           |
 | 审计  | `minio_audit_total_messages`                                                                         | 审计消息计数              |
-{.full-width}
+{.full-width .wide .expand}
 
 Pigsty 在抓取阶段丢弃 `bucket` 标签非空的样本，并且不注册专用 per-bucket 与 replication 端点。这是刻意的基数控制策略；如果业务确实需要逐桶指标，应单独评估时序规模后自行增加采集任务。

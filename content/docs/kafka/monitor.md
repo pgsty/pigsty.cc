@@ -24,7 +24,7 @@ KAFKA 模块使用两个互补的 Exporter：
 | Kafka 协议视角     | `kafka_exporter :9308`           | `kafka`（无 `role` 标签） | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
 | 主机资源           | node_exporter                    | `node`               | 纳管节点                                  | CPU、内存、磁盘、网络、文件系统                                |
 | 日志             | Journald → Vector → VictoriaLogs | `syslog`             | 所有 Kafka 节点                           | Kafka 与 Exporter 结构化检索日志                         |
-{.full-width}
+{.full-width .wide .expand}
 
 角色在每一个 Infra 节点为每个实例生成一个文件发现目标，JMX 目标与（被选中节点的）协议 Exporter 目标都在同一文件、同一 `kafka` 采集任务下：
 
@@ -176,7 +176,7 @@ Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 | `kafka:ins:request_error_rate5m`        | Broker 5 分钟请求错误速率                 |
 | `kafka:cls:under_replicated_partitions` | 集群 Under Replicated Partition 总数  |
 | `kafka:cls:offline_partitions`          | 集群 Offline Partition 数            |
-{.full-width}
+{.full-width .wide .expand}
 
 基于 Offset 变化得到的是进展速率，不是客户端请求数。日志截断、Offset 回退或 Exporter 重启可能造成瞬时负变化；规则使用 `clamp_min(..., 0)` 只保留正向进展。
 
@@ -202,7 +202,7 @@ Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 | `KafkaFencedBrokers`             | Fenced Broker > 0                   |  5m  | WARN | Kafka Overview / `cls`         |
 | `KafkaUncleanLeaderElection`     | 5 分钟出现不干净 Leader 选举                 |  立即  | CRIT | Kafka Overview / `cls`         |
 | `KafkaConsumerLagGrowing`        | Group Lag > 100000 且 30 分钟仍增长       | 30m  | WARN | Kafka Consumer / `group`       |
-{.full-width}
+{.full-width .wide .expand}
 
 不干净 Leader 选举可能意味着数据丢失，应立即保留 Controller/Broker 日志，确认受影响 Topic 与副本，再决定恢复动作。
 

@@ -83,7 +83,7 @@ juice_instances:
 | `group` | 否  | `root`           | 挂载点属组                        |
 | `mode`  | 否  | `0755`           | 挂载点权限                        |
 | `state` | 否  | `create`         | `create` / `absent`          |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!WARNING] 注意
 > - `data` 仅用于 `juicefs format`，文件系统创建后不会再更新。

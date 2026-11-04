@@ -85,7 +85,7 @@ bin/pgsql-hba pg-meta 10.10.10.10          # 仅刷新 10.10.10.10 实例
 |:-----------|:------------------------------|:--------------------------------------|
 | PostgreSQL | `/pg/data/pg_hba.conf`        | `roles/pgsql/templates/pg_hba.conf`   |
 | Pgbouncer  | `/etc/pgbouncer/pgb_hba.conf` | `roles/pgsql/templates/pgbouncer.hba` |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!WARNING] 不要直接编辑配置文件
 > 直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf` 虽然可以临时生效，但下次执行 Ansible 剧本时会被覆盖。所有 HBA 规则变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。

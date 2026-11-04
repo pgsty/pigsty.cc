@@ -127,7 +127,7 @@ redis-test:
 |  <span class="text-danger">**节点**</span>   | <span class="text-danger">**Nodes**</span>      |
 |             **`redis-test-1`**             | `10.10.10.12`  1 号节点，承载 3 个实例                   |
 |             **`redis-test-2`**             | `10.10.10.13`  2 号节点，承载 3 个实例                   |
-{.full-width}
+{.full-width .wide .expand}
 
 
 
@@ -143,7 +143,7 @@ Pigsty 使用 [**`REDIS`**](/docs/redis/param#redis) 参数组为 Redis 模块�
 | [**`redis_cluster`**](/docs/redis/param#redis_cluster)     | `string` |  集群  | Redis 集群名称，必选身份参数  | 有效的 DNS 名称，满足 `[a-z][a-z0-9-]*` |
 | [**`redis_node`**](/docs/redis/param#redis_node)           |  `int`   |  节点  | Redis 节点编号，必选身份参数  | 自然数，从 1 开始分配，集群内不重复             |
 | [**`redis_instances`**](/docs/redis/param#redis_instances) |  `dict`  |  节点  | Redis 实例定义，必选身份参数  | JSON 对象，Key 为端口号，Value 为实例配置    |
-{.full-width}
+{.full-width .wide .expand}
 
 只要在集群层面定义了集群名称，节点层面分配了节点编号与实例定义，Pigsty 就能自动根据规则为每个实体生成唯一标识符。
 

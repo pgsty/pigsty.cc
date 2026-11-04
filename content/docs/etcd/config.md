@@ -92,7 +92,7 @@ etcd:
 |:----------------|:--------------------------|:-------------------------------|
 | **Patroni**     | PostgreSQL 高可用，存储集群状态和配置  | `/etc/patroni/patroni.yml`     |
 | **VIP-Manager** | 在 PostgreSQL 集群上绑定 L2 VIP | `/etc/default/vip-manager.yml` |
-{.full-width}
+{.full-width .wide .expand}
 
 当 etcd 集群的成员信息发生永久性变更时，您应当 [重载相关服务的配置](/docs/etcd/admin#重载配置)，以确保服务能够正确访问 Etcd 集群。
 
@@ -161,4 +161,4 @@ etcd 模块在目标主机上创建以下目录和文件：
 | `/data/etcd/`                      | 主数据目录（可配置）   | 0700, etcd:etcd |
 | `/etc/profile.d/etcdctl.sh`        | 客户端环境变量      | 0644, root:root |
 | `/etc/systemd/system/etcd.service` | Systemd 服务定义 | 0644, root:root |
-{.full-width}
+{.full-width .wide .expand}

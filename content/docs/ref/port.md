@@ -57,7 +57,7 @@ categories: [参考]
 |    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-default`**  | `5436`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
 |    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-offline`**  | `5438`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
 |    [**`PGSQL`**](/docs/pgsql)     | **`{{ pg_cluster }}-<service>`** | `543x`  | [**`pg_services`**](/docs/pgsql/param#pg_services)                           | ⚠️ 按需启用  |
-{.full-width}
+{.full-width .wide .expand}
 
 Kafka 的 `9404` 端口仅在 [`kafka_jmx_exporter_enabled`](/docs/kafka/param/#kafka_jmx_exporter_enabled) 为 `true` 时启用；`9308` 协议 Exporter 不受该开关控制。
 

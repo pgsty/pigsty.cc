@@ -52,7 +52,7 @@ Pigsty 的离线仓库中不同版本的扩展支持范围不同：14 可用扩�
 | `oriole` | OrioleDB 存储引擎                           |
 | `agens`  | AgensGraph 图数据库内核                       |
 | `pgedge` | pgEdge 分布式复制内核                          |
-{.full-width}
+{.full-width .wide .expand}
 
 `pg_mode` 决定二进制路径、Patroni 集成方式及部分内核特定逻辑；它本身不会自动替你补齐所有软件包、扩展与业务数据库。实际部署时应使用匹配的 `conf/*.yml` 配置模板，或显式配置 `pg_packages`、`pg_extensions`、`pg_libs` 与 `pg_databases`。以下是一个精简的 Citus 示例：
 

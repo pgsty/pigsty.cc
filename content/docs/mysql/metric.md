@@ -52,7 +52,7 @@ MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀�
 | `mysql:ins:statement_errors` | 语句错误率 |
 | `mysql:ins:slow_queries` / `mysql:ins:slow_query_ratio` | 慢查询速率与占比 |
 | `mysql:ins:no_index_queries` | 未走索引查询速率 |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -104,7 +104,7 @@ MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀�
 | `mysql:ins:deadlocks` | 死锁速率 |
 | `mysql:ins:history_list_length` | Purge 滞后（历史链表长度） |
 | `mysql:ins:binlog_bytes` | Binlog 当前磁盘占用总量（字节） |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

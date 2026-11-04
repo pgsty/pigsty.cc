@@ -76,7 +76,7 @@ pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 |  `fdw`  | 外部类 | postgres_fdw, mysql_fdw, oracle_fdw            |
 |  `sim`  | 兼容类 | orafce, babelfishpg_tds                        |
 |  `etl`  | 数据类 | pglogical, wal2json, decoderbufs               |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------

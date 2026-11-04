@@ -78,7 +78,7 @@ bin/pgsql-hba pg-meta          # 重新渲染并应用 pg-meta 集群的 HBA 规
 | `cert`       | `hostssl` 与 `cert`           | 客户端证书认证                                                    |
 | `ident`、`os` | `ident`（PgBouncer 中为 `peer`） | 操作系统用户映射                                                   |
 | `peer`       | `peer`                       | 本地操作系统用户                                                   |
-{.full-width}
+{.full-width .wide .expand}
 
 用户字段支持四个占位符，渲染时替换为实际用户名：`${dbsu}`（超级用户）、`${repl}`（复制用户）、`${monitor}`（监控用户）、`${admin}`（管理用户）；
 `+role` 前缀表示匹配该角色的所有成员。

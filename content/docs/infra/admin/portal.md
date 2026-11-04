@@ -246,7 +246,7 @@ Pigsty 的默认首页 `home` 服务器提供以下内置路由：
 | `/blackbox/`          | Blackbox Exporter        |
 | `/pev`                | PostgreSQL Explain 可视化工具 |
 | `/haproxy/<cluster>/` | HAProxy 管理界面（如有）         |
-{.full-width}
+{.full-width .wide .expand}
 
 这些路由允许通过单一入口访问所有监控组件，无需配置多个域名。
 

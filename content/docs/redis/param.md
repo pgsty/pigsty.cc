@@ -42,7 +42,7 @@ REDIS 模块的参数列表，共有 **22** 个参数，分为两个部分：
 | [`redis_rename_commands`](#redis_rename_commands)   |   `dict`   |  `C`  | Redis 危险命令重命名列表                        |
 | [`redis_cluster_replicas`](#redis_cluster_replicas) |   `int`    |  `C`  | Redis 原生集群中每个主库配几个从库？                  |
 | [`redis_sentinel_monitor`](#redis_sentinel_monitor) | `master[]` |  `C`  | Redis 哨兵监控的主库列表，只在哨兵集群上使用              |
-{.full-width}
+{.full-width .wide .expand}
 
 [`REDIS_REMOVE`](#redis_remove) 参数组控制 Redis 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 

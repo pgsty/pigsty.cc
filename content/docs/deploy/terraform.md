@@ -126,7 +126,7 @@ Pigsty 在 [`terraform/spec/`](https://github.com/pgsty/pigsty/tree/main/terrafo
 | [`vultr.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/vultr.tf)               | Vultr        | 单节点，Debian 12/13，当前仅 AMD                          |
 | [`digitalocean.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/digitalocean.tf) | DigitalOcean | 单节点，Debian 12/13，当前仅 AMD                          |
 | [`linode.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/linode.tf)             | Linode       | 单节点，Debian 12/13，当前仅 AMD                          |
-{.full-width}
+{.full-width .wide .expand}
 
 使用模板时，将模板文件复制为 `terraform.tf`：
 
@@ -208,7 +208,7 @@ export ALICLOUD_REGION="cn-shanghai"
 | Ubuntu 26.04.0 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
 | Anolis 8.10           | `an8`  | `anolisos_8_10_x64`               | `anolisos_8_10_arm64`               |
 | Alibaba Cloud Linux 3 | `al3`  | `aliyun_3_x64_20G_alibase_[0-9]+` | `aliyun_3_arm64_20G_alibase_[0-9]+` |
-{.full-width}
+{.full-width .wide .expand}
 
 ### OSS 存储配置
 

@@ -26,7 +26,7 @@ weight: 2977
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`omnigres`**](/ext/e/omni) | `0.2.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
@@ -70,7 +70,7 @@ weight: 2977
 | 2977  | [**`omni_worker`**](/ext/e/omni_worker) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_worker` |
 | 2978  | [**`omni_xml`**](/ext/e/omni_xml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_xml` |
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_background`](/ext/e/pg_background) [`pg_task`](/ext/e/pg_task) [`pgmq`](/ext/e/pgmq) [`pg_durable`](/ext/e/pg_durable) [`pg_later`](/ext/e/pg_later) [`pg_dispatch`](/ext/e/pg_dispatch) [`ulak`](/ext/e/ulak) [`redis`](/ext/e/redis) [`pgmb`](/ext/e/pgmb) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ weight: 2977
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `omnigres` | - |
 | [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |

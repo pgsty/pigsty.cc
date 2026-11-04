@@ -73,7 +73,7 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 | Claude Code | `claude_enabled: true`  | 安装 `@anthropic-ai/claude-code`，渲染 `~/.claude.json` 与 `~/.claude/settings.json`，默认接入监控 | `./vibe.yml -t claude`     |
 | Codex CLI   | `codex_enabled: true`   | 仅执行 `npm install -g @openai/codex`；不托管 Codex 配置，也不接入 VIBE 观测                          | `./vibe.yml -t codex`      |
 | 额外 npm 包    | `npm_packages: []`      | 只用于安装额外全局包；Claude 与 Codex 已由各自任务负责安装                                                  | `./vibe.yml -t nodejs_pkg` |
-{.full-width}
+{.full-width .wide .expand}
 
 如果不需要某个组件，可以在 `pigsty.yml` 中设置对应的 `*_enabled: false`，或临时执行 `./vibe.yml -e codex_enabled=false` 这类开关。
 

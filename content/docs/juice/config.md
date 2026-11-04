@@ -64,7 +64,7 @@ JUICE 模块仅有两个参数：
 | `group` | 否  | `root`           | 挂载点属组                     |
 | `mode`  | 否  | `0755`           | 挂载点权限                     |
 | `state` | 否  | `create`         | `create` / `absent`       |
-{.full-width}
+{.full-width .wide .expand}
 
 > [!WARNING] 重要
 > - 建议在 **首次格式化** 时显式设置 `data`，以明确存储后端。

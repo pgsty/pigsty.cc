@@ -43,7 +43,7 @@ MINIO 模块共有 **22** 个公开参数，分为两个部分：
 | [`minio_endpoint`](#minio_endpoint)     |  `string`  |  `C`  | minio 部署的客户端别名对应的端点            |
 | [`minio_buckets`](#minio_buckets)       | `bucket[]` |  `C`  | 待创建的 minio 存储桶列表               |
 | [`minio_users`](#minio_users)           |  `user[]`  |  `C`  | 待创建的 minio 用户列表                |
-{.full-width}
+{.full-width .wide .expand}
 
 [`MINIO_REMOVE`](#minio_remove) 参数组控制对象存储集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 

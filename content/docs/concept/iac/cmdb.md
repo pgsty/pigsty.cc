@@ -179,7 +179,7 @@ CMDB 提供了一系列视图，用于查询和展示配置数据：
 | `pigsty.pg_service` | PostgreSQL 服务定义视图 |
 | `pigsty.pg_hba` | PostgreSQL HBA 规则视图 |
 | `pigsty.pg_remote` | 远程 PostgreSQL 实例视图 |
-{.full-width}
+{.full-width .wide .expand}
 
 **`pigsty.inventory`** 是最核心的视图，它将数据库中的配置数据转换为 Ansible 所需的 JSON 格式：
 

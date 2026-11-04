@@ -26,12 +26,12 @@ weight: 1080
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
 | [**`pg_task`**](/ext/e/pg_task) | `3.0.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
-{.ext-table}
+{.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1080  | [**`pg_task`**](/ext/e/pg_task) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_durable`](/ext/e/pg_durable) [`pg_background`](/ext/e/pg_background) [`pgagent`](/ext/e/pgagent) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_later`](/ext/e/pg_later) [`pgmq`](/ext/e/pgmq) [`ulak`](/ext/e/ulak) [`pg_retry`](/ext/e/pg_retry) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ weight: 1080
 | [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_task` | - |
 | [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_task_$v` | - |
 | [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-task` | - |
-{.ext-table}
+{.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
@@ -344,6 +344,7 @@ INSERT INTO task (input, remote) VALUES ('SELECT now()', 'user=user host=host');
 | output | text | | 接收到的结果 |
 | error | text | | 捕获的错误 |
 | remote | text | | 远程数据库连接字符串 |
+{.wide .expand}
 
 ### 配置
 
@@ -371,6 +372,7 @@ INSERT INTO task (input, remote) VALUES ('SELECT now()', 'user=user host=host');
 | pg_task.table | text | task | 任务表名 |
 | pg_task.json | json | `[{"data":"postgres"}]` | 多数据库配置 |
 | pg_task.id | bigint | 0 | 当前任务 ID，只读会话设置 |
+{.wide .expand}
 
 ### 多数据库配置
 

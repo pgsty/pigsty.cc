@@ -57,7 +57,7 @@ Patroni 提供了 [**`patronictl`**](https://patroni.readthedocs.io/en/latest/pa
 | [**`topology`**](#查看拓扑)    | 查看拓扑   | 显示集群的复制拓扑结构                    |
 | [**`version`**](#查看版本)     | 查看版本   | 显示 Patroni 版本信息                |
 | [**`remove`**](#移除成员)      | 移除成员   | 从 DCS 中移除集群成员（危险操作）            |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

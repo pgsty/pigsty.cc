@@ -25,7 +25,7 @@ categories: [参考]
 | `node:ins:network_io_bytes_rate1m` | `node:ins:network_tx_bytes_rate1m + node:ins:network_rx_bytes_rate1m` | 网络收发总速率，字节/秒 |
 | `node:ins:time_drift` | `abs(node_timex_offset_seconds)` | 时间偏移绝对值，秒 |
 | `haproxy:ins:service_up` | `sum by (ins,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` | 服务后端是否至少有一个 UP 实例，0 或 1 |
-{.full-width}
+{.full-width .wide .expand}
 
 此外，`node_up`、`haproxy_up`、`keepalived_exporter_up`、`docker_up`、`vector_up` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)，不包含在上面的模块规则数量中，也不是 Exporter 的原始指标。它们反映抓取状态，不能代替服务功能检查。
 
@@ -601,6 +601,7 @@ categories: [参考]
 | tcp_connections                                                         | gauge   | `instance`, `ins`, `job`, `protocol`, `ip`, `cls`                                                                                                                                                                              | Current number of accepted TCP connections.                                                                                                                                                                                                                                                                                                                               |
 | tcp_connections_limit                                                   | gauge   | `instance`, `ins`, `job`, `protocol`, `ip`, `cls`                                                                                                                                                                              | The max number of TCP connections that can be accepted (0 means no limit).                                                                                                                                                                                                                                                                                                |
 | up                                                                      | Unknown | `instance`, `ins`, `job`, `ip`, `cls`                                                                                                                                                                                          | N/A                                                                                                                                                                                                                                                                                                                                                                       |
+{.wide .expand}
 
 ## 记录指标索引
 
@@ -774,6 +775,6 @@ categories: [参考]
 | `haproxy:ins:uptime` | `time() - haproxy_process_start_time_seconds` |
 | `haproxy:ins:service_up` | `sum by (ins,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` |
 | `haproxy:cls:service_up` | `sum by (cls,proxy) (haproxy_server_status{state="UP", proxy!='stats'}) > bool 0` |
-{.full-width}
+{.full-width .wide .expand}
 
 </details>

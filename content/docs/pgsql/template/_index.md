@@ -16,7 +16,7 @@ Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的�
 | [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务 |
 | [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 一致性优先业务   | 一致性优先、详细审计  |
 | [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) | 1-3C   | 微型实例      | 资源受限、低配环境   |
-{.full-width}
+{.full-width .wide .expand}
 
 您可以通过 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数来选择使用哪个配置模板，默认为 [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp)。
 
@@ -84,7 +84,7 @@ pg-dev:
 | **work_mem** 范围               | 64MB-1GB     | 64MB-8GB     | 64MB-1GB     | 16MB-256MB   |
 | **maintenance_work_mem**      | 25% 共享缓冲区    | 50% 共享缓冲区    | 25% 共享缓冲区    | 25% 共享缓冲区    |
 | **max_locks_per_transaction** | 1-2x maxconn | 2-4x maxconn | 1-2x maxconn | 1-2x maxconn |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 并行查询
 
@@ -95,7 +95,7 @@ pg-dev:
 | **max_parallel_workers_per_gather** | 20% cpu (max 8) | 50% cpu         | 0（禁用）           | 0（禁用）           |
 | **parallel_setup_cost**             | 2000            | 1000            | 2000            | 1000            |
 | **parallel_tuple_cost**             | 0.2             | 0.1             | 0.2             | 0.1             |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 同步复制
 
@@ -103,7 +103,7 @@ pg-dev:
 |:---------------------|:-----------|:-----------|:-----|:-----------|
 | **synchronous_mode** | 取决于 pg_rpo | 取决于 pg_rpo | 强制开启 | 取决于 pg_rpo |
 | **data_checksums**   | 可选         | 可选         | 强制开启 | 可选         |
-{.full-width}
+{.full-width .wide .expand}
 
 ### Vacuum 配置
 
@@ -112,7 +112,7 @@ pg-dev:
 | **vacuum_cost_delay**      | 20ms | 10ms  | 20ms | 20ms |
 | **vacuum_cost_limit**      | 2000 | 10000 | 2000 | 2000 |
 | **autovacuum_max_workers** | 3    | 3     | 3    | 2    |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 超时与安全
 
@@ -123,7 +123,7 @@ pg-dev:
 | **default_statistics_target**           | 400   | 1000   | 400   | 200   |
 | **track_activity_query_size**           | 8KB   | 8KB    | 32KB  | 8KB   |
 | **log_connections**                     | 仅授权   | 仅授权    | 全部阶段  | 默认    |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ### IO 配置（PG18）
@@ -132,7 +132,7 @@ pg-dev:
 |:--------------------|:-----------------|:----------------|:-----------------|:-----------------|
 | **io_workers**      | 25% cpu (4-16)   | 50% cpu (4-32)  | 25% cpu (4-8)    | 3                |
 | **temp_file_limit** | 1/20 磁盘，上限 100GB | 1/5 磁盘，上限 400GB | 1/20 磁盘，上限 100GB | 1/20 磁盘，上限 100GB |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------

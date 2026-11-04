@@ -28,7 +28,7 @@ categories: [参考]
 | [`HAPROXY`](#haproxy)             | HAPROXY 相关参数       |
 | [`NODE_EXPORTER`](#node_exporter) | NODE_EXPORTER 相关参数 |
 | [`VECTOR`](#vector)               | VECTOR 日志收集相关参数    |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ----------------
@@ -85,7 +85,7 @@ categories: [参考]
 | [`node_tune`](#node_tune)                         |   `enum`   | `C` | 节点调优配置文件：无，oltp,olap,crit,tiny          |
 | [`node_tuned_profile_dir`](#node_tuned_profile_dir) |  `path`  | `C` | tuned 配置文件目录，由发行版映射确定                 |
 | [`node_sysctl_params`](#node_sysctl_params)       |   `dict`   | `C` | 额外的 sysctl 配置参数，k:v 格式                  |
-{.full-width}
+{.full-width .wide .expand}
 
 [`NODE_SEC`](#node_sec) 参数组用于配置节点的安全相关选项，包括 SELinux、防火墙等。
 
@@ -152,7 +152,7 @@ categories: [参考]
 | [`haproxy_client_timeout`](#haproxy_client_timeout) | `interval`  |   `C`   | haproxy 客户端连接超时，默认为 24h       |
 | [`haproxy_server_timeout`](#haproxy_server_timeout) | `interval`  |   `C`   | haproxy 服务器端连接超时，默认为 24h      |
 | [`haproxy_services`](#haproxy_services)             | `service[]` |   `C`   | 要在节点上对外暴露的 haproxy 服务列表       |
-{.full-width}
+{.full-width .wide .expand}
 
 [`NODE_EXPORTER`](#node_exporter) 参数组用于配置节点监控 Exporter。
 
@@ -213,7 +213,7 @@ node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
 |      `inventory_hostname`       |   `ip`   | **-** | **必选** | **节点 IP 地址** |
 |     [`nodename`](#nodename)     | `string` | **I** | 可选     | **节点名称**     |
 | [`node_cluster`](#node_cluster) | `string` | **C** | 可选     | **节点集群名称**   |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ```yaml

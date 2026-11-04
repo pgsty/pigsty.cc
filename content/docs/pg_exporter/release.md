@@ -43,7 +43,7 @@ description: PG Exporter 版本发布历史
 | [v0.0.3](#v003) | 2019-12-14 | 生产环境测试                                       | [v0.0.3](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.3) |
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
@@ -76,7 +76,7 @@ description: PG Exporter 版本发布历史
 | PG19 | `pg_sub_has_worker`、`pg_sub_reset_time`、`pg_sub_confl_*` | 新增 worker 存在标记、重置时间与八个冲突计数器。没有 apply worker 时仍可能保留订阅行，不能仅凭指标存在判断 worker 健康。 |
 | PG19 | `pg_subrel_count` | 同时包含表和序列；`pg_pubrel_count` 仍只统计表。检查面板名称与数量比较规则。 |
 | PG19 | `pg_wal_fpi_bytes`、`pg_lock_stat_*`、`pg_recovery_state_*`、`pg_vacuum_score_*` | 属于新增指标。恢复状态仅用于备库，自动清理评分仅用于主库；原有 WAL、锁分布和恢复指标族保留。 |
-{.full-width}
+{.full-width .wide .expand}
 
 从 PG17 或更早版本升级的用户还需迁移旧名：检查点指标自 PG17 起移出 `pg_bgwriter_*`，而 `pg_wal_write`、`pg_wal_sync`、`pg_wal_write_time`、`pg_wal_sync_time` 自 PG18 起不再输出。[完整兼容性指南](https://exp.pgsty.com/zh/compatibility/#older-postgresql-metrics) 逐项列出替代指标、标签／聚合差异与混合版本 PromQL。
 

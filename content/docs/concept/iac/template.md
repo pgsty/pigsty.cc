@@ -85,7 +85,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)                |
 | [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)                |
-{.full-width}
+{.full-width .wide .expand}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
 
@@ -126,7 +126,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库    |
 | [**`maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用      |
 | [**`registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ------
@@ -150,7 +150,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                                |
 | [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                                |
 | [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                          |
-{.full-width}
+{.full-width .wide .expand}
 
 
 ------

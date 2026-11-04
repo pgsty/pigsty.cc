@@ -45,6 +45,7 @@ Pigsty v4.5.0 的 [**仪表盘目录**](https://github.com/pgsty/pigsty/tree/v4.
 | Pigsty 总览 | 1 | 0 | 0 |
 | Agent 存活检测 | 0 | 14 | 0 |
 | **合计** | **67** | **773** | **92** |
+{.wide .expand}
 
 仪表盘按 `files/grafana/**/*.json` 文件计数；ETCD 仪表盘归入 INFRA 目录。预计算规则与告警规则分别统计 `files/victoria/rules/*.yml` 中的 `record` 与 `alert` 条目，并加上 [**`agent.yml`**](https://github.com/pgsty/pigsty/blob/v4.5.0/roles/infra/templates/victoria/agent.yml) 模板生成的 14 条存活记录规则，即 759 + 14 = 773。它们是随源码交付的配置数量，实际加载范围取决于部署模块与配置。
 

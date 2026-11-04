@@ -227,7 +227,7 @@ Pigsty 扩展预留了以下域名用于各种应用服务：
 | `dify.pigsty` | Dify AI          |
 | `odoo.pigsty` | Odoo ERP         |
 | `mm.pigsty`   | Mattermost       |
-{.full-width}
+{.full-width .wide .expand}
 
 使用这些域名需要在 [`infra_portal`](/docs/infra/param#infra_portal) 中配置相应的服务。
 

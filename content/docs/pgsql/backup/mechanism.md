@@ -175,7 +175,7 @@ stanza: pg-meta
 | 实例编排 | [**`pig pitr`**](/docs/pig/pitr)                     | 单节点编排：预检 → 停 Patroni/PG → 调用 `pgbackrest restore` → 可选启动 PG，Patroni 保持停止 |
 | 命令原语 | [**`pig pb`**](/docs/pig/pb) / `pb` 别名 / `pg-backup` | 自动填充 `--stanza` 与 DBSU 身份，转发给 pgbackrest 对应子命令                               |
 | 底层引擎 | [**`pgbackrest`**](/docs/pgbackrest/)                | 读取 `/etc/pgbackrest/pgbackrest.conf`，实际执行备份/归档/恢复                            |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 命令原语层
 
@@ -220,7 +220,7 @@ Pigsty 恢复接口的每个参数，都对应一个 pgbackrest 选项 —— �
 | `process`                          | —                                 | `process-max`                   | 恢复并行进程数                          |
 | `data`                             | `--data` / `-D`                   | `--pg1-path`                    | 恢复到哪个数据目录                        |
 | `repo`                             | —                                 | `repo1-*`（渲染临时配置）               | 覆盖备份仓库定义；`pig pitr --repo` 仅选择现有配置中的仓库编号 |
-{.full-width}
+{.full-width .wide .expand}
 
 选择性恢复仍是物理恢复：未包含或被排除的数据库会以稀疏清零文件还原，以便 PostgreSQL 完成恢复，但这些数据库本身不可访问，
 恢复后需要显式删除。它不是 `pg_dump` 那样的逻辑子集恢复。

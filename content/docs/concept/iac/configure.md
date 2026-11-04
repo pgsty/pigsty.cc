@@ -121,7 +121,7 @@ cd ~/pigsty
 | `-n, --non-interactive` | 非交互模式；单 IP 或演示 IP 可自动选择，多 IP 歧义时需配合 `-i`                          |
 | `-p, --port`            | 指定环境检查所用 SSH 端口；不会自动把 `ansible_port` 写入输出配置                       |
 | `-g, --generate`        | **为配置文件中的密码生成随机值，提高安全性（强烈推荐）**                                    |
-{.full-width}
+{.full-width .wide .expand}
 
 
 
@@ -326,7 +326,7 @@ $ ./configure -g
 |  `app/registry`  | Docker Registry 配置 |
 |   `app/immich`   | Immich 相册与视频管理配置   |
 | `app/jumpserver` | JumpServer 堡垒机配置   |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 特殊内核模板/模式
 
@@ -342,7 +342,7 @@ $ ./configure -g
 |  `agens`   | AgensGraph：图数据库内核                  |
 |  `pgedge`  | pgEdge：分布式 PostgreSQL 内核           |
 |  `mongo`   | MongoDB 兼容栈模板                      |
-{.full-width}
+{.full-width .wide .expand}
 
 ### 演示与构建模板
 
@@ -364,7 +364,7 @@ $ ./configure -g
 |  `demo/wool`  | 中国区低配云主机示例             |
 |  `build/oss`  | 跨发行版开源软件包构建环境          |
 |  `build/dev`  | 三节点开发与构建环境             |
-{.full-width}
+{.full-width .wide .expand}
 
 
 -----------------

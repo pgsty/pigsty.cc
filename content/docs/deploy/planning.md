@@ -21,7 +21,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 |  单机部署（[**`slim`**](/docs/conf/slim)）  |                           |            1            |             1             |                          | 不要监控设施，只要数据库                              |
 | 基础设施（[**`infra`**](/docs/conf/infra)） |             1             |                         |                           |                          | 只要监控基础设施                                  |
 |  单机部署（[**`rich`**](/docs/conf/rich)）  |             1             |            1            |             1             |            1             | 单机 + 对象存储 + 本地仓库/扩展                       |
-{.full-width}
+{.full-width .wide .expand}
 
 |                多节点方案                | [**INFRA**](/docs/infra/) | [**ETCD**](/docs/etcd/) | [**PGSQL**](/docs/pgsql/) | [**MINIO**](/docs/minio) | 说明                |
 |:-----------------------------------:|:-------------------------:|:-----------------------:|:-------------------------:|:------------------------:|-------------------|
@@ -30,7 +30,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 | 四节点（[**`full`**](/docs/conf/full)）  |             1             |            1            |            1+3            |                          | 演示专用，1 INFRA/ETCD |
 | 生产仿真（[**`simu`**](/docs/conf/simu)） |             3             |            5            |             9             |            4             | 20 节点，另含 2 个代理  |
 |             大规模生产（自定义）              |             3             |            5            |             n             |            n             | 3个 INFRA，5个 ETCD  |
-{.full-width}
+{.full-width .wide .expand}
 
 使用什么样的架构规划方案，取决于您对数据库可靠性的要求，以及手头可用的资源。
 通常来说，严肃的生产环境部署至少需要 **3** 个节点以实现 [**高可用配置**](#三节点配置)。
@@ -61,7 +61,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 | ID | [NODE](/docs/node/) | [PGSQL](/docs/pgsql/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) |
 |:--:|:-------------------:|:---------------------:|:---------------------:|:-----------------------:|
 | 1  |      `node-1`       |      `pg-meta-1`      |       `infra-1`       |        `etcd-1`         |
-{.full-width}
+{.full-width .wide .expand}
 
 如果为备份/PITR 配置了外部 S3 / MinIO [**备份仓库**](/docs/pgsql/backup/repository/) 提供兜底的 RTO/RPO，此配置亦可用于普通标准的生产环境。
 
@@ -83,7 +83,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 |:--:|:-------------------:|:-----------------------:|:---------------------:|:-----------------------:|
 | 1  |      `node-1`       | `pg-meta-1` (`replica`) |       `infra-1`       |        `etcd-1`         |
 | 2  |      `node-2`       | `pg-meta-2` (`primary`) |                       |                         |
-{.full-width}
+{.full-width .wide .expand}
 
 双节点配置的高可用自动切换机制有限制，这种"半 HA"设置只能从特定节点故障中自动恢复：
 - 如果 `node-1` 故障，无自动故障转移：需要手动提升 `node-2`
@@ -100,7 +100,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 | 1  |      `node-1`       |      `pg-meta-1`      |       `infra-1`       |        `etcd-1`         | `minio-1` |
 | 2  |      `node-2`       |      `pg-meta-2`      |       `infra-2`       |        `etcd-2`         | `minio-2` |
 | 3  |      `node-3`       |      `pg-meta-3`      |       `infra-3`       |        `etcd-3`         | `minio-3` |
-{.full-width}
+{.full-width .wide .expand}
 
 --------
 
@@ -114,7 +114,7 @@ Pigsty [**沙箱环境**](/docs/deploy/sandbox/) 使用的 [**标准四节点配
 | 2  |      `node-2`       |      `pg-test-1`      |                       |                         |
 | 3  |      `node-3`       |      `pg-test-2`      |                       |                         |
 | 4  |      `node-4`       |      `pg-test-3`      |                       |                         |
-{.full-width}
+{.full-width .wide .expand}
 
 在这里我们出于演示目的，不配置 [**INFRA**](/docs/infra) / [**ETCD**](/docs/etcd) 模块的高可用，您也可以对其进行进一步的调整
 
@@ -124,7 +124,7 @@ Pigsty [**沙箱环境**](/docs/deploy/sandbox/) 使用的 [**标准四节点配
 | 2  |      `node-2`       |      `pg-test-1`      |       `infra-2`       |        `etcd-2`         |                           |
 | 3  |      `node-3`       |      `pg-test-2`      |                       |        `etcd-3`         |                           |
 | 4  |      `node-4`       |      `pg-test-3`      |                       |                         |                           |
-{.full-width}
+{.full-width .wide .expand}
 
 
 --------
