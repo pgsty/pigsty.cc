@@ -5,18 +5,19 @@ description: Infra 仓库中可用的软件清单
 weight: 5441
 ---
 
-2026-11-03 与 2026-11-04 构建批次已在本地完成，以下清单包含两批次共 10 个软件包的最新构建版本；这些版本尚未导入 APT/YUM 仓库或在线发布。详见 [**发布日志**](../log/#2026-11-04)。
+2026-11-05 批次更新 10 个配方，40 个 amd64/arm64 DEB/RPM 包已验证并导入本地 APT/YUM 仓库。本批次取代此前的 Caddy 与 dblab 构建；清单中 11 月 3 日和 4 日的其余构建仍待入库。在线发布仍待后续处理。详见 [**发布日志**](../log/#2026-11-05)。
+
 
 ## Grafana 技术栈
 
 | 名称                                                                              | 版本     | 许可证                                                                                 | 备注                                |
-|-----------------------------------------------------------------------------------|----------|----------------------------------------------------------------------------------------|-------------------------------------|
+| :-------------------------------------------------------------------------------- | :------- | :------------------------------------------------------------------------------------- | :---------------------------------- |
 | [`grafana`](https://github.com/grafana/grafana/)                                  | `13.3.0` | [AGPLv3](https://github.com/grafana/grafana/blob/main/LICENSE)                         | 开源可观测性与数据可视化平台        |
 | [`loki`](https://github.com/grafana/loki)                                         | `3.7.9`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | 日志聚合系统                        |
 | [`promtail`](https://github.com/grafana/loki/releases/tag/v3.6.11)                | `3.6.11` | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志采集代理（EOL）            |
 | [`logcli`](https://github.com/grafana/loki/releases/tag/v3.7.9)                   | `3.7.9`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志查询命令行客户端           |
 | [`loki-canary`](https://github.com/grafana/loki/releases/tag/v3.7.9)              | `3.7.9`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 写入路径健康探针               |
-| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)  | `4.1.4`  | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源          |
+| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)  | `4.1.6`  | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源          |
 | [`grafana-plugins`](https://github.com/pgsty/infra-pkg/tree/main/grafana-plugins) | `13.2.3` | [Apache-2.0](https://github.com/pgsty/infra-pkg/blob/main/LICENSE)                     | Pigsty 打包的额外面板插件（noarch） |
 {.wide .expand}
 
@@ -29,7 +30,7 @@ weight: 5441
 | :------------------------------------------------------------------------------------------------------ | :-------- | :----------------------------------------------------------------------------------------------- | :-------------------------------- |
 | [`victoria-metrics`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                | `1.155.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | 高性能时序数据库，替代 Prometheus |
 | [`victoria-logs`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                   | `1.53.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | 高性能日志存储与查询引擎          |
-| [`victoria-traces`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                 | `0.12.1`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | 分布式链路追踪后端                |
+| [`victoria-traces`](https://github.com/VictoriaMetrics/VictoriaTraces)                                  | `0.13.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaTraces/blob/master/LICENSE)              | 分布式链路追踪后端                |
 | [`victoria-metrics-cluster`](https://github.com/VictoriaMetrics/VictoriaMetrics)                        | `1.155.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | VictoriaMetrics 分布式集群版      |
 | [`vmutils`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                         | `1.155.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | VictoriaMetrics 配套命令行工具    |
 | [`vlogscli`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                        | `1.53.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)             | VictoriaLogs 交互式查询客户端     |
@@ -92,7 +93,7 @@ weight: 5441
 | 名称                                                    | 版本                 | 许可证                                                                                  | 备注                                    |
 | :------------------------------------------------------ | :------------------- | :-------------------------------------------------------------------------------------- | :-------------------------------------- |
 | [`silo`](https://github.com/pgsty/silo)                 | `20261026000000.0.0` | [AGPLv3](https://github.com/pgsty/silo/blob/main/LICENSE)                               | Pigsty 维护的开源 S3 兼容对象存储服务器 |
-| [`silo-console`](https://github.com/pgsty/silo-console) | `2.5.1`              | [AGPLv3](https://github.com/pgsty/silo-console/blob/v2.5.1/LICENSE)                     | SILO 独立 Web 控制台                    |
+| [`silo-console`](https://github.com/pgsty/silo-console) | `2.6.0`              | [AGPLv3](https://github.com/pgsty/silo-console/blob/v2.6.0/LICENSE)                     | SILO 独立 Web 控制台                    |
 | [`kes`](https://github.com/pgsty/kes)                   | `20261026000000.0.0` | [AGPL-3.0-only](https://github.com/pgsty/kes/blob/RELEASE.2026-10-26T00-00-00Z/LICENSE) | SILO 密钥管理服务                       |
 | [`mcli`](https://github.com/pgsty/mc)                   | `20261026000000.0.0` | [AGPLv3](https://github.com/pgsty/mc/blob/main/LICENSE)                                 | S3 命令行客户端                         |
 | [`rustfs`](https://github.com/rustfs/rustfs)            | `1.0.4`              | [Apache-2.0](https://github.com/rustfs/rustfs/blob/main/LICENSE)                        | 仓库保留软件包；非 v4.5 MINIO 后端      |
@@ -113,10 +114,10 @@ weight: 5441
 
 ## Kubernetes
 
-| 名称                                                                      | 版本     | 许可证                                                          | 备注                                    |
-|---------------------------------------------------------------------------|----------|-----------------------------------------------------------------|-----------------------------------------|
-| [`k3s`](https://github.com/k3s-io/k3s)                                    | `1.37.1` | [Apache-2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE) | 轻量级 Kubernetes，上游 `v1.37.1+k3s1`  |
-| [`k3s-images`](https://github.com/k3s-io/k3s/releases/tag/v1.37.1%2Bk3s1) | `1.37.1` | 多种许可证                                                      | 与 `k3s` 精确匹配的双架构离线系统镜像包 |
+| 名称                                                                      | 版本     | 许可证                                                          | 备注                                                     |
+| :------------------------------------------------------------------------ | :------- | :-------------------------------------------------------------- | :------------------------------------------------------- |
+| [`k3s`](https://github.com/k3s-io/k3s)                                    | `1.37.2` | [Apache-2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE) | 轻量级 Kubernetes，上游 `v1.37.2+k3s1`；打包修订 2PGSTY  |
+| [`k3s-images`](https://github.com/k3s-io/k3s/releases/tag/v1.37.2%2Bk3s1) | `1.37.2` | 多种许可证                                                      | 与 `k3s` 精确匹配的双架构离线系统镜像包；打包修订 2PGSTY |
 {.wide .expand}
 
 
@@ -147,9 +148,9 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | :-------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------------------------------------------- | :----------------------------------------------- |
 | [`pig`](https://github.com/pgsty/pig)                                                   | `1.10.3`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                                      |
 | [`sow`](https://github.com/pgsty/sow)                                                   | `0.6.1`     | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                           |
-| [`barn`](https://github.com/pgsty/barn)                                                 | `0.9.1`     | [Apache-2.0](https://github.com/pgsty/barn/blob/v0.9.1/LICENSE)                         | 虚拟机管理工具（预发布）                         |
+| [`barn`](https://github.com/pgsty/barn)                                                 | `1.0.0`     | [Apache-2.0](https://github.com/pgsty/barn/blob/v1.0.0/LICENSE)                         | 虚拟机管理工具（稳定版）                         |
 | [`openbao`](https://github.com/openbao/openbao)                                         | `2.7.2`     | [MPL-2.0](https://github.com/openbao/openbao/blob/main/LICENSE)                         | 开源密钥与机密管理系统                           |
-| [`opentofu`](https://github.com/opentofu/opentofu)                                      | `1.13.2`    | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE)                       | 开源基础设施即代码工具                           |
+| [`opentofu`](https://github.com/opentofu/opentofu)                                      | `1.13.8`    | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE)                       | 开源基础设施即代码工具                           |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `5.0.0`     | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点                       |
 | [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.6.0`     | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具            |
 | [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.13.4`    | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI           |
@@ -162,7 +163,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`timescaledb-tools`](https://github.com/timescale/timescaledb-tune)                    | `0.19.0`    | [Apache-2.0](https://github.com/timescale/timescaledb-tune/blob/main/LICENSE)           | tune 0.19.0；parallel-copy 0.13.1；发行号 2PGSTY |
 | [`timescaledb-event-streamer`](https://github.com/noctarius/timescaledb-event-streamer) | `0.20.0`    | [Apache-2.0](https://github.com/noctarius/timescaledb-event-streamer/blob/main/LICENSE) | timescaledb 超表 CDC                             |
 | [`tigerfs`](https://github.com/timescale/tigerfs)                                       | `0.7.0`     | [MIT](https://github.com/timescale/tigerfs/blob/main/LICENSE)                           | 将 PostgreSQL 挂载为文件系统                     |
-| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.55.0`    | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                               |
+| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.55.1`    | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                               |
 | [`rainfrog`](https://github.com/achristmascarl/rainfrog)                                | `0.4.6`     | [MIT](https://github.com/achristmascarl/rainfrog/blob/main/LICENSE)                     | Postgres 终端数据库管理工具                      |
 | [`sql-studio`](https://github.com/frectonz/sql-studio)                                  | `0.1.53`    | [MIT](https://github.com/frectonz/sql-studio/blob/main/LICENSE)                         | 终端 SQL 数据库浏览器                            |
 | [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.10.0`    | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端                       |
@@ -175,7 +176,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`sabiql`](https://github.com/riii111/sabiql)                                           | `3.0.2`     | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL）            |
 | [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `16.5`      | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器（PG 14+）          |
 | [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.21.0`    | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器                  |
-| [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.8`    | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器                         |
+| [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.9`    | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器                         |
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.169.0`   | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                               |
 | [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.10.6` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端                            |
 | [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.6`    | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                      |
@@ -199,7 +200,7 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 | [`crush`](https://github.com/charmbracelet/crush)          | `0.98.2`  | [FSL-1.1-MIT](https://github.com/charmbracelet/crush/blob/main/LICENSE.md) | Charm 出品的终端 AI 代理编程助手        |
 | [`agentsview`](https://github.com/kenn-io/agentsview)      | `0.46.1`  | [MIT](https://github.com/kenn-io/agentsview/blob/main/LICENSE)             | 在终端中浏览与回放 AI 编码代理轨迹      |
 | [`code`](https://code.visualstudio.com/)                   | `1.145.0` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)           | Visual Studio Code 编辑器               |
-| [`code-server`](https://github.com/coder/code-server)      | `4.144.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)              | 浏览器中的 VS Code                      |
+| [`code-server`](https://github.com/coder/code-server)      | `4.145.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)              | 浏览器中的 VS Code                      |
 | [`mcp-toolbox`](https://github.com/googleapis/mcp-toolbox) | `1.15.0`  | [Apache-2.0](https://github.com/googleapis/mcp-toolbox/blob/main/LICENSE)  | Google 数据库 MCP 服务器                |
 | [`uv`](https://github.com/astral-sh/uv)                    | `0.13.7`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)               | 新一代 Python 包管理器                  |
 | [`golang`](https://golang.org/)                            | `1.27.3`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                  | Go 编译器                               |
