@@ -10,7 +10,7 @@ categories: [参考]
 
 Metabase 提供友好的用户界面和丰富的图表类型，支持连接多种数据库，是企业数据分析的理想选择。
 
-模板默认使用 `metabase/metabase:v0.64.1.x`，通过单一 `METABASE_IMAGE` 参数覆盖完整镜像名。2026-10-08 验证时该标签解析为 `0.64.1.1`，已在 PostgreSQL 18.6 上验证元数据库备份恢复后升级、登录和已有问题查询。
+模板默认使用 `metabase/metabase:v0.64.x`，即 Metabase 64 最新版本通道（同时发布为 `v0.64-lts`，2026-11-06 解析为 `0.64.5.2`），通过单一 `METABASE_IMAGE` 参数覆盖完整镜像名。2026-10-08 验证时此前的 `v0.64.1.x` 通道解析为 `0.64.1.1`，已在 PostgreSQL 18.6 上验证元数据库备份恢复后升级、登录和已有问题查询。
 
 
 
@@ -103,7 +103,7 @@ Metabase 的配置在 `.env` 文件中：
 
 ```bash
 # 镜像与宿主机端口
-METABASE_IMAGE=metabase/metabase:v0.64.1.x
+METABASE_IMAGE=metabase/metabase:v0.64.x
 MB_PORT=9004
 
 # Metabase 元数据库

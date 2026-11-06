@@ -10,7 +10,7 @@ categories: [参考]
 
 Pigsty 提供 `app/insforge` 配置模板，将 InsForge OSS 的无状态服务运行在 Docker Compose 中，并把最关键的状态放入 Pigsty 托管的 PostgreSQL。这样可以继续使用 Pigsty 的高可用、备份恢复、监控、入口域名与基础设施能力，而不是把数据库藏在临时容器卷里。
 
-当前模板面向 InsForge OSS `v2.3.3`，使用外部 PostgreSQL，默认运行 InsForge Dashboard/API、PostgREST 和 Deno Runtime 三个服务；后两者只绑定宿主机回环地址。
+当前模板面向 InsForge OSS `v2.3.5`，使用外部 PostgreSQL，默认运行 InsForge Dashboard/API、PostgREST 和 Deno Runtime 三个服务；后两者只绑定宿主机回环地址。
 
 ------
 
@@ -90,7 +90,7 @@ InsForge 模板默认将数据库和应用容器分离：
 
 组件说明：
 
-- **InsForge App**：`ghcr.io/insforge/insforge-oss:v2.3.3`，提供 Dashboard 和主 API，监听 `7130`。
+- **InsForge App**：`ghcr.io/insforge/insforge-oss:v2.3.5`，提供 Dashboard 和主 API，监听 `7130`。
 - **PostgREST**：`postgrest/postgrest:v12.2.12`，从 PostgreSQL schema 自动生成 REST API，宿主机入口为 `127.0.0.1:5430`。
 - **Deno Runtime**：`denoland/deno:alpine-2.0.6`，运行模板内固定版本的函数服务，宿主机入口为 `127.0.0.1:7133`。
 - **PostgreSQL**：由 Pigsty 管理，负责持久化状态、备份、监控和高可用。
@@ -170,7 +170,7 @@ pg-meta:
 | `POSTGRES_DB` | `insforge` | InsForge 数据库 |
 | `POSTGRES_USER` | `dbuser_insforge` | InsForge 连接 PostgreSQL 的业务用户 |
 | `POSTGRES_PASSWORD` | `DBUser.Insforge` | 业务用户密码，生产必须替换 |
-| `INSFORGE_VERSION` | `v2.3.3` | InsForge OSS 镜像标签 |
+| `INSFORGE_VERSION` | `v2.3.5` | InsForge OSS 镜像标签 |
 | `DENO_RUNTIME_IMAGE` | `denoland/deno:alpine-2.0.6` | Deno Runtime 完整镜像名 |
 | `INSFORGE_IMAGE` | 空 | 可选完整应用镜像覆盖，优先于 `INSFORGE_VERSION` |
 | `APP_PORT` | `7130` | InsForge App 对外端口 |
@@ -319,6 +319,12 @@ make down     # 停止容器
 make clean    # 删除已停止容器
 make edit     # 编辑 .env
 ```
+
+### 升级至 v2.3.5
+
+v2.3.5 是包含依赖安全修复的补丁版本；PostgREST `v12.2.12`、Deno `alpine-2.0.6` 与内置的函数运行时均未变化。若从 v2.3.3 之前的版本升级，还须执行下文 v2.3.3 一节。
+
+按同样要求完成备份后重建 InsForge 容器，启动迁移器会自动执行 `066_storage-objects-default-owner-policies`。该迁移仅在 `storage.objects` **没有任何**策略时生效：为 `authenticated` 创建仅限对象所有者的策略（读取还允许访问公开桶中的对象），并启用 RLS；表上已有任意策略的项目保持不变。经 S3 协议写入的对象 `uploaded_by` 为 NULL，普通用户在私有桶中看不到也无法修改它们；API 密钥 / `project_admin` 调用方绕过 RLS，不受影响。`files/insforge.sql` 不涉及 `storage`，不要重放。参见 [模板升级检查](https://github.com/pgsty/pigsty/tree/main/app/insforge#upgrade-to-v235) 与 [官方迁移](https://github.com/InsForge/InsForge/blob/c1c886e775d286433e4b50c78c24335783e8fc00/backend/src/infra/database/migrations/066_storage-objects-default-owner-policies.sql)。
 
 ### 升级至 v2.3.3
 

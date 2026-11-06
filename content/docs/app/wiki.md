@@ -11,7 +11,7 @@ categories: [参考]
 
 ![Wiki.js](/img/docs/app/wiki.jpg)
 
-当前 Compose 使用未指定标签的 `requarks/wiki` 镜像；稳定 2.x 发布维护在 [`requarks/wiki-v2`](https://github.com/requarks/wiki-v2/releases)，原 `requarks/wiki` 仓库包含 3.x Beta。2026-10-08 验证时镜像解析为 2.5.316；生产升级前应记录并核对实际镜像版本。
+当前 Compose 跟随 Wiki.js 的 `2` 主版本标签（`requarks/wiki:2`，2026-11-06 解析为 2.5.317）；稳定 2.x 发布维护在 [`requarks/wiki-v2`](https://github.com/requarks/wiki-v2/releases)。Wiki.js 3.0 已于 2026 年 11 月正式发布（`3` 标签），这是一次大版本重写，有独立的[环境要求](https://docs.js.wiki/setup/requirements)与[升级流程](https://docs.js.wiki/setup/upgrade)，不要通过修改镜像标签直接把现有 2.x 部署切到 3.x。生产升级前应记录并核对实际镜像版本。
 
 
 ## 太长;不看
@@ -39,7 +39,7 @@ bin/pgsql-db   pg-meta wiki
 services:
   wiki:
     container_name: wiki
-    image: requarks/wiki
+    image: requarks/wiki:2
     environment:
       DB_TYPE: postgres
       DB_HOST: 10.10.10.10
