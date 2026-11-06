@@ -9,10 +9,10 @@ categories: [参考]
 [**JumpServer**](https://www.jumpserver.com/) 是开源 PAM / 堡垒机系统，用于集中管理 SSH、RDP、数据库与 Web 资产访问。
 Pigsty 的 `app/jumpserver` 模板使用 Docker Compose 运行 JumpServer 社区版应用层，并使用 Pigsty 托管的 PostgreSQL 作为持久后端数据库。
 
-当前模板基于 JumpServer `v5.0.0-ce`，保留社区版 `core`、`celery`、`koko`、`kael`、`chen`、`web` 与本地 Redis，移除上游安装器中的内置 PostgreSQL 服务。
+当前模板基于 JumpServer `v5.1.1-ce`，保留社区版 `core`、`celery`、`koko`、`kael`、`chen`、`web` 与本地 Redis，移除上游安装器中的内置 PostgreSQL 服务。
 PostgreSQL、备份、监控、Nginx 入口和数据库生命周期由 Pigsty 管理。
 
-镜像组合按 [官方 v5.0.0 安装器](https://github.com/jumpserver/installer/tree/33785347d95677ad87c0cc2f754d4f671b4e086f) 校准，核验日期为 2026-10-08。当天 Docker Hub 的 Core、KoKo、Chen、Web `v5.0.0-ce` 标签返回 `MANIFEST_UNKNOWN`，官方阿里云命名空间提供完整组合，故模板使用 `IMAGE_PULL_PREFIX`。不要混搭组件版本或仅替换 Core 标签。
+镜像组合按 [官方 v5.1.1 安装器](https://github.com/jumpserver/installer/tree/83facb768be7b60e7d38d498ed24214538899c67) 校准，核验日期为 2026-11-06。当天官方阿里云命名空间与 Docker Hub 均提供全部五个 `v5.1.1-ce` 应用镜像（`linux/amd64`），但两处是分别构建的镜像，摘要不同。模板默认仍使用阿里云命名空间作为 `IMAGE_PULL_PREFIX`；如需从 Docker Hub 拉取，可改为 `docker.io/jumpserver`。不要混搭组件版本或仅替换 Core 标签。
 
 ------
 
@@ -62,8 +62,8 @@ admin / ChangeMe
 - [ ] 准备一台新 Linux 服务器，至少 `4C8G`、100 GB 磁盘；生产环境按并发与录像保留量增加资源。
 - [ ] 确认服务器 IP、DNS、NTP、SSH 与 sudo 可用。
 - [ ] 确认 Docker daemon 能拉取 `IMAGE_PULL_PREFIX` 指定的镜像仓库；默认使用官方阿里云镜像。代理应在实际执行拉取的 daemon 上配置，容器内 `127.0.0.1` 指向容器自身。
-- [ ] 执行 `./configure -c app/jumpserver` 后，修改 `pigsty.yml` 中的默认密码、`SECRET_KEY`、`BOOTSTRAP_TOKEN`、`CHAT_AI_DELEGATION_SECRET` 与 `DOMAINS`。
-- [ ] 确认 `DOMAINS` 包含浏览器实际访问的主机名或 IP，例如 `10.10.10.10:8080`。
+- [ ] 执行 `./configure -c app/jumpserver` 后，修改 `pigsty.yml` 中的默认密码、`SECRET_KEY`、`BOOTSTRAP_TOKEN`、`DOMAINS` 与 `WS_ALLOWED_ORIGINS`。
+- [ ] 确认 `DOMAINS` 包含浏览器实际访问的主机名或 IP，例如 `10.10.10.10:8080`；`WS_ALLOWED_ORIGINS` 包含对应的完整来源，例如 `http://10.10.10.10:8080`。
 - [ ] 确认 PostgreSQL 备份任务正常，部署后检查 `pig pb info` 或 `pgbackrest info`。
 
 ------
@@ -99,13 +99,13 @@ admin / ChangeMe
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `IMAGE_PULL_PREFIX` | `registry.cn-beijing.aliyuncs.com/jumpservice` | 完整官方镜像命名空间 |
-| `JUMPSERVER_VERSION` | `v5.0.0-ce` | 所有 JumpServer 组件使用同一社区版版本 |
-| `REDIS_VERSION` | `7.4.11-bookworm` | 本地 Redis 镜像版本 |
+| `JUMPSERVER_VERSION` | `v5.1.1-ce` | 所有 JumpServer 组件使用同一社区版版本 |
+| `REDIS_VERSION` | `7.4.12-bookworm` | 本地 Redis 镜像版本 |
 | `JUMPSERVER_DATA` | `/data/jumpserver` | 应用持久化目录 |
 | `DOMAINS` | `10.10.10.10:8080,10.10.10.10,jump.pigsty` | 允许登录的可信访问域名 / IP |
+| `WS_ALLOWED_ORIGINS` | `http://10.10.10.10:8080,http://10.10.10.10,http://jump.pigsty,https://jump.pigsty` | Core WebSocket 允许的浏览器来源；与 `DOMAINS` 同步维护 |
 | `SECRET_KEY` | 示例值 | 加密密钥，生产必须替换且长期保存 |
 | `BOOTSTRAP_TOKEN` | 示例值 | 组件注册令牌，生产必须替换且长期保存 |
-| `CHAT_AI_DELEGATION_SECRET` | 示例值 | Core / Kael 委托密钥，生成后长期保存 |
 | `DB_HOST` / `DB_PORT` | `10.10.10.10` / `5432` | Pigsty PostgreSQL 入口 |
 | `DB_USER` / `DB_NAME` | `jumpserver` / `jumpserver` | 业务用户与业务数据库 |
 | `DB_PASSWORD` | `DBUser.JumpServer` | 业务用户密码，生产必须替换 |
@@ -129,11 +129,12 @@ admin / ChangeMe
 ```bash
 openssl rand -base64 36 | tr -dc A-Za-z0-9 | head -c 48; echo
 openssl rand -base64 24 | tr -dc A-Za-z0-9 | head -c 24; echo
-openssl rand -hex 32           # CHAT_AI_DELEGATION_SECRET
 ```
 
+JumpServer 5.1 不再使用 `CHAT_AI_DELEGATION_SECRET`：Kael 改为转发用户的 Core 会话，不再签发委托令牌。
+
 > [!WARNING] 生产密钥必须稳定
-> `SECRET_KEY`、`BOOTSTRAP_TOKEN` 与 `CHAT_AI_DELEGATION_SECRET` 生成后长期保存；升级时保留原始值。它们必须与数据库备份、`/data/jumpserver`、`/opt/jumpserver/.env` 一起保存；丢失原始 `SECRET_KEY` 后，数据库中的加密账号密钥可能无法恢复。
+> `SECRET_KEY` 与 `BOOTSTRAP_TOKEN` 生成后长期保存；升级时保留原始值。它们必须与数据库备份、`/data/jumpserver`、`/opt/jumpserver/.env` 一起保存；丢失原始 `SECRET_KEY` 后，数据库中的加密账号密钥可能无法恢复。
 
 > [!WARNING] 密码字符限制
 > `DB_PASSWORD` 与 `REDIS_PASSWORD` 不要包含单引号或双引号，这与 JumpServer 官方安装器行为一致。
@@ -179,6 +180,14 @@ docker compose up -d --force-recreate core
 同时修改 `pigsty.yml` 或 `conf/app/jumpserver.yml`，否则下次执行 `./app.yml` 会再次覆盖 `/opt/jumpserver/.env`。
 
 不要用带 `csrf_failure=1` 的旧 URL 判断配置是否仍然错误；该页面会按照失败请求上下文显示 `DOMAINS=...` 提示。应使用正常登录页重新测试，必要时打开无痕窗口。
+
+从 5.1.0 起，Core 还会拒绝 `Origin` 不在允许列表中的浏览器 WebSocket 连接。任务日志、作业输出、站内消息、系统工具与 LDAP 操作都依赖这些连接。未设置 `WS_ALLOWED_ORIGINS` 时，Core 根据 `SITE_URL` 与 `DOMAINS` 推导允许列表；在默认的回环 `SITE_URL` 下，不带协议的公网 `DOMAINS` 条目只允许 `https://` 来源，纯 HTTP 访问会失去上述功能。因此模板显式列出所有浏览器来源：
+
+```ini
+WS_ALLOWED_ORIGINS=http://10.10.10.10:8080,http://10.10.10.10,http://jump.pigsty,https://jump.pigsty
+```
+
+使用逗号分隔的 `scheme://host[:port]`，不带路径或通配符；修改 `DOMAINS` 时同步更新此列表。不要将其设置为空值：Core 在启动时读取该列表，列表无效时无法启动。
 
 ------
 
@@ -262,7 +271,7 @@ docker compose logs init
 - `jms_core`、`jms_celery`、`jms_web`、`jms_redis`、`jms_koko`、`jms_kael`、`jms_chen` 均为 `healthy`。
 - `make health` 返回 `status=true`、`db_status=true`、`redis_status=true`。
 - `jms_init` 正常退出为 `Exited (0)`；日志显示迁移完成与终端公钥指纹。初始化失败时 Core 不启动。
-- 实际登录，创建测试资产与授权，执行安全命令，并检查审计和录像。健康检查不等于全部功能通过。
+- 实际登录，创建测试资产与授权，执行安全命令，并检查审计和录像。打开一个任务日志，确认 Core WebSocket 接受浏览器来源。健康检查不等于全部功能通过。
 
 数据库侧检查：
 
@@ -369,9 +378,28 @@ make migrate   # 与 restart 相同，维护窗口内重跑 init 并重新启动
 make exec      # 进入 core 容器
 ```
 
+### 从 5.0.0 升级到 5.1.1
+
+v5.0.0 与 v5.1.1 官方安装器之间没有修改 PostgreSQL 相关配置。影响本模板的变化是统一的 `v5.1.1-ce` 镜像、Redis `7.4.12-bookworm`、移除 Kael 委托密钥，以及 Core 的 WebSocket 来源检查。该路径尚未在 Pigsty 验收中端到端实测。
+
+1. 确认 PostgreSQL 备份可恢复并安排维护窗口；同时备份数据库、整个 `/opt/jumpserver` 与 `/data/jumpserver`。
+2. 更新完整 Compose 与 `.env`，或更新 `pigsty.yml` 中的 `apps.jumpserver.conf`。保留原始 `SECRET_KEY`、`BOOTSTRAP_TOKEN`、数据库与 Redis 密码；新增 `WS_ALLOWED_ORIGINS`，列出浏览器使用的全部来源。`CHAT_AI_DELEGATION_SECRET` 已不再使用，可以删除。
+3. 拉取新镜像，然后通过 init 重新启动：
+
+```bash
+cd /opt/jumpserver
+make pull
+make restart   # 停止后由 init 完成迁移，再启动
+make status
+make health
+docker compose logs init
+```
+
+复验原账号登录、凭据解密、主机公钥指纹、真实会话和历史录像；另外在浏览器中打开任务日志或作业输出以确认 Core WebSocket，并测试 Kael 助手。数据库执行 5.1 迁移后，回退必须恢复升级前数据库、应用文件和原始密钥。
+
 ### 从 4.10.19 升级到 5.0.0
 
-[官方 v5.0.0 升级脚本](https://github.com/jumpserver/installer/blob/33785347d95677ad87c0cc2f754d4f671b4e086f/scripts/7_upgrade.sh) 接受 `v3.10.11` 及更新源版本；本模板实测路径为 `v4.10.19-ce → v5.0.0-ce`，没有额外的中间版本。其他旧版本应先按官方升级指南确认路径。
+[官方 v5.0.0 升级脚本](https://github.com/jumpserver/installer/blob/33785347d95677ad87c0cc2f754d4f671b4e086f/scripts/7_upgrade.sh) 接受 `v3.10.11` 及更新源版本；本模板实测路径为 `v4.10.19-ce → v5.0.0-ce`，没有额外的中间版本。其他旧版本应先按官方升级指南确认路径。以下步骤使用 v5.0.0 版本的模板文件，完成后再按 5.0.0 → 5.1.1 步骤继续升级。
 
 1. 确认 PostgreSQL 备份可恢复，安排维护窗口，并停止旧栈。
 2. 同时备份数据库、整个 `/opt/jumpserver` 与 `/data/jumpserver`，在独立数据库和目录实际恢复验证。
@@ -420,9 +448,11 @@ make health
 
 ## 社区版边界
 
-本模板使用 JumpServer 5.0.0 社区版的 Core、Celery、KoKo、Chen、Kael 和 Web，另有一次性 init 与本地 Redis。5.x 不再部署独立 Lion 容器，其远程桌面实现已整合到 KoKo。JumpServer 项目采用 GPLv3，Pigsty 模板采用 Apache-2.0。
+本模板使用 JumpServer 5.1.1 社区版的 Core、Celery、KoKo、Chen、Kael 和 Web，另有一次性 init 与本地 Redis。5.x 不再部署独立 Lion 容器，其远程桌面实现已整合到 KoKo。JumpServer 项目采用 GPLv3，Pigsty 模板采用 Apache-2.0。
 
-外部 PostgreSQL 18 后端与 PostgreSQL 数据库资产是两条独立连接路径。实测范围见下表；RDP/VNC、原生客户端、ARM64、企业版组件和外部模型推理不在本次验收范围内。Kael 的登录鉴权、会话存储与权限隔离可以在未配置模型提供商时验证，模型推理仍需另行配置和验证。上游仅持久保存含消息的普通会话，空白会话草稿在重启后不保留。Core / Kael 委托认证也已验证，成功加载 952 项操作定义。
+下表的运行时验收基于 `v5.0.0-ce`。对于 `v5.1.1-ce`，目前只核验了 Compose 渲染结果与两个镜像仓库中的镜像清单，运行时检查仍需重新执行。
+
+外部 PostgreSQL 18 后端与 PostgreSQL 数据库资产是两条独立连接路径。实测范围见下表；RDP/VNC、原生客户端、ARM64、企业版组件和外部模型推理不在本次验收范围内。Kael 的登录鉴权、会话存储与权限隔离可以在未配置模型提供商时验证，模型推理仍需另行配置和验证。上游仅持久保存含消息的普通会话，空白会话草稿在重启后不保留。5.0.0 上的 Core / Kael 委托认证已验证，成功加载 952 项操作定义；5.1 改为转发用户的 Core 会话，不再使用委托认证。
 
 | 验证路径 | 5.x 新装 | 4.10.19 → 5.0.0 |
 |----------|----------|-------------------|
@@ -441,8 +471,10 @@ make health
 
 ## 参考
 
+- [JumpServer v5.1.1 官方发布](https://github.com/jumpserver/jumpserver/releases/tag/v5.1.1)
+- [JumpServer v5.1.0 官方发布](https://github.com/jumpserver/jumpserver/releases/tag/v5.1.0)
 - [JumpServer v5.0.0 官方发布](https://github.com/jumpserver/jumpserver/releases/tag/v5.0.0)
-- [固定版本安装器](https://github.com/jumpserver/installer/tree/33785347d95677ad87c0cc2f754d4f671b4e086f)
+- [固定版本安装器](https://github.com/jumpserver/installer/tree/83facb768be7b60e7d38d498ed24214538899c67)
 - [官方升级指南](https://docs.jumpserver.org/zh/v4/installation/upgrade/)
 - JumpServer 项目： https://github.com/jumpserver/jumpserver
 - JumpServer 安装器： https://github.com/jumpserver/installer

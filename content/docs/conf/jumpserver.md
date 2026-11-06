@@ -6,7 +6,7 @@ icon: fa-solid fa-shield-halved
 categories: [参考]
 ---
 
-`app/jumpserver` 配置模板部署 JumpServer Community Edition，并使用 Pigsty 托管的 PostgreSQL 18 作为外部数据库。当前模板按 JumpServer v5.0.0-ce 验证。
+`app/jumpserver` 配置模板部署 JumpServer Community Edition，并使用 Pigsty 托管的 PostgreSQL 18 作为外部数据库。当前模板使用 JumpServer v5.1.1-ce，最近一次运行时验收基于 v5.0.0-ce。
 
 
 --------
@@ -48,6 +48,6 @@ categories: [参考]
 - 本地 Redis 由应用 Compose 管理
 - 通过 `jump.pigsty` 反向代理到 `10.10.10.10:8080`
 
-部署前必须替换 `SECRET_KEY`、`BOOTSTRAP_TOKEN`、`CHAT_AI_DELEGATION_SECRET`、Redis/数据库密码与域名。`SECRET_KEY` 在产生生产数据后必须保持不变。
+部署前必须替换 `SECRET_KEY`、`BOOTSTRAP_TOKEN`、Redis/数据库密码、`DOMAINS` 中的域名，以及 `WS_ALLOWED_ORIGINS` 中对应的浏览器来源。`SECRET_KEY` 在产生生产数据后必须保持不变。
 
-一次性 init 完成迁移与主机密钥验证后启动 Core；Celery 与连接组件等待 Core 健康。`jms_init` 正常状态为 `Exited (0)`。完整安装、4.10.19 升级、备份恢复与验收说明见 [JumpServer 应用文档](/docs/app/jumpserver/)。
+一次性 init 完成迁移与主机密钥验证后启动 Core；Celery 与连接组件等待 Core 健康。`jms_init` 正常状态为 `Exited (0)`。完整安装、5.0.0 与 4.10.19 升级、备份恢复与验收说明见 [JumpServer 应用文档](/docs/app/jumpserver/)。
