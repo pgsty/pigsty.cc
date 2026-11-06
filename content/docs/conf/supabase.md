@@ -39,7 +39,7 @@ categories: [参考]
 源文件：[**`conf/supabase.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，与同版本的 `app/supabase/` 配套使用。
 
 <details>
-<summary>开发版配置预览：Supabase 0.8.2，尚无完整公开部署入口</summary>
+<summary>开发版配置预览：Supabase 0.8.4，尚无完整公开部署入口</summary>
 
 下方配置需要配套的开发版应用文件、数据库基线与迁移脚本，不能单独替换稳定版配置。网关与升级差异见 [**应用说明**](/docs/app/supabase/)。
 

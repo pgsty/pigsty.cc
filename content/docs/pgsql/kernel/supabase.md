@@ -29,7 +29,7 @@ Pigsty 为您提供完整的 Supabase 一键自建方案。自建的 Supabase �
 ## 快速上手
 
 Pigsty 默认提供的 [`supabase.yml`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml) 配置模板定义了一套单节点 Supabase。
-当前应用组合跟随 `self-hosted/v0.8.2`（提交 `564eab8`），默认使用 Envoy 网关和 Pigsty 管理的外置 PostgreSQL 18；模板仍支持 PostgreSQL 15–18。完整版本与既有部署升级步骤见 [自建手册](/docs/app/supabase)。
+当前应用组合跟随 `self-hosted/v0.8.4`（提交 `189adda`），默认使用 Envoy 网关和 Pigsty 管理的外置 PostgreSQL 18；模板仍支持 PostgreSQL 15–18。完整版本与既有部署升级步骤见 [自建手册](/docs/app/supabase)。
 
 首先，使用 Pigsty [标准安装流程](/docs/setup/install) 安装 Supabase 所需的 Silo 与 PostgreSQL 实例：
 

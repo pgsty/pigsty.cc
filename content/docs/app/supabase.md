@@ -16,7 +16,7 @@ Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务�
 
 下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，默认使用 Kong 网关和外置 PG18。
 
-Supabase `self-hosted/v0.8.2` 的 Envoy 适配与迁移脚本仍是开发预览，尚未提供完整的公开 Pigsty 配套版本。下方保留相关变化供升级规划参考，不能只复制新 YAML 或 SQL 就按该版本部署。
+Supabase `self-hosted/v0.8.4` 的 Envoy 适配与迁移脚本仍是开发预览，尚未提供完整的公开 Pigsty 配套版本。下方保留相关变化供升级规划参考，不能只复制新 YAML 或 SQL 就按该版本部署。
 
 
 
@@ -181,7 +181,7 @@ Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` �
 Supabase Studio 的 Query Performance 页面会在 `public, extensions` 搜索路径下访问 `pg_stat_statements`。
 Pigsty 仍然将 `pg_stat_statements` 扩展对象保留在 `monitor` 模式中，以兼容 `pg_exporter` 与现有监控面板；模板会在 `extensions` 模式中创建兼容视图与函数，供 Studio 使用。
 
-网关服务名为 `kong`。开发版适配 [**`self-hosted/v0.8.2`**](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker) 后，默认网关改为 Envoy `1.39.1`，服务名为 `api-gw`，并保留 Kong `3.9.3` 作为可选方案。
+网关服务名为 `kong`。开发版适配 [**`self-hosted/v0.8.4`**](https://github.com/supabase/supabase/tree/189adda99d1b56da55fc5a6ee3f849354aaea92a/docker) 后，默认网关改为 Envoy `1.39.6`，服务名为 `api-gw`，并保留 Kong `3.9.3` 作为可选方案。
 
 <details>
 <summary>开发版网关切换方式</summary>
@@ -213,7 +213,28 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 
 ## 升级现有部署
 
-同版本维护时保留配套的应用配置。下面是开发版 `0.8.2` 的升级准备说明；须先取得完整且经过验证的 Pigsty 应用版本，包括 `app/supabase/`、`conf/supabase.yml` 与相关 SQL，再安排停机与迁移。当前公开应用模板尚未包含这些开发改动。
+同版本维护时保留配套的应用配置。下面是开发版 `0.8.4` 的升级准备说明；须先取得完整且经过验证的 Pigsty 应用版本，包括 `app/supabase/`、`conf/supabase.yml` 与相关 SQL，再安排停机与迁移。当前公开应用模板尚未包含这些开发改动。
+
+<details>
+<summary>0.8.4 开发版迁移参考：安全更新、单向 Storage 迁移与 Edge Functions</summary>
+
+`self-hosted/v0.8.4` 是安全更新：修复 Storage 签名断点续传（TUS）URL 绕过 RLS、分片上传解析拒绝服务与预签名 URL 重放，修复 Realtime 伪造广播与跨租户频道访问，并包含 Envoy、imgproxy 与 Edge Runtime 的漏洞修复。
+
+**先备份数据库。** Storage `v1.89.12` 启动时会对 `storage` 模式执行单向迁移，之后回退到 Storage `v1.74.0` 会导致所有上传失败。重建容器前用 `pb info` 确认存在最近一次可恢复备份。如果实例曾通过手工固定镜像运行过 Storage `v1.72.0`-`v1.72.3`，先应用 [storage#1394](https://github.com/supabase/storage/issues/1394) 中的修复。
+
+本次无需新增 SQL：上游 `docker/volumes/db/` 与配套的 `supabase/postgres` 镜像在 0.8.2 与 0.8.4 之间完全相同。Pigsty 不提供 `files/supabase-0.8.4.sql`，`files/supabase.sql` 也未改变；Auth、Storage 与 Realtime 会在启动时执行各自的模式迁移。尚未升级到 0.8.2 的数据库仍需先完成下方的 0.8.2 步骤。
+
+请检查以下行为变化：
+
+- 网关不再为 `/functions/v1/` 应答预检请求或添加 CORS 响应头。从浏览器调用的 Edge Functions 需要自行 [处理 CORS](https://supabase.com/docs/guides/functions/cors)。两个网关都会在该路由上转换 `sb_` publishable/secret key。
+- Functions 容器的内存上限由 `FUNCTIONS_MEMORY_LIMIT` 控制（默认 `2g`），由所有 worker 共享，单个 worker 最多 256 MiB。如需更多内存，请在重建容器前于 `apps.supabase.conf` 中调大。请求空闲超时为 150 秒；Pigsty Nginx 门户仍有自己的 120 秒读超时。
+- 移除了裸路径 `/.well-known/oauth-authorization-server`。请改用 `/.well-known/oauth-authorization-server/auth/v1`，或不再需要 API Key 的 `/auth/v1/.well-known/oauth-authorization-server` 与 `/auth/v1/.well-known/openid-configuration`。
+- Realtime 以 UID 65534 运行，挂载进容器的自定义文件需对该用户可读；模板本身没有挂载文件。Postgres Changes 订阅现在按模式名与表名精确匹配。
+- Logflare 保持 `1.50.15`：`1.52` 及以后版本会导致 Studio 在 Postgres 后端上的日志查询失败。
+
+服务名称没有变化。更新文件后，使用原有的 Compose 覆盖文件组合重建即可。完整清单见 [模板升级说明](https://github.com/pgsty/pigsty/tree/main/app/supabase#existing-deployments)。
+
+</details>
 
 <details>
 <summary>0.8.2 开发版迁移参考：网关、JWT 设置与授权</summary>
@@ -318,7 +339,7 @@ SELECT has_schema_privilege('supabase_functions_admin', 'extensions', 'USAGE')
 docker compose -f docker-compose.yml -f docker-compose.asymmetric.yml up -d
 ```
 
-若同时选择 Kong，在 `-f docker-compose.asymmetric.yml` 前加入 `-f docker-compose.kong.yml`，后续启动与更新也使用同一组覆盖文件。Edge Functions 通过 `SUPABASE_JWKS` 接收 `JWT_JWKS`，为空时回退到 HS256。升级时将 worker 与共享导入映射 `volumes/functions/deno.jsonc` 一起更新，以支持 `@supabase/functions-js`、`@supabase/server` 与按请求设置的 `SUPABASE_FUNCTION_SLUG`。上游文件来源为 [Supabase 固定提交 `564eab8` 的 Functions 目录](https://github.com/supabase/supabase/tree/564eab8ad7840b13324f68b1bfac074ef8d51c21/docker/volumes/functions)。
+若同时选择 Kong，在 `-f docker-compose.asymmetric.yml` 前加入 `-f docker-compose.kong.yml`，后续启动与更新也使用同一组覆盖文件。Edge Functions 通过 `SUPABASE_JWKS` 接收 `JWT_JWKS`，为空时回退到 HS256。升级时将 worker 与共享导入映射 `volumes/functions/deno.jsonc` 一起更新，以支持 `@supabase/functions-js`、`@supabase/server` 与按请求设置的 `SUPABASE_FUNCTION_SLUG`。上游文件来源为 [Supabase 固定提交 `189adda` 的 Functions 目录](https://github.com/supabase/supabase/tree/189adda99d1b56da55fc5a6ee3f849354aaea92a/docker/volumes/functions)，包括新增的 `main/memory-pressure.ts`。
 
 修改 Supabase 凭据后，需要更新配置并重建容器。以下命令及后文未指定 Compose 覆盖文件的启动示例仅适用于默认 **Envoy + HS256**：
 
