@@ -20,7 +20,7 @@ Pigsty 提供对自托管 Dify 的支持，允许您使用单个命令部署 Dif
 - [升级](#升级)
 - [文件备份](#文件备份)
 
-> 当前模板使用 Dify `v1.17.1`，配套 plugin daemon `v0.6.10-local` 与 sandbox `v0.2.15`。2026-10-08 已在 Linux amd64、PostgreSQL 18.6 上验证登录、已有 Code 工作流及相关服务连接。Dify v1.16 起原生支持 PostgreSQL 18 的 `uuidv7()`，不再需要本地迁移补丁。
+> 当前模板使用 Dify `v1.19.0`，配套 plugin daemon `v0.6.14-local` 与 sandbox `v0.2.15`。上一版 `v1.17.1` 模板于 2026-10-08 在 Linux amd64、PostgreSQL 18.6 上验证了登录、已有 Code 工作流及相关服务连接。Dify v1.16 起原生支持 PostgreSQL 18 的 `uuidv7()`，不再需要本地迁移补丁。
 
 ------
 
@@ -120,6 +120,7 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
 - 您是否修改了 Dify 的默认加密密钥？
   - 您可以使用 `openssl rand -base64 42` 随机生成密码字符串并填入 `SECRET_KEY` 参数
   - 同时替换 `DIFY_AGENT_API_TOKEN`、`DIFY_AGENT_SERVER_SECRET_KEY`、`DIFY_AGENT_LOCAL_SANDBOX_AUTH_TOKEN` 三个 Agent 示例密钥；分别生成独立随机值，服务器密钥使用 `secrets.token_urlsafe(32)` 生成的格式
+  - 自 Dify 1.18 起，`DIFY_AGENT_LOCAL_SANDBOX_AUTH_TOKEN` 为空时本地 Agent 沙箱会拒绝启动；请使用 `openssl rand -hex 32` 生成，并在升级时保持不变
 - 您是否修改了 Dify 使用的域名？
   - 将占位符域名 `dify.pigsty` 替换为您的实际域名，例如 `dify.pigsty.cc`
   - 您可以使用 `sed -ie 's/dify.pigsty/dify.pigsty.cc/g' pigsty.yml` 修改 Dify 的域名
@@ -177,6 +178,19 @@ all:
 ```bash
 docker compose exec api flask db upgrade
 ```
+
+**从 1.17.x 升级到 1.19.0。** Dify 1.19.0 包含 1.18.0 的全部变更，请完整阅读 [1.18.0](https://github.com/langgenius/dify/releases/tag/1.18.0) 与 [1.19.0](https://github.com/langgenius/dify/releases/tag/1.19.0) 发布说明中的升级指南。对本模板而言：
+
+- API、worker、Beat、web、Agent backend 与本地沙箱必须一起升级到 `1.19.0`，plugin daemon 同步升级到 `0.6.14-local`。Agent backend 使用新的运行协议，旧版 Agent 运行时无法读取 1.18 及以后保存的会话快照。请在维护窗口内操作：先在 `/opt/dify` 中执行 `docker compose stop -t -1` 停止旧服务，再重新运行 `./app.yml -l dify`。`app.yml` 会用模板重写 `/opt/dify/.env`，因此覆盖项应保存在 `apps.dify.conf` 中。
+- plugin daemon 0.6.12 起以非 root 的 `dify` 用户（uid 1001）运行。模板中的 `init_permissions` 服务现在会在 `plugin_daemon` 启动前，把 `/data/dify/plugin_daemon` 一次性改为 `1001:1001`（并在该目录写入 `.init_permissions` 标记文件），否则安装插件会报 `permission denied`。插件目录较大时，升级后的首次启动可能较慢。
+- 本地沙箱现以 `--require-auth-token` 启动。Compose 会把 `.env` 中同一个 `DIFY_AGENT_LOCAL_SANDBOX_AUTH_TOKEN` 传给 `agent_backend` 与 `local_sandbox`，该值不能为空；已有部署请保持原值不变。
+- 模板不设置 `PASSWORD_PEPPER`。已有部署请保持不设置：设置、修改或移除它都会使已存储的全部密码哈希失效。
+- 内置 Nginx 现在用 `$remote_addr` 覆盖 `X-Forwarded-For`，`api` 与 `api_websocket` 默认启用 `RESPECT_XFORWARD_HEADERS_ENABLED=true`。位于 Pigsty 门户 Nginx 之后时，所有访客在限流中共享代理地址；如需区分真实客户端，请添加只信任该代理的 `nginx/conf.d/real-ip.conf`（`set_real_ip_from`）。切勿信任 `0.0.0.0/0`；如需关闭，可设置 `RESPECT_XFORWARD_HEADERS_ENABLED: false`。
+- 新的追踪任务使用 `ops_trace_v2` 队列（`OPS_TRACE_QUEUE` 的应用默认值）。API、worker 与 Beat 读取同一个 `.env`，因此取值一致。自定义的 `CELERY_QUEUES` 或 `CELERY_WORKER_QUEUES` 必须包含 `ops_trace_v2`、`human_input_delivery` 与 `human_input_contact_sync`。
+- 数据库迁移会从 1.17.1 升级到 `b9d3f7a5c102`（1.18.0），再到 `53c10126d551`（1.19.0）。其中若干 PostgreSQL 索引以 `CONCURRENTLY` 方式创建，会扫描 `workflow_runs`、`message_files` 等大表。若索引构建中断，请先确认没有仍在进行的构建，再用 `DROP INDEX CONCURRENTLY` 只删除那个无效索引，然后重新执行 `flask db upgrade`；切勿删除健康索引。`53c10126d551` 会删除重复的追踪配置，回滚迁移不会恢复这些行。
+- 应用导出现在使用 `.ifpkg` 包格式 v2，旧版 Dify 可能无法导入；v1 包导入与显式 YAML 导出仍然可用。
+- 模板未包含 Beta 版 KnowledgeFS（Agent 知识库）集成。它需要独立服务与独立数据库，且镜像仅支持 amd64；如需试用，请参考上游 [KnowledgeFS 指南](https://github.com/langgenius/dify/blob/1.19.0/docker/README.md#enable-the-knowledgefs-integration)，通过 Compose override 添加。
+- 上游 Compose 已将配置拆分为 `envs/**/*.defaults`，并要求 Compose 2.35.0 及以上版本。Pigsty 保持由 `apps.dify.conf` 生成的单一 `.env`，不使用 `envs/` 目录。
 
 Dify 1.17.1 已将 1.15 之前的旧模型类型迁移纳入上述流程，不再单独运行 `flask data-migrate legacy-model-types`。从 1.15 之前升级且尚未完成插件自动升级回填的部署，仍需执行一次：
 
