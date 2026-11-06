@@ -5,7 +5,7 @@ description: Infra 仓库中可用的软件清单
 weight: 5441
 ---
 
-2026-11-06 批次合并 11 月 1 日之后的更新，共 23 项软件、92 个 amd64/arm64 DEB/RPM 包，均已导入本地 APT/YUM 仓库并验证签名与索引，尚未在线发布。详见 [**发布日志**](../log/#2026-11-06)。
+2026-11-06 批次合并 11 月 1 日之后的更新，共 24 项软件、96 个 amd64/arm64 DEB/RPM 包，均已导入本地 APT/YUM 仓库并验证签名与索引，尚未在线发布。详见 [**发布日志**](../log/#2026-11-06)。
 
 
 ## Grafana 技术栈
@@ -81,8 +81,8 @@ weight: 5441
 | [`kafka-exporter`](https://github.com/danielqsj/kafka_exporter)           | `1.11.0` | [Apache-2.0](https://github.com/danielqsj/kafka_exporter/blob/master/LICENSE)         | 导出 kafka 指标                          |
 | [`jmx-exporter`](https://github.com/prometheus/jmx_exporter)              | `1.7.0`  | [Apache-2.0](https://github.com/prometheus/jmx_exporter/blob/main/LICENSE)            | 导出 JVM 指标（noarch）                  |
 | [`mongodb-exporter`](https://github.com/percona/mongodb_exporter)         | `0.54.0` | [Apache-2.0](https://github.com/percona/mongodb_exporter/blob/main/LICENSE)           | 导出 mongodb 指标                        |
-| [`mtail`](https://github.com/google/mtail)                                | `3.4.18` | [Apache-2.0](https://github.com/google/mtail/blob/main/LICENSE)                       | 分析日志并生成指标                       |
-| [`vector`](https://github.com/vectordotdev/vector/releases)               | `0.60.0` | [MPL-2.0](https://github.com/vectordotdev/vector/blob/master/LICENSE)                 | 多功能日志收集器                         |
+| [`mtail`](https://github.com/google/mtail)                                | `3.4.19` | [Apache-2.0](https://github.com/google/mtail/blob/main/LICENSE)                       | 分析日志并生成指标                       |
+| [`vector`](https://github.com/vectordotdev/vector/releases)               | `0.61.0` | [MPL-2.0](https://github.com/vectordotdev/vector/blob/master/LICENSE)                 | 多功能日志收集器                         |
 {.wide .expand}
 
 
@@ -146,7 +146,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
 | 名称                                                                                    | 版本        | 许可证                                                                                  | 备注                                             |
 | :-------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------------------------------------------- | :----------------------------------------------- |
-| [`pig`](https://github.com/pgsty/pig)                                                   | `1.10.3`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                                      |
+| [`pig`](https://github.com/pgsty/pig)                                                   | `1.10.4`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                                      |
 | [`sow`](https://github.com/pgsty/sow)                                                   | `0.6.1`     | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                           |
 | [`barn`](https://github.com/pgsty/barn)                                                 | `1.0.0`     | [Apache-2.0](https://github.com/pgsty/barn/blob/v1.0.0/LICENSE)                         | 虚拟机管理工具（稳定版）                         |
 | [`openbao`](https://github.com/openbao/openbao)                                         | `2.7.2`     | [MPL-2.0](https://github.com/openbao/openbao/blob/main/LICENSE)                         | 开源密钥与机密管理系统                           |
@@ -171,15 +171,15 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`pev2`](https://github.com/dalibo/pev2)                                                | `1.25.0`    | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2                  |
 | [`sealos`](https://github.com/labring/sealos)                                           | `5.0.1`     | [Apache-2.0](https://github.com/labring/sealos/blob/v5.0.1/LICENSE)                     | 按许可证策略锁定于 5.0.1（obsolete）             |
 | [`v2ray`](https://github.com/v2fly/v2ray-core)                                          | `5.53.0`    | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                           |
-| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.10.29`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
+| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.10.31`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
 | [`gost`](https://github.com/ginuerzh/gost)                                              | `2.12.0`    | [MIT](https://github.com/ginuerzh/gost/blob/master/LICENSE)                             | Go 编写的通用隧道与代理工具                      |
 | [`sabiql`](https://github.com/riii111/sabiql)                                           | `3.0.2`     | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL）            |
 | [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `16.5`      | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器（PG 14+）          |
 | [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.21.0`    | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器                  |
 | [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.9`    | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器                         |
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.169.0`   | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                               |
-| [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.10.6` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端                            |
-| [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.6`    | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                      |
+| [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.10.7` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端                            |
+| [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.7`    | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                      |
 | [`tailcat`](https://github.com/tailscale/tailcat)                                       | `0.7.0`     | [BSD-3](https://github.com/tailscale/tailcat/blob/main/LICENSE)                         | 无需控制平面的 Tailscale 数据平面 netcat 工具    |
 | [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `1.0.3`     | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 邮件与协作服务器；0.16.x 升级需迁移数据库        |
 | [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.7`     | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                                 |
