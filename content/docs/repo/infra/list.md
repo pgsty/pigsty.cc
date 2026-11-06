@@ -5,6 +5,8 @@ description: Infra 仓库中可用的软件清单
 weight: 5441
 ---
 
+2026-11-06 批次更新 7 个配方，28 个 amd64/arm64 DEB/RPM 包已完成本地构建与验证，尚未导入 APT/YUM 仓库或在线发布。下表包含本地构建版本，不代表这些版本均已在线可用。详见 [**发布日志**](../log/#2026-11-06)。
+
 2026-11-05 批次更新 10 个配方，40 个 amd64/arm64 DEB/RPM 包已验证并导入本地 APT/YUM 仓库。本批次取代此前的 Caddy 与 dblab 构建；清单中 11 月 3 日和 4 日的其余构建仍待入库。在线发布仍待后续处理。详见 [**发布日志**](../log/#2026-11-05)。
 
 
@@ -56,8 +58,8 @@ weight: 5441
 ## Prometheus 技术栈
 
 | 名称                                                                   | 版本     | 许可证                                                                            | 备注                       |
-|:-----------------------------------------------------------------------|:---------|:----------------------------------------------------------------------------------|:---------------------------|
-| [`prometheus`](https://github.com/prometheus/prometheus)               | `3.15.1` | [Apache-2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)          | 云原生监控系统与时序数据库 |
+| :--------------------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------- | :------------------------- |
+| [`prometheus`](https://github.com/prometheus/prometheus)               | `3.16.0` | [Apache-2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)          | 云原生监控系统与时序数据库 |
 | [`pushgateway`](https://github.com/prometheus/pushgateway)             | `1.11.4` | [Apache-2.0](https://github.com/prometheus/pushgateway/blob/master/LICENSE)       | 短生命周期任务指标推送网关 |
 | [`alertmanager`](https://github.com/prometheus/alertmanager)           | `0.34.2` | [Apache-2.0](https://github.com/prometheus/alertmanager/blob/main/LICENSE)        | 告警管理与通知分发         |
 | [`blackbox-exporter`](https://github.com/prometheus/blackbox_exporter) | `0.29.1` | [Apache-2.0](https://github.com/prometheus/blackbox_exporter/blob/master/LICENSE) | 黑盒探测，监控端点可用性   |
@@ -150,7 +152,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`sow`](https://github.com/pgsty/sow)                                                   | `0.6.1`     | [Apache-2.0](https://github.com/pgsty/sow/blob/main/LICENSE)                            | 软件仓库构建与发布工具                           |
 | [`barn`](https://github.com/pgsty/barn)                                                 | `1.0.0`     | [Apache-2.0](https://github.com/pgsty/barn/blob/v1.0.0/LICENSE)                         | 虚拟机管理工具（稳定版）                         |
 | [`openbao`](https://github.com/openbao/openbao)                                         | `2.7.2`     | [MPL-2.0](https://github.com/openbao/openbao/blob/main/LICENSE)                         | 开源密钥与机密管理系统                           |
-| [`opentofu`](https://github.com/opentofu/opentofu)                                      | `1.13.8`    | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE)                       | 开源基础设施即代码工具                           |
+| [`opentofu`](https://github.com/opentofu/opentofu)                                      | `1.13.9`    | [MPL-2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE)                       | 开源基础设施即代码工具                           |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `5.0.0`     | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点                       |
 | [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.6.0`     | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具            |
 | [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.13.4`    | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI           |
@@ -182,7 +184,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`headscale`](https://github.com/juanfont/headscale)                                    | `0.29.6`    | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器                      |
 | [`tailcat`](https://github.com/tailscale/tailcat)                                       | `0.7.0`     | [BSD-3](https://github.com/tailscale/tailcat/blob/main/LICENSE)                         | 无需控制平面的 Tailscale 数据平面 netcat 工具    |
 | [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `1.0.3`     | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 邮件与协作服务器；0.16.x 升级需迁移数据库        |
-| [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.6`     | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                                 |
+| [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.9.7`     | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                                 |
 {.wide .expand}
 
 
@@ -196,12 +198,12 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 | :--------------------------------------------------------- | :-------- | :------------------------------------------------------------------------- | :-------------------------------------- |
 | [`claude`](https://github.com/anthropics/claude-code)      | `2.1.318` | [Proprietary](https://www.anthropic.com/legal/terms)                       | Claude Code - Anthropic 代理编程工具    |
 | [`opencode`](https://github.com/anomalyco/opencode)        | `1.19.5`  | [MIT](https://github.com/anomalyco/opencode/blob/main/LICENSE)             | 终端 AI 编程助手                        |
-| [`codex`](https://github.com/openai/codex)                 | `0.165.0` | [Apache-2.0](https://github.com/openai/codex/blob/main/LICENSE)            | OpenAI 代理编程工具                     |
-| [`crush`](https://github.com/charmbracelet/crush)          | `0.98.2`  | [FSL-1.1-MIT](https://github.com/charmbracelet/crush/blob/main/LICENSE.md) | Charm 出品的终端 AI 代理编程助手        |
+| [`codex`](https://github.com/openai/codex)                 | `0.167.0` | [Apache-2.0](https://github.com/openai/codex/blob/main/LICENSE)            | OpenAI 代理编程工具                     |
+| [`crush`](https://github.com/charmbracelet/crush)          | `0.100.0` | [FSL-1.1-MIT](https://github.com/charmbracelet/crush/blob/main/LICENSE.md) | Charm 出品的终端 AI 代理编程助手        |
 | [`agentsview`](https://github.com/kenn-io/agentsview)      | `0.46.1`  | [MIT](https://github.com/kenn-io/agentsview/blob/main/LICENSE)             | 在终端中浏览与回放 AI 编码代理轨迹      |
-| [`code`](https://code.visualstudio.com/)                   | `1.145.0` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)           | Visual Studio Code 编辑器               |
+| [`code`](https://code.visualstudio.com/)                   | `1.145.1` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)           | Visual Studio Code 编辑器               |
 | [`code-server`](https://github.com/coder/code-server)      | `4.145.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)              | 浏览器中的 VS Code                      |
-| [`mcp-toolbox`](https://github.com/googleapis/mcp-toolbox) | `1.15.0`  | [Apache-2.0](https://github.com/googleapis/mcp-toolbox/blob/main/LICENSE)  | Google 数据库 MCP 服务器                |
+| [`mcp-toolbox`](https://github.com/googleapis/mcp-toolbox) | `1.16.0`  | [Apache-2.0](https://github.com/googleapis/mcp-toolbox/blob/main/LICENSE)  | Google 数据库 MCP 服务器                |
 | [`uv`](https://github.com/astral-sh/uv)                    | `0.13.7`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)               | 新一代 Python 包管理器                  |
 | [`golang`](https://golang.org/)                            | `1.27.3`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                  | Go 编译器                               |
 | [`nodejs`](https://nodejs.org/)                            | `26.13.0` | [MIT/Mixed](https://github.com/nodejs/node/blob/main/LICENSE)              | Node.js 26 LTS 服务端 JavaScript 运行时 |
