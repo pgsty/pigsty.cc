@@ -37,6 +37,17 @@ Pigsty 的默认凭据公开记录在源码和文档中，不能直接用于生�
 
 ----------------
 
+## Grafana 访问控制
+
+修改管理员密码不会关闭匿名访问。默认情况下，匿名用户仍可使用 `Viewer` 角色访问 Grafana。
+如需登录后才能查看监控，请将 [`grafana_anon_enabled`](/docs/infra/param#grafana_anon_enabled) 设置为 `false`，并按 [**管理预案**](/docs/infra/admin/sop/#管理-grafana-匿名访问) 重新渲染配置、重启 Grafana。
+
+Nginx 首页配置中的 `auth: true` 不会为 `/ui/` 路径启用 Basic Auth，该路径使用 Grafana 自己的认证。
+Grafana 的开关也不保护 VictoriaMetrics、VictoriaLogs 等其他端点，仍需单独限制其访问。
+
+
+----------------
+
 ## 防火墙
 
 [**`node_firewall_mode`**](/docs/node/param#node_firewall_mode) 默认为 `zone`，信任 [**`node_firewall_intranet`**](/docs/node/param#node_firewall_intranet) 定义的内网，并限制公网放行端口。

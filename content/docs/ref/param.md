@@ -9,7 +9,7 @@ categories: [参考]
 本文是 Pigsty v4.x 的参数导航页，不重复展开每个参数的详细解释。
 参数细节请进入各模块的 `param` 页面查看。
 
-下表 10 个模块的参数参考页合计收录 **375** 个参数，包含部署与移除参数，以及开发版本新增的 `kafka_jmx_exporter_enabled`。各模块成熟度见 [**模块列表**](/docs/ref/module/)；原生 MySQL 8.4 的 13 个参数另行列示。
+下表 10 个模块的参数参考页合计收录 **376** 个参数，包含部署与移除参数，以及开发版本新增的 `kafka_jmx_exporter_enabled` 与 `grafana_anon_enabled`。各模块成熟度见 [**模块列表**](/docs/ref/module/)；原生 MySQL 8.4 的 13 个参数另行列示。
 
 --------
 
@@ -18,7 +18,7 @@ categories: [参考]
 |                 模块                 | 参数组 | 参数量 | 说明                                   |
 |:----------------------------------:|:---:|:---:|:-------------------------------------|
 |  [**`PGSQL`**](/docs/pgsql/param)  |  9  | 124 | PostgreSQL 高可用集群配置                   |
-|  [**`INFRA`**](/docs/infra/param)  | 10  | 73  | 软件仓库与 Victoria 可观测基础设施               |
+|  [**`INFRA`**](/docs/infra/param)  | 10  | 74  | 软件仓库与 Victoria 可观测基础设施               |
 |   [**`NODE`**](/docs/node/param)   | 11  | 74  | 节点初始化、系统调优与运维基线                      |
 |   [**`ETCD`**](/docs/etcd/param)   |  2  | 13  | ETCD 集群与移除保护参数                       |
 |  [**`MINIO`**](/docs/minio/param)  |  2  | 22  | Silo 部署、观测与移除参数                       |

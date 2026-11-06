@@ -27,7 +27,7 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 
 | 范围                                          | 默认值示例                                             | `configure -g` |
 |:--------------------------------------------|:--------------------------------------------------|:--------------:|
-| Grafana 管理员与只读用户                            | `pigsty`、`DBUser.Viewer`                          |       是        |
+| Grafana 管理员与 PostgreSQL 数据源用户              | `pigsty`、`DBUser.Viewer`                          |       是        |
 | HAProxy 管理界面                                | `pigsty`                                          |       是        |
 | PostgreSQL 管理、监控、复制用户                       | `DBUser.DBA`、`DBUser.Monitor`、`DBUser.Replicator` |       是        |
 | Patroni REST API                            | `Patroni.API`                                     |       是        |
