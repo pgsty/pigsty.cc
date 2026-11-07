@@ -6,10 +6,10 @@ weight: 6460
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/markwkm/pg_proctab">
+  <a class="ext-card ext-card--repo" href="https://github.com/CrunchyData/pgnodemx">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">markwkm/pg_proctab</div>
-    <div class="ext-card__desc">https://github.com/markwkm/pg_proctab</div>
+    <div class="ext-card__title">CrunchyData/pgnodemx</div>
+    <div class="ext-card__desc">https://github.com/CrunchyData/pgnodemx</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgnodemx-2.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -25,28 +25,28 @@ weight: 6460
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 6450  | [**`pgnodemx`**](/ext/e/pgnodemx) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
-| 6460  | [**`pg_proctab`**](/ext/e/pg_proctab) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 6460  | [**`pg_proctab`**](/ext/e/pg_proctab) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table .wide .expand}
 
-| **相关扩展** | [`system_stats`](/ext/e/system_stats) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgmeminfo`](/ext/e/pgmeminfo) |
+| **相关扩展** | [`pgnodemx`](/ext/e/pgnodemx) [`system_stats`](/ext/e/system_stats) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgmeminfo`](/ext/e/pgmeminfo) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
 
-> Bundled with pgnodemx package/source 2.0.1 for PostgreSQL 14-18; this package ships pg_proctab as a compatibility stub backed by pgnodemx.
+> Compatibility stub; PGDG RPM incomplete.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | `pgnodemx` |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
 {.ext-table .wide .expand}
@@ -123,59 +123,51 @@ apt install -y postgresql-14-pgnodemx   # PG 14
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION pg_proctab;
+CREATE EXTENSION pg_proctab CASCADE;  -- 依赖: pgnodemx
 ```
-
-
-
 
 ## 用法
 
-> [pg_proctab: 从 PostgreSQL 访问操作系统进程表](https://github.com/markwkm/pg_proctab)
+来源：
 
-pg_proctab 允许在 PostgreSQL 内部通过 SQL 函数查询操作系统的进程、CPU、内存、磁盘和负载统计信息。
+- [pgnodemx 2.0.1 文档](https://github.com/pgnodemx/pgnodemx/blob/v2.0.1/README.md)
+- [兼容层控制文件](https://github.com/pgnodemx/pgnodemx/blob/v2.0.1/pg_proctab.control)
+- [兼容层 SQL](https://github.com/pgnodemx/pgnodemx/blob/v2.0.1/pg_proctab--0.0.10-compat.sql)
 
-### 函数
+`pgnodemx` 包中的 `pg_proctab` 提供五个 SQL 包装函数，兼容旧的进程监控接口。它依赖 `pgnodemx`；软件包版本为 2.0.1，SQL 安装版本为 `0.0.10-compat`。
 
-**进程信息** (`pg_proctab()`)：
+### 启用
+
+保留 `shared_preload_libraries` 中已有的条目，加入 `pgnodemx`，然后重启 PostgreSQL：
+
+```ini
+shared_preload_libraries = 'pgnodemx'
+```
+
+使用超级用户将两个扩展安装到同一模式：
 
 ```sql
--- 所有 PostgreSQL 进程信息
-SELECT pid, comm, state, utime, stime, vsize, rss, reads, writes
-FROM pg_proctab();
+CREATE EXTENSION pgnodemx;
+CREATE EXTENSION pg_proctab VERSION '0.0.10-compat';
+```
 
--- 与 pg_stat_activity 关联获取每个查询的资源使用情况
+主控制文件没有默认版本，因此必须显式指定版本。本轮核验的 PGDG RPM 缺少该主控制文件，执行此命令前需安装包含它的软件包。查询底层操作系统指标需要超级用户权限或 `pg_monitor` 成员资格。
+
+### 查询
+
+```sql
 SELECT a.pid, a.query, p.utime, p.stime, p.vsize, p.rss
 FROM pg_stat_activity a
 JOIN pg_proctab() p ON a.pid = p.pid;
-```
 
-返回每个进程的信息：`pid`、`comm`、`fullcomm`、`state`、`ppid`、`utime`、`stime`、`priority`、`nice`、`num_threads`、`vsize`、`rss`、`processor`、`uid`、`username`、`rchar`、`wchar`、`reads`、`writes` 等。
-
-**CPU 时间** (`pg_cputime()`)：
-
-```sql
 SELECT "user", nice, system, idle, iowait FROM pg_cputime();
-```
-
-**负载均值** (`pg_loadavg()`)：
-
-```sql
 SELECT load1, load5, load15, last_pid FROM pg_loadavg();
-```
-
-**内存使用** (`pg_memusage()`)：
-
-```sql
 SELECT memused, memfree, memshared, membuffers, memcached,
        swapused, swapfree, swapcached
 FROM pg_memusage();
-```
-
-**磁盘使用** (`pg_diskusage()`)：
-
-```sql
 SELECT devname, reads_completed, writes_completed,
        sectors_read, sectors_written
 FROM pg_diskusage();
 ```
+
+这些函数读取 PostgreSQL 服务端可见的 Linux 进程与系统统计信息，容器命名空间和操作系统权限会影响可见范围。在此兼容层中，`rss` 使用 KiB，内存汇总值使用 MiB，`memshared` 来自 `Shmem`。

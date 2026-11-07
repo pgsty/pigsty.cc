@@ -30,7 +30,7 @@ weight: 2530
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2530  | [**`pg_strom`**](/ext/e/pg_strom) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 2530  | [**`pg_strom`**](/ext/e/pg_strom) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_mooncake`](/ext/e/pg_mooncake) [`pg_orca`](/ext/e/pg_orca) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) [`pg_clickhouse`](/ext/e/pg_clickhouse) [`storage_engine`](/ext/e/storage_engine) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) |
@@ -38,7 +38,7 @@ weight: 2530
 {.ext-table .ext-table--rel}
 
 
-> RPM only: PGDG provides version 6.1 for PostgreSQL 15-18; the local 3.5/PG14 compatibility spec is a quarantined legacy orphan and is not scheduled; no DEB package is available.
+> RPM x86_64 only.
 
 
 ## 版本
@@ -160,6 +160,13 @@ dnf install -y pg_strom_18       # PG 18
 dnf install -y pg_strom_17       # PG 17
 dnf install -y pg_strom_16       # PG 16
 dnf install -y pg_strom_15       # PG 15
+```
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_strom';
 ```
 
 

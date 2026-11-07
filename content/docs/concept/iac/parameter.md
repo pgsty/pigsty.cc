@@ -64,7 +64,7 @@ all:                            # <------- 顶级对象：all
 | **主机/实例** | `<group>.hosts.<host>`     | 特定于单个主机的参数   | 较高 (4) |
 | **分组/集群** | `<group>.vars`             | 组/集群中主机共享的参数 | 中等 (3) |
 | **全局**    | `all.vars`                 | 所有主机共享的参数    | 较低 (2) |
-| **默认**    | `<roles>/default/main.yml` | 角色实现默认值      | 最低 (1) |
+| **默认**    | `<roles>/defaults/main.yml` | 角色实现默认值      | 最低 (1) |
 
 以下是关于参数优先级的一些示例：
 
@@ -72,7 +72,7 @@ all:                            # <------- 顶级对象：all
 - 使用主机变量上的实例级别参数 `pg_role` 覆盖 pg 实例角色
 - 使用组变量上的集群级别参数 `pg_cluster` 覆盖 pg 集群名称。
 - 使用全局变量上的全局参数 `node_ntp_servers` 指定全局 NTP 服务器
-- 如果没有设置 [**`pg_version`**](/docs/pgsql/param#pg_version)，Pigsty 将使用 [**`pgsql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/defaults/main.yml#L42) 角色实现的默认值（默认为 `18`）
+- 如果没有设置 [**`pg_version`**](/docs/pgsql/param#pg_version)，Pigsty 将使用 [**`pgsql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/defaults/main.yml#L43) 角色实现的默认值（默认为 `18`）
 
 除了 **身份参数** 外，每个参数都有适当的默认值，因此无需显式设置。
 

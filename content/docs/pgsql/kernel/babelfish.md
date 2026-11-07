@@ -65,9 +65,6 @@ pg_databases:
       - { name: babelfishpg_tsql }
       - { name: babelfishpg_tds }
       - { name: babelfishpg_money }
-      - { name: pg_hint_plan }
-      - { name: system_stats }
-      - { name: tds_fdw }
     parameters: { 'babelfishpg_tsql.migration_mode': 'multi-db' }
 
 pg_hba_rules:

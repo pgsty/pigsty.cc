@@ -69,7 +69,7 @@ pg18-feat, pg18-lang, pg18-type, pg18-util, pg18-func, pg18-admin,
 pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 ```
 
-`meta` 业务库默认创建扩展为 `postgis`、`timescaledb`、`vector`，其余扩展可按需启用。
+`meta` 业务库默认创建扩展为 `postgis`、`timescaledb`、`vector`、`age`，其余扩展可按需启用。
 
 
 --------

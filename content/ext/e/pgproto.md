@@ -38,7 +38,7 @@ weight: 4130
 {.ext-table .ext-table--rel}
 
 
-> release 0.3.3; SQL v1.0
+> SQL 1.0.
 
 
 ## 版本

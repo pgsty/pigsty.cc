@@ -184,7 +184,7 @@ Pigsty 内置了 dnsmasq 服务，可以通过 [`dns_records`](/docs/infra/param
 |-----------|----------------------------------------|
 | `disable` | 仅监听 HTTP（`nginx_port`）                 |
 | `enable`  | 同时监听 HTTPS（`nginx_ssl_port`），默认签发自签名证书 |
-| `enforce` | 强制跳转到 HTTPS，所有 80 端口请求都会 301 重定向       |
+| `enforce` | 强制跳转到 HTTPS，非 `home` 门户的 80 端口请求会 301 重定向；默认 `home` 服务器仍同时监听 80 与 443 |
 {.full-width}
 
 对于自签名证书，有以下几种访问方式：

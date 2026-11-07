@@ -146,7 +146,7 @@ $ systemctl reload patroni    # 重新加载 Patroni 配置
 
 请注意，Pigsty 默认开启了库内对象监控，所以如果您的数据库内有数以十万计的表/索引对象，抓取可能耗时会增加到几秒。
 
-您可以修改 Prometheus 的抓取频率，请确保一点：抓取周期应当显著高于一次抓取的时长。
+您可以修改 VictoriaMetrics 的抓取频率（[`vmetrics_scrape_interval`](/docs/infra/param#vmetrics_scrape_interval)），请确保一点：抓取周期应当显著高于一次抓取的时长。
 
 
 

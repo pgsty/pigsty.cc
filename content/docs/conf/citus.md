@@ -17,7 +17,7 @@ categories: [参考]
 - 节点数量： 13 节点（1 基础设施 + 1 协调组 × 2 + 5 工作组 × 2）
 - 配置说明：Citus 分布式 PostgreSQL 高可用集群
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
-- 适用架构：`x86_64`
+- 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`ha/trio`](/docs/conf/trio/)
 
 启用方式：
@@ -182,4 +182,4 @@ SELECT create_reference_table('tenants');
 - **分布列选择**：合理选择分布列（通常是租户 ID 或时间戳）对性能至关重要
 - **跨分片限制**：外键约束必须包含分布列，部分 DDL 操作有限制
 - **网络要求**：`pg_vip_interface` 默认为 `auto`，特殊网络环境可显式指定网卡
-- **架构限制**：Citus 扩展不支持 ARM64 架构
+- **架构支持**：Citus 及模板所需扩展在 `x86_64` 与 `aarch64` 上均提供软件包

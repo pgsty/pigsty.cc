@@ -1,7 +1,7 @@
 ---
 title: "pg_snakeoil"
 linkTitle: "pg_snakeoil"
-description: "PostgreSQL动态链接库反病毒功能"
+description: "基于 ClamAV 的 PostgreSQL 反病毒扩展"
 weight: 7380
 ---
 
@@ -38,7 +38,7 @@ weight: 7380
 {.ext-table .ext-table--rel}
 
 
-> require clamV libs
+> Requires ClamAV.
 
 
 ## 版本

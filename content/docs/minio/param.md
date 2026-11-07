@@ -106,6 +106,8 @@ minio_rm_data: true               # 移除时是否删除 minio 数据？默认�
 minio_rm_pkg: false               # 移除时是否卸载 minio 软件包？默认为 false
 # MINIO（引用）
 minio_type: silo                  # 对象存储引擎，当前必须为 silo
+minio_user: minio                 # minio 操作系统用户，默认为 `minio`
+minio_data: '/data/minio'         # minio 数据目录，使用 `{x...y}` 指定多个磁盘
 ```
 
 
@@ -502,7 +504,7 @@ minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
 
 移除时是否删除 Silo 数据与配置？默认值为 `true`。
 
-启用后，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 会删除数据目录、`/etc/default/silo`、`.minio` 用户目录，以及 `/etc/systemd/system/silo.service`。设置为 `false` 会保留这些数据与配置，但不会阻止服务注销、停止和禁用。
+启用后，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 会删除数据目录、`/etc/default/silo`、`.minio` 用户目录，以及 `/etc/systemd/system/silo.service`，同时清理遗留的 `/etc/default/minio` 与 `/etc/systemd/system/minio.service`。设置为 `false` 会保留这些数据与配置，但不会阻止服务注销、停止和禁用。
 
 
 

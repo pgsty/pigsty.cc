@@ -49,7 +49,7 @@ bin/pgsql-hba <cls> <ip>...           # 刷新集群中指定实例的 HBA 规�
 脚本内部执行以下剧本命令：
 
 ```bash
-./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload -e pg_reload=true
+./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload
 ```
 
 **仅刷新 PostgreSQL**：`./pgsql.yml -l <cls> -t pg_hba,pg_reload -e pg_reload=true`
@@ -80,7 +80,7 @@ pg_default_hba_rules:
   - {user: '${repl}'    ,db: postgres    ,addr: intra     ,auth: pwd   ,title: 'replicator postgres db from intranet' ,order: 300}
   - {user: '${monitor}' ,db: all         ,addr: localhost ,auth: pwd   ,title: 'monitor from localhost with password' ,order: 350}
   - {user: '${monitor}' ,db: all         ,addr: infra     ,auth: pwd   ,title: 'monitor from infra host with password',order: 400}
-  - {user: '${admin}'   ,db: all         ,addr: infra     ,auth: ssl   ,title: 'admin @ infra nodes with pwd & ssl'   ,order: 450}
+  - {user: '${admin}'   ,db: all         ,addr: intra     ,auth: pwd   ,title: 'admin @ intranet nodes with pwd'      ,order: 450}
   - {user: '${admin}'   ,db: all         ,addr: world     ,auth: ssl   ,title: 'admin @ everywhere with ssl & pwd'    ,order: 500}
   - {user: '+dbrole_readonly',db: all    ,addr: localhost ,auth: pwd   ,title: 'pgbouncer read/write via local socket',order: 550}
   - {user: '+dbrole_readonly',db: all    ,addr: intra     ,auth: pwd   ,title: 'read/write biz user via password'     ,order: 600}
@@ -259,7 +259,7 @@ PostgreSQL HBA 是 **首条匹配生效**，规则顺序至关重要。Pigsty �
 | 300   | replicator intra postgres    |
 | 350   | monitor localhost            |
 | 400   | monitor infra                |
-| 450   | admin infra ssl              |
+| 450   | admin intra pwd              |
 | 500   | admin world ssl              |
 | 550   | dbrole_readonly localhost    |
 | 600   | dbrole_readonly intra        |

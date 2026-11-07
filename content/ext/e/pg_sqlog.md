@@ -30,7 +30,7 @@ weight: 6500
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 6500  | [**`pg_sqlog`**](/ext/e/pg_sqlog) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `sqlog` |
+| 6500  | [**`pg_sqlog`**](/ext/e/pg_sqlog) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `sqlog` |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`log_fdw`](/ext/e/log_fdw) [`pg_stat_log`](/ext/e/pg_stat_log) [`logerrors`](/ext/e/logerrors) [`pgelog`](/ext/e/pgelog) [`file_fdw`](/ext/e/file_fdw) [`pg_csv`](/ext/e/pg_csv) [`aws_s3`](/ext/e/aws_s3) [`pgdisablelogerror`](/ext/e/pgdisablelogerror) [`pgaudit`](/ext/e/pgaudit) [`pg_auth_mon`](/ext/e/pg_auth_mon) |
@@ -38,7 +38,7 @@ weight: 6500
 {.ext-table .ext-table--rel}
 
 
-> require certain params
+> CSV logging; daily rotation required.
 
 
 ## 版本
@@ -47,108 +47,138 @@ weight: 6500
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_sqlog` | `file_fdw` |
 | [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_sqlog_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7+git20241118.b016539` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-sqlog` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-sqlog` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 | AVAIL PIGSTY 1.6 1 |
+| el8.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el8.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el9.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el10.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| d12.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+@ el8.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_18-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_18-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_18-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_18-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.x86_64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_18-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_18-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 pg_sqlog_18 pg_sqlog_18-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_18-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pg-sqlog postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-18-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_17-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_17-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_17-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_17-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.x86_64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_17-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_17-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 pg_sqlog_17 pg_sqlog_17-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_17-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pg-sqlog postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-17-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_16-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_16-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_16-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_16-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.x86_64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_16-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_16-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 pg_sqlog_16 pg_sqlog_16-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_16-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-pg-sqlog postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-16-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_15-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_15-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_15-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_15-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.x86_64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_15-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_15-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 pg_sqlog_15 pg_sqlog_15-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_15-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-pg-sqlog postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-15-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ el8.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sqlog_14-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm pigsty 1.7 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el8.noarch.rpm
 @ el8.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sqlog_14-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sqlog_14-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm pigsty 1.7 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el9.noarch.rpm
 @ el9.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sqlog_14-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.x86_64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sqlog_14-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm pigsty 1.7 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_14-1.7-1.git20241118.b016539PGSTY.el10.noarch.rpm
 @ el10.aarch64 14 pg_sqlog_14 pg_sqlog_14-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 15.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sqlog_14-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb pigsty 1.6 9.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb pigsty 1.6 9.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.6-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb pigsty 1.7 10.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-pg-sqlog postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb pigsty 1.7 10.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sqlog/postgresql-14-pg-sqlog_1.7+git20241118.b016539-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

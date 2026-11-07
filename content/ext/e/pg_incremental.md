@@ -38,7 +38,7 @@ weight: 2850
 {.ext-table .ext-table--rel}
 
 
-> Package 1.6.1; SQL/control 1.6. Fixes _drop_trigger search_path injection. Sequence pipelines require SELECT or USAGE at creation and execution; file-list functions run as the pipeline executor. pg_cron is optional except for scheduled pipelines.
+> SQL 1.6; scheduling needs pg_cron.
 
 
 ## 版本
@@ -46,19 +46,19 @@ weight: 2850
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6` | {{< pgvers "18,17,16" >}} | `pg_incremental` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6.1` | {{< pgvers "18,17,16" >}} | `pg_incremental_$v` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.6.1` | {{< pgvers "18,17,16" >}} | `pg_incremental_$v` | - |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.6.1` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-incremental` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.aarch64 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | AVAIL PGDG 1.6.1 4 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.x86_64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.aarch64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.aarch64 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | AVAIL PGDG 1.6.1 5 | N/A PGDG - 0 | N/A PGDG - 0 |
 | d12.x86_64 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | AVAIL PIGSTY 1.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |

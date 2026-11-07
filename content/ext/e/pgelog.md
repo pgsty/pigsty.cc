@@ -38,7 +38,7 @@ weight: 5870
 {.ext-table .ext-table--rel}
 
 
-> Release tag 1.0.2 still ships extension SQL version 1.0; requires the dblink extension at runtime in addition to pg_variables.
+> SQL 1.0/1.0.2.
 
 
 ## 版本

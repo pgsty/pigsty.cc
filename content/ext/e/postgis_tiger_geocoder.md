@@ -11,6 +11,11 @@ weight: 1504
     <div class="ext-card__title">https://gitea.osgeo.org/postgis/postgis_tiger_geocoder</div>
     <div class="ext-card__desc">https://gitea.osgeo.org/postgis/postgis_tiger_geocoder</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgis_tiger_geocoder-2025.2.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">postgis_tiger_geocoder-2025.2.tar.gz</div>
+    <div class="ext-card__desc">postgis_tiger_geocoder-2025.2.tar.gz</div>
+  </a>
 </div>
 
 
@@ -33,7 +38,7 @@ weight: 1504
 {.ext-table .ext-table--rel}
 
 
-> Standalone since PostGIS 3.7; control/package 2025.2; PG16+; no local recipe.
+> Pigsty fills EL8 gaps.
 
 
 ## 版本
@@ -48,8 +53,8 @@ weight: 1504
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
-| el8.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.x86_64 | AVAIL PIGSTY 2025.2 1 | AVAIL PIGSTY 2025.2 1 | AVAIL PIGSTY 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.aarch64 | AVAIL PIGSTY 2025.2 1 | AVAIL PIGSTY 2025.2 1 | AVAIL PIGSTY 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 | el9.x86_64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 | el9.aarch64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 | el10.x86_64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
@@ -64,6 +69,8 @@ weight: 1504
 | u24.aarch64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 | u26.x86_64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 | u26.aarch64 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | AVAIL PGDG 2025.2 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+@ el8.x86_64 18 postgis_tiger_geocoder_18 postgis_tiger_geocoder_18-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgis_tiger_geocoder_18-2025.2-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 postgis_tiger_geocoder_18 postgis_tiger_geocoder_18-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgis_tiger_geocoder_18-2025.2-1PGSTY.el8.noarch.rpm
 @ el9.x86_64 18 postgis_tiger_geocoder_18 postgis_tiger_geocoder_18-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgis_tiger_geocoder_18-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 postgis_tiger_geocoder_18 postgis_tiger_geocoder_18-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgis_tiger_geocoder_18-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el10.x86_64 18 postgis_tiger_geocoder_18 postgis_tiger_geocoder_18-2025.2-1PGDG.rhel10.2.noarch.rpm pgdg 2025.2 104.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgis_tiger_geocoder_18-2025.2-1PGDG.rhel10.2.noarch.rpm
@@ -78,6 +85,8 @@ weight: 1504
 @ u24.aarch64 18 postgresql-18-postgis-tiger-geocoder postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg24.04+1_all.deb pgdg 2025.2 95.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg24.04+1_all.deb
 @ u26.x86_64 18 postgresql-18-postgis-tiger-geocoder postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 95.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-postgis-tiger-geocoder postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 95.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-18-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
+@ el8.x86_64 17 postgis_tiger_geocoder_17 postgis_tiger_geocoder_17-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgis_tiger_geocoder_17-2025.2-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 postgis_tiger_geocoder_17 postgis_tiger_geocoder_17-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgis_tiger_geocoder_17-2025.2-1PGSTY.el8.noarch.rpm
 @ el9.x86_64 17 postgis_tiger_geocoder_17 postgis_tiger_geocoder_17-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgis_tiger_geocoder_17-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 postgis_tiger_geocoder_17 postgis_tiger_geocoder_17-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgis_tiger_geocoder_17-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el10.x86_64 17 postgis_tiger_geocoder_17 postgis_tiger_geocoder_17-2025.2-1PGDG.rhel10.2.noarch.rpm pgdg 2025.2 104.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgis_tiger_geocoder_17-2025.2-1PGDG.rhel10.2.noarch.rpm
@@ -92,6 +101,8 @@ weight: 1504
 @ u24.aarch64 17 postgresql-17-postgis-tiger-geocoder postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg24.04+1_all.deb pgdg 2025.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg24.04+1_all.deb
 @ u26.x86_64 17 postgresql-17-postgis-tiger-geocoder postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-postgis-tiger-geocoder postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-17-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
+@ el8.x86_64 16 postgis_tiger_geocoder_16 postgis_tiger_geocoder_16-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgis_tiger_geocoder_16-2025.2-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 postgis_tiger_geocoder_16 postgis_tiger_geocoder_16-2025.2-1PGSTY.el8.noarch.rpm pigsty 2025.2 123.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgis_tiger_geocoder_16-2025.2-1PGSTY.el8.noarch.rpm
 @ el9.x86_64 16 postgis_tiger_geocoder_16 postgis_tiger_geocoder_16-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgis_tiger_geocoder_16-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 postgis_tiger_geocoder_16 postgis_tiger_geocoder_16-2025.2-1PGDG.rhel9.8.noarch.rpm pgdg 2025.2 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgis_tiger_geocoder_16-2025.2-1PGDG.rhel9.8.noarch.rpm
 @ el10.x86_64 16 postgis_tiger_geocoder_16 postgis_tiger_geocoder_16-2025.2-1PGDG.rhel10.2.noarch.rpm pgdg 2025.2 104.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgis_tiger_geocoder_16-2025.2-1PGDG.rhel10.2.noarch.rpm
@@ -107,6 +118,14 @@ weight: 1504
 @ u26.x86_64 16 postgresql-16-postgis-tiger-geocoder postgresql-16-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-16-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-postgis-tiger-geocoder postgresql-16-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb pgdg 2025.2 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgis-tiger-geocoder/postgresql-16-postgis-tiger-geocoder_2025.2-1.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `postgis_tiger_geocoder` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg postgis_tiger_geocoder         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

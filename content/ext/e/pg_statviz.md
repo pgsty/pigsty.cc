@@ -38,7 +38,7 @@ weight: 6090
 {.ext-table .ext-table--rel}
 
 
-> Excluded from default package groups; pkg 1.2.1/SQL 1.2; no Python CLI; RPM Pigsty; DEB Pigsty u22/PGDG elsewhere.
+> No CLI; excluded from default groups.
 
 
 ## 版本

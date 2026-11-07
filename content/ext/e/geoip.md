@@ -38,125 +38,152 @@ weight: 1560
 {.ext-table .ext-table--rel}
 
 
-> pkg 0.3.0; source/SQL 0.4.0; rebuild needed; PGDG gaps: EL9 PG17, legacy EL8.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `geoip` | `ip4r` |
 | [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `geoip_$v` | `ip4r_$v` |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0+git20250804.fcad7f1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-geoip` | `postgresql-$v-ip4r` |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-geoip` | `postgresql-$v-ip4r` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el8.x86_64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 3 | AVAIL PIGSTY 0.4.0 3 |
+| el8.aarch64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 3 | AVAIL PIGSTY 0.4.0 3 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 3 | AVAIL PIGSTY 0.4.0 3 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 3 | AVAIL PIGSTY 0.4.0 3 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 | AVAIL PIGSTY 0.4.0 2 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+@ el8.x86_64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_18-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_18-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.x86_64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_18-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.aarch64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_18-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.x86_64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_18-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 geoip_18 geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_18-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_18-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_17-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_17-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.x86_64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_17-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.aarch64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_17-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.x86_64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_17-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 geoip_17 geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_17-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_17-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_16-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_16-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.x86_64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_16-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.aarch64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_16-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.x86_64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_16-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 geoip_16 geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_16-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_16-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_15-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 geoip_15 geoip_15-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/geoip_15-0.2.4-3.rhel8.noarch.rpm
+@ el8.aarch64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 geoip_15 geoip_15-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/geoip_15-0.2.4-3.rhel8.noarch.rpm
+@ el9.x86_64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_15-0.3.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 geoip_15 geoip_15-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 11.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/geoip_15-0.2.4-3.rhel9.noarch.rpm
+@ el9.aarch64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_15-0.3.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 geoip_15 geoip_15-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 10.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/geoip_15-0.2.4-3.rhel9.noarch.rpm
+@ el10.x86_64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_15-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 geoip_15 geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_15-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_15-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ el8.x86_64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_14-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 geoip_14 geoip_14-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/geoip_14-0.2.4-3.rhel8.noarch.rpm
+@ el8.aarch64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm pigsty 0.4.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el8.noarch.rpm
 @ el8.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 geoip_14 geoip_14-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/geoip_14-0.2.4-3.rhel8.noarch.rpm
+@ el9.x86_64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_14-0.3.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 geoip_14 geoip_14-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 11.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/geoip_14-0.2.4-3.rhel9.noarch.rpm
+@ el9.aarch64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm pigsty 0.4.0 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el9.noarch.rpm
 @ el9.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_14-0.3.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 geoip_14 geoip_14-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 10.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/geoip_14-0.2.4-3.rhel9.noarch.rpm
+@ el10.x86_64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_14-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 geoip_14 geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm pigsty 0.4.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_14-0.4.0-1.git20250804.fcad7f1PGSTY.el10.noarch.rpm
 @ el10.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_14-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb pigsty 0.4.0 6.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb pigsty 0.4.0 6.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.4.0+git20250804.fcad7f1-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

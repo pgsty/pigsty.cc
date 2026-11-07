@@ -66,7 +66,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_worker_processes`             | `max(CPU + 8, 16) + 8`         | 即 `max(CPU + 16, 24)`   |
 | `max_parallel_workers`             | `max(ceil(50% CPU), 2)`        | 1/2 CPU 上取整，最少两个        |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`        | 1/3 CPU 上取整，最少两个        |
-| `max_parallel_workers_per_gather`  | `min(max(ceil(20% CPU), 2),8)` | 1/5 CPU 下取整，最少两个，最多 8 个 |
+| `max_parallel_workers_per_gather`  | `min(max(floor(20% CPU), 2),8)` | 1/5 CPU 下取整，最少两个，最多 8 个 |
 {.full-width .wide .expand}
 
 | OLAP                               | 设置逻辑                     | 范围限制                  |
@@ -74,7 +74,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_worker_processes`             | `max(CPU + 12, 20) + 8`  | 即 `max(CPU + 20, 28)` |
 | `max_parallel_workers`             | `max(ceil(80% CPU, 2))`  | 4/5 CPU 上取整，最少两个      |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`  | 1/3 CPU 上取整，最少两个      |
-| `max_parallel_workers_per_gather`  | `max(floor(50% CPU), 2)` | 1/2 CPU 上取整，最少两个      |
+| `max_parallel_workers_per_gather`  | `max(floor(50% CPU), 2)` | 1/2 CPU 下取整，最少两个      |
 {.full-width .wide .expand}
 
 | CRIT                               | 设置逻辑                    | 范围限制                  |

@@ -50,102 +50,102 @@ weight: 4580
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-@ el8.x86_64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el8.x86_64.rpm pigsty 0.3.0 909.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_18-0.3.0-3PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el8.aarch64.rpm pigsty 0.3.0 818.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_18-0.3.0-3PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el9.x86_64.rpm pigsty 0.3.0 918.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_18-0.3.0-3PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el9.aarch64.rpm pigsty 0.3.0 866.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_18-0.3.0-3PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el10.x86_64.rpm pigsty 0.3.0 919.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_18-0.3.0-3PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_typeid_18 pg_typeid_18-0.3.0-3PIGSTY.el10.aarch64.rpm pigsty 0.3.0 845.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_18-0.3.0-3PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb pigsty 0.3.0 724.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb pigsty 0.3.0 606.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~trixie_amd64.deb pigsty 0.3.0 724.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~trixie_arm64.deb pigsty 0.3.0 607.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~jammy_amd64.deb pigsty 0.3.0 808.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~jammy_arm64.deb pigsty 0.3.0 716.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~noble_amd64.deb pigsty 0.3.0 799.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~noble_arm64.deb pigsty 0.3.0 707.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~resolute_amd64.deb pigsty 0.3.0 795.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.3.0-3PIGSTY~resolute_arm64.deb pigsty 0.3.0 706.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-18-typeid_0.3.0-3PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el8.x86_64.rpm pigsty 0.3.0 906.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_17-0.3.0-3PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el8.aarch64.rpm pigsty 0.3.0 815.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_17-0.3.0-3PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el9.x86_64.rpm pigsty 0.3.0 914.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_17-0.3.0-3PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el9.aarch64.rpm pigsty 0.3.0 863.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_17-0.3.0-3PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el10.x86_64.rpm pigsty 0.3.0 914.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_17-0.3.0-3PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_typeid_17 pg_typeid_17-0.3.0-3PIGSTY.el10.aarch64.rpm pigsty 0.3.0 845.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_17-0.3.0-3PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb pigsty 0.3.0 722.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb pigsty 0.3.0 606.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~trixie_amd64.deb pigsty 0.3.0 722.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~trixie_arm64.deb pigsty 0.3.0 606.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~jammy_amd64.deb pigsty 0.3.0 805.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~jammy_arm64.deb pigsty 0.3.0 715.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~noble_amd64.deb pigsty 0.3.0 796.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~noble_arm64.deb pigsty 0.3.0 705.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~resolute_amd64.deb pigsty 0.3.0 792.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.3.0-3PIGSTY~resolute_arm64.deb pigsty 0.3.0 704.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-17-typeid_0.3.0-3PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el8.x86_64.rpm pigsty 0.3.0 904.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_16-0.3.0-3PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el8.aarch64.rpm pigsty 0.3.0 813.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_16-0.3.0-3PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el9.x86_64.rpm pigsty 0.3.0 912.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_16-0.3.0-3PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el9.aarch64.rpm pigsty 0.3.0 862.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_16-0.3.0-3PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el10.x86_64.rpm pigsty 0.3.0 913.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_16-0.3.0-3PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_typeid_16 pg_typeid_16-0.3.0-3PIGSTY.el10.aarch64.rpm pigsty 0.3.0 844.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_16-0.3.0-3PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb pigsty 0.3.0 721.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb pigsty 0.3.0 604.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~trixie_amd64.deb pigsty 0.3.0 721.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~trixie_arm64.deb pigsty 0.3.0 605.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~jammy_amd64.deb pigsty 0.3.0 804.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~jammy_arm64.deb pigsty 0.3.0 714.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~noble_amd64.deb pigsty 0.3.0 795.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~noble_arm64.deb pigsty 0.3.0 705.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~resolute_amd64.deb pigsty 0.3.0 790.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.3.0-3PIGSTY~resolute_arm64.deb pigsty 0.3.0 703.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-16-typeid_0.3.0-3PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el8.x86_64.rpm pigsty 0.3.0 895.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_15-0.3.0-3PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el8.aarch64.rpm pigsty 0.3.0 805.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_15-0.3.0-3PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el9.x86_64.rpm pigsty 0.3.0 903.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_15-0.3.0-3PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el9.aarch64.rpm pigsty 0.3.0 852.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_15-0.3.0-3PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el10.x86_64.rpm pigsty 0.3.0 903.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_15-0.3.0-3PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_typeid_15 pg_typeid_15-0.3.0-3PIGSTY.el10.aarch64.rpm pigsty 0.3.0 840.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_15-0.3.0-3PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb pigsty 0.3.0 715.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb pigsty 0.3.0 600.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~trixie_amd64.deb pigsty 0.3.0 714.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~trixie_arm64.deb pigsty 0.3.0 600.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~jammy_amd64.deb pigsty 0.3.0 795.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~jammy_arm64.deb pigsty 0.3.0 708.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~noble_amd64.deb pigsty 0.3.0 787.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~noble_arm64.deb pigsty 0.3.0 699.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~resolute_amd64.deb pigsty 0.3.0 783.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.3.0-3PIGSTY~resolute_arm64.deb pigsty 0.3.0 697.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.3.0-3PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el8.x86_64.rpm pigsty 0.3.0 892.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_14-0.3.0-3PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el8.aarch64.rpm pigsty 0.3.0 802.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_14-0.3.0-3PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el9.x86_64.rpm pigsty 0.3.0 900.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_14-0.3.0-3PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el9.aarch64.rpm pigsty 0.3.0 849.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_14-0.3.0-3PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el10.x86_64.rpm pigsty 0.3.0 899.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_14-0.3.0-3PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_typeid_14 pg_typeid_14-0.3.0-3PIGSTY.el10.aarch64.rpm pigsty 0.3.0 839.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_14-0.3.0-3PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb pigsty 0.3.0 713.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb pigsty 0.3.0 598.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~trixie_amd64.deb pigsty 0.3.0 712.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~trixie_arm64.deb pigsty 0.3.0 599.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~jammy_amd64.deb pigsty 0.3.0 795.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~jammy_arm64.deb pigsty 0.3.0 708.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~noble_amd64.deb pigsty 0.3.0 784.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~noble_arm64.deb pigsty 0.3.0 697.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~resolute_amd64.deb pigsty 0.3.0 781.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.3.0-3PIGSTY~resolute_arm64.deb pigsty 0.3.0 695.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.3.0-3PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+@ el8.x86_64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 892.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_18-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 775.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_18-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 913.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_18-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 827.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_18-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 907.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_18-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 807.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_18-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 741.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 621.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 742.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 621.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 826.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 736.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 824.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 726.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 815.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-typeid postgresql-18-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 725.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-18-typeid_0.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 889.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_17-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 771.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_17-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 906.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_17-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 825.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_17-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 910.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_17-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_typeid_17 pg_typeid_17-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 806.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_17-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 739.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 620.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 740.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 620.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 823.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 734.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 820.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 723.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 812.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-typeid postgresql-17-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 723.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-17-typeid_0.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 888.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_16-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 768.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_16-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 902.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_16-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 823.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_16-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 902.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_16-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_typeid_16 pg_typeid_16-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 806.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_16-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 737.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 618.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 739.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 618.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 824.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 733.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 812.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 722.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 809.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-typeid postgresql-16-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 721.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-16-typeid_0.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 879.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_15-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 760.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_15-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 896.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_15-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 814.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_15-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 897.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_15-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_typeid_15 pg_typeid_15-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 804.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_15-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 734.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 613.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 733.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 615.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 817.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 726.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 808.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 717.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 804.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 715.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 875.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_14-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 759.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_14-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 891.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_14-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 812.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_14-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 893.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_14-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 801.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_14-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 731.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 612.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 732.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 612.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 813.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 724.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 807.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 715.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 800.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 712.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

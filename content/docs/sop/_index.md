@@ -38,8 +38,8 @@ hide: true
 | 选择配置模板           | [**配置模板**](/docs/concept/iac/template/)，[**模板列表**](/docs/conf/)                                        | `./configure -c <template>`                                                        |
 | 规划集群名、库名、用户名     | [**PGSQL 集群模型**](/docs/concept/model/pgsql/)                                                           | `pg_cluster`，`pg_databases`，`pg_users`                                             |
 | 创建数据库集群          | [**集群实例配置**](/docs/pgsql/config/cluster/)                                                              | [**集群管理**](/docs/pgsql/admin/cluster/)，`./pgsql.yml -l <cluster>`                  |
-| 新增业务用户           | [**用户/角色配置**](/docs/pgsql/config/user/)                                                                | [**用户管理**](/docs/pgsql/admin/user/)，`./pgsql-user.yml -l <cluster>`                |
-| 新增业务数据库          | [**数据库配置**](/docs/pgsql/config/db/)                                                                    | [**数据库管理**](/docs/pgsql/admin/db/)，`./pgsql-db.yml -l <cluster>`                   |
+| 新增业务用户           | [**用户/角色配置**](/docs/pgsql/config/user/)                                                                | [**用户管理**](/docs/pgsql/admin/user/)，`./pgsql-user.yml -l <cluster> -e username=<name>` |
+| 新增业务数据库          | [**数据库配置**](/docs/pgsql/config/db/)                                                                    | [**数据库管理**](/docs/pgsql/admin/db/)，`./pgsql-db.yml -l <cluster> -e dbname=<name>`  |
 | 配置访问入口           | [**服务/接入**](/docs/pgsql/service/)                                                                      | `pg_services`，`pg_default_services`                                                |
 | 修改 HBA           | [**HBA 配置**](/docs/pgsql/config/hba/)                                                                  | [**HBA 管理**](/docs/pgsql/admin/hba/)                                               |
 | 主从切换             | [**Patroni 管理**](/docs/pgsql/admin/patroni/)                                                           | `patronictl switchover`                                                            |

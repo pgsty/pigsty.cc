@@ -138,7 +138,7 @@ fbd4d01ce39e13016343badc3258b32e0ce5088b1604b0f62ef8b4aafca82d65  pigsty-pkg-v4.
 
 4. 从管理节点的 `/var/tmp/pigsty-dist/<version>/` 取出 `pigsty-pkg-<version>.<os>.<arch>.tgz`，传到离线环境的 `/var/tmp/pkg.tgz`，再运行 `./bootstrap -p /var/tmp/pkg.tgz`。
 
-将 `<infra-host>` 替换为清单中的一个 Infra 主机。本地目录准备与校验步骤运行在 `localhost`，因此主机限制中需要保留它。管理节点与目标节点都需要 rsync；同平台节点生成相同文件名，每次只选择一个构建节点。
+将 `<infra-host>` 替换为清单中的一个 Infra 主机。当前源码中本地目录准备与校验步骤通过 `delegate_to: localhost` 在管理节点执行，`-l` 只需包含 Infra 主机；`v4.5.0` 发布版中这些步骤是独立的 `localhost` play，主机限制中需要保留 `localhost`，上面的写法对两者均适用。管理节点与目标节点都需要 rsync；同平台节点生成相同文件名，每次只选择一个构建节点。
 
 `cache.yml` 的主要参数如下，可使用额外变量覆盖：
 

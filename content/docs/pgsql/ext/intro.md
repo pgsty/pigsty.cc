@@ -78,20 +78,17 @@ Pigsty 将扩展划分为 16 个类别：
 
 ## 预定义扩展集
 
-Pigsty 提供了若干预定义的扩展集（Stack），方便按场景选用：
+早期版本提供的 `gis-stack`、`rag-stack`、`supa-stack` 等扩展集别名已不再包含在当前各平台的 `package_map` 中。当前预定义的包组别名包括：
 
-| 扩展集          | 包含扩展                                                           |
-|:-------------|:---------------------------------------------------------------|
-| `gis-stack`  | postgis, pgrouting, pointcloud, h3, q3c, ogr_fdw               |
-| `rag-stack`  | pgvector, vchord, pgvectorscale, pg_similarity, pg_tiktoken    |
-| `fts-stack`  | pgroonga, pg_bigm, zhparser, hunspell                          |
-| `olap-stack` | pg_duckdb, pg_mooncake, timescaledb, pg_partman, plproxy       |
-| `feat-stack` | age, hll, rum, pg_graphql, pg_jsonschema, jsquery              |
-| `stat-stack` | pg_show_plans, pg_stat_kcache, pg_qualstats, pg_wait_sampling  |
-| `supa-stack` | pg_graphql, pg_jsonschema, wrappers, pgvector, pgsodium, vault |
+| 别名                                          | 说明                                    |
+|:--------------------------------------------|:--------------------------------------|
+| `pgsql-main`                                | PostgreSQL 内核、过程语言，以及 pg_repack、wal2json、pgvector |
+| `pgsql-basic`                               | pg_repack、wal2json、pgvector              |
+| `pgsql-<类别>`                                | 上述 16 个类别的扩展包组，例如 `pgsql-gis`、`pgsql-rag` |
+| `pg18-<类别>`                                 | 绑定 PG 18 的类别包组，例如 `pg18-gis`、`pg18-rag` |
 {.full-width}
 
-在 `pg_extensions` 中直接使用这些名称即可安装整套扩展。
+在 `pg_extensions` 中直接使用这些名称即可安装对应的包组。
 
 
 --------

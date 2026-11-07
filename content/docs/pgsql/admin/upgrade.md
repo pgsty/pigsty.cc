@@ -35,7 +35,7 @@ bin/pgsql-add pg-new              # 创建新版本集群
 ```
 
 ```bash {tab="扩展" value="tab3"}
-ansible <cls> -b -a 'yum upgrade -y postgis36_17*'
+ansible <cls> -b -a 'yum upgrade -y postgis37_17*'
 psql -c 'ALTER EXTENSION postgis UPDATE;'
 ```
 
@@ -317,7 +317,7 @@ pg resume <cls>
 **升级扩展软件包**
 
 ```bash {tab="EL" group="el-debian" value="el"}
-ansible <cls> -b -a 'yum upgrade -y postgis36_17 timescaledb-2-postgresql-17* pgvector_17*'
+ansible <cls> -b -a 'yum upgrade -y postgis37_17 timescaledb-tsl_17* pgvector_17*'
 ```
 
 ```bash {tab="Debian" value="debian"}

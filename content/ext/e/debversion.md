@@ -6,10 +6,10 @@ weight: 3830
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/ATIX-AG/postgresql-debversion-evr">
+  <a class="ext-card ext-card--repo" href="https://salsa.debian.org/postgresql/postgresql-debversion">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">ATIX-AG/postgresql-debversion-evr</div>
-    <div class="ext-card__desc">https://github.com/ATIX-AG/postgresql-debversion-evr</div>
+    <div class="ext-card__title">https://salsa.debian.org/postgresql/postgresql-debversion</div>
+    <div class="ext-card__desc">https://salsa.debian.org/postgresql/postgresql-debversion</div>
   </a>
 </div>
 
@@ -20,7 +20,7 @@ weight: 3830
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`debversion`**](/ext/e/debversion) | `1.2.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`debversion`**](/ext/e/debversion) | `1.2.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license gpl30orlater" href="/ext/license#gpl30orlater">GPL-3.0-or-later</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |

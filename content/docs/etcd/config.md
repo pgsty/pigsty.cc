@@ -73,11 +73,11 @@ etcd:
 ```yaml
 etcd:
   hosts:
-    10.10.10.21 : { etcd_seq: 1 }
-    10.10.10.22 : { etcd_seq: 2 }
-    10.10.10.23 : { etcd_seq: 3 }
-    10.10.10.24 : { etcd_seq: 4 }
-    10.10.10.25 : { etcd_seq: 5 }
+    10.10.10.25 : { etcd_seq: 1 }
+    10.10.10.26 : { etcd_seq: 2 }
+    10.10.10.27 : { etcd_seq: 3 }
+    10.10.10.28 : { etcd_seq: 4 }
+    10.10.10.29 : { etcd_seq: 5 }
   vars: { etcd_cluster: etcd    }
 ```
 

@@ -246,7 +246,7 @@ bin/pgsql-db pg-meta meta    # 创建/修改数据库会自动启用定义的扩
 **更新软件包**
 
 ```bash {tab="pig" group="pig-yum-apt" value="pig"}
-pig update pgvector                           # 使用 pig 更新扩展
+pig ext update pgvector                       # 使用 pig 更新扩展
 ```
 
 ```bash {tab="yum" value="yum"}
@@ -300,7 +300,7 @@ pg restart pg-meta   # 重启使配置生效
 **卸载软件包（可选）**
 
 ```bash {tab="pig" group="pig-yum-apt" value="pig"}
-pig remove pgvector                           # 使用 pig 卸载
+pig ext rm pgvector                           # 使用 pig 卸载
 ```
 
 ```bash {tab="yum" value="yum"}

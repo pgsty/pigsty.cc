@@ -210,7 +210,7 @@ max_worker_processes: 20
 
 ```yaml
 shared_buffers: ~1GB
-work_mem: ~32MB
+work_mem: ~16MB
 maintenance_work_mem: ~256MB
 max_connections: 250
 max_worker_processes: 20

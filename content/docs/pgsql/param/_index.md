@@ -874,7 +874,7 @@ PostgreSQL 使用的操作系统 dbsu 用户名， 默认为 `postgres`，改这
 - `all`：完全的 `sudo` 权限，需要密码。
 - `nopass`：不需要密码的完全 `sudo` 权限（不推荐）。
 
-- 默认值为 `limit`，只允许执行 `sudo systemctl <start|stop|reload> <postgres|patroni|pgbouncer|...>`。
+- 默认值为 `limit`，只允许执行 `sudo systemctl <start|stop|status|reload|restart> <postgres|patroni|pgbouncer|...>`。
 
 
 
@@ -1031,7 +1031,7 @@ pg_namespace: /pg                 # top level key namespace in etcd, used by pat
 patroni_port: 8008                # patroni listen port, 8008 by default
 patroni_log_dir: /pg/log/patroni  # patroni log dir, `/pg/log/patroni` by default
 patroni_ssl_enabled: false        # secure patroni RestAPI communications with SSL?
-patroni_watchdog_mode: off        # patroni watchdog mode: automatic,required,off. off by default
+patroni_watchdog_mode: 'off'      # patroni watchdog mode: automatic,required,off. off by default
 patroni_username: postgres        # patroni restapi username, `postgres` by default
 patroni_password: Patroni.API     # patroni restapi password, `Patroni.API` by default
 pg_etcd_password: ''              # etcd password for this pg cluster, '' to use pg_cluster
@@ -1042,7 +1042,12 @@ pg_conf: oltp.yml                 # config template: oltp,olap,crit,tiny. `oltp.
 pg_max_conn: auto                 # postgres max connections, `auto` will use recommended value
 pg_shared_buffer_ratio: 0.25      # postgres shared buffers ratio, 0.25 by default, 0.1~0.4
 pg_io_method: worker              # io method for postgres, auto,sync,worker,io_uring, worker by default
-pg_rto: norm                      # shared rto mode: fast,norm,safe,wide
+pg_rto: norm                      # shared rto mode for patroni & haproxy: fast,norm,safe,wide
+pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, rise, fall]
+  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'500ms'  ,'1s' ,3 ,3 ]  # rto < 30s
+  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'     ,'2s' ,3 ,3 ]  # rto < 45s
+  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1500ms' ,'3s' ,3 ,3 ]  # rto < 90s
+  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'     ,'4s' ,3 ,3 ]  # rto < 150s
 pg_rpo: 1048576                   # recovery point objective in bytes, `1MiB` at most by default
 pg_libs: 'pg_stat_statements, auto_explain'  # preloaded libraries, `pg_stat_statements,auto_explain` by default
 pg_delay: 0                       # replication apply delay for standby cluster leader
@@ -1370,12 +1375,12 @@ pg_files: [ license.lic ]
 
 配置模板：`{oltp,olap,crit,tiny}.yml`，默认为 `oltp.yml`。
 
-- `tiny.yml`：为小节点、虚拟机、小型演示优化（1-8核，1-16GB）
+- `tiny.yml`：为小节点、虚拟机、小型演示优化（1-3核）
 - `oltp.yml`：为 OLTP 工作负载和延迟敏感应用优化（4C8GB+）（默认模板）
 - `olap.yml`：为 OLAP 工作负载和吞吐量优化（4C8G+）
 - `crit.yml`：为数据一致性和关键应用优化（4C8G+）
 
-默认值：`oltp.yml`，但是 [配置](/docs/setup/install#配置) 程序将在当前节点为小节点时将此值设置为 `tiny.yml`。
+默认值：`oltp.yml`，但是 [配置](/docs/setup/install#配置) 程序将在当前节点为小节点（CPU 少于 4 核）时将此值设置为 `tiny.yml`。
 
 您可以拥有自己的模板，只需将其放在`templates/<mode>.yml`下，并将此值设置为模板名称即可使用。
 
@@ -1390,13 +1395,13 @@ PostgreSQL 服务器最大连接数。你可以选择一个介于 50 到 5000 �
 
 默认值为 `auto`，会根据 [`pg_conf`](#pg_conf) 和 [`pg_default_service_dest`](#pg_default_service_dest) 来设定最大连接数。
 
-- tiny: 100
-- olap: 200
-- oltp: 200 (pgbouncer) / 1000 (postgres)
-    - pg_default_service_dest = pgbouncer : 200
+- tiny: 250
+- olap: 500
+- oltp: 500 (pgbouncer) / 1000 (postgres)
+    - pg_default_service_dest = pgbouncer : 500
     - pg_default_service_dest = postgres : 1000
-- crit: 200 (pgbouncer) / 1000 (postgres)
-    - pg_default_service_dest = pgbouncer : 200
+- crit: 500 (pgbouncer) / 1000 (postgres)
+    - pg_default_service_dest = pgbouncer : 500
     - pg_default_service_dest = postgres : 1000
 
 不建议将此值设定为超过 5000，否则你还需要手动增加 haproxy 服务的连接限制。
@@ -1685,7 +1690,7 @@ openssl rand -hex 32   # 生成 64 位十六进制密钥
 
 pgsodium 获取密钥脚本的路径，默认使用 Pigsty 模板中的 `pgsodium_getkey` 脚本。
 
-此脚本用于在 PostgreSQL 启动时获取 pgsodium 的主密钥。默认脚本会从环境变量或配置文件中读取密钥。
+此脚本用于在 PostgreSQL 启动时获取 pgsodium 的主密钥。该模板会被渲染至 `/pg/bin/pgsodium_getkey`，默认脚本读取 `/pg/conf/pgsodium.key` 文件中的密钥，文件不存在时回退输出 [`pgsodium_key`](#pgsodium_key) 的值。
 
 如果您有自定义的密钥管理需求（如使用 HashiCorp Vault、AWS KMS 等），可以提供自定义脚本路径。
 
@@ -1760,7 +1765,7 @@ pg_default_hba_rules:             # postgres 默认 HBA 规则集，按 order �
   - {user: '${repl}'    ,db: postgres    ,addr: intra     ,auth: pwd   ,title: 'replicator postgres db from intranet' ,order: 300}
   - {user: '${monitor}' ,db: all         ,addr: localhost ,auth: pwd   ,title: 'monitor from localhost with password' ,order: 350}
   - {user: '${monitor}' ,db: all         ,addr: infra     ,auth: pwd   ,title: 'monitor from infra host with password',order: 400}
-  - {user: '${admin}'   ,db: all         ,addr: infra     ,auth: ssl   ,title: 'admin @ infra nodes with pwd & ssl'   ,order: 450}
+  - {user: '${admin}'   ,db: all         ,addr: intra     ,auth: pwd   ,title: 'admin @ intranet nodes with pwd'      ,order: 450}
   - {user: '${admin}'   ,db: all         ,addr: world     ,auth: ssl   ,title: 'admin @ everywhere with ssl & pwd'    ,order: 500}
   - {user: '+dbrole_readonly',db: all    ,addr: localhost ,auth: pwd   ,title: 'pgbouncer read/write via local socket',order: 550}
   - {user: '+dbrole_readonly',db: all    ,addr: intra     ,auth: pwd   ,title: 'read/write biz user via password'     ,order: 600}
@@ -1933,7 +1938,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
   - {user: '${repl}'    ,db: postgres    ,addr: intra     ,auth: pwd   ,title: 'replicator postgres db from intranet' ,order: 300}
   - {user: '${monitor}' ,db: all         ,addr: localhost ,auth: pwd   ,title: 'monitor from localhost with password' ,order: 350}
   - {user: '${monitor}' ,db: all         ,addr: infra     ,auth: pwd   ,title: 'monitor from infra host with password',order: 400}
-  - {user: '${admin}'   ,db: all         ,addr: infra     ,auth: ssl   ,title: 'admin @ infra nodes with pwd & ssl'   ,order: 450}
+  - {user: '${admin}'   ,db: all         ,addr: intra     ,auth: pwd   ,title: 'admin @ intranet nodes with pwd'      ,order: 450}
   - {user: '${admin}'   ,db: all         ,addr: world     ,auth: ssl   ,title: 'admin @ everywhere with ssl & pwd'    ,order: 500}
   - {user: '+dbrole_readonly',db: all    ,addr: localhost ,auth: pwd   ,title: 'pgbouncer read/write via local socket',order: 550}
   - {user: '+dbrole_readonly',db: all    ,addr: intra     ,auth: pwd   ,title: 'read/write biz user via password'     ,order: 600}
@@ -2539,8 +2544,10 @@ pg_exporter 所使用 DSN 中额外的 URL PATH 参数。
 如果没有指定此参数，PG Exporter 默认会使用以下的连接串访问 PostgreSQL：
 
 ```text
-postgres://{{ pg_monitor_username }}:{{ pg_monitor_password }}@{{ pg_host }}:{{ pg_port }}/postgres{% if pg_exporter_params != '' %}?{{ pg_exporter_params }}{% endif %}
+postgres://{{ pg_monitor_username }}:{{ pg_monitor_password }}@:{{ pg_port }}/postgres{% if pg_exporter_params != '' %}?{{ pg_exporter_params }}{% if pg_localhost != '' %}&host={{ pg_localhost }}{% endif %}{% endif %}
 ```
+
+通过 [`pg_exporters`](#pg_exporters) 监控远程实例时，则使用 `@{{ pg_host }}:{{ pg_port }}` 形式的连接串。
 
 当您想监控一个远程的 PostgreSQL 实例时，或者需要使用不同的监控用户/密码，配置选项时，可以使用这个参数。
 

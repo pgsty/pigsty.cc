@@ -38,7 +38,7 @@ weight: 9290
 {.ext-table .ext-table--rel}
 
 
-> PGDG 2.0.0 on EL8-10; PIGSTY 1.0 on D/U. TLS needs plperlu, Net::SMTP and IO::Socket::SSL.
+> TLS: plperlu, Net::SMTP, IO::Socket::SSL.
 
 
 ## 版本
@@ -46,7 +46,7 @@ weight: 9290
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_utl_smtp` | `plperlu` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_utl_smtp_$v` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_utl_smtp_$v` | `postgresql$v-plperl`, `perl(IO::Socket::SSL)` |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-utl-smtp` | `postgresql-plperl-$v`, `libio-socket-ssl-perl` |
 {.ext-table .wide .expand}
 
@@ -59,16 +59,16 @@ weight: 9290
 | el9.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | el10.x86_64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | el10.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
-| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
 @ el8.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_utl_smtp_18-2.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_utl_smtp_18-2.0-1PGDG.rhel8.10.noarch.rpm
@@ -89,16 +89,16 @@ weight: 9290
 @ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm
-@ d12.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
 @ el8.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_utl_smtp_17-2.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_utl_smtp_17-2.0-1PGDG.rhel8.10.noarch.rpm
@@ -119,16 +119,16 @@ weight: 9290
 @ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm
-@ d12.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
 @ el8.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_utl_smtp_16-2.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_utl_smtp_16-2.0-1PGDG.rhel8.10.noarch.rpm
@@ -149,16 +149,16 @@ weight: 9290
 @ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm
-@ d12.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
 @ el8.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_utl_smtp_15-2.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_utl_smtp_15-2.0-1PGDG.rhel8.10.noarch.rpm
@@ -179,16 +179,16 @@ weight: 9290
 @ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm
-@ d12.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
 @ el8.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_utl_smtp_14-2.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-2.0-1PGDG.rhel8.10.noarch.rpm pgdg 2.0 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_utl_smtp_14-2.0-1PGDG.rhel8.10.noarch.rpm
@@ -209,24 +209,24 @@ weight: 9290
 @ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm
-@ d12.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~trixie_all.deb pigsty 2.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~jammy_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~noble_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_2.0.0-1PGSTY~resolute_all.deb pigsty 2.0.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_2.0.0-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
 
-您可以使用 `pig build` 命令构建 `pg_utl_smtp` 扩展的 DEB 包：
+您可以使用 `pig build` 命令构建 `pg_utl_smtp` 扩展的 RPM / DEB 包：
 
 ```bash
-pig build pkg pg_utl_smtp         # 构建 DEB 包
+pig build pkg pg_utl_smtp         # 构建 RPM / DEB 包
 ```
 
 

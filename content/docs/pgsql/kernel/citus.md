@@ -67,7 +67,7 @@ all:
       - { user: 'all' ,db: all  ,addr: intra        ,auth: ssl ,title: 'all user ssl access from intranet'  }
 ```
 
-您也可以在一个分组内指定所有 Citus 集群成员的身份参数，如 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml) 所示：
+您也可以在一个分组内指定所有 Citus 集群成员的身份参数，例如下面的 10 节点示例（当前 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml) 模板采用同样的单分组写法，包含 6 组主从共 12 个节点，`pg_primary_db` 为 `citus`）：
 
 ```yaml
 #==========================================================#

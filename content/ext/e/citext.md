@@ -30,6 +30,7 @@ weight: 3980
 
 | **相关扩展** | [`unaccent`](/ext/e/unaccent) [`icu_ext`](/ext/e/icu_ext) [`pg_trgm`](/ext/e/pg_trgm) [`pg_xenophile`](/ext/e/pg_xenophile) [`gb18030_2022`](/ext/e/gb18030_2022) [`pg_cjk_parser`](/ext/e/pg_cjk_parser) [`dict_xsyn`](/ext/e/dict_xsyn) [`pgroonga`](/ext/e/pgroonga) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pgpcre`](/ext/e/pgpcre) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pg_lion_citext`](/ext/e/pg_lion_citext) |
 {.ext-table .ext-table--rel}
 
 

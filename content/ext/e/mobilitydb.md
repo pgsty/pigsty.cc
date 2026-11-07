@@ -1,7 +1,7 @@
 ---
 title: "mobilitydb"
 linkTitle: "mobilitydb"
-description: "MobilityDB地理空间投影数据管理分析平台"
+description: "MobilityDB 地理空间轨迹数据管理与分析平台"
 weight: 1650
 ---
 
@@ -40,7 +40,7 @@ weight: 1650
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY 1.3.1 includes the security fix; 1.2 to 1.3 requires backup/restore. PGDG covers D12/D13/U24/U26; PIGSTY covers EL/U22.
+> RPM fixes input mutation; 1.2 to 1.3 needs backup/restore.
 
 
 ## 版本
@@ -48,7 +48,7 @@ weight: 1650
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `postgis` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis36_$v` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis37_$v` |
 | [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
 {.ext-table .wide .expand}
 
@@ -71,12 +71,12 @@ weight: 1650
 | u24.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
 | u26.x86_64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
 | u26.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-@ el8.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_18-1.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_18-1.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_18-1.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_18-1.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el10.x86_64.rpm pigsty 1.3.1 707.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_18-1.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-1PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_18-1.3.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_18-1.3.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_18-1.3.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_18-1.3.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el9.aarch64.rpm pigsty 1.3.1 677.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_18-1.3.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el10.x86_64.rpm pigsty 1.3.1 708.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_18-1.3.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.1-2PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_18-1.3.1-2PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb pgdg 1.3.1 714.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb pigsty 1.3.1 716.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
@@ -111,12 +111,12 @@ weight: 1650
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb pigsty 1.3.1 648.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_17-1.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_17-1.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_17-1.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_17-1.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el10.x86_64.rpm pigsty 1.3.1 707.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_17-1.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-1PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_17-1.3.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_17-1.3.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_17-1.3.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_17-1.3.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_17-1.3.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el10.x86_64.rpm pigsty 1.3.1 708.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_17-1.3.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.1-2PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_17-1.3.1-2PGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb pgdg 1.3.1 716.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb pigsty 1.3.1 713.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
@@ -153,12 +153,12 @@ weight: 1650
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb pigsty 1.3.1 649.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_16-1.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_16-1.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_16-1.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_16-1.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el10.x86_64.rpm pigsty 1.3.1 708.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_16-1.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-1PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_16-1.3.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_16-1.3.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_16-1.3.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_16-1.3.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_16-1.3.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el10.x86_64.rpm pigsty 1.3.1 707.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_16-1.3.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.1-2PGSTY.el10.aarch64.rpm pigsty 1.3.1 682.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_16-1.3.1-2PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb pgdg 1.3.1 715.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb pigsty 1.3.1 715.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
@@ -195,12 +195,12 @@ weight: 1650
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb pigsty 1.3.1 648.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el8.x86_64.rpm pigsty 1.3.1 788.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_15-1.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_15-1.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_15-1.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el9.aarch64.rpm pigsty 1.3.1 675.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_15-1.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el10.x86_64.rpm pigsty 1.3.1 707.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_15-1.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-1PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_15-1.3.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_15-1.3.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_15-1.3.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el9.x86_64.rpm pigsty 1.3.1 691.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_15-1.3.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el9.aarch64.rpm pigsty 1.3.1 675.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_15-1.3.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el10.x86_64.rpm pigsty 1.3.1 705.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_15-1.3.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.1-2PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_15-1.3.1-2PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb pgdg 1.3.1 715.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb pigsty 1.3.1 715.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
@@ -237,12 +237,12 @@ weight: 1650
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb pigsty 1.3.1 648.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.1-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el8.x86_64.rpm pigsty 1.3.1 788.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_14-1.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el8.aarch64.rpm pigsty 1.3.1 737.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_14-1.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_14-1.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_14-1.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el10.x86_64.rpm pigsty 1.3.1 706.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_14-1.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-1PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_14-1.3.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el8.x86_64.rpm pigsty 1.3.1 789.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_14-1.3.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el8.aarch64.rpm pigsty 1.3.1 736.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_14-1.3.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el9.x86_64.rpm pigsty 1.3.1 690.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_14-1.3.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el9.aarch64.rpm pigsty 1.3.1 676.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_14-1.3.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el10.x86_64.rpm pigsty 1.3.1 706.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_14-1.3.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.1-2PGSTY.el10.aarch64.rpm pigsty 1.3.1 681.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_14-1.3.1-2PGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb pgdg 1.3.1 716.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb pigsty 1.3.1 714.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.1-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 716.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb

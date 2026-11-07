@@ -143,7 +143,7 @@ psql -h <host> -p 6432 -U <user> -d <database> -c "SELECT 1"
 psql -c "SELECT pg_reload_conf()"
 
 # 如果有语法错误，查看日志
-tail -f /pg/log/postgresql-*.log
+tail -f /pg/log/postgres/postgresql-*.log
 ```
 
 

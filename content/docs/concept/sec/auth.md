@@ -101,7 +101,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
   - {user: '${repl}'    ,db: postgres    ,addr: intra     ,auth: pwd   ,title: 'replicator postgres db from intranet' ,order: 300}
   - {user: '${monitor}' ,db: all         ,addr: localhost ,auth: pwd   ,title: 'monitor from localhost with password' ,order: 350}
   - {user: '${monitor}' ,db: all         ,addr: infra     ,auth: pwd   ,title: 'monitor from infra host with password',order: 400}
-  - {user: '${admin}'   ,db: all         ,addr: infra     ,auth: ssl   ,title: 'admin @ infra nodes with pwd & ssl'   ,order: 450}
+  - {user: '${admin}'   ,db: all         ,addr: intra     ,auth: pwd   ,title: 'admin @ intranet nodes with pwd'      ,order: 450}
   - {user: '${admin}'   ,db: all         ,addr: world     ,auth: ssl   ,title: 'admin @ everywhere with ssl & pwd'    ,order: 500}
   - {user: '+dbrole_readonly',db: all    ,addr: localhost ,auth: pwd   ,title: 'pgbouncer read/write via local socket',order: 550}
   - {user: '+dbrole_readonly',db: all    ,addr: intra     ,auth: pwd   ,title: 'read/write biz user via password'     ,order: 600}
@@ -111,7 +111,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
 逐层来看：
 
 - **本地最受信任**：超级用户 `postgres` 只能通过本地 Unix Socket 以 `ident` 方式进入 —— 不需要密码，但也无法在远程使用。这就是为什么 dbsu 默认不设密码：不存在可以被窃取的口令。
-- **内网次之**：复制与业务账号在内网使用 SCRAM 口令认证；监控和管理用户的远程访问主要面向 INFRA 节点。
+- **内网次之**：复制、业务与管理账号在内网使用 SCRAM 口令认证；监控用户的远程访问面向 INFRA 节点。
 - **公网最严**：默认只有管理员可以从任意地址访问，且必须同时提供口令与 TLS 连接。
 
 PgBouncer 侧的默认规则更保守一层：监控与管理账号从公网访问连接池会被显式 `deny`，业务用户则限定在本机与内网。

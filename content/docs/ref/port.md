@@ -36,6 +36,7 @@ categories: [参考]
 |    [**`REDIS`**](/docs/redis)     |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |        **`code-server`**         | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用  |
+|    [**`JUICE`**](/docs/juice)     |        **`juicefs` 指标**         | `9567`  | [**`juice_instances`**](/docs/juice/param#juice_instances)（`port` 字段）         | ⚠️ 按需启用  |
 |    [**`KAFKA`**](/docs/kafka)     |           **`broker`**           | `9092`  | [**`kafka_port`**](/docs/kafka/param#kafka_port)                             | 🧪 PILOT  |
 |    [**`KAFKA`**](/docs/kafka)     |      **`KRaft controller`**      | `9093`  | [**`kafka_controller_port`**](/docs/kafka/param#kafka_controller_port)       | 🧪 PILOT  |
 |    [**`KAFKA`**](/docs/kafka)     |       **`kafka_exporter`**       | `9308`  | [**`kafka_exporter_port`**](/docs/kafka/param#kafka_exporter_port)           | 🧪 PILOT  |

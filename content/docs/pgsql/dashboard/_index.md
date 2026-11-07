@@ -291,7 +291,7 @@ categories: [参考]
 
 
 
-[PGLOG Overview](https://demo.pigsty.cc/ui/d/pglog-overview)：Pigsty CMDB 中的 CSV 日志样本中某一条会话的日志详情
+[PGLOG Session](https://demo.pigsty.cc/ui/d/pglog-session)：Pigsty CMDB 中的 CSV 日志样本中某一条会话的日志详情
 
 > [!DETAILS]- PGLOG Session
 > [![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)

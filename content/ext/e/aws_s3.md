@@ -1,7 +1,7 @@
 ---
 title: "aws_s3"
 linkTitle: "aws_s3"
-description: "从S3导入导出数据的外部数据源包装器"
+description: "从 S3 导入导出数据（兼容 RDS aws_s3 扩展）"
 weight: 8800
 ---
 

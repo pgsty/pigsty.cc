@@ -18,10 +18,10 @@ categories: [参考]
 
 ```sql
 -- 删除扩展
-DROP EXTENSION pgvector;
+DROP EXTENSION vector;
 
 -- 如果有依赖对象，需要级联删除
-DROP EXTENSION pgvector CASCADE;
+DROP EXTENSION vector CASCADE;
 ```
 
 > **警告**：`CASCADE` 会删除所有依赖于该扩展的对象（表、函数、视图等），请谨慎使用。
@@ -37,7 +37,7 @@ SELECT
     objid,
     deptype
 FROM pg_depend
-WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'pgvector');
+WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'vector');
 
 -- 查看使用了扩展类型的表
 SELECT
@@ -80,7 +80,7 @@ sudo yum remove pgvector_18*
 sudo apt remove postgresql-18-pgvector
 
 # 使用 pig 包管理器
-pig remove pgvector
+pig ext rm pgvector
 ```
 
 > 通常保留软件包不会有问题，仅在需要释放磁盘空间或解决冲突时才需要卸载。
@@ -107,10 +107,10 @@ pig remove pgvector
 
 ```bash
 # 1. 检查依赖关系
-psql -d mydb -c "SELECT * FROM pg_depend WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'pgvector');"
+psql -d mydb -c "SELECT * FROM pg_depend WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'vector');"
 
 # 2. 删除数据库中的扩展
-psql -d mydb -c "DROP EXTENSION pgvector;"
+psql -d mydb -c "DROP EXTENSION vector;"
 
 # 3. 如果是预加载扩展，从 shared_preload_libraries 移除
 pg edit-config pg-meta --force -p shared_preload_libraries='pg_stat_statements, auto_explain'

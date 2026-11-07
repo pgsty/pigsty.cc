@@ -204,7 +204,7 @@ pg-meta-1
 ```bash
 # 首先在配置清单中添加新成员定义，然后执行：
 bin/etcd-add <ip>      # 添加单个新成员
-bin/etcd-add <ip1>     # 添加多个新成员
+bin/etcd-add <ip1> <ip2> ...  # 添加多个新成员
 ```
 
 **手动方式：**

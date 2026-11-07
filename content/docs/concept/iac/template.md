@@ -22,7 +22,7 @@ categories: [概念]
 
 Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/configure) 脚本作为可选的配置向导，它将根据您的环境和输入，生成具有良好默认值的 [**配置清单**](/docs/setup/config/)。
 
-使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 是相对于 `conf` 目录的路径（可省略 `.yml` 后缀）。开发版将内核模板迁入 `conf/fork/`，对应使用 `-c fork/<name>`；请根据所用源码中的实际路径选择。
+使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 是相对于 `conf` 目录、不带 `.yml` 后缀的路径。开发版将内核模板迁入 `conf/fork/`，对应使用 `-c fork/<name>`；请根据所用源码中的实际路径选择。
 
 ```bash
 ./configure                     # 默认使用 meta.yml 配置模板
@@ -39,7 +39,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
 ./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
-./configure -c agens            # AgensGraph 图数据库内核 (17)
+./configure -c fork/agens       # AgensGraph 图数据库内核 (18)
 ./configure -c pgedge           # pgEdge 分布式数据库内核 (15~18，默认 18)
 ./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
@@ -82,7 +82,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
 | [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
-| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)                |
+| [**`fork/agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (18)                |
 | [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)                |
 {.full-width .wide .expand}
@@ -126,6 +126,10 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库    |
 | [**`maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用      |
 | [**`registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry |
+| [**`immich.yml`**](/docs/conf/immich/)         | 启动 Immich 相册管理应用 |
+| [**`jumpserver.yml`**](/docs/conf/jumpserver/) | 启动 JumpServer 堡垒机 |
+| [**`discourse.yml`**](/docs/conf/discourse/)   | 启动 Discourse 社区论坛（开发版） |
+| [**`silo.yml`**](/docs/conf/silo/)             | 启动独立的 Silo 对象存储应用（开发版） |
 {.full-width .wide .expand}
 
 
@@ -137,6 +141,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 | 模板                                     | 说明                                                     |
 |----------------------------------------|--------------------------------------------------------|
+| [**`bare.yml`**](/docs/conf/bare/)     | 最小化的单节点起步配置                                            |
 | [**`el.yml`**](/docs/conf/el/)         | EL 8/9 系统的全参数配置文件                                      |
 | [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                               |
 | **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                          |
@@ -144,6 +149,9 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
 | [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
 | [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
+| [**`kernel.yml`**](/docs/conf/kernel/) | 10 节点内核矩阵演示配置                                          |
+| [**`saas.yml`**](/docs/conf/saas/)     | 含全部扩展的富功能单节点模板                                         |
+| [**`wool.yml`**](/docs/conf/wool/)     | 低成本阿里云 ECS 演示模板                                         |
 | [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件           |
 | [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                                    |
 | [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                              |

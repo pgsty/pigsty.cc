@@ -39,9 +39,6 @@ weight: 3630
 {.ext-table .ext-table--rel}
 
 
-> RPM 1.3.0 installs SQL/control 1.3; DEB baseline 1.2.0. Local 1.3.0 recipes do not imply DEB publication.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |

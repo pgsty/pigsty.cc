@@ -14,7 +14,7 @@ Pigsty 预置了一套精简的 ACL 模型，通过以下参数描述：
 - `pg_default_roles`：系统角色与系统用户。
 - `pg_users`：业务用户与角色。
 - `pg_default_privileges`：管理员/属主新建对象时的默认权限。
-- `pg_revoke_public`、`pg_default_schemas`、`pg_default_extensions`：控制 `template1` 的默认行为。
+- `pg_default_schemas`、`pg_default_extensions`：控制 `template1` 的默认行为。
 
 这些参数应与 HBA 和数据库定义一起管理，形成可复现的访问控制配置。
 
@@ -111,7 +111,7 @@ pg_default_privileges:
 
 额外提示：
 
-- `pg_revoke_public` 默认为 `true`，意味着自动撤销 `PUBLIC` 在数据库和 `public` schema 上的 `CREATE` 权限。
+- 初始化模板与建库模板会固定撤销 `PUBLIC` 在数据库和 `public` schema 上的 `CREATE` 权限，并将其授予 `dbrole_admin`；该行为不由参数控制。
 - `pg_default_schemas` 和 `pg_default_extensions` 控制在 `template1/postgres` 中预创建的 schema/扩展，通常用于监控对象（`monitor` schema、`pg_stat_statements` 等）。
 
 

@@ -136,11 +136,11 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 
 **VictoriaMetrics** 是 Pigsty 的时序数据库，负责拉取并存储所有监控指标。[**在线演示**](https://demo.pigsty.cc/vmetrics/)
 
-默认监听 `8428` 端口，挂载于 **Nginx** `/vmetrics` 路径上，亦可通过 `p.pigsty` 域名直接访问：
+默认监听 `8428` 端口，挂载于 **Nginx** `/vmetrics` 路径上：
 
 |          IP 访问（替换）           |     域名（HTTP）      | 域名（HTTPS）| 公开演示 |
 |:----------------------:|:-----------:|:---------:|:-----------------------:|:----:|
-| [**`http://10.10.10.10/vmetrics`**](http://10.10.10.10/vmetrics) | [**`http://p.pigsty`**](http://p.pigsty) | [**`https://i.pigsty/vmetrics`**](https://i.pigsty/vmetrics) | [**`https://demo.pigsty.cc/vmetrics`**](https://demo.pigsty.cc/vmetrics)  |
+| [**`http://10.10.10.10/vmetrics`**](http://10.10.10.10/vmetrics) | [**`http://i.pigsty/vmetrics`**](http://i.pigsty/vmetrics) | [**`https://i.pigsty/vmetrics`**](https://i.pigsty/vmetrics) | [**`https://demo.pigsty.cc/vmetrics`**](https://demo.pigsty.cc/vmetrics)  |
 {.full-width}
 
 **VictoriaMetrics** 完全兼容 **Prometheus** API，支持 PromQL 查询、远程读写协议以及 Alertmanager API。
@@ -218,11 +218,11 @@ Pigsty 预置了 PGSQL、NODE、REDIS 等模块的告警规则，覆盖常见故
 
 **AlertManager** 负责告警事件的聚合、去重、分组与分发。[**在线演示**](https://demo.pigsty.cc/alertmgr/)
 
-默认监听 `9059` 端口，挂载于 **Nginx** `/alertmgr` 路径上，亦可通过 `a.pigsty` 域名直接访问：
+默认监听 `9059` 端口，挂载于 **Nginx** `/alertmgr` 路径上：
 
 |          IP 访问（替换）           |     域名（HTTP）      | 域名（HTTPS）| 公开演示 |
 |:----------------------:|:-----------:|:---------:|:-----------------------:|:----:|
-| [**`http://10.10.10.10/alertmgr`**](http://10.10.10.10/alertmgr) | [**`http://a.pigsty`**](http://a.pigsty) | [**`https://i.pigsty/alertmgr`**](https://i.pigsty/alertmgr) | [**`https://demo.pigsty.cc/alertmgr`**](https://demo.pigsty.cc/alertmgr)  |
+| [**`http://10.10.10.10/alertmgr`**](http://10.10.10.10/alertmgr) | [**`http://i.pigsty/alertmgr`**](http://i.pigsty/alertmgr) | [**`https://i.pigsty/alertmgr`**](https://i.pigsty/alertmgr) | [**`https://demo.pigsty.cc/alertmgr`**](https://demo.pigsty.cc/alertmgr)  |
 {.full-width}
 
 **AlertManager** 支持多种通知渠道：邮件、Webhook、Slack、PagerDuty、企业微信等。

@@ -54,8 +54,8 @@ Redis 有三种不同的工作模式，由 [`redis_mode`](/docs/redis/param#redi
 下面给出了三种 Redis 集群的定义样例：
 
 * 一个1节点，一主一从的 Redis Standalone 集群：`redis-ms`
-* 一个1节点，3实例的 Redis Sentinel 集群：`redis-sentinel`
-* 一个2节点，6实例的 Redis Cluster 集群： `redis-cluster`
+* 一个1节点，3实例的 Redis Sentinel 集群：`redis-meta`
+* 一个2节点，6实例的 Redis Cluster 集群： `redis-test`
 
 ```yaml
 redis-ms: # redis 经典主从集群

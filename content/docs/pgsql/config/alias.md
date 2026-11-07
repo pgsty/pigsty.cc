@@ -13,7 +13,7 @@ categories: [参考]
 
 PostgreSQL 在不同操作系统上的软件包命名规则存在显著差异：
 
-- **EL 系统**（RHEL/Rocky/Alma/...）使用 `pgvector_18`，`postgis36_18` 这样的格式
+- **EL 系统**（RHEL/Rocky/Alma/...）使用 `pgvector_18`，`postgis37_18` 这样的格式
 - **Debian/Ubuntu 系统** 使用 `postgresql-18-pgvector`，`postgresql-18-postgis-3` 这样的格式
 
 这种差异给用户带来了额外的认知负担：您需要记住不同系统的包名规则，还要处理 PostgreSQL 版本号嵌入的问题。
@@ -28,7 +28,7 @@ Pigsty 通过 **软件包别名（Package Alias）** 机制解决了这个问题
 pg_extensions: [ postgis, pgvector, timescaledb ]
 
 # 等效于 EL9 + PG18 上的实际包名
-pg_extensions: [ postgis36_18, pgvector_18, timescaledb-tsl_18 ]
+pg_extensions: [ postgis37_18, pgvector_18, timescaledb-tsl_18 ]
 
 # 等效于 Ubuntu 24 + PG18 上的实际包名
 pg_extensions: [ postgresql-18-postgis-3, postgresql-18-pgvector, postgresql-18-timescaledb-tsl ]
@@ -106,7 +106,7 @@ pg18-main:   "postgresql18 postgresql18-server postgresql18-libs postgresql18-co
 ```bash
 用户配置别名 --> 检测操作系统 -->  查找别名映射表 ---> 替换$v占位符 ---> 安装实际软件包
      ↓              ↓               ↓                               ↓
-  postgis      el9.x86_64      postgis36_$v                 postgis36_18
+  postgis      el9.x86_64      postgis37_$v                 postgis37_18
   postgis      u24.x86_64      postgresql-$v-postgis-3      postgresql-18-postgis-3
 ```
 
@@ -135,6 +135,6 @@ Pigsty 的别名系统使用 `$v` 作为 PostgreSQL 版本号的占位符。当�
 
 ### 精确包名与通配符
 
-EL 映射使用精确包名，例如 `postgis` → `postgis36_$v`、`pgvector` → `pgvector_$v`，不会自动追加 `*`。显式使用通配符可能安装更多子包；具体展开以对应平台的 `package_map` 为准。
+EL 映射使用精确包名，例如 `postgis` → `postgis37_$v`、`pgvector` → `pgvector_$v`，不会自动追加 `*`。显式使用通配符可能安装更多子包；具体展开以对应平台的 `package_map` 为准。
 
 别名展开只做名称映射与版本占位符替换，不会保证所选 PostgreSQL 版本、架构及仓库存在这个包。类别组也会按平台调整成员，使用前应核对 [**扩展可用性矩阵**](/ext/os/)。

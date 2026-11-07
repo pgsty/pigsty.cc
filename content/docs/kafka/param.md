@@ -53,7 +53,7 @@ KAFKA 角色刻意只公开 16 项持久参数。拓扑、Listener、安全实�
 kafka_cluster: kf-main
 ```
 
-它用于发现完整集群成员、生成实例名和定位 Bootstrap Manifest。每次 `kafka.yml` 生命周期操作必须用精确 `-l` 选择该集群的全部成员。
+它用于发现完整集群成员、生成实例名和定位 Bootstrap Manifest。每次 `kafka.yml` 运行中被选中的集群都必须包含其全部成员：部分选择会被拒绝，选择多个完整集群或不加 `-l` 裸跑全部集群都是允许的。
 
 
 ### `kafka_seq`
@@ -261,7 +261,7 @@ kafka_users:
 
 约束：
 
-- `name` 在列表中唯一；`password` 必填且至少 12 个字符，应引用秘密管理系统；
+- `name` 在列表中唯一，且不能使用角色保留的 `pigsty-admin`、`pigsty-monitor`、`pigsty-broker-a`、`pigsty-broker-b`；`password` 必填且至少 12 个字符，应引用秘密管理系统；
 - ACL `resource` 为 `topic`、`group`、`transactional_id`、`cluster`；
 - `pattern` 为 `literal`（默认）或 `prefixed`；
 - 操作为 `Read`、`Write`、`Create`、`Delete`、`Alter`、`Describe`、`ClusterAction`、`DescribeConfigs`、`AlterConfigs`、`IdempotentWrite`；
@@ -285,7 +285,7 @@ kafka_topics:
       retention.ms: 604800000
 ```
 
-身份预检只校验 `name` 在列表中唯一；Partition 数与 RF 的合法性（至少为 1、RF 不超过当前 Broker 数）由 Kafka 在创建时判定，因此这类错误会在资源收敛阶段暴露，而不是在 `--check` 阶段。收敛语义是：
+资源声明校验只检查 `name` 在列表中唯一；Partition 数与 RF 的合法性（至少为 1、RF 不超过当前 Broker 数）由 Kafka 在创建时判定，因此这类错误会在资源收敛阶段暴露，而不是在 `--check` 阶段。收敛语义是：
 
 - Topic 不存在时幂等创建；
 - Partition 只允许增加，减少会失败；

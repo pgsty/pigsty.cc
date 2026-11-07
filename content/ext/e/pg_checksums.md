@@ -1,7 +1,7 @@
 ---
 title: "pg_checksums"
 linkTitle: "pg_checksums"
-description: "在离线模式下激活/启用/禁用数据库集群的校验和功能"
+description: "离线启用或禁用校验和，支持在线或离线校验"
 weight: 5110
 ---
 
@@ -10,6 +10,11 @@ weight: 5110
     <div class="ext-card__kicker">仓库</div>
     <div class="ext-card__title">credativ/pg_checksums</div>
     <div class="ext-card__desc">https://github.com/credativ/pg_checksums</div>
+  </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_checksums-1.4.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_checksums-1.4.tar.gz</div>
+    <div class="ext-card__desc">pg_checksums-1.4.tar.gz</div>
   </a>
 </div>
 
@@ -20,12 +25,12 @@ weight: 5110
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_checksums`**](/ext/e/pg_checksums) | `1.4` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_checksums`**](/ext/e/pg_checksums) | `1.4` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 5110  | [**`pg_checksums`**](/ext/e/pg_checksums) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 5110  | [**`pg_checksums`**](/ext/e/pg_checksums) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`amcheck`](/ext/e/amcheck) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_orphaned`](/ext/e/pg_orphaned) [`pg_pathcheck`](/ext/e/pg_pathcheck) [`pg_isok`](/ext/e/pg_isok) [`pg_surgery`](/ext/e/pg_surgery) [`pageinspect`](/ext/e/pageinspect) [`pg_repack`](/ext/e/pg_repack) [`adminpack`](/ext/e/adminpack) |
@@ -288,6 +293,14 @@ weight: 5110
 @ u26.aarch64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.4-1.pgdg26.04+2_arm64.deb pgdg 1.4 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.4-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.4-1.pgdg26.04+1_arm64.deb pgdg 1.4 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.4-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_checksums` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pg_checksums         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

@@ -38,7 +38,7 @@ weight: 2600
 {.ext-table .ext-table--rel}
 
 
-> PIGSTY RPM package 1.8.0 for PostgreSQL 18 is built from the upstream PG18 v1.8.0-rc0 source; SQL/control version is 1.8.0 and LOAD 'age' is required before use. PostgreSQL 17 remains on PIGSTY 1.7.0; PGDG DEB raw version 1.8.0~rc0 is available for PostgreSQL 18.
+> PG18 RC; LOAD 'age'.
 
 
 ## 版本
@@ -46,8 +46,8 @@ weight: 2600
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18,17" >}} | `age` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18" >}} | `age_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7.0` | {{< pgvers "17" >}} | `postgresql-$v-age` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18,17" >}} | `age_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.8.0` | {{< pgvers "18,17" >}} | `postgresql-$v-age` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}

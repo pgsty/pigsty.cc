@@ -125,7 +125,7 @@ minio:
 
 
 
-例如 Vagrant 对象存储 [沙箱](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) 定义了一个带有 4 块磁盘的单节点 Silo 集群：`/data1`、`/data2`、`/data3` 和 `/data4`。启动 Silo 前，需要正确挂载并使用 `xfs` 格式化这些磁盘：
+例如 Vagrant 对象存储 [沙箱](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) 定义了 4 个 Silo 节点，每个节点带有 4 块磁盘：`/data1`、`/data2`、`/data3` 和 `/data4`。启动 Silo 前，需要正确挂载并使用 `xfs` 格式化这些磁盘：
 
 ```bash
 mkfs.xfs /dev/vdb; mkdir /data1; mount -t xfs /dev/vdb /data1;   # 挂载第1块盘……
@@ -421,12 +421,7 @@ Silo 默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#min
 ```yaml  
 # ./infra.yml -t nginx
 infra_portal:
-  home         : { domain: h.pigsty }
-  grafana      : { domain: g.pigsty ,endpoint: "${admin_ip}:3000" , websocket: true }
-  vmetrics     : { domain: v.pigsty ,endpoint: "${admin_ip}:8428" }
-  alertmanager : { domain: a.pigsty ,endpoint: "${admin_ip}:9059" }
-  blackbox     : { endpoint: "${admin_ip}:9115" }
-  vlogs        : { endpoint: "${admin_ip}:9428" }
+  home         : { domain: i.pigsty }
 
   # 对象存储管理页面需要 HTTPS / Websocket
   minio        : { domain: m.pigsty     ,endpoint: "10.10.10.10:9001" ,scheme: https ,websocket: true }

@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **28** 个扩展包中包含多个扩展，共计 **134** 个扩展。
+以下 **29** 个扩展包中包含多个扩展，共计 **137** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -38,7 +38,7 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 1520 | [**`pointcloud`**](/ext/e/pointcloud) | `1.2.5` | `--s-d--` | - | 提供激光雷达点云数据类型支持 |
-| 1521 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | `1.2.5` | `--s-dt-` | - | 将激光雷达点云与PostGIS几何类型相集成 |
+| 1521 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | `1.2.5` | `----dt-` | - | 将激光雷达点云与PostGIS几何类型相集成 |
 {.ext-table .wide .expand}
 
 ## pg_h3
@@ -72,7 +72,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | `--sLd--` | - | MobilityDB地理空间投影数据管理分析平台 |
+| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | `--sLd--` | - | MobilityDB 地理空间轨迹数据管理与分析平台 |
 | 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.1` | `----d-r` | - | MobilityDB随机数据生成函数 |
 {.ext-table .wide .expand}
 
@@ -84,16 +84,6 @@ weight: 40
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 1700 | [**`qdgc`**](/ext/e/qdgc) | `0.1.0` | `----dtr` | - | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
 | 1710 | [`qdgc_postgis`](/ext/e/qdgc_postgis) | `0.1.0` | `----d-r` | - | 为 QDGC 增加 PostGIS geometry/geography 绑定与区域到网格单元的填充能力。 |
-{.ext-table .wide .expand}
-
-## pgcontext
-
-[`pgcontext`](/ext/e/pgcontext) 扩展包共有 **2** 个扩展：
-
-| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
-|:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1960 | [**`pgcontext`**](/ext/e/pgcontext) | `0.3.0` | `--s-d--` | `pgcontext` | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
-| 1970 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | `0.2.0` | `--s-d--` | - | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 {.ext-table .wide .expand}
 
 ## pgroonga
@@ -130,8 +120,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2400 | [**`citus`**](/ext/e/citus) | `14.3-1` | `--sLd--` | `pg_catalog` | 将 PostgreSQL 横向扩展为分布式数据库 |
-| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.3-1` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
+| 2400 | [**`citus`**](/ext/e/citus) | `14.3.0` | `--sLd--` | `pg_catalog` | 将 PostgreSQL 横向扩展为分布式数据库 |
+| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.3.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
 {.ext-table .wide .expand}
 
 ## pg_lake
@@ -140,14 +130,35 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.5` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
-| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.5` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
-| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.5` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
-| 2563 | [`pg_map`](/ext/e/pg_map) | `3.5` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
-| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.5` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
-| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.5` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
-| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.5` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
-| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.5` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
+| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.6` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.6` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.6` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| 2563 | [`pg_map`](/ext/e/pg_map) | `3.6` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
+| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.6` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
+| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.6` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
+| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.6` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
+| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.6` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
+{.ext-table .wide .expand}
+
+## pg_statecharts
+
+[`pg_statecharts`](/ext/e/pg_statecharts) 扩展包共有 **2** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 2695 | [**`pg_statecharts`**](/ext/e/pg_statecharts) | `0.1.0` | `----d--` | `fsm` | 层次状态机与事务性事件处理 |
+| 2696 | [`pg_statecharts_dev`](/ext/e/pg_statecharts_dev) | `0.1.0` | `----d--` | `fsm` | pg_statecharts 的 SCXML 导入与迁移开发工具 |
+{.ext-table .wide .expand}
+
+## pg_lion
+
+[`pg_lion`](/ext/e/pg_lion) 扩展包共有 **3** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 2715 | [**`pg_lion`**](/ext/e/pg_lion) | `0.3.0` | `--s-d-r` | - | 用于过滤、计数与聚合的 Roaring 位图倒排索引 |
+| 2716 | [`pg_lion_citext`](/ext/e/pg_lion_citext) | `0.3.0` | `----d-r` | - | 为 lion 索引提供大小写不敏感的 citext 运算符类 |
+| 2717 | [`pg_lion_vector`](/ext/e/pg_lion_vector) | `0.3.0` | `--s-d-r` | - | 为 pgvector 的 vector 与 halfvec 提供带过滤的近邻索引 |
 {.ext-table .wide .expand}
 
 ## omnigres
@@ -316,7 +327,7 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 6450 | [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | `--sLd-r` | - | 使用SQL查询获取操作系统指标 |
-| 6460 | [`pg_proctab`](/ext/e/pg_proctab) | `2.0.1` | `--s-d-r` | - | 通过SQL接口访问操作系统进程表 |
+| 6460 | [`pg_proctab`](/ext/e/pg_proctab) | `2.0.1` | `----d-r` | - | 通过SQL接口访问操作系统进程表 |
 {.ext-table .wide .expand}
 
 ## documentdb
@@ -327,7 +338,7 @@ weight: 40
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.0` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
 | 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.0` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `1.0-0` | `--sLd--` | - | DocumentDB多节点模式的API层 |
+| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `1.0` | `--sLd--` | - | DocumentDB多节点模式的API层 |
 | 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.0` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
 {.ext-table .wide .expand}
 
@@ -363,6 +374,6 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
+| 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `-bsLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
 | 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `1.0.0` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 {.ext-table .wide .expand}

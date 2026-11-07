@@ -1,7 +1,7 @@
 ---
 title: "pgdd"
 linkTitle: "pgdd"
-description: "提供通过标准SQL查询数据库目录集簇的能力"
+description: "库内数据字典，通过标准 SQL 进行数据库内省"
 weight: 5130
 ---
 

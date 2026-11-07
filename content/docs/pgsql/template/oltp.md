@@ -125,7 +125,7 @@ wal_writer_flush_after: 1MB
 commit_delay: 20
 commit_siblings: 10
 checkpoint_timeout: 15min
-checkpoint_completion_target: 0.80
+checkpoint_completion_target: 0.95
 ```
 
 这些设置平衡了数据安全性和写入性能。

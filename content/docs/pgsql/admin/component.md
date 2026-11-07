@@ -23,6 +23,7 @@ Pigsty 的 PGSQL 模块由多个组件构成，每个组件都以 systemd 服务
 | HAProxy            | **`543x`** | `haproxy`            | 负载均衡器，暴露数据库服务                |
 | pg_exporter        | **`9630`** | `pg_exporter`        | PostgreSQL 监控指标导出器           |
 | pgbouncer_exporter | **`9631`** | `pgbouncer_exporter` | Pgbouncer 监控指标导出器            |
+| pgbackrest_exporter | **`9854`** | `pgbackrest_exporter` | pgBackRest 备份监控指标导出器        |
 | vip-manager        | -          | `vip-manager`        | 可选，管理 L2 VIP 地址漂移            |
 {.full-width}
 
@@ -221,7 +222,7 @@ journalctl -u haproxy -f
 HAProxy 提供 Web 管理界面，默认监听在 9101 端口：
 
 ```text
-http://<node_ip>:9101/haproxy
+http://<node_ip>:9101/haproxy/<nodename>/
 ```
 
 默认认证：用户名 `admin`，密码由 [**`haproxy_admin_password`**](/docs/node/param#haproxy_admin_password) 配置。
@@ -331,7 +332,7 @@ systemctl status vip-manager
 journalctl -u vip-manager -f
 ```
 
-**配置文件位置**：`/etc/default/vip-manager`
+**配置文件位置**：`/etc/default/vip-manager.yml`
 
 **验证 VIP 绑定**
 

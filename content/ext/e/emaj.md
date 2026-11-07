@@ -30,7 +30,7 @@ weight: 1050
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 1050  | [**`emaj`**](/ext/e/emaj) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `emaj` |
+| 1050  | [**`emaj`**](/ext/e/emaj) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `emaj` |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`btree_gist`](/ext/e/btree_gist) [`dblink`](/ext/e/dblink) [`table_version`](/ext/e/table_version) [`pgmemento`](/ext/e/pgmemento) [`data_historization`](/ext/e/data_historization) [`table_log`](/ext/e/table_log) [`ddl_historization`](/ext/e/ddl_historization) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) |
@@ -38,7 +38,7 @@ weight: 1050
 {.ext-table .ext-table--rel}
 
 
-> Requires max_prepared_transactions; 5.0.1 fixes privilege escalation and PREPARE TRANSACTION errors.
+> Requires max_prepared_transactions.
 
 
 ## 版本
@@ -46,8 +46,8 @@ weight: 1050
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `emaj` | `btree_gist`, `dblink` |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `e-maj_$v` | - |
-| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-emaj` | - |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `e-maj_$v` | - |
+| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-emaj` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,16 @@ weight: 1050
 | el9.aarch64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 9 | AVAIL PIGSTY 5.0.1 14 | AVAIL PIGSTY 5.0.1 15 | AVAIL PIGSTY 5.0.1 15 |
 | el10.x86_64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 |
 | el10.aarch64 | AVAIL PIGSTY 5.0.1 6 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 | AVAIL PIGSTY 5.0.1 8 |
-| d12.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 | AVAIL PIGSTY 5.0.1 1 |
 @ el8.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_18-5.0.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 e-maj_18 e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 e-maj_18 e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-5.0.0-2PGDG.rhel8.10.noarch.rpm
@@ -102,16 +102,16 @@ weight: 1050
 @ el10.aarch64 18 e-maj_18 e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 5.0.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-5.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.0-1PIGSTY~resolute_all.deb
+@ d12.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-emaj postgresql-18-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-18-emaj_5.0.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_17-5.0.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 e-maj_17 e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/e-maj_17-5.0.0-2PGDG.rhel8.10.noarch.rpm
@@ -161,16 +161,16 @@ weight: 1050
 @ el10.aarch64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.0-1PIGSTY~resolute_all.deb
+@ d12.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-emaj postgresql-17-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-17-emaj_5.0.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_16-5.0.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 e-maj_16 e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/e-maj_16-5.0.0-2PGDG.rhel8.10.noarch.rpm
@@ -240,16 +240,16 @@ weight: 1050
 @ el10.aarch64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.0-1PIGSTY~resolute_all.deb
+@ d12.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-emaj postgresql-16-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-16-emaj_5.0.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_15-5.0.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 e-maj_15 e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/e-maj_15-5.0.0-2PGDG.rhel8.10.noarch.rpm
@@ -323,16 +323,16 @@ weight: 1050
 @ el10.aarch64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.0-1PIGSTY~resolute_all.deb
+@ d12.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-emaj postgresql-15-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-15-emaj_5.0.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm pigsty 5.0.1 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/e-maj_14-5.0.1-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm pgdg 5.0.1 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-5.0.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 e-maj_14 e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm pgdg 5.0.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/e-maj_14-5.0.0-2PGDG.rhel8.10.noarch.rpm
@@ -406,16 +406,16 @@ weight: 1050
 @ el10.aarch64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~bookworm_all.deb pigsty 5.0.0 232.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~trixie_all.deb pigsty 5.0.0 232.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~jammy_all.deb pigsty 5.0.0 210.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~noble_all.deb pigsty 5.0.0 209.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.0-1PIGSTY~resolute_all.deb pigsty 5.0.0 209.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-14-emaj_5.0.0-1PIGSTY~resolute_all.deb
+@ d12.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~bookworm_all.deb pigsty 5.0.1 231.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~trixie_all.deb pigsty 5.0.1 231.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~jammy_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~noble_all.deb pigsty 5.0.1 210.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-emaj postgresql-14-emaj_5.0.1-1PGSTY~resolute_all.deb pigsty 5.0.1 210.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/e/emaj/postgresql-14-emaj_5.0.1-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

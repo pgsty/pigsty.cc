@@ -20,7 +20,7 @@ Pigsty 是一个“配置驱动”的 PostgreSQL 平台：所有行为都来自 
 2. **定义参数**：在 `vars` 区块中覆盖需要的 [`PGSQL` 参数](/docs/pgsql/param)。全局 → 集群 → 主机的覆盖顺序决定了最终值。
 3. **生成与应用清单**：`./configure -c <conf>` 用所选模板生成 `pigsty.yml`；随后对尚未初始化的目标运行 `./pgsql.yml -l <cls>` 或 `bin/pgsql-add <cls>`，部署所需服务。已初始化集群的维护应使用对应专项剧本或标签。
 
-PostgreSQL 内核示例清单 `conf/pgsql.yml` 就是一份最小化示例：一个 `pg-meta` 集群、全局 `pg_version: 18`、少量业务用户与数据库定义。你可以在此基础上扩展更多集群。
+PostgreSQL 内核示例清单 `conf/fork/pgsql.yml` 就是一份最小化示例：一个 `pg-meta` 集群、全局 `pg_version: 18`、少量业务用户与数据库定义。你可以在此基础上扩展更多集群。
 
 
 ---------------------
@@ -34,7 +34,7 @@ Pigsty 的 PostgreSQL 配置可以从以下几个维度组合，后续文档会�
 - **[用户/角色](/docs/pgsql/config/user)**：在 `pg_default_roles` 与 `pg_users` 中声明系统角色、业务账号、密码策略以及连接池属性。
 - **[数据库对象](/docs/pgsql/config/db)**：借助 `pg_databases`、`baseline`、`schemas`、`extensions`、`pool_*` 字段按需创建数据库并自动接入 pgbouncer/Grafana。
 - **[访问控制 (HBA)](/docs/pgsql/config/hba)**：利用 `pg_default_hba_rules` 与 `pg_hba_rules` 维护主机级认证策略，保证不同角色/网络的访问边界。
-- **[权限模型 (ACL)](/docs/pgsql/config/acl)**：通过 `pg_default_privileges`、`pg_default_roles`、`pg_revoke_public` 等参数收敛对象权限，开箱即用地提供分层角色体系。
+- **[权限模型 (ACL)](/docs/pgsql/config/acl)**：通过 `pg_default_privileges`、`pg_default_roles` 等参数收敛对象权限，开箱即用地提供分层角色体系。
 
 理解这些参数之后，你就可以针对任意业务需求写出“配置即基础设施”的声明式清单，Pigsty 会负责执行并确保幂等。
 

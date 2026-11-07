@@ -1,7 +1,7 @@
 ---
 title: "shacrypt"
 linkTitle: "shacrypt"
-description: "实现SHA256-CRYPT与SHA512-CRYPT密钥加密算法"
+description: "实现 SHA256-CRYPT 与 SHA512-CRYPT 密码哈希方案"
 weight: 4440
 ---
 
@@ -72,14 +72,14 @@ weight: 4440
 @ el9.aarch64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el9.aarch64.rpm pigsty 1.1 18.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/shacrypt_18-1.1-2PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el10.x86_64.rpm pigsty 1.1 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/shacrypt_18-1.1-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el10.aarch64.rpm pigsty 1.1 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/shacrypt_18-1.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~noble_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~noble_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~bookworm_amd64.deb pigsty 1.1 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~bookworm_arm64.deb pigsty 1.1 29.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~trixie_amd64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~trixie_arm64.deb pigsty 1.1 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~jammy_amd64.deb pigsty 1.1 32.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~jammy_arm64.deb pigsty 1.1 31.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~noble_amd64.deb pigsty 1.1 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-2PGSTY~noble_arm64.deb pigsty 1.1 30.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-2PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1 32.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-shacrypt postgresql-18-shacrypt_1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1 31.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-18-shacrypt_1.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 shacrypt_17 shacrypt_17-1.1-2PIGSTY.el8.x86_64.rpm pigsty 1.1 19.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/shacrypt_17-1.1-2PIGSTY.el8.x86_64.rpm
@@ -88,14 +88,14 @@ weight: 4440
 @ el9.aarch64 17 shacrypt_17 shacrypt_17-1.1-2PIGSTY.el9.aarch64.rpm pigsty 1.1 18.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/shacrypt_17-1.1-2PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 shacrypt_17 shacrypt_17-1.1-2PIGSTY.el10.x86_64.rpm pigsty 1.1 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/shacrypt_17-1.1-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 shacrypt_17 shacrypt_17-1.1-2PIGSTY.el10.aarch64.rpm pigsty 1.1 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/shacrypt_17-1.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~noble_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~noble_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~bookworm_amd64.deb pigsty 1.1 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~bookworm_arm64.deb pigsty 1.1 28.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~trixie_amd64.deb pigsty 1.1 31.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~trixie_arm64.deb pigsty 1.1 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~jammy_amd64.deb pigsty 1.1 32.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~jammy_arm64.deb pigsty 1.1 32.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~noble_amd64.deb pigsty 1.1 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-2PGSTY~noble_arm64.deb pigsty 1.1 30.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-2PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1 32.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-shacrypt postgresql-17-shacrypt_1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1 31.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-17-shacrypt_1.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 shacrypt_16 shacrypt_16-1.1-2PIGSTY.el8.x86_64.rpm pigsty 1.1 19.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/shacrypt_16-1.1-2PIGSTY.el8.x86_64.rpm
@@ -104,14 +104,14 @@ weight: 4440
 @ el9.aarch64 16 shacrypt_16 shacrypt_16-1.1-2PIGSTY.el9.aarch64.rpm pigsty 1.1 18.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/shacrypt_16-1.1-2PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 shacrypt_16 shacrypt_16-1.1-2PIGSTY.el10.x86_64.rpm pigsty 1.1 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/shacrypt_16-1.1-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 shacrypt_16 shacrypt_16-1.1-2PIGSTY.el10.aarch64.rpm pigsty 1.1 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/shacrypt_16-1.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~noble_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~noble_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~bookworm_amd64.deb pigsty 1.1 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~bookworm_arm64.deb pigsty 1.1 29.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~trixie_amd64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~trixie_arm64.deb pigsty 1.1 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~jammy_amd64.deb pigsty 1.1 32.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~jammy_arm64.deb pigsty 1.1 32.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~noble_amd64.deb pigsty 1.1 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-2PGSTY~noble_arm64.deb pigsty 1.1 31.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-2PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1 32.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-shacrypt postgresql-16-shacrypt_1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1 31.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-16-shacrypt_1.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 shacrypt_15 shacrypt_15-1.1-2PIGSTY.el8.x86_64.rpm pigsty 1.1 19.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/shacrypt_15-1.1-2PIGSTY.el8.x86_64.rpm
@@ -120,14 +120,14 @@ weight: 4440
 @ el9.aarch64 15 shacrypt_15 shacrypt_15-1.1-2PIGSTY.el9.aarch64.rpm pigsty 1.1 19.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/shacrypt_15-1.1-2PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 shacrypt_15 shacrypt_15-1.1-2PIGSTY.el10.x86_64.rpm pigsty 1.1 18.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/shacrypt_15-1.1-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 shacrypt_15 shacrypt_15-1.1-2PIGSTY.el10.aarch64.rpm pigsty 1.1 18.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/shacrypt_15-1.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~noble_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~noble_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~bookworm_amd64.deb pigsty 1.1 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~bookworm_arm64.deb pigsty 1.1 29.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~trixie_amd64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~trixie_arm64.deb pigsty 1.1 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~jammy_amd64.deb pigsty 1.1 32.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~jammy_arm64.deb pigsty 1.1 32.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~noble_amd64.deb pigsty 1.1 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-2PGSTY~noble_arm64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-2PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1 32.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-shacrypt postgresql-15-shacrypt_1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1 31.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-15-shacrypt_1.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 shacrypt_14 shacrypt_14-1.1-2PIGSTY.el8.x86_64.rpm pigsty 1.1 19.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/shacrypt_14-1.1-2PIGSTY.el8.x86_64.rpm
@@ -136,14 +136,14 @@ weight: 4440
 @ el9.aarch64 14 shacrypt_14 shacrypt_14-1.1-2PIGSTY.el9.aarch64.rpm pigsty 1.1 19.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/shacrypt_14-1.1-2PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 shacrypt_14 shacrypt_14-1.1-2PIGSTY.el10.x86_64.rpm pigsty 1.1 18.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/shacrypt_14-1.1-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 shacrypt_14 shacrypt_14-1.1-2PIGSTY.el10.aarch64.rpm pigsty 1.1 18.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/shacrypt_14-1.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1 2.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~noble_amd64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~noble_arm64.deb pigsty 1.1 2.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~bookworm_amd64.deb pigsty 1.1 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~bookworm_arm64.deb pigsty 1.1 29.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~trixie_amd64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~trixie_arm64.deb pigsty 1.1 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~jammy_amd64.deb pigsty 1.1 32.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~jammy_arm64.deb pigsty 1.1 32.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~noble_amd64.deb pigsty 1.1 31.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-2PGSTY~noble_arm64.deb pigsty 1.1 31.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-2PGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1 32.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-shacrypt postgresql-14-shacrypt_1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1 31.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgres-shacrypt/postgresql-14-shacrypt_1.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}

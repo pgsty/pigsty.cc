@@ -175,7 +175,10 @@ pgbackrest_repo:                  # pgbackrest repo: https://pgbackrest.org/conf
     path: /pgbackrest             # minio backup path, default is `/pgbackrest`
     storage_port: 9000            # minio port, 9000 by default
     storage_ca_file: /etc/pki/ca.crt  # minio ca file path, `/etc/pki/ca.crt` by default
+    block: y                      # Enable block incremental backup
     bundle: y                     # bundle small files into a single file
+    bundle_limit: 20MiB           # Limit for file bundles, 20MiB for object storage
+    bundle_size: 128MiB           # Target size for file bundles, 128MiB for object storage
     cipher_type: aes-256-cbc      # enable AES encryption for remote backup repo
     cipher_pass: pgBackRest       # AES encryption password, default is 'pgBackRest'
     retention_full_type: time     # retention full backup by time on minio repo

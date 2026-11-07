@@ -45,12 +45,12 @@ weight: 8620
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 |
-| el8.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
-| el9.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
-| el9.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
-| el10.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
-| el10.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
+| el8.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 5 |
+| el8.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
+| el9.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 |
+| el9.aarch64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 6 | AVAIL PGDG 2.0.5 5 | AVAIL PGDG 2.0.5 5 |
+| el10.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
+| el10.aarch64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
 | d12.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
 | d12.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
 | d13.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
@@ -61,14 +61,20 @@ weight: 8620
 | u24.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
 | u26.x86_64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
 | u26.aarch64 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 2 |
+@ el8.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/tds_fdw_18-2.0.5-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/tds_fdw_18-2.0.5-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/tds_fdw_18-2.0.5-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/tds_fdw_18-2.0.5-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/tds_fdw_18-2.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-3PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/tds_fdw_18-2.0.5-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/tds_fdw_18-2.0.5-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/tds_fdw_18-2.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-3PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/tds_fdw_18-2.0.5-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel9.aarch64.rpm pgdg 2.0.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/tds_fdw_18-2.0.5-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/tds_fdw_18-2.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/tds_fdw_18-2.0.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel10.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/tds_fdw_18-2.0.5-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/tds_fdw_18-2.0.5-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/tds_fdw_18-2.0.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel10.aarch64.rpm pgdg 2.0.5 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/tds_fdw_18-2.0.5-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-2.pgdg12+1_amd64.deb pgdg 2.0.5 111.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-2.pgdg12+1_amd64.deb
@@ -91,19 +97,25 @@ weight: 8620
 @ u26.x86_64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/tds_fdw_17-2.0.5-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/tds_fdw_17-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/tds_fdw_17-2.0.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/tds_fdw_17-2.0.5-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/tds_fdw_17-2.0.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.4-1PGDG.rhel8.aarch64.rpm pgdg 2.0.4 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/tds_fdw_17-2.0.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/tds_fdw_17-2.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-3PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/tds_fdw_17-2.0.5-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/tds_fdw_17-2.0.5-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.4-1PGDG.rhel9.x86_64.rpm pgdg 2.0.4 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/tds_fdw_17-2.0.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/tds_fdw_17-2.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-3PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/tds_fdw_17-2.0.5-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel9.aarch64.rpm pgdg 2.0.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/tds_fdw_17-2.0.5-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.4-1PGDG.rhel9.aarch64.rpm pgdg 2.0.4 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/tds_fdw_17-2.0.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/tds_fdw_17-2.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/tds_fdw_17-2.0.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel10.x86_64.rpm pgdg 2.0.5 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/tds_fdw_17-2.0.5-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.4-2PGDG.rhel10.x86_64.rpm pgdg 2.0.4 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/tds_fdw_17-2.0.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/tds_fdw_17-2.0.5-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/tds_fdw_17-2.0.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel10.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/tds_fdw_17-2.0.5-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.4-2PGDG.rhel10.aarch64.rpm pgdg 2.0.4 46.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/tds_fdw_17-2.0.4-2PGDG.rhel10.aarch64.rpm
@@ -127,25 +139,31 @@ weight: 8620
 @ u26.x86_64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb pgdg 2.0.5 105.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 105.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.5-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.3-4PGDG.rhel8.x86_64.rpm pgdg 2.0.3 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.3-4PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/tds_fdw_16-2.0.5-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/tds_fdw_16-2.0.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.4-1PGDG.rhel8.aarch64.rpm pgdg 2.0.4 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/tds_fdw_16-2.0.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.3-4PGDG.rhel8.aarch64.rpm pgdg 2.0.3 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/tds_fdw_16-2.0.3-4PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.3-3.rhel8.aarch64.rpm pgdg 2.0.3 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/tds_fdw_16-2.0.3-3.rhel8.aarch64.rpm
+@ el9.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/tds_fdw_16-2.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-3PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/tds_fdw_16-2.0.5-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/tds_fdw_16-2.0.5-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.4-1PGDG.rhel9.x86_64.rpm pgdg 2.0.4 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/tds_fdw_16-2.0.4-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.3-4PGDG.rhel9.x86_64.rpm pgdg 2.0.3 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/tds_fdw_16-2.0.3-4PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-3PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.5-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel9.aarch64.rpm pgdg 2.0.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.5-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.4-1PGDG.rhel9.aarch64.rpm pgdg 2.0.4 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.4-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.3-4PGDG.rhel9.aarch64.rpm pgdg 2.0.3 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.3-4PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.3-3.rhel9.aarch64.rpm pgdg 2.0.3 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/tds_fdw_16-2.0.3-3.rhel9.aarch64.rpm
+@ el10.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/tds_fdw_16-2.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/tds_fdw_16-2.0.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel10.x86_64.rpm pgdg 2.0.5 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/tds_fdw_16-2.0.5-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.4-2PGDG.rhel10.x86_64.rpm pgdg 2.0.4 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/tds_fdw_16-2.0.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/tds_fdw_16-2.0.5-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/tds_fdw_16-2.0.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel10.aarch64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/tds_fdw_16-2.0.5-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 tds_fdw_16 tds_fdw_16-2.0.4-2PGDG.rhel10.aarch64.rpm pgdg 2.0.4 46.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/tds_fdw_16-2.0.4-2PGDG.rhel10.aarch64.rpm
@@ -169,23 +187,29 @@ weight: 8620
 @ u26.x86_64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.5-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.3-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/tds_fdw_15-2.0.5-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/tds_fdw_15-2.0.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.4-1PGDG.rhel8.aarch64.rpm pgdg 2.0.4 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/tds_fdw_15-2.0.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.3-1.rhel8.aarch64.rpm pgdg 2.0.3 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/tds_fdw_15-2.0.3-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/tds_fdw_15-2.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-3PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/tds_fdw_15-2.0.5-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/tds_fdw_15-2.0.5-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.4-1PGDG.rhel9.x86_64.rpm pgdg 2.0.4 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/tds_fdw_15-2.0.4-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.3-1.rhel9.x86_64.rpm pgdg 2.0.3 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/tds_fdw_15-2.0.3-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/tds_fdw_15-2.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-3PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/tds_fdw_15-2.0.5-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel9.aarch64.rpm pgdg 2.0.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/tds_fdw_15-2.0.5-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.4-1PGDG.rhel9.aarch64.rpm pgdg 2.0.4 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/tds_fdw_15-2.0.4-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.3-1.rhel9.aarch64.rpm pgdg 2.0.3 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/tds_fdw_15-2.0.3-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/tds_fdw_15-2.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/tds_fdw_15-2.0.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel10.x86_64.rpm pgdg 2.0.5 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/tds_fdw_15-2.0.5-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.4-2PGDG.rhel10.x86_64.rpm pgdg 2.0.4 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/tds_fdw_15-2.0.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/tds_fdw_15-2.0.5-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/tds_fdw_15-2.0.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel10.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/tds_fdw_15-2.0.5-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 tds_fdw_15 tds_fdw_15-2.0.4-2PGDG.rhel10.aarch64.rpm pgdg 2.0.4 46.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/tds_fdw_15-2.0.4-2PGDG.rhel10.aarch64.rpm
@@ -209,24 +233,30 @@ weight: 8620
 @ u26.x86_64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb pgdg 2.0.5 105.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.5-6PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.2-3.rhel8.x86_64.rpm pgdg 2.0.2 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.2-3.rhel8.x86_64.rpm
+@ el8.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/tds_fdw_14-2.0.5-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/tds_fdw_14-2.0.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.4-1PGDG.rhel8.aarch64.rpm pgdg 2.0.4 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/tds_fdw_14-2.0.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.3-1.rhel8.aarch64.rpm pgdg 2.0.3 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/tds_fdw_14-2.0.3-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/tds_fdw_14-2.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-3PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/tds_fdw_14-2.0.5-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/tds_fdw_14-2.0.5-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.4-1PGDG.rhel9.x86_64.rpm pgdg 2.0.4 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/tds_fdw_14-2.0.4-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.3-1.rhel9.x86_64.rpm pgdg 2.0.3 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/tds_fdw_14-2.0.3-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tds_fdw_14-2.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-3PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tds_fdw_14-2.0.5-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel9.aarch64.rpm pgdg 2.0.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tds_fdw_14-2.0.5-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.4-1PGDG.rhel9.aarch64.rpm pgdg 2.0.4 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tds_fdw_14-2.0.4-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.3-1.rhel9.aarch64.rpm pgdg 2.0.3 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tds_fdw_14-2.0.3-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tds_fdw_14-2.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tds_fdw_14-2.0.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel10.x86_64.rpm pgdg 2.0.5 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tds_fdw_14-2.0.5-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.4-2PGDG.rhel10.x86_64.rpm pgdg 2.0.4 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tds_fdw_14-2.0.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tds_fdw_14-2.0.5-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tds_fdw_14-2.0.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel10.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tds_fdw_14-2.0.5-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 tds_fdw_14 tds_fdw_14-2.0.4-2PGDG.rhel10.aarch64.rpm pgdg 2.0.4 46.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tds_fdw_14-2.0.4-2PGDG.rhel10.aarch64.rpm

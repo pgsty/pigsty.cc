@@ -11,10 +11,10 @@ weight: 7470
     <div class="ext-card__title">Manuelreyesbravo/pg_agent_gate</div>
     <div class="ext-card__desc">https://github.com/Manuelreyesbravo/pg_agent_gate</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_agent_gate-0.3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_agent_gate-0.4.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_agent_gate-0.3.0.tar.gz</div>
-    <div class="ext-card__desc">pg_agent_gate-0.3.0.tar.gz</div>
+    <div class="ext-card__title">pg_agent_gate-0.4.1.tar.gz</div>
+    <div class="ext-card__desc">pg_agent_gate-0.4.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7470
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_agent_gate`**](/ext/e/pg_agent_gate) | `0.3.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_agent_gate`**](/ext/e/pg_agent_gate) | `0.4.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,53 +38,53 @@ weight: 7470
 {.ext-table .ext-table--rel}
 
 
-> Upstream PG18-19; packages PG18. Preload before the first agent statement; READ COMMITTED required. Human approval preserves commit guards; pg_living_assertions optional. Build pgrx 0.19.3, upstream 0.19.2. Trusted code and external effects remain outside the sandbox.
+> PG18; preload before agent statements; READ COMMITTED required. 0.4.1 fixes agent-role escape. Trusted code and external effects remain outside the sandbox.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18" >}} | `pg_agent_gate` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18" >}} | `pg_agent_gate_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18" >}} | `postgresql-$v-pg-agent-gate` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18" >}} | `pg_agent_gate` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18" >}} | `pg_agent_gate_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18" >}} | `postgresql-$v-pg-agent-gate` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 524.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_agent_gate_18-0.3.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 457.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_agent_gate_18-0.3.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 526.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_agent_gate_18-0.3.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el9.aarch64.rpm pigsty 0.3.0 485.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_agent_gate_18-0.3.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el10.x86_64.rpm pigsty 0.3.0 526.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_agent_gate_18-0.3.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.3.0-1PGSTY.el10.aarch64.rpm pigsty 0.3.0 462.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_agent_gate_18-0.3.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~bookworm_amd64.deb pigsty 0.3.0 461.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~bookworm_arm64.deb pigsty 0.3.0 397.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~trixie_amd64.deb pigsty 0.3.0 460.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~trixie_arm64.deb pigsty 0.3.0 397.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~jammy_amd64.deb pigsty 0.3.0 500.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~jammy_arm64.deb pigsty 0.3.0 459.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~noble_amd64.deb pigsty 0.3.0 494.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 451.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 493.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 451.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.3.0-1PGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 538.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_agent_gate_18-0.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 470.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_agent_gate_18-0.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 541.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_agent_gate_18-0.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 498.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_agent_gate_18-0.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 541.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_agent_gate_18-0.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_agent_gate_18 pg_agent_gate_18-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 475.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_agent_gate_18-0.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 473.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 408.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 474.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 409.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 514.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 472.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 508.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 465.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 507.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-agent-gate postgresql-18-pg-agent-gate_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 464.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-agent-gate/postgresql-18-pg-agent-gate_0.4.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

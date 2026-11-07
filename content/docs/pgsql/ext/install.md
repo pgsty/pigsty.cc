@@ -97,7 +97,7 @@ Pigsty 支持使用标准化的包别名，自动翻译为对应 PG 版本的包
 ```yaml
 pg_extensions:
   - pgvector           # 自动翻译为 pgvector_18（EL）或 postgresql-18-pgvector（Debian）
-  - postgis            # 自动翻译为 postgis36_18（EL）或 postgresql-18-postgis-3（Debian）
+  - postgis            # 自动翻译为 postgis37_18（EL）或 postgresql-18-postgis-3（Debian）
   - pgsql-gis          # 类别别名，安装该平台的 GIS 扩展包组
 ```
 

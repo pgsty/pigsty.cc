@@ -38,7 +38,7 @@ weight: 6410
 {.ext-table .ext-table--rel}
 
 
-> PGDG D/U 1.5.2; EL 1.5.1. Preload with pg_stat_statements; 1.5.2 hardens search_path and ProcEntryArray.
+> Preload with pg_stat_statements.
 
 
 ## 版本
@@ -46,19 +46,19 @@ weight: 6410
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel_$v` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgsentinel_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsentinel` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 |
-| el8.aarch64 | AVAIL PGDG 1.5.1 3 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 | AVAIL PGDG 1.5.1 4 |
-| el9.x86_64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
-| el9.aarch64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
-| el10.x86_64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
-| el10.aarch64 | AVAIL PGDG 1.5.1 6 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 | AVAIL PGDG 1.5.1 7 |
+| el8.x86_64 | AVAIL PGDG 1.5.2 4 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 |
+| el8.aarch64 | AVAIL PGDG 1.5.2 4 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 |
+| el9.x86_64 | AVAIL PGDG 1.5.2 7 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 |
+| el9.aarch64 | AVAIL PGDG 1.5.2 7 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 |
+| el10.x86_64 | AVAIL PGDG 1.5.2 7 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 |
+| el10.aarch64 | AVAIL PGDG 1.5.2 7 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 | AVAIL PGDG 1.5.2 8 |
 | d12.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 | d12.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 | d13.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
@@ -69,30 +69,36 @@ weight: 6410
 | u24.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 | u26.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 | u26.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+@ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.5.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.2 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsentinel_18-1.5.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.1 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsentinel_18-1.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsentinel_18-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsentinel_18-1.3.1-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.5.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.4.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.0 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.0 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel9.7.x86_64.rpm pgdg 1.3.1 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel9.6.x86_64.rpm pgdg 1.3.1 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.5.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.4.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.0 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.0 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.4.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel9.7.aarch64.rpm pgdg 1.3.1 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.3.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel9.6.aarch64.rpm pgdg 1.3.1 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsentinel_18-1.3.1-1PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.5.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.4.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.4.0 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.4.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel10.1.x86_64.rpm pgdg 1.3.1 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.5.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsentinel_18-1.4.0-1PGDG.rhel10.1.aarch64.rpm
@@ -129,14 +135,17 @@ weight: 6410
 @ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
+@ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.5.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel8.x86_64.rpm pgdg 1.2.0 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.2 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsentinel_17-1.5.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.1 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsentinel_17-1.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsentinel_17-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsentinel_17-1.3.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsentinel_17-1.2.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.5.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.4.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.0 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.4.0-1PGDG.rhel9.7.x86_64.rpm
@@ -144,6 +153,7 @@ weight: 6410
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel9.7.x86_64.rpm pgdg 1.3.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel9.6.x86_64.rpm pgdg 1.3.1 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsentinel_17-1.2.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.5.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.1 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.4.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.4.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.0 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.4.0-1PGDG.rhel9.7.aarch64.rpm
@@ -151,6 +161,7 @@ weight: 6410
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel9.7.aarch64.rpm pgdg 1.3.1 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.3.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel9.6.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.3.1-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsentinel_17-1.2.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.5.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.4.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.4.0 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.4.0-1PGDG.rhel10.1.x86_64.rpm
@@ -158,6 +169,7 @@ weight: 6410
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel10.1.x86_64.rpm pgdg 1.3.1 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 pgsentinel_17 pgsentinel_17-1.2.0-1PGDG.rhel10.x86_64.rpm pgdg 1.2.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsentinel_17-1.2.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.5.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsentinel_17-1.4.0-1PGDG.rhel10.1.aarch64.rpm
@@ -195,14 +207,17 @@ weight: 6410
 @ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
+@ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.5.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel8.x86_64.rpm pgdg 1.2.0 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.2 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsentinel_16-1.5.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.1 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsentinel_16-1.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsentinel_16-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsentinel_16-1.3.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsentinel_16-1.2.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.5.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.1 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.4.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.0 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.4.0-1PGDG.rhel9.7.x86_64.rpm
@@ -210,6 +225,7 @@ weight: 6410
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel9.7.x86_64.rpm pgdg 1.3.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel9.6.x86_64.rpm pgdg 1.3.1 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsentinel_16-1.2.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.5.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.1 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.4.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.4.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.0 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.4.0-1PGDG.rhel9.7.aarch64.rpm
@@ -217,6 +233,7 @@ weight: 6410
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel9.7.aarch64.rpm pgdg 1.3.1 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.3.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel9.6.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.3.1-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsentinel_16-1.2.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.5.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.1 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.4.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.4.0 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.4.0-1PGDG.rhel10.1.x86_64.rpm
@@ -224,6 +241,7 @@ weight: 6410
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel10.1.x86_64.rpm pgdg 1.3.1 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 pgsentinel_16 pgsentinel_16-1.2.0-1PGDG.rhel10.x86_64.rpm pgdg 1.2.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsentinel_16-1.2.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.5.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsentinel_16-1.4.0-1PGDG.rhel10.1.aarch64.rpm
@@ -261,14 +279,17 @@ weight: 6410
 @ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
+@ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.2 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.5.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel8.x86_64.rpm pgdg 1.2.0 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.2 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsentinel_15-1.5.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.1 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsentinel_15-1.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsentinel_15-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsentinel_15-1.3.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsentinel_15-1.2.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.5.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.4.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.0 25.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.4.0-1PGDG.rhel9.7.x86_64.rpm
@@ -276,6 +297,7 @@ weight: 6410
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel9.7.x86_64.rpm pgdg 1.3.1 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel9.6.x86_64.rpm pgdg 1.3.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsentinel_15-1.2.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.5.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.4.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.4.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.4.0-1PGDG.rhel9.7.aarch64.rpm
@@ -283,6 +305,7 @@ weight: 6410
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel9.7.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.3.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel9.6.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.3.1-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsentinel_15-1.2.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 28.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.5.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.1 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.4.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.4.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.4.0-1PGDG.rhel10.1.x86_64.rpm
@@ -290,6 +313,7 @@ weight: 6410
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel10.1.x86_64.rpm pgdg 1.3.1 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 pgsentinel_15 pgsentinel_15-1.2.0-1PGDG.rhel10.x86_64.rpm pgdg 1.2.0 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsentinel_15-1.2.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.5.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsentinel_15-1.4.0-1PGDG.rhel10.1.aarch64.rpm
@@ -327,14 +351,17 @@ weight: 6410
 @ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb pgdg 1.5.1 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb pgdg 1.5.0 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.5.0-1.pgdg26.04+3_arm64.deb
+@ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.2 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.5.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.1 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel8.x86_64.rpm pgdg 1.2.0 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.2 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsentinel_14-1.5.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.5.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsentinel_14-1.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsentinel_14-1.4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.1 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 22.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsentinel_14-1.2.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.5.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.5.1 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.4.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.0 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.4.0-1PGDG.rhel9.7.x86_64.rpm
@@ -342,6 +369,7 @@ weight: 6410
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel9.7.x86_64.rpm pgdg 1.3.1 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel9.6.x86_64.rpm pgdg 1.3.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 24.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsentinel_14-1.2.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.5.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.4.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.0 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.4.0-1PGDG.rhel9.7.aarch64.rpm
@@ -349,6 +377,7 @@ weight: 6410
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel9.7.aarch64.rpm pgdg 1.3.1 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel9.6.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsentinel_14-1.2.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 28.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.5.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.5.1 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.4.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.4.0 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.4.0-1PGDG.rhel10.1.x86_64.rpm
@@ -356,6 +385,7 @@ weight: 6410
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.1.x86_64.rpm pgdg 1.3.1 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel10.x86_64.rpm pgdg 1.2.0 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.2.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.5.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm

@@ -310,7 +310,7 @@ bin/pgsql-user pg-meta dbuser_meta  # 在集群 pg-meta 上创建用户 dbuser_m
 剧本会：
 1. 在 `/pg/tmp/pg-user-{{ user.name }}.sql` 生成用户创建 SQL
 2. 在集群主库上执行用户创建/更新 SQL
-3. 若启用 `pgbouncer_enabled: true`，更新 `/etc/pgbouncer/userlist.txt` 与 `useropts.txt`
+3. 若启用 `pgbouncer_enabled: true` 且用户定义了 `pgbouncer: true`，更新 `/etc/pgbouncer/userlist.txt` 与 `useropts.txt`
 4. 重载 pgbouncer 使配置生效
 
 **用户定义示例**
@@ -594,19 +594,19 @@ pg_pitr:                           # 定义 PITR 任务
 #     - stop_patroni   : 停止 patroni 服务
 #     - stop_postgres  : 停止 postgres 服务
 #
-# pitr                 : 执行 PITR 恢复过程
+# pitr                 : 仅在主库上执行 PITR 恢复过程
 #   - config           : 生成 pgbackrest 配置和恢复脚本
 #   - backup           : 执行可选的原始数据备份
 #   - restore          : 运行 pgbackrest restore 命令
-#   - recovery         : 启动 postgres 并完成恢复
+#   - recovery         : 启动 postgres 并等待 WAL 重放到达恢复目标
 #   - verify           : 验证恢复的集群控制数据
 #
 # up                   : 启动 postgres/patroni 并恢复 HA
 #   - etcd             : 启动前清理 etcd 元数据
-#   - start            : 启动 patroni 和 postgres 服务
-#     - start_postgres : 启动 postgres 服务
-#     - start_patroni  : 启动 patroni 服务
-#   - resume           : 恢复 patroni 自动故障转移
+#   - start            : 启动主库、恢复 HA、重建从库
+#     - primary        : 在恢复目标处提升主库，启动 patroni
+#     - resume         : 恢复 patroni 自动故障转移
+#     - replica        : 清空从库数据，从新主库重新克隆
 ```
 
 **恢复目标类型说明**

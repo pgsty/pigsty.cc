@@ -135,7 +135,7 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
 
 ### 3. 定义位置
 
-通常，全局的 HBA 定义在 `all.vars` 中，如果您想要修改全局默认的 HBA 规则，可以从 [`conf/ha/full.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml) 模板中复制一份到 `all.vars` 中进行修改。
+通常，全局的 HBA 定义在 `all.vars` 中，如果您想要修改全局默认的 HBA 规则，可以从 [`conf/demo/el.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/el.yml) 模板中复制一份到 `all.vars` 中进行修改。
 
 - [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)：postgres 全局默认 HBA 规则
 - [`pgb_default_hba_rules`](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 全局默认 HBA 规则
@@ -178,8 +178,7 @@ bin/pgsql-hba <cls> ip1 ip2...      # 重新加载特定实例的 hba 规则
 底层实际执行的 Ansible 剧本命令为：
 
 ```bash
-./pgsql.yml -l <cls> -e pg_reload=true -t pg_hba,pg_reload
-./pgsql.yml -l <cls> -e pg_reload=true -t pgbouncer_hba,pgbouncer_reload
+./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload
 ```
 
 
@@ -200,7 +199,7 @@ pg_default_hba_rules:             # postgres 全局默认的HBA规则，按 orde
   - {user: '${repl}'    ,db: postgres    ,addr: intra     ,auth: pwd   ,title: 'replicator postgres db from intranet' ,order: 300}
   - {user: '${monitor}' ,db: all         ,addr: localhost ,auth: pwd   ,title: 'monitor from localhost with password' ,order: 350}
   - {user: '${monitor}' ,db: all         ,addr: infra     ,auth: pwd   ,title: 'monitor from infra host with password',order: 400}
-  - {user: '${admin}'   ,db: all         ,addr: infra     ,auth: ssl   ,title: 'admin @ infra nodes with pwd & ssl'   ,order: 450}
+  - {user: '${admin}'   ,db: all         ,addr: intra     ,auth: pwd   ,title: 'admin @ intranet nodes with pwd'      ,order: 450}
   - {user: '${admin}'   ,db: all         ,addr: world     ,auth: ssl   ,title: 'admin @ everywhere with ssl & pwd'    ,order: 500}
   - {user: '+dbrole_readonly',db: all    ,addr: localhost ,auth: pwd   ,title: 'pgbouncer read/write via local socket',order: 550}
   - {user: '+dbrole_readonly',db: all    ,addr: intra     ,auth: pwd   ,title: 'read/write biz user via password'     ,order: 600}
@@ -251,6 +250,7 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 > # replicator replication from localhost [default]
 > local    replication        replicator                            scram-sha-256
 > host     replication        replicator         127.0.0.1/32       scram-sha-256
+> host     replication        replicator         ::1/128            scram-sha-256
 >
 > # replicator replication from intranet [default]
 > host     replication        replicator         10.0.0.0/8         scram-sha-256
@@ -265,19 +265,24 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 > # monitor from localhost with password [default]
 > local    all                dbuser_monitor                        scram-sha-256
 > host     all                dbuser_monitor     127.0.0.1/32       scram-sha-256
+> host     all                dbuser_monitor     ::1/128            scram-sha-256
 >
 > # monitor from infra host with password [default]
 > host     all                dbuser_monitor     10.10.10.10/32     scram-sha-256
 >
-> # admin @ infra nodes with pwd & ssl [default]
-> hostssl  all                dbuser_dba         10.10.10.10/32     scram-sha-256
+> # admin @ intranet nodes with pwd [default]
+> host     all                dbuser_dba         10.0.0.0/8         scram-sha-256
+> host     all                dbuser_dba         172.16.0.0/12      scram-sha-256
+> host     all                dbuser_dba         192.168.0.0/16     scram-sha-256
 >
 > # admin @ everywhere with ssl & pwd [default]
 > hostssl  all                dbuser_dba         0.0.0.0/0          scram-sha-256
+> hostssl  all                dbuser_dba         ::/0               scram-sha-256
 >
 > # pgbouncer read/write via local socket [default]
 > local    all                +dbrole_readonly                      scram-sha-256
 > host     all                +dbrole_readonly   127.0.0.1/32       scram-sha-256
+> host     all                +dbrole_readonly   ::1/128            scram-sha-256
 >
 > # read/write biz user via password [default]
 > host     all                +dbrole_readonly   10.0.0.0/8         scram-sha-256
@@ -332,6 +337,7 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 > # allow all user local access with pwd [default]
 > local    all                all                                   scram-sha-256
 > host     all                all                127.0.0.1/32       scram-sha-256
+> host     all                all                ::1/128            scram-sha-256
 >
 > # monitor access via intranet with pwd [default]
 > host     pgbouncer          dbuser_monitor     10.0.0.0/8         scram-sha-256
@@ -340,6 +346,7 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 >
 > # reject all other monitor access addr [default]
 > host     all                dbuser_monitor     0.0.0.0/0          reject
+> host     all                dbuser_monitor     ::/0               reject
 >
 > # admin access via intranet with pwd [default]
 > host     all                dbuser_dba         10.0.0.0/8         scram-sha-256
@@ -348,6 +355,7 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 >
 > # reject all other admin access addr [default]
 > host     all                dbuser_dba         0.0.0.0/0          reject
+> host     all                dbuser_dba         ::/0               reject
 >
 > # allow all user intra access with pwd [default]
 > host     all                all                10.0.0.0/8         scram-sha-256

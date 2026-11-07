@@ -1,7 +1,7 @@
 ---
 title: "pg_relusage"
 linkTitle: "pg_relusage"
-description: "打印查询引用的表与列"
+description: "记录 SQL 语句实际使用的表、视图等关系"
 weight: 6850
 ---
 

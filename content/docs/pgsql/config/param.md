@@ -56,7 +56,7 @@ Patroni 将集群配置存储在 DCS（分布式配置存储，默认为 etcd）
 **配置存储结构**：
 
 ```text
-/pigsty/                          # 命名空间（patroni_namespace）
+/pg/                              # 命名空间（pg_namespace）
   └── pg-meta/                    # 集群名称（pg_cluster）
       ├── config                  # 集群配置（所有成员共享）
       ├── leader                  # 当前主库信息
@@ -74,7 +74,7 @@ Patroni 将集群配置存储在 DCS（分布式配置存储，默认为 etcd）
 
 **本地缓存机制**：
 
-每个 Patroni 实例会在本地缓存 DCS 配置，位于 `/pg/conf/<instance>.yml`：
+调优模板渲染出的 Patroni 配置文件位于 `/pg/conf/<instance>.yml`，并软链接为 `/etc/patroni/patroni.yml`；Patroni 会在数据目录中以 `patroni.dynamic.json` 缓存 DCS 中的动态配置：
 
 - 启动时：从 DCS 加载配置，缓存到本地
 - 运行时：定期同步 DCS 配置到本地缓存

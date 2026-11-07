@@ -206,7 +206,7 @@ Primary 服务可能是生产环境中最关键的服务，它在 5433 端口提
 >     option http-keep-alive
 >     http-check send meth OPTIONS uri /primary # <--- primary 服务默认使用 Patroni RestAPI /primary 健康检查
 >     http-check expect status 200
->     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     default-server inter 2s fastinter 1s downinter 2s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
 >     # servers
 >     server pg-test-1 10.10.10.11:6432 check port 8008 weight 100
 >     server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
@@ -249,7 +249,7 @@ Replica 服务在生产环境中的重要性仅次于 Primary 服务，它在 54
 >     option http-keep-alive
 >     http-check send meth OPTIONS uri /read-only
 >     http-check expect status 200
->     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     default-server inter 2s fastinter 1s downinter 2s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
 >     # servers
 >     server pg-test-1 10.10.10.11:6432 check port 8008 weight 100 backup
 >     server pg-test-3 10.10.10.13:6432 check port 8008 weight 100
@@ -287,7 +287,7 @@ Default 服务总是绕过连接池直接连到主库上的 PostgreSQL，这对�
 >     option http-keep-alive
 >     http-check send meth OPTIONS uri /primary
 >     http-check expect status 200
->     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     default-server inter 2s fastinter 1s downinter 2s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
 >     # servers
 >     server pg-test-1 10.10.10.11:5432 check port 8008 weight 100
 >     server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
@@ -326,7 +326,7 @@ Offline 服务将流量直接路由到专用的 [离线从库](/docs/pgsql/confi
 >     option http-keep-alive
 >     http-check send meth OPTIONS uri /replica
 >     http-check expect status 200
->     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+>     default-server inter 2s fastinter 1s downinter 2s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
 >     # servers
 >     server pg-test-3 10.10.10.13:5432 check port 8008 weight 100
 >     server pg-test-2 10.10.10.12:5432 check port 8008 weight 100 backup

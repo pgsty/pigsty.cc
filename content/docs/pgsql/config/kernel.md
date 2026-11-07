@@ -25,7 +25,7 @@ all:
   vars:
     pg_version: 18
     pg_packages: [ pgsql-main, pgsql-common ]
-    pg_extensions: [ postgis, timescaledb, pgvector, pgml ]
+    pg_extensions: [ postgis, timescaledb, pgvector ]
 ```
 
 > 效果：Ansible 在安装阶段会拉取与 `pg_version=18` 对应的包，将扩展预装到系统中，随后数据库初始化脚本即可直接 `CREATE EXTENSION`。
@@ -45,7 +45,7 @@ Pigsty 的离线仓库中不同版本的扩展支持范围不同：14 可用扩�
 | `citus`  | Citus 分布式集群，需要额外的 `pg_shard / pg_group` |
 | `gpsql`  | Cloudberry / Greenplum / MatrixDB       |
 | `mssql`  | Babelfish                               |
-| `mysql`  | OpenGauss/HaloDB 兼容 MySQL 协议            |
+| `mysql`  | OpenHalo/HaloDB 兼容 MySQL 协议             |
 | `polar`  | 阿里 PolarDB（基于 pg `polar` 发行）            |
 | `ivory`  | IvorySQL（Oracle 兼容语法）                   |
 | `pgtde`  | Percona PostgreSQL + pg_tde，使用 `/usr/pgtde-$v` |
@@ -151,7 +151,7 @@ pg-rag:
     pg_mode: pgsql
     pg_conf: olap.yml
     pg_packages: [ pgsql-main, pgsql-common ]
-    pg_extensions: [ pgvector, pgml, postgis ]
+    pg_extensions: [ pgvector, postgis ]
     pg_libs: 'pg_stat_statements, auto_explain'
     pg_parameters:
       max_parallel_workers: 8

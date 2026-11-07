@@ -11,6 +11,11 @@ weight: 9650
     <div class="ext-card__title">debezium/postgres-decoderbufs</div>
     <div class="ext-card__desc">https://github.com/debezium/postgres-decoderbufs</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/decoderbufs-3.7.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">decoderbufs-3.7.0.tar.gz</div>
+    <div class="ext-card__desc">decoderbufs-3.7.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -33,7 +38,7 @@ weight: 9650
 {.ext-table .ext-table--rel}
 
 
-> Headless output plugin; no CREATE EXTENSION. PGDG DEB 3.7.0, RPM 3.5.0; bundled control 0.1.0.
+> Output plugin; no CREATE EXTENSION.
 
 
 ## 版本
@@ -508,6 +513,14 @@ weight: 9650
 @ u26.aarch64 14 postgresql-14-decoderbufs postgresql-14-decoderbufs_3.6.1-1.pgdg26.04+1_arm64.deb pgdg 3.6.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgres-decoderbufs/postgresql-14-decoderbufs_3.6.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-decoderbufs postgresql-14-decoderbufs_3.6.0-2.pgdg26.04+1_arm64.deb pgdg 3.6.0 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgres-decoderbufs/postgresql-14-decoderbufs_3.6.0-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `decoderbufs` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg decoderbufs         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

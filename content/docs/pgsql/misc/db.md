@@ -140,8 +140,8 @@ Pigsty 默认将 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的所有�
 Pgbouncer 数据库列表在 `/etc/pgbouncer/database.txt` 中定义，数据库定义中关于连接池的参数会体现在这里：
 
 ```yaml
-meta                        = host=/var/run/postgresql mode=session
-grafana                     = host=/var/run/postgresql mode=transaction
+meta                        = host=/var/run/postgresql pool_mode=session
+grafana                     = host=/var/run/postgresql pool_mode=transaction
 bytebase                    = host=/var/run/postgresql auth_user=dbuser_meta
 kong                        = host=/var/run/postgresql pool_size=32 reserve_pool=64
 gitea                       = host=/var/run/postgresql min_pool_size=10

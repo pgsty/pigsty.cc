@@ -1,7 +1,7 @@
 ---
 title: "pg_query_rewrite"
 linkTitle: "pg_query_rewrite"
-description: "使用 ProcessUtility hook 重写 SQL 语句"
+description: "按预定义规则将指定 SQL 语句转换为另一条 SQL 语句"
 weight: 5030
 ---
 

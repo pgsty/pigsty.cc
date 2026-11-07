@@ -94,11 +94,7 @@ Pigsty 会在安装时首先建立一个本地软件源，以加速后续软件�
 
 Pigsty 的离线软件包即是将已建立的软件源目录（RPM/APT）打成压缩包。当前源码使用 SOW 创建仓库；如果 `/www/pigsty/repo_complete` 已存在，则认为本地源已经完整构建并跳过上游下载。该文件包含 SHA-256 校验内容，不只是一个空标记。
 
-Repo 定义文件位于 `/www/pigsty.repo`，默认可以通过 `http://${admin_ip}/pigsty.repo` 获取
-
-```bash
-curl -L http://i.pigsty/pigsty.repo -o /etc/yum.repos.d/pigsty.repo
-```
+当前源码不再生成静态的 `/www/pigsty.repo` 文件；受管节点默认通过 [`node_repo_modules`](/docs/node/param#node_repo_modules) 的 `local` 模块，按 `repo_upstream` 中 `pigsty-local` 条目（`http://${admin_ip}/pigsty`）写入软件源定义。
 
 您也可以在没有 Nginx 的情况下直接使用文件本地源：
 
@@ -384,14 +380,14 @@ INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/depl
 
 [Nginx Instance](https://demo.pigsty.cc/d/nginx-instance)：Nginx 监控指标与日志
 
-> [!DETAILS]- Nginx Overview Dashboard
-> [![nginx-overview.jpg](/img/dashboard/nginx-overview.jpg)](https://demo.pigsty.cc/d/nginx-overview)
+> [!DETAILS]- Nginx Instance Dashboard
+> [![nginx-overview.jpg](/img/dashboard/nginx-overview.jpg)](https://demo.pigsty.cc/d/nginx-instance)
 
 
 [Grafana Instance](https://demo.pigsty.cc/d/grafana-instance)：Grafana 监控指标与日志
 
-> [!DETAILS]- Grafana Overview Dashboard
-> [![grafana-overview.jpg](/img/dashboard/grafana-overview.jpg)](https://demo.pigsty.cc/d/grafana-overview)
+> [!DETAILS]- Grafana Instance Dashboard
+> [![grafana-overview.jpg](/img/dashboard/grafana-overview.jpg)](https://demo.pigsty.cc/d/grafana-instance)
 
 
 [VictoriaMetrics Instance](https://demo.pigsty.cc/d/vmetrics-instance)：VictoriaMetrics 抓取、查询与存储指标

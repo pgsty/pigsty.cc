@@ -11,6 +11,11 @@ weight: 3050
     <div class="ext-card__title">EnterpriseDB/pldebugger</div>
     <div class="ext-card__desc">https://github.com/EnterpriseDB/pldebugger</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pldebugger-1.10.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pldebugger-1.10.tar.gz</div>
+    <div class="ext-card__desc">pldebugger-1.10.tar.gz</div>
+  </a>
 </div>
 
 
@@ -225,6 +230,14 @@ weight: 3050
 @ u26.aarch64 14 postgresql-14-pldebugger postgresql-14-pldebugger_1.10-1.pgdg26.04+1_arm64.deb pgdg 1.10 69.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pldebugger/postgresql-14-pldebugger_1.10-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pldebugger postgresql-14-pldebugger_1.9-1.pgdg26.04+1_arm64.deb pgdg 1.9 69.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pldebugger/postgresql-14-pldebugger_1.9-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pldebugger` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pldebugger         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

@@ -55,9 +55,12 @@ pig pb info
 > `-e` 传入的参数必须是合法 JSON：键与字符串值都要加双引号，例如 `{"pg_pitr": {"time": "...", "archive": true}}`。
 > 布尔值不加引号，字符串必须加 —— 引号缺失会导致参数解析失败或静默取错值。
 
-剧本会依次执行：暂停 Patroni 高可用 → 停止集群进程 → 执行 pgbackrest 增量还原 → 启动 PostgreSQL 并等待进入一致恢复状态 →
-用 `pg_controldata` 打印控制信息 → 清理 etcd 元数据 → 重新拉起集群与高可用。
-执行过程的第一步会打印完整的恢复计划（源集群、目标、还原命令），但不会暂停等待确认；上面的一步式示例因此显式声明了 `action: promote`。
+剧本会依次执行：暂停 Patroni 高可用 → 停止集群进程 → 执行 pgbackrest 增量还原 → 启动 PostgreSQL 并等待 WAL 重放到达恢复目标 →
+用 `pg_controldata` 打印控制信息 → 清理 etcd 元数据 → 在目标点提升主库 → 重新拉起集群与高可用。
+如果 PostgreSQL 在到达目标前退出或暂停（例如目标超出归档末尾），剧本会直接失败。
+Patroni 接管时会丢弃恢复目标，因此主库若仍暂停或停机在目标点，剧本会先在目标点提升它，再启动 Patroni。
+只有主库会执行还原与重放；从库在 `up` 之前保持原样，`up` 阶段待新主库可写后，逐个清空从库数据目录，由 Patroni 从新主库重新克隆。
+执行过程的第一步会打印完整的恢复计划（源集群、目标、还原命令），但不会暂停等待确认。
 如果需要在目标点检查数据，请使用下文的 [**分步执行**](#分步执行)，并显式选择 `action: pause`。
 
 
@@ -173,24 +176,26 @@ SELECT pg_create_restore_point('before_migration');
 #   - stop             : # 停止 patroni 和 postgres 服务
 #     - stop_patroni   : # 停止 patroni 服务
 #     - stop_postgres  : # 停止 postgres 服务
-# pitr                 : # 执行 PITR 过程
+# pitr                 : # 仅在主库上执行 PITR 过程
 #   - config           : # 生成 pgbackrest 配置和恢复脚本
+#   - backup           : # 可选：备份原有数据目录
 #   - restore          : # 运行 pgbackrest 恢复命令
-#   - recovery         : # 启动 postgres 并完成恢复
+#   - recovery         : # 启动 postgres 并等待重放到达恢复目标
 #   - verify           : # 验证恢复后的集群控制数据
 # up:                  : # 启动 postgres / patroni 并恢复高可用
 #   - etcd             : # 启动前清理 etcd 元数据
-#   - start            : # 启动 patroni 和 postgres 服务
-#     - start_postgres : # 启动 postgres 服务
-#     - start_patroni  : # 启动 patroni 服务
-#   - resume           : # 恢复 patroni 自动故障切换
+#   - start            : # 启动主库，恢复高可用，重建从库
+#     - primary        : # 在目标点提升主库，启动 patroni
+#     - resume         : # 恢复 patroni 自动故障切换
+#     - replica        : # 清空从库数据，从新主库重新克隆
 ```
 
-每步之间您可以检查状态：`down` 之后确认进程已停；`pitr` 阶段返回后，先查看 `/pg/tmp/recovery.log`，
+每步之间您可以检查状态：`down` 之后确认进程已停；`pitr` 阶段只有在 WAL 重放到达目标后才会返回，返回后先查看 `/pg/tmp/recovery.log`，
 并用 `pg_is_in_recovery()`、`pg_is_wal_replay_paused()`、`pg_last_wal_replay_lsn()` 与 `pg_last_xact_replay_timestamp()`
 确认是否已经到达目标，再结合业务查询抽查数据。`pg_controldata /pg/data` 提供的是检查点与时间线摘要，不能单独证明时间、XID 或 LSN 目标已经命中。
-使用 `action: pause` 时，确认无误后先提升实例，再执行 `up`；如果恢复目标选错了，可在 `up` 之前调整 `pg_pitr` 重跑 `pitr` 阶段。
-`pause` / `shutdown` 需要配合这种分阶段流程才能形成明确的人工门；一步式执行应显式使用 `action: promote`。
+使用 `action: pause` 时，确认无误后执行 `up`：它会先在目标点提升主库，再启动 Patroni，手工提升不再是必需步骤；
+如果恢复目标选错了，可在 `up` 之前调整 `pg_pitr` 重跑 `pitr` 阶段。
+`pause` / `shutdown` 需要配合这种分阶段流程才能形成明确的人工门。
 
 ```sql
 SELECT pg_is_in_recovery(), pg_is_wal_replay_paused(),
@@ -198,12 +203,13 @@ SELECT pg_is_in_recovery(), pg_is_wal_replay_paused(),
 ```
 
 ```bash
-pg_ctl -D /pg/data promote              # action: pause 验证通过后执行
-./pgsql-pitr.yml -l pg-meta -t up       # 清理 etcd，拉起 Patroni，恢复 HA
+pg_ctl -D /pg/data promote              # 可选：action: pause 验证通过后执行
+./pgsql-pitr.yml -l pg-meta -t up       # 必要时在目标点提升，清理 etcd，拉起 Patroni，恢复 HA
 ```
 
 > [!WARNING] 重跑 pitr 阶段
-> `backup: true` 会把当前数据目录搬到 `/pg/data-backup`，而再次运行时会先删除已有的 `/pg/data-backup`。
+> `backup: true` 会把主库当前数据目录搬到 `/pg/data-backup`，而再次运行时会先删除已有的 `/pg/data-backup`。
+> 从库不保留副本：`up` 阶段会清空从库，并从新主库重新克隆。
 > 因此剧本支持分阶段执行，但不能把带 `backup: true` 的恢复笼统视为幂等操作。
 
 

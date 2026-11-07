@@ -43,7 +43,7 @@ listen pg-meta-primary
     #http-check send meth OPTIONS uri /primary    # <---- remove this
     #http-check expect status 200                 # <---- remove this
 
-    default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
+    default-server inter 2s fastinter 1s downinter 2s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
     server pg-meta-1 10.10.10.10:6432 check port 8008 weight 100
 
     # 注释掉其他两台故障的机器
@@ -149,7 +149,7 @@ pg resume <pg_cluster>
 all:
   vars:
     admin_ip: 10.10.10.12               # 使用新的管理节点地址
-    node_etc_hosts: [10.10.10.12 h.pigsty a.pigsty p.pigsty g.pigsty sss.pigsty]
+    node_etc_hosts: [10.10.10.12 i.pigsty sss.pigsty]
     infra_portal: {}                    # 一并修改其他引用旧管理节点 IP (10.10.10.10) 的配置
 
   children:
@@ -183,7 +183,8 @@ all:
 然后执行以下命令，将 ETCD 重置为单节点集群：
 
 ```bash
-./etcd.yml -e etcd_safeguard=false -e etcd_clean=true
+./etcd-rm.yml -l etcd -e etcd_safeguard=false   # 清除幸存节点上残留的旧 etcd 成员数据
+./etcd.yml -l etcd                              # 将 etcd 重新初始化为单节点集群
 ```
 
 根据 [ETCD重载配置](/docs/etcd/admin#重载配置) 的说明，调整对 ETCD Endpoint 的引用。

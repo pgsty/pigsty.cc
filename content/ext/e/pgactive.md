@@ -38,7 +38,7 @@ weight: 9560
 {.ext-table .ext-table--rel}
 
 
-> pkg 2.1.9; SQL 2.1.8; build needs libpgfeutils.
+> SQL 2.1.8.
 
 
 ## 版本
@@ -53,102 +53,102 @@ weight: 9560
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| el8.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| el9.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| el10.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| el10.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| d12.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| d12.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| d13.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| d13.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u22.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u22.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u24.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u24.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u26.x86_64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-| u26.aarch64 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 | AVAIL PIGSTY 2.1.7 1 |
-@ el8.x86_64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el8.x86_64.rpm pigsty 2.1.7 376.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_18-2.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el8.aarch64.rpm pigsty 2.1.7 360.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_18-2.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el9.x86_64.rpm pigsty 2.1.7 346.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_18-2.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el9.aarch64.rpm pigsty 2.1.7 338.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_18-2.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el10.x86_64.rpm pigsty 2.1.7 350.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_18-2.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgactive_18 pgactive_18-2.1.7-1PIGSTY.el10.aarch64.rpm pigsty 2.1.7 343.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_18-2.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb pigsty 2.1.7 593.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb pigsty 2.1.7 567.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb pigsty 2.1.7 594.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb pigsty 2.1.7 570.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb pigsty 2.1.7 644.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb pigsty 2.1.7 634.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~noble_amd64.deb pigsty 2.1.7 625.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~noble_arm64.deb pigsty 2.1.7 619.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb pigsty 2.1.7 622.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb pigsty 2.1.7 614.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-18-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el8.x86_64.rpm pigsty 2.1.7 367.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_17-2.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el8.aarch64.rpm pigsty 2.1.7 352.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_17-2.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el9.x86_64.rpm pigsty 2.1.7 339.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_17-2.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el9.aarch64.rpm pigsty 2.1.7 330.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_17-2.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el10.x86_64.rpm pigsty 2.1.7 343.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_17-2.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgactive_17 pgactive_17-2.1.7-1PIGSTY.el10.aarch64.rpm pigsty 2.1.7 335.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_17-2.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb pigsty 2.1.7 586.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb pigsty 2.1.7 561.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb pigsty 2.1.7 588.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb pigsty 2.1.7 564.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb pigsty 2.1.7 711.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb pigsty 2.1.7 702.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~noble_amd64.deb pigsty 2.1.7 618.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~noble_arm64.deb pigsty 2.1.7 613.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb pigsty 2.1.7 615.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb pigsty 2.1.7 606.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-17-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el8.x86_64.rpm pigsty 2.1.7 361.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_16-2.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el8.aarch64.rpm pigsty 2.1.7 346.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_16-2.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el9.x86_64.rpm pigsty 2.1.7 333.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_16-2.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el9.aarch64.rpm pigsty 2.1.7 325.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_16-2.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el10.x86_64.rpm pigsty 2.1.7 338.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_16-2.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgactive_16 pgactive_16-2.1.7-1PIGSTY.el10.aarch64.rpm pigsty 2.1.7 329.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_16-2.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb pigsty 2.1.7 581.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb pigsty 2.1.7 557.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb pigsty 2.1.7 583.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb pigsty 2.1.7 559.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb pigsty 2.1.7 701.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb pigsty 2.1.7 692.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~noble_amd64.deb pigsty 2.1.7 613.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~noble_arm64.deb pigsty 2.1.7 607.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb pigsty 2.1.7 610.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb pigsty 2.1.7 602.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-16-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el8.x86_64.rpm pigsty 2.1.7 353.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_15-2.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el8.aarch64.rpm pigsty 2.1.7 338.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_15-2.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el9.x86_64.rpm pigsty 2.1.7 330.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_15-2.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el9.aarch64.rpm pigsty 2.1.7 322.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_15-2.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el10.x86_64.rpm pigsty 2.1.7 333.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_15-2.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgactive_15 pgactive_15-2.1.7-1PIGSTY.el10.aarch64.rpm pigsty 2.1.7 327.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_15-2.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb pigsty 2.1.7 577.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb pigsty 2.1.7 551.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb pigsty 2.1.7 580.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb pigsty 2.1.7 555.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb pigsty 2.1.7 698.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb pigsty 2.1.7 690.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~noble_amd64.deb pigsty 2.1.7 610.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~noble_arm64.deb pigsty 2.1.7 606.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb pigsty 2.1.7 607.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb pigsty 2.1.7 599.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-15-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el8.x86_64.rpm pigsty 2.1.7 352.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_14-2.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el8.aarch64.rpm pigsty 2.1.7 339.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_14-2.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el9.x86_64.rpm pigsty 2.1.7 332.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_14-2.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el9.aarch64.rpm pigsty 2.1.7 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_14-2.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el10.x86_64.rpm pigsty 2.1.7 338.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_14-2.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgactive_14 pgactive_14-2.1.7-1PIGSTY.el10.aarch64.rpm pigsty 2.1.7 329.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_14-2.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb pigsty 2.1.7 581.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb pigsty 2.1.7 554.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb pigsty 2.1.7 582.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb pigsty 2.1.7 555.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb pigsty 2.1.7 701.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb pigsty 2.1.7 693.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~noble_amd64.deb pigsty 2.1.7 613.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~noble_arm64.deb pigsty 2.1.7 607.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb pigsty 2.1.7 609.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb pigsty 2.1.7 601.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-14-pgactive_2.1.7-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| el8.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| el9.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| el9.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| el10.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| el10.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| d12.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u26.x86_64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 | AVAIL PIGSTY 2.1.9 1 |
+@ el8.x86_64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el8.x86_64.rpm pigsty 2.1.9 642.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_18-2.1.9-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el8.aarch64.rpm pigsty 2.1.9 623.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_18-2.1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el9.x86_64.rpm pigsty 2.1.9 634.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_18-2.1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el9.aarch64.rpm pigsty 2.1.9 623.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_18-2.1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el10.x86_64.rpm pigsty 2.1.9 638.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_18-2.1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgactive_18 pgactive_18-2.1.9-1PGSTY.el10.aarch64.rpm pigsty 2.1.9 628.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_18-2.1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb pigsty 2.1.9 592.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb pigsty 2.1.9 564.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~trixie_amd64.deb pigsty 2.1.9 594.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~trixie_arm64.deb pigsty 2.1.9 568.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~jammy_amd64.deb pigsty 2.1.9 644.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~jammy_arm64.deb pigsty 2.1.9 633.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~noble_amd64.deb pigsty 2.1.9 624.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~noble_arm64.deb pigsty 2.1.9 618.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~resolute_amd64.deb pigsty 2.1.9 621.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgactive postgresql-18-pgactive_2.1.9-1PGSTY~resolute_arm64.deb pigsty 2.1.9 612.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-18-pgactive_2.1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el8.x86_64.rpm pigsty 2.1.9 634.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_17-2.1.9-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el8.aarch64.rpm pigsty 2.1.9 615.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_17-2.1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el9.x86_64.rpm pigsty 2.1.9 626.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_17-2.1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el9.aarch64.rpm pigsty 2.1.9 615.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_17-2.1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el10.x86_64.rpm pigsty 2.1.9 630.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_17-2.1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgactive_17 pgactive_17-2.1.9-1PGSTY.el10.aarch64.rpm pigsty 2.1.9 620.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_17-2.1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb pigsty 2.1.9 585.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb pigsty 2.1.9 559.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~trixie_amd64.deb pigsty 2.1.9 586.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~trixie_arm64.deb pigsty 2.1.9 561.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~jammy_amd64.deb pigsty 2.1.9 710.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~jammy_arm64.deb pigsty 2.1.9 701.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~noble_amd64.deb pigsty 2.1.9 617.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~noble_arm64.deb pigsty 2.1.9 610.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~resolute_amd64.deb pigsty 2.1.9 613.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgactive postgresql-17-pgactive_2.1.9-1PGSTY~resolute_arm64.deb pigsty 2.1.9 605.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-17-pgactive_2.1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el8.x86_64.rpm pigsty 2.1.9 628.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_16-2.1.9-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el8.aarch64.rpm pigsty 2.1.9 609.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_16-2.1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el9.x86_64.rpm pigsty 2.1.9 620.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_16-2.1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el9.aarch64.rpm pigsty 2.1.9 610.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_16-2.1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el10.x86_64.rpm pigsty 2.1.9 625.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_16-2.1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgactive_16 pgactive_16-2.1.9-1PGSTY.el10.aarch64.rpm pigsty 2.1.9 615.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_16-2.1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb pigsty 2.1.9 580.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb pigsty 2.1.9 554.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~trixie_amd64.deb pigsty 2.1.9 581.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~trixie_arm64.deb pigsty 2.1.9 556.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~jammy_amd64.deb pigsty 2.1.9 699.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~jammy_arm64.deb pigsty 2.1.9 690.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~noble_amd64.deb pigsty 2.1.9 612.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~noble_arm64.deb pigsty 2.1.9 611.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~resolute_amd64.deb pigsty 2.1.9 609.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgactive postgresql-16-pgactive_2.1.9-1PGSTY~resolute_arm64.deb pigsty 2.1.9 600.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-16-pgactive_2.1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el8.x86_64.rpm pigsty 2.1.9 621.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_15-2.1.9-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el8.aarch64.rpm pigsty 2.1.9 602.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_15-2.1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el9.x86_64.rpm pigsty 2.1.9 617.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_15-2.1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el9.aarch64.rpm pigsty 2.1.9 606.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_15-2.1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el10.x86_64.rpm pigsty 2.1.9 622.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_15-2.1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgactive_15 pgactive_15-2.1.9-1PGSTY.el10.aarch64.rpm pigsty 2.1.9 611.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_15-2.1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb pigsty 2.1.9 576.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb pigsty 2.1.9 629.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~trixie_amd64.deb pigsty 2.1.9 577.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~trixie_arm64.deb pigsty 2.1.9 551.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~jammy_amd64.deb pigsty 2.1.9 697.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~jammy_arm64.deb pigsty 2.1.9 689.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~noble_amd64.deb pigsty 2.1.9 609.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~noble_arm64.deb pigsty 2.1.9 604.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~resolute_amd64.deb pigsty 2.1.9 606.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgactive postgresql-15-pgactive_2.1.9-1PGSTY~resolute_arm64.deb pigsty 2.1.9 598.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-15-pgactive_2.1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el8.x86_64.rpm pigsty 2.1.9 622.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgactive_14-2.1.9-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el8.aarch64.rpm pigsty 2.1.9 603.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgactive_14-2.1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el9.x86_64.rpm pigsty 2.1.9 621.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgactive_14-2.1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el9.aarch64.rpm pigsty 2.1.9 609.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgactive_14-2.1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el10.x86_64.rpm pigsty 2.1.9 627.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgactive_14-2.1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgactive_14 pgactive_14-2.1.9-1PGSTY.el10.aarch64.rpm pigsty 2.1.9 614.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgactive_14-2.1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb pigsty 2.1.9 579.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb pigsty 2.1.9 552.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~trixie_amd64.deb pigsty 2.1.9 581.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~trixie_arm64.deb pigsty 2.1.9 554.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~jammy_amd64.deb pigsty 2.1.9 699.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~jammy_arm64.deb pigsty 2.1.9 691.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~noble_amd64.deb pigsty 2.1.9 612.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~noble_arm64.deb pigsty 2.1.9 605.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~resolute_amd64.deb pigsty 2.1.9 607.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgactive postgresql-14-pgactive_2.1.9-1PGSTY~resolute_arm64.deb pigsty 2.1.9 599.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgactive/postgresql-14-pgactive_2.1.9-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

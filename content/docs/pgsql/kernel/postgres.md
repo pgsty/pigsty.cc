@@ -27,7 +27,7 @@ categories: [概念]
 
 大多数 [配置模板](/docs/conf/) 默认使用 PostgreSQL 内核，例如：
 
-- [`meta`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) : **默认**，带有核心扩展（vector、postgis、timescale）的 postgres
+- [`meta`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) : **默认**，带有核心扩展（vector、postgis）的 postgres
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
 - [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
 - [`ha/full`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)：用于 HA 演示的 4 节点沙盒

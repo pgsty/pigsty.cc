@@ -38,7 +38,7 @@ weight: 2780
 {.ext-table .ext-table--rel}
 
 
-> PGDG PG14-18: 1.4.5/1.5.4/1.6.3/1.7.2/1.8.1; EL8 coverage refreshed. 1.9.0 is PG19-only.
+> 1.9 is PG19-only.
 
 
 ## 版本

@@ -27,6 +27,7 @@ redis_node        : 初始化redis节点
   - redis_install : 按 `redis_type` 安装 Redis 或 Valkey，并安装 `redis-exporter`
   - redis_user    : 创建操作系统用户 redis
   - redis_dir     : 配置 redis的FHS目录结构
+  - redis_selinux : 配置 redis 数据目录与运行目录的 SELinux 上下文
 redis_exporter    : 配置 redis_exporter 监控
   - redis_exporter_config  : 生成redis_exporter配置
   - redis_exporter_launch  : 启动redis_exporter
@@ -34,8 +35,10 @@ redis_instance    : 初始化并重启redis集群/节点/实例
   - redis_config  : 生成redis实例配置
   - redis_launch  : 启动redis实例
 redis_register    : 将redis注册到基础设施中
-redis_ha          : 配置redis哨兵（仅sentinel模式）
-redis_join        : 组建redis原生集群（仅cluster模式）
+  - add_metrics   : 将redis监控目标注册到 VictoriaMetrics
+  - add_logs      : 将redis日志注册到 Vector
+redis-ha          : 配置redis哨兵（仅sentinel模式）
+redis-join        : 组建redis原生集群（仅cluster模式）
 ```
 
 

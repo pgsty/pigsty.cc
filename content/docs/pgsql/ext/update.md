@@ -31,7 +31,7 @@ sudo apt update && sudo apt upgrade postgresql-18-pgvector
 ./pgsql.yml -l pg-meta -t pg_extension -e '{"pg_extensions":["pgvector"]}'
 
 # 使用 pig 包管理器
-pig update pgvector
+pig ext update pgvector
 ```
 
 
@@ -60,17 +60,17 @@ WHERE installed_version IS NOT NULL
 
 ```sql
 -- 更新到最新版本
-ALTER EXTENSION pgvector UPDATE;
+ALTER EXTENSION vector UPDATE;
 
 -- 更新到指定版本
-ALTER EXTENSION pgvector UPDATE TO '0.8.0';
+ALTER EXTENSION vector UPDATE TO '0.8.0';
 ```
 
 ### 查看更新路径
 
 ```sql
 -- 查看扩展的可用升级路径
-SELECT * FROM pg_extension_update_paths('pgvector');
+SELECT * FROM pg_extension_update_paths('vector');
 ```
 
 
@@ -103,7 +103,7 @@ SELECT * FROM pg_extension_update_paths('pgvector');
 
 ```sql
 -- 查看扩展依赖
-SELECT * FROM pg_depend WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'pgvector');
+SELECT * FROM pg_depend WHERE refobjid = (SELECT oid FROM pg_extension WHERE extname = 'vector');
 ```
 
 ### 回滚更新

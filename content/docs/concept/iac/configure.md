@@ -326,6 +326,8 @@ $ ./configure -g
 |  `app/registry`  | Docker Registry 配置 |
 |   `app/immich`   | Immich 相册与视频管理配置   |
 | `app/jumpserver` | JumpServer 堡垒机配置   |
+| `app/discourse`  | Discourse 社区论坛配置（开发版） |
+|    `app/silo`    | 独立 Silo 对象存储应用配置（开发版） |
 {.full-width .wide .expand}
 
 ### 特殊内核模板/模式
@@ -343,6 +345,8 @@ $ ./configure -g
 |  `pgedge`  | pgEdge：分布式 PostgreSQL 内核           |
 |  `mongo`   | MongoDB 兼容栈模板                      |
 {.full-width .wide .expand}
+
+上表与核心模板中的 `pgsql` 为 `v4.5.0` 发布包中的路径。开发版已将这些内核分支模板（`ha/citus` 除外）迁入 `conf/fork/`，对应使用 `-c fork/<name>`，例如 `./configure -c fork/ivory`。
 
 ### 演示与构建模板
 
@@ -404,8 +408,6 @@ proceed with ./deploy.yml
 
 |     环境变量      | 说明          |      默认值       |
 |:-------------:|:------------|:--------------:|
-| `PIGSTY_HOME` | Pigsty 安装目录 |   `~/pigsty`   |
-| `METADB_URL`  | 元数据库连接 URL  | `service=meta` |
 | `HTTP_PROXY`  | HTTP 代理     |       -        |
 | `HTTPS_PROXY` | HTTPS 代理    |       -        |
 |  `ALL_PROXY`  | 通用代理        |       -        |

@@ -11,6 +11,11 @@ weight: 2650
     <div class="ext-card__title">pgq/pgq</div>
     <div class="ext-card__desc">https://github.com/pgq/pgq</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgq-3.5.2.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pgq-3.5.2.tar.gz</div>
+    <div class="ext-card__desc">pgq-3.5.2.tar.gz</div>
+  </a>
 </div>
 
 
@@ -173,6 +178,14 @@ weight: 2650
 @ u26.x86_64 14 postgresql-14-pgq3 postgresql-14-pgq3_3.5.1-2.pgdg26.04+1_amd64.deb pgdg 3.5.1 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgq/postgresql-14-pgq3_3.5.1-2.pgdg26.04+1_amd64.deb
 @ u26.aarch64 14 postgresql-14-pgq3 postgresql-14-pgq3_3.5.1-2.pgdg26.04+1_arm64.deb pgdg 3.5.1 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgq/postgresql-14-pgq3_3.5.1-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pgq` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pgq         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

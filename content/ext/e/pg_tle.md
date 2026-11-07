@@ -38,7 +38,7 @@ weight: 3000
 {.ext-table .ext-table--rel}
 
 
-> PGDG 1.5.3 on EL8-10; PIGSTY 1.5.2 on D/U. Added EL10 aarch64; preload/restart; PG19 beta.
+> Preload + restart.
 
 
 ## 版本
@@ -46,7 +46,7 @@ weight: 3000
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_tle` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_tle_$v` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_tle_$v` | - |
 | [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-tle` | - |
 {.ext-table .wide .expand}
 
@@ -59,16 +59,16 @@ weight: 3000
 | el9.aarch64 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 6 | AVAIL PGDG 1.5.3 6 | AVAIL PGDG 1.5.3 6 | AVAIL PGDG 1.5.3 6 |
 | el10.x86_64 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 |
 | el10.aarch64 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 |
-| d12.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 | AVAIL PIGSTY 1.5.3 1 |
 @ el8.x86_64 18 pg_tle_18 pg_tle_18-1.5.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_tle_18-1.5.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 68.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tle_18-1.5.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 68.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_tle_18-1.5.2-1PGDG.rhel8.x86_64.rpm
@@ -91,16 +91,16 @@ weight: 3000
 @ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_tle_18-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_18-1.5.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel10.aarch64.rpm pgdg 1.5.2 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_tle_18-1.5.2-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 155.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 160.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb pigsty 1.5.2 155.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb pigsty 1.5.2 168.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb pigsty 1.5.2 165.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb pigsty 1.5.2 162.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb pigsty 1.5.2 159.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb pigsty 1.5.2 160.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb pigsty 1.5.2 158.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb pigsty 1.5.3 164.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb pigsty 1.5.3 158.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb pigsty 1.5.3 164.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb pigsty 1.5.3 159.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb pigsty 1.5.3 172.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb pigsty 1.5.3 168.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~noble_amd64.deb pigsty 1.5.3 166.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~noble_arm64.deb pigsty 1.5.3 163.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb pigsty 1.5.3 164.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb pigsty 1.5.3 162.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_tle_17 pg_tle_17-1.5.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_tle_17-1.5.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 68.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tle_17-1.5.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_tle_17-1.5.1-1PGDG.rhel8.x86_64.rpm
@@ -131,16 +131,16 @@ weight: 3000
 @ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_tle_17-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_17-1.5.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_tle_17-1.5.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 154.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 159.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb pigsty 1.5.2 155.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb pigsty 1.5.2 183.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb pigsty 1.5.2 179.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb pigsty 1.5.2 162.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb pigsty 1.5.2 159.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb pigsty 1.5.2 160.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb pigsty 1.5.2 158.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb pigsty 1.5.3 163.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb pigsty 1.5.3 158.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb pigsty 1.5.3 163.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb pigsty 1.5.3 158.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb pigsty 1.5.3 187.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb pigsty 1.5.3 183.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~noble_amd64.deb pigsty 1.5.3 166.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~noble_arm64.deb pigsty 1.5.3 163.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb pigsty 1.5.3 165.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb pigsty 1.5.3 162.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_tle_16 pg_tle_16-1.5.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_tle_16-1.5.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 68.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tle_16-1.5.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_tle_16-1.5.1-1PGDG.rhel8.x86_64.rpm
@@ -171,16 +171,16 @@ weight: 3000
 @ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_tle_16-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_16-1.5.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_tle_16-1.5.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 155.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 160.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb pigsty 1.5.2 155.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb pigsty 1.5.2 183.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb pigsty 1.5.2 179.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb pigsty 1.5.2 162.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb pigsty 1.5.2 159.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb pigsty 1.5.2 160.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb pigsty 1.5.2 158.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb pigsty 1.5.3 163.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb pigsty 1.5.3 158.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb pigsty 1.5.3 164.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb pigsty 1.5.3 158.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb pigsty 1.5.3 187.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb pigsty 1.5.3 183.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~noble_amd64.deb pigsty 1.5.3 166.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~noble_arm64.deb pigsty 1.5.3 165.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb pigsty 1.5.3 165.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb pigsty 1.5.3 162.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_tle_15 pg_tle_15-1.5.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 72.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_tle_15-1.5.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 69.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tle_15-1.5.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 69.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_tle_15-1.5.1-1PGDG.rhel8.x86_64.rpm
@@ -211,16 +211,16 @@ weight: 3000
 @ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 69.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_tle_15-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 67.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_15-1.5.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 68.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_tle_15-1.5.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 161.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 156.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 161.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb pigsty 1.5.2 156.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb pigsty 1.5.2 189.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb pigsty 1.5.2 186.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb pigsty 1.5.2 168.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb pigsty 1.5.2 166.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb pigsty 1.5.2 167.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb pigsty 1.5.2 164.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb pigsty 1.5.3 165.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb pigsty 1.5.3 177.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb pigsty 1.5.3 165.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb pigsty 1.5.3 160.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb pigsty 1.5.3 194.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb pigsty 1.5.3 190.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~noble_amd64.deb pigsty 1.5.3 172.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~noble_arm64.deb pigsty 1.5.3 170.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb pigsty 1.5.3 171.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb pigsty 1.5.3 168.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_tle_14 pg_tle_14-1.5.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 72.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_tle_14-1.5.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 70.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tle_14-1.5.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 69.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_tle_14-1.5.1-1PGDG.rhel8.x86_64.rpm
@@ -251,16 +251,16 @@ weight: 3000
 @ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 69.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_tle_14-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 67.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_14-1.5.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 69.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_tle_14-1.5.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 162.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 156.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 162.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb pigsty 1.5.2 157.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb pigsty 1.5.2 189.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb pigsty 1.5.2 186.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb pigsty 1.5.2 169.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb pigsty 1.5.2 167.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb pigsty 1.5.2 167.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb pigsty 1.5.2 165.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb pigsty 1.5.3 165.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb pigsty 1.5.3 160.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb pigsty 1.5.3 165.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb pigsty 1.5.3 161.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb pigsty 1.5.3 193.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb pigsty 1.5.3 190.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~noble_amd64.deb pigsty 1.5.3 173.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~noble_arm64.deb pigsty 1.5.3 170.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb pigsty 1.5.3 171.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb pigsty 1.5.3 168.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.3-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

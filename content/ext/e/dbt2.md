@@ -38,7 +38,7 @@ weight: 3220
 {.ext-table .ext-table--rel}
 
 
-> pkg 0.62.0; SQL 0.46.0; stored functions only.
+> Stored functions only.
 
 
 ## 版本
@@ -59,16 +59,16 @@ weight: 3220
 | el9.aarch64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 6 | AVAIL PGDG 0.62.0 10 | AVAIL PGDG 0.62.0 10 |
 | el10.x86_64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 |
 | el10.aarch64 | AVAIL PGDG 0.62.0 3 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 | AVAIL PGDG 0.62.0 4 |
-| d12.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 | AVAIL PIGSTY 0.61.7 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 | AVAIL PIGSTY 0.62.0 1 |
 @ el8.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm pigsty 0.61.7 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/dbt2-pg18-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
@@ -85,16 +85,16 @@ weight: 3220
 @ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.62.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.62.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 dbt2-pg18-extensions dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/dbt2-pg18-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 178.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb pigsty 0.61.7 176.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb pigsty 0.61.7 177.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb pigsty 0.61.7 176.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb pigsty 0.61.7 201.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb pigsty 0.61.7 200.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~noble_amd64.deb pigsty 0.61.7 194.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 193.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 196.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 196.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb pigsty 0.62.0 55.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb pigsty 0.62.0 54.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~trixie_amd64.deb pigsty 0.62.0 55.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~trixie_arm64.deb pigsty 0.62.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~jammy_amd64.deb pigsty 0.62.0 59.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~jammy_arm64.deb pigsty 0.62.0 59.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~noble_amd64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~noble_arm64.deb pigsty 0.62.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~resolute_amd64.deb pigsty 0.62.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-dbt2 postgresql-18-dbt2_0.62.0-1PGSTY~resolute_arm64.deb pigsty 0.62.0 56.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-18-dbt2_0.62.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm pigsty 0.61.7 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/dbt2-pg17-extensions-0.61.7-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/dbt2-pg17-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
@@ -115,16 +115,16 @@ weight: 3220
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 dbt2-pg17-extensions dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/dbt2-pg17-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 177.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb pigsty 0.61.7 176.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb pigsty 0.61.7 177.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb pigsty 0.61.7 176.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb pigsty 0.61.7 215.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb pigsty 0.61.7 214.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~noble_amd64.deb pigsty 0.61.7 193.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 192.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 193.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 193.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb pigsty 0.62.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb pigsty 0.62.0 54.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~trixie_amd64.deb pigsty 0.62.0 55.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~trixie_arm64.deb pigsty 0.62.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~jammy_amd64.deb pigsty 0.62.0 75.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~jammy_arm64.deb pigsty 0.62.0 75.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~noble_amd64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~noble_arm64.deb pigsty 0.62.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~resolute_amd64.deb pigsty 0.62.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-dbt2 postgresql-17-dbt2_0.62.0-1PGSTY~resolute_arm64.deb pigsty 0.62.0 56.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-17-dbt2_0.62.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/dbt2-pg16-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm pgdg 0.62.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/dbt2-pg16-extensions-0.62.0-1PGDG.rhel8.10.aarch64.rpm
@@ -149,16 +149,16 @@ weight: 3220
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 dbt2-pg16-extensions dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/dbt2-pg16-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 164.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb pigsty 0.61.7 162.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb pigsty 0.61.7 164.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb pigsty 0.61.7 163.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb pigsty 0.61.7 201.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb pigsty 0.61.7 200.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~noble_amd64.deb pigsty 0.61.7 178.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 177.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 180.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 179.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb pigsty 0.62.0 55.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb pigsty 0.62.0 54.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~trixie_amd64.deb pigsty 0.62.0 55.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~trixie_arm64.deb pigsty 0.62.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~jammy_amd64.deb pigsty 0.62.0 74.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~jammy_arm64.deb pigsty 0.62.0 73.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~noble_amd64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~noble_arm64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~resolute_amd64.deb pigsty 0.62.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-dbt2 postgresql-16-dbt2_0.62.0-1PGSTY~resolute_arm64.deb pigsty 0.62.0 56.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-16-dbt2_0.62.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm pgdg 0.53.4 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/dbt2-pg15-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm
@@ -198,16 +198,16 @@ weight: 3220
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 dbt2-pg15-extensions dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/dbt2-pg15-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 158.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb pigsty 0.61.7 156.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb pigsty 0.61.7 157.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb pigsty 0.61.7 156.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb pigsty 0.61.7 195.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb pigsty 0.61.7 194.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~noble_amd64.deb pigsty 0.61.7 172.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 171.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 175.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 174.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb pigsty 0.62.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb pigsty 0.62.0 69.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~trixie_amd64.deb pigsty 0.62.0 55.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~trixie_arm64.deb pigsty 0.62.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~jammy_amd64.deb pigsty 0.62.0 74.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~jammy_arm64.deb pigsty 0.62.0 73.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~noble_amd64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~noble_arm64.deb pigsty 0.62.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~resolute_amd64.deb pigsty 0.62.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-dbt2 postgresql-15-dbt2_0.62.0-1PGSTY~resolute_arm64.deb pigsty 0.62.0 56.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-15-dbt2_0.62.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.62.0 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.62.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm pgdg 0.53.7 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.53.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm pgdg 0.53.4 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/dbt2-pg14-extensions-0.53.4-1PGDG.rhel8.x86_64.rpm
@@ -247,16 +247,16 @@ weight: 3220
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb pigsty 0.61.7 139.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb pigsty 0.61.7 137.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb pigsty 0.61.7 138.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb pigsty 0.61.7 137.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb pigsty 0.61.7 166.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb pigsty 0.61.7 164.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~noble_amd64.deb pigsty 0.61.7 151.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~noble_arm64.deb pigsty 0.61.7 150.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb pigsty 0.61.7 155.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb pigsty 0.61.7 154.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.61.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb pigsty 0.62.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb pigsty 0.62.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~trixie_amd64.deb pigsty 0.62.0 55.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~trixie_arm64.deb pigsty 0.62.0 54.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~jammy_amd64.deb pigsty 0.62.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~jammy_arm64.deb pigsty 0.62.0 68.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~noble_amd64.deb pigsty 0.62.0 58.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~noble_arm64.deb pigsty 0.62.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~resolute_amd64.deb pigsty 0.62.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-dbt2 postgresql-14-dbt2_0.62.0-1PGSTY~resolute_arm64.deb pigsty 0.62.0 56.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/dbt2-extensions/postgresql-14-dbt2_0.62.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

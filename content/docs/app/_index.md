@@ -47,6 +47,7 @@ Pigsty 提供以下应用配置模板（`conf/app/*.yml`、`conf/supabase.yml` �
 - `app/registry`
 - `app/insforge`
 - `app/hindsight`
+- `app/discourse`
 - `supabase`
 
 这些模板使用 `./configure -c ...`、`./app.yml` 工作流；部署前按应用说明检查数据库、目录与镜像版本。

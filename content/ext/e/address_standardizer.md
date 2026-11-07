@@ -11,6 +11,11 @@ weight: 1505
     <div class="ext-card__title">postgis/address_standardizer</div>
     <div class="ext-card__desc">https://github.com/postgis/address_standardizer</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/address_standardizer-3.7.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">address_standardizer-3.7.0.tar.gz</div>
+    <div class="ext-card__desc">address_standardizer-3.7.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -20,7 +25,7 @@ weight: 1505
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`address_standardizer`**](/ext/e/address_standardizer) | `3.7` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`address_standardizer`**](/ext/e/address_standardizer) | `3.7` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -34,7 +39,7 @@ weight: 1505
 {.ext-table .ext-table--rel}
 
 
-> Standalone since PostGIS 3.7; control 3.7; PGDG package 3.7.0; no local recipe.
+> Pigsty fills EL8 gaps.
 
 
 ## 版本
@@ -49,8 +54,8 @@ weight: 1505
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el8.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el8.x86_64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
 | el9.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | el9.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | el10.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
@@ -65,6 +70,8 @@ weight: 1505
 | u24.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | u26.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | u26.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
+@ el8.x86_64 18 address_standardizer_18 address_standardizer_18-3.7.0-1PGSTY.el8.x86_64.rpm pigsty 3.7.0 562.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/address_standardizer_18-3.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 address_standardizer_18 address_standardizer_18-3.7.0-1PGSTY.el8.aarch64.rpm pigsty 3.7.0 560.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/address_standardizer_18-3.7.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 address_standardizer_18 address_standardizer_18-3.7.0-4PGDG.rhel9.8.x86_64.rpm pgdg 3.7.0 216.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/address_standardizer_18-3.7.0-4PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 address_standardizer_18 address_standardizer_18-3.7.0-4PGDG.rhel9.8.aarch64.rpm pgdg 3.7.0 214.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/address_standardizer_18-3.7.0-4PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 address_standardizer_18 address_standardizer_18-3.7.0-4PGDG.rhel10.2.x86_64.rpm pgdg 3.7.0 216.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/address_standardizer_18-3.7.0-4PGDG.rhel10.2.x86_64.rpm
@@ -79,6 +86,8 @@ weight: 1505
 @ u24.aarch64 18 postgresql-18-address-standardizer postgresql-18-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb pgdg 3.7.0 520.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-18-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb
 @ u26.x86_64 18 postgresql-18-address-standardizer postgresql-18-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb pgdg 3.7.0 522.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-18-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-address-standardizer postgresql-18-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb pgdg 3.7.0 519.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-18-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 address_standardizer_17 address_standardizer_17-3.7.0-1PGSTY.el8.x86_64.rpm pigsty 3.7.0 561.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/address_standardizer_17-3.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 address_standardizer_17 address_standardizer_17-3.7.0-1PGSTY.el8.aarch64.rpm pigsty 3.7.0 559.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/address_standardizer_17-3.7.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 address_standardizer_17 address_standardizer_17-3.7.0-4PGDG.rhel9.8.x86_64.rpm pgdg 3.7.0 215.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/address_standardizer_17-3.7.0-4PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 17 address_standardizer_17 address_standardizer_17-3.7.0-4PGDG.rhel9.8.aarch64.rpm pgdg 3.7.0 214.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/address_standardizer_17-3.7.0-4PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 address_standardizer_17 address_standardizer_17-3.7.0-4PGDG.rhel10.2.x86_64.rpm pgdg 3.7.0 216.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/address_standardizer_17-3.7.0-4PGDG.rhel10.2.x86_64.rpm
@@ -93,6 +102,8 @@ weight: 1505
 @ u24.aarch64 17 postgresql-17-address-standardizer postgresql-17-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb pgdg 3.7.0 520.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-17-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb
 @ u26.x86_64 17 postgresql-17-address-standardizer postgresql-17-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb pgdg 3.7.0 522.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-17-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-address-standardizer postgresql-17-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb pgdg 3.7.0 518.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-17-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 address_standardizer_16 address_standardizer_16-3.7.0-1PGSTY.el8.x86_64.rpm pigsty 3.7.0 561.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/address_standardizer_16-3.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 address_standardizer_16 address_standardizer_16-3.7.0-1PGSTY.el8.aarch64.rpm pigsty 3.7.0 559.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/address_standardizer_16-3.7.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 address_standardizer_16 address_standardizer_16-3.7.0-4PGDG.rhel9.8.x86_64.rpm pgdg 3.7.0 215.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/address_standardizer_16-3.7.0-4PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 16 address_standardizer_16 address_standardizer_16-3.7.0-4PGDG.rhel9.8.aarch64.rpm pgdg 3.7.0 214.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/address_standardizer_16-3.7.0-4PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 address_standardizer_16 address_standardizer_16-3.7.0-4PGDG.rhel10.2.x86_64.rpm pgdg 3.7.0 216.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/address_standardizer_16-3.7.0-4PGDG.rhel10.2.x86_64.rpm
@@ -107,6 +118,8 @@ weight: 1505
 @ u24.aarch64 16 postgresql-16-address-standardizer postgresql-16-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb pgdg 3.7.0 520.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-16-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb
 @ u26.x86_64 16 postgresql-16-address-standardizer postgresql-16-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb pgdg 3.7.0 522.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-16-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-address-standardizer postgresql-16-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb pgdg 3.7.0 518.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-16-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 address_standardizer_15 address_standardizer_15-3.7.0-1PGSTY.el8.x86_64.rpm pigsty 3.7.0 562.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/address_standardizer_15-3.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 address_standardizer_15 address_standardizer_15-3.7.0-1PGSTY.el8.aarch64.rpm pigsty 3.7.0 561.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/address_standardizer_15-3.7.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 address_standardizer_15 address_standardizer_15-3.7.0-4PGDG.rhel9.8.x86_64.rpm pgdg 3.7.0 224.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/address_standardizer_15-3.7.0-4PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 15 address_standardizer_15 address_standardizer_15-3.7.0-4PGDG.rhel9.8.aarch64.rpm pgdg 3.7.0 222.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/address_standardizer_15-3.7.0-4PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 address_standardizer_15 address_standardizer_15-3.7.0-4PGDG.rhel10.2.x86_64.rpm pgdg 3.7.0 225.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/address_standardizer_15-3.7.0-4PGDG.rhel10.2.x86_64.rpm
@@ -121,6 +134,8 @@ weight: 1505
 @ u24.aarch64 15 postgresql-15-address-standardizer postgresql-15-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb pgdg 3.7.0 525.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-15-address-standardizer_3.7.0-1.pgdg24.04+1_arm64.deb
 @ u26.x86_64 15 postgresql-15-address-standardizer postgresql-15-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb pgdg 3.7.0 527.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-15-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-address-standardizer postgresql-15-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb pgdg 3.7.0 524.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-15-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 address_standardizer_14 address_standardizer_14-3.7.0-1PGSTY.el8.x86_64.rpm pigsty 3.7.0 562.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/address_standardizer_14-3.7.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 address_standardizer_14 address_standardizer_14-3.7.0-1PGSTY.el8.aarch64.rpm pigsty 3.7.0 561.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/address_standardizer_14-3.7.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 address_standardizer_14 address_standardizer_14-3.7.0-4PGDG.rhel9.8.x86_64.rpm pgdg 3.7.0 224.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/address_standardizer_14-3.7.0-4PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 14 address_standardizer_14 address_standardizer_14-3.7.0-4PGDG.rhel9.8.aarch64.rpm pgdg 3.7.0 222.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/address_standardizer_14-3.7.0-4PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 address_standardizer_14 address_standardizer_14-3.7.0-4PGDG.rhel10.2.x86_64.rpm pgdg 3.7.0 224.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/address_standardizer_14-3.7.0-4PGDG.rhel10.2.x86_64.rpm
@@ -136,6 +151,14 @@ weight: 1505
 @ u26.x86_64 14 postgresql-14-address-standardizer postgresql-14-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb pgdg 3.7.0 527.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-14-address-standardizer_3.7.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 14 postgresql-14-address-standardizer postgresql-14-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb pgdg 3.7.0 524.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/a/address-standardizer/postgresql-14-address-standardizer_3.7.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `address_standardizer` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg address_standardizer         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

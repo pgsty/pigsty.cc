@@ -42,17 +42,15 @@ categories: [参考]
 `ha/simu` 模板是一个 **大规模生产环境仿真配置**，用于测试和验证复杂场景。
 
 **架构组成**：
-- 2 节点高可用 INFRA（监控/告警/Nginx/DNS）
-- 5 节点高可用 ETCD 和 MINIO（Silo，多磁盘）
-- 2 节点 Proxy（HAProxy + Keepalived VIP）
+- 3 节点高可用 INFRA（`10.10.10.10` ～ `10.10.10.12`，监控/告警/Nginx/DNS）
+- 5 节点 ETCD（`10.10.10.25` ～ `10.10.10.29`）
+- 4 节点 MINIO（Silo，每节点 4 块盘 `/data{1...4}`，`10.10.10.21` ～ `10.10.10.24`）
+- 2 节点 Proxy（HAProxy + Keepalived VIP `10.10.10.20`，`sss.pigsty` 指向该 VIP）
 - 多套 PostgreSQL 集群：
-  - pg-meta：2 节点高可用
-  - pg-v14~v18：单节点多版本测试
-  - pg-pitr：单节点 PITR 测试
-  - pg-test：4 节点高可用
-  - pg-src/pg-dst：3+2 节点复制测试
-  - pg-citus：10 节点分布式集群
-- 多种 Redis 模式：主从、哨兵、集群
+  - pg-meta：3 节点高可用，与 INFRA 共置
+  - pg-src / pg-dst：各 3 节点高可用（`10.10.10.31` ～ `33`、`10.10.10.41` ～ `43`）
+  - pg-tmp / pg-etcd / pg-minio：复用 Proxy、ETCD、MINIO 节点的 2、5、4 节点集群
+- 多种 Redis 模式：主从（redis-src、redis-dst）、哨兵（redis-meta）
 
 **适用场景**：
 - 大规模部署测试与验证

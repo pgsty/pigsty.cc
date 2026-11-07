@@ -1,7 +1,7 @@
 ---
 title: "timescaledb_toolkit"
 linkTitle: "timescaledb_toolkit"
-description: "超表分析查询，时间序列流式处理，以及其他SQL工具"
+description: "分析型超函数库、时间序列管道处理及其他 SQL 工具"
 weight: 1010
 ---
 
@@ -11,10 +11,10 @@ weight: 1010
     <div class="ext-card__title">timescale/timescaledb-toolkit</div>
     <div class="ext-card__desc">https://github.com/timescale/timescaledb-toolkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/timescaledb-toolkit-1.26.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/timescaledb-toolkit-1.27.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">timescaledb-toolkit-1.26.0.tar.gz</div>
-    <div class="ext-card__desc">timescaledb-toolkit-1.26.0.tar.gz</div>
+    <div class="ext-card__title">timescaledb-toolkit-1.27.0.tar.gz</div>
+    <div class="ext-card__desc">timescaledb-toolkit-1.27.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1010
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`timescaledb_toolkit`**](/ext/e/timescaledb_toolkit) | `1.26.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`timescaledb_toolkit`**](/ext/e/timescaledb_toolkit) | `1.27.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,101 +38,101 @@ weight: 1010
 {.ext-table .ext-table--rel}
 
 
-> 1.26.0 builds PG16-18; older packages: PG14 DEB 1.19.0, PG15 RPM/DEB 1.23.0.
+> 1.27: PG15-18.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "16,17,18" >}} | `timescaledb_toolkit` | - |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16,15" >}} | `timescaledb-toolkit_$v` | - |
-| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.26.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-timescaledb-toolkit` | - |
+| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "15,16,17,18" >}} | `timescaledb_toolkit` | - |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "18,17,16,15" >}} | `timescaledb-toolkit_$v` | - |
+| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-timescaledb-toolkit` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el8.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el8.aarch64.rpm pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el9.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el9.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el10.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.23.0-2PIGSTY.el10.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_18-1.23.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb pigsty 1.23.0 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el8.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el8.aarch64.rpm pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el9.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el9.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el10.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.23.0-2PIGSTY.el10.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_17-1.23.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb pigsty 1.23.0 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el8.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el8.aarch64.rpm pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el9.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el9.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el10.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.23.0-2PIGSTY.el10.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_16-1.23.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb pigsty 1.23.0 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el8.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el8.aarch64.rpm pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el9.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el9.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el10.x86_64.rpm pigsty 1.23.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.23.0-2PIGSTY.el10.aarch64.rpm pigsty 1.23.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_15-1.23.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb pigsty 1.23.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb pigsty 1.23.0 2.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb pigsty 1.23.0 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb pigsty 1.23.0 3.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb pigsty 1.23.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.23.0-2PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el8.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_18-1.27.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el8.aarch64.rpm pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_18-1.27.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el9.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_18-1.27.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el9.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_18-1.27.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el10.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_18-1.27.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el10.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_18-1.27.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-timescaledb-toolkit postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-18-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el8.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_17-1.27.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el8.aarch64.rpm pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_17-1.27.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el9.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_17-1.27.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el9.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_17-1.27.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el10.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_17-1.27.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 timescaledb-toolkit_17 timescaledb-toolkit_17-1.27.0-1PGSTY.el10.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_17-1.27.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-timescaledb-toolkit postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-17-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el8.x86_64.rpm pigsty 1.27.0 4.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_16-1.27.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el8.aarch64.rpm pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_16-1.27.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el9.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_16-1.27.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el9.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_16-1.27.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el10.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_16-1.27.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 timescaledb-toolkit_16 timescaledb-toolkit_16-1.27.0-1PGSTY.el10.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_16-1.27.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-timescaledb-toolkit postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-16-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el8.x86_64.rpm pigsty 1.27.0 4.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_15-1.27.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el8.aarch64.rpm pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_15-1.27.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el9.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_15-1.27.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el9.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-toolkit_15-1.27.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el10.x86_64.rpm pigsty 1.27.0 4.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-toolkit_15-1.27.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 timescaledb-toolkit_15 timescaledb-toolkit_15-1.27.0-1PGSTY.el10.aarch64.rpm pigsty 1.27.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-toolkit_15-1.27.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb pigsty 1.27.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb pigsty 1.27.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb
 @ d12.x86_64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_amd64.deb pigsty 1.19.0 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_arm64.deb pigsty 1.19.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_arm64.deb
 @ u22.x86_64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_amd64.deb pigsty 1.19.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_amd64.deb
@@ -168,18 +168,21 @@ pig install timescaledb_toolkit;          # 当前活跃 PG 版本安装
 pig ext install -y timescaledb_toolkit -v 18  # PG 18
 pig ext install -y timescaledb_toolkit -v 17  # PG 17
 pig ext install -y timescaledb_toolkit -v 16  # PG 16
+pig ext install -y timescaledb_toolkit -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
 dnf install -y timescaledb-toolkit_18       # PG 18
 dnf install -y timescaledb-toolkit_17       # PG 17
 dnf install -y timescaledb-toolkit_16       # PG 16
+dnf install -y timescaledb-toolkit_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
 apt install -y postgresql-18-timescaledb-toolkit   # PG 18
 apt install -y postgresql-17-timescaledb-toolkit   # PG 17
 apt install -y postgresql-16-timescaledb-toolkit   # PG 16
+apt install -y postgresql-15-timescaledb-toolkit   # PG 15
 ```
 
 
@@ -189,14 +192,33 @@ apt install -y postgresql-16-timescaledb-toolkit   # PG 16
 CREATE EXTENSION timescaledb_toolkit;
 ```
 
-
-
-
 ## 用法
 
-来源：[documentation index](https://github.com/timescale/timescaledb-toolkit/blob/1.23.0/docs/README.md)、[v1.23.0 release](https://github.com/timescale/timescaledb-toolkit/releases/tag/1.23.0)、[Changelog](https://github.com/timescale/timescaledb-toolkit/blob/1.23.0/Changelog.md)
+来源：
+
+- [Documentation index](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/README.md)
+- [README](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/README.md)
+- [Control](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/extension/timescaledb_toolkit.control)
+- [Cargo version](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/extension/Cargo.toml)
+- [Changelog](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/CHANGELOG.md)
+- [Counter aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/counter_agg.md)
+- [Gauge aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/gauge_agg.md)
+- [UddSketch](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/uddsketch.md)
+- [Statistics](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/stats_agg.md)
+- [Timevector pipelines](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/timeseries_pipeline_elements.md)
+- [1.27.0+p2 release](https://github.com/timescale/timescaledb-toolkit/releases/tag/1.27.0%2Bp2)
 
 TimescaleDB Toolkit 提供了一系列专用于时序数据分析的函数，采用 **两步聚合模式**。大多数函数会先创建中间表示，再通过访问器函数进行查询，从而实现高效复用和多维分析。
+
+### 启用与兼容性
+
+`timescaledb_toolkit` 1.27.0 的发布标签为 1.27.0+p2，上游 CI 覆盖 PostgreSQL 16–18。安装匹配库后，在使用它的数据库执行：
+
+```sql
+CREATE EXTENSION timescaledb_toolkit;
+```
+
+控制文件标记为 trusted，具有数据库 CREATE 权限的角色可安装；无需共享预加载。下方使用 `time_bucket` 的示例还假定已启用 TimescaleDB。升级已有安装时使用匹配的库和提供的 SQL 升级路径；实验模式中的对象不保证升级兼容。
 
 ### 近似分析
 
@@ -205,14 +227,14 @@ TimescaleDB Toolkit 提供了一系列专用于时序数据分析的函数，采
 基于概率的去重计数，支持可配置精度，适用于高基数数据集。
 
 ```sql
--- 估算每日独立用户数
+-- Estimate unique users per day
 SELECT
     date_trunc('day', timestamp) as day,
     distinct_count(hyperloglog(64, user_id)) as unique_users
 FROM events
 GROUP BY day;
 
--- 跨分区合并计数
+-- Combine counts across partitions
 SELECT distinct_count(rollup(hll))
 FROM (SELECT hyperloglog(32, session_id) as hll FROM events_2023
       UNION ALL
@@ -224,7 +246,7 @@ FROM (SELECT hyperloglog(32, session_id) as hll FROM events_2023
 高精度百分位估算，针对尾部分位数（P95、P99）进行了优化。
 
 ```sql
--- 追踪响应时间百分位
+-- Track response time percentiles
 SELECT
     service_name,
     approx_percentile(0.50, tdigest(100, response_time)) as p50,
@@ -233,7 +255,7 @@ SELECT
 FROM api_metrics
 GROUP BY service_name;
 
--- 结合连续聚合计算每小时百分位
+-- Store hourly percentiles in a materialized view
 CREATE MATERIALIZED VIEW hourly_percentiles AS
 SELECT
     time_bucket('1 hour', timestamp) as hour,
@@ -243,10 +265,10 @@ FROM requests GROUP BY hour;
 
 #### UddSketch - 有界误差分位数
 
-带有最大相对误差保证的分位数估算。
+分位数估算使用指定的初始误差上界；桶数不足时实际误差上界可能增大，应通过结果的 `error` 检查。
 
 ```sql
--- 计算 CPU 利用率百分位，最大误差 1%
+-- CPU percentiles with a starting 1% error target
 SELECT
     host_id,
     approx_percentile(0.95, uddsketch(100, 0.01, cpu_percent)) as p95_cpu,
@@ -262,7 +284,7 @@ GROUP BY host_id;
 处理单调递增的计数器，自动检测重置。
 
 ```sql
--- 计算请求速率
+-- Request rate calculation
 SELECT
     time_bucket('5 min', timestamp) as bucket,
     rate(counter_agg(timestamp, request_count)) as requests_per_sec,
@@ -270,13 +292,15 @@ SELECT
 FROM metrics
 GROUP BY bucket;
 
--- 对不完整时间桶进行外推速率计算
-SELECT
-    extrapolated_rate(
-        counter_agg(timestamp, bytes_sent,
-                   bounds => time_bucket_range('1 hour', timestamp))
-    ) as bytes_per_second
-FROM network_stats;
+-- Extrapolated rate for each hourly bucket
+SELECT bucket, extrapolated_rate(summary, method => 'prometheus') AS bytes_per_second
+FROM (
+    SELECT time_bucket('1 hour', timestamp) AS bucket,
+           counter_agg(timestamp, bytes_sent,
+                       bounds => time_bucket_range('1 hour', timestamp)) AS summary
+    FROM network_stats
+    GROUP BY time_bucket('1 hour', timestamp)
+) hourly;
 ```
 
 #### 仪表聚合 - 波动指标
@@ -284,7 +308,7 @@ FROM network_stats;
 用于分析上下波动的指标（如温度、内存使用量）。
 
 ```sql
--- 温度变化分析
+-- Temperature change analysis
 SELECT
     sensor_id,
     delta(gauge_agg(timestamp, temperature)) as temp_delta,
@@ -300,7 +324,7 @@ GROUP BY sensor_id;
 处理不规则采样数据，支持插值方法（LOCF 末次观测值保持、Linear 线性插值）。
 
 ```sql
--- 对不规则传感器读数计算加权平均
+-- Weighted average for irregular sensor readings
 SELECT
     device_id,
     average(time_weight('LOCF', timestamp, sensor_value)) as weighted_avg,
@@ -308,7 +332,7 @@ SELECT
 FROM iot_readings
 GROUP BY device_id;
 
--- 合并多个时间范围
+-- Combining multiple time ranges
 SELECT average(rollup(tw))
 FROM (SELECT time_weight('LOCF', ts, val) as tw FROM readings_2023
       UNION ALL
@@ -322,7 +346,7 @@ FROM (SELECT time_weight('LOCF', ts, val) as tw FROM readings_2023
 在保持视觉相似性的前提下对时序数据进行降采样，适用于图表展示。
 
 ```sql
--- 将 10 万个数据点降采样为 1000 个用于可视化
+-- Reduce 100K points to 1K for visualization
 SELECT time, value
 FROM unnest((
     SELECT lttb(timestamp, price, 1000)
@@ -336,7 +360,7 @@ FROM unnest((
 通过降噪生成易于阅读的图表，同时保留趋势特征。
 
 ```sql
--- 将每日数据平滑为周粒度
+-- Smooth daily data to weekly resolution
 SELECT time, value
 FROM unnest((
     SELECT asap_smooth(date, daily_sales, 52)
@@ -352,13 +376,13 @@ FROM unnest((
 提供全面的统计分析能力，支持一维和二维回归分析。
 
 ```sql
--- 多变量分析
+-- Multi-variable analysis
 SELECT
-    -- 基础统计量
+    -- Basic statistics
     average(stats_agg(response_time)) as avg_response,
     stddev(stats_agg(response_time)) as response_stddev,
 
-    -- 回归分析
+    -- Regression analysis
     slope(stats_agg(response_time, request_size)) as size_impact,
     corr(stats_agg(response_time, request_size)) as correlation,
     determination_coeff(stats_agg(response_time, request_size)) as r_squared
@@ -367,24 +391,25 @@ FROM performance_data;
 
 ### Timevector 数据类型
 
-用于时序操作的高效中间表示。
+Timevector 保存时序数据的中间值。`toolkit_experimental.lttb` 等流水线操作符仍属实验功能；降采样前应排序。
 
 ```sql
--- 创建和操作 timevector
+-- Create and manipulate timevector
 CREATE VIEW cpu_series AS
 SELECT host_id, timevector(timestamp, cpu_percent) as ts
 FROM system_metrics GROUP BY host_id;
 
--- 对 timevector 进行链式操作
-SELECT host_id, unnest(lttb(ts, 100))
+-- Chain operations on timevector
+SELECT host_id, unnest(ts -> toolkit_experimental.sort()
+                         -> toolkit_experimental.lttb(100))
 FROM cpu_series;
 ```
 
 ### 集成模式
 
-### 连续聚合支持
+### 物化聚合
 
-大多数 Toolkit 函数可与 TimescaleDB 连续聚合无缝配合使用：
+下面创建的是普通物化视图，源数据变化后须显式刷新。TimescaleDB 连续聚合还需要超表、连续聚合选项与合适的刷新策略。
 
 ```sql
 CREATE MATERIALIZED VIEW hourly_analytics AS
@@ -397,7 +422,7 @@ SELECT
 FROM api_events
 GROUP BY hour, service_name;
 
--- 查询预计算的聚合结果
+-- Query pre-computed aggregates
 SELECT
     hour,
     approx_percentile(0.95, response_digest) as p95_response,
@@ -412,7 +437,7 @@ WHERE hour >= NOW() - INTERVAL '24 hours';
 存储中间聚合结果，支持多维度分析复用：
 
 ```sql
--- 第一步：创建聚合
+-- Step 1: Create aggregates
 CREATE TABLE daily_summaries AS
 SELECT
     date_trunc('day', timestamp) as day,
@@ -420,12 +445,12 @@ SELECT
     stats_agg(response_time, request_size) as stats
 FROM requests GROUP BY day;
 
--- 第二步：基于同一份数据进行多维分析
+-- Step 2: Multiple analyses from same data
 SELECT
     day,
     approx_percentile(0.50, response_digest) as median,
     approx_percentile(0.99, response_digest) as p99,
-    average(stats) as avg_response,
+    average_y(stats) as avg_response,
     slope(stats) as size_correlation
 FROM daily_summaries;
 ```
@@ -434,4 +459,8 @@ FROM daily_summaries;
 
 ### 版本说明
 
-`timescaledb_toolkit` 1.23.0 有两项行为变化需要在测试中留意：`max_n`、`max_n_by`、`min_n` 和 `min_n_by` 在 empty streams 上返回空结果而不是报错；1D aggregations 现在会在值可能丢失 53-bit precision 时报错，而不是静默返回错误数据。该版本还将 `time_weight` 及其 rollup 标记为 parallel-unsafe，升级到 `pgrx` 0.18，并修复 ASAP smoothing sortedness checks。
+1.23 中，`max_n`、`max_n_by`、`min_n` 和 `min_n_by` 对空输入返回空结果；`stats_agg(bigint)` 拒绝超出双精度精确整数范围的值。这些行为在后续版本仍需纳入应用测试。
+
+1.24 为 `heartbeat_agg` 添加相等操作符，并修复空频率聚合与统计溢出处理；1.25 稳定了 `gauge_agg`，修复空输入的 t-digest 和若干类型处理问题；1.26 移除 `time_weight` 及其 rollup 的组合、序列化与反序列化支持，保持其非并行聚合边界。
+
+1.27 为 `statssummary1d` 和 `statssummary2d` 添加相等操作符，修复稀疏 HyperLogLog 合并及相同时间戳计数器点的误判重置。它拒绝无效 UTF-8 状态名、超过 1024 字节或括号嵌套超过 256 层的 lambda、不同元素类型的频率聚合合并，以及 `topn` 中类型不匹配的 NULL 参数；还补上流水线 map 的权限检查。

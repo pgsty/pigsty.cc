@@ -11,10 +11,10 @@ weight: 5290
     <div class="ext-card__title">Postgres-Extensions/cat_tools</div>
     <div class="ext-card__desc">https://github.com/Postgres-Extensions/cat_tools</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/cat_tools-0.3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/cat_tools-0.4.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">cat_tools-0.3.0.tar.gz</div>
-    <div class="ext-card__desc">cat_tools-0.3.0.tar.gz</div>
+    <div class="ext-card__title">cat_tools-0.4.0.tar.gz</div>
+    <div class="ext-card__desc">cat_tools-0.4.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 5290
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`cat_tools`**](/ext/e/cat_tools) | `0.3.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`cat_tools`**](/ext/e/cat_tools) | `0.4.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,117 +38,117 @@ weight: 5290
 {.ext-table .ext-table--rel}
 
 
-> Promoted from a source-only universe row to PIGSTY RPM and DEB packages at 0.3.0; control fixes schema cat_tools and META declares the plpgsql runtime dependency.
+> SQL-only catalog utilities; fixed schema cat_tools; requires plpgsql.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "14,15,16,17,18" >}} | `cat_tools` | `plpgsql` |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `cat_tools_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-cat-tools` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "14,15,16,17,18" >}} | `cat_tools` | `plpgsql` |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `cat_tools_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-cat-tools` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-@ el8.x86_64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_18-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_18-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_18-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_18-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_18-0.3.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 18 cat_tools_18 cat_tools_18-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_18-0.3.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-18-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_17-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_17-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_17-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_17-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_17-0.3.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 17 cat_tools_17 cat_tools_17-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_17-0.3.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-17-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_16-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_16-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_16-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_16-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_16-0.3.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 16 cat_tools_16 cat_tools_16-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_16-0.3.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-16-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_15-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_15-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_15-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_15-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_15-0.3.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 15 cat_tools_15 cat_tools_15-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_15-0.3.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-15-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_14-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el8.noarch.rpm pigsty 0.3.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_14-0.3.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_14-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el9.noarch.rpm pigsty 0.3.0 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_14-0.3.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_14-0.3.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 14 cat_tools_14 cat_tools_14-0.3.0-1PIGSTY.el10.noarch.rpm pigsty 0.3.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_14-0.3.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~trixie_all.deb pigsty 0.3.0 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~jammy_all.deb pigsty 0.3.0 27.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~noble_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.3.0-1PIGSTY~resolute_all.deb pigsty 0.3.0 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-14-cat-tools_0.3.0-1PIGSTY~resolute_all.deb
+| el8.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
+@ el8.x86_64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_18-0.4.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_18-0.4.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_18-0.4.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_18-0.4.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_18-0.4.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 18 cat_tools_18 cat_tools_18-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_18-0.4.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-cat-tools postgresql-18-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-18-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_17-0.4.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_17-0.4.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_17-0.4.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_17-0.4.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_17-0.4.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 cat_tools_17 cat_tools_17-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_17-0.4.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-cat-tools postgresql-17-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-17-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_16-0.4.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_16-0.4.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_16-0.4.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_16-0.4.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_16-0.4.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 cat_tools_16 cat_tools_16-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_16-0.4.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-cat-tools postgresql-16-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-16-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_15-0.4.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_15-0.4.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_15-0.4.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_15-0.4.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_15-0.4.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 15 cat_tools_15 cat_tools_15-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_15-0.4.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-cat-tools postgresql-15-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-15-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/cat_tools_14-0.4.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el8.noarch.rpm pigsty 0.4.0 37.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/cat_tools_14-0.4.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/cat_tools_14-0.4.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el9.noarch.rpm pigsty 0.4.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/cat_tools_14-0.4.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/cat_tools_14-0.4.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 14 cat_tools_14 cat_tools_14-0.4.0-1PGSTY.el10.noarch.rpm pigsty 0.4.0 36.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/cat_tools_14-0.4.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~bookworm_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~trixie_all.deb pigsty 0.4.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~jammy_all.deb pigsty 0.4.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~noble_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-cat-tools postgresql-14-cat-tools_0.4.0-1PGSTY~resolute_all.deb pigsty 0.4.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/cat-tools/postgresql-14-cat-tools_0.4.0-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

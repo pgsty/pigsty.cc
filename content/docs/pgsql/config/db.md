@@ -650,9 +650,9 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 | 集群参数                                                   | 默认值                    | 说明       |
 |--------------------------------------------------------|------------------------|----------|
 | [**`pg_encoding`**](/docs/pgsql/param#pg_encoding)     | `UTF8`                 | 集群默认字符编码 |
-| [**`pg_locale`**](/docs/pgsql/param#pg_locale)         | `C` / `C-UTF-8` (如果支持) | 集群默认本地化  |
-| [**`pg_lc_collate`**](/docs/pgsql/param#pg_lc_collate) | `C` / `C-UTF-8` (如果支持) | 集群默认排序规则 |
-| [**`pg_lc_ctype`**](/docs/pgsql/param#pg_lc_ctype)     | `C` / `C-UTF-8` (如果支持) | 集群默认字符分类 |
+| [**`pg_locale`**](/docs/pgsql/param#pg_locale)         | `C` / `C.UTF-8` (如果支持) | 集群默认本地化  |
+| [**`pg_lc_collate`**](/docs/pgsql/param#pg_lc_collate) | `C` / `C.UTF-8` (如果支持) | 集群默认排序规则 |
+| [**`pg_lc_ctype`**](/docs/pgsql/param#pg_lc_ctype)     | `C` / `C.UTF-8` (如果支持) | 集群默认字符分类 |
 {.full-width}
 
 新创建的数据库默认会从 `template1` 数据库 Fork 出来，这个模版数据库会在 [`PG_PROVISION`](/docs/pgsql/param#pg_provision) 阶段进行定制修改：
@@ -731,8 +731,8 @@ Pigsty 默认将 [`pg_databases`](/docs/pgsql/param/#pg_databases) 中的所有�
 pgbouncer 数据库列表与其配置参数在 `/etc/pgbouncer/database.txt` 中定义。
 
 ```yaml
-meta                        = host=/var/run/postgresql mode=session
-grafana                     = host=/var/run/postgresql mode=transaction
+meta                        = host=/var/run/postgresql pool_mode=session
+grafana                     = host=/var/run/postgresql pool_mode=transaction
 bytebase                    = host=/var/run/postgresql auth_user=dbuser_meta
 kong                        = host=/var/run/postgresql pool_size=32 reserve_pool=64
 gitea                       = host=/var/run/postgresql min_pool_size=10

@@ -192,7 +192,7 @@ export ALICLOUD_REGION="cn-shanghai"
 
 以下是阿里云中常用的 [**ECS 公共操作系统镜像**](https://help.aliyun.com/zh/ecs/user-guide/public-mirroring-overview) 前缀：
 
-当前推荐并验证的基线为 Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.6，以及 Ubuntu 22.04.5 / 24.04.4 / 26.04.0。
+当前推荐并验证的上游基线为 Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.7，以及 Ubuntu 22.04.5 / 24.04.5 / 26.04.1。阿里云公共镜像目录目前仍使用 Debian 13.6，因此 `d13` 的镜像前缀暂保留 `debian_13_6_*`。
 
 | 发行版                   | 代码     | x86_64 镜像前缀                       | aarch64 镜像前缀                        |
 |-----------------------|--------|-----------------------------------|-------------------------------------|
@@ -204,8 +204,8 @@ export ALICLOUD_REGION="cn-shanghai"
 | Debian 12.15          | `d12`  | `debian_12_15_x64`                | `debian_12_15_arm64`                |
 | Debian 13.6           | `d13`  | `debian_13_6_x64`                 | `debian_13_6_arm64`                 |
 | Ubuntu 22.04.5 LTS    | `u22`  | `ubuntu_22_04_x64_20G`            | `ubuntu_22_04_arm64_20G`            |
-| Ubuntu 24.04.4 LTS    | `u24`  | `ubuntu_24_04_x64_20G`            | `ubuntu_24_04_arm64_20G`            |
-| Ubuntu 26.04.0 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
+| Ubuntu 24.04.5 LTS    | `u24`  | `ubuntu_24_04_x64_20G`            | `ubuntu_24_04_arm64_20G`            |
+| Ubuntu 26.04.1 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
 | Anolis 8.10           | `an8`  | `anolisos_8_10_x64`               | `anolisos_8_10_arm64`               |
 | Alibaba Cloud Linux 3 | `al3`  | `aliyun_3_x64_20G_alibase_[0-9]+` | `aliyun_3_arm64_20G_alibase_[0-9]+` |
 {.full-width .wide .expand}

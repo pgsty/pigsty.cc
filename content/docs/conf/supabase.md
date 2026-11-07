@@ -108,5 +108,5 @@ psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
 - **必须修改 JWT_SECRET**：使用至少 32 字符的随机字符串，并重新生成 ANON_KEY 和 SERVICE_ROLE_KEY
 - 需要配置正确的域名（`SITE_URL`、`API_EXTERNAL_URL`）
 - 生产环境建议启用 HTTPS（可使用 certbot 自动签发证书）
-- Docker 网络需要能访问 PostgreSQL；模板中的 Docker HBA 范围为 `172.17.0.0/16`，应根据实际容器网络调整
+- Docker 网络需要能访问 PostgreSQL；模板中的 Docker HBA 范围为 `172.16.0.0/12`（v4.5.0 为 `172.17.0.0/16`），应根据实际容器网络调整
 - 升级前核对目标版本的迁移步骤，不要在既有数据库上重放新库基线 `files/supabase.sql`

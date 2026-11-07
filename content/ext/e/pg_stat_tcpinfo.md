@@ -38,7 +38,7 @@ weight: 6480
 {.ext-table .ext-table--rel}
 
 
-> Linux >=4.18; procfs and NETLINK_INET_DIAG required. Monitoring roles can see all server-OS-user sockets. No preload or upstream 1.0-to-1.1 upgrade script. PG14-18; PGDG remains principal supplier; PGSTY 1.1 batch supplements published.
+> Linux >=4.18; procfs/NETLINK_INET_DIAG.
 
 
 ## 版本

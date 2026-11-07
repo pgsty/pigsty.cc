@@ -136,12 +136,12 @@ sudo -iu postgres pg_ctl -D /pg/data status
 ./pgsql-pitr.yml -l pg-meta -t pitr
 ```
 
-该阶段会：
+该阶段只在主库上执行；从库保持停止，并保留原有数据直到 `up`。
 
-1. 生成 `/pg/conf/pitr.conf` 与 `/pg/bin/pg-restore`；
+1. 生成 `/pg/conf/pitr.conf`、`/pg/bin/pg-restore` 与 `/pg/bin/pg-recovery`；
 2. 根据 `backup` 决定是否移动原 PGDATA；
 3. 创建目标目录并运行带 `--force`、`delta=y` 的 pgBackRest restore；
-4. 直接启动 PostgreSQL并等待日志出现 consistent recovery state；
+4. 直接启动 PostgreSQL，等待 WAL 重放到达目标；若在到达目标前退出或暂停则直接失败；
 5. 打印 `pg_controldata` 摘要。
 
 控制信息只能证明数据目录具有可读的控制状态，不能证明指定时间、XID 或业务状态正确。使用 `action: pause` 时，确认 WAL 已到达并暂停在目标附近：
@@ -158,7 +158,7 @@ sudo -iu postgres psql -p 5432 -Atqc \
 3. 修改恢复目标并重新运行完整 `--check`；
 4. 再执行 `pitr` 阶段。
 
-不要运行 `up`，也不要让旧时间线上的副本重新接入。
+在确认恢复结果之前，不要运行 `up`。
 
 
 --------
@@ -173,6 +173,7 @@ sudo -iu postgres psql -p 5432 -Atqc 'SELECT pg_is_in_recovery()'
 ```
 
 预期结果为 `f`。提升不是只读验证，也不能无损撤销。
+如果执行 `up` 时主库仍暂停在目标点，`up` 会先在目标点提升它，再启动 Patroni。
 
 在所有 Patroni 成员仍停止、精确目标仍为 `pg-meta` 的前提下，再执行：
 
@@ -180,7 +181,7 @@ sudo -iu postgres psql -p 5432 -Atqc 'SELECT pg_is_in_recovery()'
 ./pgsql-pitr.yml -l pg-meta -t up
 ```
 
-`up` 会在主库节点对应的 etcd 中删除 `/pg/pg-meta/` 前缀（实际前缀还受 `pg_namespace`/Citus 配置影响），停止手工 PostgreSQL，启动主库 Patroni，再逐个启动副本并恢复 HA。etcd 删除任务设置了错误容忍，因此成功返回也不能证明旧 DCS 状态已正确清除。
+`up` 会在主库节点对应的 etcd 中删除 `/pg/pg-meta/` 前缀（实际前缀还受 `pg_namespace`/Citus 配置影响），停止手工 PostgreSQL，启动主库 Patroni 并恢复 HA，再逐个重建副本：等待新主库可写，清空副本数据目录，由 Patroni 从新主库重新克隆。etcd 删除任务设置了错误容忍，因此成功返回也不能证明旧 DCS 状态已正确清除。
 
 
 --------
@@ -218,7 +219,7 @@ sudo -iu postgres pig pb info
 
 ## 多节点与跨集群恢复
 
-- 多节点恢复后，旧时间线副本不能未经验证直接重新加入；`up` 会逐个启动副本并等待克隆/恢复，必须监控完成状态。
+- 只有主库会被还原。副本保留旧数据直到 `up`，届时逐个清空并由 Patroni 从新主库重新克隆；每个副本都要完整执行一次 `pg_basebackup`，需预留时间与主库带宽，并监控每个克隆完成。
 - 从另一 stanza 恢复时，`pg_pitr.cluster` 是源，`-l` 仍是被覆盖的目标。把两者分别写进变更单并逐一复述。
 - 跨集群恢复通常应使用 `archive: false`，避免测试目标向源 stanza 写入 WAL；验收并完成 [stanza 善后](/docs/pgsql/backup/cluster/#克隆善后) 后再启用自己的归档。
 - `link_map`、`data`、`port` 与临时 `repo` 会改变真正的数据与存储目标，必须纳入 `--check` 和人工复核。

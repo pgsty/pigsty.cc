@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **133** 个扩展依赖其他扩展，**79** 个扩展被其他扩展所依赖。
+共有 **136** 个扩展依赖其他扩展，**80** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **133** 个扩展需要先安装其他扩展才能使用：
+以下 **136** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -35,7 +35,7 @@ weight: 30
 | [`pgh_output_en_au`](/ext/e/pgh_output_en_au) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro 澳式英语输出扩展 |
 | [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro 巴西葡语输出扩展 |
 | [`pgh_consistency`](/ext/e/pgh_consistency) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro Pfafstetter 一致性检查扩展 |
-| [`mobilitydb`](/ext/e/mobilitydb) | [`postgis`](/ext/e/postgis) | MobilityDB地理空间投影数据管理分析平台 |
+| [`mobilitydb`](/ext/e/mobilitydb) | [`postgis`](/ext/e/postgis) | MobilityDB 地理空间轨迹数据管理与分析平台 |
 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | [`mobilitydb`](/ext/e/mobilitydb) | MobilityDB随机数据生成函数 |
 | [`earthdistance`](/ext/e/earthdistance) | [`cube`](/ext/e/cube) | 计算地球表面上的大圆距离 |
 | [`qdgc_postgis`](/ext/e/qdgc_postgis) | [`qdgc`](/ext/e/qdgc) [`postgis`](/ext/e/postgis) | 为 QDGC 增加 PostGIS geometry/geography 绑定与区域到网格单元的填充能力。 |
@@ -46,7 +46,6 @@ weight: 30
 | [`jev`](/ext/e/jev) | [`plpython3u`](/ext/e/plpython3u) | 通过兼容 Jev 的 API 实现自然语言行过滤、排序和分类 |
 | [`pg4ml`](/ext/e/pg4ml) | [`plpgsql`](/ext/e/plpgsql) [`tablefunc`](/ext/e/tablefunc) [`cube`](/ext/e/cube) [`plpython3u`](/ext/e/plpython3u) | PG4ML是一个机器学习框架 |
 | [`pgmnemo`](/ext/e/pgmnemo) | [`vector`](/ext/e/vector) | PostgreSQL 单计划多模态智能体记忆扩展 |
-| [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | [`pgcontext`](/ext/e/pgcontext) [`vector`](/ext/e/vector) | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 | [`pg_search`](/ext/e/pg_search) | [`vector`](/ext/e/vector) | 使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展 |
 | [`biscuit`](/ext/e/biscuit) | [`plpgsql`](/ext/e/plpgsql) | 使用IAM的高性能文本模式匹配 |
 | [`textsearch_intl`](/ext/e/textsearch_intl) | [`unaccent`](/ext/e/unaccent) | 结合 ICU 分词、规范化与 n-gram 匹配的多语言全文检索 |
@@ -59,7 +58,11 @@ weight: 30
 | [`pg_lake_table`](/ext/e/pg_lake_table) | [`btree_gist`](/ext/e/btree_gist) [`pg_lake_engine`](/ext/e/pg_lake_engine) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | 数据湖表和 Iceberg 表 |
 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake_engine`](/ext/e/pg_lake_engine) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) [`pg_lake_table`](/ext/e/pg_lake_table) | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`pgmb`](/ext/e/pgmb) | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) | 一个简单的PostgreSQL消息代理系统 |
-| [`fsm_core`](/ext/e/fsm_core) | [`ltree`](/ext/e/ltree) [`pgmq`](/ext/e/pgmq) [`pg_jsonschema`](/ext/e/pg_jsonschema) | PostgreSQL 有限状态机工具包 |
+| [`fsm_core`](/ext/e/fsm_core) | [`ltree`](/ext/e/ltree) [`pgmq`](/ext/e/pgmq) | PostgreSQL 有限状态机工具包 |
+| [`pg_statecharts`](/ext/e/pg_statecharts) | [`ltree`](/ext/e/ltree) | 层次状态机与事务性事件处理 |
+| [`pg_statecharts_dev`](/ext/e/pg_statecharts_dev) | [`pg_statecharts`](/ext/e/pg_statecharts) | pg_statecharts 的 SCXML 导入与迁移开发工具 |
+| [`pg_lion_citext`](/ext/e/pg_lion_citext) | [`pg_lion`](/ext/e/pg_lion) [`citext`](/ext/e/citext) | 为 lion 索引提供大小写不敏感的 citext 运算符类 |
+| [`pg_lion_vector`](/ext/e/pg_lion_vector) | [`pg_lion`](/ext/e/pg_lion) [`vector`](/ext/e/vector) | 为 pgvector 的 vector 与 halfvec 提供带过滤的近邻索引 |
 | [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
 | [`provsql`](/ext/e/provsql) | [`uuid-ossp`](/ext/e/uuid-ossp) | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) | Omnigres 基础会话认证管理模块 |
@@ -124,6 +127,7 @@ weight: 30
 | [`pgtelemetry`](/ext/e/pgtelemetry) | [`pg_stat_statements`](/ext/e/pg_stat_statements) [`plpgsql`](/ext/e/plpgsql) | 监控数据库活动、WAL、复制与存储的 SQL 视图 |
 | [`pg_statviz`](/ext/e/pg_statviz) | [`plpgsql`](/ext/e/plpgsql) | 采集 PostgreSQL 统计快照，用于时序分析与可视化 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_statements`](/ext/e/pg_stat_statements) | 内核统计信息收集 |
+| [`pg_proctab`](/ext/e/pg_proctab) | [`pgnodemx`](/ext/e/pgnodemx) | 通过SQL接口访问操作系统进程表 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`file_fdw`](/ext/e/file_fdw) | 提供访问PostgreSQL日志的SQL接口 |
 | [`powa`](/ext/e/powa) | [`plpgsql`](/ext/e/plpgsql) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`btree_gist`](/ext/e/btree_gist) | PostgreSQL 工作负载分析器-核心 |
 | [`column_encrypt`](/ext/e/column_encrypt) | [`pgcrypto`](/ext/e/pgcrypto) | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
@@ -139,7 +143,6 @@ weight: 30
 | [`db2fce`](/ext/e/db2fce) | [`plpgsql`](/ext/e/plpgsql) | 为 PostgreSQL 提供 DB2 兼容函数、类型、操作符与 SYSIBM.SYSDUMMY1。 |
 | [`plpgsql_wrap`](/ext/e/plpgsql_wrap) | [`plpgsql`](/ext/e/plpgsql) | Oracle WRAP 等价的 PL/pgSQL 语言处理器，以 AES-256-GCM 加密存储过程源码。 |
 | [`pg_dbms_lock`](/ext/e/pg_dbms_lock) | [`pg_background`](/ext/e/pg_background) | 为PG添加对 Oracle DBMS_LOCK 的完整兼容性支持 |
-| [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`plperlu`](/ext/e/plperlu) | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_common`](/ext/e/babelfishpg_common) [`uuid-ossp`](/ext/e/uuid-ossp) | SQL Server SQL语法兼容性扩展 |
 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server TDS线缆协议兼容扩展 |
@@ -150,7 +153,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **79** 个扩展被其他扩展所依赖：
+以下 **80** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -162,10 +165,9 @@ weight: 30
 | [`h3`](/ext/e/h3) | [`h3_postgis`](/ext/e/h3_postgis) | H3六边形层级索引支持 |
 | [`pghydro`](/ext/e/pghydro) | [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) | PostgreSQL/PostGIS 排水网络分析核心扩展 |
 | [`pgh_raster`](/ext/e/pgh_raster) | [`pgh_hgm`](/ext/e/pgh_hgm) | PgHydro 栅格水文分析扩展 |
-| [`mobilitydb`](/ext/e/mobilitydb) | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | MobilityDB地理空间投影数据管理分析平台 |
+| [`mobilitydb`](/ext/e/mobilitydb) | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | MobilityDB 地理空间轨迹数据管理与分析平台 |
 | [`qdgc`](/ext/e/qdgc) | [`qdgc_postgis`](/ext/e/qdgc_postgis) | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
-| [`vector`](/ext/e/vector) | [`documentdb`](/ext/e/documentdb) [`pg_search`](/ext/e/pg_search) [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) [`pgmnemo`](/ext/e/pgmnemo) [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
-| [`pgcontext`](/ext/e/pgcontext) | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
+| [`vector`](/ext/e/vector) | [`documentdb`](/ext/e/documentdb) [`pg_lion_vector`](/ext/e/pg_lion_vector) [`pg_search`](/ext/e/pg_search) [`pgmnemo`](/ext/e/pgmnemo) [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | 确定字符串之间的相似性和距离 |
 | [`citus`](/ext/e/citus) | [`documentdb_distributed`](/ext/e/documentdb_distributed) | 将 PostgreSQL 横向扩展为分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |
@@ -178,7 +180,8 @@ weight: 30
 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](/ext/e/pg_lake) | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`tablefunc`](/ext/e/tablefunc) | [`pg4ml`](/ext/e/pg4ml) | 交叉表函数 |
 | [`pgmq`](/ext/e/pgmq) | [`fsm_core`](/ext/e/fsm_core) [`pg_later`](/ext/e/pg_later) [`vectorize`](/ext/e/vectorize) | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
-| [`pg_jsonschema`](/ext/e/pg_jsonschema) | [`fsm_core`](/ext/e/fsm_core) | 提供JSON Schema校验能力 |
+| [`pg_statecharts`](/ext/e/pg_statecharts) | [`pg_statecharts_dev`](/ext/e/pg_statecharts_dev) | 层次状态机与事务性事件处理 |
+| [`pg_lion`](/ext/e/pg_lion) | [`pg_lion_citext`](/ext/e/pg_lion_citext) [`pg_lion_vector`](/ext/e/pg_lion_vector) | 用于过滤、计数与聚合的 Roaring 位图倒排索引 |
 | [`hypopg`](/ext/e/hypopg) | [`index_advisor`](/ext/e/index_advisor) | 假设索引，用于创建一个虚拟索引检验执行计划 |
 | [`pg_variables`](/ext/e/pg_variables) | [`pgelog`](/ext/e/pgelog) | 提供标量、数组和记录类型的会话变量 |
 | [`omni_cloudevents`](/ext/e/omni_cloudevents) | [`omni_email`](/ext/e/omni_email) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) | Omnigres CloudEvents 支持 |
@@ -209,8 +212,9 @@ weight: 30
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | PostgreSQL i8n与l10n工具包 |
 | [`ip4r`](/ext/e/ip4r) | [`geoip`](/ext/e/geoip) | PostgreSQL 的 IPv4/v6 和 IPv4/v6 范围索引类型 |
 | [`cube`](/ext/e/cube) | [`earthdistance`](/ext/e/earthdistance) [`pg4ml`](/ext/e/pg4ml) | 用于存储多维立方体的数据类型 |
-| [`ltree`](/ext/e/ltree) | [`fsm_core`](/ext/e/fsm_core) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`ltree_plruby`](/ext/e/ltree_plruby) | 用于表示分层树状结构的数据类型 |
+| [`ltree`](/ext/e/ltree) | [`fsm_core`](/ext/e/fsm_core) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`ltree_plruby`](/ext/e/ltree_plruby) [`pg_statecharts`](/ext/e/pg_statecharts) | 用于表示分层树状结构的数据类型 |
 | [`hstore`](/ext/e/hstore) | [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`hstore_plruby`](/ext/e/hstore_plruby) [`pg_auditor`](/ext/e/pg_auditor) [`pg_readme`](/ext/e/pg_readme) [`pg_xenophile`](/ext/e/pg_xenophile) | 用于存储（键，值）对集合的数据类型 |
+| [`citext`](/ext/e/citext) | [`pg_lion_citext`](/ext/e/pg_lion_citext) | 提供大小写不敏感的字符串类型 |
 | [`http`](/ext/e/http) | [`pgmb`](/ext/e/pgmb) | HTTP客户端，允许在数据库内收发HTTP请求 (supabase) |
 | [`ddl_historization`](/ext/e/ddl_historization) | [`schedoc`](/ext/e/schedoc) | 用SQL将所有DDL变更写入到数据库表中 |
 | [`tsm_system_rows`](/ext/e/tsm_system_rows) | [`documentdb`](/ext/e/documentdb) | 接受行数限制的 TABLESAMPLE 方法 |
@@ -220,6 +224,7 @@ weight: 30
 | [`pg_living_assertions`](/ext/e/pg_living_assertions) | [`pg_grammar_guard`](/ext/e/pg_grammar_guard) | 保存可执行 SQL 检查、核验日期和断言变更历史 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | [`pgcozy`](/ext/e/pgcozy) | 预热关系数据 |
 | [`pgfr_record`](/ext/e/pgfr_record) | [`pgfr_analyze`](/ext/e/pgfr_analyze) | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
+| [`pgnodemx`](/ext/e/pgnodemx) | [`pg_proctab`](/ext/e/pg_proctab) | 使用SQL查询获取操作系统指标 |
 | [`pg_buffercache`](/ext/e/pg_buffercache) | [`pgcozy`](/ext/e/pgcozy) | 检查共享缓冲区缓存 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgtelemetry`](/ext/e/pgtelemetry) [`powa`](/ext/e/powa) | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
 | [`pgcrypto`](/ext/e/pgcrypto) | [`column_encrypt`](/ext/e/column_encrypt) [`omni_auth`](/ext/e/omni_auth) [`omni_aws`](/ext/e/omni_aws) [`omni_credentials`](/ext/e/omni_credentials) [`omni_rest`](/ext/e/omni_rest) [`pg_dispatch`](/ext/e/pg_dispatch) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgjwt`](/ext/e/pgjwt) | 实用加解密函数 |
@@ -228,7 +233,6 @@ weight: 30
 | [`postgres_fdw`](/ext/e/postgres_fdw) | [`omni_schema`](/ext/e/omni_schema) | 用于远程 PostgreSQL 服务器的外部数据包装器 |
 | [`documentdb`](/ext/e/documentdb) | [`documentdb_distributed`](/ext/e/documentdb_distributed) [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | 微软DocumentDB的API层 |
 | [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](/ext/e/documentdb) [`documentdb_distributed`](/ext/e/documentdb_distributed) | 微软DocumentDB的核心API层实现 |
-| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
 | [`ivorysql_ora`](/ext/e/ivorysql_ora) | [`ora_btree_gin`](/ext/e/ora_btree_gin) [`ora_btree_gist`](/ext/e/ora_btree_gist) | Oracle 兼容扩展 |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |

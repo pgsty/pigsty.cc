@@ -157,7 +157,7 @@ pg_libs: 'pg_stat_statements, auto_explain'
 pg_libs: '$libdir/passwordcheck, pg_stat_statements, auto_explain'
 ```
 
-[**`ha/safe`**](/docs/conf/safe) 已包含该覆盖值。需要 `pgaudit` 时，也应显式加入 `pg_libs` 并配置审计范围：
+[**`ha/safe`**](/docs/conf/safe) 已包含类似的覆盖值（使用 `$libdir/passwordcheck_cracklib`）。需要 `pgaudit` 时，也应显式加入 `pg_libs` 并配置审计范围：
 
 ```yaml
 pg_libs: '$libdir/passwordcheck, pg_stat_statements, auto_explain, pgaudit'

@@ -20,7 +20,7 @@ categories: [参考]
 - 配置名称： `pgedge`
 - 节点数量： 单节点
 - 配置说明：pgEdge（PG18）分布式内核配置模板
-- 适用系统：`d12`, `d13`, `u22`, `u24`, `u26`（PG18 包）；EL/RPM 平台请以当前 PGSQL 仓库的 `pgedge_18` 包可用性为准
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)、[`pgsql`](/docs/conf/pgsql/)
 

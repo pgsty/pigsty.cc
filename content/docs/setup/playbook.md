@@ -52,7 +52,7 @@ sudo apt install -y ansible python3-jmespath
 ```bash {tab="EL"}
 sudo dnf install -y ansible python3.12-jmespath python3-cryptography  # EL 8
 sudo dnf install -y ansible python3-jmespath                           # EL 9
-sudo dnf install -y ansible                                            # EL 10
+sudo dnf install -y ansible python3-jmespath                           # EL 10
 ```
 
 ```bash {tab="MacOS"}

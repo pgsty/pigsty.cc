@@ -38,7 +38,7 @@ weight: 9620
 {.ext-table .ext-table--rel}
 
 
-> CDC: preload, wal_level=logical; allow pgmqtt in output_plugin_libraries if exposed; upstream 0.5.1/pkg 0.4.1.
+> Preload; wal_level=logical.
 
 
 ## 版本

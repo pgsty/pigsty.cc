@@ -11,6 +11,11 @@ weight: 6870
     <div class="ext-card__title">powa-team/powa-archivist</div>
     <div class="ext-card__desc">https://github.com/powa-team/powa-archivist</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/powa-5.3.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">powa-5.3.0.tar.gz</div>
+    <div class="ext-card__desc">powa-5.3.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -360,6 +365,14 @@ weight: 6870
 @ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.3.0-1.pgdg26.04+1_arm64.deb pgdg 5.3.0 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.2.0-1.pgdg26.04+1_arm64.deb pgdg 5.2.0 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.2.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `powa` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg powa         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

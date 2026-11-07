@@ -38,15 +38,12 @@ weight: 4630
 {.ext-table .ext-table--rel}
 
 
-> PGDG 3.0.2 on EL8-10; this round adds EL8 coverage; PIGSTY remains on D/U.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.2` | {{< pgvers "18,17,16,15,14" >}} | `count_distinct` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.2` | {{< pgvers "18,17,16,15,14" >}} | `count_distinct_$v` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.0.2` | {{< pgvers "18,17,16,15,14" >}} | `count_distinct_$v` | - |
 | [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-count-distinct` | - |
 {.ext-table .wide .expand}
 

@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **134** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **136** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -15,7 +15,7 @@ weight: 10
 | [`pg_cron`](/ext/e/pg_cron) | `pg_cron` | 定时任务调度器 |
 | [`pg_task`](/ext/e/pg_task) | `pg_task` | 在特定时间点在后台执行SQL命令 |
 | [`pg_later`](/ext/e/pg_later) | `pg_later` | 执行查询，并在稍后异步获取查询结果 |
-| [`mobilitydb`](/ext/e/mobilitydb) | `postgis-3` | MobilityDB地理空间投影数据管理分析平台 |
+| [`mobilitydb`](/ext/e/mobilitydb) | `postgis-3` | MobilityDB 地理空间轨迹数据管理与分析平台 |
 | [`vchord`](/ext/e/vchord) | `vchord` | 使用Rust重写的高性能向量扩展 |
 | [`vectorize`](/ext/e/vectorize) | `vectorize` | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pgml`](/ext/e/pgml) | `pgml` | PostgresML：用SQL运行机器学习算法并训练模型 |
@@ -31,6 +31,7 @@ weight: 10
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
 | [`pg_parquet`](/ext/e/pg_parquet) | `pg_parquet` | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
 | [`pg_ducklake`](/ext/e/pg_ducklake) | `pg_ducklake` | 基于 DuckDB 与 Parquet 的 DuckLake 湖仓一体扩展 |
+| [`pg_strom`](/ext/e/pg_strom) | `pg_strom` | 使用GPU与NVMe加速大数据处理 |
 | [`pg_orca`](/ext/e/pg_orca) | `pg_orca` | PostgreSQL ORCA 查询优化器扩展 |
 | [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | `pg_sorted_heap` | 带 zone map 剪枝和内置向量搜索的有序堆表访问方法 |
 | [`pg_lake`](/ext/e/pg_lake) | `pg_extension_base` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
@@ -40,6 +41,7 @@ weight: 10
 | [`pg_lake_table`](/ext/e/pg_lake_table) | `pg_extension_base` | 数据湖表和 Iceberg 表 |
 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `pg_extension_base` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`age`](/ext/e/age) | `age` | Apache AGE，图数据库扩展 （Deb可用） |
+| [`onesparse`](/ext/e/onesparse) | `onesparse` | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
 | [`pgrdf`](/ext/e/pgrdf) | `pgrdf` | PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展 |
 | [`ulak`](/ext/e/ulak) | `ulak` | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
 | [`pg_ttl_index`](/ext/e/pg_ttl_index) | `pg_ttl_index` | 基于TTL索引的自动数据过期清理 |
@@ -58,12 +60,11 @@ weight: 10
 | [`pldbgapi`](/ext/e/pldbgapi) | `$libdir/plugin_debugger` | 用于调试 PL/pgSQL 函数的服务器端支持 |
 | [`plprofiler`](/ext/e/plprofiler) | `plprofiler` | 剖析 PL/pgSQL 函数 |
 | [`pg_regresql`](/ext/e/pg_regresql) | `pg_regresql` | 用 pg_class 统计信息替代物理文件大小参与查询规划 |
-| [`pgpdf`](/ext/e/pgpdf) | `pgpdf` | PDF数据类型，管理函数与全文检索 |
 | [`pglite_fusion`](/ext/e/pglite_fusion) | `pglite_fusion` | 在PG表中嵌入SQLite数据库作为数据类型 |
 | [`pg_net`](/ext/e/pg_net) | `pg_net` | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
 | [`pgx_ulid`](/ext/e/pgx_ulid) | `pgx_ulid` | ULID数据类型与函数 |
 | [`pg_rewrite`](/ext/e/pg_rewrite) | `pg_rewrite` | 在线重写整表，不阻塞读写 |
-| [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | `pg_query_rewrite` | 使用 ProcessUtility hook 重写 SQL 语句 |
+| [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | `pg_query_rewrite` | 按预定义规则将指定 SQL 语句转换为另一条 SQL 语句 |
 | [`pg_squeeze`](/ext/e/pg_squeeze) | `pg_squeeze` | 从关系中删除未使用空间 |
 | [`pg_readonly`](/ext/e/pg_readonly) | `pg_readonly` | 将集群设置为只读 |
 | [`pgautofailover`](/ext/e/pgautofailover) | `pgautofailover` | PG 自动故障迁移 |
@@ -72,6 +73,7 @@ weight: 10
 | [`pg_pathcheck`](/ext/e/pg_pathcheck) | `pg_pathcheck` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
 | [`pgdisablelogerror`](/ext/e/pgdisablelogerror) | `$libdir/pgdisablelogerror` | 按 SQLSTATE 错误码禁止部分错误写入 PostgreSQL 服务器日志。 |
 | [`online_advisor`](/ext/e/online_advisor) | `online_advisor` | 在线建议缺失索引、扩展统计信息与预备语句 |
+| [`pg_savior`](/ext/e/pg_savior) | `pg_savior` | 拦截无 WHERE 的 UPDATE/DELETE 与高风险 DDL，防止误操作导致数据丢失 |
 | [`pg_circuit`](/ext/e/pg_circuit) | `pg_circuit` | 针对危险 SQL 语句提供运行时观察、告警和拦截 |
 | [`safeupdate`](/ext/e/safeupdate) | `safeupdate` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
@@ -92,14 +94,14 @@ weight: 10
 | [`pgsentinel`](/ext/e/pgsentinel) | `pgsentinel` | 活跃会话历史 |
 | [`pgnodemx`](/ext/e/pgnodemx) | `pgnodemx` | 使用SQL查询获取操作系统指标 |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | `bgw_replstatus` | 用于汇报本机主从状态的后台工作进程 |
-| [`pg_relusage`](/ext/e/pg_relusage) | `pg_relusage` | 打印查询引用的表与列 |
+| [`pg_relusage`](/ext/e/pg_relusage) | `pg_relusage` | 记录 SQL 语句实际使用的表、视图等关系 |
 | [`powa`](/ext/e/powa) | `powa,pg_stat_statements` | PostgreSQL 工作负载分析器-核心 |
 | [`pg_overexplain`](/ext/e/pg_overexplain) | `pg_overexplain` | 允许 EXPLAIN 转储更多详细 |
 | [`auto_explain`](/ext/e/auto_explain) | `auto_explain` | 提供一种自动记录执行计划的手段 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | `pg_stat_statements` | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | `$libdir/passwordcheck_cracklib` | 使用cracklib加固PG用户密码 |
 | [`supautils`](/ext/e/supautils) | `supautils` | 用于在云环境中确保数据库集群的安全 |
-| [`pgsodium`](/ext/e/pgsodium) | `pgsodium` | 表数据加密存储 TDE |
+| [`pgsodium`](/ext/e/pgsodium) | `pgsodium` | libsodium 加密函数、密钥管理与透明列加密 |
 | [`column_encrypt`](/ext/e/column_encrypt) | `column_encrypt` | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
 | [`encsearch`](/ext/e/encsearch) | `encsearch` | 使用 AEAD 加密与盲索引的实验性密文文本搜索 |
 | [`passwordpolicy`](/ext/e/passwordpolicy) | `$libdir/passwordpolicy` | 可动态配置的 PostgreSQL 密码复杂度检查扩展。 |
@@ -113,7 +115,7 @@ weight: 10
 | [`oidc_validator`](/ext/e/oidc_validator) | `oidc_validator` | 使用 Rust 与 pgrx 编写的 PostgreSQL 18 OIDC Bearer 令牌验证模块 |
 | [`credcheck`](/ext/e/credcheck) | `credcheck` | 明文凭证检查器 |
 | [`set_user`](/ext/e/set_user) | `set_user` | 增加了日志记录的 SET ROLE |
-| [`pg_snakeoil`](/ext/e/pg_snakeoil) | `pg_snakeoil` | PostgreSQL动态链接库反病毒功能 |
+| [`pg_snakeoil`](/ext/e/pg_snakeoil) | `pg_snakeoil` | 基于 ClamAV 的 PostgreSQL 反病毒扩展 |
 | [`pgextwlist`](/ext/e/pgextwlist) | `pgextwlist` | PostgreSQL扩展白名单功能 |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | `pg_command_fw` | PostgreSQL 的 DDL 与 utility 命令防火墙 |
 | [`noset`](/ext/e/noset) | `noset` | 阻止非超级用户使用SET/RESET设置变量 |

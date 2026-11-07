@@ -170,7 +170,7 @@ redis_sentinel_monitor:  # 需要被监控的主库列表，端口、密码、�
   - { name: redis-dst, host: 10.10.10.48, port: 6379 ,password: redis.dst, quorum: 1 }
 ```
 
-`redis.yml` 中的 `redis-ha` 阶段会根据该列表在每个哨兵实例上渲染 `/tmp/<cluster>.monitor` 并依次执行 `SENTINEL REMOVE` 与 `SENTINEL MONITOR` 命令，
+`redis.yml` 中的 `redis-ha` 阶段会根据该列表渲染 `/tmp/<cluster>.monitor`，并对每个哨兵实例依次执行 `SENTINEL REMOVE` 与 `SENTINEL MONITOR` 命令，
 从而保证哨兵纳管状态与清单保持一致。如果只想移除某个目标而不再重新添加，可以在监控对象上设置 `remove: true`，剧本会在 `SENTINEL REMOVE` 后跳过重新注册。
 
 使用以下命令刷新 Redis 哨兵集群上的纳管主库列表：
@@ -290,7 +290,7 @@ redis-cli -h 10.10.10.10 -p 6379 -a <password> BGSAVE
 redis-cli -h 10.10.10.10 -p 6379 -a <password> LASTSAVE
 
 # 复制 RDB 文件（默认位置）
-cp /data/redis/redis-ms-1-6379/dump.rdb /backup/redis-ms-$(date +%Y%m%d).rdb
+cp /data/redis/redis-ms-1-6379/redis-ms-1-6379.rdb /backup/redis-ms-$(date +%Y%m%d).rdb
 ```
 
 ### 数据恢复
@@ -300,8 +300,8 @@ cp /data/redis/redis-ms-1-6379/dump.rdb /backup/redis-ms-$(date +%Y%m%d).rdb
 sudo systemctl stop redis-ms-1-6379
 
 # 2. 替换 RDB 文件
-cp /backup/redis-ms-20241231.rdb /data/redis/redis-ms-1-6379/dump.rdb
-chown redis:redis /data/redis/redis-ms-1-6379/dump.rdb
+cp /backup/redis-ms-20241231.rdb /data/redis/redis-ms-1-6379/redis-ms-1-6379.rdb
+chown redis:redis /data/redis/redis-ms-1-6379/redis-ms-1-6379.rdb
 
 # 3. 启动 Redis 实例
 sudo systemctl start redis-ms-1-6379

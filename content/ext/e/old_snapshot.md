@@ -6,10 +6,10 @@ weight: 5960
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://www.postgresql.org/docs/current/oldsnapshot.html">
+  <a class="ext-card ext-card--repo" href="https://www.postgresql.org/docs/16/oldsnapshot.html">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">https://www.postgresql.org/docs/current/oldsnapshot.html</div>
-    <div class="ext-card__desc">https://www.postgresql.org/docs/current/oldsnapshot.html</div>
+    <div class="ext-card__title">https://www.postgresql.org/docs/16/oldsnapshot.html</div>
+    <div class="ext-card__desc">https://www.postgresql.org/docs/16/oldsnapshot.html</div>
   </a>
 </div>
 

@@ -171,7 +171,7 @@ Grafana 有两个密码参数：[**`grafana_admin_password`**](/docs/infra/param
 
 | 参数                       | 渲染到的配置文件                                           |
 |:-------------------------|:---------------------------------------------------|
-| `grafana_admin_password` | `/etc/grafana/grafana.ini`，`/infra/env/pigsty`     |
+| `grafana_admin_password` | `/etc/grafana/grafana.ini`，`~/.pigsty`             |
 | `grafana_view_password`  | `/etc/grafana/provisioning/datasources/pigsty.yml` |
 {.full-width}
 

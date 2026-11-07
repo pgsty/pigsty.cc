@@ -8,67 +8,67 @@ categories: [参考]
 
 Pigsty 当前公开稳定版为 [**v4.5.0**](#v450)，发布于北京时间 **2026-08-15**。尚未发布的源码更新见 [**开发分支变更**](#开发分支发布后变更)。
 
-|       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
-|:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.5.0](#v450) | 2026-08-15 | Silo、Kafka、MySQL、Valkey、575 个扩展与安全编排改进                   |               [v4.5.0](https://github.com/pgsty/pigsty/releases/tag/v4.5.0)               |
-| [v4.4.0](#v440) | 2026-07-10 | PG 19 beta 支持，531 个扩展，内核更新与 Pig CLI 改进                   |               [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)               |
-| [v4.3.0](#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持              |               [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)               |
-| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs           |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
-| [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                     |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
+|      版本       |  发布日期  | 摘要                                                                     |                                         发布页面                                          |
+|:---------------:|:----------:|--------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
+| [v4.5.0](#v450) | 2026-08-15 | Silo、Kafka、MySQL、Valkey、575 个扩展与安全编排改进                     |               [v4.5.0](https://github.com/pgsty/pigsty/releases/tag/v4.5.0)               |
+| [v4.4.0](#v440) | 2026-07-10 | PG 19 beta 支持，531 个扩展，内核更新与 Pig CLI 改进                     |               [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)               |
+| [v4.3.0](#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持                 |               [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)               |
+| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs            |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
+| [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                       |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
 | [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                     |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
-| [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                    |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
-| [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0         |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
-| [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD         |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
-| [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                       |               [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)               |
-| [v3.6.0](#v360) | 2025-07-30 | pgactive，MinIO / ETCD 改进，安装简化，配置梳理                       |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
-| [v3.5.0](#v350) | 2025-06-16 | PG18 beta，421 扩展，监控升级，代码重构                               |               [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)               |
-| [v3.4.1](#v341) | 2025-04-05 | OpenHalo & OrioleDB，MySQL 兼容，pgAdmin 改进                  |               [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)               |
-| [v3.4.0](#v340) | 2025-03-30 | 备份改进，自动证书，AGE，Ivory 全平台，本地化，架构与参数改进                      |               [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)               |
+| [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧               |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
+| [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0       |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
+| [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD            |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
+| [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                     |               [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)               |
+| [v3.6.0](#v360) | 2025-07-30 | pgactive，MinIO / ETCD 改进，安装简化，配置梳理                          |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
+| [v3.5.0](#v350) | 2025-06-16 | PG18 beta，421 扩展，监控升级，代码重构                                  |               [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)               |
+| [v3.4.1](#v341) | 2025-04-05 | OpenHalo & OrioleDB，MySQL 兼容，pgAdmin 改进                            |               [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)               |
+| [v3.4.0](#v340) | 2025-03-30 | 备份改进，自动证书，AGE，Ivory 全平台，本地化，架构与参数改进            |               [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)               |
 | [v3.3.0](#v330) | 2025-02-24 | 404 扩展，扩展目录，App 剧本，Nginx 定制，DocumentDB 支持                |               [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)               |
-| [v3.2.2](#v322) | 2025-01-23 | 390扩展，Omnigres 支持，Mooncake，Citus13 与 PG17 支持             |               [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)               |
-| [v3.2.1](#v321) | 2025-01-12 | 350扩展，Ivory4，Citus 强化，Odoo 模板                            |               [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)               |
-| [v3.2.0](#v320) | 2024-12-24 | 扩展管理 CLI，Grafana 强化，ARM64 扩展补完                           |               [v3.2.0](https://github.com/pgsty/pigsty/releases/tag/v3.2.0)               |
-| [v3.1.0](#v310) | 2024-11-24 | PG 17 升默认大版本，配置简化，Ubuntu24 与 ARM 支持，Supabase，MinIO 改进    |               [v3.1.0](https://github.com/pgsty/pigsty/releases/tag/v3.1.0)               |
-| [v3.0.4](#v304) | 2024-10-30 | PG 17 扩展，OLAP 全家桶，pg_duckdb                              |               [v3.0.4](https://github.com/pgsty/pigsty/releases/tag/v3.0.4)               |
-| [v3.0.3](#v303) | 2024-09-27 | PostgreSQL 17，Etcd 运维优化，IvorySQL 3.4，PostGIS 3.5         |               [v3.0.3](https://github.com/pgsty/pigsty/releases/tag/v3.0.3)               |
+| [v3.2.2](#v322) | 2025-01-23 | 390扩展，Omnigres 支持，Mooncake，Citus13 与 PG17 支持                   |               [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)               |
+| [v3.2.1](#v321) | 2025-01-12 | 350扩展，Ivory4，Citus 强化，Odoo 模板                                   |               [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)               |
+| [v3.2.0](#v320) | 2024-12-24 | 扩展管理 CLI，Grafana 强化，ARM64 扩展补完                               |               [v3.2.0](https://github.com/pgsty/pigsty/releases/tag/v3.2.0)               |
+| [v3.1.0](#v310) | 2024-11-24 | PG 17 升默认大版本，配置简化，Ubuntu24 与 ARM 支持，Supabase，MinIO 改进 |               [v3.1.0](https://github.com/pgsty/pigsty/releases/tag/v3.1.0)               |
+| [v3.0.4](#v304) | 2024-10-30 | PG 17 扩展，OLAP 全家桶，pg_duckdb                                       |               [v3.0.4](https://github.com/pgsty/pigsty/releases/tag/v3.0.4)               |
+| [v3.0.3](#v303) | 2024-09-27 | PostgreSQL 17，Etcd 运维优化，IvorySQL 3.4，PostGIS 3.5                  |               [v3.0.3](https://github.com/pgsty/pigsty/releases/tag/v3.0.3)               |
 | [v3.0.2](#v302) | 2024-09-07 | 精简安装模式，PolarDB 15支持，监控视图更新                               |               [v3.0.2](https://github.com/pgsty/pigsty/releases/tag/v3.0.2)               |
-| [v3.0.1](#v301) | 2024-08-31 | 例行问题修复，Patroni 4支持，Oracle 兼容性改进                          |               [v3.0.1](https://github.com/pgsty/pigsty/releases/tag/v3.0.1)               |
-| [v3.0.0](#v300) | 2024-08-25 | 333个扩展插件，可插拔内核，MSSQL，Oracle，PolarDB 兼容性                  |               [v3.0.0](https://github.com/pgsty/pigsty/releases/tag/v3.0.0)               |
-| [v2.7.0](#v270) | 2024-05-20 | 扩展大爆炸，新增20+强力扩展插件，与多款 Docker 应用                          |               [v2.7.0](https://github.com/pgsty/pigsty/releases/tag/v2.7.0)               |
-| [v2.6.0](#v260) | 2024-02-28 | PG 16 作为默认大版本，引入 ParadeDB 与 DuckDB 等扩展                   |               [v2.6.0](https://github.com/pgsty/pigsty/releases/tag/v2.6.0)               |
-| [v2.5.1](#v251) | 2023-12-01 | 例行小版本更新，PG16 重要扩展支持                                      |               [v2.5.1](https://github.com/pgsty/pigsty/releases/tag/v2.5.1)               |
-| [v2.5.0](#v250) | 2023-09-24 | Ubuntu/Debian 支持：bullseye, bookworm, jammy, focal        |               [v2.5.0](https://github.com/pgsty/pigsty/releases/tag/v2.5.0)               |
-| [v2.4.1](#v241) | 2023-09-24 | Supabase/PostgresML 支持与各种新扩展：graphql, jwt, pg_net, vault |               [v2.4.1](https://github.com/pgsty/pigsty/releases/tag/v2.4.1)               |
-| [v2.4.0](#v240) | 2023-09-14 | PG16，监控 RDS，服务咨询支持，新扩展：中文分词全文检索/图/HTTP/嵌入等               |               [v2.4.0](https://github.com/pgsty/pigsty/releases/tag/v2.4.0)               |
-| [v2.3.1](#v231) | 2023-09-01 | 带 HNSW 的 PGVector，PG 16 RC1, 文档翻新，中文文档，例行问题修复            |               [v2.3.1](https://github.com/pgsty/pigsty/releases/tag/v2.3.1)               |
-| [v2.3.0](#v230) | 2023-08-20 | 主机 VIP, ferretdb, nocodb, MySQL 存根，CVE 修复                |               [v2.3.0](https://github.com/pgsty/pigsty/releases/tag/v2.3.0)               |
-| [v2.2.0](#v220) | 2023-08-04 | 仪表盘 & 置备重做，UOS 兼容性                                       |               [v2.2.0](https://github.com/pgsty/pigsty/releases/tag/v2.2.0)               |
-| [v2.1.0](#v210) | 2023-06-10 | 支持 PostgreSQL 12 ~ 16beta                                |               [v2.1.0](https://github.com/pgsty/pigsty/releases/tag/v2.1.0)               |
-| [v2.0.2](#v202) | 2023-03-31 | 新增 pgvector 支持，修复 MinIO CVE                              |               [v2.0.2](https://github.com/pgsty/pigsty/releases/tag/v2.0.2)               |
-| [v2.0.1](#v201) | 2023-03-21 | v2 错误修复，安全增强，升级 Grafana 版本                               |               [v2.0.1](https://github.com/pgsty/pigsty/releases/tag/v2.0.1)               |
-| [v2.0.0](#v200) | 2023-02-28 | 架构大升级，兼容性、安全性、可维护性显著增强                                   |               [v2.0.0](https://github.com/pgsty/pigsty/releases/tag/v2.0.0)               |
-| [v1.5.1](#v151) | 2022-06-18 | Grafana 安全性修复                                            |               [v1.5.1](https://github.com/pgsty/pigsty/releases/tag/v1.5.1)               |
-| [v1.5.0](#v150) | 2022-05-31 | Docker 应用程序支持                                            |               [v1.5.0](https://github.com/pgsty/pigsty/releases/tag/v1.5.0)               |
-| [v1.4.1](#v141) | 2022-04-20 | 错误修复 & 英文文档完整翻译                                          |               [v1.4.1](https://github.com/pgsty/pigsty/releases/tag/v1.4.1)               |
-| [v1.4.0](#v140) | 2022-03-31 | MatrixDB 支持，分离 INFRA/NODES/PGSQL/REDIS 模块                |               [v1.4.0](https://github.com/pgsty/pigsty/releases/tag/v1.4.0)               |
-| [v1.3.0](#v130) | 2021-11-30 | PGCAT 重整 & PGSQL 增强 & Redis Beta 支持                      |               [v1.3.0](https://github.com/pgsty/pigsty/releases/tag/v1.3.0)               |
-| [v1.2.0](#v120) | 2021-11-03 | 默认 PGSQL 版本升级至 14                                        |               [v1.2.0](https://github.com/pgsty/pigsty/releases/tag/v1.2.0)               |
-| [v1.1.0](#v110) | 2021-10-12 | 主页，JupyterLab, PGWEB, Pev2 & pgbadger                    |               [v1.1.0](https://github.com/pgsty/pigsty/releases/tag/v1.1.0)               |
-| [v1.0.0](#v100) | 2021-07-26 | v1 正式版，监控系统重整                                            |               [v1.0.0](https://github.com/pgsty/pigsty/releases/tag/v1.0.0)               |
-| [v0.9.0](#v090) | 2021-04-04 | Pigsty 图形界面，命令行界面，日志集成                                   |               [v0.9.0](https://github.com/pgsty/pigsty/releases/tag/v0.9.0)               |
-| [v0.8.0](#v080) | 2021-03-28 | 服务置备，定制对外暴露的数据库服务                                        |               [v0.8.0](https://github.com/pgsty/pigsty/releases/tag/v0.8.0)               |
-| [v0.7.0](#v070) | 2021-03-01 | 仅监控部署，监控现有 PostgreSQL 实例                                 |               [v0.7.0](https://github.com/pgsty/pigsty/releases/tag/v0.7.0)               |
-| [v0.6.0](#v060) | 2021-02-19 | 架构增强，将 PG 与 Consul 解耦                                    |               [v0.6.0](https://github.com/pgsty/pigsty/releases/tag/v0.6.0)               |
-| [v0.5.0](#v050) | 2021-01-07 | 支持在配置中定义业务数据库/用户                                         |               [v0.5.0](https://github.com/pgsty/pigsty/releases/tag/v0.5.0)               |
-| [v0.4.0](#v040) | 2020-12-14 | 支持 PostgreSQL 13，添加官方文档                                  |               [v0.4.0](https://github.com/pgsty/pigsty/releases/tag/v0.4.0)               |
-| [v0.3.0](#v030) | 2020-10-22 | 虚拟机置备方案正式定稿                                              |               [v0.3.0](https://github.com/pgsty/pigsty/releases/tag/v0.3.0)               |
-|     v0.2.0      | 2020-07-10 | PG 监控系统第六版正式发布                                           | [v0.2.0](https://github.com/pgsty/pigsty/commit/385e33a62a19817e8ba19997260e6b77d99fe2ba) |
-|     v0.1.0      | 2020-06-20 | 在生产仿真测试环境中验证通过                                           | [v0.1.0](https://github.com/pgsty/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
-|     v0.0.5      | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                       | [v0.0.5](https://github.com/pgsty/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
-|     v0.0.4      | 2020-07-27 | 将 Ansible 剧本重构为 Role                                     | [v0.0.4](https://github.com/pgsty/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
-|     v0.0.3      | 2020-06-22 | 接口设计改进                                                   | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
-|     v0.0.2      | 2020-04-30 | 首次提交                                                     | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
-|     v0.0.1      | 2019-05-15 | 概念原型                                                     |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
+| [v3.0.1](#v301) | 2024-08-31 | 例行问题修复，Patroni 4支持，Oracle 兼容性改进                           |               [v3.0.1](https://github.com/pgsty/pigsty/releases/tag/v3.0.1)               |
+| [v3.0.0](#v300) | 2024-08-25 | 333个扩展插件，可插拔内核，MSSQL，Oracle，PolarDB 兼容性                 |               [v3.0.0](https://github.com/pgsty/pigsty/releases/tag/v3.0.0)               |
+| [v2.7.0](#v270) | 2024-05-20 | 扩展大爆炸，新增20+强力扩展插件，与多款 Docker 应用                      |               [v2.7.0](https://github.com/pgsty/pigsty/releases/tag/v2.7.0)               |
+| [v2.6.0](#v260) | 2024-02-28 | PG 16 作为默认大版本，引入 ParadeDB 与 DuckDB 等扩展                     |               [v2.6.0](https://github.com/pgsty/pigsty/releases/tag/v2.6.0)               |
+| [v2.5.1](#v251) | 2023-12-01 | 例行小版本更新，PG16 重要扩展支持                                        |               [v2.5.1](https://github.com/pgsty/pigsty/releases/tag/v2.5.1)               |
+| [v2.5.0](#v250) | 2023-09-24 | Ubuntu/Debian 支持：bullseye, bookworm, jammy, focal                     |               [v2.5.0](https://github.com/pgsty/pigsty/releases/tag/v2.5.0)               |
+| [v2.4.1](#v241) | 2023-09-24 | Supabase/PostgresML 支持与各种新扩展：graphql, jwt, pg_net, vault        |               [v2.4.1](https://github.com/pgsty/pigsty/releases/tag/v2.4.1)               |
+| [v2.4.0](#v240) | 2023-09-14 | PG16，监控 RDS，服务咨询支持，新扩展：中文分词全文检索/图/HTTP/嵌入等    |               [v2.4.0](https://github.com/pgsty/pigsty/releases/tag/v2.4.0)               |
+| [v2.3.1](#v231) | 2023-09-01 | 带 HNSW 的 PGVector，PG 16 RC1, 文档翻新，中文文档，例行问题修复         |               [v2.3.1](https://github.com/pgsty/pigsty/releases/tag/v2.3.1)               |
+| [v2.3.0](#v230) | 2023-08-20 | 主机 VIP, ferretdb, nocodb, MySQL 存根，CVE 修复                         |               [v2.3.0](https://github.com/pgsty/pigsty/releases/tag/v2.3.0)               |
+| [v2.2.0](#v220) | 2023-08-04 | 仪表盘 & 置备重做，UOS 兼容性                                            |               [v2.2.0](https://github.com/pgsty/pigsty/releases/tag/v2.2.0)               |
+| [v2.1.0](#v210) | 2023-06-10 | 支持 PostgreSQL 12 ~ 16beta                                              |               [v2.1.0](https://github.com/pgsty/pigsty/releases/tag/v2.1.0)               |
+| [v2.0.2](#v202) | 2023-03-31 | 新增 pgvector 支持，修复 MinIO CVE                                       |               [v2.0.2](https://github.com/pgsty/pigsty/releases/tag/v2.0.2)               |
+| [v2.0.1](#v201) | 2023-03-21 | v2 错误修复，安全增强，升级 Grafana 版本                                 |               [v2.0.1](https://github.com/pgsty/pigsty/releases/tag/v2.0.1)               |
+| [v2.0.0](#v200) | 2023-02-28 | 架构大升级，兼容性、安全性、可维护性显著增强                             |               [v2.0.0](https://github.com/pgsty/pigsty/releases/tag/v2.0.0)               |
+| [v1.5.1](#v151) | 2022-06-18 | Grafana 安全性修复                                                       |               [v1.5.1](https://github.com/pgsty/pigsty/releases/tag/v1.5.1)               |
+| [v1.5.0](#v150) | 2022-05-31 | Docker 应用程序支持                                                      |               [v1.5.0](https://github.com/pgsty/pigsty/releases/tag/v1.5.0)               |
+| [v1.4.1](#v141) | 2022-04-20 | 错误修复 & 英文文档完整翻译                                              |               [v1.4.1](https://github.com/pgsty/pigsty/releases/tag/v1.4.1)               |
+| [v1.4.0](#v140) | 2022-03-31 | MatrixDB 支持，分离 INFRA/NODES/PGSQL/REDIS 模块                         |               [v1.4.0](https://github.com/pgsty/pigsty/releases/tag/v1.4.0)               |
+| [v1.3.0](#v130) | 2021-11-30 | PGCAT 重整 & PGSQL 增强 & Redis Beta 支持                                |               [v1.3.0](https://github.com/pgsty/pigsty/releases/tag/v1.3.0)               |
+| [v1.2.0](#v120) | 2021-11-03 | 默认 PGSQL 版本升级至 14                                                 |               [v1.2.0](https://github.com/pgsty/pigsty/releases/tag/v1.2.0)               |
+| [v1.1.0](#v110) | 2021-10-12 | 主页，JupyterLab, PGWEB, Pev2 & pgbadger                                 |               [v1.1.0](https://github.com/pgsty/pigsty/releases/tag/v1.1.0)               |
+| [v1.0.0](#v100) | 2021-07-26 | v1 正式版，监控系统重整                                                  |               [v1.0.0](https://github.com/pgsty/pigsty/releases/tag/v1.0.0)               |
+| [v0.9.0](#v090) | 2021-04-04 | Pigsty 图形界面，命令行界面，日志集成                                    |               [v0.9.0](https://github.com/pgsty/pigsty/releases/tag/v0.9.0)               |
+| [v0.8.0](#v080) | 2021-03-28 | 服务置备，定制对外暴露的数据库服务                                       |               [v0.8.0](https://github.com/pgsty/pigsty/releases/tag/v0.8.0)               |
+| [v0.7.0](#v070) | 2021-03-01 | 仅监控部署，监控现有 PostgreSQL 实例                                     |               [v0.7.0](https://github.com/pgsty/pigsty/releases/tag/v0.7.0)               |
+| [v0.6.0](#v060) | 2021-02-19 | 架构增强，将 PG 与 Consul 解耦                                           |               [v0.6.0](https://github.com/pgsty/pigsty/releases/tag/v0.6.0)               |
+| [v0.5.0](#v050) | 2021-01-07 | 支持在配置中定义业务数据库/用户                                          |               [v0.5.0](https://github.com/pgsty/pigsty/releases/tag/v0.5.0)               |
+| [v0.4.0](#v040) | 2020-12-14 | 支持 PostgreSQL 13，添加官方文档                                         |               [v0.4.0](https://github.com/pgsty/pigsty/releases/tag/v0.4.0)               |
+| [v0.3.0](#v030) | 2020-10-22 | 虚拟机置备方案正式定稿                                                   |               [v0.3.0](https://github.com/pgsty/pigsty/releases/tag/v0.3.0)               |
+|     v0.2.0      | 2020-07-10 | PG 监控系统第六版正式发布                                                | [v0.2.0](https://github.com/pgsty/pigsty/commit/385e33a62a19817e8ba19997260e6b77d99fe2ba) |
+|     v0.1.0      | 2020-06-20 | 在生产仿真测试环境中验证通过                                             | [v0.1.0](https://github.com/pgsty/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
+|     v0.0.5      | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                     | [v0.0.5](https://github.com/pgsty/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
+|     v0.0.4      | 2020-07-27 | 将 Ansible 剧本重构为 Role                                               | [v0.0.4](https://github.com/pgsty/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
+|     v0.0.3      | 2020-06-22 | 接口设计改进                                                             | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
+|     v0.0.2      | 2020-04-30 | 首次提交                                                                 | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
+|     v0.0.1      | 2019-05-15 | 概念原型                                                                 |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
 {.full-width-full .release-index .wide .expand}
 
 
@@ -76,7 +76,7 @@ Pigsty 当前公开稳定版为 [**v4.5.0**](#v450)，发布于北京时间 **20
 
 ## 开发分支发布后变更
 
-以下内容对应截至 **2026-10-09** 的开发源码 `2fb8b5bd`，尚未包含在 `v4.5.0` 发布包中。截至 2026-10-13，公开 GitHub `main` 为 `745a4eab`，尚未包含下列全部变更。
+以下内容汇总截至 **2026-10-29** 的开发分支与配套仓库变更，尚未包含在 `v4.5.0` 发布包中。核心源码条目沿用已核对的开发分支记录，INFRA 与 PIG 的累计更新见下表。
 
 - **云资源工具切换到 OpenTofu**：`terraform/` 的 Makefile 和辅助脚本默认使用 `tofu`，可通过 `IAC_CLI=terraform` 继续使用 Terraform；现有 state 迁移步骤见 [**OpenTofu**](/docs/deploy/terraform/)。
 - **离线包流程完善**：远端缓存归档与 `bootstrap` 默认路径改为 `/var/tmp/pkg.tgz`，默认路径缺失时兼容旧 `/tmp/pkg.tgz`；解包失败或缺少 `repo_complete` 会清理不完整输出并终止。构建机引导按阶段等待全部传输与远程操作，并传播失败状态。详见 [**离线安装**](/docs/setup/offline/)。
@@ -85,6 +85,97 @@ Pigsty 当前公开稳定版为 [**v4.5.0**](#v450)，发布于北京时间 **20
 - **Kafka JMX 可选**：新增 `kafka_jmx_exporter_enabled`，默认启用，可关闭内嵌 Java Agent 及其对应抓取；协议 Exporter 仍独立工作。详见 [**Kafka 参数**](/docs/kafka/param/#kafka_jmx_exporter_enabled)。
 - **应用部署与模板更新**：保留 APP 配置中的字面量值，完善健康检查、持久化目录、初始化依赖、凭据与端口处理；以 Silo 替换独立 MinIO Compose 应用。Supabase 更新到自托管 0.8.2、Dify 到 1.17.1、InsForge 到 2.3.3、JumpServer 到 5.0.0、Registry 到 3.1.2；其他模板与具体约束见 [**应用目录**](/docs/app/)。
 - **软件包映射与自动化**：刷新各平台 PostgreSQL 扩展包别名，补齐移除扩展、包名与许可证筛选规则，并更新 GitHub Actions 依赖。
+
+**INFRA / PIG 配套仓库更新汇总**
+
+下表合并 2026-08-24 至 2026-10-28 的 INFRA 日志：原始 279 条记录按软件包合并，关联组件合并为一行，省略通用的构建与入库说明。PIG `v1.8.0` 于 2026-08-14 发布，已作为 `v4.5.0` 同期基线；PIG 从 `v1.8.1` 起计入。
+
+| 仓库  | 项目                                                        | 版本变化                                    | 简要说明                                                       |
+|:------|:------------------------------------------------------------|:--------------------------------------------|:---------------------------------------------------------------|
+| INFRA | `agentsview`                                                | `0.40.1` → `0.46.1`                         |                                                                |
+| INFRA | `alertmanager`                                              | `0.33.1` → `0.34.1`                         |                                                                |
+| INFRA | `barn`                                                      | `—` → `0.9.1`                               | 新增预发布包；0.x                                              |
+| INFRA | `blackbox-exporter`                                         | `0.28.0` → `0.29.1`                         |                                                                |
+| INFRA | `caddy`                                                     | `2.11.4` → `2.11.7`                         |                                                                |
+| INFRA | `cargo-pgrx-0192` / `cargo-pgrx-0193`                       | 新增 `0.19.2` / `0.19.3`                    | 独立版本槽；EL8 构建                                           |
+| INFRA | `claude`                                                    | `2.1.227` → `2.1.312`                       | 官方清单核验；原生二进制                                       |
+| INFRA | `cloudflared`                                               | `2026.7.3` → `2026.10.5`                    | 裸二进制重打包                                                 |
+| INFRA | `code`                                                      | `1.133.0` → `1.143.1`                       | 原生 DEB/RPM；仓库 RPM 副本签名                                |
+| INFRA | `code-server`                                               | `4.132.0` → `4.143.1`                       | 原生 DEB/RPM                                                   |
+| INFRA | `codex`                                                     | `0.147.0` → `0.165.0`                       | 稳定标签构建                                                   |
+| INFRA | `crush`                                                     | `0.88.1` → `0.98.2`                         | 官方 tarball 重打包并保留许可证                                |
+| INFRA | `dblab`                                                     | `0.47.4` → `0.54.0`                         |                                                                |
+| INFRA | `duckdb`                                                    | `1.5.5` → `2.0.0`                           | 大版本更新                                                     |
+| INFRA | `etcd`                                                      | `3.7.1` → `3.7.3`                           |                                                                |
+| INFRA | `garage`                                                    | `2.3.0` → `2.5.0`                           |                                                                |
+| INFRA | `golang`                                                    | `1.26.5` → `1.27.3`                         | 官方工具链                                                     |
+| INFRA | `grafana`                                                   | `13.1.3` → `13.3.0`                         | 原生 DEB/RPM                                                   |
+| INFRA | `grafana-infinity-ds`                                       | `3.11.3` → `4.1.4`                          | 插件包                                                         |
+| INFRA | `grafana-plugins`                                           | `13.0.0` → `13.2.3`                         | 更新 10 个插件；JSON datasource 1.4.3                          |
+| INFRA | `grafana-victorialogs-ds`                                   | `0.31.0` → `0.33.1`                         |                                                                |
+| INFRA | `grafana-victoriametrics-ds`                                | `0.25.2` → `0.26.1`                         |                                                                |
+| INFRA | `headscale`                                                 | `0.29.3` → `0.29.6`                         |                                                                |
+| INFRA | `hugo`                                                      | `0.164.0` → `0.169.0`                       | Extended 版本                                                  |
+| INFRA | `jmx-exporter`                                              | `1.6.0` → `1.7.0`                           | noarch                                                         |
+| INFRA | `juicefs`                                                   | `1.4.1` → `1.4.2`                           |                                                                |
+| INFRA | `k3s` / `k3s-images`                                        | `1.36.3` → `1.37.1`                         | 二进制与 air-gap 镜像同步；stable 通道为 1.36.5                |
+| INFRA | `kafka`                                                     | `4.3.1` → `4.4.0`                           | noarch RPM / all DEB；SHA512 已核验                            |
+| INFRA | `kafka-exporter`                                            | `1.9.0` → `1.11.0`                          |                                                                |
+| INFRA | `kes`                                                       | `—` → `20261026000000.0.0`                  | 新增 PGSTY KES；保留上游签名                                   |
+| INFRA | `logcli` / `loki` / `loki-canary`                           | `3.7.6` → `3.7.9`                           | 同步更新                                                       |
+| INFRA | `maddy`                                                     | `0.9.5` → `0.9.6`                           |                                                                |
+| INFRA | `mcli`                                                      | `20260806000000.0.0` → `20261026000000.0.0` | pgsty fork；原生包路径 `/usr/local/bin/mcli`                   |
+| INFRA | `mcp-toolbox`                                               | `1.8.0` → `1.15.0`                          | CGO；glibc 2.28；Go 1.27.1 / Zig 0.15.2                        |
+| INFRA | `mongodb-exporter`                                          | `0.52.0` → `0.54.0`                         |                                                                |
+| INFRA | `mtail`                                                     | `3.4.7` → `3.4.18`                          |                                                                |
+| INFRA | `mysqld-exporter`                                           | `0.19.0` → `0.21.0`                         | 指标类型变更                                                   |
+| INFRA | `nginx-exporter`                                            | `1.5.1` → `1.5.3`                           |                                                                |
+| INFRA | `nodejs`                                                    | `24.19.0` → `24.22.1`                       | 24.x LTS；安全更新                                             |
+| INFRA | `openbao`                                                   | `—` → `2.7.2`                               | 新增固定配方                                                   |
+| INFRA | `opencode`                                                  | `1.18.16` → `1.19.5`                        | Bun 安全修复                                                   |
+| INFRA | `opentofu`                                                  | `—` → `1.13.2`                              | 新增；包名 `tofu`                                              |
+| INFRA | `pev2`                                                      | `1.23.0` → `1.25.0`                         | noarch RPM / all DEB                                           |
+| INFRA | `pg-exporter`                                               | `1.4.1` → `1.5.0`                           |                                                                |
+| INFRA | `pg-hardstorage`                                            | `1.2.1` → `1.6.0`                           | 静态二进制重打包                                               |
+| INFRA | `pg-timetable`                                              | `7.0.0` → `7.1.0`                           |                                                                |
+| INFRA | `pgbot`                                                     | `—` → `0.9.0`                               | 新增；beta                                                     |
+| INFRA | `pggo`                                                      | `—` → `0.1.1`                               | 新增                                                           |
+| INFRA | `pgschema`                                                  | `1.12.2` → `1.13.4`                         | 裸二进制重打包                                                 |
+| INFRA | `pgstream`                                                  | `1.3.1` → `1.5.0`                           |                                                                |
+| INFRA | `pgsync`                                                    | `—` → `0.1.1`                               | 新增；beta                                                     |
+| INFRA | `pgterm`                                                    | `—` → `0.4.0`                               | 新增；beta                                                     |
+| INFRA | `pig`                                                       | `1.7.0` → `1.10.2`                          |                                                                |
+| INFRA | `postgrest`                                                 | `16.1` → `16.5`                             | 最低支持 PostgreSQL 14                                         |
+| INFRA | `prometheus`                                                | `3.13.2` → `3.15.1`                         |                                                                |
+| INFRA | `promtail`                                                  | `3.6.7` → `3.6.11`                          | 补齐 EOL 制品                                                  |
+| INFRA | `pushgateway`                                               | `1.11.3` → `1.11.4`                         |                                                                |
+| INFRA | `rainfrog`                                                  | `0.4.3` → `0.4.6`                           |                                                                |
+| INFRA | `rclone`                                                    | `1.75.0` → `1.75.2`                         |                                                                |
+| INFRA | `redis-exporter`                                            | `1.89.0` → `1.96.0`                         |                                                                |
+| INFRA | `rust-toolchain`                                            | `1.97.1` → `1.99.1`                         | 官方签名与双架构 ELF ABI 检查                                  |
+| INFRA | `rustfs`                                                    | `1.0.0-rc.1` → `1.0.4`                      | rc 转正式版后继续更新                                          |
+| INFRA | `sabiql`                                                    | `1.15.1` → `3.0.2`                          | 新增 MySQL；需 Oracle MySQL CLI 8.4                            |
+| INFRA | `seaweedfs`                                                 | `4.41` → `4.51`                             |                                                                |
+| INFRA | `silo`                                                      | `20260806000000.0.0` → `20261026000000.0.0` | 正式版；S3；安全与正确性修复                                   |
+| INFRA | `silo-console`                                              | `—` → `2.5.1`                               | 新增独立控制台                                                 |
+| INFRA | `sow`                                                       | `0.3.0` → `0.6.1`                           | 旧 0.3/0.4 workspace 升级需显式迁移                            |
+| INFRA | `sql-studio`                                                | `0.1.51` → `0.1.53`                         |                                                                |
+| INFRA | `stalwart`                                                  | `0.16.17` → `1.0.0`                         | 大版本更新                                                     |
+| INFRA | `tailcat`                                                   | `—` → `0.7.0`                               | 固定提交后切换正式 tarball                                     |
+| INFRA | `timescaledb-tools`                                         | `0.19.0-1PGSTY` → `0.19.0-2PGSTY`           | parallel-copy 0.13.0 → 0.13.1                                  |
+| INFRA | `uv`                                                        | `0.12.3` → `0.13.6`                         |                                                                |
+| INFRA | `v2ray`                                                     | `5.52.0` → `5.53.0`                         |                                                                |
+| INFRA | `vector`                                                    | `0.57.0` → `0.60.0`                         |                                                                |
+| INFRA | `victoria-logs` / `vlogscli` / `vlagent`                    | `1.52.0` → `1.53.0`                         | 同步更新                                                       |
+| INFRA | `victoria-metrics` / `victoria-metrics-cluster` / `vmutils` | `1.149.0` → `1.155.0`                       | 单机、集群与 vmutils 同步                                      |
+| INFRA | `victoria-traces`                                           | `0.10.0` → `0.12.1`                         |                                                                |
+| INFRA | `xray`                                                      | `26.3.27` → `26.10.21`                      | 安全更新                                                       |
+| PIG   | `v1.8.1`                                                    | `v1.8.0` → `v1.8.1`                         | Go 1.27.1；CLI、仓库与构建安全加固；目录 575                   |
+| PIG   | `v1.9.0`                                                    | `v1.8.1` → `v1.9.0`                         | Xray 客户端/服务端；仓库签名公钥；目录 600；pgrx 0.19.3        |
+| PIG   | `v1.10.0`                                                   | `v1.9.0` → `v1.10.0`                        | PG 目标与恢复安全；Inventory 保真；仓库/扩展错误边界；目录 603 |
+| PIG   | `v1.10.1`                                                   | `v1.10.0` → `v1.10.1`                       | Go 1.27.3 安全修复；依赖更新；目录 615                         |
+| PIG   | `v1.10.2`                                                   | `v1.10.1` → `v1.10.2`                       | 新增 `pg_nanotime`；目录与包信息刷新；目录 616                 |
+{.wide .expand}
 
 ------
 
@@ -158,239 +249,239 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 
 扩展日志在 7 月 10 日后的首个批次为 7 月 24 日；该批次原文覆盖 7 月 7–24 日且没有逐项日期，因此这里完整纳入该批次，以免遗漏发布后的 pgrx 重构建与软件包矩阵修复。“仅 RPM”或“仅 DEB”只表示另一份变更日志中没有同批同名记录。
 
-| 批次         | 扩展                        | 版本变化                                           | 说明                                                                                                                      |
-|:-----------|:--------------------------|:-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| 2026-08-14 | `asn1oid`                 | 仅 RPM：`1.6` → `1.6`                            | 许可证元数据：`GPL-3.0-or-later`；r2；PG14-18                                                                                    |
-| 2026-08-14 | `emailaddr`               | `0` → `0`                                      | 许可证元数据：`LicenseRef-Upstream-No-License`；r3；PG14-18                                                                      |
-| 2026-08-14 | `explain_ui`              | `0.0.2` → `0.0.2`                              | 许可证元数据：`LicenseRef-Upstream-No-License`；r4；PG14-18                                                                      |
-| 2026-08-14 | `numeral`                 | 仅 RPM：`1.3` → `1.3`                            | 许可证元数据：`GPL-2.0-or-later`；r6；PG14-18                                                                                    |
-| 2026-08-14 | `oidc_validator`          | `0.1.0` → `0.1.0`                              | Rust 模块；`LicenseRef-Upstream-No-License`；r2；PG18                                                                        |
-| 2026-08-14 | `pg_failover_slots`       | `1.2.1` → `1.2.1`                              | 许可证元数据：`PostgreSQL`；r2；需预加载；PG14-18                                                                                     |
-| 2026-08-14 | `pg_geohash`              | `1.0` → `1.0`                                  | 许可证元数据：`MIT`；r4；修复 SQL 文件名与目标 PG ABI；PG14-18                                                                            |
-| 2026-08-14 | `pg_oidc_validator`       | `0.2` → `1.1.0`                                | RPM：PG18 OAuth 校验模块；新增 `discovery_url_override`；仅 EL10<br>DEB：PG18 OAuth 校验模块；新增 `discovery_url_override` 与 GSSAPI 构建依赖 |
-| 2026-08-14 | `pg_relation_sql`         | `-` → `0.2.2`                                  | RPM：独立 SQL；不支持 `CREATE EXTENSION`；noarch；PG14-18<br>DEB：独立 SQL；不支持 `CREATE EXTENSION`；Architecture: all；PG14-18         |
-| 2026-08-14 | `pg_summarize`            | `0.0.1` → `0.0.1`                              | 许可证元数据：`LicenseRef-Upstream-No-License`；r6；PG14-18                                                                      |
-| 2026-08-14 | `pg_when`                 | `0.1.9` → `0.1.10`                             | GitHub/PGXN 同一发行版；上游 pgrx 0.18.1，打包使用 0.19.1；PG14-18                                                                    |
-| 2026-08-14 | `pre_prepare`             | 仅 RPM：`0.9` → `0.9`                            | 许可证元数据：`PostgreSQL`；r2；PG14-18                                                                                          |
-| 2026-08-14 | `smlar`                   | `1.0` → `1.0`                                  | 许可证元数据：`LicenseRef-Upstream-No-License`；r2；PG14-18                                                                      |
-| 2026-08-14 | `unit`                    | `7.10` → `7.10`                                | 许可证元数据：`GPL-3.0-or-later`；r7；PG14-18                                                                                    |
-| 2026-08-12 | `biscuit`                 | `2.4.3` → `3.0.0`                              | PG16-18；2.x 索引需 REINDEX                                                                                                 |
-| 2026-08-12 | `cat_tools`               | `-` → `0.3.0`                                  | 纯 SQL；PG14-18                                                                                                           |
-| 2026-08-12 | `citus`                   | `14.1.0` → `14.2.0`                            | 含 citus_columnar；PG16-18                                                                                                |
-| 2026-08-12 | `pg_clickhouse`           | `0.3.2` → `0.10.0`                             | PG14-18                                                                                                                 |
-| 2026-08-12 | `pg_describe`             | `-` → `1.0.0`                                  | PG17-18                                                                                                                 |
-| 2026-08-12 | `pg_disorder`             | `-` → `0.1.0`                                  | PG14-18                                                                                                                 |
-| 2026-08-12 | `pg_local_cache`          | `-` → `1.3.0`                                  | PG14-18；需预加载；仅单主                                                                                                        |
-| 2026-08-12 | `pg_mentat`               | `-` → `1.5.7`                                  | PG14-18                                                                                                                 |
-| 2026-08-12 | `pg_policy`               | `-` → `0.1.0`                                  | 纯 SQL；PG14-18                                                                                                           |
-| 2026-08-12 | `pg_rational`             | `0.0.2` → `0.0.3`                              | RPM：PIGSTY；PG14-18<br>DEB：PGDG；PG14-18                                                                                  |
-| 2026-08-12 | `pg_readme`               | `0.7.0` → `0.7.1`                              | RPM：目录 0.7.1；RPM 仍为 PGDG 0.7.0<br>DEB：含 pg_readme_test_extension；PG14-18                                                |
-| 2026-08-12 | `pg_search`               | `0.25.0` → `0.25.2`                            | PG15-18；pgrx 0.19.1；需预加载                                                                                                |
-| 2026-08-12 | `pg_squeeze`              | `1.9.2` → `1.9.4`                              | PGDG；PG14-18                                                                                                            |
-| 2026-08-12 | `pg_statviz`              | RPM：`-` → `0.9`<br>DEB：`-` → `1.1`             | RPM：PGDG；PG14-16，另有 EL10 PG18；无 PG17；非默认包组<br>DEB：PGDG；PG14-18（U22 除外）；非默认包组                                            |
-| 2026-08-12 | `pg_turbovec`             | `-` → `1.29.0`                                 | PG14-18；pgrx 0.19.1                                                                                                     |
-| 2026-08-12 | `pg_uuid_v8`              | `1.0.0` → `1.1.0`                              | PG14-18；含 1.0 至 1.1 升级脚本                                                                                                |
-| 2026-08-12 | `pg_vault_tde`            | `-` → `1.7.0`                                  | RPM：PG17-18；仅 EL9/10；需预加载<br>DEB：PG17-18；需预加载                                                                           |
-| 2026-08-12 | `pgbson`                  | `2.0.4` → `2.1.0`                              | RPM：RPM 包名 postgresbson；PG14-18<br>DEB：源码包 postgresbson；PG14-18                                                         |
-| 2026-08-12 | `pgmnemo`                 | `0.15.0` → `0.16.1`                            | PG17-18                                                                                                                 |
-| 2026-08-12 | `plpgsql_check`           | `2.10.3` → `2.10.4`                            | PG14-18                                                                                                                 |
-| 2026-08-12 | `plruby`                  | `-` → `2.5.0`                                  | 含 jsonb_plruby、hstore_plruby、ltree_plruby；PG14-18                                                                       |
-| 2026-08-12 | `polardb-17`              | `17.10.1.0-1PIGSTY` → `17.10.1.0-2PGSTY`       | 重构建；PG17                                                                                                                |
-| 2026-08-12 | `polarstore`              | `1.2.42-1PIGSTY` → `1.2.42-2PGSTY`             | 重构建                                                                                                                     |
-| 2026-08-12 | `provsql`                 | `1.11.0` → `1.12.0`                            | PG14-18                                                                                                                 |
-| 2026-08-12 | `q3c`                     | RPM：`2.0.2` → `2.0.5`<br>DEB：`2.0.4` → `2.0.5` | RPM：PGDG；PIGSTY 仍为 2.0.2；PG14-18<br>DEB：PGDG；PG14-18                                                                    |
-| 2026-08-12 | `timescaledb`             | `2.29.0` → `2.29.1`                            | PG16-18                                                                                                                 |
-| 2026-08-12 | `vector`                  | `0.8.6` → `0.8.6`                              | PGDG 仓库刷新；PG14-18                                                                                                       |
-| 2026-08-12 | `zlog`                    | `1.2.18-1PIGSTY` → `1.2.18-2PGSTY`             | 重构建                                                                                                                     |
-| 2026-07-30 | `emaj`                    | RPM：`-` → `5.0.0`<br>DEB：`4.7.1` → `5.0.0`     | RPM：包名改为 `e-maj`；Provides/Obsoletes `emaj`；r2<br>DEB：PG14-18                                                            |
-| 2026-07-30 | `graph`                   | `0.1.8` → `1.0.0`                              | pggraph；PG14-18；pgrx 0.19.1                                                                                             |
-| 2026-07-30 | `nominatim_fdw`           | `2.0.0` → `2.1.0`                              | PG14-18                                                                                                                 |
-| 2026-07-30 | `numeral`                 | 仅 RPM：`1.3` → `1.3`                            | 包名改为 `postgresql-numeral`；Provides/Obsoletes `numeral`；r3                                                               |
-| 2026-07-30 | `pg_ai_query`             | 仅 RPM：`0.1.1` → `0.1.1`                        | 仅 EL9/10（GCC 13/OpenSSL 3）；r2 尚未入库                                                                                      |
-| 2026-07-30 | `pg_column_tetris`        | `-` → `0.1.0`                                  | 纯 SQL；PG14-18                                                                                                           |
-| 2026-07-30 | `pg_net`                  | `0.20.5` → `0.20.5`                            | RPM：EL8/9：0.9.2；EL10：0.20.5；r3 尚未入库<br>DEB：D12/D13/U24/U26：0.20.5；U22：0.9.2；r2 尚未入库                                     |
-| 2026-07-30 | `pg_partman`              | RPM：`5.4.0` → `5.5.0`<br>DEB：`5.4.2` → `5.5.0` | RPM：PG14-18<br>DEB：使用 `postgresql-PGVERSION-partman` 包名                                                                 |
-| 2026-07-30 | `pg_search`               | `0.24.3` → `0.25.0`                            | PG15-18；pgrx 0.19.1；新增 pgvector/OpenBLAS 依赖                                                                             |
-| 2026-07-30 | `pgcontext`               | `-` → `0.2.0`                                  | PG17-18；pgrx 0.19.1；可选 pgvector 兼容桥                                                                                     |
-| 2026-07-30 | `pgedge`                  | 仅 RPM：`18.4` → `18.4`                          | PG15-18 ABI 修复；r2 尚未入库                                                                                                  |
-| 2026-07-30 | `pgmnemo`                 | `0.13.0` → `0.15.0`                            | PG17-18；依赖 pgvector >= 0.7.0                                                                                            |
-| 2026-07-30 | `pgmp`                    | `-` → `1.0.6`                                  | PG14-18；依赖 GMP                                                                                                          |
-| 2026-07-30 | `pgpcre`                  | 仅 RPM：`0.20190509` → `0.20190509`              | 仅 EL8/9；r2 尚未入库                                                                                                         |
-| 2026-07-30 | `pgwasm`                  | `-` → `0.1.0`                                  | PG14-18                                                                                                                 |
-| 2026-07-30 | `plpgsql_check`           | `2.10.1` → `2.10.3`                            | PG14-18；预加载改为可选                                                                                                         |
-| 2026-07-30 | `postbis`                 | `-` → `1.0`                                    | PG14-18 兼容补丁；r2                                                                                                         |
-| 2026-07-30 | `qdgc`                    | `-` → `0.1.0`                                  | PG14-18；包含 qdgc_postgis                                                                                                 |
-| 2026-07-30 | `rdf_fdw`                 | `2.6.0` → `2.7.0`                              | PG14-18                                                                                                                 |
-| 2026-07-30 | `timescaledb`             | `2.28.3` → `2.29.0`                            | PG16-18                                                                                                                 |
-| 2026-07-30 | `uri`                     | 仅 RPM：`1.20251029` → `1.20251029`              | 包名改为 `pguri`；Provides/Obsoletes `pg_uri`；r2                                                                             |
-| 2026-07-30 | `vector`                  | `0.8.5` → `0.8.6`                              | PG14-18；0.8.6 尚未入库                                                                                                      |
-| 2026-07-30 | `pg_rewrite`              | 仅 DEB：`2.0.0` → `2.2`                          | 包名改为 `postgresql-PGVERSION-pg-rewrite`；PG14-18                                                                          |
-| 2026-07-30 | `pgactive`                | 仅 DEB：`2.1.7` → `2.1.7`                        | 修复 PG14-18 构建；r2 尚未入库                                                                                                   |
-| 2026-07-30 | `pgzint`                  | 仅 DEB：`-` → `0.2.0`                            | 仅 D13/U26；依赖 Zint >= 2.14；尚未入库                                                                                          |
-| 2026-07-30 | `timeseries`              | 仅 DEB：`0.2.1` → `0.2.1`                        | 修正 partman/cron 推荐依赖与文档；r3                                                                                              |
-| 2026-07-24 | `argm`                    | `-` → `1.1.1`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `cron_utils`              | `-` → `0.1.0`                                  | 纯 SQL；PG14-18                                                                                                           |
-| 2026-07-24 | `fbsql`                   | `-` → `0.1.0`                                  | 依赖 PL/R；PG16-18                                                                                                         |
-| 2026-07-24 | `oidc_validator`          | `-` → `0.1.0`                                  | Rust OIDC；PG18                                                                                                          |
-| 2026-07-24 | `online_advisor`          | `-` → `1.0`                                    | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_cjk_parser`           | `-` → `0.1.0`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_extension_base`       | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_extension_updater`    | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_fts`                  | `-` → `0.2.0`                                  | PG17-18                                                                                                                 |
-| 2026-07-24 | `pg_jieba`                | `-` → `1.1.0`                                  | 包 2.0.1；SQL 1.1.0；PG14-18                                                                                               |
-| 2026-07-24 | `pg_kpart`                | `-` → `1.0`                                    | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_lake`                 | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_lake_copy`            | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_lake_engine`          | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_lake_iceberg`         | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_lake_table`           | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_map`                  | `-` → `3.4`                                    | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                        |
-| 2026-07-24 | `pg_oidc_validator`       | `-` → `0.2`                                    | Percona OIDC；PG18；DEB 全平台，RPM 仅 EL10                                                                                    |
-| 2026-07-24 | `pg_roast`                | `-` → `1.0`                                    | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_tiktoken_c`           | `-` → `1.1`                                    | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgfr_analyze`            | `-` → `2.29.2`                                 | pg_flight_recorder；PG15-18                                                                                              |
-| 2026-07-24 | `pgfr_record`             | `-` → `2.29.2`                                 | pg_flight_recorder；PG15-18                                                                                              |
-| 2026-07-24 | `pgmemento`               | `-` → `0.7.4`                                  | 纯 SQL；PG14-18                                                                                                           |
-| 2026-07-24 | `pgmonitor`               | `-` → `2.2.0`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgsqlmock`               | `-` → `1.0.1`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `plx`                     | `-` → `1.3.1`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `anon`                    | `3.1.1` → `3.1.3`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `block_copy_command`      | `0.1.5` → `0.1.5`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `convert`                 | `0.1.0` → `0.1.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `etcd_fdw`                | `0.0.1` → `0.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `explain_ui`              | `0.0.2` → `0.0.2`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `graph`                   | `0.1.7` → `0.1.8`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `jsonschema`              | `0.1.9` → `0.1.9`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_base58`               | `0.0.1` → `0.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_bestmatch`            | `0.0.2` → `0.0.2`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_cardano`              | `1.2.0` → `1.2.0`                              | pgrx 0.19.1；PG15-18                                                                                                     |
-| 2026-07-24 | `pg_command_fw`           | `0.1.0` → `0.1.0`                              | pgrx 0.19.1；PG15-18                                                                                                     |
-| 2026-07-24 | `pg_durable`              | `0.2.2` → `0.2.3`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_enigma`               | `0.5.0` → `0.5.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_eviltransform`        | `0.0.2` → `0.0.4`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_graphql`              | `1.6.1` → `1.6.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_idkit`                | `0.4.0` → `0.4.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_jsonschema`           | `0.3.4` → `0.3.4`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_kazsearch`            | `2.2.0` → `2.3.0`                              | pgrx 0.19.1；PG16-18                                                                                                     |
-| 2026-07-24 | `pg_later`                | `0.4.0` → `0.4.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_mooncake`             | `0.2.0` → `0.2.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_parquet`              | `0.5.1` → `0.5.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_pinyin`               | `0.0.4` → `0.0.5`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_polyline`             | `0.0.1` → `0.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_render`               | `0.1.3` → `0.1.3`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_rrf`                  | `0.0.3` → `0.0.3`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_search`               | `0.24.0` → `0.24.3`                            | pgrx 0.19.1；PG15-18                                                                                                     |
-| 2026-07-24 | `pg_session_jwt`          | `0.5.0` → `0.5.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_smtp_client`          | `0.2.1` → `0.2.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_strict`               | `1.0.5` → `1.0.5`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_summarize`            | `0.0.1` → `0.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_tiktoken`             | `0.0.1` → `0.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_tokenizer`            | `0.1.1` → `0.1.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pg_trickle`              | `0.81.0` → `0.81.0`                            | pgrx 0.19.1；PG18                                                                                                        |
-| 2026-07-24 | `pg_when`                 | `0.1.9` → `0.1.9`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pgdd`                    | `0.6.1` → `0.6.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pglinter`                | `2.0.0` → `2.0.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pglite_fusion`           | `0.0.6` → `0.0.6`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pgmqtt`                  | `0.3.0` → `0.4.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pgrdf`                   | `0.6.4` → `0.6.20`                             | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pgsmcrypto`              | `0.1.1` → `0.1.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `pgx_ulid`                | `0.2.3` → `0.2.3`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `plprql`                  | `18.0.1` → `18.0.1`                            | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `timescaledb_toolkit`     | `1.23.0` → `1.23.0`                            | pgrx 0.19.1；PG15-18                                                                                                     |
-| 2026-07-24 | `typeid`                  | `0.3.0` → `0.3.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `tzf`                     | `0.3.0` → `0.3.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `vchord`                  | `1.1.1` → `1.1.1`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `vchord_bm25`             | `0.3.0` → `0.3.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `vectorize`               | `0.26.2` → `0.26.2`                            | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `vectorscale`             | `0.9.0` → `0.9.0`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `wrappers`                | `0.6.1` → `0.6.2`                              | pgrx 0.19.1；PG14-18                                                                                                     |
-| 2026-07-24 | `age`                     | 仅 RPM：`1.7.0` → `1.8.0`                        | PG18：1.8.0-rc0；PG17：1.7.0                                                                                               |
-| 2026-07-24 | `babelfishpg_tsql`        | `5.5.0` → `5.4.0`                              | 目录修正为 5.4.0；PG17-18                                                                                                     |
-| 2026-07-24 | `biscuit`                 | `2.4.1` → `2.4.3`                              | 包 2.4.3；SQL 2.4.1；PG16-18                                                                                               |
-| 2026-07-24 | `decoderbufs`             | `3.5.0` → `3.6.0`                              | DEB 3.6.0；RPM 3.5.0；PG14-18                                                                                             |
-| 2026-07-24 | `documentdb`              | `0.113` → `0.114`                              | PG15-18；16 平台                                                                                                           |
-| 2026-07-24 | `documentdb_core`         | `0.113` → `0.114`                              | PG15-18；16 平台                                                                                                           |
-| 2026-07-24 | `documentdb_distributed`  | `0.113` → `0.114`                              | PG15-18；16 平台                                                                                                           |
-| 2026-07-24 | `documentdb_extended_rum` | `0.113` → `0.114`                              | PG15-18；16 平台                                                                                                           |
-| 2026-07-24 | `http`                    | `1.7.1` → `1.7.2`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `jdbc_fdw`                | `0.4.0` → `0.5.0`                              | 包 0.5.0；SQL 1.2；PG14-18；16 平台                                                                                           |
-| 2026-07-24 | `nominatim_fdw`           | `1.3` → `2.0.0`                                | PG14-18；16 平台                                                                                                           |
-| 2026-07-24 | `odbc_fdw`                | `0.5.1` → `0.6.1`                              | 包 0.6.1；SQL 0.5.2；PG14-18                                                                                               |
-| 2026-07-24 | `ogr_fdw`                 | `1.1.8` → `1.1.9`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_csv`                  | 仅 RPM：`1.0.1` → `1.0.2`                        | +RPM；包 1.0.2；SQL 1.0.1；PG14-18                                                                                          |
-| 2026-07-24 | `pg_dbms_errlog`          | `2.2` → `2.4`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_ivm`                  | `1.14` → `1.15`                                | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_net`                  | `0.20.3` → `0.20.5`                            | RPM：包 0.20.5；SQL 0.20.4；PG14-18；RPM EL10<br>DEB：D12/D13/U24/U26：0.20.5；U22：0.9.2（libcurl）；PG14-18                       |
-| 2026-07-24 | `pg_rewrite`              | 仅 RPM：`2.0.0` → `2.2`                          | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_statement_rollback`   | `1.5` → `1.6`                                  | PG14-18                                                                                                                 |
-| 2026-07-24 | `pg_tde`                  | `2.1` → `2.2`                                  | Percona；PG17-18                                                                                                         |
-| 2026-07-24 | `pgnodemx`                | 仅 RPM：`1.7` → `2.0.1`                          | 包 2.0.1；SQL 2.0；PG14-18；cgroup 安全                                                                                       |
-| 2026-07-24 | `pgauditlogtofile`        | `1.8.4` → `1.8.5`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgbson`                  | `2.0.2` → `2.0.4`                              | 包 2.0.4；SQL 2.0；PG14-18                                                                                                 |
-| 2026-07-24 | `pgclone`                 | `4.3.2` → `4.4.2`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgextwlist`              | `1.19` → `1.20`                                | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgmnemo`                 | `0.12.1` → `0.13.0`                            | PG17-18                                                                                                                 |
-| 2026-07-24 | `pgmq`                    | `1.11.1` → `1.12.0`                            | PG14-18                                                                                                                 |
-| 2026-07-24 | `pgsentinel`              | `1.4.1` → `1.4.2`                              | RPM 1.4.2；DEB 1.4.0；U26 1.4.1；PG14-18                                                                                   |
-| 2026-07-24 | `plpgsql_check`           | `2.9.2` → `2.10.1`                             | PG14-18                                                                                                                 |
-| 2026-07-24 | `plproxy`                 | `2.11.0` → `2.12.0`                            | PG14-18                                                                                                                 |
-| 2026-07-24 | `powa`                    | `5.1.2` → `5.2.0`                              | DEB 5.2.0；RPM 5.1.0；PG14-18                                                                                             |
-| 2026-07-24 | `provsql`                 | `1.10.0` → `1.11.0`                            | PG14-18                                                                                                                 |
-| 2026-07-24 | `re2`                     | `0.3.0` → `0.4.1`                              | PG16-18                                                                                                                 |
-| 2026-07-24 | `snowflake`               | `2.4` → `2.5.0`                                | pgEdge；PG15-18                                                                                                          |
-| 2026-07-24 | `spock`                   | `5.0.6` → `5.0.10`                             | pgEdge；PG15-18                                                                                                          |
-| 2026-07-24 | `tdigest`                 | `1.4.3` → `1.4.4`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `timescaledb`             | `2.28.2` → `2.28.3`                            | PG15-18：2.28.3；PG14：2.19.3；6 个 EL                                                                                       |
-| 2026-07-24 | `vector`                  | `0.8.4` → `0.8.5`                              | PG14-18                                                                                                                 |
-| 2026-07-24 | `babelfishpg_money`       | `1.1.0` → `1.1.0`                              | Babelfish：+PG18                                                                                                         |
-| 2026-07-24 | `babelfishpg_tds`         | `1.0.0` → `1.0.0`                              | Babelfish：+PG18                                                                                                         |
-| 2026-07-24 | `citus`                   | `14.1.0` → `14.1.0`                            | Citus 13.0.0；EL10 双架构 RPM PG14                                                                                          |
-| 2026-07-24 | `dbt2`                    | `0.61.7` → `0.61.7`                            | +DEB PG14-18；+EL8 双架构 RPM PG17-18                                                                                       |
-| 2026-07-24 | `decoder_raw`             | `1.0` → `1.0`                                  | EL10/D13；PG14-16；双架构                                                                                                    |
-| 2026-07-24 | `faker`                   | `0.5.3` → `0.5.3`                              | RPM：+DEB PG14-18<br>DEB：+DEB PG14-18；D12/U22：python3-fake-factory 22.0.0                                                |
-| 2026-07-24 | `gb18030_2022`            | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `h3`                      | `4.2.3` → `4.2.3`                              | EL8 x86_64 RPM PG17-18                                                                                                  |
-| 2026-07-24 | `hdfs_fdw`                | `2.3.3` → `2.3.3`                              | +DEB PG14-18                                                                                                            |
-| 2026-07-24 | `hstore_pllua`            | `2.0.12` → `2.0.12`                            | +RPM 6 个 EL PG14-18                                                                                                     |
-| 2026-07-24 | `hstore_plluau`           | `2.0.12` → `2.0.12`                            | +RPM 6 个 EL PG14-18                                                                                                     |
-| 2026-07-24 | `hunspell_cs_cz`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_de_de`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_en_us`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_fr`             | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_ne_np`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_nl_nl`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_nn_no`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_pt_pt`          | `1.0` → `1.0`                                  | 16 平台；pt_pt.stop 避免内核冲突                                                                                                 |
-| 2026-07-24 | `hunspell_ru_ru`          | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `hunspell_ru_ru_aot`      | `1.0` → `1.0`                                  | hunspell 合包；10 词典；16 平台；PG14-18                                                                                         |
-| 2026-07-24 | `imgsmlr`                 | `1.0` → `1.0`                                  | EL10/D13；PG14-18；双架构                                                                                                    |
-| 2026-07-24 | `ivorysql_ora`            | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `mobilitydb`              | `1.3.0` → `1.3.0`                              | +RPM 6 个 EL PG14-18；+U22 DEB PG18                                                                                       |
-| 2026-07-24 | `mobilitydb_datagen`      | `1.3.0` → `1.3.0`                              | 随 mobilitydb；+RPM 6 个 EL；+U22 DEB PG18                                                                                  |
-| 2026-07-24 | `omni`                    | `0.2.14` → `0.2.14`                            | 20251108；EL10 PG14-18；EL8/9、D12/U22 PG18                                                                                |
-| 2026-07-24 | `ora_btree_gin`           | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `ora_btree_gist`          | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `pg_dbms_job`             | `2.0` → `2.0`                                  | +DEB PG14-18                                                                                                            |
-| 2026-07-24 | `pg_dbms_lock`            | `2.0` → `2.0`                                  | +DEB PG14-18                                                                                                            |
-| 2026-07-24 | `pg_dbms_metadata`        | `1.0.0` → `1.0.0`                              | +DEB PG14-18；+EL8 aarch64 RPM PG15                                                                                      |
-| 2026-07-24 | `pg_fact_loader`          | `2.0.1` → `2.0.1`                              | U26 DEB PG14-18                                                                                                         |
-| 2026-07-24 | `pg_get_functiondef`      | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `pg_strom`                | `6.1` → `6.1`                                  | pg_strom 3.5；EL10 x86_64 PG14                                                                                           |
-| 2026-07-24 | `pgautofailover`          | `2.2` → `2.2`                                  | 6 个 EL RPM：+PG18                                                                                                        |
-| 2026-07-24 | `pgbouncer_fdw`           | `1.4.0` → `1.4.0`                              | +DEB PG14-18                                                                                                            |
-| 2026-07-24 | `pg_wait_sampling`        | 仅 RPM：`1.1.11` → `1.1.11`                      | +RPM PG14-18；SQL 1.1                                                                                                    |
-| 2026-07-24 | `pgl_ddl_deploy`          | `2.2.1` → `2.2.1`                              | RPM：+RPM PG14-18；+U26 DEB PG14-17<br>DEB：10 个 DEB：+PG18；U26 PG14-17                                                     |
-| 2026-07-24 | `pglogical_ticker`        | `1.4.1` → `1.4.1`                              | 6 个 EL RPM PG14-17                                                                                                      |
-| 2026-07-24 | `pgmemcache`              | `2.3.0` → `2.3.0`                              | EL8 aarch64 RPM PG14-15                                                                                                 |
-| 2026-07-24 | `pgml`                    | `2.10.0` → `2.10.0`                            | EL10/D13/U26；PG14-17；双架构                                                                                                |
-| 2026-07-24 | `pgspider_ext`            | `1.3.0` → `1.3.0`                              | RPM：+RPM PG14-18；兼容 PG18<br>DEB：10 个 DEB：+PG18；支持 PG15-18                                                               |
-| 2026-07-24 | `plisql`                  | `1.0` → `1.0`                                  | IvorySQL 5.4；PG18；16 平台                                                                                                 |
-| 2026-07-24 | `pllua`                   | `2.0.12` → `2.0.12`                            | 6 个 EL：+PG18；EL8 aarch64：+PG14-15                                                                                       |
-| 2026-07-24 | `rdkit`                   | `202503.6` → `202503.6`                        | RPM：202303.3；EL8/9、D12/U22；PG14-18<br>DEB：D12/U22 PG17-18：202303.3；U26 PG14-17：202503.6；运行时不变                           |
-| 2026-07-24 | `sqlite_fdw`              | `2.5.0` → `2.5.0`                              | RPM：RPM r3：+PG18、兼容 EL8 SQLite；PG14-18<br>DEB：10 个 DEB：+PG18；支持 PG14-18                                                 |
-| 2026-07-24 | `sslutils`                | `1.4` → `1.4`                                  | EL8 双架构 RPM PG18                                                                                                        |
-| 2026-07-24 | `wal2mongo`               | `1.0.7` → `1.0.7`                              | RPM：+RPM PG14-18；兼容 PG17-18<br>DEB：10 个 DEB：+PG17-18；支持 PG14-18                                                         |
-| 2026-07-24 | `system_stats`            | 仅 DEB：`4.0` → `4.1`                            | PG14-18；10 个 DEB 目标                                                                                                     |
+| 批次       | 扩展                      | 版本变化                                         | 说明                                                                                                                                           |
+|:-----------|:--------------------------|:-------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
+| 2026-08-14 | `asn1oid`                 | 仅 RPM：`1.6` → `1.6`                            | 许可证元数据：`GPL-3.0-or-later`；r2；PG14-18                                                                                                  |
+| 2026-08-14 | `emailaddr`               | `0` → `0`                                        | 许可证元数据：`LicenseRef-Upstream-No-License`；r3；PG14-18                                                                                    |
+| 2026-08-14 | `explain_ui`              | `0.0.2` → `0.0.2`                                | 许可证元数据：`LicenseRef-Upstream-No-License`；r4；PG14-18                                                                                    |
+| 2026-08-14 | `numeral`                 | 仅 RPM：`1.3` → `1.3`                            | 许可证元数据：`GPL-2.0-or-later`；r6；PG14-18                                                                                                  |
+| 2026-08-14 | `oidc_validator`          | `0.1.0` → `0.1.0`                                | Rust 模块；`LicenseRef-Upstream-No-License`；r2；PG18                                                                                          |
+| 2026-08-14 | `pg_failover_slots`       | `1.2.1` → `1.2.1`                                | 许可证元数据：`PostgreSQL`；r2；需预加载；PG14-18                                                                                              |
+| 2026-08-14 | `pg_geohash`              | `1.0` → `1.0`                                    | 许可证元数据：`MIT`；r4；修复 SQL 文件名与目标 PG ABI；PG14-18                                                                                 |
+| 2026-08-14 | `pg_oidc_validator`       | `0.2` → `1.1.0`                                  | RPM：PG18 OAuth 校验模块；新增 `discovery_url_override`；仅 EL10<br>DEB：PG18 OAuth 校验模块；新增 `discovery_url_override` 与 GSSAPI 构建依赖 |
+| 2026-08-14 | `pg_relation_sql`         | `-` → `0.2.2`                                    | RPM：独立 SQL；不支持 `CREATE EXTENSION`；noarch；PG14-18<br>DEB：独立 SQL；不支持 `CREATE EXTENSION`；Architecture: all；PG14-18              |
+| 2026-08-14 | `pg_summarize`            | `0.0.1` → `0.0.1`                                | 许可证元数据：`LicenseRef-Upstream-No-License`；r6；PG14-18                                                                                    |
+| 2026-08-14 | `pg_when`                 | `0.1.9` → `0.1.10`                               | GitHub/PGXN 同一发行版；上游 pgrx 0.18.1，打包使用 0.19.1；PG14-18                                                                             |
+| 2026-08-14 | `pre_prepare`             | 仅 RPM：`0.9` → `0.9`                            | 许可证元数据：`PostgreSQL`；r2；PG14-18                                                                                                        |
+| 2026-08-14 | `smlar`                   | `1.0` → `1.0`                                    | 许可证元数据：`LicenseRef-Upstream-No-License`；r2；PG14-18                                                                                    |
+| 2026-08-14 | `unit`                    | `7.10` → `7.10`                                  | 许可证元数据：`GPL-3.0-or-later`；r7；PG14-18                                                                                                  |
+| 2026-08-12 | `biscuit`                 | `2.4.3` → `3.0.0`                                | PG16-18；2.x 索引需 REINDEX                                                                                                                    |
+| 2026-08-12 | `cat_tools`               | `-` → `0.3.0`                                    | 纯 SQL；PG14-18                                                                                                                                |
+| 2026-08-12 | `citus`                   | `14.1.0` → `14.2.0`                              | 含 citus_columnar；PG16-18                                                                                                                     |
+| 2026-08-12 | `pg_clickhouse`           | `0.3.2` → `0.10.0`                               | PG14-18                                                                                                                                        |
+| 2026-08-12 | `pg_describe`             | `-` → `1.0.0`                                    | PG17-18                                                                                                                                        |
+| 2026-08-12 | `pg_disorder`             | `-` → `0.1.0`                                    | PG14-18                                                                                                                                        |
+| 2026-08-12 | `pg_local_cache`          | `-` → `1.3.0`                                    | PG14-18；需预加载；仅单主                                                                                                                      |
+| 2026-08-12 | `pg_mentat`               | `-` → `1.5.7`                                    | PG14-18                                                                                                                                        |
+| 2026-08-12 | `pg_policy`               | `-` → `0.1.0`                                    | 纯 SQL；PG14-18                                                                                                                                |
+| 2026-08-12 | `pg_rational`             | `0.0.2` → `0.0.3`                                | RPM：PIGSTY；PG14-18<br>DEB：PGDG；PG14-18                                                                                                     |
+| 2026-08-12 | `pg_readme`               | `0.7.0` → `0.7.1`                                | RPM：目录 0.7.1；RPM 仍为 PGDG 0.7.0<br>DEB：含 pg_readme_test_extension；PG14-18                                                              |
+| 2026-08-12 | `pg_search`               | `0.25.0` → `0.25.2`                              | PG15-18；pgrx 0.19.1；需预加载                                                                                                                 |
+| 2026-08-12 | `pg_squeeze`              | `1.9.2` → `1.9.4`                                | PGDG；PG14-18                                                                                                                                  |
+| 2026-08-12 | `pg_statviz`              | RPM：`-` → `0.9`<br>DEB：`-` → `1.1`             | RPM：PGDG；PG14-16，另有 EL10 PG18；无 PG17；非默认包组<br>DEB：PGDG；PG14-18（U22 除外）；非默认包组                                          |
+| 2026-08-12 | `pg_turbovec`             | `-` → `1.29.0`                                   | PG14-18；pgrx 0.19.1                                                                                                                           |
+| 2026-08-12 | `pg_uuid_v8`              | `1.0.0` → `1.1.0`                                | PG14-18；含 1.0 至 1.1 升级脚本                                                                                                                |
+| 2026-08-12 | `pg_vault_tde`            | `-` → `1.7.0`                                    | RPM：PG17-18；仅 EL9/10；需预加载<br>DEB：PG17-18；需预加载                                                                                    |
+| 2026-08-12 | `pgbson`                  | `2.0.4` → `2.1.0`                                | RPM：RPM 包名 postgresbson；PG14-18<br>DEB：源码包 postgresbson；PG14-18                                                                       |
+| 2026-08-12 | `pgmnemo`                 | `0.15.0` → `0.16.1`                              | PG17-18                                                                                                                                        |
+| 2026-08-12 | `plpgsql_check`           | `2.10.3` → `2.10.4`                              | PG14-18                                                                                                                                        |
+| 2026-08-12 | `plruby`                  | `-` → `2.5.0`                                    | 含 jsonb_plruby、hstore_plruby、ltree_plruby；PG14-18                                                                                          |
+| 2026-08-12 | `polardb-17`              | `17.10.1.0-1PIGSTY` → `17.10.1.0-2PGSTY`         | 重构建；PG17                                                                                                                                   |
+| 2026-08-12 | `polarstore`              | `1.2.42-1PIGSTY` → `1.2.42-2PGSTY`               | 重构建                                                                                                                                         |
+| 2026-08-12 | `provsql`                 | `1.11.0` → `1.12.0`                              | PG14-18                                                                                                                                        |
+| 2026-08-12 | `q3c`                     | RPM：`2.0.2` → `2.0.5`<br>DEB：`2.0.4` → `2.0.5` | RPM：PGDG；PIGSTY 仍为 2.0.2；PG14-18<br>DEB：PGDG；PG14-18                                                                                    |
+| 2026-08-12 | `timescaledb`             | `2.29.0` → `2.29.1`                              | PG16-18                                                                                                                                        |
+| 2026-08-12 | `vector`                  | `0.8.6` → `0.8.6`                                | PGDG 仓库刷新；PG14-18                                                                                                                         |
+| 2026-08-12 | `zlog`                    | `1.2.18-1PIGSTY` → `1.2.18-2PGSTY`               | 重构建                                                                                                                                         |
+| 2026-07-30 | `emaj`                    | RPM：`-` → `5.0.0`<br>DEB：`4.7.1` → `5.0.0`     | RPM：包名改为 `e-maj`；Provides/Obsoletes `emaj`；r2<br>DEB：PG14-18                                                                           |
+| 2026-07-30 | `graph`                   | `0.1.8` → `1.0.0`                                | pggraph；PG14-18；pgrx 0.19.1                                                                                                                  |
+| 2026-07-30 | `nominatim_fdw`           | `2.0.0` → `2.1.0`                                | PG14-18                                                                                                                                        |
+| 2026-07-30 | `numeral`                 | 仅 RPM：`1.3` → `1.3`                            | 包名改为 `postgresql-numeral`；Provides/Obsoletes `numeral`；r3                                                                                |
+| 2026-07-30 | `pg_ai_query`             | 仅 RPM：`0.1.1` → `0.1.1`                        | 仅 EL9/10（GCC 13/OpenSSL 3）；r2 尚未入库                                                                                                     |
+| 2026-07-30 | `pg_column_tetris`        | `-` → `0.1.0`                                    | 纯 SQL；PG14-18                                                                                                                                |
+| 2026-07-30 | `pg_net`                  | `0.20.5` → `0.20.5`                              | RPM：EL8/9：0.9.2；EL10：0.20.5；r3 尚未入库<br>DEB：D12/D13/U24/U26：0.20.5；U22：0.9.2；r2 尚未入库                                          |
+| 2026-07-30 | `pg_partman`              | RPM：`5.4.0` → `5.5.0`<br>DEB：`5.4.2` → `5.5.0` | RPM：PG14-18<br>DEB：使用 `postgresql-PGVERSION-partman` 包名                                                                                  |
+| 2026-07-30 | `pg_search`               | `0.24.3` → `0.25.0`                              | PG15-18；pgrx 0.19.1；新增 pgvector/OpenBLAS 依赖                                                                                              |
+| 2026-07-30 | `pgcontext`               | `-` → `0.2.0`                                    | PG17-18；pgrx 0.19.1；可选 pgvector 兼容桥                                                                                                     |
+| 2026-07-30 | `pgedge`                  | 仅 RPM：`18.4` → `18.4`                          | PG15-18 ABI 修复；r2 尚未入库                                                                                                                  |
+| 2026-07-30 | `pgmnemo`                 | `0.13.0` → `0.15.0`                              | PG17-18；依赖 pgvector >= 0.7.0                                                                                                                |
+| 2026-07-30 | `pgmp`                    | `-` → `1.0.6`                                    | PG14-18；依赖 GMP                                                                                                                              |
+| 2026-07-30 | `pgpcre`                  | 仅 RPM：`0.20190509` → `0.20190509`              | 仅 EL8/9；r2 尚未入库                                                                                                                          |
+| 2026-07-30 | `pgwasm`                  | `-` → `0.1.0`                                    | PG14-18                                                                                                                                        |
+| 2026-07-30 | `plpgsql_check`           | `2.10.1` → `2.10.3`                              | PG14-18；预加载改为可选                                                                                                                        |
+| 2026-07-30 | `postbis`                 | `-` → `1.0`                                      | PG14-18 兼容补丁；r2                                                                                                                           |
+| 2026-07-30 | `qdgc`                    | `-` → `0.1.0`                                    | PG14-18；包含 qdgc_postgis                                                                                                                     |
+| 2026-07-30 | `rdf_fdw`                 | `2.6.0` → `2.7.0`                                | PG14-18                                                                                                                                        |
+| 2026-07-30 | `timescaledb`             | `2.28.3` → `2.29.0`                              | PG16-18                                                                                                                                        |
+| 2026-07-30 | `uri`                     | 仅 RPM：`1.20251029` → `1.20251029`              | 包名改为 `pguri`；Provides/Obsoletes `pg_uri`；r2                                                                                              |
+| 2026-07-30 | `vector`                  | `0.8.5` → `0.8.6`                                | PG14-18；0.8.6 尚未入库                                                                                                                        |
+| 2026-07-30 | `pg_rewrite`              | 仅 DEB：`2.0.0` → `2.2`                          | 包名改为 `postgresql-PGVERSION-pg-rewrite`；PG14-18                                                                                            |
+| 2026-07-30 | `pgactive`                | 仅 DEB：`2.1.7` → `2.1.7`                        | 修复 PG14-18 构建；r2 尚未入库                                                                                                                 |
+| 2026-07-30 | `pgzint`                  | 仅 DEB：`-` → `0.2.0`                            | 仅 D13/U26；依赖 Zint >= 2.14；尚未入库                                                                                                        |
+| 2026-07-30 | `timeseries`              | 仅 DEB：`0.2.1` → `0.2.1`                        | 修正 partman/cron 推荐依赖与文档；r3                                                                                                           |
+| 2026-07-24 | `argm`                    | `-` → `1.1.1`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `cron_utils`              | `-` → `0.1.0`                                    | 纯 SQL；PG14-18                                                                                                                                |
+| 2026-07-24 | `fbsql`                   | `-` → `0.1.0`                                    | 依赖 PL/R；PG16-18                                                                                                                             |
+| 2026-07-24 | `oidc_validator`          | `-` → `0.1.0`                                    | Rust OIDC；PG18                                                                                                                                |
+| 2026-07-24 | `online_advisor`          | `-` → `1.0`                                      | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_cjk_parser`           | `-` → `0.1.0`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_extension_base`       | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_extension_updater`    | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_fts`                  | `-` → `0.2.0`                                    | PG17-18                                                                                                                                        |
+| 2026-07-24 | `pg_jieba`                | `-` → `1.1.0`                                    | 包 2.0.1；SQL 1.1.0；PG14-18                                                                                                                   |
+| 2026-07-24 | `pg_kpart`                | `-` → `1.0`                                      | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_lake`                 | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_lake_copy`            | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_lake_engine`          | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_lake_iceberg`         | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_lake_table`           | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_map`                  | `-` → `3.4`                                      | pg_lake 3.4；PG16-18；RPM 仅 EL9/10                                                                                                            |
+| 2026-07-24 | `pg_oidc_validator`       | `-` → `0.2`                                      | Percona OIDC；PG18；DEB 全平台，RPM 仅 EL10                                                                                                    |
+| 2026-07-24 | `pg_roast`                | `-` → `1.0`                                      | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_tiktoken_c`           | `-` → `1.1`                                      | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgfr_analyze`            | `-` → `2.29.2`                                   | pg_flight_recorder；PG15-18                                                                                                                    |
+| 2026-07-24 | `pgfr_record`             | `-` → `2.29.2`                                   | pg_flight_recorder；PG15-18                                                                                                                    |
+| 2026-07-24 | `pgmemento`               | `-` → `0.7.4`                                    | 纯 SQL；PG14-18                                                                                                                                |
+| 2026-07-24 | `pgmonitor`               | `-` → `2.2.0`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgsqlmock`               | `-` → `1.0.1`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `plx`                     | `-` → `1.3.1`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `anon`                    | `3.1.1` → `3.1.3`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `block_copy_command`      | `0.1.5` → `0.1.5`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `convert`                 | `0.1.0` → `0.1.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `etcd_fdw`                | `0.0.1` → `0.0.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `explain_ui`              | `0.0.2` → `0.0.2`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `graph`                   | `0.1.7` → `0.1.8`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `jsonschema`              | `0.1.9` → `0.1.9`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_base58`               | `0.0.1` → `0.0.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_bestmatch`            | `0.0.2` → `0.0.2`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_cardano`              | `1.2.0` → `1.2.0`                                | pgrx 0.19.1；PG15-18                                                                                                                           |
+| 2026-07-24 | `pg_command_fw`           | `0.1.0` → `0.1.0`                                | pgrx 0.19.1；PG15-18                                                                                                                           |
+| 2026-07-24 | `pg_durable`              | `0.2.2` → `0.2.3`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_enigma`               | `0.5.0` → `0.5.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_eviltransform`        | `0.0.2` → `0.0.4`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_graphql`              | `1.6.1` → `1.6.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_idkit`                | `0.4.0` → `0.4.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_jsonschema`           | `0.3.4` → `0.3.4`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_kazsearch`            | `2.2.0` → `2.3.0`                                | pgrx 0.19.1；PG16-18                                                                                                                           |
+| 2026-07-24 | `pg_later`                | `0.4.0` → `0.4.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_mooncake`             | `0.2.0` → `0.2.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_parquet`              | `0.5.1` → `0.5.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_pinyin`               | `0.0.4` → `0.0.5`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_polyline`             | `0.0.1` → `0.0.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_render`               | `0.1.3` → `0.1.3`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_rrf`                  | `0.0.3` → `0.0.3`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_search`               | `0.24.0` → `0.24.3`                              | pgrx 0.19.1；PG15-18                                                                                                                           |
+| 2026-07-24 | `pg_session_jwt`          | `0.5.0` → `0.5.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_smtp_client`          | `0.2.1` → `0.2.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_strict`               | `1.0.5` → `1.0.5`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_summarize`            | `0.0.1` → `0.0.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_tiktoken`             | `0.0.1` → `0.0.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_tokenizer`            | `0.1.1` → `0.1.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pg_trickle`              | `0.81.0` → `0.81.0`                              | pgrx 0.19.1；PG18                                                                                                                              |
+| 2026-07-24 | `pg_when`                 | `0.1.9` → `0.1.9`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pgdd`                    | `0.6.1` → `0.6.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pglinter`                | `2.0.0` → `2.0.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pglite_fusion`           | `0.0.6` → `0.0.6`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pgmqtt`                  | `0.3.0` → `0.4.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pgrdf`                   | `0.6.4` → `0.6.20`                               | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pgsmcrypto`              | `0.1.1` → `0.1.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `pgx_ulid`                | `0.2.3` → `0.2.3`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `plprql`                  | `18.0.1` → `18.0.1`                              | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `timescaledb_toolkit`     | `1.23.0` → `1.23.0`                              | pgrx 0.19.1；PG15-18                                                                                                                           |
+| 2026-07-24 | `typeid`                  | `0.3.0` → `0.3.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `tzf`                     | `0.3.0` → `0.3.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `vchord`                  | `1.1.1` → `1.1.1`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `vchord_bm25`             | `0.3.0` → `0.3.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `vectorize`               | `0.26.2` → `0.26.2`                              | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `vectorscale`             | `0.9.0` → `0.9.0`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `wrappers`                | `0.6.1` → `0.6.2`                                | pgrx 0.19.1；PG14-18                                                                                                                           |
+| 2026-07-24 | `age`                     | 仅 RPM：`1.7.0` → `1.8.0`                        | PG18：1.8.0-rc0；PG17：1.7.0                                                                                                                   |
+| 2026-07-24 | `babelfishpg_tsql`        | `5.5.0` → `5.4.0`                                | 目录修正为 5.4.0；PG17-18                                                                                                                      |
+| 2026-07-24 | `biscuit`                 | `2.4.1` → `2.4.3`                                | 包 2.4.3；SQL 2.4.1；PG16-18                                                                                                                   |
+| 2026-07-24 | `decoderbufs`             | `3.5.0` → `3.6.0`                                | DEB 3.6.0；RPM 3.5.0；PG14-18                                                                                                                  |
+| 2026-07-24 | `documentdb`              | `0.113` → `0.114`                                | PG15-18；16 平台                                                                                                                               |
+| 2026-07-24 | `documentdb_core`         | `0.113` → `0.114`                                | PG15-18；16 平台                                                                                                                               |
+| 2026-07-24 | `documentdb_distributed`  | `0.113` → `0.114`                                | PG15-18；16 平台                                                                                                                               |
+| 2026-07-24 | `documentdb_extended_rum` | `0.113` → `0.114`                                | PG15-18；16 平台                                                                                                                               |
+| 2026-07-24 | `http`                    | `1.7.1` → `1.7.2`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `jdbc_fdw`                | `0.4.0` → `0.5.0`                                | 包 0.5.0；SQL 1.2；PG14-18；16 平台                                                                                                            |
+| 2026-07-24 | `nominatim_fdw`           | `1.3` → `2.0.0`                                  | PG14-18；16 平台                                                                                                                               |
+| 2026-07-24 | `odbc_fdw`                | `0.5.1` → `0.6.1`                                | 包 0.6.1；SQL 0.5.2；PG14-18                                                                                                                   |
+| 2026-07-24 | `ogr_fdw`                 | `1.1.8` → `1.1.9`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_csv`                  | 仅 RPM：`1.0.1` → `1.0.2`                        | +RPM；包 1.0.2；SQL 1.0.1；PG14-18                                                                                                             |
+| 2026-07-24 | `pg_dbms_errlog`          | `2.2` → `2.4`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_ivm`                  | `1.14` → `1.15`                                  | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_net`                  | `0.20.3` → `0.20.5`                              | RPM：包 0.20.5；SQL 0.20.4；PG14-18；RPM EL10<br>DEB：D12/D13/U24/U26：0.20.5；U22：0.9.2（libcurl）；PG14-18                                  |
+| 2026-07-24 | `pg_rewrite`              | 仅 RPM：`2.0.0` → `2.2`                          | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_statement_rollback`   | `1.5` → `1.6`                                    | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pg_tde`                  | `2.1` → `2.2`                                    | Percona；PG17-18                                                                                                                               |
+| 2026-07-24 | `pgnodemx`                | 仅 RPM：`1.7` → `2.0.1`                          | 包 2.0.1；SQL 2.0；PG14-18；cgroup 安全                                                                                                        |
+| 2026-07-24 | `pgauditlogtofile`        | `1.8.4` → `1.8.5`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgbson`                  | `2.0.2` → `2.0.4`                                | 包 2.0.4；SQL 2.0；PG14-18                                                                                                                     |
+| 2026-07-24 | `pgclone`                 | `4.3.2` → `4.4.2`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgextwlist`              | `1.19` → `1.20`                                  | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgmnemo`                 | `0.12.1` → `0.13.0`                              | PG17-18                                                                                                                                        |
+| 2026-07-24 | `pgmq`                    | `1.11.1` → `1.12.0`                              | PG14-18                                                                                                                                        |
+| 2026-07-24 | `pgsentinel`              | `1.4.1` → `1.4.2`                                | RPM 1.4.2；DEB 1.4.0；U26 1.4.1；PG14-18                                                                                                       |
+| 2026-07-24 | `plpgsql_check`           | `2.9.2` → `2.10.1`                               | PG14-18                                                                                                                                        |
+| 2026-07-24 | `plproxy`                 | `2.11.0` → `2.12.0`                              | PG14-18                                                                                                                                        |
+| 2026-07-24 | `powa`                    | `5.1.2` → `5.2.0`                                | DEB 5.2.0；RPM 5.1.0；PG14-18                                                                                                                  |
+| 2026-07-24 | `provsql`                 | `1.10.0` → `1.11.0`                              | PG14-18                                                                                                                                        |
+| 2026-07-24 | `re2`                     | `0.3.0` → `0.4.1`                                | PG16-18                                                                                                                                        |
+| 2026-07-24 | `snowflake`               | `2.4` → `2.5.0`                                  | pgEdge；PG15-18                                                                                                                                |
+| 2026-07-24 | `spock`                   | `5.0.6` → `5.0.10`                               | pgEdge；PG15-18                                                                                                                                |
+| 2026-07-24 | `tdigest`                 | `1.4.3` → `1.4.4`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `timescaledb`             | `2.28.2` → `2.28.3`                              | PG15-18：2.28.3；PG14：2.19.3；6 个 EL                                                                                                         |
+| 2026-07-24 | `vector`                  | `0.8.4` → `0.8.5`                                | PG14-18                                                                                                                                        |
+| 2026-07-24 | `babelfishpg_money`       | `1.1.0` → `1.1.0`                                | Babelfish：+PG18                                                                                                                               |
+| 2026-07-24 | `babelfishpg_tds`         | `1.0.0` → `1.0.0`                                | Babelfish：+PG18                                                                                                                               |
+| 2026-07-24 | `citus`                   | `14.1.0` → `14.1.0`                              | Citus 13.0.0；EL10 双架构 RPM PG14                                                                                                             |
+| 2026-07-24 | `dbt2`                    | `0.61.7` → `0.61.7`                              | +DEB PG14-18；+EL8 双架构 RPM PG17-18                                                                                                          |
+| 2026-07-24 | `decoder_raw`             | `1.0` → `1.0`                                    | EL10/D13；PG14-16；双架构                                                                                                                      |
+| 2026-07-24 | `faker`                   | `0.5.3` → `0.5.3`                                | RPM：+DEB PG14-18<br>DEB：+DEB PG14-18；D12/U22：python3-fake-factory 22.0.0                                                                   |
+| 2026-07-24 | `gb18030_2022`            | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `h3`                      | `4.2.3` → `4.2.3`                                | EL8 x86_64 RPM PG17-18                                                                                                                         |
+| 2026-07-24 | `hdfs_fdw`                | `2.3.3` → `2.3.3`                                | +DEB PG14-18                                                                                                                                   |
+| 2026-07-24 | `hstore_pllua`            | `2.0.12` → `2.0.12`                              | +RPM 6 个 EL PG14-18                                                                                                                           |
+| 2026-07-24 | `hstore_plluau`           | `2.0.12` → `2.0.12`                              | +RPM 6 个 EL PG14-18                                                                                                                           |
+| 2026-07-24 | `hunspell_cs_cz`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_de_de`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_en_us`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_fr`             | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_ne_np`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_nl_nl`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_nn_no`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_pt_pt`          | `1.0` → `1.0`                                    | 16 平台；pt_pt.stop 避免内核冲突                                                                                                               |
+| 2026-07-24 | `hunspell_ru_ru`          | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `hunspell_ru_ru_aot`      | `1.0` → `1.0`                                    | hunspell 合包；10 词典；16 平台；PG14-18                                                                                                       |
+| 2026-07-24 | `imgsmlr`                 | `1.0` → `1.0`                                    | EL10/D13；PG14-18；双架构                                                                                                                      |
+| 2026-07-24 | `ivorysql_ora`            | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `mobilitydb`              | `1.3.0` → `1.3.0`                                | +RPM 6 个 EL PG14-18；+U22 DEB PG18                                                                                                            |
+| 2026-07-24 | `mobilitydb_datagen`      | `1.3.0` → `1.3.0`                                | 随 mobilitydb；+RPM 6 个 EL；+U22 DEB PG18                                                                                                     |
+| 2026-07-24 | `omni`                    | `0.2.14` → `0.2.14`                              | 20251108；EL10 PG14-18；EL8/9、D12/U22 PG18                                                                                                    |
+| 2026-07-24 | `ora_btree_gin`           | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `ora_btree_gist`          | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `pg_dbms_job`             | `2.0` → `2.0`                                    | +DEB PG14-18                                                                                                                                   |
+| 2026-07-24 | `pg_dbms_lock`            | `2.0` → `2.0`                                    | +DEB PG14-18                                                                                                                                   |
+| 2026-07-24 | `pg_dbms_metadata`        | `1.0.0` → `1.0.0`                                | +DEB PG14-18；+EL8 aarch64 RPM PG15                                                                                                            |
+| 2026-07-24 | `pg_fact_loader`          | `2.0.1` → `2.0.1`                                | U26 DEB PG14-18                                                                                                                                |
+| 2026-07-24 | `pg_get_functiondef`      | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `pg_strom`                | `6.1` → `6.1`                                    | pg_strom 3.5；EL10 x86_64 PG14                                                                                                                 |
+| 2026-07-24 | `pgautofailover`          | `2.2` → `2.2`                                    | 6 个 EL RPM：+PG18                                                                                                                             |
+| 2026-07-24 | `pgbouncer_fdw`           | `1.4.0` → `1.4.0`                                | +DEB PG14-18                                                                                                                                   |
+| 2026-07-24 | `pg_wait_sampling`        | 仅 RPM：`1.1.11` → `1.1.11`                      | +RPM PG14-18；SQL 1.1                                                                                                                          |
+| 2026-07-24 | `pgl_ddl_deploy`          | `2.2.1` → `2.2.1`                                | RPM：+RPM PG14-18；+U26 DEB PG14-17<br>DEB：10 个 DEB：+PG18；U26 PG14-17                                                                      |
+| 2026-07-24 | `pglogical_ticker`        | `1.4.1` → `1.4.1`                                | 6 个 EL RPM PG14-17                                                                                                                            |
+| 2026-07-24 | `pgmemcache`              | `2.3.0` → `2.3.0`                                | EL8 aarch64 RPM PG14-15                                                                                                                        |
+| 2026-07-24 | `pgml`                    | `2.10.0` → `2.10.0`                              | EL10/D13/U26；PG14-17；双架构                                                                                                                  |
+| 2026-07-24 | `pgspider_ext`            | `1.3.0` → `1.3.0`                                | RPM：+RPM PG14-18；兼容 PG18<br>DEB：10 个 DEB：+PG18；支持 PG15-18                                                                            |
+| 2026-07-24 | `plisql`                  | `1.0` → `1.0`                                    | IvorySQL 5.4；PG18；16 平台                                                                                                                    |
+| 2026-07-24 | `pllua`                   | `2.0.12` → `2.0.12`                              | 6 个 EL：+PG18；EL8 aarch64：+PG14-15                                                                                                          |
+| 2026-07-24 | `rdkit`                   | `202503.6` → `202503.6`                          | RPM：202303.3；EL8/9、D12/U22；PG14-18<br>DEB：D12/U22 PG17-18：202303.3；U26 PG14-17：202503.6；运行时不变                                    |
+| 2026-07-24 | `sqlite_fdw`              | `2.5.0` → `2.5.0`                                | RPM：RPM r3：+PG18、兼容 EL8 SQLite；PG14-18<br>DEB：10 个 DEB：+PG18；支持 PG14-18                                                            |
+| 2026-07-24 | `sslutils`                | `1.4` → `1.4`                                    | EL8 双架构 RPM PG18                                                                                                                            |
+| 2026-07-24 | `wal2mongo`               | `1.0.7` → `1.0.7`                                | RPM：+RPM PG14-18；兼容 PG17-18<br>DEB：10 个 DEB：+PG17-18；支持 PG14-18                                                                      |
+| 2026-07-24 | `system_stats`            | 仅 DEB：`4.0` → `4.1`                            | PG14-18；10 个 DEB 目标                                                                                                                        |
 {.wide .expand}
 
 **Infra 软件包更新记录**
@@ -399,152 +490,152 @@ Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份
 
 表中的构建、下载与核验状态沿用原始日志口径，不代表仓库索引、签名、同步或离线包验收已经完成。完整上下文见 [Infra 变更日志](/docs/repo/infra/log/)。
 
-| 批次         | 软件包                        | 旧版本                    | 新版本              | 说明                                    |
-|:-----------|:---------------------------|:-----------------------|:-----------------|:--------------------------------------|
-| 2026-08-12 | `claude`                   | `2.1.226`              | `2.1.227`        | 通过代理下载并按官方清单核验，已构建双架构 RPM/DEB         |
-| 2026-08-12 | `code-server`              | `4.131.0`              | `4.132.0`        | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-12 | `grafana-infinity-ds`      | `3.11.2`               | `3.11.3`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-12 | `mtail`                    | `3.4.6`                | `3.4.7`          | 已构建双架构 RPM/DEB                        |
-| 2026-08-12 | `opencode`                 | `1.18.15`              | `1.18.16`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-12 | `pg-hardstorage`           | `1.1.1`                | `1.2.1`          | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-12 | `pig`                      | `1.6.1`                | `1.8.0`          | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-12 | `postgrest`                | `16.0`                 | `16.1`           | 双架构静态制品；最低支持 PostgreSQL 14            |
-| 2026-08-12 | `redis-exporter`           | `1.88.0`               | `1.89.0`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-12 | `sow`                      | `0.2.0`                | `0.3.0`          | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-12 | `stalwart`                 | `0.16.16`              | `0.16.17`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-08 | `claude`                   | `2.1.223`              | `2.1.226`        | 通过代理下载并按官方清单核验，已构建双架构 RPM/DEB         |
+| 批次       | 软件包                     | 旧版本                 | 新版本           | 说明                                               |
+|:-----------|:---------------------------|:-----------------------|:-----------------|:---------------------------------------------------|
+| 2026-08-12 | `claude`                   | `2.1.226`              | `2.1.227`        | 通过代理下载并按官方清单核验，已构建双架构 RPM/DEB |
+| 2026-08-12 | `code-server`              | `4.131.0`              | `4.132.0`        | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-12 | `grafana-infinity-ds`      | `3.11.2`               | `3.11.3`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-12 | `mtail`                    | `3.4.6`                | `3.4.7`          | 已构建双架构 RPM/DEB                               |
+| 2026-08-12 | `opencode`                 | `1.18.15`              | `1.18.16`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-12 | `pg-hardstorage`           | `1.1.1`                | `1.2.1`          | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-12 | `pig`                      | `1.6.1`                | `1.8.0`          | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-12 | `postgrest`                | `16.0`                 | `16.1`           | 双架构静态制品；最低支持 PostgreSQL 14             |
+| 2026-08-12 | `redis-exporter`           | `1.88.0`               | `1.89.0`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-12 | `sow`                      | `0.2.0`                | `0.3.0`          | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-12 | `stalwart`                 | `0.16.16`              | `0.16.17`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-08 | `claude`                   | `2.1.223`              | `2.1.226`        | 通过代理下载并按官方清单核验，已构建双架构 RPM/DEB |
 | 2026-08-08 | `codex`                    | `0.146.1`              | `0.147.0`        | 稳定发布标签 `rust-v0.147.0`，已构建双架构 RPM/DEB |
-| 2026-08-08 | `crush`                    | `0.88.0`               | `0.88.1`         | 由官方 tarball 合规重打包为 `1PGSTY`，内含许可证     |
-| 2026-08-08 | `grafana`                  | `13.1.2`               | `13.1.3`         | 官方双架构 RPM/DEB 成品                      |
-| 2026-08-08 | `opencode`                 | `1.18.14`              | `1.18.15`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-08 | `postgrest`                | `14.16`                | `16.0`           | 双架构静态制品；最低支持 PostgreSQL 14            |
-| 2026-08-08 | `rainfrog`                 | `0.4.2`                | `0.4.3`          | 已构建双架构 RPM/DEB                        |
-| 2026-08-08 | `rustfs`                   | `1.0.0-b12`            | `1.0.0-rc1`      | 上游 `rc.1-preview.1`；已构建双架构 RPM/DEB    |
-| 2026-08-08 | `uv`                       | `0.12.2`               | `0.12.3`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `claude`                   | `2.1.222`              | `2.1.223`        | 通过代理下载并按官方清单核验，已构建                    |
-| 2026-08-07 | `codex`                    | `0.146.0`              | `0.146.1`        | 稳定发布标签 `rust-v0.146.1`，已构建            |
-| 2026-08-07 | `code`                     | `1.131.0`              | `1.132.0`        | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-07 | `dblab`                    | `0.47.2`               | `0.47.4`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `grafana-infinity-ds`      | `3.11.1`               | `3.11.2`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `grafana-victorialogs-ds`  | `0.30.1`               | `0.31.0`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `k3s`                      | `1.36.2`               | `1.36.3`         | 官方稳定通道 `v1.36.3+k3s1`，已构建             |
-| 2026-08-07 | `k3s-images`               | `1.36.2`               | `1.36.3`         | 与 k3s 精确匹配的双架构离线镜像包，已构建               |
+| 2026-08-08 | `crush`                    | `0.88.0`               | `0.88.1`         | 由官方 tarball 合规重打包为 `1PGSTY`，内含许可证   |
+| 2026-08-08 | `grafana`                  | `13.1.2`               | `13.1.3`         | 官方双架构 RPM/DEB 成品                            |
+| 2026-08-08 | `opencode`                 | `1.18.14`              | `1.18.15`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-08 | `postgrest`                | `14.16`                | `16.0`           | 双架构静态制品；最低支持 PostgreSQL 14             |
+| 2026-08-08 | `rainfrog`                 | `0.4.2`                | `0.4.3`          | 已构建双架构 RPM/DEB                               |
+| 2026-08-08 | `rustfs`                   | `1.0.0-b12`            | `1.0.0-rc1`      | 上游 `rc.1-preview.1`；已构建双架构 RPM/DEB        |
+| 2026-08-08 | `uv`                       | `0.12.2`               | `0.12.3`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `claude`                   | `2.1.222`              | `2.1.223`        | 通过代理下载并按官方清单核验，已构建               |
+| 2026-08-07 | `codex`                    | `0.146.0`              | `0.146.1`        | 稳定发布标签 `rust-v0.146.1`，已构建               |
+| 2026-08-07 | `code`                     | `1.131.0`              | `1.132.0`        | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-07 | `dblab`                    | `0.47.2`               | `0.47.4`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `grafana-infinity-ds`      | `3.11.1`               | `3.11.2`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `grafana-victorialogs-ds`  | `0.30.1`               | `0.31.0`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `k3s`                      | `1.36.2`               | `1.36.3`         | 官方稳定通道 `v1.36.3+k3s1`，已构建                |
+| 2026-08-07 | `k3s-images`               | `1.36.2`               | `1.36.3`         | 与 k3s 精确匹配的双架构离线镜像包，已构建          |
 | 2026-08-07 | `mcli`                     | `20260804000000`       | `20260806000000` | pgsty 分支官方双架构 RPM/DEB 已下载并核验          |
-| 2026-08-07 | `opencode`                 | `1.18.13`              | `1.18.14`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `pgschema`                 | `1.12.1`               | `1.12.2`         | 官方双架构 RPM/DEB 已下载并核验                  |
-| 2026-08-07 | `seaweedfs`                | `4.40`                 | `4.41`           | 已构建双架构 RPM/DEB                        |
+| 2026-08-07 | `opencode`                 | `1.18.13`              | `1.18.14`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `pgschema`                 | `1.12.1`               | `1.12.2`         | 官方双架构 RPM/DEB 已下载并核验                    |
+| 2026-08-07 | `seaweedfs`                | `4.40`                 | `4.41`           | 已构建双架构 RPM/DEB                               |
 | 2026-08-07 | `silo`                     | `minio 20260804000000` | `20260806000000` | 正式替换 minio；官方双架构 RPM/DEB 已核验          |
-| 2026-08-07 | `uv`                       | `0.12.1`               | `0.12.2`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-07 | `victoria-metrics`         | `1.148.0`              | `1.149.0`        | 主包、cluster 与 vmutils 均已构建双架构 RPM/DEB  |
-| 2026-08-07 | `ferretdb2`                | `2.7.0`                | `2.7.0`          | 按当前版本重新构建双架构 RPM/DEB                  |
-| 2026-08-05 | `agentsview`               | `0.39.0`               | `0.40.1`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `claude`                   | `2.1.220`              | `2.1.222`        | 通过代理下载并按官方清单核验，已构建                    |
-| 2026-08-05 | `code-server`              | `4.130.0`              | `4.131.0`        | 官方成品已下载并核验                            |
-| 2026-08-05 | `crush`                    | `0.87.0`               | `0.88.0`         | 仅更新官方链接；再分发仍受许可证条款阻塞                  |
-| 2026-08-05 | `grafana`                  | `13.1.1`               | `13.1.2`         | 官方成品已下载并核验；含安全修复                      |
-| 2026-08-05 | `juicefs`                  | `1.4.0`                | `1.4.1`          | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `mcli`                     | `20260417000000`       | `20260804000000` | pgsty 分支官方成品已下载并核验                    |
-| 2026-08-05 | `minio`                    | `20260618000000`       | `20260804000000` | pgsty 分支官方成品已下载并核验                    |
-| 2026-08-05 | `mongodb-exporter`         | `0.51.0`               | `0.52.0`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `mtail`                    | `3.0.8`                | `3.4.6`          | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `nodejs`                   | `24.18.1`              | `24.19.0`        | Node.js 24.x LTS；已构建                  |
-| 2026-08-05 | `opencode`                 | `1.18.9`               | `1.18.13`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `pg-hardstorage`           | `1.0.17`               | `1.1.1`          | 官方成品已下载并核验                            |
-| 2026-08-05 | `pgbackrest-exporter`      | `0.23.0`               | `0.24.0`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `pgstream`                 | `1.2.5`                | `1.3.1`          | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `rclone`                   | `1.74.4`               | `1.75.0`         | 官方成品已下载并核验                            |
-| 2026-08-05 | `rustfs`                   | `1.0.0-b11`            | `1.0.0-b12`      | Beta 版本线；已构建双架构 RPM/DEB               |
-| 2026-08-05 | `stalwart`                 | `0.16.15`              | `0.16.16`        | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `uv`                       | `0.12.0`               | `0.12.1`         | 已构建双架构 RPM/DEB                        |
-| 2026-08-05 | `vray`                     | `5.51.2`               | `5.52.0`         | 最新稳定版；已构建双架构 RPM/DEB                  |
+| 2026-08-07 | `uv`                       | `0.12.1`               | `0.12.2`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-07 | `victoria-metrics`         | `1.148.0`              | `1.149.0`        | 主包、cluster 与 vmutils 均已构建双架构 RPM/DEB    |
+| 2026-08-07 | `ferretdb2`                | `2.7.0`                | `2.7.0`          | 按当前版本重新构建双架构 RPM/DEB                   |
+| 2026-08-05 | `agentsview`               | `0.39.0`               | `0.40.1`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `claude`                   | `2.1.220`              | `2.1.222`        | 通过代理下载并按官方清单核验，已构建               |
+| 2026-08-05 | `code-server`              | `4.130.0`              | `4.131.0`        | 官方成品已下载并核验                               |
+| 2026-08-05 | `crush`                    | `0.87.0`               | `0.88.0`         | 仅更新官方链接；再分发仍受许可证条款阻塞           |
+| 2026-08-05 | `grafana`                  | `13.1.1`               | `13.1.2`         | 官方成品已下载并核验；含安全修复                   |
+| 2026-08-05 | `juicefs`                  | `1.4.0`                | `1.4.1`          | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `mcli`                     | `20260417000000`       | `20260804000000` | pgsty 分支官方成品已下载并核验                     |
+| 2026-08-05 | `minio`                    | `20260618000000`       | `20260804000000` | pgsty 分支官方成品已下载并核验                     |
+| 2026-08-05 | `mongodb-exporter`         | `0.51.0`               | `0.52.0`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `mtail`                    | `3.0.8`                | `3.4.6`          | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `nodejs`                   | `24.18.1`              | `24.19.0`        | Node.js 24.x LTS；已构建                           |
+| 2026-08-05 | `opencode`                 | `1.18.9`               | `1.18.13`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `pg-hardstorage`           | `1.0.17`               | `1.1.1`          | 官方成品已下载并核验                               |
+| 2026-08-05 | `pgbackrest-exporter`      | `0.23.0`               | `0.24.0`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `pgstream`                 | `1.2.5`                | `1.3.1`          | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `rclone`                   | `1.74.4`               | `1.75.0`         | 官方成品已下载并核验                               |
+| 2026-08-05 | `rustfs`                   | `1.0.0-b11`            | `1.0.0-b12`      | Beta 版本线；已构建双架构 RPM/DEB                  |
+| 2026-08-05 | `stalwart`                 | `0.16.15`              | `0.16.16`        | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `uv`                       | `0.12.0`               | `0.12.1`         | 已构建双架构 RPM/DEB                               |
+| 2026-08-05 | `vray`                     | `5.51.2`               | `5.52.0`         | 最新稳定版；已构建双架构 RPM/DEB                   |
 | 2026-08-05 | `xray`                     | `26.3.27`              | `26.7.28`        | 最新日期版本；已构建双架构 RPM/DEB                 |
-| 2026-08-05 | `prometheus`               | `3.13.1`               | `3.13.2`         | 安全与稳定性修复                              |
-| 2026-08-05 | `pig`                      | `1.6.0`                | `1.6.1`          | 扩展目录刷新                                |
-| 2026-07-30 | `agentsview`               | `0.38.1`               | `0.39.0`         |                                       |
-| 2026-07-30 | `claude`                   | `2.1.218`              | `2.1.220`        |                                       |
-| 2026-07-30 | `cloudflared`              | `2026.7.2`             | `2026.7.3`       |                                       |
-| 2026-07-30 | `code`                     | `1.130.0`              | `1.131.0`        |                                       |
-| 2026-07-30 | `code-server`              | `4.129.0`              | `4.130.0`        |                                       |
-| 2026-07-30 | `codex`                    | `0.145.0`              | `0.146.0`        | 发布标签 `rust-v0.146.0`                  |
-| 2026-07-30 | `crush`                    | `0.86.0`               | `0.87.0`         |                                       |
-| 2026-07-30 | `dblab`                    | `0.46.0`               | `0.47.2`         |                                       |
-| 2026-07-30 | `etcd`                     | `3.7.0`                | `3.7.1`          |                                       |
-| 2026-07-30 | `genai-toolbox`            | `1.7.0`                | `1.8.0`          | 源码构建；已验证 Rocky 8/9 与 Debian 12        |
-| 2026-07-30 | `headscale`                | `0.29.2`               | `0.29.3`         |                                       |
-| 2026-07-30 | `nodejs`                   | `24.18.0`              | `24.18.1`        | 安全更新                                  |
-| 2026-07-30 | `opencode`                 | `1.18.4`               | `1.18.9`         |                                       |
-| 2026-07-30 | `pg-exporter`              | `1.4.0`                | `1.4.1`          | 官方发布成品                                |
-| 2026-07-30 | `pg-hardstorage`           | `1.0.13`               | `1.0.17`         |                                       |
-| 2026-07-30 | `pgschema`                 | `1.12.0`               | `1.12.1`         |                                       |
-| 2026-07-30 | `pgstream`                 | `1.2.2`                | `1.2.5`          |                                       |
-| 2026-07-30 | `pig`                      | `1.5.1`                | `1.6.0`          |                                       |
-| 2026-07-30 | `postgrest`                | `14.15`                | `14.16`          |                                       |
-| 2026-07-30 | `rainfrog`                 | `0.3.20`               | `0.4.2`          |                                       |
-| 2026-07-30 | `redis-exporter`           | `1.87.0`               | `1.88.0`         |                                       |
-| 2026-07-30 | `rustfs`                   | `1.0.0-beta.10`        | `1.0.0-beta.11`  | 排除 preview 版本                         |
-| 2026-07-30 | `stalwart`                 | `0.16.14`              | `0.16.15`        |                                       |
-| 2026-07-30 | `uv`                       | `0.11.31`              | `0.12.0`         |                                       |
-| 2026-07-30 | `victoria-traces`          | `0.9.4`                | `0.10.0`         |                                       |
-| 2026-07-23 | `claude`                   | `2.1.215`              | `2.1.218`        | 通过 8118 代理下载并按官方清单核验                  |
-| 2026-07-23 | `codex`                    | `0.144.6`              | `0.145.0`        | 发布标签 `rust-v0.145.0`                  |
-| 2026-07-23 | `dblab`                    | `0.44.1`               | `0.46.0`         |                                       |
-| 2026-07-23 | `duckdb`                   | `1.5.4`                | `1.5.5`          |                                       |
-| 2026-07-23 | `grafana-infinity-ds`      | `3.8.0`                | `3.11.1`         |                                       |
-| 2026-07-23 | `grafana-victorialogs-ds`  | `0.30.0`               | `0.30.1`         |                                       |
-| 2026-07-23 | `opencode`                 | `1.18.3`               | `1.18.4`         |                                       |
-| 2026-07-23 | `pg-timetable`             | `6.3.0`                | `7.0.0`          | 主版本更新                                 |
-| 2026-07-23 | `pgstream`                 | `1.2.0`                | `1.2.2`          |                                       |
-| 2026-07-23 | `stalwart`                 | `0.16.13`              | `0.16.14`        |                                       |
-| 2026-07-23 | `uv`                       | `0.11.29`              | `0.11.31`        |                                       |
-| 2026-07-23 | `grafana`                  | `13.1.0`               | `13.1.1`         | 直链构建产物更新                              |
-| 2026-07-23 | `pg-hardstorage`           | `1.0.12`               | `1.0.13`         | 直链构建产物更新                              |
-| 2026-07-23 | `crush`                    | `0.85.0`               | `0.86.0`         | 直链构建产物更新                              |
-| 2026-07-23 | `code`                     | `1.129.1`              | `1.130.0`        | 直链构建产物更新                              |
-| 2026-07-20 | `RPM Exporter 包名`          | `xxx_exporter`         | `xxx-exporter`   | 下划线式 RPM 包名改为连字符形式，与 DEB 包名对齐         |
-| 2026-07-20 | `pg-exporter`              | `1.3.0`                | `1.4.0`          | 改为从上游 Linux tarball 重新打包              |
-| 2026-07-20 | `victoria-metrics`         | `1.147.0`              | `1.148.0`        | VictoriaMetrics 主包                    |
-| 2026-07-20 | `victoria-metrics-cluster` | `1.147.0`              | `1.148.0`        | VictoriaMetrics 配套组件                  |
-| 2026-07-20 | `vmutils`                  | `1.147.0`              | `1.148.0`        | VictoriaMetrics 配套组件                  |
-| 2026-07-20 | `victoria-logs`            | `1.51.0`               | `1.52.0`         | VictoriaLogs 主包                       |
-| 2026-07-20 | `vlogscli`                 | `1.51.0`               | `1.52.0`         | VictoriaLogs 配套组件                     |
-| 2026-07-20 | `vlagent`                  | `1.51.0`               | `1.52.0`         | VictoriaLogs 配套组件                     |
-| 2026-07-20 | `grafana-victorialogs-ds`  | `0.29.0`               | `0.30.0`         |                                       |
-| 2026-07-20 | `seaweedfs`                | `4.39`                 | `4.40`           |                                       |
-| 2026-07-20 | `rustfs`                   | `1.0.0-b9`             | `1.0.0-b10`      | 预发布版本线；排除 preview 版本                  |
-| 2026-07-20 | `sabiql`                   | `1.14.0`               | `1.15.1`         |                                       |
-| 2026-07-20 | `timescaledb-tools`        | `0.19.0-1`             | `0.19.0-2`       | 内含 timescaledb-parallel-copy 0.13.0   |
-| 2026-07-20 | `claude`                   | `2.1.211`              | `2.1.215`        | 通过 8118 代理下载并核验                       |
-| 2026-07-20 | `codex`                    | `0.144.4`              | `0.144.6`        | 发布标签 `rust-v0.144.6`                  |
-| 2026-07-20 | `genai-toolbox`            | `1.6.0`                | `1.7.0`          | 使用官方 GCS 二进制与 arm64 容器产物进行外部构建        |
-| 2026-07-20 | `opencode`                 | `1.18.2`               | `1.18.3`         |                                       |
-| 2026-07-20 | `pg-hardstorage`           | `1.0.10`               | `1.0.12`         | 直链构建产物更新                              |
-| 2026-07-20 | `code`                     | `1.129.0`              | `1.129.1`        | 直链构建产物更新                              |
-| 2026-07-20 | `code-server`              | `4.128.0`              | `4.129.0`        | 直链构建产物更新                              |
-| 2026-07-20 | `pev2`                     | `1.22.0`               | `1.23.0`         | noarch 软件包                            |
-| 2026-07-20 | `k3s`                      | `-`                    | `1.36.2`         | 上游 `v1.36.2+k3s1`，支持 amd64 与 arm64    |
-| 2026-07-20 | `k3s-images`               | `-`                    | `1.36.2`         | 与二进制精确匹配的系统镜像包，支持双架构                  |
-| 2026-07-16 | `jmx-exporter`             | `-`                    | `1.6.0`          | 新增 noarch 软件包                         |
-| 2026-07-16 | `node_exporter`            | `1.11.1`               | `1.12.1`         |                                       |
-| 2026-07-16 | `redis_exporter`           | `1.86.0`               | `1.87.0`         |                                       |
-| 2026-07-16 | `etcd`                     | `3.6.13`               | `3.7.0`          |                                       |
-| 2026-07-16 | `dblab`                    | `0.43.0`               | `0.44.1`         |                                       |
-| 2026-07-16 | `pgstream`                 | `1.1.1`                | `1.2.0`          |                                       |
-| 2026-07-16 | `rainfrog`                 | `0.3.19`               | `0.3.20`         |                                       |
-| 2026-07-16 | `rustfs`                   | `1.0.0-b8`             | `1.0.0-b9`       | 预发布版本线                                |
-| 2026-07-16 | `agentsview`               | `0.37.5`               | `0.38.1`         |                                       |
-| 2026-07-16 | `claude`                   | `2.1.206`              | `2.1.211`        | 通过 8118 代理下载并核验                       |
-| 2026-07-16 | `codex`                    | `0.144.1`              | `0.144.4`        | 发布标签 `rust-v0.144.4`                  |
-| 2026-07-16 | `stalwart`                 | `0.16.12`              | `0.16.13`        |                                       |
-| 2026-07-16 | `npgsqlrest`               | `3.20.0`               | `3.21.0`         |                                       |
-| 2026-07-16 | `postgrest`                | `14.14`                | `14.15`          |                                       |
-| 2026-07-16 | `opencode`                 | `1.17.18`              | `1.18.2`         |                                       |
-| 2026-07-16 | `uv`                       | `0.11.28`              | `0.11.29`        |                                       |
-| 2026-07-16 | `vector`                   | `0.56.0`               | `0.57.0`         | 直链构建产物更新                              |
-| 2026-07-16 | `pg-hardstorage`           | `1.0.8`                | `1.0.10`         | 直链构建产物更新                              |
-| 2026-07-16 | `crush`                    | `0.84.0`               | `0.85.0`         | 直链构建产物更新                              |
-| 2026-07-16 | `code`                     | `1.128.0`              | `1.129.0`        | 直链构建产物更新                              |
-| 2026-07-16 | `code-server`              | `4.127.0`              | `4.128.0`        | 直链构建产物更新                              |
-| 2026-07-16 | `cloudflared`              | `2026.7.1`             | `2026.7.2`       | 直链构建产物更新                              |
+| 2026-08-05 | `prometheus`               | `3.13.1`               | `3.13.2`         | 安全与稳定性修复                                   |
+| 2026-08-05 | `pig`                      | `1.6.0`                | `1.6.1`          | 扩展目录刷新                                       |
+| 2026-07-30 | `agentsview`               | `0.38.1`               | `0.39.0`         |                                                    |
+| 2026-07-30 | `claude`                   | `2.1.218`              | `2.1.220`        |                                                    |
+| 2026-07-30 | `cloudflared`              | `2026.7.2`             | `2026.7.3`       |                                                    |
+| 2026-07-30 | `code`                     | `1.130.0`              | `1.131.0`        |                                                    |
+| 2026-07-30 | `code-server`              | `4.129.0`              | `4.130.0`        |                                                    |
+| 2026-07-30 | `codex`                    | `0.145.0`              | `0.146.0`        | 发布标签 `rust-v0.146.0`                           |
+| 2026-07-30 | `crush`                    | `0.86.0`               | `0.87.0`         |                                                    |
+| 2026-07-30 | `dblab`                    | `0.46.0`               | `0.47.2`         |                                                    |
+| 2026-07-30 | `etcd`                     | `3.7.0`                | `3.7.1`          |                                                    |
+| 2026-07-30 | `genai-toolbox`            | `1.7.0`                | `1.8.0`          | 源码构建；已验证 Rocky 8/9 与 Debian 12            |
+| 2026-07-30 | `headscale`                | `0.29.2`               | `0.29.3`         |                                                    |
+| 2026-07-30 | `nodejs`                   | `24.18.0`              | `24.18.1`        | 安全更新                                           |
+| 2026-07-30 | `opencode`                 | `1.18.4`               | `1.18.9`         |                                                    |
+| 2026-07-30 | `pg-exporter`              | `1.4.0`                | `1.4.1`          | 官方发布成品                                       |
+| 2026-07-30 | `pg-hardstorage`           | `1.0.13`               | `1.0.17`         |                                                    |
+| 2026-07-30 | `pgschema`                 | `1.12.0`               | `1.12.1`         |                                                    |
+| 2026-07-30 | `pgstream`                 | `1.2.2`                | `1.2.5`          |                                                    |
+| 2026-07-30 | `pig`                      | `1.5.1`                | `1.6.0`          |                                                    |
+| 2026-07-30 | `postgrest`                | `14.15`                | `14.16`          |                                                    |
+| 2026-07-30 | `rainfrog`                 | `0.3.20`               | `0.4.2`          |                                                    |
+| 2026-07-30 | `redis-exporter`           | `1.87.0`               | `1.88.0`         |                                                    |
+| 2026-07-30 | `rustfs`                   | `1.0.0-beta.10`        | `1.0.0-beta.11`  | 排除 preview 版本                                  |
+| 2026-07-30 | `stalwart`                 | `0.16.14`              | `0.16.15`        |                                                    |
+| 2026-07-30 | `uv`                       | `0.11.31`              | `0.12.0`         |                                                    |
+| 2026-07-30 | `victoria-traces`          | `0.9.4`                | `0.10.0`         |                                                    |
+| 2026-07-23 | `claude`                   | `2.1.215`              | `2.1.218`        | 通过 8118 代理下载并按官方清单核验                 |
+| 2026-07-23 | `codex`                    | `0.144.6`              | `0.145.0`        | 发布标签 `rust-v0.145.0`                           |
+| 2026-07-23 | `dblab`                    | `0.44.1`               | `0.46.0`         |                                                    |
+| 2026-07-23 | `duckdb`                   | `1.5.4`                | `1.5.5`          |                                                    |
+| 2026-07-23 | `grafana-infinity-ds`      | `3.8.0`                | `3.11.1`         |                                                    |
+| 2026-07-23 | `grafana-victorialogs-ds`  | `0.30.0`               | `0.30.1`         |                                                    |
+| 2026-07-23 | `opencode`                 | `1.18.3`               | `1.18.4`         |                                                    |
+| 2026-07-23 | `pg-timetable`             | `6.3.0`                | `7.0.0`          | 主版本更新                                         |
+| 2026-07-23 | `pgstream`                 | `1.2.0`                | `1.2.2`          |                                                    |
+| 2026-07-23 | `stalwart`                 | `0.16.13`              | `0.16.14`        |                                                    |
+| 2026-07-23 | `uv`                       | `0.11.29`              | `0.11.31`        |                                                    |
+| 2026-07-23 | `grafana`                  | `13.1.0`               | `13.1.1`         | 直链构建产物更新                                   |
+| 2026-07-23 | `pg-hardstorage`           | `1.0.12`               | `1.0.13`         | 直链构建产物更新                                   |
+| 2026-07-23 | `crush`                    | `0.85.0`               | `0.86.0`         | 直链构建产物更新                                   |
+| 2026-07-23 | `code`                     | `1.129.1`              | `1.130.0`        | 直链构建产物更新                                   |
+| 2026-07-20 | `RPM Exporter 包名`        | `xxx_exporter`         | `xxx-exporter`   | 下划线式 RPM 包名改为连字符形式，与 DEB 包名对齐   |
+| 2026-07-20 | `pg-exporter`              | `1.3.0`                | `1.4.0`          | 改为从上游 Linux tarball 重新打包                  |
+| 2026-07-20 | `victoria-metrics`         | `1.147.0`              | `1.148.0`        | VictoriaMetrics 主包                               |
+| 2026-07-20 | `victoria-metrics-cluster` | `1.147.0`              | `1.148.0`        | VictoriaMetrics 配套组件                           |
+| 2026-07-20 | `vmutils`                  | `1.147.0`              | `1.148.0`        | VictoriaMetrics 配套组件                           |
+| 2026-07-20 | `victoria-logs`            | `1.51.0`               | `1.52.0`         | VictoriaLogs 主包                                  |
+| 2026-07-20 | `vlogscli`                 | `1.51.0`               | `1.52.0`         | VictoriaLogs 配套组件                              |
+| 2026-07-20 | `vlagent`                  | `1.51.0`               | `1.52.0`         | VictoriaLogs 配套组件                              |
+| 2026-07-20 | `grafana-victorialogs-ds`  | `0.29.0`               | `0.30.0`         |                                                    |
+| 2026-07-20 | `seaweedfs`                | `4.39`                 | `4.40`           |                                                    |
+| 2026-07-20 | `rustfs`                   | `1.0.0-b9`             | `1.0.0-b10`      | 预发布版本线；排除 preview 版本                    |
+| 2026-07-20 | `sabiql`                   | `1.14.0`               | `1.15.1`         |                                                    |
+| 2026-07-20 | `timescaledb-tools`        | `0.19.0-1`             | `0.19.0-2`       | 内含 timescaledb-parallel-copy 0.13.0              |
+| 2026-07-20 | `claude`                   | `2.1.211`              | `2.1.215`        | 通过 8118 代理下载并核验                           |
+| 2026-07-20 | `codex`                    | `0.144.4`              | `0.144.6`        | 发布标签 `rust-v0.144.6`                           |
+| 2026-07-20 | `genai-toolbox`            | `1.6.0`                | `1.7.0`          | 使用官方 GCS 二进制与 arm64 容器产物进行外部构建   |
+| 2026-07-20 | `opencode`                 | `1.18.2`               | `1.18.3`         |                                                    |
+| 2026-07-20 | `pg-hardstorage`           | `1.0.10`               | `1.0.12`         | 直链构建产物更新                                   |
+| 2026-07-20 | `code`                     | `1.129.0`              | `1.129.1`        | 直链构建产物更新                                   |
+| 2026-07-20 | `code-server`              | `4.128.0`              | `4.129.0`        | 直链构建产物更新                                   |
+| 2026-07-20 | `pev2`                     | `1.22.0`               | `1.23.0`         | noarch 软件包                                      |
+| 2026-07-20 | `k3s`                      | `-`                    | `1.36.2`         | 上游 `v1.36.2+k3s1`，支持 amd64 与 arm64           |
+| 2026-07-20 | `k3s-images`               | `-`                    | `1.36.2`         | 与二进制精确匹配的系统镜像包，支持双架构           |
+| 2026-07-16 | `jmx-exporter`             | `-`                    | `1.6.0`          | 新增 noarch 软件包                                 |
+| 2026-07-16 | `node_exporter`            | `1.11.1`               | `1.12.1`         |                                                    |
+| 2026-07-16 | `redis_exporter`           | `1.86.0`               | `1.87.0`         |                                                    |
+| 2026-07-16 | `etcd`                     | `3.6.13`               | `3.7.0`          |                                                    |
+| 2026-07-16 | `dblab`                    | `0.43.0`               | `0.44.1`         |                                                    |
+| 2026-07-16 | `pgstream`                 | `1.1.1`                | `1.2.0`          |                                                    |
+| 2026-07-16 | `rainfrog`                 | `0.3.19`               | `0.3.20`         |                                                    |
+| 2026-07-16 | `rustfs`                   | `1.0.0-b8`             | `1.0.0-b9`       | 预发布版本线                                       |
+| 2026-07-16 | `agentsview`               | `0.37.5`               | `0.38.1`         |                                                    |
+| 2026-07-16 | `claude`                   | `2.1.206`              | `2.1.211`        | 通过 8118 代理下载并核验                           |
+| 2026-07-16 | `codex`                    | `0.144.1`              | `0.144.4`        | 发布标签 `rust-v0.144.4`                           |
+| 2026-07-16 | `stalwart`                 | `0.16.12`              | `0.16.13`        |                                                    |
+| 2026-07-16 | `npgsqlrest`               | `3.20.0`               | `3.21.0`         |                                                    |
+| 2026-07-16 | `postgrest`                | `14.14`                | `14.15`          |                                                    |
+| 2026-07-16 | `opencode`                 | `1.17.18`              | `1.18.2`         |                                                    |
+| 2026-07-16 | `uv`                       | `0.11.28`              | `0.11.29`        |                                                    |
+| 2026-07-16 | `vector`                   | `0.56.0`               | `0.57.0`         | 直链构建产物更新                                   |
+| 2026-07-16 | `pg-hardstorage`           | `1.0.8`                | `1.0.10`         | 直链构建产物更新                                   |
+| 2026-07-16 | `crush`                    | `0.84.0`               | `0.85.0`         | 直链构建产物更新                                   |
+| 2026-07-16 | `code`                     | `1.128.0`              | `1.129.0`        | 直链构建产物更新                                   |
+| 2026-07-16 | `code-server`              | `4.127.0`              | `4.128.0`        | 直链构建产物更新                                   |
+| 2026-07-16 | `cloudflared`              | `2026.7.1`             | `2026.7.2`       | 直链构建产物更新                                   |
 {.wide .expand}
 
 **兼容性变化与升级说明**
@@ -702,66 +793,66 @@ Pigsty v4.4.0 是一个维护版本，重点涵盖 PostgreSQL 18.4、PostgreSQL 
 
 **基础设施软件包变更**
 
-| 软件包                          | 旧版本              | 新版本              | 备注                    |
-|------------------------------|------------------|------------------|-----------------------|
-| `pig`                        | `1.4.1`          | `1.5.1`          |                       |
-| `pg_exporter`                | `1.2.2`          | `1.3.0`          |                       |
-| `pgschema`                   | `1.9.0`          | `1.12.0`         |                       |
-| `pgstream`                   | `1.0.1`          | `1.1.1`          |                       |
-| `pg-hardstorage`             | -                | `1.0.8`          |                       |
-| `codex`                      | `0.125.0`        | `0.144.1`        |                       |
-| `claude`                     | `2.1.123`        | `2.1.206`        |                       |
-| `opencode`                   | `1.14.30`        | `1.17.18`        |                       |
-| `agentsview`                 | `0.26.0`         | `0.37.5`         |                       |
-| `genai-toolbox`              | `1.1.0`          | `1.6.0`          | 软件包名为 `mcp-toolbox`   |
-| `crush`                      | `0.64.0`         | `0.84.0`         |                       |
-| `code`                       | `1.118.1`        | `1.128.0`        |                       |
-| `code-server`                | `4.117.0`        | `4.127.0`        |                       |
-| `victoria-metrics`           | `1.142.0`        | `1.147.0`        |                       |
-| `victoria-metrics-cluster`   | `1.142.0`        | `1.147.0`        |                       |
-| `vmutils`                    | `1.142.0`        | `1.147.0`        |                       |
-| `victoria-logs`              | `1.50.0`         | `1.51.0`         |                       |
-| `vlagent`                    | `1.50.0`         | `1.51.0`         |                       |
-| `vlogscli`                   | `1.50.0`         | `1.51.0`         |                       |
-| `victoria-traces`            | `0.8.2`          | `0.9.4`          |                       |
-| `prometheus`                 | `3.11.3`         | `3.13.1`         |                       |
-| `alertmanager`               | `0.32.1`         | `0.33.1`         |                       |
-| `pushgateway`                | `1.11.2`         | `1.11.3`         |                       |
+| 软件包                       | 旧版本           | 新版本           | 备注                              |
+|------------------------------|------------------|------------------|-----------------------------------|
+| `pig`                        | `1.4.1`          | `1.5.1`          |                                   |
+| `pg_exporter`                | `1.2.2`          | `1.3.0`          |                                   |
+| `pgschema`                   | `1.9.0`          | `1.12.0`         |                                   |
+| `pgstream`                   | `1.0.1`          | `1.1.1`          |                                   |
+| `pg-hardstorage`             | -                | `1.0.8`          |                                   |
+| `codex`                      | `0.125.0`        | `0.144.1`        |                                   |
+| `claude`                     | `2.1.123`        | `2.1.206`        |                                   |
+| `opencode`                   | `1.14.30`        | `1.17.18`        |                                   |
+| `agentsview`                 | `0.26.0`         | `0.37.5`         |                                   |
+| `genai-toolbox`              | `1.1.0`          | `1.6.0`          | 软件包名为 `mcp-toolbox`          |
+| `crush`                      | `0.64.0`         | `0.84.0`         |                                   |
+| `code`                       | `1.118.1`        | `1.128.0`        |                                   |
+| `code-server`                | `4.117.0`        | `4.127.0`        |                                   |
+| `victoria-metrics`           | `1.142.0`        | `1.147.0`        |                                   |
+| `victoria-metrics-cluster`   | `1.142.0`        | `1.147.0`        |                                   |
+| `vmutils`                    | `1.142.0`        | `1.147.0`        |                                   |
+| `victoria-logs`              | `1.50.0`         | `1.51.0`         |                                   |
+| `vlagent`                    | `1.50.0`         | `1.51.0`         |                                   |
+| `vlogscli`                   | `1.50.0`         | `1.51.0`         |                                   |
+| `victoria-traces`            | `0.8.2`          | `0.9.4`          |                                   |
+| `prometheus`                 | `3.11.3`         | `3.13.1`         |                                   |
+| `alertmanager`               | `0.32.1`         | `0.33.1`         |                                   |
+| `pushgateway`                | `1.11.2`         | `1.11.3`         |                                   |
 | `node_exporter`              | `1.11.1`         | `1.11.1`         | 补齐 tarball 缓存；修正版本元数据 |
-| `redis_exporter`             | `1.82.0`         | `1.86.0`         |                       |
-| `mongodb_exporter`           | `0.50.0`         | `0.51.0`         |                       |
-| `grafana`                    | `13.0.1`         | `13.1.0`         |                       |
-| `grafana-victorialogs-ds`    | `0.26.3`         | `0.29.0`         |                       |
-| `grafana-victoriametrics-ds` | `0.24.0`         | `0.25.2`         |                       |
-| `vector`                     | `0.55.0`         | `0.56.0`         |                       |
-| `minio`                      | `20260417000000` | `20260618000000` |                       |
-| `seaweedfs`                  | `4.22`           | `4.39`           |                       |
-| `rustfs`                     | `1.0.0-b1`       | `1.0.0-b8`       | 预发布版本线                |
-| `duckdb`                     | `1.5.2`          | `1.5.4`          |                       |
-| `kafka`                      | `4.2.0`          | `4.3.1`          |                       |
-| `etcd`                       | `3.6.10`         | `3.6.13`         |                       |
-| `restic`                     | `0.18.1`         | `0.19.1`         |                       |
-| `juicefs`                    | `1.3.1`          | `1.4.0`          |                       |
-| `tigerbeetle`                | `0.17.2`         | `0.17.9`         |                       |
-| `tigerfs`                    | `0.6.0`          | `0.7.0`          |                       |
-| `caddy`                      | `2.11.2`         | `2.11.4`         |                       |
-| `cloudflared`                | `2026.2.0`       | `2026.7.1`       |                       |
-| `headscale`                  | `0.28.0`         | `0.29.2`         |                       |
-| `v2ray`                      | `5.48.0`         | `5.51.2`         |                       |
-| `nodejs`                     | `24.15.0`        | `24.18.0`        |                       |
-| `golang`                     | `1.26.2`         | `1.26.5`         |                       |
-| `hugo`                       | `0.161.1`        | `0.164.0`        |                       |
-| `uv`                         | `0.11.8`         | `0.11.28`        |                       |
-| `rclone`                     | `1.73.5`         | `1.74.4`         |                       |
-| `asciinema`                  | `3.2.0`          | `3.2.1`          |                       |
-| `stalwart`                   | `0.16.2`         | `0.16.12`        |                       |
-| `maddy`                      | `0.9.3`          | `0.9.5`          |                       |
-| `dblab`                      | `0.38.0`         | `0.43.0`         |                       |
-| `npgsqlrest`                 | `3.12.0`         | `3.20.0`         |                       |
-| `postgrest`                  | `14.10`          | `14.14`          |                       |
-| `sabiql`                     | `1.11.1`         | `1.14.0`         |                       |
-| `pev2`                       | `1.21.0`         | `1.22.0`         |                       |
-| `rainfrog`                   | `0.3.18`         | `0.3.19`         |                       |
+| `redis_exporter`             | `1.82.0`         | `1.86.0`         |                                   |
+| `mongodb_exporter`           | `0.50.0`         | `0.51.0`         |                                   |
+| `grafana`                    | `13.0.1`         | `13.1.0`         |                                   |
+| `grafana-victorialogs-ds`    | `0.26.3`         | `0.29.0`         |                                   |
+| `grafana-victoriametrics-ds` | `0.24.0`         | `0.25.2`         |                                   |
+| `vector`                     | `0.55.0`         | `0.56.0`         |                                   |
+| `minio`                      | `20260417000000` | `20260618000000` |                                   |
+| `seaweedfs`                  | `4.22`           | `4.39`           |                                   |
+| `rustfs`                     | `1.0.0-b1`       | `1.0.0-b8`       | 预发布版本线                      |
+| `duckdb`                     | `1.5.2`          | `1.5.4`          |                                   |
+| `kafka`                      | `4.2.0`          | `4.3.1`          |                                   |
+| `etcd`                       | `3.6.10`         | `3.6.13`         |                                   |
+| `restic`                     | `0.18.1`         | `0.19.1`         |                                   |
+| `juicefs`                    | `1.3.1`          | `1.4.0`          |                                   |
+| `tigerbeetle`                | `0.17.2`         | `0.17.9`         |                                   |
+| `tigerfs`                    | `0.6.0`          | `0.7.0`          |                                   |
+| `caddy`                      | `2.11.2`         | `2.11.4`         |                                   |
+| `cloudflared`                | `2026.2.0`       | `2026.7.1`       |                                   |
+| `headscale`                  | `0.28.0`         | `0.29.2`         |                                   |
+| `v2ray`                      | `5.48.0`         | `5.51.2`         |                                   |
+| `nodejs`                     | `24.15.0`        | `24.18.0`        |                                   |
+| `golang`                     | `1.26.2`         | `1.26.5`         |                                   |
+| `hugo`                       | `0.161.1`        | `0.164.0`        |                                   |
+| `uv`                         | `0.11.8`         | `0.11.28`        |                                   |
+| `rclone`                     | `1.73.5`         | `1.74.4`         |                                   |
+| `asciinema`                  | `3.2.0`          | `3.2.1`          |                                   |
+| `stalwart`                   | `0.16.2`         | `0.16.12`        |                                   |
+| `maddy`                      | `0.9.3`          | `0.9.5`          |                                   |
+| `dblab`                      | `0.38.0`         | `0.43.0`         |                                   |
+| `npgsqlrest`                 | `3.12.0`         | `3.20.0`         |                                   |
+| `postgrest`                  | `14.10`          | `14.14`          |                                   |
+| `sabiql`                     | `1.11.1`         | `1.14.0`         |                                   |
+| `pev2`                       | `1.21.0`         | `1.22.0`         |                                   |
+| `rainfrog`                   | `0.3.18`         | `0.3.19`         |                                   |
 {.wide .expand}
 
 **验证与校验和**
@@ -811,144 +902,144 @@ d092c48ee55116ed5e2c99a3d909ccdd  pigsty-pkg-v4.4.0.u24.aarch64.tgz
 
 **PostgreSQL 与扩展包变更汇总**
 
-| 包名                   | 旧版本        | 新版本        | 备注                                      |
-|:---------------------|:-----------|:-----------|:----------------------------------------|
-| `block_copy_command` | -          | 0.1.5      | 新增；PG 14-18；Rust/pgrx 0.17.0            |
-| `cloudberry`         | 2.0.0      | 2.1.0      | 内核包组；RPM release 2 修复 initdb errno 问题   |
-| `cloudberry-backup`  | -          | 2.1.0      | 新增 Cloudberry 备份工具包                     |
-| `cloudberry-pxf`     | -          | 2.1.0      | 新增 Cloudberry PXF 包                     |
-| `credcheck`          | 4.6        | 4.7        | 升级；PG 14-18；PGDG                        |
-| `datasketches`       | -          | 1.7.0      | 新增；PG 14-18                             |
-| `ddl_historization`  | 0.0.7      | 0.2        | 升级                                      |
-| `documentdb`         | 0.109      | 0.110      | 升级到上游版本；PG 15-18                        |
-| `external_file`      | -          | 1.2        | 新增；PG 14-18                             |
-| `logical_ddl`        | -          | 0.1.0      | 新增；PG 14-18                             |
-| `nominatim_fdw`      | 1.1.0      | 1.2        | 升级                                      |
-| `onesparse`          | -          | 1.0.0      | 新增；仅 PG 18                              |
-| `orioledb`           | beta15 1.7 | beta15 1.7 | 配套 OriolePG 17.18                       |
-| `oriolepg`           | 17.16      | 17.18      | 内核补丁集更新                                 |
-| `parray_gin`         | -          | 1.5.0      | 新增后升级；PG 14-18                          |
-| `pg_accumulator`     | -          | 1.1.3      | 新增；PG 14-18                             |
-| `pg_anon`            | 3.0.1      | 3.0.13     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pg_background`      | 1.8        | 1.9.2      | 仅 DEB                                   |
-| `pg_bikram_sambat`   | -          | 0.1.0      | 新增；Bikram Sambat 日期类型与 AD/BS 转换函数       |
-| `pg_byteamagic`      | -          | 0.2.4      | 新增；PG 14-18                             |
-| `pg_cardano`         | 1.1.1      | 1.2.0      | 升级；Rust/pgrx 0.17.0                     |
-| `pg_clickhouse`      | 0.1.5      | 0.2.0      | 升级                                      |
-| `pg_datasentinel`    | -          | 1.0        | 新增；PG 15-18                             |
-| `pg_dbms_job`        | 1.5        | 2.0        | 升级；PG 14-18；PGDG                        |
-| `pg_dispatch`        | -          | 0.1.5      | 新增；PG 14-18                             |
-| `pg_failover_slots`  | 1.2.0      | 1.2.1      | 升级                                      |
-| `pg_fsql`            | -          | 1.1.0      | 新增；PG 14-18                             |
-| `pg_incremental`     | 1.4.1      | 1.5.0      | 升级                                      |
-| `pg_isok`            | -          | 1.4.1      | 新增；PG 14-18                             |
-| `pg_ivm`             | 1.13       | 1.14       | 升级；PG 14-18                             |
-| `pg_kazsearch`       | -          | 2.0.0      | 新增；PG 16-18；Rust/pgrx 0.17.0            |
-| `pg_liquid`          | -          | 0.1.7      | 新增；PG 14-18                             |
-| `pg_pathcheck`       | -          | 0.9.1      | 新增；PG 17-18；需 shared_preload_libraries  |
-| `pg_query_rewrite`   | -          | 0.0.5      | 新增；PG 14-18                             |
-| `pg_regresql`        | -          | 2.0.0      | 新增；PG 14-18                             |
-| `pg_rrf`             | -          | 0.0.3      | 新增；PG 14-17；Rust/pgrx 0.16.1 -> 0.17.0  |
+| 包名                 | 旧版本     | 新版本     | 备注                                               |
+|:---------------------|:-----------|:-----------|:---------------------------------------------------|
+| `block_copy_command` | -          | 0.1.5      | 新增；PG 14-18；Rust/pgrx 0.17.0                   |
+| `cloudberry`         | 2.0.0      | 2.1.0      | 内核包组；RPM release 2 修复 initdb errno 问题     |
+| `cloudberry-backup`  | -          | 2.1.0      | 新增 Cloudberry 备份工具包                         |
+| `cloudberry-pxf`     | -          | 2.1.0      | 新增 Cloudberry PXF 包                             |
+| `credcheck`          | 4.6        | 4.7        | 升级；PG 14-18；PGDG                               |
+| `datasketches`       | -          | 1.7.0      | 新增；PG 14-18                                     |
+| `ddl_historization`  | 0.0.7      | 0.2        | 升级                                               |
+| `documentdb`         | 0.109      | 0.110      | 升级到上游版本；PG 15-18                           |
+| `external_file`      | -          | 1.2        | 新增；PG 14-18                                     |
+| `logical_ddl`        | -          | 0.1.0      | 新增；PG 14-18                                     |
+| `nominatim_fdw`      | 1.1.0      | 1.2        | 升级                                               |
+| `onesparse`          | -          | 1.0.0      | 新增；仅 PG 18                                     |
+| `orioledb`           | beta15 1.7 | beta15 1.7 | 配套 OriolePG 17.18                                |
+| `oriolepg`           | 17.16      | 17.18      | 内核补丁集更新                                     |
+| `parray_gin`         | -          | 1.5.0      | 新增后升级；PG 14-18                               |
+| `pg_accumulator`     | -          | 1.1.3      | 新增；PG 14-18                                     |
+| `pg_anon`            | 3.0.1      | 3.0.13     | 升级；Rust/pgrx 0.16.1 -> 0.17.0                   |
+| `pg_background`      | 1.8        | 1.9.2      | 仅 DEB                                             |
+| `pg_bikram_sambat`   | -          | 0.1.0      | 新增；Bikram Sambat 日期类型与 AD/BS 转换函数      |
+| `pg_byteamagic`      | -          | 0.2.4      | 新增；PG 14-18                                     |
+| `pg_cardano`         | 1.1.1      | 1.2.0      | 升级；Rust/pgrx 0.17.0                             |
+| `pg_clickhouse`      | 0.1.5      | 0.2.0      | 升级                                               |
+| `pg_datasentinel`    | -          | 1.0        | 新增；PG 15-18                                     |
+| `pg_dbms_job`        | 1.5        | 2.0        | 升级；PG 14-18；PGDG                               |
+| `pg_dispatch`        | -          | 0.1.5      | 新增；PG 14-18                                     |
+| `pg_failover_slots`  | 1.2.0      | 1.2.1      | 升级                                               |
+| `pg_fsql`            | -          | 1.1.0      | 新增；PG 14-18                                     |
+| `pg_incremental`     | 1.4.1      | 1.5.0      | 升级                                               |
+| `pg_isok`            | -          | 1.4.1      | 新增；PG 14-18                                     |
+| `pg_ivm`             | 1.13       | 1.14       | 升级；PG 14-18                                     |
+| `pg_kazsearch`       | -          | 2.0.0      | 新增；PG 16-18；Rust/pgrx 0.17.0                   |
+| `pg_liquid`          | -          | 0.1.7      | 新增；PG 14-18                                     |
+| `pg_pathcheck`       | -          | 0.9.1      | 新增；PG 17-18；需 shared_preload_libraries        |
+| `pg_query_rewrite`   | -          | 0.0.5      | 新增；PG 14-18                                     |
+| `pg_regresql`        | -          | 2.0.0      | 新增；PG 14-18                                     |
+| `pg_rrf`             | -          | 0.0.3      | 新增；PG 14-17；Rust/pgrx 0.16.1 -> 0.17.0         |
 | `pg_savior`          | 0.0.1      | 0.1.0      | 升级；高风险 DDL/DML 防护 hook；需 preload 或 LOAD |
-| `pg_search`          | 0.22.2     | 0.23.1     | 升级；PG 15-18；pgrx 0.18.0                 |
-| `pg_slug_gen`        | -          | 1.0.0      | 新增；PG 15-18                             |
-| `pg_stat_ch`         | -          | 0.3.6      | 新增后升级；PG 16-18；EL8 break                |
-| `pg_store_plans`     | 1.9        | 1.10       | 升级                                      |
-| `pg_strict`          | 1.0.3      | 1.0.5      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pg_text_semver`     | -          | 1.2.1      | 新增；PG 14-18                             |
-| `pg_textsearch`      | 0.5.0      | 1.1.0      | 升级；PG 17-18；需 shared_preload_libraries  |
-| `pg_trickle`         | 0.16.0     | 0.40.0     | 升级；仅 PG 18；pgrx 0.18.0                  |
-| `pg_tzf`             | 0.2.3      | 0.2.4      | 升级；Rust/pgrx 0.17.0                     |
-| `pg_vectorize`       | 0.26.0     | 0.26.1     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pg_variables`       | -          | 1.2.5      | 新增；PG 14-18                             |
-| `pg_when`            | -          | 0.1.9      | 新增；PG 14-18；Rust/pgrx 0.17.0            |
-| `pgxicor`            | 0.1.0      | 0.1.1      | 升级                                      |
-| `pgcalendar`         | -          | 1.1.0      | 新增；PG 14-18                             |
-| `pgclone`            | -          | 4.0.0      | 新增后升级；PG 14-18                          |
-| `pgelog`             | -          | 1.0.2      | 新增；PG 14-18                             |
-| `pglinter`           | 1.1.1      | 1.1.2      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pglock`             | -          | 1.0.0      | 新增；PG 14-18                             |
-| `pgmq`               | 1.11.0     | 1.11.1     | 升级；PG 14-18                             |
-| `pgmqtt`             | -          | 0.1.0      | 新增；PG 14-18；Rust/pgrx 0.16.1 -> 0.17.0  |
-| `pgproto`            | -          | 0.5.0      | 新增后升级；原生 Protobuf 支持                    |
-| `pghydro`            | -          | 6.6        | 新增；PG 14-18                             |
-| `pgx_ulid`           | 0.2.2      | 0.2.3      | 升级；Rust/pgrx 0.17.0                     |
-| `plv8`               | 3.2.4      | 3.2.4-2    | 仅 RPM；EL10 构建修复                         |
-| `PolarDB`            | 15.15      | 17.9.1.0   | PG 15 -> 17                             |
-| `postgresbson`       | -          | 2.0.2      | 新增；PG 14-18                             |
-| `postgis`            | 3.6.2      | 3.6.3      | 仅 DEB                                   |
-| `prefix`             | 1.2.10     | 1.2.11     | 升级；PG 14-18；PGDG                        |
-| `provsql`            | -          | 1.2.3      | 新增；PG 14-18                             |
-| `rdf_fdw`            | -          | 2.5.0      | 新增后升级；PG 14-18                          |
-| `rdkit`              | -          | 202503.6   | 新增；PG 14-18                             |
-| `re2`                | -          | 0.1.1      | 新增；PG 16-18                             |
-| `storage_engine`     | -          | 1.3.4      | 新增后升级；PG 14-18；列式与行压缩表访问方法              |
-| `supautils`          | 3.1.0      | 3.2.1      | 升级                                      |
-| `system_stats`       | 3.2        | 4.0        | 升级                                      |
-| `timescaledb`        | 2.25.2     | 2.26.4     | 升级；TSL 小版本更新                            |
-| `ulak`               | -          | 0.0.2      | 新增；PG 14-18                             |
-| `wrappers`           | 0.5.7      | 0.6.0      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pg_search`          | 0.22.2     | 0.23.1     | 升级；PG 15-18；pgrx 0.18.0                        |
+| `pg_slug_gen`        | -          | 1.0.0      | 新增；PG 15-18                                     |
+| `pg_stat_ch`         | -          | 0.3.6      | 新增后升级；PG 16-18；EL8 break                    |
+| `pg_store_plans`     | 1.9        | 1.10       | 升级                                               |
+| `pg_strict`          | 1.0.3      | 1.0.5      | 升级；Rust/pgrx 0.16.1 -> 0.17.0                   |
+| `pg_text_semver`     | -          | 1.2.1      | 新增；PG 14-18                                     |
+| `pg_textsearch`      | 0.5.0      | 1.1.0      | 升级；PG 17-18；需 shared_preload_libraries        |
+| `pg_trickle`         | 0.16.0     | 0.40.0     | 升级；仅 PG 18；pgrx 0.18.0                        |
+| `pg_tzf`             | 0.2.3      | 0.2.4      | 升级；Rust/pgrx 0.17.0                             |
+| `pg_vectorize`       | 0.26.0     | 0.26.1     | 升级；Rust/pgrx 0.16.1 -> 0.17.0                   |
+| `pg_variables`       | -          | 1.2.5      | 新增；PG 14-18                                     |
+| `pg_when`            | -          | 0.1.9      | 新增；PG 14-18；Rust/pgrx 0.17.0                   |
+| `pgxicor`            | 0.1.0      | 0.1.1      | 升级                                               |
+| `pgcalendar`         | -          | 1.1.0      | 新增；PG 14-18                                     |
+| `pgclone`            | -          | 4.0.0      | 新增后升级；PG 14-18                               |
+| `pgelog`             | -          | 1.0.2      | 新增；PG 14-18                                     |
+| `pglinter`           | 1.1.1      | 1.1.2      | 升级；Rust/pgrx 0.16.1 -> 0.17.0                   |
+| `pglock`             | -          | 1.0.0      | 新增；PG 14-18                                     |
+| `pgmq`               | 1.11.0     | 1.11.1     | 升级；PG 14-18                                     |
+| `pgmqtt`             | -          | 0.1.0      | 新增；PG 14-18；Rust/pgrx 0.16.1 -> 0.17.0         |
+| `pgproto`            | -          | 0.5.0      | 新增后升级；原生 Protobuf 支持                     |
+| `pghydro`            | -          | 6.6        | 新增；PG 14-18                                     |
+| `pgx_ulid`           | 0.2.2      | 0.2.3      | 升级；Rust/pgrx 0.17.0                             |
+| `plv8`               | 3.2.4      | 3.2.4-2    | 仅 RPM；EL10 构建修复                              |
+| `PolarDB`            | 15.15      | 17.9.1.0   | PG 15 -> 17                                        |
+| `postgresbson`       | -          | 2.0.2      | 新增；PG 14-18                                     |
+| `postgis`            | 3.6.2      | 3.6.3      | 仅 DEB                                             |
+| `prefix`             | 1.2.10     | 1.2.11     | 升级；PG 14-18；PGDG                               |
+| `provsql`            | -          | 1.2.3      | 新增；PG 14-18                                     |
+| `rdf_fdw`            | -          | 2.5.0      | 新增后升级；PG 14-18                               |
+| `rdkit`              | -          | 202503.6   | 新增；PG 14-18                                     |
+| `re2`                | -          | 0.1.1      | 新增；PG 16-18                                     |
+| `storage_engine`     | -          | 1.3.4      | 新增后升级；PG 14-18；列式与行压缩表访问方法       |
+| `supautils`          | 3.1.0      | 3.2.1      | 升级                                               |
+| `system_stats`       | 3.2        | 4.0        | 升级                                               |
+| `timescaledb`        | 2.25.2     | 2.26.4     | 升级；TSL 小版本更新                               |
+| `ulak`               | -          | 0.0.2      | 新增；PG 14-18                                     |
+| `wrappers`           | 0.5.7      | 0.6.0      | 升级；Rust/pgrx 0.16.1 -> 0.17.0                   |
 {.wide .expand}
 
 
 **基础设施软件包更新**
 
-| 包名                           | 旧版本            | 新版本            | 备注                    |
-|:-----------------------------|:---------------|:---------------|:----------------------|
-| `alertmanager`               | 0.31.1         | 0.32.1         |                       |
-| `agentsview`                 | 0.15.0         | 0.26.0         |                       |
-| `claude`                     | 2.1.81         | 2.1.123        | 通过 8118 代理下载并核验       |
-| `code`                       | 1.112.0        | 1.118.1        | 直链元数据更新               |
-| `code-server`                | 4.112.0        | 4.117.0        | 直链元数据更新               |
-| `codex`                      | 0.116.0        | 0.125.0        | 从预发布链收敛到稳定版后继续升级      |
-| `crush`                      | 0.51.2         | 0.64.0         | 直链元数据更新               |
-| `dblab`                      | 0.34.3         | 0.38.0         |                       |
-| `duckdb`                     | 1.5.0          | 1.5.2          |                       |
-| `etcd`                       | 3.6.9          | 3.6.10         | 统一软件包版本               |
-| `garage`                     | 2.2.0          | 2.3.0          |                       |
-| `genai-toolbox`              | 0.27.0         | 1.1.0          | 上游已更名为 mcp-toolbox    |
-| `golang`                     | 1.26.1         | 1.26.2         |                       |
-| `grafana`                    | 12.4.1         | 13.0.1         | 主版本升级后继续刷新元数据         |
-| `grafana-infinity-ds`        | 3.7.4          | 3.8.0          |                       |
-| `grafana-plugins`            | 12.3.0         | 13.0.0         | Noarch 插件包，手工归集       |
-| `grafana-victoriametrics-ds` | 0.23.1         | 0.24.0         |                       |
-| `hugo`                       | 0.158.0        | 0.161.1        |                       |
-| `maddy`                      | 0.8.2          | 0.9.3          |                       |
-| `mcli`                       | 20260321000000 | 20260417000000 | pgsty 分支，修复 cve       |
-| `minio`                      | 20260325000000 | 20260417000000 | pgsty 分支，修复 cve       |
-| `mongodb_exporter`           | 0.49.0         | 0.50.0         |                       |
-| `node_exporter`              | 1.10.2         | 1.11.1         |                       |
-| `nodejs`                     | 24.14.0        | 24.15.0        | 维持在 24.x 策略线          |
-| `npgsqlrest`                 | 3.11.1         | 3.12.0         |                       |
-| `opencode`                   | 1.2.27         | 1.14.30        | 改为版本化缓存并重新构建          |
-| `pg_exporter`                | 1.2.1          | 1.2.2          | 直链元数据更新               |
-| `pgflo`                      | 0.0.15         | -              | 已移除                   |
-| `pgschema`                   | 1.7.4          | 1.9.0          |                       |
-| `pig`                        | 1.3.2          | 1.4.1          | 仅更新元信息                |
-| `postgrest`                  | 14.7           | 14.10          |                       |
-| `prometheus`                 | 3.10.0         | 3.11.3         |                       |
-| `rainfrog`                   | 0.3.17         | 0.3.18         |                       |
-| `rclone`                     | 1.73.2         | 1.73.5         | 直链元数据更新               |
-| `rustfs`                     | 1.0.0-alpha.89 | 1.0.0-b1       | 预发布版本线                |
-| `sabiql`                     | 1.8.2          | 1.11.1         |                       |
-| `seaweedfs`                  | 4.17           | 4.22           |                       |
-| `sqlcmd`                     | 1.9.0          | 1.10.0         |                       |
-| `stalwart`                   | 0.15.5         | 0.16.2         |                       |
-| `tigerbeetle`                | 0.16.77        | 0.17.2         |                       |
-| `tigerfs`                    | 0.5.0          | 0.6.0          |                       |
-| `timescaledb-tools`          | 0.18.2         | 0.19.0         | 重新构建 timescaledb-tune |
-| `uv`                         | 0.10.12        | 0.11.8         |                       |
-| `victoria-logs`              | 1.48.0         | 1.50.0         | 主包                    |
-| `victoria-metrics`           | 1.138.0        | 1.142.0        |                       |
-| `victoria-metrics-cluster`   | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件  |
-| `victoria-traces`            | 0.8.0          | 0.8.2          |                       |
-| `vip-manager`                | 4.0.0          | 4.2.0          | 直链元数据更新               |
-| `vlagent`                    | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件     |
-| `vlogscli`                   | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件     |
-| `vmutils`                    | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件  |
-| `vector`                     | 0.54.0         | 0.55.0         | 直链元数据更新               |
-| `v2ray`                      | 5.47.0         | 5.48.0         |                       |
-| `xray`                       | 26.2.6         | 26.3.27        |                       |
+| 包名                         | 旧版本         | 新版本         | 备注                             |
+|:-----------------------------|:---------------|:---------------|:---------------------------------|
+| `alertmanager`               | 0.31.1         | 0.32.1         |                                  |
+| `agentsview`                 | 0.15.0         | 0.26.0         |                                  |
+| `claude`                     | 2.1.81         | 2.1.123        | 通过 8118 代理下载并核验         |
+| `code`                       | 1.112.0        | 1.118.1        | 直链元数据更新                   |
+| `code-server`                | 4.112.0        | 4.117.0        | 直链元数据更新                   |
+| `codex`                      | 0.116.0        | 0.125.0        | 从预发布链收敛到稳定版后继续升级 |
+| `crush`                      | 0.51.2         | 0.64.0         | 直链元数据更新                   |
+| `dblab`                      | 0.34.3         | 0.38.0         |                                  |
+| `duckdb`                     | 1.5.0          | 1.5.2          |                                  |
+| `etcd`                       | 3.6.9          | 3.6.10         | 统一软件包版本                   |
+| `garage`                     | 2.2.0          | 2.3.0          |                                  |
+| `genai-toolbox`              | 0.27.0         | 1.1.0          | 上游已更名为 mcp-toolbox         |
+| `golang`                     | 1.26.1         | 1.26.2         |                                  |
+| `grafana`                    | 12.4.1         | 13.0.1         | 主版本升级后继续刷新元数据       |
+| `grafana-infinity-ds`        | 3.7.4          | 3.8.0          |                                  |
+| `grafana-plugins`            | 12.3.0         | 13.0.0         | Noarch 插件包，手工归集          |
+| `grafana-victoriametrics-ds` | 0.23.1         | 0.24.0         |                                  |
+| `hugo`                       | 0.158.0        | 0.161.1        |                                  |
+| `maddy`                      | 0.8.2          | 0.9.3          |                                  |
+| `mcli`                       | 20260321000000 | 20260417000000 | pgsty 分支，修复 cve             |
+| `minio`                      | 20260325000000 | 20260417000000 | pgsty 分支，修复 cve             |
+| `mongodb_exporter`           | 0.49.0         | 0.50.0         |                                  |
+| `node_exporter`              | 1.10.2         | 1.11.1         |                                  |
+| `nodejs`                     | 24.14.0        | 24.15.0        | 维持在 24.x 策略线               |
+| `npgsqlrest`                 | 3.11.1         | 3.12.0         |                                  |
+| `opencode`                   | 1.2.27         | 1.14.30        | 改为版本化缓存并重新构建         |
+| `pg_exporter`                | 1.2.1          | 1.2.2          | 直链元数据更新                   |
+| `pgflo`                      | 0.0.15         | -              | 已移除                           |
+| `pgschema`                   | 1.7.4          | 1.9.0          |                                  |
+| `pig`                        | 1.3.2          | 1.4.1          | 仅更新元信息                     |
+| `postgrest`                  | 14.7           | 14.10          |                                  |
+| `prometheus`                 | 3.10.0         | 3.11.3         |                                  |
+| `rainfrog`                   | 0.3.17         | 0.3.18         |                                  |
+| `rclone`                     | 1.73.2         | 1.73.5         | 直链元数据更新                   |
+| `rustfs`                     | 1.0.0-alpha.89 | 1.0.0-b1       | 预发布版本线                     |
+| `sabiql`                     | 1.8.2          | 1.11.1         |                                  |
+| `seaweedfs`                  | 4.17           | 4.22           |                                  |
+| `sqlcmd`                     | 1.9.0          | 1.10.0         |                                  |
+| `stalwart`                   | 0.15.5         | 0.16.2         |                                  |
+| `tigerbeetle`                | 0.16.77        | 0.17.2         |                                  |
+| `tigerfs`                    | 0.5.0          | 0.6.0          |                                  |
+| `timescaledb-tools`          | 0.18.2         | 0.19.0         | 重新构建 timescaledb-tune        |
+| `uv`                         | 0.10.12        | 0.11.8         |                                  |
+| `victoria-logs`              | 1.48.0         | 1.50.0         | 主包                             |
+| `victoria-metrics`           | 1.138.0        | 1.142.0        |                                  |
+| `victoria-metrics-cluster`   | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件         |
+| `victoria-traces`            | 0.8.0          | 0.8.2          |                                  |
+| `vip-manager`                | 4.0.0          | 4.2.0          | 直链元数据更新                   |
+| `vlagent`                    | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件            |
+| `vlogscli`                   | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件            |
+| `vmutils`                    | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件         |
+| `vector`                     | 0.54.0         | 0.55.0         | 直链元数据更新                   |
+| `v2ray`                      | 5.47.0         | 5.48.0         |                                  |
+| `xray`                       | 26.2.6         | 26.3.27        |                                  |
 {.wide .expand}
 
 **校验和**
@@ -986,67 +1077,67 @@ fd1ea5cd5554bfe91fadd51ad80860e3  pigsty-pkg-v4.3.0.u26.x86_64.tgz
 
 **PostgreSQL 软件包更新**
 
-| 包名                 | 旧版本     | 新版本       | 备注      |
-|:-------------------|:--------|:----------|:--------|
-| pg_search          | 0.21.12 | 0.22.2    |         |
+| 包名               | 旧版本  | 新版本    | 备注       |
+|:-------------------|:--------|:----------|:-----------|
+| pg_search          | 0.21.12 | 0.22.2    |            |
 | pgsentinel         | 1.4.0   | 1.4.1     | 仅更新 rpm |
-| pg_track_optimizer | 0.9.1   | 0.9.2     |         |
-| pgcollection       | 1.0.0   | 2.0.0     |         |
-| pg_ttl_index       | 2.0.0   | 3.0.0     |         |
-| pg_clickhouse      | 0.1.4   | 0.1.5     |         |
-| pdu                |         | 3.0.25.12 | 新增      |
-| pgdog              |         | 0.1.32    | 新增      |
+| pg_track_optimizer | 0.9.1   | 0.9.2     |            |
+| pgcollection       | 1.0.0   | 2.0.0     |            |
+| pg_ttl_index       | 2.0.0   | 3.0.0     |            |
+| pg_clickhouse      | 0.1.4   | 0.1.5     |            |
+| pdu                |         | 3.0.25.12 | 新增       |
+| pgdog              |         | 0.1.32    | 新增       |
 
 **基础设施软件包更新**
 
-| 名称                         | 旧版本            | 新版本            | 备注 |
-|:---------------------------|:---------------|:---------------|:---|
-| `grafana`                  | 12.4.0         | 12.4.1         |    |
-| `pgbackrest_exporter`      | 0.22.0         | 0.23.0         |    |
-| `redis_exporter`           | 1.81.0         | 1.82.0         |    |
-| `victoria-logs`            | 1.47.0         | 1.48.0         |    |
-| `vlagent`                  | 1.47.0         | 1.48.0         |    |
-| `vlogscli`                 | 1.47.0         | 1.48.0         |    |
-| `victoria-traces`          | 0.7.1          | 0.8.0          |    |
-| `duckdb`                   | 1.4.4          | 1.5.0          |    |
-| `pg_timetable`             | 6.2.0          | 6.3.0          |    |
-| `pgschema`                 | 1.4.2          | 1.7.4          |    |
+| 名称                       | 旧版本         | 新版本         | 备注 |
+|:---------------------------|:---------------|:---------------|:-----|
+| `grafana`                  | 12.4.0         | 12.4.1         |      |
+| `pgbackrest_exporter`      | 0.22.0         | 0.23.0         |      |
+| `redis_exporter`           | 1.81.0         | 1.82.0         |      |
+| `victoria-logs`            | 1.47.0         | 1.48.0         |      |
+| `vlagent`                  | 1.47.0         | 1.48.0         |      |
+| `vlogscli`                 | 1.47.0         | 1.48.0         |      |
+| `victoria-traces`          | 0.7.1          | 0.8.0          |      |
+| `duckdb`                   | 1.4.4          | 1.5.0          |      |
+| `pg_timetable`             | 6.2.0          | 6.3.0          |      |
+| `pgschema`                 | 1.4.2          | 1.7.4          |      |
 | `pgstream`                 | -              | 1.0.1          | 新增 |
-| `tigerbeetle`              | 0.16.75        | 0.16.77        |    |
-| `grafana-victorialogs-ds`  | 0.26.2         | 0.26.3         |    |
-| `grafana-infinity-ds`      | 3.7.3          | 3.7.4          |    |
-| `caddy`                    | 2.11.1         | 2.11.2         |    |
-| `npgsqlrest`               | 3.10.0         | 3.11.1         |    |
-| `postgrest`                | 14.5           | 14.7           |    |
-| `opencode`                 | 1.2.17         | 1.2.27         |    |
-| `pev2`                     | 1.20.2         | 1.21.0         |    |
-| `golang`                   | 1.26.0         | 1.26.1         |    |
-| `vector`                   | 0.53.0         | 0.54.0         |    |
-| `rclone`                   | 1.73.1         | 1.73.2         |    |
-| `code-server`              | 4.109.5        | 4.112.0        |    |
-| `code`                     | 1.109.4        | 1.112.0        |    |
-| `seaweedfs`                | 4.15           | 4.17           |    |
-| `uv`                       | 0.10.8         | 0.10.12        |    |
-| `codex`                    | 0.110.0        | 0.116.0        |    |
-| `v2ray`                    | 5.44.1         | 5.47.0         |    |
-| `sabiql`                   | 1.6.2          | 1.8.2          |    |
+| `tigerbeetle`              | 0.16.75        | 0.16.77        |      |
+| `grafana-victorialogs-ds`  | 0.26.2         | 0.26.3         |      |
+| `grafana-infinity-ds`      | 3.7.3          | 3.7.4          |      |
+| `caddy`                    | 2.11.1         | 2.11.2         |      |
+| `npgsqlrest`               | 3.10.0         | 3.11.1         |      |
+| `postgrest`                | 14.5           | 14.7           |      |
+| `opencode`                 | 1.2.17         | 1.2.27         |      |
+| `pev2`                     | 1.20.2         | 1.21.0         |      |
+| `golang`                   | 1.26.0         | 1.26.1         |      |
+| `vector`                   | 0.53.0         | 0.54.0         |      |
+| `rclone`                   | 1.73.1         | 1.73.2         |      |
+| `code-server`              | 4.109.5        | 4.112.0        |      |
+| `code`                     | 1.109.4        | 1.112.0        |      |
+| `seaweedfs`                | 4.15           | 4.17           |      |
+| `uv`                       | 0.10.8         | 0.10.12        |      |
+| `codex`                    | 0.110.0        | 0.116.0        |      |
+| `v2ray`                    | 5.44.1         | 5.47.0         |      |
+| `sabiql`                   | 1.6.2          | 1.8.2          |      |
 | `sql-studio`               | -              | 0.1.51         | 新增 |
 | `rainfrog`                 | -              | 0.3.17         | 新增 |
-| `agentsview`               | 0.10.0         | 0.15.0         |    |
+| `agentsview`               | 0.10.0         | 0.15.0         |      |
 | `crush`                    | -              | 0.51.2         | 新增 |
 | `tigerfs`                  | -              | 0.5.0          | 新增 |
-| `victoria-metrics`         | 1.137.0        | 1.138.0        |    |
-| `victoria-metrics-cluster` | 1.137.0        | 1.138.0        |    |
-| `vmutils`                  | 1.137.0        | 1.138.0        |    |
-| `hugo`                     | 0.157.0        | 0.158.0        |    |
-| `rustfs`                   | 1.0.0-alpha.85 | 1.0.0-alpha.89 |    |
-| `mysqld_exporter`          | 0.18.0         | 0.19.0         |    |
-| `pg_exporter`              | 1.2.0          | 1.2.1          |    |
-| `pig`                      | 1.3.1          | 1.3.2          |    |
-| `minio`                    | 20260214       | 20260321       |    |
-| `mcli`                     | 20260213       | 20260321       |    |
-| `claude`                   | 2.1.68         | 2.1.81         |    |
-| `ivroysql`                 | 5.1            | 5.3            |    |
+| `victoria-metrics`         | 1.137.0        | 1.138.0        |      |
+| `victoria-metrics-cluster` | 1.137.0        | 1.138.0        |      |
+| `vmutils`                  | 1.137.0        | 1.138.0        |      |
+| `hugo`                     | 0.157.0        | 0.158.0        |      |
+| `rustfs`                   | 1.0.0-alpha.85 | 1.0.0-alpha.89 |      |
+| `mysqld_exporter`          | 0.18.0         | 0.19.0         |      |
+| `pg_exporter`              | 1.2.0          | 1.2.1          |      |
+| `pig`                      | 1.3.1          | 1.3.2          |      |
+| `minio`                    | 20260214       | 20260321       |      |
+| `mcli`                     | 20260213       | 20260321       |      |
+| `claude`                   | 2.1.68         | 2.1.81         |      |
+| `ivroysql`                 | 5.1            | 5.3            |      |
 {.wide .expand}
 
 **校验和**
@@ -1101,39 +1192,39 @@ PGDG YUM 仓库已经归档移除 [pg13](https://yum.postgresql.org/news/pg13-en
 
 **PostgreSQL 软件包更新**
 
-| 包名               | 旧版本     | 新版本     | 备注                 |
-|:-----------------|:--------|:--------|:-------------------|
-| timescaledb      | 2.25.1  | 2.25.2  |                    |
+| 包名             | 旧版本  | 新版本  | 备注                          |
+|:-----------------|:--------|:--------|:------------------------------|
+| timescaledb      | 2.25.1  | 2.25.2  |                               |
 | vchord           | 1.1.0   | 1.1.1   | 新增 clang 构建依赖，修复错误 |
-| vchord_bm25      | 0.3.0-1 | 0.3.0-2 | 修复版本注入问题           |
-| aggs_for_vecs    | 1.4.0   | 1.4.1   |                    |
-| pg_search        | 0.21.9  | 0.21.12 |                    |
-| pg_pinyin        | -       | 0.0.2   | 新增扩展               |
-| pg_eviltransform | -       | 0.0.2   | 新增扩展               |
-| pg_qos           | -       | 1.0.0   | 新增扩展，QoS 资源治理      |
+| vchord_bm25      | 0.3.0-1 | 0.3.0-2 | 修复版本注入问题              |
+| aggs_for_vecs    | 1.4.0   | 1.4.1   |                               |
+| pg_search        | 0.21.9  | 0.21.12 |                               |
+| pg_pinyin        | -       | 0.0.2   | 新增扩展                      |
+| pg_eviltransform | -       | 0.0.2   | 新增扩展                      |
+| pg_qos           | -       | 1.0.0   | 新增扩展，QoS 资源治理        |
 
 
 **基础设施软件包更新**
 
-| 名称                           | 旧版本            | 新版本            | 备注 |
-|:-----------------------------|:---------------|:---------------|:---|
-| `asciinema`                  | 3.1.0          | 3.2.0          |    |
-| `grafana-infinity-ds`        | 3.7.2          | 3.7.3          |    |
-| `victoria-metrics`           | 1.136.0        | 1.137.0        |    |
-| `victoria-metrics-cluster`   | 1.136.0        | 1.137.0        |    |
-| `vmutils`                    | 1.136.0        | 1.137.0        |    |
-| `hugo`                       | 0.155.3        | 0.157.0        |    |
-| `opencode`                   | 1.2.15         | 1.2.17         |    |
-| `rustfs`                     | 1.0.0-alpha.83 | 1.0.0-alpha.85 |    |
-| `seaweedfs`                  | 4.13           | 4.15           |    |
-| `tigerbeetle`                | 0.16.74        | 0.16.75        |    |
-| `uv`                         | 0.10.4         | 0.10.8         |    |
-| `codex`                      | 0.105.0        | 0.110.0        |    |
-| `claude`                     | 2.1.59         | 2.1.68         |    |
-| `xray`                       | -              | 26.2.6         | 新增 |
-| `gost`                       | -              | 2.12.0         | 新增 |
-| `sabiql`                     | -              | 1.6.2          | 新增 |
-| `agentsview`                 | -              | 0.10.0         | 新增 |
+| 名称                       | 旧版本         | 新版本         | 备注 |
+|:---------------------------|:---------------|:---------------|:-----|
+| `asciinema`                | 3.1.0          | 3.2.0          |      |
+| `grafana-infinity-ds`      | 3.7.2          | 3.7.3          |      |
+| `victoria-metrics`         | 1.136.0        | 1.137.0        |      |
+| `victoria-metrics-cluster` | 1.136.0        | 1.137.0        |      |
+| `vmutils`                  | 1.136.0        | 1.137.0        |      |
+| `hugo`                     | 0.155.3        | 0.157.0        |      |
+| `opencode`                 | 1.2.15         | 1.2.17         |      |
+| `rustfs`                   | 1.0.0-alpha.83 | 1.0.0-alpha.85 |      |
+| `seaweedfs`                | 4.13           | 4.15           |      |
+| `tigerbeetle`              | 0.16.74        | 0.16.75        |      |
+| `uv`                       | 0.10.4         | 0.10.8         |      |
+| `codex`                    | 0.105.0        | 0.110.0        |      |
+| `claude`                   | 2.1.59         | 2.1.68         |      |
+| `xray`                     | -              | 26.2.6         | 新增 |
+| `gost`                     | -              | 2.12.0         | 新增 |
+| `sabiql`                   | -              | 1.6.2          | 新增 |
+| `agentsview`               | -              | 0.10.0         | 新增 |
 {.wide .expand}
 
 
@@ -1190,30 +1281,30 @@ a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.1.u24.aarch64.tgz
 - 新增/重建：`pgedge 17.9`，`spock 5.0.5`，`lolor 1.2.2`，`snowflake 2.4`，`babelfish 5.5.0`，`cloudberry 2.0.0`
 - 内核配套：`oriolepg 17.11 -> 17.16`，`orioledb beta12 -> beta14`，`openhalo 14.10 -> 1.0(14.18)`
 
-| 包名                  | 旧版本             | 新版本      | 备注                    |
-|:--------------------|:----------------|:---------|:----------------------|
-| `timescaledb`       | 2.25.0          | 2.25.1   |                       |
-| `citus`             | 14.0.0-3        | 14.0.0-4 | 使用最新官方版本重新构建          |
+| 包名                | 旧版本          | 新版本   | 备注                         |
+|:--------------------|:----------------|:---------|:-----------------------------|
+| `timescaledb`       | 2.25.0          | 2.25.1   |                              |
+| `citus`             | 14.0.0-3        | 14.0.0-4 | 使用最新官方版本重新构建     |
 | `age`               | 1.7.0           | 1.7.0    | 新增 PG 17 的 1.7.0 版本支持 |
-| `pgmq`              | 1.10.0          | 1.10.1   | 当前没有该扩展包              |
-| `pg_search`         | 0.21.7 / 0.21.6 | 0.21.9   | RPM/DEB 旧版本不同         |
-| `oriolepg`          | 17.11           | 17.16    | OriolePG 内核更新         |
-| `orioledb`          | beta12          | beta14   | 配套 OriolePG 17.16     |
+| `pgmq`              | 1.10.0          | 1.10.1   | 当前没有该扩展包             |
+| `pg_search`         | 0.21.7 / 0.21.6 | 0.21.9   | RPM/DEB 旧版本不同           |
+| `oriolepg`          | 17.11           | 17.16    | OriolePG 内核更新            |
+| `orioledb`          | beta12          | beta14   | 配套 OriolePG 17.16          |
 | `openhalo`          | 14.10           | 1.0      | 更新并重命名，14.18          |
-| `pgedge`            | -               | 17.9     | 新增多主边缘分布式内核           |
+| `pgedge`            | -               | 17.9     | 新增多主边缘分布式内核       |
 | `spock`             | -               | 5.0.5    | 新增，pgEdge 核心扩展        |
 | `lolor`             | -               | 1.2.2    | 新增，pgEdge 核心扩展        |
 | `snowflake`         | -               | 2.4      | 新增，pgEdge 核心扩展        |
-| `babelfishpg`       | -               | 5.5.0    | 新增 BabelfishPG 包组     |
-| `babelfish`         | -               | 5.5.0    | 新增 Babelfish 兼容包      |
+| `babelfishpg`       | -               | 5.5.0    | 新增 BabelfishPG 包组        |
+| `babelfish`         | -               | 5.5.0    | 新增 Babelfish 兼容包        |
 | `antlr4-runtime413` | -               | 4.13     | 新增 Babelfish 依赖运行时    |
-| `cloudberry`        | -               | 2.0.0    | 仅 RPM 构建              |
-| `pg_background`     | -               | 1.8      | 仅 DEB 构建              |
+| `cloudberry`        | -               | 2.0.0    | 仅 RPM 构建                  |
+| `pg_background`     | -               | 1.8      | 仅 DEB 构建                  |
 {.wide .expand}
 
 **基础设施软件更新**
 
-| 名称                           | 旧版本            | 新版本            |
+| 名称                         | 旧版本         | 新版本         |
 |:-----------------------------|:---------------|:---------------|
 | `grafana`                    | 12.3.2         | 12.4.0         |
 | `prometheus`                 | 3.9.1          | 3.10.0         |
@@ -1347,17 +1438,17 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 
 [Infra Changelog 2026-02-12](/docs/repo/infra/log/#2026-02-12)
 
-| 软件包                 | 版本      | 软件包               | 版本       |
-|---------------------|---------|-------------------|----------|
-| victoria-metrics    | 1.135.0 | victoria-logs     | 1.45.0   |
-| vector              | 0.53.0  | grafana           | 12.3.2   |
-| alertmanager        | 0.31.1  | etcd              | 3.6.7    |
-| duckdb              | 1.4.4   | pg_exporter       | 1.2.0    |
-| pig                 | 1.1.0   | claude            | 2.1.37   |
-| opencode            | 1.1.59  | uv                | 0.10.0   |
-| code-server         | 4.108.2 | caddy             | 2.10.2   |
-| hugo                | 0.155.2 | cloudflared       | 2026.2.0 |
-| headscale           | 0.28.0  |                   |          |
+| 软件包           | 版本    | 软件包        | 版本     |
+|------------------|---------|---------------|----------|
+| victoria-metrics | 1.135.0 | victoria-logs | 1.45.0   |
+| vector           | 0.53.0  | grafana       | 12.3.2   |
+| alertmanager     | 0.31.1  | etcd          | 3.6.7    |
+| duckdb           | 1.4.4   | pg_exporter   | 1.2.0    |
+| pig              | 1.1.0   | claude        | 2.1.37   |
+| opencode         | 1.1.59  | uv            | 0.10.0   |
+| code-server      | 4.108.2 | caddy         | 2.10.2   |
+| hugo             | 0.155.2 | cloudflared   | 2026.2.0 |
+| headscale        | 0.28.0  |               |          |
 
 **API 变化**
 
@@ -1529,7 +1620,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 
 MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
-| 软件包                 | 版本      | 软件包               | 版本       |
+| 软件包              | 版本    | 软件包            | 版本     |
 |---------------------|---------|-------------------|----------|
 | victoria-metrics    | 1.134.0 | victoria-logs     | 1.43.1   |
 | vector              | 0.52.0  | grafana           | 12.3.1   |
@@ -1565,7 +1656,7 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
 **可观测性栈**
 
-| 旧组件        | 新组件             |
+| 旧组件     | 新组件          |
 |------------|-----------------|
 | Prometheus | VictoriaMetrics |
 | Loki       | VictoriaLogs    |
@@ -1574,22 +1665,22 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
 **参数变更**
 
-| 移除                         | 替代                                                  |
+| 移除                       | 替代                                                |
 |----------------------------|-----------------------------------------------------|
 | `node_disable_firewall`    | `node_firewall_mode` (off/none/zone)                |
 | `node_disable_selinux`     | `node_selinux_mode` (disabled/permissive/enforcing) |
-| `pg_pwd_enc`               | 已移除，统一使用 scram-sha-256                              |
+| `pg_pwd_enc`               | 已移除，统一使用 scram-sha-256                      |
 | `infra_pip_packages`       | `node_pip_packages`                                 |
 | `code_home`/`jupyter_home` | `vibe_data`                                         |
 {.full-width}
 
 **默认值变更**
 
-| 参数                         | 变化                 |
-|----------------------------|--------------------|
-| `grafana_clean`            | true → false       |
-| `effective_io_concurrency` | 1000 → 200         |
-| `install.yml`              | 重命名为 `deploy.yml`  |
+| 参数                       | 变化                  |
+|----------------------------|-----------------------|
+| `grafana_clean`            | true → false          |
+| `effective_io_concurrency` | 1000 → 200            |
+| `install.yml`              | 重命名为 `deploy.yml` |
 {.full-width}
 
 **可观测性**
@@ -1724,47 +1815,47 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
 **新增参数**
 
-| 参数                       | 类型     | 默认值           | 说明                                 |
-|--------------------------|--------|---------------|------------------------------------|
+| 参数                     | 类型   | 默认值        | 说明                                          |
+|--------------------------|--------|---------------|-----------------------------------------------|
 | `node_firewall_mode`     | enum   | none (v4.0)   | 防火墙模式：off/none/zone（v4.1 起默认 zone） |
-| `node_selinux_mode`      | enum   | permissive    | SELinux 模式                         |
-| `node_firewall_intranet` | string | -             | HBA 信任的内网网段                        |
-| `node_admin_sudo`        | enum   | nopass        | 管理员 sudo 权限级别                      |
-| `pg_io_method`           | enum   | worker        | I/O 方法：auto/sync/worker/io_uring   |
-| `pg_rto_plan`            | dict   | -             | RTO 预设：fast/norm/safe/wide         |
-| `pg_crontab`             | list   | []            | postgres dbsu 定时任务                 |
-| `vip_auth_pass`          | string | -             | VRRP 认证密码                          |
-| `grafana_pgurl`          | string | -             | Grafana PG 后端连接字符串                 |
-| `grafana_view_password`  | string | DBUser.Viewer | Grafana Meta 数据源密码                 |
-| `infra_extra_services`   | list   | []            | 首页额外服务入口                           |
-| `juice_cache`            | path   | /data/juice   | JuiceFS 共享缓存目录                     |
-| `juice_instances`        | dict   | {}            | JuiceFS 实例定义                       |
-| `vibe_data`              | path   | /fs           | VIBE 工作空间目录                        |
-| `code_enabled`           | bool   | true          | 是否启用 Code-Server                   |
-| `code_port`              | port   | 8443          | Code-Server 监听端口                   |
-| `code_data`              | path   | /data/code    | Code-Server 数据目录                   |
-| `code_password`          | string | Vibe.Coding   | Code-Server 登录密码                   |
-| `code_gallery`           | enum   | openvsx       | 扩展市场：openvsx/microsoft             |
-| `jupyter_enabled`        | bool   | true          | 是否启用 JupyterLab                    |
-| `jupyter_port`           | port   | 8888          | JupyterLab 监听端口                    |
-| `jupyter_data`           | path   | /data/jupyter | JupyterLab 数据目录                    |
-| `jupyter_password`       | string | Vibe.Coding   | JupyterLab 登录 Token                |
-| `jupyter_venv`           | path   | /data/venv    | Python 虚拟环境路径                      |
-| `claude_enabled`         | bool   | true          | 是否启用 Claude Code 配置                |
-| `claude_env`             | dict   | {}            | Claude Code 额外环境变量                 |
-| `nodejs_enabled`         | bool   | true          | 是否启用 Node.js 安装                    |
-| `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像              |
-| `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                  |
-| `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                  |
+| `node_selinux_mode`      | enum   | permissive    | SELinux 模式                                  |
+| `node_firewall_intranet` | string | -             | HBA 信任的内网网段                            |
+| `node_admin_sudo`        | enum   | nopass        | 管理员 sudo 权限级别                          |
+| `pg_io_method`           | enum   | worker        | I/O 方法：auto/sync/worker/io_uring           |
+| `pg_rto_plan`            | dict   | -             | RTO 预设：fast/norm/safe/wide                 |
+| `pg_crontab`             | list   | []            | postgres dbsu 定时任务                        |
+| `vip_auth_pass`          | string | -             | VRRP 认证密码                                 |
+| `grafana_pgurl`          | string | -             | Grafana PG 后端连接字符串                     |
+| `grafana_view_password`  | string | DBUser.Viewer | Grafana Meta 数据源密码                       |
+| `infra_extra_services`   | list   | []            | 首页额外服务入口                              |
+| `juice_cache`            | path   | /data/juice   | JuiceFS 共享缓存目录                          |
+| `juice_instances`        | dict   | {}            | JuiceFS 实例定义                              |
+| `vibe_data`              | path   | /fs           | VIBE 工作空间目录                             |
+| `code_enabled`           | bool   | true          | 是否启用 Code-Server                          |
+| `code_port`              | port   | 8443          | Code-Server 监听端口                          |
+| `code_data`              | path   | /data/code    | Code-Server 数据目录                          |
+| `code_password`          | string | Vibe.Coding   | Code-Server 登录密码                          |
+| `code_gallery`           | enum   | openvsx       | 扩展市场：openvsx/microsoft                   |
+| `jupyter_enabled`        | bool   | true          | 是否启用 JupyterLab                           |
+| `jupyter_port`           | port   | 8888          | JupyterLab 监听端口                           |
+| `jupyter_data`           | path   | /data/jupyter | JupyterLab 数据目录                           |
+| `jupyter_password`       | string | Vibe.Coding   | JupyterLab 登录 Token                         |
+| `jupyter_venv`           | path   | /data/venv    | Python 虚拟环境路径                           |
+| `claude_enabled`         | bool   | true          | 是否启用 Claude Code 配置                     |
+| `claude_env`             | dict   | {}            | Claude Code 额外环境变量                      |
+| `nodejs_enabled`         | bool   | true          | 是否启用 Node.js 安装                         |
+| `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像                |
+| `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                |
+| `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                    |
 {.full-width .wide .expand}
 
 **兼容性**
 
-| 操作系统               | x86_64 | aarch64 |
+| 操作系统           | x86_64 | aarch64 |
 |--------------------|:------:|:-------:|
-| EL 8/9/10          |   ✅    |    ✅    |
-| Debian 11/12/13    |   ✅    |    ✅    |
-| Ubuntu 22.04/24.04 |   ✅    |    ✅    |
+| EL 8/9/10          |   ✅   |   ✅    |
+| Debian 11/12/13    |   ✅   |   ✅    |
+| Ubuntu 22.04/24.04 |   ✅   |   ✅    |
 {.full-width}
 
 **PostgreSQL**: 13, 14, 15, 16, 17, 18
@@ -2673,12 +2764,12 @@ e62f9ce9f89a58958609da7b234bf2f2  pigsty-v3.1.0.tgz
 
 欢迎查阅我们最新的 PostgreSQL 扩展目录： /ext/
 
-|   统计项   | 总计  | PGDG | PIGSTY | MISC | MISS | PG17 | PG16 | PG15 | PG14 | PG13 | PG12 |
-|:-------:|:---:|:----:|:------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| EL 系统扩展  | 338 | 134  |  130   |  4   |  7   | 298  | 334  | 336  | 328  | 319  | 310  |
-| Deb 系统扩展 | 326 | 109  |  143   |  74  |  19  | 290  | 322  | 324  | 316  | 307  | 300  |
-| RPM 软件包 | 313 | 122  |  129   |  4   |  6   | 275  | 309  | 311  | 303  | 294  | 285  |
-| DEB 软件包 | 298 |  93  |  142   |  64  |  19  | 264  | 294  | 296  | 288  | 279  | 272  |
+|    统计项    | 总计 | PGDG | PIGSTY | MISC | MISS | PG17 | PG16 | PG15 | PG14 | PG13 | PG12 |
+|:------------:|:----:|:----:|:------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| EL 系统扩展  | 338  | 134  |  130   |  4   |  7   | 298  | 334  | 336  | 328  | 319  | 310  |
+| Deb 系统扩展 | 326  | 109  |  143   |  74  |  19  | 290  | 322  | 324  | 316  | 307  | 300  |
+|  RPM 软件包  | 313  | 122  |  129   |  4   |  6   | 275  | 309  | 311  | 303  | 294  | 285  |
+|  DEB 软件包  | 298  |  93  |  142   |  64  |  19  | 264  | 294  | 296  | 288  | 279  | 272  |
 {.wide .expand}
 
 **版本升级**

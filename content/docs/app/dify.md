@@ -53,7 +53,7 @@ Pigsty 为 Dify 提供声明式部署，并可使用镜像解决中国地区的�
 部署 Compose Redis、VictoriaMetrics/Grafana 监控与 Nginx 反向代理；满足公网 DNS、端口和 Certbot 配置后，还可申请 Let's Encrypt 证书。
 文件默认保存到 `DIFY_DATA`（`/data/dify`），也可按需接入 Silo/S3 对象存储。
 
-当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件与插件数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Compose 内置 Redis 的数据仍位于 `/opt/dify/volumes/redis/data`，Sandbox 依赖与 Certbot 数据也位于 `/opt/dify/volumes/`，Agent 本地沙箱的 `/home/dify` 与 `/workspace` 还使用独立命名卷，因此备份时不能只保留数据库和宿主机目录。
+当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件、插件数据与 Compose 内置 Redis 的数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Sandbox 依赖与 Certbot 数据仍位于 `/opt/dify/volumes/`，Agent 本地沙箱的 `/home/dify` 与 `/workspace` 还使用独立命名卷，因此备份时不能只保留数据库和宿主机目录。
 
 ------
 
@@ -91,7 +91,7 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
 
 ## 配置
 
-当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和当前环境生成配置文件。以下快照与 v4.5.0 源模板同步：
+当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和当前环境生成配置文件。以下快照与当前开发版源模板同步：
 
 {{< include file="/docs/conf/yaml/app/dify.yml" code=true lang="yaml" >}}
 
@@ -208,7 +208,7 @@ Agent 功能仍为 Beta，只应向可信用户开放。`SSRF_PROXY_ALLOW_PRIVAT
 
 ## 文件备份
 
-您可以使用 `restic` 备份 Dify 的文件状态。当前模板至少需要保留 `/data/dify`、`/opt/dify/.env` 与 `/opt/dify/volumes/`；其中后者包含 Compose Redis、Sandbox 依赖和可能存在的 Certbot 数据。PostgreSQL 中的 Dify 数据仍应使用 Pigsty/pgBackRest 单独备份。还需单独备份 `dify_agent_local_sandbox_home` 与 `dify_agent_local_sandbox_workspace` 命名卷（实际名称带 Compose 项目前缀）；下面的 Restic 命令不包含这两个卷。
+您可以使用 `restic` 备份 Dify 的文件状态。当前模板至少需要保留 `/data/dify`、`/opt/dify/.env` 与 `/opt/dify/volumes/`；其中后者包含 Sandbox 依赖和可能存在的 Certbot 数据，Compose Redis 数据位于 `/data/dify/redis/data`。PostgreSQL 中的 Dify 数据仍应使用 Pigsty/pgBackRest 单独备份。还需单独备份 `dify_agent_local_sandbox_home` 与 `dify_agent_local_sandbox_workspace` 命名卷（实际名称带 Compose 项目前缀）；下面的 Restic 命令不包含这两个卷。
 
 ```bash
 export RESTIC_REPOSITORY=/data/backups/dify   # 指定 dify 备份目录

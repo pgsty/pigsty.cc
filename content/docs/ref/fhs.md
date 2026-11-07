@@ -21,11 +21,16 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
 - bin/   {open=false}
   - 管理与运维脚本
 - conf/
-  - pgsql.yml
-  - mssql.yml
-  - … · 其他内核变体模板
+  - meta.yml
+  - … · 其他单节点模板
+  - fork/   {open=false}
+    - 内核分支模板（pgsql、mssql、ivory 等）
   - ha/   {open=false}
     - 高可用拓扑模板
+  - app/   {open=false}
+    - 应用模板
+  - demo/   {open=false}
+    - 演示模板
   - build/   {open=false}
     - 多平台构建清单
 - files/
@@ -53,7 +58,7 @@ Pigsty 的主目录默认放置于 `~/pigsty`，该目录下的文件结构如�
 - *.yml
 ```
 
-内核模板位于 `conf/` 根目录；开发版迁入 `conf/fork/`。选择配置时以所用源码中的实际路径为准，见 [**配置模板**](/docs/conf/)。
+内核分支模板位于 `conf/fork/`（`v4.5.0` 发布包中位于 `conf/` 根目录）。选择配置时以所用源码中的实际路径为准，见 [**配置模板**](/docs/conf/)。
 
 `/infra` 是 `/data/infra` 的运行时软链接，集中存放可观测性数据与生成的配置：
 
@@ -330,7 +335,11 @@ Pigsty 自行渲染的 INFRA 单元统一位于 `/etc/systemd/system/`，包括 
         - { path: "{{ pg_cluster_dir }}/data"   ,mode: "0700" }
         - { path: "{{ pg_cluster_dir }}/spool"  ,mode: "0700" }
         - { path: "{{ pg_backup_dir }}/backup"  ,mode: "0700" }
-        - { path: "/var/run/postgresql"         ,owner: root, group: root, mode: "0755" }
+        - { path: "/var/run/postgresql"         ,mode: "0755" }
+        - { path: "/etc/patroni"                ,mode: "0700" }
+        - { path: "/etc/pgbackrest"             ,mode: "0700" }
+        - { path: "/etc/pgbouncer"              ,mode: "0700" }
+        - { path: "/etc/pg_exporter"            ,mode: "0700" }
 
     - name: link pgsql directories
       file: src={{ item.src }} dest={{ item.dest }} state=link

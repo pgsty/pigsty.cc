@@ -200,10 +200,10 @@ node-test:
 除此之外，在 Pigsty 监控系统中，节点还有两个重要的身份参数：[`nodename`](#nodename) 与 [`node_cluster`](#node_cluster)，这两者将在监控系统中被用作节点的 **实例标识**（`ins`） 与 **集群标识** （`cls`）。
 
 ```yaml
-node_load1{cls="pg-meta", ins="pg-meta-1", ip="10.10.10.10", job="nodes"}
-node_load1{cls="pg-test", ins="pg-test-1", ip="10.10.10.11", job="nodes"}
-node_load1{cls="pg-test", ins="pg-test-2", ip="10.10.10.12", job="nodes"}
-node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
+node_load1{cls="pg-meta", ins="pg-meta-1", ip="10.10.10.10", job="node"}
+node_load1{cls="pg-test", ins="pg-test-1", ip="10.10.10.11", job="node"}
+node_load1{cls="pg-test", ins="pg-test-2", ip="10.10.10.12", job="node"}
+node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="node"}
 ```
 
 在执行默认的 PostgreSQL 部署时，因为 Pigsty 默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（[`pg_cluster`](/docs/pgsql/param#pg_cluster) 借用至节点的 `ins` 与 `cls` 标签上。
@@ -361,7 +361,7 @@ node_dns_options:                 # dns resolv options in `/etc/resolv.conf`
 
 如何配置 DNS 服务器？有三种选项：`add`、`none`、`overwrite`，默认值为 `add`。
 
-* `add`：将 [`node_dns_servers`](#node_dns_servers) 中的记录 **追加** 至 `/etc/resolv.conf`，并保留已有 DNS 服务器。（默认）
+* `add`：将 [`node_dns_servers`](#node_dns_servers) 中的记录写入 `/etc/resolv.conf`，置于已有 DNS 服务器 **之前**，并保留已有 DNS 服务器。（默认）
 * `overwrite`：使用将 [`node_dns_servers`](#node_dns_servers) 中的记录覆盖 `/etc/resolv.conf`
 * `none`：跳过 DNS 服务器配置，如果您的环境中已经配置有 DNS 服务器，则可以直接跳过 DNS 配置。
 
@@ -941,7 +941,7 @@ Pigsty 默认使用 `nopass` 模式，管理员用户可以无需密码执行任
 
 是否将当前节点 & 用户的公钥加入管理员账户，默认值是： `true`
 
-启用时，将会把当前节点上执行此剧本的管理用户的 SSH 公钥（`~/.ssh/id_rsa.pub`）拷贝至目标节点管理员用户的 `authorized_keys` 中。
+启用时，将会把当前节点上执行此剧本的管理用户的 SSH 公钥（`~/.ssh/id*.pub`）拷贝至目标节点管理员用户的 `authorized_keys` 中。
 
 生产环境部署时，请务必注意此参数，此参数会将当前执行命令用户的默认公钥安装至所有机器的管理用户上。
 
@@ -1360,7 +1360,7 @@ haproxy_services:                   # list of haproxy service
     ip: "*"                         # [OPTIONAL] service listen addr, "*" by default
     protocol: tcp                   # [OPTIONAL] service protocol, 'tcp' by default
     balance: leastconn              # [OPTIONAL] load balance algorithm, roundrobin by default (or leastconn)
-    maxconn: 20000                  # [OPTIONAL] max allowed front-end connection, 20000 by default
+    maxconn: 20000                  # [OPTIONAL] max allowed front-end connection, 10000 by default
     default: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
     options:
       - option httpchk
@@ -1439,9 +1439,9 @@ node_exporter_options: '--no-collector.softnet --no-collector.nvme --collector.t
 Vector 是 Pigsty 自 v4 起使用的日志收集组件，会收集各个模块产生的日志并发送至基础设施节点上的 VictoriaLogs 服务。
 
 * `INFRA`： 基础设施组件的日志只会在 Infra 节点上收集。
-    * `nginx-access`: `/var/log/nginx/access.log`
-    * `nginx-error`: `/var/log/nginx/error.log`
-    * `grafana`: `/var/log/grafana/grafana.log`
+    * `nginx-access`: `/var/log/nginx/*.log`
+    * `nginx-error`: `/var/log/nginx-error.log`
+    * `grafana`: `/var/log/grafana/*.log`
 
 * `NODES`：主机相关日志，所有节点上都会启用收集。
     * 通过 `journald` 统一采集系统服务日志（`job=syslog`），不依赖固定的 `/var/log/*` 文件路径。
@@ -1449,13 +1449,12 @@ Vector 是 Pigsty 自 v4 起使用的日志收集组件，会收集各个模块�
 * `PGSQL`：PostgreSQL 相关的日志，只有节点配置了 [PGSQL](/docs/pgsql) 模块才会启用收集。
     * `postgres`: `/pg/log/postgres/*`
     * `patroni`: `/pg/log/patroni/patroni.log`（`job=patroni`）
-    * `pgbouncer`: `/pg/log/pgbouncer/pgbouncer.log`
     * `pgbackrest`: `/pg/log/pgbackrest/*.log`
 
 * `REDIS`：Redis 相关日志，只有节点配置了 [REDIS](/docs/redis) 模块才会启用收集。
     * `redis`: `/var/log/redis/*.log`
 
-> 日志目录会根据这些参数的配置自动调整：[`pg_log_dir`](/docs/pgsql/param#pg_log_dir), [`patroni_log_dir`](/docs/pgsql/param#patroni_log_dir), [`pgbouncer_log_dir`](/docs/pgsql/param#pgbouncer_log_dir), [`pgbackrest_log_dir`](/docs/pgsql/param#pgbackrest_log_dir)
+> 日志目录会根据这些参数的配置自动调整：[`pg_log_dir`](/docs/pgsql/param#pg_log_dir), [`patroni_log_dir`](/docs/pgsql/param#patroni_log_dir), [`pgbackrest_log_dir`](/docs/pgsql/param#pgbackrest_log_dir)
 
 
 ```yaml

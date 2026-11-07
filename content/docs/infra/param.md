@@ -603,15 +603,18 @@ Pigsty 默认会在基础设施节点 80/443 端口启动 Nginx，对外提供�
 模块以逗号分隔，可用的模块列表请参考 `repo_upstream` 中的定义，常见模块包括：
 
 - `local`：本地 Pigsty 仓库
-- `infra`：基础设施软件包（Nginx、Docker 等）
+- `infra`：Pigsty INFRA 仓库，提供基础设施软件包
 - `node`：操作系统基础软件包
 - `pgsql`：PostgreSQL 相关软件包
 - `extra`：额外的 PostgreSQL 扩展
-- `docker`：Docker 相关
+- `nginx`：Nginx 官方仓库
+- `docker`：Docker CE 官方仓库
 - `redis`：Redis 相关
 - `mongo`：MongoDB 相关
 - `mysql`：MySQL 相关
 - 等等...
+
+2026-09-20 起的开发源码将 Docker 仓库与 EL 平台的 Nginx 仓库从 `infra` 拆分为独立的 `docker`、`nginx` 模块；`v4.5.0` 发布包中它们仍归属 `infra`。
 
 
 
@@ -938,7 +941,7 @@ Nginx SSL 默认监听的端口，默认为 `443`，最好不要修改这个参�
 
 是否在安装过程中使用 certbot 签署 Nginx 证书？默认值为 `false`。
 
-当设置为 `true` 时，Pigsty 会在执行 `infra.yml` 和 `deploy.yml` 剧本（`nginx` 角色）期间使用 certbot 自动从 Let's Encrypt 申请免费 SSL 证书。
+当设置为 `true` 时，Pigsty 会在执行 `infra.yml` 和 `deploy.yml` 剧本（`infra` 角色的 `nginx_certbot` 任务）期间使用 certbot 自动从 Let's Encrypt 申请免费 SSL 证书。
 
 在 [`infra_portal`](#infra_portal) 定义的域名中，如果定义了 `certbot` 参数，Pigsty 将使用 certbot 为 `domain` 域名申请证书，证书名称将是 `certbot` 参数的值。如果多个服务器/域名指定了相同的 `certbot` 参数，Pigsty 会合并并为这些域名申请一个证书，使用 `certbot` 参数的值作为证书名称。
 

@@ -1,7 +1,7 @@
 ---
 title: "pg_rational"
 linkTitle: "pg_rational"
-description: "使用BIGINT表示的有理数数据类型"
+description: "以两个 32 位整数（分子/分母）表示的精确分数类型"
 weight: 3740
 ---
 

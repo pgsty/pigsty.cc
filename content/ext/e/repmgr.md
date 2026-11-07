@@ -11,6 +11,11 @@ weight: 9710
     <div class="ext-card__title">EnterpriseDB/repmgr</div>
     <div class="ext-card__desc">https://github.com/EnterpriseDB/repmgr</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/repmgr-5.5.1.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">repmgr-5.5.1.tar.gz</div>
+    <div class="ext-card__desc">repmgr-5.5.1.tar.gz</div>
+  </a>
 </div>
 
 
@@ -20,12 +25,12 @@ weight: 9710
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`repmgr`**](/ext/e/repmgr) | `5.5.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`repmgr`**](/ext/e/repmgr) | `5.5.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9710  | [**`repmgr`**](/ext/e/repmgr) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `repmgr` |
+| 9710  | [**`repmgr`**](/ext/e/repmgr) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `repmgr` |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`pg_failover_slots`](/ext/e/pg_failover_slots) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pgautofailover`](/ext/e/pgautofailover) [`pgpool_adm`](/ext/e/pgpool_adm) [`pglogical`](/ext/e/pglogical) [`pgactive`](/ext/e/pgactive) [`pglogical_ticker`](/ext/e/pglogical_ticker) |
@@ -37,7 +42,7 @@ weight: 9710
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `repmgr` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.1` | {{< pgvers "18,17,16,15,14" >}} | `repmgr` | - |
 | [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `repmgr_$v` | - |
 | [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-repmgr` | - |
 {.ext-table .wide .expand}
@@ -45,12 +50,12 @@ weight: 9710
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 7 |
-| el8.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 4 |
-| el9.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 6 |
-| el9.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 4 |
-| el10.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 |
-| el10.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 |
+| el8.x86_64 | AVAIL PGDG 5.5.1 2 | AVAIL PGDG 5.5.1 2 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 5 | AVAIL PGDG 5.5.1 8 |
+| el8.aarch64 | AVAIL PGDG 5.5.1 2 | AVAIL PGDG 5.5.1 2 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 5 | AVAIL PGDG 5.5.1 5 |
+| el9.x86_64 | AVAIL PGDG 5.5.1 4 | AVAIL PGDG 5.5.1 2 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 5 | AVAIL PGDG 5.5.1 7 |
+| el9.aarch64 | AVAIL PGDG 5.5.1 4 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 4 | AVAIL PGDG 5.5.1 5 | AVAIL PGDG 5.5.1 5 |
+| el10.x86_64 | AVAIL PGDG 5.5.1 4 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 |
+| el10.aarch64 | AVAIL PGDG 5.5.1 4 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 | AVAIL PGDG 5.5.1 3 |
 | d12.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | d12.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | d13.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
@@ -61,17 +66,23 @@ weight: 9710
 | u24.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | u26.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | u26.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
+@ el8.x86_64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.1 298.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/repmgr_18-5.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 295.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/repmgr_18-5.5.0-6PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.1 288.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/repmgr_18-5.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 285.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/repmgr_18-5.5.0-6PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 5.5.1 268.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/repmgr_18-5.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 repmgr_18 repmgr_18-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 266.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/repmgr_18-5.5.0-7PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel9.7.x86_64.rpm pgdg 5.5.0 266.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/repmgr_18-5.5.0-6PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel9.6.x86_64.rpm pgdg 5.5.0 267.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/repmgr_18-5.5.0-6PGDG.rhel9.6.x86_64.rpm
+@ el9.aarch64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.1 261.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/repmgr_18-5.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 repmgr_18 repmgr_18-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 260.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/repmgr_18-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel9.7.aarch64.rpm pgdg 5.5.0 260.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/repmgr_18-5.5.0-6PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel9.6.aarch64.rpm pgdg 5.5.0 260.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/repmgr_18-5.5.0-6PGDG.rhel9.6.aarch64.rpm
+@ el10.x86_64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.1 271.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/repmgr_18-5.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 repmgr_18 repmgr_18-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 269.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/repmgr_18-5.5.0-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDGrhel10.1.x86_64.rpm pgdg 5.5.0 269.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/repmgr_18-5.5.0-6PGDGrhel10.1.x86_64.rpm
 @ el10.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDGrhel10.0.x86_64.rpm pgdg 5.5.0 270.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/repmgr_18-5.5.0-6PGDGrhel10.0.x86_64.rpm
+@ el10.aarch64 18 repmgr_18 repmgr_18-5.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.1 262.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/repmgr_18-5.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 repmgr_18 repmgr_18-5.5.0-7PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 261.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/repmgr_18-5.5.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDGrhel10.1.aarch64.rpm pgdg 5.5.0 261.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/repmgr_18-5.5.0-6PGDGrhel10.1.aarch64.rpm
 @ el10.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDGrhel10.0.aarch64.rpm pgdg 5.5.0 261.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/repmgr_18-5.5.0-6PGDGrhel10.0.aarch64.rpm
@@ -85,13 +96,19 @@ weight: 9710
 @ u24.aarch64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 208.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
 @ u26.x86_64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 209.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.1 298.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/repmgr_17-5.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 295.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.1 288.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/repmgr_17-5.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 285.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 5.5.1 268.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/repmgr_17-5.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 266.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/repmgr_17-5.5.0-7PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.1 262.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/repmgr_17-5.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 260.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/repmgr_17-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 261.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/repmgr_17-5.5.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.1 271.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/repmgr_17-5.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 270.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/repmgr_17-5.5.0-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 repmgr_17 repmgr_17-5.5.0-3PGDG.rhel10.x86_64.rpm pgdg 5.5.0 270.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/repmgr_17-5.5.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 repmgr_17 repmgr_17-5.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.1 262.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/repmgr_17-5.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 261.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/repmgr_17-5.5.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 repmgr_17 repmgr_17-5.5.0-3PGDG.rhel10.aarch64.rpm pgdg 5.5.0 261.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/repmgr_17-5.5.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb pgdg 5.5.0 246.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb
@@ -104,17 +121,23 @@ weight: 9710
 @ u24.aarch64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 207.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
 @ u26.x86_64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 234.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 209.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.1 295.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/repmgr_16-5.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 293.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/repmgr_16-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 291.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/repmgr_16-5.4.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.1 285.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 282.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel8.aarch64.rpm pgdg 5.4.1 280.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.4.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 5.5.1 268.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 266.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.5.0-7PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 266.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.4.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.1 261.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 260.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 261.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.5.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel9.aarch64.rpm pgdg 5.4.1 261.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.4.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.1 271.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/repmgr_16-5.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 269.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/repmgr_16-5.5.0-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 repmgr_16 repmgr_16-5.5.0-3PGDG.rhel10.x86_64.rpm pgdg 5.5.0 270.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/repmgr_16-5.5.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 repmgr_16 repmgr_16-5.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.1 262.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/repmgr_16-5.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 261.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/repmgr_16-5.5.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 repmgr_16 repmgr_16-5.5.0-3PGDG.rhel10.aarch64.rpm pgdg 5.5.0 261.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/repmgr_16-5.5.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb pgdg 5.5.0 244.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb
@@ -127,24 +150,30 @@ weight: 9710
 @ u24.aarch64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 205.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
 @ u26.x86_64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 231.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 207.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.1 294.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 291.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 290.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.4.0-1.rhel8.x86_64.rpm pgdg 5.4.0 289.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.4.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.3.3-1.rhel8.x86_64.rpm pgdg 5.3.3 286.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.3.3-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.1 284.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 282.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel8.aarch64.rpm pgdg 5.4.1 280.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.4.0-1.rhel8.aarch64.rpm pgdg 5.4.0 280.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.3.3-1.rhel8.aarch64.rpm pgdg 5.3.3 276.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.3.3-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 5.5.1 270.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 268.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.5.0-7PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 268.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 268.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.4.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.3.3-1.rhel9.x86_64.rpm pgdg 5.3.3 266.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.3.3-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.1 263.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/repmgr_15-5.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 repmgr_15 repmgr_15-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 261.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/repmgr_15-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 repmgr_15 repmgr_15-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 263.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/repmgr_15-5.5.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel9.aarch64.rpm pgdg 5.4.1 263.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/repmgr_15-5.4.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 repmgr_15 repmgr_15-5.4.0-1.rhel9.aarch64.rpm pgdg 5.4.0 262.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/repmgr_15-5.4.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.1 271.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/repmgr_15-5.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 repmgr_15 repmgr_15-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 270.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/repmgr_15-5.5.0-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 repmgr_15 repmgr_15-5.5.0-3PGDG.rhel10.x86_64.rpm pgdg 5.5.0 270.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/repmgr_15-5.5.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 repmgr_15 repmgr_15-5.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.1 263.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/repmgr_15-5.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 repmgr_15 repmgr_15-5.5.0-7PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 261.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/repmgr_15-5.5.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 repmgr_15 repmgr_15-5.5.0-3PGDG.rhel10.aarch64.rpm pgdg 5.5.0 262.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/repmgr_15-5.5.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb pgdg 5.5.0 243.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb
@@ -157,6 +186,7 @@ weight: 9710
 @ u24.aarch64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 206.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
 @ u26.x86_64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 231.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 206.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.1 292.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.5.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 289.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 288.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.4.0-1.rhel8.x86_64.rpm pgdg 5.4.0 288.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.4.0-1.rhel8.x86_64.rpm
@@ -164,22 +194,27 @@ weight: 9710
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.3.2-1.rhel8.x86_64.rpm pgdg 5.3.2 296.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.3.2-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.3.1-1.rhel8.x86_64.rpm pgdg 5.3.1 296.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.3.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.3.0-1.rhel8.x86_64.rpm pgdg 5.3.0 296.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.3.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.1 283.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.5.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 280.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel8.aarch64.rpm pgdg 5.4.1 279.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.4.0-1.rhel8.aarch64.rpm pgdg 5.4.0 278.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.3.3-1.rhel8.aarch64.rpm pgdg 5.3.3 275.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.3.3-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel9.8.x86_64.rpm pgdg 5.5.1 269.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.5.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 268.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.5.0-7PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 268.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 267.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.4.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.3.3-1.rhel9.x86_64.rpm pgdg 5.3.3 266.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.3.3-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.3.2-1.rhel9.x86_64.rpm pgdg 5.3.2 279.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.3.2-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.3.1-1.rhel9.x86_64.rpm pgdg 5.3.1 278.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.3.1-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.1 262.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/repmgr_14-5.5.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 repmgr_14 repmgr_14-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 261.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/repmgr_14-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 repmgr_14 repmgr_14-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 262.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/repmgr_14-5.5.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel9.aarch64.rpm pgdg 5.4.1 262.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/repmgr_14-5.4.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 repmgr_14 repmgr_14-5.4.0-1.rhel9.aarch64.rpm pgdg 5.4.0 262.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/repmgr_14-5.4.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.1 271.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/repmgr_14-5.5.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 repmgr_14 repmgr_14-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 269.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/repmgr_14-5.5.0-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 repmgr_14 repmgr_14-5.5.0-3PGDG.rhel10.x86_64.rpm pgdg 5.5.0 269.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/repmgr_14-5.5.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 repmgr_14 repmgr_14-5.5.1-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.1 262.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/repmgr_14-5.5.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 repmgr_14 repmgr_14-5.5.0-7PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 260.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/repmgr_14-5.5.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 repmgr_14 repmgr_14-5.5.0-3PGDG.rhel10.aarch64.rpm pgdg 5.5.0 261.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/repmgr_14-5.5.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb pgdg 5.5.0 243.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg12+1_amd64.deb
@@ -193,6 +228,14 @@ weight: 9710
 @ u26.x86_64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 230.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
 @ u26.aarch64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 206.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `repmgr` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg repmgr         # 构建 RPM / DEB 包
+```
 
 
 ## 安装
@@ -247,16 +290,23 @@ shared_preload_libraries = 'repmgr';
 CREATE EXTENSION repmgr;
 ```
 
-
-
-
 ## 用法
 
-> [repmgr: PostgreSQL 复制管理器](https://github.com/EnterpriseDB/repmgr)
+来源：
 
-一套用于管理 PostgreSQL 集群复制和故障转移的工具。支持搭建备库服务器、监控复制状态以及执行故障转移/计划切换。
+- [README v5.5.1](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/README.md)
+- [Control](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/repmgr.control)
+- [SQL 5.5](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/repmgr--5.5.sql)
+- [Quickstart](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/doc/quickstart.xml)
+- [repmgrd configuration](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/doc/repmgrd-configuration.xml)
+- [Upgrade guide](https://github.com/EnterpriseDB/repmgr/blob/v5.5.1/doc/upgrading-repmgr.xml)
+- [5.5.1 release](https://github.com/EnterpriseDB/repmgr/releases/tag/v5.5.1)
+
+`repmgr` 管理 PostgreSQL 物理复制、监控与故障切换。发行版 5.5.1 支持 PostgreSQL 13–18，SQL 扩展版本仍为 5.5；它修复了向外部通知命令替换参数时的转义问题。集群各节点应使用同一 repmgr 发布版本。
 
 ### 启用
+
+使用独立的元数据数据库与管理角色，并配置复制连接及所需的 SSH 访问。上游快速入门使用超级用户角色；普通角色需要为高权限操作提供 `--superuser`。以下 SQL 应在元数据数据库内以足够权限执行：
 
 ```sql
 CREATE EXTENSION repmgr;
@@ -282,23 +332,23 @@ repmgr -f /etc/repmgr.conf primary register
 ### 克隆并注册备节点
 
 ```bash
-# 从主节点克隆
+# Clone from primary
 repmgr -h primary-host -U repmgr -d repmgr -f /etc/repmgr.conf standby clone
 
-# 启动备节点
+# Start the standby
 pg_ctl -D /var/lib/postgresql/data start
 
-# 注册备节点
+# Register the standby
 repmgr -f /etc/repmgr.conf standby register
 ```
 
 ### 监控
 
 ```bash
-# 显示集群状态
+# Show cluster status
 repmgr -f /etc/repmgr.conf cluster show
 
-# 显示复制状态
+# Show replication status
 repmgr -f /etc/repmgr.conf node status
 ```
 
@@ -311,6 +361,12 @@ repmgr -f /etc/repmgr.conf standby switchover
 ```
 
 ### 使用 repmgrd 自动故障转移
+
+使用 `repmgrd` 前，在每个节点配置以下参数并重启 PostgreSQL：
+
+```ini
+shared_preload_libraries = 'repmgr'
+```
 
 在每个节点上启动 repmgr 守护进程：
 
@@ -337,3 +393,7 @@ follow_command='repmgr standby follow -f /etc/repmgr.conf --upstream-node-id=%n'
 - `repmgr cluster show` - 显示集群状态
 - `repmgr cluster event` - 显示集群事件
 - `repmgr node check` - 节点健康检查
+
+### 5.5.1 升级
+
+按升级指南暂停或停止自动故障转移，更新各节点的程序，再重启正在运行的 `repmgrd` 并检查集群状态。5.5.0 与 5.5.1 的 SQL 版本均为 `5.5`，不要尝试更新到不存在的 SQL 版本 5.5.1；从更早的 SQL 版本升级时，应遵循对应的扩展升级链。

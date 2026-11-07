@@ -11,10 +11,10 @@ weight: 1503
     <div class="ext-card__title">https://git.osgeo.org/gitea/postgis/postgis</div>
     <div class="ext-card__desc">https://git.osgeo.org/gitea/postgis/postgis</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgis-3.7.0.tar.gz postgis-3.7.0-en.pdf postgis37-filter-requires-perl-Pg.sh">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
-    <div class="ext-card__desc">postgis-3.6.4.tar.gz postgis-3.6.4-en.pdf postgis36-filter-requires-perl-Pg.sh</div>
+    <div class="ext-card__title">postgis-3.7.0.tar.gz postgis-3.7.0-en.pdf postgis37-filter-requires-perl-Pg.sh</div>
+    <div class="ext-card__desc">postgis-3.7.0.tar.gz postgis-3.7.0-en.pdf postgis37-filter-requires-perl-Pg.sh</div>
   </a>
 </div>
 
@@ -41,7 +41,7 @@ weight: 1503
 {.ext-table .ext-table--rel}
 
 
-> DEB 3.7.0 on D/U; EL RPM and local recipe remain 3.6.4.
+> Pigsty fills EL8 gaps.
 
 
 ## 版本
@@ -49,19 +49,19 @@ weight: 1503
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgis` | `postgis` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.4` | {{< pgvers "18,17,16,15,14" >}} | `postgis36_$v` | - |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgis37_$v` | - |
 | [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-postgis-3` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 | AVAIL PGDG 3.6.4 7 |
-| el8.aarch64 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 | AVAIL PGDG 3.6.4 8 |
-| el9.x86_64 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 |
-| el9.aarch64 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 | AVAIL PGDG 3.6.4 14 |
-| el10.x86_64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
-| el10.aarch64 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 | AVAIL PGDG 3.6.4 13 |
+| el8.x86_64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el9.x86_64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
+| el9.aarch64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
+| el10.x86_64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
+| el10.aarch64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
 | d12.x86_64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
 | d12.aarch64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
 | d13.x86_64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
@@ -106,11 +106,11 @@ pig ext install -y postgis -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
-dnf install -y postgis36_18       # PG 18
-dnf install -y postgis36_17       # PG 17
-dnf install -y postgis36_16       # PG 16
-dnf install -y postgis36_15       # PG 15
-dnf install -y postgis36_14       # PG 14
+dnf install -y postgis37_18       # PG 18
+dnf install -y postgis37_17       # PG 17
+dnf install -y postgis37_16       # PG 16
+dnf install -y postgis37_15       # PG 15
+dnf install -y postgis37_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}

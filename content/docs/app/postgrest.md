@@ -40,7 +40,7 @@ ports:
 - `POSTGREST_DB_ANON_ROLE`：匿名角色
 - `POSTGREST_JWT_SECRET`：JWT 密钥
 
-将 `POSTGREST_JWT_SECRET` 改为至少 32 字符的随机值。配置 JWT 密钥本身不会禁止匿名访问；`POSTGREST_DB_ANON_ROLE` 仍决定未认证请求的数据库权限。使用 `make up` 启动以应用 Compose 配置；`make run` 是独立的 `docker run` 命令，不会采用上面修改的端口映射。
+将 `POSTGREST_JWT_SECRET` 改为至少 32 字符的随机值。配置 JWT 密钥本身不会禁止匿名访问；`POSTGREST_DB_ANON_ROLE` 仍决定未认证请求的数据库权限。使用 `make up` 启动以应用 Compose 配置；`make run` 是独立的 `docker run` 命令，不会采用上面修改的端口映射。开发模板已默认将端口绑定到回环地址，并将 `make run` 改为 `make up` 的别名。
 
 ## Swagger UI（可选）
 

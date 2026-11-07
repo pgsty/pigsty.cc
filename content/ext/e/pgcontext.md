@@ -31,16 +31,14 @@ weight: 1960
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 1960  | [**`pgcontext`**](/ext/e/pgcontext) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgcontext` |
-| 1970  | [**`pgcontext_pgvector`**](/ext/e/pgcontext_pgvector) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table .wide .expand}
 
 | **相关扩展** | [`vector`](/ext/e/vector) [`vectorize`](/ext/e/vectorize) [`vchord`](/ext/e/vchord) [`vectorscale`](/ext/e/vectorscale) [`pg_rrf`](/ext/e/pg_rrf) [`pg_search`](/ext/e/pg_search) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`vchord_bm25`](/ext/e/vchord_bm25) [`pgmnemo`](/ext/e/pgmnemo) [`pg_summarize`](/ext/e/pg_summarize) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) |
 {.ext-table .ext-table--rel}
 
 
-> 0.3.0 requires clean install; no 0.1/0.2 upgrade; pgcontext_pgvector retired.
+> 0.3 requires fresh install.
 
 
 ## 版本
@@ -55,54 +53,54 @@ weight: 1960
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcontext_18-0.2.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcontext_18-0.2.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 3.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcontext_18-0.2.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcontext_18-0.2.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 3.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcontext_18-0.2.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgcontext_18 pgcontext_18-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcontext_18-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-18-pgcontext_0.2.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcontext_17-0.2.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcontext_17-0.2.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 3.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcontext_17-0.2.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcontext_17-0.2.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 3.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcontext_17-0.2.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgcontext_17 pgcontext_17-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcontext_17-0.2.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~resolute_amd64.deb pigsty 0.2.0 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.2.0-1PIGSTY~resolute_arm64.deb pigsty 0.2.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-17-pgcontext_0.2.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 4.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcontext_18-0.3.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 4.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcontext_18-0.3.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 4.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcontext_18-0.3.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el9.aarch64.rpm pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcontext_18-0.3.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el10.x86_64.rpm pigsty 0.3.0 4.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcontext_18-0.3.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgcontext_18 pgcontext_18-0.3.0-1PGSTY.el10.aarch64.rpm pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcontext_18-0.3.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~bookworm_amd64.deb pigsty 0.3.0 4.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~bookworm_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~trixie_amd64.deb pigsty 0.3.0 4.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~trixie_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~jammy_amd64.deb pigsty 0.3.0 4.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~jammy_arm64.deb pigsty 0.3.0 4.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~noble_amd64.deb pigsty 0.3.0 4.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 4.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgcontext postgresql-18-pgcontext_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-18-pgcontext_0.3.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 4.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcontext_17-0.3.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 4.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcontext_17-0.3.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 4.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcontext_17-0.3.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el9.aarch64.rpm pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcontext_17-0.3.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el10.x86_64.rpm pigsty 0.3.0 4.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcontext_17-0.3.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgcontext_17 pgcontext_17-0.3.0-1PGSTY.el10.aarch64.rpm pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcontext_17-0.3.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~bookworm_amd64.deb pigsty 0.3.0 4.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~bookworm_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~trixie_amd64.deb pigsty 0.3.0 4.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~trixie_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~jammy_amd64.deb pigsty 0.3.0 4.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~jammy_arm64.deb pigsty 0.3.0 4.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~noble_amd64.deb pigsty 0.3.0 4.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 4.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 4.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgcontext postgresql-17-pgcontext_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcontext/postgresql-17-pgcontext_0.3.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

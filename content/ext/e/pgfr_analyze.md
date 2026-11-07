@@ -6,10 +6,10 @@ weight: 6061
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/dventimisupabase/pg_flight_recorder">
+  <a class="ext-card ext-card--repo" href="https://github.com/neptunestation-com/pg_flight_recorder">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">dventimisupabase/pg_flight_recorder</div>
-    <div class="ext-card__desc">https://github.com/dventimisupabase/pg_flight_recorder</div>
+    <div class="ext-card__title">neptunestation-com/pg_flight_recorder</div>
+    <div class="ext-card__desc">https://github.com/neptunestation-com/pg_flight_recorder</div>
   </a>
   <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_flight_recorder-2.32.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
@@ -39,7 +39,7 @@ weight: 6061
 {.ext-table .ext-table--rel}
 
 
-> pkg 2.32.1 overrides upstream control 0.0.0.
+> Control version set at build.
 
 
 ## 版本
@@ -54,22 +54,22 @@ weight: 6061
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | AVAIL PIGSTY 2.29.2 1 | N/A PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
 {{< /pgext_matrix >}}
 
 ## 构建

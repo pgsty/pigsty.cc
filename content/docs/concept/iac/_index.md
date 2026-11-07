@@ -342,7 +342,6 @@ etcd: # dcs service for postgres/patroni ha consensus
   vars: # cluster level parameter override roles/etcd
     etcd_cluster: etcd  # mark etcd cluster name etcd
     etcd_safeguard: false # safeguard against purging
-    etcd_clean: true # purge etcd during init process
 ```
 
 

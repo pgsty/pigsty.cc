@@ -38,7 +38,7 @@ weight: 6020
 {.ext-table .ext-table--rel}
 
 
-> Maintained release/package 0.4.0 installs SQL extension 0.4. PG16-18; requires preload. Local RPM builds cover both EL8 architectures with a private Bison 3.8.2 build tool. Local matrix on 2026-10-10 has RPM 0.4.0 and DEB 0.3.6; retain maintained DEB 0.4.0. Repository publication is checked separately.
+> SQL 0.4; preload.
 
 
 ## 版本
@@ -59,64 +59,64 @@ weight: 6020
 | el9.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | el10.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | el10.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el8.x86_64.rpm pigsty 0.4.0 9.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_18-0.4.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el8.aarch64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_18-0.4.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el9.x86_64.rpm pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_18-0.4.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el9.aarch64.rpm pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_18-0.4.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el10.x86_64.rpm pigsty 0.4.0 6.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_18-0.4.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-1PGSTY.el10.aarch64.rpm pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_18-0.4.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb pigsty 0.3.6 720.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb pigsty 0.3.6 649.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb pigsty 0.3.6 731.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb pigsty 0.3.6 656.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb pigsty 0.3.6 5.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb pigsty 0.3.6 5.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb pigsty 0.3.6 716.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb pigsty 0.3.6 683.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb pigsty 0.3.6 734.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb pigsty 0.3.6 717.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el8.x86_64.rpm pigsty 0.4.0 9.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_17-0.4.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el8.aarch64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_17-0.4.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el9.x86_64.rpm pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_17-0.4.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el9.aarch64.rpm pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_17-0.4.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el10.x86_64.rpm pigsty 0.4.0 6.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_17-0.4.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-1PGSTY.el10.aarch64.rpm pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_17-0.4.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb pigsty 0.3.6 719.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb pigsty 0.3.6 648.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb pigsty 0.3.6 730.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb pigsty 0.3.6 655.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb pigsty 0.3.6 5.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb pigsty 0.3.6 5.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb pigsty 0.3.6 716.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb pigsty 0.3.6 683.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb pigsty 0.3.6 735.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb pigsty 0.3.6 719.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el8.x86_64.rpm pigsty 0.4.0 9.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_16-0.4.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el8.aarch64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_16-0.4.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el9.x86_64.rpm pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_16-0.4.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el9.aarch64.rpm pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_16-0.4.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el10.x86_64.rpm pigsty 0.4.0 6.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_16-0.4.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-1PGSTY.el10.aarch64.rpm pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_16-0.4.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb pigsty 0.3.6 719.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb pigsty 0.3.6 649.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb pigsty 0.3.6 729.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb pigsty 0.3.6 656.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb pigsty 0.3.6 5.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb pigsty 0.3.6 5.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb pigsty 0.3.6 716.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb pigsty 0.3.6 681.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb pigsty 0.3.6 733.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb pigsty 0.3.6 717.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.6-1PIGSTY~resolute_arm64.deb
+| d12.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el8.x86_64.rpm pigsty 0.4.0 10.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_18-0.4.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el8.aarch64.rpm pigsty 0.4.0 10.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_18-0.4.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el9.x86_64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_18-0.4.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el9.aarch64.rpm pigsty 0.4.0 7.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_18-0.4.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el10.x86_64.rpm pigsty 0.4.0 8.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_18-0.4.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.4.0-2PGSTY.el10.aarch64.rpm pigsty 0.4.0 7.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_18-0.4.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb pigsty 0.4.0 7.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb pigsty 0.4.0 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb pigsty 0.4.0 7.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb pigsty 0.4.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb pigsty 0.4.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb pigsty 0.4.0 6.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb pigsty 0.4.0 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el8.x86_64.rpm pigsty 0.4.0 10.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_17-0.4.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el8.aarch64.rpm pigsty 0.4.0 10.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_17-0.4.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el9.x86_64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_17-0.4.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el9.aarch64.rpm pigsty 0.4.0 7.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_17-0.4.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el10.x86_64.rpm pigsty 0.4.0 8.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_17-0.4.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.4.0-2PGSTY.el10.aarch64.rpm pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_17-0.4.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb pigsty 0.4.0 7.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb pigsty 0.4.0 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb pigsty 0.4.0 7.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb pigsty 0.4.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb pigsty 0.4.0 6.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb pigsty 0.4.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb pigsty 0.4.0 6.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb pigsty 0.4.0 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el8.x86_64.rpm pigsty 0.4.0 10.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_ch_16-0.4.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el8.aarch64.rpm pigsty 0.4.0 10.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_stat_ch_16-0.4.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el9.x86_64.rpm pigsty 0.4.0 7.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_16-0.4.0-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el9.aarch64.rpm pigsty 0.4.0 7.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_16-0.4.0-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el10.x86_64.rpm pigsty 0.4.0 8.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_16-0.4.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.4.0-2PGSTY.el10.aarch64.rpm pigsty 0.4.0 7.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_16-0.4.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb pigsty 0.4.0 7.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb pigsty 0.4.0 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb pigsty 0.4.0 7.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb pigsty 0.4.0 6.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb pigsty 0.4.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb pigsty 0.4.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb pigsty 0.4.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb pigsty 0.4.0 6.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb pigsty 0.4.0 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.4.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

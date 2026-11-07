@@ -13,7 +13,7 @@ Pigsty 不使用任何虚拟化容器化技术，直接运行于裸操作系统�
 
 ## 概述
 
-Pigsty 推荐使用的操作系统版本：Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.6、Ubuntu 22.04.5 / 24.04.4 / 26.04.0。
+Pigsty 推荐使用的操作系统版本：Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.7、Ubuntu 22.04.5 / 24.04.5 / 26.04.1。
 
 | 发行版                       |                 架构                 |                                              系统代码                                               |                       PG18                       |                       PG17                       |                       PG16                       |                       PG15                       |                       PG14                       |
 |:--------------------------|:----------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
@@ -82,7 +82,7 @@ Pigsty 支持 Ubuntu 26.04 / 24.04 / 22.04：
 | Ubuntu 22.04 (`jammy`)    | <b class="text-danger">aarch64</b> | [`u22.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 {.full-width .wide .expand}
 
-> [!TIP] 推荐使用 Ubuntu 22.04.5 / 24.04.4 / 26.04.0 LTS
+> [!TIP] 推荐使用 Ubuntu 22.04.5 / 24.04.5 / 26.04.1 LTS
 > Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生产环境基线，也可以继续使用 Ubuntu 24.04。
 
 
@@ -90,7 +90,7 @@ Pigsty 支持 Ubuntu 26.04 / 24.04 / 22.04：
 
 ## Debian
 
-Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
+Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.7。
 
 | Debian 发行版             |                 架构                 |                                             系统代码                                              |                       PG18                       |                       PG17                       |                          PG16                           |                          PG15                           |                          PG14                           |
 |:-----------------------|:----------------------------------:|:---------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|
@@ -102,7 +102,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |
 {.full-width .wide .expand}
 
-> [!TIP] 推荐使用 Debian 12.15 / 13.6
+> [!TIP] 推荐使用 Debian 12.15 / 13.7
 
 > [!CAUTION] Debian 11 LTS 已结束
 > Debian 11 的常规支持于 2024-08-14 结束，LTS 于 **2026-08-31** 结束，详见 [**Debian 官方生命周期说明**](https://www.debian.org/releases/bullseye/)。当前 Pigsty 基线为 Debian 12 / 13；旧系统支持范围请咨询 [**专业订阅服务**](/docs/about/service)。
@@ -120,10 +120,10 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Rocky 9.8      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           |
 | Rocky 10.2     | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         |
 | Debian 12.15   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       |
-| Debian 13.6    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
+| Debian 13.7    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
 | Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
-| Ubuntu 24.04.4 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |
-| Ubuntu 26.04.0 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |
+| Ubuntu 24.04.5 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |
+| Ubuntu 26.04.1 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |
 {.full-width}
 
 
@@ -139,8 +139,8 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Rocky 9.8      | `rockylinux_9_8_x64`   |
 | Rocky 10.2     | `rockylinux_10_2_x64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_x64_20G` |
-| Ubuntu 24.04.4 | `ubuntu_24_04_x64_20G` |
-| Ubuntu 26.04.0 | `ubuntu_26_04_x64_20G` |
+| Ubuntu 24.04.5 | `ubuntu_24_04_x64_20G` |
+| Ubuntu 26.04.1 | `ubuntu_26_04_x64_20G` |
 | Debian 12.15   | `debian_12_15_x64`     |
 | Debian 13.6    | `debian_13_6_x64`      |
 {.full-width}
@@ -152,8 +152,10 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 | Rocky 9.8      | `rockylinux_9_8_arm64`   |
 | Rocky 10.2     | `rockylinux_10_2_arm64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_arm64_20G` |
-| Ubuntu 24.04.4 | `ubuntu_24_04_arm64_20G` |
-| Ubuntu 26.04.0 | `ubuntu_26_04_arm64_20G` |
+| Ubuntu 24.04.5 | `ubuntu_24_04_arm64_20G` |
+| Ubuntu 26.04.1 | `ubuntu_26_04_arm64_20G` |
 | Debian 12.15   | `debian_12_15_arm64`     |
 | Debian 13.6    | `debian_13_6_arm64`      |
 {.full-width}
+
+> 注：Debian 上游当前为 13.7，但阿里云公共镜像目录尚未提供 Debian 13.7，因此 OpenTofu 的 Aliyun 前缀暂保留 `debian_13_6_*`。

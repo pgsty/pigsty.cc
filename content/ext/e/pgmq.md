@@ -39,7 +39,7 @@ weight: 2660
 {.ext-table .ext-table--rel}
 
 
-> SQL-only. 1.13.1 hardens search_path and removes pg_monitor access to message payloads; run ALTER EXTENSION UPDATE and inspect privilege-revocation warnings. Also fixes mixed-case queue notifications.
+> UPDATE extension; review revoked grants.
 
 
 ## 版本
@@ -47,7 +47,7 @@ weight: 2660
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.1` | {{< pgvers "18,17,16,15,14" >}} | `pgmq` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.1` | {{< pgvers "18,17,16,15,14" >}} | `pgmq_$v` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.13.1` | {{< pgvers "18,17,16,15,14" >}} | `pgmq_$v` | - |
 | [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.13.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmq` | - |
 {.ext-table .wide .expand}
 

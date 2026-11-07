@@ -28,7 +28,6 @@ files/pki/
 ├── infra/
 ├── kafka/
 ├── minio/                    # MINIO 模块（Silo）证书
-├── mongo/
 ├── mysql/
 ├── nginx/
 └── pgsql/
@@ -243,7 +242,7 @@ systemctl list-timers --all | grep -i certbot
 certbot renew --dry-run
 ```
 
-仅更新证书文件不会让 Nginx 自动加载新证书。应检查续期 Hook 是否会在签发成功后执行 `nginx -t && systemctl reload nginx.service`；尚未配置时，将该步骤补入现有 Certbot 续期任务。
+仅更新证书文件不会让 Nginx 自动加载新证书。应检查续期 Hook 是否会在签发成功后执行 `nginx -t && systemctl reload nginx.service`；尚未配置时，将该步骤补入现有 Certbot 续期任务。2026-09-01 起的开发源码会在 `nginx_config` 阶段写入 `/etc/letsencrypt/renewal-hooks/deploy/10-reload-nginx` 执行该检查与重载；`v4.5.0` 发布包不包含此 Hook。
 
 --------
 

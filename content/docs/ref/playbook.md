@@ -198,7 +198,7 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 
 ```bash
 ./minio.yml -l <cls>                       # 初始化 MINIO 模块的 Silo 集群
-./minio-rm.yml -l <cls> -e minio_type=silo # 移除 Silo；该值必须显式确认
+./minio-rm.yml -l <cls> -e minio_type=silo # 移除 Silo；minio_type 默认即为 silo
 ```
 
 ### DOCKER 模块

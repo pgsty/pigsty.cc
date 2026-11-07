@@ -53,19 +53,19 @@ weight: 1600
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.6` | {{< pgvers "18,17,16,15,14" >}} | `pghydro` | `plpgsql`, `postgis` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.6` | {{< pgvers "18,17,16,15,14" >}} | `pghydro_$v` | `postgis36_$v` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.6` | {{< pgvers "18,17,16,15,14" >}} | `pghydro_$v` | `postgis37_$v` |
 | [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `6.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pghydro` | `postgresql-$v-postgis-3` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
-| el8.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
-| el9.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
-| el9.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
-| el10.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
-| el10.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
+| el8.x86_64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
+| el8.aarch64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
+| el9.x86_64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
+| el9.aarch64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
+| el10.x86_64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
+| el10.aarch64 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 | AVAIL PIGSTY 6.6 2 |
 | d12.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
 | d12.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
 | d13.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
@@ -76,11 +76,17 @@ weight: 1600
 | u24.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
 | u26.x86_64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
 | u26.aarch64 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 | AVAIL PIGSTY 6.6 1 |
+@ el8.x86_64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_18-6.6-2PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el8.x86_64.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_18-6.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_18-6.6-2PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el8.aarch64.rpm pigsty 6.6 144.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_18-6.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_18-6.6-2PGSTY.el9.noarch.rpm
 @ el9.x86_64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el9.x86_64.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_18-6.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_18-6.6-2PGSTY.el9.noarch.rpm
 @ el9.aarch64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el9.aarch64.rpm pigsty 6.6 138.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_18-6.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_18-6.6-2PGSTY.el10.noarch.rpm
 @ el10.x86_64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el10.x86_64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_18-6.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pghydro_18 pghydro_18-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_18-6.6-2PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 pghydro_18 pghydro_18-6.6-1PIGSTY.el10.aarch64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_18-6.6-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pghydro postgresql-18-pghydro_6.6-1PIGSTY~bookworm_amd64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-18-pghydro_6.6-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pghydro postgresql-18-pghydro_6.6-1PIGSTY~bookworm_arm64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-18-pghydro_6.6-1PIGSTY~bookworm_arm64.deb
@@ -92,11 +98,17 @@ weight: 1600
 @ u24.aarch64 18 postgresql-18-pghydro postgresql-18-pghydro_6.6-1PIGSTY~noble_arm64.deb pigsty 6.6 135.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pghydro/postgresql-18-pghydro_6.6-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pghydro postgresql-18-pghydro_6.6-1PIGSTY~resolute_amd64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-18-pghydro_6.6-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pghydro postgresql-18-pghydro_6.6-1PIGSTY~resolute_arm64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-18-pghydro_6.6-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_17-6.6-2PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el8.x86_64.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_17-6.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_17-6.6-2PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el8.aarch64.rpm pigsty 6.6 144.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_17-6.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_17-6.6-2PGSTY.el9.noarch.rpm
 @ el9.x86_64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el9.x86_64.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_17-6.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_17-6.6-2PGSTY.el9.noarch.rpm
 @ el9.aarch64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el9.aarch64.rpm pigsty 6.6 138.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_17-6.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_17-6.6-2PGSTY.el10.noarch.rpm
 @ el10.x86_64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el10.x86_64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_17-6.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pghydro_17 pghydro_17-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_17-6.6-2PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 pghydro_17 pghydro_17-6.6-1PIGSTY.el10.aarch64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_17-6.6-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pghydro postgresql-17-pghydro_6.6-1PIGSTY~bookworm_amd64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-17-pghydro_6.6-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pghydro postgresql-17-pghydro_6.6-1PIGSTY~bookworm_arm64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-17-pghydro_6.6-1PIGSTY~bookworm_arm64.deb
@@ -108,11 +120,17 @@ weight: 1600
 @ u24.aarch64 17 postgresql-17-pghydro postgresql-17-pghydro_6.6-1PIGSTY~noble_arm64.deb pigsty 6.6 135.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pghydro/postgresql-17-pghydro_6.6-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pghydro postgresql-17-pghydro_6.6-1PIGSTY~resolute_amd64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-17-pghydro_6.6-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pghydro postgresql-17-pghydro_6.6-1PIGSTY~resolute_arm64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-17-pghydro_6.6-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_16-6.6-2PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el8.x86_64.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_16-6.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_16-6.6-2PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el8.aarch64.rpm pigsty 6.6 144.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_16-6.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_16-6.6-2PGSTY.el9.noarch.rpm
 @ el9.x86_64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el9.x86_64.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_16-6.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_16-6.6-2PGSTY.el9.noarch.rpm
 @ el9.aarch64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el9.aarch64.rpm pigsty 6.6 138.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_16-6.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_16-6.6-2PGSTY.el10.noarch.rpm
 @ el10.x86_64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el10.x86_64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_16-6.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pghydro_16 pghydro_16-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_16-6.6-2PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 pghydro_16 pghydro_16-6.6-1PIGSTY.el10.aarch64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_16-6.6-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pghydro postgresql-16-pghydro_6.6-1PIGSTY~bookworm_amd64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-16-pghydro_6.6-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pghydro postgresql-16-pghydro_6.6-1PIGSTY~bookworm_arm64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-16-pghydro_6.6-1PIGSTY~bookworm_arm64.deb
@@ -124,11 +142,17 @@ weight: 1600
 @ u24.aarch64 16 postgresql-16-pghydro postgresql-16-pghydro_6.6-1PIGSTY~noble_arm64.deb pigsty 6.6 135.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pghydro/postgresql-16-pghydro_6.6-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pghydro postgresql-16-pghydro_6.6-1PIGSTY~resolute_amd64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-16-pghydro_6.6-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pghydro postgresql-16-pghydro_6.6-1PIGSTY~resolute_arm64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-16-pghydro_6.6-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_15-6.6-2PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el8.x86_64.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_15-6.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_15-6.6-2PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el8.aarch64.rpm pigsty 6.6 144.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_15-6.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_15-6.6-2PGSTY.el9.noarch.rpm
 @ el9.x86_64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el9.x86_64.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_15-6.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_15-6.6-2PGSTY.el9.noarch.rpm
 @ el9.aarch64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el9.aarch64.rpm pigsty 6.6 138.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_15-6.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_15-6.6-2PGSTY.el10.noarch.rpm
 @ el10.x86_64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el10.x86_64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_15-6.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pghydro_15 pghydro_15-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_15-6.6-2PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 pghydro_15 pghydro_15-6.6-1PIGSTY.el10.aarch64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_15-6.6-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pghydro postgresql-15-pghydro_6.6-1PIGSTY~bookworm_amd64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-15-pghydro_6.6-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pghydro postgresql-15-pghydro_6.6-1PIGSTY~bookworm_arm64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-15-pghydro_6.6-1PIGSTY~bookworm_arm64.deb
@@ -140,11 +164,17 @@ weight: 1600
 @ u24.aarch64 15 postgresql-15-pghydro postgresql-15-pghydro_6.6-1PIGSTY~noble_arm64.deb pigsty 6.6 135.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pghydro/postgresql-15-pghydro_6.6-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pghydro postgresql-15-pghydro_6.6-1PIGSTY~resolute_amd64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-15-pghydro_6.6-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pghydro postgresql-15-pghydro_6.6-1PIGSTY~resolute_arm64.deb pigsty 6.6 136.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pghydro/postgresql-15-pghydro_6.6-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_14-6.6-2PGSTY.el8.noarch.rpm
 @ el8.x86_64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el8.x86_64.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pghydro_14-6.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el8.noarch.rpm pigsty 6.6 145.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_14-6.6-2PGSTY.el8.noarch.rpm
 @ el8.aarch64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el8.aarch64.rpm pigsty 6.6 144.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pghydro_14-6.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_14-6.6-2PGSTY.el9.noarch.rpm
 @ el9.x86_64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el9.x86_64.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pghydro_14-6.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el9.noarch.rpm pigsty 6.6 138.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_14-6.6-2PGSTY.el9.noarch.rpm
 @ el9.aarch64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el9.aarch64.rpm pigsty 6.6 138.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pghydro_14-6.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_14-6.6-2PGSTY.el10.noarch.rpm
 @ el10.x86_64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el10.x86_64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pghydro_14-6.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pghydro_14 pghydro_14-6.6-2PGSTY.el10.noarch.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_14-6.6-2PGSTY.el10.noarch.rpm
 @ el10.aarch64 14 pghydro_14 pghydro_14-6.6-1PIGSTY.el10.aarch64.rpm pigsty 6.6 138.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pghydro_14-6.6-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pghydro postgresql-14-pghydro_6.6-1PIGSTY~bookworm_amd64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-14-pghydro_6.6-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pghydro postgresql-14-pghydro_6.6-1PIGSTY~bookworm_arm64.deb pigsty 6.6 135.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pghydro/postgresql-14-pghydro_6.6-1PIGSTY~bookworm_arm64.deb

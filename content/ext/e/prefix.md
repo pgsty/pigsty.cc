@@ -1,7 +1,7 @@
 ---
 title: "prefix"
 linkTitle: "prefix"
-description: "前缀树数据类型"
+description: "前缀范围（prefix_range）数据类型，支持 GiST 前缀匹配"
 weight: 3500
 ---
 
