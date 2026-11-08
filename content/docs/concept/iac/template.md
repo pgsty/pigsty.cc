@@ -79,7 +79,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
 | [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
 | [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)         |
-| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
+| [**`fork/halo.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
 | [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
 | [**`fork/agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (18)                |
@@ -148,7 +148,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | **`redis.yml`**                        | Redis 集群示例配置                                           |
 | [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
 | [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
-| [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
+| [**`demo/mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/fork/halo.yml` |
 | [**`kernel.yml`**](/docs/conf/kernel/) | 10 节点内核矩阵演示配置                                          |
 | [**`saas.yml`**](/docs/conf/saas/)     | 含全部扩展的富功能单节点模板                                         |
 | [**`wool.yml`**](/docs/conf/wool/)     | 低成本阿里云 ECS 演示模板                                         |

@@ -6,7 +6,9 @@ icon: fa-solid fa-database
 categories: [参考]
 ---
 
-`demo/mysql` 是原生 MySQL 8.4 LTS 试点模块的四节点示例，与 [`conf/mysql.yml`](/docs/conf/mysql/) 中通过 OpenHalo 提供 MySQL 协议兼容的 PostgreSQL 内核不是同一实现。
+`demo/mysql` 是原生 MySQL 8.4 LTS 试点模块的四节点示例，与 [`conf/fork/halo.yml`](/docs/conf/mysql/) 中通过 OpenHalo 提供 MySQL 协议兼容的 PostgreSQL 内核不是同一实现。
+
+当前开发源码中，`./configure -c mysql` 与 `./configure -c demo/mysql` 都选择此模板；OpenHalo 使用 `-c halo`。
 
 
 --------

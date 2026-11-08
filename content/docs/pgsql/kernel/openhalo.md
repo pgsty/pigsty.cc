@@ -21,13 +21,14 @@ Pigsty 在所有支持的 Linux 平台上为 OpenHalo 提供部署支持。
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mysql`](/docs/conf/mysql) 配置模板。
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 准备工作目录，并选择 [`halo`](/docs/conf/mysql) 配置模板。
 
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml)；开发版已迁移至 `conf/fork/mysql.yml`，对应使用 `-c fork/mysql`。
+以下配置命令适用于包含 `conf/fork/halo.yml` 的当前开发源码，`-c halo` 与 `-c fork/halo` 等价。
+[v4.5.0 发布包](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml) 仍使用 `-c mysql`；
+当前开发源码中的 `-c mysql` 已用于原生 MySQL 示例。
 
 ```bash
-curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
-./configure -c mysql    # 使用 MySQL（openHalo）配置模板
+./configure -c halo     # 使用 OpenHalo 配置模板
 ./deploy.yml            # 安装，生产部署请先在 pigsty.yml 中修改密码
 ```
 
@@ -77,7 +78,7 @@ OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容�
 
 OpenHalo 提供 MySQL 线协议兼容性，默认监听端口 3306，允许 MySQL 客户端和驱动程序直接连接。
 
-Pigsty 的 [`conf/mysql`](/docs/conf/mysql/) 配置默认安装 `mysql` 客户端工具。
+[`fork/halo`](/docs/conf/mysql/) 模板安装 OpenHalo 服务端；使用下方命令前，需要另行安装兼容的 MySQL 客户端。
 
 您可以使用以下命令访问 MySQL：
 

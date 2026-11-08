@@ -57,7 +57,7 @@ cd ~/pigsty
 ./configure -c meta               # 使用默认单节点模板（默认）
 ./configure -c rich               # 使用功能丰富的单节点模板
 ./configure -c slim               # 使用精简模板（仅 PGSQL + ETCD）
-./configure -c ha/full            # 使用 4 节点高可用沙箱模板
+./configure -c full               # 使用 4 节点高可用沙箱模板，等价于 ha/full
 ./configure -c ha/trio            # 使用 3 节点高可用模板
 ./configure -c supabase           # 使用 Supabase 自托管模板
 ./configure -c app/immich         # 使用 Immich 相册模板
@@ -94,7 +94,7 @@ cd ~/pigsty
 
 ```bash
 ./configure
-    [-c|--conf <template>]      # 配置模板名称（meta|rich|slim|ha/full|...）
+    [-c|--conf <template>]      # 配置模板名称（meta|rich|slim|full|ha/full|...）
     [-i|--ip <ipaddr>]          # 指定主 IP 地址
     [-v|--version <pgver>]      # PostgreSQL 大版本号（14|15|16|17|18|19）
     [-r|--region <region>]      # 上游软件仓库区域（default|china|europe）
@@ -111,7 +111,7 @@ cd ~/pigsty
 
 | 参数                      | 说明                                                                |
 |:------------------------|:------------------------------------------------------------------|
-| `-c, --conf`            | 从 `conf/<template>.yml` 生成配置文件，支持子目录如 `ha/full`                   |
+| `-c, --conf`            | 选择模板，裸名称如 `full` 按序查找，显式路径如 `ha/full` 直接定位                   |
 | `-i, --ip`              | 用指定 IP 替换配置模板中的占位符 `10.10.10.10`                                  |
 | `-v, --version`         | 指定 PostgreSQL 大版本号（14-19）；PG19 为 Beta，建议直接使用 `pg19` 模板            |
 | `-r, --region`          | 设置软件仓库镜像区域：`default`（默认）、`china`（中国镜像）、`europe`（欧洲镜像）             |
@@ -282,7 +282,25 @@ $ ./configure -g
 
 ## 配置模板
 
-脚本从 `conf/` 目录读取配置模板。`-c` 的值是相对于 `conf/`、不带 `.yml` 后缀的路径，例如 `ha/full`、`app/immich`。
+当前开发源码从 `conf/` 目录读取模板，支持裸名称和显式相对路径。裸名称按以下顺序查找，首个匹配文件生效：
+
+```text
+conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
+```
+
+根目录优先；不会递归搜索其他目录。去掉可选前后缀后仍带目录的名称，例如 `ha/full`，只查找该路径，
+不存在时直接报错，不会回退到其他同名模板。`./`、`conf/` 前缀和 `.yml` 后缀均可省略：
+
+```bash
+./configure -c full                 # 查找到 conf/ha/full.yml
+./configure -c ha/full              # 显式选择同一模板
+./configure -c ./conf/ha/full.yml   # 同一模板的完整相对文件名
+./configure -c halo                 # OpenHalo：conf/fork/halo.yml
+./configure -c mysql                # 原生 MySQL：conf/demo/mysql.yml
+```
+
+这些简写与 `halo` 名称对应当前开发源码。使用较早的发布包时，请以该版本的 `configure` 和模板布局为准；
+例如 v4.5.0 的 `conf/mysql.yml` 是 OpenHalo 模板。模板重名时，可通过显式目录路径固定选择。
 
 ### 核心模板
 
@@ -338,7 +356,7 @@ $ ./configure -g
 |  `mssql`   | Babelfish：SQL Server 兼容 PostgreSQL |
 |  `polar`   | PolarDB：阿里云开源分布式 PostgreSQL        |
 | `ha/citus` | Citus：分布式 PostgreSQL 高可用集群         |
-|  `mysql`   | OpenHalo：MySQL 协议兼容 PostgreSQL     |
+|  `halo`    | OpenHalo：MySQL 协议兼容 PostgreSQL     |
 |  `pgtde`   | Percona PostgreSQL Server：透明加密     |
 |  `oriole`  | OrioleDB：新一代存储引擎                   |
 |  `agens`   | AgensGraph：图数据库内核                  |
@@ -346,7 +364,9 @@ $ ./configure -g
 |  `mongo`   | MongoDB 兼容栈模板                      |
 {.full-width .wide .expand}
 
-上表与核心模板中的 `pgsql` 为 `v4.5.0` 发布包中的路径。开发版已将这些内核分支模板（`ha/citus` 除外）迁入 `conf/fork/`，对应使用 `-c fork/<name>`，例如 `./configure -c fork/ivory`。
+当前开发版将这些内核模板与 `pgsql` 放在 `conf/fork/` 下，`ha/citus` 除外。
+例如 `-c ivory` 与 `-c fork/ivory` 均选择 `conf/fork/ivory.yml`。
+OpenHalo 使用 `halo` 或 `fork/halo`；其内部配置值仍为 `pg_mode: mysql`。
 
 ### 演示与构建模板
 

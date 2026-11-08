@@ -100,7 +100,7 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## `conf/mysql.yml` 模板怎么和这个模块对不上？
 
-该模板在开发版中位于 `conf/fork/mysql.yml`。它是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与本模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 生态兼容用本模块；PG 基础设施上跑 MySQL 协议应用可考虑 OpenHalo。
+该模板在开发版中位于 `conf/fork/halo.yml`。它是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与本模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 生态兼容用本模块；PG 基础设施上跑 MySQL 协议应用可考虑 OpenHalo。
 
 
 ## 剧本失败显示 `no ONLINE member holds the cluster`？

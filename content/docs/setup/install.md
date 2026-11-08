@@ -147,7 +147,10 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
 
-开发版本将内核模板迁入 `conf/fork/`，对应命令为 `./configure -c fork/ivory`；上面的命令适用于 `v4.5.0` 发布包。
+上面的命令保留 `v4.5.0` 发布包的路径。当前开发源码还支持模板简写：`./configure -c full` 选择 `conf/ha/full.yml`，
+`-c ivory` 与 `-c fork/ivory` 均选择 `conf/fork/ivory.yml`。
+裸名称按 `conf/ → ha/ → fork/ → app/ → demo/ → build/` 查找，所有子目录均位于 `conf/` 下；
+首个匹配生效，显式目录路径不回退。详见 [**模板查找规则**](/docs/concept/iac/configure#配置模板)。
 
 下面展示的是当前 `main` 分支（{{< param version >}}）的输出；若安装其他版本，首行会显示对应版本号。
 
@@ -186,7 +189,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
   {{< /field >}}
 
   {{< field name="-c | --conf" type="string" >}}
-  指定 [**配置模板**](/docs/conf/)，填写相对于 `conf/` 目录且不带 `.yml` 后缀的名称。
+  指定 [**配置模板**](/docs/conf/)，可用 `ha/full` 这样的相对路径；当前开发源码也接受 `full` 简写、`conf/` 前缀和 `.yml` 后缀。
   {{< /field >}}
 
   {{< field name="-v | --version" type="integer" >}}
