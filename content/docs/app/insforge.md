@@ -324,7 +324,7 @@ make edit     # 编辑 .env
 
 v2.3.5 是包含依赖安全修复的补丁版本；PostgREST `v12.2.12`、Deno `alpine-2.0.6` 与内置的函数运行时均未变化。若从 v2.3.3 之前的版本升级，还须执行下文 v2.3.3 一节。
 
-按同样要求完成备份后重建 InsForge 容器，启动迁移器会自动执行 `066_storage-objects-default-owner-policies`。该迁移仅在 `storage.objects` **没有任何**策略时生效：为 `authenticated` 创建仅限对象所有者的策略（读取还允许访问公开桶中的对象），并启用 RLS；表上已有任意策略的项目保持不变。经 S3 协议写入的对象 `uploaded_by` 为 NULL，普通用户在私有桶中看不到也无法修改它们；API 密钥 / `project_admin` 调用方绕过 RLS，不受影响。`files/insforge.sql` 不涉及 `storage`，不要重放。参见 [模板升级检查](https://github.com/pgsty/pigsty/tree/main/app/insforge#upgrade-to-v235) 与 [官方迁移](https://github.com/InsForge/InsForge/blob/c1c886e775d286433e4b50c78c24335783e8fc00/backend/src/infra/database/migrations/066_storage-objects-default-owner-policies.sql)。
+按同样要求完成备份后重建 InsForge 容器，启动迁移器会自动执行 `066_storage-objects-default-owner-policies`。该迁移仅在 `storage.objects` **没有任何** 策略时生效：为 `authenticated` 创建仅限对象所有者的策略（读取还允许访问公开桶中的对象），并启用 RLS；表上已有任意策略的项目保持不变。经 S3 协议写入的对象 `uploaded_by` 为 NULL，普通用户在私有桶中看不到也无法修改它们；API 密钥 / `project_admin` 调用方绕过 RLS，不受影响。`files/insforge.sql` 不涉及 `storage`，不要重放。参见 [模板升级检查](https://github.com/pgsty/pigsty/tree/main/app/insforge#upgrade-to-v235) 与 [官方迁移](https://github.com/InsForge/InsForge/blob/c1c886e775d286433e4b50c78c24335783e8fc00/backend/src/infra/database/migrations/066_storage-objects-default-owner-policies.sql)。
 
 ### 升级至 v2.3.3
 

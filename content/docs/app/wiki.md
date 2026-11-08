@@ -11,7 +11,7 @@ categories: [参考]
 
 ![Wiki.js](/img/docs/app/wiki.jpg)
 
-当前 Compose 跟随 Wiki.js 的 `2` 主版本标签（`requarks/wiki:2`，2026-11-06 解析为 2.5.317）；稳定 2.x 发布维护在 [`requarks/wiki-v2`](https://github.com/requarks/wiki-v2/releases)。Wiki.js 3.0 已于 2026 年 11 月正式发布（`3` 标签），这是一次大版本重写，有独立的[环境要求](https://docs.js.wiki/setup/requirements)与[升级流程](https://docs.js.wiki/setup/upgrade)，不要通过修改镜像标签直接把现有 2.x 部署切到 3.x。生产升级前应记录并核对实际镜像版本。
+当前 Compose 跟随 Wiki.js 的 `2` 主版本标签（`requarks/wiki:2`，2026-11-06 解析为 2.5.317）；稳定 2.x 发布维护在 [`requarks/wiki-v2`](https://github.com/requarks/wiki-v2/releases)。Wiki.js 3.0 已于 2026 年 11 月正式发布（`3` 标签），这是一次大版本重写，有独立的 [环境要求](https://docs.js.wiki/setup/requirements) 与 [升级流程](https://docs.js.wiki/setup/upgrade)，不要通过修改镜像标签直接把现有 2.x 部署切到 3.x。生产升级前应记录并核对实际镜像版本。
 
 
 ## 太长;不看
