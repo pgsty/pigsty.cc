@@ -1,5 +1,4 @@
 ---
-# Development preview: requires matching app/mattermost/ resources.
 #==============================================================#
 # File      :   mattermost.yml
 # Desc      :   pigsty config for running 1-node mattermost app

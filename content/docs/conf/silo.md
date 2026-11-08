@@ -1,6 +1,5 @@
 ---
 title: app/silo
-draft: true
 weight: 875
 description: 独立 Silo Docker APP 配置模板，提供单节点 S3 对象存储与控制台。
 icon: fa-solid fa-box-archive
@@ -9,7 +8,7 @@ categories: [参考]
 
 `app/silo` 配置模板在单节点上部署 Silo Docker Compose 应用，替代原 `app/minio`。使用方法见 [**Silo 应用说明**](/docs/app/silo/)。
 
-本页为开发草稿。下方 YAML 需配套尚未公开的 `app/silo/`，不能单独用于部署；待完整模板发布后再启用本页。
+配套的 [`app/silo/`](https://github.com/pgsty/pigsty/tree/main/app/silo) 与 [`conf/app/silo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/silo.yml) 已在主仓库公开，应使用同一源码版本的文件。
 
 ## 配置概览
 

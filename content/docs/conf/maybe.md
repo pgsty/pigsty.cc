@@ -60,7 +60,8 @@ categories: [参考]
 
 ```bash
 # Maybe Web 界面
-http://maybe.pigsty:5002
+http://maybe.pigsty
+http://<IP>:5002
 
 # 或通过 Nginx 代理
 https://maybe.pigsty

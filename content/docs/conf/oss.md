@@ -19,7 +19,7 @@ categories: [参考]
 - 节点数量： 七节点（el9, el10, d12, d13, u22, u24, u26）
 - 配置说明：Pigsty 开源版离线软件包构建环境
 - 适用系统：`el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
-- 适用架构：`x86_64`
+- 适用架构：`x86_64`、`aarch64`
 
 启用方式：
 
@@ -51,7 +51,7 @@ cp conf/build/oss.yml pigsty.yml
 - 节点软件包（监控代理、工具等）
 - 额外模块（extra-modules）
 
-模板还声明了虚拟机默认规格 `vm_cpu: 2`、`vm_mem: 4096`，并为每个节点设置对应的 `vm_image` 与 `nodename`，便于按操作系统创建构建环境。
+`vm_cpu`、`vm_mem`、`vm_image` 是清单中的描述性元数据，Vagrant 与 Terraform 模板不会读取这些值。实际资源应在相应的虚拟机规格中设置；当前 `vagrant/spec/oss.rb` 为每个节点分配 2 vCPU、2048 MiB 内存。
 
 **支持的操作系统**：
 - EL9 (Rocky/Alma/RHEL 9)
@@ -72,7 +72,7 @@ cp conf/build/oss.yml pigsty.yml
 ./infra.yml -t repo_build
 
 # 3. 打包离线安装包
-make cache
+./cache.yml
 ```
 
 **适用场景**：

@@ -6,7 +6,7 @@ icon: fa-solid fa-database
 categories: [参考]
 ---
 
-`demo/mysql` 是原生 MySQL 8.4 LTS 试点模块的四节点示例，与 [`conf/fork/halo.yml`](/docs/conf/mysql/) 中通过 OpenHalo 提供 MySQL 协议兼容的 PostgreSQL 内核不是同一实现。
+`demo/mysql` 是原生 MySQL 8.4 LTS 模块的四节点示例，与 [`conf/fork/halo.yml`](/docs/conf/mysql/) 中通过 OpenHalo 提供 MySQL 协议兼容的 PostgreSQL 内核不是同一实现。
 
 当前开发源码中，`./configure -c mysql` 与 `./configure -c demo/mysql` 都选择此模板；OpenHalo 使用 `-c halo`。
 
@@ -19,8 +19,8 @@ categories: [参考]
 - 节点数量：4 个
 - `my-meta`：单节点 MySQL 8.4
 - `my-test`：三节点、单主模式 InnoDB Cluster，每个成员运行 MySQL Router
-- 模块状态：MYSQL PILOT，不计入正式模块数量
-- 平台边界：支持声明的 x86_64 RPM/DEB 平台及 EL9/EL10 aarch64；Oracle APT 当前没有 arm64 组件，因此 Debian/Ubuntu ARM 会被前置检查拒绝
+- 模块：MYSQL，限定原生 MySQL 8.4
+- 平台边界：支持 EL8/9/10、Debian 12/13、Ubuntu 22/24 x86_64，以及 EL9/EL10 aarch64；Ubuntu 26 和 Debian/Ubuntu ARM 会被前置检查拒绝
 
 模板中的所有 `CHANGE_ME` 值必须替换，且真实部署需要明确审批。先做只读预检：
 

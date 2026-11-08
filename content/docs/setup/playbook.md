@@ -40,7 +40,7 @@ Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一
 
 ## 安装 Ansible
 
-使用 [**Pigsty 安装脚本**](/docs/setup/install#安装)，或离线安装的 [**`bootstrap`**](/docs/setup/offline#bootstrap) 阶段，Pigsty 会自动为您安装 `ansible` 及其依赖。
+在 Linux 上，可以使用 [**Pigsty 安装脚本**](/docs/setup/install#安装)，或运行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 从本地离线仓库或上游软件源安装 Ansible 及其依赖。若 `ansible-playbook` 已在 `PATH` 中，`bootstrap` 会跳过安装；macOS 上需要手工安装。
 
 如果您想手动安装 Ansible，可以参考以下说明，支持的 Ansible 最低版本为 2.9
 

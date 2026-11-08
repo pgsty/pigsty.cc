@@ -20,6 +20,9 @@ categories: [参考]
 
 ```bash
 ./configure -c demo/remote [-i <infra_ip>]
+# 在 pigsty.yml 中配置远端实例与监控凭据，然后执行：
+./infra.yml
+./pgsql-monitor.yml -l infra
 ```
 
 

@@ -1,5 +1,4 @@
 ---
-# Development draft: requires the unpublished app/silo/ Compose resources.
 #==============================================================#
 # File      :   silo.yml
 # Desc      :   Pigsty config for running the standalone Silo APP

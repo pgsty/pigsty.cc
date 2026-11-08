@@ -58,7 +58,7 @@ FHS 前缀 `/usr/pgtde-$v`（PostgreSQL 18 对应 `/usr/pgtde-18`）链接到稳
 - 需要静态数据加密的场景
 - 对数据安全有严格要求的企业环境
 
-**使用方法**：
+**使用方法**（pg_tde 2.x，参见 [**密钥管理函数**](https://docs.percona.com/pg-tde/functions.html)）：
 
 ```sql
 CREATE EXTENSION pg_tde;
@@ -67,7 +67,8 @@ SELECT pg_tde_add_database_key_provider_file(
     'local-file',
     '/secure/path/pg_tde_keys'
 );
-SELECT pg_tde_set_principal_key('app-principal-key', 'local-file');
+SELECT pg_tde_create_key_using_database_key_provider('app-principal-key', 'local-file');
+SELECT pg_tde_set_key_using_database_key_provider('app-principal-key', 'local-file');
 
 -- 创建加密表
 CREATE TABLE sensitive_data (

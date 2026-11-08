@@ -119,7 +119,7 @@ SSH 配置是 Linux 101，但我们会在此处介绍基础知识，以防您不
 ssh-keygen -t rsa -b 2048 -N '' -f ~/.ssh/id_rsa -q
 ```
 
-如果您没有密钥对，Pigsty 会在 [`bootstrap`](/docs/setup/offline#bootstrap) 阶段为您完成此操作。
+在 Linux 上，如果当前用户无法免密 SSH 到本机，[**`bootstrap`**](/docs/setup/offline#bootstrap) 会尝试修复：缺少 `~/.ssh/id_rsa` 时生成密钥，并将公钥加入本机的 `~/.ssh/authorized_keys`。远程节点的公钥分发仍需单独完成。
 
 
 ### 复制 SSH 密钥

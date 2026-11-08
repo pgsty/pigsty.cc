@@ -93,7 +93,7 @@ apps:
 
 模板中保留了注释状态的三节点 `pg-mongo` 示例。需要时取消该区块以及两个额外 etcd 成员的注释即可。
 
-HA 模式下，每个 FerretDB 容器绑定 `{{ inventory_hostname }}:27018`，HAProxy 通过浮动端点 `10.10.10.4:27017`（`mongo.pigsty`）暴露三个后端。PostgreSQL 故障转移仍由 Patroni 负责，FerretDB 始终保持无状态。
+HA 模式下，每个 FerretDB 容器绑定 `{{ inventory_hostname }}:27018`，HAProxy 通过浮动端点 `10.10.10.4:27017` 暴露三个后端；使用 `mongo.pigsty` 时需自行配置 DNS 指向 `10.10.10.4`。PostgreSQL 故障转移仍由 Patroni 负责，FerretDB 始终保持无状态。
 
 
 --------
@@ -102,5 +102,5 @@ HA 模式下，每个 FerretDB 容器绑定 `{{ inventory_hostname }}:27018`，H
 
 - 模板包含方便开发测试的 HBA 示例，生产环境请收紧。
 - 默认未启用客户端 MongoDB TLS。
-- 后端使用标准 PostgreSQL 与 Docker 仪表盘监控；不再提供独立 FERRET 模块或模块仪表盘。
+- 后端使用标准 PostgreSQL 仪表盘监控，FerretDB 通过 Docker 日志排查；不再提供独立 FERRET 模块或模块仪表盘。
 - FerretDB 或 DocumentDB 升级后应重新执行一次带认证的 CRUD 冒烟测试。

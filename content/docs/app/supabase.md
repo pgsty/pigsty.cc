@@ -14,9 +14,9 @@ Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务�
 
 本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
 
-下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，默认使用 Kong 网关和外置 PG18。
+下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，当前源码默认使用 Envoy（`api-gw`）网关和外置 PG18。
 
-Supabase `self-hosted/v0.8.4` 的 Envoy 适配与迁移脚本仍是开发预览，尚未提供完整的公开 Pigsty 配套版本。下方保留相关变化供升级规划参考，不能只复制新 YAML 或 SQL 就按该版本部署。
+当前源码跟踪 Supabase `self-hosted/v0.8.4`，包含 Envoy 适配与迁移脚本。应使用同一源码版本中的配置模板、应用目录和 SQL 文件。已发布的 Pigsty 压缩包可能包含较早的 Supabase 版本，不能仅复制新 YAML 或 SQL 完成升级。
 
 
 
@@ -134,7 +134,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase �
 让我们先从单节点 Supabase 部署开始，我们会在后面进一步介绍多节点高可用部署的方法。
 
 [准备](/docs/deploy/prepare) 一台全新 [Linux 服务器](/docs/deploy/prepare)，使用 Pigsty 提供的 [`supabase`](/docs/conf/supabase/) 配置模板执行 [标准安装](/docs/setup/install)，
-然后额外运行 [`docker.yml`](/docs/docker/playbook#dockeryml) 与 `app.yml` 拉起无状态部分的 Supabase 容器即可（默认 Kong HTTP 端口为 `8000`，可通过 Nginx 门户接入 HTTPS）。
+然后额外运行 [`docker.yml`](/docs/docker/playbook#dockeryml) 与 `app.yml` 拉起无状态部分的 Supabase 容器即可（默认 `api-gw` HTTP 端口为 `8000`，可通过 Nginx 门户接入 HTTPS）。
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
@@ -181,12 +181,12 @@ Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` �
 Supabase Studio 的 Query Performance 页面会在 `public, extensions` 搜索路径下访问 `pg_stat_statements`。
 Pigsty 仍然将 `pg_stat_statements` 扩展对象保留在 `monitor` 模式中，以兼容 `pg_exporter` 与现有监控面板；模板会在 `extensions` 模式中创建兼容视图与函数，供 Studio 使用。
 
-网关服务名为 `kong`。开发版适配 [**`self-hosted/v0.8.4`**](https://github.com/supabase/supabase/tree/189adda99d1b56da55fc5a6ee3f849354aaea92a/docker) 后，默认网关改为 Envoy `1.39.6`，服务名为 `api-gw`，并保留 Kong `3.9.3` 作为可选方案。
+当前网关服务名为 `api-gw`。适配 [**`self-hosted/v0.8.4`**](https://github.com/supabase/supabase/tree/189adda99d1b56da55fc5a6ee3f849354aaea92a/docker) 后，默认网关改为 Envoy `1.39.6`，服务名为 `api-gw`，并保留 Kong `3.9.3` 作为可选方案。
 
 <details>
-<summary>开发版网关切换方式</summary>
+<summary>网关切换方式</summary>
 
-仅在已取得配套的开发版应用文件时，使用以下组合启用 Kong：
+使用同版本的配套应用文件，可通过以下组合启用可选的 Kong 网关：
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.kong.yml up -d

@@ -65,7 +65,8 @@ categories: [参考]
 
 ```bash
 # Teable Web 界面
-http://tea.pigsty:8890
+http://tea.pigsty
+http://<IP>:8890
 
 # 或通过 Nginx 代理
 https://tea.pigsty

@@ -160,33 +160,54 @@ fbd4d01ce39e13016343badc3258b32e0ce5088b1604b0f62ef8b4aafca82d65  pigsty-pkg-v4.
 
 ## Bootstrap
 
-Pigsty 依赖 ansible 执行剧本，这个脚本负责用各种方式来确保 ansible 正确安装。
+`bootstrap` 用于在运行 Pigsty 剧本前准备软件源与 Ansible。手工下载或克隆源码后，可以用它安装部署依赖；离线安装时，可以用它解包并启用本地软件仓库。
+
+### 参数
+
+| 参数 | 说明 |
+|:-----|:-----|
+| `-h`、`--help` | 显示用法并退出，不执行引导操作 |
+| `-r <region>`、`--region <region>` | 镜像区域：`default`、`china` 或 `europe`；省略时探测网络，自动选择 `default` 或 `china`。实际镜像取决于发行版 |
+| `-p <path>`、`--path <path>`、`--pkg <path>` | 指定已有离线包的路径；当前开发源码默认为 `/var/tmp/pkg.tgz` |
+| `-k`、`--keep` | 跳过将现有软件源文件批量移到备份目录的步骤；仍可能写入或覆盖脚本生成的软件源文件，详见下文 |
+{.full-width}
+
+部分旧版本的帮助信息误列了 `-y/--yes`。当前脚本不支持这两个参数，也不会自动下载离线包；使用它们会报 `unrecognized option` 并以状态码 `1` 退出。请先下载离线包，再通过 `-p` 指定路径。
+
+常用示例：
 
 ```bash
-./bootstrap       # 确保 ansible 正确安装（如果有离线包，优先使用离线安装并解包使用）
+./bootstrap --help                                      # 查看参数
+./bootstrap -r china                                    # 使用中国镜像
+./bootstrap -p /var/tmp/pkg.tgz                          # 使用已下载的离线包
+./bootstrap --region china --pkg /var/tmp/pkg.tgz --keep # 组合使用参数
 ```
 
-通常在两种情况下，你需要运行这个脚本：
+### 执行流程
 
-- 你不是通过 [**安装脚本**](/docs/setup/install#安装) 来安装 Pigsty 的，而是通过下载，`git clone` 源码包的方式安装的，因此没有安装 ansible。
-- 你准备通过离线软件包来安装 Pigsty，需要使用这个脚本来从离线软件包中安装 ansible。
+在 Linux 上，脚本按以下顺序执行：
 
-当前开发源码的 `bootstrap` 默认检测 `/var/tmp/pkg.tgz`；仅当默认路径不存在时才回退到旧路径 `/tmp/pkg.tgz`。`v4.5.0` 发布版默认仍是 `/tmp/pkg.tgz`，因此跨版本操作时建议始终显式指定：
+1. 检查系统、架构和包管理器。当前用户须为 `root` 或具有免密 sudo 权限；脚本只检查 sudo 并在不满足要求时退出，不会自动修改 sudo 配置。
+2. 检查当前用户免密 SSH 到 `127.0.0.1` 的能力，必要时尝试生成 `~/.ssh/id_rsa` 并将公钥加入本机的 `~/.ssh/authorized_keys`。这不会向远程节点分发密钥。
+3. 准备本地仓库：若 `/www/pigsty/repo_complete` 已存在，则直接复用，传入 `-p` 也不会重新解包。否则，若指定的离线包存在，则解压到 `/www`；解压失败或缺少完成标记时，清理不完整的 `/www/pigsty` 并报错退出。
+4. 若本地仓库已就绪，则配置指向 `/www/pigsty` 的本地文件软件源；否则，联网探测成功时配置所选区域的上游源，探测失败时保留现有源。随后刷新包管理器缓存。
+5. 若 `ansible-playbook` 已在 `PATH` 中，则跳过安装；否则从可用软件源安装 Ansible 及引导工具，如 `unzip`、`wget`、`sshpass` 和相应平台的依赖，并检查 Ansible 是否可用。已有 Ansible 不会跳过前面的 SSH、仓库准备和缓存刷新步骤。
 
-```bash
-./bootstrap -p /var/tmp/pkg.tgz
-```
+当前开发源码仅在包路径为 `/var/tmp/pkg.tgz`、该文件不存在且 `/tmp/pkg.tgz` 存在时，才回退到旧路径。`v4.5.0` 发布版默认仍是 `/tmp/pkg.tgz`，因此跨版本操作时建议显式指定 `-p /var/tmp/pkg.tgz`。即使显式指定的包路径不存在，脚本也会继续按上面的软件源选择流程尝试安装，不会仅因缺少离线包而退出。
 
-如果存在则解压使用它，然后从里面安装 ansible。
-如果离线包不存在，它会尝试从互联网安装 ansible。如果还是不行，那你就要自己想办法了！
+脚本不会安装或启动 Nginx；此阶段通过本地文件软件源读取离线包。完成后再运行 `./configure` 和相应的部署剧本。
 
+### 软件源变更
 
-> [!WARNING] 我的 yum/apt 仓库文件跑到哪里去了？
-> 引导程序默认会 **移走** 现有软件源配置，以确保只有所需的仓库被启用。
-> 您可以在 `/etc/yum.repos.d/backup` (EL) 或 `/etc/apt/backup` (Debian / Ubuntu) 中找回它们。
+> [!WARNING] 现有软件源与 `--keep` 的边界
+> 在启用本地仓库或配置上游源前，默认会将现有软件源文件 **移到备份目录**：EL 为 `/etc/yum.repos.d/backup`，Debian / Ubuntu 为 `/etc/apt/backup`。脚本结束时不会自动恢复这些文件。
 >
-> 如果您想在 `bootstrap` 过程中保留现有软件源配置，请使用 `-k|--keep` 参数。
+> `-k/--keep` 跳过这一步批量移走操作，但仍会写入软件源文件：本地模式会写入 `pigsty-local.repo` 或 `pigsty-local.list`；在线上游模式会写入 `/etc/yum.repos.d/el<版本>.repo` 或覆盖 `/etc/apt/sources.list`。旧的 EL7 上游配置分支仍会移走已有 `.repo` 文件，即使使用了 `-k`。
 >
 > ```bash
-> ./bootstrap -k # 或 --keep
+> ./bootstrap -k # 等同于 --keep
 > ```
+
+### macOS
+
+macOS 只能作为管理节点。脚本会跳过 Linux 的 sudo、SSH、离线解包和软件源配置步骤；若未找到 Ansible，只提示手工运行 `brew install ansible`，不会自动执行 Homebrew 安装。

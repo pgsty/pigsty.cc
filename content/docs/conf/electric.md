@@ -80,7 +80,7 @@ http://elec.pigsty
 
 **注意事项**：
 - Electric 用户需要 `replication` 权限
-- 需要启用 PostgreSQL 逻辑复制
+- PostgreSQL 默认启用逻辑复制（`pg_logical_replication: true`），Electric 需要保留该设置
 - 生产环境建议使用 SSL 连接（已配置 `sslmode=require`）
 - 容器内监听 `ELECTRIC_PORT=3000`，宿主机发布 `ELECTRIC_PUBLISH_PORT=8002`
 - 默认 `ELECTRIC_STORAGE=FAST_FILE`，缓存卷挂载到 `/var/lib/electric`

@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称：`ha/safe`
 - 节点数量：3 个 INFRA、etcd 和 PostgreSQL 节点；可选延迟副本
 - 适用系统：`el8`、`el9`、`el10`、`d12`、`d13`、`u22`、`u24`、`u26`
-- 适用架构：`x86_64`；部分安全扩展没有 ARM64 软件包
+- 适用架构：`x86_64`、`aarch64`
 - 相关配置：[**`ha/trio`**](/docs/conf/trio/)、[**`ha/full`**](/docs/conf/full/)
 
 生成配置：
@@ -57,7 +57,7 @@ categories: [参考]
 - 为数据库客户端配置 `sslmode=verify-full` 与可信 CA；
 - 确认严格同步模式的可用性影响符合业务要求；
 - 根据需要预加载并配置 `pgaudit`、`credcheck` 等扩展；
-- 检查 ARM64 环境中的扩展软件包可用性；
+- 为额外选用的安全扩展核对平台软件包可用性；
 - 完成备份恢复、故障切换和证书验证测试。
 
 安全机制说明见 [**安全模型**](/docs/concept/sec/level)、[**身份认证**](/docs/concept/sec/auth)、[**加密通信**](/docs/concept/sec/ca) 和 [**数据安全**](/docs/concept/sec/data)。

@@ -439,7 +439,7 @@ proceed with ./deploy.yml
 
 ## 注意事项
 
-1. **免密访问**：运行 `configure` 前，确保当前用户具有免密 sudo 权限和免密 SSH 到本机的能力。可以通过 `bootstrap` 脚本自动配置。
+1. **免密访问**：在 Linux 上运行 `configure` 前，确保当前用户具有免密 sudo 权限和免密 SSH 到本机的能力。[**`bootstrap`**](/docs/setup/offline#bootstrap) 会检查 sudo 权限，并尝试修复到本机的免密 SSH；sudo 权限需要预先配置。
 
 2. **IP 地址选择**：请选择 **内网 IP** 作为主 IP 地址，不要使用公网 IP 或 `127.0.0.1`。
 

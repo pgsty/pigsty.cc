@@ -10,7 +10,7 @@ categories: [参考]
 
 `mssql` 配置模板使用 Babelfish 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。软件仓库提供 PG17、PG18 兼容包，模板默认选择 `pg_version: 17`；具体平台的可用版本见 [**软件包清单**](/docs/repo/pgsql/)。
 
-`./configure -c mssql` 会忽略 `-v`。如需使用 PG18，应在生成的 `pigsty.yml` 中显式修改 `pg_version`，并确认对应平台的内核包与扩展可用。开发版的 `fork/mssql` 路径不受这条旧名称判断保护，`-v` 会覆盖版本。
+`configure` 同时接受 `-c mssql` 与 `-c fork/mssql`，两者均保留模板的 PG17 设置，忽略 `-v`。如需使用 PG18，应同步修改生成清单中集群级与全局的两处 `pg_version`，并确认对应平台的内核包与扩展可用。
 
 从 Pigsty v4.2 以来，Babelfish 由 Pigsty 直接构建，不再使用 WiltonDB 仓库，可在所有 [支持的 Linux 平台](/docs/ref/linux) 上使用。
 

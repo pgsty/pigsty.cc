@@ -40,7 +40,7 @@ categories: [参考]
 ## 配置解读
 
 - 应用文件持久化到 `/data/immich/library`
-- PostgreSQL 集群名为 `pg-immich`，数据库与账号均为 `immich` 对应定义
+- PostgreSQL 集群名为 `pg-immich`，数据库为 `immich`，账号为 `dbuser_immich`
 - 安装 `pgvector` 与 `vchord` 软件包，在数据库中创建 `vchord`、`earthdistance` 和位于 `public` 的 `pg_trgm`
 - 预加载 `vchord.so`，并设置 `DB_VECTOR_EXTENSION: vectorchord`
 - 使用 Compose 内与 Immich 3.3.0 官方配置匹配、按 digest 固定的 Valkey 9 服务，不在 Pigsty 中另建 Redis 集群

@@ -87,7 +87,7 @@ pg_libs: 'citus, pg_cron, pg_stat_statements'
 **安全配置**：
 
 - 启用 `pg_dbsu_password`，允许超级用户密码访问（Citus 节点间通信需要）
-- HBA 规则要求所有连接使用 SSL 认证
+- 模板添加 SSL HBA 规则，但默认规则仍允许部分非 TLS 连接，并非全局强制 TLS
 - 节点间使用证书验证：`sslmode=verify-full`
 
 

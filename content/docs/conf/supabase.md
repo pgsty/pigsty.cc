@@ -18,11 +18,11 @@ categories: [参考]
 - 配置名称： `supabase`
 - 节点数量： 单节点
 - 配置说明：使用 Pigsty 托管的 PostgreSQL 自建 Supabase
-- 适用系统：`el8`, `el9`, `d12`, `u22`, `u24`, `u26`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - PostgreSQL：`15`, `16`, `17`, `18`（模板默认 `18`）
 - Supabase：使用配套的应用镜像集合
-- API 网关：默认使用 Kong
+- API 网关：当前源码默认使用 Envoy（`api-gw`），可选 Kong 覆盖配置
 - 相关配置：[`meta`](/docs/conf/meta/)，[`rich`](/docs/conf/rich/)
 
 启用方式：
@@ -39,9 +39,9 @@ categories: [参考]
 源文件：[**`conf/supabase.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，与同版本的 `app/supabase/` 配套使用。
 
 <details>
-<summary>开发版配置预览：Supabase 0.8.4，尚无完整公开部署入口</summary>
+<summary>当前源码配置：Supabase self-hosted/v0.8.4</summary>
 
-下方配置需要配套的开发版应用文件、数据库基线与迁移脚本，不能单独替换稳定版配置。网关与升级差异见 [**应用说明**](/docs/app/supabase/)。
+下方配置需要同一源码版本的 `app/supabase/` 应用文件、数据库基线与迁移脚本。已发布版本可能使用旧网关，升级时应一并更新配套应用文件。网关与升级差异见 [**应用说明**](/docs/app/supabase/)。
 
 {{< include file="yaml/supabase.yml" code=true lang="yaml" >}}
 
@@ -63,7 +63,7 @@ categories: [参考]
 **架构组成**：
 - **PostgreSQL**：Pigsty 托管的生产级 PostgreSQL（支持高可用）
 - **Docker 容器**：Supabase 无状态服务（Auth、Storage、Realtime、Edge Functions 等）
-- **API 网关**：使用 `kong` 服务提供 HTTP `8000` 入口；开发版改用 Envoy
+- **API 网关**：`api-gw` 服务默认运行 Envoy，提供 HTTP `8000` 入口；Kong 作为可选兼容覆盖配置保留
 - **Silo**：由 MINIO 模块部署的 S3 兼容对象存储，用于文件存储和 PostgreSQL 备份
 - **Nginx**：反向代理和 HTTPS 终止
 
@@ -92,7 +92,7 @@ vi pigsty.yml                            # 修改域名、密码与密钥
 ```bash
 # Supabase Studio
 http://<IP>:8000
-http://supa.pigsty   (用户名: supabase, 密码: pigsty)
+https://supa.pigsty  (用户名: supabase, 密码: pigsty)
 
 # 直接连接 PostgreSQL
 psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
@@ -105,7 +105,7 @@ psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
 - 对 Supabase 云服务有合规或成本考虑
 
 **注意事项**：
-- **必须修改 JWT_SECRET**：使用至少 32 字符的随机字符串，并重新生成 ANON_KEY 和 SERVICE_ROLE_KEY
+- **必须修改 JWT_SECRET**：使用至少 32 字符的随机字符串，并重新生成 ANON_KEY 和 SERVICE_ROLE_KEY。内置样例令牌于 2031-11-07 UTC 过期，仅用于演示
 - 需要配置正确的域名（`SITE_URL`、`API_EXTERNAL_URL`）
 - 生产环境建议启用 HTTPS（可使用 certbot 自动签发证书）
 - Docker 网络需要能访问 PostgreSQL；模板中的 Docker HBA 范围为 `172.16.0.0/12`（v4.5.0 为 `172.17.0.0/16`），应根据实际容器网络调整

@@ -89,7 +89,7 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 **JupyterLab**：交互式计算环境
 
 - 支持 Python/SQL/Markdown 笔记本
-- 预配置 Python venv 数据科学库
+- Python venv 默认安装 `jupyterlab` 与 `ipykernel`，数据科学库需按需安装
 - 通过 Nginx 反向代理提供 HTTPS 访问
 - 模板显式参数：`jupyter_enabled`, `jupyter_password`
 - 其余可选参数：`jupyter_port`, `jupyter_data`, `jupyter_venv`

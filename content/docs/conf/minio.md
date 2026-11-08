@@ -74,6 +74,6 @@ mcli ls sss/
 
 **注意事项**：
 - 每个节点需要准备 4 块独立磁盘挂载到 `/data1` - `/data4`
-- 虚拟机示例使用 `vm_image: u24`，并通过 `vm_disks` 为这四个挂载点各声明 `size: 64` 的数据盘；已有主机仍需自行确认实际挂载与容量
+- `vm_image` 与 `vm_disks` 仅是描述性元数据，Vagrant 与 Terraform 不会读取。`vagrant/spec/minio.rb` 示例为每节点配置四块 32 GiB 数据盘；应在虚拟机规格中配置磁盘，并确认已有主机的实际挂载
 - 生产环境建议至少 4 节点以实现纠删码冗余
 - VIP 需要正确配置网络接口（`vip_interface`）
