@@ -134,7 +134,7 @@ docker run -d \
 ## 兼容性
 
 当前默认配置支持 PostgreSQL 10-19+。
-对于 EOL 旧版本 PostgreSQL，可以使用仓库内置的 `legacy/` 配置包进行兼容监控。
+对于 EOL 旧版本 PostgreSQL，使用 [main 分支单独维护的 legacy 配置包](https://github.com/pgsty/pg_exporter/tree/main/legacy)。它不包含在二进制压缩包或 RPM／DEB 中，需要独立下载。
 
 | PostgreSQL 版本 | 支持状态                           |
 |---------------|--------------------------------|
@@ -146,11 +146,13 @@ docker run -d \
 启用 Legacy 配置示例：
 
 ```bash
-make conf9
-PG_EXPORTER_CONFIG=legacy/pg_exporter.yml pg_exporter
+curl -fSL https://raw.githubusercontent.com/pgsty/pg_exporter/main/legacy/pg_exporter.yml -o pg_exporter-legacy.yml
+PG_EXPORTER_CONFIG=pg_exporter-legacy.yml pg_exporter
 ```
 
-pg_exporter 支持 pgBouncer 1.8+（`v1.8` 是第一个支持 `SHOW` 命令的版本）。
+PostgreSQL 9.1 请使用 main 上 `282e19d` 或之后的配置，修复没有 TOAST 关系的表触发 OID 0 错误、整组表大小指标缺失的问题。该 legacy 维护修改不属于 v1.6.0 发布制品；v1.6.0 源码标签中的旧副本也不含此修复。
+
+pg_exporter 的内置采集器支持 pgBouncer 1.8+；这些采集器使用的 `SHOW STATS` 字段从 1.8 开始可用。
 
 | pgBouncer 版本   | 支持状态   |
 |----------------|--------|

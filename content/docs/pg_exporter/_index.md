@@ -36,7 +36,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 - 当前稳定版本：[`v1.6.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0)
 - 默认配置支持：PostgreSQL **10-19+**
-- Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
+- Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 main 上单独维护的 `legacy/` 配置包，见 [安装说明](/docs/pg_exporter/install/#兼容性)）
 - PgBouncer 支持：**1.8-1.26+**
 
 v1.6.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1 个配置参考文件）、**96 个版本／角色分支** 和 **59 个指标命名空间**。460 按指标名跨分支去重，包含默认禁用的采集器与 2 个尚未展开的 `HISTOGRAM` 定义；实际时序数取决于版本、对象数量、标签与直方图桶。
