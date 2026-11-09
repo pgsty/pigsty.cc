@@ -197,6 +197,16 @@ timeout: -1    # 禁用超时（不推荐）
 
 `timeout: 0` 或省略该字段使用默认 100ms；有限负值关闭查询期限。v1.5.0 拒绝 NaN、无穷大和转换后会溢出的正超时。超时覆盖本次谓词与主查询的总执行时间。
 
+### 请求生命周期
+
+自 v1.6.0 起，采集、等待与响应写入阶段合计最多接纳两个指标请求。采集仍串行；第二个请求在剩余预算内等待，更多请求返回 HTTP 503。预算默认为 30 秒，合法、有限且为正数的 `X-Prometheus-Scrape-Timeout-Seconds` 请求头可以缩短它。等待期间取消的请求不执行 SQL。
+
+请求取消后，不再启动下一个采集器或数据库。已启动且 timeout 为正数的采集器，其谓词链与主 SQL 共用同一期限，继续执行并正常缓存结果。负数 timeout 关闭该期限，此时查询随请求取消。中断的采集在连接仍允许响应时返回 503。驱动与网络阻塞意味着这些期限不是硬性的墙钟上限；建连握手需另行设置 DSN 的 `connect_timeout`。
+
+中断轮次不增加 `pg_exporter_scrape_error_count` 和 `pg_exporter_server_scrape_error_count`，轮次汇总日志为 INFO `interrupted`；查询错误计数与 fatal 查询的 ERROR 日志仍然保留。因此，恰好与请求取消重叠的真实失败可能不计入这两个轮次计数。请求没有取消时，连接／预检失败和 fatal 查询失败（包括自身超时）仍按错误计数；非 fatal 失败仍体现在查询级计数中。
+
+刷新失败沿用原有失败 TTL。尤其是负数 timeout 的 fatal 采集器，被取消后会缓存 fatal 失败；后续有效抓取可能对该失败计数并返回 `pg_up 0`，直到成功刷新。建议 fatal 采集器保留正数 timeout。设计理由见 [采集生命周期](https://exp.pgsty.com/zh/design/scrape-lifetime/)。
+
 ### 版本兼容性
 
 控制哪些 PostgreSQL 版本可以运行此采集器：
@@ -541,11 +551,12 @@ curl -s http://localhost:9630/metrics | grep -E 'pg_exporter_query_scrape_(durat
 
 升级 Exporter 时，应合并并部署配套采集器 YAML。只替换二进制不会应用 SQL、标签或状态编码修正；在 Pigsty 管理的实例上，还应确认最终部署的配置包含这些定义。升级 PostgreSQL 大版本时，必须重新检查按版本选中的采集器分支。
 
+- **Exporter v1.5.0 → v1.6.0：** 内置 SQL 指标名、标签键、类型与单位不变。跨库进度指标的 `relname` 改用数字 OID 表示其他库的用户关系，当前库与系统目录仍解析名称；面板保留 `datname` 与 `pid`。中断轮次不再增加目标错误计数，HTTP 健康与采集成功分开判定。
 - **Exporter v1.4.1 → v1.5.0：** 内置 SQL 指标名、类型与单位不变，但 `pg_sub_*` 增加 `datname`，`pg_recv_state` 修正状态编码。检查跨库同名订阅的连接／聚合，以及 Grafana 值映射。
 - **PG18 → PG19：** 已有指标没有删除或改名，但 `pg_sub_sync_error_count` 扩大为表与序列同步错误之和，`pg_subrel_count` 也包含序列。`pg_sub_has_worker` 可区分订阅行存在与 apply worker 运行；不能只看 `pg_sub_id` 是否存在。
 - **跨越 PG17／18：** 部分 `pg_bgwriter_*` 指标需要改用 `pg_checkpointer_*` 或按后端筛选的 I/O 指标；`pg_wal_write`、`pg_wal_sync`、`pg_wal_write_time`、`pg_wal_sync_time` 自 PG18 起需要迁移到 `pg_io_*{object="wal"}`，并调整标签聚合。逐项替代关系见 [**兼容性对照表**](https://exp.pgsty.com/zh/compatibility/#older-postgresql-metrics)。
 
-完整变更见 [**v1.5.0 发布说明**](/docs/pg_exporter/release/#v150-metric-compatibility) 和 [**PG19 指标对照表**](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics)。PG19 支持最早随 v1.3.0 发布，验收证据对应 19 RC1；这些说明不表示所有仪表盘已通过运行验收。
+完整变更见 [**v1.6.0 发布说明**](/docs/pg_exporter/release/#v160-metric-compatibility) 和 [**PG19 指标对照表**](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics)。PG19 支持最早随 v1.3.0 发布，验收证据对应 19 RC1；这些说明不表示所有仪表盘已通过运行验收。
 
 部署前后检查 `/metrics`、`/explain`、`/stat`、`pg_exporter_query_scrape_error_count` 和日志，再执行实际仪表盘、记录规则与告警表达式，检查返回时序、标签、单位和状态映射。用 `promtool check rules` 检查规则语法，并用 `promtool test rules` 覆盖正常输入和时序缺失。HTTP 200、`up == 1` 或 `pg_up == 1` 都不能证明每个预期指标存在；空向量也不等于健康的零值。
 

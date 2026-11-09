@@ -30,7 +30,7 @@ sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_export
 
 ```bash
 pg_exporter --version
-# pg_exporter v1.5.0 (built with go1.27.3 on linux/amd64)
+# pg_exporter v1.6.0 (built with go1.27.3 on linux/amd64)
 ```
 
 
@@ -78,12 +78,12 @@ curl -s http://localhost:9630/metrics | grep -E '^pg_(up|version|in_recovery) '
 你应当看到三个最核心的内置指标：
 
 ```prometheus
-pg_up 1              # 能连上目标库为 1，否则为 0
+pg_up 1              # 主目标可达且本轮没有 fatal 采集器错误时为 1
 pg_version 170000    # server_version_num 格式的版本号
 pg_in_recovery 0     # 从库为 1，主库为 0
 ```
 
-`pg_up` 为 `1` 说明链路已通，`pg_exporter.yml` 提供 460 个去重后的指标定义（`pg_db_*`、`pg_table_*`、`pg_wal_*` 等），按版本、角色与对象情况输出其中适用的指标。如果 `pg_up` 为 `0`，用 `pg_exporter --log.level=debug` 重启并观察连接错误。
+`pg_up` 为 `1` 表示最近有效采集的主目标可达且没有 fatal 错误，`pg_exporter.yml` 提供 460 个去重后的指标定义（`pg_db_*`、`pg_table_*`、`pg_wal_*` 等），按版本、角色与对象情况输出其中适用的指标。如果 `pg_up` 为 `0`，用 `pg_exporter --log.level=debug` 查看连接与 fatal 查询错误；首次预检中断也可能暂时保持为 0。HTTP 健康检查与采集指标的区别见 [API](/docs/pg_exporter/api/)。
 
 
 --------
@@ -112,7 +112,7 @@ scrape_configs:
 | 症状 | 排查方法 |
 |------|---------|
 | `pg_up 0`，连接失败 | `pg_exporter --log.level=debug` 查看具体报错；确认 URL、`pg_hba.conf` 与网络可达性 |
-| 部分指标缺失 | `curl localhost:9630/explain` 查看每个采集器的规划结果（版本门槛、标签、谓词是否命中） |
+| 部分指标缺失 | `curl localhost:9630/explain` 查看每个采集器的规划结果（版本、角色、标签等条件；谓词在刷新时执行，需另查查询统计与日志） |
 | 某个采集器持续报错 | `curl localhost:9630/stat` 查看各采集器的错误计数与耗时 |
 | 抓取缓慢 | 在 `/stat` 中找出慢采集器，调大其 `ttl` 或在配置中 `skip: true` |
 {.full-width}

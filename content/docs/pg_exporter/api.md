@@ -55,7 +55,7 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="v1.5.0",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.3",goos="linux",goarch="amd64"} 1
+pg_exporter_build_info{version="v1.6.0",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.3",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```
@@ -70,30 +70,48 @@ pg_exporter_build_info{version="v1.5.0",branch="main",revision="<git-sha>",build
 <metric_name>{<label_name>="<label_value>",...} <value> <timestamp>
 ```
 
+自 v1.6.0 起，采集、等待与响应写入阶段合计最多接纳两个指标请求。采集仍串行；第二个请求在剩余预算内等待，更多请求返回 HTTP 503。预算默认为 30 秒，合法、有限且为正数的 `X-Prometheus-Scrape-Timeout-Seconds` 请求头可以缩短它。等待期间取消的请求不执行 SQL。
+
+请求取消后，不再启动下一个采集器或数据库。已启动且 timeout 为正数的采集器，其谓词链与主 SQL 共用同一期限，继续执行并正常缓存结果。负数 timeout 关闭该期限，此时查询随请求取消。中断的采集在连接仍允许响应时返回 503。驱动与网络阻塞意味着这些期限不是硬性的墙钟上限；建连握手需另行设置 DSN 的 `connect_timeout`。
+
+中断轮次不增加 `pg_exporter_scrape_error_count` 和 `pg_exporter_server_scrape_error_count`，轮次汇总日志为 INFO `interrupted`；查询错误计数与 fatal 查询的 ERROR 日志仍然保留。因此，恰好与请求取消重叠的真实失败可能不计入这两个轮次计数。请求没有取消时，连接／预检失败和 fatal 查询失败（包括自身超时）仍按错误计数；非 fatal 失败仍体现在查询级计数中。
+
+刷新失败沿用原有失败 TTL。尤其是负数 timeout 的 fatal 采集器，被取消后会缓存 fatal 失败；后续有效抓取可能对该失败计数并返回 `pg_up 0`，直到成功刷新。建议 fatal 采集器保留正数 timeout。设计理由见 [采集生命周期](https://exp.pgsty.com/zh/design/scrape-lifetime/)。
+
 #### 自监控指标
 
-除 YAML 采集器定义的业务指标外，`/metrics` 还暴露 exporter 自身的运行指标（可用 `--disable-intro` 关闭 `pg_exporter_*` 部分；前缀随 `--namespace` 变化，pgBouncer 模式下为 `pgbouncer_`）：
+PostgreSQL 的内置指标前缀默认为 `pg`，PgBouncer 默认为 `pgbouncer`。`--namespace` 可以修改此类前缀，但不会改变 YAML 中定义的指标名。
 
-| 指标 | 标签 | 描述 |
-|------|------|------|
-| `pg_up` | — | 能连上目标库为 1，否则为 0 |
-| `pg_version` | — | `server_version_num` 格式的服务器版本号 |
-| `pg_in_recovery` | — | 处于恢复模式（从库）为 1 |
-| `pg_exporter_build_info` | version, revision, ... | 恒为 1，构建信息在标签中 |
-| `pg_exporter_up` | — | exporter 存活即为 1 |
-| `pg_exporter_uptime` | — | exporter 启动以来的秒数 |
-| `pg_exporter_scrape_total_count` / `_error_count` | — | 累计抓取次数 / 失败次数 |
-| `pg_exporter_scrape_duration` | — | 最近一次抓取耗时（秒） |
-| `pg_exporter_last_scrape_time` | — | 最近一次抓取的时间戳 |
-| `pg_exporter_server_scrape_*` | datname | 每个目标库的抓取耗时与成败计数 |
-| `pg_exporter_query_scrape_duration` | datname, query | 每个采集器的最近执行耗时 |
-| `pg_exporter_query_scrape_total_count` / `_error_count` | datname, query | 每个采集器的执行 / 失败计数 |
-| `pg_exporter_query_scrape_hit_count` / `_metric_count` | datname, query | 每个采集器返回的行数 / 产出的指标数 |
-| `pg_exporter_query_scrape_predicate_skip_count` | datname, query | 因谓词不满足而跳过的次数 |
-| `pg_exporter_query_cache_ttl` | datname, query | 采集器结果缓存的 TTL |
+| 指标 | 类型 | 标签 | 含义 |
+|:---|:---|:---|:---|
+| `pg_up` | Gauge | — | 采集所见的主目标可用状态；中断规则见下文 |
+| `pg_version` | Gauge | — | 主目标的版本号 |
+| `pg_in_recovery` | Gauge | — | 从库为 1，主库为 0；在 `pg_up = 1` 时使用 |
+| `pg_exporter_build_info` | Gauge | version、revision、branch、builddate、goversion、goos、goarch | 恒为 1，标签记录构建信息 |
+| `pg_exporter_up` | Gauge | — | 恒为 1 |
+| `pg_exporter_uptime` | Gauge | — | exporter 初始化以来的秒数 |
+| `pg_exporter_scrape_total_count` | Counter | — | 采集轮数 |
+| `pg_exporter_scrape_error_count` | Counter | — | 主目标出现连接错误或致命采集器错误的轮数 |
+| `pg_exporter_scrape_duration` | Gauge | — | 最近一轮完整采集的耗时，单位秒 |
+| `pg_exporter_last_scrape_time` | Gauge | — | 最近一轮采集结束时的 Unix 时间戳 |
+| `pg_exporter_server_scrape_duration` | Gauge | datname | 数据库最近一轮采集的耗时，单位秒 |
+| `pg_exporter_server_scrape_total_seconds` | Gauge | datname | 数据库累计采集耗时，单位秒 |
+| `pg_exporter_server_scrape_total_count` | Gauge | datname | 数据库采集轮数 |
+| `pg_exporter_server_scrape_error_count` | Gauge | datname | 数据库连接错误或致命采集器错误次数 |
+| `pg_exporter_query_scrape_total_count` | Gauge | datname、query | 采集器调用次数，含缓存命中和谓词跳过 |
+| `pg_exporter_query_scrape_error_count` | Gauge | datname、query | 采集器调用报错次数 |
+| `pg_exporter_query_scrape_hit_count` | Gauge | datname、query | 结果缓存命中次数 |
+| `pg_exporter_query_scrape_metric_count` | Gauge | datname、query | 采集器当前结果中的样本数 |
+| `pg_exporter_query_scrape_duration` | Gauge | datname、query | 最近一次实际执行耗时，单位秒；缓存命中时保留原值 |
+| `pg_exporter_query_scrape_predicate_skip_count` | Gauge | datname、query | 谓词返回 false、NULL 或零行而跳过的次数 |
+| `pg_exporter_query_cache_ttl` | Gauge | datname、query | 结果缓存剩余有效期，单位秒 |
 {.full-width .wide .expand}
 
-用 `pg_exporter_query_scrape_duration` 与 `_error_count` 可以直接定位慢采集器与故障采集器，等价于 `/stat` 的机器可读版本。
+这些序列也会附加配置的固定标签。数据库和采集器级别的累计计数以 Gauge 暴露。服务器重新规划时会重置采集器统计，配置重载也会触发这一过程。数据库连接对象重建时会重置该数据库的统计。
+
+`--disable-intro` 会隐藏表中所有内置指标，包括 `pg_up`。YAML 指标、Go/进程指标和 HTTP 健康检查仍然可用。
+
+中断时，`pg_up` 保留主目标此前的可用状态；若本轮预检已成功，则保留为 1。首次预检在成功前被中断时，保持为 0，后续成功抓取可恢复。子数据库中断采用相同的单库规则，不增加主目标的错误计数。
 
 
 --------
@@ -104,7 +122,7 @@ pg_exporter_build_info{version="v1.5.0",branch="main",revision="<git-sha>",build
 
 ### GET /up
 
-简单的存活检查（基于后台探针缓存状态，不会在每次 HTTP 请求时主动探测数据库）。
+初始化后，HTTP 健康状态只由每秒一次的后台探测更新。慢采集不再占用探测所需的锁，采集完成也不会覆盖更新的探测结果。HTTP 健康请求只读取快照，不执行 SQL。`pg_up` 与 `pg_in_recovery` 仍属于采集指标：fatal 采集器失败可能使 `pg_up` 为 0，而数据库可达时 `/up` 仍返回 200。PostgreSQL 主连接池最多三个连接，PgBouncer 最多两个，每个发现数据库最多一个。
 
 #### 响应码
 
@@ -298,7 +316,7 @@ server reloaded
 
 ### GET /explain
 
-显示所有已配置采集器的查询执行规划信息。
+显示主目标当前计划中选中的采集器；谓词在刷新时运行，不能从该端点判断谓词结果。
 
 #### 请求
 

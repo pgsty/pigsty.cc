@@ -191,7 +191,7 @@ docker run -d \
   --restart unless-stopped \
   -p 9630:9630 \
   -e PG_EXPORTER_URL="postgres://monitor:S3cret@host:5432/postgres" \
-  pgsty/pg_exporter:1.5.0
+  pgsty/pg_exporter:1.6.0
 ```
 
 Docker Compose：
@@ -199,7 +199,7 @@ Docker Compose：
 ```yaml
 services:
   pg_exporter:
-    image: pgsty/pg_exporter:1.5.0
+    image: pgsty/pg_exporter:1.6.0
     container_name: pg_exporter
     restart: unless-stopped
     ports:
@@ -213,7 +213,7 @@ services:
 ```
 
 > [!WARNING] 注意
-> 官方镜像基于 `scratch`，不含系统 CA 证书。若以 `sslmode=verify-ca` / `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书并通过 `sslrootcert` 指定，否则 TLS 校验无法完成。
+> 镜像基于 `scratch`，包含系统 CA 证书包与许可证，但没有 shell。公共受信任证书可使用内置根证书；使用私有 CA 且启用 `sslmode=verify-ca` 或 `verify-full` 时，仍需挂载私有 CA 并设置 `sslrootcert`。
 
 
 --------
@@ -236,7 +236,7 @@ spec:
     spec:
       containers:
       - name: pg-exporter
-        image: pgsty/pg_exporter:1.5.0
+        image: pgsty/pg_exporter:1.6.0
         ports:
         - containerPort: 9630
         env:
@@ -290,7 +290,8 @@ pg_exporter --auto-discovery \
 - 数据库级采集器在每个被发现的库上分别执行，指标带 `datname` 标签区分
 - 新建／删除的数据库会在后续预检中被自动纳入／移除
 - v1.5.0 复用 `lib/pq` 解析实际数据库身份；替换库名时清除 URL 查询中冲突的 `dbname` / `database` 参数，正确保留特殊字符，防止多个发现连接落到同一个库
-- 多库采集仍为串行执行，抓取超时预算应覆盖预检与各数据库的查询总耗时
+- 多库采集仍为串行执行，抓取超时预算应覆盖预检与各数据库的查询总耗时；v1.6.0 请求取消后不再启动后续数据库或采集器。
+- PostgreSQL 主连接池最多三个连接，发现数据库各一个；PgBouncer 主连接池最多两个连接，分别容纳串行采集与独立健康探测。
 
 
 --------

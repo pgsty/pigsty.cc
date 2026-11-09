@@ -11,6 +11,8 @@ categories: [任务]
 
 --------
 
+软件仓库安装使用仓库当前提供的包，可能晚于 GitHub Release。需要精确安装 v1.6.0 时，使用下方带版本号的发布制品。
+
 ## Pigsty
 
 最简单的使用 `pg_exporter` 的方式是使用 [Pigsty](https://pigsty.cc)。Pigsty 内置了基于 `pg_exporter`、VictoriaMetrics（Prometheus 兼容指标抓取与查询）和 Grafana 的 PostgreSQL 可观测性方案；部署后即可使用预置指标、规则与仪表盘。
@@ -26,22 +28,22 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 
 您也可以直接从 [GitHub 发布页面](https://github.com/pgsty/pg_exporter/releases/latest) 下载 `pg_exporter` 软件包（`RPM`/`DEB`/Tarball）：
 
-**v1.5.0 发布文件：**
+**v1.6.0 发布文件：**
 
 | 类型                      | 文件                                                                                                                                               |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| DEB (amd64)             | [pg-exporter_1.5.0-1_amd64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter_1.5.0-1_amd64.deb)                     |
-| DEB (arm64)             | [pg-exporter_1.5.0-1_arm64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter_1.5.0-1_arm64.deb)                     |
-| DEB (ppc64le)           | [pg-exporter_1.5.0-1_ppc64le.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter_1.5.0-1_ppc64le.deb)                 |
-| RPM (aarch64)           | [pg-exporter-1.5.0-1.aarch64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter-1.5.0-1.aarch64.rpm)                 |
-| RPM (x86_64)            | [pg-exporter-1.5.0-1.x86_64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter-1.5.0-1.x86_64.rpm)                   |
-| RPM (ppc64le)           | [pg-exporter-1.5.0-1.ppc64le.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg-exporter-1.5.0-1.ppc64le.rpm)                 |
-| Tarball (Linux amd64)   | [pg_exporter-1.5.0.linux-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.linux-amd64.tar.gz)       |
-| Tarball (Linux arm64)   | [pg_exporter-1.5.0.linux-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.linux-arm64.tar.gz)       |
-| Tarball (Linux ppc64le) | [pg_exporter-1.5.0.linux-ppc64le.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.linux-ppc64le.tar.gz)   |
-| Tarball (macOS amd64)   | [pg_exporter-1.5.0.darwin-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.darwin-amd64.tar.gz)     |
-| Tarball (macOS arm64)   | [pg_exporter-1.5.0.darwin-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.darwin-arm64.tar.gz)     |
-| Tarball (Windows amd64) | [pg_exporter-1.5.0.windows-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.5.0/pg_exporter-1.5.0.windows-amd64.tar.gz)   |
+| DEB (amd64)             | [pg-exporter_1.6.0-1_amd64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter_1.6.0-1_amd64.deb)                     |
+| DEB (arm64)             | [pg-exporter_1.6.0-1_arm64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter_1.6.0-1_arm64.deb)                     |
+| DEB (ppc64le)           | [pg-exporter_1.6.0-1_ppc64le.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter_1.6.0-1_ppc64le.deb)                 |
+| RPM (aarch64)           | [pg-exporter-1.6.0-1.aarch64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter-1.6.0-1.aarch64.rpm)                 |
+| RPM (x86_64)            | [pg-exporter-1.6.0-1.x86_64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter-1.6.0-1.x86_64.rpm)                   |
+| RPM (ppc64le)           | [pg-exporter-1.6.0-1.ppc64le.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg-exporter-1.6.0-1.ppc64le.rpm)                 |
+| Tarball (Linux amd64)   | [pg_exporter-1.6.0.linux-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.linux-amd64.tar.gz)       |
+| Tarball (Linux arm64)   | [pg_exporter-1.6.0.linux-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.linux-arm64.tar.gz)       |
+| Tarball (Linux ppc64le) | [pg_exporter-1.6.0.linux-ppc64le.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.linux-ppc64le.tar.gz)   |
+| Tarball (macOS amd64)   | [pg_exporter-1.6.0.darwin-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.darwin-amd64.tar.gz)     |
+| Tarball (macOS arm64)   | [pg_exporter-1.6.0.darwin-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.darwin-arm64.tar.gz)     |
+| Tarball (Windows amd64) | [pg_exporter-1.6.0.windows-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.6.0/pg_exporter-1.6.0.windows-amd64.tar.gz)   |
 {.full-width .wide .expand}
 
 您可以直接使用操作系统的包管理器（`rpm`/`dpkg`）安装，或者将二进制文件放入 `$PATH` 中。当前归档文件还会附带 `pg_exporter.yml`、`package/pg_exporter.default`、`package/pg_exporter.service` 与 `LICENSE`，便于按 tarball 手工部署。
@@ -102,7 +104,7 @@ docker run -d \
   --name pg_exporter \
   -p 9630:9630 \
   -e PG_EXPORTER_URL="postgres://user:password@host:5432/postgres" \
-  pgsty/pg_exporter:1.5.0
+  pgsty/pg_exporter:1.6.0
 
 # 使用自定义配置
 docker run -d \
@@ -111,7 +113,7 @@ docker run -d \
   -v /path/to/pg_exporter.yml:/etc/pg_exporter.yml:ro \
   -e PG_EXPORTER_CONFIG="/etc/pg_exporter.yml" \
   -e PG_EXPORTER_URL="postgres://user:password@host:5432/postgres" \
-  pgsty/pg_exporter:1.5.0
+  pgsty/pg_exporter:1.6.0
 
 # 启用自动发现
 docker run -d \
@@ -120,11 +122,11 @@ docker run -d \
   -e PG_EXPORTER_URL="postgres://user:password@host:5432/postgres" \
   -e PG_EXPORTER_AUTO_DISCOVERY="true" \
   -e PG_EXPORTER_EXCLUDE_DATABASE="template0,template1" \
-  pgsty/pg_exporter:1.5.0
+  pgsty/pg_exporter:1.6.0
 ```
 
 > [!WARNING] 注意
-> 当前 Docker 镜像基于 `scratch`。如果您使用 `sslmode=verify-ca` 或 `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书（例如 `sslrootcert` 或系统 CA bundle），否则 TLS 校验可能无法完成。
+> 镜像基于 `scratch`，包含系统 CA 证书包与许可证，但没有 shell。公共受信任证书可使用内置根证书；使用私有 CA 且启用 `sslmode=verify-ca` 或 `verify-full` 时，仍需挂载私有 CA 并设置 `sslrootcert`。
 
 
 --------

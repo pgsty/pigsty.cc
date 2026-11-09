@@ -1,0 +1,35 @@
+name: Check PG Exporter Docs
+
+on:
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "content/docs/pg_exporter/**"
+      - ".github/workflows/pg-exporter-docs-check.yaml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pg-exporter-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v7
+        with:
+          go-version: 1.27.3
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.168.0"
+          extended: true
+      - name: Check source, rendered pages, and links
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: make check

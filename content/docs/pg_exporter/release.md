@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.5.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0)
+`pg_exporter` 的最新稳定版本是 [v1.6.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.6.0](#v160) | 2026-11-09 | 独立健康探测、有界抓取、跨库进度标签与容器 CA 修正 | [v1.6.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0) |
 | [v1.5.0](#v150) | 2026-10-23 | 连接安全、自动发现、健康检查与复制指标修复，Go 1.27.3 | [v1.5.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0) |
 | [v1.4.1](#v141) | 2026-07-29 | 修复逻辑订阅计数与标签列校验，统一 RPM 包名                  | [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1) |
 | [v1.4.0](#v140) | 2026-07-18 | 快照直方图支持，新增 pg_xact_age 采集器，HTTP 路由加固         | [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0) |
@@ -45,6 +46,62 @@ description: PG Exporter 版本发布历史
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width .wide .expand}
 
+
+--------
+
+## v1.6.0
+
+发布日期：2026-11-09。
+
+PG Exporter v1.6.0 将健康探测与指标采集解耦，限制并发抓取与等待，保留客户端离开后已完成的有界刷新，并修正跨数据库进度标签。同时补齐容器信任根并更新依赖。构建工具链仍为 **Go 1.27.3**，PostgreSQL 驱动仍为 **lib/pq 1.12.3**。
+
+### 修复与改进
+
+- **健康探测独立运行：** 慢指标采集不再阻塞后台探测，采集完成不再覆盖更新的连通性或角色观测。初始化后，HTTP 健康状态只由探测写入；`pg_up` 和 `pg_in_recovery` 仍反映采集结果。数据库可达时，即使 fatal 采集器使 `pg_up` 为 0，`/up` 仍可返回 HTTP 200。
+- **限制重叠抓取：** 采集、等待和响应写入合计最多接纳两个指标请求。采集仍串行，第二个请求可以等待并复用缓存，更多请求返回 HTTP 503。等待可取消且不执行 SQL。请求预算为 30 秒，合法、有限且为正数的 Prometheus 抓取超时请求头可缩短它。
+- **按采集器取消：** 请求取消后不再启动下一个采集器或数据库。已经运行且 timeout 为正数的采集器，在同一期限内继续执行谓词链与主 SQL，然后正常缓存结果，避免一个客户端离开导致其他抓取者共享失败缓存。负数 timeout 关闭采集器期限，此时 SQL 随请求取消。
+- **区分中断与目标错误：** 中断轮次的汇总日志为 INFO `interrupted`，不增加 exporter／server 抓取错误计数。可用状态保留之前的值；本轮预检成功后视为 true。未中断的连接失败和 fatal 采集失败仍计数。查询级错误计数与 fatal 查询的 ERROR 日志保持原有行为。
+- **修正进度标签：** `pg_vacuuming`、`pg_indexing`、`pg_clustering` 保持集群级覆盖，每次刷新仍只执行三条查询。当前连接库与系统目录的关系解析为名称，其他库的用户关系在 `relname` 中使用数字 OID，并保留 `datname`、`pid`，避免误用本地同 OID 对象名称。自动发现过滤或缺少 CONNECT 权限不会滤除进度视图中可见的行。
+- **补齐容器信任：** 两条 scratch 镜像构建路径均包含系统 CA 证书包与许可证，公共 CA 校验可以使用内置信任库。私有 CA 仍需显式挂载并设置 `sslrootcert`；默认 TLS 模式不变。
+- **更新依赖与发布检查：** YAML 从 v3 升到 v4，保持既有采集器配置语法；更新 Prometheus common／procfs、`golang.org/x/net` 等依赖。CI 在 RPM 兼容性与校验和检查之外，验证容器文件／TLS 行为并检查三个 DEB 架构。
+- **校准帮助文本：** 区分 I/O 字节与操作次数、已完成检查点、VACUUM 死元组内存和 CLUSTER 进度。在相同 PostgreSQL 版本上，SQL 指标名、标签键、类型与单位不变。
+
+### 升级注意事项 {#v160-metric-compatibility}
+
+1. **同时升级配置与二进制。** 合并新版 `pg_exporter.yml` 或拆分 YAML，软件包升级会保留本地配置。只替换程序不会修正进度 SQL。默认配置仍包含 58 个 YAML 文件、96 个分支、59 个命名空间和 460 个去重指标定义，含默认禁用的采集器与两个未展开直方图。
+2. **检查进度标签的使用者。** 跨库 `relname` 可能从错误名称变为 OID，产生新的时序；面板应保留数据库与任务身份。当前库与系统目录的关系名称仍可读。
+3. **按目的选择健康信号。** `/up` 和角色端点反映最近一次健康探测；`pg_up` 反映主目标采集，包括 fatal 失败。非 fatal 与子数据库错误需查看查询／服务器指标。`--disable-intro` 会隐藏全部内置指标，包括 `pg_up`，但保留 HTTP 健康检查。
+4. **为 PgBouncer 探测预留连接。** PgBouncer 主连接池上限由一个增至两个。PostgreSQL 保持主目标三个连接，每个发现数据库一个连接。
+5. **fatal 采集器保留正数 timeout。** 取消负数 timeout 的 fatal 查询会按正常 TTL 缓存失败。后续有效抓取可能对该缓存失败计数，并返回 `pg_up 0`，直到成功刷新。TTL 为零或 `--disable-cache` 仍强制每次抓取刷新。
+6. **检查并发与预算。** 超额请求或中断采集可以返回 503。已经开始的有界采集器可能超出请求预算，通常最多再占用自身 timeout；网络阻塞可能更久，二者都不是硬性的墙钟上限。建连握手需配置合适的 DSN `connect_timeout`。
+
+真实失败恰好与请求取消重叠时，可能不计入两个轮次错误计数，因为分类同时检查采集错误与请求 context；查询级失败仍可见。首次抓取在预检成功前中断时，`pg_up` 保持为 0，直到后续恢复。失败 TTL、重载和 SIGTERM 直接退出行为不变，本版本不增加后台刷新或优雅关闭。
+
+从 v1.4.1 或更早版本升级时，仍需遵循 [v1.5.0 迁移说明](https://exp.pgsty.com/zh/release/v1.5.0/)，包括订阅标签、接收器状态映射和 PostgreSQL 10–13 监控授权。完整运行契约见 [指标兼容性](https://exp.pgsty.com/zh/compatibility/#exporter-160-metrics)、[HTTP API](https://exp.pgsty.com/zh/api/) 与 [采集生命周期](https://exp.pgsty.com/zh/design/scrape-lifetime/)。
+
+### 验证范围
+
+发布验证覆盖完整 race 测试、两种 HTTP mux、模块与生成配置一致性、静态检查、六平台构建、容器 TLS／文件校验和软件包验证。三个取消回归用例还在 race 检测下连续 200 轮通过；此前移除中断修复的反向对照失败。PostgreSQL 18.6 上，客户端在 0.8 秒有界 fatal 查询期间离开，两个轮次错误计数保持为 0；下一次抓取返回 `pg_up 1` 与缓存指标，没有重跑 SQL。
+
+进度 SQL 分支已使用监控角色在 PostgreSQL 12、17、18 上验证；系统目录补充场景与真实跨库 VACUUM 在 18.6 上验证。这些是限定场景的验收结果，不是对全部 PostgreSQL 版本、扩展、仪表盘和生产负载重新完成的完整审计。Composite、Patroni、pgBackRest 与 PostgreSQL 日志组件仍在独立的 `snort` 开发线上，不包含在 v1.6.0 中。
+
+
+### SHA-256 校验和
+
+```text
+1bb4bfeb40f215a6ad3998d4399b12074bacfe03920a38784599b04eb1ca3028  pg-exporter-1.6.0-1.aarch64.rpm
+87b248e8eab5e872146c63e7c8fff86eb8f4dcd4db5505957aff2e17043bd3a2  pg-exporter-1.6.0-1.ppc64le.rpm
+955ee5549aebc347fa1bd4e0517812c687d037faf17054a678fbc5bfffc4eb03  pg-exporter-1.6.0-1.x86_64.rpm
+448c9dfc738e1425ace8cafdf44bbc677c2aee21fb89ec49faec5a8d6b3c35ef  pg-exporter_1.6.0-1_amd64.deb
+e10a3823b2fb30c44eba1d6b1f833af3244a2451221c8d65071eaad32673c001  pg-exporter_1.6.0-1_arm64.deb
+61bc7efd5ac9a7a3bef2860a67bfa1ee0b379a09e85389ca75306aec3dee209a  pg-exporter_1.6.0-1_ppc64le.deb
+f7a57acb1ccd9fd074e6a41a8811ae0fc482a7d8db34aec508415ff0ee93f5b2  pg_exporter-1.6.0.darwin-amd64.tar.gz
+6c8e475ba675fa86921c07e5031db8073ddd012f198e88f66548be0d246baab7  pg_exporter-1.6.0.darwin-arm64.tar.gz
+e392328ca27fd7a84e3273f2cfe70d28d2e7f162dcc735fb9fb96182368a59e3  pg_exporter-1.6.0.linux-amd64.tar.gz
+3795371d53388757778eea180ea91e71e51945a4864ccef315a93a230d8729fe  pg_exporter-1.6.0.linux-arm64.tar.gz
+ec2b7c7419a6f111494ccc777cfb86825e421b0f494aa68623e05e3c31d681f4  pg_exporter-1.6.0.linux-ppc64le.tar.gz
+92fc6b5e58fcaa120473f59856874b8a44ea0e7388d417c5de0fbc709d6687f2  pg_exporter-1.6.0.windows-amd64.tar.gz
+```
 
 --------
 
