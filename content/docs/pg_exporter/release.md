@@ -91,18 +91,18 @@ PG Exporter v1.6.0 将健康探测与指标采集解耦，限制并发抓取与�
 ### SHA-256 校验和
 
 ```text
-1bb4bfeb40f215a6ad3998d4399b12074bacfe03920a38784599b04eb1ca3028  pg-exporter-1.6.0-1.aarch64.rpm
-87b248e8eab5e872146c63e7c8fff86eb8f4dcd4db5505957aff2e17043bd3a2  pg-exporter-1.6.0-1.ppc64le.rpm
-955ee5549aebc347fa1bd4e0517812c687d037faf17054a678fbc5bfffc4eb03  pg-exporter-1.6.0-1.x86_64.rpm
-448c9dfc738e1425ace8cafdf44bbc677c2aee21fb89ec49faec5a8d6b3c35ef  pg-exporter_1.6.0-1_amd64.deb
-e10a3823b2fb30c44eba1d6b1f833af3244a2451221c8d65071eaad32673c001  pg-exporter_1.6.0-1_arm64.deb
-61bc7efd5ac9a7a3bef2860a67bfa1ee0b379a09e85389ca75306aec3dee209a  pg-exporter_1.6.0-1_ppc64le.deb
-f7a57acb1ccd9fd074e6a41a8811ae0fc482a7d8db34aec508415ff0ee93f5b2  pg_exporter-1.6.0.darwin-amd64.tar.gz
-6c8e475ba675fa86921c07e5031db8073ddd012f198e88f66548be0d246baab7  pg_exporter-1.6.0.darwin-arm64.tar.gz
-e392328ca27fd7a84e3273f2cfe70d28d2e7f162dcc735fb9fb96182368a59e3  pg_exporter-1.6.0.linux-amd64.tar.gz
-3795371d53388757778eea180ea91e71e51945a4864ccef315a93a230d8729fe  pg_exporter-1.6.0.linux-arm64.tar.gz
-ec2b7c7419a6f111494ccc777cfb86825e421b0f494aa68623e05e3c31d681f4  pg_exporter-1.6.0.linux-ppc64le.tar.gz
-92fc6b5e58fcaa120473f59856874b8a44ea0e7388d417c5de0fbc709d6687f2  pg_exporter-1.6.0.windows-amd64.tar.gz
+dd81e485377fd9bfead1b3e8000a145eb89d1c914becffaa3588cafc67731ed9  pg-exporter-1.6.0-1.aarch64.rpm
+413f64b25feb6202bf7cf70f10d0a73527c42767a2cc2bef37beef6d33ab48ae  pg-exporter-1.6.0-1.ppc64le.rpm
+c25e57077f916a83993263eb0009959bbafe183fb3da4f81169629dfdbd7c64a  pg-exporter-1.6.0-1.x86_64.rpm
+46f03078e7e74430c34d3650b48cecacc55e011c6bcecde4f3ef555076f917b3  pg-exporter_1.6.0-1_amd64.deb
+d24dea8ee5774f28a8e4c5e9c9977b07d80b6e1c4d5a86a7b7802cc5d6d02a0f  pg-exporter_1.6.0-1_arm64.deb
+5cc839bc5f9d551559984442fcd24305e3113688dc2d92d437ed5421683e3ae0  pg-exporter_1.6.0-1_ppc64le.deb
+ddefa112d810bf5ae8acc0eeb9edc23b44609ecd577a75df8f5c2321f81fea47  pg_exporter-1.6.0.darwin-amd64.tar.gz
+a62d9474d091ac906a5fcd1898ffce599eaf74fb7c93800caa85b6c190d64d85  pg_exporter-1.6.0.darwin-arm64.tar.gz
+296a26bf83acd7024f4de8fdeac0ee31baffa01e3153cf5c694e90ed8268719a  pg_exporter-1.6.0.linux-amd64.tar.gz
+ea6d1dbe0820d599e81ed702e128b4fe4a557e2afb5b5c157de222576c1d7ce7  pg_exporter-1.6.0.linux-arm64.tar.gz
+b720183a3c4d35d20d683bc6ba998e5eddcb1f76e5721788829aa56c2cd7155a  pg_exporter-1.6.0.linux-ppc64le.tar.gz
+29909ef65af96f1da5e7258c7b9025c85ad1dca63596c9fba8b85b55e006bb25  pg_exporter-1.6.0.windows-amd64.tar.gz
 ```
 
 --------
