@@ -55,10 +55,10 @@ weight: 8760
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | el8.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 |
+| el9.aarch64 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 |
+| el10.x86_64 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 |
 | d12.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
@@ -72,9 +72,13 @@ weight: 8760
 @ el8.x86_64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 395.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdf_fdw_18-3.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 386.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdf_fdw_18-3.1.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 404.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_18-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 rdf_fdw_18 rdf_fdw_18-3.1-1PGDG.rhel9.8.x86_64.rpm pgdg 3.1 155.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/rdf_fdw_18-3.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 398.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_18-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 rdf_fdw_18 rdf_fdw_18-3.1-1PGDG.rhel9.8.aarch64.rpm pgdg 3.1 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/rdf_fdw_18-3.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 405.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_18-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 rdf_fdw_18 rdf_fdw_18-3.1-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1 156.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/rdf_fdw_18-3.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 rdf_fdw_18 rdf_fdw_18-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 400.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdf_fdw_18-3.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 rdf_fdw_18 rdf_fdw_18-3.1-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1 152.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/rdf_fdw_18-3.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-rdf-fdw postgresql-18-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 403.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-18-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-rdf-fdw postgresql-18-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 393.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-18-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-rdf-fdw postgresql-18-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 402.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdf-fdw/postgresql-18-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb
@@ -88,9 +92,13 @@ weight: 8760
 @ el8.x86_64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 395.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdf_fdw_17-3.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 385.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdf_fdw_17-3.1.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 403.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_17-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 rdf_fdw_17 rdf_fdw_17-3.1-1PGDG.rhel9.8.x86_64.rpm pgdg 3.1 154.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/rdf_fdw_17-3.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 398.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_17-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 rdf_fdw_17 rdf_fdw_17-3.1-1PGDG.rhel9.8.aarch64.rpm pgdg 3.1 150.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/rdf_fdw_17-3.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 404.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_17-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 rdf_fdw_17 rdf_fdw_17-3.1-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1 156.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/rdf_fdw_17-3.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 17 rdf_fdw_17 rdf_fdw_17-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 399.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdf_fdw_17-3.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 rdf_fdw_17 rdf_fdw_17-3.1-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1 152.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rdf_fdw_17-3.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-rdf-fdw postgresql-17-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 404.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-17-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-rdf-fdw postgresql-17-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 393.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-17-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-rdf-fdw postgresql-17-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 405.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdf-fdw/postgresql-17-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb
@@ -104,9 +112,13 @@ weight: 8760
 @ el8.x86_64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 393.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdf_fdw_16-3.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 384.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdf_fdw_16-3.1.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 402.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_16-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 rdf_fdw_16 rdf_fdw_16-3.1-1PGDG.rhel9.8.x86_64.rpm pgdg 3.1 154.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rdf_fdw_16-3.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 396.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_16-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 rdf_fdw_16 rdf_fdw_16-3.1-1PGDG.rhel9.8.aarch64.rpm pgdg 3.1 150.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rdf_fdw_16-3.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 403.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_16-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 rdf_fdw_16 rdf_fdw_16-3.1-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1 156.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/rdf_fdw_16-3.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 16 rdf_fdw_16 rdf_fdw_16-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 398.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdf_fdw_16-3.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 rdf_fdw_16 rdf_fdw_16-3.1-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rdf_fdw_16-3.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-rdf-fdw postgresql-16-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 400.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-16-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-rdf-fdw postgresql-16-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 391.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-16-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-rdf-fdw postgresql-16-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 401.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdf-fdw/postgresql-16-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb
@@ -120,9 +132,13 @@ weight: 8760
 @ el8.x86_64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 395.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdf_fdw_15-3.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 385.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdf_fdw_15-3.1.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 404.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_15-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 rdf_fdw_15 rdf_fdw_15-3.1-1PGDG.rhel9.8.x86_64.rpm pgdg 3.1 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rdf_fdw_15-3.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 399.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_15-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 rdf_fdw_15 rdf_fdw_15-3.1-1PGDG.rhel9.8.aarch64.rpm pgdg 3.1 152.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rdf_fdw_15-3.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 405.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_15-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 rdf_fdw_15 rdf_fdw_15-3.1-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1 158.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/rdf_fdw_15-3.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 15 rdf_fdw_15 rdf_fdw_15-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 400.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdf_fdw_15-3.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 rdf_fdw_15 rdf_fdw_15-3.1-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1 155.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rdf_fdw_15-3.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-rdf-fdw postgresql-15-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 403.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-15-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-rdf-fdw postgresql-15-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 420.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-15-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-rdf-fdw postgresql-15-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 403.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdf-fdw/postgresql-15-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb
@@ -136,9 +152,13 @@ weight: 8760
 @ el8.x86_64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 394.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rdf_fdw_14-3.1.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 385.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rdf_fdw_14-3.1.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 405.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_14-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 rdf_fdw_14 rdf_fdw_14-3.1-1PGDG.rhel9.8.x86_64.rpm pgdg 3.1 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/rdf_fdw_14-3.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 398.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_14-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 rdf_fdw_14 rdf_fdw_14-3.1-1PGDG.rhel9.8.aarch64.rpm pgdg 3.1 152.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/rdf_fdw_14-3.1-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 405.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_14-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 rdf_fdw_14 rdf_fdw_14-3.1-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1 158.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/rdf_fdw_14-3.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 rdf_fdw_14 rdf_fdw_14-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 400.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdf_fdw_14-3.1.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 rdf_fdw_14 rdf_fdw_14-3.1-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1 155.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/rdf_fdw_14-3.1-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-rdf-fdw postgresql-14-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 403.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-14-rdf-fdw_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-rdf-fdw postgresql-14-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 392.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/rdf-fdw/postgresql-14-rdf-fdw_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-rdf-fdw postgresql-14-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 402.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdf-fdw/postgresql-14-rdf-fdw_3.1.0-1PGSTY~trixie_amd64.deb

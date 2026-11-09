@@ -38,9 +38,9 @@ dark, and system mode share `td-color-theme` across pages.
 | Site customization | Ownership |
 | --- | --- |
 | Docs / Extensions dropdowns | `navbar-group-items.html` preserves the original groups and columns through `params.pigsty_groups`, `pigsty_group`, and `pigsty_column`. Its ungrouped fallback follows OINK v1.5.1. `_pigsty-navbar.scss` styles only these panels. |
-| Language link | Native `params.ui.alt_site` points to the independent English site. It does not imply per-page translation mapping. |
+| Language link | Native `params.ui.alt_site` points to the independent English site. `_pigsty-navbar.scss` hides only the navbar label; the icon keeps its tooltip and accessible name. It does not imply per-page translation mapping. |
 | Homepage | Custom content, extension canvas, and player remain local. Images and components follow OINK's theme state and events. |
-| Extension catalog | Domain-specific tables, badges, and shortcodes remain local. General content and shell styling belong to OINK. |
+| Extension catalog | OINK owns table frames, spacing, scrolling, sticky matrix headers, and the expanded reader. Local styles retain category colors, availability badges, download details, and the column sizing of link lists and combined metadata tables. |
 | GitHub stars | `landing/github-stars.html` adapts the site's shared snapshot for the native navbar. |
 
 Do not restore a copied `navbar.html`, global palette overrides, or a separate
@@ -52,6 +52,17 @@ OINK 1.5.1's Mermaid viewer and `.wide .expand` table reader are inherited by
 existing content. Keep summary search for this large site; enable local PlantUML
 or blog galleries only when the content needs them. Legacy static vendor files
 require a separate reference audit before removal.
+
+Use `.full-width` for the article canvas, `.wide` for technical columns, and
+`.matrix` for row/column comparisons. Add `.expand` where the larger reader is
+useful. The category index instead wraps its links within the available width.
+The legacy `.ext-table` marker in generated Markdown is inert: do not restore
+its old frame, margins, fixed widths, or `display: block` rules.
+Both availability shortcodes render generated Markdown through OINK's table
+hook. Download buttons open native popovers above the scroll viewport, with
+keyboard focus, Escape, and an explicit close button. Unused legacy chip,
+card-shortcode, availability, and Bootstrap tab overrides have been removed;
+the extension pages already use OINK's native tabs.
 
 ## Refresh catalog and GitHub data
 

@@ -1,5 +1,12 @@
 // Pigsty's two grouped dropdowns, inside OINK's native navbar and disclosure.
 // All colors and type roles follow the reader's selected OINK preset.
+
+// OINK 1.5.1's alt_site keeps its accessible name and tooltip; the navbar
+// uses the same icon-only presentation as the native language selector.
+.td-site-header .td-nav-alt-site > span {
+  display: none;
+}
+
 .td-site-header .td-nav-menu__panel:has(> .pigsty-nav-groups) {
   width: max-content;
   max-width: calc(100vw - 32px);

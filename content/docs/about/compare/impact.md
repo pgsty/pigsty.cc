@@ -11,29 +11,29 @@ categories: [参考]
 
 ## 中国 PostgreSQL 生态项目影响力
 
-按 GitHub 仓库 API 的 `stargazers_count` 降序排列，最后更新时间为北京时间 2026-10-28。
+按 GitHub 仓库 API 的 `stargazers_count` 降序排列，最后更新时间为北京时间 2026-11-09。
 
 | 项目                                                                                                    |                                       Star                                       | 作者               |  类型  | 简介                                   |
 |---------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|--------------------|:------:|:---------------------------------------|
-| [`pgsty/pigsty`](https://github.com/pgsty/pigsty)                                                       |              [**5870**](https://github.com/pgsty/pigsty/stargazers)              | 冯若航 @ **PGSTY** | 发行版 | 开箱即用的 PostgreSQL 发行版           |
-| [`polardb/PolarDB-for-PostgreSQL`](https://github.com/polardb/PolarDB-for-PostgreSQL)                   |     [**3208**](https://github.com/polardb/PolarDB-for-PostgreSQL/stargazers)     | 阿里云             |  内核  | 阿里云开源 PolarDB for PostgreSQL 内核 |
+| [`pgsty/pigsty`](https://github.com/pgsty/pigsty)                                                       |              [**5917**](https://github.com/pgsty/pigsty/stargazers)              | 冯若航 @ **PGSTY** | 发行版 | 开箱即用的 PostgreSQL 发行版           |
+| [`polardb/PolarDB-for-PostgreSQL`](https://github.com/polardb/PolarDB-for-PostgreSQL)                   |     [**3209**](https://github.com/polardb/PolarDB-for-PostgreSQL/stargazers)     | 阿里云             |  内核  | 阿里云开源 PolarDB for PostgreSQL 内核 |
 | [`tensorchord/pgvecto.rs`](https://github.com/tensorchord/pgvecto.rs)                                   |         [**2191**](https://github.com/tensorchord/pgvecto.rs/stargazers)         | TensorChord        |  扩展  | Rust 编写的向量检索扩展                |
-| [`supervc-stack/VectorChord`](https://github.com/supervc-stack/VectorChord)                             |       [**1831**](https://github.com/supervc-stack/VectorChord/stargazers)        | TensorChord        |  扩展  | 下一代向量检索扩展                     |
+| [`supervc-stack/VectorChord`](https://github.com/supervc-stack/VectorChord)                             |       [**1838**](https://github.com/supervc-stack/VectorChord/stargazers)        | TensorChord        |  扩展  | 下一代向量检索扩展                     |
 | [`Tencent/TBase`](https://github.com/Tencent/TBase)                                                     |             [**1444**](https://github.com/Tencent/TBase/stargazers)              | 腾讯云             |  内核  | 腾讯分布式 HTAP 数据库内核             |
-| [`apache/cloudberry`](https://github.com/apache/cloudberry)                                             |           [**1436**](https://github.com/apache/cloudberry/stargazers)            | HashData           |  内核  | 开源 MPP 数据仓库内核                  |
-| [`pgplex/pgschema`](https://github.com/pgplex/pgschema)                                                 |            [**1072**](https://github.com/pgplex/pgschema/stargazers)             | 陈天舟             |  工具  | 声明式 Postgres Schema 迁移 CLI        |
-| [`IvorySQL/IvorySQL`](https://github.com/IvorySQL/IvorySQL)                                             |           [**1071**](https://github.com/IvorySQL/IvorySQL/stargazers)            | 济南瀚高           |  内核  | Oracle 兼容 PostgreSQL 分支            |
-| [`amutu/zhparser`](https://github.com/amutu/zhparser)                                                   |             [**872**](https://github.com/amutu/zhparser/stargazers)              | Jov                |  扩展  | 基于 SCWS 的中文全文分词扩展           |
-| [`opengauss-mirror/openGauss-server`](https://github.com/opengauss-mirror/openGauss-server)             |    [**795**](https://github.com/opengauss-mirror/openGauss-server/stargazers)    | 华为               |  内核  | 早期 PG 9.2 内核分叉                   |
-| [`jaiminpan/pg_jieba`](https://github.com/jaiminpan/pg_jieba)                                           |           [**426**](https://github.com/jaiminpan/pg_jieba/stargazers)            | Pan Jiamin         |  扩展  | 基于结巴分词的中文全文检索扩展         |
+| [`apache/cloudberry`](https://github.com/apache/cloudberry)                                             |           [**1440**](https://github.com/apache/cloudberry/stargazers)            | HashData           |  内核  | 开源 MPP 数据仓库内核                  |
+| [`pgplex/pgschema`](https://github.com/pgplex/pgschema)                                                 |            [**1083**](https://github.com/pgplex/pgschema/stargazers)             | 陈天舟             |  工具  | 声明式 Postgres Schema 迁移 CLI        |
+| [`IvorySQL/IvorySQL`](https://github.com/IvorySQL/IvorySQL)                                             |           [**1078**](https://github.com/IvorySQL/IvorySQL/stargazers)            | 济南瀚高           |  内核  | Oracle 兼容 PostgreSQL 分支            |
+| [`amutu/zhparser`](https://github.com/amutu/zhparser)                                                   |             [**873**](https://github.com/amutu/zhparser/stargazers)              | Jov                |  扩展  | 基于 SCWS 的中文全文分词扩展           |
+| [`opengauss-mirror/openGauss-server`](https://github.com/opengauss-mirror/openGauss-server)             |    [**794**](https://github.com/opengauss-mirror/openGauss-server/stargazers)    | 华为               |  内核  | 早期 PG 9.2 内核分叉                   |
+| [`jaiminpan/pg_jieba`](https://github.com/jaiminpan/pg_jieba)                                           |           [**427**](https://github.com/jaiminpan/pg_jieba/stargazers)            | Pan Jiamin         |  扩展  | 基于结巴分词的中文全文检索扩展         |
 | [`HaloTech-Co-Ltd/openHalo`](https://github.com/HaloTech-Co-Ltd/openHalo)                               |        [**418**](https://github.com/HaloTech-Co-Ltd/openHalo/stargazers)         | 易景羲和           |  内核  | MySQL 协议兼容的 PostgreSQL 内核       |
 | [`alitrack/duckdb_fdw`](https://github.com/alitrack/duckdb_fdw)                                         |           [**415**](https://github.com/alitrack/duckdb_fdw/stargazers)           | 李红艳             |  扩展  | DuckDB 外部数据源包装器                |
-| [`supervc-stack/VectorChord-bm25`](https://github.com/supervc-stack/VectorChord-bm25)                   |     [**380**](https://github.com/supervc-stack/VectorChord-bm25/stargazers)      | TensorChord        |  扩展  | PostgreSQL 原生 BM25 排序索引          |
+| [`supervc-stack/VectorChord-bm25`](https://github.com/supervc-stack/VectorChord-bm25)                   |     [**381**](https://github.com/supervc-stack/VectorChord-bm25/stargazers)      | TensorChord        |  扩展  | PostgreSQL 原生 BM25 排序索引          |
 | [`pgsty/pg_exporter`](https://github.com/pgsty/pg_exporter)                                             |            [**366**](https://github.com/pgsty/pg_exporter/stargazers)            | 冯若航 @ **PGSTY** |  工具  | PostgreSQL 与 Pgbouncer 指标采集器     |
 | [`ChenHuajun/pg_roaringbitmap`](https://github.com/ChenHuajun/pg_roaringbitmap)                         |       [**291**](https://github.com/ChenHuajun/pg_roaringbitmap/stargazers)       | 陈华军 @ 苏宁      |  扩展  | PostgreSQL RoaringBitmap 位图扩展      |
-| [`pgsty/pig`](https://github.com/pgsty/pig)                                                             |                [**205**](https://github.com/pgsty/pig/stargazers)                | 冯若航 @ **PGSTY** |  工具  | PostgreSQL 扩展包管理器                |
-| [`wublabdubdub/PDU-PostgreSQLDataUnloader`](https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader) | [**122**](https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader/stargazers) | 张晨               |  工具  | PostgreSQL 数据库救援与数据卸载工具    |
-| [`tensorchord/pg_bestmatch.rs`](https://github.com/tensorchord/pg_bestmatch.rs)                         |       [**100**](https://github.com/tensorchord/pg_bestmatch.rs/stargazers)       | TensorChord        |  扩展  | 在 PostgreSQL 内生成 BM25 稀疏向量     |
+| [`pgsty/pig`](https://github.com/pgsty/pig)                                                             |                [**206**](https://github.com/pgsty/pig/stargazers)                | 冯若航 @ **PGSTY** |  工具  | PostgreSQL 扩展包管理器                |
+| [`wublabdubdub/PDU-PostgreSQLDataUnloader`](https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader) | [**123**](https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader/stargazers) | 张晨               |  工具  | PostgreSQL 数据库救援与数据卸载工具    |
+| [`tensorchord/pg_bestmatch.rs`](https://github.com/tensorchord/pg_bestmatch.rs)                         |       [**99**](https://github.com/tensorchord/pg_bestmatch.rs/stargazers)       | TensorChord        |  扩展  | 在 PostgreSQL 内生成 BM25 稀疏向量     |
 | [`supervc-stack/pg_tokenizer.rs`](https://github.com/supervc-stack/pg_tokenizer.rs)                     |      [**46**](https://github.com/supervc-stack/pg_tokenizer.rs/stargazers)       | TensorChord        |  扩展  | 全文检索 tokenizer 扩展                |
 | [`jaiminpan/pg_scws`](https://github.com/jaiminpan/pg_scws)                                             |            [**41**](https://github.com/jaiminpan/pg_scws/stargazers)             | Pan Jiamin         |  扩展  | 基于 SCWS 的中文分词扩展               |
 | [`pgsty/pgext`](https://github.com/pgsty/pgext)                                                         |               [**37**](https://github.com/pgsty/pgext/stargazers)                | 冯若航 @ **PGSTY** |  工具  | PG 扩展目录与元数据工具                |
@@ -131,7 +131,7 @@ series:
       position: right
       formatter: $fn:labfmt
       fontWeight: 600
-    data: [5870, 3208, 2191, 1831, 1444, 1436, 1072, 1071, 872, 795, 426, 418, 415, 380, 366, 291, 205, 122, 100, 46, 41, 37]
+    data: [5917, 3209, 2191, 1838, 1444, 1440, 1083, 1078, 873, 794, 427, 418, 415, 381, 366, 291, 206, 123, 99, 46, 41, 37]
 media:
   - query: { maxWidth: 600 }
     option:
@@ -158,22 +158,22 @@ media:
 
 ## PostgreSQL 发行版影响力指标
 
-按 GitHub Star 数降序排列（商业产品无公开 Star 的统一置后），最后更新时间为北京时间 2026-10-28。
+按 GitHub Star 数降序排列（商业产品无公开 Star 的统一置后），最后更新时间为北京时间 2026-11-09。
 
 | 项目                                                                                                      |                                     Star                                     | 供应商        | 类型       | 许可证                                                                           | 简介                                                |
 |-----------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------:|---------------|------------|----------------------------------------------------------------------------------|-----------------------------------------------------|
-| [CloudNativePG](https://github.com/cloudnative-pg/cloudnative-pg)                                         |   [**9496**](https://github.com/cloudnative-pg/cloudnative-pg/stargazers)    | EDB           | K8S 云原生 | Apache-2.0                                                                       | 不依赖 Patroni 的主流 PG Operator。                 |
-| [Pigsty](https://github.com/pgsty/pigsty)                                                                 |            [**5870**](https://github.com/pgsty/pigsty/stargazers)            | **PGSTY**     | Linux 原生 | Apache-2.0                                                                       | Ansible 驱动的一体化 PG 发行版。                    |
-| [Zalando Postgres Operator](https://github.com/zalando/postgres-operator)                                 |     [**5266**](https://github.com/zalando/postgres-operator/stargazers)      | Zalando       | K8S 云原生 | MIT                                                                              | 老牌 Patroni/Spilo 架构 PG Operator。               |
-| [PGO](https://github.com/CrunchyData/postgres-operator)                                                   |   [**4456**](https://github.com/CrunchyData/postgres-operator/stargazers)    | Crunchy Data  | K8S 云原生 | Apache-2.0                                                                       | 生产级 Operator，集成备份与监控。                   |
-| [Autobase](https://github.com/autobase-tech/autobase)                                                     |       [**4426**](https://github.com/autobase-tech/autobase/stargazers)       | Autobase.tech | Linux 原生 | MIT                                                                              | 支持 Patroni/etcd/Consul 自动化部署。               |
-| [KubeBlocks](https://github.com/apecloud/kubeblocks)                                                      |        [**3156**](https://github.com/apecloud/kubeblocks/stargazers)         | ApeCloud      | K8S 云原生 | AGPL-3.0                                                                         | 多数据库统一 Operator 平台。                        |
-| [StackGres](https://github.com/ongres/stackgres)                                                          |          [**1443**](https://github.com/ongres/stackgres/stargazers)          | OnGres        | K8S 云原生 | AGPL-3.0                                                                         | CRD/CLI/Web UI 一体化 PG Operator。                 |
-| [Kubegres](https://github.com/reactive-tech/kubegres)                                                     |       [**1349**](https://github.com/reactive-tech/kubegres/stargazers)       | Reactive Tech | K8S 云原生 | Apache-2.0                                                                       | 极简 Operator，基于原生流复制。                     |
+| [CloudNativePG](https://github.com/cloudnative-pg/cloudnative-pg)                                         |   [**9563**](https://github.com/cloudnative-pg/cloudnative-pg/stargazers)    | EDB           | K8S 云原生 | Apache-2.0                                                                       | 不依赖 Patroni 的主流 PG Operator。                 |
+| [Pigsty](https://github.com/pgsty/pigsty)                                                                 |            [**5917**](https://github.com/pgsty/pigsty/stargazers)            | **PGSTY**     | Linux 原生 | Apache-2.0                                                                       | Ansible 驱动的一体化 PG 发行版。                    |
+| [Zalando Postgres Operator](https://github.com/zalando/postgres-operator)                                 |     [**5272**](https://github.com/zalando/postgres-operator/stargazers)      | Zalando       | K8S 云原生 | MIT                                                                              | 老牌 Patroni/Spilo 架构 PG Operator。               |
+| [PGO](https://github.com/CrunchyData/postgres-operator)                                                   |   [**4458**](https://github.com/CrunchyData/postgres-operator/stargazers)    | Crunchy Data  | K8S 云原生 | Apache-2.0                                                                       | 生产级 Operator，集成备份与监控。                   |
+| [Autobase](https://github.com/autobase-tech/autobase)                                                     |       [**4434**](https://github.com/autobase-tech/autobase/stargazers)       | Autobase.tech | Linux 原生 | MIT                                                                              | 支持 Patroni/etcd/Consul 自动化部署。               |
+| [KubeBlocks](https://github.com/apecloud/kubeblocks)                                                      |        [**3166**](https://github.com/apecloud/kubeblocks/stargazers)         | ApeCloud      | K8S 云原生 | AGPL-3.0                                                                         | 多数据库统一 Operator 平台。                        |
+| [StackGres](https://github.com/ongres/stackgres)                                                          |          [**1445**](https://github.com/ongres/stackgres/stargazers)          | OnGres        | K8S 云原生 | AGPL-3.0                                                                         | CRD/CLI/Web UI 一体化 PG Operator。                 |
+| [Kubegres](https://github.com/reactive-tech/kubegres)                                                     |       [**1351**](https://github.com/reactive-tech/kubegres/stargazers)       | Reactive Tech | K8S 云原生 | Apache-2.0                                                                       | 极简 Operator，基于原生流复制。                     |
 | [Tembo（原 Operator）](https://github.com/tembo/tembo)                                                    |            [**1266**](https://github.com/tembo/tembo/stargazers)             | Tembo         | 历史项目   | 未声明                                                                           | 当前仓库仅保留 README，默认分支已无 Operator 代码。 |
-| [pgEdge（Spock）](https://github.com/pgEdge/spock)                                                        |            [**759**](https://github.com/pgEdge/spock/stargazers)             | pgEdge        | Linux 原生 | PostgreSQL                                                                       | 分布式 PG 发行版，主打 Spock 多主复制。             |
+| [pgEdge（Spock）](https://github.com/pgEdge/spock)                                                        |            [**763**](https://github.com/pgEdge/spock/stargazers)             | pgEdge        | Linux 原生 | PostgreSQL                                                                       | 分布式 PG 发行版，主打 Spock 多主复制。             |
 | [KubeDB（CLI）](https://github.com/kubedb/cli)                                                            |             [**732**](https://github.com/kubedb/cli/stargazers)              | AppsCode      | K8S 云原生 | [AppsCode Community 1.0.0](https://github.com/kubedb/cli/blob/master/LICENSE.md) | 多数据库 Operator，配套 kubectl 插件。              |
-| [Percona Operator for PostgreSQL](https://github.com/percona/percona-postgresql-operator)                 | [**386**](https://github.com/percona/percona-postgresql-operator/stargazers) | Percona       | K8S 云原生 | Apache-2.0                                                                       | Percona 生态内的 PG Operator。                      |
+| [Percona Operator for PostgreSQL](https://github.com/percona/percona-postgresql-operator)                 | [**387**](https://github.com/percona/percona-postgresql-operator/stargazers) | Percona       | K8S 云原生 | Apache-2.0                                                                       | Percona 生态内的 PG Operator。                      |
 | [EDB TPA](https://github.com/EnterpriseDB/tpa)                                                            |           [**88**](https://github.com/EnterpriseDB/tpa/stargazers)           | EDB           | Linux 原生 | GPL-3.0                                                                          | EDB 官方 Ansible 编排交付工具。                     |
 | [Percona Distribution for PostgreSQL](https://www.percona.com/software/postgresql-distribution)           |                                      -                                       | Percona       | Linux 原生 | 多种                                                                             | 整合 PG 与常用组件的发行版方案。                    |
 | [ClusterControl](https://www.severalnines.com/product/clustercontrol)                                     |                                      -                                       | Severalnines  | Linux 原生 | 商业                                                                             | 多数据库部署、监控、备份与切换平台。                |
@@ -184,13 +184,13 @@ media:
 
 ### Star 历史与增量对比
 
-下图为 2026-10-28 获取的 [Star History 官方图](https://www.star-history.com/)，收录 8 个 PostgreSQL 发行版与高可用项目。图表使用服务端缓存，少量项目可能比本页实时快照少 1–2 个 Star。
+下图为 2026-11-09 获取的 [Star History 官方图](https://www.star-history.com/)，收录 8 个 PostgreSQL 发行版与高可用项目。图表使用服务端缓存，最新计数可能滞后于本页的 GitHub API 快照。
 
-<!-- Star History SVG fetched 2026-10-28T05:30:45Z: https://api.star-history.com/svg?repos=pgsty%2Fpigsty%2Cautobase-tech%2Fautobase%2Ccloudnative-pg%2Fcloudnative-pg%2Czalando%2Fpostgres-operator%2Csorintlab%2Fstolon%2Ccrunchydata%2Fpostgres-operator%2Capecloud%2Fkubeblocks%2Congres%2Fstackgres&type=date&size=desktop&legend=top-left -->
+<!-- Star History SVG fetched 2026-11-09T02:19:41Z: https://api.star-history.com/svg?repos=pgsty%2Fpigsty%2Cautobase-tech%2Fautobase%2Ccloudnative-pg%2Fcloudnative-pg%2Czalando%2Fpostgres-operator%2Csorintlab%2Fstolon%2Ccrunchydata%2Fpostgres-operator%2Capecloud%2Fkubeblocks%2Congres%2Fstackgres&type=date&size=desktop&legend=top-left -->
 
-![PostgreSQL 发行版与高可用项目 Star History（2026-10-28）](/img/pigsty/star-history-20261028.svg)
+![PostgreSQL 发行版与高可用项目 Star History（2026-11-09）](/img/pigsty/star-history-20261109.svg)
 
-下表以 2026-07-01 为基准，比较截至北京时间 2026-10-28 的 Star 增量与增幅；两期数值均来自 GitHub 仓库 `stargazers_count` 的精确快照。
+下表以 2026-07-01 为基准，比较截至北京时间 2026-11-09 的 Star 增量与增幅；两期数值均来自 GitHub 仓库 `stargazers_count` 的精确快照。
 
 {{< star_history >}}
 

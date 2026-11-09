@@ -33,11 +33,13 @@ def main():
         hashes[name] = hashlib.sha256(raw).hexdigest()
         tables[name] = list(csv.DictReader(io.StringIO(raw.decode("utf-8"))))
 
-    packaged = {row["name"] for row in tables["extension"]}
     universe = tables["universe"]
+    # The distribution flag is authoritative; extension.csv retains retired entries.
+    packaged = {row["name"] for row in universe if row["packaged"] == "t"}
+    extension_names = {row["name"] for row in tables["extension"]}
     assert len({row["name"] for row in universe}) == len(universe), "duplicate extension name"
-    assert packaged <= {row["name"] for row in universe}, "universe is missing packaged entries"
-    assert {row["name"] for row in universe if row["packaged"] == "t"} == packaged, "catalog snapshots disagree"
+    assert extension_names <= {row["name"] for row in universe}, "universe is missing extension entries"
+    assert packaged <= extension_names, "packaged entries are missing extension metadata"
     assert all(row["category"] in CATEGORIES for row in universe), "unknown category"
     rows = sorted(universe, key=lambda row: (CATEGORIES.index(row["category"]), -int(row["stars"] or 0), row["name"]))
     lines = [
@@ -63,7 +65,7 @@ def main():
     (ROOT / "data/pgext/extension.yaml").write_text("\n".join(lines) + "\n")
 
     # Match pgext.summary in db/schema.sql: one lead extension per non-contrib package.
-    packages = {row["pkg"] for row in tables["extension"] if row["lead"] == "t" and row["contrib"] != "t"}
+    packages = {row["pkg"] for row in tables["extension"] if row["name"] in packaged and row["lead"] == "t" and row["contrib"] != "t"}
     platforms = sum(row["active"] == "t" for row in tables["os"])
     majors = sum(row["active"] == "t" for row in tables["pg"])
     stats = [

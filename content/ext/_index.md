@@ -46,12 +46,12 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 扩展统计
 
-| **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
-|:------:|:------:|:------:|:------:|:------:|:---:|:------:|:------:|:------:|:------:|:------:|
-| **ALL** | 626 | 148 | 448 | 71 | | 617 | 604 | 586 | 552 | 525 |
-| **EL** | 624 | 145 | 408 | 71 | | 615 | 602 | 584 | 551 | 525 |
-| **Debian** | 618 | 114 | 433 | 71 | | 610 | 596 | 579 | 547 | 523 |
-{.ext-table .wide .expand}
+| **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| **ALL** | 626 | 148 | 448 | 71 | 617 | 604 | 586 | 552 | 525 |
+| **EL** | 624 | 145 | 408 | 71 | 615 | 602 | 584 | 551 | 525 |
+| **Debian** | 618 | 114 | 433 | 71 | 610 | 596 | 579 | 547 | 523 |
+{.full-width .matrix .wide .expand}
 
 > **626** 是已打包扩展总目录口径；EL、Debian/Ubuntu 及各 PostgreSQL 大版本行展示对应平台的实际覆盖数，因此可能少于 626。
 >
@@ -80,7 +80,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | [`wrappers`](/ext/e/wrappers)  [`multicorn`](/ext/e/multicorn)  [`odbc_fdw`](/ext/e/odbc_fdw)  [`jdbc_fdw`](/ext/e/jdbc_fdw)  [`pgspider_ext`](/ext/e/pgspider_ext)  [`mysql_fdw`](/ext/e/mysql_fdw)  [`oracle_fdw`](/ext/e/oracle_fdw)  [`tds_fdw`](/ext/e/tds_fdw)  [`db2_fdw`](/ext/e/db2_fdw)  [`sqlite_fdw`](/ext/e/sqlite_fdw)  [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw)  [`etcd_fdw`](/ext/e/etcd_fdw)  [`informix_fdw`](/ext/e/informix_fdw)  [`nominatim_fdw`](/ext/e/nominatim_fdw)  [`mongo_fdw`](/ext/e/mongo_fdw)  [`redis_fdw`](/ext/e/redis_fdw)  [`pg_redis_pubsub`](/ext/e/redis)  [`kafka_fdw`](/ext/e/kafka_fdw)  [`hdfs_fdw`](/ext/e/hdfs_fdw)  [`firebird_fdw`](/ext/e/firebird_fdw)  [`rdf_fdw`](/ext/e/rdf_fdw)  [`oai_fdw`](/ext/e/oai_fdw)  [`aws_s3`](/ext/e/aws_s3)  [`log_fdw`](/ext/e/log_fdw) |
 | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | [`documentdb`](/ext/e/documentdb)  [`pg_projection`](/ext/e/pg_projection)  [`orafce`](/ext/e/orafce)  [`pgtt`](/ext/e/pgtt)  [`session_variable`](/ext/e/session_variable)  [`pg_statement_rollback`](/ext/e/pg_statement_rollback)  [`ivorysql`](/ext/e/ivorysql_ora)  [`db2fce`](/ext/e/db2fce)  [`plpgsql_wrap`](/ext/e/plpgsql_wrap)  [`pg_synonym`](/ext/e/pg_synonym)  [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata)  [`pg_dbms_lock`](/ext/e/pg_dbms_lock)  [`pg_dbms_job`](/ext/e/pg_dbms_job)  [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog)  [`pg_utl_smtp`](/ext/e/pg_utl_smtp)  [`babelfish`](/ext/e/babelfishpg_common)  [`pgmemcache`](/ext/e/pgmemcache)  [`openhalo`](/ext/e/aux_mysql)  [`pgs3`](/ext/e/pgs3)  [`kafgres`](/ext/e/kafgres) |
 | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | [`pglogical`](/ext/e/pglogical)  [`pglogical_ticker`](/ext/e/pglogical_ticker)  [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy)  [`logical_ddl`](/ext/e/logical_ddl)  [`pg_failover_slots`](/ext/e/pg_failover_slots)  [`db_migrator`](/ext/e/db_migrator)  [`pgactive`](/ext/e/pgactive)  [`spock`](/ext/e/spock)  [`lolor`](/ext/e/lolor)  [`pgclone`](/ext/e/pgclone)  [`pgmqtt`](/ext/e/pgmqtt)  [`wal2json`](/ext/e/wal2json)  [`wal2mongo`](/ext/e/wal2mongo)  [`decoderbufs`](/ext/e/decoderbufs)  [`decoder_raw`](/ext/e/decoder_raw)  [`mimeo`](/ext/e/mimeo)  [`repmgr`](/ext/e/repmgr)  [`pg_fact_loader`](/ext/e/pg_fact_loader)  [`pg_bulkload`](/ext/e/pg_bulkload) |
-{.ext-table .wide .expand}
+{.full-width .ext-category-index}
 
 | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--license 0bsd" href="/ext/license#0bsd">0BSD</a> | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--license artistic10" href="/ext/license#artistic10">Artistic-1.0</a> <a class="ext-badge ext-badge--license artistic20" href="/ext/license#artistic20">Artistic-2.0</a> |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -108,7 +108,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | `Ubuntu 22.04` | `22.04` | [`u22.x86_64`](/ext/os/u22.x86_64) | [`u22.aarch64`](/ext/os/u22.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
 | `Ubuntu 24.04` | `24.04` | [`u24.x86_64`](/ext/os/u24.x86_64) | [`u24.aarch64`](/ext/os/u24.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
 | `Ubuntu 26.04` | `26.04` | [`u26.x86_64`](/ext/os/u26.x86_64) | [`u26.aarch64`](/ext/os/u26.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-{.ext-table .wide .expand}
+{.full-width .matrix .wide .expand}
 
 > 详见：[操作系统](/ext/os)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)
 

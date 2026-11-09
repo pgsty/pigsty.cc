@@ -40,102 +40,94 @@
   {{ end -}}
 {{ end -}}
 
-{{/* ── Phase 3: Render table ── */}}
-<table class="ext-table ext-table--matrix">
-<thead>
-{{ range $lines -}}
-  {{ $line := trim . " \r\t" -}}
-  {{ if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
-  <tr>
-    {{ range $ci, $rawCell := split $line "|" -}}
-      {{ $cell := trim $rawCell " " -}}
-      {{ if and (ne $ci 0) (ne $cell "") -}}
-        <th>{{ $cell | markdownify }}</th>
-      {{ end -}}
-    {{ end -}}
-  </tr>
-  {{ end -}}
-{{ end -}}
-</thead>
-<tbody>
-{{ range $lines -}}
-  {{ $line := trim . " \r\t" -}}
-  {{ if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
-  <tr>
-    {{ $cells := split $line "|" -}}
-    {{ $os := "" -}}
-    {{ range $ci, $rawCell := $cells -}}
-      {{ $cell := trim $rawCell " " -}}
-      {{ if and (ne $ci 0) (ne $cell "") -}}
-        {{ if eq $ci 1 -}}
-          {{ $os = $cell -}}
-          <td class="ext-matrix-os"><a class="ext-os" href="/ext/os/{{ $cell }}">{{ $cell }}</a></td>
-        {{ else -}}
-          {{ $parts := findRE `\S+` $cell -}}
-          {{ if ge (len $parts) 4 -}}
-            {{ $state := index $parts 0 -}}
-            {{ $repo  := index $parts 1 -}}
-            {{ $ver   := index $parts 2 -}}
-            {{/* Determine badge CSS class */}}
-            {{ $cls := "ext-avail-cell--na" -}}
-            {{ if eq $state "AVAIL" -}}
-              {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
-              {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
-              {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
-            {{ else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
-            {{ else if eq $state "N/A"  }}{{ $cls = "ext-avail-cell--na"   -}}
-            {{ end -}}
-            {{/* Version display */}}
-            {{ $verDisplay := $ver -}}
-            {{ if eq $state "MISS" -}}
-              {{ $verDisplay = "MISS" -}}
-            {{ else if eq $state "N/A" -}}
-              {{ $verDisplay = "N/A" -}}
-            {{ else if or (eq $ver "-") (eq $ver "") -}}
-              {{ $verDisplay = "AVAIL" -}}
-            {{ end -}}
-            {{/* O(1) lookup for matching downloads */}}
-            {{ $cellDL := slice -}}
-            {{ if $hasDL -}}
-              {{ $pgIdx := sub $ci 2 -}}
-              {{ if and (ge $pgIdx 0) (lt $pgIdx (len $pgVersions)) -}}
-                {{ $pg := index $pgVersions $pgIdx -}}
-                {{ $key := printf "%s-%s" $os $pg -}}
-                {{ $found := $dlMap.Get $key -}}
-                {{ if $found }}{{ $cellDL = $found }}{{ end -}}
-              {{ end -}}
-            {{ end -}}
-            {{/* Render cell — with popover if downloads exist */}}
-            {{ if gt (len $cellDL) 0 -}}
-            <td><div class="ext-pop-wrap">
-              <span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span>
-              <div class="ext-pop">
-                {{ $firstDL := findRE `\S+` (index $cellDL 0) -}}
-                <div class="ext-pop__hd">{{ $os }}.pg{{ index $pgVersions (sub $ci 2) }} : {{ index $firstDL 3 }}</div>
-                {{ range $cellDL -}}
-                  {{ $dp := findRE `\S+` . -}}
-                  {{ $dRepo := index $dp 5 -}}
-                  {{ $repoCls := "ext-pop__repo" -}}
-                  {{ if eq $dRepo "pigsty" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pigsty" }}{{ end -}}
-                  {{ if eq $dRepo "pgdg" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pgdg" }}{{ end -}}
-                  <a class="ext-pop__row" href="{{ index $dp 8 }}">
-                    <span class="ext-pop__fn">{{ index $dp 4 }}</span>
-                    <span class="ext-pop__meta"><span class="{{ $repoCls }}">{{ upper $dRepo }}</span> · {{ index $dp 6 }} · {{ index $dp 7 }}</span>
-                  </a>
-                {{ end -}}
-              </div>
-            </div></td>
-            {{ else -}}
-            <td><span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span></td>
-            {{ end -}}
-          {{ else -}}
-            <td>{{ $cell }}</td>
-          {{ end -}}
-        {{ end -}}
-      {{ end -}}
-    {{ end -}}
-  </tr>
-  {{ end -}}
-{{ end -}}
-</tbody>
-</table>
+{{/* ── Phase 3: Build GFM rows for OINK's native table renderer ── */}}
+{{- $rows := slice -}}
+{{- $ordinal := .Ordinal -}}
+{{- range $lines -}}
+  {{- $line := trim . " \r\t" -}}
+  {{- if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
+    {{- $header := slice -}}
+    {{- $alignment := slice -}}
+    {{- $cells := split (strings.TrimSuffix "|" (strings.TrimPrefix "|" (replace $line "\\|" "&#124;"))) "|" -}}
+    {{- range $ci, $rawCell := $cells -}}
+      {{- $header = $header | append (trim $rawCell " ") -}}
+      {{- $alignment = $alignment | append (cond (eq $ci 0) ":---" ":---:") -}}
+    {{- end -}}
+    {{- $rows = $rows | append (printf "| %s |" (delimit $header " | ")) (printf "| %s |" (delimit $alignment " | ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $rowIndex, $rawLine := $lines -}}
+  {{- $line := trim $rawLine " \r\t" -}}
+  {{- if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
+    {{- $row := slice -}}
+    {{- $cells := split (strings.TrimSuffix "|" (strings.TrimPrefix "|" (replace $line "\\|" "&#124;"))) "|" -}}
+    {{- $os := "" -}}
+    {{- range $ci, $rawCell := $cells -}}
+      {{- $cell := trim $rawCell " " -}}
+      {{- $cellHTML := htmlEscape $cell -}}
+      {{- if eq $ci 0 -}}
+        {{- $os = $cell -}}
+        {{- $cellHTML = printf `<a class="ext-os" href="/ext/os/%s">%s</a>` (htmlEscape $os) (htmlEscape $os) -}}
+      {{- else -}}
+        {{- $parts := findRE `\S+` $cell -}}
+        {{- if ge (len $parts) 4 -}}
+          {{- $state := index $parts 0 -}}
+          {{- $repo := index $parts 1 -}}
+          {{- $ver := index $parts 2 -}}
+          {{- $cls := "ext-avail-cell--na" -}}
+          {{- if eq $state "AVAIL" -}}
+            {{- if eq $repo "PGDG" }}{{ $cls = "ext-avail-cell--pgdg" }}{{ end -}}
+            {{- if eq $repo "PIGSTY" }}{{ $cls = "ext-avail-cell--pigsty" }}{{ end -}}
+            {{- if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
+          {{- else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
+          {{- else if eq $state "N/A" }}{{ $cls = "ext-avail-cell--na" -}}
+          {{- end -}}
+          {{- $verDisplay := $ver -}}
+          {{- if eq $state "MISS" -}}
+            {{- $verDisplay = "MISS" -}}
+          {{- else if eq $state "N/A" -}}
+            {{- $verDisplay = "N/A" -}}
+          {{- else if or (eq $ver "-") (eq $ver "") -}}
+            {{- $verDisplay = "AVAIL" -}}
+          {{- end -}}
+          {{- $label := htmlEscape $verDisplay -}}
+          {{- if eq $state "AVAIL" }}{{ $label = printf "%s&nbsp;%s" (htmlEscape $repo) $label }}{{ end -}}
+          {{- $cellHTML = printf `<span class="ext-avail-cell %s">%s</span>` $cls $label -}}
+          {{/* O(1) lookup retains every download for this OS/PG cell. */}}
+          {{- $cellDL := slice -}}
+          {{- $pg := "" -}}
+          {{- $pgIdx := sub $ci 1 -}}
+          {{- if and $hasDL (lt $pgIdx (len $pgVersions)) -}}
+            {{- $pg = index $pgVersions $pgIdx -}}
+            {{- with $dlMap.Get (printf "%s-%s" $os $pg) }}{{ $cellDL = . }}{{ end -}}
+          {{- end -}}
+          {{- if gt (len $cellDL) 0 -}}
+            {{- $id := printf "ext-pop-%d-%d-%d-%.12s" $ordinal $rowIndex $ci (md5 (printf "%s/%s" $os $pg)) -}}
+            {{- $firstDL := findRE `\S+` (index $cellDL 0) -}}
+            {{- $title := printf "%s.pg%s : %s" $os $pg (index $firstDL 3) -}}
+            {{- $downloads := slice -}}
+            {{- range $cellDL -}}
+              {{- $dp := findRE `\S+` . -}}
+              {{- $dRepo := index $dp 5 -}}
+              {{- $repoCls := "ext-pop__repo" -}}
+              {{- if eq $dRepo "pigsty" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pigsty" }}{{ end -}}
+              {{- if eq $dRepo "pgdg" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pgdg" }}{{ end -}}
+              {{- $downloads = $downloads | append (printf `<a class="ext-pop__row" href="%s"><span class="ext-pop__fn">%s</span><span class="ext-pop__meta"><span class="%s">%s</span> · %s · %s</span></a>` (htmlEscape (index $dp 8)) (htmlEscape (index $dp 4)) $repoCls (htmlEscape (upper $dRepo)) (htmlEscape (index $dp 6)) (htmlEscape (index $dp 7))) -}}
+            {{- end -}}
+            {{/* Native popovers enter the top layer instead of clipping inside table scroll. */}}
+            {{- $cellHTML = printf `<button class="ext-avail-cell %s ext-pop-trigger" type="button" popovertarget="%s" aria-label="%s">%s</button><div class="ext-pop" id="%s" popover aria-labelledby="%s-title"><div class="ext-pop__hd" id="%s-title">%s<button class="ext-pop__close" type="button" popovertarget="%s" popovertargetaction="hide" aria-label="关闭下载详情">×</button></div>%s</div>` $cls $id (htmlEscape (printf "下载详情：%s" $title)) $label $id $id $id (htmlEscape $title) $id (delimit $downloads "") -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{/* GFM cells must stay on one line, including HTML attributes and download URLs. */}}
+      {{/* Text inside inline HTML still passes through Goldmark. Encode Markdown
+           punctuation so package filenames and versions remain literal. */}}
+      {{- range $char, $entity := dict "\\" "&#92;" "*" "&#42;" "_" "&#95;" "~" "&#126;" "`" "&#96;" "[" "&#91;" "]" "&#93;" -}}
+        {{- $cellHTML = replace $cellHTML $char $entity -}}
+      {{- end -}}
+      {{- $row = $row | append (replace (replaceRE `[\r\n]+` " " $cellHTML) "|" "&#124;") -}}
+    {{- end -}}
+    {{- $rows = $rows | append (printf "| %s |" (delimit $row " | ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- .Page.RenderString (dict "display" "block") (printf "%s\n{.matrix .full-width .wide .expand .ext-table--matrix}" (delimit $rows "\n")) -}}

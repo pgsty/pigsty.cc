@@ -1,4 +1,4 @@
-// Pigsty-specific extensions layered on top of OINK 1.4.0.
+// Pigsty-specific extensions layered on top of OINK 1.5.1.
 // OINK owns code blocks, semantic table overflow, navigation, and page chrome.
 
 // 窄屏下收紧博客页码间距，兼容 Terminal 等宽字体。
@@ -66,7 +66,7 @@
 // Goal:
 // - Keep markdown/HTML clean (no inline styles)
 // - Provide semantic classes for: category, license, language, repo, flags, etc.
-// - Aesthetic close to Tailwind / Mintlify (subtle, pastel, not "rainbow blobs")
+// - Defer general table, tab, and shell styling to OINK
 // - Work in both light/dark (OINK uses Bootstrap 5 `data-bs-theme`)
 // =============================================================================
 
@@ -117,40 +117,6 @@
     border-color: color-mix(in srgb, var(--ext-accent) 30%, transparent);
   }
 
-  .ext-badge--mono { font-variant-numeric: tabular-nums; }
-
-  // ---- Chip (dependency links etc.) ----------------------------------------
-  .ext-chip {
-    --ext-chip-bg: var(--ext-surface);
-    --ext-chip-fg: var(--bs-body-color);
-    --ext-chip-border: var(--ext-border);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.18em 0.45em;
-    font-size: 0.82em;
-    line-height: 1.2;
-    border-radius: 0.45rem;
-    white-space: nowrap;
-    margin: 0.12em 0.15em;
-
-    color: var(--ext-chip-fg);
-    background: var(--ext-chip-bg);
-    border: 1px solid var(--ext-chip-border);
-    text-decoration: none;
-
-    transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
-  }
-
-  a.ext-chip:hover {
-    color: var(--ext-chip-fg);
-    text-decoration: none;
-    transform: translateY(-1px);
-    background: var(--ext-surface-2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-
   // ---- Flags (Yes/No/Maybe) -------------------------------------------------
   .ext-flag {
     @extend .ext-badge;
@@ -159,8 +125,6 @@
   }
   .ext-flag--yes { --ext-accent: #16a34a; }
   .ext-flag--no { --ext-accent: #64748b; }
-  .ext-flag--warn { --ext-accent: #d97706; }
-  .ext-flag--na { --ext-accent: #94a3b8; }
 
   // ---- PG Version pills (compatibility list) --------------------------------
   .ext-pgver {
@@ -188,11 +152,6 @@
   .ext-pgver--ok { --ext-accent: #16a34a; }
   .ext-pgver--miss {
     --ext-accent: #dc2626;
-    border-style: dashed;
-    opacity: 0.9;
-  }
-  .ext-pgver--na {
-    --ext-accent: #94a3b8;
     border-style: dashed;
     opacity: 0.9;
   }
@@ -279,63 +238,6 @@
   .ext-card--repo { --ext-accent: #64748b; }
   .ext-card--source { --ext-accent: #2563eb; }
 
-  // ---- Top cards (OINK-compatible card shortcode) --------------------------
-  // Keep OINK's `card`/`cardpane` output visually cohesive with extension data.
-  // "ext" look by scoping light restyling under `.ext-topcards`.
-  .ext-topcards {
-    margin: 1rem 0 1.25rem;
-  }
-
-  .ext-topcards .td-card-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 0.9rem;
-    margin: 0;
-    margin-bottom: 0 !important; // override Bootstrap `mb-4` class on the shortcode wrapper
-  }
-
-  .ext-topcards .td-card {
-    margin: 0 !important; // override `me-4` from shortcode
-    border-radius: var(--ext-radius);
-    border-color: var(--ext-border) !important;
-    overflow: hidden;
-
-    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background-color 150ms ease;
-  }
-
-  .ext-topcards .td-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--ext-shadow-hover);
-    border-color: color-mix(in srgb, var(--bs-link-color) 24%, var(--ext-border)) !important;
-  }
-
-  .ext-topcards .td-card .card-header {
-    background: var(--ext-surface);
-    border-bottom: 1px solid var(--ext-border);
-    font-weight: 750;
-    letter-spacing: 0.02em;
-  }
-
-  .ext-topcards .td-card .card-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .ext-topcards .td-card .card-text {
-    margin-bottom: 0;
-  }
-
-  .ext-topcards .ext-cardlink {
-    text-decoration: none;
-  }
-
-  .ext-topcards .ext-cardlink code {
-    display: inline-block;
-    font-family: var(--bs-font-monospace);
-    word-break: break-word;
-    color: var(--ext-muted);
-  }
-
   // ---- OS/Arch pill ---------------------------------------------------------
   .ext-os {
     --ext-os-bg: var(--ext-surface);
@@ -390,103 +292,88 @@
   .ext-avail-cell--pgdg    { --ext-avail-accent: #336791; }
   .ext-avail-cell--pigsty  { --ext-avail-accent: #16a34a; }
   .ext-avail-cell--contrib { --ext-avail-accent: #64748b; }
-  .ext-avail-cell--other   { --ext-avail-accent: #0ea5e9; }
   .ext-avail-cell--miss    { --ext-avail-accent: #dc2626; border-style: dashed; opacity: 0.85; }
   .ext-avail-cell--na      { --ext-avail-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
 
-  .ext-matrix-os { white-space: nowrap; text-align: center; }
-
-  // ---- Matrix popover (hover download details) ------------------------------
-  // Wrapper: positioned relative so the popover anchors to it
-  .ext-pop-wrap {
-    position: relative;
-    display: inline-flex;
+  // Download details use the browser's top layer, outside the table viewport.
+  // OINK can therefore own scrolling without clipping links on narrow screens.
+  .ext-pop-trigger {
     cursor: pointer;
 
-    // Invisible bridge between badge and popover so hover doesn't break
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: 8px;       // matches the gap
+    &:hover { border-color: currentColor; }
+    &:focus-visible {
+      outline: 2px solid var(--bs-link-color);
+      outline-offset: 2px;
     }
   }
-  .ext-pop-wrap .ext-avail-cell { cursor: pointer; }
 
-  // The popover card — hidden by default, shown on hover
   .ext-pop {
-    display: none;
-    position: absolute;
-    z-index: 200;
-    top: calc(100% + 6px);
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    inset: 0;
     width: max-content;
-    max-width: 640px;
-    max-height: 420px;
-    overflow-y: auto;
-    padding: 0.5rem 0.6rem;
+    max-width: calc(100vw - 2rem);
+    max-height: 80dvh;
+    margin: auto;
+    padding: 0.75rem 1rem;
+    overflow: auto;
+    color: var(--bs-body-color);
     background: var(--bs-body-bg);
     border: 1px solid var(--ext-border);
-    border-radius: var(--ext-radius);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
-    text-align: left;
+    border-radius: var(--td-control-radius, 6px);
+    box-shadow: var(--td-shell-shadow-lg);
+    text-align: start;
+    white-space: normal;
 
-    // Small arrow pointing up
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-bottom-color: var(--ext-border);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 5px solid transparent;
-      border-bottom-color: var(--bs-body-bg);
+    &:popover-open { display: block; }
+  }
+
+  .ext-pop__close {
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-inline-start: 0.75rem;
+    border: 0;
+    border-radius: var(--td-control-radius, 6px);
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-size: 1.25rem;
+
+    &:hover { background: var(--bs-tertiary-bg); }
+    &:focus-visible {
+      outline: 2px solid var(--bs-link-color);
+      outline-offset: 2px;
     }
   }
-  .ext-pop-wrap:hover .ext-pop { display: block; }
-
-  // Ensure nothing clips the popover — all ancestors must allow overflow
-  table.ext-table--matrix,
-  table.ext-table--matrix thead,
-  table.ext-table--matrix tbody,
-  table.ext-table--matrix tr,
-  table.ext-table--matrix td,
-  table.ext-table--matrix th { overflow: visible !important; }
 
   // Popover header — title line
   .ext-pop__hd {
-    font-size: 0.78em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
     font-weight: 700;
     font-family: var(--bs-font-monospace);
     color: var(--bs-body-color);
     padding-bottom: 0.35rem;
     margin-bottom: 0.3rem;
     border-bottom: 1px solid var(--ext-border);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   // Each download row — clickable block
   .ext-pop__row {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.6rem;
+    gap: 0.2rem 0.6rem;
     padding: 0.25rem 0.35rem;
     margin: 0 -0.35rem;
     border-radius: var(--ext-radius-sm);
     text-decoration: none;
     color: inherit;
-    white-space: nowrap;
+    white-space: normal;
     transition: background 100ms ease;
 
     &:hover {
@@ -498,17 +385,18 @@
 
   // Filename
   .ext-pop__fn {
-    font-size: 0.72em;
+    font-size: 0.8125rem;
     font-family: var(--bs-font-monospace);
     font-weight: 600;
     color: var(--bs-link-color);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .ext-pop__row:hover .ext-pop__fn { text-decoration: underline; }
 
   // Metadata (repo · version · size)
   .ext-pop__meta {
-    font-size: 0.68em;
+    font-size: 0.75rem;
     color: var(--ext-muted);
     white-space: nowrap;
   }
@@ -520,202 +408,35 @@
   .ext-pop__repo--pigsty { color: #16a34a; }
   .ext-pop__repo--pgdg   { color: #336791; }
 
-  // ---- Availability cell (legacy, for category/OS pages) --------------------
-  .ext-avail__pkg {
-    --ext-accent: var(--bs-link-color);
+  // OINK owns table borders, spacing, scrolling and the expanded reader.
+  // Keep the legacy .ext-table marker inert for generated catalog content.
+  // Only the link-list and combined metadata layouts need site-specific sizing.
+  table.ext-category-index {
+    width: 100%;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.18em 0.45em;
-    font-size: 0.84em;
-    font-weight: 750;
-    line-height: 1.2;
-    border-radius: 0.55rem;
-    white-space: nowrap;
-    font-family: var(--bs-font-monospace);
-
-    color: color-mix(in srgb, var(--ext-accent) 92%, var(--bs-body-color));
-    background: color-mix(in srgb, var(--ext-accent) 12%, var(--bs-body-bg));
-    border: 1px solid color-mix(in srgb, var(--ext-accent) 24%, transparent);
-    text-decoration: none;
-
-    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, border-color 120ms ease;
-  }
-
-  a.ext-avail__pkg:hover {
-    color: color-mix(in srgb, var(--bs-link-color) 92%, var(--bs-body-color));
-    text-decoration: none;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    background: color-mix(in srgb, var(--bs-link-color) 16%, var(--bs-body-bg));
-    border-color: color-mix(in srgb, var(--bs-link-color) 30%, transparent);
-  }
-
-  .ext-avail__meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-top: 0.35rem;
-  }
-
-  .ext-avail__ver {
-    font-size: 0.88em;
-    font-family: var(--bs-font-monospace);
-    font-variant-numeric: tabular-nums;
-    color: var(--ext-muted);
-  }
-
-  .ext-avail__na {
-    display: inline-block;
-    padding: 0.18em 0.45em;
-    font-size: 0.84em;
-    border-radius: 0.55rem;
-    border: 1px dashed var(--ext-border);
-    color: var(--ext-muted);
-    font-family: var(--bs-font-monospace);
-  }
-
-  // ---- Tabs (Bootstrap tabpane, restyled) -----------------------------------
-  .ext-tabs {
-    margin: 1rem 0 1.25rem;
-  }
-
-  .ext-tabs .nav-tabs {
-    border-bottom: 1px solid var(--ext-border);
-    gap: 0.25rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .ext-tabs .nav-tabs .nav-link {
-    border: 0;
-    border-bottom: 2px solid transparent;
-    background: transparent;
-    color: var(--ext-muted);
-    font-weight: 700;
-    padding: 0.55rem 0.75rem;
-    border-radius: 0.7rem 0.7rem 0 0;
-    white-space: nowrap;
-
-    transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
-  }
-
-  .ext-tabs .nav-tabs .nav-link:hover:not(.disabled) {
-    color: var(--bs-body-color);
-    background: var(--ext-surface);
-  }
-
-  .ext-tabs .nav-tabs .nav-link.active {
-    color: color-mix(in srgb, var(--bs-link-color) 90%, var(--bs-body-color));
-    background: var(--bs-body-bg);
-    border-bottom-color: var(--bs-link-color);
-  }
-
-  .ext-tabs .tab-content { padding-top: 0.85rem; }
-
-  // ---- Meta tables (optional, add {.ext-table}) ------------------------------
-  table.ext-table {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: table;
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
-    border-radius: var(--ext-radius);
-    background: var(--bs-body-bg);
-    border: 1px solid var(--ext-border);
-    margin: 0.9rem 0 1.25rem;
-
-    thead th {
-      background: var(--ext-surface);
-      font-weight: 700;
-      font-size: 0.92em;
+    th:first-child,
+    td:first-child {
+      width: 1%;
+      white-space: nowrap;
     }
 
-    th,
-    td {
-      vertical-align: middle;
-      border-bottom: 1px solid var(--ext-border);
-    }
+    td { vertical-align: top; }
 
-    tbody tr:last-child td { border-bottom: 0; }
-
-    td,
-    th {
-      padding: 0.65rem 0.75rem;
-    }
-
-    tbody tr:hover td {
-      background: color-mix(in srgb, var(--bs-body-bg) 92%, var(--bs-body-color) 2%);
-    }
-
-    a { text-decoration: none; }
-  }
-
-  // 扩展清单有较多不可拆分的徽标；在可用宽度不足时由表格自身滚动。
-  @media (max-width: 1500px) {
-    table.ext-table:not(.ext-table--matrix):not(.ext-table--cate):not(.ext-table--os-matrix) {
-      display: block;
-      width: 100% !important;
-      max-width: 100% !important;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    td a {
+      display: inline-block;
+      max-width: 100%;
     }
   }
 
-  table.ext-table.ext-table--rel {
+  table.ext-table--rel {
+    width: 100%;
     table-layout: fixed;
-
-    thead th {
-      font-size: inherit;
-    }
 
     th:first-child,
     td:first-child {
       width: 9.5rem;
       white-space: nowrap;
     }
-  }
-
-  table.ext-table.ext-table--matrix {
-    table-layout: fixed;
-    width: 100%;
-    max-width: 100%;
-
-    td,
-    th {
-      padding: 0.4rem 0.25rem;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-    // First column (OS) — fixed narrow width
-    th:first-child,
-    td:first-child {
-      width: 7.5rem;
-      white-space: nowrap;
-    }
-  }
-
-  table.ext-table.ext-table--avail {
-    td { vertical-align: top; }
-
-    th:first-child,
-    td:first-child,
-    th:nth-child(2),
-    td:nth-child(2) {
-      width: 1%;
-      white-space: nowrap;
-    }
-  }
-
-  table.ext-table.ext-table--download {
-    td,
-    th { padding: 0.55rem 0.65rem; }
   }
 
   // ---- Semantic accents ------------------------------------------------------
@@ -725,31 +446,30 @@
   .ext-badge--lang { letter-spacing: 0.01em; }
   .ext-badge--avail { --ext-accent: #2563eb; }
   .ext-badge--miss  { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.7; }
-  .ext-badge--na    { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
 
   // Category (function group): TIME / GIS / RAG / ...
-  .ext-cate--time,  .ext-badge--cate.time  { --ext-accent: #0ea5e9; }
-  .ext-cate--gis,   .ext-badge--cate.gis   { --ext-accent: #16a34a; }
-  .ext-cate--rag,   .ext-badge--cate.rag   { --ext-accent: #7c3aed; }
-  .ext-cate--fts,   .ext-badge--cate.fts   { --ext-accent: #e11d48; }
-  .ext-cate--olap,  .ext-badge--cate.olap  { --ext-accent: #f97316; }
-  .ext-cate--feat,  .ext-badge--cate.feat  { --ext-accent: #0f766e; }
-  .ext-cate--lang,  .ext-badge--cate.lang  { --ext-accent: #6366f1; }
-  .ext-cate--type,  .ext-badge--cate.type  { --ext-accent: #0891b2; }
-  .ext-cate--util,  .ext-badge--cate.util  { --ext-accent: #475569; }
-  .ext-cate--func,  .ext-badge--cate.func  { --ext-accent: #2563eb; }
-  .ext-cate--admin, .ext-badge--cate.admin { --ext-accent: #dc2626; }
-  .ext-cate--stat,  .ext-badge--cate.stat  { --ext-accent: #7c3aed; }
-  .ext-cate--sec,   .ext-badge--cate.sec   { --ext-accent: #ea580c; }
-  .ext-cate--fdw,   .ext-badge--cate.fdw   { --ext-accent: #334155; }
-  .ext-cate--sim,   .ext-badge--cate.sim   { --ext-accent: #d97706; }
-  .ext-cate--etl,   .ext-badge--cate.etl   { --ext-accent: #52525b; }
+  .ext-badge--cate.time  { --ext-accent: #0ea5e9; }
+  .ext-badge--cate.gis   { --ext-accent: #16a34a; }
+  .ext-badge--cate.rag   { --ext-accent: #7c3aed; }
+  .ext-badge--cate.fts   { --ext-accent: #e11d48; }
+  .ext-badge--cate.olap  { --ext-accent: #f97316; }
+  .ext-badge--cate.feat  { --ext-accent: #0f766e; }
+  .ext-badge--cate.lang  { --ext-accent: #6366f1; }
+  .ext-badge--cate.type  { --ext-accent: #0891b2; }
+  .ext-badge--cate.util  { --ext-accent: #475569; }
+  .ext-badge--cate.func  { --ext-accent: #2563eb; }
+  .ext-badge--cate.admin { --ext-accent: #dc2626; }
+  .ext-badge--cate.stat  { --ext-accent: #7c3aed; }
+  .ext-badge--cate.sec   { --ext-accent: #ea580c; }
+  .ext-badge--cate.fdw   { --ext-accent: #334155; }
+  .ext-badge--cate.sim   { --ext-accent: #d97706; }
+  .ext-badge--cate.etl   { --ext-accent: #52525b; }
 
   // Repo/Channel (PGDG / Pigsty / Contrib / Timescale / ...)
-  .ext-repo--pgdg,      .ext-badge--repo.pgdg      { --ext-accent: #336791; }
-  .ext-repo--pigsty,    .ext-badge--repo.pigsty    { --ext-accent: #0f766e; }
-  .ext-repo--contrib,   .ext-badge--repo.contrib   { --ext-accent: #64748b; }
-  .ext-repo--timescale, .ext-badge--repo.timescale { --ext-accent: #f97316; }
+  .ext-badge--repo.pgdg      { --ext-accent: #336791; }
+  .ext-badge--repo.pigsty    { --ext-accent: #0f766e; }
+  .ext-badge--repo.contrib   { --ext-accent: #64748b; }
+  .ext-badge--repo.timescale { --ext-accent: #f97316; }
 
   // License — Blue: permissive, Green: copyleft-weak/GPL, Yellow: LGPL, Red: AGPL, Gray: proprietary
   // Permissive (blue spectrum)
@@ -773,18 +493,14 @@
   .ext-badge--license.timescale    { --ext-accent: #6b7280; }  // gray-500
 
   // Language (C / C++ / SQL / Rust / ...)
-  .ext-lang--c,    .ext-badge--lang.c    { --ext-accent: #334155; }
-  .ext-lang--cpp,  .ext-badge--lang.cpp  { --ext-accent: #005f9e; }
-  .ext-lang--sql,  .ext-badge--lang.sql  { --ext-accent: #0ea5e9; }
-  .ext-lang--rust, .ext-badge--lang.rust { --ext-accent: #b45309; }
-  .ext-lang--py,   .ext-badge--lang.py   { --ext-accent: #2563eb; }
+  .ext-badge--lang.c    { --ext-accent: #334155; }
+  .ext-badge--lang.cpp  { --ext-accent: #005f9e; }
+  .ext-badge--lang.sql  { --ext-accent: #0ea5e9; }
+  .ext-badge--lang.rust { --ext-accent: #b45309; }
+  .ext-badge--lang.py   { --ext-accent: #2563eb; }
 
   // ---- Category page: unified table (left metadata + right OS availability) --
-  table.ext-table.ext-table--cate {
-    table-layout: fixed;
-
-    td, th { padding: 0.55rem 0.65rem; }
-
+  table.ext-table--cate {
     // Col 1: 条目 label
     td:nth-child(1), th:nth-child(1) {
       width: 5.5rem;
@@ -805,50 +521,11 @@
     // Col 4-5: x86_64 / aarch64
     td:nth-child(4), th:nth-child(4),
     td:nth-child(5), th:nth-child(5) {
-      width: 22%;
+      width: auto;
       text-align: center;
     }
   }
 
-  // ---- OS page: availability matrix (pkg × PG versions) ----------------------
-  table.ext-table.ext-table--os-matrix {
-    table-layout: fixed;
-    width: 100%;
-    font-size: 0.88em;
-
-    th, td {
-      text-align: center;
-      padding: 0.4rem 0.3rem;
-    }
-
-    th:first-child {
-      width: 18%;
-      text-align: center;
-    }
-
-    .ext-os-matrix-pkg {
-      width: 18%;
-      text-align: left;
-      padding-left: 0.75rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      a { font-weight: 600; }
-      code {
-        font-size: 0.92em;
-        padding: 0.1em 0.3em;
-        background: color-mix(in srgb, var(--ext-surface) 60%, transparent);
-        border-radius: 3px;
-      }
-    }
-
-    // Make avail-cell badges fill the table cell
-    td .ext-avail-cell {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
 }
 
 [data-bs-theme="dark"] .td-content {

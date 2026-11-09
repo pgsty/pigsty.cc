@@ -1,62 +1,64 @@
 {{- $lines := split .Inner "\n" -}}
-<table class="ext-table ext-table--os-matrix">
-<thead>
-{{ range $lines -}}
-  {{ $line := trim . " \r\t" -}}
-  {{ if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
-  <tr>
-    {{ range $ci, $rawCell := split $line "|" -}}
-      {{ $cell := trim $rawCell " " -}}
-      {{ if and (ne $ci 0) (ne $cell "") -}}
-        <th>{{ $cell | markdownify }}</th>
-      {{ end -}}
-    {{ end -}}
-  </tr>
-  {{ end -}}
-{{ end -}}
-</thead>
-<tbody>
-{{ range $lines -}}
-  {{ $line := trim . " \r\t" -}}
-  {{ if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
-  <tr>
-    {{ $cells := split $line "|" -}}
-    {{ range $ci, $rawCell := $cells -}}
-      {{ $cell := trim $rawCell " " -}}
-      {{ if and (ne $ci 0) (ne $cell "") -}}
-        {{ if eq $ci 1 -}}
-          <td class="ext-os-matrix-pkg">{{ $cell | markdownify | replaceRE "</?p[^>]*>" "" | safeHTML }}</td>
-        {{ else -}}
-          {{ $parts := findRE `\S+` $cell -}}
-          {{ if ge (len $parts) 4 -}}
-            {{ $state := index $parts 0 -}}
-            {{ $repo  := index $parts 1 -}}
-            {{ $ver   := index $parts 2 -}}
-            {{ $cls := "ext-avail-cell--na" -}}
-            {{ if eq $state "AVAIL" -}}
-              {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
-              {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
-              {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
-            {{ else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
-            {{ else if eq $state "N/A"  }}{{ $cls = "ext-avail-cell--na"   -}}
-            {{ end -}}
-            {{ $verDisplay := $ver -}}
-            {{ if eq $state "MISS" -}}
-              {{ $verDisplay = "MISS" -}}
-            {{ else if eq $state "N/A" -}}
-              {{ $verDisplay = "N/A" -}}
-            {{ else if or (eq $ver "-") (eq $ver "") -}}
-              {{ $verDisplay = "AVAIL" -}}
-            {{ end -}}
-            <td><span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span></td>
-          {{ else -}}
-            <td>{{ $cell }}</td>
-          {{ end -}}
-        {{ end -}}
-      {{ end -}}
-    {{ end -}}
-  </tr>
-  {{ end -}}
-{{ end -}}
-</tbody>
-</table>
+{{- $rows := slice -}}
+{{- range $lines -}}
+  {{- $line := trim . " \r\t" -}}
+  {{- if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
+    {{- $header := slice -}}
+    {{- $alignment := slice -}}
+    {{- $cells := split (strings.TrimSuffix "|" (strings.TrimPrefix "|" (replace $line "\\|" "&#124;"))) "|" -}}
+    {{- range $ci, $rawCell := $cells -}}
+      {{- $header = $header | append (trim $rawCell " ") -}}
+      {{- $alignment = $alignment | append (cond (eq $ci 0) ":---" ":---:") -}}
+    {{- end -}}
+    {{- $rows = $rows | append (printf "| %s |" (delimit $header " | ")) (printf "| %s |" (delimit $alignment " | ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $lines -}}
+  {{- $line := trim . " \r\t" -}}
+  {{- if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
+    {{- $row := slice -}}
+    {{- $cells := split (strings.TrimSuffix "|" (strings.TrimPrefix "|" (replace $line "\\|" "&#124;"))) "|" -}}
+    {{- range $ci, $rawCell := $cells -}}
+      {{- $cell := trim $rawCell " " -}}
+      {{- $cellHTML := htmlEscape $cell -}}
+      {{- if eq $ci 0 -}}
+        {{- $cellHTML = printf `<span class="ext-os-matrix-pkg">%s</span>` ($cell | markdownify | replaceRE "</?p[^>]*>" "") -}}
+      {{- else -}}
+        {{- $parts := findRE `\S+` $cell -}}
+        {{- if ge (len $parts) 4 -}}
+          {{- $state := index $parts 0 -}}
+          {{- $repo := index $parts 1 -}}
+          {{- $ver := index $parts 2 -}}
+          {{- $cls := "ext-avail-cell--na" -}}
+          {{- if eq $state "AVAIL" -}}
+            {{- if eq $repo "PGDG" }}{{ $cls = "ext-avail-cell--pgdg" }}{{ end -}}
+            {{- if eq $repo "PIGSTY" }}{{ $cls = "ext-avail-cell--pigsty" }}{{ end -}}
+            {{- if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
+          {{- else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
+          {{- else if eq $state "N/A" }}{{ $cls = "ext-avail-cell--na" -}}
+          {{- end -}}
+          {{- $verDisplay := $ver -}}
+          {{- if eq $state "MISS" -}}
+            {{- $verDisplay = "MISS" -}}
+          {{- else if eq $state "N/A" -}}
+            {{- $verDisplay = "N/A" -}}
+          {{- else if or (eq $ver "-") (eq $ver "") -}}
+            {{- $verDisplay = "AVAIL" -}}
+          {{- end -}}
+          {{- $label := htmlEscape $verDisplay -}}
+          {{- if eq $state "AVAIL" }}{{ $label = printf "%s&nbsp;%s" (htmlEscape $repo) $label }}{{ end -}}
+          {{- $cellHTML = printf `<span class="ext-avail-cell %s">%s</span>` $cls $label -}}
+        {{- end -}}
+      {{- end -}}
+      {{/* Keep cell HTML inline and prevent literal pipes from becoming GFM separators. */}}
+      {{/* Text inside inline HTML still passes through Goldmark. Encode Markdown
+           punctuation so package filenames and versions remain literal. */}}
+      {{- range $char, $entity := dict "\\" "&#92;" "*" "&#42;" "_" "&#95;" "~" "&#126;" "`" "&#96;" "[" "&#91;" "]" "&#93;" -}}
+        {{- $cellHTML = replace $cellHTML $char $entity -}}
+      {{- end -}}
+      {{- $row = $row | append (replace (replaceRE `[\r\n]+` " " $cellHTML) "|" "&#124;") -}}
+    {{- end -}}
+    {{- $rows = $rows | append (printf "| %s |" (delimit $row " | ")) -}}
+  {{- end -}}
+{{- end -}}
+{{- .Page.RenderString (dict "display" "block") (printf "%s\n{.matrix .full-width .wide .expand .ext-table--os-matrix}" (delimit $rows "\n")) -}}

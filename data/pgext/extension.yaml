@@ -1,10 +1,10 @@
 # 首页扩展索引：由 bin/gen-pgext.py 从 pgext/db/universe.csv 生成。
-# 生成日期 2026-10-28 · 共 2695 个扩展，其中 620 个已打包。
-# universe.csv SHA-256: 0465d81d995ca1f3eddc429b79b0b004c4a006735c9d66f77a53a6bb90f3f946
+# 生成日期 2026-11-09 · 共 2733 个扩展，其中 625 个已打包。
+# universe.csv SHA-256: 7fd5b3bd54499841005fb2b7b12a3ddf9e13f0db5b18a28de83f17203c63b61f
 # stars 为目录采集值，并非生成时对所有上游仓库重新抓取。
 - {name: "timescaledb", cat: TIME, pkg: true, stars: 23739, desc: "时序数据库扩展插件"}
 - {name: "pg_cron", cat: TIME, pkg: true, stars: 3907, desc: "定时任务调度器"}
-- {name: "timescaledb_toolkit", cat: TIME, pkg: true, stars: 492, desc: "超表分析查询，时间序列流式处理，以及其他SQL工具"}
+- {name: "timescaledb_toolkit", cat: TIME, pkg: true, stars: 493, desc: "分析型超函数库、时间序列管道处理及其他 SQL 工具"}
 - {name: "timeseries", cat: TIME, pkg: true, stars: 424, desc: "时序数据API封装"}
 - {name: "pg_later", cat: TIME, pkg: true, stars: 375, desc: "执行查询，并在稍后异步获取查询结果"}
 - {name: "periods", cat: TIME, pkg: true, stars: 321, desc: "为 PERIODs 和 SYSTEM VERSIONING 提供标准 SQL 功能"}
@@ -78,9 +78,9 @@
 - {name: "temporalbox", cat: TIME, pkg: false, stars: 0, desc: "将带键的时间区间映射为立方体"}
 - {name: "timeql", cat: TIME, pkg: false, stars: 0, desc: "使用PostgreSQL范围类型和GiST索引的原生时间历史跟踪及时间点查询"}
 - {name: "timetravel", cat: TIME, pkg: false, stars: 0, desc: "腾讯云 PostgreSQL 提供的 timetravel 扩展，1.0 版本仅支持 PostgreSQL 10 和 11。"}
-- {name: "pg_lake_spatial", cat: GIS, pkg: false, stars: 1661, desc: "通过 PostGIS 与基于 GDAL 的流程为 pg_lake 增加地理空间文件格式和空间函数支持。"}
+- {name: "pg_lake_spatial", cat: GIS, pkg: false, stars: 1670, desc: "通过 PostGIS 与基于 GDAL 的流程为 pg_lake 增加地理空间文件格式和空间函数支持。"}
 - {name: "pgrouting", cat: GIS, pkg: true, stars: 1442, desc: "提供寻路能力"}
-- {name: "mobilitydb", cat: GIS, pkg: true, stars: 628, desc: "MobilityDB地理空间投影数据管理分析平台"}
+- {name: "mobilitydb", cat: GIS, pkg: true, stars: 628, desc: "MobilityDB 地理空间轨迹数据管理与分析平台"}
 - {name: "mobilitydb_datagen", cat: GIS, pkg: true, stars: 628, desc: "MobilityDB随机数据生成函数"}
 - {name: "pointcloud", cat: GIS, pkg: true, stars: 429, desc: "提供激光雷达点云数据类型支持"}
 - {name: "pointcloud_postgis", cat: GIS, pkg: true, stars: 429, desc: "将激光雷达点云与PostGIS几何类型相集成"}
@@ -118,13 +118,13 @@
 - {name: "postgis", cat: GIS, pkg: true, stars: 9, desc: "PostGIS 几何和地理空间扩展"}
 - {name: "postgis_raster", cat: GIS, pkg: true, stars: 9, desc: "PostGIS 光栅类型和函数"}
 - {name: "postgis_sfcgal", cat: GIS, pkg: true, stars: 9, desc: "PostGIS SFCGAL 函数"}
-- {name: "postgis_tiger_geocoder", cat: GIS, pkg: true, stars: 9, desc: "PostGIS tiger 地理编码器和反向地理编码器"}
 - {name: "postgis_topology", cat: GIS, pkg: true, stars: 9, desc: "PostGIS 拓扑空间类型和函数"}
 - {name: "postile", cat: GIS, pkg: false, stars: 9, desc: "postile 是一个基于 pgrx 的 PostgreSQL 扩展，提供地图瓦片生成辅助函数以及 gzip/Brotli bytea 压缩。"}
 - {name: "pg_tileless", cat: GIS, pkg: false, stars: 8, desc: "pg_tileless：地理空间类 PostgreSQL 扩展；上游说明为“Tools for packaging twkb in sqlite for tileless”。"}
 - {name: "tzf", cat: GIS, pkg: true, stars: 8, desc: "快速根据GPS经纬度坐标查找时区"}
 - {name: "pg_landmetrics", cat: GIS, pkg: false, stars: 7, desc: "用于计算景观格局指标的 PostgreSQL/PostGIS 扩展。"}
 - {name: "pggeojson", cat: GIS, pkg: false, stars: 7, desc: "PostGIS的GeoJSON生成扩展"}
+- {name: "postgist", cat: GIS, pkg: false, stars: 7, desc: "基于 PostGIS 的时间序列与轨迹复合类型及聚合函数。"}
 - {name: "vasavgeom", cat: GIS, pkg: false, stars: 7, desc: "vasavgeom：地理空间类 PostgreSQL 扩展；上游说明为“Vague geometry handler - VASA”。"}
 - {name: "a5pg", cat: GIS, pkg: false, stars: 6, desc: "为 PostgreSQL 提供等面积 A5 空间索引函数。"}
 - {name: "festival", cat: GIS, pkg: false, stars: 6, desc: "用于空间索引性能评估的PostgreSQL扩展"}
@@ -132,6 +132,7 @@
 - {name: "postgis_letters", cat: GIS, pkg: false, stars: 5, desc: "使用内置矢量字体将文本字母转换为 PostGIS 几何对象。"}
 - {name: "geohash_extra", cat: GIS, pkg: false, stars: 4, desc: "geohash_extra：地理空间类 PostgreSQL 扩展；上游说明为“Additional geohash functions”。"}
 - {name: "geoip2lookup", cat: GIS, pkg: false, stars: 4, desc: "使用 MaxMind GeoIP2 MMDB 文件查询 IP 地址地理信息的 PL/PerlU 扩展。"}
+- {name: "gpu_spatial", cat: GIS, pkg: false, stars: 4, desc: "通过 SQL 查询由 CUDA 守护进程管理的 GPU 常驻空间图层。"}
 - {name: "hexgrid", cat: GIS, pkg: false, stars: 4, desc: "抽象表面上可配置的六边形网格"}
 - {name: "pg_polyline", cat: GIS, pkg: true, stars: 4, desc: "Google快速Polyline编码解码扩展"}
 - {name: "pg_trajectory", cat: GIS, pkg: false, stars: 4, desc: "以 SQL 和 PL/pgSQL 定义 PostGIS 轨迹类型及其时空分析函数"}
@@ -195,6 +196,7 @@
 - {name: "pgtempus", cat: GIS, pkg: false, stars: 0, desc: "提供多模式交通图加载、路径规划与等时圈函数。"}
 - {name: "pgtfs", cat: GIS, pkg: false, stars: 0, desc: "基于GTFS的公共交通路线规划PostgreSQL扩展"}
 - {name: "pgvroom", cat: GIS, pkg: false, stars: 0, desc: "从数据库访问VROOM功能"}
+- {name: "postgis_tiger_geocoder", cat: GIS, pkg: true, stars: 0, desc: "PostGIS tiger 地理编码器和反向地理编码器"}
 - {name: "postgrids", cat: GIS, pkg: false, stars: 0, desc: "基于 pgrx 的英国 OSGB 与爱尔兰 OSI 国家格网引用扩展，支持解析、格式化及精度重算。"}
 - {name: "qqespm", cat: GIS, pkg: false, stars: 0, desc: "使用关键词、距离与拓扑约束进行空间模式匹配"}
 - {name: "rtiles", cat: GIS, pkg: false, stars: 0, desc: "基于 Rust 与 PostGIS，为自托管交互式地图生成可配置 Mapbox Vector Tile 图层的扩展。"}
@@ -209,7 +211,6 @@
 - {name: "vectorscale", cat: RAG, pkg: true, stars: 3149, desc: "使用DiskANN算法对向量进行高效索引"}
 - {name: "vexdb_lite", cat: RAG, pkg: false, stars: 2327, desc: "跨平台向量数据库插件"}
 - {name: "vectors", cat: RAG, pkg: false, stars: 2191, desc: "用 Rust 编写的 PostgreSQL 向量数据库插件，面向 LLM 场景。"}
-- {name: "vchord", cat: RAG, pkg: true, stars: 1828, desc: "使用Rust重写的高性能向量扩展"}
 - {name: "gp_sparse_vector", cat: RAG, pkg: false, stars: 1435, desc: "Greenplum家族数据库中的稀疏向量实现"}
 - {name: "jev", cat: RAG, pkg: true, stars: 1209, desc: "通过兼容 Jev 的 API 实现自然语言行过滤、排序和分类"}
 - {name: "lantern_extras", cat: RAG, pkg: false, stars: 896, desc: "处理向量嵌入的便捷函数。"}
@@ -223,7 +224,7 @@
 - {name: "pg_vectorsearch", cat: RAG, pkg: true, stars: 403, desc: "使用 PRISM 索引与 RaBitQ 量化的近似向量检索"}
 - {name: "pg_similarity", cat: RAG, pkg: true, stars: 402, desc: "提供17种距离度量函数"}
 - {name: "pgcontext", cat: RAG, pkg: true, stars: 265, desc: "在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。"}
-- {name: "pgcontext_pgvector", cat: RAG, pkg: true, stars: 265, desc: "pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。"}
+- {name: "pgcontext_pgvector", cat: RAG, pkg: false, stars: 265, desc: "pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。"}
 - {name: "pgclaw", cat: RAG, pkg: false, stars: 208, desc: "将 LLM 或 OpenClaw 智能体作为 PostgreSQL 值存储，并通过后台工作进程处理受监控的数据行"}
 - {name: "pg_gist_hamming", cat: RAG, pkg: false, stars: 185, desc: "GiST索引常见数据类型支持"}
 - {name: "vptree", cat: RAG, pkg: false, stars: 185, desc: "VP树实现"}
@@ -239,6 +240,7 @@
 - {name: "pg_onnx", cat: RAG, pkg: false, stars: 63, desc: "在 PostgreSQL 中集成 ONNX Runtime，用 SQL 调用机器学习模型进行推理。"}
 - {name: "percolate", cat: RAG, pkg: false, stars: 61, desc: "通过应用角色隔离的 SQL 工作流引擎与智能体记忆模式"}
 - {name: "percolate_parser", cat: RAG, pkg: false, stars: 61, desc: "Percolate 的原生查询、YAML 工作流与图处理函数"}
+- {name: "pg_pinecone", cat: RAG, pkg: false, stars: 57, desc: "在 PostgreSQL 内提供 Pinecone 兼容的向量、全文与远程搜索引擎"}
 - {name: "openai", cat: RAG, pkg: false, stars: 56, desc: "调用兼容 OpenAI HTTP API 的 SQL 客户端函数。"}
 - {name: "neurondb", cat: RAG, pkg: false, stars: 53, desc: "面向 PostgreSQL 的向量检索、机器学习和 RAG 扩展。"}
 - {name: "pg_tiktoken", cat: RAG, pkg: true, stars: 52, desc: "在PostgreSQL中计算OpenAI使用的Token数"}
@@ -257,7 +259,6 @@
 - {name: "tensor_dancer", cat: RAG, pkg: false, stars: 17, desc: "通过 PostgreSQL 文本函数访问本机 Ollama 服务的实验性接口。"}
 - {name: "vector_extra", cat: RAG, pkg: false, stars: 17, desc: "使用 pgvector 与二进制矩阵表示的实验性矩阵向量乘法。"}
 - {name: "pg_turboquant", cat: RAG, pkg: false, stars: 16, desc: "面向 pgvector 的紧凑 TurboQuant 近似最近邻索引访问方法，支持 vector 与 halfvec。"}
-- {name: "pg_pinecone", cat: RAG, pkg: false, stars: 14, desc: "在 PostgreSQL 内提供 Pinecone 兼容的向量、全文与远程搜索引擎"}
 - {name: "avocado", cat: RAG, pkg: false, stars: 13, desc: "AvocadoDB 的 PostgreSQL 扩展，使用 pgvector/pgrx 在数据库内提供面向 AI 代理的确定性上下文编译。"}
 - {name: "pg4ml", cat: RAG, pkg: true, stars: 13, desc: "PG4ML是一个机器学习框架"}
 - {name: "maludb_core", cat: RAG, pkg: false, stars: 12, desc: "提供租户模式、向量检索和主体作用域的 PostgreSQL 记忆与知识图谱扩展"}
@@ -281,6 +282,7 @@
 - {name: "pg_ask", cat: RAG, pkg: false, stars: 4, desc: "使用 AI 将自然语言请求生成 SQL 的 PostgreSQL 扩展。"}
 - {name: "pg_vector_embedding", cat: RAG, pkg: false, stars: 4, desc: "通过外部 HTTP 服务与后台队列触发生成向量嵌入。"}
 - {name: "tlsh_gist", cat: RAG, pkg: false, stars: 4, desc: "TLSH模糊哈希数据类型、距离操作及相似性搜索的GiST索引"}
+- {name: "vchord", cat: RAG, pkg: true, stars: 4, desc: "使用Rust重写的高性能向量扩展"}
 - {name: "vexec_pgvector", cat: RAG, pkg: false, stars: 4, desc: "为 vexec 批处理执行器声明 pgvector 距离运算内核"}
 - {name: "mtree", cat: RAG, pkg: false, stars: 3, desc: "基于 PostgreSQL GiST 实现的实验性度量空间索引访问方法。"}
 - {name: "otlet", cat: RAG, pkg: false, stars: 3, desc: "在 PostgreSQL 内运行本地 LLM 推理，提供后台工作进程、任务队列、执行回执与语义数据操作。"}
@@ -335,6 +337,8 @@
 - {name: "aws_ml", cat: RAG, pkg: false, stars: 0, desc: "aws_ml：Amazon Aurora PostgreSQL 的机器学习扩展，可从 SQL 调用 Amazon Comprehend、SageMaker AI 和 Bedrock 服务。"}
 - {name: "azure_ai", cat: RAG, pkg: false, stars: 0, desc: "azure_ai：Azure Database for PostgreSQL 的 AI 扩展，可在数据库内调用 Azure AI、Azure OpenAI、Cognitive Services 和 Azure Machine Learning。"}
 - {name: "catboost", cat: RAG, pkg: false, stars: 0, desc: "使用CatBoost的机器学习模块"}
+- {name: "course_embedding_search", cat: RAG, pkg: false, stars: 0, desc: "对打包的课程嵌入向量进行精确余弦扫描并返回各组最大值。"}
+- {name: "dase_batch_hnsw", cat: RAG, pkg: false, stars: 0, desc: "通过批量 HNSW 范围探测构建 DASE 语义连接索引。"}
 - {name: "embedding_search", cat: RAG, pkg: false, stars: 0, desc: "面向 LangChain/Supabase 的文档向量存储与相似度搜索辅助包，依赖 pgvector。"}
 - {name: "faiss_pg", cat: RAG, pkg: false, stars: 0, desc: "通过 SQL 函数创建 Faiss 向量索引文件并执行近邻搜索"}
 - {name: "glia", cat: RAG, pkg: false, stars: 0, desc: "用于数据挖掘的Postgres扩展"}
@@ -373,15 +377,15 @@
 - {name: "rds_embedding", cat: RAG, pkg: false, stars: 0, desc: "阿里云 RDS 文本向量生成与模型调用扩展"}
 - {name: "tencentdb_ai", cat: RAG, pkg: false, stars: 0, desc: "腾讯云数据库扩展，用于调用大模型 API 并构建数据库内 RAG 工作流。"}
 - {name: "tsearch2", cat: FTS, pkg: false, stars: 22515, desc: "Amazon RDS PostgreSQL 10 中已弃用的兼容扩展，为仍使用 8.3 之前 tsearch2 全文检索 API 的应用提供迁移过渡。"}
-- {name: "pg_search", cat: FTS, pkg: true, stars: 9434, desc: "使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展"}
+- {name: "pg_search", cat: FTS, pkg: true, stars: 9497, desc: "使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展"}
 - {name: "zombodb", cat: FTS, pkg: false, stars: 4719, desc: "将 PostgreSQL 与 Elasticsearch 集成，提供 Elasticsearch 支撑的全文检索与索引能力。"}
 - {name: "pg_textsearch", cat: FTS, pkg: true, stars: 4039, desc: "带有BM25排序的全文搜索扩展"}
 - {name: "zhparser", cat: FTS, pkg: true, stars: 872, desc: "中文分词，全文搜索解析器"}
 - {name: "pgroonga", cat: FTS, pkg: true, stars: 757, desc: "使用Groonga，面向所有语言的高速全文检索平台"}
 - {name: "pgroonga_database", cat: FTS, pkg: true, stars: 757, desc: "清理损坏的 PGroonga 内部数据库文件的恢复辅助扩展"}
 - {name: "acdat", cat: FTS, pkg: true, stars: 663, desc: "在 PostgreSQL 中编译 Aho-Corasick 双数组机，实现精确多模式匹配与替换"}
+- {name: "antfly_postgres", cat: FTS, pkg: false, stars: 479, desc: "提供连接 Antfly 的索引访问方法、搜索函数与行同步。"}
 - {name: "pg_jieba", cat: FTS, pkg: true, stars: 423, desc: "基于 cppjieba 的中文全文检索分词器"}
-- {name: "vchord_bm25", cat: FTS, pkg: true, stars: 379, desc: "BM25排序算法"}
 - {name: "biscuit", cat: FTS, pkg: true, stars: 301, desc: "使用IAM的高性能文本模式匹配"}
 - {name: "pg_biscuit", cat: FTS, pkg: false, stars: 301, desc: "基于位图的PostgreSQL索引"}
 - {name: "psql_bm25s", cat: FTS, pkg: true, stars: 200, desc: "PostgreSQL BM25 系列全文检索扩展，提供原生索引访问方法和 BM25 排序"}
@@ -400,7 +404,6 @@
 - {name: "hunspell_ru_ru_aot", cat: FTS, pkg: true, stars: 68, desc: "Hunspell俄语全文检索词典（来自AOT.ru小组）"}
 - {name: "addressing_dictionary", cat: FTS, pkg: true, stars: 59, desc: "面向地址缩写归一化的全文检索词典与配置"}
 - {name: "sphinx", cat: FTS, pkg: false, stars: 51, desc: "从 PostgreSQL 查询和更新外部 SphinxSearch 服务的 C 连接器。"}
-- {name: "pg_tokenizer", cat: FTS, pkg: true, stars: 46, desc: "用于全文检索的分词器"}
 - {name: "pg_cjk_parser", cat: FTS, pkg: true, stars: 41, desc: "基于 PostgreSQL 默认解析器的中日韩二字组全文检索分词器"}
 - {name: "pg_scws", cat: FTS, pkg: false, stars: 41, desc: "基于内置 SCWS 分词库，为 PostgreSQL 全文搜索提供中文解析器和配置。"}
 - {name: "thai_parser", cat: FTS, pkg: false, stars: 41, desc: "为 PostgreSQL 全文检索提供泰语分词解析器和文本搜索配置。"}
@@ -408,6 +411,7 @@
 - {name: "tsvector2", cat: FTS, pkg: false, stars: 27, desc: "PostgreSQL tsvector 的压缩替代类型，移除原始 1 MB 限制，并提供兼容的检索函数、GIN、GiST 及可选 RUM 索引。"}
 - {name: "chamkho_parser", cat: FTS, pkg: false, stars: 26, desc: "使用 Chamkho 分词引擎、从 pg-search-thai 移植而来的 Rust 全文检索解析器。"}
 - {name: "pg_kazsearch", cat: FTS, pkg: true, stars: 26, desc: "PostgreSQL 哈萨克语全文检索扩展"}
+- {name: "pg_charabia", cat: FTS, pkg: false, stars: 23, desc: "为 PostgreSQL 全文检索提供 Charabia 多语言分析和结构化词元解析。"}
 - {name: "sphinxlink", cat: FTS, pkg: false, stars: 18, desc: "通过 MySQL 兼容协议从 PostgreSQL 向 SphinxSearch 或 ManticoreSearch 发起查询的 C 扩展。"}
 - {name: "pg_tsparser", cat: FTS, pkg: false, stars: 17, desc: "pg_tsparser：全文搜索相关 PostgreSQL 扩展；上游说明为“Parser for PostgreSQL text search”。"}
 - {name: "tsexample", cat: FTS, pkg: false, stars: 15, desc: "以 C 语言示范自定义全文检索解析器、词典模板、词典和文本检索配置的扩展。"}
@@ -465,11 +469,13 @@
 - {name: "pg_glot_hybrid", cat: FTS, pkg: false, stars: 1, desc: "结合 BM25、稠密向量与倒数排名融合的检索扩展。"}
 - {name: "pg_kiwi", cat: FTS, pkg: false, stars: 1, desc: "使用 Kiwi 形态分析器实现韩文全文检索"}
 - {name: "pg_textparser", cat: FTS, pkg: false, stars: 1, desc: "pg_textparser：全文搜索相关 PostgreSQL 扩展；上游说明为“Text search parser”。"}
+- {name: "pg_tokenizer", cat: FTS, pkg: true, stars: 1, desc: "用于全文检索的分词器"}
 - {name: "proxquery", cat: FTS, pkg: false, stars: 1, desc: "tsvector全文检索的位置接近谓词"}
 - {name: "soundex-function", cat: FTS, pkg: false, stars: 1, desc: "比较字符串的声音索引函数"}
 - {name: "stomata", cat: FTS, pkg: false, stars: 1, desc: "为 PostgreSQL LIKE 与 ILIKE 模式匹配提供分段自动机索引"}
 - {name: "textsearch_intl", cat: FTS, pkg: true, stars: 1, desc: "结合 ICU 分词、规范化与 n-gram 匹配的多语言全文检索"}
 - {name: "twitter_parser", cat: FTS, pkg: false, stars: 1, desc: "用于 PostgreSQL 全文检索、解析 Twitter 风格话题标签和用户提及的轻量 C 解析器。"}
+- {name: "vchord_bm25", cat: FTS, pkg: true, stars: 1, desc: "BM25排序算法"}
 - {name: "alohadb_search", cat: FTS, pkg: false, stars: 0, desc: "AlohaDB 搜索评分、模糊匹配与地理搜索函数"}
 - {name: "dict_maxlen", cat: FTS, pkg: false, stars: 0, desc: "过滤长单词的字典全文搜索模板"}
 - {name: "fuzzering", cat: FTS, pkg: false, stars: 0, desc: "搜索字符串内容"}
@@ -484,6 +490,7 @@
 - {name: "pg_bert", cat: FTS, pkg: false, stars: 0, desc: "实现为PostgreSQL全文检索解析器的BERT分词器"}
 - {name: "pg_bleve", cat: FTS, pkg: false, stars: 0, desc: "将 Bleve 搜索引擎集成到 PostgreSQL 的全文搜索扩展。"}
 - {name: "pg_fts", cat: FTS, pkg: true, stars: 0, desc: "提供 BM25、BM25F 排序与专用倒排索引的全文检索扩展"}
+- {name: "pg_fuzzysearch", cat: FTS, pkg: false, stars: 0, desc: "提供兼容 fuzzysort 的子序列模糊匹配与预处理目标。"}
 - {name: "pg_gse", cat: FTS, pkg: false, stars: 0, desc: "使用 Jieba 分词的中文全文检索解析器"}
 - {name: "pg_probablepeople", cat: FTS, pkg: false, stars: 0, desc: "使用 CRF 将个人或组织名称解析为结构化组成部分。"}
 - {name: "pg_sift", cat: FTS, pkg: false, stars: 0, desc: "提供 BM25 全文检索、压缩列索引与列式表访问方法。"}
@@ -498,16 +505,15 @@
 - {name: "columnar", cat: OLAP, pkg: true, stars: 3043, desc: "开源列式存储扩展"}
 - {name: "pg_partman", cat: OLAP, pkg: true, stars: 2841, desc: "用于按时间或 ID 管理分区表的扩展"}
 - {name: "pipelinedb", cat: OLAP, pkg: false, stars: 2665, desc: "在 PostgreSQL 中运行连续 SQL 查询，实现高吞吐的增量时序聚合"}
-- {name: "pg_mooncake", cat: OLAP, pkg: true, stars: 2009, desc: "PostgreSQL列式存储表"}
 - {name: "cstore_fdw", cat: OLAP, pkg: false, stars: 1780, desc: "cstore_fdw：为 PostgreSQL 提供列式存储的外部数据包装器。"}
-- {name: "pg_lake", cat: OLAP, pkg: true, stars: 1662, desc: "Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展"}
-- {name: "pg_extension_base", cat: OLAP, pkg: true, stars: 1661, desc: "Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理"}
-- {name: "pg_extension_updater", cat: OLAP, pkg: true, stars: 1661, desc: "在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器"}
-- {name: "pg_lake_copy", cat: OLAP, pkg: true, stars: 1661, desc: "在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展"}
-- {name: "pg_lake_engine", cat: OLAP, pkg: true, stars: 1661, desc: "用于数据湖查询的查询引擎"}
-- {name: "pg_lake_iceberg", cat: OLAP, pkg: true, stars: 1661, desc: "PostgreSQL 中的 Iceberg 实现"}
-- {name: "pg_lake_table", cat: OLAP, pkg: true, stars: 1661, desc: "数据湖表和 Iceberg 表"}
-- {name: "pg_map", cat: OLAP, pkg: true, stars: 1661, desc: "pg_lake 内置并依赖的 PostgreSQL Map 数据类型。"}
+- {name: "pg_extension_base", cat: OLAP, pkg: true, stars: 1670, desc: "Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理"}
+- {name: "pg_extension_updater", cat: OLAP, pkg: true, stars: 1670, desc: "在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器"}
+- {name: "pg_lake", cat: OLAP, pkg: true, stars: 1670, desc: "Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展"}
+- {name: "pg_lake_copy", cat: OLAP, pkg: true, stars: 1670, desc: "在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展"}
+- {name: "pg_lake_engine", cat: OLAP, pkg: true, stars: 1670, desc: "用于数据湖查询的查询引擎"}
+- {name: "pg_lake_iceberg", cat: OLAP, pkg: true, stars: 1670, desc: "PostgreSQL 中的 Iceberg 实现"}
+- {name: "pg_lake_table", cat: OLAP, pkg: true, stars: 1670, desc: "数据湖表和 Iceberg 表"}
+- {name: "pg_map", cat: OLAP, pkg: true, stars: 1670, desc: "pg_lake 内置并依赖的 PostgreSQL Map 数据类型。"}
 - {name: "interconnect", cat: OLAP, pkg: false, stars: 1435, desc: "先进的开源MPP数据库，替代Greenplum Database"}
 - {name: "pg_strom", cat: OLAP, pkg: true, stars: 1410, desc: "使用GPU与NVMe加速大数据处理"}
 - {name: "pg_shard", cat: OLAP, pkg: false, stars: 1060, desc: "在远程 PostgreSQL 服务器之间分片并复制数据表"}
@@ -544,6 +550,7 @@
 - {name: "koldstore", cat: OLAP, pkg: false, stars: 6, desc: "将历史行移至Parquet的同时保持原始表完全可查询并支持更新和删除的PostgreSQL分层存储"}
 - {name: "pg_particulous", cat: OLAP, pkg: false, stars: 6, desc: "在原生 PostgreSQL 表与 pg_pathman 分区表之间迁移"}
 - {name: "router", cat: OLAP, pkg: false, stars: 6, desc: "用于在 PostgreSQL 分片之间路由 OLTP 查询的实验性 C 扩展。"}
+- {name: "tessera_pg", cat: OLAP, pkg: false, stars: 6, desc: "通过规划器钩子和稀疏矩阵乘法实现连接聚合与条目相似度计算。"}
 - {name: "dventimi@pg_partition_magician", cat: OLAP, pkg: false, stars: 5, desc: "支持时间、数值、UUIDv7 和编码文本键的纯 SQL 在线范围分区管理器"}
 - {name: "pg_fkpart", cat: OLAP, pkg: true, stars: 5, desc: "按外键实用程序进行表分区的扩展"}
 - {name: "partman_to_cstore", cat: OLAP, pkg: false, stars: 4, desc: "partman_to_cstore：分析处理类 PostgreSQL 扩展；用于将旧的 pg_partman 分区迁移到 cstore 列式存储。"}
@@ -551,12 +558,12 @@
 - {name: "pmpp", cat: OLAP, pkg: false, stars: 4, desc: "通过异步 libpq 连接并行运行手工拆分的 SQL 工作并汇总结果"}
 - {name: "repeater", cat: OLAP, pkg: false, stars: 4, desc: "在远程 PostgreSQL 节点执行序列化原始查询计划的演示扩展。"}
 - {name: "pathman_sharding", cat: OLAP, pkg: false, stars: 3, desc: "pathman_sharding：分析处理类 PostgreSQL 扩展；为 pg_pathman 提供改进的分片能力。"}
-- {name: "pg_improv", cat: OLAP, pkg: true, stars: 3, desc: "基于 PostgreSQL 表的增量多维模型与公式函数。"}
 - {name: "lagodb_base", cat: OLAP, pkg: false, stars: 2, desc: "LagoDB 共享运行时、存储服务与查询下推"}
 - {name: "lagodb_iceberg", cat: OLAP, pkg: false, stars: 2, desc: "受管与外部 Apache Iceberg 表"}
 - {name: "pargres", cat: OLAP, pkg: false, stars: 2, desc: "pargres：用于共享无集群并行查询执行的 PostgreSQL 原型扩展，需要 shared_preload_libraries 预加载。"}
 - {name: "pg_delta_am", cat: OLAP, pkg: false, stars: 2, desc: "Delta 表访问方法骨架。"}
 - {name: "pg_iceberg_am", cat: OLAP, pkg: false, stars: 2, desc: "Robert Mu开发的Iceberg表访问方法"}
+- {name: "pg_improv", cat: OLAP, pkg: true, stars: 2, desc: "基于 PostgreSQL 表的增量多维模型与公式函数。"}
 - {name: "pg_lakebase_runtime", cat: OLAP, pkg: false, stars: 2, desc: "Lakebase表访问方法扩展共享运行时"}
 - {name: "pg_table_range", cat: OLAP, pkg: true, stars: 2, desc: "基于每个分区的数据范围在规划阶段裁剪分区，并支持非分区键列。"}
 - {name: "pg_trex", cat: OLAP, pkg: false, stars: 2, desc: "用于分布式trexsql的PostgreSQL扩展"}
@@ -584,7 +591,8 @@
 - {name: "pg_acce", cat: OLAP, pkg: false, stars: 0, desc: "pg_acce：分析处理类 PostgreSQL 扩展；上游说明为“pg_acce -- Accelerated Engine”。"}
 - {name: "pg_elephantduck", cat: OLAP, pkg: false, stars: 0, desc: "基于 DuckDB 与 Parquet 存储的 PostgreSQL 列式表访问方法。"}
 - {name: "pg_gftr", cat: OLAP, pkg: false, stars: 0, desc: "面向整数列的实验性 CUDA 排序分组聚合"}
-- {name: "pg_mooncake_rust", cat: OLAP, pkg: false, stars: 0, desc: "Postgres中实现列存储表"}
+- {name: "pg_lamina", cat: OLAP, pkg: false, stars: 0, desc: "将堆表离线转换为 PostgreSQL 内的 Parquet，并通过 DataFusion 查询。"}
+- {name: "pg_mooncake", cat: OLAP, pkg: true, stars: 0, desc: "PostgreSQL列式存储表"}
 - {name: "pg_ocpm", cat: OLAP, pkg: false, stars: 0, desc: "提供面向对象流程挖掘的存储、遍历、聚合与紧凑分析载荷。"}
 - {name: "pg_popyramids_datamarts", cat: OLAP, pkg: false, stars: 0, desc: "在硬编码的 dms 模式中，基于预先存在的 ods 模式创建人口金字塔分析数据集市对象。"}
 - {name: "pg_shardman", cat: OLAP, pkg: false, stars: 0, desc: "在 PostgreSQL 10 中使用 pg_pathman、postgres_fdw 和逻辑复制管理跨节点哈希分片表。"}
@@ -598,6 +606,7 @@
 - {name: "refdata", cat: OLAP, pkg: false, stars: 0, desc: "面向高频读取、低频变更参考数据的 EDB 表访问方法。"}
 - {name: "shardman", cat: OLAP, pkg: false, stars: 0, desc: "实验性分片、重平衡及跨节点锁图原型"}
 - {name: "spq", cat: OLAP, pkg: false, stars: 0, desc: "无共享并行查询"}
+- {name: "syntradb", cat: OLAP, pkg: false, stars: 0, desc: "提供实验性显式堆表聚合与带版本的分析段。"}
 - {name: "tablefunc", cat: OLAP, pkg: true, stars: 0, desc: "交叉表函数"}
 - {name: "th_dbdm", cat: OLAP, pkg: false, stars: 0, desc: "th dbdm：用于数据库数据管理的Postgres"}
 - {name: "pg_plan_advice", cat: FEAT, pkg: false, stars: 22515, desc: "使用计划建议描述与约束规划器选择"}
@@ -612,7 +621,7 @@
 - {name: "pg_durable", cat: FEAT, pkg: true, stars: 2839, desc: "PostgreSQL 内的 SQL 原生持久化工作流编排扩展"}
 - {name: "hypopg", cat: FEAT, pkg: true, stars: 1741, desc: "假设索引，用于创建一个虚拟索引检验执行计划"}
 - {name: "index_advisor", cat: FEAT, pkg: true, stars: 1705, desc: "查询索引建议器"}
-- {name: "pg_lake_benchmark", cat: FEAT, pkg: false, stars: 1661, desc: "为 pg_lake、Iceberg 和普通堆表提供 ClickBench、TPC-H 与 TPC-DS 数据生成及基准查询。"}
+- {name: "pg_lake_benchmark", cat: FEAT, pkg: false, stars: 1670, desc: "为 pg_lake、Iceberg 和普通堆表提供 ClickBench、TPC-H 与 TPC-DS 数据生成及基准查询。"}
 - {name: "omni", cat: FEAT, pkg: true, stars: 1595, desc: "PostgreSQL即平台，Omnigres主扩展与加载器"}
 - {name: "omni_sql", cat: FEAT, pkg: true, stars: 1595, desc: "Omnigres SQL编程组件"}
 - {name: "omni_vfs_types_v1", cat: FEAT, pkg: true, stars: 1595, desc: "Omnigres 虚拟文件系统（v1）"}
@@ -708,8 +717,8 @@
 - {name: "pgsloth", cat: FEAT, pkg: false, stars: 24, desc: "通过执行器钩子将每条查询随机延迟 100 至 9,999 毫秒。"}
 - {name: "pg_kaboom", cat: FEAT, pkg: false, stars: 22, desc: "以有趣且有用的方式在PostgreSQL中触发事件"}
 - {name: "pg_shared_plans", cat: FEAT, pkg: false, stars: 22, desc: "PostgreSQL 共享内存执行计划缓存概念验证扩展"}
-- {name: "pg_statecharts", cat: FEAT, pkg: false, stars: 22, desc: "PostgreSQL 内的层次状态机与事务性事件处理。"}
-- {name: "pg_statecharts_dev", cat: FEAT, pkg: false, stars: 22, desc: "导入 SCXML 状态图并生成 Sqitch 迁移的开发工具扩展。"}
+- {name: "pg_statecharts", cat: FEAT, pkg: true, stars: 22, desc: "层次状态机与事务性事件处理"}
+- {name: "pg_statecharts_dev", cat: FEAT, pkg: true, stars: 22, desc: "pg_statecharts 的 SCXML 导入与迁移开发工具"}
 - {name: "pg_message_queue", cat: FEAT, pkg: false, stars: 21, desc: "基于表存储与 LISTEN/NOTIFY 通知的 PostgreSQL 消息队列扩展"}
 - {name: "pgrdf", cat: FEAT, pkg: true, stars: 21, desc: "PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展"}
 - {name: "solverapi", cat: FEAT, pkg: false, stars: 18, desc: "SolveDB：基于PostgreSQL的优化应用数据库系统"}
@@ -767,6 +776,9 @@
 - {name: "fmodel_rust_postgres", cat: FEAT, pkg: false, stars: 4, desc: "将 f{model} 事件溯源领域模型作为 pgrx 扩展运行在 PostgreSQL 内。"}
 - {name: "implicit_schema", cat: FEAT, pkg: false, stars: 4, desc: "通过事件触发器在缺失 schema 中创建表或视图时自动创建该 schema。"}
 - {name: "index_analyzer", cat: FEAT, pkg: false, stars: 4, desc: "用于评估现有或候选索引并检查外键索引覆盖情况的 PL/pgSQL 函数。"}
+- {name: "pg_lion", cat: FEAT, pkg: true, stars: 4, desc: "用于过滤、计数与聚合的 Roaring 位图倒排索引"}
+- {name: "pg_lion_citext", cat: FEAT, pkg: true, stars: 4, desc: "为 lion 索引提供大小写不敏感的 citext 运算符类"}
+- {name: "pg_lion_vector", cat: FEAT, pkg: true, stars: 4, desc: "为 pgvector 的 vector 与 halfvec 提供带过滤的近邻索引"}
 - {name: "pg_raft", cat: FEAT, pkg: false, stars: 4, desc: "实验性的 Raft 节点管理与选主原型。"}
 - {name: "pg_splitjson", cat: FEAT, pkg: false, stars: 4, desc: "将 JSON 热路径拆分为普通列，并保留 JSONB 业务视图"}
 - {name: "pg_validator", cat: FEAT, pkg: false, stars: 4, desc: "使用触发器验证数据的PostgreSQL扩展"}
@@ -812,7 +824,7 @@
 - {name: "pgpm-achievements", cat: FEAT, pkg: false, stars: 2, desc: "用户成就步骤与等级跟踪表"}
 - {name: "pgpm-app-scope", cat: FEAT, pkg: false, stars: 2, desc: "为 PGPM 应用目录解析有序的作用域查找链。"}
 - {name: "pgpm-function-resolution", cat: FEAT, pkg: false, stars: 2, desc: "按作用域解析函数与资源，并向应用任务队列提交作业。"}
-- {name: "pgpm-measurements", cat: FEAT, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试、可逆的SQL变更模块"}
+- {name: "pgpm-measurements", cat: FEAT, pkg: false, stars: 2, desc: "物理量、计量单位及其标签的目录"}
 - {name: "pgqbw", cat: FEAT, pkg: false, stars: 2, desc: "Postgres队列后台工作进程"}
 - {name: "wiki", cat: FEAT, pkg: false, stars: 2, desc: "提供库内 Wiki 数据模型、SQL/PLPerl API 及可选 MediaWiki 集成的扩展。"}
 - {name: "all_hooks", cat: FEAT, pkg: false, stars: 1, desc: "为所有可用钩子发出消息的PostgreSQL扩展"}
@@ -827,6 +839,7 @@
 - {name: "lsm_idx", cat: FEAT, pkg: false, stars: 1, desc: "基于 PostgreSQL B-tree 内部接口实现的实验性 LSM 风格索引访问方法。"}
 - {name: "metis_pg", cat: FEAT, pkg: false, stars: 1, desc: "使用本地 C 或外部 Java 估计器的工作负载感知基数估计"}
 - {name: "newsfeeds", cat: FEAT, pkg: false, stars: 1, desc: "newsfeeds：用于 gathering news 的 PostgreSQL 扩展。"}
+- {name: "overlay_branch", cat: FEAT, pkg: false, stars: 1, desc: "通过 MVCC 增量覆盖实现实验性会话分支。"}
 - {name: "pg2podg", cat: FEAT, pkg: false, stars: 1, desc: "pg2podg：模拟/游戏类 PostgreSQL 扩展；提供两人、完全信息、确定性游戏的通用工具。"}
 - {name: "pg_ascii_movie", cat: FEAT, pkg: false, stars: 1, desc: "观看ASCII电影的PostgreSQL扩展"}
 - {name: "pg_async", cat: FEAT, pkg: false, stars: 1, desc: "C 扩展，为热备只读副本提供异步 LISTEN/NOTIFY 队列支持。"}
@@ -867,6 +880,7 @@
 - {name: "alex_gist_int8", cat: FEAT, pkg: false, stars: 0, desc: "支持常见PostgreSQL数据类型的GiST索引"}
 - {name: "alohadb_branch", cat: FEAT, pkg: false, stars: 0, desc: "轻量级数据库分支，用于测试迁移和实验"}
 - {name: "alohadb_cache", cat: FEAT, pkg: false, stars: 0, desc: "AlohaDB 共享内存 JSONB 缓存，支持 TTL 和 LRU 淘汰"}
+- {name: "alohadb_graphql", cat: FEAT, pkg: false, stars: 0, desc: "AlohaDB 的 GraphQL 模式生成与 SQL 查询执行扩展。"}
 - {name: "alohadb_queue", cat: FEAT, pkg: false, stars: 0, desc: "提供显式确认与消费组的 AlohaDB 消息队列"}
 - {name: "asghonim@pgho_inbox", cat: FEAT, pkg: false, stars: 0, desc: "面向入站联系与咨询的收件箱框架，提供校验、限流、垃圾信息评分、状态流转与通知事件。"}
 - {name: "bedquilt", cat: FEAT, pkg: false, stars: 0, desc: "json对象存储"}
@@ -909,6 +923,9 @@
 - {name: "patients", cat: FEAT, pkg: false, stars: 0, desc: "患者相关扩展"}
 - {name: "payment_ext", cat: FEAT, pkg: false, stars: 0, desc: "市场原型的支付服务交易标记及监听/通知后台进程"}
 - {name: "pg_abris", cat: FEAT, pkg: false, stars: 0, desc: "Abris 元数据扩展，创建 meta 模式及元数据表、视图和辅助函数。"}
+- {name: "pg_broker", cat: FEAT, pkg: false, stars: 0, desc: "带外部 Kafka 协议网关的持久化分区事件日志。"}
+- {name: "pg_cache", cat: FEAT, pkg: false, stars: 0, desc: "带异步 PostgreSQL 持久化的实验性 RESP2 内存缓存。"}
+- {name: "pg_cache_journal", cat: FEAT, pkg: false, stars: 0, desc: "为 pg_cache 原型提供可选的 WAL 日志写后持久化队列。"}
 - {name: "pg_ctblmgr", cat: FEAT, pkg: false, stars: 0, desc: "基于逻辑复制的异步预计算视图"}
 - {name: "pg_dms", cat: FEAT, pkg: false, stars: 0, desc: "面向文档管理的扩展，提供自定义 ID、族、引用类型，以及动作跟踪和 JSON 注册表辅助函数。"}
 - {name: "pg_documents", cat: FEAT, pkg: false, stars: 0, desc: "HTTP服务器访问JSON数据"}
@@ -920,6 +937,7 @@
 - {name: "pg_inplace_update_am", cat: FEAT, pkg: false, stars: 0, desc: "通过 undo 实现原位更新的 iheap 表存储与删除标记 B-tree 索引。"}
 - {name: "pg_jevplanner", cat: FEAT, pkg: false, stars: 0, desc: "通过 TypeSafe JEV API 实现实验性内连接排序"}
 - {name: "pg_json_validate", cat: FEAT, pkg: false, stars: 0, desc: "jsonb值的JSON Schema验证函数"}
+- {name: "pg_jsontailor", cat: FEAT, pkg: false, stars: 0, desc: "在关系表上生成带 ETag 的可写 JSON 文档视图。"}
 - {name: "pg_knowledge_base", cat: FEAT, pkg: false, stars: 0, desc: "事务性 RDF 存储、SPARQL 查询与关系表到 RDF 的映射"}
 - {name: "pg_kv", cat: FEAT, pkg: true, stars: 0, desc: "共享内存键值缓存、令牌桶限流与有序集合。"}
 - {name: "pg_learned", cat: FEAT, pkg: false, stars: 0, desc: "基于机器学习的查询加速扩展"}
@@ -939,7 +957,7 @@
 - {name: "pg_spi", cat: FEAT, pkg: false, stars: 0, desc: "SPI回滚失败测试案例"}
 - {name: "pg_tviews", cat: FEAT, pkg: false, stars: 0, desc: "支持自动增量刷新与级联传播的事务性物化视图"}
 - {name: "pg_vx", cat: FEAT, pkg: false, stars: 0, desc: "测试向量化和CustomScanAPI接口的PostgreSQL扩展"}
-- {name: "pg_warren", cat: FEAT, pkg: false, stars: 0, desc: "基于 SQL 表邻接快照的版本化图遍历与图计算。"}
+- {name: "pg_warren", cat: FEAT, pkg: true, stars: 0, desc: "基于 PostgreSQL 表的版本化图遍历与图计算"}
 - {name: "pg_zen_engine", cat: FEAT, pkg: false, stars: 0, desc: "使用 Zen Engine 在 PostgreSQL 中对 JSONB 数据执行 JSON Decision Model 决策图"}
 - {name: "pgautograph", cat: FEAT, pkg: false, stars: 0, desc: "使用 pgrx 根据外键约束自动生成属性图查询的 PostgreSQL 扩展。"}
 - {name: "pgchem_tigress", cat: FEAT, pkg: false, stars: 0, desc: "传统分子类型、化学指纹、操作符与 GiST 索引扩展。"}
@@ -949,7 +967,7 @@
 - {name: "pglens", cat: FEAT, pkg: false, stars: 0, desc: "通过实验性的按键手动重算 API 维护由 SQL 视图派生的投影表"}
 - {name: "pgmer1", cat: FEAT, pkg: false, stars: 0, desc: "MeritRank HTTP 连接器，在 SQL 中调用图排名服务。"}
 - {name: "pgmolji", cat: FEAT, pkg: false, stars: 0, desc: "pgmolji 是一个 pgrx 扩展，通过执行器钩子将查询结果中的文本与 varchar 值改写为随机 Emoji。"}
-- {name: "pgpm-verify", cat: FEAT, pkg: false, stars: 0, desc: "pgpm验证扩展"}
+- {name: "pgpm-verify", cat: FEAT, pkg: false, stars: 0, desc: "用于检查数据库对象、角色、成员关系及策略的 SQL 辅助函数"}
 - {name: "pgtap_fixture", cat: FEAT, pkg: false, stars: 0, desc: "用于pgTAP测试的复杂fixture创建工具"}
 - {name: "pgwaffles", cat: FEAT, pkg: false, stars: 0, desc: "显示最佳华夫饼食谱的PostgreSQL扩展"}
 - {name: "postgresql_extension_template", cat: FEAT, pkg: false, stars: 0, desc: "PostgreSQL C扩展模板"}
@@ -972,6 +990,7 @@
 - {name: "treedb_pgext", cat: FEAT, pkg: false, stars: 0, desc: "TreeDB表访问方法（第一阶段原型）"}
 - {name: "us-states", cat: FEAT, pkg: false, stars: 0, desc: "Postgres大会2026年演示扩展"}
 - {name: "varlena_alignment", cat: FEAT, pkg: false, stars: 0, desc: "基于 pgrx 的 PostgreSQL 测试扩展，用于记录 pgrx set_varsize 辅助函数的 varlena 对齐行为。"}
+- {name: "vg_planner", cat: FEAT, pkg: false, stars: 0, desc: "应用 VitalGraph 生成的连接基数、方法与顺序规划建议。"}
 - {name: "jsonb_plpython2u", cat: LANG, pkg: false, stars: 22515, desc: "历史上的jsonb与不受信PL/Python 2语言之间的转换"}
 - {name: "plpython2u", cat: LANG, pkg: false, stars: 22515, desc: "历史上的不可信PL/Python 2过程语言"}
 - {name: "plpythonu", cat: LANG, pkg: false, stars: 22515, desc: "历史上的不可信PL/Python过程语言"}
@@ -1002,6 +1021,7 @@
 - {name: "bytea_plphp", cat: LANG, pkg: false, stars: 56, desc: "在 bytea 与 PL/php 二进制安全 PHP 字符串之间转换"}
 - {name: "hstore_plphp", cat: LANG, pkg: false, stars: 56, desc: "在 hstore 与 PL/php 的 PHP 关联数组之间转换"}
 - {name: "jsonb_plphp", cat: LANG, pkg: false, stars: 56, desc: "在 jsonb 与 PL/php 原生 PHP 值之间转换"}
+- {name: "plmustache", cat: LANG, pkg: false, stars: 56, desc: "通过受信任过程语言在 PostgreSQL 函数中渲染 Mustache 模板。"}
 - {name: "plphp", cat: LANG, pkg: true, stars: 56, desc: "将 PHP 8 嵌入 PostgreSQL，提供非可信过程语言"}
 - {name: "plsci", cat: LANG, pkg: false, stars: 49, desc: "Clojure通过SCI处理的PostgreSQL过程语言"}
 - {name: "hstore_plruby", cat: LANG, pkg: true, stars: 36, desc: "在 hstore 与 PL/Ruby 的 Ruby Hash 之间转换"}
@@ -1059,8 +1079,11 @@
 - {name: "ltree_plpythonu", cat: LANG, pkg: false, stars: 0, desc: "ltree与plpythonu之间的转换"}
 - {name: "pg_agg", cat: LANG, pkg: false, stars: 0, desc: "实验性的聚合查询支持扩展；当前安装脚本会创建非受信任的 PL/Python 语言。"}
 - {name: "pg_extism", cat: LANG, pkg: false, stars: 0, desc: "使用pgrx运行Extism插件示例"}
+- {name: "pg_pure", cat: LANG, pkg: false, stars: 0, desc: "通过安全模式解释器与 PostgreSQL SPI 提供受信任的 Pure 过程语言。"}
+- {name: "pg_pureu", cat: LANG, pkg: false, stars: 0, desc: "以 Pure 编写标量函数并通过 SPI 访问 PostgreSQL 的非受信任过程语言。"}
 - {name: "pgcel", cat: LANG, pkg: false, stars: 0, desc: "对 JSON 数据求值 Common Expression Language 表达式"}
 - {name: "pl_jsonschema", cat: LANG, pkg: false, stars: 0, desc: "由 PLV8 或 PLJS 驱动的 JSON Schema 验证语言"}
+- {name: "plllvm", cat: LANG, pkg: false, stars: 0, desc: "提供非受信任 LLVM IR 过程语言及实验性 PL/pgSQL JIT。"}
 - {name: "plmuggin", cat: LANG, pkg: false, stars: 0, desc: "PL/Muggin：用于PostgreSQL的HTML模板语言"}
 - {name: "plperl", cat: LANG, pkg: true, stars: 0, desc: "PL/Perl 存储过程语言"}
 - {name: "plperlu", cat: LANG, pkg: true, stars: 0, desc: "PL/PerlU 存储过程语言（未受信/高权限）"}
@@ -1080,7 +1103,7 @@
 - {name: "uri", cat: TYPE, pkg: true, stars: 323, desc: "URI数据类型"}
 - {name: "roaringbitmap", cat: TYPE, pkg: true, stars: 291, desc: "支持RoaringBitmap数据类型"}
 - {name: "unit", cat: TYPE, pkg: true, stars: 280, desc: "SI 国标单位扩展"}
-- {name: "pg_rational", cat: TYPE, pkg: true, stars: 257, desc: "使用BIGINT表示的有理数数据类型"}
+- {name: "pg_rational", cat: TYPE, pkg: true, stars: 257, desc: "以两个 32 位整数（分子/分母）表示的精确分数类型"}
 - {name: "pgpdf", cat: TYPE, pkg: true, stars: 226, desc: "PDF数据类型，管理函数与全文检索"}
 - {name: "pgfaceting", cat: TYPE, pkg: true, stars: 182, desc: "使用倒排索引的高速切面查询"}
 - {name: "pg_rrule", cat: TYPE, pkg: true, stars: 175, desc: "日历重复规则RRULE数据类型"}
@@ -1089,7 +1112,7 @@
 - {name: "pgcalendar", cat: TYPE, pkg: true, stars: 141, desc: "为 PostgreSQL 提供循环日程、投影与例外处理的日历扩展"}
 - {name: "postpic", cat: TYPE, pkg: false, stars: 137, desc: "PostPic 为 PostgreSQL 提供基于 GraphicsMagick 的图像类型、SQL 图像处理与元数据函数，以及导入/导出工具。"}
 - {name: "timestamp9", cat: TYPE, pkg: true, stars: 124, desc: "纳秒分辨率时间戳"}
-- {name: "prefix", cat: TYPE, pkg: true, stars: 106, desc: "前缀树数据类型"}
+- {name: "prefix", cat: TYPE, pkg: true, stars: 106, desc: "前缀范围（prefix_range）数据类型，支持 GiST 前缀匹配"}
 - {name: "pgbson", cat: TYPE, pkg: true, stars: 103, desc: "为 PostgreSQL 提供 BSON 数据类型及访问函数"}
 - {name: "pg_libphonenumber", cat: TYPE, pkg: false, stars: 96, desc: "提供由 Google libphonenumber 支持的紧凑电话号码类型和解析函数。"}
 - {name: "acl", cat: TYPE, pkg: true, stars: 90, desc: "ACL数据类型"}
@@ -1130,6 +1153,7 @@
 - {name: "country", cat: TYPE, pkg: true, stars: 9, desc: "国家代码数据类型，遵循ISO 3166-1标准"}
 - {name: "datalink", cat: TYPE, pkg: false, stars: 9, desc: "实现 SQL/MED DATALINK 数据类型与函数，用于受控访问 PostgreSQL 外部文件"}
 - {name: "md5hash", cat: TYPE, pkg: true, stars: 9, desc: "提供128位MD5的原生数据类型"}
+- {name: "meridian_pg", cat: TYPE, pkg: false, stars: 9, desc: "为 Meridian 同步提供 CRDT 状态函数、聚合与变更通知触发器。"}
 - {name: "plid", cat: TYPE, pkg: false, stars: 8, desc: "plid 提供 128 位、可按字典序排序的 PostgreSQL PLID 类型，支持短前缀、毫秒时间戳、随机位和可选的单调生成。"}
 - {name: "telephone", cat: TYPE, pkg: false, stars: 8, desc: "用于规范化电话号码并按拨号计划校验的 PostgreSQL 数据类型。"}
 - {name: "cbor", cat: TYPE, pkg: false, stars: 7, desc: "cbor：为 PostgreSQL 提供 Concise Binary Object Representation 数据类型。"}
@@ -1191,7 +1215,7 @@
 - {name: "pg_imputed_genotype", cat: TYPE, pkg: false, stars: 2, desc: "以四字节紧凑 PostgreSQL 类型存储插补基因型的三元概率"}
 - {name: "pg_intmap", cat: TYPE, pkg: false, stars: 2, desc: "压缩整数到整数映射"}
 - {name: "pg_money", cat: TYPE, pkg: true, stars: 2, desc: "精确的带币种金额类型、算术与金额分摊"}
-- {name: "pgpm-types", cat: TYPE, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试、可逆的SQL变更模块"}
+- {name: "pgpm-types", cat: TYPE, pkg: false, stars: 2, desc: "用于附件、邮箱、主机名、图片、上传文件及 URL 的可重用域类型"}
 - {name: "pguri", cat: TYPE, pkg: false, stars: 2, desc: "提供可索引的 URI 与域名类型，以及 URI 文本搜索能力。"}
 - {name: "ubjson", cat: TYPE, pkg: false, stars: 2, desc: "具有自定义二进制传输格式、兼容 JSONB 存储的实验类型"}
 - {name: "url", cat: TYPE, pkg: false, stars: 2, desc: "提供用于 URL 解析、编码解码以及查询字符串键值处理的 SQL 和 PL/pgSQL 类型与辅助函数。"}
@@ -1200,7 +1224,6 @@
 - {name: "ajversion", cat: TYPE, pkg: false, stars: 1, desc: "PostgreSQL 语义版本号类型，使用紧凑的整数形式存储。"}
 - {name: "boolean_cascaded", cat: TYPE, pkg: false, stars: 1, desc: "boolean_cascaded：提供级联父子状态使用的复合布尔状态类型、操作符与触发器辅助函数。"}
 - {name: "codesystem", cat: TYPE, pkg: true, stars: 1, desc: "支持校验、层级导航与修订追踪的分类编码类型"}
-- {name: "debversion", cat: TYPE, pkg: true, stars: 1, desc: "Debian版本号数据类型"}
 - {name: "decibel", cat: TYPE, pkg: false, stars: 1, desc: "提供分贝数据类型，支持与帕斯卡转换、算术运算、比较和聚合。"}
 - {name: "decimal", cat: TYPE, pkg: false, stars: 1, desc: "提供基于 _Decimal32 与 _Decimal64 的十进制浮点数据类型，支持算术运算和类型转换。"}
 - {name: "eigen", cat: TYPE, pkg: false, stars: 1, desc: "基于 Eigen 数值模板库，为 PostgreSQL 提供数组类型和线性代数函数。"}
@@ -1240,6 +1263,7 @@
 - {name: "cranges", cat: TYPE, pkg: false, stars: 0, desc: "为 PostgreSQL 的日期、int4 与 int8 离散范围提供闭区间形式。"}
 - {name: "cube", cat: TYPE, pkg: true, stars: 0, desc: "用于存储多维立方体的数据类型"}
 - {name: "daterangex", cat: TYPE, pkg: false, stars: 0, desc: "上界按闭区间显示的日期范围类型，并提供转换与操作符。"}
+- {name: "debversion", cat: TYPE, pkg: true, stars: 0, desc: "Debian版本号数据类型"}
 - {name: "dna_sequence", cat: TYPE, pkg: false, stars: 0, desc: "提供 DNA 与 k-mer 类型及 SP-GiST 前缀索引"}
 - {name: "ednb", cat: TYPE, pkg: false, stars: 0, desc: "支持EDN作为自定义数据类型的Postgres扩展"}
 - {name: "gsscode", cat: TYPE, pkg: false, stars: 0, desc: "用于英国 ONS 与 GSS 地理编码的紧凑索引类型"}
@@ -1248,7 +1272,7 @@
 - {name: "isn", cat: TYPE, pkg: true, stars: 0, desc: "用于国际产品编号标准的数据类型"}
 - {name: "kmoney", cat: TYPE, pkg: false, stars: 0, desc: "为每种货币提供独立 SQL 类型的精确 18 位定点金额实现。"}
 - {name: "ksj", cat: TYPE, pkg: false, stars: 0, desc: "日语汉字数字整数类型，支持算术、聚合、类型转换、比较和 B-tree 索引。"}
-- {name: "launchql-ext-types", cat: TYPE, pkg: false, stars: 0, desc: "基本Pg工具"}
+- {name: "launchql-ext-types", cat: TYPE, pkg: false, stars: 0, desc: "用于附件、邮箱、主机名、图片、选项、上传文件及 URL 的可重用域类型"}
 - {name: "ltree", cat: TYPE, pkg: true, stars: 0, desc: "用于表示分层树状结构的数据类型"}
 - {name: "ntext", cat: TYPE, pkg: false, stars: 0, desc: "ntext：面向 UTF-8 日文字符串的正则化比较文本类型。"}
 - {name: "optim", cat: TYPE, pkg: false, stars: 0, desc: "实验性 pgrx 扩展，定义优化方向与超参数试验数据类型。"}
@@ -1334,7 +1358,7 @@
 - {name: "byteamagic", cat: UTIL, pkg: true, stars: 9, desc: "从 PostgreSQL bytea 值检测 MIME 类型与文件格式"}
 - {name: "colnames", cat: UTIL, pkg: true, stars: 9, desc: "返回记录或复合类型值的列名数组"}
 - {name: "cryptint", cat: UTIL, pkg: true, stars: 9, desc: "加密INT与BIGINT类型"}
-- {name: "shacrypt", cat: UTIL, pkg: true, stars: 9, desc: "实现SHA256-CRYPT与SHA512-CRYPT密钥加密算法"}
+- {name: "shacrypt", cat: UTIL, pkg: true, stars: 9, desc: "实现 SHA256-CRYPT 与 SHA512-CRYPT 密码哈希方案"}
 - {name: "flate", cat: UTIL, pkg: false, stars: 8, desc: "为 PostgreSQL bytea 数据提供原始 DEFLATE 压缩和解压函数。"}
 - {name: "floatfile", cat: UTIL, pkg: true, stars: 8, desc: "将浮点数组存储到文件中而不是堆表中"}
 - {name: "pg_extra_time", cat: UTIL, pkg: true, stars: 8, desc: "一些关于日期与时间的扩展函数"}
@@ -1379,7 +1403,7 @@
 - {name: "pg_fsql", cat: UTIL, pkg: true, stars: 2, desc: "支持 JSONB 驱动执行的递归 SQL 模板引擎"}
 - {name: "pgcodec7", cat: UTIL, pkg: false, stars: 2, desc: "pgcodec7：使用 7 位或 6 位文本分组对 bytea 数据进行编码与解码的 C 扩展。"}
 - {name: "pgerror", cat: UTIL, pkg: false, stars: 2, desc: "更好的错误处理工具"}
-- {name: "pgpm-base32", cat: UTIL, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试、可逆的SQL变更模块"}
+- {name: "pgpm-base32", cat: UTIL, pkg: false, stars: 2, desc: "PostgreSQL 中的 Base32 编码与解码函数"}
 - {name: "pjpg", cat: UTIL, pkg: false, stars: 2, desc: "提供时区转换、日期边界与时间范围等通用 SQL 工具函数。"}
 - {name: "rpc", cat: UTIL, pkg: false, stars: 2, desc: "通过 Unix 域套接字提供同步 JSON 到 JSON 调用的 PostgreSQL RPC 客户端，并附带 Go 服务端示例"}
 - {name: "warren_surveyor_pg", cat: UTIL, pkg: false, stars: 2, desc: "通过 surveyor 访问方法读取现有索引，为规划器提供测量结果"}
@@ -1398,7 +1422,6 @@
 - {name: "pg_jq", cat: UTIL, pkg: false, stars: 1, desc: "在 PostgreSQL json 与 jsonb 值上执行 libjq 过滤器的实验性扩展。"}
 - {name: "pg_json_diff", cat: UTIL, pkg: true, stars: 1, desc: "JSONB 差异比较、JSON Patch 与 JSON Merge Patch 函数"}
 - {name: "pg_logfmt", cat: UTIL, pkg: false, stars: 1, desc: "pg_logfmt：将 logfmt 字符串解析为 JSONB 和键集合。"}
-- {name: "pg_opencc", cat: UTIL, pkg: false, stars: 1, desc: "使用 OpenCC 在简体中文、各地区繁体中文与日文新字体之间转换文本。"}
 - {name: "pg_udp", cat: UTIL, pkg: false, stars: 1, desc: "通过 PostgreSQL 函数向指定主机和端口发送 UDP 数据报。"}
 - {name: "pg_wthtmltopdf", cat: UTIL, pkg: false, stars: 1, desc: "通过 PostgreSQL 函数将 HTML 渲染为 PDF。"}
 - {name: "pg_zerialize", cat: UTIL, pkg: false, stars: 1, desc: "提供 MessagePack、CBOR、ZERA、FlexBuffers、Ion、BSON 与 BEVE 二进制序列化。"}
@@ -1419,6 +1442,7 @@
 - {name: "modeshape_bson", cat: UTIL, pkg: false, stars: 0, desc: "modeshape_bson：函数工具类 PostgreSQL 扩展；上游说明为“PostgreSQL extension to convert ModeShape BSON to and from JSON”。"}
 - {name: "myhelper", cat: UTIL, pkg: false, stars: 0, desc: "myhelper：实用工具类 PostgreSQL 扩展；上游说明为“Collection of PostgreSQL helper functions”。"}
 - {name: "olirice-asciiplot", cat: UTIL, pkg: false, stars: 0, desc: "ASCII绘图库"}
+- {name: "opencc", cat: UTIL, pkg: true, stars: 0, desc: "基于 OpenCC 的简繁中文、地区用语与日文新字体转换"}
 - {name: "oxr", cat: UTIL, pkg: false, stars: 0, desc: "在 PostgreSQL 内调用 OpenExchangeRates API 并缓存汇率。"}
 - {name: "pg_base62", cat: UTIL, pkg: false, stars: 0, desc: "将 UUID 编码为 URL 安全的 Base62 字符串，并支持反向解码。"}
 - {name: "pg_debyte_ext", cat: UTIL, pkg: false, stars: 0, desc: "使用 pg_debyte Rust 组件将 bytea 载荷解码为 JSON 的 PostgreSQL 示例扩展。"}
@@ -1433,6 +1457,7 @@
 - {name: "pg_sqlite_fs", cat: UTIL, pkg: false, stars: 0, desc: "SQLite文件系统创建"}
 - {name: "pg_ssh", cat: UTIL, pkg: false, stars: 0, desc: "通过SSH在PostgreSQL中运行远程命令（使用libssh2和内存中的私钥认证）"}
 - {name: "pg_tigerbeetle", cat: UTIL, pkg: false, stars: 0, desc: "实验性Zig扩展，用于从PostgreSQL查询TigerBeetle账户信息。"}
+- {name: "pg_webrtc", cat: UTIL, pkg: false, stars: 0, desc: "PostgreSQL 的早期 WebRTC 运行时边界，使用预加载后台工作进程。"}
 - {name: "pg_wsl", cat: UTIL, pkg: false, stars: 0, desc: "从主节点向备用节点写入日志的PostgreSQL扩展"}
 - {name: "pgfs", cat: UTIL, pkg: false, stars: 0, desc: "基于 pgrx 的 PostgreSQL 扩展，可通过 SQL 在服务器文件系统上复制文件。"}
 - {name: "pgjsonrpc", cat: UTIL, pkg: false, stars: 0, desc: "JSON-RPC 2.0 实现"}
@@ -1594,8 +1619,8 @@
 - {name: "pg_str", cat: FUNC, pkg: false, stars: 2, desc: "使用 pgrx 为 PostgreSQL 添加受 Laravel 启发的字符串处理函数"}
 - {name: "pg_strverscmp", cat: FUNC, pkg: false, stars: 2, desc: "提供基于类 strverscmp 排序规则的自然排序比较函数、text 操作符和 btree 操作符类。"}
 - {name: "pghll", cat: FUNC, pkg: false, stars: 2, desc: "提供与 Java stream-lib HyperLogLog 格式兼容的解码、计数、合并和聚合函数。"}
-- {name: "pgpm-faker", cat: FUNC, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试、可逆的SQL变更模块"}
-- {name: "pgpm-inflection", cat: FUNC, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试、可逆的SQL变更模块"}
+- {name: "pgpm-faker", cat: FUNC, pkg: false, stars: 2, desc: "使用 SQL 函数与字典生成合成测试数据"}
+- {name: "pgpm-inflection", cat: FUNC, pkg: false, stars: 2, desc: "字符串词形、命名规则及 slug 转换函数"}
 - {name: "pgpm-ltree-helpers", cat: FUNC, pkg: false, stars: 2, desc: "在斜杠路径、通配模式与 PostgreSQL ltree 类型之间转换。"}
 - {name: "pgpm-stamps", cat: FUNC, pkg: false, stars: 2, desc: "为 PGPM 应用提供时间戳与操作用户审计触发器。"}
 - {name: "pgpm-utils", cat: FUNC, pkg: false, stars: 2, desc: "为 PGPM 提供字符串与位串填充以及应用触发器工具。"}
@@ -1646,6 +1671,7 @@
 - {name: "pg_uom", cat: FUNC, pkg: false, stars: 1, desc: "带量纲与仿射变换检查的计量单位转换。"}
 - {name: "pg_variant_functions", cat: FUNC, pkg: false, stars: 1, desc: "pg_variant_functions：函数工具类 PostgreSQL 扩展；上游说明为“Variant analysis functions”。"}
 - {name: "pgbloomfun", cat: FUNC, pkg: false, stars: 1, desc: "操作字节数组的可增长布隆过滤器函数"}
+- {name: "pgjinja", cat: FUNC, pkg: false, stars: 1, desc: "使用 JSONB 上下文与存储模板进行 MiniJinja 模板渲染。"}
 - {name: "pgorpy", cat: FUNC, pkg: false, stars: 1, desc: "从数据库访问OR-tools的Python接口"}
 - {name: "pgx_uuidv7", cat: FUNC, pkg: false, stars: 1, desc: "pgx_uuidv7 是基于 pgrx 的 PostgreSQL 扩展，用于生成 UUIDv7，并在 UUID 与时间戳之间转换。"}
 - {name: "random", cat: FUNC, pkg: true, stars: 1, desc: "随机数生成器"}
@@ -1692,11 +1718,12 @@
 - {name: "intagg", cat: FUNC, pkg: true, stars: 0, desc: "整数聚合器和枚举器（过时）"}
 - {name: "intarray", cat: FUNC, pkg: true, stars: 0, desc: "1维整数数组的额外函数、运算符和索引支持"}
 - {name: "jsonb_delete_array", cat: FUNC, pkg: false, stars: 0, desc: "按 text[] 列表删除 jsonb 对象键或字符串数组元素的 C 扩展运算符。"}
+- {name: "jsonb_delta", cat: FUNC, pkg: false, stars: 0, desc: "提供 JSONB 变更集、按键更新数组及合并函数。"}
 - {name: "jsonb_explorer", cat: FUNC, pkg: false, stars: 0, desc: "输出 jsonb 树结构和路径的 C 扩展函数。"}
 - {name: "jsondiff", cat: FUNC, pkg: false, stars: 0, desc: "计算 JSONB 对象顶层 set/unset 差异"}
 - {name: "jsonvd", cat: FUNC, pkg: false, stars: 0, desc: "JSONB 路径搜索、差异比较、深度合并与类型推断"}
 - {name: "kiwicopple-is_even", cat: FUNC, pkg: false, stars: 0, desc: "判断值是否为偶数"}
-- {name: "launchql-stamps", cat: FUNC, pkg: false, stars: 0, desc: "基本Pg工具"}
+- {name: "launchql-stamps", cat: FUNC, pkg: false, stars: 0, desc: "用于维护时间戳与操作用户信息的触发器函数"}
 - {name: "launchql-uuid", cat: FUNC, pkg: false, stars: 0, desc: "历史 LaunchQL 伪有序 UUID 工具"}
 - {name: "lower_quantile", cat: FUNC, pkg: true, stars: 0, desc: "Lower Quantile 聚合函数"}
 - {name: "manip", cat: FUNC, pkg: false, stars: 0, desc: "各种操作函数"}
@@ -1771,12 +1798,12 @@
 - {name: "pgagent", cat: ADMIN, pkg: true, stars: 124, desc: "PostgreSQL任务调度工具，与PGADMIN配合使用"}
 - {name: "pgfincore", cat: ADMIN, pkg: true, stars: 111, desc: "检查和管理操作系统缓冲区缓存"}
 - {name: "pg_column_tetris", cat: ADMIN, pkg: true, stars: 102, desc: "强制采用最优列对齐顺序，以减少 PostgreSQL 行数据中的填充浪费。"}
-- {name: "pg_savior", cat: ADMIN, pkg: true, stars: 100, desc: "阻止不带条件的全表更新以避免意外事故"}
+- {name: "pg_savior", cat: ADMIN, pkg: true, stars: 100, desc: "拦截无 WHERE 的 UPDATE/DELETE 与高风险 DDL，防止误操作导致数据丢失"}
 - {name: "pg_catcheck", cat: ADMIN, pkg: true, stars: 87, desc: "用于诊断系统目录是否损坏的工具"}
 - {name: "qos", cat: ADMIN, pkg: true, stars: 64, desc: "PostgreSQL QoS 资源治理扩展（会话与查询限流/隔离）"}
 - {name: "sr_plan", cat: ADMIN, pkg: false, stars: 64, desc: "基于规划器钩子的扩展，可记录、展示并复用执行计划，包括参数化计划模板。"}
 - {name: "gp_pitr", cat: ADMIN, pkg: false, stars: 62, desc: "Greenplum 分布式恢复点与 WAL 归档辅助扩展"}
-- {name: "pgdd", cat: ADMIN, pkg: true, stars: 56, desc: "提供通过标准SQL查询数据库目录集簇的能力"}
+- {name: "pgdd", cat: ADMIN, pkg: true, stars: 56, desc: "库内数据字典，通过标准 SQL 进行数据库内省"}
 - {name: "ptrack", cat: ADMIN, pkg: false, stars: 55, desc: "通过共享内存映射与 PostgreSQL 内核存储钩子跟踪变更数据块，用于增量备份。"}
 - {name: "pg_check", cat: ADMIN, pkg: false, stars: 52, desc: "pg_check：统计观测类 PostgreSQL 扩展；上游说明为“Provides basic integrity checks for data files”。"}
 - {name: "pg_rewrite", cat: ADMIN, pkg: true, stars: 46, desc: "在线重写整表，不阻塞读写"}
@@ -1795,7 +1822,7 @@
 - {name: "pgespresso", cat: ADMIN, pkg: false, stars: 27, desc: "Barman可选扩展，PostgreSQL备份和恢复管理器"}
 - {name: "pg_dtm", cat: ADMIN, pkg: false, stars: 26, desc: "使用共享全局快照的可插拔分布式事务管理器"}
 - {name: "pg_orphaned", cat: ADMIN, pkg: true, stars: 24, desc: "处理孤儿文件的扩展插件"}
-- {name: "pg_query_rewrite", cat: ADMIN, pkg: true, stars: 24, desc: "使用 ProcessUtility hook 重写 SQL 语句"}
+- {name: "pg_query_rewrite", cat: ADMIN, pkg: true, stars: 24, desc: "按预定义规则将指定 SQL 语句转换为另一条 SQL 语句"}
 - {name: "pg_start_sql", cat: ADMIN, pkg: false, stars: 24, desc: "在实例启动时运行SQL语句"}
 - {name: "pgraft", cat: ADMIN, pkg: false, stars: 24, desc: "Raft 共识、主节点选举与复制键值状态"}
 - {name: "prioritize", cat: ADMIN, pkg: true, stars: 22, desc: "获取和设置 PostgreSQL 后端的优先级"}
@@ -1880,6 +1907,7 @@
 - {name: "buffercache_tools", cat: ADMIN, pkg: false, stars: 1, desc: "检查并操作 PostgreSQL 缓冲区缓存中属于关系、分支、数据库和表空间的缓存项。"}
 - {name: "constr_name_unif", cat: ADMIN, pkg: false, stars: 1, desc: "统一 PostgreSQL 基表中各类约束的名称。"}
 - {name: "constraint_uniform", cat: ADMIN, pkg: false, stars: 1, desc: "统一基本表约束名称的扩展"}
+- {name: "dist_emaj", cat: ADMIN, pkg: false, stars: 1, desc: "协调多个 PostgreSQL 数据库中的 E-Maj 标记与回滚。"}
 - {name: "extension_drop", cat: ADMIN, pkg: false, stars: 1, desc: "在扩展被删除时运行自定义命令"}
 - {name: "forbid_truncate", cat: ADMIN, pkg: false, stars: 1, desc: "forbid_truncate：通过 shared_preload_libraries 加载 ProcessUtility 钩子以拒绝 TRUNCATE 命令。"}
 - {name: "mvtbl", cat: ADMIN, pkg: false, stars: 1, desc: "轻松在表空间中移动表"}
@@ -1898,12 +1926,14 @@
 - {name: "pg_reject_truncate", cat: ADMIN, pkg: false, stars: 1, desc: "通过 ProcessUtility 钩子拒绝 PostgreSQL TRUNCATE 操作。"}
 - {name: "pg_rlimit", cat: ADMIN, pkg: false, stars: 1, desc: "按会话通过 SQL 函数或 GUC 设置、读取进程地址空间资源限制。"}
 - {name: "pg_sats", cat: ADMIN, pkg: false, stars: 1, desc: "使用聪计价余额按角色计量查询，并可选择强制限额。"}
+- {name: "pg_scalpel", cat: ADMIN, pkg: false, stars: 1, desc: "通过 Janet 在 PostgreSQL 后端中检查与插桩。"}
 - {name: "pg_setpriority", cat: ADMIN, pkg: false, stars: 1, desc: "读取或调整 PostgreSQL 进程的 Unix 调度优先级"}
 - {name: "pg_settimeout", cat: ADMIN, pkg: false, stars: 1, desc: "在后台工作进程中执行延迟或周期性 SQL 任务"}
 - {name: "pg_toastutils", cat: ADMIN, pkg: false, stars: 1, desc: "pg_toastutils：统计观测类 PostgreSQL 扩展；上游说明为“TOAST inspection utils for postgres”。"}
 - {name: "pgds", cat: ADMIN, pkg: false, stars: 1, desc: "动态统计"}
 - {name: "plsh_mtb", cat: ADMIN, pkg: false, stars: 1, desc: "plsh_mtb 是一个 PostgreSQL 多租户备份控制器，使用 PL/SH 调用随扩展安装的 Korn Shell 命令。"}
 - {name: "showenv", cat: ADMIN, pkg: false, stars: 1, desc: "显示后端环境变量"}
+- {name: "adaptive_autovacuum", cat: ADMIN, pkg: false, stars: 0, desc: "通过维护策略控制全实例自适应自动清理。"}
 - {name: "adminpack", cat: ADMIN, pkg: true, stars: 0, desc: "PostgreSQL 管理函数集合"}
 - {name: "alohadb_cron", cat: ADMIN, pkg: false, stars: 0, desc: "在 AlohaDB 中按 cron 表达式调度 SQL 任务"}
 - {name: "alohadb_pool", cat: ADMIN, pkg: false, stars: 0, desc: "AlohaDB内置连接池"}
@@ -2006,6 +2036,7 @@
 - {name: "bg_mon", cat: STAT, pkg: false, stars: 75, desc: "bg_mon：统计观测类 PostgreSQL 扩展；上游说明为“Background worker for monitoring PostgreSQL”。"}
 - {name: "powa", cat: STAT, pkg: true, stars: 75, desc: "PostgreSQL 工作负载分析器-核心"}
 - {name: "pg_store_plans", cat: STAT, pkg: true, stars: 69, desc: "跟踪所有执行的 SQL 语句的计划统计信息"}
+- {name: "pg_proctab", cat: STAT, pkg: true, stars: 55, desc: "通过SQL接口访问操作系统进程表"}
 - {name: "pg_track_settings", cat: STAT, pkg: true, stars: 55, desc: "跟踪设置更改"}
 - {name: "pgnodemx", cat: STAT, pkg: true, stars: 55, desc: "使用SQL查询获取操作系统指标"}
 - {name: "dsef", cat: STAT, pkg: false, stars: 52, desc: "DiffStats和ExplainFull：第三方帮助和支持的详细SQL报告"}
@@ -2015,12 +2046,11 @@
 - {name: "pg_track_optimizer", cat: STAT, pkg: true, stars: 34, desc: "跟踪规划器决策与实际执行的差距"}
 - {name: "pagevis", cat: STAT, pkg: true, stars: 31, desc: "使用ASCII字符可视化数据库物理页面布局"}
 - {name: "pg_stat_log", cat: STAT, pkg: true, stars: 30, desc: "按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。"}
-- {name: "pg_proctab", cat: STAT, pkg: true, stars: 29, desc: "通过SQL接口访问操作系统进程表"}
 - {name: "dump_stat", cat: STAT, pkg: false, stars: 27, desc: "从历史 Postgres Pro 9.5 分支导出优化器统计信息 SQL"}
 - {name: "pgtelemetry", cat: STAT, pkg: true, stars: 27, desc: "监控数据库活动、WAL、复制与存储的 SQL 视图"}
 - {name: "meta", cat: STAT, pkg: true, stars: 24, desc: "标准化，更友好的PostgreSQL系统目录视图"}
 - {name: "pg_meminfo", cat: STAT, pkg: false, stars: 24, desc: "通过 SQL 检查数据库后端的内存与进程资源使用。"}
-- {name: "pg_relusage", cat: STAT, pkg: true, stars: 22, desc: "打印查询引用的表与列"}
+- {name: "pg_relusage", cat: STAT, pkg: true, stars: 22, desc: "记录 SQL 语句实际使用的表、视图等关系"}
 - {name: "pg_uprobe", cat: STAT, pkg: false, stars: 20, desc: "PostgreSQL 会话跟踪与内部函数动态探针"}
 - {name: "pg_backtrace", cat: STAT, pkg: false, stars: 19, desc: "pg_backtrace：用于在 PostgreSQL 错误和信号处理时输出调用栈回溯的扩展。"}
 - {name: "pg_otel_tracer", cat: STAT, pkg: false, stars: 19, desc: "Rust编写的Postgres扩展，添加查询生命周期事件到OTEL跟踪中"}
@@ -2133,6 +2163,7 @@
 - {name: "edb_stat_monitor", cat: STAT, pkg: false, stars: 0, desc: "为 PostgreSQL 与 EDB Postgres 记录分桶查询执行统计。"}
 - {name: "edb_wait_states", cat: STAT, pkg: false, stars: 0, desc: "持久采样后端等待事件及其查询上下文。"}
 - {name: "jessevent@supa_profile", cat: STAT, pkg: false, stars: 0, desc: "数据库表和列统计分析器"}
+- {name: "jsonb_stats", cat: STAT, pkg: false, stars: 0, desc: "提供可合并的 JSONB 统计与精确数值聚合。"}
 - {name: "logfmt", cat: STAT, pkg: false, stars: 0, desc: "logfmt日志收集器"}
 - {name: "memleak_analyzer", cat: STAT, pkg: false, stars: 0, desc: "分析并定位PostgreSQL后端会话和后台工作进程中的逻辑内存泄漏"}
 - {name: "mods_since_analyze", cat: STAT, pkg: false, stars: 0, desc: "估计已更改元组的数量"}
@@ -2144,6 +2175,7 @@
 - {name: "pageinspect", cat: STAT, pkg: true, stars: 0, desc: "检查数据库页面二进制内容"}
 - {name: "pg_buffercache", cat: STAT, pkg: true, stars: 0, desc: "检查共享缓冲区缓存"}
 - {name: "pg_freespacemap", cat: STAT, pkg: true, stars: 0, desc: "检查自由空间映射的内容（FSM）"}
+- {name: "pg_index_deps", cat: STAT, pkg: false, stars: 0, desc: "从已捕获的 PostgreSQL 查询计划估计索引依赖及删除索引的影响。"}
 - {name: "pg_logicalinspect", cat: STAT, pkg: true, stars: 0, desc: "检视逻辑解码组件详情"}
 - {name: "pg_logtap", cat: STAT, pkg: false, stars: 0, desc: "捕获结构化 PostgreSQL 日志并投递到 Vector、HTTP、TCP 或文件。"}
 - {name: "pg_microbench", cat: STAT, pkg: false, stars: 0, desc: "pg_microbench：使用 Linux perf_event_open 统计查询规划、执行、工具命令和 SPI 查询阶段的硬件性能计数器。"}
@@ -2156,6 +2188,7 @@
 - {name: "pg_stat_cluster_activity", cat: STAT, pkg: false, stars: 0, desc: "整个集群的执行统计"}
 - {name: "pg_stat_conn", cat: STAT, pkg: false, stars: 0, desc: "按数据库与角色累计连接、断开与认证失败计数。"}
 - {name: "pg_stat_error", cat: STAT, pkg: false, stars: 0, desc: "腾讯云数据库 PostgreSQL 托管的错误统计扩展；当前版本 1.0 支持 PostgreSQL 10-13。"}
+- {name: "pg_stat_index_queries", cat: STAT, pkg: false, stars: 0, desc: "记录已执行和已规划查询对索引的依赖，并提供逐索引使用诊断。"}
 - {name: "pg_stat_statement_context", cat: STAT, pkg: false, stars: 0, desc: "按 SQL 注释或会话上下文中的应用标签归集查询执行统计。"}
 - {name: "pg_stat_statements", cat: STAT, pkg: true, stars: 0, desc: "跟踪所有执行的 SQL 语句的计划和执行统计信息"}
 - {name: "pg_stat_statements2", cat: STAT, pkg: false, stars: 0, desc: "基于 PostgreSQL 9.4 的 pg_stat_statements 分支，与 sql_firewall 集成以统计 SQL 执行信息"}
@@ -2194,7 +2227,7 @@
 - {name: "pg_tde", cat: SEC, pkg: true, stars: 232, desc: "Percona 透明加密存储引擎"}
 - {name: "pg_jobmon", cat: SEC, pkg: true, stars: 202, desc: "记录和监控函数"}
 - {name: "sql_firewall", cat: SEC, pkg: false, stars: 176, desc: "按用户与解析树指纹建立集群级查询白名单防火墙，提供学习、强制、宽松及禁用模式。"}
-- {name: "launchql-base32", cat: SEC, pkg: false, stars: 118, desc: "纯PostgreSQL plpgsql实现RFC6238 TOTP"}
+- {name: "launchql-base32", cat: SEC, pkg: false, stars: 118, desc: "使用 SQL 和 PL/pgSQL 实现的 Base32 编码与解码函数"}
 - {name: "pgextwlist", cat: SEC, pkg: true, stars: 102, desc: "PostgreSQL扩展白名单功能"}
 - {name: "supautils", cat: SEC, pkg: true, stars: 93, desc: "用于在云环境中确保数据库集群的安全"}
 - {name: "credcheck", cat: SEC, pkg: true, stars: 86, desc: "明文凭证检查器"}
@@ -2207,6 +2240,7 @@
 - {name: "pg-audit-json", cat: SEC, pkg: false, stars: 47, desc: "基于触发器与递归 JSONB 差异的行变更审计"}
 - {name: "pg_oidc_validator", cat: SEC, pkg: true, stars: 40, desc: "PostgreSQL 18 OAuth 与 OIDC 令牌验证模块"}
 - {name: "pg_roast", cat: SEC, pkg: true, stars: 40, desc: "覆盖模式设计、安全配置、运行健康与查询行为的数据库审计器"}
+- {name: "pg_dregg", cat: SEC, pkg: false, stars: 39, desc: "为行级安全提供实验性对象能力授权函数。"}
 - {name: "signed_vault", cat: SEC, pkg: false, stars: 38, desc: "通过签名会话设置保存应用身份的历史 RLS 示例"}
 - {name: "table_vault", cat: SEC, pkg: false, stars: 38, desc: "通过私有会话表保存应用身份的历史 RLS 示例"}
 - {name: "logerrors", cat: SEC, pkg: true, stars: 37, desc: "用于收集日志文件中消息统计信息的函数"}
@@ -2215,7 +2249,7 @@
 - {name: "check_access", cat: SEC, pkg: false, stars: 28, desc: "用于检查 PostgreSQL 对象访问权限的函数与视图。"}
 - {name: "eql", cat: SEC, pkg: false, stars: 28, desc: "Encrypt Query Language 为 PostgreSQL 提供可搜索加密数据所需的类型、函数、操作符和索引支持。"}
 - {name: "pg_auth_mon", cat: SEC, pkg: true, stars: 28, desc: "监控每个用户的连接尝试"}
-- {name: "pg_snakeoil", cat: SEC, pkg: true, stars: 25, desc: "PostgreSQL动态链接库反病毒功能"}
+- {name: "pg_snakeoil", cat: SEC, pkg: true, stars: 25, desc: "基于 ClamAV 的 PostgreSQL 反病毒扩展"}
 - {name: "pgauditlogtofile", cat: SEC, pkg: true, stars: 24, desc: "pgAudit 子扩展，将审计日志写入单独的文件中"}
 - {name: "hello-world", cat: SEC, pkg: false, stars: 23, desc: "用户和产品表的行级安全演示扩展"}
 - {name: "supabase", cat: SEC, pkg: false, stars: 23, desc: "构建并验证Supabase行级安全性的友好平台"}
@@ -2286,7 +2320,7 @@
 - {name: "pg_tamperlog_rust", cat: SEC, pkg: false, stars: 2, desc: "pg_tamperlog 的 Rust/pgrx 辅助扩展，用于加速 SHA-256 哈希链计算。"}
 - {name: "pgfga", cat: SEC, pkg: false, stars: 2, desc: "为 PostgreSQL 提供实验性的 ReBAC/Zanzibar 风格细粒度授权函数。"}
 - {name: "pgocrypto", cat: SEC, pkg: false, stars: 2, desc: "pgocrypto：安全类 PostgreSQL 扩展；上游说明为“encrypt data between Go and PG”。"}
-- {name: "pgpm-defaults", cat: SEC, pkg: false, stars: 2, desc: "使用pgpm工作流的安全、可测试和可逆的SQL变更模块"}
+- {name: "pgpm-defaults", cat: SEC, pkg: false, stars: 2, desc: "为 pgpm 角色配置数据库、模式与函数的默认权限"}
 - {name: "pgpm-encrypted-secrets", cat: SEC, pkg: false, stars: 2, desc: "操作 PGPM 编码秘密值存储的 SQL 辅助函数"}
 - {name: "pgpm-encrypted-secrets-table", cat: SEC, pkg: false, stars: 2, desc: "PGPM 秘密值的存储表与散列触发器"}
 - {name: "pgpm-totp", cat: SEC, pkg: false, stars: 2, desc: "在 PostgreSQL 内生成与校验基于时间的一次性口令。"}
@@ -2303,6 +2337,7 @@
 - {name: "eidos_oauth", cat: SEC, pkg: false, stars: 1, desc: "面向 PostgreSQL 18 OAuth 验证器 API 的 OAuth 2.0 JWT 校验扩展。"}
 - {name: "gdpr_anatomizer", cat: SEC, pkg: false, stars: 1, desc: "gdpr_anatomizer：基于 Anatomy 方法的 GDPR 匿名化原型扩展，主要使用 PL/Python 并包含 PL/pgSQL 辅助函数；上游未声明许可证。"}
 - {name: "openssl", cat: SEC, pkg: false, stars: 1, desc: "openssl：为 PostgreSQL 提供基于 OpenSSL 的加密函数与类型。"}
+- {name: "pg_agent", cat: SEC, pkg: false, stars: 1, desc: "提供权限感知目录摘要及代理策略元数据的 SQL 原型。"}
 - {name: "pg_agent_gate", cat: SEC, pkg: true, stars: 1, desc: "为 Agent 数据库角色提供 SQL 提议、校验、受控执行与人工审批。"}
 - {name: "pg_command_fw", cat: SEC, pkg: true, stars: 1, desc: "PostgreSQL 的 DDL 与 utility 命令防火墙"}
 - {name: "pg_dctp", cat: SEC, pkg: false, stars: 1, desc: "阻止角色 DDL 使用明文密码的预加载模块"}
@@ -2347,7 +2382,7 @@
 - {name: "khulnasoft_vault", cat: SEC, pkg: false, stars: 0, desc: "Khulnasoft Vault扩展"}
 - {name: "launchql-ext-default-roles", cat: SEC, pkg: false, stars: 0, desc: "创建 LaunchQL 使用的匿名、已认证与管理员角色"}
 - {name: "launchql-jwt-claims", cat: SEC, pkg: false, stars: 0, desc: "launchql-jwt-claims扩展"}
-- {name: "launchql-totp", cat: SEC, pkg: false, stars: 0, desc: "基本Pg工具"}
+- {name: "launchql-totp", cat: SEC, pkg: false, stars: 0, desc: "PostgreSQL 中的 HOTP/TOTP 生成与验证函数"}
 - {name: "log_entries", cat: SEC, pkg: false, stars: 0, desc: "通过行级触发器记录谁在何时修改了数据行。"}
 - {name: "martindonadieu-supabase_auth_admin", cat: SEC, pkg: false, stars: 0, desc: "用于检查用户是否为平台管理员的Supabase认证工具"}
 - {name: "ofarm_ed25519", cat: SEC, pkg: false, stars: 0, desc: "OFARM验证专用严格Ed25519原语"}
@@ -2365,6 +2400,7 @@
 - {name: "pg_login_guard", cat: SEC, pkg: false, stars: 0, desc: "在连续认证失败后按角色执行类似 fail2ban 的锁定。"}
 - {name: "pg_mask", cat: SEC, pkg: false, stars: 0, desc: "C语言编写的简单数据遮掩工具"}
 - {name: "pg_mic", cat: SEC, pkg: false, stars: 0, desc: "为 PostgreSQL 提供 Biba 强制完整性标签与访问检查"}
+- {name: "pg_pass_policy", cat: SEC, pkg: false, stars: 0, desc: "管理角色密码复杂度、历史、有效期、轮换与认证失败锁定策略。"}
 - {name: "pg_pii_audit", cat: SEC, pkg: false, stars: 0, desc: "通过 INSERT 执行钩子采样电子邮件模式的实验性扩展"}
 - {name: "pg_seal", cat: SEC, pkg: false, stars: 0, desc: "PostgreSQL防篡改审计日志"}
 - {name: "pg_secret", cat: SEC, pkg: false, stars: 0, desc: "定义顺序可揭示加密域、比较运算符和 B-tree 运算符类。"}
@@ -2410,7 +2446,7 @@
 - {name: "clickhousedb_fdw", cat: FDW, pkg: false, stars: 207, desc: "ClickHouse 外部数据包装器，支持 SELECT/INSERT，以及聚合与连接下推。"}
 - {name: "pgspider_core_fdw", cat: FDW, pkg: false, stars: 180, desc: "PGSpider 多数据源外部表查询协调器"}
 - {name: "pgspider_fdw", cat: FDW, pkg: false, stars: 180, desc: "访问远端 PGSpider 节点的外部数据包装器"}
-- {name: "aws_s3", cat: FDW, pkg: true, stars: 178, desc: "从S3导入导出数据的外部数据源包装器"}
+- {name: "aws_s3", cat: FDW, pkg: true, stars: 178, desc: "从 S3 导入导出数据（兼容 RDS aws_s3 扩展）"}
 - {name: "holycorn", cat: FDW, pkg: false, stars: 165, desc: "holycorn：基于 Ruby 的 PostgreSQL 外部数据包装器提供器。"}
 - {name: "hdfs_fdw", cat: FDW, pkg: true, stars: 141, desc: "hdfs 外部数据包装器"}
 - {name: "kv_fdw", cat: FDW, pkg: false, stars: 132, desc: "kv_fdw：用于访问或集成 key-value storage backed by RocksDB/VidarDB 的 PostgreSQL 外部数据包装器。"}
@@ -2549,7 +2585,7 @@
 - {name: "zipfile-fdw", cat: FDW, pkg: false, stars: 0, desc: "ZIP文件访问的外部数据包装器原型"}
 - {name: "documentdb", cat: SIM, pkg: true, stars: 3532, desc: "微软DocumentDB的API层"}
 - {name: "documentdb_core", cat: SIM, pkg: true, stars: 3532, desc: "微软DocumentDB的核心API层实现"}
-- {name: "documentdb_distributed", cat: SIM, pkg: true, stars: 3532, desc: "DocumentDB多节点模式的API层"}
+- {name: "documentdb_distributed", cat: SIM, pkg: false, stars: 3532, desc: "DocumentDB多节点模式的API层"}
 - {name: "documentdb_extended_rum", cat: SIM, pkg: true, stars: 3532, desc: "DocumentDB扩展RUM索引访问方法"}
 - {name: "pg_documentdb_gw_host", cat: SIM, pkg: false, stars: 3532, desc: "通过 PostgreSQL 后台工作进程运行 DocumentDB 协议网关。"}
 - {name: "gb18030_2022", cat: SIM, pkg: true, stars: 1070, desc: "支持 GB18030-2022 与 UTF-8 编码转换"}
@@ -2562,7 +2598,7 @@
 - {name: "gms_tcp", cat: SIM, pkg: false, stars: 794, desc: "提供PL/SQL中的TCP/IP客户端访问功能"}
 - {name: "oraplsql", cat: SIM, pkg: false, stars: 603, desc: "OpenTenBase兼容的Oracle兼容过程SQL语言"}
 - {name: "orafce", cat: SIM, pkg: true, stars: 549, desc: "模拟 Oracle RDBMS 的一部分函数和包的函数和运算符"}
-- {name: "kafgres", cat: SIM, pkg: true, stars: 421, desc: "在 PostgreSQL 中运行 Kafka 协议消息代理"}
+- {name: "kafgres", cat: SIM, pkg: true, stars: 428, desc: "在 PostgreSQL 中运行 Kafka 协议消息代理"}
 - {name: "aux_mysql", cat: SIM, pkg: true, stars: 415, desc: "MySQL兼容辅助扩展模块"}
 - {name: "pgmemcache", cat: SIM, pkg: true, stars: 175, desc: "为PG提供memcached兼容接口"}
 - {name: "pgtt", cat: SIM, pkg: true, stars: 100, desc: "类似Oracle的全局临时表功能"}
@@ -2599,7 +2635,7 @@
 - {name: "pgkv", cat: SIM, pkg: false, stars: 0, desc: "基于 JSONB 与 PL/pgSQL 的 PostgreSQL 类 Redis 键值存储扩展"}
 - {name: "shark", cat: SIM, pkg: false, stars: 0, desc: "D语言兼容扩展"}
 - {name: "yb_xcluster_ddl_replication", cat: ETL, pkg: false, stars: 10619, desc: "YugabyteDB xCluster 自动 DDL 捕获与回放记录"}
-- {name: "repmgr", cat: ETL, pkg: true, stars: 1719, desc: "PostgreSQL复制管理组件"}
+- {name: "repmgr", cat: ETL, pkg: true, stars: 1720, desc: "PostgreSQL复制管理组件"}
 - {name: "wal2json", cat: ETL, pkg: true, stars: 1517, desc: "用逻辑解码捕获 JSON 格式的 CDC 变更"}
 - {name: "pglogical", cat: ETL, pkg: true, stars: 1242, desc: "PostgreSQL逻辑复制：三方扩展实现"}
 - {name: "pglogical_origin", cat: ETL, pkg: true, stars: 1242, desc: "用于从 Postgres 9.4 升级时的兼容性虚拟扩展"}
@@ -2686,6 +2722,7 @@
 - {name: "londiste", cat: ETL, pkg: false, stars: 0, desc: "Londiste 逻辑复制框架的数据库端支持对象"}
 - {name: "pboutput", cat: ETL, pkg: false, stars: 0, desc: "使用Protocol Buffers编码PostgreSQL变化的逻辑解码二进制输出插件"}
 - {name: "pg_logical_ddl", cat: ETL, pkg: false, stars: 0, desc: "PostgreSQL逻辑DDL复制实现"}
+- {name: "pg_pagecopy", cat: ETL, pkg: false, stars: 0, desc: "通过兼容性检查执行物理表传输与本地页面克隆。"}
 - {name: "pg_replayfeed", cat: ETL, pkg: false, stars: 0, desc: "通过逻辑复制槽输出仅含键的 WAL 变更流"}
 - {name: "pg_transport", cat: ETL, pkg: false, stars: 0, desc: "Amazon RDS 的 PostgreSQL 可传输数据库扩展，用于在 RDS 实例之间快速迁移数据库。"}
 - {name: "pgl_validate", cat: ETL, pkg: false, stars: 0, desc: "用于 pglogical 与 PostgreSQL 逻辑复制的跨节点数据校验，支持延迟校正、契约感知行数及校验和比对。"}
@@ -2697,3 +2734,4 @@
 - {name: "synchro_pg", cat: ETL, pkg: false, stars: 0, desc: "基于作用域变更捕获的离线优先同步数据库扩展"}
 - {name: "tencentdb_failover_slot", cat: ETL, pkg: false, stars: 0, desc: "腾讯云数据库专有内核扩展：把逻辑复制槽状态同步到备节点，使逻辑订阅可在主备切换后连续运行。"}
 - {name: "test_decoding", cat: ETL, pkg: true, stars: 0, desc: "基于SQL的WAL逻辑解码样例"}
+- {name: "worf", cat: ETL, pkg: false, stars: 0, desc: "支持复制集、多上游与可配置冲突处理的逻辑复制扩展。"}

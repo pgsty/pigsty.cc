@@ -424,7 +424,7 @@ icon: fa-brands fa-redhat fa-flip-vertical
 | [`kafka_fdw`](/ext/e/kafka_fdw) | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | [`hdfs_fdw`](/ext/e/hdfs_fdw) | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 6 | AVAIL PGDG 2.3.3 6 |
 | [`firebird_fdw`](/ext/e/firebird_fdw) | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 10 |
-| [`rdf_fdw`](/ext/e/rdf_fdw) | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| [`rdf_fdw`](/ext/e/rdf_fdw) | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 | AVAIL PIGSTY 3.1.0 2 |
 | [`oai_fdw`](/ext/e/oai_fdw) | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | [`aws_s3`](/ext/e/aws_s3) | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | [`log_fdw`](/ext/e/log_fdw) | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
