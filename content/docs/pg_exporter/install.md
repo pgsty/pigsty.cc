@@ -8,12 +8,9 @@ categories: [任务]
 
 `pg_exporter` 可以通过 Pigsty、YUM/APT 仓库、GitHub 发布包（RPM/DEB/Tarball）、Docker 镜像或源码构建安装，按你的基础设施任选一种即可。
 
-
---------
-
 软件仓库安装使用仓库当前提供的包，可能晚于 GitHub Release。需要精确安装 v1.6.0 时，使用下方带版本号的发布制品。
 
-## Pigsty
+## Pigsty {#pigsty}
 
 最简单的使用 `pg_exporter` 的方式是使用 [Pigsty](https://pigsty.cc)。Pigsty 内置了基于 `pg_exporter`、VictoriaMetrics（Prometheus 兼容指标抓取与查询）和 Grafana 的 PostgreSQL 可观测性方案；部署后即可使用预置指标、规则与仪表盘。
 
@@ -21,10 +18,7 @@ categories: [任务]
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 ```
 
-
---------
-
-## 发布版本
+## 发布版本 {#release}
 
 您也可以直接从 [GitHub 发布页面](https://github.com/pgsty/pg_exporter/releases/latest) 下载 `pg_exporter` 软件包（`RPM`/`DEB`/Tarball）：
 
@@ -53,14 +47,11 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 
 完整 SHA256 校验信息见发布页面中的 `checksums.txt`；具体版本的校验和也会在 [发布注记](/docs/pg_exporter/release/) 中归档。
 
-
---------
-
-## 软件仓库
+## 软件仓库 {#repository}
 
 pg_exporter 软件包也可以在 [`pigsty-infra`](https://ext.pgsty.com/repo/infra) 仓库中获取。您可以将该仓库添加到系统中，然后使用操作系统包管理器安装：
 
-### YUM
+### YUM {#yum}
 
 适用于 RHEL、RockyLinux、CentOS、Alma Linux、OracleLinux 等 EL 系发行版：
 
@@ -78,7 +69,7 @@ sudo yum makecache;
 sudo yum install -y pg-exporter
 ```
 
-### APT
+### APT {#apt}
 
 适用于 Debian、Ubuntu 及兼容的 Linux 发行版：
 
@@ -91,10 +82,7 @@ sudo apt update;
 sudo apt install -y pg-exporter
 ```
 
-
---------
-
-## Docker
+## Docker {#docker}
 
 我们在 Docker Hub 上提供了 `amd64` 和 `arm64` 架构的预构建镜像：[pgsty/pg_exporter](https://hub.docker.com/r/pgsty/pg_exporter)。
 
@@ -128,10 +116,7 @@ docker run -d \
 > [!WARNING] 注意
 > 镜像基于 `scratch`，包含系统 CA 证书包与许可证，但没有 shell。公共受信任证书可使用内置根证书；使用私有 CA 且启用 `sslmode=verify-ca` 或 `verify-full` 时，仍需挂载私有 CA 并设置 `sslrootcert`。
 
-
---------
-
-## 兼容性
+## 兼容性 {#compatibility}
 
 当前默认配置支持 PostgreSQL 10-19+。
 对于 EOL 旧版本 PostgreSQL，使用 [main 分支单独维护的 legacy 配置包](https://github.com/pgsty/pg_exporter/tree/main/legacy)。它不包含在二进制压缩包或 RPM／DEB 中，需要独立下载。

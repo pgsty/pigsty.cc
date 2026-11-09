@@ -15,10 +15,7 @@ categories: [参考]
 
 指标采集行为则完全由 YAML 采集器定义驱动（默认 `/etc/pg_exporter.yml`，亦可指向配置目录），详见 [配置参考](/docs/pg_exporter/config/)。
 
-
---------
-
-## 命令行参数
+## 命令行参数 {#command-line-arguments}
 
 ```bash
 pg_exporter \
@@ -64,7 +61,7 @@ Flags:
 - **启动策略**：默认非阻塞启动——目标库暂时不可达时，HTTP 端点照常拉起，后台持续探测直到恢复；如果希望"连不上就失败退出"（例如交由 systemd/编排器重启决策），设置 `--fail-fast`。
 - **指标路径校验**：`--web.telemetry-path` 拒绝空路径、内置端点冲突与 `//metrics` 等非规范路径。v1.5.0 还验证当前 HTTP mux 实际选中指标处理器，避免某些转义路径被接受却返回首页或重定向。建议使用 `/metrics` 这样的未转义路径。
 
-### 连接 URL 的来源
+### 连接 URL 的来源 {#connection-url-sources}
 
 连接串按以下优先级解析，命令行与环境变量取第一个非空值：
 
@@ -80,12 +77,9 @@ v1.5.0 严格校验 URL、百分号转义和查询参数名：参数名不能为
 
 URL 中未指定 `sslmode` 时会自动补 `sslmode=disable`。另外，`PGSERVICE` / `PGSERVICEFILE` 等 libpq 服务文件环境变量会在启动时被清除并记录日志——服务文件可能覆盖显式指定的连接目标，`pg_exporter` 要求"日志里宣告的 URL 就是实际连接的 URL"。
 
+## 监控用户与凭据 {#monitoring-user-and-credentials}
 
---------
-
-## 监控用户与凭据
-
-### 创建监控用户
+### 创建监控用户 {#create-the-monitoring-user}
 
 ```sql
 CREATE ROLE monitor WITH LOGIN PASSWORD 'S3cret' CONNECTION LIMIT 5;
@@ -100,7 +94,7 @@ GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;
 
 `CONNECTION LIMIT` 应按自动发现库数调整，避免过低限制导致额外数据库无法连接。建议保留连接数上限：exporter 正常只占用一至数个连接（自动发现时每库一个），限流可以防止配置错误时耗尽连接。
 
-### 使用 .pgpass 管理密码
+### 使用 .pgpass 管理密码 {#manage-passwords-with-pgpass}
 
 把密码从 URL 中拿掉，交给 libpq 的 `.pgpass` 机制：
 
@@ -117,20 +111,17 @@ PG_EXPORTER_URL='postgres://monitor@localhost:5432/postgres'
 > 包安装的服务以 `prometheus` 系统用户运行。自 v1.4.0 起该用户的 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的位置），但安装包 **不会** 创建这个目录。使用 `.pgpass` 前请先执行：
 > `install -d -o prometheus -g prometheus /var/lib/prometheus`
 
-### 数据库连接 TLS
+### 数据库连接 TLS {#tls-for-the-database-connection}
 
 ```bash
 PG_EXPORTER_URL='postgres://monitor:S3cret@db.example.com:5432/postgres?sslmode=verify-full&sslrootcert=/etc/pki/ca.crt'
 ```
 
-### HTTP 端口侧的保护
+### HTTP 端口侧的保护 {#protecting-the-http-port}
 
 `/metrics` 之外，`/reload`、`/explain`、`/stat` 属于管理端点：能访问该端口的任何人都可以读取配置与运行态信息、触发重载。如果 exporter 暴露在共享网络中，请通过 `--web.config.file`（[exporter-toolkit web 配置](https://github.com/prometheus/exporter-toolkit/blob/master/docs/web-configuration.md)）启用 TLS/Basic Auth，或在防火墙/反向代理层限制来源。
 
-
---------
-
-## Systemd 部署（RPM/DEB 包）
+## Systemd 部署（RPM/DEB 包） {#systemd-deployment}
 
 RPM/DEB 包已内置服务单元与环境文件，安装后仅需修改环境文件并启动：
 
@@ -180,10 +171,7 @@ journalctl -u pg_exporter -f               # 跟踪日志
 curl -X POST localhost:9630/reload         # 热重载采集器配置（无需重启）
 ```
 
-
---------
-
-## Docker 部署
+## Docker 部署 {#docker-deployment}
 
 ```bash
 docker run -d \
@@ -215,10 +203,7 @@ services:
 > [!WARNING] 注意
 > 镜像基于 `scratch`，包含系统 CA 证书包与许可证，但没有 shell。公共受信任证书可使用内置根证书；使用私有 CA 且启用 `sslmode=verify-ca` 或 `verify-full` 时，仍需挂载私有 CA 并设置 `sslrootcert`。
 
-
---------
-
-## Kubernetes 部署
+## Kubernetes 部署 {#kubernetes-deployment}
 
 ```yaml
 apiVersion: apps/v1
@@ -270,10 +255,7 @@ spec:
 
 也可以用 `PG_EXPORTER_URL_FILE` 指向 Secret 挂载出的文件，避免把连接串放进环境变量。
 
-
---------
-
-## 自动发现
+## 自动发现 {#auto-discovery}
 
 自动发现（默认启用）让一个 exporter 实例监控目标 PostgreSQL 中的所有数据库：
 
@@ -293,10 +275,7 @@ pg_exporter --auto-discovery \
 - 多库采集仍为串行执行，抓取超时预算应覆盖预检与各数据库的查询总耗时；v1.6.0 请求取消后不再启动后续数据库或采集器。
 - PostgreSQL 主连接池最多三个连接，发现数据库各一个；PgBouncer 主连接池最多两个连接，分别容纳串行采集与独立健康探测。
 
-
---------
-
-## 监控 pgBouncer
+## 监控 pgBouncer {#monitoring-pgbouncer}
 
 将 URL 的数据库名设为 `pgbouncer` 即可切换到 pgBouncer 模式（以此触发自动检测）：
 
@@ -306,12 +285,9 @@ PG_EXPORTER_URL='postgres://stats_user:S3cret@localhost:6432/pgbouncer' pg_expor
 
 pgBouncer 模式下，exporter 使用 `pgbouncer` 指标前缀，只执行 pgBouncer 专属采集器（`SHOW STATS` / `SHOW POOLS` 等）。通常的做法是为 PostgreSQL 和 pgBouncer 各跑一个 exporter 实例（不同端口）。
 
+## Prometheus 抓取与告警 {#prometheus-scraping-and-alerting}
 
---------
-
-## Prometheus 抓取与告警
-
-### 抓取配置
+### 抓取配置 {#scrape-configuration}
 
 ```yaml
 scrape_configs:
@@ -339,7 +315,7 @@ scrape_configs:
 
 抓取间隔建议不小于常用采集器的 `ttl`（默认配置多为 10 秒）：TTL 缓存保证了更高频的抓取只会拿到缓存结果，徒增开销。
 
-### 告警规则
+### 告警规则 {#alert-rules}
 
 以下规则全部基于真实存在的指标：
 
@@ -380,8 +356,8 @@ groups:
           summary: "采集器 {{ $labels.query }} 在 {{ $labels.datname }} 上持续报错"
 ```
 
-### 基于角色的流量路由
+### 基于角色的流量路由 {#role-based-traffic-routing}
 
-`/primary`、`/replica`、`/read` 等健康检查端点可以直接充当 HAProxy 等负载均衡器的健康检查探针，实现主从读写分离。端点语义与完整的 HAProxy 配置示例见 [API 参考](/docs/pg_exporter/api/#流量路由)。
+`/primary`、`/replica`、`/read` 等健康检查端点可以直接充当 HAProxy 等负载均衡器的健康检查探针，实现主从读写分离。端点语义与完整的 HAProxy 配置示例见 [API 参考](/docs/pg_exporter/api/#traffic-routing)。
 
 注意：Nginx 开源版不支持基于旁路端口的主动 HTTP 健康检查（`health_check` 为 NGINX Plus 功能），按角色路由 PostgreSQL 流量请优先使用 HAProxy，或 Patroni + vip-manager 等方案。

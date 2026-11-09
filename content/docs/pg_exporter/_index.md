@@ -11,10 +11,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 [**快速上手**](/docs/pg_exporter/start) | [**GitHub**](https://github.com/pgsty/pg_exporter) | [**在线演示**](https://g.pgsty.com)
 
-
---------
-
-## 功能特性
+## 功能特性 {#features}
 
 | 特性        | 描述                                                          |
 |-----------|-------------------------------------------------------------|
@@ -27,16 +24,13 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 | **快照直方图** | `HISTOGRAM` 列类型将 SQL 快照聚合为经典 Prometheus 直方图分布               |
 | **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling、citus、timescaledb  |
 | **生产就绪**  | 在真实环境中经过 6 年以上、12K+ 核心的实战检验                                 |
-{.full-width}
+{.full-width .wide .expand}
 
-
---------
-
-## 版本信息
+## 版本信息 {#version-info}
 
 - 当前稳定版本：[`v1.6.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0)
 - 默认配置支持：PostgreSQL **10-19+**
-- Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 main 上单独维护的 `legacy/` 配置包，见 [安装说明](/docs/pg_exporter/install/#兼容性)）
+- Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 main 上单独维护的 `legacy/` 配置包，见 [安装说明](/docs/pg_exporter/install/#compatibility)）
 - PgBouncer 支持：**1.8-1.26+**
 
 v1.6.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1 个配置参考文件）、**96 个版本／角色分支** 和 **59 个指标命名空间**。460 按指标名跨分支去重，包含默认禁用的采集器与 2 个尚未展开的 `HISTOGRAM` 定义；实际时序数取决于版本、对象数量、标签与直方图桶。
@@ -45,10 +39,7 @@ v1.6.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1
 
 升级前请检查 [**v1.6.0 指标变化**](/docs/pg_exporter/release/#v160-metric-compatibility) 与 [**仪表盘／告警迁移检查**](/docs/pg_exporter/config/#metric-compatibility)。指标名保留不代表标签、状态编码或统计口径不变；PostgreSQL 大版本升级还会切换采集器分支。
 
-
---------
-
-## 设计逻辑
+## 设计逻辑 {#design-rationale}
 
 `pg_exporter` 的核心设计取向是「本地优先 + 可声明 + 可演进」：
 
@@ -60,10 +51,7 @@ v1.6.0 的默认配置包含 **58 个 YAML 文件**（57 个采集器文件与 1
 - 健康探针分离：健康端点基于后台探测缓存，避免每次探针请求都阻塞数据库
 - 管理面可收敛：`/reload`、`/explain`、`/stat` 会暴露配置与运行态信息，生产环境建议结合 `--web.config.file` 启用认证/TLS，或仅在内网暴露
 
-
---------
-
-## 快速安装
+## 快速安装 {#installation}
 
 PG Exporter 提供多种 [**安装方式**](/docs/pg_exporter/install)，适配各种基础设施：
 
@@ -111,10 +99,7 @@ cd pg_exporter
 make build
 ```
 
-
---------
-
-## 快速开始
+## 快速开始 {#quick-start}
 
 几分钟内即可启动 PG Exporter，参见 [快速上手](/docs/pg_exporter/start)：
 
@@ -132,10 +117,15 @@ curl http://localhost:9630/metrics
 curl -X POST http://localhost:9630/reload
 ```
 
+## 文档目录 {#documentation}
 
---------
+- [**快速上手**](/docs/pg_exporter/start) - 快速启动指南与基础概念
+- [**安装指南**](/docs/pg_exporter/install) - 各平台安装说明
+- [**配置参考**](/docs/pg_exporter/config) - 采集器配置参考与示例
+- [**部署指南**](/docs/pg_exporter/deploy) - 生产环境部署实践
+- [**内置采集器**](https://github.com/pgsty/pg_exporter/tree/main/config) - 全部指标采集器配置定义
 
-## 在线演示
+## 在线演示 {#live-demo}
 
 通过在线演示环境体验 PG Exporter 的实际效果：**https://g.pgsty.com**
 
@@ -146,19 +136,13 @@ curl -X POST http://localhost:9630/reload
 - 扩展特定的指标和监控
 - 由 [Pigsty](https://pigsty.cc) 驱动的完整可观测性堆栈
 
-
---------
-
-## 社区与支持
+## 社区与支持 {#community-and-support}
 
 - [**GitHub**](https://github.com/pgsty/pg_exporter)：源代码、问题反馈与贡献
 - [**讨论区**](https://github.com/pgsty/pg_exporter/discussions)：提问与分享经验
 - [**Pigsty**](https://pigsty.cc)：包含 PG Exporter 的完整 PostgreSQL 发行版
 
-
---------
-
-## 开源协议
+## 开源协议 {#license}
 
 PG Exporter 是基于 [Apache License 2.0](https://github.com/pgsty/pg_exporter/blob/main/LICENSE) 许可的开源软件。
 

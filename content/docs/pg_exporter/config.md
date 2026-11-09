@@ -10,10 +10,7 @@ categories: [参考]
 
 配置可以是单个 YAML 文件（如默认的 `pg_exporter.yml`），也可以是包含多个 YAML 文件的目录——官方默认配置包正是由 [`config/`](https://github.com/pgsty/pg_exporter/tree/main/config) 目录下 58 个 YAML 文件（57 个采集器文件与 1 个配置参考文件）按字典序合并而来；共 96 个分支、59 个命名空间、460 个去重后的指标定义，包含默认禁用的采集器与 2 个尚未展开的直方图定义。
 
-
---------
-
-## 配置加载
+## 配置加载 {#configuration-loading}
 
 PG Exporter 按以下顺序搜索配置：
 
@@ -31,10 +28,7 @@ PG Exporter 按以下顺序搜索配置：
 - 部分文件解析失败时记录错误，仍加载其余有效文件；目录加载并非全有或全无
 - 空的单个 YAML 文件是合法空配置；重载它会清空采集器。解析失败的重载则保留原计划与缓存
 
-
---------
-
-## 采集器结构
+## 采集器结构 {#collector-structure}
 
 每个采集器是 YAML 配置中的一个顶级对象，具有唯一名称和多种属性：
 
@@ -87,12 +81,9 @@ collector_branch_name:           # 此采集器的唯一标识符
 - SQL 查询结果必须包含所有声明为 `LABEL` 的列；自 `v1.4.1` 起，缺少任一标签列都会使该采集器本轮采集失败，不再生成空标签或沿用旧结果，其他非致命采集器不受影响
 - 如果使用单行内联 `metrics` 写法，`description` 建议始终使用双引号包裹，避免 YAML 歧义
 
+## 核心配置元素 {#core-configuration-elements}
 
---------
-
-## 核心配置元素
-
-### 采集器分支名称
+### 采集器分支名称 {#collector-branch-name}
 
 顶级键在整个配置中唯一标识一个采集器：
 
@@ -101,7 +92,7 @@ pg_stat_database:  # 必须唯一
   name: pg_db      # 实际的指标命名空间
 ```
 
-### 查询定义
+### 查询定义 {#query-definition}
 
 检索指标的 SQL 查询：
 
@@ -118,7 +109,7 @@ query: |
   WHERE datname NOT IN ('template0', 'template1')
 ```
 
-### 指标类型
+### 指标类型 {#metric-types}
 
 查询结果中的每一列必须映射到一个指标类型：
 
@@ -131,7 +122,7 @@ query: |
 | `DISCARD`   | 忽略此列                                      | 内部值    |
 {.full-width}
 
-### 直方图列（HISTOGRAM）
+### 直方图列（HISTOGRAM） {#histogram-columns}
 
 `v1.4.0` 引入 `HISTOGRAM` 列类型：查询返回的每一行都作为一次观测，按标签组聚合为经典
 Prometheus 直方图快照，派生 `<name>_bucket`（含 `le` 标签与 `+Inf` 桶）、`<name>_count`、
@@ -165,7 +156,7 @@ pg_xact_age:
 - `scale` 在分桶前应用于观测值；与标量列一致，时间戳与布尔值不受 `scale` 影响
 - 默认配置包中的 [`pg_xact_age`](https://github.com/pgsty/pg_exporter/blob/main/config/0450-pg_xact_age.yml) 采集器即为参考实现
 
-### 缓存控制（TTL）
+### 缓存控制（TTL） {#cache-control-ttl}
 
 `ttl` 参数控制结果缓存：
 
@@ -185,7 +176,7 @@ pg_table_bloat:
 - TTL 为 0 表示禁用缓存
 - `ttl` 与谓词 `ttl` 必须为非负有限数，且转换为 Go `time.Duration` 后不能溢出；v1.5.0 拒绝 NaN、无穷大和过大的值
 
-### 超时控制
+### 超时控制 {#timeout-control}
 
 防止查询运行时间过长：
 
@@ -197,7 +188,7 @@ timeout: -1    # 禁用超时（不推荐）
 
 `timeout: 0` 或省略该字段使用默认 100ms；有限负值关闭查询期限。v1.5.0 拒绝 NaN、无穷大和转换后会溢出的正超时。超时覆盖本次谓词与主查询的总执行时间。
 
-### 请求生命周期
+### 请求生命周期 {#request-lifetime}
 
 自 v1.6.0 起，采集、等待与响应写入阶段合计最多接纳两个指标请求。采集仍串行；第二个请求在剩余预算内等待，更多请求返回 HTTP 503。预算默认为 30 秒，合法、有限且为正数的 `X-Prometheus-Scrape-Timeout-Seconds` 请求头可以缩短它。等待期间取消的请求不执行 SQL。
 
@@ -207,7 +198,7 @@ timeout: -1    # 禁用超时（不推荐）
 
 刷新失败沿用原有失败 TTL。尤其是负数 timeout 的 fatal 采集器，被取消后会缓存 fatal 失败；后续有效抓取可能对该失败计数并返回 `pg_up 0`，直到成功刷新。建议 fatal 采集器保留正数 timeout。设计理由见 [采集生命周期](https://exp.pgsty.com/zh/design/scrape-lifetime/)。
 
-### 版本兼容性
+### 版本兼容性 {#version-compatibility}
 
 控制哪些 PostgreSQL 版本可以运行此采集器：
 
@@ -224,10 +215,7 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 - `190000` 表示 19.0
 - `90600` 表示 9.6（Legacy 配置场景）
 
-
---------
-
-## 执行模型
+## 执行模型 {#execution-model}
 
 理解一个采集器从定义到产出指标的完整路径，有助于回答"为什么这个指标没出来"：
 
@@ -237,13 +225,11 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 
 v1.5.0 在成功预检后比较用户名、Schema 与扩展集合；变化时重新规划，新增／删除扩展或 Schema 无需手动重载。集合不变时保留计划与缓存，重新规划会重置查询缓存和统计。
 
---------
-
-## 标签系统
+## 标签系统 {#tag-system}
 
 标签控制采集器的执行时机和位置：
 
-### 内置标签
+### 内置标签 {#built-in-tags}
 
 | 标签                    | 描述                   |
 |-----------------------|----------------------|
@@ -253,7 +239,7 @@ v1.5.0 在成功预检后比较用户名、Schema 与扩展集合；变化时重
 | `pgbouncer`           | 仅用于 pgBouncer 连接     |
 {.full-width}
 
-### 前缀标签
+### 前缀标签 {#prefixed-tags}
 
 | 前缀 | 示例 | 描述 |
 |------|------|------|
@@ -264,7 +250,7 @@ v1.5.0 在成功预检后比较用户名、Schema 与扩展集合；变化时重
 | `not:` | `not:slow` | 当导出器没有该标签时执行 |
 {.full-width}
 
-### 自定义标签
+### 自定义标签 {#custom-tags}
 
 向导出器传递自定义标签：
 
@@ -279,10 +265,7 @@ expensive_metrics:
   tags: [critical]  # 仅在有 'critical' 标签时运行
 ```
 
-
---------
-
-## 谓词查询
+## 谓词查询 {#predicate-queries}
 
 在执行主查询之前进行条件检查：
 
@@ -298,12 +281,9 @@ predicate_queries:
 
 只有当所有谓词返回 `true` 时，主查询才会执行。
 
+## 指标定义 {#metric-definition}
 
---------
-
-## 指标定义
-
-### 基本定义
+### 基本定义 {#basic-definition}
 
 ```yaml
 metrics:
@@ -312,7 +292,7 @@ metrics:
       description: "已连接的后端进程数"
 ```
 
-### 高级选项
+### 高级选项 {#advanced-options}
 
 ```yaml
 metrics:
@@ -324,10 +304,7 @@ metrics:
       description: "检查点写入时间（秒）"
 ```
 
-
---------
-
-## 采集器组织
+## 采集器组织 {#collector-organization}
 
 PG Exporter 自带预先组织好的采集器：
 
@@ -346,12 +323,9 @@ PG Exporter 自带预先组织好的采集器：
 | 10xx+ | 扩展        | 扩展特定指标        |
 {.full-width .wide .expand}
 
+## 实际示例 {#real-world-examples}
 
---------
-
-## 实际示例
-
-### 简单的 Gauge 采集器
+### 简单的 Gauge 采集器 {#simple-gauge-collector}
 
 ```yaml
 pg_connections:
@@ -372,7 +346,7 @@ pg_connections:
     - idle_in_transaction: {usage: GAUGE, description: "事务中空闲连接数"}
 ```
 
-### 带标签的 Counter
+### 带标签的 Counter {#counter-with-labels}
 
 ```yaml
 pg_table_stats:
@@ -398,7 +372,7 @@ pg_table_stats:
     - n_dead_tup: {usage: GAUGE, description: "死亡元组数"}
 ```
 
-### 版本特定采集器
+### 版本特定采集器 {#version-specific-collector}
 
 ```yaml
 pg_wal_stats:
@@ -423,7 +397,7 @@ pg_wal_stats:
     - wal_sync_time: {usage: COUNTER, scale: 0.001}
 ```
 
-### 扩展依赖采集器
+### 扩展依赖采集器 {#extension-dependent-collector}
 
 ```yaml
 pg_stat_statements_metrics:
@@ -442,12 +416,9 @@ pg_stat_statements_metrics:
     - mean_time: {usage: GAUGE, scale: 0.001}
 ```
 
+## 自定义采集器 {#custom-collectors}
 
---------
-
-## 自定义采集器
-
-### 创建自己的指标
+### 创建自己的指标 {#creating-your-own-metrics}
 
 1. 在配置目录中创建新的 YAML 文件：
 
@@ -473,7 +444,7 @@ app_metrics:
 pg_exporter --explain --config=/etc/pg_exporter/
 ```
 
-### 条件指标
+### 条件指标 {#conditional-metrics}
 
 使用谓词查询实现条件指标：
 
@@ -504,12 +475,9 @@ partition_metrics:
     - total_size: {usage: GAUGE}
 ```
 
+## 性能优化 {#performance-optimization}
 
---------
-
-## 性能优化
-
-### 查询优化技巧
+### 查询优化技巧 {#query-optimization-tips}
 
 1. **使用适当的 TTL 值**：
    - 快速查询：1-10 秒
@@ -532,7 +500,7 @@ partition_metrics:
      skip: true  # 如果不需要则禁用
    ```
 
-### 监控采集器性能
+### 监控采集器性能 {#monitoring-collector-performance}
 
 检查采集器执行统计：
 
@@ -543,9 +511,6 @@ curl http://localhost:9630/stat
 # 按 datname/query 维度查看每个采集器的耗时与错误
 curl -s http://localhost:9630/metrics | grep -E 'pg_exporter_query_scrape_(duration|error_count)'
 ```
-
-
---------
 
 ## 指标与告警的升级检查 {#metric-compatibility}
 
@@ -570,9 +535,9 @@ pg_wal_bytes{job="pg19"}
 
 `job="pg19"` 只是示例，须替换为实际目标选择器，并按部署方式补齐匹配标签；分别监控 `up` 和 `pg_up` 故障。缺失检查须考虑版本、主备角色与对象是否存在，例如主库不应要求 `pg_recovery_state_*`。不要用无条件 `or vector(0)` 掩盖缺失；整个集群的 `absent(metric)` 也无法识别其他目标仍有数据时的单目标缺失。完整规则见 [**缺失指标检查**](https://exp.pgsty.com/zh/compatibility/#missing-metric-alerts)。
 
-## 配置故障排查
+## 配置故障排查 {#troubleshooting-configuration}
 
-### 验证配置
+### 验证配置 {#validate-configuration}
 
 ```bash
 # 干运行 - 显示解析后的配置
@@ -582,7 +547,7 @@ pg_exporter --dry-run
 pg_exporter --explain
 ```
 
-### 常见问题
+### 常见问题 {#common-issues}
 
 | 问题    | 解决方案               |
 |-------|--------------------|
@@ -592,7 +557,7 @@ pg_exporter --explain
 | 权限错误  | 验证监控用户的查询权限        |
 {.full-width}
 
-### 调试日志
+### 调试日志 {#debug-logging}
 
 启用调试日志进行故障排查：
 

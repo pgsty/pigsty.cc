@@ -11,24 +11,21 @@ categories: [参考]
 | 端点                         | 方法       | 描述                                          |
 |----------------------------|----------|---------------------------------------------|
 | [`/metrics`](#get-metrics) | GET      | Prometheus 指标端点（路径可经 `--web.telemetry-path` 修改） |
-| [`/up`](#健康检查)             | GET      | 存活检查；别名 `/health`、`/liveness`、`/readiness`、`/read` |
-| [`/primary`](#流量路由)        | GET      | 主库检查；别名 `/leader`、`/master`、`/read-write`、`/rw` |
-| [`/replica`](#流量路由)        | GET      | 从库检查；别名 `/standby`、`/slave`、`/read-only`、`/ro` |
-| [`/reload`](#运维端点)         | GET/POST | 热重载采集器配置                                    |
-| [`/explain`](#运维端点)        | GET      | 展示各采集器的规划裁决结果                               |
-| [`/stat`](#运维端点)           | GET      | 各采集器的运行统计（命中/错误/耗时）                         |
+| [`/up`](#health-checks)    | GET      | 存活检查；别名 `/health`、`/liveness`、`/readiness`、`/read` |
+| [`/primary`](#traffic-routing) | GET  | 主库检查；别名 `/leader`、`/master`、`/read-write`、`/rw` |
+| [`/replica`](#traffic-routing) | GET  | 从库检查；别名 `/standby`、`/slave`、`/read-only`、`/ro` |
+| [`/reload`](#operational-endpoints) | GET/POST | 热重载采集器配置                            |
+| [`/explain`](#operational-endpoints) | GET | 展示各采集器的规划裁决结果                         |
+| [`/stat`](#operational-endpoints) | GET    | 各采集器的运行统计（命中/错误/耗时）                   |
 | `/version`                 | GET      | 版本与构建信息（文本）                                 |
 | `/`                        | GET      | 落地页，链接到指标端点                                 |
-{.full-width}
+{.full-width .wide .expand}
 
 健康与路由端点的判定基于后台探测缓存的角色状态（`primary` / `replica` / `down` / `starting` / `unknown`），不会在每次 HTTP 请求时同步查询数据库。v1.5.0 每次响应只读取一个原子状态快照，HTTP 状态码和正文始终对应同一状态；状态仍可能落后于数据库的最新变化。PgBouncer 探测成功映射为 `primary`，不代表其后端 PostgreSQL 的主从角色。
 
+## 指标端点 {#metrics-endpoint}
 
---------
-
-## 指标端点
-
-### GET /metrics
+### GET /metrics {#get-metrics}
 
 暴露所有采集指标的主端点，格式为 Prometheus 格式。
 
@@ -113,14 +110,11 @@ PostgreSQL 的内置指标前缀默认为 `pg`，PgBouncer 默认为 `pgbouncer`
 
 中断时，`pg_up` 保留主目标此前的可用状态；若本轮预检已成功，则保留为 1。首次预检在成功前被中断时，保持为 0，后续成功抓取可恢复。子数据库中断采用相同的单库规则，不增加主目标的错误计数。
 
-
---------
-
-## 健康检查
+## 健康检查 {#health-checks}
 
 健康检查端点提供多种方式来监控 PG Exporter 和目标数据库的状态。
 
-### GET /up
+### GET /up {#get-up}
 
 初始化后，HTTP 健康状态只由每秒一次的后台探测更新。慢采集不再占用探测所需的锁，采集完成也不会覆盖更新的探测结果。HTTP 健康请求只读取快照，不执行 SQL。`pg_up` 与 `pg_in_recovery` 仍属于采集指标：fatal 采集器失败可能使 `pg_up` 为 0，而数据库可达时 `/up` 仍返回 200。PostgreSQL 主连接池最多三个连接，PgBouncer 最多两个，每个发现数据库最多一个。
 
@@ -142,7 +136,7 @@ HTTP/1.1 200 OK
 Content-Type: text/plain; charset=utf-8
 ```
 
-### GET /health
+### GET /health {#get-health}
 
 `/up` 的别名，行为相同。
 
@@ -150,7 +144,7 @@ Content-Type: text/plain; charset=utf-8
 curl http://localhost:9630/health
 ```
 
-### GET /liveness 与 GET /readiness
+### GET /liveness 与 GET /readiness {#get-liveness-and-get-readiness}
 
 为 Kubernetes 探针习惯提供的路径别名，行为与 `/up` 完全一致（同一处理器）：
 
@@ -167,14 +161,11 @@ readinessProbe:
 
 注意二者语义相同：目标数据库不可达时都会返回 503。若不希望"数据库宕机导致 exporter Pod 被重启"，liveness 探针可以改用 TCP 探测监听端口。
 
-
---------
-
-## 流量路由
+## 流量路由 {#traffic-routing}
 
 这些端点专为负载均衡器和代理设计，根据服务器角色路由流量。
 
-### GET /primary
+### GET /primary {#get-primary}
 
 检查服务器是否为主库（primary）实例。
 
@@ -207,7 +198,7 @@ backend pg_primary
   server pg2 10.0.0.2:5432 check port 9630
 ```
 
-### GET /replica
+### GET /replica {#get-replica}
 
 检查服务器是否为从库（standby）实例。
 
@@ -241,7 +232,7 @@ backend pg_replicas
   server pg3 10.0.0.3:5432 check port 9630
 ```
 
-### GET /read
+### GET /read {#get-read}
 
 检查服务器是否可以处理读流量（主库和从库都可以）。
 
@@ -267,12 +258,9 @@ backend pg_read
   server pg3 10.0.0.3:5432 check port 9630
 ```
 
+## 运维端点 {#operational-endpoints}
 
---------
-
-## 运维端点
-
-### GET /reload / POST /reload
+### GET /reload / POST /reload {#get-reload-post-reload}
 
 在不重启导出器的情况下重新加载配置。
 
@@ -309,12 +297,12 @@ server reloaded
 - 添加或移除采集器
 
 > [!NOTE] 注意
-> 重载会刷新采集器配置、查询计划、缓存与查询统计；解析失败时保留原计划及缓存。空 YAML 是合法空配置，成功重载后会清空采集器。目录模式允许部分文件成功加载，详见 [配置加载](/docs/pg_exporter/config/#配置加载)。如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
+> 重载会刷新采集器配置、查询计划、缓存与查询统计；解析失败时保留原计划及缓存。空 YAML 是合法空配置，成功重载后会清空采集器。目录模式允许部分文件成功加载，详见 [配置加载](/docs/pg_exporter/config/#configuration-loading)。如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
 
 > [!WARNING] 安全建议
 > `/reload`、`/explain`、`/stat` 都属于管理端点。若 exporter 不仅在本机或可信内网使用，建议通过 `--web.config.file` 启用认证/TLS，或在反向代理 / 防火墙层限制访问。
 
-### GET /explain
+### GET /explain {#get-explain}
 
 显示主目标当前计划中选中的采集器；谓词在刷新时运行，不能从该端点判断谓词结果。
 
@@ -346,7 +334,7 @@ curl http://localhost:9630/explain
 ...
 ```
 
-### GET /stat
+### GET /stat {#get-stat}
 
 显示运行时统计信息，包括采集器执行时间和成功/失败计数。
 
@@ -368,12 +356,9 @@ pg_activity              12         0          1          0          8          
 
 此端点对于识别慢速或有问题的采集器非常有用。
 
+## 在负载均衡器中使用 {#using-with-load-balancers}
 
---------
-
-## 在负载均衡器中使用
-
-### HAProxy 配置示例
+### HAProxy 配置示例 {#haproxy-example}
 
 ```haproxy
 # 主库后端 - 用于写流量
@@ -404,6 +389,6 @@ backend pg_read
   server pg3 10.0.0.3:5432 check port 9630 inter 3000 fall 2 rise 2
 ```
 
-### 关于 Nginx
+### 关于 Nginx {#a-note-on-nginx}
 
 Nginx 开源版不支持基于旁路端口的主动 HTTP 健康检查（`health_check` 指令是 NGINX Plus 功能），且代理 PostgreSQL 流量需要 `stream` 模块而非 `http` 代理。按角色路由 PostgreSQL 流量请优先使用上面的 HAProxy 方案，或 Patroni + vip-manager 等方案。

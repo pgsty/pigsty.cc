@@ -8,12 +8,9 @@ categories: [教程]
 
 本页是一条最短路径：安装 `pg_exporter`，连上一个 PostgreSQL 实例，确认指标产出，接入 Prometheus。
 
-你需要准备的东西只有两样：一个可访问的 PostgreSQL 10-19+（或 pgBouncer 1.8+）实例，以及在其中创建用户的权限。更老的 PostgreSQL 9.1-9.6 实例请参阅 [兼容性说明](/docs/pg_exporter/install/#兼容性)。
+你需要准备的东西只有两样：一个可访问的 PostgreSQL 10-19+（或 pgBouncer 1.8+）实例，以及在其中创建用户的权限。更老的 PostgreSQL 9.1-9.6 实例请参阅 [兼容性说明](/docs/pg_exporter/install/#compatibility)。
 
-
---------
-
-## 第 1 步：安装
+## 第 1 步：安装 {#step-1-install}
 
 Linux amd64 可以直接下载二进制（其他平台与 RPM/DEB/Docker 安装方式见 [安装指南](/docs/pg_exporter/install/)）：
 
@@ -33,10 +30,7 @@ pg_exporter --version
 # pg_exporter v1.6.0 (built with go1.27.3 on linux/amd64)
 ```
 
-
---------
-
-## 第 2 步：创建监控用户
+## 第 2 步：创建监控用户 {#step-2-create-a-monitoring-user}
 
 在目标 PostgreSQL 上创建一个专用监控用户。首先授予 PostgreSQL 10+ 内置的 `pg_monitor` 角色：
 
@@ -53,10 +47,7 @@ GRANT SELECT (oid) ON pg_catalog.pg_subscription TO monitor;
 
 如果你只是在本机以 `postgres` 等超级用户试用，可以跳过这一步。
 
-
---------
-
-## 第 3 步：启动并验证
+## 第 3 步：启动并验证 {#step-3-run-and-verify}
 
 先用 `--dry-run` 确认配置能正确解析，再正式启动：
 
@@ -85,10 +76,7 @@ pg_in_recovery 0     # 从库为 1，主库为 0
 
 `pg_up` 为 `1` 表示最近有效采集的主目标可达且没有 fatal 错误，`pg_exporter.yml` 提供 460 个去重后的指标定义（`pg_db_*`、`pg_table_*`、`pg_wal_*` 等），按版本、角色与对象情况输出其中适用的指标。如果 `pg_up` 为 `0`，用 `pg_exporter --log.level=debug` 查看连接与 fatal 查询错误；首次预检中断也可能暂时保持为 0。HTTP 健康检查与采集指标的区别见 [API](/docs/pg_exporter/api/)。
 
-
---------
-
-## 第 4 步：接入 Prometheus
+## 第 4 步：接入 Prometheus {#step-4-hook-into-prometheus}
 
 在 `prometheus.yml` 中添加抓取目标：
 
@@ -104,10 +92,7 @@ scrape_configs:
 
 到这里就完成了。Grafana 侧可以直接复用 [Pigsty](https://pigsty.cc) 的 PostgreSQL 仪表盘，或到 [在线演示](https://g.pgsty.com) 看实际效果。
 
-
---------
-
-## 常见问题排查
+## 常见问题排查 {#troubleshooting}
 
 | 症状 | 排查方法 |
 |------|---------|
@@ -119,10 +104,7 @@ scrape_configs:
 
 `/stat`、`/explain`、`/reload` 属于管理端点，生产环境建议配合 `--web.config.file` 启用认证/TLS，或仅在内网开放，详见 [API 参考](/docs/pg_exporter/api/)。
 
-
---------
-
-## 下一步
+## 下一步 {#next-steps}
 
 - 监控 **pgBouncer**、启用 **自动发现**、配置 **systemd/Docker/Kubernetes** 生产部署：[部署指南](/docs/pg_exporter/deploy/)
 - 理解与定制 **采集器**（GAUGE/COUNTER/HISTOGRAM、TTL、标签、版本门槛）：[配置参考](/docs/pg_exporter/config/)
