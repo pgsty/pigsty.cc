@@ -83,7 +83,7 @@ PG Exporter v1.6.0 将健康探测与指标采集解耦，限制并发抓取与�
 
 发布验证覆盖完整 race 测试、两种 HTTP mux、模块与生成配置一致性、静态检查、六平台构建、容器 TLS／文件校验和软件包验证。三个取消回归用例还在 race 检测下连续 200 轮通过；此前移除中断修复的反向对照失败。PostgreSQL 18.6 上，客户端在 0.8 秒有界 fatal 查询期间离开，两个轮次错误计数保持为 0；下一次抓取返回 `pg_up 1` 与缓存指标，没有重跑 SQL。
 
-对实际发布制品的本地验收还覆盖 PostgreSQL 9.2–9.6（legacy 配置）、10–18 与 19 RC1（默认配置），以及 PgBouncer 1.26.1。Linux amd64／arm64／ppc64le 压缩包及 RPM／DEB 通过运行与安装检查；ARM64 软件包从 1.5.0 升级后保留本地配置。Darwin ARM64 的 24 组功能测试通过，覆盖 HTTPS 认证、重载重叠、备库晋升和断连恢复。Windows 与 Intel macOS 仅做静态检查；容器内的软件包测试未验证真实 systemd 启动。
+对实际发布制品的本地验收还覆盖 PostgreSQL 9.2–9.6（legacy 配置）、10–18 与 19 RC1（默认配置），以及 PgBouncer 1.26.1。Linux amd64／arm64／ppc64le 压缩包及 RPM／DEB 通过运行与安装检查；ARM64 软件包从 1.5.0 升级后保留本地配置。Darwin ARM64 的 24 组功能测试通过，覆盖 HTTPS 认证、重载重叠、备库晋升和断连恢复。Windows 与 Intel macOS 仅做静态检查；容器内的软件包测试未验证真实 systemd 启动。Docker Hub 上的 `1.6.0` 与 `latest` 标签已指向同一份 amd64／arm64 多架构清单；两个公开镜像拉取后通过 CA、文件内容与 TLS 校验，其二进制与对应发布压缩包逐字节一致。
 
 进度 SQL 分支已使用监控角色在 PostgreSQL 12、17、18 上验证；系统目录补充场景与真实跨库 VACUUM 在 18.6 上验证。这些是限定场景的验收结果，不是对全部 PostgreSQL 版本、扩展、仪表盘和生产负载重新完成的完整审计。Composite、Patroni、pgBackRest 与 PostgreSQL 日志组件仍在独立的 `snort` 开发线上，不包含在 v1.6.0 中。
 
