@@ -13,7 +13,7 @@ categories: [参考]
 
 恢复会替换目标目录中的数据。先用 `--plan` 检查目录、备份来源、恢复目标和服务操作。
 
-## 恢复前准备
+## 恢复前准备 {#before-recovery}
 
 需要已安装的 pgBackRest、可读取的配置文件、可用备份，以及到达恢复目标所需的 WAL 归档。
 默认配置文件是 `/etc/pgbackrest/pgbackrest.conf`。使用 `-c` 选择其他配置文件，使用 `-s` 选择 stanza。
@@ -32,7 +32,7 @@ categories: [参考]
 
 需要自行安排服务停止与启动步骤时，使用 [`pig pb restore`](/docs/pig/pb/#pb-restore)。
 
-## 快速入门
+## 快速入门 {#quick-start}
 
 以下示例将已有托管数据目录恢复到指定时间。将时间戳替换为实际恢复目标：
 
@@ -56,9 +56,9 @@ pig pg psql -D /pg/data
 指定时间、还原点、LSN、事务 ID 或 immediate 目标时，PostgreSQL 通常在到达目标后暂停恢复。
 先检查数据，再提升主库。步骤见 [恢复后操作](#post-recovery-actions)。
 
-## 参数说明
+## 参数说明 {#parameters}
 
-### 恢复目标
+### 恢复目标 {#recovery-target}
 
 必须且只能选择一个目标。缺少目标时返回错误，文本模式还会显示帮助。
 
@@ -74,7 +74,7 @@ pig pg psql -D /pg/data
 
 `--set` 只选择备份，仍需指定恢复目标。
 
-### 备份与目标选项
+### 备份与目标选项 {#backup-and-target-options}
 
 | 参数 | 简写 | 说明 |
 |:---|:---|:---|
@@ -89,7 +89,7 @@ pig pg psql -D /pg/data
 
 `--target-action` 不能与 `--default` 同用。`--exclusive` 要求同时指定 `--time`、`--lsn` 或 `--xid`。
 
-### 流程控制
+### 流程控制 {#flow-control}
 
 | 参数 | 简写 | 默认值 | 说明 |
 |:---|:---|:---|:---|
@@ -100,7 +100,7 @@ pig pg psql -D /pg/data
 | `--force-stop` | | false | 快速关闭失败时，允许立即关闭及终止进程 |
 {.full-width}
 
-### 配置参数
+### 配置参数 {#configuration}
 
 | 参数 | 简写 | 默认值或来源 |
 |:---|:---|:---|
@@ -111,7 +111,7 @@ pig pg psql -D /pg/data
 | `--data` | `-D` | 目标目录；配置中的 `pg1-path`、`$PGDATA`、`/pg/data`，按此顺序选择 |
 {.full-width .wide .expand}
 
-### 原生恢复参数
+### 原生恢复参数 {#native-restore-options}
 
 额外的 pgBackRest 参数放在 `--` 之后：
 
@@ -123,7 +123,7 @@ pig pitr -d -- --delta
 覆盖这些设置的原生参数会被拒绝，包括 `--repoN-*` 和 `--recovery-option`。
 其他恢复参数可以转发，例如 `--delta`、`--tablespace-map`、`--link-map` 和 `--link-all`。
 
-## 时间格式
+## 时间格式 {#time-format}
 
 PIG 按当前日期和本地时区补全缺少的部分：
 
@@ -138,7 +138,7 @@ PIG 按当前日期和本地时区补全缺少的部分：
 脚本中使用带时区的完整时间戳。计划和建议的后续命令会将简写展开为完整时间戳，
 使重复执行时仍使用相同目标。
 
-## 托管目录与旁路恢复
+## 托管目录与旁路恢复 {#managed-directory-and-side-restore}
 
 托管目录依次取自所选 stanza 的 `pg1-path`、`$PGDATA`、`/pg/data`，其中必须已有初始化的 PostgreSQL 实例。
 显式 `-D` 解析后仍指向此路径时，继续按托管恢复处理，软链接也按实际目标判断。
@@ -167,7 +167,7 @@ pig pg psql -D /tmp/pg-restore
 `pig pg psql -D` 读取恢复目录中的 `postmaster.pid`，使用其中的端口和 socket 连接实例。
 无法解析该实例时返回错误。
 
-## 执行流程
+## 执行流程 {#execution-flow}
 
 1. 检查参数、配置、目标目录、stanza 状态和可用备份。指定 `--set` 时，检查备份标签是否存在。
 2. 显示操作并请求确认；指定 `--yes` 时跳过确认。
@@ -187,7 +187,7 @@ PIG 不会覆盖恢复到状态未确认的实例，也不会用未经验证的 
 
 `--plan` 执行预检查并返回计划，需要访问配置、数据目录和备份仓库，但不会停止服务或恢复数据。
 
-## 更多示例
+## 更多示例 {#more-examples}
 
 按需要选择一条恢复命令：
 
@@ -236,13 +236,13 @@ pig pitr -t "2025-01-15 09:30:00+08" --target-action=promote -- --delta
 检查 PostgreSQL 和 pgBackRest 日志，修复问题并完成恢复，再启动 Patroni。
 启动超时也需要检查原因；它不会撤销已经恢复的文件。
 
-## 结构化输出
+## 结构化输出 {#structured-output}
 
 使用 `--plan -o json` 查看结构化计划，使用 `--yes -o json` 无交互执行。也可以选择 YAML。
 
 成功结果的 `data` 包含 `requested_data_dir`、`effective_data_dir`、`managed_data_dir` 和 `side_restore`。
 后续命令位于结果顶层的 `next_actions` 字段。
 
-## 设计记录
+## 设计记录 {#design-record}
 
 [PIG 运维 CLI 安全契约](https://pig.pgsty.com/zh/design/ops-cli-safety/) 解释 `pig pb restore` 与 `pig pitr` 的分工。

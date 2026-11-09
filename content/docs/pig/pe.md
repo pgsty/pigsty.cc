@@ -17,7 +17,7 @@ pig pe stat                    # 查看 exporter 统计信息
 pig pe reload                  # 重载 exporter 配置
 ```
 
-## 选择 exporter
+## 选择 exporter {#select-an-exporter}
 
 默认端点为 `http://127.0.0.1:9630`。使用以下参数选择其他实例：
 
@@ -35,7 +35,7 @@ pig pe --host 10.10.10.10 get
 PIG 使用 HTTP 和标准的 `/metrics`、`/stat`、`/reload` 路径。
 需要 HTTPS、身份认证、客户端证书或自定义路径时，使用 `curl` 等 HTTP 客户端。
 
-## pe get
+## pe get {#pe-get}
 
 读取 `/metrics`，输出名称以 `pg_` 开头的指标样本，以及对应的 Prometheus `HELP` 和 `TYPE` 行。
 
@@ -50,7 +50,7 @@ pig pe --host pg-meta get
 curl -fsS http://127.0.0.1:9630/metrics
 ```
 
-## pe list
+## pe list {#pe-list}
 
 读取 `/metrics`，为响应中的每个 `pg_` 指标族输出一条 `HELP` 行。
 列表反映 exporter 的当前配置。
@@ -59,7 +59,7 @@ curl -fsS http://127.0.0.1:9630/metrics
 pig pe list
 ```
 
-## pe stat
+## pe stat {#pe-stat}
 
 读取 `/stat` 并输出响应。响应格式取决于已安装的 pg_exporter 版本。
 
@@ -67,7 +67,7 @@ pig pe list
 pig pe stat
 ```
 
-## pe reload
+## pe reload {#pe-reload}
 
 修改 exporter 配置后，通过 `/reload` 请求重载：
 
@@ -75,7 +75,7 @@ pig pe stat
 pig pe reload
 ```
 
-## 输出与错误
+## 输出与错误 {#output-and-errors}
 
 使用 `-o json` 或 `-o yaml` 获取包含命令文本输出的 PIG 结果。
 Prometheus 指标在结果中仍以文本保存。

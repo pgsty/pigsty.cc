@@ -44,7 +44,7 @@ PIG 在解析路径前展开 `~/`，包括 `ansible.cfg` 中带引号的路径�
 [`pig sty deploy`](/docs/pig/sty/#sty-deploy) 要求普通文件。两者都显式向 Ansible 传入解析后的路径，
 避免 Ansible 静默选择另一份默认清单。
 
-## 快速入门
+## 快速入门 {#quick-start}
 
 ```bash
 pig inventory status                     # 当前生效的清单来源是什么？
@@ -55,7 +55,7 @@ pig inventory check -p ssh --sudo        # 附加 SSH/sudo 就绪探测
 pig inventory diff /path/other.yml       # 与另一份清单对比声明
 ```
 
-## inv status / list / show
+## inv status / list / show {#inv-status-list-show}
 
 ```bash
 pig inv status                          # 显示当前清单路径与来源类型
@@ -66,7 +66,7 @@ pig inv show pg-meta                    # 原样输出集群 YAML
 
 `status` 检查来源，不执行动态清单。`list` 显示分组、主机、键名与取值类型。`show` 输出实际取值，包括配置中的密码；加上 `-o json` 也不会改变其 YAML 输出。
 
-## 选择器
+## 选择器 {#selectors}
 
 `list` / `show` / `edit` 接受可选的 **选择器** 参数，定位清单中的一个片段：
 
@@ -78,7 +78,7 @@ pig inv e pg-meta.vars.pg_databases      # 嵌套键路径
 pig inv e 'pg-meta.hosts["10.10.10.10"]' # 含点的键（如 IP）用引号方括号
 ```
 
-## inv edit
+## inv edit {#inv-edit}
 
 在 `$EDITOR` 中打开选中片段。保存退出后，PIG 恢复缩进和换行风格，重新解析完整文档，检查原文件是否被并发修改，再原子替换原文件。解析失败时会保留临时文件，供你修正。
 
@@ -95,7 +95,7 @@ pig inv e vars --from vars.yml           # 从文件（或 stdin：-）替换选
 
 保存后的文件归当前用户所有，并移除组和其他用户的访问权限。通常权限变为 `0600`；原有更严格的仅属主权限会保留。结构化结果中的 `mode_tightened` 表示权限是否收紧。
 
-## inv validate
+## inv validate {#inv-validate}
 
 校验一份完整的静态 Pigsty 清单：YAML 结构、Ansible 约定与 Pigsty 语义（如 `admin_ip`、`infra`
 分组、主机 IPv4 键等）逐层检查，诊断信息不回显敏感取值。
@@ -124,7 +124,7 @@ pig inv v --strict -o json               # 结构化输出（CI 友好）
 或显式标记为时间戳的值保留原始内容，其标量类型为不透明的 `unknown`；需要字符串时应加引号。
 `show` 和显式 CMDB 导出保留原始数据输出契约。
 
-## inv check
+## inv check {#inv-check}
 
 在静态校验之上做就绪体检：默认只检查清单与控制器本地条件，可用 `--profile` 追加探测。
 
@@ -146,7 +146,7 @@ pig inv ck -p ssh --sudo                 # SSH 探测并验证 sudo -n
 
 `--user` 和 `--port` 使用显式参数或上表中的默认值，不从 Inventory 推导有效 SSH 变量。可用逗号组合检查，例如 `--profile ansible,ssh`。
 
-## inv diff
+## inv diff {#inv-diff}
 
 比较当前清单与另一份文件，输出声明的增加、删除和修改。结果包含路径与取值类型，不包含配置值：
 
@@ -155,7 +155,7 @@ pig inv diff other.yml
 pig inv diff other.yml -o json
 ```
 
-## inv cmdb（实验性）
+## inv cmdb（实验性） {#inv-cmdb}
 
 `pig inventory cmdb` 通过原生 PostgreSQL 驱动，与 Pigsty 既有的 CMDB 模式
 （`files/cmdb.sql`，`pigsty` / `pglog` schema）交换配置清单。连接解析顺序：
@@ -182,7 +182,7 @@ pig inventory cmdb disable               # 切回静态 pigsty.yml
 
 `init` 会执行 `cmdb.sql`，覆盖已有 `pigsty` / `pglog` schema；执行前先备份需要保留的数据。`load` 在单个事务中替换全部声明行。交互模式会要求确认目标；自动化和结构化输出模式使用 `--yes` 确认。用 `--plan` 查看操作内容。
 
-## 设计记录
+## 设计记录 {#design-records}
 
 - [无损 Pigsty Inventory](https://pig.pgsty.com/zh/design/lossless-inventory/)
 - [复用 Pigsty 已经拥有的 CMDB](https://pig.pgsty.com/zh/design/existing-cmdb-boundary/)

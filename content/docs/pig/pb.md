@@ -17,9 +17,9 @@ PIG 以 PostgreSQL 操作系统用户运行 pgBackRest，依次从 `--dbsu`、`$
 需要同时停止 Patroni、停止 PostgreSQL 并在恢复后启动 PostgreSQL 时，使用 [`pig pitr`](/docs/pig/pitr/)。
 自行管理这些步骤时，使用 `pig pb restore`。
 
-## 命令概览
+## 命令概览 {#command-overview}
 
-**信息查询**：
+信息查询：
 
 | 命令        | 缩写   | 描述              | 实现方式              |
 |:----------|------|:----------------|:------------------|
@@ -27,7 +27,7 @@ PIG 以 PostgreSQL 操作系统用户运行 pgBackRest，依次从 `--dbsu`、`$
 | `pb list` | `ls` | 列出备份集、仓库和 stanza | `pgbackrest info` 与配置文件 |
 {.full-width}
 
-**备份与恢复**：
+备份与恢复：
 
 | 命令           | 缩写  | 描述       | 实现方式                 |
 |:-------------|-----|:---------|:---------------------|
@@ -36,7 +36,7 @@ PIG 以 PostgreSQL 操作系统用户运行 pgBackRest，依次从 `--dbsu`、`$
 | `pb expire`  | `e` | 清理过期备份   | `pgbackrest expire`  |
 {.full-width}
 
-**Stanza 管理**：
+Stanza 管理：
 
 | 命令           | 缩写  | 描述                   | 实现方式                        |
 |:-------------|-----|:---------------------|:----------------------------|
@@ -45,7 +45,7 @@ PIG 以 PostgreSQL 操作系统用户运行 pgBackRest，依次从 `--dbsu`、`$
 | `pb delete`  | `d` | 删除 stanza 及其备份     | `pgbackrest stanza-delete`  |
 {.full-width}
 
-**控制命令**：
+控制命令：
 
 | 命令         | 别名   | 描述               | 实现方式               |
 |:-----------|:-----|:-----------------|:-------------------|
@@ -55,7 +55,7 @@ PIG 以 PostgreSQL 操作系统用户运行 pgBackRest，依次从 `--dbsu`、`$
 | `pb log`   | `l`  | 查看日志             | 最新日志快照 / tail      |
 {.full-width}
 
-## 创建首次备份 {#快速入门}
+## 创建首次备份 {#quick-start}
 
 配置好 pgBackRest 与 WAL 归档后，创建 stanza 并检查配置：
 
@@ -71,7 +71,7 @@ pig pb backup full
 pig pb info
 ```
 
-## 全局参数
+## 全局参数 {#global-options}
 
 以下参数适用于所有 `pig pb` 子命令：
 
@@ -83,7 +83,7 @@ pig pb info
 | `--dbsu`   | `-U` | PostgreSQL 操作系统用户（默认：`$PIG_DBSU` 或 `postgres`） |
 {.full-width}
 
-**Stanza 自动检测：**
+Stanza 自动检测：
 
 如果未指定 `-s` 参数，PIG 会从配置文件中自动检测 stanza 名称：
 
@@ -91,9 +91,9 @@ pig pb info
 2. 查找非 `[global*]` 开头的 section
 3. 使用找到的第一个 stanza
 
-如果配置文件中有多个 stanza，会发出警告并使用第一个。此时应显式指定 `--stanza` 参数。
+如果配置文件中有多个 stanza，会发出警告并使用第一个（`pb delete` 除外，它会拒绝自动选择并要求显式指定 `--stanza`）。配置包含多个 stanza 时，应显式指定 `--stanza` 参数。
 
-**多仓库支持：**
+多仓库支持：
 
 pgBackRest 支持配置多个仓库（repo1、repo2 等）。使用 `-r` 参数指定操作的目标仓库：
 
@@ -103,9 +103,9 @@ pig pb backup -r 2                   # 备份到 repo2
 pig pb info -r 2                     # 查看 repo2 的备份信息
 ```
 
-## 信息查询命令
+## 信息查询命令 {#information-commands}
 
-### pb info
+### pb info {#pb-info}
 
 显示备份仓库详细信息，包括所有备份集和 WAL 归档状态。
 
@@ -115,8 +115,6 @@ pig pb info --raw --raw-output json  # 原始 JSON 输出
 pig pb info --set 20250101-120000F   # 显示特定备份集详情
 ```
 
-**选项：**
-
 | 参数             | 简写   | 说明                             |
 |:---------------|:-----|:-------------------------------|
 | `--raw`        | `-R` | 原始输出模式（透传 pgBackRest 输出）       |
@@ -124,7 +122,7 @@ pig pb info --set 20250101-120000F   # 显示特定备份集详情
 | `--set`        |      | 显示特定备份集详情                      |
 {.full-width}
 
-### pb ls
+### pb ls {#pb-ls}
 
 列出备份仓库中的资源。
 
@@ -135,8 +133,6 @@ pig pb ls repo                       # 列出配置的仓库
 pig pb ls stanza                     # 列出所有 stanza
 ```
 
-**类型说明：**
-
 | 类型     | 描述          | 数据来源               |
 |:-------|:------------|:-------------------|
 | backup | 列出所有备份集（默认） | pgbackrest info    |
@@ -144,9 +140,9 @@ pig pb ls stanza                     # 列出所有 stanza
 | stanza | 列出所有 stanza | 解析 pgbackrest.conf |
 {.full-width}
 
-## 备份命令
+## 备份命令 {#backup-commands}
 
-### pb backup
+### pb backup {#pb-backup}
 
 创建物理备份。PIG 在执行 pgBackRest 前检查本地实例是否为主库。
 
@@ -158,14 +154,12 @@ pig pb backup incr                   # 增量备份
 pig pb backup --force                # 跳过主库角色检查
 ```
 
-**选项：**
-
 | 参数        | 简写   | 说明       |
 |:----------|:-----|:---------|
 | `--force` | `-f` | 跳过主库角色检查 |
 {.full-width}
 
-**备份类型：**
+备份类型：
 
 | 类型   | 说明                |
 |:-----|:------------------|
@@ -178,7 +172,7 @@ pig pb backup --force                # 跳过主库角色检查
 备库、已停止的实例或无法确定的角色都不能通过检查。
 如果需要按 pgBackRest 配置处理主备角色，使用 `--force` 跳过 PIG 检查；pgBackRest 仍执行自己的备份检查。
 
-### pb expire
+### pb expire {#pb-expire}
 
 按配置的保留策略删除备份和 WAL 归档。
 `--set` 使用完整备份标签，还会删除依赖该备份的其他备份。此次操作仍会执行 WAL 保留策略。
@@ -191,8 +185,6 @@ pig pb expire --set 20250101-120000F -y    # 跳过删除备份集确认
 pig pb expire --plan                 # 仅预览清理计划，不删除
 ```
 
-**选项：**
-
 | 参数       | 简写   | 说明                  |
 |:---------|:-----|:--------------------|
 | `--set`  |      | 删除特定备份集             |
@@ -203,8 +195,6 @@ pig pb expire --plan                 # 仅预览清理计划，不删除
 `--plan` 执行 pgBackRest 试运行。使用结构化输出时，PIG 计划会包含可用的试运行结果。
 通过该结果检查将受影响的备份。
 
-**保留策略配置：**
-
 保留策略在 `pgbackrest.conf` 中配置：
 
 ```ini
@@ -214,9 +204,9 @@ repo1-retention-diff=4               # 保留的差异备份数
 repo1-retention-archive=2            # WAL 归档保留策略
 ```
 
-## 恢复命令
+## 恢复命令 {#restore-commands}
 
-### pb restore
+### pb restore {#pb-restore}
 
 将备份文件恢复到目标数据目录。PostgreSQL 必须已停止。
 必须且只能选择一个恢复目标：`-d`、`-I`、`-t`、`--name`、`--lsn` 或 `--xid`。
@@ -245,7 +235,7 @@ pig pb restore -d -y                 # 跳过 y/yes 交互确认
 pig pb restore -d -- --delta         # 在 -- 后透传 pgBackRest restore 参数
 ```
 
-**恢复目标选项：**
+恢复目标选项：
 
 | 参数            | 简写   | 说明                |
 |:--------------|:-----|:------------------|
@@ -257,7 +247,7 @@ pig pb restore -d -- --delta         # 在 -- 后透传 pgBackRest restore 参�
 | `--xid`       |      | 恢复到指定事务 ID        |
 {.full-width}
 
-**备份集和其他选项：**
+备份集和其他选项：
 
 | 参数                  | 简写   | 说明                                       |
 |:--------------------|:-----|:-----------------------------------------|
@@ -271,14 +261,12 @@ pig pb restore -d -- --delta         # 在 -- 后透传 pgBackRest restore 参�
 | `--` 后的原生参数         |      | 透传 pgBackRest restore 参数，例如 `-- --delta` |
 {.full-width}
 
-**组合规则：** `--target-action` 不能与 `--default` 同时使用，因为 `--default` 已表示恢复到 WAL 末尾。`--exclusive/-X` 必须配合明确的停止目标使用：`--time`、`--lsn` 或 `--xid`。
+**组合规则**：`--target-action` 不能与 `--default` 同时使用，因为 `--default` 已表示恢复到 WAL 末尾。`--exclusive/-X` 必须配合明确的停止目标使用：`--time`、`--lsn` 或 `--xid`。
 
 使用 PIG 参数设置恢复目标、数据目录、stanza、仓库和配置文件。
 PIG 会拒绝覆盖这些设置的原生参数，包括 `--repoN-*` 和 `--recovery-option`。
 其他恢复参数放在 `--` 之后，例如 `--delta`、`--tablespace-map`、`--link-map` 或 `--link-all`。
 恢复到已有数据目录时，使用 `-- --delta` 按校验和复用文件并恢复差异。
-
-**时间格式：**
 
 支持多种时间格式输入，自动补全时区（支持非整小时时区如 +05:30）：
 
@@ -289,7 +277,7 @@ PIG 会拒绝覆盖这些设置的原生参数，包括 `--repoN-*` 和 `--recov
 | 仅时间  | `12:00:00`               | 自动补全为今天（当前时区）          |
 {.full-width}
 
-**恢复流程：**
+恢复流程：
 
 1. 验证参数和环境
 2. 检查 PostgreSQL 已停止
@@ -313,9 +301,9 @@ pig pg psql -D /pg/data
 文本模式会在恢复前要求输入 `y` 或 `yes`。脚本使用 `-o json` 或 `-o yaml` 时，
 加 `--yes` 执行，或用 `--plan` 查看计划。
 
-## Stanza 管理命令
+## Stanza 管理命令 {#stanza-management-commands}
 
-### pb create
+### pb create {#pb-create}
 
 初始化新的 stanza。必须在首次备份前执行。
 
@@ -325,15 +313,13 @@ pig pb create --no-online            # PostgreSQL 未运行时创建
 pig pb create --force                # 强制创建
 ```
 
-**选项：**
-
 | 参数            | 简写   | 说明                |
 |:--------------|:-----|:------------------|
 | `--no-online` |      | PostgreSQL 未运行时创建 |
 | `--force`     | `-f` | 强制创建              |
 {.full-width}
 
-### pb upgrade
+### pb upgrade {#pb-upgrade}
 
 PostgreSQL 大版本升级后更新 stanza。
 
@@ -342,18 +328,14 @@ pig pb upgrade                       # 升级 stanza
 pig pb upgrade --no-online           # PostgreSQL 未运行时升级
 ```
 
-**选项：**
-
 | 参数            | 说明                |
 |:--------------|:------------------|
 | `--no-online` | PostgreSQL 未运行时升级 |
 {.full-width}
 
-**使用场景：**
-
 当 PostgreSQL 进行大版本升级（如 16 → 17）后，需要执行此命令更新 stanza 元数据。
 
-### pb delete
+### pb delete {#pb-delete}
 
 删除 stanza 及其所有备份。
 
@@ -363,8 +345,6 @@ pig pb delete --yes                  # 跳过 y/yes 交互确认
 pig pb delete --plan                 # 预览删除计划
 ```
 
-**选项：**
-
 | 参数       | 简写   | 说明             |
 |:---------|:-----|:---------------|
 | `--plan` |      | 仅预览删除计划，不执行    |
@@ -372,11 +352,11 @@ pig pb delete --plan                 # 预览删除计划
 {.full-width}
 
 删除会永久移除所选 stanza 的备份。文本模式下输入 `y` 或 `yes` 确认，或使用 `--yes`。
-结构化执行必须加 `--yes`。配置包含多个 stanza 时，用 `--stanza` 指定目标。
+结构化执行必须加 `--yes`。配置包含多个 stanza 时，`pb delete` 会拒绝自动选择；请用 `--stanza` 显式指定目标。
 
-## 控制命令
+## 控制命令 {#control-commands}
 
-### pb check
+### pb check {#pb-check}
 
 检查 stanza 配置、仓库访问和 WAL 归档。
 
@@ -393,7 +373,7 @@ pig pb check                         # 检查配置与归档
 `check` 不会逐一读取备份文件并校验内容。需要校验备份与归档的校验和时，使用 pgBackRest
 [`verify`](https://pgbackrest.org/command.html#command-verify)。
 
-### pb start
+### pb start {#pb-start}
 
 启用 pgBackRest 操作。
 
@@ -403,7 +383,7 @@ pig pb start                         # 启用操作
 
 在执行 `pb stop` 后使用此命令恢复正常操作。
 
-### pb stop
+### pb stop {#pb-stop}
 
 禁用 pgBackRest 操作（用于维护）。
 
@@ -412,20 +392,16 @@ pig pb stop                          # 禁用操作
 pig pb stop --force                  # 终止正在运行的操作
 ```
 
-**选项：**
-
 | 参数        | 简写   | 说明        |
 |:----------|:-----|:----------|
 | `--force` | `-f` | 终止正在运行的操作 |
 {.full-width}
 
-**使用场景：**
-
 在进行系统维护时，使用此命令阻止新的备份操作启动。
 
-## 日志命令
+## 日志命令 {#log-commands}
 
-### pb log
+### pb log {#pb-log}
 
 查看 pgBackRest 日志文件。日志目录优先读取 pgBackRest 配置中的 `log-path`，未配置时使用 `/pg/log/pgbackrest/`。父命令默认显示最新日志快照，实时跟踪请使用 `tail` 或 `-f`。只有 `pb log` 与 `pb log show` 支持 `-o json` 输出 JSONL；日志快照不支持 `yaml` 与 `json-pretty`，follow/tail 不支持结构化输出。
 
@@ -439,7 +415,7 @@ pig pb log show -n 50                # 显示最后 50 行
 pig pb log cat                       # show 的别名
 ```
 
-**子命令：**
+子命令：
 
 | 子命令    | 别名             | 说明           |
 |:-------|:---------------|:-------------|
@@ -448,7 +424,7 @@ pig pb log cat                       # show 的别名
 | tail   | t, f, follow   | 实时跟踪最新日志     |
 {.full-width}
 
-**选项：**
+选项：
 
 | 参数         | 简写   | 默认值   | 说明                                                         |
 |:-----------|:-----|:------|:-----------------------------------------------------------|
@@ -456,11 +432,9 @@ pig pb log cat                       # show 的别名
 | `--follow` | `-f` | false | 使 `pb log` 持续跟踪；`pb log tail` 始终跟踪 |
 {.full-width}
 
-**权限处理：**
-
 如果当前用户没有权限读取日志目录，命令会自动使用 `sudo` 重试。
 
-## 路径与权限
+## 路径与权限 {#paths-and-privileges}
 
 | 设置 | 默认值 |
 |:---|:---|
@@ -476,6 +450,6 @@ root 使用 `su`；其他用户使用 `sudo -H -u`。
 这些命令采用 Linux 和 Pigsty 默认路径。其他目录布局可显式指定配置文件和 stanza。
 PIG 未提供的 pgBackRest 操作，直接使用 `pgbackrest` 命令。
 
-## 设计记录
+## 设计记录 {#design-record}
 
 [PIG 运维 CLI 安全契约](https://pig.pgsty.com/zh/design/ops-cli-safety/) 解释 `pb restore` 与 `pig pitr` 恢复流程的分工。

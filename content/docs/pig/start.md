@@ -10,9 +10,9 @@ categories: [教程]
 
 本教程安装 PostgreSQL 18 和 pgvector，启动本地测试实例，并在数据库中启用扩展。
 
-准备一台 [受支持的 Linux 测试主机](/docs/pig/intro/#linux-兼容性)，确保能联网并已安装 `curl`。你需要 root 或 `sudo` 权限。按顺序执行以下命令。
+准备一台 [受支持的 Linux 测试主机](/docs/pig/intro/#linux-compatibility)，确保能联网并已安装 `curl`。你需要 root 或 `sudo` 权限。按顺序执行以下命令。
 
-## 安装 PIG {#安装}
+## 安装 PIG {#installation}
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/pig | bash
@@ -21,7 +21,7 @@ pig version
 
 中国大陆以外可使用 `https://repo.pigsty.io/pig`。安装脚本会选择与主机匹配的 RPM 或 DEB 包。其他方式见 [安装](/docs/pig/install/)。
 
-## 检查主机 {#检查环境}
+## 检查主机 {#check-environment}
 
 ```bash
 pig status
@@ -29,7 +29,7 @@ pig status
 
 查看操作系统代码、CPU 架构和已检测到的 PostgreSQL 安装。此命令也会测试软件仓库的连通性。
 
-## 添加仓库 {#添加仓库}
+## 添加仓库 {#add-repositories}
 
 添加 PGDG 与 Pigsty PostgreSQL 仓库，并刷新软件包元数据：
 
@@ -39,7 +39,7 @@ sudo pig repo add pgsql --update
 
 需要中国镜像时，在命令后加上 `--mirror`。
 
-## 安装 PostgreSQL 与 pgvector {#安装-pg}
+## 安装 PostgreSQL 与 pgvector {#install-pg}
 
 ```bash
 sudo pig install -v 18 pg18 vector
@@ -101,7 +101,7 @@ sudo pig pg stop -v 18 -D /pg/data-demo
 
 数据保留在 `/pg/data-demo` 中。再次执行启动命令即可继续使用。服务配置与其他操作见 [PostgreSQL 管理](/docs/pig/pg/)。
 
-## 查找更多扩展 {#列出扩展}
+## 查找更多扩展 {#list-extensions}
 
 ```bash
 pig ext list                 # 列出扩展目录
@@ -112,12 +112,12 @@ pig ext avail pg_duckdb      # 查看软件包可用矩阵
 
 安装其他扩展前，用 `info` 查看启用要求，用 `avail` 检查软件包是否可用。
 
-## 选择软件包与版本 {#别名翻译}
+## 选择软件包与版本 {#alias-translation}
 
 需要其他 PostgreSQL 大版本时，替换上述命令中的 `18`。
 软件包组、版本选择和已有安装的处理方式见 [扩展安装](/docs/pig/ext/#ext-add)。
 
-## 检查与更新 {#显示扩展}
+## 检查与更新 {#show-extensions}
 
 `pig ext status -v 18` 列出已安装的扩展文件。要查看数据库中已启用的扩展，在 `psql` 中执行 `\dx`。
 需要升级软件包及数据库中的扩展对象时，参阅 [扩展更新](/docs/pig/ext/#ext-update)。

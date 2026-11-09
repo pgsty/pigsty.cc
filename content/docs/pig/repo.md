@@ -24,7 +24,7 @@ categories: [参考]
 | `repo reload` | 刷新仓库目录          |                   |
 {.full-width .wide .expand}
 
-## 快速入门
+## 快速入门 {#quick-start}
 
 为已配置系统软件源的主机添加 PostgreSQL 仓库，并更新索引：
 
@@ -46,7 +46,7 @@ pig repo set
 
 使用 `pig repo info pgsql` 查看仓库定义，使用 `pig repo status` 查看主机当前配置。
 
-## 模块
+## 模块 {#modules}
 
 在 pig 中，APT/YUM 仓库被组织为 **模块** —— 服务于特定目的的一组仓库。
 
@@ -85,7 +85,7 @@ pig repo set
 不安全名称会在安装密钥或修改仓库前使整次请求失败。名称格式正确但模块不存在时，保留原有行为：
 `repo add` 添加有效模块，并为未知模块返回失败；`repo set` 和 `repo add --remove` 整次拒绝。
 
-## 仓库定义
+## 仓库定义 {#repository-definitions}
 
 Pigsty 中可用仓库的完整定义位于 [`cli/repo/assets/repo.yml`](https://github.com/pgsty/pig/blob/main/cli/repo/assets/repo.yml)。
 
@@ -93,7 +93,7 @@ Pigsty 中可用仓库的完整定义位于 [`cli/repo/assets/repo.yml`](https:/
 
 `--region` 选择 `baseurl` 中的区域 URL；不存在对应区域时使用 `default`。`-m` 选择 `china`，包含 Pigsty 中国镜像及目录中配置的其他镜像。
 
-### 信任策略与配置归属
+### 信任策略与配置归属 {#trust-and-configuration-ownership}
 
 `repo add` 写入所选模块的配置文件，并保留其他文件。`repo set` 或 `repo add --remove` 会先备份现有定义再替换。若仓库配置由 Ansible 等工具管理，请在对应配置中维护这些定义，避免下一次运行覆盖手工修改。
 
@@ -122,7 +122,7 @@ Pigsty 中可用仓库的完整定义位于 [`cli/repo/assets/repo.yml`](https:/
 
 EL 仓库保留 DNF 的模块过滤规则。只有声明 `module_hotfixes=1` 的定义（如 Pigsty 与 PGDG）会绕过模块流过滤；生成 EL7 配置时会移除该键。
 
-## repo list
+## repo list {#repo-list}
 
 `pig repo list` 将列出当前系统可用的所有仓库模块。
 
@@ -131,7 +131,7 @@ pig repo list                # 列出当前系统可用仓库
 pig repo list all            # 列出所有仓库（不过滤）
 ```
 
-## repo info
+## repo info {#repo-info}
 
 显示特定仓库或模块的详细信息，包括 URL、元数据和区域镜像，以及 `.repo` / `.list` 仓库文件内容。
 
@@ -141,7 +141,7 @@ pig repo info pigsty pgdg        # 显示多个模块的信息
 pig repo info all                # 显示所有模块的信息
 ```
 
-## repo status
+## repo status {#repo-status}
 
 显示系统上的当前仓库配置。
 
@@ -149,7 +149,7 @@ pig repo info all                # 显示所有模块的信息
 pig repo status
 ```
 
-## repo add
+## repo add {#repo-add}
 
 添加仓库配置文件到系统。需要 root/sudo 权限。
 
@@ -164,12 +164,13 @@ pig repo add pgdg --region=china # 使用中国镜像
 pig repo add pgsql -m            # 明确选择中国区域镜像
 ```
 
-**选项：**
-
-- `-r|--remove`：添加新仓库前移除现有仓库
-- `-u|--update`：添加仓库后运行包缓存更新
-- `-m|--mirror`：明确选择内置的 `china` 仓库定义
-- `--region <region>`：使用区域镜像仓库（`default` / `china` / `europe`）
+| 参数 | 说明 |
+|:---|:---|
+| `-r, --remove` | 添加新仓库前移除现有仓库 |
+| `-u, --update` | 添加仓库后运行包缓存更新 |
+| `-m, --mirror` | 明确选择内置的 `china` 仓库定义 |
+| `--region <region>` | 使用区域镜像仓库（`default` / `china` / `europe`） |
+{.full-width}
 
 |   平台   | 模块位置                                    |
 |:------:|:----------------------------------------|
@@ -177,10 +178,10 @@ pig repo add pgsql -m            # 明确选择中国区域镜像
 | Debian | `/etc/apt/sources.list.d/<module>.list` |
 {.full-width}
 
-## repo set
+## repo set {#repo-set}
 
 先备份并移除现有仓库定义，再写入所选模块，最后刷新软件包元数据。
-这等同于 `repo add --remove --update`。省略模块时，PIG 使用 `all`。
+这等同于 `repo add --remove --update`（别名 `pig repo overwrite`）。省略模块时，PIG 使用 `all`。
 
 ```bash
 pig repo set                     # 替换为默认仓库
@@ -191,7 +192,7 @@ pig repo set -m                  # 明确选择中国区域镜像
 
 `repo set` 支持与 `repo add` 相同的 `--region` 与 `-m|--mirror` 区域选项。
 
-## repo rm
+## repo rm {#repo-rm}
 
 真正不带参数时，将全部软件源定义移到既有备份目录。显式模块参数只删除对应模块文件；
 `all` 只展开为 `node`、`pgsql`、`infra`，不代表所有文件。空字符串、纯空白、逗号空项与
@@ -215,7 +216,7 @@ pig repo rm pgdg pigsty -u       # 移除并更新缓存
 | Debian | `/etc/apt/sources.list.d/backup/` |
 {.full-width}
 
-## repo update
+## repo update {#repo-update}
 
 更新包管理器缓存以反映仓库更改。
 
@@ -229,7 +230,7 @@ pig repo update                  # 更新包缓存
 | Debian | `apt-get update`    |
 {.full-width}
 
-## repo create
+## repo create {#repo-create}
 
 为离线安装创建本地包仓库。
 
@@ -259,7 +260,7 @@ SOW 的 `--pigsty` 模式会：
 
 SOW 保留非软件包文件和目录；软件包无法解析或同一软件包坐标冲突时停止。旧后端在 `repo_complete` 中记录 MD5，清理规则也与 SOW 不同。PIG 检查该文件是否存在，不校验其中的哈希；分发离线包前可用该清单检查文件完整性。
 
-## repo cache
+## repo cache {#repo-cache}
 
 创建仓库内容的压缩 tarball 用于离线分发。
 
@@ -269,16 +270,17 @@ pig repo cache -d /srv           # 自定义源目录
 pig repo cache pigsty docker     # 包含多个顶层仓库
 ```
 
-**选项：**
-
-- `-d, --dir`：源目录（默认：`/www/`）
-- `-p, --path`：输出路径（默认：`/tmp/pkg.tgz`）
+| 参数 | 说明 |
+|:---|:---|
+| `-d, --dir` | 源目录（默认 `/www/`） |
+| `-p, --path` | 输出路径（默认 `/tmp/pkg.tgz`） |
+{.full-width}
 
 离线包必须包含 `pigsty`，且 `pigsty/repo_complete` 必须是普通文件。请求中不存在的仓库会被
 跳过，并与实际打包的仓库分别报告。原生 boot 解包器只接受目录和普通文件，因此 cache
 拒绝符号链接。cache 失败时不会覆盖已有的输出包。
 
-## repo boot
+## repo boot {#repo-boot}
 
 从离线包解压并设置本地仓库。
 
@@ -288,10 +290,11 @@ pig repo boot -p /mnt/pkg.tgz   # 自定义包路径
 pig repo boot -d /srv           # 自定义目标目录
 ```
 
-**选项：**
-
-- `-p, --path`：包路径（默认：`/tmp/pkg.tgz`）
-- `-d, --dir`：目标目录（默认：`/www/`）
+| 参数 | 说明 |
+|:---|:---|
+| `-p, --path` | 包路径（默认 `/tmp/pkg.tgz`） |
+| `-d, --dir` | 目标目录（默认 `/www/`） |
+{.full-width}
 
 命令先解压到临时目录，检查目标路径，再移动仓库。附加仓库先移动，`pigsty` 最后移动。
 
@@ -299,7 +302,7 @@ pig repo boot -d /srv           # 自定义目标目录
 - 目标路径冲突时停止。若上一次运行中断，先检查并移走已移动的冲突目录，再重试。
 - 离线包必须包含普通文件 `pigsty/repo_complete`。PIG 检查该文件是否存在，不校验其内容。
 
-## repo reload
+## repo reload {#repo-reload}
 
 从 Pigsty 仓库站点下载最新仓库目录。
 

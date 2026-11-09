@@ -23,7 +23,7 @@ categories: [参考]
 | `build pkg`   | 完整构建流程：get、dep、ext | 需要 sudo 或 root 权限 |
 {.full-width .wide .expand}
 
-## 快速入门
+## 快速入门 {#quick-start}
 
 构建主机需要配置软件源时，运行 `pig build repo`。它会备份并替换现有仓库定义。
 已有合适的软件源时，跳过此步骤。
@@ -48,9 +48,9 @@ pig build ext citus --pg 18
 
 `build pkg` 组合的是这三个阶段。它不会替你安装通用构建工具或下载构建配方。
 
-## 构建基础设施
+## 构建基础设施 {#build-infrastructure}
 
-### 目录结构
+### 目录结构 {#directory-layout}
 
 ```filetree {title="PIG 构建目录"}
 - ~/ext/
@@ -74,12 +74,12 @@ pig build ext citus --pg 18
 
 `~/ext/` 是真实工作目录：`pkg` 保存构建产物，`src` 保存源码压缩包，`log` / `tmp` 分别保存构建日志和临时文件；平台专用目录则把输出与源码位置链接回这里。
 
-**构建输出位置：**
+构建输出位置：
 
 - **EL 系统**：`~/ext/pkg/`，并通过 `~/rpmbuild/RPMS/` 软链接访问
 - **Debian 系统**：`~/ext/pkg/`，并通过 `~/debbuild/DEBS/` 软链接访问
 
-## build spec
+## build spec {#build-spec}
 
 设置构建规范与目录结构。
 
@@ -89,16 +89,16 @@ pig build spec -f                # 强制重新下载构建规范 tarball
 pig build spec -m                # 优先使用 pigsty.cc 中国镜像
 ```
 
-**功能：**
+功能：
 
 1. 下载 RPM 或 DEB 构建规范 tarball
 2. 创建 `~/ext/{pkg,src,log,tmp}` 与平台构建目录
 3. 将 `RPMS/DEBS` 与 `SOURCES` 软链接到 `~/ext/pkg` 和 `~/ext/src`
 4. 通过增量 `rsync` 同步 makefile、spec 与 Debian 打包文件
 
-**工作目录：** 默认使用 `~/ext/` 保存源码、产物、日志与临时文件；平台打包目录为 `~/rpmbuild/` 或 `~/debbuild/`。
+**工作目录**：默认使用 `~/ext/` 保存源码、产物、日志与临时文件；平台打包目录为 `~/rpmbuild/` 或 `~/debbuild/`。
 
-## build repo
+## build repo {#build-repo}
 
 初始化构建扩展所需的包仓库。
 
@@ -108,14 +108,15 @@ pig build repo -m                # 选择内置的中国区域镜像
 pig build repo --beta            # 同时启用 PostgreSQL 19 beta 仓库模块
 ```
 
-**功能：** 以 `pig repo set` 初始化构建所需仓库：移除旧仓库、添加所需仓库并更新包缓存。`--beta/-b` 会把 `beta` 模块追加到仓库模块列表，用于显式构建 PostgreSQL 19 beta 相关包；稳定默认路径仍只使用 PG14-18。
+**功能**：以 `pig repo set` 初始化构建所需仓库：移除旧仓库、添加所需仓库并更新包缓存。`--beta/-b` 会把 `beta` 模块追加到仓库模块列表，用于显式构建 PostgreSQL 19 beta 相关包；稳定默认路径仍只使用 PG14-18。
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `-b`, `--beta` | 额外启用 PostgreSQL beta 仓库模块 |
+| `-m`, `--mirror` | 选择内置的 `china` 仓库定义 |
+{.full-width}
 
-- `-b|--beta`：额外启用 PostgreSQL beta 仓库模块
-- `-m|--mirror`：选择内置的 `china` 仓库定义
-
-## build tool
+## build tool {#build-tool}
 
 安装必要的开发工具和编译器。
 
@@ -127,13 +128,13 @@ pig build rust                   # 单独安装 Rust 工具链
 pig build tool --beta            # 额外安装 PG19 beta 构建依赖
 ```
 
-**工具包：**
+工具包：
 
-- **最小（`mini`）：** 构建工具和开发库，从安装列表中排除 PostgreSQL 与 PGDG 包
-- **默认 / `full`：** Make、CMake、开发库、打包工具和 PostgreSQL 构建依赖。EL 安装 PG14-18 server/devel 包；Debian/Ubuntu 使用 `postgresql-all` 与 `postgresql-server-dev-all`
-- **`--beta`：** 额外安装 PG19 beta server/devel 包；`mini` 仍排除 PostgreSQL 包
+- **最小（`mini`）**：构建工具和开发库，从安装列表中排除 PostgreSQL 与 PGDG 包
+- **默认 / `full`**：Make、CMake、开发库、打包工具和 PostgreSQL 构建依赖。EL 安装 PG14-18 server/devel 包；Debian/Ubuntu 使用 `postgresql-all` 与 `postgresql-server-dev-all`
+- **`--beta`**：额外安装 PG19 beta server/devel 包；`mini` 仍排除 PostgreSQL 包
 
-## build rust
+## build rust {#build-rust}
 
 安装 Rust 编程语言工具链，基于 Rust 的扩展所需。
 
@@ -145,7 +146,7 @@ pig build rust -m                # 使用中国镜像安装 Rust，并写入 Car
 
 PIG 通过 rustup 为当前用户安装 Rust，不询问交互确认。如果 `~/.cargo/bin/cargo` 已存在，默认跳过安装；`-y` 强制重新安装。`-m` 为 rustup 选择 `rsproxy.cn`，并写入 Cargo 镜像配置，即使 Rust 已安装也会写入该配置。
 
-## build pgrx
+## build pgrx {#build-pgrx}
 
 安装并初始化 PGRX（Rust 的 PostgreSQL 扩展框架）。
 
@@ -157,9 +158,9 @@ pig build pgrx --pg init         # 只执行 cargo pgrx init，不传 PG 参数
 pig build pgrx -b                # 自动探测时包含 PostgreSQL 19 beta pg_config
 ```
 
-**前提条件：** 必须先安装 Rust 工具链、PostgreSQL 开发头文件。默认自动探测只覆盖稳定 PG14-18；需要 PG19 beta 时使用 `-b|--beta`，或通过 `--pg 19` 显式指定。
+**前提条件**：必须先安装 Rust 工具链、PostgreSQL 开发头文件。默认自动探测只覆盖稳定 PG14-18；需要 PG19 beta 时使用 `-b|--beta`，或通过 `--pg 19` 显式指定。
 
-## build proxy
+## build proxy {#build-proxy}
 
 旧源码生成的无管理注释 macOS LaunchAgent，在完整内容匹配时可直接升级，无需 `--replace`。
 识别依据是完整生成内容，不能只凭管理注释接管文件。外来或修改过的服务文件仍需
@@ -170,7 +171,7 @@ pig build pgrx -b                # 自动探测时包含 PostgreSQL 19 beta pg_c
 不带参数的 `pig build proxy` 只安装或确认 Xray。
 设计依据见 [Xray 设计记录](https://pig.pgsty.com/zh/design/xray-client-server/)。
 
-### 客户端
+### 客户端 {#client}
 
 一行命令按需安装 Xray、写入客户端配置、启动服务，并分别检查 HTTP 与 SOCKS 的 HTTPS 请求。
 首次监听默认使用 **`127.0.0.1:12345`**，同一端口提供 HTTP 和 SOCKS。
@@ -221,7 +222,7 @@ source ~/.config/xray/proxy.sh
 po
 ```
 
-### 服务端
+### 服务端 {#server}
 
 服务端设置支持 Linux，需要相同的软件包、root 与 systemd 条件。
 必须提供公网发布地址 `--host` 与 REALITY 伪装目标 `--target host:port`。
@@ -252,7 +253,7 @@ sudo pig build proxy server --host proxy.example.com --export-only --export -
 
 设置成功后，从真实客户端检查连通性。按网络环境开放防火墙或云安全组；`--proxy-protocol` 需要已有可信前端并使用回环监听。PIG 不会停止占用端口的其他服务或移除已有 V2Ray。
 
-### 历史 VMess 形式
+### 历史 VMess 形式 {#historical-vmess-form}
 
 历史位置参数语法继续保留 V2Ray/VMess 行为，首次客户端端口仍为 12345：
 
@@ -265,7 +266,7 @@ pig build proxy user@host:8080 127.0.0.1:1080
 并重启 `v2ray`。需要 root 或 `sudo`；HTTPS 检查失败时返回非零。
 远端用户 ID 属于凭据，普通结果会脱敏。
 
-## build get
+## build get {#build-get}
 
 下载扩展源代码 tarball。
 
@@ -279,7 +280,7 @@ pig build get citus -m           # 优先使用 pigsty.cc 中国镜像
 
 `pig build get` 的参数是扩展名、包名或源码文件名；未知名称会按源码文件名处理。它不会把 `all` 或 `std` 展开为内置集合。需要批量下载时，请显式列出目标包名。
 
-一些源码包并不直接对应扩展名，`pig build get` 内置了特殊别名 以便直接下载源码。
+一些源码包并不直接对应扩展名，`pig build get` 内置了特殊别名以便直接下载源码。
 
 ```bash
 pig build get pdu                # 下载 pdu-3.0.25.12.tar.gz
@@ -288,9 +289,9 @@ pig build get pgedge             # 同时下载 PostgreSQL 与 spock 源码
 pig build get onesparse          # 同时下载 onesparse、graphblas、lagraph
 ```
 
-当前常见的特殊源码别名 包括：`babelfish`、`agensgraph`、`orioledb`、`cloudberry`、`pgedge`、`pdu`、`pgdog`、`rdkit`、`onesparse`、`libpgfeutils`。
+当前常见的特殊源码别名包括：`babelfish`、`agensgraph`、`orioledb`、`cloudberry`、`pgedge`、`pdu`、`pgdog`、`rdkit`、`onesparse`、`libpgfeutils`。
 
-## build dep
+## build dep {#build-dep}
 
 安装构建扩展所需的依赖。
 
@@ -300,14 +301,15 @@ pig build dep citus pgvector     # 多个扩展
 pig build dep citus --pg 17,16   # 为特定 PG 版本
 ```
 
-**选项：**
-
-- `--pg`：指定一个或多个 PostgreSQL 大版本；未指定时按扩展元数据或本机安装自动推断
+| 选项 | 说明 |
+|:---|:---|
+| `--pg` | 指定一个或多个 PostgreSQL 大版本；未指定时按扩展元数据或本机安装自动推断 |
+{.full-width}
 
 指定 `--pg 17,16` 这样的版本列表时，带版本占位符的依赖包名会按每个选定版本展开，
 去重后统一安装。`build pkg` 使用相同的依赖安装步骤。
 
-## build ext
+## build ext {#build-ext}
 
 编译扩展并创建安装包。
 
@@ -328,13 +330,13 @@ pig build ext citus --pg 17      # 为特定 PG 版本
 pig build ext citus --nodbg      # 显式省略自动调试包
 ```
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `--pg` | 指定一个或多个 PostgreSQL 大版本 |
+| `--nodbg` | 在 RPM 构建中禁用自动 `debuginfo` / `debugsource` 包，在 DEB 构建中禁用 `dbgsym` 包 |
+{.full-width}
 
-- `--pg`：指定一个或多个 PostgreSQL 大版本
-- `--nodbg`：在 RPM 构建中禁用自动 `debuginfo` / `debugsource` 包，在 DEB 构建中禁用
-  `dbgsym` 包
-
-## build pkg
+## build pkg {#build-pkg}
 
 对每个目标依次下载源码、安装依赖并构建。源码下载失败会停止该包的构建。依赖安装失败会告警后继续尝试构建，因为所需依赖可能已经安装。
 
@@ -346,16 +348,16 @@ pig build pkg citus --nodbg      # 显式省略自动调试包
 pig build pkg citus -m           # 优先使用 pigsty.cc 中国镜像下载源码
 ```
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `--pg` | 指定一个或多个 PostgreSQL 大版本 |
+| `--nodbg` | 在 RPM 构建中禁用自动 `debuginfo` / `debugsource` 包，在 DEB 构建中禁用 `dbgsym` 包 |
+| `-m`, `--mirror` | 下载源码时优先使用 `pigsty.cc` 镜像 |
+{.full-width}
 
-- `--pg`：指定一个或多个 PostgreSQL 大版本
-- `--nodbg`：在 RPM 构建中禁用自动 `debuginfo` / `debugsource` 包，在 DEB 构建中禁用
-  `dbgsym` 包
-- `-m|--mirror`：下载源码时优先使用 `pigsty.cc` 镜像
+## 常见工作流 {#common-workflows}
 
-## 常见工作流
-
-### 构建并安装本地软件包
+### 构建并安装本地软件包 {#build-and-install-a-local-package}
 
 完成快速入门中的环境准备后，构建目标版本：
 
@@ -373,7 +375,7 @@ sudo apt install /absolute/path/to/package.deb   # Debian / Ubuntu
 
 `pig ext add NAME` 从已配置仓库安装软件包。安装本次构建产物时，使用上面的文件路径形式。
 
-### 构建 Rust 扩展
+### 构建 Rust 扩展 {#build-a-rust-extension}
 
 在已准备好的构建环境中，为当前用户安装 Rust 和配方要求的 pgrx：
 
@@ -385,7 +387,7 @@ pig build pkg pgmq --pg 18
 
 需要中国镜像时，为 `build rust` 添加 `-m`。若配方要求特定 pgrx 版本，使用 `pig build pgrx -v VERSION --pg 18`。本地软件包按上一节安装。
 
-### 构建多个 PostgreSQL 版本
+### 构建多个 PostgreSQL 版本 {#build-for-multiple-postgresql-versions}
 
 ```bash
 pig build pkg citus --pg 15,16,17
@@ -393,7 +395,7 @@ pig build pkg citus --pg 15,16,17
 
 结果按 PostgreSQL 主版本分别生成。所选版本需要匹配的开发包和构建配方支持。
 
-### 构建 PostgreSQL 19 beta 扩展
+### 构建 PostgreSQL 19 beta 扩展 {#build-for-postgresql-19-beta}
 
 ```bash
 pig build repo --beta
@@ -404,7 +406,7 @@ pig build pkg EXTENSION --pg 19
 
 将 `EXTENSION` 替换为支持该版本的扩展。这里的 beta 版本由 PIG 当前内置配置指定。
 
-## 故障排除
+## 故障排除 {#troubleshooting}
 
 | 问题 | 处理方式 |
 |:---|:---|

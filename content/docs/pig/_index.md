@@ -6,13 +6,11 @@ icon: fas fa-piggy-bank
 module: [PIG]
 ---
 
-当前文档版本：**v{{< param pig_version >}}**，查看 [发布说明](/docs/pig/release/#v1104)。
-
-本次版本新增七个目录条目、移除一条退役记录，并修复目标版本分类别名，内嵌扩展目录增至 **{{< param pig_catalog_count >}} 个条目**。
+当前文档版本：**v{{< param pig_version >}}**。本次版本新增七个目录条目、移除一条退役记录，并修复目标版本分类别名，内嵌扩展目录增至 **{{< param pig_catalog_count >}} 个条目**，详见 [发布说明](/docs/pig/release/#v1104)。
 
 PIG 用统一的命令查找、安装和构建 PostgreSQL 扩展包，也提供 PostgreSQL、Patroni、pgBackRest 和 Pigsty 管理命令。软件包安装由系统的 `apt`、`dnf` 或 `yum` 完成。
 
-## 从这里开始
+## 从这里开始 {#start-here}
 
 | 你要做什么 | 阅读页面 |
 |:---|:---|
@@ -21,7 +19,7 @@ PIG 用统一的命令查找、安装和构建 PostgreSQL 扩展包，也提供 
 | 下载、安装、升级或卸载 PIG | [安装](/docs/pig/install/) |
 | 查询命令、选项与自动化用法 | [命令参考](/docs/pig/cmd/) |
 
-## 安装 PostgreSQL 与扩展
+## 安装 PostgreSQL 与扩展 {#install-postgresql-and-extensions}
 
 在有 root 或 `sudo` 权限的 Linux 主机上执行：
 
@@ -33,7 +31,7 @@ sudo pig install -v 18 pg18 vector
 
 中国大陆以外可将安装地址换为 `https://repo.pigsty.io/pig`。上述命令安装 PostgreSQL 18 与 pgvector 软件包。接下来按 [快速上手](/docs/pig/start/) 启动测试实例，并用 `CREATE EXTENSION vector` 在数据库中启用扩展。
 
-## 命令参考
+## 命令参考 {#command-reference}
 
 | 任务 | 命令 |
 |:---|:---|
@@ -53,13 +51,13 @@ sudo pig install -v 18 pg18 vector
 
 执行 `pig help <command>` 查看命令帮助。编写自动化脚本时，用 `pig -o json --help` 查看命令能力，再选择对应的输出与计划选项。
 
-## 查找更多信息
+## 查找更多信息 {#find-more-information}
 
 按 {{< kbd "Ctrl" "K" >}}（macOS 为 {{< kbd "⌘" "K" >}}）打开站内搜索。按 {{< kbd "/" >}} 打开页面操作；选择 AI 助手操作后，会将当前页面的公开 URL 与阅读提示传给所选服务。
 
 - [设计归档](https://pig.pgsty.com/zh/design/)：实现决策、取舍与提案。
 - [发布注记](/docs/pig/release/)：各版本的变更和下载文件。
-- [扩展目录](https://pigsty.cc/ext/list/)：扩展说明与软件包信息。
+- [扩展目录](/ext/list/)：扩展说明与软件包信息。
 - [GitHub Issues](https://github.com/pgsty/pig/issues)：报告问题或提出功能建议。
 
 PIG 由 [Vonng](https://vonng.com/) 开发，以 [Apache 2.0](https://github.com/pgsty/pig/blob/main/LICENSE) 许可证开源。[Pigsty](https://pigsty.cc/) 提供 PostgreSQL 部署、监控、备份与高可用管理。

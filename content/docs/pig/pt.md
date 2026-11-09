@@ -15,7 +15,7 @@ PIG 负责选择配置文件，并提供本地服务、状态和日志命令。
 使用 `pig pt COMMAND --help` 查看原生命令帮助，使用 `pig pt -- --help` 查看 patronictl 根帮助。
 单独运行 `pig pt` 显示 PIG 帮助。
 
-## 命令概览
+## 命令概览 {#command-overview}
 
 **透传命令**（`patronictl` 原生）：
 
@@ -50,7 +50,7 @@ PIG 负责选择配置文件，并提供本地服务、状态和日志命令。
 使用 `pig pt restart CLUSTER` 通过 Patroni 重启 PostgreSQL。
 使用 `pig pt svc restart` 重启本地 Patroni 守护进程。
 
-## 查看集群 {#快速入门}
+## 查看集群 {#quick-start}
 
 在已配置好 Patroni 的节点上，查看集群成员和动态配置。
 将 `pg-meta` 替换为你的集群名：
@@ -62,7 +62,7 @@ pig pt show-config pg-meta
 
 使用 `pig pt status` 查看本地服务状态，使用 `pig pt log -f` 持续查看日志。
 
-## PIG 选项
+## PIG 选项 {#pig-options}
 
 以下 PIG 选项 **必须出现在原生命令之前**；一旦出现原生命令词，其后的所有参数都属于 patronictl：
 
@@ -81,7 +81,7 @@ pig pt query -c 'select 1'                 # 原生 query 的 -c：SQL 语句，
 
 使用完整的 `--dbsu` 参数；`pig pt` 没有 `-U` 简写。
 
-## 配置文件解析
+## 配置文件解析 {#config-file-resolution}
 
 PIG 按以下顺序选择 patronictl 配置文件：
 
@@ -94,7 +94,7 @@ PIG 按以下顺序选择 patronictl 配置文件：
 PIG 使用显式路径或环境变量路径，即使文件不存在或不可读。相对路径在切换操作系统用户前解析。
 两个常规路径按所选用户的读取权限检查。服务命令和原生帮助不需要配置文件。
 
-## 命令分发与输出
+## 命令分发与输出 {#command-dispatch-and-output}
 
 PIG 处理上表中的本地命令，其他命令及其后的全部参数原样转发给 patronictl。
 将 PIG 参数放在原生命令之前：
@@ -111,7 +111,7 @@ pig pt list pg-meta --format json
 如果原生命令与本地命令同名，使用 `pig pt -- COMMAND ...` 转发。
 本地 `set`、`status` 和 `service` 支持 PIG 结构化输出。日志命令的格式见下文。
 
-## pt set
+## pt set {#pt-set}
 
 `pt set` 修改配置文件所选集群的参数：
 
@@ -119,7 +119,7 @@ pig pt list pg-meta --format json
 pig pt set KEY=VALUE [KEY=VALUE ...] [--yes] [--plan]
 ```
 
-**键分类规则**：
+键分类规则：
 
 - 以下 Patroni 顶层标量键翻译为原生 `--set`：
   `loop_wait`、`ttl`、`retry_timeout`、`primary_race_backoff`、
@@ -145,7 +145,7 @@ pig pt set ttl=60 max_connections=200 synchronous_mode=on
 - 修改需要重启的 PostgreSQL 参数后，PIG 会提示后续操作：
   先 `pig pt list`，再 `pig pt restart CLUSTER --pending`（需显式集群名）。
 
-## 服务管理
+## 服务管理 {#service-management}
 
 `pt service`（别名 `pt svc`）管理本地 `patroni` systemd 服务：
 
@@ -161,7 +161,7 @@ pig pt set ttl=60 max_connections=200 synchronous_mode=on
 `pt start` / `pt stop`（别名 `up` / `dn`）调用相同的服务操作。
 停止 Patroni 服务可能导致该节点上的 PostgreSQL 一并停止（取决于 Patroni 配置）。
 
-### pt status
+### pt status {#pt-status}
 
 显示综合状态：systemd 服务状态、Patroni 进程信息、以及来自 patronictl 的集群成员状态。
 
@@ -170,7 +170,7 @@ pig pt status
 pig pt st -o json                # 结构化输出
 ```
 
-### pt log
+### pt log {#pt-log}
 
 查看本地 Patroni 日志。日志目录取自选中配置的 `log.dir`，未配置时回退到 `/pg/log/patroni`，
 也可用 `--log-dir` 显式指定。仅 `pt log` 与 `pt log show` 支持 `-o json`（JSONL 快照）；
@@ -199,7 +199,7 @@ pig pt log grep ERROR          # 搜索日志
 | `--log-dir` |      | 自动解析  | 日志目录     |
 {.full-width}
 
-## 从 v1.5.x 迁移
+## 从 v1.5.x 迁移 {#migrating-from-v15x}
 
 从 v1.5.x 升级后，按下表将旧脚本改为 patronictl 原生语法：
 
@@ -217,14 +217,14 @@ pig pt log grep ERROR          # 搜索日志
 | `--dbsu -U`                        | `--dbsu`（`-U` 简写已移除）                             |
 {.full-width .wide .expand}
 
-## 运行条件与权限
+## 运行条件与权限 {#requirements-and-privileges}
 
 服务命令需要 Linux 和 systemd。日志命令需要可读取的 Patroni 日志文件。
 PIG 按 `--dbsu`、`$PIG_DBSU`、`postgres` 的顺序选择运行 patronictl 的操作系统用户。
 当前用户相同时直接执行；root 使用 `su`；其他用户使用 `sudo -H -u`。
 服务管理使用 root 权限。
 
-## 设计记录
+## 设计记录 {#design-record}
 
 [让 Patronictl 自己说话](https://pig.pgsty.com/zh/design/patronictl-passthrough/) 记录了 PIG 为什么停止镜像上游命令树，
 以及仍然保留了哪些本地职责。

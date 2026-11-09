@@ -18,7 +18,7 @@ categories: [参考]
 | `sty list` / `sty get` | 查询或下载 Pigsty 发行版 |
 | `sty grafana` | 管理 Grafana 仪表盘、语言和外观；别名 `gf` |
 
-## 快速入门
+## 快速入门 {#quick-start}
 
 在控制节点上依次运行：
 
@@ -30,11 +30,11 @@ pig inventory edit              # 检查目标主机与部署配置
 pig sty deploy                   # 执行部署
 ```
 
-`deploy` 会立即执行剧本，修改 Inventory 选中的主机。完整部署步骤见 [Pigsty 安装指南](https://pigsty.cc/docs/setup/install/)。
+`deploy` 会立即执行剧本，修改 Inventory 选中的主机。完整部署步骤见 [Pigsty 安装指南](/docs/setup/install/)。
 
 `boot` 也会尝试初始化缺失的 `~/pigsty`；需要指定版本或路径时，先执行 `init`。使用 [`pig inventory`](/docs/pig/inventory/) 编辑和校验已有配置。
 
-## sty init
+## sty init {#sty-init}
 
 下载并安装 Pigsty 发行版到 `~/pigsty` 目录。
 
@@ -47,16 +47,17 @@ pig sty init -v {{< param pigsty_version >}}       # 安装文档对应的 Pigst
 pig sty init 4                 # 安装 4.x 系列的最新版本
 ```
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `-p`, `--path` | 目标安装目录（默认 `~/pigsty`） |
+| `-f`, `--force` | 强制覆盖已存在的 pigsty 目录 |
+| `-m`, `--mirror` | 优先使用 `pigsty.cc` 镜像源 |
+| `-v`, `--version` | Pigsty 版本号 |
+| `-d`, `--dir` | 下载目录（默认 `/tmp`） |
+| `--accept-eula` | 非交互接受 Pigsty Pro EULA，仅 Pro 发行版需要 |
+{.full-width}
 
-- `-p|--path`：目标安装目录（默认 "~/pigsty"）
-- `-f|--force`：强制覆盖已存在的 pigsty 目录
-- `-m|--mirror`：优先使用 `pigsty.cc` 镜像源
-- `-v|--version`：pigsty 版本号
-- `-d|--dir`：下载目录（默认 `/tmp`）
-- `--accept-eula`：非交互接受 Pigsty Pro EULA，仅 Pro 发行版需要
-
-## sty boot
+## sty boot {#sty-boot}
 
 准备 Ansible 及其 Python 依赖，配置在线或离线软件源，并检查控制节点的本机 SSH 和 Pigsty 目录。
 
@@ -74,7 +75,7 @@ pig sty boot -o json                 # 返回机器可读的结果与告警
 进行一次自重启。设置 `PIG_NO_SUDO=1` 可禁用自动提权。JSON/YAML 输出及
 `PIG_NON_INTERACTIVE=1` 使用非交互 sudo；提权需要密码时直接失败，不等待输入。
 
-### 引导阶段
+### 引导阶段 {#bootstrap-stages}
 
 1. 在 Debian 12/13 上检查并尝试修复 `en_US.UTF-8` locale。
 2. 检查 Ansible 能否运行，以及其 Python 环境是否具备 `yaml`、`jmespath` 和 `cryptography` 或 `OpenSSL`。
@@ -83,7 +84,7 @@ pig sty boot -o json                 # 返回机器可读的结果与告警
 
 即使 Ansible 已可用，指定或发现的离线仓库仍会准备，可用此命令为控制节点预置离线软件包。
 
-### 来源选择与工作模式
+### 来源选择与工作模式 {#source-selection-and-modes}
 
 结果中会记录以下四种引导模式之一：
 
@@ -108,28 +109,29 @@ pig sty boot -o json                 # 返回机器可读的结果与告警
 离线模式只启用严格的 `pigsty-local` 仓库；在线模式配置所选区域，安装 `node` 与 `pigsty`
 控制节点模块，并复用或安装 Pigsty 内嵌签名密钥。公钥准备成功时启用签名校验；默认公钥准备
 失败时记录告警，关闭所选 Pigsty 仓库的签名校验并继续。元数据显式指定 `gpgkey` 或
-`signed-by` 时，准备该引用实际指定的密钥失败仍会终止，详见 [`pig repo`](/docs/pig/repo/#信任策略与配置归属)。
+`signed-by` 时，准备该引用实际指定的密钥失败仍会终止，详见 [`pig repo`](/docs/pig/repo/#trust-and-configuration-ownership)。
 
-### 仓库替换与恢复
+### 仓库替换与恢复 {#repository-replacement-and-recovery}
 
 默认先备份现有仓库定义，再写入新配置。仓库配置或软件包安装失败时，PIG 尝试恢复备份，并报告恢复结果。`--keep` 保留现有定义；在线刷新失败时，可回退使用原有仓库。
 
 Ansible 安装或验证失败会使命令失败。本机 SSH、locale 或 Pigsty 目录初始化未完成时，命令会报告告警。
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `-r`, `--region` | 区域（如 `default`、`china`、`europe`） |
+| `-m`, `--mirror` | 等价于 `--region china`；不能与 `--region` 同时使用 |
+| `-p`, `--path` | 离线包文件或 HTTP(S) URL；显式指定的来源无效时直接失败 |
+| `-k`, `--keep` | 保留现有仓库定义，不执行替换 |
+{.full-width}
 
-- `-r|--region`：区域（default, china, europe...）
-- `-m|--mirror`：等价于 `--region china`；不能与 `--region` 同时使用
-- `-p|--path`：离线包文件或 HTTP(S) URL；显式指定的来源无效时直接失败
-- `-k|--keep`：保留现有仓库定义，不执行替换
-
-### 结构化输出
+### 结构化输出 {#boot-structured-output}
 
 `-o json` 或 `-o yaml` 返回 `pig.sty.boot/v2` 结果，包括 Ansible 状态、工作模式、软件源、仓库恢复结果、本机 SSH、Pigsty 目录和告警。
 
-离线部署步骤见 [Pigsty 离线安装](https://pigsty.cc/docs/setup/offline/#bootstrap)。
+离线部署步骤见 [Pigsty 离线安装](/docs/setup/offline/#bootstrap)。
 
-## sty conf
+## sty conf {#sty-conf}
 
 从 `<PIGSTY_HOME>/conf` 下的模板生成 Inventory。命令修改 YAML 配置，校验完整结果，再以 `0600` 权限原子写入输出文件。
 
@@ -150,7 +152,7 @@ pig sty conf -n --ip 10.0.0.10 -o json
 默认模式为 `meta`；`pig sty c` 与 `pig sty configure` 是命令别名。注意大写 `-O` 用于指定
 Inventory 输出文件，全局小写 `-o` 用于选择 text、JSON 或 YAML 命令输出。
 
-### 模板与输出路径
+### 模板与输出路径 {#template-and-output-paths}
 
 以下有序短名称查找规则对应当前开发源码。旧版 PIG 可能仍需使用该版本支持的完整模板 mode，例如 `ha/full`。
 
@@ -171,7 +173,7 @@ conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
 
 相对输出路径位于 `<PIGSTY_HOME>` 下，也可指定绝对路径。输出必须与模板是不同文件，且不能是符号链接。解析、变更或校验失败时，原输出文件保持不变。
 
-### 结构化变更
+### 结构化变更 {#structural-mutations}
 
 命令对模板应用以下变更：
 
@@ -198,37 +200,38 @@ IP 替换会产生重复键时，命令停止。提供的地址在模板中没�
 `DBUser.Meta`、`DBUser.Viewer`、`S3User.Backup`、`S3User.Meta`、`S3User.Data`、
 `DBUser.Supa` 和 `Vibe.Coding` 占位符；同一标识符出现多次时会使用同一个生成值。
 
-**选项：**
+| 选项 | 说明 |
+|:---|:---|
+| `-c`, `--conf` | 模板模式，等价于位置参数 `[mode]`，两种形式不能同时使用 |
+| `--ip` | 最多十个互不相同、逗号分隔的 IPv4 地址 |
+| `--domain` | 将精确的 `i.pigsty` 占位符替换为合法 DNS 域名 |
+| `-v`, `--version` | PostgreSQL 主版本（`18`/`17`/`16`/`15`/`14`；`19` beta 可显式指定） |
+| `-r`, `--region` | 上游仓库区域（`default`/`china`/`europe`） |
+| `-m`, `--mirror` | 等价于 `--region china`；不能与 `--region` 同时使用 |
+| `-O`, `--output-file` | 输出配置文件路径（默认 `pigsty.yml`） |
+| `-s`, `--skip` | 保留占位 IP 并跳过管理员 SSH/sudo 预检；不能与 `--ip` 同时使用 |
+| `-p`, `--port` | SSH 端口 |
+| `-x`, `--proxy` | 将非空代理环境变量写入 `all.vars.proxy_env` |
+| `-n`, `--non-interactive` | IP 候选不唯一时拒绝猜测，不进入交互选择 |
+| `-g`, `--generate` | 将已知演示口令替换为 24 位随机值 |
+{.full-width}
 
-- `-c|--conf`：模板模式，等价于位置参数 `[mode]`，两种形式不能同时使用
-- `--ip`：最多十个互不相同、逗号分隔的 IPv4 地址
-- `--domain`：将精确的 `i.pigsty` 占位符替换为合法 DNS 域名
-- `-v|--version`：PostgreSQL 主版本（18/17/16/15/14；19 beta 可显式指定）
-- `-r|--region`：上游仓库区域（default/china/europe）
-- `-m|--mirror`：等价于 `--region china`；不能与 `--region` 同时使用
-- `-O|--output-file`：输出配置文件路径（默认：pigsty.yml）
-- `-s|--skip`：保留占位 IP 并跳过管理员 SSH/sudo 预检；不能与 `--ip` 同时使用
-- `-p|--port`：SSH 端口
-- `-x|--proxy`：将非空代理环境变量写入 `all.vars.proxy_env`
-- `-n|--non-interactive`：IP 候选不唯一时拒绝猜测，不进入交互选择
-- `-g|--generate`：将已知演示口令替换为 24 位随机值
-
-### 预检与校验
+### 预检与校验 {#preflight-and-validation}
 
 PIG 检查操作系统、软件包管理器、控制节点资源、SSH、sudo 和 Ansible。`--port` 指定 SSH 检查端口。`--skip` 跳过管理员 SSH/sudo 预检并保留占位 IP；其他检查仍会运行。
 
 输出必须通过 Inventory 校验。存在 `ansible-inventory` 时，还会使用它解析结果。参数、模板或校验错误会阻止写入；可以继续生成配置的问题则以告警返回。
 
-### 结构化输出
+### 结构化输出 {#conf-structured-output}
 
 `-o json` 或 `-o yaml` 返回 `pig.sty.configure/v1`，包括模板、输出路径、区域、IP、域名、SSH 端口、PostgreSQL 版本和告警。生成的密码只写入 Inventory；结果列出对应标识符。
 
 `mode` 返回相对于 `conf/`、不带 `.yml` 的解析后名称，例如输入 `full` 时返回 `ha/full`；
 `template_path` 标识实际选中的文件。
 
-详细步骤见 [Pigsty 配置指南](https://pigsty.cc/docs/setup/install/#配置)。
+详细步骤见 [Pigsty 配置指南](/docs/setup/install/#配置)。
 
-## sty deploy
+## sty deploy {#sty-deploy}
 
 `sty deploy` 使用配置层已经选定的 Inventory 来源。`-i` 和 `PIGSTY_INVENTORY` 的相对路径
 以调用者工作目录为基准；带引号的 `~/` 按用户主目录展开。选定的绝对路径通过 `-i` 传给 Ansible，
@@ -247,7 +250,7 @@ pig sty de           # 短别名
 
 剧本会立即开始执行，不再询问确认。运行前检查所选 Inventory。
 
-## sty list
+## sty list {#sty-list}
 
 列出可用的 Pigsty 版本。
 
@@ -260,7 +263,7 @@ pig sty list 4                   # 从最新的 4.x 稳定版起列出版本
 版本前缀使用与 `sty get` 相同的补全规则，以最高匹配稳定版作为列表起点。
 匹配按版本分段区分，`1.1` 不会匹配 `1.10`。精确版本（含预发行版）和 `latest` 的含义不变。
 
-## sty get
+## sty get {#sty-get}
 
 下载 Pigsty 源码压缩包。
 
@@ -270,7 +273,7 @@ pig sty get {{< param pigsty_version >}}       # 下载文档对应的 Pigsty �
 pig sty get -m                   # 优先使用 pigsty.cc 镜像
 ```
 
-## sty grafana
+## sty grafana {#sty-grafana}
 
 `pig sty grafana`（别名 `gf`）通过 HTTP API 管理仪表盘。可选 `PATH` 指向 Grafana 根目录、其下一层目录或一个仪表盘 JSON 文件。默认路径为 `<PIGSTY_HOME>/files/grafana`。
 
@@ -286,7 +289,7 @@ pig sty grafana lang zh-Hans     # 设置组织与当前用户语言
 pig sty grafana style dark       # 设置组织与当前用户界面风格
 ```
 
-### 选择操作范围
+### 选择操作范围 {#select-the-operation-scope}
 
 - `list` 列出当前组织的全部仪表盘。
 - `load` 按本地文件中的 UID 创建或更新仪表盘，保留其他远端仪表盘。
@@ -303,7 +306,7 @@ pig sty grafana clean --dry-run
 pig sty grafana clean --yes
 ```
 
-**连接与凭据**：
+连接与凭据：
 
 | 参数                | 说明                                                    |
 |:------------------|:------------------------------------------------------|
@@ -316,7 +319,7 @@ pig sty grafana clean --yes
 `--password` 与 `--password-file` 不能同时使用。都未指定时，依次读取 `GRAFANA_PASSWORD` 环境变量和 Inventory 中的 `all.vars.grafana_admin_password`。
 HTTP 客户端带有超时与响应大小限制，并拒绝重定向；TLS 证书默认校验。
 
-### 传统仪表盘与 schema v2 资源
+### 传统仪表盘与 schema v2 资源 {#legacy-dashboards-and-schema-v2-resources}
 
 `load` 与 `init` 同时接受传统 Grafana 仪表盘 JSON，以及具有以下精确身份的资源格式：
 
@@ -334,7 +337,7 @@ HTTP 客户端带有超时与响应大小限制，并拒绝重定向；TLS 证�
 
 其他 `dashboard.grafana.app/*` 版本暂不支持。需要导出时保留 v2 格式，请保留已有的本地 v2 文件。
 
-## 设计记录
+## 设计记录 {#design-records}
 
 - [原生 sty boot](https://pig.pgsty.com/zh/design/native-sty-boot/)
 - [原生 sty conf](https://pig.pgsty.com/zh/design/native-sty-conf/)

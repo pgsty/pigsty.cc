@@ -24,7 +24,7 @@ Inventory 来源与 [`sty deploy`](/docs/pig/sty/#sty-deploy) 使用同一配置
 重新解释路径。显式、环境或默认来源不存在时，在执行剧本前失败。既有的目录与可执行 Inventory
 来源仍交给 Ansible；静态 Inventory 命令不会执行它们。
 
-## 命令总览
+## 命令总览 {#command-overview}
 
 | 命令 | 用途 | 必需参数 |
 |:---|:---|:---|
@@ -45,7 +45,7 @@ Inventory 来源与 [`sty deploy`](/docs/pig/sty/#sty-deploy) 使用同一配置
 
 使用 `pig do COMMAND --help` 查看单项操作的别名与精确示例。
 
-## PostgreSQL 操作
+## PostgreSQL 操作 {#postgresql-operations}
 
 ```bash
 pig do pgsql-add pg-meta                  # 初始化声明的集群
@@ -61,7 +61,7 @@ pig do pgsql-svc pg-meta                  # 刷新 PostgreSQL 服务
 
 `pgsql-db` 与 `pgsql-user` 使用 Inventory 中已有的 `pg_databases` 和 `pg_users` 声明，不修改清单。`pgsql-rm --uninstall` 在移除服务时还会卸载软件包；同一主机仍需这些包时，省略此选项。
 
-### 名称规则
+### 名称规则 {#name-rules}
 
 | 对象 | 允许的名称 |
 |:---|:---|
@@ -71,7 +71,7 @@ pig do pgsql-svc pg-meta                  # 刷新 PostgreSQL 服务
 
 以上规则适用于明确要求集群名、用户名或数据库名的参数。选择器参数支持下节所述的目标选择方式。
 
-## 节点与仓库操作
+## 节点与仓库操作 {#node-and-repository-operations}
 
 选择器可以是集群名、主机名、IP 地址或 Ansible 主机模式。实际目标由当前 Inventory 决定。
 
@@ -86,7 +86,7 @@ pig do repo-build                          # 重建 infra 仓库
 `node-repo` 省略选择器时作用于 `node.yml` 选中的全部主机；省略模块时使用 Inventory 中的设置。仓库模块来自已安装的 Pigsty 版本，例如 `local`、`infra`、`pgsql`、`node` 与 `extra`。
 安装软件包前，应确认目标节点能够访问所需仓库。
 
-## Redis 操作
+## Redis 操作 {#redis-operations}
 
 ```bash
 pig do redis-add redis-meta                # 初始化声明的 Redis 集群
@@ -97,7 +97,7 @@ pig do redis-rm redis-test --uninstall     # 移除并卸载软件包
 
 `redis-rm --uninstall` 在移除节点或集群时还会卸载软件包。
 
-## 配置与输出
+## 配置与输出 {#configuration-and-output}
 
 `pig do` 使用 PIG 全局选项：
 
@@ -111,4 +111,4 @@ pig do redis-rm redis-test --uninstall     # 移除并卸载软件包
 
 结构化模式报告请求的操作与捕获到的执行结果。底层 Ansible 与 Playbook 行为仍由已安装的 Pigsty 版本决定。
 
-完整剧本变量与操作步骤见 [Pigsty 文档](https://pigsty.cc/docs/)。
+完整剧本变量与操作步骤见 [Pigsty 文档](/docs/)。

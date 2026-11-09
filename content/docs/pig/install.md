@@ -10,7 +10,7 @@ categories: [任务]
 
 可通过 Linux 安装脚本、系统软件包或发布压缩包安装 PIG。当前版本为 **v{{< param pig_version >}}**，全部发布文件见 [下载页](https://pig.pgsty.com/zh/download/)。
 
-## 脚本安装
+## 脚本安装 {#script-installation}
 
 在 Linux 上执行：
 
@@ -38,7 +38,7 @@ pig version
 curl -fsSL https://repo.pigsty.cc/pig | bash -s {{< param pig_version >}}
 ```
 
-## 发布产物下载
+## 发布产物下载 {#download-release-artifacts}
 
 在 [下载页](https://pig.pgsty.com/zh/download/#packages) 或 [GitHub Release](https://github.com/pgsty/pig/releases/tag/v{{< param pig_version >}}) 中选择对应操作系统与架构的文件。
 
@@ -61,11 +61,11 @@ pig version
 
 每个版本提供 [SHA-256 校验和](https://github.com/pgsty/pig/releases/download/v{{< param pig_version >}}/checksums.txt)。Linux 用 `sha256sum`，macOS 用 `shasum -a 256` 计算下载文件的哈希，再与清单比对。
 
-macOS 版支持目录查询、配置清单编辑等不依赖 Linux 包管理器的操作。安装 PostgreSQL 软件包请使用 [受支持的 Linux 主机](/docs/pig/intro/#linux-兼容性)。
+macOS 版支持目录查询、配置清单编辑等不依赖 Linux 包管理器的操作。安装 PostgreSQL 软件包请使用 [受支持的 Linux 主机](/docs/pig/intro/#linux-compatibility)。
 
-## 仓库安装
+## 仓库安装 {#repository-installation}
 
-要用系统包管理器维护 PIG，先添加 [Pigsty Infra 仓库](https://pigsty.cc/docs/repo/infra/)。按主机选择对应标签页：
+要用系统包管理器维护 PIG，先添加 [Pigsty Infra 仓库](/docs/repo/infra/)。按主机选择对应标签页：
 
 ```bash {tab="APT (Debian / Ubuntu)" group="install-pig-repository" value="apt" copy="all"}
 sudo tee /etc/apt/sources.list.d/pigsty-infra.list > /dev/null <<EOF
@@ -92,7 +92,7 @@ sudo dnf install -y pig
 
 这些仓库定义关闭了 Pigsty 仓库的签名校验。密钥处理与校验设置见 [仓库密钥](/docs/pig/repo/#repo-key)。
 
-## 更新
+## 更新 {#update}
 
 在 Linux 上更新 PIG 程序：
 
@@ -100,7 +100,7 @@ sudo dnf install -y pig
 sudo pig update
 ```
 
-加 `-m` 使用中国镜像，加 `-v {{< param pig_version >}}` 选择该版本。macOS 压缩包安装请下载新版归档并替换已安装的可执行文件。
+加 `-m`（`--mirror`）使用中国镜像，加 `-v {{< param pig_version >}}` 选择该版本。macOS 压缩包安装请下载新版归档并替换已安装的可执行文件。
 
 单独刷新扩展目录：
 
@@ -110,7 +110,7 @@ pig ext reload
 
 此命令更新目录元数据，已安装的软件包保持不变。
 
-## 卸载
+## 卸载 {#uninstall}
 
 按安装方式选择对应命令：
 
@@ -122,7 +122,7 @@ sudo rm /usr/local/bin/pig        # 安装在此路径的归档二进制
 
 如果归档二进制安装在其他位置，删除对应文件即可。PostgreSQL 及其扩展可以继续运行。
 
-## 构建
+## 构建 {#build-from-source}
 
 安装 Git、Make，以及项目 [go.mod](https://github.com/pgsty/pig/blob/v{{< param pig_version >}}/go.mod) 指定的 Go 工具链。构建当前发布版本：
 

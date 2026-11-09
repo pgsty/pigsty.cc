@@ -25,7 +25,7 @@ categories: [参考]
 - **pig license**：签发和验证 Pigsty 许可证
 - **pig status / update / version**：查看环境、升级 pig、打印版本信息
 
-## 全局选项
+## 全局选项 {#global-options}
 
 | 选项 | 用途 |
 |:---|:---|
@@ -51,9 +51,9 @@ pig ext list vector -o json
 pig help inventory edit
 ```
 
-## pig repo
+## pig repo {#pig-repo}
 
-管理 PostgreSQL 软件包的 APT/YUM 仓库，详情请参考 [`pig repo`](/docs/pig/repo/)
+管理 PostgreSQL 软件包的 APT/YUM 仓库，详情请参考 [`pig repo`](/docs/pig/repo/)。
 
 ```bash
 pig repo list                    # 列出可用仓库
@@ -67,9 +67,9 @@ pig repo cache                   # 创建离线包
 pig repo boot                    # 从离线包引导
 ```
 
-## pig ext
+## pig ext {#pig-ext}
 
-管理 PostgreSQL 扩展和内核包，详情请参考 [`pig ext`](/docs/pig/ext/)
+管理 PostgreSQL 扩展和内核包，详情请参考 [`pig ext`](/docs/pig/ext/)。
 
 ```bash
 pig ext list    duck             # 搜索扩展
@@ -84,9 +84,9 @@ pig ext link    17               # 链接 PG 版本到 PATH
 pig ext reload                   # 刷新扩展目录
 ```
 
-## pig build
+## pig build {#pig-build}
 
-从源码构建 PostgreSQL 扩展，详情请参考 [`pig build`](/docs/pig/build/)
+从源码构建 PostgreSQL 扩展，详情请参考 [`pig build`](/docs/pig/build/)。
 
 ```bash
 # 环境设置
@@ -110,7 +110,7 @@ pig build dep citus              # 安装依赖
 pig build ext citus              # 构建包
 ```
 
-## pig install
+## pig install {#pig-install}
 
 使用系统原生包管理器安装软件包，并对 PostgreSQL 内核、扩展及常用别名做包名翻译。需要直接传递系统包名时，可使用 `-n/--no-translation`。
 
@@ -123,9 +123,9 @@ pig install pg18 --plan          # 预览安装计划
 pig install vector -y         # 自动确认安装
 ```
 
-## pig sty
+## pig sty {#pig-sty}
 
-安装 Pigsty 发行版，详情请参考 [`pig sty`](/docs/pig/sty/)
+安装 Pigsty 发行版，详情请参考 [`pig sty`](/docs/pig/sty/)。
 
 ```bash
 pig sty init                     # 安装 Pigsty 到 ~/pigsty
@@ -137,7 +137,7 @@ pig sty get {{< param pigsty_version >}}                # 下载内置的 Pigsty
 pig sty grafana list             # 管理 Grafana 仪表盘（info/list/boot/load/init/dump/clean/lang/style）
 ```
 
-## pig inventory
+## pig inventory {#pig-inventory}
 
 检视、编辑、校验、体检并与 CMDB 交换 Pigsty 配置清单（`pigsty.yml`），根级命令组，别名 `inv`，
 详情请参考 [`pig inventory`](/docs/pig/inventory/)。
@@ -153,7 +153,7 @@ pig inventory diff other.yml     # 对比声明差异（不输出取值）
 pig inventory cmdb check         # 检查 PostgreSQL CMDB（实验性）
 ```
 
-## pig do
+## pig do {#pig-do}
 
 执行 Pigsty 管理任务，底层调用对应的 Ansible Playbook。完整命令参考见
 [`pig do`](/docs/pig/do/)。
@@ -167,7 +167,7 @@ pig do pgsql-ext  <cls> [ext...]      # 安装扩展
 pig do node-pkg   <sel> [pkg...]      # 安装节点软件包
 ```
 
-## pig pe
+## pig pe {#pig-pe}
 
 访问 pg_exporter 暴露的 PostgreSQL 监控指标，默认连接 `127.0.0.1:9630`；
 端点与操作详情见 [`pig pe`](/docs/pig/pe/)。
@@ -188,7 +188,7 @@ pig pe --host 127.0.0.1 -p 9630 get
 参数错误和不含私钥的签名密钥失败原因在文本、JSON、YAML 中均保留。
 `license status` 与 `license verify` 不回显 Token。
 
-## pig context
+## pig context {#pig-context}
 
 输出环境上下文快照，覆盖主机、PostgreSQL、Patroni、pgBackRest 与已安装扩展。该命令适合排障和自动化脚本快速了解当前节点状态。
 
@@ -199,9 +199,9 @@ pig context -m postgres          # 只输出 PostgreSQL 模块（默认包含 ho
 pig context -m postgres,!host    # 排除 host 模块
 ```
 
-## pig pg
+## pig pg {#pig-pg}
 
-管理本地 PostgreSQL 服务器，详情请参考 [`pig pg`](/docs/pig/pg/)
+管理本地 PostgreSQL 服务器，详情请参考 [`pig pg`](/docs/pig/pg/)。
 
 ```bash
 pig pg init                      # 初始化数据目录
@@ -217,9 +217,9 @@ pig pg fork list                 # 列出本地 fork
 pig pg log tail                  # 实时查看日志
 ```
 
-## pig pt
+## pig pt {#pig-pt}
 
-透明运行 `patronictl` 管理 Patroni HA 集群，详情请参考 [`pig pt`](/docs/pig/pt/)
+透明运行 `patronictl` 管理 Patroni HA 集群，详情请参考 [`pig pt`](/docs/pig/pt/)。
 
 ```bash
 pig pt list pg-meta              # 列出集群成员（原生透传）
@@ -230,9 +230,9 @@ pig pt status                    # 本地命令：综合服务与集群状态
 pig pt log -f                    # 本地命令：实时查看日志
 ```
 
-## pig pb
+## pig pb {#pig-pb}
 
-管理 pgBackRest 备份与恢复，详情请参考 [`pig pb`](/docs/pig/pb/)
+管理 pgBackRest 备份与恢复，详情请参考 [`pig pb`](/docs/pig/pb/)。
 
 ```bash
 pig pb info                      # 显示备份信息
@@ -244,9 +244,9 @@ pig pb restore -t "2025-01-01"   # 恢复到指定时间
 pig pb log tail                  # 实时查看日志
 ```
 
-## pig pitr
+## pig pitr {#pig-pitr}
 
-执行编排式时间点恢复（PITR），详情请参考 [`pig pitr`](/docs/pig/pitr/)
+执行编排式时间点恢复（PITR），详情请参考 [`pig pitr`](/docs/pig/pitr/)。
 
 ```bash
 pig pitr -d                      # 恢复到最新数据
@@ -256,7 +256,7 @@ pig pitr -d --plan               # 显示执行计划（不实际执行）
 pig pitr -d -y                   # 跳过确认（自动化）
 ```
 
-## 辅助命令
+## 辅助命令 {#helper-commands}
 
 ```bash
 pig status                       # 显示当前环境状态
@@ -273,7 +273,7 @@ pig version -o json              # 结构化版本输出
 
 如果 `~/.pig/config.yml` 存在语法错误，请先修正，再运行 `pig status` 等读取配置的命令。`pig version` 和 `pig pe` HTTP 命令不读取该文件，仍可使用。
 
-## 设计记录
+## 设计记录 {#design-records}
 
 - [从面向人类到 Agent-Native](https://pig.pgsty.com/zh/design/agent-native-cli/)
 - [为什么 PIG 保持扁平的 Cobra 命令层](https://pig.pgsty.com/zh/design/flat-cobra-command-layer/)
