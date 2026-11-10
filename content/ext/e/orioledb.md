@@ -11,10 +11,10 @@ weight: 2910
     <div class="ext-card__title">orioledb/orioledb</div>
     <div class="ext-card__desc">https://github.com/orioledb/orioledb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/orioledb-1.10.2.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/orioledb-1.10.3.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">orioledb-1.10.2.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz</div>
-    <div class="ext-card__desc">orioledb-1.10.2.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz</div>
+    <div class="ext-card__title">orioledb-1.10.3.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz</div>
+    <div class="ext-card__desc">orioledb-1.10.3.tar.gz postgres-patches16_50.tar.gz postgres-patches17_23.tar.gz postgres-patches18_4.tar.gz</div>
   </a>
 </div>
 
@@ -46,77 +46,77 @@ weight: 2910
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16" >}} | `orioledb` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.2` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.1` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.3` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.3` | {{< pgvers "18,17,16" >}} | `orioledb-$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | AVAIL PIGSTY 1.10.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | AVAIL PIGSTY 1.10.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el8.x86_64.rpm pigsty 1.10.2 24.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-18-1.10.2-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el8.aarch64.rpm pigsty 1.10.2 23.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-18-1.10.2-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el9.x86_64.rpm pigsty 1.10.2 23.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-18-1.10.2-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el9.aarch64.rpm pigsty 1.10.2 23.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-18-1.10.2-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el10.x86_64.rpm pigsty 1.10.2 23.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-18-1.10.2-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 orioledb-18 orioledb-18-1.10.2-1PGSTY.el10.aarch64.rpm pigsty 1.10.2 23.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-18-1.10.2-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~bookworm_amd64.deb pigsty 1.10.1 23.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~bookworm_arm64.deb pigsty 1.10.1 22.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~trixie_amd64.deb pigsty 1.10.1 21.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~trixie_arm64.deb pigsty 1.10.1 20.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~jammy_amd64.deb pigsty 1.10.1 25.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~jammy_arm64.deb pigsty 1.10.1 25.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~noble_amd64.deb pigsty 1.10.1 23.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~noble_arm64.deb pigsty 1.10.1 23.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~resolute_amd64.deb pigsty 1.10.1 22.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 orioledb-18 orioledb-18_1.10.1-1PGSTY~resolute_arm64.deb pigsty 1.10.1 22.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-18/orioledb-18_1.10.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el8.x86_64.rpm pigsty 1.10.2 23.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-17-1.10.2-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el8.aarch64.rpm pigsty 1.10.2 22.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-17-1.10.2-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el9.x86_64.rpm pigsty 1.10.2 22.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-17-1.10.2-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el9.aarch64.rpm pigsty 1.10.2 22.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-17-1.10.2-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el10.x86_64.rpm pigsty 1.10.2 22.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-17-1.10.2-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 orioledb-17 orioledb-17-1.10.2-1PGSTY.el10.aarch64.rpm pigsty 1.10.2 22.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-17-1.10.2-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~bookworm_amd64.deb pigsty 1.10.1 22.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~bookworm_arm64.deb pigsty 1.10.1 22.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~trixie_amd64.deb pigsty 1.10.1 20.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~trixie_arm64.deb pigsty 1.10.1 19.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~jammy_amd64.deb pigsty 1.10.1 24.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~jammy_arm64.deb pigsty 1.10.1 24.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~noble_amd64.deb pigsty 1.10.1 22.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~noble_arm64.deb pigsty 1.10.1 22.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~resolute_amd64.deb pigsty 1.10.1 22.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 orioledb-17 orioledb-17_1.10.1-1PGSTY~resolute_arm64.deb pigsty 1.10.1 21.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-17/orioledb-17_1.10.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el8.x86_64.rpm pigsty 1.10.2 22.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-16-1.10.2-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el8.aarch64.rpm pigsty 1.10.2 22.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-16-1.10.2-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el9.x86_64.rpm pigsty 1.10.2 21.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-16-1.10.2-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el9.aarch64.rpm pigsty 1.10.2 21.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-16-1.10.2-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el10.x86_64.rpm pigsty 1.10.2 21.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-16-1.10.2-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 orioledb-16 orioledb-16-1.10.2-1PGSTY.el10.aarch64.rpm pigsty 1.10.2 21.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-16-1.10.2-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~bookworm_amd64.deb pigsty 1.10.1 21.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~bookworm_arm64.deb pigsty 1.10.1 21.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~trixie_amd64.deb pigsty 1.10.1 19.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~trixie_arm64.deb pigsty 1.10.1 19.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~jammy_amd64.deb pigsty 1.10.1 23.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~jammy_arm64.deb pigsty 1.10.1 23.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~noble_amd64.deb pigsty 1.10.1 21.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~noble_arm64.deb pigsty 1.10.1 21.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~resolute_amd64.deb pigsty 1.10.1 21.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 orioledb-16 orioledb-16_1.10.1-1PGSTY~resolute_arm64.deb pigsty 1.10.1 21.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-16/orioledb-16_1.10.1-1PGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | AVAIL PIGSTY 1.10.3 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el8.x86_64.rpm pigsty 1.10.3 24.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-18-1.10.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el8.aarch64.rpm pigsty 1.10.3 23.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-18-1.10.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el9.x86_64.rpm pigsty 1.10.3 23.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-18-1.10.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el9.aarch64.rpm pigsty 1.10.3 23.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-18-1.10.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el10.x86_64.rpm pigsty 1.10.3 23.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-18-1.10.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 orioledb-18 orioledb-18-1.10.3-1PGSTY.el10.aarch64.rpm pigsty 1.10.3 23.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-18-1.10.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~bookworm_amd64.deb pigsty 1.10.3 23.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~bookworm_arm64.deb pigsty 1.10.3 22.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~trixie_amd64.deb pigsty 1.10.3 21.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~trixie_arm64.deb pigsty 1.10.3 20.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~jammy_amd64.deb pigsty 1.10.3 25.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~jammy_arm64.deb pigsty 1.10.3 25.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~noble_amd64.deb pigsty 1.10.3 23.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~noble_arm64.deb pigsty 1.10.3 23.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~resolute_amd64.deb pigsty 1.10.3 22.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 orioledb-18 orioledb-18_1.10.3-1PGSTY~resolute_arm64.deb pigsty 1.10.3 22.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-18/orioledb-18_1.10.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el8.x86_64.rpm pigsty 1.10.3 23.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-17-1.10.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el8.aarch64.rpm pigsty 1.10.3 22.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-17-1.10.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el9.x86_64.rpm pigsty 1.10.3 22.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-17-1.10.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el9.aarch64.rpm pigsty 1.10.3 22.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-17-1.10.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el10.x86_64.rpm pigsty 1.10.3 22.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-17-1.10.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 orioledb-17 orioledb-17-1.10.3-1PGSTY.el10.aarch64.rpm pigsty 1.10.3 22.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-17-1.10.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~bookworm_amd64.deb pigsty 1.10.3 22.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~bookworm_arm64.deb pigsty 1.10.3 22.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~trixie_amd64.deb pigsty 1.10.3 20.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~trixie_arm64.deb pigsty 1.10.3 19.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~jammy_amd64.deb pigsty 1.10.3 24.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~jammy_arm64.deb pigsty 1.10.3 24.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~noble_amd64.deb pigsty 1.10.3 22.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~noble_arm64.deb pigsty 1.10.3 22.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~resolute_amd64.deb pigsty 1.10.3 22.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 orioledb-17 orioledb-17_1.10.3-1PGSTY~resolute_arm64.deb pigsty 1.10.3 21.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-17/orioledb-17_1.10.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el8.x86_64.rpm pigsty 1.10.3 22.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb-16-1.10.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el8.aarch64.rpm pigsty 1.10.3 22.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb-16-1.10.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el9.x86_64.rpm pigsty 1.10.3 21.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb-16-1.10.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el9.aarch64.rpm pigsty 1.10.3 21.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/orioledb-16-1.10.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el10.x86_64.rpm pigsty 1.10.3 21.8MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/orioledb-16-1.10.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 orioledb-16 orioledb-16-1.10.3-1PGSTY.el10.aarch64.rpm pigsty 1.10.3 21.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/orioledb-16-1.10.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~bookworm_amd64.deb pigsty 1.10.3 21.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~bookworm_arm64.deb pigsty 1.10.3 21.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~trixie_amd64.deb pigsty 1.10.3 19.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~trixie_arm64.deb pigsty 1.10.3 19.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~jammy_amd64.deb pigsty 1.10.3 23.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~jammy_arm64.deb pigsty 1.10.3 23.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~noble_amd64.deb pigsty 1.10.3 21.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~noble_arm64.deb pigsty 1.10.3 21.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~resolute_amd64.deb pigsty 1.10.3 21.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 orioledb-16 orioledb-16_1.10.3-1PGSTY~resolute_arm64.deb pigsty 1.10.3 21.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/orioledb-16/orioledb-16_1.10.3-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -47,7 +47,7 @@ weight: 2330
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.6.2` | {{< pgvers "17,18" >}} | `pg_tre` | - |
 | [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.6.2` | {{< pgvers "18,17" >}} | `pg_tre_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.6.1` | {{< pgvers "18,17" >}} | `postgresql-$v-pg-tre` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.6.2` | {{< pgvers "18,17" >}} | `postgresql-$v-pg-tre` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
@@ -59,48 +59,48 @@ weight: 2330
 | el9.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | el10.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | el10.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 4.6.1 1 | AVAIL PIGSTY 4.6.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 4.6.2 1 | AVAIL PIGSTY 4.6.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el8.x86_64.rpm pigsty 4.6.2 597.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tre_18-4.6.2-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el8.aarch64.rpm pigsty 4.6.2 580.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tre_18-4.6.2-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el9.x86_64.rpm pigsty 4.6.2 566.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tre_18-4.6.2-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el9.aarch64.rpm pigsty 4.6.2 558.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tre_18-4.6.2-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el10.x86_64.rpm pigsty 4.6.2 574.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tre_18-4.6.2-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 pg_tre_18 pg_tre_18-4.6.2-1PGSTY.el10.aarch64.rpm pigsty 4.6.2 562.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tre_18-4.6.2-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~bookworm_amd64.deb pigsty 4.6.1 577.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~bookworm_arm64.deb pigsty 4.6.1 558.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~trixie_amd64.deb pigsty 4.6.1 579.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~trixie_arm64.deb pigsty 4.6.1 561.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~jammy_amd64.deb pigsty 4.6.1 591.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~jammy_arm64.deb pigsty 4.6.1 582.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~noble_amd64.deb pigsty 4.6.1 576.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~noble_arm64.deb pigsty 4.6.1 565.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~resolute_amd64.deb pigsty 4.6.1 572.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.1-1PGSTY~resolute_arm64.deb pigsty 4.6.1 560.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.1-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~bookworm_amd64.deb pigsty 4.6.2 577.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~bookworm_arm64.deb pigsty 4.6.2 558.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~trixie_amd64.deb pigsty 4.6.2 580.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~trixie_arm64.deb pigsty 4.6.2 562.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~jammy_amd64.deb pigsty 4.6.2 592.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~jammy_arm64.deb pigsty 4.6.2 582.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~noble_amd64.deb pigsty 4.6.2 576.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~noble_arm64.deb pigsty 4.6.2 566.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~resolute_amd64.deb pigsty 4.6.2 573.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-tre postgresql-18-pg-tre_4.6.2-1PGSTY~resolute_arm64.deb pigsty 4.6.2 561.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-18-pg-tre_4.6.2-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el8.x86_64.rpm pigsty 4.6.2 598.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tre_17-4.6.2-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el8.aarch64.rpm pigsty 4.6.2 581.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tre_17-4.6.2-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el9.x86_64.rpm pigsty 4.6.2 567.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tre_17-4.6.2-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el9.aarch64.rpm pigsty 4.6.2 558.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tre_17-4.6.2-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el10.x86_64.rpm pigsty 4.6.2 574.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tre_17-4.6.2-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 pg_tre_17 pg_tre_17-4.6.2-1PGSTY.el10.aarch64.rpm pigsty 4.6.2 563.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tre_17-4.6.2-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~bookworm_amd64.deb pigsty 4.6.1 578.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~bookworm_arm64.deb pigsty 4.6.1 558.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~trixie_amd64.deb pigsty 4.6.1 580.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~trixie_arm64.deb pigsty 4.6.1 562.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~jammy_amd64.deb pigsty 4.6.1 648.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~jammy_arm64.deb pigsty 4.6.1 636.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~noble_amd64.deb pigsty 4.6.1 576.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~noble_arm64.deb pigsty 4.6.1 566.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~resolute_amd64.deb pigsty 4.6.1 574.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.1-1PGSTY~resolute_arm64.deb pigsty 4.6.1 561.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.1-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~bookworm_amd64.deb pigsty 4.6.2 578.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~bookworm_arm64.deb pigsty 4.6.2 559.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~trixie_amd64.deb pigsty 4.6.2 580.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~trixie_arm64.deb pigsty 4.6.2 562.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~jammy_amd64.deb pigsty 4.6.2 649.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~jammy_arm64.deb pigsty 4.6.2 636.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~noble_amd64.deb pigsty 4.6.2 577.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~noble_arm64.deb pigsty 4.6.2 566.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~resolute_amd64.deb pigsty 4.6.2 574.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-tre postgresql-17-pg-tre_4.6.2-1PGSTY~resolute_arm64.deb pigsty 4.6.2 562.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-tre/postgresql-17-pg-tre_4.6.2-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

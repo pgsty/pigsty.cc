@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **29** 个扩展包中包含多个扩展，共计 **137** 个扩展。
+以下 **29** 个扩展包中包含多个扩展，共计 **136** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -332,13 +332,12 @@ weight: 40
 
 ## documentdb
 
-[`documentdb`](/ext/e/documentdb) 扩展包共有 **4** 个扩展：
+[`documentdb`](/ext/e/documentdb) 扩展包共有 **3** 个扩展：
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.0` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
 | 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.0` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `1.0` | `--sLd--` | - | DocumentDB多节点模式的API层 |
 | 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.0` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
 {.ext-table .wide .expand}
 

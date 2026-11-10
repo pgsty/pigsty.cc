@@ -1,8 +1,8 @@
-# bin/gen-pgext.py 生成，日期 2026-11-09；来源 pgsty/pgext 的 db/*.csv。
+# bin/gen-pgext.py 生成，日期 2026-11-10；来源 pgsty/pgext 的 db/*.csv。
 # 扩展软件包：lead 且非 contrib 的独立包族；Linux 平台：OS 大版本 × 架构。
 # 矩阵槽位：457 包族 × 16 平台 × 5 PG 大版本；包含不适用与缺失组合，不代表已交付二进制包数。
-# universe.csv SHA-256: 7fd5b3bd54499841005fb2b7b12a3ddf9e13f0db5b18a28de83f17203c63b61f
-# extension.csv SHA-256: e8df2bbdc17aa11f5504550d9465e62b443320d8c97acd5e24893db421cc63ef
+# universe.csv SHA-256: 31085678e2fe4f282b95a365fdc86f5c561d448e9eae6c2aae9624cc5a6a53db
+# extension.csv SHA-256: 46c1001acfb7868c0776c3ff0335645a8138cffb50432641687da8a7817839fd
 # os.csv SHA-256: 6085f351770ff2a951f174f933a5494a3e12d67bd7bad55e1f08a1d4e16402c8
 # pg.csv SHA-256: 35875bd75678e927bba58e67c2df2ebb7cd1ee0f6fdfccb38921725cdc54a17b
 - label: 内核与方案
@@ -13,7 +13,7 @@
   value: 2733
   href: https://pgext.cloud/
 - label: 已打包扩展
-  value: 625
+  value: 626
   href: https://pgext.cloud/?scope=packaged
 - label: 独立扩展包族
   value: 457

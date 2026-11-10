@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **136** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **135** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -129,7 +129,6 @@ weight: 10
 | [`passwordcheck`](/ext/e/passwordcheck) | `$libdir/passwordcheck` | 用于强制拒绝修改弱密码的扩展 |
 | [`documentdb`](/ext/e/documentdb) | `pg_cron,pg_documentdb_core,pg_documentdb` | 微软DocumentDB的API层 |
 | [`documentdb_core`](/ext/e/documentdb_core) | `pg_documentdb_core` | 微软DocumentDB的核心API层实现 |
-| [`documentdb_distributed`](/ext/e/documentdb_distributed) | `pg_documentdb,pg_documentdb_core` | DocumentDB多节点模式的API层 |
 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `pg_documentdb_extended_rum` | DocumentDB扩展RUM索引访问方法 |
 | [`pgtt`](/ext/e/pgtt) | `pgtt` | 类似Oracle的全局临时表功能 |
 | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | `pg_statement_rollback` | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
