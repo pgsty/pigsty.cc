@@ -287,7 +287,7 @@ vault-backup 14                    # 拍摄快照，并保留最近 14 份
 journalctl -t vault-backup         # 查看定时任务的执行日志
 ```
 
-**初始快照**：集群首次初始化后，剧本会立即拍摄一份快照，回收到管理节点的 `files/pki/vault/backup/` 目录。
+**初始快照与最终快照**：集群首次初始化后，剧本会立即拍摄一份快照，回收到管理节点的 `files/pki/vault/backup/` 目录；[销毁集群](#销毁集群) 之前，剧本也会回收一份最终快照。除此之外，管理节点上不会有其他快照。
 
 **异地保存**：定时快照只保存在各成员本地，复制到异地属于运维职责。快照由 OpenBao 的 barrier key 加密，没有 `unseal.key` 无法解开，可以放心复制到其他存储；但请把 `files/pki/vault/` 与快照 **分开保存**。
 例如，在管理节点上取回某个成员最新的快照：
@@ -398,14 +398,20 @@ ansible 10.10.10.12 -b -m systemd -a 'name=openbao state=restarted'
 
 > [!CAUTION] 危险操作
 > 销毁 VAULT 等于销毁其中保存的 **全部密钥**：使用它们加密的数据库、对象及其全部备份都将永久无法解密。
-> 执行前请确认：没有任何消费者仍在使用 VAULT；管理节点上的 `files/pki/vault/` 完好；最新的快照已经复制到成员之外的安全位置（本地快照会随数据目录一起删除）。
+> 执行前请确认：没有任何消费者仍在使用 VAULT；管理节点上的 `files/pki/vault/` 完好。成员上的本地快照会随数据目录一起删除，剧本会先把一份最终快照回收到管理节点。
 
 ```bash
 bin/vault-rm                                        # 需要手工输入集群名 vault 确认
 ./vault-rm.yml -l vault -e vault_safeguard=false    # 与上一条等价
 ```
 
-移除整个集群时，剧本会先列出现存的 `tde/*` 与 `kes/*` 消费者，暂停 5 秒，然后注销监控、停止服务并删除数据。它不会执行 `raft remove-peer`，也不会删除管理节点上的 `files/pki/vault/` 与成员上的审计日志。
+移除整个集群时，剧本会先列出现存的 `tde/*` 与 `kes/*` 消费者，暂停 5 秒，在一个成员上拍摄 **最终快照** 并回收到管理节点的 `files/pki/vault/backup/`，然后才注销监控、停止服务并删除数据。它不会执行 `raft remove-peer`，也不会删除管理节点上的 `files/pki/vault/` 与成员上的审计日志。
+
+如果最终快照失败，剧本会在删除任何东西之前中止。对于已经损坏、或者从未初始化成功的集群，没有快照可拍，可以显式跳过这一步：
+
+```bash
+./vault-rm.yml -l vault -e vault_safeguard=false --skip-tags vault_snapshot   # 不拍最终快照，直接移除
+```
 
 **重新创建空集群**：销毁之后，如果要创建一套全新的 **空** 集群（而不是从快照恢复），需要先归档旧集群的初始化材料，否则 `vault.yml` 会拒绝初始化：
 

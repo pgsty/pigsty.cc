@@ -177,6 +177,8 @@ VAULT 防误删保险参数，**默认为 `true`**。为 `true` 时，`vault-rm.
 
 启用时会删除成员上的 `/etc/openbao`（包括 TLS 证书、解封密钥与备份令牌的节点副本）、[`vault_data`](#vault_data) 目录（**包括其中的本地快照**）、systemd 单元、客户端环境文件、日志轮转配置与 `vault-backup` 脚本。
 
+移除整个集群且此参数启用时，剧本会先拍摄一份最终快照并回收到管理节点的 `files/pki/vault/backup/`，失败则中止。
+
 无论此参数取值如何，管理节点上的 `files/pki/vault/` 与成员上的审计日志 `/var/log/openbao/` 都不会被删除。
 
 ```bash

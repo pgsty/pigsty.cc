@@ -128,6 +128,8 @@ bao write auth/approle/login role_id=<role_id> secret_id=<secret_id>
 
 请通过安全的渠道把 `secret_id` 交给应用，并根据需要设置 `secret_id_ttl`、`secret_id_num_uses`、`token_bound_cidrs` 等参数进一步收紧凭据的使用范围。
 
+请注意，经 VIP 入口访问时，HAProxy 以 TCP 模式转发，OpenBao 看到的来源地址是 VAULT 成员而不是真实客户端：审计日志中记录的也是成员地址，按客户端网段设置的 `token_bound_cidrs` 会拒绝这些请求。
+
 
 --------
 

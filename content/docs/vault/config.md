@@ -80,6 +80,7 @@ all:
 - 绑定 `<VIP>:8200`，以 TCP 模式工作，**TLS 透传**，证书校验仍由客户端与 OpenBao 完成
 - 使用 `GET /v1/sys/health` 做健康检查：active 返回 `200`，standby 返回 `429`，被封印返回 `503`，未初始化返回 `501`；只有返回 `200` 的成员会接收流量
 - 健康检查本身也走 HTTPS，并使用 `/etc/pki/ca.crt` 校验成员证书
+- 不持有 VIP 的成员也要绑定 `<VIP>:8200`，这依赖内核参数 `net.ipv4.ip_nonlocal_bind=1`：NODE 的各个 tuned 模板都已设置；如果使用 `node_tune: none`，请自行设置，否则剧本会在此处中止
 
 启用 VIP 后，成员的服务端证书 SAN 中也会包含 VIP 地址。成员的 [`node_cluster`](/docs/node/param#node_cluster) 应当保持一致，否则 NODE 会为它们推导出不同的 VRRP 认证信息，导致 VIP 无法正常漂移。
 

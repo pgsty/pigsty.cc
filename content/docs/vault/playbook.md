@@ -61,6 +61,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 - `vault_safeguard`：检查防误删保险，**默认开启**，开启时直接中止执行
 - `vault_consumer`：移除整个集群时，列出 `tde/*` 与 `kes/*` 消费者，提示哪些数据将永久无法解密
 - `vault_pause`：暂停 5 秒，允许用户使用 Ctrl-C 中止执行
+- `vault_snapshot`：移除整个集群时，先拍摄一份最终快照并回收到管理节点的 `files/pki/vault/backup/`；**失败则中止**，不会继续删除数据
 - `vault_deregister`：从 VictoriaMetrics 监控目标中移除成员
 - `vault_leave`：仅移除部分成员时，在一个存活成员上执行 `bao operator raft remove-peer`；**失败则中止**，不会继续删除数据
 - `vault_svc`：删除备份定时任务与备份指标，停止并禁用 `openbao` 服务，移除 HAProxy 入口
@@ -78,9 +79,10 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 
 > [!CAUTION] 危险操作
 > 移除整个 VAULT 集群，等于销毁其中保存的全部密钥：使用这些密钥加密的数据库、对象及其 **全部备份** 都将永久无法解密，除非您能用快照与 `files/pki/vault/unseal.key` 恢复 VAULT。
-> `vault_rm_data` 默认为 `true`，成员上的本地快照会随数据目录一起删除。执行前请确认管理节点上的 `files/pki/vault/` 完好，并把最新的快照复制到安全位置。
+> `vault_rm_data` 默认为 `true`，成员上的本地快照会随数据目录一起删除，因此剧本会先把一份最终快照回收到管理节点。执行前请确认管理节点上的 `files/pki/vault/` 完好。
+> 已经损坏或从未初始化的集群拍不出快照，需要加上 `--skip-tags vault_snapshot` 才能移除。
 
-管理节点上的 `files/pki/vault/`（解封密钥、初始化材料、初始快照）与成员上的审计日志 `/var/log/openbao/`，在任何情况下都不会被删除。
+管理节点上的 `files/pki/vault/`（解封密钥、初始化材料、初始快照与最终快照）与成员上的审计日志 `/var/log/openbao/`，在任何情况下都不会被删除。
 
 
 
