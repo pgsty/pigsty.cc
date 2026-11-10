@@ -13,7 +13,7 @@ categories: [参考]
 
 JuiceFS 由 **元数据引擎** 与 **数据存储** 两部分组成。
 当前版本中，`meta` 会原样透传给 `juicefs` 作为元数据引擎 URL，生产场景通常使用 PostgreSQL。
-数据存储通过 `data` 参数传入 `juicefs format` 选项决定。
+数据存储由 `data` 参数决定，该参数会作为选项传给 `juicefs format`。
 
 JUICE 模块执行逻辑与关键命令：
 
@@ -30,6 +30,7 @@ juicefs mount <mount_opts> --cache-dir <juice_cache> --metrics 0.0.0.0:<port> <m
 - `--no-update` 确保已存在的文件系统不会被覆盖。
 - `data` 仅用于 **首次格式化**，文件系统已存在时不会生效。
 - `mount` 仅用于挂载阶段，可按需传入缓存与并发参数。
+- 挂载点目录不存在时由 `juicefs mount` 自动创建；`owner` / `group` / `mode` 在挂载完成后作用于 **文件系统根目录**，而不是挂载点下面的本地目录。
 
 --------
 
@@ -44,31 +45,32 @@ JUICE 模块仅有两个参数：
 {.full-width}
 
 - `juice_cache`：所有实例共享的本地缓存目录，默认 `/data/juice`
-- `juice_instances`：在 **实例级别** 定义的实例字典，Key 为文件系统名称；空字典表示不管理实例
+- `juice_instances`：通常在 **实例级别** 定义的实例字典，Key 为文件系统名称；空字典表示不管理实例，该主机会被剧本跳过
 
 --------
 
 ## 实例配置
 
-`juice_instances` 的每个条目代表一个 JuiceFS 实例：
+`juice_instances` 的每个条目代表一个 JuiceFS 实例，Key 为实例名，同时也是 JuiceFS 卷名：
 
 | 字段      | 必选 | 默认值              | 说明                        |
 |:--------|:--:|:-----------------|:--------------------------|
-| `path`  | 是  | -                | 挂载点路径，如 `/fs`             |
+| `path`  | 是  | -                | 挂载点路径，如 `/fs`（同节点需唯一）     |
 | `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）  |
 | `data`  | 否  | `''`             | `juicefs format` 选项（存储后端） |
 | `unit`  | 否  | `juicefs-<name>` | systemd 服务名               |
 | `mount` | 否  | `''`             | `juicefs mount` 额外参数      |
 | `port`  | 否  | `9567`           | 指标端口（同节点需唯一）              |
-| `owner` | 否  | `root`           | 挂载点属主                     |
-| `group` | 否  | `root`           | 挂载点属组                     |
-| `mode`  | 否  | `0755`           | 挂载点权限                     |
+| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）          |
+| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）          |
+| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）          |
 | `state` | 否  | `create`         | `create` / `absent`       |
 {.full-width .wide .expand}
 
 > [!WARNING] 重要
 > - 建议在 **首次格式化** 时显式设置 `data`，以明确存储后端。
-> - 同一节点多个实例必须配置不同的 `port`。
+> - 同一节点多个实例必须配置不同的 `port` 与 `path`。
+> - 实例名须为 3–63 位小写字母、数字或连字符，且首尾不能是连字符：`jfs`、`pg-fs` 合法，`fs`、`pg_fs`、`JFS` 不合法。
 
 配置示例：
 
@@ -80,6 +82,18 @@ juice_instances:
     data: --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
     port: 9567
 ```
+
+--------
+
+## 配置校验
+
+`juice.yml` 每次执行都会先由 `juice_id` 校验 `juice_instances`。校验任务带有 `always` 标签，任何标签组合下都会执行，不通过则直接失败：
+
+- `juice_instances` 必须是字典，每个实例都必须定义 `path`。
+- `state` 不是 `absent` 的实例必须定义 `meta`，实例名须符合 JuiceFS 卷名规则（`^[a-z0-9][a-z0-9-]{1,61}[a-z0-9]$`）。
+- 同一节点上，`state` 不是 `absent` 的各实例之间 `port`（默认 `9567`）互不相同，`path` 也互不相同。
+
+`state: absent` 的实例豁免名称、`meta` 与冲突检查。因此可以把旧实例标记为 `absent`，同时在同一端口上新建实例；名称不合规的旧条目也能正常清理。
 
 --------
 
@@ -156,6 +170,20 @@ app:
 
 第一次格式化由任一节点执行即可，其余节点会通过 `--no-update` 自动跳过。
 
+更简洁的写法是在集群级别 `vars` 中定义一次 `juice_instances`，由所有成员共享：
+
+```yaml
+app:
+  hosts:
+    10.10.10.11: {}
+    10.10.10.12: {}
+  vars:
+    juice_instances:
+      shared: { path: /shared, meta: "postgres://...", port: 9567 }
+```
+
+`owner` / `group` / `mode` 作用于共享的文件系统根目录，各节点上这三项必须一致，否则每次执行都会互相覆盖。
+
 --------
 
 ## 注意事项
@@ -163,3 +191,5 @@ app:
 - `port` 会暴露在 `0.0.0.0`，请结合防火墙或安全组控制访问。
 - `data` 变更不会更新已存在的文件系统，如需切换后端请手动处理。
 - `meta` 与 `data` 可能包含数据库或对象存储凭据；请限制 `pigsty.yml` 的读取权限，并使用独立的最小权限账号，生产环境不要沿用示例密码。
+- 剧本默认输出中的循环项只显示实例名，格式化命令行也被隐藏；但以 `--diff` 执行时，环境文件的差异仍会显示 `meta`。
+- 以 `--read-only` 挂载的客户端无法修改文件系统根目录属性。若实际值与 `owner` / `group` / `mode` 不一致，`juice_dir` 任务会失败，此时应让配置与实际值保持一致。

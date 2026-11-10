@@ -58,7 +58,8 @@ juice_cache: /data/juice
 参数名称：`juice_instances`，类型：`dict`，级别：`I`
 
 JuiceFS 实例定义字典，通常在实例级别定义。
-默认值为空字典（表示不部署实例）；Key 为文件系统名称，Value 为实例配置对象。
+默认值为空字典（表示不部署实例）；Key 为文件系统名称（即 JuiceFS 卷名），Value 为实例配置对象。
+未定义该参数或其为空字典的主机会被 `juice.yml` 直接跳过，不会安装软件包、创建缓存目录或写入监控目标文件。
 
 ```yaml
 juice_instances:
@@ -73,18 +74,19 @@ juice_instances:
 
 | 字段      | 必选 | 默认值              | 说明                           |
 |:--------|:--:|:-----------------|:-----------------------------|
-| `path`  | 是  | -                | 挂载点路径                        |
+| `path`  | 是  | -                | 挂载点路径（同节点需唯一）                |
 | `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）     |
 | `data`  | 否  | `''`             | `juicefs format` 选项（仅首次创建生效） |
 | `unit`  | 否  | `juicefs-<name>` | systemd 服务名                  |
 | `mount` | 否  | `''`             | `juicefs mount` 额外参数         |
 | `port`  | 否  | `9567`           | 指标端口（同节点需唯一）                 |
-| `owner` | 否  | `root`           | 挂载点属主                        |
-| `group` | 否  | `root`           | 挂载点属组                        |
-| `mode`  | 否  | `0755`           | 挂载点权限                        |
+| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）             |
+| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）             |
+| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）             |
 | `state` | 否  | `create`         | `create` / `absent`          |
 {.full-width .wide .expand}
 
 > [!WARNING] 注意
 > - `data` 仅用于 `juicefs format`，文件系统创建后不会再更新。
-> - 同一节点多实例必须使用不同的 `port`。
+> - 同一节点多实例必须使用不同的 `port` 与 `path`。
+> - 实例名须为 3–63 位小写字母、数字或连字符，且首尾不能是连字符；`state: absent` 的实例不受此限制，详见 [**配置校验**](/docs/juice/config#配置校验)。

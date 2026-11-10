@@ -25,10 +25,12 @@ Grafana Dashboard
 若已部署 [`INFRA`](/docs/infra)，`juice_register` 会自动写入抓取目标：
 
 ```text
-/infra/targets/juice/<hostname>.yml
+/infra/targets/juice/<ip>.yml
 ```
 
-当前源码随附 [Node JuiceFS](https://demo.pigsty.cc/d/node-juice) 仪表盘（UID：`node-juice`），
+该文件按配置整体重写，只包含 `state: create` 的实例。执行 `juice_clean` 移除实例时会同步刷新；使用 [`node-rm.yml`](/docs/node/playbook#node-rmyml) 下线节点时会删除该文件。
+
+当前源码随附 [**Node JuiceFS**](https://demo.pigsty.cc/d/node-juice) 仪表盘（UID：`node-juice`），
 用于查看单个节点上各 JuiceFS 挂载实例的容量、缓存、对象存储、元数据事务与客户端资源指标。
 
 --------
@@ -90,3 +92,11 @@ rate(juicefs_blockcache_hits[5m]) /
 ```promql
 histogram_quantile(0.99, rate(juicefs_object_request_durations_histogram_seconds_bucket[5m]))
 ```
+
+--------
+
+## 告警
+
+JuiceFS 目前没有专属告警规则。实例存活由通用的 `AgentDown` 告警覆盖：记录规则 `agent_up` 包含 `job="juice"` 的抓取目标，抓取失败持续 1 分钟即触发 `CRIT` 级别告警，详见 [**INFRA 监控告警**](/docs/infra/monitor/)。
+
+抓取失败不一定意味着挂载失败：指标端口被其他进程占用时，JuiceFS 只会在日志中记录一条 `listen on ... failed` 错误并继续挂载，文件系统可用，只是没有指标。可用 `journalctl -u juicefs-<name>` 排查。
