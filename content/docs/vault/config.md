@@ -149,7 +149,7 @@ VAULT 的全部信任根都保存在管理节点的 `files/pki/vault/` 目录中
 | `unseal.key` | 32 字节 static seal 解封密钥 | 首次部署时生成，此后绝不覆盖；各成员凭它自动解封 |
 | `init.json` | root token 与 5 份恢复密钥（阈值 3） | `bao operator init` 的输出，是全部管理权限的根 |
 | `backup.token` | 只能读取快照的备份令牌 | `vault-backup` 脚本使用，有效期 10 年 |
-| `backup/*.snap` | 集群首次初始化后的初始快照 | 文件权限 `0600` |
+| `backup/*.snap` | 集群首次初始化后的初始快照，以及整集群移除前的最终快照 | 文件权限 `0600` |
 | `vault-<seq>.crt` / `.key` | 各成员的服务端证书与私钥 | 由 Pigsty CA 签发，有效期由 [`cert_validity`](/docs/infra/param#cert_validity) 决定 |
 {.full-width}
 

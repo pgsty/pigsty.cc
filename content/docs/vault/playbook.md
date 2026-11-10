@@ -62,8 +62,8 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 - `vault_consumer`：移除整个集群时，列出 `tde/*` 与 `kes/*` 消费者，提示哪些数据将永久无法解密
 - `vault_pause`：暂停 5 秒，允许用户使用 Ctrl-C 中止执行
 - `vault_snapshot`：移除整个集群时，先拍摄一份最终快照并回收到管理节点的 `files/pki/vault/backup/`；**失败则中止**，不会继续删除数据
-- `vault_deregister`：从 VictoriaMetrics 监控目标中移除成员
 - `vault_leave`：仅移除部分成员时，在一个存活成员上执行 `bao operator raft remove-peer`；**失败则中止**，不会继续删除数据
+- `vault_deregister`：从 VictoriaMetrics 监控目标中移除成员
 - `vault_svc`：删除备份定时任务与备份指标，停止并禁用 `openbao` 服务，移除 HAProxy 入口
 - `vault_data`：删除数据、配置、TLS 证书、解封密钥与备份令牌的节点副本，以及本地快照（可通过 `vault_rm_data=false` 禁用）
 - `vault_pkg`：卸载 `openbao` 软件包（需通过 `vault_rm_pkg=true` 显式启用）
@@ -75,6 +75,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 - [`vault_rm_pkg`](/docs/vault/param#vault_rm_pkg)：控制是否卸载 `openbao` 软件包，默认为 `false`
 
 剧本判断移除范围的方式是：如果本次执行覆盖了 `vault` 分组的全部成员，就视为移除整个集群；否则视为移除部分成员，需要先将它们从 Raft 中摘除。
+开始移除前，本次选中的成员必须全部可达；有成员无法连接时，剧本会中止。
 摘除操作使用管理节点 `init.json` 中的 root token，因此被移除的成员在执行期间 **必须仍然保留在配置清单的 `vault` 分组中**。
 
 > [!CAUTION] 危险操作
@@ -148,7 +149,7 @@ VAULT 在部署与移除两个方向上都设置了护栏：
 | 防误删保险 | `vault_safeguard` 默认为 `true`，必须在命令行显式覆盖才能移除 |
 | 消费者提示 | 移除整个集群前列出 `tde/*` 与 `kes/*` 消费者 |
 | 摘除失败即中止 | `raft remove-peer` 失败时不再删除数据，避免残留的死成员悄悄吃掉集群的容错能力 |
-| 信任根不删除 | 移除剧本永远不碰管理节点上的 `files/pki/vault/` |
+| 信任根不删除 | 移除剧本不删除管理节点上的 `files/pki/vault/`，并向其中回收最终快照 |
 {.full-width}
 
 无论保护开关取值如何，真实运行后都要重新检查 `bao status`、Raft 成员列表与集群的容错能力；剧本返回成功不能替代这些运行态验收。

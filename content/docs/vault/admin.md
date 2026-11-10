@@ -190,7 +190,7 @@ bin/vault-add 10.10.10.14
 bin/vault-rm 10.10.10.13          # 从集群中摘除 10.10.10.13
 ```
 
-脚本会执行 `./vault-rm.yml -l 10.10.10.13 -e vault_safeguard=false`，依次完成：注销监控目标，在存活成员上执行 `bao operator raft remove-peer vault-3`，停止服务，删除本机数据与配置。
+脚本会执行 `./vault-rm.yml -l 10.10.10.13 -e vault_safeguard=false`，依次完成：在存活成员上执行 `bao operator raft remove-peer vault-3`，注销监控目标，停止服务，删除本机数据与配置。
 
 **执行期间，被移除的成员必须仍在配置清单的 `vault` 分组中**：剧本需要从清单中找到存活成员来执行摘除操作。如果摘除失败（例如管理员令牌无效），剧本会立即中止，不会删除任何数据。
 
@@ -287,7 +287,7 @@ vault-backup 14                    # 拍摄快照，并保留最近 14 份
 journalctl -t vault-backup         # 查看定时任务的执行日志
 ```
 
-**初始快照与最终快照**：集群首次初始化后，剧本会立即拍摄一份快照，回收到管理节点的 `files/pki/vault/backup/` 目录；[销毁集群](#销毁集群) 之前，剧本也会回收一份最终快照。除此之外，管理节点上不会有其他快照。
+**初始快照与最终快照**：集群首次初始化后，剧本会立即拍摄一份快照，回收到管理节点的 `files/pki/vault/backup/` 目录；[销毁集群](#销毁集群) 之前，剧本也会回收一份最终快照。管理员也可以按需把其他快照复制到该目录，管理节点不会自动清理这些文件。
 
 **异地保存**：定时快照只保存在各成员本地，复制到异地属于运维职责。快照由 OpenBao 的 barrier key 加密，没有 `unseal.key` 无法解开，可以放心复制到其他存储；但请把 `files/pki/vault/` 与快照 **分开保存**。
 例如，在管理节点上取回某个成员最新的快照：
@@ -352,14 +352,20 @@ Raft 会把恢复后的状态复制到其余成员。完成后检查 `bao status
    bao operator raft snapshot restore -force /tmp/restore.snap
    ```
 
-5. 恢复之后，原来的 root token 重新生效，临时集群的凭据全部作废。放回原来的 `init.json`，再执行令牌签发与备份任务：剧本发现当前的备份令牌已经无效，会重新签发并分发到各成员：
+5. 等待所有成员恢复健康。OpenBao 2.7.2 实测中，跨集群强制恢复后，个别 standby 可能持续报 `decryption failed: cipher: message authentication failed`。先确认该成员的 `unseal.key` 与管理节点一致，再单独重启受影响的成员，等待 `bao status` 恢复正常后继续；不要同时重启全部成员：
+
+   ```bash
+   ansible 10.10.10.13 -b -m systemd -a 'name=openbao state=restarted'   # 替换为受影响成员的地址
+   ```
+
+6. 恢复之后，原来的 root token 重新生效，临时集群的凭据全部作废。放回原来的 `init.json`，再执行令牌签发与备份任务：剧本发现当前的备份令牌已经无效，会重新签发并分发到各成员：
 
    ```bash
    mv -f files/pki/vault/orig/init.json files/pki/vault/
    ./vault.yml -l vault -t vault_provision,vault_backup
    ```
 
-6. 使用原来的 root token 检查 `bao operator raft list-peers`、业务密钥，并在每个成员上手工执行一次 `vault-backup` 确认备份链路恢复正常。
+7. 使用原来的 root token 检查 `bao operator raft list-peers`、业务密钥，并在每个成员上手工执行一次 `vault-backup` 确认备份链路恢复正常。
 
 快照中也保存了审计设备的配置，OpenBao 在解封后会尝试写入原来的审计路径 `/var/log/openbao/audit.log`。如果该路径不可写，解封后的初始化会失败，请检查目录权限，**不要通过关闭审计来绕过问题**。
 

@@ -181,6 +181,8 @@ Raft 的 leader 依靠心跳维持任期，心跳超时就会触发重新选举�
 
 每个成员都启用了文件审计设备，审计日志写入本地的 `/var/log/openbao/audit.log`，由 logrotate 每天轮转、保留 7 份。审计日志中的敏感字段会由 OpenBao 进行 HMAC 处理。
 
+standby 将业务请求转发给 active，由 active 记录审计；尚未担任过 active 的成员可能还没有 `audit.log`，这不表示审计配置失效。
+
 审计日志不会被采集到 VictoriaLogs，删除 VAULT 时也不会被删除。如果审计设备无法写入，OpenBao 会拒绝所有请求，此时会触发 `VaultAuditFailure` 告警，请优先检查磁盘空间。
 
 
