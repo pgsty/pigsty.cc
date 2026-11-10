@@ -6,6 +6,15 @@ icon: fa-solid fa-clipboard-list
 categories: [参考]
 ---
 
+## 2026-11-10
+
+Claude Code 已改用 Anthropic 官方签名的 DEB/RPM 原生包。新配方 `claude-code` 直接从官方 apt/dnf latest 仓库下载，版本为 `2.1.322`，四个包的 SHA256 均按官方仓库索引校验；原自维护的 `claude` 本地 nFPM 重打包配方已封存为 obsolete。
+
+| 名称 | 原版本 | 新版本 | 备注 |
+|---|---|---|---|
+| claude-code | 2.1.319 | 2.1.322 | 官方原生 DEB/RPM；SHA256 按官方 apt/dnf 索引固定 |
+{.wide .expand}
+
 ## 2026-11-06
 
 | 名称                       | 旧版本  | 新版本  | 备注                   |

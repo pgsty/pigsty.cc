@@ -194,7 +194,7 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 
 | 名称                                                       | 版本      | 许可证                                                                     | 备注                                    |
 | :--------------------------------------------------------- | :-------- | :------------------------------------------------------------------------- | :-------------------------------------- |
-| [`claude`](https://github.com/anthropics/claude-code)      | `2.1.318` | [Proprietary](https://www.anthropic.com/legal/terms)                       | Claude Code - Anthropic 代理编程工具    |
+| [`claude-code`](https://github.com/anthropics/claude-code) | `2.1.322` | [Proprietary](https://www.anthropic.com/legal/terms)                       | Anthropic 官方签名 apt/dnf 原生包；替代已封存的 `claude` |
 | [`opencode`](https://github.com/anomalyco/opencode)        | `1.19.5`  | [MIT](https://github.com/anomalyco/opencode/blob/main/LICENSE)             | 终端 AI 编程助手                        |
 | [`codex`](https://github.com/openai/codex)                 | `0.167.0` | [Apache-2.0](https://github.com/openai/codex/blob/main/LICENSE)            | OpenAI 代理编程工具                     |
 | [`crush`](https://github.com/charmbracelet/crush)          | `0.100.0` | [FSL-1.1-MIT](https://github.com/charmbracelet/crush/blob/main/LICENSE.md) | Charm 出品的终端 AI 代理编程助手        |
