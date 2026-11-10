@@ -145,7 +145,7 @@ rsync -avz ./ meta-2:~/pigsty
   - default · root:root 0644
 - datasources · root:infra 0750/
   - *.json · 0600，由 register 生成
-- dashboards · grafana:infra 0750/   {open=false}
+- dashboards · root:infra 0750/   {open=false}
 - metrics · victoria:infra 0750/   {open=false}
 - logs · victoria:infra 0750/   {open=false}
 - traces · victoria:infra 0750/   {open=false}
@@ -337,8 +337,8 @@ Pigsty 自行渲染的 INFRA 单元统一位于 `/etc/systemd/system/`，包括 
         - { path: "{{ pg_backup_dir }}/backup"  ,mode: "0700" }
         - { path: "/var/run/postgresql"         ,mode: "0755" }
         - { path: "/etc/patroni"                ,mode: "0700" }
-        - { path: "/etc/pgbackrest"             ,mode: "0700" }
-        - { path: "/etc/pgbouncer"              ,mode: "0700" }
+        - { path: "/etc/pgbackrest"             ,mode: "0750" }
+        - { path: "/etc/pgbouncer"              ,mode: "0750" }
         - { path: "/etc/pg_exporter"            ,mode: "0700" }
 
     - name: link pgsql directories
@@ -416,7 +416,7 @@ Pgbouncer 使用与 `{{ pg_dbsu }}`（默认为 `postgres`）相同的用户运�
   - pgbouncer.ini · postgres:postgres 0640，连接池主配置
   - database.txt · postgres:postgres 0600，连接池数据库
   - useropts.txt · postgres:postgres 0600，业务用户连接参数
-  - userlist.txt · postgres:postgres，由 /pg/bin/pgb-user 维护
+  - userlist.txt · postgres:postgres 0600，由 /pg/bin/pgb-user 维护
   - pgb_hba.conf · postgres:postgres 0600，访问控制
 - pg/log/pgbouncer · postgres:postgres 0750/   {open=false}
 - var/run/postgresql · pg_dbsu:postgres 0755，由 tmpfiles 维护/   {open=false}
