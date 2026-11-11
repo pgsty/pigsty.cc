@@ -79,6 +79,8 @@ collector_branch_name:           # 此采集器的唯一标识符
 - 指标名、标签名会在加载阶段进行 Prometheus 规则校验，非法配置会直接报错
 - 常量标签会在加载阶段检查冲突；它们不能与查询标签重名，也不能与内置动态标签 `datname` / `query` 冲突；配置了 `HISTOGRAM` 采集器时，`le` 为保留标签，不能用作常量标签
 - SQL 查询结果必须包含所有声明为 `LABEL` 的列；自 `v1.4.1` 起，缺少任一标签列都会使该采集器本轮采集失败，不再生成空标签或沿用旧结果，其他非致命采集器不受影响
+- 返回 `GAUGE` 或 `COUNTER` 列时，查询必须保证每组标签一行；重复会拒绝整个采集器结果，未设置 `fatal: true` 时其他采集器继续工作。只有直方图指标的查询仍会聚合同标签多行
+- `scale` 与 `default` 必须为有限数；加载时拒绝 NaN 与无穷值
 - 如果使用单行内联 `metrics` 写法，`description` 建议始终使用双引号包裹，避免 YAML 歧义
 
 ## 核心配置元素 {#core-configuration-elements}
@@ -150,7 +152,7 @@ pg_xact_age:
 
 使用注意：
 
-- 这是 **快照** 直方图：每次抓取重建整个分布，桶计数可增可减，语义上更接近 Gauge。
+- 这是 **快照** 直方图：每次刷新缓存重建分布，桶计数可增可减，输出类型为 Gauge。
   `histogram_quantile()` 可以直接使用，但对 `_count` / `_sum` 使用 `rate()` / `increase()` 没有意义
 - SQL `NULL` 默认忽略不计入观测；显式配置 `default` 时按默认值计入
 - `scale` 在分桶前应用于观测值；与标量列一致，时间戳与布尔值不受 `scale` 影响
@@ -516,12 +518,13 @@ curl -s http://localhost:9630/metrics | grep -E 'pg_exporter_query_scrape_(durat
 
 升级 Exporter 时，应合并并部署配套采集器 YAML。只替换二进制不会应用 SQL、标签或状态编码修正；在 Pigsty 管理的实例上，还应确认最终部署的配置包含这些定义。升级 PostgreSQL 大版本时，必须重新检查按版本选中的采集器分支。
 
+- **Exporter v1.6.0 → v1.6.1：** 内置指标名、标签键、类型与桶不变。分区父表冻结年龄改为零；无索引表扫描汇总和空行数估计得到修正。重复标量行只使所属采集器失败，非致命失败不会阻断其他采集器；直方图仍聚合同标签观测。自定义 `scale`／`default` 必须有限。SQL 修复需要部署新版 YAML。
 - **Exporter v1.5.0 → v1.6.0：** 内置 SQL 指标名、标签键、类型与单位不变。跨库进度指标的 `relname` 改用数字 OID 表示其他库的用户关系，当前库与系统目录仍解析名称；面板保留 `datname` 与 `pid`。中断轮次不再增加目标错误计数，HTTP 健康与采集成功分开判定。
 - **Exporter v1.4.1 → v1.5.0：** 内置 SQL 指标名、类型与单位不变，但 `pg_sub_*` 增加 `datname`，`pg_recv_state` 修正状态编码。检查跨库同名订阅的连接／聚合，以及 Grafana 值映射。
 - **PG18 → PG19：** 已有指标没有删除或改名，但 `pg_sub_sync_error_count` 扩大为表与序列同步错误之和，`pg_subrel_count` 也包含序列。`pg_sub_has_worker` 可区分订阅行存在与 apply worker 运行；不能只看 `pg_sub_id` 是否存在。
 - **跨越 PG17／18：** 部分 `pg_bgwriter_*` 指标需要改用 `pg_checkpointer_*` 或按后端筛选的 I/O 指标；`pg_wal_write`、`pg_wal_sync`、`pg_wal_write_time`、`pg_wal_sync_time` 自 PG18 起需要迁移到 `pg_io_*{object="wal"}`，并调整标签聚合。逐项替代关系见 [**兼容性对照表**](https://exp.pgsty.com/zh/compatibility/#older-postgresql-metrics)。
 
-完整变更见 [**v1.6.0 发布说明**](/docs/pg_exporter/release/#v160-metric-compatibility) 和 [**PG19 指标对照表**](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics)。PG19 支持最早随 v1.3.0 发布，验收证据对应 19 RC1；这些说明不表示所有仪表盘已通过运行验收。
+完整变更见 [**v1.6.1 发布说明**](/docs/pg_exporter/release/#v161-metric-compatibility)、[**v1.6.0 发布说明**](/docs/pg_exporter/release/#v160-metric-compatibility) 和 [**PG19 指标对照表**](https://exp.pgsty.com/zh/compatibility/#postgresql-19-metrics)。PG19 支持最早随 v1.3.0 发布，验收证据对应 19 RC1；这些说明不表示所有仪表盘已通过运行验收。
 
 部署前后检查 `/metrics`、`/explain`、`/stat`、`pg_exporter_query_scrape_error_count` 和日志，再执行实际仪表盘、记录规则与告警表达式，检查返回时序、标签、单位和状态映射。用 `promtool check rules` 检查规则语法，并用 `promtool test rules` 覆盖正常输入和时序缺失。HTTP 200、`up == 1` 或 `pg_up == 1` 都不能证明每个预期指标存在；空向量也不等于健康的零值。
 

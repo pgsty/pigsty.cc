@@ -73,7 +73,7 @@ Flags:
 
 选用 `PG_EXPORTER_URL_FILE` 后，文件不可读、为空或只含空白都会阻止启动，不会回退到本机默认目标。
 
-v1.5.0 严格校验 URL、百分号转义和查询参数名：参数名不能为空，不能包含空白或 `=`，URL 不能包含未转义的 `#`。错误会使用不含原始连接串的固定诊断并停止启动，避免泄露密码或静默丢弃 TLS 设置。有效 URL 的用户信息中的密码与 `password=` 参数在日志中会被遮盖。
+自 v1.5.0 起严格校验 URL、百分号转义和查询参数名：参数名不能为空，不能包含空白或 `=`，URL 不能包含未转义的 `#`。错误会使用不含原始连接串的固定诊断并停止启动，避免泄露密码或静默丢弃 TLS 设置。日志会遮盖有效 URL 用户信息中的密码和 `password=` 参数值；v1.6.1 增加 `sslpassword=` 脱敏，并修复 `postgresql://?host=/var/run/postgresql` 这类连接串规范化时丢失 `//` 的问题。自动发现为子库替换库名时还会移除冲突的 `service=`。
 
 URL 中未指定 `sslmode` 时会自动补 `sslmode=disable`。另外，`PGSERVICE` / `PGSERVICEFILE` 等 libpq 服务文件环境变量会在启动时被清除并记录日志——服务文件可能覆盖显式指定的连接目标，`pg_exporter` 要求"日志里宣告的 URL 就是实际连接的 URL"。
 
@@ -129,13 +129,14 @@ RPM/DEB 包已内置服务单元与环境文件，安装后仅需修改环境文
 # /usr/lib/systemd/system/pg_exporter.service
 [Unit]
 Description=Prometheus exporter for PostgreSQL/Pgbouncer server metrics
-Documentation=https://pigsty.io/docs/pg_exporter
+Documentation=https://exp.pgsty.com/docs/
 After=network.target
 
 [Service]
 EnvironmentFile=-/etc/default/pg_exporter
 User=prometheus
 ExecStart=/usr/bin/pg_exporter $PG_EXPORTER_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 
 [Install]
@@ -168,8 +169,11 @@ PG_EXPORTER_OPTS='--log.level=info'
 sudo systemctl enable --now pg_exporter    # 启动并设置开机自启
 sudo systemctl status pg_exporter          # 查看状态
 journalctl -u pg_exporter -f               # 跟踪日志
-curl -X POST localhost:9630/reload         # 热重载采集器配置（无需重启）
+sudo systemctl reload pg_exporter         # v1.6.1 单元支持 SIGHUP 重载
+curl -X POST localhost:9630/reload         # 也可通过 HTTP 重载采集器配置
 ```
+
+安装或替换服务单元后执行 `sudo systemctl daemon-reload`。更换二进制或修改 `/etc/default/pg_exporter` 后需 `sudo systemctl restart pg_exporter`；只有采集器 YAML 修改可以用 reload。重载复用数据库连接池并清空采集计划；自动发现移除或替换子库时才会回收相应旧池。
 
 ## Docker 部署 {#docker-deployment}
 
@@ -179,7 +183,7 @@ docker run -d \
   --restart unless-stopped \
   -p 9630:9630 \
   -e PG_EXPORTER_URL="postgres://monitor:S3cret@host:5432/postgres" \
-  pgsty/pg_exporter:1.6.0
+  pgsty/pg_exporter:1.6.1
 ```
 
 Docker Compose：
@@ -187,7 +191,7 @@ Docker Compose：
 ```yaml
 services:
   pg_exporter:
-    image: pgsty/pg_exporter:1.6.0
+    image: pgsty/pg_exporter:1.6.1
     container_name: pg_exporter
     restart: unless-stopped
     ports:
@@ -221,7 +225,7 @@ spec:
     spec:
       containers:
       - name: pg-exporter
-        image: pgsty/pg_exporter:1.6.0
+        image: pgsty/pg_exporter:1.6.1
         ports:
         - containerPort: 9630
         env:

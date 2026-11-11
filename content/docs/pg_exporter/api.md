@@ -52,10 +52,12 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="v1.6.0",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.3",goos="linux",goarch="amd64"} 1
+pg_exporter_build_info{version="v1.6.1",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.4",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```
+
+`pg_exporter_build_info` 的 `version`、`revision`、`branch`、`builddate`、`goversion`、`goos`、`goarch` 保留真实构建值，用户固定标签不能覆盖它们。非法 `--namespace` 会在启动时被拒绝；数据库或查询级内置样本的标签无效时记录警告并跳过，避免 panic。
 
 #### 响应格式
 
