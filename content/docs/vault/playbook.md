@@ -21,7 +21,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 
 在 [`vault.yml`](https://github.com/pgsty/pigsty/blob/main/vault.yml) 中，提供了以下可用的任务子集：
 
-- `vault_assert`：校验 `vault_seq` 与 `vault_data`，推导实例名、成员列表与 VIP（总是执行）
+- `vault_assert`：校验成员编号、数据目录、端口与 VIP 配置，推导实例名与成员列表（总是执行）
 - `vault_install`：安装 `openbao` 软件包，确保 `openbao` 系统用户存在
 - `vault_dir`：创建配置、数据、快照与审计日志目录
 - `vault_config`：生成 VAULT 配置
@@ -30,7 +30,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
     - `vault_cert_copy`：将 CA 证书、服务端证书与私钥复制到成员
   - `vault_seal`：生成并分发 static seal 解封密钥；成员上已有的密钥与管理节点不一致时立即中止
   - `vault_conf`：渲染 `openbao.hcl`、systemd 单元、`bao` 客户端环境与日志轮转配置
-- `vault_launch`：逐个启动成员；仅当证书、解封密钥、配置或单元变化时才重启，并等待成员重新入群
+- `vault_launch`：启动已停止的成员；仅当本次证书、解封密钥、配置或单元变化时才逐个重启，并等待成员重新入群
 - `vault_init`：在 `vault_seq` 最小的成员上执行一次性初始化，随后等待所有成员解封
 - `vault_provision`：启用 `secret/`、`transit/` 与 `approle`；签发备份令牌，已有的令牌无效时（例如上一套集群遗留的）自动重新签发
 - `vault_haproxy`：启用 VIP 时在各成员上生成 `<VIP>:8200` 的 HAProxy 入口，否则移除该入口
@@ -130,7 +130,7 @@ bin/vault-rm 10.10.10.13       # 从集群中摘除指定成员（可指定多�
 例如，添加或摘除成员后，脚本会提示刷新其余成员的配置与 HAProxy 入口：
 
 ```bash
-./vault.yml -l 'vault,!10.10.10.14' -t vault_haproxy,vault_conf
+./vault.yml -l 'vault,!10.10.10.14' -t vault_config,vault_launch,vault_haproxy,vault_backup
 ```
 
 
@@ -145,7 +145,7 @@ VAULT 在部署与移除两个方向上都设置了护栏：
 |:---|:---|
 | 初始化保护 | 仅在全部成员可达、全部未初始化且没有 `init.json` 时才初始化，避免分裂出空集群 |
 | 解封密钥校验 | 成员上已有的解封密钥与管理节点不一致时立即中止，避免用错误的密钥封装数据 |
-| 串行重启 | 一次只重启一个成员，等它重新入群后再处理下一个，保证集群始终有多数成员在线 |
+| 串行重启 | 集群已有 leader 时，等待当前成员重新入群后再处理下一个；尚无 leader 时先启动其余成员 |
 | 防误删保险 | `vault_safeguard` 默认为 `true`，必须在命令行显式覆盖才能移除 |
 | 消费者提示 | 移除整个集群前列出 `tde/*` 与 `kes/*` 消费者 |
 | 摘除失败即中止 | `raft remove-peer` 失败时不再删除数据，避免残留的死成员悄悄吃掉集群的容错能力 |

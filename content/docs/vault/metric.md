@@ -55,8 +55,8 @@ OpenBao 沿用了上游 Vault 的 `vault_` 指标前缀，并通过 go-metrics �
 | `vault:ins:login_rps` | 实例的登录请求速率（次/秒） | `rate(vault_core_handle_login_request_count{job="vault"}[1m])` |
 | `vault:ins:req_rt_avg_5m` | 实例 5 分钟平均请求延迟（秒） | `rate(vault_core_handle_request_sum{job="vault"}[5m]) / rate(vault_core_handle_request_count{job="vault"}[5m]) / 1000` |
 | `vault:cls:req_rt_avg_5m` | 集群 5 分钟平均请求延迟（秒），按请求量加权 | `sum by (job,cls) (rate(vault_core_handle_request_sum{job="vault"}[5m])) / sum by (job,cls) (rate(vault_core_handle_request_count{job="vault"}[5m])) / 1000` |
-| `vault:cls:unsealed` | 集群中已解封的成员数 | `sum by (job,cls) (vault_core_unsealed{job="vault"})` |
-| `vault:cls:active` | 集群中 active 成员数，正常应恰好为 1 | `sum by (job,cls) (vault_core_active{job="vault"})` |
+| `vault:cls:unsealed` | 集群中已解封的成员数 | `sum by (job,cls) (vault_core_unsealed{job="vault"}) or (0 * count by (job,cls) (up{job="vault"}))` |
+| `vault:cls:active` | 集群中 active 成员数，正常应恰好为 1 | `sum by (job,cls) (vault_core_active{job="vault"}) or (0 * count by (job,cls) (up{job="vault"}))` |
 | `vault:cls:autopilot_healthy` | active 成员视角的集群健康状态 | `max by (job,cls) (vault_autopilot_healthy{job="vault"} and on(ins) (vault_core_active{job="vault"} == 1))` |
 | `vault:cls:failure_tolerance` | active 成员视角的集群容错数 | `max by (job,cls) (vault_autopilot_failure_tolerance{job="vault"} and on(ins) (vault_core_active{job="vault"} == 1))` |
 | `vault:ins:autopilot_healthy` | active 成员视角的各成员健康状态 | `max by (job,cls,ins) (label_replace(vault_autopilot_node_healthy{job="vault"} and on(ins) (vault_core_active{job="vault"} == 1), "ins", "$1", "node_id", "(.+)"))` |

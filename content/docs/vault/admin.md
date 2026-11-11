@@ -148,13 +148,13 @@ bin/vault-add 10.10.10.14
 脚本会执行 `./vault.yml -l 10.10.10.14`：新成员签发证书、获取解封密钥，通过 Raft `retry_join` 加入现有集群并自动解封，同时注册到监控系统。
 新成员不是 `vault_seq` 最小的成员，所以绝不会执行初始化。
 
-完成后，刷新现有成员的配置（`retry_join` 成员列表）与 HAProxy 入口：
+完成后，刷新现有成员的配置、证书、HAProxy 入口与备份脚本：
 
 ```bash
-./vault.yml -l 'vault,!10.10.10.14' -t vault_haproxy,vault_conf
+./vault.yml -l 'vault,!10.10.10.14' -t vault_config,vault_launch,vault_haproxy,vault_backup
 ```
 
-`retry_join` 只在进程启动时使用，因此这里不需要重启现有成员，配置会在它们下次重启时生效。
+配置或证书发生变化时，`vault_launch` 会逐个重启现有成员，使更新立即生效。
 
 
 ### 从单节点扩容到三节点
@@ -167,7 +167,7 @@ bin/vault-add 10.10.10.14
 4. 刷新原有成员的证书、配置与入口，证书变化会触发它的重启：
 
    ```bash
-   ./vault.yml -l 10.10.10.11 -t vault_cert,vault_conf,vault_launch,vault_haproxy
+   ./vault.yml -l 10.10.10.11 -t vault_config,vault_launch,vault_haproxy,vault_backup
    ```
 
 5. 将 `node_etc_hosts` 中的 `vault.pigsty` 改为指向 VIP，然后执行 `./node.yml -t node_hosts` 刷新所有节点；
@@ -197,8 +197,8 @@ bin/vault-rm 10.10.10.13          # 从集群中摘除 10.10.10.13
 成功后，编辑配置清单删除该成员，再刷新其余成员的配置与 HAProxy 入口：
 
 ```bash
-vi pigsty.yml                                             # 从 vault 分组中删除 10.10.10.13
-./vault.yml -l vault -t vault_haproxy,vault_conf          # 刷新剩余成员的配置与入口
+vi pigsty.yml                     # 从 vault 分组中删除 10.10.10.13
+./vault.yml -l vault -t vault_config,vault_launch,vault_haproxy,vault_backup
 ```
 
 > [!WARNING] 注意容错能力
@@ -253,7 +253,7 @@ VAULT 的配置都由剧本生成，请修改配置清单后重跑剧本，不�
 ./vault.yml -l vault -t vault_conf,vault_launch     # 刷新配置文件，变化时逐个重启成员
 ```
 
-`vault_launch` 只在证书、解封密钥、配置文件或 systemd 单元发生变化时才重启成员，并且一次只重启一个：等待该成员重新找到 leader 之后，才会处理下一个。因此在三节点集群上，整个过程中始终有多数成员在线。
+`vault_launch` 先启动所有选中成员中已经停止的服务，再逐个处理本次证书、解封密钥、配置文件或 systemd 单元发生变化的成员。集群已有 leader 时，等待当前成员重新入群后才重启下一个；尚无 leader 时，继续启动流程，使集群有机会恢复法定人数。更新前应确认集群健康；若上次运行在写入配置后中断，需要手工逐个重启尚未加载新配置的成员。
 
 **更新证书**：服务端证书默认有效期为 20 年。如需重新签发（例如更换了 VIP 或域名），删除管理节点上对应的证书后重新执行：
 
@@ -288,6 +288,8 @@ journalctl -t vault-backup         # 查看定时任务的执行日志
 ```
 
 **初始快照与最终快照**：集群首次初始化后，剧本会立即拍摄一份快照，回收到管理节点的 `files/pki/vault/backup/` 目录；[销毁集群](#销毁集群) 之前，剧本也会回收一份最终快照。管理员也可以按需把其他快照复制到该目录，管理节点不会自动清理这些文件。
+
+如果首次部署在回收快照前中断，重跑时发现管理节点尚无快照，剧本会补拍并回收一份。
 
 **异地保存**：定时快照只保存在各成员本地，复制到异地属于运维职责。快照由 OpenBao 的 barrier key 加密，没有 `unseal.key` 无法解开，可以放心复制到其他存储；但请把 `files/pki/vault/` 与快照 **分开保存**。
 例如，在管理节点上取回某个成员最新的快照：
