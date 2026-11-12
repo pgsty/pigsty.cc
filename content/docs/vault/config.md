@@ -175,7 +175,7 @@ VAULT 模块在成员节点上创建以下目录和文件：
 | `/etc/openbao/unseal.key` | static seal 解封密钥的节点副本 | `0640`，`root:openbao` |
 | `/etc/openbao/backup.token` | 备份令牌的节点副本 | `0600`，`root:root` |
 | `/data/vault/raft/` | Raft 数据目录（可配置） | `0700`，`openbao:openbao` |
-| `/data/vault/backup/` | 本地快照目录，保留 7 份 | `0700`，`root:root` |
+| `/data/vault/backup/` | 本地快照目录，保留 7 份（含并发互斥锁 `.backup.lock`） | `0700`，`root:root` |
 | `/var/log/openbao/` | 审计日志 `audit.log`，每天轮转，保留 7 份 | `0750`，`openbao:openbao` |
 | `/etc/systemd/system/openbao.service` | systemd 服务定义 | `0644`，`root:root` |
 | `/etc/profile.d/bao.sh` | `bao` 客户端环境变量 | `0644`，`root:root` |
@@ -186,4 +186,4 @@ VAULT 模块在成员节点上创建以下目录和文件：
 | `/etc/haproxy/conf.d/vault.cfg` | VIP 上的 HAProxy 入口（仅启用 VIP 时） | `0644`，`root:root` |
 {.full-width .wide .expand}
 
-此外，INFRA 节点上的 `/infra/targets/vault/<vault-seq>.yml` 是该成员的监控抓取目标。
+此外，INFRA 节点上的 `/infra/targets/vault/<vault_cluster>-<vault_seq>.yml` 是该成员的监控抓取目标。

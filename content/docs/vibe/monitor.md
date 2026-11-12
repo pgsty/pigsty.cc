@@ -14,7 +14,7 @@ Code-Server 与 JupyterLab 本身不暴露 Prometheus 指标，可通过 systemd
 
 ## Claude Code 可观测性
 
-VIBE 在 `~/.claude/settings.json` 中写入默认 OpenTelemetry 环境变量：
+VIBE 在 `~/.claude/settings.json` 中通过非破坏性合并写入默认 OpenTelemetry 环境变量（默认将指标与日志发往控制平面 `admin_ip` 上的 `vmetrics_port: 8428` 与 `vlogs_port: 9428`，未定义 `admin_ip` 时回退 `127.0.0.1`）：
 
 ```json
 {
@@ -24,14 +24,14 @@ VIBE 在 `~/.claude/settings.json` 中写入默认 OpenTelemetry 环境变量：
     "OTEL_LOGS_EXPORTER": "otlp",
     "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL": "http/protobuf",
     "OTEL_EXPORTER_OTLP_LOGS_PROTOCOL": "http/protobuf",
-    "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT": "http://127.0.0.1:8428/opentelemetry/v1/metrics",
-    "OTEL_EXPORTER_OTLP_LOGS_ENDPOINT": "http://127.0.0.1:9428/insert/opentelemetry/v1/logs",
+    "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT": "http://<admin_ip>:8428/opentelemetry/v1/metrics",
+    "OTEL_EXPORTER_OTLP_LOGS_ENDPOINT": "http://<admin_ip>:9428/insert/opentelemetry/v1/logs",
     "OTEL_RESOURCE_ATTRIBUTES": "ip=<host>,job=claude"
   }
 }
 ```
 
-`claude_env` 会与上述默认配置合并，可用于配置 API Key 或替换模型端点。
+`claude_env` 会与上述默认配置及文件中已有的用户自定义配置合并，可用于配置 API Key 或替换模型端点。
 
 --------
 
@@ -64,9 +64,9 @@ ss -tlnp | grep 8888
 
 ## Claude 日志查询
 
-通过 VictoriaLogs：
+在控制平面（`<admin_ip>`）通过 VictoriaLogs 查询：
 
 ```bash
-curl -G 'http://127.0.0.1:9428/select/logsql/query' \
+curl -G 'http://<admin_ip>:9428/select/logsql/query' \
   --data-urlencode 'query=job:claude'
 ```

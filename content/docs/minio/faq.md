@@ -12,7 +12,7 @@ categories: [参考]
 
 ## MINIO 模块默认部署哪个引擎？
 
-v4.5.0 当前源码部署并且只部署 Silo，`minio_type` 唯一合法值是 `silo`。MINIO 是兼容模块名，不表示运行 MinIO 服务端。
+自 Pigsty v4.5 起（含当前 v4.6.0），MINIO 模块部署并且只部署 Silo，`minio_type` 唯一合法值是 `silo`。MINIO 是兼容模块名，不表示运行 MinIO 服务端。
 
 - 新建集群建议显式写出 `minio_type: silo`。
 - `minio_type: minio` 与 `minio_type: rustfs` 都会在身份检查阶段失败。
@@ -28,7 +28,7 @@ MinIO 上游在 [2025-10-15 改为仅分发源码](https://github.com/minio/mini
 
 Pigsty 因此曾维护自己的 [MinIO 分支](https://github.com/pgsty/minio) 与软件包。MinIO [**CVE-2025-62506**](https://nvd.nist.gov/vuln/detail/CVE-2025-62506) 影响 `RELEASE.2025-10-15T17-29-55Z` 之前的版本，并在该版本修复；Pigsty 后续 MinIO 分支和当前 Silo 代码都包含这一修复。
 
-您仍可以在 Pigsty Infra 仓库中找到 MinIO/RustFS 的 RPM/DEB 包以及构建脚本，但“仓库提供软件包”不等于“v4.5 MINIO 模块支持该后端”。当前角色只接受 Silo；其他服务需要自行部署和维护。
+您仍可以在 Pigsty Infra 仓库中找到 MinIO/RustFS 的 RPM/DEB 包以及构建脚本，但“仓库提供软件包”不等于“当前 MINIO 模块支持该后端”。自 v4.5 起角色只接受 Silo；其他服务需要自行部署和维护。
 
 
 ----------------

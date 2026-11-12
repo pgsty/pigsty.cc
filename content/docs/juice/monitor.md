@@ -28,7 +28,7 @@ Grafana Dashboard
 /infra/targets/juice/<ip>.yml
 ```
 
-该文件按配置整体重写，只包含 `state: create` 的实例。执行 `juice_clean` 移除实例时会同步刷新；使用 [`node-rm.yml`](/docs/node/playbook#node-rmyml) 下线节点时会删除该文件。
+该文件按配置整体重写，只包含 `state: create` 的实例；若该节点上已没有任何 `state: create` 的实例，则会直接删除该文件。执行 `juice_clean` 移除实例时会同步刷新或清理；使用 [`node-rm.yml`](/docs/node/playbook#node-rmyml) 下线节点时也会删除该文件。
 
 当前源码随附 [**Node JuiceFS**](https://demo.pigsty.cc/d/node-juice) 仪表盘（UID：`node-juice`），
 用于查看单个节点上各 JuiceFS 挂载实例的容量、缓存、对象存储、元数据事务与客户端资源指标。

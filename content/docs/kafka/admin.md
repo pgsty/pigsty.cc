@@ -115,7 +115,7 @@ sudo -u kafka /usr/local/bin/pigsty-kafka-health cluster \
   describe --replication
 ```
 
-如果没有 Leader、成员长期落后或 Voter 集合与预期不一致，应先停止其他变更，保留日志、Manifest 与 `meta.properties` 证据再分析。死掉的 Voter 用 [缩容](#缩容集群) 或 [替换故障节点](#替换故障节点) 流程摘除；不要手工改写 quorum 状态。
+如果看到没有 Leader、成员长期落后或 Voter 集合与预期不一致，应先停止其他变更，保留日志、Manifest 与 `meta.properties` 证据再分析（`pigsty-kafka-health` 门禁同样直接解析 `describe --replication` 逐个正式 Voter 校验 `Lag == 0` 且最近拉取/追平时间在阈值内，排除尚未晋升的 Observer）。死掉的 Voter 用 [缩容](#缩容集群) 或 [替换故障节点](#替换故障节点) 流程摘除；不要手工改写 quorum 状态。
 
 
 --------
@@ -246,10 +246,10 @@ Lag 要结合消费速率与业务 SLO 判断：短暂积压可能是批处理�
 
 角色根据现场健康和静态指纹自动选择路径：
 
-- 集群不健康或停止：只启动已停止的 Controller，恢复并追平 Quorum 后再启动 Broker；若同时存在静态变化，仍在线成员随后进入严格滚动；
+- 集群不健康或停止：只启动已停止的 Controller，恢复并追平 Quorum 后再启动 Broker（若恢复前存在挂起的 Controller Observer 晋升，也会继续完成晋升）；若同时存在静态变化，仍在线成员随后进入严格滚动；
 - 存在待加入的 Controller-capable 节点：逐个以 Observer 追平后 `add-controller` 提升为 Voter；
 - 健康集群新增纯 Broker：逐个格式化、启动并确认注册；
-- 健康集群存在静态变化：严格逐节点滚动，每节点重启前后执行 Controller 零 Lag/最近追平、Quorum、Offline Partition、Under Min ISR 与 ISR 追平门禁；
+- 健康集群存在静态变化：严格逐节点滚动，每节点重启前后执行 Controller 零 Lag/最近追平、Quorum、Offline Partition、Under Min ISR 与 ISR 追平门禁（单节点开发集群或两个声明 Controller 均已是活跃正式 Voter 的双 Controller 集群会按拓扑豁免多数派损失检查并给出告警提示）；
 - 没有静态变化：不重启 Kafka。
 
 不要用 `-t kafka_config` 绕过完整状态机。动态 Topic/User/ACL/Quota 收敛位于 `kafka_provision` 资源收敛阶段，静态变化是否重启由角色决定。
@@ -296,7 +296,7 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 ./kafka-rm.yml -l 10.10.10.13     # 退役单个成员：摘除 Voter 条目、注销 Broker、清理本机
 ```
 
-执行内容依次为：注销监控 Target → 停止服务 → `remove-controller` 摘除 KRaft Voter 条目（若该成员是 Voter；多成员退役时严格串行）→ `kafka-cluster.sh unregister` 注销 Broker → 清理本机配置与数据（受 `kafka_rm_data` 控制）。Broker 注销步骤容忍失败，以便重入与处理已失联成员；只有在核对现场 Quorum、Broker 注册、副本健康以及目标本机状态后，才从 `pigsty.yml` 删除该成员条目。
+执行内容依次为：先在停服前通过幸存成员执行 `remove-controller` 摘除 KRaft Voter 条目（若该成员是 Voter；多成员退役时严格串行，若 Quorum 不可读或摘除失败会立即终止剧本而不停服删盘）→ 注销监控 Target → 停止服务 → 通过幸存成员执行 `kafka-cluster.sh unregister` 注销 Broker（仅对已未注册的幂等状态放行，其余错误失败中止）→ 清理本机配置与数据（受 `kafka_rm_data` 控制）。如果集群中同时存在已死节点与存活待缩容节点，必须先退役已死节点；只有在核对现场 Quorum、Broker 注册、副本健康以及目标本机状态后，才从 `pigsty.yml` 删除该成员条目。
 
 退役前请自行确认：剩余 Controller 仍构成多数派、保持奇数个 Controller、剩余 Broker 数不低于现有 Topic 的最大 RF。如果被退役 Broker 上仍有 Partition 副本，角色会打印警告：这些 Partition 将保持副本不足，直到同 `kafka_seq` 的替换节点重新加入（自动继承副本分配并补数据），或你显式执行 Reassignment 将副本迁走。**计划内缩容应当先 Reassignment 排空、再退役**。
 

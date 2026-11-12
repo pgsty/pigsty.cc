@@ -21,13 +21,14 @@ apt update      # Debian/Ubuntu
 ./infra.yml -t repo
 ```
 
-### JupyterLab 安装失败
+### JupyterLab 未部署或安装失败
 
-`jupyter_venv` 必须存在：
+1. `jupyter_enabled` 默认值为 `false`（仅 `conf/vibe.yml` 模板显式设为 `true`），单独执行 `-t jupyter` 时请确认已在清单开启或附带 `-e jupyter_enabled=true`
+2. 确认目标节点已由 [`NODE`](/docs/node) 模块安装 `uv`（`jupyter_install` 会自动调用 `uv venv` 创建 `jupyter_venv` 并安装 `jupyterlab` 与 `ipykernel`）
 
 ```bash
-uv venv /data/venv
-./vibe.yml -l <host> -t jupyter
+which uv
+./vibe.yml -l <host> -t jupyter -e jupyter_enabled=true
 ```
 
 --------
@@ -65,9 +66,10 @@ nginx -t
 
 ### 修改 JupyterLab Token
 
+`jupyter_launch` 在检测到配置文件变更时会自动重启 `jupyter` 服务（若清单中未开启 `jupyter_enabled: true`，需一并传入 `-e jupyter_enabled=true`）：
+
 ```bash
-./vibe.yml -l <host> -e jupyter_password='NewToken' -t jupyter_config
-ssh <host> sudo systemctl restart jupyter
+./vibe.yml -l <host> -e jupyter_enabled=true -e jupyter_password='NewToken' -t jupyter_config,jupyter_launch
 ```
 
 --------
@@ -76,49 +78,52 @@ ssh <host> sudo systemctl restart jupyter
 
 ### CLI 找不到命令
 
-先检查 `claude_install` 是否完成：
+Claude Code 通过 `pigsty-infra` 原生系统包安装（默认包名 `claude`），请检查软件源与 `claude_install` 是否执行成功：
 
 ```bash
 which claude
-npm list -g --depth=0 | grep '@anthropic-ai/claude-code'
+rpm -q claude || dpkg -l claude
 ./vibe.yml -l <host> -t claude_install
 ```
 
-如果你禁用了 `claude_enabled`，可手工安装：
+如果你禁用了 `claude_enabled`，可通过系统包管理器手工安装：
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+yum install -y claude      # EL
+apt install -y claude      # Debian/Ubuntu
 ```
 
-需要替换 npm 包时，可通过 `claude_package` 指定。
+如需切换为软件源提供的新官方包名，可在配置中设置 `claude_package: claude-code`。
 
 ### Codex CLI 找不到命令
 
+Codex CLI 同样通过 `pigsty-infra` 原生系统包 `codex` 安装：
+
 ```bash
 which codex
-npm list -g --depth=0 | grep '@openai/codex'
+rpm -q codex || dpkg -l codex
 ./vibe.yml -l <host> -t codex_install
 ```
 
-确认 `codex_enabled: true`。VIBE 仅安装 Codex CLI，不负责生成 Codex 配置。
+确认 `codex_enabled: true` 且节点已挂载 `pigsty-infra` 软件源。VIBE 仅安装 Codex CLI，不负责生成 Codex 配置。
 
 ### API Key 未配置
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-xxx
-# 或配置到 claude_env
+# 或配置到 claude_env 后执行 ./vibe.yml -l <host> -t claude_config
 ```
 
 ### 监控数据不显示
 
-检查本地 VictoriaMetrics/VictoriaLogs：
+检查控制平面（`<admin_ip>`，单机部署即 `127.0.0.1`）上的 VictoriaMetrics / VictoriaLogs 可达性：
 
 ```bash
-curl http://127.0.0.1:8428/api/v1/status/buildinfo
-curl http://127.0.0.1:9428/select/logsql/stats_query
+curl http://<admin_ip>:8428/api/v1/status/buildinfo
+curl http://<admin_ip>:9428/select/logsql/stats_query
 ```
 
-确保 `~/.claude/settings.json` 中 OTEL 端点正确。
+确保 `~/.claude/settings.json` 中 OTEL 端点（`http://<admin_ip>:8428/opentelemetry/v1/metrics` 与 `http://<admin_ip>:9428/insert/opentelemetry/v1/logs`）可达。
 
 --------
 

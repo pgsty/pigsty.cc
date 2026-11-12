@@ -176,7 +176,7 @@ JMX 配置采用白名单，只导出 JVM 基线和有界的 Broker、复制、�
 | `kafka_network_request_total_time_seconds` |  Gauge  | `request`, `version`, `quantile` | API 总耗时 P50/P95/P99       |
 | `kafka_network_request_queue_size`         |  Gauge  | －                                | 等待 Request Handler 的请求数   |
 | `kafka_network_response_queue_size`        |  Gauge  | －                                | 等待 Network Processor 的响应数 |
-| `kafka_server_request_handler_idle_ratio`  |  Gauge  | －                                | Request Handler 平均空闲比例    |
+| `kafka_server_request_handler_idle_ratio`  |  Gauge  | －                                | Request Handler 近 1 分钟（OneMinuteRate）空闲比例 |
 | `kafka_network_processor_idle_ratio`       |  Gauge  | －                                | Network Processor 平均空闲比例  |
 {.full-width .wide .expand}
 

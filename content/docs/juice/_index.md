@@ -78,4 +78,4 @@ juice_instances:
 ./juice.yml -l <host>
 ```
 
-未定义 `juice_instances` 或其为空字典的主机会被剧本自动跳过。实例名即 JuiceFS 卷名，须为 3–63 位小写字母、数字或连字符，且首尾不能是连字符，详见 [**配置校验**](/docs/juice/config#配置校验)。
+控制端要求 `ansible-core >= 2.16`。未定义 `juice_instances`、其值为 `null` 或为空字典的主机（以及指定 `-e fsname=<name>` 但未命中的主机）会被剧本自动跳过。实例名即 JuiceFS 卷名，须为 3–63 位小写字母、数字或连字符，且首尾不能是连字符，详见 [**配置校验**](/docs/juice/config#配置校验)。

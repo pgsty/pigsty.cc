@@ -25,7 +25,7 @@ juice_instances:
     port: 9568
 ```
 
-`state: absent` 的实例不参与冲突检查。替换实例时，可以把旧实例标记为 `absent`，让新实例沿用原端口。
+`state: absent` 的实例豁免 `port` 与 `path` 冲突检查（但 `unit` 仍需在节点内全部实例间保持唯一）。替换实例时，可以把旧实例标记为 `absent`，让新实例使用新的实例名并沿用原端口。
 
 --------
 
@@ -56,21 +56,21 @@ juice_instances:
 
 ## 不带 `-l` 执行 `juice.yml` 会怎样？
 
-未定义 `juice_instances` 或其为空字典的主机会被直接跳过，不会安装软件包、创建缓存目录或写入监控目标文件；定义了实例的主机照常执行。
+未定义 `juice_instances`、其值为 `null` 或为空字典的主机（以及指定 `-e fsname=<name>` 但未命中的主机）会被直接跳过，不会安装软件包、创建缓存目录或写入监控目标文件；定义了实例的主机照常执行。
 不过仍建议使用 `-l` 明确执行范围。
 
 --------
 
 ## 如何移除实例？
 
-1. 将实例 `state` 设为 `absent`
+1. 先停止使用该挂载点的应用进程，将实例 `state` 设为 `absent`（默认 `unit` 无需保留 `path` 与 `meta`）
 2. 执行：
 
 ```bash
 ./juice.yml -l <host> -t juice_clean
 ```
 
-`juice_clean` 会同时刷新该节点的监控目标文件。移除不会删除元数据、文件数据（PostgreSQL `jfs_blob` 表或对象存储）、本地缓存与挂载点目录。
+`juice_clean` 会停止服务并强校验正常卸载（不执行 `umount -l` 懒卸载；若挂载点繁忙会报错中止并保留单元与环境文件以便排障），成功后删除配置并刷新或清理该节点的监控目标文件。移除不会删除元数据、文件数据（PostgreSQL `jfs_blob` 表或对象存储）、本地缓存与挂载点目录。
 v4.5.0 及更早版本中，`-t juice_clean` 不会执行清理任务，请改用不带标签的完整执行：`./juice.yml -l <host> -e fsname=<name>`。
 
 --------

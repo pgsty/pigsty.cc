@@ -128,7 +128,7 @@ minio_data: '/data/minio'         # minio 数据目录，使用 `{x...y}` 指定
 
 保留的对象存储后端选择器，默认值与当前唯一合法值都是 `silo`。Silo 沿用 MinIO S3/Admin API、`MINIO_*` 环境变量与磁盘格式。
 
-`minio` 与 `rustfs` 不再是有效取值，会在角色身份检查阶段失败。旧 MinIO 集群升级到 v4.5 前，必须独立验证备份、MinIO → Silo 数据兼容性与回滚方案；修改参数本身不会执行数据迁移。
+`minio` 与 `rustfs` 不再是有效取值，会在角色身份检查阶段失败。旧 MinIO 集群升级到 v4.5+ 前，必须独立验证备份、MinIO → Silo 数据兼容性与回滚方案；修改参数本身不会执行数据迁移。
 
 部署与移除角色都将 `minio_type` 默认为 `silo`。执行 `minio-rm.yml` 时仍必须提供 `minio_cluster` 与 `minio_seq` 身份参数，并受 `minio_safeguard`、数据与软件包清理开关约束；默认引擎值不会绕过这些删除保护。
 

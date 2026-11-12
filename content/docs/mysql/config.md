@@ -17,7 +17,7 @@ MYSQL 模块通过清单（Inventory）声明集群，`mysql.yml` 将现场收�
 - 目标节点已完成 [`NODE`](/docs/node) 纳管，共享 CA 已安装到 `/etc/pki/ca.crt`（由 `node_ca` 负责，MySQL 角色只签发叶证书）；
 - 软件仓库包含 `mysql` 模块：`node_repo_modules: node,infra,mysql`，或本地仓库已缓存 `repo_extra_packages: [mysql]`；
 - 平台在支持矩阵内：`x86_64` 的 EL 8/9/10、Debian 12/13、Ubuntu 22/24，或 `aarch64` 的 EL 9/10；
-- 三个平台密码（`mysql_root_password`、`mysql_monitor_password`、`mysql_cluster_password`）已改为生产值——预检会拒绝 `CHANGE_ME` 开头的占位密码。
+- 三个平台密码（`mysql_root_password`、`mysql_monitor_password`、`mysql_cluster_password`）已改为生产值——预检会拒绝 `CHANGE_ME` 开头的占位密码，且 `mysql_monitor_password` 禁止包含 `%(...)s` 形式的 INI 插值表达式。
 
 
 --------
@@ -28,11 +28,11 @@ MYSQL 模块通过清单（Inventory）声明集群，`mysql.yml` 将现场收�
 
 | 参数              | 层级 | 说明                                           |
 |:----------------|:--:|:---------------------------------------------|
-| `mysql_cluster` | 集群 | 集群名，必须与清单分组名一致（成员须位于同名分组）；也是备份目录与监控 `cls` 标签 |
-| `mysql_seq`     | 实例 | 单机为 `1`；HA 为连续的 `1..3`，同时作为 `server_id`      |
+| `mysql_cluster` | 集群 | 集群名，必须与清单分组名一致（成员须位于同名分组）；也是备份子目录与监控 `cls` 标签 |
+| `mysql_seq`     | 实例 | 单机为 `1`；HA 为连续的 `1..3`（用于生成实例名与确定首次引导协调者）     |
 {.full-width .wide .expand}
 
-拓扑由成员数量决定：**1 个成员是单机，3 个成员是 InnoDB Cluster**，其他数量会被预检拒绝。`mysql_seq=1` 只是首次引导协调者，不代表运行时主库。
+拓扑由成员数量决定：**1 个成员是单机，3 个成员是 InnoDB Cluster**，其他数量会被预检拒绝。`mysql_seq=1` 只是首次引导协调者，不代表运行时主库；实例 `server_id` 由成员 IPv4 地址按 32 位无符号整数自动推导（非 IPv4 主机名取 SHA-1 前 32 位），无需手工指定。
 
 实例名为 `{{ mysql_cluster }}-{{ mysql_seq }}`（如 `my-test-1`）。清单中的主机地址（IP 或可解析主机名）就是 MySQL 与 MGR 的通告地址，部署后不可通过普通重跑变更。
 
@@ -76,10 +76,10 @@ my-test:
         priv: { 'app.*': 'ALL PRIVILEGES' }
 ```
 
-部署后形成单主 MGR：一个 PRIMARY 可写，两个 SECONDARY 只读，容忍一台故障。每个成员运行 Router，从任一成员的 `6446` 都能到达当前主库。
+部署后形成单主 MGR：一个 PRIMARY 可写，两个 SECONDARY 只读，容忍一台故障。每个成员运行 Router，从任一成员的 `6446` 都能到达当前主库。若同组启用了 [`NODE`](/docs/node) 模块的二层 VIP（`vip_enabled: true`、`vip_address`、`vip_vrid`），VIP 会自动加入各成员 TLS 叶证书 SAN，客户端可直接通过统一入口 `<vip>:6446`（读写）与 `<vip>:6447`（只读）接入。
 
-> [!WARNING] 每次操作都要选择完整集群
-> 所有 `mysql.yml` 操作必须用 `-l` 选中该集群的 **全部成员**（或不加 `-l` 收敛所有 MySQL 集群）。部分成员选择会在预检阶段被拒绝，这是防止拓扑分歧的刻意设计。
+> [!WARNING] 集群收敛与单成员限域规则
+> 涉及引导、配置或拓扑协调的完整 `mysql.yml` 操作必须用 `-l` 选中该集群的 **全部成员**（或不加 `-l` 收敛所有 MySQL 集群），部分成员限域会在预检阶段被拒绝。仅单成员独立阶段 `-t mysql_provision`（含 `mysql_db`、`mysql_user`，要求当前 PRIMARY 在 `-l` 范围内）、`-t mysql_backup` 与 `-t mysql_monitor` 允许对降级集群的存活子集执行局部收敛。
 
 
 --------
@@ -159,26 +159,35 @@ my-test:
 - **平台保留参数不可覆盖**：身份与协议（`user`、`pid_file`、`server_id`、`datadir`、`socket`、`port`、`bind_address`、`mysqlx_bind_address`、`report_host`、`mysqlx` 等）、复制与插件（`gtid_mode`、`enforce_gtid_consistency`、`log_bin`、`relay_log`、`plugin_load*`、`clone`、`plugin_clone`、`plugin_mysqlx`、`group_replication_*` 等）以及 TLS（`require_secure_transport`、`ssl_*`）由角色统一管理，声明即拒绝；
 - 参数变更会触发 [编排式滚动重启](/docs/mysql/admin#修改集群参数)：从库先行、主库殿后。
 
-内存基线无需配置：缓冲池为节点内存的 25%（下限 256MB），Redo 容量为缓冲池一半（128MB–4GB），复制并行度按 CPU 推导。需要精确控制时用 `mysql_parameters` 覆盖 `innodb_buffer_pool_size` 等参数即可。
+内存基线无需手工配置：在独占 MySQL 节点上，缓冲池（`innodb_buffer_pool_size`）默认为节点物理内存的 **50%**；与 PostgreSQL 混部（节点定义了 `pg_cluster`）时自动收敛为 **25%**，同时始终为系统保留至少 `1 GiB` 内存（下限 `256 MiB`）。Redo 容量（`innodb_redo_log_capacity`）默认为缓冲池的一半（限制在 `128 MiB`–`4 GiB`），默认 `max_connections` 为 `1000`，复制并行度按 CPU 核数推导。需要精确控制时用 `mysql_parameters` 覆盖对应参数即可。
 
 
 --------
 
-## 备份配置
+## 数据目录与备份配置
 
 ```yaml
-mysql_backup_enabled: true            # 默认开启每日备份
-mysql_backup_repo:
-  local:
-    path: /data/backups/mysql         # 本地备份根目录
-    retention: 7                      # 保留最近 7 份全量
+mysql_data: /data/mysql               # MySQL 数据目录（含 binlog 与 tmp 子目录）
+mysql_backup_enabled: true            # 默认开启每日全量备份
+mysql_backup_dir: /data/backups/mysql # 本地备份根目录（禁止与 mysql_data 重叠）
+mysql_backup_retention: 3             # 保留最近 3 份已提交全量备份
 ```
+
+数据目录约定：
+
+- `mysql_data` 默认为 `/data/mysql`（Binlog 与临时文件分别位于其下 `binlog/` 与 `tmp/` 子目录），不可放在 `/etc`、`/usr`、`/var`、`/tmp` 等系统保留路径下（唯一例外是兼容旧版原地管理的 `/var/lib/mysql`）；
+- Debian/Ubuntu 节点会自动渲染 `/etc/apparmor.d/local/usr.sbin.mysqld` 放行自定义 `mysql_data` 与 `/etc/pki/ca.crt`；
+- 若主机 `/var/lib/mysql` 下已存在初始化过的旧库而 `mysql_data` 配为其他路径，预检会主动拦截，避免在旧库旁误初始化空库。
+
+> [!IMPORTANT] 旧参数 `mysql_backup_repo` 已废弃并会触发预检失败
+> 请统一使用扁平参数 `mysql_backup_dir` 与 `mysql_backup_retention`；若清单残留 `mysql_backup_repo`，`mysql_check` 会直接报错退出。
 
 备份契约（详见 [日常管理](/docs/mysql/admin#管理备份)）：
 
-- 每日一次 XtraBackup **全量物理备份**，备份后立即 prepare，产出可直接恢复的目录；
-- 单机在本机备份；HA 由每个成员的定时器各自触发，但 **只有当前 PRIMARY 真正执行**，其余成员自动跳过；
-- 目录布局 `<path>/<cluster>/<UTC 时间戳>/`，`latest` 符号链接原子指向最新一份，按 `retention` 剪枝；
+- 每日一次 XtraBackup **全量物理备份**，备份后立即执行 `--prepare`，产出可直接回拷恢复的目录；首次执行 `mysql_backup` 阶段时若尚无备份，会自动触发一次初始全量基线备份；
+- 单机在本机备份；HA 由每个成员的定时器各自触发，但 **只有当前可写 PRIMARY 真正执行**，其余成员自动跳过；
+- 目录布局 `<mysql_backup_dir>/<mysql_cluster>/<UTC 时间戳>/`，`latest` 符号链接原子指向最新一份含 `backup.ok` 的备份，按 `mysql_backup_retention`（默认 `3`）剪枝；
+- 每次成功备份后向 `/var/lib/node_exporter/textfile/mysql.prom` 写入最新成功时间戳与体积指标，供 `MySQLBackupStale` 告警巡检；
 - 没有增量链、Binlog 归档与 PITR；单机场景的恢复点就是最近一次备份。
 
 > [!WARNING] 备份位置跟随主库
@@ -198,15 +207,20 @@ mysql_cluster_password: MySQL.Cluster    # AdminAPI / Router / 备份身份
 凭据的生命周期约定：
 
 - 密码不能包含换行，不能保留 `CHANGE_ME` 前缀，预检强制校验；
+- `mysql_monitor_password` 写入 Go INI 格式的 `/etc/mysqld_exporter.cnf`（`"""..."""` 字面量会自动将 `$` 转义为 `$$`），因此 **禁止包含 `%(...)s` 形式的 INI 插值子串**（如 `%(host)s`）；
 - **HA 集群的 `mysql_cluster_password` 不能通过普通重跑轮换**：它已写入集群 Metadata 与 Router 密钥环，隐式轮换会被预检拒绝（单机实例无此绑定，改清单重跑即生效）；
 - **`mysql_root_password` 同样不能隐式重置**：现场 root 密码与声明不一致时任务会明确报错，避免误配置静默改密。
 
-凭据材料落盘在 `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`），包括 root 与集群身份的客户端配置文件，可供本机运维直接使用：
+凭据材料落盘在 `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`），同时节点会自动安装 `/etc/profile.d/mysql.sh` 交互式管理快捷方式：
 
 ```bash
-mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf        # 本机 root 会话
+my                                                            # 等价于 sudo mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf
+mysh                                                          # HA 节点快捷 AdminAPI，默认打印 dba.getCluster().status()
 mysql --defaults-extra-file=/etc/mysql/pigsty/cluster.cnf     # 经本机 Router 的集群会话（仅 HA 成员）
 ```
+
+> [!TIP] 手工调用 `mysqlsh` 请始终加上 `--no-defaults`
+> 软件包自带的客户端配置可能包含 MySQL Shell 不识别的选项，直接运行手工 `mysqlsh` 命令时请显式传入 `mysqlsh --no-defaults ...`（`mysh` 函数与内置维护脚本已自动附带）。
 
 
 --------
@@ -243,7 +257,7 @@ all:
           max_connections: 500
 
   vars:
-    version: v4.5.0
+    version: v4.6.0
     admin_ip: 10.10.10.10
     region: china                        # 中国大陆使用 USTC/腾讯镜像
     node_repo_modules: node,infra,mysql
@@ -254,4 +268,4 @@ all:
     mysql_cluster_password: MySQL.Cluster
 ```
 
-完整模板见 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。[**`conf/mysql.yml`**](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml) 是 OpenHalo（PostgreSQL 内核的 MySQL 兼容方案）模板，与本模块无关；开发版将它迁至 `conf/fork/halo.yml`。
+完整模板见 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。注意 [`conf/fork/halo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/halo.yml) 是 OpenHalo（PostgreSQL 内核的 MySQL 协议兼容方案）模板，与原生 MYSQL 模块无关。

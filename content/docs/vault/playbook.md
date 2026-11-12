@@ -21,6 +21,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 
 在 [`vault.yml`](https://github.com/pgsty/pigsty/blob/main/vault.yml) 中，提供了以下可用的任务子集：
 
+- `id`：通过 `node_id` 角色推导节点身份与变量
 - `vault_assert`：校验成员编号、数据目录、端口与 VIP 配置，推导实例名与成员列表（总是执行）
 - `vault_install`：安装 `openbao` 软件包，确保 `openbao` 系统用户存在
 - `vault_dir`：创建配置、数据、快照与审计日志目录
@@ -30,12 +31,12 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
     - `vault_cert_copy`：将 CA 证书、服务端证书与私钥复制到成员
   - `vault_seal`：生成并分发 static seal 解封密钥；成员上已有的密钥与管理节点不一致时立即中止
   - `vault_conf`：渲染 `openbao.hcl`、systemd 单元、`bao` 客户端环境与日志轮转配置
-- `vault_launch`：启动已停止的成员；仅当本次证书、解封密钥、配置或单元变化时才逐个重启，并等待成员重新入群
-- `vault_init`：在 `vault_seq` 最小的成员上执行一次性初始化，随后等待所有成员解封
+- `vault_launch`：启动已停止的成员；仅对执行前已在运行且本次证书、解封密钥、配置或单元发生变化的成员逐个滚动重启（刚从停止状态首次拉起的成员跳过二次重启，避免启动竞态），并等待成员重新入群
+- `vault_init`：在 `vault_seq` 最小的成员上执行一次性初始化，随后等待所有成员自动解封并完成 Raft 选主（`leader_address` 非空）
 - `vault_provision`：启用 `secret/`、`transit/` 与 `approle`；签发备份令牌，已有的令牌无效时（例如上一套集群遗留的）自动重新签发
 - `vault_haproxy`：启用 VIP 时在各成员上生成 `<VIP>:8200` 的 HAProxy 入口，否则移除该入口
 - `vault_backup`：安装 `vault-backup` 脚本、每日定时任务，并拍摄第一份快照
-- `vault_register`：将 VAULT 成员注册到 VictoriaMetrics 监控
+- `vault_register`（别名 `register`、`add_metrics`）：将 VAULT 成员注册到 VictoriaMetrics 监控
 
 `vault_init` 只有在以下条件 **全部** 满足时才会执行 `bao operator init`：
 
@@ -63,7 +64,7 @@ VAULT 模块提供了两个剧本：[`vault.yml`](#vaultyml) 用于创建、更�
 - `vault_pause`：暂停 5 秒，允许用户使用 Ctrl-C 中止执行
 - `vault_snapshot`：移除整个集群时，先拍摄一份最终快照并回收到管理节点的 `files/pki/vault/backup/`；**失败则中止**，不会继续删除数据
 - `vault_leave`：仅移除部分成员时，在一个存活成员上执行 `bao operator raft remove-peer`；**失败则中止**，不会继续删除数据
-- `vault_deregister`：从 VictoriaMetrics 监控目标中移除成员
+- `vault_deregister`（别名 `deregister`、`rm_metrics`）：从 VictoriaMetrics 监控目标中移除成员
 - `vault_svc`：删除备份定时任务与备份指标，停止并禁用 `openbao` 服务，移除 HAProxy 入口
 - `vault_data`：删除数据、配置、TLS 证书、解封密钥与备份令牌的节点副本，以及本地快照（可通过 `vault_rm_data=false` 禁用）
 - `vault_pkg`：卸载 `openbao` 软件包（需通过 `vault_rm_pkg=true` 显式启用）

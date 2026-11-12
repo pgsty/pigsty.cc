@@ -62,10 +62,10 @@ Play 使用 `any_errors_fatal: true`。某个阶段失败时，后续危险推�
 
 1. 启动所有 Controller-capable 节点；
 2. 等待 Controller listener 与动态 Quorum Leader；
-3. 首次 Bootstrap 时验证初始 Controller Directory ID 已进入现场 Quorum；
+3. 首次 Bootstrap 时验证初始 Controller Directory ID 已进入现场 Quorum；若恢复的是全停的已定型集群且存在尚未完成晋升的待加入 Controller Observer，恢复后继续完成 `add-controller` 晋升；
 4. 启动纯 Broker；
 5. 等待 Broker listener 并要求完整集群健康；
-6. 只有配置已证明成功运行后，才持久化静态指纹。
+6. 只有配置已证明成功运行（且所有声明的 Controller 均已成为正式 Voter，而非停留在 Observer 状态）后，才完成 Manifest 定型（`kafka_commission`）并持久化静态指纹。
 
 JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于角色自有的 Kafka CLI/metadata 管理通道。
 
@@ -74,7 +74,7 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 
 新格式化的 `kafka_role: broker` 逐个准入（`admit`）：启动后要求它已经注册且未 Fenced 才继续下一个。
 
-新的 Combined/Controller 节点则逐个加入动态 Quorum（`join`）：已 Commission 的集群以 `--no-initial-controllers` 全新格式化该节点，它以 Observer 身份启动并追平元数据，随后角色执行 `add-controller` 将其提升为 Voter，并用健康后置检查确认它进入 Voter 集合且集群完整健康。加入流程可重入：中断后重跑会从现场状态继续；若其 `node.id` 在 Quorum 中残留着死去前任的 Voter 条目，配置阶段会快速失败并给出先行 `kafka-rm.yml` 退役的确切命令。
+新的 Combined/Controller 节点则逐个加入动态 Quorum（`join`）：已 Commission 的集群以 `--no-initial-controllers` 全新格式化该节点，它以 Observer 身份启动并追平元数据，随后角色执行 `add-controller` 将其提升为 Voter，并用健康后置检查确认它进入 Voter 集合且集群完整健康（待晋升节点的静态指纹会推迟到晋升完成后才落盘）。加入流程可重入：中断后重跑会从现场状态继续；若其 `node.id` 在 Quorum 中残留着死去前任的 Voter 条目，配置阶段会快速失败并给出先行 `kafka-rm.yml` 退役的确切命令。
 
 准入/加入只证明服务成为成员；已有 Partition 不会自动迁移到新 Broker，必须另行执行显式 Reassignment。
 
@@ -83,7 +83,8 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 
 当渲染后的静态指纹变化时，严格滚动每次只处理一个节点：
 
-- 重启前检查 Controller 多数派、全部 Voter 零 Lag 且最近完成追平、Offline Partition、Under Replicated、Under Min ISR，以及移除目标后每个 Partition 的有效 ISR；
+- 重启前检查 Controller 多数派、全部正式 Voter 零 Lag 且最近完成追平、Offline Partition、Under Replicated、Under Min ISR，以及移除目标后每个 Partition 的有效 ISR；
+- 单 Controller 或单 Broker 开发集群自动跳过多数派/ISR 预检并打印短暂中断提示；双 Controller 集群仅在两个声明的 Controller 均已确认为正式活跃 Voter（绝非待晋升 Observer）时跳过 Controller 多数派损失检查（仍保留 Broker `min.insync.replicas` 预检）并输出告警提示；
 - 重启后要求目标 Controller 回到 Voter 且重新追平、目标 Broker 注册且未 Fenced、其副本重新进入 ISR；
 - 任一门禁失败立即停止后续节点。
 
@@ -96,17 +97,31 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 
 ## 任务标签
 
-| 标签                                            | 阶段/作用                                               |
-|:----------------------------------------------|:----------------------------------------------------|
-| `kafka-id`                                    | 始终执行的身份、完整集群与拓扑派生断言                                 |
-| `kafka_install`                               | 安装阶段总入口                                             |
-| `kafka_user`                                  | 创建 `kafka` 系统用户与用户组                                 |
-| `kafka_pkg`                                   | 按平台映射安装 `java-runtime` 与 `kafka-stack` 软件包          |
-| `kafka_config`                                | Manifest、安全材料、配置渲染、静态指纹、存储格式化与路径判定                  |
-| `kafka_launch`                                | Converge、Controller 串行加入、Broker 串行准入、严格滚动与 Manifest Commission |
-| `kafka_provision`                             | 动态 minISR、Topic、User、ACL 与 Quota 收敛                 |
-| `kafka_monitor` / `monitor`                   | 协议 Exporter 配置与监控注册总入口                              |
-| `kafka_register` / `register` / `add_metrics` | 仅刷新 VictoriaMetrics 文件发现 Target                     |
+`kafka.yml` 主要标签：
+
+| 标签                                            | 阶段/作用                                                  |
+|:----------------------------------------------|:-------------------------------------------------------|
+| `id` / `node-id`                              | 通过 `node_id` 角色推导主机身份                                  |
+| `kafka-id`                                    | 始终执行的身份、完整集群与拓扑派生断言                                    |
+| `kafka_install`                               | 安装阶段总入口（含 `kafka_user`、`kafka_pkg`）                    |
+| `kafka_config`                                | 配置阶段总入口（含 `kafka_dir`、`kafka_meta`、`kafka_manifest`、`kafka_security`、`kafka_fingerprint`、`kafka_format`、`kafka_lifecycle`） |
+| `kafka_launch`                                | 启动阶段总入口（含 `converge`、`join`、`admit`、`roll`、`kafka_commission`） |
+| `kafka_provision`                             | 动态 minISR、Topic、User、ACL 与 Quota 收敛                    |
+| `kafka_monitor` / `monitor`                   | 协议 Exporter 配置与清理（`kafka_exporter`）及监控注册总入口            |
+| `kafka_register` / `register` / `add_metrics` | 仅刷新 VictoriaMetrics 文件发现 Target                        |
+{.full-width}
+
+`kafka-rm.yml` 主要标签：
+
+| 标签                                              | 阶段/作用                                    |
+|:------------------------------------------------|:-----------------------------------------|
+| `kafka-id`                                      | 始终执行的身份、路径安全与防误删断言                       |
+| `kafka_retire`                                  | 真子集退役时经幸存成员摘除 KRaft Voter（停服前）与注销 Broker（停服后） |
+| `kafka_deregister` / `deregister` / `rm_metrics` | 移除 VictoriaMetrics 文件发现 Target           |
+| `kafka`                                         | 停止并禁用 `kafka_exporter` 与 `kafka` 服务      |
+| `kafka_config`                                  | 删除 Exporter 配置、Systemd 单元/环境文件与健康脚本      |
+| `kafka_data`                                    | 按 `kafka_rm_data` 删除数据根目录与 `/etc/kafka`  |
+| `kafka_pkg`                                     | 按 `kafka_rm_pkg` 卸载 `kafka-stack` 软件包    |
 {.full-width}
 
 正常配置变更应运行完整 `kafka.yml`，让角色自行选择生命周期路径。阶段标签主要用于开发、诊断和受控修复；不能用 `-t kafka_config` 或只限制单节点来绕过完整状态机。
@@ -136,7 +151,7 @@ Bootstrap Manifest 的权威副本位于每个集群成员上：
 `scram` 集群的每个成员另有 `/etc/kafka/secrets.yml`；管理节点不保存任何 Kafka 状态，每次运行时从任一成员副本解析。活集群是运行事实权威，但普通剧本不会在冲突时擅自改写任何一方：
 
 - 所有成员都没有 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
-- Manifest 存在而所有数据盘为空时失败关闭；
+- 已定型（commissioned）的 Manifest 存在而所有数据盘为空时失败关闭（若仅为首次引导未完成格式化留下的未定型 Manifest，则自动丢弃并重新生成）；
 - Cluster ID、安全模式或 Controller Identity 冲突时失败关闭；
 - 新节点的 `node.id` 在 Quorum 中残留前任 Voter 条目时快速失败，要求先用 `kafka-rm.yml` 退役。
 
@@ -149,7 +164,7 @@ Bootstrap Manifest 的权威副本位于每个集群成员上：
 
 角色对影响 Kafka 进程的静态文件计算期望指纹，并只在以下条件之一成立后写入 `/etc/kafka/.pigsty-applied-static.sha256`：
 
-- Converge 已经成功启动并通过全局健康检查；
+- Converge 已经成功启动并通过全局健康检查（处于待加入 Quorum 晋升状态的节点则会推迟至 `join` 晋升完成后写入）；
 - 严格滚动已经让该节点重启、追平并通过后置门禁。
 
 如果执行中断，未被证明生效的变化不会被记成“已应用”。下一次完整重跑仍能识别待处理的静态重启。
@@ -165,7 +180,7 @@ Bootstrap Manifest 的权威副本位于每个集群成员上：
 2. 幂等处理 `kafka_users` 的凭据、ACL 与声明 Quota；
 3. 幂等处理 `kafka_topics` 的创建、Partition 增长与显式配置；
 4. 检查内部 Topic RF 漂移，但不自动 Reassignment；
-5. 在按 `kafka_seq` 排序后的前两个 Broker-capable 节点配置并启动协议 Exporter；
+5. 在按 `kafka_seq` 排序后的前两个 Broker-capable 节点配置并启动协议 Exporter，同时停止并清理其余节点上残留的旧协议 Exporter 服务；
 6. 在全部 Infra 节点刷新文件发现 Target。
 
 每个实例对应一个 Target 文件，启用时的 JMX 目标与（被选中节点的）协议 Exporter 目标都在同一 `kafka` 采集任务下。关闭 JMX 且未放置协议 Exporter 的实例会写入空列表 `[]`：
@@ -218,12 +233,17 @@ Target 文件每次完整运行按当前 Exporter 放置与 JMX 开关刷新；T
 ## `kafka-rm.yml`
 
 移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。
-该剧本 **强制要求非空 `-l/--limit`**，裸跑会在进入角色前失败；`-l` 选中一个集群的 **全部成员** 即为集群下线，选中 **真子集** 即为成员退役，两者共用同一执行顺序：
+该剧本 **强制要求非空 `-l/--limit`**，裸跑会在进入角色前失败；`-l` 选中一个集群的 **全部成员** 即为集群下线，选中 **真子集** 即为成员退役，执行顺序如下：
 
-注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 经幸存成员摘除 KRaft Voter 条目与 Broker 注册（`kafka_retire`，仅在选中真子集时有幸存成员可用）
-→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
+1. 经幸存成员摘除 KRaft Voter 条目（`kafka_retire`，仅真子集退役时执行，且 **在停服与删盘之前运行**；要求 Quorum 可读，若 Quorum 不可读或 `remove-controller` 失败立即终止整个 Play，不继续停服或删除数据）；
+2. 注销 VictoriaMetrics Target（`kafka_deregister`）；
+3. 停止并禁用 `kafka_exporter` 与 `kafka` 服务（`kafka`）；
+4. 经幸存成员注销 Broker 注册（`kafka_retire`，仅真子集退役时在停服后执行 `kafka-cluster.sh unregister`，仅容忍已未注册的幂等返回，其余错误失败中止）；
+5. 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）；
+6. 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）；
+7. 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
 
-在任何注销或停服前，角色还会验证 `kafka_data` 是专用的安全绝对路径：不含 `.`/`..` 路径段，且不能是 `/`、`/data`、`/var`、`/etc`、`/opt`、`/usr`、`/home`、`/root` 或 `/pg`。
+在任何退群、注销或停服前，角色还会验证 `kafka_data` 是专用的安全绝对路径：不含 `.`/`..` 路径段，且不能是 `/`、`/data`、`/var`、`/etc`、`/opt`、`/usr`、`/home`、`/root` 或 `/pg`。
 防误删开关是 `kafka_safeguard`：设置为 `true`（命令行或清单中）时剧本直接中止，不删除任何东西。身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由——先用 [`kafka.yml`](#kafkayml) 收敛并读取失败原因。
 
 
@@ -242,14 +262,14 @@ Target 文件每次完整运行按当前 Exporter 放置与 JMX 开关刷新；T
 ### 成员退役
 
 ```bash
-./kafka-rm.yml -l 10.10.10.13                      # 退役单个成员：摘除 Voter 条目与 Broker 注册，再清理本机
+./kafka-rm.yml -l 10.10.10.13                      # 退役单个成员：先摘除 Voter 条目，再停服、注销 Broker 并清理本机
 ```
 
 部分退役要求 `-l` 之外至少保留一个 Broker-capable（`combined`/`broker`）成员和一个 Controller-capable（`combined`/`controller`）成员；
-两者可以是同一台 Combined 节点。缺少任一幸存锚点时，剧本会在注销或停服前失败。
-通过这些幸存成员，剧本尝试摘除目标的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。
+两者可以是同一台 Combined 节点。缺少任一幸存锚点时，剧本会在退群、注销或停服前失败。
+剧本先在目标服务尚未被停服前通过幸存成员执行 `remove-controller` 摘除目标的 KRaft Voter 条目（多成员时严格串行，支持将双 Voter 缩容为单 Voter；若集群中同时存在已死节点与存活待缩容节点，必须先退役已死节点以恢复 Quorum 可写），成功后再注销监控、停止本机服务，最后通过幸存成员执行 `unregister` 注销 Broker 注册并清理本机数据。
 元数据操作委派给幸存成员，因此对已经死亡、无法连接的目标节点同样适用——这也是 [替换故障节点](/docs/kafka/admin#替换故障节点) 的第一步。
-注销 Broker 的命令被设计为可重入并容忍失败；真实运行后必须检查现场 Quorum、Broker 注册和副本健康，不能只凭剧本返回状态判定退役完成。
+Voter 摘除与 Broker 注销均采用失败关闭（fail-closed）策略，仅容忍目标已不在 Voter 列表或已未注册（`no longer registered` / `IdNotRegisteredException`）的幂等重入场景；真实运行后仍应检查现场 Quorum、Broker 注册和副本健康。
 
 退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。
 

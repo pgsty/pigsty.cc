@@ -1,13 +1,13 @@
 ---
 title: 日常管理
 weight: 5013
-description: MySQL 集群的状态检查、客户端接入、配置变更、故障处理，以及成员替换、物理恢复与完全停机恢复三份操作手册。
+description: MySQL 集群的状态检查、快捷命令、客户端接入、配置变更、故障自愈，以及成员替换、物理恢复与停机恢复手册。
 icon: fa-solid fa-wrench
 module: [MYSQL]
 categories: [参考]
 ---
 
-本页覆盖 MYSQL 模块的日常运维操作。总原则：**声明状态改清单，收敛现场跑剧本**——成员掉线、AdminAPI 状态漂移等多数异常，重跑一次 `./mysql.yml -l <集群>` 即可自愈；只有三类破坏性场景（替换成员、恢复备份、完全停机恢复）需要按本页手册人工介入。
+本页覆盖 MYSQL 模块的日常运维操作。总原则：**声明状态改清单，收敛现场跑剧本**——单成员掉线、三节点全员可达的完全停机、以及同 IP 新机替换死机成员等场景，重跑一次 `./mysql.yml -l <集群>` 即可自动收敛自愈；只有物理备份回拷恢复、或不足三台可达的不完整停机场景需要按本页手册人工介入。
 
 
 --------
@@ -16,37 +16,41 @@ categories: [参考]
 
 | 操作 | 命令 |
 |:---|:---|
-| 部署 / 收敛集群 | `./mysql.yml -l <集群>` |
+| 部署 / 收敛 / 自愈集群 | `./mysql.yml -l <集群>` |
 | 预检（不改现场） | `./mysql.yml -l <集群> --check` |
-| 本机 root 会话 | `mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf` |
-| 查看 MGR 拓扑 | `SELECT MEMBER_HOST,MEMBER_STATE,MEMBER_ROLE FROM performance_schema.replication_group_members;` |
-| AdminAPI 状态 | `mysqlsh` 连接后 `dba.getCluster().status()` |
-| 手工触发备份 | `systemctl start mysql-backup`（HA 上仅主库真正执行） |
-| 退役一个从库 | `./mysql-rm.yml -l <IP> -e mysql_safeguard=false -e mysql_rm_confirm=<实例名>` |
-| 下线整个集群 | `./mysql-rm.yml -l <集群> -e mysql_safeguard=false -e mysql_rm_confirm=<集群名>` |
+| 本机 root 快捷客户端 | `my`（等价于 `sudo mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf`） |
+| AdminAPI 集群状态（HA） | `mysh`（默认打印 `dba.getCluster().status()`） |
+| 查看 MGR 拓扑 | `my -e "SELECT MEMBER_HOST,MEMBER_STATE,MEMBER_ROLE FROM performance_schema.replication_group_members;"` |
+| 手工触发备份 | `sudo systemctl start mysql-backup`（HA 上仅可写主库真正执行） |
+| 摘除并销毁单个成员 | `./mysql-rm.yml -l <IP> -e mysql_safeguard=false`（目标若为 PRIMARY 会自动先切主） |
+| 整集群停服保数据 | `./mysql-rm.yml -l <集群> -e mysql_safeguard=false -e mysql_rm_data=false` |
+| 彻底销毁整个集群 | `./mysql-rm.yml -l <集群> -e mysql_safeguard=false`（始终保留备份目录） |
 {.full-width}
 
 
 --------
 
-## 状态检查
+## 状态检查与快捷命令
 
-本页命令需以 root 在集群成员上执行（`/etc/mysql/pigsty/` 下的客户端配置与密钥仅 root 可读）。示例以 EL 为准：Debian/Ubuntu 上 MySQL 服务单元名为 `mysql` 而非 `mysqld`。
+节点在安装阶段会自动部署 `/etc/profile.d/mysql.sh`，提供 `my`（全拓扑可用）与 `mysh`（HA 节点可用）两个快捷命令；凭据文件保存在 `/etc/mysql/pigsty/`（仅 root 可读）。示例以 EL 为准：Debian/Ubuntu 上 MySQL 服务单元名为 `mysql` 而非 `mysqld`。
 
 在任意成员上确认服务与拓扑：
 
 ```bash
 systemctl status mysqld mysqlrouter mysqld_exporter mysql-backup.timer
 
-mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -e "
+my -e "
   SELECT MEMBER_HOST, MEMBER_STATE, MEMBER_ROLE, MEMBER_VERSION
   FROM performance_schema.replication_group_members ORDER BY MEMBER_HOST;"
 ```
 
-健康的三节点集群应显示 3 行 `ONLINE`，其中恰好 1 个 `PRIMARY`。需要 AdminAPI 视角时：
+健康的三节点集群应显示 3 行 `ONLINE`，其中恰好 1 个 `PRIMARY`。查看 AdminAPI 集群视图可直接使用 `mysh`（或手工调用 `mysqlsh --no-defaults`）：
 
 ```bash
-mysqlsh --js -e '
+mysh
+
+# 等价的手工命令（注意手工运行 mysqlsh 务必携带 --no-defaults）：
+sudo mysqlsh --no-defaults --js -e '
 shell.options.useWizards=false;
 var pw = os.loadTextFile("/etc/mysql/pigsty/cluster-password").replace(/[\r\n]+$/, "");
 shell.connect({user:"dbuser_cluster", password:pw, host:"127.0.0.1", port:3306,
@@ -61,20 +65,20 @@ print(dba.getCluster().status());'
 
 ## 客户端接入
 
-HA 集群通过任一成员的 Router 端口接入，Router 自动跟随主从切换：
+HA 集群通过任一成员的 Router 端口（或节点二层 VIP）接入，Router 自动跟随主从切换：
 
 ```bash
-# 读写入口（当前主库）
-mysql -h <任一成员> -P 6446 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-ca=/etc/pki/ca.crt app
+# 读写入口（当前主库，可填任一成员 IP 或 NODE VIP）
+mysql -h <任一成员或VIP> -P 6446 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-ca=/etc/pki/ca.crt app
 
 # 只读入口（从库轮询）
-mysql -h <任一成员> -P 6447 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-ca=/etc/pki/ca.crt app
+mysql -h <任一成员或VIP> -P 6447 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-ca=/etc/pki/ca.crt app
 ```
 
 接入建议：
 
 - 服务端强制 TLS，明文连接会被拒绝；普通客户端默认的 `PREFERRED` 模式即可自动协商加密，建议显式 `VERIFY_CA`（JDBC：`sslMode=VERIFY_CA`）并信任 Pigsty CA；
-- 模块不提供 VIP/DNS 接入层。为避免单一 Router 节点成为断点，应用侧建议配置 **多地址 DSN**，例如 JDBC `jdbc:mysql://10.10.10.11:6446,10.10.10.12:6446,10.10.10.13:6446/app`，或在应用侧负载均衡器中列出全部成员；
+- **二层 VIP 或多地址 DSN**：若在同组启用了 [`NODE`](/docs/node) 模块的二层 VIP（`vip_enabled: true`、`vip_address`、`vip_vrid`），VIP 会在存活节点间漂移并自动写入 TLS 叶证书 SAN，客户端可直接连接 `<vip>:6446`（读写）与 `<vip>:6447`（只读）；若未启用 VIP，建议在应用侧配置 **多地址 DSN**（例如 JDBC `jdbc:mysql://10.10.10.11:6446,10.10.10.12:6446,10.10.10.13:6446/app`）；
 - 单机集群没有 Router，直连 `3306`；
 - 成员被隔离或失去多数派时，本机 Router 会主动拒绝读写连接（fail-safe），不会提供过期读。
 
@@ -88,11 +92,11 @@ mysql -h <任一成员> -P 6447 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-c
 在清单中修改 `mysql_databases` / `mysql_users` 声明，然后收敛：
 
 ```bash
-./mysql.yml -l my-test                      # 全量收敛
-./mysql.yml -l my-test -t mysql_provision   # 只收敛业务对象（更快）
+./mysql.yml -l my-test                      # 全量收敛（需全员在线）
+./mysql.yml -l my-test -t mysql_provision   # 只收敛业务库与用户（更快；也可单独用 -t mysql_db 或 -t mysql_user）
 ```
 
-HA 集群的对象变更只会在当前主库执行并经复制生效。声明是增量语义：不会删库、删用户或回收授权；这三类操作请手工执行后同步清单。
+HA 集群的对象变更只会在当前运行时主库执行并经复制生效。若集群处于单节点故障降级期，`-t mysql_provision` / `-t mysql_db` / `-t mysql_user` 支持通过 `-l` 仅选中存活成员执行（前提是当前 `PRIMARY` 包含在 `-l` 范围内）。声明是增量语义：不会删库、删用户或回收授权；这三类操作请手工执行后同步清单。
 
 
 --------
@@ -126,94 +130,84 @@ mysql_parameters:
 
 ## 主从切换
 
-模块不自动编排计划内主从切换（Switchover）；需要时用 AdminAPI 手工执行：
+计划内主从切换（Switchover）可在任一 HA 成员上通过 `mysh` 快捷函数执行：
 
 ```bash
-mysqlsh --js -e '
-shell.options.useWizards=false;
-var pw = os.loadTextFile("/etc/mysql/pigsty/cluster-password").replace(/[\r\n]+$/, "");
-shell.connect({user:"dbuser_cluster", password:pw, host:"127.0.0.1", port:3306,
-  "ssl-mode":"VERIFY_CA", "ssl-ca":"/etc/pki/ca.crt"});
-dba.getCluster().setPrimaryInstance("10.10.10.12:3306");   // 指定新主库
-'
+mysh 'dba.getCluster().setPrimaryInstance("10.10.10.12:3306")'
 ```
 
-切换后 Router 自动跟随，无需重新配置。之后重跑 `./mysql.yml -l <集群>` 确认收敛（运行时主库位置不属于声明状态，剧本不会把主库切回去）。
+切换后 Router 自动跟随，无需重新配置。之后可重跑 `./mysql.yml -l <集群>` 确认收敛（运行时主库位置不属于声明状态，剧本不会把主库切回 1 号节点）。
 
 
 --------
 
 ## 成员故障与自愈
 
-**故障中无需人工介入**：主库崩溃后 MGR 约 20 秒内选出新主，Router 自动改道；崩溃成员由 systemd 拉起并自动重新入组。以下场景才需要动手：
+**故障中无需人工介入**：主库崩溃后 MGR 约 20 秒内选出新主，Router 自动改道；崩溃成员由 systemd 拉起并自动重新入组。出现滞留异常时按表处理：
 
 | 现象 | 处理 |
 |:---|:---|
-| 某成员 `MEMBER_STATE` 长期 `OFFLINE`（进程在、GR 停了） | 重跑 `./mysql.yml -l <集群>`，剧本会将其 rejoin 回集群 |
+| 某成员 `MEMBER_STATE` 长期 `OFFLINE`（进程在、GR 停了） | 重跑 `./mysql.yml -l <集群>`，剧本会将其增量 rejoin 回集群 |
 | 成员反复无法入组，日志报 `peers not configured` | 同上：收敛会把 `group_replication_group_seeds` 钉回声明值 |
-| 网络分区恢复后成员未回归 | 等待约 1 分钟自动重连；仍未回归则重跑剧本 |
-| 全部成员 `OFFLINE` | 完全停机场景，见 [完全停机恢复](#完全停机恢复) |
-| 机器损坏无法修复 | 见 [替换故障成员](#替换故障成员) |
+| 网络分区恢复后成员未回归 | 等待约 1 分钟自动重连；仍未回归则重跑 `./mysql.yml -l <集群>` |
+| 三台成员全部 `OFFLINE` 但主机均可达 | 直接重跑 `./mysql.yml -l <集群>`，自动选最高 GTID 节点执行 `rebootClusterFromCompleteOutage` |
+| 全部 `OFFLINE` 且部分主机损毁失联 | 见 [完全停机恢复](#完全停机恢复) 手工恢复仲裁 |
+| 单台机器损坏重装替换 | 用原 IP 装好新机后直接跑 `./node.yml` + `./mysql.yml -l <集群>`，见 [替换故障成员](#替换故障成员) |
 {.full-width}
 
-对应告警：`MySQLClusterMemberOffline`（WARN）、`MySQLClusterNoPrimary` / `MySQLClusterQuorumLost`（CRIT）。
+对应告警：`MySQLClusterDegraded`（WARN）、`MySQLClusterDown`（CRIT）、`MySQLDown`（CRIT）。
 
 
 --------
 
 ## 替换故障成员
 
-替换契约：**新机器复用故障机的服务地址**（清单不变），三步完成。假设 `my-test-3`（`10.10.10.13`）损坏：
+替换契约：**新机器复用故障机的服务地址**（清单不变）。假设 `my-test-3`（`10.10.10.13`）需要更换：
 
 ```bash
-# 1. 摘除故障成员。机器仍可达时使用退役剧本：
-./mysql-rm.yml -l 10.10.10.13 -e mysql_safeguard=false -e mysql_rm_confirm=my-test-3
+# 场景 A：旧机器已彻底损坏失联，直接用同一 IP 准备全新机器
+./node.yml  -l 10.10.10.13          # 1. 完成新机器节点纳管（仓库、共享 CA、监控代理）
+./mysql.yml -l my-test --check      # 2. 预检整套集群
+./mysql.yml -l my-test              # 3. 自动 rescan 摘除旧注册，并通过 Clone 重建新成员入组
 
-# 1b. 机器已彻底失联（SSH 不可达）时，剧本无法在其上执行；
-#     改在任一健康成员上用 AdminAPI 强制摘除：
-mysqlsh --js -e '
-shell.options.useWizards=false;
-var pw = os.loadTextFile("/etc/mysql/pigsty/cluster-password").replace(/[\r\n]+$/, "");
-shell.connect({user:"dbuser_cluster", password:pw, host:"127.0.0.1", port:3306,
-  "ssl-mode":"VERIFY_CA", "ssl-ca":"/etc/pki/ca.crt"});
-dba.getCluster("my-test").removeInstance("10.10.10.13:3306", {force: true});'
-
-# 2. 用同一地址准备新机器（重装系统），完成节点纳管
-./node.yml -l 10.10.10.13
-
-# 3. 对完整集群重新收敛：新成员将通过 Clone 自动重建数据并入组
-./mysql.yml -l my-test --check
-./mysql.yml -l my-test
+# 场景 B：旧机器仍在线可达，计划内腾退重做（目标即使当前是 PRIMARY 也会自动先切主）
+./mysql-rm.yml -l 10.10.10.13 -e mysql_safeguard=false   # 1. 优雅退群并清空本机数据与配置
+./mysql.yml    -l my-test                                # 2. 重新初始化并通过 Clone 重建入组
 ```
 
 要点：
 
-- 第 1 步的本质是把该地址从集群 Metadata 中摘除——只有不在 Metadata 中的地址才会走全新 Clone 路径。退役剧本要求 **目标可达**（在线 SECONDARY 或已脱离集群的成员）；死机场景用 1b 的强制摘除代替；
-- 新机器必须是 **全新状态**（空数据目录、无 Router 密钥残留）——重装系统即可保证；带残留状态的"半新机器"会被预检或 Router 引导拒绝；
-- Clone 会全量复制数据，耗时与数据量成正比，期间集群保持可用（1 主 1 从在线）；
-- 不支持在替换时更换成员地址，也不支持长期两节点运行。
+- **死机替换无需手工 `removeInstance`**：只要新机器复用同一 IP 且数据目录为空，整簇运行 `mysql.yml` 时协调脚本会自动识别全新实例，调用 `cluster.rescan({removeInstances})` 清理旧 UUID 注册并通过 MySQL Clone 全量重建入组；
+- 若旧机已永久损毁但暂时不补新机、仅希望先从集群元数据中清除死节点，可在任一存活成员执行 `mysh 'dba.getCluster().removeInstance("10.10.10.13:3306", {force: true})'`；
+- 新机器必须是 **全新状态**（空 `mysql_data`、无残留 Router 状态），Clone 耗时与数据量成正比，期间集群保持可用（1 主 1 从在线）；
+- 不支持在替换时直接更换成员 IP，也不支持长期两节点运行。
 
 
 --------
 
-## 下线与复活集群
+## 停服保数据与销毁集群
 
-下线整个集群（停止服务、注销监控、保留全部数据）：
-
-```bash
-./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
-```
-
-下线后每个成员的数据目录会留下退役标记 `/var/lib/mysql/.pigsty-mysql-retired`，它会 **阻止普通 `mysql.yml` 重新接管**，防止误操作复活已退役实例。确认要原地复活时，删除标记后重新收敛：
+`mysql-rm.yml` 默认销毁数据与受管配置（`mysql_rm_data: true`），同时也支持整集群停服保数据模式（`-e mysql_rm_data=false`）：
 
 ```bash
-ansible my-test -b -a 'rm -f /var/lib/mysql/.pigsty-mysql-retired'
+# 1. 整集群停服保数据（仅停止服务并注销监控，完整保留 /data/mysql 与受管配置）
+./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_data=false
+
+# 重新拉起并自动恢复三节点集群（无需手工删锁文件或手工 rebootCluster）
 ./mysql.yml -l my-test
+
+# 2. 彻底销毁整个集群（删除 /data/mysql 与受管配置，但始终保留 /data/backups/mysql 备份）
+./mysql-rm.yml -l my-test -e mysql_safeguard=false
+
+# 如需连同软件包一并卸载：
+./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_pkg=true
 ```
 
-单机实例两条命令即可复活。**HA 集群** 多一步：重跑会把服务拉起，但三个成员的 GR 都处于 OFFLINE（防脑裂：无人自举），剧本会以完全停机报错退出——继续按 [完全停机恢复](#完全停机恢复) 第 3-4 步重建仲裁即可。
+注意：
 
-彻底销毁（删除数据目录、备份、软件包）不由剧本代劳，属于确认过备份的手工操作。
+- 当前版本不再写入 `.pigsty-mysql-retired` 退役锁文件，也不再要求 `mysql_rm_confirm`；
+- `-e mysql_rm_data=false` 仅适用于整集群（或单机集群）停服，单成员摘除强制要求 `mysql_rm_data=true`；
+- 无论何种模式，`mysql-rm.yml` **绝不会删除 `mysql_backup_dir`（`/data/backups/mysql`）**，历史物理备份需由管理员在确认无用后手工清理。
 
 
 --------
@@ -222,11 +216,11 @@ ansible my-test -b -a 'rm -f /var/lib/mysql/.pigsty-mysql-retired'
 
 ```bash
 systemctl list-timers mysql-backup.timer          # 查看下次备份时间
-systemctl start mysql-backup                      # 手工触发（HA 上仅主库真正执行，从库自动跳过）
+sudo systemctl start mysql-backup                 # 手工触发（HA 上仅可写主库真正执行，从库自动跳过）
 journalctl -u mysql-backup --since today          # 查看备份日志
 ```
 
-备份目录布局（在 **当前主库** 的本地磁盘上）：
+备份目录布局（在 **当前主库** 的本地磁盘上，默认保留最近 `mysql_backup_retention: 3` 份）：
 
 ```text
 /data/backups/mysql/<集群名>/
@@ -234,7 +228,7 @@ journalctl -u mysql-backup --since today          # 查看备份日志
 │   ├── backup.ok              # 提交标记：只有完整成功的备份才有
 │   ├── backup.log             # XtraBackup 执行日志
 │   └── ...                    # InnoDB 数据文件
-├── ...                        # 按 retention 保留最近 N 份
+├── ...                        # 按 mysql_backup_retention（默认 3）保留最近 N 份
 └── latest -> 20260729T053900Z # 原子指向最新一份
 ```
 
@@ -244,47 +238,47 @@ journalctl -u mysql-backup --since today          # 查看备份日志
 ansible my-test -b -a 'ls -l /data/backups/mysql/my-test/latest'
 ```
 
-> [!WARNING] 备份告警缺口
-> 当前版本没有备份新鲜度指标与告警：备份失败只能从 `mysql-backup` 日志（已接入 VictoriaLogs，Instance Dashboard 的 Router / Backup Logs 面板可查）发现。重要环境建议为备份日志配置外部巡检，并定期演练下文的恢复流程。
+备份监控与排障：
+
+- 每次成功备份后，脚本会原子更新 `/var/lib/node_exporter/textfile/mysql.prom`（导出 `mysql_backup_last_success_timestamp_seconds` 与 `mysql_backup_size_bytes`），由 VictoriaMetrics 聚合为 `mysql:ins:backup_time` 与 `mysql:cls:backup_time`；若全集群超过 30 小时无成功备份，会自动触发 `MySQLBackupStale`（WARN）告警；
+- 若备份中途失败，旧的已提交备份与 `latest` 软链保持原样不受污染，失败当次的 XtraBackup 详细日志保存在 `/var/lib/pigsty/mysql-backup/<UTC 时间戳>.log`。
 
 
 --------
 
 ## 恢复物理备份
 
-以下手册将单机实例恢复到最近一次备份（**破坏性操作**：备份之后的写入将丢失。恢复前确认 `latest` 时间戳可接受）。HA 集群的整簇重建同理：先在一台恢复出主库，其余成员走 Clone 重建。
+以下手册将单机实例恢复到最近一次备份（**破坏性操作**：备份之后的写入将丢失。恢复前确认 `latest` 时间戳可接受；若自定义了 `mysql_data`，请将下文的 `/data/mysql` 替换为实际路径）。HA 集群的整簇重建同理：先在一台恢复出数据，其余空节点走 Clone 重建。
 
 ```bash
 # 0. 确认备份可用：必须存在 backup.ok
 BK=/data/backups/mysql/my-meta/latest
-sudo test -f $BK/backup.ok && sudo cat $BK/backup.ok
+sudo test -f "$BK/backup.ok" && sudo cat "$BK/backup.ok"
 
-# 1. 停库并保留残骸（便于事后取证，确认无误后再删除）
-sudo systemctl stop mysqld
-sudo mv /var/lib/mysql /var/lib/mysql.destroyed
+# 1. 停止备份定时器、正在运行的备份任务与数据库（Debian/Ubuntu 将 mysqld 换为 mysql），保留现场残骸
+sudo systemctl stop mysql-backup.timer mysql-backup.service mysqld
+sudo mv /data/mysql /data/mysql.destroyed
 
-# 2. 回拷备份（备份已 prepare，无需再执行 --prepare）
-sudo mkdir -p /var/lib/mysql && sudo chown mysql:mysql /var/lib/mysql && sudo chmod 750 /var/lib/mysql
-sudo xtrabackup --copy-back --target-dir=$BK
-sudo rm -f /var/lib/mysql/backup.ok /var/lib/mysql/backup.log   # 清除随备份带入的记录文件
+# 2. 回拷备份（备份已 prepare，无需再执行 --prepare；务必加 --no-defaults 与 --datadir）
+sudo install -d -m 0750 -o mysql -g mysql /data/mysql
+sudo xtrabackup --no-defaults --copy-back --target-dir="$BK" --datadir=/data/mysql
+sudo rm -f /data/mysql/backup.ok /data/mysql/backup.log   # 清除随备份带入的记录文件
 
-# 3. 重建备份不包含的运行目录
-sudo mkdir -p /var/lib/mysql/binlog /var/lib/mysql/tmp
-sudo chown -R mysql:mysql /var/lib/mysql
-sudo chmod 750 /var/lib/mysql/binlog /var/lib/mysql/tmp
+# 3. 重建备份不包含的运行子目录
+sudo install -d -m 0750 -o mysql -g mysql /data/mysql/binlog /data/mysql/tmp
 
 # 4. 重建 Pigsty 数据目录属主标记（cluster/instance/topology 按实际实例填写）
 echo '{"version": 1, "cluster": "my-meta", "instance": "my-meta-1", "topology": "standalone"}' | \
-  sudo tee /var/lib/mysql/.pigsty-mysql-initialized > /dev/null
-sudo chown mysql:mysql /var/lib/mysql/.pigsty-mysql-initialized
-sudo chmod 600 /var/lib/mysql/.pigsty-mysql-initialized
+  sudo tee /data/mysql/.pigsty-mysql-initialized > /dev/null
+sudo chmod 0600 /data/mysql/.pigsty-mysql-initialized
+sudo chown -R mysql:mysql /data/mysql
 
-# 5. EL 系统恢复 SELinux 上下文，然后启动
-sudo restorecon -RF /var/lib/mysql 2>/dev/null || true
-sudo systemctl start mysqld
+# 5. EL 系统恢复 SELinux 上下文，然后重新启动数据库与备份定时器
+sudo restorecon -RF /data/mysql 2>/dev/null || true
+sudo systemctl start mysqld mysql-backup.timer
 
 # 6. 验证数据与 GTID 位点，并确认剧本可正常收敛
-sudo mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -e 'SELECT @@gtid_executed; SHOW DATABASES;'
+my -e 'SELECT @@gtid_executed; SHOW DATABASES;'
 ./mysql.yml -l my-meta        # 应全绿收敛（changed=0 或仅例行项）
 ```
 
@@ -295,35 +289,43 @@ sudo mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -e 'SELECT @@gtid_ex
 
 ## 完全停机恢复
 
-三个成员全部 `OFFLINE`（机房断电、级联故障）时，MGR 出于防脑裂考虑 **不会自动重建仲裁**，`mysql.yml` 也会明确拒绝并在报错中给出指引。恢复流程：
+三个成员全部 `OFFLINE`（如机房断电恢复、或执行过停服保数据）时，分两种情况处理：
+
+### 三台主机全部可达（自动恢复）
+
+只要三台成员的 SSH 与 `mysqld` 均可访问，直接对完整集群运行剧本即可：
 
 ```bash
-# 1. 确认所有成员的 mysqld 进程在运行（systemd 通常已自动拉起），GR 全部 OFFLINE
-ansible my-test -b -a "mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -NBe \
-  \"SELECT COALESCE((SELECT MEMBER_STATE FROM performance_schema.replication_group_members \
-  WHERE MEMBER_ID=@@server_uuid),'OFFLINE')\""
+./mysql.yml -l my-test
+```
 
-# 2. 选出数据最新的成员：比较各成员 GTID，选执行集最大（或相等任选）的一台
-ansible my-test -b -a "mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -NBe 'SELECT @@gtid_executed'"
+剧本会自动采集三台成员的 `@@gtid_executed` 超集关系，选出事务位点最新的成员以 `force: false` 执行 `dba.rebootClusterFromCompleteOutage("my-test")`，并将残余 `OFFLINE` 成员增量 rejoin 回集群。
 
-# 3. 在最新成员上用 AdminAPI 重建集群（把 10.10.10.12 换成第 2 步选出的地址）
-mysqlsh --js -e '
+### 部分主机损毁失联（手工强制恢复）
+
+若全停的同时有成员硬件损坏无法开机，剧本出于防脑裂安全边界会拒绝自动重建（因为失联机器可能持有更新事务）。确认可接受潜在未同步事务损失后，在存活成员中选出 GTID 最新的一台手工重建：
+
+```bash
+# 1. 在所有存活成员上比较已执行 GTID 集合，选出最新的一台（假设为 10.10.10.12）
+ansible 10.10.10.11,10.10.10.12 -b -a "mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -NBe 'SELECT @@gtid_executed'"
+
+# 2. 在最新成员上用 mysqlsh --no-defaults 重建集群仲裁
+sudo mysqlsh --no-defaults --js -e '
 shell.options.useWizards=false;
 var pw = os.loadTextFile("/etc/mysql/pigsty/cluster-password").replace(/[\r\n]+$/, "");
 shell.connect({user:"dbuser_cluster", password:pw, host:"10.10.10.12", port:3306,
   "ssl-mode":"VERIFY_CA", "ssl-ca":"/etc/pki/ca.crt"});
-var c = dba.rebootClusterFromCompleteOutage("my-test");
+var c = dba.rebootClusterFromCompleteOutage("my-test", {force: true});
 print(c.status().defaultReplicaSet.status);'
 
-# 4. 重跑剧本：仍处于 OFFLINE 的其余成员会被自动 rejoin，随后全绿收敛
+# 3. 用原 IP 补齐损坏机器后（见「替换故障成员」），整簇运行剧本自动 Clone 补齐三副本
+./node.yml  -l 10.10.10.13
 ./mysql.yml -l my-test
 ```
 
 要点：
 
-- 第 3 步通常已把所有可达成员一并带回；个别成员仍 OFFLINE 时由第 4 步的剧本收敛完成 rejoin，无需逐台手工处理；
-- 若在少数成员上重建（其余机器已损坏），先完成重建恢复写入，再按 [替换故障成员](#替换故障成员) 补齐；
-- 重建完成前集群无法写入（`super_read_only`）；多数场景下各成员仍可只读访问，个别曾被驱逐的成员可能处于 `offline_mode` 拒绝普通连接；
+- 重建完成前集群处于 `super_read_only` 无法写入；
 - 平台默认 `sql_require_primary_key=ON` 已从源头拦截会阻塞该流程的无主键表。
 
 

@@ -129,7 +129,7 @@ failed to read environment: Error loading CA File: open /etc/openbao/tls/ca.crt:
 
 ## 为什么 vault-rm.yml 默认会被中止？
 
-[`vault_safeguard`](/docs/vault/param#vault_safeguard) 默认为 `true`，这是 Pigsty 中唯一默认开启的删除保险。删除 VAULT 意味着删除其中全部密钥，使用这些密钥加密的数据与 **全部备份** 都会永久无法解密，影响范围远大于删除任何单个数据库集群。
+[`vault_safeguard`](/docs/vault/param#vault_safeguard) 与 `MYSQL` 模块的 `mysql_safeguard` 一样默认为 `true`。删除 VAULT 意味着删除其中全部密钥，使用这些密钥加密的数据与 **全部备份** 都会永久无法解密，影响范围远大于删除任何单个数据库集群。
 
 确认目标与快照之后，请在命令行显式覆盖：`./vault-rm.yml -l <exact-target> -e vault_safeguard=false`，或者使用 `bin/vault-rm` 脚本。
 

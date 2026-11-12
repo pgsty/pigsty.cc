@@ -11,8 +11,8 @@ categories: [参考]
 
 > [!NOTE] 当前状态：Pilot 试点模块
 > MYSQL 是补充性的试点模块，定位是「简单、廉价、够用」的 MySQL 集群，不追求与 PGSQL 模块同级的完备性。
-> 核心能力（部署收敛、高可用切换、每日备份、监控告警）已经过系统性测试；
-> 完全停机恢复、物理备份恢复等破坏性流程刻意保留为手工运维操作，参见 [日常管理](/docs/mysql/admin) 中的操作手册。
+> 核心能力（部署收敛、高可用切换、三节点全停自愈、同地址死机替换、每日备份、监控告警）已经过系统性测试；
+> 物理备份回拷恢复等破坏性流程刻意保留为手工运维操作，参见 [日常管理](/docs/mysql/admin) 中的操作手册。
 
 
 --------
@@ -23,14 +23,14 @@ MYSQL 模块当前提供：
 
 - 固定的原生 MySQL 8.4 LTS 平台：Server、Client、Shell、Router、XtraBackup 版本一致，开箱即用
 - 两种拓扑：单机实例，或三节点单主 InnoDB Cluster（MySQL Shell AdminAPI 创建与收敛）
-- 每个 HA 成员本机部署 MySQL Router，提供拓扑感知的读写（`6446`）与只读（`6447`）入口
+- 灵活高可用接入：每个 HA 成员本机部署 MySQL Router（读写 `6446`、只读 `6447`），并支持复用 `NODE` 模块二层 VIP（`<vip>:6446/6447` 自动写入证书 SAN）
 - 全链路强制 TLS：复用 Pigsty 共享 CA 签发节点叶证书，拒绝非加密连接
 - 声明式业务对象：`mysql_databases` 与 `mysql_users` 增量收敛，不隐式删除数据
 - `mysql_parameters` 参数覆盖：调整关键参数（如 `max_connections`），配置变更自动编排滚动重启
-- 每日全量物理备份：XtraBackup 备份并完成整备（prepare），带保留策略、并发锁与原子提交
-- 完整可观测性：mysqld_exporter 指标、68 条预置衍生规则、27 条告警规则、5 个 Grafana Dashboard、错误日志入 VictoriaLogs
+- 每日全量物理备份：XtraBackup 备份并完成整备（prepare），首次部署自动完成初始基线备份，带保留策略、并发锁、原子提交与备份新鲜度指标
+- 完整可观测性：`mysqld_exporter` 与备份指标、70 条预置衍生规则、8 条可行动告警规则、5 个 Grafana Dashboard、错误日志入 VictoriaLogs
 - 默认启用 `sql_require_primary_key`：拦截无主键表，保护 MGR 复制与灾难恢复
-- 收敛式运维：成员掉线、AdminAPI 状态漂移等场景重跑 `mysql.yml` 即可自愈；危险操作有安全护栏
+- 收敛式运维：成员掉线、三节点完全停机（全员可达时自动选最高 GTID 节点重建仲裁）、死机同 IP 新机替换（自动清理陈旧注册并 Clone 重建）等场景重跑 `mysql.yml` 即可自愈；危险操作有安全护栏
 
 
 --------
@@ -105,10 +105,10 @@ Debian/Ubuntu ARM64 会被预检拒绝：Oracle APT 仓库的 MySQL 8.4 组件�
 MYSQL 是固定平台，不是通用 MySQL 安装器。以下事项 **有意不做**，使用前请确认可以接受：
 
 - **拓扑固定为 1 或 3 节点**：不支持 1→3 原地升级、3→5 扩容或长期两节点拓扑；容量升级通过逻辑迁移完成，硬件更换通过 [同地址替换](/docs/mysql/admin#替换故障成员) 完成
-- **版本、端口、目录、字符集固定**：不暴露相应参数；内存参数按节点规格自动推导，可用 [`mysql_parameters`](/docs/mysql/param#mysql_parameters) 覆盖关键参数
-- **备份为每日本地全量**：无增量链、无 Binlog 连续归档、无 PITR；物理恢复是手工流程（附 [操作手册](/docs/mysql/admin#恢复物理备份)）
-- **完全停机恢复保留为手工操作**：防止自动化误判造成脑裂，剧本失败信息会给出恢复指引
-- **无 VIP / DNS / HAProxy 接入层**：客户端通过任一成员的 Router 端口或多地址 DSN 接入
+- **版本、端口、字符集固定**：不暴露相应参数；数据目录默认 `/data/mysql`（可通过 [`mysql_data`](/docs/mysql/param#mysql_data) 自定义）；内存参数按节点规格与是否混部 PG 自动推导，可用 [`mysql_parameters`](/docs/mysql/param#mysql_parameters) 覆盖关键参数
+- **备份为每日本地全量**：无增量链、无 Binlog 连续归档、无 PITR；物理回拷恢复是手工流程（附 [操作手册](/docs/mysql/admin#恢复物理备份)）
+- **仅在三成员全部可达时自动从完全停机恢复**：均以 `force: false` 安全执行；若部分机器损毁导致不足三台可达，需先修复机器或按 [完全停机恢复](/docs/mysql/admin#完全停机恢复) 手工介入，绝不自动强制破拆多数派
+- **接入层基于本地 Router 与可选 L2 VIP**：客户端可通过任一成员 Router 端口、多地址 DSN 或 [`NODE`](/docs/node) 托管的二层 VIP（`<vip>:6446/6447`）接入，不内置 DNS / HAProxy 接入层
 
 
 --------
@@ -117,9 +117,9 @@ MYSQL 是固定平台，不是通用 MySQL 安装器。以下事项 **有意不�
 
 | 文档 | 说明 |
 |:---|:---|
-| [集群配置](/docs/mysql/config) | 拓扑规划、身份参数、业务库表用户、参数覆盖与备份配置 |
-| [参数参考](/docs/mysql/param) | 11 项公开参数与固定平台约定 |
-| [日常管理](/docs/mysql/admin) | 状态检查、客户端接入、配置变更、故障处理与三份恢复手册 |
+| [集群配置](/docs/mysql/config) | 拓扑规划、身份参数、数据目录、业务库表用户、参数覆盖与备份配置 |
+| [参数参考](/docs/mysql/param) | 16 项公开参数（13 项部署 + 3 项移除）与固定平台约定 |
+| [日常管理](/docs/mysql/admin) | 状态检查、快捷命令、客户端接入、配置变更、故障自愈与物理恢复手册 |
 | [预置剧本](/docs/mysql/playbook) | `mysql.yml` 与 `mysql-rm.yml` 的用法、标签与安全护栏 |
 | [监控告警](/docs/mysql/monitor) | Dashboard、衍生规则、告警规则与日志查询 |
 | [指标定义](/docs/mysql/metric) | 标签模型与衍生指标字典 |

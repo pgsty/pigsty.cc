@@ -7,14 +7,14 @@ module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 模块复用 Pigsty 的可观测性基座：指标经 mysqld_exporter 进入 VictoriaMetrics，错误日志经 Journald/Vector 进入 VictoriaLogs，Grafana 提供 5 个预置 Dashboard，vmalert 加载 68 条衍生规则与 27 条告警规则。
+MYSQL 模块复用 Pigsty 的可观测性基座：指标经 `mysqld_exporter` 与 `node_exporter` textfile 收集器进入 VictoriaMetrics，错误日志经 Journald/Vector 进入 VictoriaLogs，Grafana 提供 5 个预置 Dashboard，vmalert 加载 **70 条** 衍生规则与 **8 条** 精炼可行动告警规则。
 
 
 --------
 
 ## 采集架构
 
-每个 MySQL 节点运行一个 `mysqld_exporter`（端口 `9104`），以最小权限监控账号（`dbuser_monitor@'127.0.0.1'`）采集服务器与 MGR 指标。部署时在 Infra 节点生成文件发现 Target：
+每个 MySQL 节点运行一个 `mysqld_exporter`（端口 `9104`），以最小权限监控账号（`dbuser_monitor@'127.0.0.1'`）采集服务器与 MGR 指标；同时 `mysql-backup` 脚本将本地物理备份成功时间戳与体积写入 `/var/lib/node_exporter/textfile/mysql.prom`，由节点 `node_exporter` 一并上报并按 `ip` 关联至集群指标。部署时在 Infra 节点生成文件发现 Target：
 
 ```text
 /infra/targets/mysql/<实例名>.yml     # 如 my-test-1.yml
@@ -65,27 +65,21 @@ MySQL Group Replication Dashboard 仅对 `innodb_cluster` 拓扑有意义；选�
 
 ## 告警规则
 
-27 条告警规则按严重级分层（`severity`：CRIT / WARN / INFO），关键规则如下：
+[`files/victoria/rules/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/mysql.yml) 收敛为 **8 条精炼、可行动（Actionable）** 的告警规则（慢查询、临时表、缓冲池命中率、Redo 利用率等诊断型信号保留在 Grafana Dashboard 面板上，不再制造噪音告警）：
 
-### 可用性与集群（响应优先）
+| 告警名称 | 级别 | 持续时间 | 触发表达式与处置提示 |
+|:---|:---:|:---:|:---|
+| `MySQLDown` | `CRIT` | `1m` | `mysql:ins:exporter_up == 1 and on (...) mysql:ins:up < 1`：Exporter 在线但无法连接 `mysqld` |
+| `MySQLExporterDown` | `WARN` | `2m` | `mysql:ins:exporter_up < 1`：`mysqld_exporter` 抓取不可达 |
+| `MySQLClusterDown` | `CRIT` | `1m` | `mysql:cls:health{topology="innodb_cluster"} < 1`：失去多数派或无唯一在线主库（全员恢复可达后跑 `mysql.yml` 可自动重建） |
+| `MySQLClusterDegraded` | `WARN` | `5m` | `mysql:cls:health{topology="innodb_cluster"} == 1`：集群仍可写但有成员离线，跑 `mysql.yml` 重入组或同址换机 |
+| `MySQLReplicationLag` | `WARN` | `10m` | `mysql:ins:gr_certifier_queue > 1000 or mysql:ins:gr_applier_queue > 1000`：MGR 认证或应用队列积压超 1000 事务 |
+| `MySQLConnUsageHigh` | `WARN` | `5m` | `mysql:ins:connection_usage > 0.80`：实例连接数超过 `max_connections` 的 80% |
+| `MySQLHistoryListLarge` | `WARN` | `15m` | `mysql:ins:history_list_length > 1000000`：长事务阻塞 Undo Purge，历史链表超 100 万 |
+| `MySQLBackupStale` | `WARN` | `5m` | `time() - mysql:cls:backup_time > 30 * 3600`：全集群过去 30 小时内无成功本地全量备份（或首次备份失败） |
+{.full-width .wide .expand}
 
-| 告警 | 级别 | 触发条件 |
-|:---|:---:|:---|
-| `MySQLInstanceDown` | CRIT | 实例连接失败超 1 分钟 |
-| `MySQLClusterNoPrimary` | CRIT | 集群无 ONLINE 主库超 1 分钟 |
-| `MySQLClusterQuorumLost` | CRIT | ONLINE 成员不足多数派超 1 分钟 |
-| `MySQLClusterMultiplePrimary` | CRIT | 出现多主（30 秒即告，脑裂信号） |
-| `MySQLSecondaryWritable` | CRIT | 从库可写超 2 分钟（数据发散风险） |
-| `MySQLClusterMemberOffline` | WARN | 声明成员离组超 5 分钟 |
-| `MySQLPrimaryReadOnly` | WARN | 主库只读超 5 分钟 |
-| `MySQLExporterDown` | WARN | Exporter 抓取失败超 2 分钟 |
-{.full-width}
-
-### 容量与性能（观察优先）
-
-连接压力（`MySQLConnectionsHigh` WARN 80% / `MySQLConnectionsCritical` CRIT 95%）、复制队列（`MySQLGRQueueHigh` WARN / `MySQLGRQueueCritical` CRIT）、流控（`MySQLGRFlowControlHigh`）、InnoDB（`MySQLBufferPoolWaits`、`MySQLInnoDBLogWaits`、`MySQLRedoCapacityHigh`、`MySQLDeadlocksHigh`、`MySQLHistoryListLarge`），以及 INFO 级的慢查询、磁盘临时表、全表连接、缓冲池命中率与重启提示。
-
-实测行为参考：主库崩溃切换（约 20 秒）只会产生 pending 不会误报；真正的完全停机会在 2 分钟内让 `ClusterNoPrimary` 与 `QuorumLost` 进入 firing。
+实测行为参考：主库崩溃自动切换（约 20 秒）只会短暂进入 pending，不会触发误报；真正的完全停机或单成员掉线会按持续时间窗口准确触发 `MySQLClusterDown` 或 `MySQLClusterDegraded`。
 
 
 --------

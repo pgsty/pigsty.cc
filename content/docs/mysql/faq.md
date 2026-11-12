@@ -9,7 +9,7 @@ categories: [参考]
 
 ## 当前 MYSQL 模块是什么成熟度？
 
-Pilot 试点模块，定位「简单、廉价、够用」的 MySQL 集群。部署收敛、高可用切换、每日备份、监控告警四大核心能力经过系统性实测（含故障注入与完全停机演练）；恢复类破坏性流程刻意保留为手工操作并配有 [操作手册](/docs/mysql/admin)。不追求与 PGSQL 模块同级的完备度：没有 PITR、没有接入层 VIP/DNS、没有自动扩缩容。用于严肃生产环境前，请按业务要求验证并演练恢复流程。
+Pilot 试点模块，定位「简单、廉价、够用」的 MySQL 集群。部署收敛、高可用切换、三节点完全停机自愈、同地址死机替换、每日物理备份与监控告警均经过系统性实测；物理备份回拷恢复刻意保留为手工操作并配有 [操作手册](/docs/mysql/admin#恢复物理备份)。不追求与 PGSQL 模块同级的完备度：没有 PITR、没有 DNS/HAProxy 接入层（支持本地 Router 与 `NODE` 二层 VIP）、没有在线拓扑扩缩容。用于严肃生产环境前，请按业务要求验证并演练恢复流程。
 
 
 ## 为什么固定 MySQL 8.4，不能选版本？
@@ -48,7 +48,7 @@ Oracle 的 APT 仓库没有为 MySQL 8.4 提供 `arm64` 软件包，这不是 Pi
 
 HA 集群连任一成员的 `6446`（读写）/`6447`（只读），Router 自动跟随主从切换；单机直连 `3306`。TLS 是强制的：服务端 `require_secure_transport=ON`，明文连接直接被拒（`ERROR 3159`）。普通客户端默认的 `PREFERRED` 模式即会自动协商加密（只有显式 `DISABLED` 才会被拒）；建议显式 `VERIFY_CA` 并信任 `/etc/pki/ca.crt`。
 
-Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址 DSN（把三个成员的 `6446` 都写进连接串）以规避单节点故障。
+Router 是每节点本地部署。若希望使用单一浮动接入地址，可在同组启用 [`NODE`](/docs/node) 模块的二层 VIP（`vip_enabled: true`、`vip_address`、`vip_vrid`），VIP 会自动写入 TLS 叶证书 SAN 并暴露 `<vip>:6446/6447`；若不使用 VIP，建议在应用侧配置多地址 DSN（把三个成员的 `6446` 都写进连接串）以规避单节点故障。
 
 
 ## 主库切走了，会自动切回来吗？
@@ -63,17 +63,17 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## 三台全挂了怎么恢复？
 
-这是唯一需要手工介入的可用性场景（防脑裂的刻意设计）：在数据最新的成员上执行 `dba.rebootClusterFromCompleteOutage()`，然后重跑剧本收敛其余成员。完整步骤见 [完全停机恢复手册](/docs/mysql/admin#完全停机恢复)。`mysql.yml` 在这种状态下的报错会直接给出该指引。
+只要三台主机恢复网络与 `mysqld` 可达，直接执行 `./mysql.yml -l <集群>` 即可自动恢复：剧本会自动比对三台节点的 GTID 集合，从位点最高的成员以 `force: false` 执行 `dba.rebootClusterFromCompleteOutage()` 并将其余成员 rejoin 入组。只有当全停的同时伴随机器损毁失联（不足三台可达）时，剧本才会出于防脑裂保护拒绝自动重建，此时请按 [完全停机恢复手册](/docs/mysql/admin#完全停机恢复) 在最新存活成员上手工介入。
 
 
 ## 备份在哪里？能恢复到任意时间点吗？
 
-备份是 **每日一次的全量物理备份**，落在 **当前主库** 的 `/data/backups/mysql/<集群>/` 下（主从切换后新备份跟随新主库，检查时要看所有成员）。没有增量与 Binlog 归档，因此 **不支持 PITR**：单机的恢复点就是最近一次备份（最坏损失一天写入）；HA 集群的数据安全主要靠三副本同步复制，备份用于兜底与整簇重建。恢复步骤见 [恢复物理备份手册](/docs/mysql/admin#恢复物理备份)。异地容灾请自行同步备份目录。
+备份是 **每日一次的全量物理备份**，落在 **当前主库** 的 `mysql_backup_dir/<集群>/`（默认 `/data/backups/mysql/<集群>/`，默认保留最近 `mysql_backup_retention: 3` 份；主从切换后新备份跟随新主库，检查时要看所有成员）。没有增量与 Binlog 归档，因此 **不支持 PITR**：单机的恢复点就是最近一次备份（最坏损失一天写入）；HA 集群的数据安全主要靠三副本同步复制，备份用于兜底与整簇重建。恢复步骤见 [恢复物理备份手册](/docs/mysql/admin#恢复物理备份)。异地容灾请自行同步备份目录。
 
 
 ## 备份失败会有告警吗？
 
-当前版本没有备份专属指标与告警（已知缺口）。备份日志已接入 VictoriaLogs（`unit:mysql-backup`），Instance Dashboard 的 Router / Backup Logs 面板可查；重要环境建议对备份日志做外部巡检，并定期做恢复演练验证备份可用性。
+会。`mysql-backup` 脚本会将最近一次成功备份的时间戳与体积写入 `/var/lib/node_exporter/textfile/mysql.prom`（若首次备份即失败则写入 `0`），由 VictoriaMetrics 聚合为 `mysql:cls:backup_time`；当整个集群超过 30 小时未产出成功备份时，会自动触发 `MySQLBackupStale`（WARN）告警。失败当次的详细 XtraBackup 日志位于 `/var/lib/pigsty/mysql-backup/`，服务日志也已接入 VictoriaLogs（`unit:mysql-backup`）。
 
 
 ## 为什么 `mysql_parameters` 里有些参数被拒绝？
@@ -93,19 +93,19 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 - `mysql_cluster_password`：HA 集群中与 Metadata、Router 密钥环绑定，普通重跑拒绝轮换（单机改清单重跑即生效），当前无 HA 自动轮换流程；如必须轮换，请通过 AdminAPI 手工操作并同步各成员凭据文件后再更新清单。
 
 
-## 下线的集群怎么复活？误删了退役标记会怎样？
+## `mysql-rm.yml` 会删数据吗？怎么只停服保数据后重新拉起？
 
-`mysql-rm.yml` 下线时保留全部数据并写入退役标记；复活 = 删除各成员的 `/var/lib/mysql/.pigsty-mysql-retired` 后重跑 `mysql.yml`（见 [下线与复活集群](/docs/mysql/admin#下线与复活集群)）。单机两步即可；HA 集群还需按 [完全停机恢复](/docs/mysql/admin#完全停机恢复) 重建仲裁。标记的意义是防止「下线后被无意重新拉起」；数据目录属主校验（`.pigsty-mysql-initialized`）独立存在，删除退役标记不会让别的集群接管这份数据。
-
-
-## `conf/mysql.yml` 模板怎么和这个模块对不上？
-
-该模板在开发版中位于 `conf/fork/halo.yml`。它是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与本模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 生态兼容用本模块；PG 基础设施上跑 MySQL 协议应用可考虑 OpenHalo。
+`mysql-rm.yml` 默认 `mysql_rm_data: true`，传入 `-e mysql_safeguard=false` 执行时会彻底删除 `mysql_data`（默认 `/data/mysql`）与受管配置文件，但 **始终保留 `mysql_backup_dir`（`/data/backups/mysql`）**。若希望临时停服并完整保留数据，请对整套集群加上 `-e mysql_rm_data=false`（见 [停服保数据与销毁集群](/docs/mysql/admin#停服保数据与销毁集群)）；当前版本不再写入 `.pigsty-mysql-retired` 锁文件，后续直接执行 `./mysql.yml -l <集群>` 即可原地拉起服务并自动完成仲裁恢复。
 
 
-## 剧本失败显示 `no ONLINE member holds the cluster`？
+## OpenHalo 模板与这个模块是什么关系？
 
-这是完全停机（或仅存成员不可达）的判定：没有任何 ONLINE 成员持有集群。按报错给出的指引执行 [完全停机恢复](/docs/mysql/admin#完全停机恢复)。如果实际上有成员在线却报此错，先检查 seq=1 协调成员（收敛脚本在其上执行）到各成员 3306 的连通性，以及该成员上的 CA（`/etc/pki/ca.crt`）是否就位。
+[`conf/fork/halo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/halo.yml) 是 **OpenHalo** 模板——基于 PostgreSQL 内核的 MySQL 线缆协议兼容方案（`pg_mode: mysql`），与原生 MYSQL 模块无关。原生 MySQL 模块的参考模板是 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。选型参考：需要真 MySQL 8.4 生态与 InnoDB Cluster 兼容用本模块；在 PGSQL 基础设施上兼容部分 MySQL 协议应用可评估 OpenHalo。
+
+
+## 剧本失败提示完全停机且无法自动恢复？
+
+当集群没有任何 `ONLINE` 成员，且三台声明成员中 **有主机失联不可达** 时，剧本无法确认失联主机是否持有更新的 GTID 事务，因此拒绝自动执行 `rebootClusterFromCompleteOutage`。若故障主机可恢复开机，请先恢复主机连通性再重跑 `./mysql.yml -l <集群>`（三台全可达时会自动选最高 GTID 重建）；若机器已永久损坏，请按 [完全停机恢复](/docs/mysql/admin#完全停机恢复) 在最新存活成员上手工强制重建。
 
 
 ## 监控没有数据 / Dashboard 空白？

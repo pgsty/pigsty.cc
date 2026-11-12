@@ -8,9 +8,6 @@ categories: [参考]
 aliases: [/docs/pilot/kafka/param]
 ---
 
-> [!NOTE] 源码版本范围
-> 本页按当前开发源码快照校对。`kafka_jmx_exporter_enabled` 于 2026-09-01 加入；已发布的 `v4.5.0` 标签尚不包含此参数，始终启用 JMX，持久公开参数仍为 15 项。本文的 16 项参数与关闭 JMX 的操作适用于包含该变更的源码版本。
-
 KAFKA 角色刻意只公开 16 项持久参数。拓扑、Listener、安全实现、存储子目录、复制安全与 Exporter 放置等细节由角色统一推导，不能作为额外持久变量覆盖。
 
 
@@ -209,7 +206,7 @@ JMX Exporter HTTP 端口，默认 `9404`。仅在 [`kafka_jmx_exporter_enabled`]
 
 ### `kafka_exporter_port`
 
-协议型 `kafka_exporter` HTTP 端口，默认 `9308`。角色只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点配置、启动与注册；单 Broker 集群只运行一个。监控 Target 文件每次完整运行都会按当前放置刷新，但曾经被选中节点上的旧 Exporter 服务不会被普通剧本自动停止。
+协议型 `kafka_exporter` HTTP 端口，默认 `9308`。角色只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点配置、启动与注册；单 Broker 集群只运行一个。每次完整运行都会按当前放置刷新监控 Target 文件，并自动停止、禁用且删除未被选中节点上残留的 `kafka_exporter` 服务与单元文件。
 
 Exporter 使用的 Kafka 协议版本、TLS/SCRAM 参数和副本放置均为角色内部约定，没有额外公开开关或 options 参数。
 

@@ -118,7 +118,7 @@ Pigsty 针对 VAULT 提供了以下六条预置告警规则，定义于 [`files/
     description: |
       vault_up[ins={{ $labels.ins }}, instance={{ $labels.instance }}] = {{ $value }} < 1
       metrics of the member can not be scraped: check openbao service on {{ $labels.ip }}
-      /ui/d/vault-overview
+      /ui/d/vault-overview?var-cls={{ $labels.cls }}
 
 # member reports itself sealed: a sealed single node also triggers VaultNoLeader
 - alert: VaultSealed

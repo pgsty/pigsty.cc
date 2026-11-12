@@ -7,12 +7,12 @@ module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀）与 vmalert 衍生规则（`mysql:ins:*` / `mysql:cls:*`）。Dashboard 与告警优先建立在衍生指标之上，本页是衍生指标的完整字典。
+MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀）、`node_exporter` textfile 备份指标（`/var/lib/node_exporter/textfile/mysql.prom`）与 vmalert 衍生规则（`mysql:ins:*` / `mysql:cls:*`）。Dashboard 与告警优先建立在衍生指标之上，本页是衍生指标的完整字典。
 
 
 --------
 
-当前 [`files/victoria/rules/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/mysql.yml) 提供 **68 条** 模块记录规则，本页均有列出；另有 `mysql_exporter_up = up{job="mysql"}` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)。这些记录指标不会出现在 `mysqld_exporter` 原始端点中，`mysql_up` 才是 Exporter 对数据库连接的探测结果。
+当前 [`files/victoria/rules/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/mysql.yml) 提供 **70 条** 模块记录规则，本页均有列出；另有 `mysql_exporter_up = up{job="mysql"}` 来自 Infra 的 [**共享存活记录规则**](/docs/infra/metric#共享存活记录规则)。这些记录指标不会出现在 `mysqld_exporter` 原始端点中，`mysql_up` 才是 Exporter 对数据库连接的探测结果。
 
 ## 公共标签
 
@@ -143,6 +143,19 @@ MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀�
 
 --------
 
+## 备份
+
+由 `mysql-backup` 写入 `/var/lib/node_exporter/textfile/mysql.prom` 后按 `ip` 关联至实例与集群（由于备份跟随当前运行时主库执行，新鲜度在集群维度上判别，例如 `time() - mysql:cls:backup_time`）：
+
+| 指标 | 含义 |
+|:---|:---|
+| `mysql:ins:backup_time` | 本节点最近一次成功本地全量物理备份的 Unix 时间戳（秒） |
+| `mysql:cls:backup_time` | 集群所有成员中最近一次成功本地全量物理备份的 Unix 时间戳（秒） |
+{.full-width}
+
+
+--------
+
 ## 原始指标族
 
 衍生指标未覆盖的细节可直接查询 Exporter 原始指标，常用族：
@@ -158,6 +171,7 @@ MYSQL 模块的指标来自 `mysqld_exporter`（原始指标，`mysql_` 前缀�
 | `mysql_perf_schema_transactions_*` / `mysql_perf_schema_conflicts_detected_total` | MGR 认证队列、应用队列与冲突统计 |
 | `mysql_binlog_*` | Binlog 文件数与尺寸 |
 | `mysql_info_schema_processlist_*` | 会话按状态分布 |
+| `mysql_backup_last_success_timestamp_seconds` / `mysql_backup_size_bytes` | 本地物理备份最新成功时间戳与字节体积（`node_exporter` textfile） |
 {.full-width}
 
 在 VictoriaMetrics 的 vmui（`/select/vmui`）中以 `mysql_` 前缀浏览即可获得完整清单。

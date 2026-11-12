@@ -8,9 +8,6 @@ categories: [参考]
 aliases: [/docs/pilot/kafka]
 ---
 
-> [!NOTE] 源码版本范围
-> 本页按当前开发源码快照校对。`kafka_jmx_exporter_enabled` 于 2026-09-01 加入；已发布的 `v4.5.0` 标签尚不包含此参数，始终启用 JMX，持久公开参数仍为 15 项。本文的 16 项参数与关闭 JMX 的操作适用于包含该变更的源码版本。
-
 [Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.1+ 动态 KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
 > [!NOTE] 当前状态：Beta 模块

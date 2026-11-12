@@ -45,7 +45,7 @@ juice_instances: {}
 参数名称：`juice_cache`，类型：`path`，级别：`C`
 
 所有 JuiceFS 实例共享的本地缓存目录，默认 `/data/juice`。
-JuiceFS 会在此目录下按文件系统 UUID 进行隔离。
+JuiceFS 会在此目录下按文件系统 UUID 进行隔离。该路径必须是非根绝对路径（不含 `.` 或 `..`），且不得与任一活跃实例的挂载路径 `path` 相同或互相包含。
 
 ```yaml
 juice_cache: /data/juice
@@ -59,7 +59,7 @@ juice_cache: /data/juice
 
 JuiceFS 实例定义字典，通常在实例级别定义。
 默认值为空字典（表示不部署实例）；Key 为文件系统名称（即 JuiceFS 卷名），Value 为实例配置对象。
-未定义该参数或其为空字典的主机会被 `juice.yml` 直接跳过，不会安装软件包、创建缓存目录或写入监控目标文件。
+未定义该参数、其值为 `null` 或为空字典的主机（以及指定 `-e fsname=<name>` 但未命中的主机）会被 `juice.yml` 直接跳过，不会安装软件包、创建缓存目录或写入监控目标文件。
 
 ```yaml
 juice_instances:
@@ -72,18 +72,18 @@ juice_instances:
 
 实例字段说明：
 
-| 字段      | 必选 | 默认值              | 说明                           |
-|:--------|:--:|:-----------------|:-----------------------------|
-| `path`  | 是  | -                | 挂载点路径（同节点需唯一）                |
-| `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）     |
-| `data`  | 否  | `''`             | `juicefs format` 选项（仅首次创建生效） |
-| `unit`  | 否  | `juicefs-<name>` | systemd 服务名                  |
-| `mount` | 否  | `''`             | `juicefs mount` 额外参数         |
-| `port`  | 否  | `9567`           | 指标端口（同节点需唯一）                 |
-| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）             |
-| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）             |
-| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）             |
-| `state` | 否  | `create`         | `create` / `absent`          |
+| 字段      | 必选 | 默认值              | 说明                                 |
+|:--------|:--:|:-----------------|:-----------------------------------|
+| `path`  | 条件 | -                | 挂载点非根绝对路径（`create` 时必填，同节点唯一）      |
+| `meta`  | 条件 | -                | 元数据引擎 URL（`create` 时必填，建议 PostgreSQL） |
+| `data`  | 否  | `''`             | `juicefs format` 选项（仅首次创建生效）       |
+| `unit`  | 否  | `juicefs-<name>` | 裸 systemd 服务名（不含 `.service`，全实例唯一） |
+| `mount` | 否  | `''`             | `juicefs mount` 额外参数               |
+| `port`  | 否  | `9567`           | 指标端口（同节点活跃实例需唯一）                   |
+| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）                   |
+| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）                   |
+| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）                   |
+| `state` | 否  | `create`         | `create` / `absent`                |
 {.full-width .wide .expand}
 
 > [!WARNING] 注意

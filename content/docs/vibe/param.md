@@ -36,10 +36,10 @@ VIBE 模块共有 **18** 个参数，分为：
 | [`nodejs_enabled`](#nodejs_enabled)     |   `bool`   | `C` | `true`                      | 启用 Node.js        |
 | [`nodejs_registry`](#nodejs_registry)   |   `url`    | `C` | `''`                        | npm 镜像地址          |
 | [`npm_packages`](#npm_packages)         | `string[]` | `C` | `[]`                        | 额外全局 npm 包        |
-| [`claude_enabled`](#claude_enabled)     |   `bool`   | `C` | `true`                      | 安装并配置 Claude Code |
-| [`claude_package`](#claude_package)     |  `string`  | `C` | `@anthropic-ai/claude-code` | Claude Code npm 包 |
-| [`claude_env`](#claude_env)             |   `dict`   | `C` | `{}`                        | Claude 环境变量       |
-| [`codex_enabled`](#codex_enabled)       |   `bool`   | `C` | `true`                      | 安装 Codex CLI      |
+| [`claude_enabled`](#claude_enabled)     |   `bool`   | `C` | `true`        | 安装并配置 Claude Code  |
+| [`claude_package`](#claude_package)     |  `string`  | `C` | `claude`      | Claude Code 系统软件包名 |
+| [`claude_env`](#claude_env)             |   `dict`   | `C` | `{}`          | Claude 环境变量        |
+| [`codex_enabled`](#codex_enabled)       |   `bool`   | `C` | `true`        | 安装 Codex CLI 软件包   |
 {.full-width .wide .expand}
 
 --------
@@ -68,7 +68,7 @@ nodejs_registry: ''
 npm_packages: []
 
 claude_enabled: true
-claude_package: '@anthropic-ai/claude-code'
+claude_package: claude
 claude_env: {}
 
 codex_enabled: true
@@ -130,7 +130,7 @@ codex_enabled: true
 
 ### `jupyter_venv`
 
-JupyterLab 使用的 Python venv 路径，默认值为 `/data/venv`，需要预先创建（通常由 `NODE` 模块完成）。
+JupyterLab 使用的 Python venv 路径，默认值为 `/data/venv`。若 `<jupyter_venv>/bin/python` 不存在，`jupyter_install` 任务会自动调用 `uv venv` 创建虚拟环境，并在 `<jupyter_venv>/bin/jupyter` 不存在时自动安装 `jupyterlab` 与 `ipykernel`。
 
 --------
 
@@ -138,7 +138,7 @@ JupyterLab 使用的 Python venv 路径，默认值为 `/data/venv`，需要预�
 
 ### `nodejs_enabled`
 
-是否启用独立的 Node.js 安装任务，默认值为 `true`。
+是否启用独立的 Node.js 安装与配置任务，默认值为 `true`。该开关与 `claude_enabled` / `codex_enabled` 完全解耦；启用时 `nodejs_config` 还会将全局 npm 安装前缀统一设为 `prefix=/usr/local`。
 
 ### `nodejs_registry`
 
@@ -147,7 +147,7 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 ### `npm_packages`
 
 额外全局安装的 npm 包列表，对应标签 `nodejs_pkg`，默认为空。
-Claude Code 与 Codex CLI 由各自的独立任务安装，不需要加入此列表。
+Claude Code 与 Codex CLI 均由各自的独立任务通过原生系统包安装，不需要加入此列表。
 
 --------
 
@@ -155,25 +155,25 @@ Claude Code 与 Codex CLI 由各自的独立任务安装，不需要加入此列
 
 ### `claude_enabled`
 
-启用 Claude Code 安装与配置任务，默认值为 `true`。`claude_install` 安装 CLI，`claude_config` 写入配置。
+启用 Claude Code 安装与配置任务，默认值为 `true`。`claude_install` 安装原生系统软件包，`claude_config` 非破坏性合并写入 `~/.claude/settings.json` 并初始化 `~/.claude.json`（`force: false`）。
 
 ### `claude_package`
 
-Claude Code 使用的 npm 包，默认为 `@anthropic-ai/claude-code`。
+Claude Code 使用的 `pigsty-infra` 原生系统软件包名，默认为 `claude`（仓库亦提供新官方包名 `claude-code`，可按需覆盖）。
 
 ### `claude_env`
 
-额外环境变量，合并至默认 OpenTelemetry 配置。
+额外环境变量，非破坏性合并至 `~/.claude/settings.json` 的 `env` 字典（优先级高于受管默认项，且保留文件中已有的其他用户自定义键）。
 
-默认环境变量包括：
+默认环境变量包括（其中 `<admin_ip>` 默认回退 `127.0.0.1`，端口取 `vmetrics_port: 8428` 与 `vlogs_port: 9428`）：
 
 - `CLAUDE_CODE_ENABLE_TELEMETRY=1`
 - `OTEL_METRICS_EXPORTER=otlp`
 - `OTEL_LOGS_EXPORTER=otlp`
 - `OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=http/protobuf`
 - `OTEL_EXPORTER_OTLP_LOGS_PROTOCOL=http/protobuf`
-- `OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://127.0.0.1:8428/opentelemetry/v1/metrics`
-- `OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://127.0.0.1:9428/insert/opentelemetry/v1/logs`
+- `OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://<admin_ip>:<vmetrics_port>/opentelemetry/v1/metrics`
+- `OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://<admin_ip>:<vlogs_port>/insert/opentelemetry/v1/logs`
 - `OTEL_RESOURCE_ATTRIBUTES=ip=<inventory_hostname>,job=claude`
 
 --------
@@ -182,5 +182,5 @@ Claude Code 使用的 npm 包，默认为 `@anthropic-ai/claude-code`。
 
 ### `codex_enabled`
 
-是否安装 Codex CLI，默认为 `true`。启用后，`codex_install` 任务执行 `npm install -g @openai/codex`。
+是否安装 Codex CLI，默认为 `true`。启用后，`codex_install` 任务通过系统包管理器从 `pigsty-infra` 软件源安装原生软件包 `codex`。
 VIBE 只负责安装 Codex CLI，不托管 Codex 配置，也不为其配置 OpenTelemetry。

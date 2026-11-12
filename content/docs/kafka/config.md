@@ -141,7 +141,7 @@ Bootstrap-only 事实保存在每个集群成员节点上：
 `scram` 集群的每个成员还持有 `/etc/kafka/secrets.yml`。管理节点不保存任何 Kafka 状态：Manifest 与 Secret 在每次运行时从任一成员副本解析，签发的节点证书放在共享 PKI 树 `files/pki/kafka/`（CSR 在 `files/pki/csr/`），丢失时直接用 Pigsty CA 重签。Manifest 只记录集群身份、初始 Controller Identity、安全模式和初始 RF/minISR。活集群始终是运行事实权威：
 
 - Manifest 与现场身份或安全模式冲突时，普通剧本失败关闭；
-- 旧 Manifest 存在但全部数据盘为空时拒绝复活旧集群；
+- 已定型（commissioned）的旧 Manifest 存在但全部数据盘为空时拒绝复活旧集群（若仅为首次引导在格式化前中途失败留下的未定型 Manifest，则会自动丢弃并重新生成）；
 - 所有成员都找不到 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
 - 已格式化的 `scram` 集群在所有成员都没有 Secret 副本时同样失败关闭。
 

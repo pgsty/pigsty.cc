@@ -43,8 +43,6 @@ KAFKA 模块使用两个互补的 Exporter：
 
 ### 关闭 JMX 的影响
 
-此功能适用于包含 2026-09-01 JMX 开关变更的开发源码；`v4.5.0` 发布标签仍始终启用 JMX。
-
 [`kafka_jmx_exporter_enabled`](/docs/kafka/param#kafka_jmx_exporter_enabled) 默认 `true`。关闭后需完整运行 `kafka.yml`，通过滚动重启移除 Java Agent 并更新监控目标；`-t register` 只刷新 Target 文件。
 
 关闭 JMX 的实例没有 JVM、KRaft、Broker 内部状态或实例存活指标，相应告警也失去数据。如果集群全部关闭 JMX，Kafka Overview / Kafka Instance 无法再发现该集群，`KafkaDown` 不能检测它。协议 Exporter 继续运行，因此 Topic、Partition 与 Consumer Group 监控仍可使用。

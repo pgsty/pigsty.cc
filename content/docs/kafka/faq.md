@@ -81,7 +81,7 @@ getent hosts <inventory-hostname>
 
 每个集群成员都保留一份 Manifest 权威副本 `/etc/kafka/manifest.yml`（`scram` 集群另有 `/etc/kafka/secrets.yml`），管理节点不保存任何 Kafka 状态，每次运行时从任一成员副本解析，因此换管理节点或丢失本地检出都不影响集群管理。只有当所有成员的副本都丢失、而存储已经格式化时，角色才失败关闭并提示先在任一成员上恢复该文件；已格式化的 `scram` 集群在所有成员都找不到 Secret 副本时同样失败关闭。签发的节点证书缓存在 `files/pki/kafka/`，丢失时直接由 Pigsty CA 重签。
 
-反过来，如果 Manifest 存在而全部 Kafka 数据盘为空，角色会失败关闭，避免用旧身份意外复活已消失的集群。确实要重建时必须先执行 `kafka-rm.yml` 和明确的重建流程。
+反过来，如果已定型（commissioned）的 Manifest 存在而全部 Kafka 数据盘为空，角色会失败关闭，避免用旧身份意外复活已消失的集群（若只是首次引导在完成格式化前中途失败留下的未定型 Manifest，角色会自动丢弃并重建）。确实要重建已定型集群时必须先执行 `kafka-rm.yml` 和明确的重建流程。
 
 
 --------
@@ -141,7 +141,7 @@ ls -l /infra/targets/kafka/
 grep 9308 /infra/targets/kafka/*.yml
 ```
 
-完整运行会按当前放置刷新每个实例的 Target 文件，不应只针对单节点运行注册标签。注意：若 Exporter 放置因拓扑变化而转移，曾被选中节点上的旧 `kafka_exporter` 服务不会被普通剧本自动停止，需要手工或通过 `kafka-rm.yml` 清理。
+完整运行不仅按当前放置刷新每个实例的 Target 文件，还会自动停止、禁用并清理不再被选中节点上残留的 `kafka_exporter` 服务与单元文件；不应只针对单节点运行注册标签。
 
 
 --------
@@ -228,4 +228,4 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 `kafka.yml` 永远不执行清理，删除动作只在独立的 `kafka-rm.yml` 中：剧本强制要求显式非空 `-l/--limit`，裸跑会失败；`-l` 选中整个集群即为集群下线，选中真子集则是成员退役。默认 `kafka_rm_data=true` 会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；`kafka_rm_data=false` 保留数据与恢复状态，`kafka_safeguard=true` 中止一切删除。
 
-该剧本没有确认字符串等额外闸门。命令会直接执行删除；运行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。成员退役中的 Broker 注销命令会容忍失败，真实运行后还必须核对 Quorum、Broker 注册与副本健康。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。
+该剧本没有确认字符串等额外闸门。命令会直接执行删除；运行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。成员退役会先在停服前摘除 KRaft Voter（失败立即中止），停服后注销 Broker 也仅容忍已未注册的幂等场景；真实运行后仍必须核对 Quorum、Broker 注册与副本健康。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。

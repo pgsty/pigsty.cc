@@ -1,13 +1,13 @@
 ---
 title: 参数参考
 weight: 5012
-description: MYSQL 模块 13 项公开参数：11 项部署参数、2 项受保护移除参数，以及固定平台约定。
+description: MYSQL 模块 16 项公开参数：13 项部署参数、3 项受保护移除参数，以及固定平台约定。
 icon: fa-solid fa-sliders
 module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保护运维参数。软件版本、端口、目录、字符集、TLS 路径与定时器表达式由角色统一固定，内存基线按节点规格推导；需要调整服务器行为时使用 [`mysql_parameters`](#mysql_parameters)。
+MYSQL 部署角色公开 **13 项** 参数，移除角色另有 **3 项** 受保护运维参数（合计 **16 项**）。软件版本、端口、字符集、TLS 路径与定时器表达式由角色统一固定，内存基线按节点规格与是否混部 PG 自动推导；需要调整服务器行为时使用 [`mysql_parameters`](#mysql_parameters)。
 
 
 --------
@@ -24,8 +24,10 @@ MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保�
 | [`mysql_databases`](#mysql_databases) | 集群 | `[]` | 增量收敛的业务数据库 |
 | [`mysql_users`](#mysql_users) | 集群 | `[]` | 增量收敛的业务用户与授权 |
 | [`mysql_parameters`](#mysql_parameters) | 集群/实例 | `{}` | `[mysqld]` 参数覆盖 |
+| [`mysql_data`](#mysql_data) | 集群/实例 | `/data/mysql` | MySQL 数据目录（含 `binlog/` 与 `tmp/`） |
 | [`mysql_backup_enabled`](#mysql_backup_enabled) | 集群 | `true` | 每日全量备份定时器 |
-| [`mysql_backup_repo`](#mysql_backup_repo) | 集群 | 见下文 | 本地备份目录与保留份数 |
+| [`mysql_backup_dir`](#mysql_backup_dir) | 集群 | `/data/backups/mysql` | 本地物理备份根目录 |
+| [`mysql_backup_retention`](#mysql_backup_retention) | 集群 | `3` | 本地保留的全量备份份数 |
 | [`mysql_exporter_enabled`](#mysql_exporter_enabled) | 集群 | `true` | Exporter 与监控 Target |
 {.full-width .wide .expand}
 
@@ -33,11 +35,12 @@ MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保�
 
 | 参数 | 层级 | 默认值 | 说明 |
 |:---|:---:|:---|:---|
-| [`mysql_safeguard`](#mysql_safeguard) | 全局/集群/命令行 | `true` | 默认拒绝执行移除 |
-| [`mysql_rm_confirm`](#mysql_rm_confirm) | 命令行 | `''` | 必须精确匹配实例名或集群名 |
-{.full-width}
+| [`mysql_safeguard`](#mysql_safeguard) | 全局/集群/命令行 | `true` | 防误删保险，默认拒绝执行移除 |
+| [`mysql_rm_data`](#mysql_rm_data) | 全局/集群/命令行 | `true` | 是否清理数据目录与受管配置（始终保留备份目录） |
+| [`mysql_rm_pkg`](#mysql_rm_pkg) | 全局/集群/命令行 | `false` | 是否一并卸载 MySQL / Router / XtraBackup / Exporter 软件包 |
+{.full-width .wide .expand}
 
-旧版页面曾出现的 `mysql_role`、`mysql_services`、`mysql_packages`、`mysql_data`、`mysql_port`、`mysql_replication_*`、`mysql_*_username` 等变量已不属于公开接口，请勿使用。
+旧版曾出现的 `mysql_backup_repo`（已被预检显式拦截拒绝）、`mysql_rm_confirm`、`mysql_role`、`mysql_services`、`mysql_packages`、`mysql_port`、`mysql_replication_*`、`mysql_*_username` 等变量不属于当前公开接口，请勿使用。
 
 
 --------
@@ -52,17 +55,17 @@ MYSQL 部署角色刻意只公开 11 项参数，移除角色另有 2 项受保�
 mysql_cluster: my-test
 ```
 
-用于生成实例名（`my-test-1`）、MGR Group UUID（由集群名确定性推导）、备份目录（`<repo>/my-test/`）与监控标签 `cls`。
+用于生成实例名（`my-test-1`）、AdminAPI 集群名、备份子目录（`<mysql_backup_dir>/my-test/`）与监控标签 `cls`（MGR Group UUID 由 AdminAPI 在建群时自动生成并由集群自行持有）。
 
 ### `mysql_seq`
 
-必填的实例序号。单机为 `1`；三节点必须是连续的 `1、2、3`，并直接作为 `server_id`：
+必填的实例序号。单机为 `1`；三节点必须是连续的 `1、2、3`：
 
 ```yaml
 10.10.10.11: { mysql_seq: 1 }
 ```
 
-`mysql_seq=1` 仅表示首次引导时的协调者；运行时主库由 MGR 选举决定，重跑剧本不会迁回主库。
+`mysql_seq=1` 仅表示首次引导时的协调者；运行时主库由 MGR 选举决定，重跑剧本不会迁回主库。注意 `mysql_seq` 不直接作为 `server_id`（`server_id` 由成员 IPv4 地址按 32 位无符号整数自动推导）。
 
 
 --------
@@ -83,13 +86,13 @@ mysql_root_password: DBUser.Root
 
 ### `mysql_monitor_password`
 
-`dbuser_monitor@'127.0.0.1'` 密码，供 mysqld_exporter 使用，仅限本机回环地址、最多 3 连接、只读权限：
-
-默认值为 `DBUser.Monitor`：
+`dbuser_monitor@'127.0.0.1'` 密码，供 `mysqld_exporter` 使用，仅限本机回环地址、最多 3 连接、只读权限。默认值为 `DBUser.Monitor`：
 
 ```yaml
 mysql_monitor_password: DBUser.Monitor
 ```
+
+该密码渲染至 Go INI 格式的 `/etc/mysqld_exporter.cnf`（模板会将 `$` 转义为 `$$`），**禁止包含 `%(...)s` 形式的 INI 插值语法**（如 `%(host)s`），否则预检会直接拒绝。
 
 ### `mysql_cluster_password`
 
@@ -162,7 +165,21 @@ mysql_parameters:
 
 --------
 
-## 备份参数
+## 存储与备份参数
+
+### `mysql_data`
+
+MySQL 数据目录路径，默认值为 `/data/mysql`（Binlog 与临时目录分别位于其下 `binlog/` 与 `tmp/` 子目录）：
+
+```yaml
+mysql_data: /data/mysql
+```
+
+约束与平台行为：
+
+- 必须为多级绝对路径，不能与 `mysql_backup_dir` 相等或互相嵌套，也不能位于 `/etc`、`/usr`、`/var`、`/tmp` 等系统保留路径下（唯一例外是原地纳管旧版 `/var/lib/mysql`）；
+- 若节点 `/var/lib/mysql` 下已存在初始化过的系统库而 `mysql_data` 被设为其他路径，预检会主动拒绝，防止在旧数据旁误拉起空库；
+- Debian/Ubuntu 节点会自动维护 `/etc/apparmor.d/local/usr.sbin.mysqld` 本地放行规则，EL 节点会自动执行 `restorecon -RF`。
 
 ### `mysql_backup_enabled`
 
@@ -172,20 +189,27 @@ mysql_parameters:
 mysql_backup_enabled: true
 ```
 
-设为 `false` 停用定时器，但保留备份脚本与配置。注意：若备份目录从未创建过（备份从未启用），手工触发会因目录缺失直接退出。
+启用时，若 `<mysql_backup_dir>/<mysql_cluster>/latest/backup.ok` 尚不存在，`mysql_backup` 阶段会自动在当前可写主库上执行一次初始基线备份。设为 `false` 时停用定时器并移除 `/var/lib/node_exporter/textfile/mysql.prom` 备份指标文件，但保留已有备份与脚本。
 
-### `mysql_backup_repo`
+### `mysql_backup_dir`
 
-本地备份仓库定义，当前只支持 `local` 一种方式：
+本地物理全量备份根目录，默认值为 `/data/backups/mysql`：
 
 ```yaml
-mysql_backup_repo:
-  local:
-    path: /data/backups/mysql     # 绝对路径，不能与数据目录重叠
-    retention: 7                  # 保留最近 N 份已提交全量（1-9999）
+mysql_backup_dir: /data/backups/mysql
 ```
 
-目录布局与恢复流程见 [日常管理](/docs/mysql/admin#管理备份)。
+必须为非系统保留区的多级绝对路径，且不能与 `mysql_data` 重叠。集群备份实际落盘在 `<mysql_backup_dir>/<mysql_cluster>/` 下，即使是销毁数据的 `mysql-rm.yml` 也 **绝不删除** 该备份目录。注意旧版结构化参数 `mysql_backup_repo` 已废弃并会被预检断言拒绝。
+
+### `mysql_backup_retention`
+
+本地保留的已提交全量物理备份份数（`1..9999`），默认值为 `3`：
+
+```yaml
+mysql_backup_retention: 3
+```
+
+每次新备份完成 `--prepare` 并原子更新 `latest` 软链后，脚本会自动清理超出保留份数的旧备份目录。目录布局与恢复流程见 [日常管理](/docs/mysql/admin#管理备份)。
 
 
 --------
@@ -209,15 +233,30 @@ mysql_exporter_enabled: true
 
 ### `mysql_safeguard`
 
-受保护移除的保险开关，默认值为 `true`。执行 `mysql-rm.yml` 时必须显式设置为 `false`，否则角色会拒绝继续：
+受保护移除的防误删保险开关，默认值为 `true`（与 [`VAULT`](/docs/vault/param#vault_safeguard) 模块的 `vault_safeguard` 一样默认开启）。执行 `mysql-rm.yml` 时必须显式传入 `-e mysql_safeguard=false`，否则剧本在预检阶段拒绝执行：
 
 ```bash
-./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
+./mysql-rm.yml -l my-test -e mysql_safeguard=false
 ```
 
-### `mysql_rm_confirm`
+### `mysql_rm_data`
 
-目标名称确认字符串，默认值为空。移除单个成员时必须精确等于实例名（例如 `my-test-3`）；移除完整集群或单机实例时必须精确等于 `mysql_cluster`。该参数与 `mysql_safeguard=false` 缺一不可。
+移除时是否销毁数据目录与受管配置文件，默认值为 `true`：
+
+```yaml
+mysql_rm_data: true
+```
+
+- 默认 `true`：在停止服务并注销监控后，彻底删除 `mysql_data`、`/etc/mysql/pigsty`、`/etc/mysql/pki`、`pigsty.cnf`、Router 配置与密钥环、Exporter 配置、systemd 覆写与备份单元、`/var/lib/pigsty/mysql-backup`、`/var/lib/node_exporter/textfile/mysql.prom` 及 `/etc/profile.d/mysql.sh`，**但始终保留 `mysql_backup_dir` 备份目录**；
+- 设为 `false`：**仅整集群下线支持**（`-l <cluster> -e mysql_safeguard=false -e mysql_rm_data=false`），只停止服务并摘除监控注册，原样保留数据目录与配置，后续执行 `./mysql.yml -l <cluster>` 即可原地拉起并恢复集群；单成员摘除强制要求 `mysql_rm_data=true`。
+
+### `mysql_rm_pkg`
+
+移除时是否一并卸载 MySQL Server/Client/Shell/Router、Percona XtraBackup 与 `mysqld_exporter` 软件包，默认值为 `false`：
+
+```yaml
+mysql_rm_pkg: false
+```
 
 
 --------
@@ -226,18 +265,18 @@ mysql_exporter_enabled: true
 
 以下值由角色固定或推导，**不是** 清单参数，列出供运维参考：
 
-| 项目     | 值                                                                                                                                                                    |
-|:-------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 软件版本   | MySQL Server/Client/Shell/Router 8.4 LTS、Percona XtraBackup 8.4                                                                                                      |
-| 端口     | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO）、`9104`（Exporter）；Exporter 服务与 MySQL 目标注册均固定使用 `9104`，`mysql_exporter_port` 已从 INFRA 参考变量中移除，也不是 MYSQL 的公开参数 |
-| 数据目录   | `/var/lib/mysql`（Binlog 于 `binlog/` 子目录，7 天过期）                                                                                                                       |
-| 配置文件   | EL：`/etc/my.cnf.d/pigsty.cnf`；Debian/Ubuntu：`/etc/mysql/mysql.conf.d/pigsty.cnf`                                                                                     |
-| 服务单元   | MySQL：EL 为 `mysqld`，Debian/Ubuntu 为 `mysql`；Router：`mysqlrouter`；Exporter：`mysqld_exporter`                                                                          |
-| 凭据与脚本  | `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`）                                                                                                                    |
-| 日志     | 错误日志 `/var/log/mysql/error.log` 并镜像到 Journald；慢查询 `/var/log/mysql/slow.log`（阈值 1s）                                                                                   |
-| TLS    | 强制加密（`require_secure_transport=ON`）；CA `/etc/pki/ca.crt`，叶证书 `/etc/mysql/pki/`                                                                                       |
-| 字符集    | `utf8mb4` / `utf8mb4_0900_ai_ci`                                                                                                                                     |
-| 内存基线   | 缓冲池 = max(节点内存 × 25%, 256MB)；Redo = clamp(缓冲池 × 50%, 128MB, 4GB)                                                                                                     |
-| 复制     | GTID 强制、`sql_require_primary_key=ON`、MGR 单主、故障切换读一致性 `BEFORE_ON_PRIMARY_FAILOVER`                                                                                    |
-| 数据目录标记 | `.pigsty-mysql-initialized`（属主校验）与 `.pigsty-mysql-retired`（退役防护）                                                                                                     |
+| 项目 | 值 |
+|:---|:---|
+| 软件版本 | MySQL Server/Client/Shell/Router 8.4 LTS、Percona XtraBackup 8.4 |
+| 端口与 VIP | `3306`（Classic）、`33060`（X Protocol，单机仅回环）、`33061`（MGR）、`6446/6447`（Router RW/RO，启用 `NODE` 二层 VIP 时同步暴露 `<vip>:6446/6447`）、`9104`（Exporter） |
+| 身份推导 | `server_id` 由成员 IPv4 地址按 32 位无符号整数自动推导（非 IPv4 取 SHA-1 前 32 位）；MGR Group UUID 由 AdminAPI 自动生成 |
+| 配置文件 | EL：`/etc/my.cnf.d/pigsty.cnf`；Debian/Ubuntu：`/etc/mysql/mysql.conf.d/pigsty.cnf`（另自动维护 AppArmor 本地规则） |
+| 服务单元 | MySQL：EL 为 `mysqld`，Debian/Ubuntu 为 `mysql`；Router：`mysqlrouter`；Exporter：`mysqld_exporter`；备份：`mysql-backup.{service,timer}` |
+| 凭据与快捷命令 | `/etc/mysql/pigsty/`（root 属主：目录 `0700`、文件 `0600`）；`/etc/profile.d/mysql.sh` 提供 `my` 与 `mysh` 快捷命令 |
+| 日志与备份状态 | 错误日志 `/var/log/mysql/error.log` 并镜像到 Journald；慢查询 `/var/log/mysql/slow.log`（阈值 1s）；备份失败工作日志 `/var/lib/pigsty/mysql-backup/`；备份指标 `/var/lib/node_exporter/textfile/mysql.prom` |
+| TLS | 强制加密（`require_secure_transport=ON`）；CA `/etc/pki/ca.crt`，叶证书 `/etc/mysql/pki/`（自动包含节点地址与可选 `NODE` VIP SAN） |
+| 字符集 | `utf8mb4` / `utf8mb4_0900_ai_ci` |
+| 内存与连接基线 | 缓冲池 = 独占节点 50% 内存 / 与 PG 混部（定义 `pg_cluster`）25% 内存（预留至少 1 GiB 系统内存，下限 256 MiB）；Redo = `clamp(缓冲池 × 50%, 128 MiB, 4 GiB)`；`max_connections` = `1000` |
+| 复制 | GTID 强制、`sql_require_primary_key=ON`、MGR 单主、故障切换读一致性 `BEFORE_ON_PRIMARY_FAILOVER` |
+| 数据目录标记 | `<mysql_data>/.pigsty-mysql-initialized`（记录 `version`、`cluster`、`instance`、`topology` 用于属主校验） |
 {.full-width .wide .expand}

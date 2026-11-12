@@ -27,10 +27,11 @@ juicefs mount <mount_opts> --cache-dir <juice_cache> --metrics 0.0.0.0:<port> <m
 
 说明：
 
-- `--no-update` 确保已存在的文件系统不会被覆盖。
+- `--no-update` 确保已存在的文件系统不会被覆盖；同时 `juice_init` 会执行 `juicefs status <meta>` 校验已有元数据中的卷名（`Setting.Name`）必须与当前实例名一致，防止误挂载其他卷的元数据。
 - `data` 仅用于 **首次格式化**，文件系统已存在时不会生效。
 - `mount` 仅用于挂载阶段，可按需传入缓存与并发参数。
-- 挂载点目录不存在时由 `juicefs mount` 自动创建；`owner` / `group` / `mode` 在挂载完成后作用于 **文件系统根目录**，而不是挂载点下面的本地目录。
+- 环境文件 `/etc/default/<unit>` 权限为 `0600`（systemd `EnvironmentFile` 格式，请勿当作普通 shell 脚本 `source`）；systemd 单元默认排在本机 `patroni` / `postgres` / `silo` / `minio` 之后、`code-server` / `jupyter` 之前启停。
+- 挂载点目录不存在时由 `juicefs mount` 自动创建；`owner` / `group` / `mode` 在核验真实 JuiceFS 挂载就绪后作用于 **文件系统根目录**，而不是挂载点下面的本地目录。
 
 --------
 
@@ -53,18 +54,18 @@ JUICE 模块仅有两个参数：
 
 `juice_instances` 的每个条目代表一个 JuiceFS 实例，Key 为实例名，同时也是 JuiceFS 卷名：
 
-| 字段      | 必选 | 默认值              | 说明                        |
-|:--------|:--:|:-----------------|:--------------------------|
-| `path`  | 是  | -                | 挂载点路径，如 `/fs`（同节点需唯一）     |
-| `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）  |
-| `data`  | 否  | `''`             | `juicefs format` 选项（存储后端） |
-| `unit`  | 否  | `juicefs-<name>` | systemd 服务名               |
-| `mount` | 否  | `''`             | `juicefs mount` 额外参数      |
-| `port`  | 否  | `9567`           | 指标端口（同节点需唯一）              |
-| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）          |
-| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）          |
-| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）          |
-| `state` | 否  | `create`         | `create` / `absent`       |
+| 字段      | 必选 | 默认值              | 说明                                 |
+|:--------|:--:|:-----------------|:-----------------------------------|
+| `path`  | 条件 | -                | 挂载点非根绝对路径，如 `/fs`（`create` 时必填，同节点唯一） |
+| `meta`  | 条件 | -                | 元数据引擎 URL（`create` 时必填，建议 PostgreSQL） |
+| `data`  | 否  | `''`             | `juicefs format` 选项（存储后端）          |
+| `unit`  | 否  | `juicefs-<name>` | 裸 systemd 服务名（不含 `.service` 后缀）    |
+| `mount` | 否  | `''`             | `juicefs mount` 额外参数               |
+| `port`  | 否  | `9567`           | 指标端口（同节点活跃实例需唯一）                   |
+| `owner` | 否  | `root`           | 文件系统根目录属主（挂载后设置）                   |
+| `group` | 否  | `root`           | 文件系统根目录属组（挂载后设置）                   |
+| `mode`  | 否  | `0755`           | 文件系统根目录权限（挂载后设置）                   |
+| `state` | 否  | `create`         | `create` / `absent`                |
 {.full-width .wide .expand}
 
 > [!WARNING] 重要
@@ -87,13 +88,16 @@ juice_instances:
 
 ## 配置校验
 
-`juice.yml` 每次执行都会先由 `juice_id` 校验 `juice_instances`。校验任务带有 `always` 标签，任何标签组合下都会执行，不通过则直接失败：
+`juice.yml` 每次执行都会先由 `juice_id` 校验运行环境、`juice_cache` 与 `juice_instances`。校验任务带有 `always` 标签，任何标签组合下都会执行，不通过则直接失败：
 
-- `juice_instances` 必须是字典，每个实例都必须定义 `path`。
-- `state` 不是 `absent` 的实例必须定义 `meta`，实例名须符合 JuiceFS 卷名规则（`^[a-z0-9][a-z0-9-]{1,61}[a-z0-9]$`）。
-- 同一节点上，`state` 不是 `absent` 的各实例之间 `port`（默认 `9567`）互不相同，`path` 也互不相同。
+- 控制端要求 `ansible-core >= 2.16`。
+- `juice_cache` 必须是非根绝对路径（不含 `.` 或 `..`），且不能与任一 `state: create` 实例的 `path` 相同或互相包含（禁止目录重叠）。
+- `juice_instances` 必须是字典；`state` 仅允许 `create`（默认）或 `absent`。
+- `state: create` 的实例必须定义非根绝对路径 `path`（不含 `.` 或 `..`）与 `meta`，且实例名须符合 JuiceFS 卷名规则（`^[a-z0-9][a-z0-9-]{1,61}[a-z0-9]$`）。
+- `unit` 必须是合法的裸 systemd 单元名（不含 `.service` 后缀），且 **同一节点上全部实例（包含 `state: absent` 实例）的 `unit` 互不冲突**，防止清理任务误停新建实例的服务。
+- 同一节点上，`state: create` 的各实例之间 `port`（默认 `9567`）互不相同，`path` 也互不相同。
 
-`state: absent` 的实例豁免名称、`meta` 与冲突检查。因此可以把旧实例标记为 `absent`，同时在同一端口上新建实例；名称不合规的旧条目也能正常清理。
+`state: absent` 的实例无需保留 `path` 或 `meta`（若原实例使用了自定义 `unit`，清理时需继续保留 `unit`），且豁免实例名规则以及 `port` / `path` 冲突检查。因此可以把旧实例标记为 `absent`，同时在原端口或挂载点上使用新实例名新建实例；名称不合规的旧条目也能正常清理。
 
 --------
 

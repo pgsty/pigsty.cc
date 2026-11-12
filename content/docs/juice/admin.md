@@ -32,14 +32,14 @@ categories: [任务]
 
 初始化流程：
 
-- 跳过未定义 `juice_instances` 或其为空字典的主机
-- 校验实例配置：实例名、必填字段、端口与路径冲突（见 [**配置校验**](/docs/juice/config#配置校验)）
+- 跳过未定义 `juice_instances`、其值为 `null` 或为空字典的主机（以及指定 `-e fsname=<name>` 但未命中的主机）
+- 校验控制端 `ansible-core >= 2.16`、`juice_cache` 与实例配置（实例名、必填字段、`unit`、端口与路径冲突，见 [**配置校验**](/docs/juice/config#配置校验)）
 - 安装 `juicefs` 软件包
 - 创建共享缓存目录（默认 `/data/juice`）
-- 执行 `juicefs format --no-update`（仅首次创建有效，失败时打印 JuiceFS 输出的最后一行错误）
-- 渲染 systemd 单元与环境文件
-- 启动服务并等待挂载点就绪；挂载点目录不存在时由 `juicefs mount` 自动创建
-- 挂载后设置文件系统根目录的属主、属组与权限（默认 `root:root 0755`）
+- 执行 `juicefs format --no-update`（仅首次创建有效，失败时打印最后一行错误），并通过 `juicefs status` 核验已有元数据的卷名与当前实例名一致
+- 渲染环境文件 `/etc/default/<unit>`（权限 `0600`）与 systemd 单元（权限 `0644`）
+- 启动服务，并通过 `systemctl is-active`、`findmnt`（精确核验 `FSTYPE="fuse.juicefs"` 与 `SOURCE="JuiceFS:<name>"`）及 `stat -f` 等待真实挂载就绪；挂载点目录不存在时由 `juicefs mount` 自动创建
+- 核验挂载就绪后设置文件系统根目录的属主、属组与权限（默认 `root:root 0755`）
 - 注册到 VictoriaMetrics（若存在 infra 节点）
 
 -------------
@@ -68,15 +68,14 @@ categories: [任务]
 
 ## 移除实例
 
-1. 将实例 `state` 设为 `absent`
+1. 先停止正在访问该挂载点的应用进程（并退出以挂载点为当前目录的终端），将实例 `state` 设为 `absent`（默认 `unit` 无需保留 `path` 与 `meta`；若有自定义 `unit` 则继续保留 `unit`）
 2. 执行 `juice_clean`
 
 ```yaml
 juice_instances:
   jfs:
-    path: /fs
-    meta: postgres://...
     state: absent
+    # unit: my-juice-unit   # 原实例有自定义 unit 时保留
 ```
 
 ```bash
@@ -86,11 +85,10 @@ juice_instances:
 
 移除动作：
 
-- 停止并禁用 systemd 服务
-- `umount -l` 懒卸载
-- 删除 unit 与环境文件
-- 重载 systemd
-- 重写该节点的 VictoriaMetrics 目标文件，移除 `state: absent` 的实例
+- 停止并禁用活跃的 systemd 服务（`ExecStop` 执行 `juicefs umount`），并强校验 `systemctl show <unit> --property=Result` 为 `success`（**不执行 `umount -l` 强制懒卸载**）
+- 若卸载失败（例如 `Device or resource busy`），任务在删除单元与环境文件、刷新监控目标之前立即报错中止，保留现场以便排查；使用 `fuser -vm <path>` 或 `lsof` 释放占用后重跑 `juice_clean` 即可完成清理
+- 确认停止成功后删除 `.service` 单元与 `/etc/default/<unit>` 环境文件，重载 systemd
+- 重写该节点的 VictoriaMetrics 目标文件，移除 `state: absent` 的实例（若该节点已无 `state: create` 实例，则直接删除 `/infra/targets/juice/<ip>.yml`）
 
 不带标签完整执行 `juice.yml` 同样会清理 `state: absent` 的实例。确认清理完成后，再从配置中删除该条目。
 
@@ -198,27 +196,34 @@ sudo -iu postgres pg-pitr -s <stanza> -t "2026-08-14 10:30:00+08"
 invalid juice_instances: [jfs] port conflicts with jfs2. [jfs2] port conflicts with jfs.
 ```
 
-按提示修改配置：为冲突实例指定不同的 `port` 或 `path`；若其中一个是要下线的旧实例，将其标记为 `state: absent` 即可豁免冲突检查。
-其他提示还包括 `path is required`、`meta is required` 与 `name must be 3-63 chars of [a-z0-9-]`，分别对应缺少字段与实例名不合规。
+按提示修改配置：为冲突实例指定不同的 `port` 或 `path`；若其中一个是要下线的旧实例，将其标记为 `state: absent` 即可豁免 `port` 与 `path` 冲突检查（注意 **`unit` 在全部实例之间仍不能重复**，如需复用同名实例或同一 `unit`，请先执行 `juice_clean` 移除旧实例）。
+其他常见报错还包括 `juice_cache` 与挂载路径重叠、缺少 `path` / `meta`、非法 `state` / `unit`，以及实例名不符合 `3-63` 位 `[a-z0-9-]` 规则。
 
-### 格式化失败
+### 格式化与卷名校验失败
 
-`juice_init` 失败时，剧本会打印 JuiceFS 输出的最后一行错误（命令行含凭据，仍保持隐藏），形如 `juicefs format <name> failed: <错误信息>`。常见原因：
+`juice_init` 执行 `juicefs format --no-update` 失败时，剧本会打印最后一行错误（命令行含凭据，保持隐藏），并在格式化后通过 `juicefs status` 核验元数据中的卷名（`Setting.Name`）是否等于当前实例名。常见失败原因：
 
+- `meta` 指向的元数据引擎已经格式化为 **另一个不同的卷名**（禁止把已初始化的其他卷挂在错误的实例键下；共享 PostgreSQL 时应使用独立数据库或不同实例键）
 - `meta` 或 `--bucket` 指向的数据库不存在
 - 数据库用户权限不足
-- 对象存储 bucket 非空
+- 对象存储 bucket 非空或不可写
 
 可先用下文 [**元数据连接问题**](#元数据连接问题) 中的命令确认数据库可达。
 
 ### 挂载未就绪
 
-`juice_launch` 启动服务后每 2 秒检查一次 `mountpoint -q <path>`，最多等待 60 秒；超时后任务失败，请查看服务状态与日志：
+`juice_launch` 启动服务后每 2 秒执行一次就绪核验（最多重试 30 次，共等待 60 秒；单独执行 `-t juice_dir` 时也会在修改目录属性前做一次同样的挂载核验），要求同时满足：
+
+1. `systemctl is-active --quiet <unit>` 服务处于活跃态；
+2. `findmnt -knP -d backward -f -M <path> -o FSTYPE,SOURCE` 输出精确为 `FSTYPE="fuse.juicefs" SOURCE="JuiceFS:<name>"`；
+3. `stat -f <path>` 能正常访问挂载点文件系统。
+
+超时或来源不匹配时任务失败，请查看服务状态、挂载表与日志：
 
 ```bash
-systemctl status juicefs-jfs
-journalctl -u juicefs-jfs -f
-mountpoint /fs
+systemctl show juicefs-jfs -p ActiveState -p MainPID -p Result
+journalctl -u juicefs-jfs -n 50 --no-pager
+findmnt -knP -d backward -f -M /fs -o FSTYPE,SOURCE
 ```
 
 ### 元数据连接问题

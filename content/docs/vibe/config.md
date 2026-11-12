@@ -48,9 +48,9 @@ all:
 - Code-Server 默认打开目录
 - JupyterLab `root_dir`
 - Claude Code 的工作目录
-- 渲染 `AGENTS.md` 上下文文件，并创建指向它的 `CLAUDE.md` 符号链接
+- 渲染 `AGENTS.md` 上下文文件（若存在旧版符号链接会先清理），并创建指向它的 `CLAUDE.md` 符号链接
 
-`vibe_dir` 任务会创建目录并写入上下文文件，文件属主为 `node_user`。
+`vibe_dir` 任务会创建目录并写入上下文文件，文件属主为 `node_user`（未定义时默认为 `root`）。
 
 ```yaml
 vibe_data: /fs
@@ -96,9 +96,9 @@ jupyter_venv: /data/venv
 - 服务监听 `0.0.0.0:<jupyter_port>`（默认 8888），基路径为 `/jupyter/`
 - 配置文件：`jupyter_data/jupyter_config.py`（默认 `/data/jupyter/jupyter_config.py`）
 - 登录 Token：`c.IdentityProvider.token`
-- **不会自动创建 venv**，建议通过 `NODE` 模块的 `node_uv_env` 预先创建
+- 若 `<jupyter_venv>/bin/python` 不存在，`jupyter_install` 会自动调用 `uv venv` 创建虚拟环境，并在 `<jupyter_venv>/bin/jupyter` 不存在时自动安装 `jupyterlab` 与 `ipykernel`（也可配合 `NODE` 模块预置的 `/data/venv` 复用同一环境）
 
-创建 venv 示例：
+手工创建或复用 venv 示例：
 
 ```bash
 uv venv /data/venv
@@ -116,31 +116,33 @@ npm_packages: []
 
 说明：
 
+- `nodejs` 是完全独立的运行时组件，仅受 `nodejs_enabled` 控制，与 `claude` / `codex` 解耦
+- `nodejs_config` 会自动探测全局 npm 配置文件（`npm config get globalconfig`，回退 `/etc/npmrc`），并写入全局安装前缀 `prefix=/usr/local`
 - `nodejs_registry` 为空时，`region=china` 会自动使用 `https://registry.npmmirror.com`
-- `npm_packages` 用于安装额外的全局 npm 包，默认为空
-- Claude Code 与 Codex CLI 由各自的独立任务安装
+- `npm_packages` 用于通过 `npm install -g` 安装额外的全局 npm 包，默认为空
+- Claude Code 与 Codex CLI 通过 `pigsty-infra` 原生系统软件包安装，不依赖 npm
 
 --------
 
 ## Claude Code 配置
 
-`claude` 子任务同时执行 CLI 安装（`claude_install`）与配置写入（`claude_config`）。
+`claude` 子任务同时执行原生软件包安装（`claude_install`）与配置写入（`claude_config`）。
 
 ```yaml
 claude_enabled: true
-claude_package: '@anthropic-ai/claude-code'
+claude_package: claude
 claude_env:
   ANTHROPIC_API_KEY: sk-ant-xxx
 ```
 
-启用 Claude 或 Codex 时，VIBE 会确保 Node.js 运行时已经安装。需要替换 Claude npm 包时，可覆盖 `claude_package`。
+`claude_install` 通过系统包管理器（APT/YUM）从 `pigsty-infra` 软件源安装 `claude_package`（默认为 `claude`；软件源中亦提供新官方包名 `claude-code`，可按需覆盖 `claude_package: claude-code`）。
 
-生成的文件：
+生成与维护的文件（位于 `~<node_user>/` 下，权限 `0600`）：
 
-- `~/.claude.json`
-- `~/.claude/settings.json`
+- `~/.claude.json`：写入跳过首次引导与权限确认的初始状态，采用 `force: false`（若文件已存在则不覆盖用户状态）
+- `~/.claude/settings.json`：读取已有配置后执行非破坏性 `combine` 合并，保留用户自定义顶层字段与自定义 `env` 键，同时刷新受管的 OpenTelemetry 默认项并应用 `claude_env` 覆盖项（值为 `null` 的键会被剔除）
 
-`claude_env` 会与默认 OpenTelemetry 环境变量合并，默认上报到 VictoriaMetrics / VictoriaLogs。
+默认 OpenTelemetry 端点会自动指向控制平面 `admin_ip`（未定义时回退 `127.0.0.1`）上的 `vmetrics_port`（默认 `8428`）与 `vlogs_port`（默认 `9428`），支持非管理节点直接向中心 VictoriaMetrics / VictoriaLogs 上报遥测数据。
 
 --------
 
@@ -150,7 +152,7 @@ claude_env:
 codex_enabled: true
 ```
 
-`codex` 子任务执行 `npm install -g @openai/codex`。VIBE 仅安装 Codex CLI，不写入 Codex 配置，也不接入 VIBE 的 Claude Code 可观测性。
+`codex` 子任务通过系统包管理器从 `pigsty-infra` 软件源安装原生软件包 `codex`。VIBE 仅安装 Codex CLI，不写入 Codex 配置，也不接入 VIBE 的 Claude Code 可观测性。
 
 --------
 
