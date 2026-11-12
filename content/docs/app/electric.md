@@ -27,26 +27,27 @@ vi pigsty.yml                 # 修改域名、密码、密钥
 - `http://<IP>:8002`
 - `http://elec.pigsty`（按模板默认域名）
 
-模板默认还启用并发布 `8003` 指标端口。应配置定期抓取；不需要指标时，在启动前从 `pigsty.yml` 与应用 `.env` 中移除 `ELECTRIC_PROMETHEUS_PORT`，并删除 Compose 对应的端口映射。启用而不抓取的 reporter 可能持续积累指标。
+Prometheus 指标端点默认关闭且未发布端口。除非已配置定期抓取，否则不要启用 `ELECTRIC_PROMETHEUS_PORT`：启用但未被抓取的 reporter 会持续保留指标，最终可能耗尽内存。
 
 ## 关键配置
 
 `conf/app/electric.yml` 会在 `apps.electric.conf` 中覆盖 `/opt/electric/.env`。常见参数：
 
-- `DATABASE_URL`：Electric 使用的 PostgreSQL 连接串（需要复制权限）
-- `ELECTRIC_PORT`：容器监听端口与宿主机发布端口，默认均为 `8002`
-- `ELECTRIC_PROMETHEUS_PORT`：默认启用的指标端口，值为 `8003`
-- `ELECTRIC_INSECURE`：开发环境可设为 `true`，生产环境建议关闭并使用密钥
+- `DATABASE_URL`：Electric 使用的 PostgreSQL 连接串（需要 `REPLICATION` 权限）
+- `ELECTRIC_PORT`：容器内监听端口，默认 `3000`
+- `ELECTRIC_PUBLISH_PORT`：宿主机发布端口，默认 `8002`
+- `ELECTRIC_PERSISTENT_STATE`：默认 `FILE`，在容器重建时保留同步状态
+- `ELECTRIC_STORAGE`：默认 `FAST_FILE`（Electric 1.7.12+ 接受 `MEMORY` 或 `FAST_FILE`，旧值 `FILE` 启动会失败）
+- `ELECTRIC_STORAGE_DIR`：容器内持久化绝对路径，默认 `/var/lib/electric`
+- `ELECTRIC_INSECURE`：开发环境默认为 `true`；生产环境暴露前必须设为 `false` 并配置 `ELECTRIC_SECRET`
 
-模板使用未固定标签的 `electricsql/electric` 镜像，部署前应固定与配置兼容的版本或摘要。
+模板默认跟随上游未固定标签的 `electricsql/electric` 镜像（验证快照对应 sync-service `1.7.12`）；需要受控升级窗口的生产环境建议显式固定镜像版本或摘要。
 
-## 缓存与版本差异
+## 缓存与持久化
 
-Compose 没有配置缓存持久卷。需要在容器重建后保留 shape 缓存时，应同时设置存储参数和卷挂载，不能只在 `.env` 中指定目录。
+Compose 默认将命名卷 `electric-data` 挂载到 `ELECTRIC_STORAGE_DIR`（默认 `/var/lib/electric`），在同版本容器重建且 PostgreSQL 时间线未变时保留 shape 句柄与日志数据。
 
-开发模板增加了 `electric-data` 卷，将容器监听端口设为 `3000`、宿主机端口设为 `ELECTRIC_PUBLISH_PORT=8002`，并默认关闭指标端口，需要配套更新 Compose。其 Electric 1.7.12 配置使用 `ELECTRIC_PERSISTENT_STATE=FILE`、`ELECTRIC_STORAGE=FAST_FILE` 和 `ELECTRIC_STORAGE_DIR=/var/lib/electric`；该版本不接受旧的 `ELECTRIC_STORAGE=FILE`。
-
-PostgreSQL 保存权威业务数据，缓存卷不能替代数据库备份。缓存丢失或 PostgreSQL 时间线变化时，客户端仍须处理 `409` / `must-refetch` 并重新同步。
+PostgreSQL 保存权威业务数据，Electric 缓存卷不能替代数据库备份。当缓存卷丢失或 PostgreSQL 实例身份/时间线发生变化时，缓存的 shape 会失效，客户端仍须处理 `409` / `must-refetch` 控制消息并丢弃本地缓存重新同步。
 
 ## 运维命令
 

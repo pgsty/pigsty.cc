@@ -91,7 +91,7 @@ vi pigsty.yml             # 编辑配置文件，修改域名和密码
 
 ## 配置
 
-当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和当前环境生成配置文件。以下快照与当前开发版源模板同步：
+当您使用 `./configure -c app/dify` 命令进行配置时，Pigsty 会根据 [`conf/app/dify.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/dify.yml) 模板和当前环境生成配置文件。完整模板内容如下：
 
 {{< include file="/docs/conf/yaml/app/dify.yml" code=true lang="yaml" >}}
 

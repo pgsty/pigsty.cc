@@ -6,9 +6,7 @@ icon: fa-solid fa-table-cells
 categories: [参考]
 ---
 
-`app/teable` 配置模板提供了部署 Teable 开源无代码数据库的参考配置，使用 Pigsty 托管的 PostgreSQL 作为数据库。
-
-下方预览中的缓存参数需要配套的开发版 Compose；若所用 Compose 不附带 Redis，须另外提供缓存服务，配置方式见 [**Teable 应用说明**](/docs/app/teable/)。
+`app/teable` 配置模板提供了部署 Teable 开源无代码数据库的参考配置，使用 Pigsty 托管的 PostgreSQL 作为数据库，并内置认证 Redis 缓存容器。详细配置见 [**Teable 应用说明**](/docs/app/teable/)。
 
 --------
 
@@ -32,14 +30,10 @@ categories: [参考]
 
 ## 配置内容
 
-源文件：[**`conf/app/teable.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/app/teable.yml)。
-
-<details>
-<summary>开发版配置预览：需要配套含 Redis 服务的 Compose</summary>
+源文件地址：[`pigsty/conf/app/teable.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/teable.yml)
 
 {{< include file="yaml/app/teable.yml" code=true lang="yaml" >}}
 
-</details>
 
 --------
 
@@ -58,8 +52,8 @@ categories: [参考]
 - 数据实际存储在真实的 PostgreSQL 表中
 - 支持 SQL 直接查询数据
 - 可与其他 PostgreSQL 工具和扩展集成
-- 开发版 Compose 附带认证 Redis 缓存（默认 `redis:7-alpine`），启用 AOF 持久卷，不发布 Redis 端口
-- 开发版会等待 Redis 就绪后启动应用，并检查后端 `/health` 状态
+- Compose 默认附带认证 Redis 缓存（`redis:7-alpine`），启用 AOF 持久卷，不向宿主机发布 Redis 端口
+- 应用启动前等待 Redis 就绪，并通过后端 `/health` 端点提供健康检查
 
 **访问方式**：
 
@@ -85,5 +79,5 @@ psql postgresql://dbuser_teable:DBUser.Teable@10.10.10.10:5432/teable
 - Teable 用户需要 superuser 权限
 - 需要正确配置 `PUBLIC_ORIGIN` 为外部访问地址
 - 支持邮件通知（可选配置 SMTP）
-- 使用开发版缓存模板时修改 `REDIS_PASSWORD`；稳定版需提供外部 Redis 及完整的 `BACKEND_CACHE_REDIS_URI`
+- 部署前必须修改 `REDIS_PASSWORD` 与数据库密码；如需改用外部 Redis，可在配置中覆盖 `BACKEND_CACHE_REDIS_URI`
 - 同时备份 PostgreSQL 与 `/data/teable` 应用资产目录

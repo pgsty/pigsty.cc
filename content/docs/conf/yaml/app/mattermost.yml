@@ -10,6 +10,7 @@
 #==============================================================#
 
 # tutorial: https://pigsty.io/docs/app/mattermost
+# The configured Mattermost image requires an x86_64 host (linux/amd64).
 # how to use this template:
 #
 #  curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
@@ -85,7 +86,7 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # global variables
-    version: v4.5.0                   # pigsty version string
+    version: v4.6.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit

@@ -6,9 +6,7 @@ icon: fa-solid fa-gem
 categories: [参考]
 ---
 
-开发版配置路径为 `conf/fork/ivory.yml`；v4.5.0 使用 `conf/ivory.yml`，配置命令相应为 `-c ivory`。
-
-`ivory` 配置模板使用瀚高的 IvorySQL 数据库内核替代原生 PostgreSQL，提供 Oracle 语法与 PL/SQL 兼容能力。
+`ivory` 配置模板（`conf/fork/ivory.yml`，可通过 `-c ivory` 或 `-c fork/ivory` 选择）使用瀚高的 IvorySQL 数据库内核替代原生 PostgreSQL，提供 Oracle 语法与 PL/SQL 兼容能力。
 
 完整教程请参考：**[IvorySQL (Oracle兼容) 内核使用说明](/docs/pgsql/kernel/ivorysql/)**
 
@@ -17,7 +15,7 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `ivory`
+- 配置名称： `ivory`（显式路径：`fork/ivory`）
 - 节点数量： 单节点
 - 配置说明：使用 IvorySQL Oracle 兼容内核
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
@@ -35,9 +33,9 @@ categories: [参考]
 
 ## 配置内容
 
-开发版源文件：`conf/fork/ivory.yml`；发布版：[`v4.5.0：conf/ivory.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/ivory.yml)。
+源文件地址：[`pigsty/conf/fork/ivory.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/ivory.yml)
 
-{{< include file="yaml/ivory.yml" code=true lang="yaml" >}}
+{{< include file="yaml/fork/ivory.yml" code=true lang="yaml" >}}
 
 
 --------

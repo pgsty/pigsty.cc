@@ -6,16 +6,14 @@ icon: fa-solid fa-feather
 categories: [参考]
 ---
 
-开发版配置路径为 `conf/fork/oriole.yml`；v4.5.0 使用 `conf/oriole.yml`，配置命令相应为 `-c oriole`。
-
-`oriole` 配置模板使用 OrioleDB 存储引擎替代 PostgreSQL 默认的 Heap 存储，使用 UNDO 日志保存旧版本，减少主存储中的膨胀。
+`oriole` 配置模板（`conf/fork/oriole.yml`，可通过 `-c oriole` 或 `-c fork/oriole` 选择）使用 OrioleDB 存储引擎替代 PostgreSQL 默认的 Heap 存储，使用 UNDO 日志保存旧版本，减少主存储中的膨胀。
 
 
 --------
 
 ## 配置概览
 
-- 配置名称： `oriole`
+- 配置名称： `oriole`（显式路径：`fork/oriole`）
 - 节点数量： 单节点
 - 配置说明：OrioleDB 存储引擎配置
 - PostgreSQL 大版本：`16`、`17`、`18`
@@ -34,9 +32,9 @@ categories: [参考]
 
 ## 配置内容
 
-开发版源文件：`conf/fork/oriole.yml`；发布版：[`v4.5.0：conf/oriole.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/oriole.yml)。
+源文件地址：[`pigsty/conf/fork/oriole.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/oriole.yml)
 
-{{< include file="yaml/oriole.yml" code=true lang="yaml" >}}
+{{< include file="yaml/fork/oriole.yml" code=true lang="yaml" >}}
 
 
 --------

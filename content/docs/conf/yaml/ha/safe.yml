@@ -59,7 +59,7 @@ all:
         pg_databases:
           - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [ pigsty ] ,extensions: [ { name: vector } ] }
         pg_services:
-          - { name: standby , ip: "*" ,port: 5435 , dest: default ,selector: "[]" ,check: /read-only-sync , backup: "[? pg_role == `primary`]" }
+          - { name: standby , ip: "*" ,port: 5435 , dest: default ,selector: "[]" ,check: /sync , backup: "[? pg_role == `primary`]" }
         pg_crontab:     # https://pigsty.io/docs/pgsql/admin/crontab
           - '00 01 * * * /pg/bin/pg-backup full'
         pg_listen: '${ip},${vip},${lo}'
@@ -76,7 +76,7 @@ all:
   #                          Parameters                              #
   ####################################################################
   vars: # global variables
-    version: v4.5.0                   # pigsty version string
+    version: v4.6.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     node_etc_hosts: [ "${admin_ip} i.pigsty sss.pigsty" ]

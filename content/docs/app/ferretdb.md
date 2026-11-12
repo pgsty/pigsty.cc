@@ -10,12 +10,12 @@ categories: [参考]
 
 ## 快速开始
 
-以下命令使用 v4.5.0 的 `mongo` 模板；开发版已迁移至 `conf/fork/mongo.yml`，对应使用 `-c fork/mongo`。
+以下命令使用 `mongo`（即 `conf/fork/mongo.yml`，亦支持显式路径 `-c fork/mongo`）配置模板：
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./bootstrap
-./configure -c mongo          # v4.5.0 发布包；开发源码使用 fork/mongo
+./configure -c mongo
 ./deploy.yml
 ./docker.yml -l pg-meta
 ./app.yml -l pg-meta

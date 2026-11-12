@@ -9,9 +9,7 @@ categories: [参考]
 
 [**Discourse**](https://www.discourse.org/) 是开源社区论坛软件。Pigsty 提供 `app/discourse` 模板：使用官方经典 [`discourse_docker`](https://github.com/discourse/discourse_docker) Launcher 在本地构建应用镜像，由 Docker Compose 管理运行；数据库使用 Pigsty 托管的外部 PostgreSQL，Redis 以单实例形式内嵌在应用容器中。
 
-模板沿用 Pigsty 常规的 `app.yml` → 应用目录 → `.env` → `make` 工作流。`apps.discourse.dest` 为 `/data/app/discourse`，管理文件与持久化文件位于同一目录，便于整体迁移。
-
-`app/discourse` 是 v4.5.0 发布后新增的开发版模板，需使用包含 `app/discourse/`、`conf/app/discourse.yml` 与 `files/discourse.sql` 的同版本 Pigsty，不能只复制配置文件。
+模板沿用 Pigsty 常规的 `app.yml` → 应用目录 → `.env` → `make` 工作流。`apps.discourse.dest` 为 `/data/app/discourse`，管理文件与持久化文件位于同一目录，便于整体迁移。部署时应使用同版本 Pigsty 中的 `app/discourse/`、`conf/app/discourse.yml` 与 `files/discourse.sql`。
 
 | 项目 | 默认值 |
 |------|--------|
@@ -29,10 +27,10 @@ categories: [参考]
 
 ## 快速开始
 
-在运行兼容操作系统的 **全新主机** 上执行。`v4.5.0` 发布包不含此模板，因此这里从 `main` 分支克隆源码，而不是使用默认安装稳定版的 `get` 脚本：
+在运行兼容操作系统的 **全新主机** 上执行：
 
 ```bash
-git clone https://github.com/pgsty/pigsty; cd pigsty   # 使用包含 app/discourse 的 main 分支
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./bootstrap                    # 安装 Ansible
 ./configure -c app/discourse   # 使用 Discourse 配置模板
 vi pigsty.yml                  # 修改密码、域名与 SMTP
@@ -55,8 +53,8 @@ vi pigsty.yml                  # 修改密码、域名与 SMTP
 |------|--------|------|
 | `DISCOURSE_DATA` | `/data/app/discourse` | 应用目录，与 `dest` 保持一致 |
 | `DISCOURSE_HOSTNAME` | `ask.pigsty` | 论坛域名，只填写 DNS 名称，不带 URL 或端口 |
-| `DISCOURSE_VERSION` | `tests-passed` | Discourse 应用引用，默认跟随官方测试通过通道 |
-| `DISCOURSE_DOCKER_REF` | `945d491ee62ac0d6e5d9076c173073c3f795d978` | 固定的经典 Launcher 与模板提交 |
+| `DISCOURSE_VERSION` | `f00f07d62728d646642cd2185cc077ad84a60fa8` | 固定的 Discourse 应用提交 SHA |
+| `DISCOURSE_DOCKER_REF` | `0ba1841d589e77df3bc923774abca2720a320ec2` | 固定的经典 Launcher 与模板提交 SHA |
 | `PG_HOST` / `PG_PORT` | `10.10.10.10` / `5432` | 直连 PostgreSQL 入口，不能使用 `localhost` |
 | `PG_DBNAME` / `PG_USERNAME` | `discourse` / `discourse` | 数据库与属主 |
 | `PG_PASSWORD` | `DBUser.Discourse` | 与 `pg_users` 中的密码保持一致，生产必须替换 |
@@ -124,7 +122,7 @@ make save        # 保存镜像到 /tmp/docker/discourse.tgz
 make load        # 从 /tmp/docker/discourse.tgz 加载镜像
 ```
 
-固定的 `DISCOURSE_DOCKER_REF` 同时选定经典 Launcher 及其模板；`DISCOURSE_VERSION=tests-passed` 跟随官方测试通过通道，受控部署可设为确切的应用提交。本地构建记录与解析后的配置一致时，`make up` 复用已有镜像；刷新浮动的应用引用请使用 `make rebuild`。升级时同时检查两个引用及所需的 PostgreSQL 主版本。
+固定的 `DISCOURSE_DOCKER_REF` 同时选定经典 Launcher 及其模板，`DISCOURSE_VERSION` 默认同样固定为经过验证的确切应用提交，保证跨节点与跨时间的构建结果一致。本地构建记录与解析后的配置一致时，`make up` 复用已有镜像；更新固定提交（或显式改用浮动分支后刷新引用）请使用 `make rebuild`。升级时同时检查两个提交引用及所需的 PostgreSQL 主版本。
 
 生成的 `launcher/containers/discourse.yml` 为 JSON 格式（同样是合法 YAML），权限为 `0600`。它使用 Redis、Web、限流与 socket 模板，不使用 PostgreSQL、SSL 或 Let's Encrypt 模板。应用镜像在本地构建，不使用实验性的预构建镜像 `discourse/discourse`。
 
@@ -165,7 +163,7 @@ PostgreSQL 通过 Pigsty/pgBackRest 备份；另外创建包含上传文件的 D
 4. 使用 `make save` / `make load` 导出并加载同一镜像。`/tmp/docker/discourse.tgz` 属于私有文件：Launcher 构建的镜像包含应用配置，不要放入 Git 或公共镜像仓库。
 5. 在新主机上配置数据库连通性与 Nginx socket 上游。在配置与镜像均不变的情况下使用 `make start`，验证登录、发帖、上传、邮件、后台任务与备份后，再切换公网代理；旧应用保持停止。
 
-如果数据库入口或其他配置发生变化，将 `DISCOURSE_VERSION` 固定为旧构建记录中的确切 `commit`，再用 `make up` 重新构建同一应用版本。不要在迁移的同时意外升级浮动的 `tests-passed` 分支。
+如果数据库入口或其他配置发生变化，请保持 `DISCOURSE_VERSION` 与 `DISCOURSE_DOCKER_REF` 与旧构建记录中的确切提交一致，再用 `make up` 重新构建同一应用版本，避免在迁移的同时夹带应用版本升级。
 
 PostgreSQL 保持不动时，此次迁移无需执行 Discourse 恢复。迁移或下线数据库主机属于单独的 Pigsty 切换或恢复操作。切勿把在线 PGDATA 当作应用目录的一部分复制。
 

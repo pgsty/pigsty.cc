@@ -16,7 +16,7 @@ Odoo 19 要求 PostgreSQL 13 或更高版本、Python 3.10 或更高版本；官
 在运行兼容操作系统的全新 Linux x86_64 / ARM64 服务器上执行：
 
 ```bash
-curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./bootstrap                # 安装 Ansible
 ./configure -c app/odoo    # 生成 Odoo 配置
 vi pigsty.yml              # 修改默认密码
@@ -82,7 +82,7 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # global variables
-    version: v4.5.0                   # pigsty version string
+    version: v4.6.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit

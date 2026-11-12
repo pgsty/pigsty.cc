@@ -31,34 +31,34 @@ vi pigsty.yml                 # 修改域名、数据库密码与 LLM 设置
 
 `conf/app/hindsight.yml` 会在 `apps.hindsight.conf` 中覆盖 `/opt/hindsight/.env`。重点参数：
 
-- `HINDSIGHT_API_PUBLISH_PORT`：API 对外端口，默认 `8888`
-- `HINDSIGHT_UI_PUBLISH_PORT`：UI 对外端口，默认 `9999`
+- `HINDSIGHT_API_PORT`：容器内 API 监听端口，默认 `8888`（控制面连接地址 `HINDSIGHT_CP_DATAPLANE_API_URL` 默认自动联动此端口）
+- `HINDSIGHT_API_PUBLISH_PORT`：API 宿主机发布端口，默认 `8888`
+- `HINDSIGHT_UI_PUBLISH_PORT`：UI 宿主机发布端口，默认 `9999`
 - `HINDSIGHT_DB_HOST` / `HINDSIGHT_DB_PORT` / `HINDSIGHT_DB_NAME` / `HINDSIGHT_DB_USER` / `HINDSIGHT_DB_PASSWORD`
 - `HINDSIGHT_API_VECTOR_EXTENSION`：默认 `pgvector`
 - `HINDSIGHT_API_TEXT_SEARCH_EXTENSION`：默认 `native`
 - `HINDSIGHT_API_LLM_PROVIDER`：默认 `none`
-- `HINDSIGHT_MODEL_CACHE`：宿主机模型缓存目录，默认 `/data/hindsight`
+- `HF_HUB_OFFLINE`：默认 `1`，直接使用官方镜像内预置的本地模型，避免运行时请求 Hugging Face Hub；如需下载未缓存的新模型，将其设为 `0` 并开放出站网络
 
 默认 `none` LLM Provider 可以保留文本并使用本地 embedding/reranker 模型召回；事实抽取、反思与整合能力需要配置 Ollama 或 OpenAI 兼容 API。
 
-模板将宿主机模型缓存目录挂载到 `/home/hindsight/.cache`，没有 `hindsight-cache` 命名卷。空目录可能遮住镜像预置模型，因此首次启动应检查模型是否可用，并按需允许下载。
+Compose 将命名卷 `hindsight-cache` 挂载到 `/home/hindsight/.cache`，利用 Docker 命名卷的首次 copy-up 机制保留镜像内预置模型并在容器重建后持久化缓存。
 
-数据库需启用 `vector` 和位于 `public` 的 `pg_trgm`；模板只显式声明 `vector`，部署前请补齐并检查 `pg_trgm` 的位置，`CREATE EXTENSION IF NOT EXISTS` 不会移动已有扩展。
-
-开发模板改用了保留镜像预置模型的命名卷，设置 `HF_HUB_OFFLINE=1`，并增加 API/UI 联合健康检查与 `make health`，使用这些功能需要更新配套文件。修改容器内 API 端口后，应同步检查控制面连接地址。
+数据库需启用 `vector` 以及安装在 `public` 模式下的 `pg_trgm`（上游 trigram 索引迁移依赖 `public` 模式）。`conf/app/hindsight.yml` 已默认声明 `extensions: [ vector, { name: pg_trgm, schema: public } ]`；若接入已有数据库，请确认 `pg_trgm` 位于 `public`（`CREATE EXTENSION IF NOT EXISTS` 不会移动已安装在其他模式中的扩展）。
 
 ## 运维命令
 
 ```bash
 cd /opt/hindsight
 make up
+make health
 make log
 make info
 make down
 make pull
 ```
 
-可分别请求 API 的 `/health/ready` 和 UI 代理的 `/api/banks?limit=1`，确认应用就绪且控制面能够访问 API。
+容器内置健康检查与 `make health` 会同时探测 API 的 `/health/ready` 和 UI 代理的 `/api/banks?limit=1`，确认数据面就绪且控制面能够正常连接 API。
 
 ## 参考
 

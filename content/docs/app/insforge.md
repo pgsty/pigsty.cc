@@ -228,7 +228,7 @@ NOTIFY pgrst, 'reload schema';
 
 `insforge_pg_utils` 是必需的 PostgreSQL 工具库，使 `project_admin` 能管理受管表的 RLS 策略和扩展；应用迁移不能替代它。将完整的 `app/insforge/pgutils/` 目录复制到每个数据库节点，在 PostgreSQL 初始化前安装并通过 `pg_libs` 预加载。它不提供 SQL 对象，无需 `CREATE EXTENSION`。
 
-`pgutils/install.sh` 下载并校验固定的官方源码，应用 PG16–18 兼容补丁后用 PGXS 编译。Debian/Ubuntu 的 PG18 使用 `postgresql-server-dev-18` 和 `/usr/lib/postgresql/18/bin/pg_config`；EL/RPM 使用 `postgresql18-devel`、`gcc`、`make`、`curl`、`patch` 和 `/usr/pgsql-18/bin/pg_config`。脚本不修改配置或重启集群；已有部署需要单独安排预加载配置与重启。
+`pgutils/install.sh` 下载并校验固定的官方源码，应用 PG16–18 兼容补丁后以 `with_llvm=no` 调用 PGXS 编译和安装（无需宿主机安装 clang / LLVM bitcode 工具链）。Debian/Ubuntu 的 PG18 使用 `postgresql-server-dev-18` 和 `/usr/lib/postgresql/18/bin/pg_config`；EL/RPM 使用 `postgresql18-devel`、`gcc`、`make`、`curl`、`patch` 和 `/usr/pgsql-18/bin/pg_config`。脚本不修改配置或重启集群；已有部署需要单独安排预加载配置与重启。
 
 `cron.use_background_workers: true` 让计划任务使用后台工作进程，无需增加回环 `trust` 规则；为 cron、复制及其他扩展预留足够的 `max_worker_processes`。
 

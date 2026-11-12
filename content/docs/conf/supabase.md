@@ -1,5 +1,6 @@
 ---
 title: supabase
+aliases: [/docs/conf/supa/]
 weight: 805
 description: 使用 Pigsty 托管的 PostgreSQL 自建 Supabase 开源 Firebase 替代方案
 icon: fa-solid fa-bolt
@@ -15,14 +16,14 @@ categories: [参考]
 
 ## 配置概览
 
-- 配置名称： `supabase`
+- 配置名称： `supabase`（别名：`supa`、`app/supa`）
 - 节点数量： 单节点
 - 配置说明：使用 Pigsty 托管的 PostgreSQL 自建 Supabase
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - PostgreSQL：`15`, `16`, `17`, `18`（模板默认 `18`）
-- Supabase：使用配套的应用镜像集合
-- API 网关：当前源码默认使用 Envoy（`api-gw`），可选 Kong 覆盖配置
+- Supabase：`self-hosted/v0.8.4` 配套应用镜像集合
+- API 网关：默认使用 Envoy（`api-gw`），可选 Kong 覆盖配置
 - 相关配置：[`meta`](/docs/conf/meta/)，[`rich`](/docs/conf/rich/)
 
 启用方式：
@@ -36,16 +37,9 @@ categories: [参考]
 
 ## 配置内容
 
-源文件：[**`conf/supabase.yml`**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，与同版本的 `app/supabase/` 配套使用。
-
-<details>
-<summary>当前源码配置：Supabase self-hosted/v0.8.4</summary>
-
-下方配置需要同一源码版本的 `app/supabase/` 应用文件、数据库基线与迁移脚本。已发布版本可能使用旧网关，升级时应一并更新配套应用文件。网关与升级差异见 [**应用说明**](/docs/app/supabase/)。
+源文件地址：[`pigsty/conf/supabase.yml`](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，与同版本的 `app/supabase/` 配套使用。网关切换与版本升级说明见 [**应用说明**](/docs/app/supabase/)。
 
 {{< include file="yaml/supabase.yml" code=true lang="yaml" >}}
-
-</details>
 
 --------
 
@@ -108,5 +102,5 @@ psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
 - **必须修改 JWT_SECRET**：使用至少 32 字符的随机字符串，并重新生成 ANON_KEY 和 SERVICE_ROLE_KEY。内置样例令牌于 2031-11-07 UTC 过期，仅用于演示
 - 需要配置正确的域名（`SITE_URL`、`API_EXTERNAL_URL`）
 - 生产环境建议启用 HTTPS（可使用 certbot 自动签发证书）
-- Docker 网络需要能访问 PostgreSQL；模板中的 Docker HBA 范围为 `172.16.0.0/12`（v4.5.0 为 `172.17.0.0/16`），应根据实际容器网络调整
+- Docker 网络需要能访问 PostgreSQL；模板中的 Docker HBA 范围为 `172.16.0.0/12`，应根据实际容器网络调整
 - 升级前核对目标版本的迁移步骤，不要在既有数据库上重放新库基线 `files/supabase.sql`

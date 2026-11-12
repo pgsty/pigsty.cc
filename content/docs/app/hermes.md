@@ -8,7 +8,7 @@ categories: [参考]
 
 [`app/hermes`](https://github.com/pgsty/pigsty/tree/main/app/hermes) 提供 [**Hermes Agent**](https://github.com/NousResearch/hermes-agent) 的源码安装指南。它使用独立 Python 虚拟环境与外部模型 API，适合已有 Pigsty 的 Linux 主机；该目录没有 Compose 文件或 `conf/app/hermes.yml`，无需运行 `app.yml`。
 
-开发版指南固定 [**v2026.9.24**](https://github.com/NousResearch/hermes-agent/tree/f97608f178d1ffeca59860195ab7da295f7c8e5f)（Python 包版本 `0.21.5`），要求 Python `>=3.11,<3.14`。公开 Pigsty 仓库中的指南仍为早期 `0.8.0` 示例，安装新版时使用以下步骤。
+安装指南固定 [**v2026.9.24**](https://github.com/NousResearch/hermes-agent/tree/f97608f178d1ffeca59860195ab7da295f7c8e5f)（Python 包版本 `0.21.5`），要求 Python `>=3.11,<3.14`。
 
 ## 安装
 

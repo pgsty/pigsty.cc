@@ -8,8 +8,6 @@ categories: [参考]
 
 `app/silo` 配置模板在单节点上部署 Silo Docker Compose 应用，替代原 `app/minio`。使用方法见 [**Silo 应用说明**](/docs/app/silo/)。
 
-配套的 [`app/silo/`](https://github.com/pgsty/pigsty/tree/main/app/silo) 与 [`conf/app/silo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/silo.yml) 已在主仓库公开，应使用同一源码版本的文件。
-
 ## 配置概览
 
 - 配置名称：`app/silo`
@@ -29,7 +27,7 @@ vi pigsty.yml              # 修改口令、域名与数据目录
 
 ## 配置内容
 
-开发版源文件：`conf/app/silo.yml`。
+源文件地址：[`pigsty/conf/app/silo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/silo.yml)
 
 {{< include file="yaml/app/silo.yml" code=true lang="yaml" >}}
 

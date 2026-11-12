@@ -39,6 +39,6 @@ categories: [参考]
 
 ## 配置解读
 
-每个 `pg_exporters` 条目使用一个唯一的本地监听端口，并声明远端实例的 `pg_cluster`、`pg_seq`、`pg_host` 与可选连接参数。模板同时展示完整 URL、拆分账号密码、数据库白名单与自动发现等写法。
+每个 `pg_exporters` 条目使用一个唯一的本地监听端口，并声明远端实例的 `pg_cluster`、`pg_seq`、`pg_host` 与可选连接参数。模板同时展示完整 URL、拆分账号密码、数据库白名单与自动发现等写法。在 INFRA 节点上，`pgsql-monitor.yml` 为每个条目渲染独立的 `pg_exporter_<ins>.service` 并以 `prometheus` 系统用户运行（连接环境文件 `/etc/default/pg_exporter_<ins>` 权限为 `0600`）。
 
 示例主机名和凭据都是占位值。实际使用时只保留需要的条目，并使用最小权限监控账号；不要把真实 RDS 密码提交到版本库。

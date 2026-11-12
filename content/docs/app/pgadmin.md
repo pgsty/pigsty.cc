@@ -82,14 +82,16 @@ all:
 ./infra.yml -l infra -t env_pgadmin
 ```
 
-生成的服务器定义使用 `PassFile: /pgpass`，在 pgAdmin Server 模式下 [相对于用户存储目录解析](https://www.pgadmin.org/docs/pgadmin4/latest/import_export_servers.html)。`make pass` 将密码文件复制到写死的 `/var/lib/pgadmin/storage/admin_pigsty.cc/pgpass`；修改登录邮箱后，需要调整 Makefile 中的用户与存储目录。若改变密码文件名，也要同步修改 `PassFile`。复制后验证数据库连接。
+生成的服务器定义使用 `PassFile: "/.pgpass"`，在 pgAdmin Server 模式下 [相对于用户存储目录解析](https://www.pgadmin.org/docs/pgadmin4/latest/import_export_servers.html)。`make pass` 会根据容器当前配置的 `PGADMIN_DEFAULT_EMAIL`（将 `@` 转为 `_`）定位 `/var/lib/pgadmin/storage/<email_dir>/.pgpass`，从宿主机最新源文件写入密码并以 `0600` 权限保存（宿主机需安装 `jq`）。
 
-`make up`、`make start` 与 `make restart` 不会自动刷新密码文件。若宿主机文件已被替换，还应检查容器内挂载的内容，避免继续使用旧凭据。
+容器内置的密码文件初始化仅在首次建库时执行；Pigsty 的 `make up`、`make start` 与 `make restart` 会自动调用 `make pass` 刷新 `.pgpass`，且不会改动已有服务器列表。轮换数据库凭据后，可先重新生成 Infra 文件再仅刷新密码：
 
-首次初始化可以导入服务器列表。示例将 `PGADMIN_REPLACE_SERVERS_ON_STARTUP` 设为字符串 `'False'`，但该选项不控制 Makefile 中的手动导入。
+```bash
+./infra.yml -l infra -t env_pgadmin
+./app.yml -l app -e app=pgadmin -t app_launch -e app_args=pass
+```
 
-> [!WARNING] 手动导入会替换服务器列表
-> `make list`、`make conf` 和 `make reload` 都会执行带 `--replace` 的导入，目标用户写死为 `admin@pigsty.cc`。执行前导出需要保留的服务器定义，并检查目标邮箱；不要将这些命令当作非破坏性的追加操作。
+首次初始化会自动导入服务器列表。模板默认设置 `PGADMIN_REPLACE_SERVERS_ON_STARTUP=False`，以保留用户在 Web 界面手工添加的服务器定义。`make list`、`make conf` 与 `make reload` 同样读取当前 `PGADMIN_DEFAULT_EMAIL`，且仅当 `PGADMIN_REPLACE_SERVERS_ON_STARTUP` 精确设为首字母大写的字符串 `'True'`（上游镜像不识别小写 `true`；在 `apps.pgadmin.conf` 中请写引号字符串 `'True'` 而非 YAML 布尔值 `true`）时才会附加 `--replace` 替换该用户的全部服务器定义。
 
 `pgpass` 只写入生成该文件时的 `pg_admin_username` / `pg_admin_password`，并使用主机、端口、数据库通配符；各集群使用不同管理员凭据时，需要补齐对应条目。请限制文件、备份和应用主机的访问范围；若不希望 pgAdmin 持有 DBA 凭据，应自行生成最小权限的连接定义。
 
@@ -137,19 +139,18 @@ infra_portal:
 在 `/opt/pgadmin` 中可使用：
 
 ```bash
-make up       # docker compose up -d
+make up       # 启动容器并自动刷新 .pgpass
 make view     # 显示访问地址
 make log      # 跟随容器日志
 make info     # docker inspect
-make conf     # 替换服务器列表并复制 pgpass，先核对目标用户
-make pass     # 复制 pgpass，先核对用户与路径
+make list     # 为当前用户导入服务器列表（默认不覆盖，精确设为 True 时才加 --replace）
+make pass     # 仅刷新当前用户的 .pgpass 密码文件
+make conf     # 依次执行 make list 与 make pass
 make stop     # 停止容器
-make restart  # 重启容器
+make restart  # 重启容器并刷新 .pgpass
 ```
 
-Compose 没有声明用于 `/var/lib/pgadmin` 的持久卷，不能依靠该模板保证容器重建后保留配置数据库、用户文件与界面设置。清理或升级前先备份这个目录；需要持久化时，显式配置卷并恢复已有状态，直接挂入空卷不会自动迁移旧容器状态。
-
-开发模板增加了 `pgadmin-data` 卷、密码刷新与可选的非替换导入。迁移时须同时核对 Compose、Makefile、服务器定义和密码文件，不能只复制新 `.env`。
+Compose 默认声明命名卷 `pgadmin-data` 挂载到 `/var/lib/pgadmin`，在容器重建后保留 pgAdmin 配置数据库、用户存储目录与界面设置。清理或升级前建议先备份该卷中的数据。
 
 ![pgAdmin](/img/docs/app/pgadmin.jpeg)
 

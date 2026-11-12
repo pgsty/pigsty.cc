@@ -6,9 +6,7 @@ icon: fa-solid fa-comment-dots
 categories: [参考]
 ---
 
-`app/discourse` 配置模板提供 Discourse 社区论坛的单节点参考配置：PostgreSQL 由 Pigsty 托管，Redis 内嵌在应用容器中，经 Pigsty Nginx 与 Unix Socket 对外提供服务。
-
-该模板在 v4.5.0 发布后加入，需配套同版本的 `app/discourse/` 与 `files/discourse.sql`，不能只复制下方 YAML。
+`app/discourse` 配置模板提供 Discourse 社区论坛的单节点参考配置：PostgreSQL 由 Pigsty 托管，Redis 内嵌在应用容器中，经 Pigsty Nginx 与 Unix Socket 对外提供服务。该模板与同版本的 `app/discourse/` 及 `files/discourse.sql` 配套使用。
 
 更多细节，请参考 **[Discourse 部署教程](/docs/app/discourse/)**
 
@@ -53,7 +51,7 @@ vi pigsty.yml              # 修改密码、域名与 SMTP
 **关键特性**：
 
 - `apps.discourse.dest` 为 `/data/app/discourse`，管理文件与 `shared/` 下的持久化数据位于同一目录
-- `DISCOURSE_DOCKER_REF` 固定 Launcher 提交，`DISCOURSE_VERSION` 默认跟随官方 `tests-passed` 通道
+- `DISCOURSE_DOCKER_REF`（`0ba1841d589e77df3bc923774abca2720a320ec2`）与 `DISCOURSE_VERSION`（`f00f07d62728d646642cd2185cc077ad84a60fa8`）默认双双固定经过验证的提交 SHA，确保可重复构建
 - 独立的 `pg-discourse` 集群使用 PostgreSQL 18，安装 `pgvector`；`discourse` 数据库启用 `hstore`、`pg_trgm`、`unaccent`、`vector` 扩展，并应用 `discourse.sql` 基线
 - `discourse` 用户撤销 `dbrole_admin`，用户与数据库均不接入 PgBouncer
 - HBA 只允许 `discourse` 用户从 `172.16.0.0/12` Docker 网段访问 `discourse` 数据库

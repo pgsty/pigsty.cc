@@ -7,11 +7,9 @@ icon: fa-solid fa-database
 categories: [参考]
 ---
 
-当前开发源码使用 `conf/fork/halo.yml`，可通过 `-c halo` 或 `-c fork/halo` 选择。
-为避免与原生 MySQL 示例混淆，OpenHalo 模板已改名为 `halo`；`mysql` / `demo/mysql` 选择原生 MySQL。
-v4.5.0 发布包仍使用 `conf/mysql.yml` 和 `-c mysql`。
+`halo` 配置模板（`conf/fork/halo.yml`，可通过 `-c halo` 或 `-c fork/halo` 选择）使用 OpenHalo 数据库内核替代原生 PostgreSQL，提供 MySQL 线缆协议与 SQL 语法兼容能力。
 
-`halo` 配置模板使用 OpenHalo 数据库内核替代原生 PostgreSQL，提供 MySQL 线缆协议与 SQL 语法兼容能力。
+注意：在 Pigsty `v4.6.0` 中，`-c mysql`（或 `-c demo/mysql`）选择原生 MySQL 8.4 示例模板 [`conf/demo/mysql.yml`](/docs/conf/mysql84/)；OpenHalo 请使用 `-c halo`。
 
 
 --------
@@ -23,7 +21,7 @@ v4.5.0 发布包仍使用 `conf/mysql.yml` 和 `-c mysql`。
 - 配置说明：OpenHalo MySQL 兼容内核配置
 - 适用系统：EL 8/9/10、Debian 12/13、Ubuntu 22/24/26
 - 适用架构：`x86_64`、`aarch64`
-- 相关配置：[`meta`](/docs/conf/meta/)
+- 相关配置：[`meta`](/docs/conf/meta/)、[`demo/mysql`](/docs/conf/mysql84/)
 
 启用方式：
 
@@ -36,7 +34,7 @@ v4.5.0 发布包仍使用 `conf/mysql.yml` 和 `-c mysql`。
 
 ## 配置内容
 
-开发版源文件：[`conf/fork/halo.yml`](https://github.com/pgsty/pigsty/blob/d3f3aaeeb34c10be967dd34880b67d68f34b26ff/conf/fork/halo.yml)；发布版：[`v4.5.0：conf/mysql.yml`](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml)。
+源文件地址：[`pigsty/conf/fork/halo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/halo.yml)
 
 {{< include file="yaml/fork/halo.yml" code=true lang="yaml" >}}
 

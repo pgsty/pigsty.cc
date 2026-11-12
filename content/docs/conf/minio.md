@@ -1,13 +1,13 @@
 ---
 title: demo/minio
 weight: 1040
-description: 四节点 x 四盘位的高可用 S3 对象存储集群演示；当前源码默认使用 Silo。
+description: 四节点 x 四盘位的高可用 S3 对象存储集群演示，默认使用 Silo。
 icon: fa-solid fa-box-archive
 categories: [参考]
 aliases: [/docs/conf/rustfs/]
 ---
 
-`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，并显式设置 `minio_type: silo`；v4.5.0 当前源码只接受这一取值，部署与移除角色也都默认使用 `silo`。删除前仍应把该值连同精确目标、集群身份和数据盘路径一并核对。
+`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，并显式设置 `minio_type: silo`；Pigsty `v4.6.0` 只接受这一取值，部署与移除角色也都默认使用 `silo`。删除前仍应把该值连同精确目标、集群身份和数据盘路径一并核对。
 
 更多教程，请参考 **[MINIO](/docs/minio/)** 模块文档。
 
@@ -18,7 +18,7 @@ aliases: [/docs/conf/rustfs/]
 
 - 配置名称： `demo/minio`
 - 节点数量： 四节点
-- 配置说明：高可用多节点多盘 S3 对象存储集群演示（当前默认 Silo）
+- 配置说明：高可用多节点多盘 S3 对象存储集群演示（默认 Silo）
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)

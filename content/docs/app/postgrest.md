@@ -9,24 +9,17 @@ categories: [参考]
 
 [PostgREST](https://postgrest.org/) 可以将 PostgreSQL schema 直接暴露为 REST API。
 
-Pigsty 提供 `app/postgrest` 模板，以只读用户 `dbuser_view` 提供 Pigsty CMDB API 示例。默认将 `8884` 端口发布到宿主机所有接口；下面先将其限制到回环地址。
+Pigsty 提供 `app/postgrest` 模板，以只读用户 `dbuser_view` 提供 Pigsty CMDB API 示例。Compose 默认将 `POSTGREST_SERVER_PORT`（默认 `8884`）仅绑定到宿主机回环地址 `127.0.0.1`。
 
 ## 快速开始
 
 ```bash
 cd ~/pigsty/app/postgrest
-vi .env         # 检查 DB_URI / DB_SCHEMA / JWT
-vi docker-compose.yml
+vi .env         # 检查 POSTGREST_DB_URI / DB_SCHEMA / JWT_SECRET / SERVER_PORT
+make up
 ```
 
-将 `postgrest` 服务的端口映射替换为：
-
-```yaml
-ports:
-  - "127.0.0.1:${POSTGREST_SERVER_PORT}:${POSTGREST_SERVER_PORT}"
-```
-
-再执行 `make up`。完成上述修改后的入口：
+默认访问入口：
 
 - `http://127.0.0.1:8884`
 - 远程访问使用 SSH 隧道，或配置带认证的 Nginx 门户 `http://api.pigsty`
@@ -35,12 +28,13 @@ ports:
 
 `.env` 常用参数：
 
+- `POSTGREST_SERVER_PORT`：服务监听与回环映射端口（默认 `8884`）
 - `POSTGREST_DB_URI`：数据库连接串
 - `POSTGREST_DB_SCHEMA`：暴露的 schema（默认 `pigsty`）
 - `POSTGREST_DB_ANON_ROLE`：匿名角色
 - `POSTGREST_JWT_SECRET`：JWT 密钥
 
-将 `POSTGREST_JWT_SECRET` 改为至少 32 字符的随机值。配置 JWT 密钥本身不会禁止匿名访问；`POSTGREST_DB_ANON_ROLE` 仍决定未认证请求的数据库权限。使用 `make up` 启动以应用 Compose 配置；`make run` 是独立的 `docker run` 命令，不会采用上面修改的端口映射。开发模板已默认将端口绑定到回环地址，并将 `make run` 改为 `make up` 的别名。
+将 `POSTGREST_JWT_SECRET` 改为至少 32 字符的随机值。配置 JWT 密钥本身不会禁止匿名访问；`POSTGREST_DB_ANON_ROLE` 仍决定未认证请求的数据库权限。`make run` 已作为 `make up` 的别名，统一使用上述 Compose 回环绑定配置。
 
 ## Swagger UI（可选）
 

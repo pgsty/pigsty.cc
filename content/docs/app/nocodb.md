@@ -53,7 +53,7 @@ make save    # 保存镜像到 /tmp/docker/nocodb.tgz
 make load    # 从 /tmp/docker/nocodb.tgz 加载镜像
 ```
 
-`make run` 使用独立的 `docker run` 命令，连接串与密钥写死在 Makefile 中；使用上面的 `make up` 才会读取 Compose 配置。开发模板已将 `make run` 改为 `make up` 的别名。
+`make run` 已统一作为 `make up` 的别名，同样读取 `.env` 与 Docker Compose 配置。
 
 
 

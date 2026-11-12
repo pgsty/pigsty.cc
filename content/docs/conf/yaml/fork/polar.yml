@@ -1,21 +1,21 @@
 ---
 #==============================================================#
-# File      :   mysql.yml
-# Desc      :   1-node OpenHaloDB (MySQL Compatible) template
-# Ctime     :   2025-04-03
+# File      :   polar.yml
+# Desc      :   Pigsty 1-node PolarDB Kernel Config Template
+# Ctime     :   2020-08-05
 # Mtime     :   2026-07-08
-# Docs      :   https://pigsty.io/docs/conf/mysql
+# Docs      :   https://pigsty.io/docs/conf/polar
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
 
-# This is the config template for OpenHalo PG Kernel,
-# Which is a PostgreSQL 14 fork with MySQL Wire Compatibility
-# tutorial: https://pigsty.io/docs/pgsql/kernel/openhalo
+# This is the config template for PolarDB PG Kernel,
+# Which is a PostgreSQL 17 fork with RAC flavor features
+# tutorial: https://pigsty.io/docs/pgsql/kernel/polardb
 #
 # Usage:
 #   curl https://repo.pigsty.io/get | bash
-#   ./configure -c mysql
+#   ./configure -c polar
 #   ./deploy.yml
 
 all:
@@ -25,9 +25,8 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio }}
 
     #----------------------------------------------#
-    # OpenHalo Database Cluster
+    # PolarDB Database Cluster
     #----------------------------------------------#
-    # connect with mysql client: mysql -h 10.10.10.10 -u dbuser_meta -D mysql (the actual database is 'postgres', and 'mysql' is a schema)
     pg-meta:
       hosts:
         10.10.10.10: { pg_seq: 1, pg_role: primary }
@@ -37,23 +36,32 @@ all:
           - {name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
           - {name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
         pg_databases:
-          - {name: postgres, extensions: [aux_mysql]} # the mysql compatible database
           - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty]}
         pg_hba_rules:   # https://pigsty.io/docs/pgsql/config/hba
           - { user: all ,db: all ,addr: intra ,auth: pwd ,title: 'everyone intranet access with password' ,order: 800 }
         pg_crontab:     # https://pigsty.io/docs/pgsql/admin/crontab
           - '00 01 * * * /pg/bin/pg-backup full'
 
-        # OpenHalo Ad Hoc Setting
-        pg_mode: mysql                    # MySQL Compatible Mode by HaloDB
-        pg_version: 14                    # OpenHaloDB is compatible with PG Major Version 14
-        pg_packages: [ openhalo, pgsql-common ]  # install openhalodb instead of postgresql kernel
+        # PolarDB Ad Hoc Settings
+        pg_version: 17                            # PolarDB PG is based on PG 17
+        pg_mode: polar                            # PolarDB PG Compatible mode
+        pg_packages: [ polardb, pgsql-common ]    # Replace PG kernel with PolarDB kernel
+        pg_exporter_exclude_database: 'template0,template1,postgres,polardb_admin'
+        pg_default_roles:                         # PolarDB require replicator as superuser
+          - { name: dbrole_readonly  ,login: false ,comment: role for global read-only access     }
+          - { name: dbrole_offline   ,login: false ,comment: role for restricted read-only access }
+          - { name: dbrole_readwrite ,login: false ,roles: [dbrole_readonly] ,comment: role for global read-write access }
+          - { name: dbrole_admin     ,login: false ,roles: [pg_monitor, dbrole_readwrite] ,comment: role for object creation }
+          - { name: postgres     ,superuser: true  ,comment: system superuser }
+          - { name: replicator   ,superuser: true  ,replication: true ,roles: [pg_monitor, dbrole_readonly] ,comment: system replicator } # <- superuser is required for replication
+          - { name: dbuser_dba   ,superuser: true  ,roles: [dbrole_admin]  ,pgbouncer: true ,pool_mode: session, pool_connlimit: 16 ,comment: pgsql admin user }
+          - { name: dbuser_monitor ,roles: [pg_monitor] ,pgbouncer: true ,parameters: {log_min_duration_statement: 1000 } ,pool_mode: session ,pool_connlimit: 8 ,comment: pgsql monitor user }
 
-  vars:
+  vars:                               # global variables
     #----------------------------------------------#
     # INFRA : https://pigsty.io/docs/infra/param
     #----------------------------------------------#
-    version: v4.5.0                   # pigsty version string
+    version: v4.6.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default,china,europe
     infra_portal:                     # infra services exposed via portal
@@ -69,7 +77,7 @@ all:
     #----------------------------------------------#
     # PGSQL : https://pigsty.io/docs/pgsql/param
     #----------------------------------------------#
-    pg_version: 14                      # OpenHalo is compatible with PG 14
+    pg_version: 17                      # PolarDB is compatible with PG 17
     pg_conf: oltp.yml                   # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
 
     #----------------------------------------------#
@@ -84,4 +92,5 @@ all:
     haproxy_admin_password: pigsty
     minio_secret_key: S3User.MinIO
     etcd_root_password: Etcd.Root
+
 ...

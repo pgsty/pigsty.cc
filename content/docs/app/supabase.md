@@ -1,7 +1,7 @@
 ---
 title: Supabase 企业级自建
 weight: 555
-description: 使用 Pigsty 自托管企业级 supabase，带有监控、高可用、PITR、IaC 以及 600 个已打包 PG 扩展。
+description: 使用 Pigsty 自托管企业级 supabase，带有监控、高可用、PITR、IaC 以及 625 个已打包 PG 扩展。
 module: [SOFTWARE]
 categories: [参考]
 ---
@@ -14,9 +14,9 @@ Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务�
 
 本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
 
-下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，当前源码默认使用 Envoy（`api-gw`）网关和外置 PG18。
+下面的安装命令使用配套的 [**应用文件**](https://github.com/pgsty/pigsty/tree/main/app/supabase) 与 [**配置模板**](https://github.com/pgsty/pigsty/blob/main/conf/supabase.yml)，默认使用 Envoy（`api-gw`）网关和外置 PG18。
 
-当前源码跟踪 Supabase `self-hosted/v0.8.4`，包含 Envoy 适配与迁移脚本。应使用同一源码版本中的配置模板、应用目录和 SQL 文件。已发布的 Pigsty 压缩包可能包含较早的 Supabase 版本，不能仅复制新 YAML 或 SQL 完成升级。
+模板基于 Supabase `self-hosted/v0.8.4`，包含 Envoy 适配与迁移脚本。部署或升级时请使用同一 Pigsty 版本中的配置模板、应用目录和 SQL 文件，不能仅复制新 YAML 或 SQL 完成跨版本升级。
 
 
 
@@ -101,7 +101,7 @@ Supabase 也提供免费云服务额度；当前 [免费计划](https://supabase
 Supabase 内置了一系列由他们自己开发维护的 PG 扩展。Supabase 在 2024 年收购了 Oriole 团队，并把 [**OrioleDB**](/docs/pgsql/kernel/orioledb) 作为可选 Public Alpha 提供；它不是生产环境默认内核，也不能表述为已计划替换原生 PostgreSQL。部分 Supabase 扩展和带补丁内核不由 PGDG 官方仓库提供。
 
 这实际上是某种隐性的供应商锁定，阻止了用户使用除了 supabase/postgres Docker 镜像之外的方式自建，Pigsty 则提供开源，透明，通用的方案解决这个问题。
-我们将 Supabase 自研与用到的 10 个缺失扩展打成开箱即用的 RPM/DEB 包，覆盖当前 `supabase` 模板声明支持的 [Linux 发行版](/docs/ref/linux)：EL 8/9、Debian 12、Ubuntu 22.04/24.04/26.04，以及 x86_64/aarch64 架构。
+我们将 Supabase 自研与用到的 10 个缺失扩展打成开箱即用的 RPM/DEB 包，覆盖当前 `supabase` 模板声明支持的 [Linux 发行版](/docs/ref/linux)：EL 8/9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04，以及 x86_64/aarch64 架构。
 
 | 扩展                                       | 说明                                                         |
 |------------------------------------------|------------------------------------------------------------|
@@ -213,10 +213,10 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 
 ## 升级现有部署
 
-同版本维护时保留配套的应用配置。下面是开发版 `0.8.4` 的升级准备说明；须先取得完整且经过验证的 Pigsty 应用版本，包括 `app/supabase/`、`conf/supabase.yml` 与相关 SQL，再安排停机与迁移。当前公开应用模板尚未包含这些开发改动。
+同版本维护时保留配套的应用配置。升级现有部署前，请准备完整且同版本的 `app/supabase/`、`conf/supabase.yml` 与相关 SQL，再安排停机与迁移：
 
 <details>
-<summary>0.8.4 开发版迁移参考：安全更新、单向 Storage 迁移与 Edge Functions</summary>
+<summary>0.8.4 升级说明：安全更新、单向 Storage 迁移与 Edge Functions</summary>
 
 `self-hosted/v0.8.4` 是安全更新：修复 Storage 签名断点续传（TUS）URL 绕过 RLS、分片上传解析拒绝服务与预签名 URL 重放，修复 Realtime 伪造广播与跨租户频道访问，并包含 Envoy、imgproxy 与 Edge Runtime 的漏洞修复。
 
@@ -237,7 +237,7 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 </details>
 
 <details>
-<summary>0.8.2 开发版迁移参考：网关、JWT 设置与授权</summary>
+<summary>0.8.2 升级说明：网关、JWT 设置与授权</summary>
 
 升级前备份 PostgreSQL、对象存储和应用卷，并检查本地定制。旧模板的网关服务名为 `kong`，新模板为 `api-gw`；**替换旧 Compose 文件前**，在旧应用目录执行 `docker compose down`，不要加 `-v`，以停止旧网关并释放端口，同时保留卷和外置数据。只用新文件执行 `up -d` 可能留下旧 `kong` 容器并造成端口或容器名冲突。
 
@@ -245,7 +245,7 @@ Supabase 的部分功能需要发送邮件，所以要用到 SMTP 服务。除�
 
 先检查依赖 `current_setting('app.settings.jwt_secret')` 的自定义 SQL 函数。如仍需签名密钥，按 [上游迁移说明](https://github.com/supabase/supabase/pull/45003) 改用受限的 Vault secret，仅授权函数所有者读取，避免通过公开 RPC 返回解密后的密钥。
 
-完成配套文件准备、依赖处理和备份后，开发版使用 `files/supabase-0.8.2.sql` 执行以下窄升级。这里保留 SQL 供审查；它不能单独完成应用升级：
+完成配套文件准备、依赖处理和备份后，使用 `files/supabase-0.8.2.sql` 执行以下窄升级。这里保留 SQL 供审查；它不能单独完成应用升级：
 
 ```sql
 \set ON_ERROR_STOP on

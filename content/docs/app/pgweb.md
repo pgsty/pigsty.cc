@@ -9,11 +9,11 @@ categories: [参考]
 
 ## PGWeb 客户端
 
-[PGWeb](https://github.com/sosedoff/pgweb) 是一款基于浏览器的 PostgreSQL 客户端。Pigsty 在 `app/pgweb` 中提供了一个小型 Docker Compose 模板，把容器的 `8081` 端口发布到主机的 `8886` 端口。
+[PGWeb](https://github.com/sosedoff/pgweb) 是一款基于浏览器的 PostgreSQL 客户端。Pigsty 在 `app/pgweb` 中提供了一个小型 Docker Compose 模板，默认通过 `.env` 中的 `PGWEB_PORT=8886` 把容器的 `8081` 端口发布到宿主机的 `8886` 端口。
 
 ```bash
 cd ~/pigsty/app/pgweb
-vi docker-compose.yml      # 端口映射写在 Compose 文件中
+vi .env                    # 按需修改 PGWEB_PORT（默认 8886）
 make up                    # docker compose up -d
 ```
 
@@ -49,6 +49,4 @@ make save       # 将镜像保存到 /tmp/docker/pgweb.tgz
 make load       # 从 /tmp/docker/pgweb.tgz 加载镜像
 ```
 
-当前模板使用未固定版本的 `sosedoff/pgweb` 镜像；若正式环境要求部署可复现，应在 `app/pgweb/docker-compose.yml` 中固定镜像版本或摘要。
-
-`make run` 是固定端口的独立 `docker run` 命令，不采用 Compose 修改。开发模板增加了 `PGWEB_PORT` 并将 `make run` 统一为 Compose 入口，使用时需配套更新。
+当前模板使用未固定版本的 `sosedoff/pgweb` 镜像；若正式环境要求部署可复现，应在 `app/pgweb/docker-compose.yml` 中固定镜像版本或摘要。`make run` 已统一为 `make up` 的别名，同样遵循 `.env` 与 Compose 配置。

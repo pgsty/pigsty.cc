@@ -1,12 +1,12 @@
 ---
 title: demo/demo
 weight: 1030
-description: Pigsty 公开演示站点配置，展示如何配置 SSL 证书、暴露域名、按显式清单安装扩展
+description: Pigsty 公开演示站点配置，展示如何配置 SSL 证书、暴露域名与安装全类别 PG18 扩展包组
 icon: fa-solid fa-globe
 categories: [参考]
 ---
 
-`demo/demo` 配置模板是 Pigsty 公开演示站点使用的配置文件，展示了如何对外暴露网站、配置 SSL 证书、按显式清单安装扩展。
+`demo/demo` 配置模板是 Pigsty 公开演示站点使用的配置文件，展示了如何对外暴露网站、配置 SSL 证书、安装全类别 PostgreSQL 18 扩展包组并集成多模块样例。
 
 如果您希望在云服务器上搭建自己的公开服务，可以参考此配置模板。
 
@@ -36,12 +36,12 @@ categories: [参考]
 此模板在 `meta` 基础上进行了以下增强：
 
 - 配置 SSL 证书和自定义域名（如 `pigsty.cc`）
-- 按平台软件包组缓存 PostgreSQL 18 扩展，再按 `pg-meta.pg_extensions` 的显式清单安装
+- 通过全局分类软件包组（含 `pg18-olap` 在内的 16 个分类包组）缓存并安装全部 PostgreSQL 18 扩展
 - 启用 Docker 并配置镜像加速
 - 部署 Silo 对象存储
-- 预置多个业务数据库和用户
-- 添加 Redis 主从实例示例
-- 添加 Kafka 样例集群
+- 预置多个业务数据库和用户（`meta` 库默认启用 `vector`、`postgis`、`timescaledb`）
+- 添加 Redis 主从实例示例与 Kafka 4.x 单节点集群
+- VictoriaMetrics 监控数据默认保留 `15d`、磁盘占用上限设置为 `10GiB`
 
 
 --------
@@ -57,13 +57,13 @@ categories: [参考]
 
 ## 配置解读
 
-`demo/demo` 模板是 Pigsty 的 **公开演示配置**，用于展示各组件的配置。模板关闭了 pgBackRest，作为生产配置使用前需要补齐备份策略。
+`demo/demo` 模板是 Pigsty 的 **公开演示配置**，用于展示各组件的配置。模板默认关闭了 pgBackRest（`pgbackrest_enabled: false`），作为生产配置使用前需要补齐备份策略。
 
 **关键特性**：
 - 配置 HTTPS 证书和自定义域名
-- 安装 `pg-meta` 集群中指定的 PostgreSQL 扩展
-- 集成 Redis、Kafka 等组件
-- 配置 Docker 镜像加速
+- 在全局 `pg_extensions` 中启用包括 `pg18-olap` 在内的完整 PostgreSQL 18 扩展包组
+- 集成 Silo、Redis、Kafka 与远端 `pg_exporters` 监控演示
+- 配置 Docker 镜像加速与 `10GiB` VictoriaMetrics 存储配额
 
 **适用场景**：
 - 搭建公开演示站点

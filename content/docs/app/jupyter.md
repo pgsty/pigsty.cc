@@ -7,9 +7,9 @@ module: [SOFTWARE]
 categories: [参考]
 ---
 
-[JupyterLab](https://jupyter.org/) 是交互式 Notebook、终端与数据分析环境。Pigsty v4.5.0 有两种不同的部署方式：
+[JupyterLab](https://jupyter.org/) 是交互式 Notebook、终端与数据分析环境。Pigsty `v4.6.0` 提供两种不同的部署方式：
 
-- [`VIBE`](/docs/vibe/) 模块：由 Ansible 和 systemd 管理，适合 v4.5.0 的完整开发沙箱。
+- [`VIBE`](/docs/vibe/) 模块：由 Ansible 和 systemd 管理，适合完整 Web 开发沙箱。
 - `app/jupyter`：轻量的独立 Docker Compose 模板，本页介绍这一方式。
 
 `app/jupyter` 不是默认 `apps` 清单项，且创建数据目录是独立步骤；不要直接假设 `app.yml -e app=jupyter` 能处理目录权限。
@@ -36,7 +36,7 @@ make up                    # docker compose up -d
 
 ## 当前模板
 
-`.env` 的 v4.5.0 默认值为：
+`.env` 的默认值为：
 
 ```bash
 JUPYTER_IMAGE=quay.io/jupyter/minimal-notebook:latest

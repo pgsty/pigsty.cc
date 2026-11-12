@@ -44,14 +44,14 @@ categories: [参考]
 
 **核心组件**：
 
-| 组件                | 说明                                      | 访问方式                  |
-|-------------------|-----------------------------------------|-----------------------|
-| **Code-Server**   | VS Code 的 Web 版本，功能完整的代码编辑器             | `http://<ip>/code`    |
-| **JupyterLab**    | 交互式数据科学笔记本，支持 Python/SQL                | `http://<ip>/jupyter` |
-| **Claude Code**   | AI 编程助手运行环境与可观测性入口（可通过 `claude_env` 定制） | 终端 / 仪表盘              |
-| **Codex CLI**     | OpenAI 代理编程 CLI；VIBE 只负责安装，不托管配置        | 终端                    |
-| **JuiceFS**       | 基于 PostgreSQL 的分布式文件系统                  | 挂载点 `/fs`             |
-| **PostgreSQL 18** | 功能丰富的数据库，安装 `pg18-main` + 全类别扩展包组       | `5432` 端口             |
+| 组件                | 说明                                      | 访问方式                   |
+|-------------------|-----------------------------------------|------------------------|
+| **Code-Server**   | VS Code 的 Web 版本，功能完整的代码编辑器             | `http://<ip>/code/`    |
+| **JupyterLab**    | 交互式数据科学笔记本，支持 Python/SQL                | `http://<ip>/jupyter/` |
+| **Claude Code**   | AI 编程助手运行环境与可观测性入口（可通过 `claude_env` 定制） | 终端 / 仪表盘               |
+| **Codex CLI**     | OpenAI 代理编程 CLI；VIBE 只负责安装，不托管配置        | 终端                     |
+| **JuiceFS**       | 基于 PostgreSQL 的分布式文件系统                  | 挂载点 `/fs`              |
+| **PostgreSQL 18** | 功能丰富的数据库，安装 `pg18-main` + 全类别扩展包组       | `5432` 端口              |
 
 **模板显式安装的节点工具**（`node_packages`）：
 
@@ -96,14 +96,14 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 
 **Claude Code**：AI 编程助手
 
-- 使用模块默认行为完成 Claude 运行环境配置
+- 通过 Pigsty 原生 `infra` 软件源包（`claude`）安装，并完成 Claude 运行环境配置
 - 可通过 `claude_env` 覆盖模型端点与 API 密钥
 - 提供 `claude-code` 仪表盘监控使用情况
 
 **Codex CLI**：AI 编程助手
 
-- 由 `codex_enabled` 控制，默认启用
-- VIBE 仅安装 `@openai/codex`，不写入 Codex 配置，也不接入 Claude Code 仪表盘
+- 由 `codex_enabled` 控制，默认启用，通过原生 `infra` 软件源包（`codex`）安装（与独立的 Node.js 运行时解耦；`npm_packages` 默认为空，可按需安装其他全局 npm 工具）
+- VIBE 只负责安装 CLI，不写入 Codex 配置，也不接入 Claude Code 仪表盘
 
 
 --------
@@ -132,6 +132,7 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 juice_instances:
   jfs:
     path  : /fs
+    owner : '{{ node_user | default("root") }}'
     meta  : postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
     data  : --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
     port  : 9567
