@@ -4,21 +4,21 @@
 # File      :   pkg
 # Desc      :   download & install pigsty src & offline package
 # Ctime     :   2025-07-25
-# Mtime     :   2026-08-14
+# Mtime     :   2026-11-13
 # Path      :   https://repo.pigsty.cc/pkg (global, default)
 # Usage     :   curl -fsSL https://repo.pigsty.cc/pkg | bash
-# Docs      :   https://pgsty.com/docs/install/offline
+# Docs      :   https://pigsty.cc/docs/setup/offline/
 # Deps      :   curl
 # Author    :   Ruohang Feng (rh@vonng.com)
 # License   :   Apache-2.0
 #==============================================================#
-DEFAULT_VERSION=v4.5.0
+DEFAULT_VERSION=v4.6.0
 
-# To install the latest stable version of pigsty (v4.5.0):
+# To install the latest stable version of pigsty (v4.6.0):
 # curl -fsSL https://pigsty.cc/pkg | bash
 
-# To install a specific version of pigsty (e.g. v4.5.0)
-# curl -fsSL https://pigsty.cc/pkg | bash -s v4.5.0
+# To install a specific version of pigsty (e.g. v4.6.0)
+# curl -fsSL https://pigsty.cc/pkg | bash -s v4.6.0
 
 
 #--------------------------------------------------------------#
@@ -61,8 +61,8 @@ fi
 # Reference
 #--------------------------------------------------------------#
 log_line "${VERSION}"
-log_hint "$ curl -fsSL https://repo.pigsty.cc/get | bash"
-log_title "Docs" "https://doc.pgsty.com"
+log_hint "$ curl -fsSL https://repo.pigsty.cc/pkg | bash"
+log_title "Docs" "https://pigsty.cc"
 log_title "Demo" "https://demo.pigsty.cc"
 log_title "Repo" "https://github.com/pgsty/pigsty"
 
@@ -104,7 +104,7 @@ function download_file(){
 download_file "${DOWNLOAD_URL}" "${DOWNLOAD_TO}"
 if [[ $? -ne 0 ]]; then
     log_error "fail to download pigsty source from ${DOWNLOAD_URL}"
-    log_hint "check: https://doc.pgsty.com/install"
+    log_hint "check: https://pigsty.cc/docs/setup/offline/"
     log_hint "alternative url: ${SECONDARY_SRC_URL}"
     exit 2
 fi

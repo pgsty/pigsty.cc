@@ -4,21 +4,21 @@
 # File      :   get
 # Desc      :   download & install pigsty src
 # Ctime     :   2022-10-30
-# Mtime     :   2026-08-15
+# Mtime     :   2026-11-13
 # Path      :   https://pigsty.cc/get (global, default)
 # Usage     :   curl -fsSL https://pigsty.cc/get | bash
-# Docs      :   https://pgsty.com/docs/install/start
+# Docs      :   https://pigsty.cc/docs/setup/install/
 # Deps      :   curl
 # Author    :   Ruohang Feng (rh@vonng.com)
 # License   :   Apache-2.0
 #==============================================================#
-DEFAULT_VERSION=v4.5.0
+DEFAULT_VERSION=v4.6.0
 
-# To install the latest stable version of pigsty (v4.5.0):
+# To install the latest stable version of pigsty (v4.6.0):
 # curl -fsSL https://pigsty.cc/get | bash
 
-# To install a specific version of pigsty (e.g. v4.5.0)
-# curl -fsSL https://pigsty.cc/get | bash -s v4.5.0
+# To install a specific version of pigsty (e.g. v4.6.0)
+# curl -fsSL https://pigsty.cc/get | bash -s v4.6.0
 
 
 #--------------------------------------------------------------#
@@ -104,7 +104,7 @@ function download_file(){
 download_file "${DOWNLOAD_URL}" "${DOWNLOAD_TO}"
 if [[ $? -ne 0 ]]; then
     log_error "fail to download pigsty source from ${DOWNLOAD_URL}"
-    log_hint "check: https://doc.pgsty.com/install"
+    log_hint "check: https://pigsty.cc/docs/setup/install/"
     log_hint "alternative url: ${SECONDARY_SRC_URL}"
     exit 2
 fi

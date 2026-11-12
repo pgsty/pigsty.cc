@@ -46,7 +46,7 @@ categories: [参考]
 
 ### 重要扩展
 
-这里保留了一份基于 2024-02-28 可见信息的 PostgreSQL 16 扩展支持历史快照。表内版本与项目（包括后来归档并从目录移除的 `pg_analytics`）不代表 Pigsty v4.5.0 或云厂商的当前支持矩阵；当前 Pigsty 能力请以 [**扩展目录**](/ext/list/) 为准，云服务能力请重新核对厂商文档。
+这里保留了一份基于 2024-02-28 可见信息的 PostgreSQL 16 扩展支持历史快照。表内版本与项目（包括后来归档并从目录移除的 `pg_analytics`）不代表 Pigsty v4.6.0 或云厂商的当前支持矩阵；当前 Pigsty 能力请以 [**扩展目录**](/ext/list/) 为准，云服务能力请重新核对厂商文档。
 
 - [**Pigsty 扩展列表**](/ext/list/)
 - [**AWS RDS 扩展列表**](https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-extensions.html):
@@ -189,7 +189,7 @@ categories: [参考]
 
 ### 可观测性
 
-Pigsty 提供近 3000 类监控指标与 50+ 监控面板，覆盖数据库、主机、连接池、负载均衡等对象，提供完整的可观测性能力。
+Pigsty 提供近 3000 类监控指标与 {{< param dashboard_count >}} 个监控面板，覆盖数据库、主机、连接池、负载均衡等对象，提供完整的可观测性能力。
 
 ![Pigsty 监控仪表盘](/img/pigsty/dashboard.jpg)
 
@@ -221,7 +221,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 | 变更方式          | 幂等剧本 基于 Ansible Playbook                    | 控制台点击操作                                                                                                               | 控制台点击操作       |
 | 参数调优          | 自动根据节点适配 四种预置模板 OLTP, OLAP, TINY, CRIT      |                                                                                                                       |               |
 | Infra as Code | 原生支持                                        | 可使用 Terraform                                                                                                         | 可使用 Terraform |
-| 可定制参数点        | [Pigsty Parameters](/docs/conf) 283 个       |                                                                                                                       |               |
+| 可定制参数点        | [Pigsty Parameters](/docs/ref/param/) 399 个 |                                                                                                                       |               |
 | 服务与支持         | 提供商业订阅支持兜底                                  | 提供售后工单支持                                                                                                              | 提供售后工单支持      |
 | 无互联网部署        | 可离线安装部署                                     | N/A                                                                                                                   | N/A           |
 | 数据库迁移         | 提供从现有 v10+ PG 实例基于逻辑复制不停机迁移至 Pigsty 托管实例的剧本 | 提供上云辅助迁移 [Aliyun RDS 数据同步](https://help.aliyun.com/document_detail/322179.html?spm=a2c4g.11186623.0.0.5fb374c9OOi4Dm) |               |

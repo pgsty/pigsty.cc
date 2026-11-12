@@ -37,7 +37,7 @@ Pigsty 项目始于 2018 ～ 2019 年，起源于 [**探探**](https://tantanapp
 Pigsty 作为监控系统的效果相当惊艳，帮助我们解决了无数管理问题。
 
 随后，研发人员希望在本地的开发机上也有这样的监控系统，于是我们使用 Ansible 编写了置备剧本，将这套系统从一次性建设任务转变为了可重复使用，可复制的软件。
-新版本允许用户使用 Vagrant 和 Terraform，用 Infra as Code 的方式快速拉起本地 DevBox 开发机，或生产环境服务器，并自动完成 PostgreSQL 与监控系统的部署。
+新版本允许用户使用 Vagrant 和 OpenTofu（兼容 Terraform），用 Infra as Code 的方式快速拉起本地 DevBox 开发机，或生产环境服务器，并自动完成 PostgreSQL 与监控系统的部署。
 
 接下来，我们重新设计了生产环境的 PostgreSQL 架构，引入了 Patroni 与 pgBackRest 解决了数据库的 [**高可用**](/docs/concept/ha) 与 [**时间点恢复**](/docs/concept/pitr) 问题。
 开发了基于逻辑复制的不停机 [**迁移**](/docs/pgsql/migration) 方案，通过蓝绿部署将生产环境两百套数据库集群滚动升级至最新大版本。并将这些能力引入 Pigsty 中。
@@ -55,7 +55,7 @@ Pigsty 是我们做给自己使用的软件，“Eat dog food”最大的好处�
 
 在 2022 年，Pigsty 项目获得了由陆奇博士发起的奇绩创坛的种子轮投资，我得以全职出来做这件事情。
 
-作为一个开源项目，Pigsty 的发展相当不赖，在全职创业这几年里，截至 2026-07-11，Pigsty 在 GitHub 上的 Star 数从几百增长到了 5213；上了 HN 头条推荐，增长开始滚起雪球。
+作为一个开源项目，Pigsty 的发展相当不赖，在全职创业这几年里，截至 2026-11-10，Pigsty 在 GitHub 上的 Star 数从几百增长到了 5925；上了 HN 头条推荐，增长开始滚起雪球。
 2025 年 11 月，Pigsty 荣获 PostgreSQL 生态大会颁发的 **Magneto Award**。2026 年，Pigsty 子项目 PGEXT.CLOUD 投中 PGCon.Dev 2026 演讲。
 Pigsty 成为第一个站上这个 PostgreSQL 核心生态大会舞台上的中国开源项目。
 

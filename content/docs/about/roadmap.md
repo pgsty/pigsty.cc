@@ -48,13 +48,9 @@ Pigsty 通常每年计划 4 - 6 个小版本，完整发布历史请参考 [**�
 
 ### 考虑纳入
 
-- PDU : https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader
 - walminer https://gitee.com/movead/XLogMiner
-- is_jsonb_valid https://github.com/furstenheim/is_jsonb_valid
 - pg_kafka https://github.com/xstevens/pg_kafka
-- pg_jieba https://github.com/jaiminpan/pg_jieba
 - pg_paxos https://github.com/microsoft/pg_paxos
-- OneSparse https://github.com/OneSparse/OneSparse
 - PipelineDB https://github.com/pipelinedb/pipelinedb
 - SQL Firewall https://github.com/uptimejp/sql_firewall
 - zcurve https://github.com/bmuratshin/zcurve
@@ -75,15 +71,10 @@ Pigsty 通常每年计划 4 - 6 个小版本，完整发布历史请参考 [**�
 - [pg_tier](https://github.com/tembo-io/pg_tier)：not ready due to incomplete dep parquet_s3_fdw
 - [parquet_s3_fdw](https://github.com/pgspider/parquet_s3_fdw)：not ready due to compiler version
 - pg_top: not ready due to cmake error
-- timestamp9: not ready due to compiler error
-- pg_tier obsolete
 - pg_timeseries, we already have timescaledb
 - pg_quack, we already have a pg_lakehouse
-- pg_telemetry, we already have better observability
-- pgx_ulid, https://github.com/pksunkara/pgx_ulid, already covered by pg_idkit (MIT, but RUST)
 - embedding: obsolete
 - FEAT zson https://github.com/postgrespro/zson MIT C (too old)
-- GIS pghydro https://github.com/pghydro/pghydro C GPL-2.0 6.6 (no makefile)
 - https://github.com/Zeleo/pg_natural_sort_order (too old)
 - https://github.com/postgrespro/pg_query_state
 - https://github.com/no0p/pgsampler

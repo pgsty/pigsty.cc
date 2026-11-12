@@ -1,5 +1,5 @@
 ---
-title: Pigsty 中文文档 v4.5
+title: Pigsty 中文文档 v4.6
 weight: 10
 module: [PIGSTY]
 categories: [参考]
@@ -33,7 +33,7 @@ cascade:
 
 ## 版本范围
 
-安装入口使用公开稳定版 **{{< param stable_version >}}**。文档中标为“开发版本”的内容尚未包含在该发布包中，部分变更尚未同步到公开仓库；具体范围见 [**发布说明**](/docs/about/release/#开发分支发布后变更)。
+当前文档与快速安装入口对应公开稳定版 **{{< param stable_version >}}**；各版本新增特性、升级说明与校验信息见 [**发布说明**](/docs/about/release/#v460)。
 
 ## 简介
 
@@ -77,7 +77,7 @@ cd ~/pigsty      # 进入源码目录
 
 接下来，您可以探索 [**图形界面**](/docs/setup/webui)，访问 `5432` 端口上的 [**PostgreSQL 服务**](/docs/pgsql/service/)，以及 `3000` 端口上的 Grafana 监控大盘（用户名 / 密码：`admin` / `pigsty`）。
 
-您还可以将多种风味的 [**PostgreSQL 内核**](/docs/pgsql/kernel/) 封装为 RDS 服务：[**Citus**](/docs/pgsql/kernel/citus)、[**WiltonDB**](/docs/pgsql/kernel/babelfish)、[**IvorySQL**](/docs/pgsql/kernel/ivorysql)、[**OpenHalo**](/docs/pgsql/kernel/openhalo)、[**Percona**](/docs/pgsql/kernel/percona)、[**OrioleDB**](/docs/pgsql/kernel/orioledb)、[**PolarDB**](/docs/pgsql/kernel/polardb)，以及 [**Supabase**](/docs/pgsql/kernel/supabase)。
+您还可以将多种风味的 [**PostgreSQL 内核与方案**](/docs/pgsql/kernel/) 封装为 RDS 服务：[**Supabase**](/docs/pgsql/kernel/supabase)、[**Citus**](/docs/pgsql/kernel/citus)、[**WiltonDB**](/docs/pgsql/kernel/babelfish)、[**IvorySQL**](/docs/pgsql/kernel/ivorysql)、[**OpenHalo**](/docs/pgsql/kernel/openhalo)、[**DocumentDB**](/docs/pgsql/kernel/documentdb)、[**OrioleDB**](/docs/pgsql/kernel/orioledb)、[**pgEdge**](/docs/pgsql/kernel/pgedge)、[**Percona**](/docs/pgsql/kernel/percona)、[**PolarDB**](/docs/pgsql/kernel/polardb)、[**AgensGraph**](/docs/pgsql/kernel/agensgraph)，以及 [**Cloudberry**](/docs/pgsql/kernel/cloudberry)。
 
 
 ## 模块
@@ -129,10 +129,13 @@ AI 编程沙箱，Claude/Codex 开发环境，Agent 运行时
 Apache Kafka 4.x dynamic KRaft 消息队列集群，安全与监控齐备。
 {{< /card >}}
 {{< card title="MYSQL" link="/docs/mysql/" icon="fa-solid fa-fish" badge="可选" >}}
-MySQL 数据库，广泛使用的关系型数据库管理系统。
+原生 MySQL 8.4 LTS 单机或三节点 InnoDB Cluster，TLS、备份与监控齐备。
+{{< /card >}}
+{{< card title="VAULT" link="/docs/vault/" icon="fa-solid fa-vault" badge="可选" >}}
+OpenBao 密钥管理集群，提供统一的 KMS、自动解封、TLS 与快照备份。
 {{< /card >}}
 {{< card title="PILOT" link="/docs/pilot/" icon="fa-solid fa-flask-vial" badge="试点" >}}
-试点功能模组：Kubernetes、DuckDB、MySQL、TigerBeetle……供尝鲜探索。
+试点功能模组：Kubernetes、DuckDB、TigerBeetle……供尝鲜探索。
 {{< /card >}}
 {{< /cards >}}
 
@@ -148,7 +151,7 @@ MySQL 数据库，广泛使用的关系型数据库管理系统。
 [操作系统](/docs/ref/linux) [模块列表](/docs/ref/module) [文件结构](/docs/ref/fhs) [同类产品](/docs/about/compare) [成本参考](/docs/about/compare/cost) [运维 SOP](/docs/sop/)
 {{< /card >}}
 {{< card title="已打包扩展" link="/ext/" icon="fa-solid fa-puzzle-piece" >}}
-{pgext_count} 个已打包 PostgreSQL 生态扩展：元数据、文档、下载与支持矩阵。
+{{< param pgext_count >}} 个已打包 PostgreSQL 生态扩展：元数据、文档、下载与支持矩阵。
 
 [扩展列表](/ext/list) [系统支持](/ext/os) [软件仓库](/docs/repo/)
 {{< /card >}}

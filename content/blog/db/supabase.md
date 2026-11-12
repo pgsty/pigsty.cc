@@ -2,10 +2,10 @@
 title: "自建 Supabase：创业出海的首选数据库"
 linkTitle: "Supabase 自建指南"
 date: 2024-11-25
-lastmod: 2026-08-14
+lastmod: 2026-11-13T00:00:00+08:00
 author: 冯若航
 summary: >
-  使用 Pigsty v4.5 的 supabase 模板，在自有 Linux 服务器上部署 PostgreSQL、Silo 与 Supabase 无状态服务。
+  使用 Pigsty v4.6 的 supabase 模板，在自有 Linux 服务器上部署 PostgreSQL、Silo 与 Supabase 无状态服务。
 tags: [数据库, Supabase]
 ---
 
@@ -13,9 +13,9 @@ Supabase 是以 PostgreSQL 为核心的开源 BaaS，提供身份认证、Realti
 
 当你需要掌控数据与基础设施、满足隔离或合规要求，或者希望自行选择 PostgreSQL 版本与扩展时，可以考虑自托管。Supabase 的 [官方自托管文档](https://supabase.com/docs/guides/self-hosting) 推荐 Docker，并明确指出自托管方负责服务器、安全加固、数据库维护、高可用、备份和监控。Pigsty 是独立的社区集成，目前不在该官方页面的社区项目列表中。
 
-Pigsty v4.5 的 `supabase` 模板把有状态组件交给 Pigsty 管理：PostgreSQL 由 PGSQL 模块托管，对象存储由 MINIO 模块当前部署的 Silo 提供；Auth、Storage、Realtime、Studio 等无状态组件使用 Docker Compose 运行。模板支持 PostgreSQL 15-18（默认 18），并可使用 Pigsty 当前收录的 {{< param pgext_count >}} 个 PostgreSQL 扩展。
+Pigsty v4.6 的 `supabase` 模板把有状态组件交给 Pigsty 管理：PostgreSQL 由 PGSQL 模块托管，对象存储由 MINIO 模块当前部署的 Silo 提供；Auth、Storage、Realtime、Studio 等无状态组件使用 Docker Compose 运行。模板支持 PostgreSQL 15-18（默认 18），并可使用 Pigsty 当前收录的 {{< param pgext_count >}} 个 PostgreSQL 扩展。
 
-> 本文原发于 2024-11-25，命令和事实已于 2026-08-14 按 Pigsty v4.5 当前源码重新校准。持续更新的完整说明位于 [Supabase 企业级自建](/docs/app/supabase/)；该参考页是部署参数与操作步骤的唯一维护入口。
+> 本文原发于 2024-11-25，命令和事实已于 2026-11-13 按 Pigsty v4.6 当前源码重新校准。持续更新的完整说明位于 [Supabase 企业级自建](/docs/app/supabase/)；该参考页是部署参数与操作步骤的唯一维护入口。
 
 
 ------
@@ -90,6 +90,6 @@ Auth 发信需要生产可用的 SMTP 服务。`SMTP_HOST` 只填写主机名，
 
 ## 为什么选择 Pigsty
 
-Supabase 官方当前预配置 50 多个扩展，具体清单随平台更新；Pigsty v4.5 的扩展目录包含 {{< param pgext_count >}} 个条目，并提供 Supabase 使用的 `pg_graphql`、`pg_jsonschema`、`wrappers`、`index_advisor`、`pg_net`、`supabase_vault`、`pgjwt`、`pgsodium`、`supautils` 与 `plan_filter` 等包。
+Supabase 官方当前预配置 50 多个扩展，具体清单随平台更新；Pigsty v4.6 的扩展目录包含 {{< param pgext_count >}} 个条目，并提供 Supabase 使用的 `pg_graphql`、`pg_jsonschema`、`wrappers`、`index_advisor`、`pg_net`、`supabase_vault`、`pgjwt`、`pgsodium`、`supautils` 与 `plan_filter` 等包。
 
 自建的价值不是“零运维”，而是把版本、扩展、数据、备份和可用性策略的决定权交回用户。相应地，服务器维护、安全补丁、密钥管理、容量规划、备份验证和故障演练也由部署方负责。开始前请通读 [Supabase 参考手册](/docs/app/supabase/)、[安全指南](/docs/setup/security/) 与 [备份机制](/docs/pgsql/backup/)。

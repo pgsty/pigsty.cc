@@ -24,7 +24,7 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 - 希望支持国产信创操作系统/国产信创 ARM 芯片架构，提供中文/本地化界面支持。
 - 建设基于 Victoria / Grafana 技术栈的可观测性体系，数据大盘，可视化应用。
 - 下云并寻求 RDS for PostgreSQL 的开源替代 —— 云中立，无供应商锁定的解决方案。
-- 希望获取关于 Redis / ETCD / Silo，以及 TimescaleDB / Citus 等扩展的专业支持。
+- 希望获取关于 Redis / ETCD / Vault / Silo，以及 TimescaleDB / Citus 等扩展的专业支持。
 - 希望将 Pigsty 作为 SaaS / PaaS / DBaaS 对外销售，或基于此发行版提供技术服务/云服务。
 
 
@@ -148,7 +148,7 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 Pigsty 开源版使用 [**Apache-2.0**](/docs/about/license) 许可证， 提供了完整核心功能，无需任何费用，但也不承诺任何质保服务。如果您发现了 Pigsty 的缺陷，我们非常欢迎您在 Github 上提出 [Issue](https://github.com/pgsty/pigsty/issues/)。
 
 Pigsty 开源软件当前支持七个在线验证基线：EL 9.8 / 10.2、Debian 12.15 / 13.7、Ubuntu 22.04.5 / 24.04.5 / 26.04.1，并覆盖 `x86_64` 与 `aarch64`。
-`v4.5.0` 在 GitHub 公开提供七个平台的双架构离线包，共 **14 个制品**；这些离线包按该版本发布时的系统小版本制作，具体基线见 [**离线安装说明**](/docs/setup/offline/)。源码、离线包和校验文件均提供 GPG 签名。
+`{{< param stable_version >}}` 在 GitHub 公开提供七个平台的双架构离线包，共 **14 个制品**；这些离线包按该版本发布时的系统小版本制作，具体基线见 [**离线安装说明**](/docs/setup/offline/)。源码、离线包和校验文件均提供 GPG 签名。
 
 使用 Pigsty 开源版本，可以让初级研发工程师 / 运维工程师拥有专业 DBA **70%+** 的能力，在缺少数据库专家的情况下，也能够轻松搭建一个高可用，高性能，易维护，安全可靠的 PostgreSQL 数据库集群。
 
@@ -257,9 +257,11 @@ Pigsty 专业版/企业版相比开源版本，包含以下额外功能：
 - **扩展支持能力**：针对 {{< param pgext_count >}} 个可用 PG Extension，提供 PG 14-18 在主流操作系统上开箱即用的安装能力。
 - **完整功能模块**：提供所有功能模块：
     - [**Supabase**](/docs/pgsql/kernel/supabase)：可靠地自建生产级开源 Firebase
+    - [**Vault**](/docs/vault)：基于 OpenBao 的高可用机密存储与密钥管理服务
     - [**Silo**](/docs/minio)：企业 PB 级对象存储规划与自建
-    - [**DuckDB**](/docs/pilot/duckdb)：提供完善的 DuckDB 支持，以及 PostgreSQL + DuckDB OLAP 扩展插件支持
     - [**Kafka**](/docs/kafka)：提供高可用的 Kafka 集群部署与监控
+    - [**MySQL**](/docs/mysql)：提供 MySQL 8.4 单机与三节点 InnoDB Cluster 部署与监控
+    - [**DuckDB**](/docs/pilot/duckdb)：提供完善的 DuckDB 支持，以及 PostgreSQL + DuckDB OLAP 扩展插件支持
     - Kubernetes, VictoriaMetrics & VictoriaLogs
 - **国产操作系统支持**：提供国产信创操作系统支持选项（**仅限企业版订阅**）
 - **国产 ARM 架构支持**：提供国产 ARM64 架构支持选项（**仅限企业版订阅**）

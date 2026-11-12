@@ -63,7 +63,7 @@ menus:
         mono: true
   - identifier: docs-docs
     parent: docs
-    name: Pigsty v4.5
+    name: Pigsty v4.6
     url: /docs/
     weight: 10
     params:
@@ -231,7 +231,7 @@ menus:
     params:
       icon: fa-brands fa-docker
       pigsty_group: 模块
-      pigsty_column: 2
+      pigsty_column: 1
   - identifier: docs-docs-juice
     parent: docs
     name: JUICE
@@ -266,6 +266,15 @@ menus:
     weight: 230
     params:
       icon: fas fa-fish
+      pigsty_group: 模块
+      pigsty_column: 2
+  - identifier: docs-docs-vault
+    parent: docs
+    name: VAULT
+    url: /docs/vault/
+    weight: 235
+    params:
+      icon: fas fa-vault
       pigsty_group: 模块
       pigsty_column: 2
   - identifier: docs-docs-pilot
@@ -672,21 +681,21 @@ cascade:
 #=======================================#
 params:
   # metadata
-  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的 RDS，以及开箱即用的监控、管控、IaC、高可用，以及 626 个已打包 PG 扩展与 12 种内核及方案'
-  version: v4.5.0           # 当前文档版本；发布后的开发源码功能以各页适用范围为准
-  version_short: v4.5       # 当前源码/文档基线的短版本号（major.minor）
-  stable_version: v4.5.0    # GitHub 最新公开稳定版，2026-10-13 核验；安装与 Git tag 示例使用此参数
-  stable_version_short: v4.5
-  pg_version: '18.6'        # PostgreSQL 最新小版本，正文用 {{< param pg_version >}}
-  pig_version: 1.10.4        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
-  pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
-  pig_catalog_count: 626    # PIG v1.10.4 发布版内嵌目录记录总数
-  pgext_count: 626          # 2026-11-10 PGEXT 已打包扩展数，与 data/pgext/extension.yaml 一致
+  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的 RDS，以及开箱即用的监控、管控、IaC、高可用，以及 625 个已打包 PG 扩展与 12 种内核及方案'
+  version: v4.6.0           # 当前文档版本；发布后的开发源码功能以各页适用范围为准
+  version_short: v4.6       # 当前源码/文档基线的短版本号（major.minor）
+  stable_version: v4.6.0    # GitHub 最新公开稳定版，2026-11-13 核验；安装与 Git tag 示例使用此参数
+  stable_version_short: v4.6
+  pg_version: '18.7'        # PostgreSQL 最新小版本，正文用 {{< param pg_version >}}
+  pig_version: 1.11.0       # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
+  pigsty_version: 4.6.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
+  pig_catalog_count: 625    # PIG v1.11.0 发布版内嵌目录记录总数
+  pgext_count: 625          # 2026-11-13 PGEXT 已打包扩展数，与 data/pgext/stats.yaml 一致
   pg_kernel_count: 12      # 首页列出的内核与方案，不含原生 PG，包含 Supabase、Citus、DocumentDB
-  # 2026-10-28 核对 pgsty/pigsty e7a77472：files/grafana/*.json（递归）、files/victoria/rules/*.yml。
-  dashboard_count: 67
-  recording_rule_count: 759
-  alert_rule_count: 92
+  # 2026-11-13 核对 pgsty/pigsty v4.6.0 (d71d9de8)：files/grafana/*.json（递归）、files/victoria/rules/*.yml。
+  dashboard_count: 68
+  recording_rule_count: 775
+  alert_rule_count: 79
   pgext_url: https://pgext.cloud  # PG 扩展目录站点，首页扩展索引格点与指标卡片链接前缀
   copyright:
     authors: Ruohang Feng

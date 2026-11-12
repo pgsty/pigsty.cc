@@ -12,6 +12,11 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-11-13**：**Pigsty v4.6.0 正式发布！625 个扩展，VAULT 密钥管理模块，MySQL 8.4 原生高可用重构**
+  - 发布博客：[**Pigsty v4.6 发布文章**](/blog/pigsty/v4.6)
+  - 发布说明：[**v4.6.0**](/docs/about/release#v460)
+  - 主要变化：新增基于 OpenBao 的 VAULT 模块，重构 MySQL 8.4 原生高可用模块，升级 PostgreSQL 18.7、PIG v1.11.0 与 PG Exporter v1.6.1，已打包扩展达 625 个。
+
 - **2026-08-15**：**Pigsty v4.5.0 正式发布！575 个扩展，Silo、Valkey，以及 Kafka / MySQL 试点模块**
   - 发布说明：[**v4.5.0**](/docs/about/release#v450)
   - 新增安全编排与可观测性改进，提供七个平台、双架构共 14 个离线包。
