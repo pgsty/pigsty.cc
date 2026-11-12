@@ -33,7 +33,7 @@ infra_portal:
 只有定义了 `domain` 的服务才会生成对应的 Nginx 配置文件。
 
 - **`home`**：特殊的默认服务器，用于处理首页和内置监控组件的反向代理
-- **代理服务**：通过 `endpoint` 指定上游服务地址，进行反向代理
+- **代理服务**：通过 `endpoint` 指定上游服务地址进行反向代理（默认 `endpoint.conf` 自动向上游传递 `Host $host`、`X-Real-IP`、`X-Forwarded-For`、`X-Forwarded-Host $http_host` 与 `X-Forwarded-Proto $scheme`，保留客户端访问的公开主机名、非标准端口与协议）
 - **静态服务**：通过 `path` 指定本地目录，提供静态文件服务
 
 
@@ -67,7 +67,7 @@ infra_portal:
 | 参数          | 说明               |
 |-------------|------------------|
 | `conf`      | 指定 `roles/infra/templates/nginx` 中的模板文件 |
-| `cache_dir` | 开发版支持由角色创建缓存目录；其他部署需手动准备目录与权限 |
+| `cache_dir` | 门户缓存目录；非空时由角色自动创建（`nginx:nginx`、`0750`） |
 | `config`    | 通用模板中的自定义 Nginx 配置片段 |
 | `index`     | 启用目录列表（用于静态服务）   |
 | `log`       | 自定义日志文件名称        |
@@ -291,9 +291,9 @@ infra_portal:
 
 ----------------
 
-## 开发版维护参考
+## 专用站点模板
 
-以下为维护 Pigsty 公共站点的专用开发模板，尚未随公开源码提供。普通门户使用前面的通用配置即可。
+除 `home.conf`、`path.conf`、`endpoint.conf` 通用门户模板外，`roles/infra/templates/nginx/` 还随源码提供一套面向公共仓库、镜像缓存与社区站点的专用模板。普通门户使用前面的通用配置即可。
 
 <details>
 <summary>专用站点模板及迁移注意事项</summary>
@@ -307,7 +307,7 @@ infra_portal:
 | `pgweb.conf` | PostgreSQL 中文社区站点；使用 `endpoint`，可另设 `admin_static`、`media_root`、`files_root` 三个静态目录 |
 {.full-width}
 
-开发源码中的文件位于 `roles/infra/templates/nginx/`。这些模板都将 HTTP 重定向至 HTTPS，并保留 ACME 验证路径。`beta.conf` 的上游域名、缓存限制及 CA 文件路径是模板内配置；其中 CA 默认路径为 EL 的 `/etc/pki/tls/certs/ca-bundle.crt`，迁移到 Debian / Ubuntu 前应适配模板。`pgweb.conf` 服务的是社区网站，并非同名的 PostgreSQL 数据浏览器应用。
+上述模板文件均位于 `roles/infra/templates/nginx/`，默认都将 HTTP 重定向至 HTTPS，并保留 ACME 验证路径。`beta.conf` 的上游域名、缓存限制及 CA 文件路径是模板内配置；其中 CA 默认路径为 EL 的 `/etc/pki/tls/certs/ca-bundle.crt`，迁移到 Debian / Ubuntu 前应适配模板。`pgweb.conf` 服务的是社区网站，并非同名的 PostgreSQL 数据浏览器应用。
 
 `repo.conf` 自带默认服务器与 `127.0.0.1:9180/nginx` 状态端点，部署时不要同时生成占用同一监听地址的 `home.conf` 默认服务器。使用此模板时应设置 `nginx_exporter_scrape_uri: http://127.0.0.1:9180/nginx`；若覆盖模板使用的 `nginx_status_port`，也要同步调整抓取地址。
 

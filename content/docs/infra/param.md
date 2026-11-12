@@ -159,7 +159,6 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`grafana_clean`](#grafana_clean)                   |   `bool`   | `G/A` | 初始化 Grafana 期间清除数据？                   |
 | [`grafana_admin_username`](#grafana_admin_username) | `username` |  `G`  | Grafana 管理员用户名，默认为 `admin`            |
 | [`grafana_admin_password`](#grafana_admin_password) | `password` |  `G`  | Grafana 管理员密码，默认为 `pigsty`            |
-| [`grafana_anon_enabled`](#grafana_anon_enabled)           |   `bool`   | `G/I` | 允许匿名用户以 Viewer 角色访问，默认为 `true`    |
 | [`grafana_auth_proxy`](#grafana_auth_proxy)         |   `bool`   |  `G`  | 启用 Grafana 身份代理？                      |
 | [`grafana_pgurl`](#grafana_pgurl)                   |   `url`    |  `G`  | 外部 PostgreSQL 数据库 URL（用于 Grafana 持久化） |
 | [`grafana_view_password`](#grafana_view_password)   | `password` |  `G`  | Grafana 元数据库 PG 数据源密码                 |
@@ -173,7 +172,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 这一小节指定了一套 Pigsty 部署的元数据：包括版本号，管理员节点 IP 地址，软件源镜像上游 [`区域`](#region)，默认语言，以及下载软件包时使用的 http(s) 代理。
 
 ```yaml
-version: v4.5.0                   # pigsty 版本号
+version: v4.6.0                   # pigsty 版本号
 admin_ip: 10.10.10.10             # 管理节点IP地址
 region: default                   # 上游镜像区域：default,china,europe
 language: en                      # 默认语言: en 或 zh
@@ -191,11 +190,11 @@ proxy_env:                        # 全局HTTPS代理，用于下载、安装软
 
 参数名称： `version`， 类型： `string`， 层次：`G`
 
-Pigsty 版本号字符串，当前源码默认值为：`v4.5.0`。
+Pigsty 版本号字符串，当前源码默认值为：`v4.6.0`。
 
 Pigsty 内部会使用版本号进行功能控制与内容渲染，请勿随意修改此参数。
 
-Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.5.0`。
+Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.6.0`。
 
 
 
@@ -435,10 +434,10 @@ Pigsty 会根据实际启用的组件自动配置相应的反向代理，用户�
   - 本地 Web 服务器使用默认 Access 日志
 - `conf`：Nginx 模板文件名
   - 显式指定使用的配置模板文件，位于 [roles/infra/templates/nginx](https://github.com/pgsty/pigsty/tree/main/roles/infra/templates/nginx) 或 [templates/nginx](https://github.com/pgsty/pigsty/tree/main/templates/nginx) 目录
-  - 优先于 `home` / `path` / `endpoint` 自动选择；开发版另有 `repo.conf`、`beta.conf`、`demo.conf`、`pgext.conf`、`pgweb.conf` 等专用站点模板，见 [**开发版维护参考**](/docs/infra/admin/portal#开发版维护参考)
+  - 优先于 `home` / `path` / `endpoint` 自动选择；除通用模板外，还提供 `repo.conf`、`beta.conf`、`demo.conf`、`pgext.conf`、`pgweb.conf` 等专用站点模板，见 [**专用站点模板**](/docs/infra/admin/portal#专用站点模板)
   - 如果未指定此参数，将使用默认配置模板
-- `cache_dir`：门户缓存目录；非空时角色会创建目录，并设置所有者 `nginx:nginx`、权限 `0750`。目录管理于 2026-09-01 加入开发源码，`v4.5.0` 发布包不包含此行为
-- `domains`：额外域名列表，会参与 Certbot 域名集合；2026-09-01 起的开发源码在新签发自签名证书时还将其加入 SAN。具体模板是否监听这些别名仍取决于模板的 `server_name`
+- `cache_dir`：门户缓存目录；非空时角色会自动创建该目录，并设置所有者 `nginx:nginx`、权限 `0750`
+- `domains`：额外域名列表，会参与 Certbot 域名集合，并在签发自签名证书时自动加入 SAN。具体模板是否监听这些别名仍取决于模板的 `server_name`
 - `config`：Nginx 配置代码块
   - 直接注入到 Nginx Server 配置块中的配置文本
 - `enforce_https`：将 HTTP 重定向到 HTTPS
@@ -614,7 +613,7 @@ Pigsty 默认会在基础设施节点 80/443 端口启动 Nginx，对外提供�
 - `mysql`：MySQL 相关
 - 等等...
 
-2026-09-20 起的开发源码将 Docker 仓库与 EL 平台的 Nginx 仓库从 `infra` 拆分为独立的 `docker`、`nginx` 模块；`v4.5.0` 发布包中它们仍归属 `infra`。
+自 `v4.6.0` 起，Docker 仓库与 EL 平台的 Nginx 仓库已从 `infra` 拆分为独立的 `docker`、`nginx` 模块；如需离线缓存或安装它们，请显式将其加入模块列表。
 
 
 
@@ -837,7 +836,7 @@ Nginx 是 Pigsty 基础设施的核心组件，负责：
 
 nginx_exporter 监听端口，默认值为 `9113`。
 
-nginx_exporter 用于收集 Nginx 的运行指标，供 VictoriaMetrics 抓取监控。
+nginx_exporter 用于收集 Nginx 的运行指标，供 VictoriaMetrics 抓取监控。其环境模板 `/etc/default/nginx_exporter` 默认从 `nginx_exporter_scrape_uri`（默认 `http://127.0.0.1:80/nginx`）抓取 `stub_status`；当使用不生成默认 `home.conf` 的专用站点模板（如 `repo.conf`，其在本地回环监听 `nginx_status_port`，默认 `9180`）时，可通过主机或组变量覆盖 `nginx_exporter_scrape_uri: http://127.0.0.1:9180/nginx`。
 
 
 
@@ -1364,7 +1363,6 @@ grafana_port: 3000                # Grafana 监听端口
 grafana_clean: false              # 初始化时清理数据？
 grafana_admin_username: admin     # 管理员用户名
 grafana_admin_password: pigsty    # 管理员密码
-grafana_anon_enabled: true        # 允许匿名用户以 Viewer 角色访问？
 grafana_auth_proxy: false         # 启用身份代理？
 grafana_pgurl: ''                 # 外部 PostgreSQL URL
 grafana_view_password: DBUser.Viewer  # PG 数据源密码
@@ -1426,34 +1424,6 @@ Grafana 管理员密码，默认为 `pigsty`。
 
 
 
-### `grafana_anon_enabled`
-
-参数名称： `grafana_anon_enabled`， 类型： `bool`， 层次：`G/I`
-
-是否允许匿名访问 Grafana？默认值为 `true`，匿名用户以 `Pigsty` 组织的 `Viewer` 角色访问。
-
-此参数为开发版本新增，v4.5.0 及更早版本尚不支持。
-
-设置为 `false` 后，用户需要通过 Grafana 登录或已配置的认证代理完成身份认证，才能访问仪表盘和数据源。
-可以在 `all.vars`、`infra` 分组或具体基础设施节点上设置：
-
-```yaml
-grafana_anon_enabled: false
-```
-
-修改配置清单后，重新渲染配置并重启 Grafana：
-
-```bash
-./infra.yml -l infra -t grafana_config,grafana_launch
-```
-
-将 `-l infra` 替换为 `-l <infra-node>` 可仅应用到指定节点。`grafana_config` 只写入配置文件，必须重启 Grafana 才会生效。
-
-此开关与 [`grafana_auth_proxy`](#grafana_auth_proxy) 独立；只允许通过认证代理访问时，需要同时关闭匿名访问。
-[`grafana_view_password`](#grafana_view_password) 是 PostgreSQL 数据源密码，不控制访客登录。
-此参数只控制 Grafana，其他基础设施端点仍需通过防火墙或门户认证保护。
-
-
 ### `grafana_auth_proxy`
 
 参数名称： `grafana_auth_proxy`， 类型： `bool`， 层次：`G`
@@ -1462,7 +1432,7 @@ grafana_anon_enabled: false
 
 当启用时，Grafana 会信任反向代理（Nginx）传递的用户身份信息，实现单点登录（SSO）功能。
 
-这通常用于与外部身份认证系统集成的场景。若要求所有访客经过认证，还需将 [`grafana_anon_enabled`](#grafana_anon_enabled) 设置为 `false`。
+这通常用于与外部身份认证系统集成的场景。
 
 
 
@@ -1486,4 +1456,4 @@ grafana_anon_enabled: false
 
 Grafana 元数据库 PG 数据源使用的只读用户密码，默认为 `DBUser.Viewer`。
 
-此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据。它不是 Grafana 访客的登录密码；匿名访问由 [`grafana_anon_enabled`](#grafana_anon_enabled) 控制。
+此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据，不是 Grafana 访客的登录密码。

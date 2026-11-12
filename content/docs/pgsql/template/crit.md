@@ -44,7 +44,7 @@ synchronous_mode: true
 synchronous_mode_strict: true
 ```
 
-`synchronous_mode_strict` 禁止 Patroni 在没有同步副本时自动退回异步复制，因此主库会阻塞需要同步确认的写入。
+`synchronous_mode_strict` 禁止 Patroni 在没有同步副本时自动退回异步复制，因此主库会阻塞需要同步确认的写入。在集群首次初始化阶段（`pg_init`），剧本会为执行 `/pg/bin/pg-init` 的会话临时注入 `PGOPTIONS='-c synchronous_commit=local'`，避免从库尚未拉起时主库初始化脚本因等待同步确认而阻塞；初始化完成后，常规业务会话严格遵循同步复制策略。
 
 在以下前提下，该模式以不丢失已确认事务为目标：
 

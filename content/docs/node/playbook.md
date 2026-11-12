@@ -73,7 +73,7 @@ profile        : 移除 /etc/profile.d/node.sh 与 node.alias.sh 环境配置文
 
 `node-rm.yml` 的作用是解除 Pigsty 纳管并停止 NODE 相关服务，并不是操作系统销毁或完整卸载：
 
-- 会注销 Node、Docker、Ping、VIP 等监控目标以及 HAProxy 管理入口；
+- 会注销 Node、Docker、JuiceFS、Ping、VIP 等监控目标（含 `/infra/targets/juice/<ip>.yml`）以及 HAProxy 管理入口；
 - 会停止并禁用 HAProxy、Node Exporter、Vector，以及启用时的 Keepalived/Exporter；
 - 会删除 HAProxy 配置、Node 的 Vector 配置，并删除 `vector_data`（默认 `/data/vector`）；
 - 不会卸载软件包、删除管理员用户、删除 `node_data`，也不会停止 Docker 服务或删除 Docker 数据。

@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 600 个扩展的原版 PostgreSQL 内核
+description: 带有 625 个扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]
@@ -9,20 +9,18 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 {{< param pgext_count >}} 个 PG 扩展。
+默认安装 PostgreSQL 18（当前发布基线为 `18.7`），支持 PostgreSQL 14 ~ 18，并提供 {{< param pgext_count >}} 个 PG 扩展。
 
 
 ------
 
 ## 快速开始
 
-使用 [`pgsql`](/docs/conf/pgsql/) 配置模板 [**安装**](/docs/setup/install) Pigsty。
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgsql.yml)；开发版已迁移至 `conf/fork/pgsql.yml`，对应使用 `-c fork/pgsql`。
+使用 [`fork/pgsql`](/docs/conf/pgsql/) 配置模板（[`conf/fork/pgsql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/pgsql.yml)，`-c pgsql` 与 `-c fork/pgsql` 等价）[**安装**](/docs/setup/install) Pigsty：
 
 ```bash
-./configure -c pgsql     # 使用 postgres 内核
-./deploy.yml             # 部署 Pigsty 核心链路与原生 PostgreSQL
+./configure -c fork/pgsql # 使用原生 PostgreSQL 内核模板
+./deploy.yml              # 部署 Pigsty 核心链路与原生 PostgreSQL
 ```
 
 大多数 [配置模板](/docs/conf/) 默认使用 PostgreSQL 内核，例如：
@@ -31,7 +29,7 @@ categories: [概念]
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
 - [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
 - [`ha/full`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)：用于 HA 演示的 4 节点沙盒
-- [`pgsql`](/docs/conf/pgsql/)：最小的 postgres 内核配置示例
+- [`fork/pgsql`](/docs/conf/pgsql/)：最小的 postgres 内核配置示例
 
 
 ------

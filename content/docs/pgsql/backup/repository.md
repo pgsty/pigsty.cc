@@ -10,7 +10,7 @@ categories: [任务]
 [**`pgbackrest_method`**](/docs/pgsql/param/#pgbackrest_method) 选择实际使用哪一个。
 仓库定义中的键值会 [**按固定规则**](/docs/pgsql/backup/mechanism/#配置如何渲染) 渲染为 pgbackrest 的 `repo1-*` 配置项，
 因此 [**pgBackRest 支持的任何仓库选项**](/docs/pgbackrest/configuration) 都可以直接写入。
-v4.5.0 每次只把 `pgbackrest_method` 选中的一个字典项渲染为 `repo1`；候选项同时存在并不等于多仓备份。
+当前模板每次只把 `pgbackrest_method` 选中的一个字典项渲染为 `repo1`；候选项同时存在并不等于多仓备份。
 
 
 --------

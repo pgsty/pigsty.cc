@@ -126,7 +126,7 @@ categories: [参考]
 | [`pg_max_conn`](#pg_max_conn)                       |   `int`    |  `C`  | postgres 最大连接数，`auto` 将使用推荐值                          |
 | [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) |  `float`   |  `C`  | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
 | [`pg_rto`](#pg_rto)                                 |   `enum`   |  `C`  | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
-| [`pg_rto_plan`](#pg_rto_plan)                       |   `dict`   |  `G`  | RTO 预设配置，定义 Patroni HA 与 HAProxy 健康检查的超时参数            |
+| [`pg_rto_plan`](#pg_rto_plan)                       |   `dict`   | `G/C` | RTO 预设配置，定义 Patroni HA 与 HAProxy 健康检查的超时参数            |
 | [`pg_rpo`](#pg_rpo)                                 |   `int`    |  `C`  | Patroni 故障切换候选从库的采样落后阈值，默认为 `1MiB`                    |
 | [`pg_libs`](#pg_libs)                               |  `string`  |  `C`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](#pg_delay)                             | `interval` |  `I`  | 备份集群主库的 WAL 重放应用延迟，用于制备延迟从库                           |
@@ -170,6 +170,7 @@ categories: [参考]
 | [`pgbackrest_method`](#pgbackrest_method)           | `enum` |  `C`  | pgbackrest 使用的仓库：local,minio,等...        |
 | [`pgbackrest_init_backup`](#pgbackrest_init_backup) | `bool` |  `C`  | pgbackrest 初始化完成后是否立即执行全量备份？默认为 `true`   |
 | [`pgbackrest_repo`](#pgbackrest_repo)               | `dict` | `G/C` | pgbackrest 仓库定义                          |
+| [`pg_pitr`](#pg_pitr)                               | `dict` | `C/A` | 定义 PITR 时间点恢复目标、源仓库与恢复选项                 |
 {.full-width}
 
 --------
@@ -989,7 +990,7 @@ pg_extensions:
   - pgsql-fdw     # 使用别名一次性安装常用 FDW
 ```
 
-`pg_package_map` 中提供了大量别名，方便在不同发行版之间屏蔽包名差异。下面给出当前 v4.5 EL9 映射中的单扩展别名与分类包组示例；其他平台及 PostgreSQL 大版本的实际可用范围可能不同：
+`pg_package_map` 中提供了大量别名，方便在不同发行版之间屏蔽包名差异。下面给出当前 EL9 映射中的单扩展别名与分类包组示例；其他平台及 PostgreSQL 大版本的实际可用范围可能不同：
 
 ```bash
 pg_extensions: # extensions to be installed on this cluster
@@ -1034,7 +1035,7 @@ patroni_ssl_enabled: false        # secure patroni RestAPI communications with S
 patroni_watchdog_mode: 'off'      # patroni watchdog mode: automatic,required,off. off by default
 patroni_username: postgres        # patroni restapi username, `postgres` by default
 patroni_password: Patroni.API     # patroni restapi password, `Patroni.API` by default
-pg_etcd_password: ''              # etcd password for this pg cluster, '' to use pg_cluster
+pg_etcd_password: ''              # etcd password for this pg cluster, '' uses pg_cluster (or pg_shard for citus), no whitespace
 pg_primary_db: postgres           # primary database name, used by citus,etc... ,postgres by default
 pg_parameters: {}                 # extra parameters in postgresql.auto.conf
 pg_files: []                      # extra files to be copied to postgres data directory (e.g. license)
@@ -1462,7 +1463,7 @@ pg_rto: safe   # 跨机房部署推荐
 
 ### `pg_rto_plan`
 
-参数名称： `pg_rto_plan`， 类型： `dict`， 层次：`G`
+参数名称： `pg_rto_plan`， 类型： `dict`， 层次：`G/C`
 
 RTO 预设配置字典，定义了 Patroni 高可用与 HAProxy 健康检查的具体超时参数，默认值包含四种预设模式：
 
@@ -1658,9 +1659,12 @@ PostgreSQL 的 IO 方法，默认为 `worker`。可选值包括：
 
 此 PostgreSQL 集群在 etcd 中使用的密码，默认为空字符串 `''`。
 
-如果设置为空字符串，则会使用 [`pg_cluster`](#pg_cluster) 参数值作为密码（对于 Citus 集群则使用 [`pg_shard`](#pg_shard) 参数值）。
+如果设置为空字符串，则会使用 [`pg_cluster`](#pg_cluster) 参数值作为密码；对于 Citus 集群则使用 [`pg_shard`](#pg_shard) 作为 etcd 用户名、角色前缀及默认密码。
 
-此密码用于 Patroni 连接 etcd 以及 vip-manager 访问 etcd 时的认证。
+此密码用于 Patroni 连接 etcd 以及 vip-manager 访问 etcd 时的认证。执行剧本时会对该参数做严格校验：
+
+- `pg_etcd_password` 不可设置为 `null`，且最终生效的密码字符串中 **不允许包含任何空白字符**（空格、制表符、换行等）；
+- 集群标识 [`pg_cluster`](#pg_cluster)（Citus 模式下为 [`pg_shard`](#pg_shard)）**禁止命名为 `root`**，以免覆盖 etcd 根管理员账号。
 
 
 
@@ -2024,6 +2028,7 @@ pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/c
     cipher_pass: pgBackRest       # AES 加密密码，默认为 'pgBackRest'
     retention_full_type: time     # 在 minio 仓库上按时间保留完整备份
     retention_full: 14            # 保留过去 14 天的完整备份
+#pg_pitr: {}                      # 定义时间点恢复（PITR）任务，默认未定义
 ```
 
 
@@ -2086,7 +2091,7 @@ Pigsty 默认使用 `local` 备份仓库，这将在主实例的 `/pg/backup` �
 pgBackRest 仓库文档：https://pgbackrest.org/configuration.html#section-repository
 
 默认值包括 `local` 与 `minio` 两个候选仓库，定义如下。`pgbackrest_method` 只选择其中一个，
-v4.5.0 模板只将被选项渲染为 pgBackRest 的 `repo1`；同时列出两个字典项不表示双仓同时备份：
+当前模板只将被选项渲染为 pgBackRest 的 `repo1`；同时列出两个字典项不表示双仓同时备份：
 
 ```yaml
 pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/configuration.html#section-repository
@@ -2120,6 +2125,40 @@ pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/c
 **块级增量备份 (Block Incremental Backup)**：从 pgBackRest 2.46 版本开始支持 `block: y` 选项，可以实现块级增量备份。
 这意味着在增量备份时，pgBackRest 只会备份发生变化的数据块，而不是整个变化的文件，从而大幅减少备份数据量和备份时间。
 此功能对于大型数据库特别有用，建议在对象存储仓库上启用此选项。
+
+
+
+
+### `pg_pitr`
+
+参数名称： `pg_pitr`， 类型： `dict`， 层次：`C/A`
+
+定义时间点恢复（PITR）任务的配置字典，默认未定义（`NULL`），供 [`pgsql-pitr.yml`](/docs/pgsql/backup/restore/) 剧本读取并渲染恢复配置 `/pg/conf/pitr.conf`。
+
+常用子字段示例：
+
+```yaml
+pg_pitr:                          # 定义一个 PITR 恢复任务
+  cluster: pg-meta                # 备份源集群名（stanza），默认取当前 pg_cluster
+  type: time                      # 恢复目标类型：default, time, xid, name, lsn, immediate
+  time: "2026-08-13 10:00:00+08"  # 目标时间点（与 name / xid / lsn 互斥）
+  # name: "restore_point_name"    # 命名还原点
+  # xid: "100000"                 # 目标事务 ID
+  # lsn: "0/3000000"              # 目标 LSN
+  set: latest                     # 起始备份集，默认为 latest
+  timeline: latest                # 目标时间线，默认为 latest 或正整数
+  exclusive: false                # 是否排除恢复目标点本身，默认为 false
+  action: pause                   # 抵达恢复目标后的动作：pause, promote, shutdown
+  archive: true                   # 恢复后是否保留归档配置，默认为 true
+  db_include: []                  # 仅恢复指定数据库列表
+  db_exclude: []                  # 排除指定数据库列表
+  link_map: {}                    # 表空间软链接重映射
+  process: 4                      # 并行恢复进程数，默认取节点 CPU 核数
+  repo: {}                        # 覆盖恢复源仓库定义，默认使用 pgbackrest_repo[pgbackrest_method]
+  backup: false                   # 恢复前是否将原 PGDATA 移至 <pg_data>-backup（会覆盖已有备份目录）
+```
+
+分阶段执行流程与安全注意事项请参见 [**恢复操作**](/docs/pgsql/backup/restore/) 与 [**手工 PITR 演练**](/docs/pgsql/tutorial/pitr/)。
 
 
 
@@ -2349,9 +2388,11 @@ L2 VIP 只能在相同的 L2 网络中使用，这可能会对您的网络拓扑
 
 参数名称： `pg_vip_address`， 类型： `cidr4`， 层次：`C`
 
-如果启用 vip，则需要`<ipv4>/<mask>`格式的 vip 地址。
+如果启用 vip，则需要 `<ipv4>/<mask>` 格式的 vip 地址。
 
 默认值： `127.0.0.1/24`。这个值由两部分组成：`ipv4` 和 `mask`，用 `/` 分隔。
+
+当启用 [`pg_vip_enabled`](#pg_vip_enabled) 时，集群首次签发 `/pg/cert/server.crt` 会自动将去掉掩码后的 `pg_vip_address`（以及节点启用 `vip_enabled` 时的节点 `vip_address`）写入服务端证书 SAN，支持客户端以 `sslmode=verify-full` 连接 VIP。若在集群初始化后新增或修改此地址，需先删除控制机 `files/pki/pgsql/<cls>-<seq>.{key,crt}` 后重跑 `./pgsql.yml -l <cls> -t pg_cert` 并重载 PostgreSQL，详见 [**配置 PG VIP**](/docs/pgsql/tutorial/pg-vip/#tls-证书与-san)。
 
 
 
@@ -2394,7 +2435,9 @@ PostgreSQL DNS 名称后缀，默认为空字符串。
 
 您可以通过本参数指定一个域名后缀，这样会使用 `{{ pg_cluster }}{{ pg_dns_suffix }}` 作为集群 DNS 名称。
 
-例如，如果您将 `pg_dns_suffix` 设置为 `.db.vip.company.tld`，那么 `pg-test` 的集群 DNS 名称将是 `pg-test.db.vip.company.tld`
+例如，如果您将 `pg_dns_suffix` 设置为 `.db.vip.company.tld`，那么 `pg-test` 的集群 DNS 名称将是 `pg-test.db.vip.company.tld`。
+
+当 `pg_dns_suffix` 非空时，集群首次签发 `/pg/cert/server.crt` 还会自动将该完整集群域名（若后缀未以 `.` 开头会自动补 `.`）写入服务端证书 SAN。若在集群初始化后新增或修改后缀，同样需移除控制机 `files/pki/pgsql/<cls>-<seq>.{key,crt}` 后重新执行 `./pgsql.yml -l <cls> -t pg_cert` 并重载 PostgreSQL。
 
 
 

@@ -22,15 +22,16 @@ Ansible 可以使用 **声明式** 的方式对服务器进行配置管理，所
 
 ## 部署剧本
 
-Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一次性部署核心链路：CA/软件仓库、NODE、INFRA、ETCD、PGSQL，以及配置中启用的 MINIO。Redis、Kafka、原生 MySQL 等可选模块即使已在清单中定义，也需要分别执行其模块剧本。
+Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一次性部署核心链路共 6 个模块：CA/软件仓库与 INFRA、NODE、ETCD，以及配置中启用的 VAULT、MINIO 与 PGSQL。Redis、Docker、Kafka、原生 MySQL 等可选模块即使已在清单中定义，也需要分别执行其模块剧本。
 
-| Playbook    | 命令            | 分组         | `infra` | `[nodes]` | `etcd` | `minio` | `[pgsql]` |
-|-------------|---------------|------------|:-------:|:---------:|:------:|:-------:|:---------:|
-| `infra.yml` | `./infra.yml` | `-l infra` |    ✓    |     ✓     |        |         |           |
-| `node.yml`  | `./node.yml`  |            |         |     ✓     |        |         |           |
-| `etcd.yml`  | `./etcd.yml`  | `-l etcd`  |         |           |   ✓    |         |           |
-| `minio.yml` | `./minio.yml` | `-l minio` |         |           |        |    ✓    |           |
-| `pgsql.yml` | `./pgsql.yml` |            |         |           |        |         |     ✓     |
+| Playbook    | 命令            | 分组         | `infra` | `[nodes]` | `etcd` | `vault` | `minio` | `[pgsql]` |
+|-------------|---------------|------------|:-------:|:---------:|:------:|:-------:|:-------:|:---------:|
+| `infra.yml` | `./infra.yml` | `-l infra` |    ✓    |     ✓     |        |         |         |           |
+| `node.yml`  | `./node.yml`  |            |         |     ✓     |        |         |         |           |
+| `etcd.yml`  | `./etcd.yml`  | `-l etcd`  |         |           |   ✓    |         |         |           |
+| `vault.yml` | `./vault.yml` | `-l vault` |         |           |        |    ✓    |         |           |
+| `minio.yml` | `./minio.yml` | `-l minio` |         |           |        |         |    ✓    |           |
+| `pgsql.yml` | `./pgsql.yml` |            |         |           |        |         |         |     ✓     |
 {.full-width .wide .expand}
 
 这是最简单的部署方式，您也可以参考 [**定制指南**](/docs/setup/config/) 里的说明，一步来增量式地完成所有模块与节点的部署。
@@ -238,6 +239,8 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 |  [**REDIS**](/docs/redis/playbook/)  | [**`redis-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/redis-rm.yml)               | 移除 Redis 集群/节点/实例            |
 |   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd.yml)                       | 初始化 ETCD 集群，或扩容新成员           |
 |   [**ETCD**](/docs/etcd/playbook/)   | [**`etcd-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/etcd-rm.yml)                 | 移除 ETCD 集群与数据，或移除现有成员缩容      |
+|  [**VAULT**](/docs/vault/playbook/)  | [**`vault.yml`**](https://github.com/pgsty/pigsty/blob/main/vault.yml)                     | 初始化 OpenBao / Vault 密钥管理集群   |
+|  [**VAULT**](/docs/vault/playbook/)  | [**`vault-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/vault-rm.yml)               | 移除 OpenBao / Vault 集群与可选数据   |
 |  [**MINIO**](/docs/minio/playbook/)  | [**`minio.yml`**](https://github.com/pgsty/pigsty/blob/main/minio.yml)                     | 初始化 Silo 对象存储集群              |
 |  [**MINIO**](/docs/minio/playbook/)  | [**`minio-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml)               | 移除 Silo、配置与可选数据              |
 | [**DOCKER**](/docs/docker/playbook/) | [**`docker.yml`**](https://github.com/pgsty/pigsty/blob/main/docker.yml)                   | 在节点上安装 Docker                |

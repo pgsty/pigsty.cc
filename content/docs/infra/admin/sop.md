@@ -146,21 +146,20 @@ Nginx 相关的管理任务：
 
 ## 管理 Grafana 匿名访问
 
-Grafana 默认允许匿名用户以 `Viewer` 角色访问。使用支持 [`grafana_anon_enabled`](/docs/infra/param#grafana_anon_enabled) 的版本，在配置清单的 `all.vars` 或 `infra` 分组变量中设置：
+Grafana 默认允许匿名用户以 `Viewer` 角色访问。如需强制登录认证，可在每个目标 Infra 节点编辑 `/etc/grafana/grafana.ini`，将 `[auth.anonymous]` 段落下的 `enabled` 改为 `false`：
 
-```yaml
-grafana_anon_enabled: false
+```ini
+[auth.anonymous]
+enabled = false
 ```
 
-然后重新渲染配置并重启 Grafana：
+修改后重启 Grafana 服务使其生效：
 
 ```bash
-./infra.yml -l infra -t grafana_config,grafana_launch
+sudo systemctl restart grafana-server
 ```
 
-仅执行 `grafana_config` 不会立即生效。针对单个节点操作时，将 `-l infra` 替换为 `-l <infra-node>`。
-配置清单中的设置会在后续重跑时保留；直接编辑 `/etc/grafana/grafana.ini` 会被模板覆盖。
-此开关与 [`grafana_auth_proxy`](/docs/infra/param#grafana_auth_proxy) 独立，只保护 Grafana 的访问入口。
+注意：重跑 `./infra.yml -t grafana_config` 会根据控制机上的 `roles/infra/templates/grafana/grafana.ini.j2` 重新渲染 `/etc/grafana/grafana.ini` 并覆盖手工修改；如需在剧本重跑后长期保留，可同步调整该本地模板或在配置任务后再次应用。此设置与 [`grafana_auth_proxy`](/docs/infra/param#grafana_auth_proxy) 独立，只控制 Grafana 自身的匿名访问入口。
 
 
 ----------------

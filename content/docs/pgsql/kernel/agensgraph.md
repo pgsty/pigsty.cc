@@ -18,9 +18,9 @@ Pigsty 通过 `pg_mode: agens` 接入 AgensGraph，并保留标准 PostgreSQL �
 
 - 内核包别名：`agensgraph`，在 PG18 模板中解析为 `agensgraph-18`
 - 模式标识：`pg_mode: agens`
-- 本文验证版本：`AgensGraph 2.18.6.0`（`agensgraph-18`，Debian 13 的 amd64 / arm64 包）
-- 版本字符串示例：`PostgreSQL 18.6 (AgensGraph 2.18.6.0)`，实际补丁版本以安装包与 `SELECT version()` 为准
-- 当前开发版模板：`fork/agens`
+- 当前软件包基线：`AgensGraph 2.18.6.1`（基于 `PostgreSQL 18.6`，`agensgraph-18`）
+- 版本字符串示例：`PostgreSQL 18.6 (AgensGraph 2.18.6.1)`，实际补丁版本以安装包与 `SELECT version()` 为准
+- 配置模板：[`fork/agens`](https://github.com/pgsty/pigsty/blob/main/conf/fork/agens.yml)（`-c agens` 与 `-c fork/agens` 等价）
 - 适用场景：关系数据之上叠加图关系分析、路径查询、知识图谱、风控关联
 
 对客户端来说，AgensGraph 仍然暴露 PostgreSQL 线缆协议，常规 PG 客户端、驱动与连接池都可以直接接入。
@@ -31,9 +31,7 @@ AgensGraph 增加了图模型对象、Cypher 语法，以及顶点、边等图�
 
 ## 安装
 
-使用 Pigsty 内置模板：
-
-以下命令使用 [**当前开发版模板**](https://github.com/pgsty/pigsty/blob/main/conf/fork/agens.yml)，默认选择 AgensGraph 2.18 / PostgreSQL 18。已发布的 [**v4.5.0 模板**](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/agens.yml) 仍使用 `-c agens` 并默认选择 PG17；若使用该版本进行新的 PG18 部署，需显式设置 `pg_version: 18`。
+使用 Pigsty 内置的 [`fork/agens`](/docs/conf/agens/) 配置模板（[`conf/fork/agens.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/agens.yml)，默认选择 AgensGraph 2.18 / PostgreSQL 18）：
 
 ```bash
 ./configure -c fork/agens
@@ -66,7 +64,7 @@ all:
         pg_packages: [ agensgraph, pgsql-common ]
 ```
 
-AgensGraph 不需要像 pgEdge / Babelfish 那样额外预加载一组专有库，因此大多数 Pigsty 的标准 HA、备份、监控、访问控制与 IaC 用法都保持不变。
+AgensGraph 不需要像 pgEdge / Babelfish 那样额外预加载一组专有库，因此大多数 Pigsty 的标准 HA、备份、监控、访问控制与 IaC 用法都保持不变。针对备份与恢复，当 `pg_mode: agens` 时，Pigsty 会在 `/etc/pgbackrest/pgbackrest.conf` 与 PITR 临时配置中自动注入 `pg-version-force=18`（匹配 `pg_version`），并在 `pgbackrest.conf` 中设置 `checksum-page=n`（因 AgensGraph 在数据库目录 `base/<oid>/AG_VERSION` 下存放纯文本图元数据而非标准 PostgreSQL 数据页，开启页级校验会导致备份报错）。
 如果你的负载以图遍历和复杂路径查询为主，通常应重点关注 `work_mem`、`shared_buffers` 与代价参数，而不是简单沿用默认 OLTP 习惯。
 
 
@@ -117,7 +115,8 @@ ORDER BY name;
 
 ## 注意事项
 
-- 当前开发版模板面向 AgensGraph 2.18 / PG18 新部署。PG17 数据目录不能直接交给 PG18；现有集群应按 [**上游升级指南**](https://tech.skaiworldwide.com/docs/en/agensgraph/latest/release_notes/upgrade-to-2.18.html) 评估 `pg_upgrade` 或逻辑导出导入，并验证查询兼容性。
+- `fork/agens` 模板面向 AgensGraph 2.18 / PG18 部署。PG17 数据目录不能直接交给 PG18；现有集群应按 [**上游升级指南**](https://tech.skaiworldwide.com/docs/en/agensgraph/latest/release_notes/upgrade-to-2.18.html) 评估 `pg_upgrade` 或逻辑导出导入，并验证查询兼容性。
+- 若从早期未启用 `checksum-page=n` 的配置升级而来，且历史备份曾因 `AG_VERSION` 页校验产生异常或告警，升级配置后建议立即重新执行一次全量备份（`pg-backup full`）。
 - `fork/agens` 默认模板为单节点快速启用，生产环境建议按需扩展为高可用拓扑。
 - 并非所有 PostgreSQL 三方扩展都保证可直接用于 AgensGraph 内核，建议先做兼容性验证。
 - 图对象与关系对象可以共存于同一数据库中，但生产上通常更建议规划清晰的数据库或命名约定，避免图模型与普通业务对象互相污染。

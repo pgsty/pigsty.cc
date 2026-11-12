@@ -14,7 +14,7 @@ categories: [概念]
 
 ## 概览
 
-Pigsty PGSQL 仓库直接提供 IvorySQL 5.4 软件包，兼容 PostgreSQL 18.4，并覆盖当前支持的 EL、Debian、Ubuntu 与双架构平台。
+Pigsty PGSQL 仓库直接提供 IvorySQL 5.6 软件包，兼容 PostgreSQL 18.6，并覆盖当前支持的 EL、Debian、Ubuntu 与双架构平台。
 在线安装使用 Pigsty 的 `pgsql` 仓库；商业版同时提供对应平台的离线交付方案。
 
 
@@ -30,12 +30,10 @@ Pigsty PGSQL 仓库直接提供 IvorySQL 5.4 软件包，兼容 PostgreSQL 18.4�
 
 ## 安装
 
-使用 Pigsty 内置的 `ivory` 配置模板安装：
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/ivory.yml)；开发版已迁移至 `conf/fork/ivory.yml`，对应使用 `-c fork/ivory`。
+使用 Pigsty 内置的 [`fork/ivory`](/docs/conf/ivory/) 配置模板（[`conf/fork/ivory.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/ivory.yml)，`-c ivory` 与 `-c fork/ivory` 等价）安装：
 
 ```bash
-./configure -c ivory
+./configure -c fork/ivory
 ./deploy.yml
 ```
 
@@ -57,7 +55,7 @@ pg_libs: 'liboracle_parser, pg_stat_statements, auto_explain'
 pg_extensions: [ ]                # do not install any vanilla postgresql extensions
 ```
 
-> 使用 Oracle 兼容性模式时，需要动态加载 `liboracle_parser` 扩展插件。
+> 使用 Oracle 兼容性模式时，需要动态加载 `liboracle_parser` 扩展插件。当 `pg_mode: ivory` 时，Pigsty 还会在 `/etc/pgbackrest/pgbackrest.conf` 与 PITR 恢复配置中自动注入 `archive-header-check=n` 和 `pg-version-force=18`（匹配 `pg_version`），兼容 IvorySQL 的控制文件与 WAL 头标识。
 
 
 --------

@@ -27,12 +27,10 @@ Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在
 
 ## 安装
 
-使用 Pigsty 内置模板：
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/polar.yml)；开发版已迁移至 `conf/fork/polar.yml`，对应使用 `-c fork/polar`。
+使用 Pigsty 内置的 [`fork/polar`](/docs/conf/polar/) 配置模板（[`conf/fork/polar.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/polar.yml)，`-c polar` 与 `-c fork/polar` 等价；`configure` 对该模板显式忽略 `-v` 大版本覆盖，固定保持 `pg_version: 17`）：
 
 ```bash
-./configure -c polar
+./configure -c fork/polar
 ./deploy.yml
 ```
 
@@ -76,6 +74,8 @@ pg_default_roles:
 ```
 
 默认 `polar` 内核安装目录已调整为 `/usr/polar-17`。这里特别注意，PolarDB PG 要求 `replicator` 复制用户为 `SUPERUSER`，与原生 PG 不同。
+
+此外，由于 PolarDB 可能将备份结束记录留在当前活跃 WAL 段中，当 `pg_mode: polar` 时，Pigsty 会在 `/etc/pgbackrest/pgbackrest.conf` 的 `[global:backup]` 与 `[global:check]` 段自动设置 `archive-timeout=600`（高于默认的 300 秒 `archive_timeout`），避免 `pgbackrest backup` 或 `pgbackrest check` 在低写入负载下因等待 WAL 段切换超时而误报失败。
 
 
 

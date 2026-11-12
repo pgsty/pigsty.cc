@@ -17,10 +17,10 @@ Pigsty 内置了 [**Docker**](https://www.docker.com/) 支持，您可以用它�
 
 Docker 是一个 **可选模块**。在 Pigsty 中，Docker 是否安装由节点上的 [`docker_enabled`](/docs/docker/param#docker_enabled) 控制，默认不启用。
 
-`docker-ce` 官方上游仓库在当前源码中归属于独立的 `docker` 模块（`v4.5.0` 发布包中归属 `infra` 模块）。默认 `repo_packages` 中的 `extra-modules` 别名已包含 `docker-ce` 与 `docker-compose-plugin`；若你需要在离线仓库中显式加入 Docker 包，可通过 `repo_extra_packages` 指定 `docker` 包别名（映射为 `docker-ce` 与 `docker-compose-plugin`）。
+`docker-ce` 官方上游仓库自 `v4.6.0` 起归属于独立的 `docker` 模块（从原 `infra` 模块拆分）。默认 `repo_packages` 中的 `extra-modules` 别名已包含 `docker-ce` 与 `docker-compose-plugin`；若你需要在本地软件仓库中下载并缓存 Docker 包，请在 `repo_modules` 中显式加入 `docker`，并通过 `repo_extra_packages` 指定 `docker` 包别名（映射为 `docker-ce` 与 `docker-compose-plugin`）。
 
 ```yaml
-repo_modules: infra,node,pgsql,docker  # <--- 加入 docker 模块（v4.5.0 中 Docker 上游在 infra 中）
+repo_modules: infra,node,pgsql,docker  # <--- 显式加入独立的 docker 仓库模块
 repo_extra_packages:
   - pgsql-main
   - docker                         # <--- 下载 Docker（docker-ce + docker-compose-plugin）
@@ -55,7 +55,7 @@ infra:
 ./node.yml -e '{"node_repo_modules":"node,docker","node_packages":["docker-ce","docker-compose-plugin"]}' -t node_repo,node_pkg -l <select_group_ip>
 ```
 
-这条命令会在目标节点上，首先启用 `node,docker` 两个模块对应的上游软件源（`v4.5.0` 中应使用 `node,infra`），然后安装 `docker-ce` 与 `docker-compose-plugin` 两个软件包（EL/Debian 同名）。
+这条命令会在目标节点上，首先启用 `node,docker` 两个模块对应的上游软件源，然后安装 `docker-ce` 与 `docker-compose-plugin` 两个软件包（EL/Debian 同名）。
 
 如果您希望的是在 Pigsty 初始化的时候就自动下载好 Docker 相关软件包，请参考下面的说明。
 
@@ -81,11 +81,11 @@ ansible <selector> -m package -b -a 'name=docker-ce,docker-compose-plugin state=
 
 ## 下载
 
-想要在 Pigsty 安装过程中下载 Docker，在 [**配置清单**](/docs/setup/config/) 中确认 [`repo_modules`](/docs/infra/param#repo_modules) 包含 `docker`（当前源码中 Docker 上游所在模块；`v4.5.0` 中为 `infra`），
+想要在 Pigsty 安装过程中下载 Docker，在 [**配置清单**](/docs/setup/config/) 中确认 [`repo_modules`](/docs/infra/param#repo_modules) 包含 `docker`，
 然后在 [`repo_packages`](/docs/infra/param#repo_packages) 或 [`repo_extra_packages`](/docs/infra/param#repo_extra_packages) 参数中指定下载 Docker 软件包。
 
 ```yaml
-repo_modules: infra,node,pgsql,docker  # <--- Docker 上游仓库归属 docker 模块（v4.5.0 中为 infra）
+repo_modules: infra,node,pgsql,docker  # <--- Docker 上游仓库归属独立的 docker 模块
 repo_packages: 
   - node-bootstrap, infra-package, infra-addons, node-package1, node-package2, pgsql-common, docker
 repo_extra_packages:
@@ -98,7 +98,7 @@ repo_extra_packages:
 
 如果您已经完成了 Pigsty 安装，本地软件源已经初始化完毕，您可以在修改配置之后执行 `./infra.yml -t repo_build` 重新下载并构建离线软件源。
 
-安装 Docker 需要用到 Docker 的 YUM/APT [仓库](#仓库)。该仓库在当前源码默认的 `repo_upstream` 中归属于 `docker` 模块，需要在 `repo_modules` 或 `node_repo_modules` 中显式启用；`v4.5.0` 中归属于 `infra` 模块。
+安装 Docker 需要用到 Docker 的 YUM/APT [仓库](#仓库)。该仓库在默认的 `repo_upstream` 中归属于 `docker` 模块，需要在 `repo_modules` 或 `node_repo_modules` 中显式启用。
 
 
 
@@ -106,7 +106,7 @@ repo_extra_packages:
 
 ## 仓库
 
-下载 Docker 需要用到互联网上游软件仓库，已定义在默认的 `repo_upstream` 中，模块名为 `docker`（`v4.5.0` 中为 `infra`）
+下载 Docker 需要用到互联网上游软件仓库，已定义在默认的 `repo_upstream` 中，模块名为 `docker`：
 
 ```yaml
 - { name: docker-ce      ,description: 'Docker CE'          ,module: docker  ,releases: [8,9,10] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://download.docker.com/linux/centos/$releasever/$basearch/stable'    ,china: 'https://mirrors.cloud.tencent.com/docker-ce/linux/centos/$releasever/$basearch/stable https://repo.huaweicloud.com/docker-ce/linux/centos/$releasever/$basearch/stable https://mirrors.aliyun.com/docker-ce/linux/centos/$releasever/$basearch/stable' ,europe: 'https://mirrors.xtom.de/docker-ce/linux/centos/$releasever/$basearch/stable' } ,meta: { skip_if_unavailable: 1 }}

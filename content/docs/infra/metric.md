@@ -46,7 +46,7 @@ Blackbox Exporter 的自身指标属于 `job=infra`；ICMP 探测经 `/probe` �
 | 指标 | 源码表达式 | 含义 |
 |:---|:---|:---|
 | `infra_up` | `up{job="infra"}` | 基础设施抓取端点是否可达 |
-| `agent_up` | `up{job!~"infra\|node\|etcd\|minio\|pgsql\|redis\|mysql"}` | 排除列出的任务后，其余抓取目标的可达状态 |
+| `agent_up` | `up{job!~"infra\|node\|etcd\|vault\|minio\|pgsql\|redis\|mysql"}` | 排除列出的任务后，其余抓取目标的可达状态 |
 {.full-width}
 
 `infra_up` 与 `agent_up` 是记录规则，不会出现在组件原始 `/metrics` 输出中。`agent_up` 的实际范围由上面的排除列表决定；当前列表没有排除 `kafka`、`ping`、`pgrds` 等任务，也不会覆盖已经属于 `node` 或 `pgsql` 的 Exporter。`up=1` 只说明抓取成功，服务功能健康还需结合 `nginx_up`、探测结果或组件自身指标判断。
@@ -55,7 +55,7 @@ Blackbox Exporter 的自身指标属于 `job=infra`；ICMP 探测经 `/probe` �
 
 ## 共享存活记录规则
 
-除模块规则外，[`roles/infra/templates/victoria/agent.yml`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/victoria/agent.yml) 还生成 **14 条共享存活规则**，部署到 `/infra/rules/agent.yml`。下表保留模板表达式；其中端口由配置变量渲染。它们都源于采集器生成的 `up`，反映抓取是否成功，不代表数据库查询、仲裁或应用请求一定正常。
+除模块规则外，[`roles/infra/templates/victoria/agent.yml`](https://github.com/pgsty/pigsty/blob/main/roles/infra/templates/victoria/agent.yml) 还生成 **15 条共享存活规则**，部署到 `/infra/rules/agent.yml`。下表保留模板表达式；其中端口由配置变量渲染。它们都源于采集器生成的 `up`，反映抓取是否成功，不代表数据库查询、仲裁或应用请求一定正常。
 
 | 记录指标 | 模板表达式 |
 |:---|:---|
@@ -65,6 +65,7 @@ Blackbox Exporter 的自身指标属于 `job=infra`；ICMP 探测经 `/probe` �
 | `docker_up` | `up{instance=~".*:{{ docker_exporter_port\|default('9323') }}"}` |
 | `vector_up` | `up{instance=~".*:{{ vector_port\|default('9598') }}"}` |
 | `etcd_up` | `up{job="etcd"}` |
+| `vault_up` | `up{job="vault"}` |
 | `minio_up` | `up{job="minio"}` |
 | `pg_exporter_agent_up` | `up{instance=~".*:{{ pg_exporter_port\|default('9630') }}"}` |
 | `pgbouncer_exporter_agent_up` | `up{instance=~".*:{{ pgbouncer_exporter_port\|default('9631') }}"}` |

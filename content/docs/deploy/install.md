@@ -126,7 +126,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 > [!DETAILS]- 配置 / configure 过程的样例输出
 > ```bash
 > vagrant@meta:~/pigsty$ ./configure
-> configure pigsty v4.5.0 begin
+> configure pigsty v4.6.0 begin
 > [ OK ] region = china
 > [ OK ] kernel  = Linux
 > [ OK ] machine = x86_64

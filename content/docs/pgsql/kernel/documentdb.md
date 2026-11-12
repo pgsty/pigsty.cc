@@ -22,16 +22,14 @@ Pigsty 是 FerretDB 社区的合作伙伴，提供 FerretDB 与 DocumentDB 扩�
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mongo`](/docs/conf/mongo/) 配置模板：
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mongo.yml)；开发版已迁移至 `conf/fork/mongo.yml`，对应使用 `-c fork/mongo`。
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`fork/mongo`](/docs/conf/mongo/) 配置模板（[`conf/fork/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/mongo.yml)，`-c mongo` 与 `-c fork/mongo` 等价）：
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
-./configure -c mongo    # 使用 Mongo（DocumentDB + FerretDB）配置模板
-./deploy.yml            # 安装，生产部署请先在 pigsty.yml 中修改密码
-./docker.yml -l pg-meta # 在 pg-meta 节点上安装 Docker
-./app.yml -l pg-meta    # 部署 FerretDB Docker APP
+./configure -c fork/mongo # 使用 Mongo（DocumentDB + FerretDB）配置模板
+./deploy.yml              # 安装，生产部署请先在 pigsty.yml 中修改密码
+./docker.yml -l pg-meta   # 在 pg-meta 节点上安装 Docker
+./app.yml -l pg-meta      # 部署 FerretDB Docker APP
 ```
 
 FerretDB 默认监听本机回环地址的 `27017` 端口，使用 `mongosh` 或任意 MongoDB 兼容客户端即可访问：
@@ -45,7 +43,7 @@ mongosh 'mongodb://mongod:DBUser.Mongo@127.0.0.1:27017/'
 
 ## 配置
 
-源文件：[`pigsty/conf/mongo.yml`](/docs/conf/mongo/)，完整模板说明见 [**Mongo 配置模板**](/docs/conf/mongo/) 文档。
+源文件：[`pigsty/conf/fork/mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/mongo.yml)，完整模板说明见 [**Mongo 配置模板**](/docs/conf/mongo/) 文档。
 
 PostgreSQL 侧的关键配置是 `documentdb` 扩展及其预加载库，以及供 FerretDB 使用的后端超级用户：
 

@@ -426,6 +426,8 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 当 Pigsty 纳管节点时，会根据此参数的值来过滤 [`repo_upstream`](/docs/infra/param#repo_upstream) 中的条目，只有 `module` 字段与此参数值匹配的条目才会被添加到节点的软件源中。
 
+自 `v4.6.0` 起，Docker CE 官方仓库与 EL 平台的 Nginx 官方仓库已从 `infra` 模块拆分为独立的 `docker` 与 `nginx` 模块。若某业务节点不通过本地仓库（`local`）而直接挂载上游仓库安装 Docker 或新版 Nginx，请按需将其设为 `node,docker` 或 `node,nginx`。
+
 
 
 
@@ -1425,7 +1427,7 @@ node_exporter_options: '--no-collector.softnet --no-collector.nvme --collector.t
 
 `--no-collector.softnet --no-collector.nvme --collector.tcpstat --collector.processes`
 
-该选项会启用/禁用一些指标收集器，请根据您的需要进行调整。
+该选项会启用/禁用一些指标收集器，请根据您的需要进行调整。无论此参数如何设置，Pigsty 在部署 `node_exporter` 时都会自动创建 `/var/lib/node_exporter/textfile`（权限 `0755`），并在实际启动命令行末尾固定追加 `--collector.textfile.directory=/var/lib/node_exporter/textfile`，供本机脚本输出自定义 `.prom` 指标文件。
 
 
 

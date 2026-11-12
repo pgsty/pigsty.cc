@@ -9,7 +9,7 @@ categories: [任务]
 
 Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
-- [`deploy.yml`](#deployyml)：在所有节点上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心模块
+- [`deploy.yml`](#deployyml)：在所有节点上一次性部署 INFRA、NODE、ETCD、VAULT、MINIO 与 PGSQL 六大核心模块
 - [`infra.yml`](#infrayml)：在 infra 节点上初始化 pigsty 基础设施
 - [`infra-rm.yml`](#infra-rmyml)：从 infra 节点移除基础设施组件
 
@@ -18,7 +18,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ## `deploy.yml`
 
-在所有节点上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心模块，解决 INFRA/NODE 循环依赖问题。
+在所有节点上一次性部署 INFRA、NODE、ETCD、VAULT、MINIO 与 PGSQL 六大模块，解决 INFRA/NODE 循环依赖问题。
 
 该剧本会交叉执行 `infra.yml` 与 `node.yml` 的子任务，按以下顺序完成核心组件的部署：
 
@@ -29,15 +29,17 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 5. **infra**：初始化 Nginx、DNS、VictoriaMetrics、Grafana 等
 6. **node-monitor**：初始化 node-exporter、vector
 7. **etcd**：初始化 etcd（PostgreSQL 高可用必需）
-8. **minio**：初始化 Silo（可选）
-9. **pgsql**：初始化 PostgreSQL 集群并配置 PostgreSQL 监控
+8. **vault**：初始化 Vault（OpenBao 密钥管理，可选，供 `pg_tde` 等使用）
+9. **minio**：初始化 Silo（可选）
+10. **pgsql**：初始化 PostgreSQL 集群并配置 PostgreSQL 监控
 
-该剧本等效于依次执行以下五个剧本：
+该剧本等效于依次执行以下六个剧本：
 
 ```bash
 ./infra.yml -l infra    # 在 infra 分组上部署基础设施
 ./node.yml              # 在所有节点上初始化节点
 ./etcd.yml              # 初始化 etcd 集群
+./vault.yml -l vault    # 初始化 Vault（OpenBao）集群（可选）
 ./minio.yml             # 初始化 MINIO（Silo）集群（可选）
 ./pgsql.yml             # 初始化 PostgreSQL 集群
 ```

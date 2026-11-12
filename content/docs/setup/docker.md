@@ -74,15 +74,15 @@ make pass | grep -E 'grafana_admin_password|pg_admin_password'
 
 Pigsty 提供开箱即用的 Docker 镜像，发布在 [**Docker Hub**](https://hub.docker.com/r/pgsty/pigsty)。
 
-| 镜像             | 拉取大小   | 解压大小  | 内容                                        |
-|:---------------|:-------|:------|:------------------------------------------|
-| `pgsty/pigsty` | ~500MB | 1.3GB | Debian 13 + systemd + SSH + pig + Ansible |
+| 镜像             | 拉取大小   | 解压大小  | 内容                                               |
+|:---------------|:-------|:------|:-------------------------------------------------|
+| `pgsty/pigsty` | ~500MB | 1.3GB | Debian 13.7 + systemd + SSH + pig 1.11.0 + Ansible |
 
 - 同时支持 **amd64**（x86_64）和 **arm64**（Apple Silicon、AWS Graviton）架构
-- 镜像标签按 Pigsty 版本命名。当前 `main` 分支的 Docker 配置默认值与站点口径均为 `{{< param version >}}`；拉取或部署前仍应独立确认远端已有同名镜像
-- 镜像内已预生成 docker 配置模板，可直接执行 `./deploy.yml` 部署
+- 镜像标签按 Pigsty 版本命名，当前默认版本为 `v4.6.0`（`{{< param version >}}`）；拉取或部署前仍应确认远端已有同名镜像
+- 镜像内已预生成 `docker` 配置模板，可直接执行 `./deploy.yml` 部署（默认安装 **PostgreSQL 18.7**）
 
-镜像基于 **Debian 13 (Trixie)** 构建，预装了 [**`pig`**](/docs/pig/) CLI 工具和 Ansible，并已初始化好 Pigsty 源码。
+镜像基于 **Debian 13.7 (Trixie)** 构建，预装了 [**`pig`**](/docs/pig/) `v1.11.0` CLI 工具和 Ansible，并已初始化好 Pigsty 源码。
 
 
 ----------------
@@ -124,7 +124,7 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 您可以通过修改 [**`.env`**](https://github.com/pgsty/pigsty/blob/main/docker/.env) 文件来自定义镜像版本和端口映射：
 
 ```bash
-PIGSTY_VERSION=v4.5.0         # 当前 main 的源码默认值；拉取前核验远端标签
+PIGSTY_VERSION=v4.6.0         # Pigsty 镜像版本标签；拉取前请确认远端标签可用
 PIGSTY_SSH_PORT=2222          # SSH 端口
 PIGSTY_HTTP_PORT=8080         # Nginx HTTP 端口
 PIGSTY_HTTPS_PORT=8443        # Nginx HTTPS 端口
@@ -133,9 +133,9 @@ PIGSTY_PG_PORT=5432           # PostgreSQL 端口
 
 **端口映射说明**：
 
-| 环境变量                | 默认值      | 容器端口 | 说明                         |
-|:--------------------|:---------|:-----|:---------------------------|
-| `PIGSTY_VERSION`    | `v4.5.0` | -    | 当前 `main` 的源码默认值；远端标签需另行核验 |
+| 环境变量                | 默认值      | 容器端口 | 说明                       |
+|:--------------------|:---------|:-----|:-------------------------|
+| `PIGSTY_VERSION`    | `v4.6.0` | -    | Pigsty 镜像版本标签；远端标签需确认可用 |
 | `PIGSTY_SSH_PORT`   | `2222`   | 22   | SSH 访问端口                   |
 | `PIGSTY_HTTP_PORT`  | `8080`   | 80   | Nginx HTTP 端口              |
 | `PIGSTY_HTTPS_PORT` | `8443`   | 443  | Nginx HTTPS 端口             |
@@ -185,10 +185,13 @@ make pass         # 查看配置中的密码
 ### 镜像构建命令
 
 ```bash
-make build        # 本地构建镜像
-make buildnc      # 不使用缓存构建镜像
-make push         # 构建并推送多架构镜像
+make source       # 将当前 Git 检出源码打包为 pigsty.tgz
+make build        # 本地构建镜像（自动依赖 make source）
+make buildnc      # 不使用缓存构建镜像（自动依赖 make source）
+make push         # 构建并推送多架构镜像（自动依赖 make source）
 ```
+
+若不通过 `Makefile` 而直接手动执行 `docker build`，请务必先执行 `make source` 在 `docker/` 目录下生成构建所需的 `pigsty.tgz` 源码归档。
 
 ### 镜像管理命令
 
@@ -240,7 +243,7 @@ make purge        # 删除容器并直接删除当前目录的 ./data
 
 ## 原理
 
-Pigsty Docker 镜像基于 **Debian 13 (Trixie)**，启用了 **systemd** 作为 init 系统。
+Pigsty Docker 镜像基于 **Debian 13.7 (Trixie)**，启用了 **systemd** 作为 init 系统。
 这使得容器内的服务管理方式与原生 Linux 系统保持一致，可以使用 `systemctl` 管理服务。
 
 镜像的关键特性：
@@ -249,18 +252,25 @@ Pigsty Docker 镜像基于 **Debian 13 (Trixie)**，启用了 **systemd** 作为
 - **SSH 访问**：预配置了 SSH 服务，root 密码为 `pigsty`
 - **特权模式**：需要 `--privileged` 参数以支持 systemd
 - **数据持久化**：通过 `/data` 卷挂载实现数据持久化
-- **预装软件**：预装 pig CLI 和 Ansible，已完成 Pigsty 源码初始化
+- **预装软件**：预装 `pig`（`v1.11.0`）CLI 和 Ansible，已完成 Pigsty `v4.6.0` 源码初始化（默认部署 PostgreSQL 18.7）
 
 镜像构建时会执行以下初始化步骤：
 
 ```dockerfile
-# 安装 pig CLI
+# 安装固定版本的 pig CLI
 RUN echo "deb [trusted=yes] https://repo.pigsty.cc/apt/infra/ generic main" \
     > /etc/apt/sources.list.d/pigsty.list \
-    && apt-get update && apt-get install -y pig
+    && apt-get update \
+    && apt-get install -y --no-install-recommends "pig=${PIG_VERSION}-*" \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# 初始化 Pigsty 源码并安装 Ansible
-RUN pig sty init -v ${PIGSTY_VERSION} \
+# 导入由 make source 打包的本地源码归档
+ADD pigsty.tgz /root/
+WORKDIR /root/pigsty
+
+# 核验源码版本，安装 Ansible 并生成容器配置清单
+RUN test "$(sed -n 's/^PIGSTY_VERSION=//p' bootstrap)" = "${PIGSTY_VERSION%%-*}" \
     && pig sty boot \
     && pig sty conf -c docker --ip 127.0.0.1
 ```

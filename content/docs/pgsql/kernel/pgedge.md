@@ -33,16 +33,14 @@ Pigsty 提供的是“先验证单节点内核，再扩展到多节点复制拓�
 
 ## 安装
 
-使用 Pigsty 内置模板：
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgedge.yml)；开发版已迁移至 `conf/fork/pgedge.yml`，对应使用 `-c fork/pgedge`。
+使用 Pigsty 内置的 [`fork/pgedge`](/docs/conf/pgedge/) 配置模板（[`conf/fork/pgedge.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/pgedge.yml)，`-c pgedge` 与 `-c fork/pgedge` 等价）：
 
 ```bash
-./configure -c pgedge
+./configure -c fork/pgedge
 ./deploy.yml
 ```
 
-模板默认在 `meta` 数据库预装 `spock`、`snowflake`、`lolor`。部署完成后可用以下命令核对版本和扩展：
+模板默认在 `meta` 数据库预装 `spock`、`snowflake`、`lolor`（当前 PG18 包基线为 `pgedge-18` `18.6-3PGSTY`，内置 `Spock 5.0.13`）。部署完成后可用以下命令核对版本和扩展：
 
 ```bash
 psql -d meta -c "SELECT version();"
@@ -56,7 +54,7 @@ psql -d meta -c "SELECT extname, extversion FROM pg_extension WHERE extname IN (
 
 ## 配置
 
-`pgedge` 模板的关键参数如下（与 `conf/pgedge.yml` 一致）：
+`fork/pgedge` 模板的关键参数如下（与 `conf/fork/pgedge.yml` 一致）：
 
 ```yaml
 pg_mode: pgedge

@@ -9,8 +9,7 @@ categories: [概念]
 
 [Percona Postgres](https://www.percona.com/postgresql/software/postgresql-distribution) 是一个带有 [`pg_tde`](https://docs.percona.com/pg-tde/index.html)（透明数据加密）扩展的补丁 Postgres 内核。
 
-Pigsty 从 v4.4.0 起将 Percona PostgreSQL 打包到私有前缀 `/usr/pgtde-$v`，v4.5.0 延续这一布局
-（PostgreSQL 18 对应 `/usr/pgtde-18`）。`pgtde` 包别名会同时安装内核包
+Pigsty 从 v4.4.0 起将 Percona PostgreSQL 打包到私有前缀 `/usr/pgtde-$v`（PostgreSQL 18 对应 `/usr/pgtde-18`，当前包基线为 Percona Server for PostgreSQL `18.6.1`，含 `pg_tde 2.2.2`）。`pgtde` 包别名会同时安装内核包
 与 contrib 包，其中包含 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、
 pgaudit、pg_stat_monitor 等常用组件。
 
@@ -21,14 +20,12 @@ pgaudit、pg_stat_monitor 等常用组件。
 
 ## 快速开始
 
-使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`pgtde`](/docs/conf/pgtde/) 配置模板。
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/pgtde.yml)；开发版已迁移至 `conf/fork/pgtde.yml`，对应使用 `-c fork/pgtde`。
+使用 Pigsty [**标准安装流程**](/docs/setup/install)，配合 [`fork/pgtde`](/docs/conf/pgtde/) 配置模板（[`conf/fork/pgtde.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/pgtde.yml)，`-c pgtde` 与 `-c fork/pgtde` 等价）：
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
-./configure -c pgtde     # 使用 percona postgres 内核
-./deploy.yml             # 部署 Pigsty 核心链路与 Percona PostgreSQL
+./configure -c fork/pgtde # 使用 Percona PostgreSQL 内核
+./deploy.yml              # 部署 Pigsty 核心链路与 Percona PostgreSQL
 ```
 
 

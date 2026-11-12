@@ -21,15 +21,11 @@ Pigsty 在所有支持的 Linux 平台上为 OpenHalo 提供部署支持。
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 准备工作目录，并选择 [`halo`](/docs/conf/mysql) 配置模板。
-
-以下配置命令适用于包含 `conf/fork/halo.yml` 的当前开发源码，`-c halo` 与 `-c fork/halo` 等价。
-[v4.5.0 发布包](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mysql.yml) 仍使用 `-c mysql`；
-当前开发源码中的 `-c mysql` 已用于原生 MySQL 示例。
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 准备工作目录，并选择 [`fork/halo`](/docs/conf/mysql/) 配置模板（[`conf/fork/halo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/halo.yml)，`-c halo` 与 `-c fork/halo` 等价；注意 `-c mysql` 对应原生 MySQL 试点模板 `conf/demo/mysql.yml`）：
 
 ```bash
-./configure -c halo     # 使用 OpenHalo 配置模板
-./deploy.yml            # 安装，生产部署请先在 pigsty.yml 中修改密码
+./configure -c fork/halo # 使用 OpenHalo 配置模板
+./deploy.yml             # 安装，生产部署请先在 pigsty.yml 中修改密码
 ```
 
 对于生产部署，请确保在运行安装剧本之前修改 `pigsty.yml` 配置文件中的密码参数。
@@ -61,7 +57,7 @@ pg-meta:
     pg_packages: [ openhalo, pgsql-common ]    # 安装 openHalo 而不是 PostgreSQL 原生内核
 ```
 
-OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容性所需的函数和类型。请确保在 `pg_databases` 配置中为 `postgres` 数据库启用此扩展，以获得完整的 MySQL 兼容功能。
+OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容性所需的函数和类型。请确保在 `pg_databases` 配置中为 `postgres` 数据库启用此扩展，以获得完整的 MySQL 兼容功能。由于 `aux_mysql` 运行时依赖 `PGDATA` 环境变量定位数据目录资源，当 `pg_mode: mysql` 时，Pigsty 会在 `patroni.service` 中自动注入 `Environment="PGDATA={{ pg_data }}"`（默认 `/pg/data`）；若手工启动实例或自定义 systemd 单元，请保留该环境变量。
 
 
 

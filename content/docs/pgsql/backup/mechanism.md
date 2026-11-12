@@ -244,6 +244,12 @@ pgbackrest_repo:
 执行 `pgsql-pitr.yml` 时，Pigsty 会另行渲染一份临时配置 `/pg/conf/pitr.conf`（避免污染常规配置），
 该剧本启动恢复期间的 PostgreSQL 日志写入 `/pg/tmp/recovery.log`。
 
+针对特定 PostgreSQL 内核分支，模板还会在渲染 `pgbackrest.conf`（及 `pitr.conf`）时按 `pg_mode` 自动注入兼容选项：
+
+- **`ivory`（IvorySQL）**：自动写入 `archive-header-check=n` 与 `pg-version-force=<pg_version>`（两处同步）。
+- **`agens`（AgensGraph）**：自动写入 `pg-version-force=<pg_version>`（两处同步），并在 `pgbackrest.conf` 中设置 `checksum-page=n` 以跳过非标准数据页文件 `AG_VERSION` 的页级校验。
+- **`polar`（PolarDB）**：在 `pgbackrest.conf` 的 `[global:backup]` 与 `[global:check]` 段自动设置 `archive-timeout=600`，避免因活跃 WAL 段尚未切换导致归档等待超时。
+
 
 --------
 

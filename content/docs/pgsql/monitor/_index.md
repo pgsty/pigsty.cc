@@ -186,6 +186,8 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
     bin/pgmon-add pg-bar  # 将 pg-bar 集群纳入监控
     ```
 
+   该脚本调用 `pgsql-monitor.yml`，在 Infra 节点上以 `prometheus:prometheus` 系统用户部署独立的 `pg_exporter_<cls>-<seq>.service` 服务，连接环境变量保存在 `/etc/default/pg_exporter_<cls>-<seq>`（权限 `0600`），采集器配置位于 `/etc/pg_exporter/pg_exporter_<cls>-<seq>.yml`。
+
 4. 要删除远程集群的监控目标，可以使用 `bin/pgmon-rm <clsname>`
 
     ```bash

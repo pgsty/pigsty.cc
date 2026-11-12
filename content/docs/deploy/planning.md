@@ -70,7 +70,7 @@ Pigsty 采用 [**模块化架构**](/docs/concept/arch)，您可以像搭积木�
 - **充血版**（[**`rich`**](/docs/conf/rich)）：生产版本的单机部署模版，带有本地 Silo 对象存储，使用本地软件仓库，下载所有 PG 扩展。
 - **瘦身版**（[**`slim`**](/docs/conf/slim)）：只安装 [**PGSQL**](/docs/pgsql/) 和 [**ETCD**](/docs/etcd/)，不安装监控设施 —— [**精简安装**](/docs/setup/slim) 也可以扩充为 [**多节点高可用部署**](/docs/setup/slim#高可用集群)
 - **监控版**（[**`infra`**](/docs/conf/infra)）：与 `slim` 相反，只安装 [**INFRA**](/docs/infra/) 监控基础设施，不安装数据库服务，只用来监控其他实例。
-- **内核替换**：用衍生分支 [**`pgsql`**](/docs/conf/pgsql/)、[**`mssql`**](/docs/conf/mssql/)、[**`polar`**](/docs/conf/polar/)、[**`ivory`**](/docs/conf/ivory/)、[**`mysql`**](/docs/conf/mysql/)、[**`pgtde`**](/docs/conf/pgtde/)、[**`oriole`**](/docs/conf/oriole/)、[**`agens`**](/docs/conf/agens/)、[**`pgedge`**](/docs/conf/pgedge/) 替换原生 PG
+- **内核替换**：用衍生分支 [**`pgsql`**](/docs/conf/pgsql/)、[**`mssql`**](/docs/conf/mssql/)、[**`polar`**](/docs/conf/polar/)、[**`ivory`**](/docs/conf/ivory/)、[**`halo`**](/docs/conf/mysql/)、[**`pgtde`**](/docs/conf/pgtde/)、[**`oriole`**](/docs/conf/oriole/)、[**`agens`**](/docs/conf/agens/)、[**`pgedge`**](/docs/conf/pgedge/) 替换原生 PG
 
 
 --------

@@ -40,7 +40,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 | [**`http://10.10.10.10/ui`**](http://10.10.10.10/ui) | [**`http://i.pigsty/ui`**](http://i.pigsty/ui) | [**`https://i.pigsty/ui`**](https://i.pigsty/ui) | [**`https://demo.pigsty.cc/ui`**](https://demo.pigsty.cc/ui) |
 {.full-width}
 
-Grafana 默认允许匿名访问。若要求登录后才能查看仪表盘，可将 [`grafana_anon_enabled`](/docs/infra/param#grafana_anon_enabled) 设置为 `false`，并按 [**管理预案**](/docs/infra/admin/sop/#管理-grafana-匿名访问) 应用配置。
+Grafana 默认允许匿名访问。若要求登录后才能查看仪表盘，可在 `/etc/grafana/grafana.ini` 中关闭匿名认证并重启服务，详见 [**管理预案**](/docs/infra/admin/sop/#管理-grafana-匿名访问)。
 
 如果您的服务对互联网与办公网开放，我们建议您通过 [**域名**](/docs/infra/admin/domain/) 访问，并启用 [**HTTPS**](/docs/infra/admin/cert) 加密，只需要少量配置工作即可实现。
 

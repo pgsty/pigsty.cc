@@ -19,21 +19,19 @@ Pigsty 允许您使用 `mssql` 模式部署 Babelfish 内核，在 PostgreSQL �
 - T-SQL 语法兼容
 - 与 Pigsty 现有能力（高可用、备份、监控、IaC）统一集成
 
-Pigsty 提供 **PostgreSQL 17/18** 兼容的 Babelfish 软件包，默认模板选择 `pg_version: 17`。版本与平台可用性见 [**软件包清单**](/docs/repo/pgsql/)。
+Pigsty 提供 **PostgreSQL 17/18** 兼容的 Babelfish 软件包（当前 PG18 包基线为 Babelfish `6.2.0`，基于 PostgreSQL `18.6`），默认模板 `conf/fork/mssql.yml` 选择 `pg_version: 17`。版本与平台可用性见 [**软件包清单**](/docs/repo/pgsql/)。
 
-`./configure -c mssql` 会忽略 `-v`；选择 PG18 时，应显式调整生成的配置并核对软件包。开发版 `fork/mssql` 的 `-v` 会覆盖版本，详细说明见 [**MSSQL 配置模板**](/docs/conf/mssql/)。
+`./configure` 对 `fork/mssql`（及 `-c mssql` 简写）显式排除了 `-v` 大版本覆盖；如需改用 PG18，请在生成 `pigsty.yml` 后手动将 `pg_version` 改为 `18` 并核对目标平台软件包，详细说明见 [**MSSQL 配置模板**](/docs/conf/mssql/)。
 
 
 --------
 
 ## 快速开始
 
-使用 Pigsty 内置模板：
-
-以下命令使用 [v4.5.0 模板](https://github.com/pgsty/pigsty/blob/v4.5.0/conf/mssql.yml)；开发版已迁移至 `conf/fork/mssql.yml`，对应使用 `-c fork/mssql`。
+使用 Pigsty 内置的 [`fork/mssql`](/docs/conf/mssql/) 配置模板（[`conf/fork/mssql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/fork/mssql.yml)，`-c mssql` 与 `-c fork/mssql` 等价）：
 
 ```bash
-./configure -c mssql
+./configure -c fork/mssql
 ./deploy.yml
 ```
 

@@ -63,5 +63,24 @@ pg-test:
 使用以下命令，刷新 PG 的 vip-manager 配置并重启生效：
 
 ```bash
-./pgsql.yml -t pg_vip 
+./pgsql.yml -t pg_vip
+```
+
+------
+
+## TLS 证书与 SAN
+
+在集群首次初始化签发 `/pg/cert/server.crt` 时，若已启用 `pg_vip_enabled` 并设置 `pg_vip_address`（或节点启用了 `vip_enabled` / `vip_address`），Pigsty 会自动将不带掩码的 VIP 地址写入 PostgreSQL 服务端证书的 `Subject Alternative Name`（SAN），以便客户端通过 `sslmode=verify-full` 安全连接 VIP。
+
+由于证书任务默认在管理节点已存在 `files/pki/pgsql/<cls>-<seq>.crt` 时跳过重签，若您在 **集群初始化之后** 新增或修改了 `pg_vip_address`，需要先在管理节点删除该集群各实例的旧证书文件，再重新签发下发并重载 PostgreSQL：
+
+```bash
+# 在管理节点移除目标集群旧服务端证书（将 pg-test-* 替换为实际实例前缀）
+rm -f files/pki/pgsql/pg-test-*.{key,crt} files/pki/csr/pg-test-*.csr
+
+# 重新签发分发证书并刷新 VIP 配置
+./pgsql.yml -l pg-test -t pg_cert,pg_vip
+
+# 重载 PostgreSQL 使新服务端证书生效
+ansible pg-test -b -m shell -a 'su - postgres -c "pg_ctl -D /pg/data reload"'
 ```

@@ -9,7 +9,7 @@ categories: [教程]
 
 [**OpenTofu**](https://opentofu.org/) 是一个开源的“基础设施即代码”工具，您可以使用它在公有云上一键创建虚拟机。
 
-下面直接使用 `tofu` 命令操作云模板。使用 Makefile 与 `./ssh` 辅助脚本前，应检查其实际调用的是 `tofu` 还是 `terraform`；不支持 `IAC_CLI` 的脚本不能通过该变量切换。源码提供兼容两者的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
+下面直接使用 `tofu` 命令操作云模板。目录中的 `Makefile`、`./ssh` 与 `./check` 辅助脚本同样默认使用 `IAC_CLI=tofu`，并可通过设置 `IAC_CLI=terraform` 切换为 Terraform。源码提供兼容两者的 `.tf` 示例模板，覆盖阿里云、AWS（全球与中国区）、Azure、GCP、腾讯云、Hetzner、Vultr、DigitalOcean 与 Linode；其中 `aliyun-s3.tf` 还会为 S3/pgBackRest 场景创建私有 OSS Bucket 与专用 RAM 读写凭据。
 
 
 ----------------
@@ -57,9 +57,9 @@ tofu output -raw meta_ip
 tofu output -raw ssh_command
 ```
 
-仓库中的 `./ssh` 是面向旧式“全部输出都是 IP、root 密码为 `PigstyDemo4`”模板的兼容脚本：它会遍历 IaC 输出，将其当作 IP 写入 `~/.ssh/pigsty_config`，再用 `sshpass` 分发密钥。因此它适用于 `aliyun.tf`、`aliyun-full.tf`、`aliyun-oss.tf`、`aliyun-pro.tf` 这类兼容模板；不要对包含 `ssh_command`、私网 IP 或访问密钥输出的现代模板运行它。
+仓库中的 `./ssh` 是面向旧式“全部输出都是 IP、root 密码为 `PigstyDemo4`”模板的兼容脚本（运行前会检查 `IAC_CLI` 与 `jq` 是否已安装）：它会通过 `$IAC_CLI output -json` 遍历 IaC 输出，将其当作 IP 写入 `~/.ssh/pigsty_config`，再用 `sshpass` 分发密钥。因此它适用于 `aliyun.tf`、`aliyun-full.tf`、`aliyun-oss.tf`、`aliyun-pro.tf` 这类兼容模板；不要对包含 `ssh_command`、私网 IP 或访问密钥输出的现代模板运行它。
 
-如果所用 `./ssh` 仍调用 Terraform，则需要安装 Terraform；若只安装 OpenTofu，请根据 `tofu output` 配置 SSH。使用兼容脚本时：
+`./ssh` 默认调用 `tofu`（如需使用 Terraform 可执行 `IAC_CLI=terraform ./ssh`）。使用兼容脚本时：
 
 ```bash
 ./ssh       # 写入 SSH 配置并分发密钥
@@ -86,7 +86,7 @@ tofu destroy
 
 ## Terraform 兼容与迁移
 
-目录和文件名继续保留为 `terraform/`、`.tf`、`terraform.tfvars`、`.terraform.lock.hcl` 与 `terraform.tfstate`，因为 OpenTofu 正式支持这些兼容名称。若所用 Makefile 支持 `IAC_CLI`，可按下面的方式选择 Terraform；否则直接执行 `terraform plan`：
+目录和文件名继续保留为 `terraform/`、`.tf`、`terraform.tfvars`、`.terraform.lock.hcl` 与 `terraform.tfstate`，因为 OpenTofu 正式支持这些兼容名称。`Makefile`、`./ssh` 与 `./check` 均支持通过 `IAC_CLI=terraform` 选择 Terraform：
 
 ```bash
 make IAC_CLI=terraform plan
@@ -123,8 +123,8 @@ Pigsty 在 [`terraform/spec/`](https://github.com/pgsty/pigsty/tree/main/terrafo
 | [`gcp.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/gcp.tf)                   | GCP          | GCP 单节点，Debian 12/13，AMD/ARM                      |
 | [`qcloud.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/qcloud.tf)             | 腾讯云          | 腾讯云单节点环境                                          |
 | [`hetzner.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/hetzner.tf)           | Hetzner      | 单节点，Debian 12/13，AMD/ARM                          |
-| [`vultr.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/vultr.tf)               | Vultr        | 单节点，Debian 12/13，当前仅 AMD                          |
-| [`digitalocean.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/digitalocean.tf) | DigitalOcean | 单节点，Debian 12/13，当前仅 AMD                          |
+| [`vultr.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/vultr.tf)               | Vultr        | 单节点，Debian 12/13，当前仅 AMD（基于 `vultr_vpc` 私有网络）       |
+| [`digitalocean.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/digitalocean.tf) | DigitalOcean | 单节点，仅支持 Debian 13（`d13`），当前仅 AMD                    |
 | [`linode.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/linode.tf)             | Linode       | 单节点，Debian 12/13，当前仅 AMD                          |
 {.full-width .wide .expand}
 
@@ -141,7 +141,7 @@ tofu init && tofu apply
 
 ## 变量配置
 
-各模板的变量并不完全相同。阿里云模板支持完整的多发行版矩阵，默认 `u26`；AWS 全球、Azure、GCP、腾讯云与 Hetzner 支持 Debian 12/13 并可选 AMD/ARM，默认 `d12`/`amd64`；Vultr、DigitalOcean 与 Linode 当前只提供 AMD 实例选择。
+各模板的变量并不完全相同。阿里云模板支持完整的多发行版矩阵，默认 `u26`；AWS 全球、Azure、GCP、腾讯云与 Hetzner 支持 Debian 12/13 并可选 AMD/ARM，默认 `d12`/`amd64`；Vultr 与 Linode 支持 Debian 12/13（默认 `d12`）且当前只提供 AMD 实例选择；DigitalOcean 已下线 Debian 12 镜像，默认且仅支持 `d13`（Debian 13）与 AMD 实例。
 
 ### 架构与发行版
 
@@ -156,7 +156,7 @@ variable "architecture" {
 variable "distro" {
   description = "发行版代码（具体集合由模板决定）"
   type        = string
-  default     = "d12"       # 全球云模板通常默认 Debian 12；阿里云模板默认 u26
+  default     = "d12"       # 多数全球云模板默认 d12；DigitalOcean 仅支持且默认 d13；阿里云默认 u26
 }
 ```
 
@@ -192,7 +192,7 @@ export ALICLOUD_REGION="cn-shanghai"
 
 以下是阿里云中常用的 [**ECS 公共操作系统镜像**](https://help.aliyun.com/zh/ecs/user-guide/public-mirroring-overview) 前缀：
 
-当前推荐并验证的上游基线为 Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.7，以及 Ubuntu 22.04.5 / 24.04.5 / 26.04.1。阿里云公共镜像目录目前仍使用 Debian 13.6，因此 `d13` 的镜像前缀暂保留 `debian_13_6_*`。
+当前推荐并验证的上游基线为 Rocky Linux 9.8 / 10.2、Debian 12.15 / 13.7，以及 Ubuntu 22.04.5 / 24.04.5 / 26.04.1，阿里云公共镜像已与该基线对齐（如 `debian_13_7_x64_20G_alibase_20261019.vhd` / `arm64`）。
 
 | 发行版                   | 代码     | x86_64 镜像前缀                       | aarch64 镜像前缀                        |
 |-----------------------|--------|-----------------------------------|-------------------------------------|
@@ -202,7 +202,7 @@ export ALICLOUD_REGION="cn-shanghai"
 | Rocky 10.2            | `el10` | `rockylinux_10_2_x64`             | `rockylinux_10_2_arm64`             |
 | Debian 11.11          | `d11`  | `debian_11_11_x64`                | -                                   |
 | Debian 12.15          | `d12`  | `debian_12_15_x64`                | `debian_12_15_arm64`                |
-| Debian 13.6           | `d13`  | `debian_13_6_x64`                 | `debian_13_6_arm64`                 |
+| Debian 13.7           | `d13`  | `debian_13_7_x64`                 | `debian_13_7_arm64`                 |
 | Ubuntu 22.04.5 LTS    | `u22`  | `ubuntu_22_04_x64_20G`            | `ubuntu_22_04_arm64_20G`            |
 | Ubuntu 24.04.5 LTS    | `u24`  | `ubuntu_24_04_x64_20G`            | `ubuntu_24_04_arm64_20G`            |
 | Ubuntu 26.04.1 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
@@ -296,24 +296,27 @@ GCP 模板还要求提供 `project` 变量，例如 `tofu apply -var="project=my
 
 ## 快捷命令
 
-Pigsty 提供默认使用 OpenTofu 的 Makefile 快捷命令；如需 Terraform，显式设置 `IAC_CLI=terraform`。
+Pigsty 提供默认使用 OpenTofu（`IAC_CLI ?= tofu`）的 Makefile 快捷命令与模板校验脚本；如需 Terraform，显式设置 `IAC_CLI=terraform`。
 
 ```bash
 cd ~/pigsty/terraform
 
-make init       # tofu init
-make validate   # tofu validate
-make plan       # tofu plan
-make u          # 交互式 tofu apply + 运行旧式 ./ssh（仅兼容模板）
-make d          # 交互式 tofu destroy
-make apply      # 交互式 tofu apply
-make destroy    # 交互式 tofu destroy
-make out        # tofu output
-make ssh        # 运行 ssh 脚本配置 SSH 访问
-make r          # 重置 terraform.tf 到版本库状态
+make init          # tofu init
+make validate      # tofu validate
+make plan          # tofu plan
+make up            # 交互式 tofu apply + 运行旧式 ./ssh（别名 make u，仅兼容模板）
+make up-auto       # 免确认 tofu apply -auto-approve + 运行旧式 ./ssh（仅兼容模板）
+make apply         # 交互式 tofu apply
+make apply-auto    # 免确认 tofu apply -auto-approve
+make destroy       # 交互式 tofu destroy（别名 make d）
+make destroy-auto  # 免确认 tofu destroy -auto-approve
+make out           # tofu output
+make ssh           # 运行 ./ssh 脚本配置 SSH 访问
+make reset         # 重置 terraform.tf 到版本库状态（别名 make r）
+./check validate   # 在隔离临时目录中批量校验 terraform.tf 与全部 spec/*.tf（等价于 ./check）
 ```
 
-对于带有 `ssh_command`、私网 IP 或其他非 IP 输出的现代模板，请直接运行 `tofu apply`，不要使用会随后调用旧式 `./ssh` 的 `make u`。只有名称明确的 `up-auto`、`apply-auto` 与 `destroy-auto` 目标才会跳过交互确认。
+对于带有 `ssh_command`、私网 IP 或其他非 IP 输出的现代模板（例如升级至 `vultr_vpc` 资源的 `vultr.tf`），请直接运行 `tofu apply` 或 `make apply`，不要使用会随后调用旧式 `./ssh` 的 `make up` / `make u`。只有名称明确的 `up-auto`、`apply-auto` 与 `destroy-auto` 目标才会跳过交互确认。
 
 
 ----------------

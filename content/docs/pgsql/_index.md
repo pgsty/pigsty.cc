@@ -1,7 +1,7 @@
 ---
 title: 模块：PGSQL
 weight: 1000
-description: 使用 Pigsty v4.5 声明、部署、接入、监控、备份与管理 PostgreSQL 集群。
+description: 使用 Pigsty v4.6 声明、部署、接入、监控、备份与管理 PostgreSQL 集群。
 icon: fab fa-postgresql
 module: [PGSQL]
 categories: [参考]
@@ -10,7 +10,7 @@ feedback: false
 
 PGSQL 是 Pigsty 的核心模块：通过 Ansible 清单声明 PostgreSQL 集群，以 Patroni 与 etcd 提供高可用编排，以 pgBackRest 提供备份/PITR，并通过 HAProxy、VIP、DNS、PgBouncer 与完整可观测性栈提供数据库服务。
 
-本页按 Pigsty v4.5.0 源码组织入口。具体默认值只在 [参数参考](/docs/pgsql/param/) 中维护，避免在模块首页复制一份会漂移的参数快照。
+本页按 Pigsty v4.6.0 源码组织入口。具体默认值只在 [参数参考](/docs/pgsql/param/) 中维护，避免在模块首页复制一份会漂移的参数快照。
 
 
 ----------------
@@ -76,7 +76,7 @@ PGSQL 是 Pigsty 的核心模块：通过 Ansible 清单声明 PostgreSQL 集群
 
 ## 参数组
 
-[PGSQL 参数参考](/docs/pgsql/param/) 是 v4.5.0 默认值与语义的唯一文档入口：
+[PGSQL 参数参考](/docs/pgsql/param/) 是 v4.6.0 默认值与语义的唯一文档入口：
 
 - `PG_ID`：集群/实例身份。
 - `PG_BUSINESS`：用户、数据库、服务等业务对象。

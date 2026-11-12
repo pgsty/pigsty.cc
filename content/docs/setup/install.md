@@ -147,19 +147,19 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
 
-上面的命令保留 `v4.5.0` 发布包的路径。当前开发源码还支持模板简写：`./configure -c full` 选择 `conf/ha/full.yml`，
+`./configure -c` 支持相对路径与模板简写：例如 `./configure -c full` 选择 `conf/ha/full.yml`，
 `-c ivory` 与 `-c fork/ivory` 均选择 `conf/fork/ivory.yml`。
-裸名称按 `conf/ → ha/ → fork/ → app/ → demo/ → build/` 查找，所有子目录均位于 `conf/` 下；
+裸名称按 `conf/ → ha/ → fork/ → app/ → demo/ → build/` 顺序查找（所有子目录均位于 `conf/` 下），
 首个匹配生效，显式目录路径不回退。详见 [**模板查找规则**](/docs/concept/iac/configure#配置模板)。
 
-下面展示的是当前 `main` 分支（{{< param version >}}）的输出；若安装其他版本，首行会显示对应版本号。
+下面展示的是 `v4.6.0`（`{{< param version >}}`）的运行输出；若安装其他版本，首行会显示对应版本号。
 
-{{< eg num="1" id="configure-output" caption="当前 main 分支的 configure 样例输出" >}}
+{{< eg num="1" id="configure-output" caption="configure 样例输出" >}}
 
-> [!DETAILS]- 当前 main 分支的 configure 样例输出
+> [!DETAILS]- configure 样例输出
 > ```console {title="configure output" copy="command" collapse=12 label="configure 样例输出"}
 > vagrant@meta:~/pigsty$ ./configure
-> configure pigsty v4.5.0 begin
+> configure pigsty v4.6.0 begin
 > [ OK ] region = china
 > [ OK ] kernel  = Linux
 > [ OK ] machine = x86_64
@@ -189,7 +189,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
   {{< /field >}}
 
   {{< field name="-c | --conf" type="string" >}}
-  指定 [**配置模板**](/docs/conf/)，可用 `ha/full` 这样的相对路径；当前开发源码也接受 `full` 简写、`conf/` 前缀和 `.yml` 后缀。
+  指定 [**配置模板**](/docs/conf/)，既可使用 `ha/full` 这样的相对路径，也支持 `full` 简写、`conf/` 前缀和 `.yml` 后缀。
   {{< /field >}}
 
   {{< field name="-v | --version" type="integer" >}}

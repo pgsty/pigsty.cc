@@ -7,7 +7,7 @@ categories: [任务]
 aliases: [/docs/pgsql/tutorial/example/]
 ---
 
-本教程在 Pigsty v4.5.0 的四节点沙箱中演练 PostgreSQL 时间点恢复。核心路径使用 [`pgsql-pitr.yml`](/docs/pgsql/backup/restore/) 的 `down → pitr → up` 三阶段，让操作者在覆盖数据、提升时间线和重建 HA 之前分别停下来验证。
+本教程在 Pigsty v4.6.0 的四节点沙箱中演练 PostgreSQL 时间点恢复。核心路径使用 [`pgsql-pitr.yml`](/docs/pgsql/backup/restore/) 的 `down → pitr → up` 三阶段，让操作者在覆盖数据、提升时间线和重建 HA 之前分别停下来验证。对于 `ivory`（IvorySQL）与 `agens`（AgensGraph）内核分支，剧本渲染的 `/pg/conf/pitr.conf` 也会按 `pg_mode` 自动补齐 `pg-version-force`、`archive-header-check=n` 等兼容项。
 
 如果只恢复当前节点，可使用 [`pig pitr`](/docs/pig/pitr/)；如果需要直接控制 pgBackRest，可参考 [`pg-pitr` 低层工具](/docs/pgsql/tutorial/pg-fork/#pg-pitr)。
 

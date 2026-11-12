@@ -205,9 +205,9 @@ pg_users:
 **保护机制**：Ansible 任务会跳过 `postgres` 以及清单中配置的复制、管理和监控用户。直接运行 `pg-drop-role` 时，脚本只硬编码保护默认名称 `postgres`、`replicator`、`dbuser_dba`、`dbuser_monitor`；如果改过系统用户名，直接脚本不会自动识别它们，必须额外谨慎。
 
 > [!WARNING] 依赖感知，但不是事务性删除
-> `pg-drop-role` 会在 `REASSIGN OWNED` 失败时跳过对应数据库的 `DROP OWNED`，但整个跨数据库流程不是一个事务；中途失败可能留下 `NOLOGIN`、已转移的部分对象或残余依赖。v4.5 的 Ansible 删除任务还使用 `ignore_errors`，因此剧本最终状态不能代替核验。执行后必须确认角色已消失、继任所有权正确、应用已切换，并检查审计日志。
+> `pg-drop-role` 会在 `REASSIGN OWNED` 失败时跳过对应数据库的 `DROP OWNED`，但整个跨数据库流程不是一个事务；中途失败可能留下 `NOLOGIN`、已转移的部分对象或残余依赖。Ansible 删除任务还使用 `ignore_errors`，因此剧本最终状态不能代替核验。执行后必须确认角色已消失、继任所有权正确、应用已切换，并检查审计日志。
 
-v4.5 的 `pgsql-user.yml` 会重载 Pgbouncer，但不会可靠地从 `/etc/pgbouncer/userlist.txt` 清除已删除角色。删除后应在每个集群实例检查：
+当前实现的 `pgsql-user.yml` 会重载 Pgbouncer，但不会可靠地从 `/etc/pgbouncer/userlist.txt` 清除已删除角色。删除后应在每个集群实例检查：
 
 ```bash
 sudo -iu postgres psql -AXtwc "SELECT 1 FROM pg_roles WHERE rolname = 'dbuser_old';"
@@ -406,7 +406,7 @@ sudo -iu postgres psql -d postgres
 复制密码在数据库角色与所有 Patroni 节点之间不一致时，新建复制连接会失败，因此应安排维护窗口并快速完成验证。若部署了 VIBE 等会把管理员连接串写入工作区上下文的模块，还应按模块文档重新渲染对应文件。
 
 > [!WARNING] 检查 Infra .pgpass 重复项
-> v4.5 的 `env_pgpass` 使用 `lineinfile` 添加新记录，不会按用户名自动删除旧密码；libpq 又采用第一条匹配记录。刷新后应在每个目标 Infra 节点检查每个系统用户名是否只有一条匹配记录，并通过受控编辑删掉旧项（不要把密码打印到终端或日志）：
+> 当前实现的 `env_pgpass` 使用 `lineinfile` 添加新记录，不会按用户名自动删除旧密码；libpq 又采用第一条匹配记录。刷新后应在每个目标 Infra 节点检查每个系统用户名是否只有一条匹配记录，并通过受控编辑删掉旧项（不要把密码打印到终端或日志）：
 >
 > ```bash
 > awk -F: '$4=="dbuser_dba" || $4=="dbuser_monitor" || $4=="replicator" {print NR, $4}' ~/.pgpass

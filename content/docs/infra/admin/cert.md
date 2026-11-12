@@ -30,10 +30,11 @@ files/pki/
 ├── minio/                    # MINIO 模块（Silo）证书
 ├── mysql/
 ├── nginx/
-└── pgsql/
+├── pgsql/
+└── vault/                    # VAULT 模块（OpenBao）证书（0700）
 ```
 
-核心默认值与 v4.5.0 角色一致：
+核心参数默认值如下：
 
 | 参数                    | 默认值         | 含义                       |
 |:----------------------|:------------|:-------------------------|
@@ -150,7 +151,9 @@ openssl x509 -in files/pki/misc/myservice.crt -noout -subject -issuer -dates -ex
 openssl verify -CAfile files/pki/ca/ca.crt files/pki/misc/myservice.crt
 ```
 
-PostgreSQL 客户端证书的 `cn` 必须与 HBA/cert 认证预期的数据库角色一致。将证书、私钥与根证书安装到客户端时，私钥应为 `0600`，且连接串使用 `sslmode=verify-full` 时，目标主机名必须出现在服务器证书 SAN 中。
+PostgreSQL 客户端证书的 `cn` 必须与 HBA/cert 认证预期的数据库角色一致。将证书、私钥与根证书安装到客户端时，私钥应为 `0600`，且连接串使用 `sslmode=verify-full` 时，目标主机名或 IP 必须出现在服务器证书 SAN 中。
+
+PostgreSQL 服务端证书（`files/pki/pgsql/<cls>-<seq>.crt`）在首次签发时自动将 `localhost`、`<pg_cluster>`、`<pg_cluster>-<pg_seq>`、`<pg_cluster><pg_dns_suffix>`、实例 IP、集群 VIP（`pg_vip_address`）及节点 VIP（`vip_address`）写入 SAN；Nginx 自签名证书（`files/pki/nginx/pigsty.crt`）则自动将 `i.pigsty`、`localhost`、`infra_portal` 中的全部 `domain` 与 `domains`、全部 `infra` 节点 IP 以及开启 `vip_enabled` 的节点 `vip_address` 写入 SAN。由于证书任务默认在控制机已有同名 `.crt` 时跳过重签，集群初始化后若新增或变更域名、VIP，需先在管理节点移除对应旧证书文件（如 `files/pki/nginx/pigsty.{key,crt}` 或 `files/pki/pgsql/<cls>-<seq>.{key,crt}`），再重新执行 `./infra.yml -l infra -t nginx_cert,nginx_reload` 或 `./pgsql.yml -l <cls> -t pg_cert` 并重载服务。
 
 --------
 
@@ -191,9 +194,9 @@ Infra Nginx 默认可在 `http://<infra_ip>/ca.crt` 提供公开 CA 证书。下
 
 ## Nginx 与 Let's Encrypt
 
-每个 `infra_portal` 条目都可以指定 `certbot` 证书名称。Pigsty 的 `/etc/nginx/sign-cert` 使用 Certbot `webroot` 模式，聚合同一证书名下的 `domain` 与 `domains`，签发后由 `/etc/nginx/link-cert` 将证书链接到 Nginx。
+每个 `infra_portal` 条目都可以指定 `certbot` 证书名称。Pigsty 的 `/etc/nginx/sign-cert` 使用 Certbot `webroot` 模式，聚合同一证书名下的 `domain` 与 `domains`，签发后调用 `/etc/nginx/link-cert` 链接证书并执行 `nginx -t` 配置校验。
 
-`sign-cert` 对已有证书使用 `--expand`，移除旧别名时需要另外核对证书的域名集合；`link-cert` 只按私钥文件是否存在选择 Certbot 证书，不会自动验证证书有效期与主机名。部署后应检查实际证书的 SAN 和有效期。
+`sign-cert` 对已有证书使用 `--renew-with-new-domains` 精确对齐当前配置的域名集合；`link-cert` 会依次检查 `fullchain.pem` 与 `privkey.pem` 非空、`openssl x509 -checkend 0` 未过期，以及 `openssl x509 -checkhost` 匹配门户主域名 `domain`，任一检查未通过时自动回退链接到自签名证书 `/etc/nginx/conf.d/cert/pigsty.{crt,key}`。部署后仍建议核对实际证书的完整 SAN 列表和有效期。
 
 前置条件：
 
@@ -226,7 +229,7 @@ dig +short example.com
 ```
 
 > [!WARNING] 必须单独验证签发结果
-> v4.5.0 的 `nginx_certbot` 任务设置了 `ignore_errors: true`。Playbook 继续执行或总体成功不代表证书已签发；必须检查 Certbot 状态、证书文件、Nginx 配置和真实 TLS 握手。
+> `nginx_certbot` 任务设置了 `ignore_errors: true`。Playbook 继续执行或总体成功不代表证书已签发；必须检查 Certbot 状态、证书文件、Nginx 配置和真实 TLS 握手。
 
 ```bash
 certbot certificates
@@ -242,7 +245,7 @@ systemctl list-timers --all | grep -i certbot
 certbot renew --dry-run
 ```
 
-仅更新证书文件不会让 Nginx 自动加载新证书。应检查续期 Hook 是否会在签发成功后执行 `nginx -t && systemctl reload nginx.service`；尚未配置时，将该步骤补入现有 Certbot 续期任务。2026-09-01 起的开发源码会在 `nginx_config` 阶段写入 `/etc/letsencrypt/renewal-hooks/deploy/10-reload-nginx` 执行该检查与重载；`v4.5.0` 发布包不包含此 Hook。
+仅更新证书文件不会让 Nginx 自动加载新证书。Pigsty 在 `nginx_config` 阶段会自动写入续期部署钩子 `/etc/letsencrypt/renewal-hooks/deploy/10-reload-nginx`（模板源文件 `roles/infra/templates/nginx/certbot-deploy-hook`），在 Certbot 续期成功后自动执行 `/etc/nginx/link-cert`、`nginx -t` 与 `systemctl reload nginx.service`。若自定义了外部续期机制，请确认该钩子目录生效或等价执行上述三步。
 
 --------
 

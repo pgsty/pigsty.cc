@@ -40,7 +40,7 @@ Pigsty 的默认凭据公开记录在源码和文档中，不能直接用于生�
 ## Grafana 访问控制
 
 修改管理员密码不会关闭匿名访问。默认情况下，匿名用户仍可使用 `Viewer` 角色访问 Grafana。
-如需登录后才能查看监控，请将 [`grafana_anon_enabled`](/docs/infra/param#grafana_anon_enabled) 设置为 `false`，并按 [**管理预案**](/docs/infra/admin/sop/#管理-grafana-匿名访问) 重新渲染配置、重启 Grafana。
+如需登录后才能查看监控，请按 [**管理预案**](/docs/infra/admin/sop/#管理-grafana-匿名访问) 修改 `/etc/grafana/grafana.ini` 中的 `[auth.anonymous]` 配置并重启 `grafana-server`（注意重新执行 `grafana_config` 标签会按模板覆盖该文件）。
 
 Nginx 首页配置中的 `auth: true` 不会为 `/ui/` 路径启用 Basic Auth，该路径使用 Grafana 自己的认证。
 Grafana 的开关也不保护 VictoriaMetrics、VictoriaLogs 等其他端点，仍需单独限制其访问。
@@ -73,6 +73,7 @@ Grafana 的开关也不保护 VictoriaMetrics、VictoriaLogs 等其他端点，�
 
 - `pigsty.yml`：系统与业务凭据、节点和服务配置；
 - `files/pki/ca/ca.key`：本地 CA 私钥；
+- `files/pki/vault/`：OpenBao（VAULT 模块）初始化材料、解封密钥与恢复快照（启用 VAULT 时）；
 - 管理用户 SSH 私钥：用于访问纳管节点；
 - `files/pki/misc/*.key`：客户端证书私钥；
 - `/pg/tmp/pg-user-*.sql`：用户创建过程中生成的明文口令 SQL。

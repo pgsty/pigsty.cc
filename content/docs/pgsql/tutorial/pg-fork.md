@@ -8,7 +8,7 @@ categories: [任务]
 aliases: [/docs/pgsql/tutorial/instance/]
 ---
 
-Pigsty v4.5.0 提供两个本机 Shell 工具：
+Pigsty v4.6.0 提供两个本机 Shell 工具：
 
 - [`pg-fork`](#pg-fork)：复制一个 PostgreSQL 数据目录，并为副本设置独立端口。
 - [`pg-pitr`](#pg-pitr)：调用 pgBackRest，将一个 **已停止** 的数据目录恢复到指定目标。
@@ -61,7 +61,7 @@ pg-fork <FORK_ID> [options]
 
 如果无法通过指定端口连接源实例，脚本会 **自动降级为冷拷贝**，而不是中止。`-s` 也会强制冷拷贝。只有确认源实例已经完全停止时，冷拷贝才是安全的；`postmaster.pid` 只能作为警告线索，不能证明进程状态。
 
-同一文件系统上，脚本会将以下文件系统识别为快速 CoW 模式：启用 reflink 的 XFS、Btrfs、Bcachefs 和 OCFS2。其他文件系统或跨文件系统目标仍执行 `cp --reflink=auto`，但可能退化为完整复制。脚本帮助中的 ZFS 描述比当前探测逻辑更宽；v4.5.0 实现不会把 ZFS 标记为已确认的快速 CoW 模式。
+同一文件系统上，脚本会将以下文件系统识别为快速 CoW 模式：启用 reflink 的 XFS、Btrfs、Bcachefs 和 OCFS2。其他文件系统或跨文件系统目标仍执行 `cp --reflink=auto`，但可能退化为完整复制。脚本帮助中的 ZFS 描述比当前探测逻辑更宽；当前实现不会把 ZFS 标记为已确认的快速 CoW 模式。
 
 ### 副本配置
 

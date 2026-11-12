@@ -14,7 +14,7 @@ categories: [参考]
 
 ## 监控面板
 
-当前 [`files/grafana/infra`](https://github.com/pgsty/pigsty/tree/main/files/grafana/infra) 包含 **11 个** 监控面板；下表还列出根目录的 **Pigsty Home**。全站仪表盘与规则统计见 [**监控体系**](/docs/concept/monitor/)，指标入口与标签见 [**指标列表**](/docs/infra/metric/)。
+当前 [`files/grafana/infra`](https://github.com/pgsty/pigsty/tree/main/files/grafana/infra) 包含 **12 个** 监控面板；下表还列出根目录的 **Pigsty Home**。全站仪表盘与规则统计见 [**监控体系**](/docs/concept/monitor/)，指标入口与标签见 [**指标列表**](/docs/infra/metric/)。
 
 | 面板 | 描述 |
 |:-----|:-----|
@@ -30,6 +30,7 @@ categories: [参考]
 | [VictoriaTraces Instance](https://demo.pigsty.cc/d/vtraces-instance) | Trace 存储与查询 |
 | [Inventory CMDB](https://demo.pigsty.cc/d/inventory-cmdb) | CMDB 可视化 |
 | [ETCD Overview](https://demo.pigsty.cc/d/etcd-overview) | etcd 集群监控 |
+| [Vault Overview](https://demo.pigsty.cc/d/vault-overview) | Vault（OpenBao）密钥服务集群监控 |
 {.full-width .wide .expand}
 
 

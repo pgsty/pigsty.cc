@@ -467,6 +467,8 @@ pg_monitor_username: dbuser_monitor    # 监控用户名
 pg_monitor_password: DBUser.Monitor    # 监控密码
 ```
 
+在 Infra 节点上部署的远程 `pg_exporter_<cls>-<seq>.service` 实例统一以系统用户 `prometheus:prometheus` 运行（无需在 Infra 节点创建 `postgres` 用户），连接凭据写入 `/etc/default/pg_exporter_<cls>-<seq>`（权限 `0600`），采集器配置渲染至 `/etc/pg_exporter/pg_exporter_<cls>-<seq>.yml`（属主 `prometheus:infra`，权限 `0644`）。
+
 **远程数据库配置**
 
 远程 PostgreSQL 实例需要创建监控用户：

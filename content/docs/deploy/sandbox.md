@@ -47,7 +47,7 @@ all:
       vars: { pg_cluster: pg-test }
 
   vars:
-    version: v4.5.0
+    version: v4.6.0
     admin_ip: 10.10.10.10
     region: default
     pg_version: 18
@@ -134,7 +134,7 @@ tofu apply
 
 更多详情请参考 [**OpenTofu**](/docs/deploy/terraform/) 文档。
 
-以上直接使用 OpenTofu CLI。使用 `make` 与 `./ssh` 前，应检查辅助脚本实际调用的是 `tofu` 还是 `terraform`，详见 [**OpenTofu 快速开始**](/docs/deploy/terraform/#快速开始)。
+以上直接使用 OpenTofu CLI。仓库中的 `Makefile`、`./ssh` 与 `./check` 辅助脚本默认同样使用 `IAC_CLI=tofu`（如需使用 Terraform 可设置 `IAC_CLI=terraform`），详见 [**OpenTofu 快速开始**](/docs/deploy/terraform/#快速开始)。
 
 
 
