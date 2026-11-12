@@ -37,7 +37,7 @@ weight: 9010
 
 | **相关扩展** | [`mongo_fdw`](/ext/e/mongo_fdw) [`pg_projection`](/ext/e/pg_projection) [`pgbson`](/ext/e/pgbson) [`jsquery`](/ext/e/jsquery) [`pgjq`](/ext/e/pgjq) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsonschema`](/ext/e/jsonschema) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`documentdb`](/ext/e/documentdb) `documentdb_distributed` |
+| **下游依赖** | [`documentdb`](/ext/e/documentdb) |
 {.ext-table .ext-table--rel}
 
 

@@ -5,7 +5,7 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **135** 个扩展依赖其他扩展，**80** 个扩展被其他扩展所依赖。
+共有 **135** 个扩展依赖其他扩展，**79** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
@@ -152,7 +152,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **80** 个扩展被其他扩展所依赖：
+以下 **79** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -168,7 +168,6 @@ weight: 30
 | [`qdgc`](/ext/e/qdgc) | [`qdgc_postgis`](/ext/e/qdgc_postgis) | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
 | [`vector`](/ext/e/vector) | [`documentdb`](/ext/e/documentdb) [`pg_lion_vector`](/ext/e/pg_lion_vector) [`pg_search`](/ext/e/pg_search) [`pgmnemo`](/ext/e/pgmnemo) [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | 确定字符串之间的相似性和距离 |
-| [`citus`](/ext/e/citus) | `documentdb_distributed` | 将 PostgreSQL 横向扩展为分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_partman`](/ext/e/pg_partman) | [`timeseries`](/ext/e/timeseries) | 用于按时间或 ID 管理分区表的扩展 |
 | [`pg_extension_base`](/ext/e/pg_extension_base) | [`pg_extension_updater`](/ext/e/pg_extension_updater) [`pg_lake_engine`](/ext/e/pg_lake_engine) | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
@@ -230,8 +229,8 @@ weight: 30
 | [`dblink`](/ext/e/dblink) | [`emaj`](/ext/e/emaj) [`mimeo`](/ext/e/mimeo) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) [`omni_vfs`](/ext/e/omni_vfs) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_profile`](/ext/e/pg_profile) [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) [`pgelog`](/ext/e/pgelog) | 从数据库内连接到其他 PostgreSQL 数据库 |
 | [`file_fdw`](/ext/e/file_fdw) | [`pg_sqlog`](/ext/e/pg_sqlog) | 访问外部文件的外部数据包装器 |
 | [`postgres_fdw`](/ext/e/postgres_fdw) | [`omni_schema`](/ext/e/omni_schema) | 用于远程 PostgreSQL 服务器的外部数据包装器 |
-| [`documentdb`](/ext/e/documentdb) | `documentdb_distributed` [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | 微软DocumentDB的API层 |
-| [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](/ext/e/documentdb) `documentdb_distributed` | 微软DocumentDB的核心API层实现 |
+| [`documentdb`](/ext/e/documentdb) | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | 微软DocumentDB的API层 |
+| [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](/ext/e/documentdb) | 微软DocumentDB的核心API层实现 |
 | [`ivorysql_ora`](/ext/e/ivorysql_ora) | [`ora_btree_gin`](/ext/e/ora_btree_gin) [`ora_btree_gist`](/ext/e/ora_btree_gist) | Oracle 兼容扩展 |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |

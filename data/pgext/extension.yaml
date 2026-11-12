@@ -1,6 +1,6 @@
 # 首页扩展索引：由 bin/gen-pgext.py 从 pgext/db/universe.csv 生成。
-# 生成日期 2026-11-10 · 共 2733 个扩展，其中 626 个已打包。
-# universe.csv SHA-256: 31085678e2fe4f282b95a365fdc86f5c561d448e9eae6c2aae9624cc5a6a53db
+# 生成日期 2026-11-13 · 共 2740 个扩展，其中 625 个已打包。
+# universe.csv SHA-256: 356b8920ff17c6bc6733a5c1715f521da429de8a273e3b84a76d50b9b068d69f
 # stars 为目录采集值，并非生成时对所有上游仓库重新抓取。
 - {name: "timescaledb", cat: TIME, pkg: true, stars: 23829, desc: "时序数据库扩展插件"}
 - {name: "pg_cron", cat: TIME, pkg: true, stars: 3918, desc: "定时任务调度器"}
@@ -80,8 +80,8 @@
 - {name: "timetravel", cat: TIME, pkg: false, stars: 0, desc: "腾讯云 PostgreSQL 提供的 timetravel 扩展，1.0 版本仅支持 PostgreSQL 10 和 11。"}
 - {name: "pg_lake_spatial", cat: GIS, pkg: false, stars: 1670, desc: "通过 PostGIS 与基于 GDAL 的流程为 pg_lake 增加地理空间文件格式和空间函数支持。"}
 - {name: "pgrouting", cat: GIS, pkg: true, stars: 1447, desc: "提供寻路能力"}
-- {name: "mobilitydb", cat: GIS, pkg: true, stars: 632, desc: "MobilityDB 地理空间轨迹数据管理与分析平台"}
-- {name: "mobilitydb_datagen", cat: GIS, pkg: true, stars: 632, desc: "MobilityDB随机数据生成函数"}
+- {name: "mobilitydb", cat: GIS, pkg: true, stars: 634, desc: "MobilityDB 地理空间轨迹数据管理与分析平台"}
+- {name: "mobilitydb_datagen", cat: GIS, pkg: true, stars: 634, desc: "MobilityDB随机数据生成函数"}
 - {name: "pointcloud", cat: GIS, pkg: true, stars: 429, desc: "提供激光雷达点云数据类型支持"}
 - {name: "pointcloud_postgis", cat: GIS, pkg: true, stars: 429, desc: "将激光雷达点云与PostGIS几何类型相集成"}
 - {name: "h3", cat: GIS, pkg: true, stars: 387, desc: "H3六边形层级索引支持"}
@@ -163,6 +163,7 @@
 - {name: "pg_solid", cat: GIS, pkg: false, stars: 1, desc: "基于 OpenCASCADE 的三维实体几何与 CAD／BIM 操作。"}
 - {name: "pg_twkb", cat: GIS, pkg: false, stars: 1, desc: "pg_twkb：地理空间类 PostgreSQL 扩展；上游说明为“TWKB tools etc”。"}
 - {name: "postgis_domains", cat: GIS, pkg: false, stars: 1, desc: "定义可复用的 PostGIS geometry/geography 域，约束为有效、简单的 SRID 4326 值"}
+- {name: "raster_h3", cat: GIS, pkg: false, stars: 1, desc: "通过原生 PostgreSQL 函数将地理栅格聚合为 H3 单元。"}
 - {name: "triangle_array", cat: GIS, pkg: false, stars: 1, desc: "使用紧凑点数组与三角形数组表示不规则三角网（TIN）的 PostgreSQL 原型扩展。"}
 - {name: "addressql", cat: GIS, pkg: false, stars: 0, desc: "返回结构化 JSONB 的地址与邮政元数据函数"}
 - {name: "astrocat", cat: GIS, pkg: false, stars: 0, desc: "用于天文星表索引的 PostgreSQL 扩展，提供球面点和圆类型、GiST 索引、径向查询与 KNN 排序。"}
@@ -376,6 +377,8 @@
 - {name: "rds_ai", cat: RAG, pkg: false, stars: 0, desc: "阿里云 RDS 扩展，可在 SQL 中调用大模型、生成嵌入、执行语义检索和端到端 RAG"}
 - {name: "rds_embedding", cat: RAG, pkg: false, stars: 0, desc: "阿里云 RDS 文本向量生成与模型调用扩展"}
 - {name: "tencentdb_ai", cat: RAG, pkg: false, stars: 0, desc: "腾讯云数据库扩展，用于调用大模型 API 并构建数据库内 RAG 工作流。"}
+- {name: "trigpoint", cat: RAG, pkg: false, stars: 0, desc: "使用向量草图与校准距离剪枝的向量索引。"}
+- {name: "tsfm", cat: RAG, pkg: false, stars: 0, desc: "使用 Chronos-2 与 Timestral 模型进行本地时间序列预测。"}
 - {name: "tsearch2", cat: FTS, pkg: false, stars: 22748, desc: "Amazon RDS PostgreSQL 10 中已弃用的兼容扩展，为仍使用 8.3 之前 tsearch2 全文检索 API 的应用提供迁移过渡。"}
 - {name: "pg_search", cat: FTS, pkg: true, stars: 9497, desc: "使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展"}
 - {name: "zombodb", cat: FTS, pkg: false, stars: 4716, desc: "将 PostgreSQL 与 Elasticsearch 集成，提供 Elasticsearch 支撑的全文检索与索引能力。"}
@@ -694,6 +697,7 @@
 - {name: "basejump-supabase_test_helpers", cat: FEAT, pkg: false, stars: 133, desc: "一组用于更方便测试 Supabase 项目的 pgTAP 辅助函数。"}
 - {name: "graph_accel", cat: FEAT, pkg: false, stars: 131, desc: "graph_accel：面向 Apache AGE 的内存图遍历加速扩展。"}
 - {name: "pg_plan_advsr", cat: FEAT, pkg: false, stars: 121, desc: "pg_plan_advsr：功能增强类 PostgreSQL 扩展；上游说明为“Automated execution plan tuning extension”。"}
+- {name: "traceheap", cat: FEAT, pkg: false, stars: 109, desc: "提供后端局部回调计数器的教学堆表访问方法。"}
 - {name: "plan_filter", cat: FEAT, pkg: true, stars: 99, desc: "基于计划估算成本的语句与事务负载保护"}
 - {name: "gitgres", cat: FEAT, pkg: false, stars: 95, desc: "在 PostgreSQL 表中存储 Git 对象与引用，并提供 Git 数据查询函数和原生 git_oid 类型。"}
 - {name: "provsql", cat: FEAT, pkg: true, stars: 75, desc: "PostgreSQL 半环溯源、概率与不确定性管理扩展"}
@@ -890,6 +894,7 @@
 - {name: "bedquilt", cat: FEAT, pkg: false, stars: 0, desc: "json对象存储"}
 - {name: "bench_pg_unwind", cat: FEAT, pkg: false, stars: 0, desc: "bench_pg_unwind：实用工具类 PostgreSQL 扩展；上游说明为“Benchmark PostgreSQL/Rust exception unwinding overhead”。"}
 - {name: "bgworker_segfault", cat: FEAT, pkg: false, stars: 0, desc: "bgworker_segfault：最小化 Rust/pgrx 后台工作进程示例，用于复现 max_worker_processes 耗尽时的崩溃问题。"}
+- {name: "blmfl", cat: FEAT, pkg: false, stars: 0, desc: "I-Rex 研究原型使用的实验性布隆过滤器与范围摘要聚合。"}
 - {name: "bloom", cat: FEAT, pkg: true, stars: 0, desc: "bloom 索引-基于指纹的索引"}
 - {name: "bloom_fulon", cat: FEAT, pkg: false, stars: 0, desc: "用于学习目的的 pgrx PostgreSQL 索引访问方法示例。"}
 - {name: "cart_ext", cat: FEAT, pkg: false, stars: 0, desc: "市场原型购物车服务交易标记及监听/通知后台进程"}
@@ -1763,6 +1768,7 @@
 - {name: "range_type_functions", cat: FUNC, pkg: false, stars: 0, desc: "增强范围类型功能的功能"}
 - {name: "refint", cat: FUNC, pkg: true, stars: 0, desc: "实现引用完整性的函数"}
 - {name: "replace_string", cat: FUNC, pkg: false, stars: 0, desc: "基于 Rust/pgrx 的字面字符串替换函数"}
+- {name: "sc_pglib", cat: FUNC, pkg: false, stars: 0, desc: "在 PostgreSQL 中提供 simply-cpp 工具函数、服务器文件与外部服务集成。"}
 - {name: "session_hash_tools", cat: FUNC, pkg: false, stars: 0, desc: "PL/Perl共享哈希存储嵌套哈希函数"}
 - {name: "sha256_agg", cat: FUNC, pkg: false, stars: 0, desc: "按指定行顺序计算 PostgreSQL 逻辑数据的 SHA-256 摘要。"}
 - {name: "spqrhash", cat: FUNC, pkg: false, stars: 0, desc: "PG中的Murmur3和City哈希函数"}
@@ -2585,7 +2591,7 @@
 - {name: "zipfile-fdw", cat: FDW, pkg: false, stars: 0, desc: "ZIP文件访问的外部数据包装器原型"}
 - {name: "documentdb", cat: SIM, pkg: true, stars: 3555, desc: "微软DocumentDB的API层"}
 - {name: "documentdb_core", cat: SIM, pkg: true, stars: 3555, desc: "微软DocumentDB的核心API层实现"}
-- {name: "documentdb_distributed", cat: SIM, pkg: true, stars: 3555, desc: "DocumentDB多节点模式的API层"}
+- {name: "documentdb_distributed", cat: SIM, pkg: false, stars: 3555, desc: "DocumentDB多节点模式的API层"}
 - {name: "documentdb_extended_rum", cat: SIM, pkg: true, stars: 3555, desc: "DocumentDB扩展RUM索引访问方法"}
 - {name: "pg_documentdb_gw_host", cat: SIM, pkg: false, stars: 3555, desc: "通过 PostgreSQL 后台工作进程运行 DocumentDB 协议网关。"}
 - {name: "gb18030_2022", cat: SIM, pkg: true, stars: 1078, desc: "支持 GB18030-2022 与 UTF-8 编码转换"}
@@ -2731,6 +2737,7 @@
 - {name: "rds_hwdrs_ddl", cat: ETL, pkg: false, stars: 0, desc: "华为云 RDS 增量 DDL 同步辅助扩展"}
 - {name: "rds_online_ddl", cat: ETL, pkg: false, stars: 0, desc: "阿里云 RDS 在线修改列类型扩展"}
 - {name: "rds_online_migrate", cat: ETL, pkg: false, stars: 0, desc: "阿里云 RDS 在线表分区迁移扩展"}
+- {name: "snapsync", cat: ETL, pkg: false, stars: 0, desc: "使用事务快照和删除墓碑轮询表变更。"}
 - {name: "synchro_pg", cat: ETL, pkg: false, stars: 0, desc: "基于作用域变更捕获的离线优先同步数据库扩展"}
 - {name: "tencentdb_failover_slot", cat: ETL, pkg: false, stars: 0, desc: "腾讯云数据库专有内核扩展：把逻辑复制槽状态同步到备节点，使逻辑订阅可在主备切换后连续运行。"}
 - {name: "test_decoding", cat: ETL, pkg: true, stars: 0, desc: "基于SQL的WAL逻辑解码样例"}

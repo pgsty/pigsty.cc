@@ -12,7 +12,7 @@ Pigsty 提供了三样基础设施，帮助用户利用 PostgreSQL 扩展生态�
 - [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**16 个 Linux 系统与架构组合**](/ext/os) 上可用
 - [**包管理器**](/docs/pig)：使用 [`pig`](/docs/pig) 命令行工具，屏蔽操作系统与架构差异，一键安装扩展
 
-[**PGEXT.CLOUD 总目录**](https://pgext.cloud/) 共收录 **2622** 个扩展，其中 **600** 个已打包；本节介绍这 600 个扩展的安装与使用。
+[**PGEXT.CLOUD 总目录**](https://pgext.cloud/) 共收录 **2740** 个扩展，其中 **{{< param pgext_count >}}** 个已打包；本节介绍这 {{< param pgext_count >}} 个扩展的安装与使用。
 
 --------
 
