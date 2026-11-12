@@ -69,22 +69,29 @@ psql "host=pg-meta dbname=postgres user=dbuser_dba sslmode=verify-full sslrootce
 
 本地 CA 为下列组件签发证书，构成统一的信任链：
 
-| 组件                                                    | 证书身份（CN）            | 部署路径                              | 加密状态                                                                           |
-|:------------------------------------------------------|:--------------------|:----------------------------------|:-------------------------------------------------------------------------------|
-| [**PostgreSQL**](/docs/concept/arch/pgsql#postgresql) | `<集群>-<序号>`         | `/pg/cert/server.{crt,key}`       | 服务端 SSL 默认启用；是否强制由 HBA 决定                                                      |
-| [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer)   | 复用 PostgreSQL 证书    | `/pg/cert/`                       | TLS 默认关闭（[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)）           |
-| [**Patroni**](/docs/concept/arch/pgsql#patroni)       | 复用 PostgreSQL 证书    | `/pg/cert/`                       | API HTTPS 默认关闭（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)） |
-| [**Etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}`      | 客户端与对等通信使用 TLS                                                                 |
-| [**Silo**](/docs/concept/model/minio)                 | `<节点名>`             | `~minio/.minio/certs/`            | Silo HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                |
-| [**Kafka**](/docs/kafka/)                             | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`        | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                        |
-| [**MySQL**](/docs/mysql/)                       | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                            |
-| [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名） | `/etc/nginx/conf.d/cert/`         | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
-| [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点名>`             | `/etc/pki/infra.{crt,key}`        | 供基础设施组件使用                                                                      |
+| 组件                                                    | 证书身份（CN）            | 部署路径                                | 加密状态                                                                           |
+|:------------------------------------------------------|:--------------------|:------------------------------------|:-------------------------------------------------------------------------------|
+| [**PostgreSQL**](/docs/concept/arch/pgsql#postgresql) | `<集群>-<序号>`         | `/pg/cert/server.{crt,key}`         | 服务端 SSL 默认启用；是否强制由 HBA 决定                                                      |
+| [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer)   | 复用 PostgreSQL 证书    | `/pg/cert/`                         | TLS 默认关闭（[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)）           |
+| [**Patroni**](/docs/concept/arch/pgsql#patroni)       | 复用 PostgreSQL 证书    | `/pg/cert/`                         | API HTTPS 默认关闭（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)） |
+| [**Etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}`        | 客户端与对等通信使用 TLS                                                                 |
+| [**VAULT（OpenBao）**](/docs/vault/)                    | `<实例名>`             | `/etc/openbao/tls/server.{crt,key}` | 强制启用 TLS 1.3；客户端 HTTPS API 与 Raft 对等通信使用 mTLS                                 |
+| [**Silo**](/docs/concept/model/minio)                 | `<节点名>`             | `~minio/.minio/certs/`              | Silo HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                |
+| [**Kafka**](/docs/kafka/)                             | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`          | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                        |
+| [**MySQL**](/docs/mysql/)                             | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}`   | 强制安全传输；客户端与组复制校验证书链                                                            |
+| [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名与节点 IP/VIP） | `/etc/nginx/conf.d/cert/`           | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
+| [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点 IP>`           | `/etc/pki/infra.{crt,key}`          | 供基础设施组件使用                                                                      |
 {.full-width}
+
+关键服务端证书的 **SAN（Subject Alternative Name）** 自动覆盖常见接入入口，便于客户端启用 `verify-full` 主机名校验：
+
+- **PostgreSQL 服务端证书**：包含 `localhost`、`<pg_cluster>`、`<pg_cluster>-<pg_seq>`、`<pg_cluster><pg_dns_suffix>`（当配置了非空 `pg_dns_suffix` 时）、`127.0.0.1`、实例 IP，以及启用时的集群 L2 VIP [`pg_vip_address`](/docs/pgsql/param#pg_vip_address) 与节点 L2 VIP [`vip_address`](/docs/node/param#vip_address)。
+- **VAULT（OpenBao）证书**：部署在 `/etc/openbao/tls/`（含 `ca.crt`、`server.crt`、`server.key`），SAN 包含 `localhost`、`<vault_instance>`、[`vault_domain`](/docs/vault/param#vault_domain)、`127.0.0.1`、实例 IP 与可选节点 VIP。
+- **Nginx 自签名证书**：包含 `i.pigsty`、`infra_portal` 中声明的全部域名、`localhost`，以及所有 `infra` 节点的 IP 与已启用的节点 L2 VIP。
 
 表中的“加密状态”一列如实反映了默认配置的取舍：
 
-- **部署时启用**：PostgreSQL 服务端可以接受 SSL 连接，etcd 的客户端与对等通信使用 TLS。
+- **部署时启用**：PostgreSQL 服务端可以接受 SSL 连接，etcd 的客户端与对等通信使用 TLS，VAULT（OpenBao）的服务端 API 与 Raft 对等通信强制使用 TLS 1.3。
 - **默认加密**：MINIO 模块的对象存储备份流量与 Nginx Web 流量默认启用 HTTPS。
 - **默认关闭，按需启用**：Patroni REST API 与 PgBouncer 的 TLS 默认关闭，证书已经就位，可以通过相应参数开启；[**`ha/safe`**](/docs/conf/safe) 模板中两者均默认开启。
 
@@ -124,9 +131,9 @@ files/pki/ca/ca.crt    # 对应的 CA 证书
 
 ## 密钥保护与轮换
 
-- CA 私钥只存在于管理节点上。它与 `pigsty.yml` 一起构成部署中信任等级最高的资产（参见 [**信任边界**](/docs/concept/sec/level#信任边界)），建议离线备份。
+- CA 私钥只存在于管理节点上。它与 `pigsty.yml` 一起构成部署中信任等级最高的资产（参见 [**信任边界**](/docs/concept/sec/level#信任边界)），建议离线备份。启用 VAULT 模块时，控制机的 `files/pki/vault/`（权限 `0700`）同样存放静态解封密钥 `unseal.key`、初始化根凭据 `init.json`、快照 `backup/` 与服务端私钥，必须与 `files/pki/ca/` 同等级严格保护并离线成套备份。
 - CA 私钥一旦泄露，需要建立新的信任根并重新签发全部组件与客户端证书。执行前应规划新旧 CA 的信任过渡，避免一次性中断所有连接。
-- 组件证书的签发源保存在管理节点的 `files/pki/<component>/`，节点上的证书只是部署副本。仅删除节点上的证书会重新复制原证书，不会触发重新签发。轮换时应更新或删除管理节点上的对应证书源，再执行相关剧本，并按组件要求重载或滚动重启。
+- 组件证书的签发源保存在管理节点的 `files/pki/<component>/`，节点上的证书只是部署副本。仅删除节点上的证书会重新复制原证书，不会触发重新签发。轮换（或变更 VIP / 域名导致 SAN 更新）时应更新或删除管理节点上的对应证书源，再执行相关剧本，并按组件要求重载或滚动重启。
 
 
 ---------------

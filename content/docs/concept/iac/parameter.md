@@ -14,21 +14,26 @@ categories: [概念]
 
 ## 参数列表
 
-按照当前源码与参数参考页对账，Pigsty 的 10 个正式模块共有 **376** 个公开参数，用于精细控制系统的各个方面；完整列表见 [**参考-参数列表**](/docs/ref/param)。原生 MySQL 8.4 试点模块的 13 个公开参数单列，不计入该合计。
+按照 `files/cmdb.sql` 默认参数基线统计，Pigsty 的 12 个模块共有 **399** 个公开配置参数，用于精细控制系统的各个方面；完整列表见 [**参考 - 参数列表**](/docs/ref/param)。
 
 | 模块                               | 参数组 | 参数数 | 说明                                   |
 |:---------------------------------|:---:|:---:|:-------------------------------------|
-| [**PGSQL**](/docs/pgsql/param)   |  9  | 124 | PostgreSQL 高可用集群配置                   |
-| [**INFRA**](/docs/infra/param)   | 10  | 74  | 软件仓库与 Victoria 可观测基础设施               |
-| [**NODE**](/docs/node/param)     | 11  | 74  | 节点初始化、系统调优与运维基线                      |
+| [**PGSQL**](/docs/pgsql/param)   | 10  | 125 | PostgreSQL 高可用集群、备份与 PITR 配置         |
+| [**INFRA**](/docs/infra/param)   | 10  | 73  | 软件仓库与 Victoria 可观测基础设施               |
+| [**NODE**](/docs/node/param)     | 11  | 73  | 节点初始化、系统调优与运维基线                      |
 | [**ETCD**](/docs/etcd/param)     |  2  | 13  | ETCD 集群与移除保护参数                       |
+| [**VAULT**](/docs/vault/param)   |  2  |  8  | OpenBao 密钥管理集群与移除保护参数                |
 | [**MINIO**](/docs/minio/param)   |  2  | 22  | Silo 部署、观测与移除参数                      |
 | [**REDIS**](/docs/redis/param)   |  2  | 22  | Redis/Valkey 部署与移除参数                 |
 | [**DOCKER**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                          |
 | [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                      |
-| [**VIBE**](/docs/vibe/param)     |  1  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
+| [**VIBE**](/docs/vibe/param)     |  6  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
 | [**KAFKA**](/docs/kafka/param)   |  2  | 19  | Kafka 部署参数与移除保护参数                    |
+| [**MYSQL**](/docs/mysql/param)   |  6  | 16  | 原生 MySQL 8.4 部署、备份、监控与移除参数           |
+| **合计**                           | **55** | **399** | `files/cmdb.sql` 默认参数记录总数        |
 {.wide .expand}
+
+> 注：`INFRA` 在 `cmdb.sql` 中将 `INFRA_ID` 与 `INFRA_PACKAGE` 合并记为同一分组（共 9 组），文档拆分为 10 组以便查阅；另 `NODE` 角色在 `defaults/main.yml` 中还包含平台派生参数 `node_tuned_profile_dir`（[**NODE 参数列表**](/docs/node/param) 共列 74 项）。
 
 
 ------
@@ -88,10 +93,13 @@ all:                            # <------- 顶级对象：all
 | [**`PGSQL`**](/docs/pgsql/param#pg_id)    | `pg_cluster`, `pg_seq`, `pg_role`, ...           |
 | [**`NODE`**](/docs/node/param#node_id)    | `nodename`, `node_cluster`                       |
 | [**`ETCD`**](/docs/etcd/param#etcd)       | `etcd_cluster`, `etcd_seq`                       |
+| [**`VAULT`**](/docs/vault/param#vault)    | `vault_cluster`, `vault_seq`                     |
 | [**`MINIO`**](/docs/minio/param#minio)    | `minio_cluster`, `minio_seq`                     |
 | [**`REDIS`**](/docs/redis/param/)         | `redis_cluster`, `redis_node`, `redis_instances` |
+| [**`KAFKA`**](/docs/kafka/param/)         | `kafka_cluster`, `kafka_seq`                     |
+| [**`MYSQL`**](/docs/mysql/param/)         | `mysql_cluster`, `mysql_seq`                     |
 | [**`INFRA`**](/docs/infra/param#infra_id) | `infra_seq`                                      |
 
-例外是 [**`etcd_cluster`**](/docs/etcd/param#etcd_cluster) 仍有默认值 `etcd`。
+例外是运行在固定分组上的 [**`etcd_cluster`**](/docs/etcd/param#etcd_cluster) 与 [**`vault_cluster`**](/docs/vault/param#vault_cluster)，分别提供默认值 `etcd` 与 `vault`（实例序号 `etcd_seq`、`vault_seq` 仍须显式指定）。
 对象存储的 [**`minio_cluster`**](/docs/minio/param#minio_cluster) 已不再提供默认值，必须在每个对象存储集群的变量中显式定义；
 不要放在 `all.vars` 中，否则会把所有主机标记为 MINIO 模块成员。

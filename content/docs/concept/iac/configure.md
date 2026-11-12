@@ -247,16 +247,19 @@ pg_lc_ctype: C.UTF-8
 
 使用 `-g` 参数时，脚本会为以下密码生成 24 位随机字符串：
 
-|           密码参数            | 说明                |
-|:-------------------------:|:------------------|
-| `grafana_admin_password`  | Grafana 管理员密码     |
-|    `pg_admin_password`    | PostgreSQL 管理员密码  |
-|   `pg_monitor_password`   | PostgreSQL 监控用户密码 |
-| `pg_replication_password` | PostgreSQL 复制用户密码 |
-|    `patroni_password`     | Patroni API 密码    |
-| `haproxy_admin_password`  | HAProxy 管理密码      |
-|    `minio_secret_key`     | Silo Root Secret  |
-|   `etcd_root_password`    | ETCD Root 密码      |
+|           密码参数            | 说明                       |
+|:-------------------------:|:-------------------------|
+| `grafana_admin_password`  | Grafana 管理员密码            |
+|    `pg_admin_password`    | PostgreSQL 管理员密码         |
+|   `pg_monitor_password`   | PostgreSQL 监控用户密码        |
+| `pg_replication_password` | PostgreSQL 复制用户密码        |
+|    `patroni_password`     | Patroni API 密码           |
+| `haproxy_admin_password`  | HAProxy 管理密码             |
+|    `minio_secret_key`     | Silo Root Secret         |
+|   `etcd_root_password`    | ETCD Root 密码             |
+|   `mysql_root_password`   | MySQL `root` 管理员密码       |
+| `mysql_monitor_password`  | MySQL 监控用户密码             |
+| `mysql_cluster_password`  | MySQL InnoDB Cluster 管理与备份密码 |
 
 同时还会替换以下占位符密码：
 
@@ -282,7 +285,7 @@ $ ./configure -g
 
 ## 配置模板
 
-当前开发源码从 `conf/` 目录读取模板，支持裸名称和显式相对路径。裸名称按以下顺序查找，首个匹配文件生效：
+`configure` 从 `conf/` 目录读取模板，支持裸名称和显式相对路径。裸名称按以下顺序查找，首个匹配文件生效：
 
 ```text
 conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
@@ -296,11 +299,10 @@ conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
 ./configure -c ha/full              # 显式选择同一模板
 ./configure -c ./conf/ha/full.yml   # 同一模板的完整相对文件名
 ./configure -c halo                 # OpenHalo：conf/fork/halo.yml
-./configure -c mysql                # 原生 MySQL：conf/demo/mysql.yml
+./configure -c mysql                # 原生 MySQL 8.4：conf/demo/mysql.yml
 ```
 
-这些简写与 `halo` 名称对应当前开发源码。使用较早的发布包时，请以该版本的 `configure` 和模板布局为准；
-例如 v4.5.0 的 `conf/mysql.yml` 是 OpenHalo 模板。模板重名时，可通过显式目录路径固定选择。
+请注意区分 `-c halo`（OpenHalo，MySQL 协议兼容的 PostgreSQL 内核模板 `conf/fork/halo.yml`）与 `-c mysql`（原生 MySQL 8.4 模板 `conf/demo/mysql.yml`）。模板重名时，可通过显式目录路径固定选择。
 
 ### 核心模板
 
@@ -344,8 +346,8 @@ conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
 |  `app/registry`  | Docker Registry 配置 |
 |   `app/immich`   | Immich 相册与视频管理配置   |
 | `app/jumpserver` | JumpServer 堡垒机配置   |
-| `app/discourse`  | Discourse 社区论坛配置（开发版） |
-|    `app/silo`    | 独立 Silo 对象存储应用配置（开发版） |
+| `app/discourse`  | Discourse 社区论坛配置   |
+|    `app/silo`    | 独立 Silo 对象存储应用配置   |
 {.full-width .wide .expand}
 
 ### 特殊内核模板/模式
@@ -364,7 +366,7 @@ conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
 |  `mongo`   | MongoDB 兼容栈模板                      |
 {.full-width .wide .expand}
 
-当前开发版将这些内核模板与 `pgsql` 放在 `conf/fork/` 下，`ha/citus` 除外。
+这些内核模板与 `pgsql` 统一位于 `conf/fork/` 目录下（`ha/citus` 除外）。
 例如 `-c ivory` 与 `-c fork/ivory` 均选择 `conf/fork/ivory.yml`。
 OpenHalo 使用 `halo` 或 `fork/halo`；其内部配置值仍为 `pg_mode: mysql`。
 
@@ -380,14 +382,14 @@ OpenHalo 使用 `halo` 或 `fork/halo`；其内部配置值仍为 `pg_mode: mysq
 |  `demo/demo`  | 多模块演示环境配置              |
 | `demo/kernel` | 十节点数据库内核矩阵             |
 | `demo/redis`  | Redis 主从、哨兵与原生集群演示     |
-| `demo/minio`  | Silo（源码默认）多节点多盘集群演示    |
+| `demo/minio`  | Silo 多节点多盘集群演示         |
 | `demo/kafka`  | Kafka KRaft 开发与安全集群演示  |
 | `demo/mysql`  | 原生 MySQL 8.4 试点演示      |
 | `demo/remote` | 远程 PostgreSQL/RDS 监控示例 |
 |  `demo/saas`  | 传统单节点 SaaS 组件组合示例      |
 |  `demo/wool`  | 中国区低配云主机示例             |
 |  `build/oss`  | 跨发行版开源软件包构建环境          |
-|  `build/dev`  | 三节点开发与构建环境             |
+|  `build/dev`  | 七节点开发与构建环境             |
 {.full-width .wide .expand}
 
 
@@ -397,7 +399,7 @@ OpenHalo 使用 `halo` 或 `fork/halo`；其内部配置值仍为 `pg_mode: mysq
 
 ```bash
 $ ./configure
-configure pigsty v4.5.0 begin
+configure pigsty v4.6.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64

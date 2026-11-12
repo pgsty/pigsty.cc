@@ -118,7 +118,7 @@ Pigsty 使用 [**Apache-2.0**](/docs/about/license) 许可证开源，但请注�
 
 [**MINIO**](/docs/minio) 模块为 PostgreSQL 提供可选的 Silo [**备份存储仓库**](/docs/pgsql/backup/repository)。
 
-配置清单中的 **`minio`** 分组指定哪些节点是 MINIO 模块节点；v4.5.0 会在这些节点上运行 Silo 服务器，监听以下端口：
+配置清单中的 **`minio`** 分组指定哪些节点是 MINIO 模块节点；Pigsty v4.6.0 会在这些节点上运行 Silo 服务器，监听以下端口：
 
 |   组件   |   端口   | 描述           |
 |:------:|:------:|--------------|

@@ -74,7 +74,7 @@ pgbackrest_repo:                  # 仓库定义：https://pgbackrest.org/config
     retention_full: 14            # 按时间保留 14 天
 ```
 
-v4.5.0 的模板只把 `pgbackrest_repo[pgbackrest_method]` 选中的那一个字典项渲染为 pgBackRest 的 `repo1`；
+Pigsty v4 的模板只把 `pgbackrest_repo[pgbackrest_method]` 选中的那一个字典项渲染为 pgBackRest 的 `repo1`；
 同时列出 `local` 与 `minio` 只是定义候选项，并不等于双仓同时备份。
 
 注意两套预置仓库的策略差异：**本地仓库** 追求简单直接 —— 不加密、不打包、按份数保留；

@@ -15,6 +15,7 @@ categories: [参考]
 | [**`INFRA`**](/docs/infra/playbook)   | 3  | `deploy.yml` `infra.yml` `infra-rm.yml`                                                                                         |
 | [**`NODE`**](/docs/node/playbook)     | 2  | `node.yml` `node-rm.yml`                                                                                                        |
 | [**`ETCD`**](/docs/etcd/playbook)     | 2  | `etcd.yml` `etcd-rm.yml`                                                                                                        |
+| [**`VAULT`**](/docs/vault/playbook)   | 2  | `vault.yml` `vault-rm.yml`                                                                                                      |
 | [**`PGSQL`**](/docs/pgsql/playbook)   | 7  | `pgsql.yml` `pgsql-rm.yml` <br> `pgsql-user.yml` `pgsql-db.yml` <br> `pgsql-monitor.yml` `pgsql-migration.yml` `pgsql-pitr.yml` |
 | [**`REDIS`**](/docs/redis/playbook)   | 2  | `redis.yml` `redis-rm.yml`                                                                                                      |
 | [**`MINIO`**](/docs/minio/playbook)   | 2  | `minio.yml` `minio-rm.yml`                                                                                                      |
@@ -22,40 +23,42 @@ categories: [参考]
 | [**`JUICE`**](/docs/juice/playbook)   | 1  | `juice.yml`                                                                                                                     |
 | [**`VIBE`**](/docs/vibe/playbook)     | 1  | `vibe.yml`                                                                                                                      |
 | [**`KAFKA`**](/docs/kafka/playbook)   | 2  | `kafka.yml` `kafka-rm.yml`                                                                                                      |
-| [**`MYSQL`（试点）**](/docs/mysql/) | 2  | `mysql.yml` `mysql-rm.yml`                                                                                                      |
+| [**`MYSQL`**](/docs/mysql/playbook)   | 2  | `mysql.yml` `mysql-rm.yml`                                                                                                      |
 {.full-width .wide .expand}
 
 --------
 
 ## 剧本总表
 
-| 剧本                                                                   |    模块    | 主要用途                                         |
-|:---------------------------------------------------------------------|:--------:|:---------------------------------------------|
-| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | `INFRA`  | 一次性部署核心链路（Infra/Node/Etcd/PGSQL，按配置启用 MINIO） |
-| [**`infra.yml`**](/docs/infra/playbook#infrayml)                     | `INFRA`  | 初始化基础设施节点                                    |
-| [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | `INFRA`  | 移除基础设施组件                                     |
-| [**`node.yml`**](/docs/node/playbook#nodeyml)                        |  `NODE`  | 节点纳管与基线配置                                    |
-| [**`node-rm.yml`**](/docs/node/playbook#node-rmyml)                  |  `NODE`  | 节点去纳管                                        |
-| [**`etcd.yml`**](/docs/etcd/playbook#etcdyml)                        |  `ETCD`  | ETCD 安装/扩容                                   |
-| [**`etcd-rm.yml`**](/docs/etcd/playbook#etcd-rmyml)                  |  `ETCD`  | ETCD 移除/缩容                                   |
-| [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml)                     | `PGSQL`  | 初始化 PostgreSQL 集群或新增实例                       |
-| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | `PGSQL`  | 移除 PostgreSQL 集群/实例                          |
-| [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml)           | `PGSQL`  | 增加业务用户                                       |
-| [**`pgsql-db.yml`**](/docs/pgsql/playbook#pgsql-dbyml)               | `PGSQL`  | 增加业务数据库                                      |
-| [**`pgsql-monitor.yml`**](/docs/pgsql/playbook#pgsql-monitoryml)     | `PGSQL`  | 纳管远程 PostgreSQL 监控                           |
-| [**`pgsql-migration.yml`**](/docs/pgsql/playbook#pgsql-migrationyml) | `PGSQL`  | 生成迁移手册与脚本                                    |
-| [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | `PGSQL`  | 时间点恢复（PITR）                                  |
-| [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                     |
-| [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
-| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | Silo 部署                                      |
-| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除 Silo、配置与可选数据                              |
-| [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
-| [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
-| [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
-| [**`kafka.yml`**](/docs/kafka/playbook#kafkayml)                     | `KAFKA`  | 创建或收敛完整的 dynamic KRaft 集群                    |
-| [**`kafka-rm.yml`**](/docs/kafka/playbook#kafka-rmyml)               | `KAFKA`  | 移除 Kafka 集群，或安全退役单个成员                        |
-| [**`mysql.yml`**](/docs/mysql/)                                | `MYSQL`  | 收敛原生 MySQL 8.4 单节点或三节点 InnoDB Cluster（试点）    |
-| [**`mysql-rm.yml`**](/docs/mysql/)                             | `MYSQL`  | 停止/退役原生 MySQL 实例或集群并保留本地状态（试点）               |
+| 剧本                                                                   |    模块    | 主要用途                                                        |
+|:---------------------------------------------------------------------|:--------:|:------------------------------------------------------------|
+| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | `INFRA`  | 一次性串联部署核心链路（`infra -> node -> etcd -> vault -> minio -> pgsql`） |
+| [**`infra.yml`**](/docs/infra/playbook#infrayml)                     | `INFRA`  | 初始化基础设施节点                                                   |
+| [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | `INFRA`  | 移除基础设施组件                                                    |
+| [**`node.yml`**](/docs/node/playbook#nodeyml)                        |  `NODE`  | 节点纳管与基线配置                                                   |
+| [**`node-rm.yml`**](/docs/node/playbook#node-rmyml)                  |  `NODE`  | 节点去纳管                                                       |
+| [**`etcd.yml`**](/docs/etcd/playbook#etcdyml)                        |  `ETCD`  | ETCD 安装/扩容                                                  |
+| [**`etcd-rm.yml`**](/docs/etcd/playbook#etcd-rmyml)                  |  `ETCD`  | ETCD 移除/缩容                                                  |
+| [**`vault.yml`**](/docs/vault/playbook#vaultyml)                     | `VAULT`  | 初始化或收敛 OpenBao 密钥管理集群                                       |
+| [**`vault-rm.yml`**](/docs/vault/playbook#vault-rmyml)               | `VAULT`  | 移除 OpenBao 密钥管理集群或退役单个成员                                    |
+| [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml)                     | `PGSQL`  | 初始化 PostgreSQL 集群或新增实例                                      |
+| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | `PGSQL`  | 移除 PostgreSQL 集群/实例                                         |
+| [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml)           | `PGSQL`  | 增加业务用户                                                      |
+| [**`pgsql-db.yml`**](/docs/pgsql/playbook#pgsql-dbyml)               | `PGSQL`  | 增加业务数据库                                                     |
+| [**`pgsql-monitor.yml`**](/docs/pgsql/playbook#pgsql-monitoryml)     | `PGSQL`  | 纳管远程 PostgreSQL 监控                                          |
+| [**`pgsql-migration.yml`**](/docs/pgsql/playbook#pgsql-migrationyml) | `PGSQL`  | 生成迁移手册与脚本                                                   |
+| [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | `PGSQL`  | 时间点恢复（PITR）                                                 |
+| [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                                    |
+| [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                                    |
+| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | Silo 部署                                                     |
+| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除 Silo、配置与可选数据                                             |
+| [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                                 |
+| [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                                             |
+| [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                                 |
+| [**`kafka.yml`**](/docs/kafka/playbook#kafkayml)                     | `KAFKA`  | 创建或收敛完整的 dynamic KRaft 集群                                   |
+| [**`kafka-rm.yml`**](/docs/kafka/playbook#kafka-rmyml)               | `KAFKA`  | 移除 Kafka 集群，或安全退役单个成员                                       |
+| [**`mysql.yml`**](/docs/mysql/playbook)                              | `MYSQL`  | 收敛原生 MySQL 8.4 单节点或三节点 InnoDB Cluster                       |
+| [**`mysql-rm.yml`**](/docs/mysql/playbook)                           | `MYSQL`  | 移除原生 MySQL 集群或摘除单个成员（默认删除数据与配置，保留备份目录）                      |
 {.full-width .wide .expand}
 
 --------
@@ -80,24 +83,26 @@ categories: [参考]
 
 多个模块提供了防误删保险，通过 `*_safeguard` 参数控制：
 
-- **PGSQL**: [**`pg_safeguard`**](/docs/pgsql/param#pg_safeguard) 参数用于防止误删 PostgreSQL 集群
-- **ETCD**: [**`etcd_safeguard`**](/docs/etcd/param#etcd_safeguard) 参数用于防止误删 Etcd 集群
-- **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 Silo 集群
-- **REDIS**: [**`redis_safeguard`**](/docs/redis/param#redis_safeguard) 参数用于防止误删 Redis 实例
-- **KAFKA**: [**`kafka_safeguard`**](/docs/kafka/playbook#kafka-rmyml) 参数用于阻止 Kafka 移除剧本
-- **MYSQL（试点）**: [`mysql_safeguard`](/docs/mysql/) 与精确匹配的 `mysql_rm_confirm` 共同保护原生 MySQL 退役流程
+- **PGSQL**: [**`pg_safeguard`**](/docs/pgsql/param#pg_safeguard) 参数用于防止误删 PostgreSQL 集群（默认 `false`）
+- **ETCD**: [**`etcd_safeguard`**](/docs/etcd/param#etcd_safeguard) 参数用于防止误删 Etcd 集群（默认 `false`）
+- **VAULT**: [**`vault_safeguard`**](/docs/vault/param#vault_safeguard) 参数用于防止误删 OpenBao 密钥管理集群（**默认 `true`**）
+- **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 Silo 集群（默认 `false`）
+- **REDIS**: [**`redis_safeguard`**](/docs/redis/param#redis_safeguard) 参数用于防止误删 Redis 实例（默认 `false`）
+- **KAFKA**: [**`kafka_safeguard`**](/docs/kafka/param#kafka_safeguard) 参数用于阻止 Kafka 移除剧本（默认 `false`）
+- **MYSQL**: [**`mysql_safeguard`**](/docs/mysql/param#mysql_safeguard) 参数用于防止误删原生 MySQL 实例或集群（**默认 `true`**）
 
-PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；生产环境可在已初始化的集群上设置为 `true`。原生 MySQL 试点相反：`mysql_safeguard` 默认是 `true`，且即使显式关闭，也必须提供与目标实例或集群完全一致的 `mysql_rm_confirm`。
+PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均为 `false`，生产环境建议在已初始化的集群上显式设为 `true`；而 **VAULT 与 MYSQL 的 `vault_safeguard`、`mysql_safeguard` 默认即为 `true`**，防止意外销毁加密主密钥或 MySQL 数据。此外，`mysql-rm.yml` 默认开启 `mysql_rm_data: true`（销毁 `/data/mysql` 数据目录、配置与 Router 状态，但保留备份目录 `mysql_backup_dir`）；仅整集群或单机移除时支持追加 `-e mysql_rm_data=false` 执行停服保数据。
 
-当保护开关设置为 `true` 时，对应的 `*-rm.yml` 剧本会立即中止执行，防止误删。可以通过命令行参数强制覆盖：
+当保护开关为 `true` 时，对应的 `*-rm.yml` 剧本会立即中止执行。确认风险与备份后，可通过命令行参数覆盖：
 
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
 ./etcd-rm.yml  -l etcd -e etcd_safeguard=false
-./minio-rm.yml -l minio   -e minio_type=silo -e minio_safeguard=false
+./vault-rm.yml -l vault -e vault_safeguard=false
+./minio-rm.yml -l minio -e minio_type=silo -e minio_safeguard=false
 ./redis-rm.yml -l redis-test -e redis_safeguard=false
 ./kafka-rm.yml -l kf-main -e kafka_safeguard=false
-./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
+./mysql-rm.yml -l my-test -e mysql_safeguard=false
 ```
 
 
@@ -167,6 +172,18 @@ bin/etcd-add <ip>                # 添加 etcd 成员 (包装脚本)
 bin/etcd-rm <ip>                 # 移除 etcd 成员 (包装脚本)
 ```
 
+### VAULT 模块
+
+```bash
+./vault.yml -l vault                           # 初始化或收敛 OpenBao 密钥集群
+./vault-rm.yml -l vault -e vault_safeguard=false   # 移除整套集群（先保存最终快照至控制机）
+./vault-rm.yml -l <ip> -e vault_safeguard=false    # 从集群安全摘除单个成员
+bin/vault-add                                  # 初始化或收敛集群 (包装脚本)
+bin/vault-add <ip>                             # 扩容添加新成员并刷新集群配置 (包装脚本)
+bin/vault-rm                                   # 移除整套集群 (包装脚本)
+bin/vault-rm <ip>                              # 退役单个成员 (包装脚本)
+```
+
 ### PGSQL 模块
 
 ```bash
@@ -219,15 +236,14 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 
 普通收敛的 `-l` 必须包含所选 Kafka 集群的全部已声明成员；`kafka-rm.yml` 才支持选择单个成员执行退役。
 
-### MYSQL 试点模块
+### MYSQL 模块
 
 ```bash
-./mysql.yml -l <cls> --check
-./mysql.yml -l <cls>             # 只接受完整的 1 或 3 成员集群范围
-./mysql-rm.yml -l <instance> --check \
-  -e mysql_safeguard=false -e mysql_rm_confirm=<instance>
-./mysql-rm.yml -l <cls> \
-  -e mysql_safeguard=false -e mysql_rm_confirm=<cls>
+./mysql.yml -l <cls> --check     # 只读预检
+./mysql.yml -l <cls>             # 创建或收敛完整的 1 成员或 3 成员集群
+./mysql-rm.yml -l <cls> -e mysql_safeguard=false                      # 移除集群并默认清理 /data/mysql 与配置
+./mysql-rm.yml -l <cls> -e mysql_safeguard=false -e mysql_rm_data=false  # 仅停止整套集群服务并保留数据
+./mysql-rm.yml -l <ip> -e mysql_safeguard=false                       # 通过存活成员安全摘除单个 HA 成员
 ```
 
-`mysql-rm.yml` 会停止服务、写入退役标记并注销监控，但不会删除数据目录、备份、配置、证书、软件包或 InnoDB Cluster 元数据。
+`mysql-rm.yml` 必须显式指定 `-l` 且传入 `-e mysql_safeguard=false`；默认 `mysql_rm_data=true` 会销毁 `/data/mysql`、配置文件与 Router 状态，但始终保留 `mysql_backup_dir`（默认 `/data/backups/mysql`）下的本地物理备份。单成员摘除（`-l <ip>`）若命中主库会自动先切主，不支持 `-e mysql_rm_data=false`。

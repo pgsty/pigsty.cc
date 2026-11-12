@@ -142,7 +142,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.7。
 | Ubuntu 24.04.5 | `ubuntu_24_04_x64_20G` |
 | Ubuntu 26.04.1 | `ubuntu_26_04_x64_20G` |
 | Debian 12.15   | `debian_12_15_x64`     |
-| Debian 13.6    | `debian_13_6_x64`      |
+| Debian 13.7    | `debian_13_7_x64`      |
 {.full-width}
 
 
@@ -155,7 +155,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.7。
 | Ubuntu 24.04.5 | `ubuntu_24_04_arm64_20G` |
 | Ubuntu 26.04.1 | `ubuntu_26_04_arm64_20G` |
 | Debian 12.15   | `debian_12_15_arm64`     |
-| Debian 13.6    | `debian_13_6_arm64`      |
+| Debian 13.7    | `debian_13_7_arm64`      |
 {.full-width}
 
-> 注：Debian 上游当前为 13.7，但阿里云公共镜像目录尚未提供 Debian 13.7，因此 OpenTofu 的 Aliyun 前缀暂保留 `debian_13_6_*`。
+> 注：阿里云公共镜像选择器按前缀自动匹配最新基线构建（例如 Debian 13.7 对应 `debian_13_7_x64_20G_alibase_20261019.vhd` 与 `debian_13_7_arm64_20G_alibase_20261019.vhd`）。

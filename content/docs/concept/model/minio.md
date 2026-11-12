@@ -8,7 +8,7 @@ categories: [概念]
 ---
 
 
-MINIO 是 Pigsty 的对象存储兼容模块名。v4.5.0 当前源码通过 [`minio_type: silo`](/docs/minio/param#minio_type) 部署 Silo，并以 **集群** 组织一组对象存储 **实例**。
+MINIO 是 Pigsty 的对象存储兼容模块名。Pigsty v4.6.0 通过 [`minio_type: silo`](/docs/minio/param#minio_type) 部署 Silo，并以 **集群** 组织一组对象存储 **实例**。
 
 每个集群都是一个 **自治** 的 S3 兼容对象存储单元，由至少一个实例组成，通过 S3 API 端口对外提供服务。
 

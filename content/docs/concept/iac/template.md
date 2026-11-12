@@ -22,7 +22,7 @@ categories: [概念]
 
 Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/configure) 脚本作为可选的配置向导，它将根据您的环境和输入，生成具有良好默认值的 [**配置清单**](/docs/setup/config/)。
 
-使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 是相对于 `conf` 目录、不带 `.yml` 后缀的路径。开发版将内核模板迁入 `conf/fork/`，对应使用 `-c fork/<name>`；请根据所用源码中的实际路径选择。
+使用 `./configure -c <conf>` 指定配置模板，其中 `<conf>` 可以是相对于 `conf/` 目录的路径（省略 `.yml` 后缀），也可以直接使用裸名称（按 `conf/` → `ha/` → `fork/` → `app/` → `demo/` → `build/` 顺序查找）：
 
 ```bash
 ./configure                     # 默认使用 meta.yml 配置模板
@@ -30,17 +30,19 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c rich             # 使用包含全部扩展与 Silo 的富功能模板
 ./configure -c slim             # 使用最小化的单节点模板
 
-# 使用不同的数据库内核
+# 使用不同的数据库内核与兼容栈
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
 ./configure -c pg19             # PostgreSQL 19 Beta 专用试用模板
 ./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17/18)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
-./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
+./configure -c halo             # OpenHalo 内核，兼容 MySQL 协议 (14)，等价于 fork/halo
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
 ./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
-./configure -c fork/agens       # AgensGraph 图数据库内核 (18)
+./configure -c agens            # AgensGraph 图数据库内核 (18)，等价于 fork/agens
 ./configure -c pgedge           # pgEdge 分布式数据库内核 (15~18，默认 18)
+./configure -c mongo            # FerretDB / MongoDB 协议兼容栈，等价于 fork/mongo
+./configure -c mysql            # 原生 MySQL 8.4 部署模板，等价于 demo/mysql
 ./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
 
@@ -72,19 +74,20 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 适用于各类数据库管理系统与内核的模板：
 
-| 模板                                         | 说明                                    |
-|--------------------------------------------|---------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)         |
-| [**`pg19.yml`**](/docs/conf/pg19/)         | PostgreSQL 19 Beta 专用试用模板             |
-| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
-| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)         |
-| [**`fork/halo.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
-| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
-| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
-| [**`fork/agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (18)                |
-| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
-| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)                |
+| 模板                                           | 说明                                    |
+|----------------------------------------------|---------------------------------------|
+| [**`fork/pgsql.yml`**](/docs/conf/pgsql/)    | 原生 PostgreSQL 内核，基础功能 (14~18)         |
+| [**`pg19.yml`**](/docs/conf/pg19/)           | PostgreSQL 19 Beta 专用试用模板             |
+| [**`fork/mssql.yml`**](/docs/conf/mssql/)    | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
+| [**`fork/polar.yml`**](/docs/conf/polar/)    | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
+| [**`fork/ivory.yml`**](/docs/conf/ivory/)    | IvorySQL 内核，兼容 Oracle 语法 (18)         |
+| [**`fork/halo.yml`**](/docs/conf/mysql/)     | OpenHalo 内核，兼容 MySQL 协议 (14)          |
+| [**`fork/pgtde.yml`**](/docs/conf/pgtde/)    | Percona PostgreSQL Server 透明加密 (18)   |
+| [**`fork/oriole.yml`**](/docs/conf/oriole/)  | OrioleDB 内核，OLTP 增强 (16~18)           |
+| [**`fork/agens.yml`**](/docs/conf/agens/)    | AgensGraph 图数据库内核 (18)                |
+| [**`fork/pgedge.yml`**](/docs/conf/pgedge/)  | pgEdge 分布式数据库内核 (15~18，默认 18)         |
+| [**`fork/mongo.yml`**](/docs/conf/mongo/)    | FerretDB / MongoDB 协议兼容示例             |
+| [**`supabase.yml`**](/docs/conf/supabase/)   | Supabase 自托管配置 (15~18)                |
 {.full-width .wide .expand}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
@@ -98,12 +101,12 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 | 模板                                      | 说明                              |
 |-----------------------------------------|---------------------------------|
-| [**`dual.yml`**](/docs/conf/dual/)      | 2 节点半高可用部署                      |
-| [**`trio.yml`**](/docs/conf/trio/)      | 3 节点标准高可用部署                     |
-| [**`full.yml`**](/docs/conf/full/)      | 4 节点标准部署                        |
-| [**`safe.yml`**](/docs/conf/safe/)      | 4 节点安全增强部署，含延迟从库                |
-| [**`octo.yml`**](/docs/conf/octo/)      | 8 节点紧凑高可用仿真                     |
-| [**`simu.yml`**](/docs/conf/simu/)      | 20 节点生产环境模拟                     |
+| [**`ha/dual.yml`**](/docs/conf/dual/)   | 2 节点半高可用部署                      |
+| [**`ha/trio.yml`**](/docs/conf/trio/)   | 3 节点标准高可用部署                     |
+| [**`ha/full.yml`**](/docs/conf/full/)   | 4 节点标准部署                        |
+| [**`ha/safe.yml`**](/docs/conf/safe/)   | 3 节点安全增强部署，含离线查询从库              |
+| [**`ha/octo.yml`**](/docs/conf/octo/)   | 8 节点紧凑高可用仿真                     |
+| [**`ha/simu.yml`**](/docs/conf/simu/)   | 20 节点生产环境模拟                     |
 | [**`ha/citus.yml`**](/docs/conf/citus/) | Citus 分布式高可用 PostgreSQL (14~18) |
 {.full-width}
 
@@ -114,22 +117,23 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 您可以使用以下模板运行 Docker 应用/软件：
 
-| 模板                                             | 说明                 |
-|------------------------------------------------|--------------------|
-| [**`supabase.yml`**](/docs/conf/supabase/)     | 启动单节点 Supabase     |
-| [**`odoo.yml`**](/docs/conf/odoo/)             | 启动 Odoo ERP 系统     |
-| [**`dify.yml`**](/docs/conf/dify/)             | 启动 Dify AI 工作流系统   |
-| [**`electric.yml`**](/docs/conf/electric/)     | 启动 Electric 同步引擎   |
-| [**`insforge.yml`**](/docs/conf/insforge/)     | 启动 Insforge 后端平台   |
-| [**`hindsight.yml`**](/docs/conf/hindsight/)   | 启动 Hindsight 应用    |
-| [**`mattermost.yml`**](/docs/conf/mattermost/) | 启动 Mattermost 协作平台 |
-| [**`teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库    |
-| [**`maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用      |
-| [**`registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry |
-| [**`immich.yml`**](/docs/conf/immich/)         | 启动 Immich 相册管理应用 |
-| [**`jumpserver.yml`**](/docs/conf/jumpserver/) | 启动 JumpServer 堡垒机 |
-| [**`discourse.yml`**](/docs/conf/discourse/)   | 启动 Discourse 社区论坛（开发版） |
-| [**`silo.yml`**](/docs/conf/silo/)             | 启动独立的 Silo 对象存储应用（开发版） |
+| 模板                                                 | 说明                  |
+|----------------------------------------------------|---------------------|
+| [**`supabase.yml`**](/docs/conf/supabase/)         | 启动单节点 Supabase      |
+| [**`app/supa.yml`**](/docs/conf/supabase/)         | 启动精简版 Supabase 应用栈  |
+| [**`app/odoo.yml`**](/docs/conf/odoo/)             | 启动 Odoo ERP 系统      |
+| [**`app/dify.yml`**](/docs/conf/dify/)             | 启动 Dify AI 工作流系统    |
+| [**`app/electric.yml`**](/docs/conf/electric/)     | 启动 Electric 同步引擎    |
+| [**`app/insforge.yml`**](/docs/conf/insforge/)     | 启动 Insforge 后端平台    |
+| [**`app/hindsight.yml`**](/docs/conf/hindsight/)   | 启动 Hindsight 应用     |
+| [**`app/mattermost.yml`**](/docs/conf/mattermost/) | 启动 Mattermost 协作平台  |
+| [**`app/teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库     |
+| [**`app/maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用       |
+| [**`app/registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry  |
+| [**`app/immich.yml`**](/docs/conf/immich/)         | 启动 Immich 相册管理应用    |
+| [**`app/jumpserver.yml`**](/docs/conf/jumpserver/) | 启动 JumpServer 堡垒机   |
+| [**`app/discourse.yml`**](/docs/conf/discourse/)   | 启动 Discourse 社区论坛   |
+| [**`app/silo.yml`**](/docs/conf/silo/)             | 启动独立的 Silo 对象存储应用   |
 {.full-width .wide .expand}
 
 
@@ -139,25 +143,24 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 除主要模板外，Pigsty 还提供了一组面向不同场景的演示模板：
 
-| 模板                                     | 说明                                                     |
-|----------------------------------------|--------------------------------------------------------|
-| [**`bare.yml`**](/docs/conf/bare/)     | 最小化的单节点起步配置                                            |
-| [**`el.yml`**](/docs/conf/el/)         | EL 8/9 系统的全参数配置文件                                      |
-| [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                               |
-| **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                          |
-| **`redis.yml`**                        | Redis 集群示例配置                                           |
-| [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
-| [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
-| [**`demo/mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/fork/halo.yml` |
-| [**`kernel.yml`**](/docs/conf/kernel/) | 10 节点内核矩阵演示配置                                          |
-| [**`saas.yml`**](/docs/conf/saas/)     | 含全部扩展的富功能单节点模板                                         |
-| [**`wool.yml`**](/docs/conf/wool/)     | 低成本阿里云 ECS 演示模板                                         |
-| [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件           |
-| [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                                    |
-| [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                              |
-| [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                                |
-| [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                                |
-| [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                          |
+| 模板                                           | 说明                                                      |
+|----------------------------------------------|---------------------------------------------------------|
+| [**`demo/bare.yml`**](/docs/conf/bare/)      | 最小化的单节点起步配置                                             |
+| [**`demo/el.yml`**](/docs/conf/el/)          | EL 9/10 系统的全参数配置文件                                      |
+| [**`demo/debian.yml`**](/docs/conf/debian/)  | Debian/Ubuntu 系统的全参数配置文件                                |
+| [**`demo/remote.yml`**](/docs/conf/remote/)  | 监控远程 PostgreSQL 集群或 RDS 的示例配置                           |
+| [**`demo/redis.yml`**](/docs/conf/redis/)    | Redis 集群示例配置                                            |
+| [**`demo/minio.yml`**](/docs/conf/minio/)    | 4 节点 Silo 多盘集群示例                                        |
+| [**`demo/kafka.yml`**](/docs/conf/kafka/)    | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例               |
+| [**`demo/mysql.yml`**](/docs/conf/mysql84/)  | 原生 MySQL 8.4 单节点/三节点试点示例（区别于 OpenHalo `fork/halo.yml`）  |
+| [**`demo/kernel.yml`**](/docs/conf/kernel/)  | 10 节点内核矩阵演示配置                                           |
+| [**`demo/saas.yml`**](/docs/conf/saas/)      | 含全部扩展的富功能单节点模板                                          |
+| [**`demo/wool.yml`**](/docs/conf/wool/)      | 低成本阿里云 ECS 演示模板                                         |
+| [**`demo/demo.yml`**](/docs/conf/demo/)      | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件            |
+| [**`fat.yml`**](/docs/conf/fat/)             | 含本地软件源与完整功能的单节点配置文件                                     |
+| [**`infra.yml`**](/docs/conf/infra/)         | 仅部署基础设施模块                                               |
+| [**`vibe.yml`**](/docs/conf/vibe/)           | Vibe Coding / AI 应用开发模板                                 |
+| [**`docker.yml`**](/docs/conf/docker/)       | Docker 应用宿主模板                                           |
 {.full-width .wide .expand}
 
 
@@ -165,10 +168,10 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 ### 构建模板
 
-以下配置模板用于开发和测试目的：
+以下配置模板用于软件包构建与跨发行版测试目的：
 
-| 模板                  | 说明                                                   |
-|---------------------|------------------------------------------------------|
-| **`build/oss.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04 开源构建配置 |
-| **`build/dev.yml`** | 开发测试构建配置                                             |
+| 模板                                       | 说明                                                   |
+|------------------------------------------|------------------------------------------------------|
+| [**`build/oss.yml`**](/docs/conf/oss/)   | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04 开源构建配置 |
+| [**`build/dev.yml`**](/docs/conf/dev/)   | 7 节点跨发行版本地开发测试构建配置                                   |
 {.full-width}
