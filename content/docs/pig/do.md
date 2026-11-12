@@ -59,7 +59,14 @@ pig do pgsql-hba pg-meta                  # 刷新 pg_hba 规则
 pig do pgsql-svc pg-meta                  # 刷新 PostgreSQL 服务
 ```
 
-`pgsql-db` 与 `pgsql-user` 使用 Inventory 中已有的 `pg_databases` 和 `pg_users` 声明，不修改清单。`pgsql-rm --uninstall` 在移除服务时还会卸载软件包；同一主机仍需这些包时，省略此选项。
+`pgsql-db` 与 `pgsql-user` 使用 Inventory 中已有的 `pg_databases` 和 `pg_users` 声明，不修改清单。
+
+`pgsql-rm` 显式向移除剧本传递 `pg_rm_pkg=false`，保留 PostgreSQL 软件包。
+`--uninstall`（或 `-u`）则传递 `pg_rm_pkg=true`；`--uninstall=false` 仍保留软件包。
+此选择覆盖 Inventory 与剧本的默认值，仅控制软件包卸载；数据与备份的删除仍遵循已安装的 Pigsty 剧本和 Inventory。
+
+`pgmon-rm <cluster>` 删除 `infra` 主机上的 `/infra/targets/pgrds/<cluster>.yml`，
+与 `pgmon-add` 创建的远程监控目标对应。目标文件已经不存在时，命令仍成功返回且不做修改。
 
 ### 名称规则 {#name-rules}
 

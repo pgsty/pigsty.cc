@@ -265,6 +265,8 @@ pig pb restore -d -- --delta         # 在 -- 后透传 pgBackRest restore 参�
 
 使用 PIG 参数设置恢复目标、数据目录、stanza、仓库和配置文件。
 PIG 会拒绝覆盖这些设置的原生参数，包括 `--repoN-*` 和 `--recovery-option`。
+对应的 `--reset-*` 和 `--no-*` 形式也会被拒绝。显式传入空值或纯空白的 `-D/--data`
+会报错，只有省略该选项才使用配置中的默认目录；拒绝消息不会回显选项值。
 其他恢复参数放在 `--` 之后，例如 `--delta`、`--tablespace-map`、`--link-map` 或 `--link-all`。
 恢复到已有数据目录时，使用 `-- --delta` 按校验和复用文件并恢复差异。
 

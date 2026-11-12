@@ -186,10 +186,11 @@ pig ext add pg18-client          # 仅安装客户端工具
 |:---|:---|
 | `pg18` | 服务端、客户端、contrib 模块与过程语言 |
 | `pg18-server` | 服务端与 contrib 模块 |
+| `pg18-contrib` | EL 上独立的 contrib 包；Debian/Ubuntu 不提供该映射 |
 | `pg18-client` | 客户端工具 |
 | `pg18-devel` | 开发文件 |
 | `pg18-basic` | pg_repack、wal2json 和 pgvector |
-| `pgsql-common` | patroni、pgbouncer、pgbackrest、pg-exporter、pgbackrest-exporter、vip-manager 与 python3-etcd |
+| `pgsql-common` | patroni、pgbouncer、pgbackrest、pg-exporter、pgbackrest-exporter、vip-manager，以及 patroni-etcd（EL）或 python3-etcd（Debian/Ubuntu） |
 {.full-width}
 
 将 `18` 替换为所需的大版本，也可以用 `pgsql` 配合 `-v 18`。
@@ -226,13 +227,17 @@ PostGIS 3.7 系列会解析为 `postgis37_N`；地址标准化器和 PG16 以上
 
 ## ext rm {#ext-rm}
 
-移除一个或多个 PostgreSQL 扩展。
+通过扩展名或显式软件包组别名，选择要卸载的操作系统软件包。
 
 ```bash
 pig ext rm pg_duckdb             # 移除 pg_duckdb
 pig ext rm pg_duckdb -v 18       # 移除 PG 18 版本
 pig ext rm pgvector -y           # 自动确认移除
 pig ext rm pgvector --plan       # 预览移除计划，不执行
+pig ext rm plpython3u -v 18      # 移除独立语言包
+pig ext rm pg18-contrib --plan   # 预览整个 contrib 包的卸载（仅 EL）
+pig ext rm pg18-server --plan    # 预览显式 server 软件包组的卸载
+pig ext rm orioledb-server -v 18 --plan  # 预览 OrioleDB 内核的卸载
 ```
 
 | 参数 | 说明 |
@@ -243,6 +248,33 @@ pig ext rm pgvector --plan       # 预览移除计划，不执行
 {.full-width}
 
 该命令移除的是操作系统软件包，而不是数据库对象。删除共享文件前，应先在所有受影响数据库中移除或迁移依赖它的扩展。
+
+server、contrib 集合与受支持的替代内核包受卸载保护。通过 `pg_trgm`、`earthdistance`、
+`tablefunc`、`plpgsql` 等扩展名，不能卸载提供该扩展的 server 或 contrib 包。
+确实要卸载整个软件包组时，必须显式选择对应别名：
+
+| 选择方式 | 卸载规则 |
+|:---|:---|
+| `pg18-server`、`pgsql-server -v 18` | 允许显式 server 包组；EL 上还包含 libraries 和 contrib |
+| `pg18`、`pg18-mini`、`pg18-core`、`pg18-full`、`pg18-main`、`postgresql -v 18` | 允许选定的 PostgreSQL 软件包组 |
+| `pg18-contrib`、`pgsql-contrib -v 18` | EL 允许；Debian/Ubuntu 的映射没有独立 contrib 包，因此拒绝 |
+| `plpython3u`、`pltcl`、`pltclu`、`plperl`、`plperlu` | 允许独立语言包，包括共用同一包的受信与非受信变体 |
+| `spock`、`snowflake`、`lolor`、`orioledb`、`pg_tde` | 通过扩展名命中内核包，拒绝 |
+| `pgedge -v 18`、`orioledb-server -v 18`、`ivorysql -v 18`、`babelfish -v 18`、`openhalo -v 18` | 允许显式选定的内核软件包组 |
+{.full-width}
+
+带数字的别名使用自己的大版本：`pg18-server -v 17` 仍选择 PostgreSQL 18。
+既有固定版本别名 `pgtde`、`percona-core`、`percona-main` 选择 PG 18。
+`orioledb` 保留扩展含义；明确卸载内核时使用 `orioledb-server`。
+分类别名和扩展包简称都不能授予内核卸载权限。
+
+每项输入都在软件包去重前检查。任意一项违反保护规则，整次请求都会在调用 sudo 或包管理器前拒绝。
+将 `pg18-server` 加到含 `pg_trgm` 的请求中，也不会为后者授权；参数顺序和 `--yes` 都不改变判定。
+执行返回错误码 `100102`、退出状态 `2`。被阻止的 `--plan` 同样退出 `2`，包含失败的前置条件，
+不包含卸载动作；结构化 stdout 仍只有一个计划对象。
+
+允许执行的计划列出操作系统软件包及其在目录中提供的扩展，包括同包内其他扩展，
+但不模拟 APT/DNF 可能追加的依赖卸载。边界说明见 [设计记录](https://pig.pgsty.com/zh/design/protected-package-removal/)。
 
 ## ext update {#ext-update}
 
@@ -306,6 +338,9 @@ pig ext link /usr/polar-17       # 从指定 PolarDB 路径链接
 pig ext link null                # 取消当前 PostgreSQL 链接
 pig ext link none                # null / none / nil / nop / no 均可取消链接
 ```
+
+相对安装路径以调用者的当前工作目录解析。空路径、`/usr/` 等系统根路径，以及包含 shell
+展开字符或换行的路径，会在修改链接或 profile 前被拒绝。
 
 该命令创建 `/usr/pgsql` 软链接，并写入 `/etc/profile.d/pgsql.sh`。在当前 Shell 中加载配置：
 

@@ -39,6 +39,9 @@ categories: [参考]
 
 PIG 自己管理的结果支持结构化输出。原始内容命令（如 `inventory show`）和透传命令（如 `pt list`）保留原生输出，具体格式见对应参考页。
 
+`-ojson`、`-o=json`、`-o json` 与 `--output=json` 选择相同的格式，参数校验失败时也一致。
+原生参数转发边界 `--` 之后的标志属于下游命令，不再选择 PIG 的输出格式。
+
 结构化结果将诊断信息与被调用工具的普通输出放在 stderr。JSON/YAML 输出及
 `PIG_NON_INTERACTIVE=1` 禁用 PIG 命令适配器的提示输入，并使用 `sudo -n`；
 它们不代替破坏性操作的确认，需要时仍应传入 `--yes`。
@@ -112,7 +115,7 @@ pig build ext citus              # 构建包
 
 ## pig install {#pig-install}
 
-使用系统原生包管理器安装软件包，并对 PostgreSQL 内核、扩展及常用别名做包名翻译。需要直接传递系统包名时，可使用 `-n/--no-translation`。
+使用系统原生包管理器安装软件包，并对 PostgreSQL 内核、扩展及 Pigsty 组件组别名（如 `node`、`infra`，含 `kes` 与 `openbao`）做包名翻译。需要直接传递系统包名时，可使用 `-n/--no-translation`。
 
 ```bash
 pig install pg_duckdb            # 安装扩展并自动翻译包名

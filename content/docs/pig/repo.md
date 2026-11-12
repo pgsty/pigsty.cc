@@ -97,6 +97,11 @@ Pigsty 中可用仓库的完整定义位于 [`cli/repo/assets/repo.yml`](https:/
 
 `repo add` 写入所选模块的配置文件，并保留其他文件。`repo set` 或 `repo add --remove` 会先备份现有定义再替换。若仓库配置由 Ansible 等工具管理，请在对应配置中维护这些定义，避免下一次运行覆盖手工修改。
 
+Debian/Ubuntu 上，同一 APT URI 与 suite 的定义必须采用一致的信任选项，包括 `trusted` 和 `signed-by`。
+普通追加操作继承已有源的策略，避免在 `sty boot` 之后重新引入宽松默认值；保留其他 `.list` 与 `.sources` 文件。
+显式策略冲突或已有定义互相矛盾时，在修改仓库文件前失败。应先协调这些定义，或明确使用 `repo set` 替换。
+Deb822 `.sources` 文件中的内嵌公钥不能复制到 PIG 的单行 `.list` 格式；可保留原文件，或在替换时指定公钥文件路径。
+
 ### Pigsty 公钥 {#repo-key}
 
 添加包含 `pigsty-infra` 或 `pigsty-pgsql` 的模块时，PIG 会复用已有公钥文件，或从程序内嵌资源安装公钥，权限为 `0644`：
@@ -265,7 +270,7 @@ SOW 保留非软件包文件和目录；软件包无法解析或同一软件包�
 创建仓库内容的压缩 tarball 用于离线分发。
 
 ```bash
-pig repo cache                   # 默认：/www 到 /tmp/pkg.tgz
+pig repo cache                   # 默认：/www 到 /var/tmp/pkg.tgz
 pig repo cache -d /srv           # 自定义源目录
 pig repo cache pigsty docker     # 包含多个顶层仓库
 ```
@@ -273,7 +278,7 @@ pig repo cache pigsty docker     # 包含多个顶层仓库
 | 参数 | 说明 |
 |:---|:---|
 | `-d, --dir` | 源目录（默认 `/www/`） |
-| `-p, --path` | 输出路径（默认 `/tmp/pkg.tgz`） |
+| `-p, --path` | 输出路径（默认 `/var/tmp/pkg.tgz`） |
 {.full-width}
 
 离线包必须包含 `pigsty`，且 `pigsty/repo_complete` 必须是普通文件。请求中不存在的仓库会被
@@ -282,17 +287,23 @@ pig repo cache pigsty docker     # 包含多个顶层仓库
 
 ## repo boot {#repo-boot}
 
+不指定 `--path` 时，先查找 `/var/tmp/pkg.tgz`，仅在不存在时回退到 `/tmp/pkg.tgz`。
+显式路径（包括显式传入默认路径）不回退。`repo cache` 默认写入新路径，不采用读取时的旧路径回退。
+
+自动选择的离线包必须是非符号链接的普通文件，由 root 或调用者的 `SUDO_UID` 拥有，且不能允许组或其他用户写入。
+不可信的自动来源会在创建目标目录前被拒绝；显式 `--path` 选择不采用这项所有权检查。
+
 从离线包解压并设置本地仓库。
 
 ```bash
-pig repo boot                    # 默认：/tmp/pkg.tgz 到 /www
+pig repo boot                    # 默认：/var/tmp/pkg.tgz 到 /www
 pig repo boot -p /mnt/pkg.tgz   # 自定义包路径
 pig repo boot -d /srv           # 自定义目标目录
 ```
 
 | 参数 | 说明 |
 |:---|:---|
-| `-p, --path` | 包路径（默认 `/tmp/pkg.tgz`） |
+| `-p, --path` | 包路径（默认 `/var/tmp/pkg.tgz`） |
 | `-d, --dir` | 目标目录（默认 `/www/`） |
 {.full-width}
 

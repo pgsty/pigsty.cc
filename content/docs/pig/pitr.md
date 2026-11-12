@@ -121,6 +121,8 @@ pig pitr -d -- --delta
 
 恢复目标、数据目录、配置文件、stanza 和仓库使用 PIG 参数设置。
 覆盖这些设置的原生参数会被拒绝，包括 `--repoN-*` 和 `--recovery-option`。
+对应的 `--reset-*` 和 `--no-*` 形式也会被拒绝。显式传入空值或纯空白的 `-D/--data`
+会在确认或变更服务前失败；只有省略该选项才使用默认目录。
 其他恢复参数可以转发，例如 `--delta`、`--tablespace-map`、`--link-map` 和 `--link-all`。
 
 ## 时间格式 {#time-format}

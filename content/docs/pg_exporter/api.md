@@ -52,7 +52,7 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="v1.6.0",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.3",goos="linux",goarch="amd64"} 1
+pg_exporter_build_info{version="v1.6.1",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.27.4",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```
@@ -77,7 +77,7 @@ pg_exporter_build_info{version="v1.6.0",branch="main",revision="<git-sha>",build
 
 #### 自监控指标
 
-PostgreSQL 的内置指标前缀默认为 `pg`，PgBouncer 默认为 `pgbouncer`。`--namespace` 可以修改此类前缀，但不会改变 YAML 中定义的指标名。
+PostgreSQL 的内置指标前缀默认为 `pg`，PgBouncer 默认为 `pgbouncer`。`--namespace` 可以修改此类前缀，非法前缀会在启动时被拒绝；它不会改变 YAML 中定义的指标名。
 
 | 指标 | 类型 | 标签 | 含义 |
 |:---|:---|:---|:---|
@@ -104,7 +104,7 @@ PostgreSQL 的内置指标前缀默认为 `pg`，PgBouncer 默认为 `pgbouncer`
 | `pg_exporter_query_cache_ttl` | Gauge | datname、query | 结果缓存剩余有效期，单位秒 |
 {.full-width .wide .expand}
 
-这些序列也会附加配置的固定标签。数据库和采集器级别的累计计数以 Gauge 暴露。服务器重新规划时会重置采集器统计，配置重载也会触发这一过程。数据库连接对象重建时会重置该数据库的统计。
+这些序列也会附加配置的固定标签。在 `pg_exporter_build_info` 上，`version`、`revision`、`branch`、`builddate`、`goversion`、`goos` 与 `goarch` 的构建信息值优先于用户标签。数据库或查询级内置样本的标签无效时，会记录警告并跳过该样本，避免 panic。数据库和采集器级别的累计计数以 Gauge 暴露。服务器重新规划时会重置采集器统计，配置重载也会触发这一过程。数据库连接对象重建时会重置该数据库的统计。
 
 `--disable-intro` 会隐藏表中所有内置指标，包括 `pg_up`。YAML 指标、Go/进程指标和 HTTP 健康检查仍然可用。
 

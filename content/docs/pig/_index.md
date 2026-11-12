@@ -1,12 +1,12 @@
 ---
-title: "PIG 1.10.4 文档"
+title: "PIG 1.11.0 文档"
 weight: 5200
 description: "使用 pig 命令行工具安装、管理、构建 PostgreSQL 与其扩展。"
 icon: fas fa-piggy-bank
 module: [PIG]
 ---
 
-当前文档版本：**v{{< param pig_version >}}**。本次版本新增七个目录条目、移除一条退役记录，并修复目标版本分类别名，内嵌扩展目录增至 **{{< param pig_catalog_count >}} 个条目**，详见 [发布说明](/docs/pig/release/#v1104)。
+当前文档版本：**v{{< param pig_version >}}**。本次版本对齐 Pigsty **v{{< param pigsty_version >}}**，加固软件包与运维命令安全边界，支持 `sty conf` 有序模板简写查找，内嵌扩展目录共 **{{< param pig_catalog_count >}} 个条目**，详见 [发布说明](/docs/pig/release/#v1110)。
 
 PIG 用统一的命令查找、安装和构建 PostgreSQL 扩展包，也提供 PostgreSQL、Patroni、pgBackRest 和 Pigsty 管理命令。软件包安装由系统的 `apt`、`dnf` 或 `yum` 完成。
 

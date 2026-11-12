@@ -99,7 +99,8 @@ pig sty boot -o json                 # 返回机器可读的结果与告警
 
 - `--path` 接受本地归档或 HTTP(S) URL。包含凭据的 URL 会被拒绝；显式来源无效时直接失败，
   不会改用在线模式。
-- 自动发现的 `/tmp/pkg.tgz` 必须是普通文件，不可被组或其他用户写入，且属主为 root 或发起
+- 自动发现先查找 `/var/tmp/pkg.tgz`，仅在不存在时回退到 `/tmp/pkg.tgz`；首选文件不可读或不安全时，
+  不改用旧路径。选中的离线包必须是普通文件，不可被组或其他用户写入，且属主为 root 或发起
   sudo 的用户；不符合条件的文件会被忽略并产生告警。
 - 已有完整的 `/www/pigsty` 仓库优先于选中的离线包；两者同时存在时复用现有仓库，离线包
   保持不动并给出告警。
@@ -154,7 +155,7 @@ Inventory 输出文件，全局小写 `-o` 用于选择 text、JSON 或 YAML 命
 
 ### 模板与输出路径 {#template-and-output-paths}
 
-以下有序短名称查找规则对应当前开发源码。旧版 PIG 可能仍需使用该版本支持的完整模板 mode，例如 `ha/full`。
+自 PIG `v1.11.0` 起支持以下有序短名称查找规则；`v1.10.x` 及更早版本需指定完整相对模板名（例如 `ha/full`）。
 
 模板名相对于 `<PIGSTY_HOME>/conf`。裸名称按以下顺序查找对应的 `.yml` 文件：
 
@@ -183,12 +184,16 @@ conf/ → conf/ha/ → conf/fork/ → conf/app/ → conf/demo/ → conf/build/
 | 未指定 `--ip` | 探测本机网卡；候选不唯一时交互选择，`--non-interactive` 或 stdin 已关闭时则失败并提示使用 `--ip`。 |
 | `--domain NAME` | 只替换精确的 `i.pigsty`，不会误改 `cli.pigsty` 或 `i.pigsty.cc`；NAME 必须是合法 DNS 域名。 |
 | 小规格控制节点 | 探测到 CPU 少于四核时，将 `node_tune: oltp` 与 `pg_conf: oltp.yml` 改为对应的 `tiny` 配置。 |
-| `--region REGION` | 非默认区域会更新 `all.vars.region`；`china` 还会启用模板中已有的 Docker 与 pip 镜像值。 |
+| `--region REGION` | 将选定区域写入 `all.vars.region`，包括 `default`；`china` 还会启用模板中已有的 Docker 与 pip 镜像值。 |
 | `--proxy` | 读取 `HTTP_PROXY`、`HTTPS_PROXY`、`ALL_PROXY` 与 `NO_PROXY`，每项都在大写值缺失时回退到对应的小写变量。HTTP/HTTPS 缺失时回退到 ALL_PROXY。将非空值写入 `all.vars.proxy_env`，必要时补充默认 no-proxy 列表。 |
 | `--version MAJOR` | 通用模板支持 PostgreSQL 14-18，以及显式指定的 19 beta，并选择匹配的 locale；版本固定的 `fork/mssql`、`fork/polar`、旧版根目录 `mssql`/`polar` 与根目录 `pgNN` 模式保留模板版本并给出告警。 |
 | `--generate` | 每个已知凭据标识符生成一个 24 位随机值，并一致替换其生效值和文档化占位符。 |
 
 IP 替换会产生重复键时，命令停止。提供的地址在模板中没有对应占位符时，PIG 会告警。
+
+显式 `--region` 或 `--mirror` 优先，否则自动探测区域。选定值双向覆盖模板中的 region：
+即使模板原为 `china`，探测结果为 `default` 时也写入 `default`。结果中的 region 与写入值一致。
+模板未定义 region 且选定值为 `default` 时，保留隐含默认值。
 
 指定 PostgreSQL 19 beta 时，如果模板包含预期的软件仓库列表，Pig 还会在 `pgsql` 后启用
 `beta` 仓库。`conf/build/` 下的模式有意绕过 IP 映射与控制节点管理员预检，以保持构建模板可移植。

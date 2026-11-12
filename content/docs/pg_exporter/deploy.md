@@ -73,7 +73,7 @@ Flags:
 
 选用 `PG_EXPORTER_URL_FILE` 后，文件不可读、为空或只含空白都会阻止启动，不会回退到本机默认目标。
 
-v1.5.0 严格校验 URL、百分号转义和查询参数名：参数名不能为空，不能包含空白或 `=`，URL 不能包含未转义的 `#`。错误会使用不含原始连接串的固定诊断并停止启动，避免泄露密码或静默丢弃 TLS 设置。有效 URL 的用户信息中的密码与 `password=` 参数在日志中会被遮盖。
+v1.5.0 严格校验 URL、百分号转义和查询参数名：参数名不能为空，不能包含空白或 `=`，URL 不能包含未转义的 `#`。错误会使用不含原始连接串的固定诊断并停止启动，避免泄露密码或静默丢弃 TLS 设置。有效 URL 的用户信息中的密码及 `password=`、`sslpassword=` 参数值在日志中会被遮盖；`postgresql://?host=/var/run/postgresql` 等省略主机的 URL 在规范化时也会保留 `//`。
 
 URL 中未指定 `sslmode` 时会自动补 `sslmode=disable`。另外，`PGSERVICE` / `PGSERVICEFILE` 等 libpq 服务文件环境变量会在启动时被清除并记录日志——服务文件可能覆盖显式指定的连接目标，`pg_exporter` 要求"日志里宣告的 URL 就是实际连接的 URL"。
 
@@ -136,6 +136,7 @@ After=network.target
 EnvironmentFile=-/etc/default/pg_exporter
 User=prometheus
 ExecStart=/usr/bin/pg_exporter $PG_EXPORTER_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 
 [Install]
@@ -165,10 +166,12 @@ PG_EXPORTER_OPTS='--log.level=info'
 常用管理命令：
 
 ```bash
+sudo systemctl daemon-reload               # 升级单元文件后刷新 systemd
 sudo systemctl enable --now pg_exporter    # 启动并设置开机自启
 sudo systemctl status pg_exporter          # 查看状态
+sudo systemctl reload pg_exporter          # 热重载采集器配置（SIGHUP，无需重启）
 journalctl -u pg_exporter -f               # 跟踪日志
-curl -X POST localhost:9630/reload         # 热重载采集器配置（无需重启）
+curl -X POST localhost:9630/reload         # 通过 HTTP 热重载采集器配置
 ```
 
 ## Docker 部署 {#docker-deployment}
@@ -179,7 +182,7 @@ docker run -d \
   --restart unless-stopped \
   -p 9630:9630 \
   -e PG_EXPORTER_URL="postgres://monitor:S3cret@host:5432/postgres" \
-  pgsty/pg_exporter:1.6.0
+  pgsty/pg_exporter:1.6.1
 ```
 
 Docker Compose：
@@ -187,7 +190,7 @@ Docker Compose：
 ```yaml
 services:
   pg_exporter:
-    image: pgsty/pg_exporter:1.6.0
+    image: pgsty/pg_exporter:1.6.1
     container_name: pg_exporter
     restart: unless-stopped
     ports:
@@ -221,7 +224,7 @@ spec:
     spec:
       containers:
       - name: pg-exporter
-        image: pgsty/pg_exporter:1.6.0
+        image: pgsty/pg_exporter:1.6.1
         ports:
         - containerPort: 9630
         env:
@@ -271,7 +274,7 @@ pg_exporter --auto-discovery \
 - 集群级采集器（`tags: [cluster]`）只在主连接上执行一次
 - 数据库级采集器在每个被发现的库上分别执行，指标带 `datname` 标签区分
 - 新建／删除的数据库会在后续预检中被自动纳入／移除
-- v1.5.0 复用 `lib/pq` 解析实际数据库身份；替换库名时清除 URL 查询中冲突的 `dbname` / `database` 参数，正确保留特殊字符，防止多个发现连接落到同一个库
+- v1.5.0 复用 `lib/pq` 解析实际数据库身份；替换库名时清除 URL 查询中冲突的 `dbname` / `database` 参数（v1.6.1 同时移除冲突的 `service=`），正确保留特殊字符，防止多个发现连接落到同一个库；移除或替换子库目标时会等待活跃采集结束再回收旧连接池
 - 多库采集仍为串行执行，抓取超时预算应覆盖预检与各数据库的查询总耗时；v1.6.0 请求取消后不再启动后续数据库或采集器。
 - PostgreSQL 主连接池最多三个连接，发现数据库各一个；PgBouncer 主连接池最多两个连接，分别容纳串行采集与独立健康探测。
 

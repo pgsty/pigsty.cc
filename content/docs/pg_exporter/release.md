@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.6.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0)
+`pg_exporter` 的最新稳定版本是 [v1.6.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.1)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.6.1](#v161) | 2026-11-11 | 修正表统计，隔离重复标量样本，修复连接处理，支持 systemd 重载，升级 Go 1.27.4 | [v1.6.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.1) |
 | [v1.6.0](#v160) | 2026-11-09 | 独立健康探测、有界抓取、跨库进度标签与容器 CA 修正 | [v1.6.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.0) |
 | [v1.5.0](#v150) | 2026-10-23 | 连接安全、自动发现、健康检查与复制指标修复，Go 1.27.3 | [v1.5.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.5.0) |
 | [v1.4.1](#v141) | 2026-07-29 | 修复逻辑订阅计数与标签列校验，统一 RPM 包名                  | [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1) |
@@ -45,6 +46,60 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width .wide .expand}
+
+## v1.6.1 {#v161}
+
+发布日期：2026-11-11。
+
+PG Exporter v1.6.1 是一次维护更新，修正表统计数值、可能影响整次抓取的采集器错误，以及连接处理的边界问题。构建工具链升级至 **Go 1.27.4**，PostgreSQL 驱动仍为 **lib/pq 1.12.3**。内置 SQL 指标名、标签键、类型、桶、命令行参数与 HTTP 路由不变。
+
+### 修复与改进 {#v161-changes}
+
+- **隔离重复标量行，避免整次抓取失败：** 当 `GAUGE` 或 `COUNTER` 查询返回相同标签的多行数据时，在交给 Prometheus 汇总前将该采集器标记为失败并丢弃结果。非致命采集器失败后，其他采集器继续工作；`fatal: true` 保留原有失败语义。只有 `HISTOGRAM` 指标的采集器仍会将同标签多行观测合并为一个快照分布。不同采集器之间的指标冲突仍需通过配置解决。
+- **修正分区表与无索引表统计：** `pg_table` 的全部四个版本分支均对 `relfrozenxid = 0` 的关系（包括分区父表）输出 `age = 0`，不再产生 `2147483647`。`tbl_scan`、`tup_read` 与 `n_tup_mod` 在相加前分别将空值补为零，避免空索引计数吞掉有效的顺序扫描统计；存活、死亡和修改行数估计的空值也改为零，不再输出 NaN。
+- **避免临时表导致表大小查询失败：** `pg_table_size` 排除 `pg_temp*` 与 `pg_toast*` 模式，不再尝试读取其他会话的临时表或单独统计 TOAST 表。源码标签还纳入 PostgreSQL 9.1 legacy 配置中“无 TOAST 表触发 OID 0 错误”的修复，避免整组表大小指标缺失。legacy 配置仍需单独下载。
+- **修正活动耗时与 TimescaleDB 标识符：** 当状态、事务或会话时间戳晚于查询时间基准时，`pg_activity` 将算出的负耗时截断为零。默认禁用的 `pg_tsdb_hypertable` 正确引用含大写字母或特殊字符的模式名和表名。同步校准事务／会话起点、索引构建阶段、检查点计数和表主数据分支大小的 HELP 文本。
+- **修复连接 URL 与日志脱敏：** `postgresql://?host=/var/run/postgresql` 等省略主机的 URL 在规范化时保留 `//`，不再变成 lib/pq 无法识别的连接串。自动发现为子库指定库名时移除冲突的 `service=`；日志也会遮盖 `sslpassword=` 参数值。
+- **完善连接池回收：** 自动发现移除或替换子库目标后，等待活跃采集结束再关闭旧连接池；关闭时同步清空池引用，允许安全处理尚未初始化或已经关闭的池。配置重载仍复用现有连接池并清空采集计划，不会重建全部子库连接。
+- **加强配置校验与内置指标保护：** 配置加载拒绝非有限的 `scale` 与 `default`，启动时拒绝非法 `--namespace`。内置指标遇到无效标签（如非 UTF-8 数据库名）时记录警告并跳过该样本，避免 panic。用户固定标签不能覆盖 `version`、`revision` 等构建信息保留字段。
+- **修复诊断页与直接调用的边界行为：** HTML explain 页面能正确显示谓词缓存 TTL。直接调用采集器时，即使尚无服务器抓取时间戳，冷缓存或 TTL 为零也会执行查询。显式调用 `Server.Plan(...)` 时按分支键保留同名的不同版本查询。
+- **更新构建与服务管理：** 软件包的 systemd 单元新增 `ExecReload`，支持 `systemctl reload pg_exporter`。独立 Docker 构建可接收版本、分支、提交与构建日期参数，`make docker-build` 会传入这些信息；普通 Docker 构建若未传参，提交和日期仍为 `HEAD`／`unknown`。工具链升级到 Go 1.27.4，并例行更新依赖。
+
+### 升级注意事项 {#v161-metric-compatibility}
+
+1. **升级二进制并合并采集器 YAML。** 软件包会保留本地修改的 `/etc/pg_exporter.yml` 与 `/etc/default/pg_exporter`；只有部署新版 SQL，才能获得表统计、活动耗时和 TimescaleDB 修复。默认配置仍包含 58 个 YAML 文件、96 个分支、59 个命名空间与 460 个去重指标定义。
+2. **检查自定义采集器。** 标量查询须为每组标签返回一行，`scale` 与 `default` 必须是有限数；只有直方图指标的查询仍可为同一组标签返回多条观测。分区父表的冻结年龄现在为零，无索引表汇总值及原先为 NaN 的行数估计也可能变化。
+3. **更新服务单元，升级二进制后重启。** 安装新版 systemd 单元后执行 `sudo systemctl daemon-reload`；用 `sudo systemctl restart pg_exporter` 启用新二进制或进程参数。以后只改采集器 YAML 时，可执行 `sudo systemctl reload pg_exporter` 或 `POST /reload`。
+4. **PostgreSQL 9.1–9.6 单独下载 legacy YAML。** 使用 [v1.6.1 标签中的配置](https://github.com/pgsty/pg_exporter/blob/v1.6.1/legacy/pg_exporter.yml)，或 main 上 `282e19d` 及之后的版本。二进制压缩包与 RPM／DEB 仍只附带面向 PostgreSQL 10+ 的默认配置。
+
+从 v1.5.0 或更早版本跨版本升级时，还应查阅 [v1.6.0 发布说明](#v160) 中的健康探测、抓取预算和跨库进度标签变化，以及 [v1.5.0 发布说明](#v150) 中的订阅标签、接收器状态与 PostgreSQL 10–13 授权要求。完整迁移表见 [指标兼容性](https://exp.pgsty.com/zh/compatibility/#exporter-161-metrics)。
+
+### 验证范围 {#v161-verification-scope}
+
+`v1.6.1` 标签指向 `d0dead1`。[CI](https://github.com/pgsty/pg_exporter/actions/runs/43008634536) 与 [Release](https://github.com/pgsty/pg_exporter/actions/runs/43009095607) 工作流通过模块和生成配置检查、完整 race 测试、Go 1.21 HTTP mux 兼容测试、`go vet`、六目标交叉编译、容器检查、软件包与校验和检查。新增回归覆盖重复标量行隔离、直接采集的冷缓存／零 TTL、命名空间和构建信息校验、无主机 URL、移除 `service=`、`sslpassword` 脱敏、谓词 HTML 渲染、有限数值配置及采集 SQL 不变量。
+
+发布验收记录覆盖 12 个公开制品与校验和、amd64／arm64 Docker 镜像、Debian 12 的 ARM64 DEB 与 Rocky Linux 9 的 ARM64 RPM 安装，以及非超级用户在 **PostgreSQL 10–18 和 19 RC1** 主库、**PostgreSQL 18 和 19 RC1** 流复制备库、**PgBouncer 1.26.1** 和配合独立 legacy 配置的 **PostgreSQL 9.1–9.6** 上的真实抓取。场景包括自动发现与数据库移除、HTTP／SIGHUP 重载、`pg_stat_statements`、无索引表、分区表、临时表和活跃事务。legacy 验收不表示已回移现代配置的 `pg_temp*` 过滤和 `COALESCE` 修正。Windows、Linux ppc64le 与 Intel macOS 仅覆盖构建和校验和，软件包容器检查也不代表真实 systemd 启动验收。PostgreSQL 19 的证据限于 RC1，不代表全部后续构建或生产负载。实验性的 `snort` 组件不包含在 v1.6.1 中。
+
+### SHA-256 校验和 {#v161-checksums}
+
+[SHA256 校验和](https://github.com/pgsty/pg_exporter/releases/download/v1.6.1/checksums.txt)
+
+```checksums {base="https://github.com/pgsty/pg_exporter/releases/download/v1.6.1"}
+d0612ad9294497830892a59d302e7f92510ffd7baca4347b7f0b2438efc90277  pg-exporter-1.6.1-1.aarch64.rpm
+73fe4587efebeb444bf1b80730352bc07e22fcd88b0ac17acb6fb745ec26b9b5  pg-exporter-1.6.1-1.ppc64le.rpm
+c20c8a802466776f60b7e95103013bb4d461ac7dab76e3d139c3c9158d3f2c82  pg-exporter-1.6.1-1.x86_64.rpm
+0d6fe86ac43c707accfe10bf90af7b3c61e64242b7d916afff15fe3694a8e5fc  pg-exporter_1.6.1-1_amd64.deb
+a055f9a724c4c5eb3ac436756448c4ad76024d1d7db5087d72f4369daaeb2ab4  pg-exporter_1.6.1-1_arm64.deb
+f8500d010e05bd220c1e0978f27f6b053663ec7d0bdeab2bb85088d87c388d4c  pg-exporter_1.6.1-1_ppc64le.deb
+496c42f329fc265e952c964afaef29ebc7d2d4640180872a735a84eebb962774  pg_exporter-1.6.1.darwin-amd64.tar.gz
+9ace0b48115497f2b3d7d9e1660e13e6a778472c66c8ec5ff679faa2fa61c662  pg_exporter-1.6.1.darwin-arm64.tar.gz
+e8fdf64c352081720a53420a2c7ea095654078d5fab5f6213786bb6476791fdf  pg_exporter-1.6.1.linux-amd64.tar.gz
+91da5400ae31d42925af721c7d5f8eb0befcbb104d8a14ae5f08707abb5e333b  pg_exporter-1.6.1.linux-arm64.tar.gz
+769e9e56f91787f21478301f9fab1cb7c2791c74f8c355d8e9fbdf818964a5fb  pg_exporter-1.6.1.linux-ppc64le.tar.gz
+0e118a9815138a6dc0fed95d934aea0ad84dd4a58139371c2d16e47f85681066  pg_exporter-1.6.1.windows-amd64.tar.gz
+```
+
+[GitHub 发布](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.1) · [SHA256 校验和](https://github.com/pgsty/pg_exporter/releases/download/v1.6.1/checksums.txt) · [完整变更](https://github.com/pgsty/pg_exporter/compare/v1.6.0...v1.6.1) · [完整采集器文档](https://exp.pgsty.com/zh/collectors/)
 
 ## v1.6.0 {#v160}
 
