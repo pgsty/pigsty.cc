@@ -61,16 +61,16 @@ curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/
 
 ## GitHub 发布资产验证
 
-从 `v4.5.0` 的 [**GitHub 发布页面**](https://github.com/pgsty/pigsty/releases/tag/v4.5.0) 下载的源码、离线包和 `checksums` 都有同名 `.asc` 签名。先下载目标文件、对应 `.asc` 与该 tag 的 `KEYS`，再验证：
+从 `v4.6.0` 的 [**GitHub 发布页面**](https://github.com/pgsty/pigsty/releases/tag/v4.6.0) 下载的源码、离线包和 `checksums` 都有同名 `.asc` 签名。先下载目标文件、对应 `.asc` 与该 tag 的 `KEYS`，再验证：
 
 ```bash
-curl -fsSLO https://raw.githubusercontent.com/pgsty/pigsty/v4.5.0/KEYS
+curl -fsSLO https://raw.githubusercontent.com/pgsty/pigsty/v4.6.0/KEYS
 gpg --import KEYS
 gpg --fingerprint B9BD8B20
-gpg --verify pigsty-v4.5.0.tgz.asc pigsty-v4.5.0.tgz
+gpg --verify pigsty-v4.6.0.tgz.asc pigsty-v4.6.0.tgz
 ```
 
-完整指纹应与上方列出的 `9592A7BC7A682E7333376E09E7935D8DB9BD8B20` 一致。离线包同样使用 `gpg --verify <包名>.asc <包名>`；SHA-256 列表见 [**离线安装**](/docs/setup/offline/#离线软件包)。
+完整指纹应与上方列出的 `9592A7BC7A682E7333376E09E7935D8DB9BD8B20` 一致。离线包同样使用 `gpg --verify <包名>.asc <包名>`，并可结合发布页提供的资产 SHA-256 摘要或 `checksums` 文件核验，详见 [**离线安装**](/docs/setup/offline/#离线软件包)。
 
 ---------
 

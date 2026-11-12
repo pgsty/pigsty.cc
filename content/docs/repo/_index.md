@@ -40,7 +40,7 @@ Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 
 
 ## Pigsty 中的仓库模块
 
-Pigsty 的 `repo_modules` 与 `node_repo_modules` 按 `roles/node_id/vars/<os>.<arch>.yml` 中的 `module` 字段选择软件源。开发版本中，Nginx 与 Docker 官方仓库分别使用 `nginx`、`docker`；`v4.5.0` 发布版中，Docker 仓库和 EL 平台的 Nginx 仓库仍属于 `infra`。
+Pigsty 的 `repo_modules` 与 `node_repo_modules` 按 `roles/node_id/vars/<os>.<arch>.yml` 中的 `module` 字段选择软件源。自 `v4.6.0` 起，Nginx 与 Docker 官方仓库已拆分为独立的 `nginx`、`docker` 模块，不再默认捆绑在 `infra` 模块内。
 
 需要这些上游仓库时，可显式添加，例如 `node_repo_modules: node,infra,pgsql,nginx,docker`。本地离线仓库使用 `local`。完整参数见 [**REPO**](/docs/infra/param/#repo) 与 [**node_repo_modules**](/docs/node/param/#node_repo_modules)。
 

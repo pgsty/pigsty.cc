@@ -6,6 +6,75 @@ icon: fa-solid fa-clipboard-list
 categories: [参考]
 ---
 
+## 2026-11-12
+
+### 补充更新：SILO、Console 与 pig
+
+补充更新以下三个配方，共 12 个包（6 个 DEB、6 个 RPM），覆盖 `amd64` / `arm64` 双架构并完成仓库签名与索引更新：
+
+| 软件包 | 原版本 | 新版本 | 说明 |
+|---|---|---|---|
+| [silo](https://github.com/pgsty/silo/releases/tag/RELEASE.2026-11-12T00-00-00Z) | 20261109000000.0.0 | 20261112000000.0.0 | 正式发布原生包，发行号 1PGSTY |
+| [silo-console](https://github.com/pgsty/silo-console/releases/tag/v2.7.2) | 2.7.1 | 2.7.2 | 官方原生包，与 SILO 20261112 配套 |
+| [pig](https://github.com/pgsty/pig/releases/tag/v1.11.0) | 1.10.4 | 1.11.0 | 双架构重打包，发行号 1PGSTY；支持 Pigsty 4.6.0，内置 625 项扩展目录 |
+{.wide .expand}
+
+SILO 双架构二进制及 Go 构建信息均对应标签提交 `44e848fed`，内嵌 Console 2.7.2。双架构包头、可执行文件及版本检查通过，隔离 APT/DNF 客户端均通过 GPG 签名验证并命中目标版本（APT 每架构 115 条索引记录，YUM 每架构 156 个包）。
+
+### 常规升级批次
+
+完成 28 个配方的同步升级，共 120 个包（60 个 DEB、60 个 RPM），覆盖 `amd64` / `arm64` 双架构，双架构索引、`Release` / `repomd` 签名及包校验和均已验证通过：
+
+| 软件包 | 入库前仓库版本 | 已入库版本 | 说明 |
+|---|---|---|---|
+| [agentsview](https://github.com/kenn-io/agentsview/releases/tag/v0.47.0) | 0.46.1 | 0.47.0 | 双架构重打包 |
+| [alertmanager](https://github.com/prometheus/alertmanager/releases/tag/v0.35.0) | 0.34.1 | 0.35.0 | 双架构重打包 |
+| [barn](https://github.com/pgsty/barn/releases/tag/v1.2.0) | 1.1.0 | 1.2.0 | 官方原生包 |
+| [claude-code](https://downloads.claude.ai/claude-code/apt/latest/dists/latest/main/binary-amd64/Packages) | 2.1.319 | 2.1.322 | 官方新包名 claude-code；旧 claude 保留 |
+| [code](https://update.code.visualstudio.com/api/update/linux-deb-x64/stable/latest) | 1.145.2 | 1.146.0 | 官方原生包 |
+| [codex](https://github.com/openai/codex/releases/tag/rust-v0.167.2) | 0.167.0 | 0.167.2 | 保留完整上游运行时及原始 bwrap |
+| [dblab](https://github.com/danvergara/dblab/releases/tag/v0.55.2) | 0.55.1 | 0.55.2 | 双架构重打包 |
+| [golang](https://go.dev/dl/?mode=json) | 1.27.3 | 1.27.4 | 双架构重打包 |
+| [grafana](https://github.com/grafana/grafana/releases/tag/v13.3.1) | 13.3.0 | 13.3.1 | 官方原生包 |
+| [ivorysql](https://github.com/IvorySQL/IvorySQL/releases/tag/IvorySQL_5.6) | 5.4 | 5.6 | 新增原包配方；DEB ivorysql-5 / RPM ivorysql5；PG 18.6 内核 |
+| [mcli](https://github.com/pgsty/mc/releases/tag/RELEASE.2026-11-12T00-00-00Z) | 20261109000000.0.0 | 20261112000000.0.0 | 官方原生包 |
+| [nodejs](https://nodejs.org/dist/index.json) | 24.22.1 | 26.13.1 | Node 26 LTS；RPM epoch 2；npm prefix 为 /usr/local |
+| [opencode](https://github.com/anomalyco/opencode/releases/tag/v1.19.5) | 1.19.5-1PGSTY | 1.19.5-2PGSTY | 发行号 1PGSTY → 2PGSTY；上游版本未变 |
+| [pg-exporter](https://github.com/pgsty/pg_exporter/releases/tag/v1.6.1) | 1.6.0 | 1.6.1 | 双架构重打包 |
+| [pg-hardstorage](https://github.com/cybertec-postgresql/pg_hardstorage/releases/tag/v1.7.0) | 1.6.0 | 1.7.0 | 双架构重打包 |
+| [pgext](https://github.com/pgsty/pgext/releases/tag/v1.7.1) | 1.6.0 | 1.7.1 | 官方原生包 |
+| [pi-coding-agent](https://github.com/earendil-works/pi/releases/tag/v1.5.2) | 尚未收录 | 1.5.2 | 首次收录；保留完整上游运行时 |
+| [rainfrog](https://github.com/achristmascarl/rainfrog/releases/tag/v0.4.7) | 0.4.6 | 0.4.7 | 双架构重打包 |
+| [rustfs](https://github.com/rustfs/rustfs/releases/tag/1.0.5) | 1.0.4 | 1.0.5 | 双架构重打包 |
+| [sabiql](https://github.com/riii111/sabiql/releases/tag/v3.0.3) | 3.0.2 | 3.0.3 | 双架构重打包 |
+| [sealos](https://github.com/labring/sealos/releases/tag/v5.1.1) | 5.0.1 | 5.1.1 | 官方原包；Sustainable Use License；RPM 许可证字段与源码不一致 |
+| [silo](https://github.com/pgsty/silo/releases/tag/RELEASE.2026-11-09T00-00-00Z) | 20261026000000.0.0 | 20261109000000.0.0 | 官方原生包 |
+| [silo-console](https://github.com/pgsty/silo-console/releases/tag/v2.7.1) | 2.7.0 | 2.7.1 | 官方原生包 |
+| [sow](https://github.com/pgsty/sow/releases/tag/v0.7.1) | 0.7.0 | 0.7.1 | 双架构重打包 |
+| [stalwart](https://github.com/stalwartlabs/stalwart/releases/tag/v1.1.0) | 1.0.3 | 1.1.0 | 双架构重打包 |
+| [timescaledb-tools](https://github.com/timescale/timescaledb-tune/releases/tag/v0.19.1) | 0.19.0 | 0.19.1 | tune 0.19.1 + parallel-copy 0.13.2；Go 1.27.4 源码构建 |
+| [victoria-metrics](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.156.0) | 1.155.0 | 1.156.0 | 同时产出 victoria-metrics-cluster 与 vmutils |
+| [xray](https://github.com/XTLS/Xray-core/releases/tag/v26.11.9) | 26.10.31 | 26.11.9 | 双架构重打包 |
+{.wide .expand}
+
+120 个包的包头与载荷架构检查通过，`dist` 中 40 个原生源包与上游 SHA256 完全一致，本地重打包的 DEB/RPM 可执行载荷一致。双架构 Linux 容器完成 82 项 CLI／配置检查，另核验两份 VS Code 应用版本清单。Codex 完整运行时与上游归档一致；Node 保留 RPM epoch 2 与 npm 配置；Timescale 两个工具附带源码与构建溯源信息。
+
+Sealos 5.1.1 改用官方原包配方。[**对应源码许可证**](https://github.com/labring/sealos/blob/v5.1.1/LICENSE.md) 为 Sealos Sustainable Use License，而官方 RPM 仍标注 Apache 2.0。本次在 `dist` 保留上游包字节并记录该元数据差异，原 Apache-2.0 本地重打包锁定作为历史说明保留。
+
+入库验收：APT amd64/arm64 各有 115 条索引记录，YUM x86_64/aarch64 各有 153 个 RPM。四路隔离 APT/DNF 客户端均通过 Pigsty 公钥验证，并选中本批次全部 30 个软件包版本。60 个 DEB 保留源文件字节；60 个 RPM 中 56 个完成新增签名或改签，4 个已有有效 Pigsty 签名而保持原字节。全部 RPM 的主包头和载荷与构建源包一致，`dist` 中的上游原包完整保留。未执行旧包清理。
+
+新包名 `claude-code` 已入库，旧 `claude` 包仍保留。上游原包没有声明对 `claude` 的替换关系，已安装旧包的机器需要按包名迁移。
+
+新增 T3 Code 与 Orca 桌面软件包，覆盖 amd64/arm64，共 4 个 DEB 与 4 个 RPM，已完成本地下载、构建与校验，尚未入库、签名或发布。
+
+| 名称 | 原版本 | 新版本 | 备注 |
+|---|---|---|---|
+| t3code | — | 0.1.9 | T3 Code；DEB 保留官方原包，RPM 使用同一套应用文件封装，发行号 1PGSTY |
+| orca-ide | — | 1.4.256 | Orca；双架构 DEB/RPM 均保留官方原包 |
+{.wide .expand}
+
+构建入口为 `make t3-code` 与 `make orca`，实际包名分别为 `t3code` 与 `orca-ide`。T3 Code 的核心辅助程序要求 glibc 2.34，可选的 KDE 截图组件要求 2.39；两个项目均使用 MIT 许可证。
+
 ## 2026-11-10
 
 Claude Code 已改用 Anthropic 官方签名的 DEB/RPM 原生包。新配方 `claude-code` 直接从官方 apt/dnf latest 仓库下载，版本为 `2.1.322`，四个包的 SHA256 均按官方仓库索引校验；原自维护的 `claude` 本地 nFPM 重打包配方已封存为 obsolete。
@@ -14,6 +83,42 @@ Claude Code 已改用 Anthropic 官方签名的 DEB/RPM 原生包。新配方 `c
 |---|---|---|---|
 | claude-code | 2.1.319 | 2.1.322 | 官方原生 DEB/RPM；SHA256 按官方 apt/dnf 索引固定 |
 {.wide .expand}
+
+## 2026-11-09
+
+合并 11 月 8 日、9 日扫描结果，并重新核对 PGEXT 与 SILO Console。16 个配方已完成构建与验证，共 62 个包（31 个 DEB、31 个 RPM）；除 Grafana 插件合集为 noarch 外，均覆盖 `amd64` / `arm64`，包与索引的签名及校验和均已验证通过。
+
+| 名称 | 原版本 | 新版本 | 备注 |
+|---|---|---|---|
+| barn | 1.0.0 | 1.1.0 | 上游原生包 |
+| claude | 2.1.318 | 2.1.319 | 双架构重打包 |
+| code | 1.145.1 | 1.145.2 | 上游原生包 |
+| code-server | 4.145.0 | 4.145.2 | 上游原生包 |
+| grafana-plugins | 13.2.3 | 13.3.0 | noarch；更新下列六个插件 |
+| grafana-victorialogs-ds | 0.33.1 | 0.34.0 | 双架构重打包 |
+| mcli | 20261026000000.0.0 | 20261109000000.0.0 | 上游原生包 |
+| mtail | 3.4.19 | 3.4.20 | 双架构重打包 |
+| pg-exporter | 1.5.0 | 1.6.0 | 双架构重打包 |
+| pgext | — | 1.6.0 | 新增配方；前次扫描为 1.5.0 |
+| pgschema | 1.13.4 | 1.14.1 | 双架构重打包 |
+| pgstream | 1.5.0 | 1.6.0 | 固定提交源码构建 |
+| rclone | 1.75.2 | 1.76.0 | 双架构重打包 |
+| seaweedfs | 4.52 | 4.53 | 包版本为 4.53.0 |
+| silo-console | 2.6.0 | 2.7.0 | 上游 Draft；本地验证 |
+| sow | 0.6.1 | 0.7.0 | 双架构重打包 |
+| marcusolsson-dynamictext-panel | 6.3.0 | 6.3.1 | grafana-plugins |
+| marcusolsson-json-datasource | 1.4.3 | 1.4.4 | grafana-plugins |
+| volkovlabs-echarts-panel | 7.2.5 | 7.3.0 | grafana-plugins |
+| volkovlabs-form-panel | 6.3.5 | 6.3.6 | grafana-plugins |
+| volkovlabs-image-panel | 7.3.3 | 7.3.4 | grafana-plugins |
+| volkovlabs-table-panel | 3.6.8 | 3.6.9 | grafana-plugins |
+| nFPM | 2.43.1 | 2.48.0 | 构建工具；三平台缓存 |
+| Zig | 0.15.2 | 0.17.1 | 仅下载；Linux 双架构 |
+{.wide .expand}
+
+[**PGEXT 1.6.0**](https://github.com/pgsty/pgext/releases/tag/v1.6.0) 已正式发布，覆盖前次扫描到的 1.5.0，并新增 `pgext` 原生包配方。SILO Console 2.7.0 在本次核对时仍为上游 Draft，公开 latest 为 2.6.0；本地采用经过 SHA256 校验的四个草稿附件，保留原生包字节，未发布该草稿。
+
+[**PGStream 1.6.0**](https://github.com/xataio/pgstream/releases/tag/v1.6.0) 没有上游二进制附件，使用固定提交 `97d7ab464f0accf6cf1373b3c3f7b328debae4b9`、Go 1.27.3 与上游 `go.mod`/`go.sum` 构建，附带 `BUILDINFO`。Grafana 插件合集升级六个插件，其余八个插件文件保持一致。nFPM 升级为本次实际使用的 2.48.0；Zig 0.17.1 仅更新 Linux 双架构下载缓存。
 
 ## 2026-11-06
 

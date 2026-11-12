@@ -6,6 +6,26 @@ icon: fa-brands fa-ubuntu
 categories: [参考]
 ---
 
+## 2026-11-10
+
+| 名称                   | 旧版本       | 新版本       | 说明                                         |
+| :--------------------- | :----------- | :----------- | :------------------------------------------- |
+| login_hook             | 1.8          | 1.9          | PG14-17 PGDG；PG18 Pigsty                    |
+| orioledb-16            | 1.10.1       | 1.10.3       | PG16.15 内核；SQL 1.10                       |
+| orioledb-17            | 1.10.1       | 1.10.3       | PG17.11 内核；SQL 1.10                       |
+| orioledb-18            | 1.10.1       | 1.10.3       | PG18.6 内核；SQL 1.10                        |
+| pg_clickhouse          | 0.11.0       | 0.11.1       | PG14-18；SQL 0.11                            |
+| pg_curl                | 2.4.6        | 2.5.0        | PG14-18；SQL 2.5                             |
+| pg_improv              | 0.12.2       | 0.14.0       | PG15-18；pgrx 0.19.3                         |
+| pg_integrity_checksums | 2.1.0        | 2.2.0        | PG14-18；SQL 2.2                             |
+| pg_mentat              | 1.19.1       | 1.20.0       | PG14-18                                      |
+| pg_search              | 0.26.5       | 0.26.6       | PG15-18；需预加载；MPP JoinScan 已知崩溃风险 |
+| pg_tokenizer           | 1.0.0        | 1.1.0        | PG14-18；原生 tsvector                       |
+| pg_tre                 | 4.6.1        | 4.6.2        | PG17-18                                      |
+| vchord                 | 1.2.0-2PGSTY | 1.3.0-1PGSTY | PG14-18                                      |
+| vchord_bm25            | 1.0.0        | 1.1.0        | PG14-18；原生 tsvector                       |
+{.wide .expand}
+
 ## 2026-11-05
 
 | 名称                      | 旧版本           | 新版本           | 说明                                                                 |
