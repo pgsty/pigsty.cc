@@ -77,8 +77,12 @@ Pigsty 当前公开稳定版为 [**v4.6.0**](#v460)，发布于北京时间 **20
 
 ## v4.6.0
 
+[中文](#v460-zh) · [English](#v460-en) · [软件包更新 / Packages](#v460-packages) · [离线包与验证 / Offline](#v460-offline)
+
+### 中文 {#v460-zh}
+
 Pigsty **v4.6.0** 发布于 **2026-11-13**，是一个涵盖新密钥管理模块、MySQL 8.4 模块重构、PostgreSQL 18.7 与内核变体升级、625 个已打包扩展以及基础设施与供应链更新的功能版本。
-完整源码差异见 [`v4.5.0...v4.6.0`](https://github.com/pgsty/pigsty/compare/v4.5.0...v4.6.0)（139 个提交、441 个文件变更），发布资产见 [GitHub Release v4.6.0](https://github.com/pgsty/pigsty/releases/tag/v4.6.0)。
+标签间源码差异见 [`v4.5.0...v4.6.0`](https://github.com/pgsty/pigsty/compare/v4.5.0...v4.6.0)（139 个提交、441 个文件变更），发布资产见 [GitHub Release v4.6.0](https://github.com/pgsty/pigsty/releases/tag/v4.6.0)。
 
 **亮点特性**
 
@@ -88,6 +92,8 @@ Pigsty **v4.6.0** 发布于 **2026-11-13**，是一个涵盖新密钥管理模�
 - **625 个已打包扩展**：内置扩展目录较 v4.5.0（575 项）新增 52 项、移除 2 项，净增 50 项至 **625** 个已打包扩展、**457** 个非 contrib 独立包族；大批 Rust 扩展升级至 `pgrx 0.19.3`。
 - **可观测性与核心工具链升级**：`pig` 升级至 **v1.11.0**，`pg_exporter` 升级至 **v1.6.1**，`sow` 升级至 **v0.7.1**，Silo 升级至 `20261112`（配套 `silo-console 2.7.2`）；Grafana 仪表盘增至 **68** 套，静态记录规则增至 **775** 条（含动态模板共 790 条），告警规则 **79** 条。
 - **模板归位与自动化增强**：10 套内核分支模板统一迁入 `conf/fork/*`（含 `conf/mysql.yml` 重命名为 `conf/fork/halo.yml`），新增 `app/silo` 与 `app/discourse` 至 **53** 套独立配置模板；`terraform/` 默认切换至 OpenTofu（`tofu`），离线包默认路径收敛至 `/var/tmp/pkg.tgz`，`docker` 与 `nginx` 拆分为独立上游仓库模块。
+
+- **14 份离线包完成实机验证**：EL9/10、Debian 12/13、Ubuntu 22/24/26 的 x86_64 与 ARM64 包均小于 **2 GiB**；在全新 VM 中隔离外网，独立完成 `bootstrap → configure -c rich → deploy`，**14/14 通过**。
 
 **新模块与数据服务演进**
 
@@ -104,7 +110,7 @@ Pigsty **v4.6.0** 发布于 **2026-11-13**，是一个涵盖新密钥管理模�
   - **新增 49 个主扩展与工具包**：`acdat`、`addressing_dictionary`、`codesystem`、`colnames`、`edtf_postgres`、`encsearch`、`hdr_histogram`、`is_jsonb_valid`、`istore`、`jev`、`kafgres`、`libx509pq`、`macavity`、`oai_fdw`、`opencc`、`pg_agent_gate`、`pg_circuit`、`pg_grammar_guard`、`pg_icu_parser`、`pg_improv`、`pg_integrity_checksums`、`pg_json_diff`、`pg_kv`、`pg_lease`、`pg_lexo`、`pg_lion`、`pg_living_assertions`、`pg_money`、`pg_nanotime`、`pg_relation_sql`、`pg_rusage`、`pg_stat_tcpinfo`、`pg_statecharts`、`pg_statkit`、`pg_statvfs`、`pg_synonym`、`pg_table_range`、`pg_tre`、`pg_try_cast`、`pg_vectorsearch`、`pg_warren`、`pgexporter_ext`、`pgs3`、`pgtelemetry`、`plphp`、`stannum`、`textsearch_intl`、`tin`、`vgram`。
   - **随主包新增 3 个子扩展**：`pg_lion_citext`、`pg_lion_vector`、`pg_statecharts_dev`。
   - **移除 2 个子扩展**：`documentdb_distributed`（上游 DocumentDB 1.0 移除）与 `pgcontext_pgvector`。
-  - **关键扩展升级**：`documentdb 1.0`、`citus 14.3.0`、`timescaledb 2.31.0`、`postgis 3.7.0`、`pg_duckdb 1.2.0` + `duckdb_fdw 2.0.2` + `pg_mooncake 0.3.0`（适配 DuckDB 2.0.0）、`pg_search 0.26.6`、`pg_lake 3.5.10`、`vchord 1.3.0` + `vchord_bm25 1.1.0` + `pg_tokenizer 1.1.0`（原生 `tsvector`）、`pgroonga 4.1.0`（Groonga 16.1.5）、`mobilitydb 1.3.1`、`pg_trickle 0.108.3`、`pg_turbovec 2.15.0`、`pg_fts 1.15.2`、`anon 3.3.2`、`credcheck 6.0`、`rdf_fdw 3.0.0`、`pg_task 3.0.0`、`rdkit 202609.2` 等。
+  - **关键扩展升级**：`documentdb 1.0`、`citus 14.3.0`、`timescaledb 2.31.0`、`postgis 3.7.0`、`pg_duckdb 1.2.0` + `duckdb_fdw 2.0.2` + `pg_mooncake 0.3.0`（适配 DuckDB 2.0.0）、`pg_search 0.26.6`、`pg_lake 3.6.0`、`vchord 1.3.0` + `vchord_bm25 1.1.0` + `pg_tokenizer 1.1.0`（原生 `tsvector`）、`pgroonga 4.1.0`（Groonga 16.1.5）、`mobilitydb 1.3.1`、`pg_trickle 0.108.3`、`pg_turbovec 2.15.0`、`pg_fts 1.16.0`、`anon 3.3.2`、`credcheck 6.0`、`rdf_fdw 3.1.0`、`pg_task 3.0.0`、`rdkit 202609.2` 等。
 
 **基础设施、应用与发布工程**
 
@@ -112,282 +118,403 @@ Pigsty **v4.6.0** 发布于 **2026-11-13**，是一个涵盖新密钥管理模�
 - **Docker 应用模板**：`app.yml` 在生成 `.env` 时自动将字面量 `$` 转义为 `$$`，避免 Docker Compose 变量误展开并保持 `0600` 权限；新增 [`silo`](/docs/app/silo/)（替代独立 MinIO Compose 模板）与 [`discourse`](/docs/app/discourse/)（固定镜像摘要 SHA），同步更新 Supabase `0.8.2`、Dify `1.17.1`、InsForge `2.3.3`、JumpServer `5.0.0`、Registry `3.1.2` 等 [应用目录](/docs/app/) 模板。
 - **OpenTofu、离线安装与 Docker**：`terraform/` 的 Makefile 与辅助脚本默认使用 OpenTofu（`tofu`），可通过 `IAC_CLI=terraform` 切换回 Terraform，详见 [OpenTofu 指南](/docs/deploy/terraform/)；云镜像与 Vagrant Box 基线刷新（含 Debian 13.7 等）。远端缓存归档与 `bootstrap` 默认离线包路径改为 `/var/tmp/pkg.tgz`（缺失时兼容回退 `/tmp/pkg.tgz`），解包失败或缺少 `repo_complete` 标记时自动清理残留并中止，详见 [离线安装](/docs/setup/offline/)。[Docker 环境](/docs/setup/docker/) 改为通过 `make source` 打包本地归档构建，基于 Debian 13.7 并固定安装 `pig=1.11.0-*`。
 
-**PostgreSQL 内核与扩展软件包更新汇总**
+- **离线仓库依赖求解修复**：APT/DNF 对完整目标包集合统一求解，使用空安装状态，关闭 APT 推荐/建议包和 DNF 弱依赖；`hdfs_fdw` 与 OneSparse（别名 `one_sparse`）从默认分组隐藏，避免引入 Java 与 GraphBLAS/LAGraph。本次归档也排除了误选 PG14、重复 PostGIS 分支及 Babelfish；GCC、Qt 等仍被目标包强依赖的组件予以保留。隐藏默认分组不等于从扩展目录或在线仓库删除。
 
-下表汇总 v4.5.0 发布后（2026-09-24 至 2026-11-12）的 [RPM 变更日志](/docs/repo/pgsql/rpm/)、[DEB 变更日志](/docs/repo/pgsql/deb/) 与默认内核基线变更，按包名合并为“旧版本 → 最终版本”：
+### English {#v460-en}
 
-| 包名 | 旧版本 | 新版本 | 说明 |
-|:---|:---|:---|:---|
-| `postgresql-18` | `18.6` | `18.7` | 默认生产大版本小版本更新；PG 14–17 同步常规维护基线 |
-| `acdat` | `0.1.1` | `0.1.1` | PG14-18；已有扩展首次正式全量入库；80 主包 |
-| `address_standardizer` | - | RPM：3.7.0-1PGSTY / DEB：3.7.0 | EL8 补包；独立包；SQL 3.7；含 data_us；不依赖 PostGIS |
-| `addressing_dictionary` | - | `1.1` | PG14-18；纯 SQL |
-| `agensgraph-18` | - | `2.18.6.1` | PG18.6 内核与配套扩展 |
-| `arrow` | `22.0.0` | RPM：25.0.1 / DEB：24.0.0 / 25.0.1 | 含 compute/devel；ABI 2500 |
-| `babelfish-17` | `5.4.0` | `5.7.0` | PG17.11；含四个配套扩展 |
-| `babelfish-18` | `6.0.0` | `6.2.0` | PG18.6；含四个配套扩展 |
-| `biscuit` | `3.0.0` | `3.1.0` | PG16-18 |
-| `cat_tools` | `0.3.0` | `0.4.0` | 纯 SQL |
-| `citus` | `14.2.0` | `14.3.0` | PG16-18；含 citus_columnar |
-| `cloudberry` | `2.1.0` | `2.2.0` | 内核与配套扩展 |
-| `cloudberry-backup` | `2.1.0` | `2.2.0` | 六个备份恢复工具 |
-| `cloudberry-pxf` | `2.1.0` | `2.2.0` | 配套 Cloudberry 2.2.0；含 pxf/pxf_fdw |
-| `codesystem` | - | 仅 RPM：0.2.1 | PG14-18；SQL 版本 0.2.0 |
-| `colnames` | - | `1.7.1` | PG14-18；SQL 1.7.0 |
-| `containerd.io` | - | `2.4.2-3` | 官方 RPM/DEB（拆分为独立 docker 仓库模块） |
-| `credcheck` | 仅 RPM：4.7 | 仅 RPM：6.0 | PG14-18；EL8 安全补包 |
-| `ddlx` | `0.30` | `0.31` | PG14-18；纯 SQL |
-| `docker-buildx-plugin` | - | `0.38.1` | 官方 RPM/DEB（独立 docker 仓库模块） |
-| `docker-ce` | - | `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块） |
-| `docker-ce-cli` | - | `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块） |
-| `docker-ce-rootless-extras` | - | `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块） |
-| `docker-compose-plugin` | - | `5.7.0` | 官方 RPM/DEB（独立 docker 仓库模块） |
-| `documentdb` | `0.114` | RPM：1.0-2PGSTY / DEB：1.0 | PG15-18；PostGIS 3.7 |
-| `duckdb_fdw` | `1.4.3` | `2.0.2` | PG15-18；DuckDB 2.0.0；与 pg_duckdb 互斥 |
-| `edtf_postgres` | - | `1.2.3` | PG14-18 |
-| `emaj` | `5.0.0` | `5.0.1` | PG14-18；修复 emaj_adm 权限提升与并行回滚问题 |
-| `encsearch` | - | 仅 RPM：0.1.1 | PG17；加密搜索 |
-| `graphblas` | `10.5.0` | `10.5.2` | 运行库与开发包；ABI 10 |
-| `groonga` | RPM：15.1.8 / DEB：15.1.7 / 15.1.9 / 16.0.0 | RPM：16.1.5 / DEB：16.0.5 / 16.1.3 | EL8/9/10；x86_64/aarch64；含 libs/devel |
-| `groonga-tokenizer-mecab` | RPM：15.1.8 / DEB：15.1.7 / 15.1.9 / 16.0.0 | RPM：16.1.5 / DEB：16.0.5 / 16.1.3 | EL8/9/10；x86_64/aarch64；MeCab 分词器 |
-| `haproxy` | `3.4.4` | `3.4.7` | 含文档子包 |
-| `hdr_histogram` | - | `1.0.0` | PG14-18；SQL 版本 1.0 |
-| `is_jsonb_valid` | - | `0.1.4` | PG14-18 |
-| `istore` | - | `0.1.12` | PG14-18 |
-| `ivorysql-18` | `5.4` | `5.6` | PG18.6 内核 |
-| `ivorysql-contrib` | `5.4` | `5.6` | PG18（IvorySQL）；含 38 个扩展 |
-| `jev` | - | `0.2.1` | PG14-17 |
-| `jsonschema` | `0.1.9` | `0.1.11` | PG14-18；pgrx 0.19.3 |
-| `kafgres` | - | `0.3.0` | PG16 |
-| `lagraph` | `1.2.2` | `1.2.2` | 使用 GraphBLAS 10.5.2 重建 |
-| `lead` | - | `1.0.6` | PG17-18；扩展名 tin；开发快照 |
-| `libx509pq` | - | `1.3` | PG14-18 |
-| `log_fdw` | `1.4` | `1.5` | PG14-18 |
-| `login_hook` | `1.8` | `1.9` | PG14-17 PGDG；PG18 Pigsty |
-| `lolor` | `1.2.2` | `1.2.3` | 随 pgEdge 15-18 更新 |
-| `macavity` | - | `0.2.0` | PG16-18；故障注入；仅限测试 |
-| `mobilitydb` | `1.3.0` | RPM：1.3.1-2PGSTY / DEB：1.3.1 | PG14-18；PostGIS 3.7 |
-| `nginx` | - | `1.31.8` | 官方 RPM/DEB（拆分为独立 nginx 仓库模块） |
-| `nginx-module-acme` | - | `1.31.8+0.4.1` | 官方 RPM/DEB（独立 nginx 仓库模块） |
-| `nominatim_fdw` | `2.1.0` | `2.3` | PG14-18；RPM 主供 PGDG；同版本 Pigsty 补位包并存 |
-| `oai_fdw` | - | `1.16.0` | PG14-18；OAI-PMH FDW；SQL 1.16 |
-| `onesparse` | `1.0.0-1PGSTY` | `1.0.0-2PGSTY` | PG18；随 GraphBLAS/LAGraph 重建；SQL 0.1.0；需预加载 |
-| `opencc` | - | `0.1.0` | PG14-18；繁简中文转换 |
-| `orioledb-16` | `1.8-beta16` | `1.10.3` | PG16.15 内核；SQL 1.10 |
-| `orioledb-17` | `1.8-beta16` | `1.10.3` | PG17.11 内核；SQL 1.10 |
-| `orioledb-18` | `1.8-beta16` | `1.10.3` | PG18.6 内核；SQL 1.10 |
-| `passwordcheck_cracklib` | `3.2.0` | `3.2.1` | PG14-18 |
-| `pg_adhoc` | 仅 RPM：17.4 | 仅 RPM：19.0 | 含 pg_filedump |
-| `pg_agent_gate` | - | `0.4.1` | PG18；修复代理角色逃逸；需预加载 |
-| `pg_anon` | `3.2.2` | `3.3.2` | PG14-18；pgrx 0.19.3；安全更新；需要删除并重建 |
-| `pg_background` | `2.0.3` | `2.0.4-2PGSTY` | PG14-18；移除下游升级补丁 |
-| `pg_circuit` | - | `0.1.0` | PG16-18；需预加载 |
-| `pg_clickhouse` | `0.10.0` | `0.11.1` | PG14-18；SQL 0.11 |
-| `pg_curl` | `2.4.5` | `2.5.0` | PG14-18；SQL 2.5 |
-| `pg_duckdb` | `1.1.1` | `1.2.0` | DuckDB 2.0.0；与 duckdb_fdw 冲突 |
-| `pg_durable` | `0.2.3` | `0.2.9` | PG14-18；需预加载 |
-| `pg_eviltransform` | `0.0.5` | `0.0.7` | PG14-18 |
-| `pg_fts` | `0.2.0` | `1.15.2` | PG17-18；修复 top-k 与删除后性能退化 |
-| `pg_grammar_guard` | - | `0.4.9` | PG14-18；Apache-2.0 |
-| `pg_graphql` | `1.6.2` | `1.6.3` | 修复 nodeId 的带引号主键 |
-| `pg_h3` | `4.2.3` | `4.5.0` | PG14-18；含 h3_postgis；新增 50 个 DEB；按上游迁移指南升级 |
-| `pg_icu_parser` | - | `1.0.0` | PG14-18；EL8/9/10 x86_64/aarch64；修复 PG18 兼容性 |
-| `pg_improv` | - | `0.14.0` | PG15-18；pgrx 0.19.3 |
-| `pg_incremental` | 仅 DEB：1.5.0 | 仅 DEB：1.6.1 | PG16-18；SQL 1.6 |
-| `pg_integrity_checksums` | - | `2.2.0` | PG14-18；SQL 2.2 |
-| `pg_ivm` | `1.15` | `1.17` | PG14-18 |
-| `pg_json_diff` | - | `1.0` | PG14-18 |
-| `pg_kv` | - | `0.1.0` | PG15-18；非持久化共享内存 KV |
-| `pg_lake` | `3.4.0` | `3.5.10` | PG16-18；仅 EL9/10；八个扩展，SQL 3.5；Brotli 安全修复 |
-| `pg_lease` | - | 仅 RPM：0.1.0 | PG14-18；纯 SQL |
-| `pg_lexo` | - | `0.6.1` | PG16-18；SQL 0.6.0；修复序号生成与排序 |
-| `pg_lion` | - | `0.3.0` | PG14-18；含 pg_lion_citext、pg_lion_vector 子扩展 |
-| `pg_living_assertions` | - | `0.5.10` | 纯 SQL；全平台重建 |
-| `pg_local_cache` | `1.3.0` | `3.1.0` | PG14-18；OpenSSL 依赖 |
-| `pg_mentat` | `1.6.0` | `1.20.0` | PG14-18 |
-| `pg_money` | - | `0.3.0` | PG14-18 |
-| `pg_mooncake` | `0.2.0` | `0.3.0-1PGSTY` | PGSTY 分支；适配 pg_duckdb 1.2.0 / DuckDB 2.0.0；缺少 0.2.0 升级脚本 |
-| `pg_nanotime` | - | `0.2.0` | PG17-18；纳秒时间戳；预览版 |
-| `pg_parquet` | `0.5.1-3PIGSTY` | `0.5.1-4PGSTY` | 修复流式 COPY 临时文件泄漏 |
-| `pg_pinyin` | `0.0.6` | `0.0.8` | PG14-18 |
-| `pg_profile` | `4.11` | `4.16` | PG14-18；恢复 30 个 RPM；纯 SQL；版本不变 |
-| `pg_regresql` | `2.0.0` | `2.1.0` | PG14-18；SQL 版本 2.0 |
-| `pg_relusage` | `0.0.1` | `1.0.2` | PG14-18；需加载 |
-| `pg_rusage` | - | `1.0` | PG14-18 |
-| `pg_search` | `0.25.2` | `0.26.6` | PG15-18；需预加载；MPP JoinScan 已知崩溃风险 |
-| `pg_semver` | `0.41.0` | `0.42.0` | PG14-18 |
-| `pg_stat_ch` | 仅 RPM：0.3.6 | 仅 RPM：0.4.0 | PG16-18；新增 EL8 覆盖；DEB 保留 0.3.6 |
-| `pg_stat_monitor` | `2.3.2` | `2.4.0` | PG14-18；需预加载 |
-| `pg_stat_tcpinfo` | - | `1.1` | PG14-18；PGDG 主供，Pigsty 补充 |
-| `pg_statecharts` | - | `0.1.0` | PG14-18；含 pg_statecharts_dev 子扩展 |
-| `pg_statkit` | - | `1.1.0` | PG14-17 |
-| `pg_statvfs` | - | `1.0` | PG14-18 |
-| `pg_statviz` | RPM：0.9 / 1.2 / DEB：1.2.1 | `1.2.1` | PG14-18；正式 RPM 从 PGDG 旧版切换至 Pigsty 1.2.1；SQL 版本 1.2；补齐 30 个 RPM |
-| `pg_synonym` | - | `1.0.0` | PG15-18；SQL 版本 1.0 |
-| `pg_table_range` | - | 仅 RPM：0.1.2 | PG16-18；范围剪枝 |
-| `pg_task` | `2.1.29` | `3.0.0` | PG14-18；需预加载 |
-| `pg_textsearch` | `1.4.0` | `1.5.1` | PG17-18；RPM 采用 PGDG；DEB 由 Pigsty 提供 |
-| `pg_tle` | `1.5.2` | `1.5.3` | PG14-18 |
-| `pg_tokenizer` | `0.1.1` | `1.1.0` | PG14-18；原生 tsvector |
-| `pg_tre` | - | `4.6.2` | PG17-18 |
-| `pg_trickle` | `0.81.0` | `0.108.3` | PG18；pgrx 0.19.3 |
-| `pg_try_cast` | - | `1.0.0` | PG16-18；SQL 版本 1.0 |
-| `pg_turbovec` | `2.2.2` | `2.15.0` | PG14-18 |
-| `pg_utl_smtp` | 仅 DEB：1.0.0 | 仅 DEB：2.0.0 | PG14-18；IO::Socket::SSL 依赖 |
-| `pg_vault_tde` | `1.7.0` | `1.7.2` | PG17-18；EL9/10 |
-| `pg_vectorsearch` | - | `0.1.0` | PG18；Alpha |
-| `pg_warren` | - | `0.8.0` | PG14-18；新增扩展 |
-| `pgaudit` | 仅 RPM：1.6.3 / 1.7.1 | 仅 RPM：1.6.3-1PGSTY / 1.7.1-1PGSTY | PG14/15；统一 pgaudit_$v 包名并兼容 PGDG 旧名；PG16-18 复用 PGDG |
-| `pgbson` | `2.1.0` | `2.2.0` | PG14-18；RPM 包名 postgresbson |
-| `pgdog` | `0.1.57` | `0.1.63` | PostgreSQL 连接池 |
-| `pgedge-15` | `15.19-1PGSTY` | `15.19-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3 |
-| `pgedge-16` | `16.15-1PGSTY` | `16.15-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3 |
-| `pgedge-17` | `17.11-1PGSTY` | `17.11-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3 |
-| `pgedge-18` | `18.6-1PGSTY` | `18.6-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3 |
-| `pgexporter_ext` | - | 仅 DEB：0.2.5 | PG14-18；新增 DEB；RPM 沿用 PGDG |
-| `pgextwlist` | `1.19` | `1.20` | PG14-18；RPM 配方更新；正式包采用 PGDG |
-| `pggraph` | `1.2.0` | `1.2.1` | PG14-18；扩展名 graph；修正 DEB SQL 文件验收 |
-| `pghydro` | 仅 RPM：6.6-1PIGSTY | 仅 RPM：6.6-2PGSTY | PG14-18；PostGIS 3.7；noarch |
-| `pgmb` | 仅 RPM：1.0.0-1PIGSTY | 仅 RPM：1.0.0-2PGSTY | PG14-18；修复 schema 创建与 pgsql_http 依赖 |
-| `pgmnemo` | `0.20.0` | `0.21.0` | PG17-18；pg_dump 会保留语料表和序列 |
-| `pgmq` | `1.12.0` | `1.13.1` | PG14-18；纯 SQL |
-| `pgmqtt` | `0.5.0` | `0.5.1` | PG14-18；需预加载；CDC 需 logical WAL |
-| `pgrdf` | `0.6.20` | `0.6.40` | PG14-18；pgrx 0.19.3 |
-| `pgroonga` | `4.0.8` | RPM：4.1.0-4PGSTY.el9 / DEB：4.1.0 | PG14-18；EL9 修订；EL8/10 以 2PGSTY 重建；Groonga 16.1.5 |
-| `pgs3` | `0.1.1` | `0.1.1` | PG17-18；已有扩展首次正式全量入库；32 主包；alpha |
-| `pgsentinel` | `1.5.0` | `1.5.1` | PG14-18；配方更新；正式包采用 PGDG；移出重复 Pigsty 包 |
-| `pgsql_tweaks` | `1.0.5` | `1.1.0` | PG14-18；纯 SQL |
-| `pgtde-18` | `18.4` | `18.6` | Percona 18.6.1；pg_tde 2.2.2 |
-| `pgtde-18-contrib` | `18.4` | `18.6` | pg_stat_monitor 2.4.0；vector 0.8.6 |
-| `pgtelemetry` | - | `1.7` | PG14-18；纯 SQL；依赖 pg_stat_statements |
-| `pgvector` | `0.8.6` | RPM：0.8.7 / DEB：0.8.6 | PG14-18；RPM 0.8.7 采用 PGDG；按约定移出 Pigsty 包 |
-| `pgvectorscale` | `0.9.1` | `0.9.1` | PG14-18；扩展名 vectorscale；同版本重构建、订正目录旧标签 |
-| `plpgsql_check` | `2.10.4` | `2.10.15` | PG14-18；SQL 版本 2.10 |
-| `plphp` | - | `2.6` | PG14-18；修正嵌入运行库依赖 |
-| `plprql` | `18.0.1` | `18.0.2` | PG14-18 |
-| `plv8` | `3.2.4` | `3.2.5` | PG14-18；修复 EL10 LTO 构建 |
-| `polardb-17` | `17.10.1.0` | `17.11.1.0-2PGSTY` | PG17.11 内核与扩展；使用新版 PolarStore SDK 重建 |
-| `polarstore` | `1.2.42-2PGSTY` | `1.2.42-3PGSTY` | 使用 zlog 1.2.20 重建 |
-| `postgis` | RPM：3.6.4 / DEB：3.7.0 | RPM：3.7.0-1PGSTY / DEB：3.7.0 | EL8 补包；EL9/10 由 PGDG 主供 |
-| `postgis_tiger_geocoder` | - | RPM：2025.2-1PGSTY / DEB：2025.2 | EL8 PG16-18 补包；独立 noarch 包 |
-| `provsql` | `1.12.0` | `1.13.1` | 修复电路大小与取消操作；需预加载 |
-| `psql_bm25s` | `0.4.13` | `0.4.14` | PG17-18 |
-| `q3c` | 仅 RPM：2.0.5 | 仅 RPM：2.0.6 | PGDG 软件包 |
-| `rdf_fdw` | `2.7.0` | `3.0.0` | PG14-18；SQL 版本 3.0 |
-| `rdkit` | RPM：202303.3 / 202503.6 / DEB：202503.6 | `202609.2` | PG14-18；EL9/10；移除下游升级补丁 |
-| `redis` | `7.2.16` | `7.2.17-1PGSTY` | 含开发包 |
-| `repmgr` | 仅 RPM：5.5.0 | 仅 RPM：5.5.1 | PGDG 软件包 |
-| `session_variable` | `3.5` | `3.6` | PG14-18 |
-| `snowflake` | `2.6.0` | `2.6.0` | PG15-18；随 pgEdge 重构建；订正旧目录 2.5.0 标签 |
-| `spock` | `5.0.11` | `5.0.13` | 随 pgEdge 15-18 更新；需预加载 |
-| `stannum` | - | `0.1.0` | PG17-18；开发快照 |
-| `supautils` | `3.4.3` | `3.4.4` | PG14-18 |
-| `textsearch_intl` | - | RPM：1.0.1 / DEB：1.0.0 | PG14-18；SQL 版本 1.0；DEB 保持 1.0.0 |
-| `timescaledb` | `2.29.1` | `2.31.0` | PG16-18；TSL |
-| `ulak` | `0.0.2` | `0.2.0` | PG14-18；需预加载 |
-| `valkey` | `9.1.1` | `9.1.3-1PGSTY` | 安全更新；含开发包 |
-| `vchord` | `1.1.1` | `1.3.0-1PGSTY` | PG14-18 |
-| `vchord_bm25` | `0.3.0` | `1.1.0` | PG14-18；原生 tsvector |
-| `vectorize` | `0.26.2` | `0.27.1` | PG14-18；SQL 0.23.0；多行处理修复 |
-| `vgram` | - | `1.0` | PG14-18 |
-| `wrappers` | `0.6.2` | `0.6.3` | PG14-18 |
-| `zlog` | `1.2.18` | `1.2.20` | 联动重建 PolarStore 与 PolarDB |
+Pigsty **v4.6.0**, released on **2026-11-13**, adds a secrets-management module, rebuilds MySQL 8.4 orchestration, updates the default PostgreSQL baseline to **18.7**, and expands the packaged extension catalog to **625** entries. The tagged source comparison contains **139 commits and 441 changed files** since v4.5.0; the attached source archive also includes the offline dependency fixes described below.
+
+**Highlights**
+
+- **VAULT secrets management:** the new OpenBao **2.7.2** module provides Raft HA, static-seal auto-unseal, TLS 1.3, a VIP/HAProxy endpoint, daily snapshots, monitoring and removal safeguards.
+- **MySQL 8.4 overhaul:** a **16-parameter** public interface, a consistent `/data/mysql` layout, recovery from a complete cluster outage, InnoDB Clone rebuilding, **70 recording rules** and **8 alerts**.
+- **PostgreSQL and kernel variants:** PostgreSQL **18.7**, IvorySQL **5.6**, Babelfish **6.2.0 / 5.7.0**, Percona PostgreSQL TDE **18.6.1**, OrioleDB **1.10.3**, AgensGraph **2.18.6.1**, pgEdge revision **3PGSTY** with Spock **5.0.13**, PolarDB **17.11.1.0**, Cloudberry **2.2.0**, and DocumentDB **1.0**.
+- **625 packaged extensions:** **52 additions and 2 removals**, a net gain of 50 over v4.5.0; **457 non-contrib package families**. Many Rust extensions move to **pgrx 0.19.3**. These are catalog counts, not the number installed by a template or included in one platform archive.
+- **Observability and tooling:** PIG **1.11.0**, PG Exporter **1.6.1**, SOW **0.7.1**, and Silo **20261112** with Console **2.7.2**; **68 dashboards**, **775 static recording rules** (790 including dynamic templates), and **79 alerts**.
+- **Templates and automation:** ten kernel templates move under `conf/fork/`; OpenHalo's former `conf/mysql.yml` becomes `conf/fork/halo.yml`. The template library grows to **53**, including `app/silo` and `app/discourse`. OpenTofu becomes the default IaC CLI, while Docker and Nginx get independent repository modules.
+- **Validated offline installation:** **14 complete archives**, each below **2 GiB**, cover seven distributions on x86_64 and ARM64. Every platform passed a fresh, isolated `bootstrap → configure -c rich → deploy` installation.
+
+**Modules and orchestration**
+
+- **VAULT (Beta)** deploys OpenBao on the `vault` group. One member provides a lab instance; three members form a production Raft cluster without ETCD or an external database. Its eight public parameters comprise five deployment and three removal settings, with `vault_safeguard: true`. Static-seal material is kept under `files/pki/vault/` on the admin node. Defaults enable `secret/` (KV v2), `transit/` and `approle`; Pigsty CA certificates secure TLS 1.3, and VIP/HAProxy exposes `https://vault.pigsty:8200`. The daily `vault-backup` job uses `flock`, retains seven snapshots, and retrieves snapshots to the admin node after initialization and before whole-cluster removal. The module adds 14 recording rules, six alerts and a Vault Overview dashboard.
+- **MYSQL** reduces its public interface to 13 deployment and three guarded removal parameters. Preflight rejects obsolete variables such as `mysql_backup_repo`; `configure -g` randomizes the root, monitor and cluster passwords. Data lives under `/data/mysql`, with three retained physical backups under `/data/backups/mysql`. Memory settings account for host size and PostgreSQL co-location; `server_id` derives from the node IPv4 address. Reconciliation supports `dba.rebootClusterFromCompleteOutage()`, InnoDB Clone and `cluster.rescan()`. `mysql_safeguard` defaults to `true`, and the rules adapt to mysqld-exporter **0.21.0**, including a stale-backup alert.
+- **KAFKA** adds `kafka_jmx_exporter_enabled` (default `true`) to control the embedded JMX agent and its scrape target independently of the protocol exporter. Removal retires dynamic KRaft controller voters before stopping services, then cleans exporter units and targets. Kafka updates to **4.4.0**.
+- **JUICE and VIBE** tighten service readiness and package installation. JuiceFS checks both the systemd result and the actual mount with `findmnt`. VIBE installs native `claude-code` **2.1.322** and `codex` **0.167.2** packages from the INFRA repository, isolates JupyterLab in `/data/jupyter/.venv` with `uv`, and updates Node.js to **26.13.1 LTS**. The legacy `claude` package remains separately available.
+
+**PostgreSQL and extensions**
+
+- Kernel templates use `./configure -c fork/<name>`. Version overrides exclude the fixed-major `fork/mssql` and `fork/polar` templates, and kernel-specific pgBackRest compatibility handling is completed.
+- The new `pg_pitr` parameter renders declarative recovery settings into `/pg/bin/pg-pitr`. PostgreSQL TLS certificates include the configured VIP in their SANs. The `crit` profile starts a single primary with `synchronous_commit: local`, then enables synchronous quorum settings after bootstrap. HAProxy health checks normalize `pg_rto` to a valid duration.
+- PIG **1.11.0** embeds **625 available catalog records**. The new entries cover search, time types, vector search, graph workloads, auditing and administration; `documentdb_distributed` and `pgcontext_pgvector` are removed. Key versions include TimescaleDB **2.31.0**, PostGIS **3.7.0**, pgvector **0.8.7**, Citus **14.3.0**, pg_search **0.26.6**, pg_lake **3.6.0**, pg_fts **1.16.0**, pg_duckdb **1.2.0**, duckdb_fdw **2.0.2**, pg_mooncake **0.3.0**, VectorChord **1.3.0**, vchord_bm25 **1.1.0**, pg_tokenizer **1.1.0**, and PGroonga **4.1.0**. The shared package tables retain RPM/DEB differences and distinguish optional repository packages from the PG18 offline snapshot.
+
+**Infrastructure, applications and release engineering**
+
+- Docker and Nginx upstream repositories are separate `docker` and `nginx` modules, with Docker CE **29.9.2** and Nginx **1.31.8**. INFRA adds production portal templates and cache-directory settings. Certbot's deploy hook refreshes certificate symlinks before validating and reloading Nginx. Rendered remote PostgreSQL exporter credentials use owner `prometheus` and mode `0600`.
+- Docker application `.env` rendering escapes literal `$` as `$$` and retains mode `0600`. New Silo and digest-pinned Discourse templates join updates to Supabase **0.8.2**, Dify **1.17.1**, InsForge **2.3.3**, JumpServer **5.0.0**, and Registry **3.1.2**.
+- IaC scripts default to `tofu`, with `IAC_CLI=terraform` available as an override. Cloud and VM image baselines are refreshed. The offline archive defaults to `/var/tmp/pkg.tgz`, with `/tmp/pkg.tgz` as a fallback; failed extraction or a missing `repo_complete` marker aborts bootstrap and removes partial output. Docker builds use `make source`, Debian **13.7**, and `pig=1.11.0-*`.
+- Offline repositories resolve the complete explicit package set in one APT/DNF transaction against an empty installed state. APT recommendations/suggestions and DNF weak dependencies are disabled. `hdfs_fdw` and OneSparse are hidden from default package groups, so their Java and GraphBLAS/LAGraph dependency chains are absent. The verified archives also avoid unintended PG14 and duplicate PostGIS branches. Required dependencies remain; this is not a claim that every optional repository package is installed or that the solver produces a mathematically minimal set.
+
+### 软件包更新 / Package updates {#v460-packages}
+
+**发布包基线 / Release package baseline**
+
+以下核心组件版本来自 2026-11-13 实际发布的 PG18 离线包，包发行号、架构及文件摘要以附件 `PACKAGE-MANIFEST.json` 为准。
+The core versions below come from the actual PG18 release archives. Exact package revisions, architectures and hashes are recorded in `PACKAGE-MANIFEST.json`.
+
+| 组件 / Component | 发布基线 / Release baseline |
+|:---|:---|
+| PostgreSQL | `18.7` |
+| Patroni | `4.1.5` |
+| PgBouncer | `1.26.1` |
+| pgBackRest | `2.60.0` |
+| PostGIS | `3.7.0` |
+| pgvector | `0.8.7` |
+| TimescaleDB | `2.31.0` |
+| PIG / PG Exporter / SOW | `1.11.0 / 1.6.1 / 0.7.1` |
+| Grafana | `13.3.1` |
+| VictoriaMetrics / Logs / Traces | `1.156.0 / 1.53.0 / 0.13.0` |
+| ETCD / HAProxy | `3.7.3 / 3.4.7` |
+| Silo / Console | `20261112 / 2.7.2` |
 {.wide .expand}
 
-**INFRA 与 PIG 配套仓库更新汇总**
+**PostgreSQL 内核、扩展与配套软件包更新汇总 / PGSQL package updates**
 
-下表合并 v4.5.0 发布后（2026-08-24 至 2026-11-12）的 [Infra 变更日志](/docs/repo/infra/log/) 与 [PIG 版本发布](/docs/pig/release/)：
+合并 v4.5.0 之后的 [RPM 变更日志](/docs/repo/pgsql/rpm/)、[DEB 变更日志](/docs/repo/pgsql/deb/)，并用本次发布归档校正 PG18 版本。旧版本是本期首条变更的基线；新版本是最终仓库记录或明确标出的 PG18 发布快照。表内也包含可选内核、扩展与依赖库，不表示这些包全部进入默认安装或每份离线包；其他 PG 大版本与平台以对应仓库为准。
+This table consolidates the RPM/DEB changes since v4.5.0, checked against the PG18 release archives. Previous versions are the earliest recorded baselines in this cycle. Current versions are the final repository records or explicitly marked PG18 snapshots. Optional kernels, extensions and libraries are included in the changelog; they are not all installed by default or bundled on every platform. Other PostgreSQL majors follow their own repository branches.
 
-| 仓库 | 项目 | 版本变化 | 简要说明 |
+| 包名 / Package | 旧版本 / Previous | 新版本 / Current | 说明 / Notes |
 |:---|:---|:---|:---|
-| INFRA | `agentsview` | `0.40.1` → `0.47.0` | AI 会话查看器更新 |
-| INFRA | `alertmanager` | `0.33.1` → `0.35.0` | 告警管理器升级 |
-| INFRA | `barn` | `—` → `1.2.0` | 新增官方原生包并升级至 1.2 稳定版 |
+| `postgresql-18` | `18.6` | `18.7` | 默认生产大版本小版本更新；PG 14–17 同步常规维护基线<br>Default production baseline: PostgreSQL 18.7; other supported majors follow their own maintenance branches. |
+| `acdat` | `0.1.1` | `0.1.1` | PG14-18；已有扩展首次正式全量入库；80 主包<br>PG14-18; First full production packaging of an existing extension; 80 main packages |
+| `address_standardizer` | - | RPM: 3.7.0-1PGSTY / DEB: 3.7.0 | EL8 补包；独立包；SQL 3.7；含 data_us；不依赖 PostGIS<br>EL8 gap fill; standalone; SQL 3.7; includes data_us; no PostGIS dependency |
+| `addressing_dictionary` | - | `1.1` | PG14-18；纯 SQL<br>PG14-18; SQL-only |
+| `age` | `1.7.0` | RPM: `1.8.0` / DEB: `1.8.0~rc0` | PG18 离线快照；旧 PG 大版本按对应发布线选择<br>PG18 snapshot: RPM 1.8.0 and PGDG DEB 1.8.0~rc0; older PG majors retain their release branches. |
+| `agensgraph-18` | - | `2.18.6.1` | PG18.6 内核与配套扩展<br>PG18.6 kernel and contrib |
+| `arrow` | `22.0.0` | RPM: 25.0.1 / DEB: 24.0.0 / 25.0.1 | 含 compute/devel；ABI 2500<br>Runtime, compute and development libraries; versions vary by distribution and ABI. |
+| `babelfish-17` | `5.4.0` | `5.7.0` | PG17.11；含四个配套扩展<br>PG17.11; includes all four companion extensions |
+| `babelfish-18` | `6.0.0` | `6.2.0` | PG18.6；含四个配套扩展<br>PG18.6; includes all four companion extensions |
+| `biscuit` | `3.0.0` | `3.1.0` | PG16-18<br>PG16-18 |
+| `cat_tools` | `0.3.0` | `0.4.0` | 纯 SQL<br>SQL-only |
+| `citus` | `14.2.0` | `14.3.0` | PG16-18；含 citus_columnar<br>PG16-18; includes citus_columnar |
+| `cloudberry` | `2.1.0` | `2.2.0` | 内核与配套扩展<br>Kernel and contrib |
+| `cloudberry-backup` | `2.1.0` | `2.2.0` | 六个备份恢复工具<br>Six backup/restore tools |
+| `cloudberry-pxf` | `2.1.0` | `2.2.0` | 配套 Cloudberry 2.2.0；含 pxf/pxf_fdw<br>For Cloudberry 2.2.0; includes pxf/pxf_fdw |
+| `codesystem` | - | RPM only: 0.2.1 | PG14-18；SQL 版本 0.2.0<br>PG14-18; SQL version 0.2.0 |
+| `colnames` | - | `1.7.1` | PG14-18；SQL 1.7.0<br>PG14-18; SQL 1.7.0 |
+| `credcheck` | RPM only: 4.7 | `6.0` | PG18 离线包采用 PGDG；EL8 提供 Pigsty 补包<br>PGDG packages in the PG18 snapshot; Pigsty fills EL8 gaps. |
+| `ddlx` | `0.30` | `0.31` | PG14-18；纯 SQL<br>PG14-18; SQL-only |
+| `documentdb` | `0.114` | RPM: 1.0-2PGSTY / DEB: 1.0 | PG15-18；PostGIS 3.7<br>PG15-18; PostGIS 3.7 |
+| `duckdb_fdw` | `1.4.3` | `2.0.2` | PG15-18；DuckDB 2.0.0；与 pg_duckdb 互斥<br>PG15-18; DuckDB 2.0.0; conflicts with pg_duckdb |
+| `edtf_postgres` | - | `1.3.2` | PG18 离线发布快照；日期时间类型<br>PG18 release snapshot; extended date/time types. |
+| `emaj` | `5.0.0` | `5.0.1` | PG14-18；修复 emaj_adm 权限提升与并行回滚问题<br>PG14-18; fixes emaj_adm privilege escalation and parallel rollback |
+| `encsearch` | - | RPM only: 0.1.1 | PG17；加密搜索<br>PG17; encrypted search |
+| `graphblas` | `10.5.0` | `10.5.2` | 运行库与开发包；ABI 10；不纳入默认分组及本次离线包<br>Runtime and development libraries, ABI 10; excluded from default groups and these offline archives. |
+| `groonga` | RPM: 15.1.8 / DEB: 15.1.7 / 15.1.9 / 16.0.0 | RPM: 16.1.5 / DEB: 16.0.5 / 16.1.3 | EL8/9/10；x86_64/aarch64；含 libs/devel<br>RPM 16.1.5; DEB runtime versions differ by distribution. |
+| `groonga-tokenizer-mecab` | RPM: 15.1.8 / DEB: 15.1.7 / 15.1.9 / 16.0.0 | RPM: 16.1.5 / DEB: 16.0.5 / 16.1.3 | EL8/9/10；x86_64/aarch64；MeCab 分词器<br>MeCab tokenizer; versions follow the matching Groonga packages. |
+| `haproxy` | `3.4.4` | `3.4.7` | 含文档子包<br>RPM includes the haproxy-doc subpackage |
+| `hdr_histogram` | - | `1.0.0` | PG14-18；SQL 版本 1.0<br>PG14-18; SQL version 1.0 |
+| `hypopg` | 1.4.4 | 1.4.5 | PGDG 软件包<br>PGDG packages |
+| `is_jsonb_valid` | - | `0.1.4` | PG14-18<br>PG14-18 |
+| `istore` | - | `0.1.12` | PG14-18<br>PG14-18 |
+| `ivorysql-18` | `5.4` | `5.6` | PG18.6 内核<br>PG18.6 kernel |
+| `ivorysql-contrib` | `5.4` | `5.6` | PG18（IvorySQL）；含 38 个扩展<br>PG18 (IvorySQL); includes 38 extensions |
+| `jev` | - | `0.2.1` | PG14-17<br>PG14-17 |
+| `jsonschema` | `0.1.9` | `0.1.11` | PG14-18；pgrx 0.19.3<br>PG14-18; pgrx 0.19.3 |
+| `kafgres` | - | `0.3.2` | PG16<br>PG16 |
+| `lagraph` | `1.2.2` | `1.2.2` | 使用 GraphBLAS 10.5.2 重建；不纳入本次离线包<br>Rebuilt against GraphBLAS 10.5.2; excluded from these offline archives. |
+| `lead` | - | `1.0.6` | PG17-18；扩展名 tin；开发快照<br>PG17-18; extension tin; development snapshot |
+| `libx509pq` | - | `1.3` | PG14-18<br>PG14-18 |
+| `log_fdw` | `1.4` | `1.5` | PG14-18<br>PG14-18 |
+| `login_hook` | `1.8` | `1.9` | PG14-17 PGDG；PG18 Pigsty<br>PG14-17 PGDG; PG18 Pigsty |
+| `lolor` | `1.2.2` | `1.2.3` | 随 pgEdge 15-18 更新<br>Updated with pgEdge 15-18 |
+| `macavity` | - | `0.2.0` | PG16-18；故障注入；仅限测试<br>PG16-18; Fault injection; testing only |
+| `mobilitydb` | `1.3.0` | RPM: 1.3.1-2PGSTY / DEB: 1.3.1 | PG14-18；PostGIS 3.7<br>PG14-18; PostGIS 3.7 |
+| `nominatim_fdw` | `2.1.0` | `2.3` | PG14-18；RPM 主供 PGDG；同版本 Pigsty 补位包并存<br>PG14-18; PGDG is the principal RPM provider; same-version Pigsty supplements remain |
+| `oai_fdw` | - | `1.16.0` | PG14-18；OAI-PMH FDW；SQL 1.16<br>PG14-18; OAI-PMH FDW; SQL 1.16 |
+| `onesparse` | `1.0.0-1PGSTY` | `1.0.0-2PGSTY` | PG18；随 GraphBLAS/LAGraph 重建；需预加载；已从默认分组隐藏<br>PG18; rebuilt with GraphBLAS/LAGraph; preload required; hidden from default groups. |
+| `opencc` | - | `0.1.0` | PG14-18；繁简中文转换<br>PG14–18; conversion between simplified and traditional Chinese. |
+| `orioledb-16` | `1.8-beta16` | `1.10.3` | PG16.15 内核；SQL 1.10<br>PG16.15 kernel; SQL 1.10 |
+| `orioledb-17` | `1.8-beta16` | `1.10.3` | PG17.11 内核；SQL 1.10<br>PG17.11 kernel; SQL 1.10 |
+| `orioledb-18` | `1.8-beta16` | `1.10.3` | PG18.6 内核；SQL 1.10<br>PG18.6 kernel; SQL 1.10 |
+| `passwordcheck_cracklib` | `3.2.0` | `3.2.1` | PG14-18<br>PG14-18 |
+| `passwordpolicy` | 2.0.5 | 2.0.6 | PGDG 软件包<br>PGDG packages |
+| `pg_adhoc` | RPM only: 17.4 | RPM only: 19.0 | 含 pg_filedump<br>Includes pg_filedump |
+| `pg_agent_gate` | - | `0.4.1` | PG18；修复代理角色逃逸；需预加载<br>PG18; fixes agent-role escape; preload required |
+| `pg_anon` | `3.2.2` | `3.3.2` | PG14-18；pgrx 0.19.3；安全更新；需要删除并重建<br>PG14-18; pgrx 0.19.3; security update; drop/recreate required |
+| `pg_background` | `2.0.3` | `2.0.4-2PGSTY` | PG14-18；移除下游升级补丁<br>PG14-18; remove downstream upgrade patch; built, import pending |
+| `pg_circuit` | - | `0.1.0` | PG16-18；需预加载<br>PG16-18; preload |
+| `pg_clickhouse` | `0.10.0` | `0.11.1` | PG14-18；SQL 0.11<br>PG14-18; SQL 0.11 |
+| `pg_curl` | `2.4.5` | `2.5.0` | PG14-18；SQL 2.5<br>PG14-18; SQL 2.5 |
+| `pg_currency` | 0.0.4 | 0.0.6 | PG14-18；扩展名 currency<br>PG14-18; extension currency |
+| `pg_duckdb` | `1.1.1` | `1.2.0` | DuckDB 2.0.0；与 duckdb_fdw 冲突<br>DuckDB 2.0.0; conflicts with duckdb_fdw |
+| `pg_durable` | `0.2.3` | `0.2.9` | PG14-18；需预加载<br>PG14-18; preload required; imported locally |
+| `pg_eviltransform` | `0.0.5` | `0.0.7` | PG14-18<br>PG14-18 |
+| `pg_fts` | `0.2.0` | `1.16.0` | PG17-18；修复 top-k 与删除后性能退化<br>PG17-18; fixes top-k and delete performance |
+| `pg_grammar_guard` | - | `0.4.9` | PG14-18；Apache-2.0<br>PG14-18; Apache-2.0; built, import pending |
+| `pg_graphql` | `1.6.2` | `1.6.3` | 修复 nodeId 的带引号主键<br>Fixes quoted primary keys in nodeId |
+| `pg_h3` | `4.2.3` | `4.5.0` | PG14-18；含 h3_postgis；新增 50 个 DEB；按上游迁移指南升级<br>PG14-18; Includes h3_postgis; adds 50 DEBs; follow upstream migration guidance |
+| `pg_hint_plan` | 1.8.0/1.7.1/1.6.2/1.5.3/1.4.4 | 1.8.1/1.7.2/1.6.3/1.5.4/1.4.5 | PGDG 的 PG18/17/16/15/14 发布线<br>PGDG PG18/17/16/15/14 release lines |
+| `pg_icu_parser` | - | `1.0.0` | PG14-18；EL8/9/10 x86_64/aarch64；修复 PG18 兼容性<br>PG14-18; EL8/9/10 x86_64/aarch64; PG18 compatibility fix; imported locally |
+| `pg_improv` | - | `0.14.0` | PG15-18；pgrx 0.19.3<br>PG15-18; pgrx 0.19.3 |
+| `pg_incremental` | `1.5.0` | RPM: `1.5.0` / DEB: `1.6.1` | DEB 升级至 1.6.1；PG18 RPM 保持 1.5.0<br>DEB upgraded to 1.6.1; PG18 RPM remains at 1.5.0. |
+| `pg_integrity_checksums` | - | `2.2.0` | PG14-18；SQL 2.2<br>PG14-18; SQL 2.2 |
+| `pg_ivm` | `1.15` | `1.17` | PG14-18<br>PG14-18 |
+| `pg_json_diff` | - | `1.0` | PG14-18<br>PG14-18 |
+| `pg_kv` | - | `0.1.0` | PG15-18；非持久化共享内存 KV<br>PG15-18; non-persistent shared-memory KV |
+| `pg_lake` | `3.4.0` | `3.6.0` | PG16-18；八个扩展，SQL 3.6；覆盖 EL9/10 与 Debian/Ubuntu<br>PG16–18; eight extensions, SQL 3.6; EL9/10 and Debian/Ubuntu packages. |
+| `pg_lease` | - | RPM only: 0.1.0 | PG14-18；纯 SQL<br>PG14-18; SQL-only |
+| `pg_lexo` | - | `0.6.1` | PG16-18；SQL 0.6.0；修复序号生成与排序<br>PG16-18; SQL 0.6.0; fix rank generation and ordering |
+| `pg_lion` | - | `0.3.0` | PG14-18；含 pg_lion_citext、pg_lion_vector 子扩展<br>PG16-18; includes citext/vector companions |
+| `pg_living_assertions` | - | `0.5.10` | 纯 SQL；全平台重建<br>SQL-only rebuild |
+| `pg_local_cache` | `1.3.0` | `3.1.0` | PG14-18；OpenSSL 依赖<br>PG14-18; OpenSSL dependency; built, import pending |
+| `pg_mentat` | `1.6.0` | `1.20.0` | PG14-18<br>PG14-18 |
+| `pg_money` | - | `0.3.0` | PG14-18<br>PG14-18 |
+| `pg_mooncake` | `0.2.0` | `0.3.0-1PGSTY` | PGSTY 分支；适配 pg_duckdb 1.2.0 / DuckDB 2.0.0；缺少 0.2.0 升级脚本<br>PGSTY fork; pg_duckdb 1.2.0 / DuckDB 2.0.0; no 0.2.0 upgrade script |
+| `pg_nanotime` | - | `0.3.0` | PG18 离线发布快照；纳秒时间戳<br>PG18 release snapshot; nanosecond timestamps. |
+| `pg_parquet` | `0.5.1-3PIGSTY` | `0.5.1-4PGSTY` | 修复流式 COPY 临时文件泄漏<br>Fixes streaming COPY temporary-file leaks |
+| `pg_pinyin` | `0.0.6` | `0.0.8` | PG14-18<br>PG14-18 |
+| `pg_profile` | `4.11` | `4.16` | PG14-18；恢复缺失 RPM；纯 SQL<br>PG14–18; missing RPM coverage restored; SQL-only. |
+| `pg_regresql` | `2.0.0` | `2.1.0` | PG14-18；SQL 版本 2.0<br>PG14-18; SQL version 2.0 |
+| `pg_relusage` | `0.0.1` | `1.0.2` | PG14-18；需加载<br>PG14-18; loading required |
+| `pg_rusage` | - | `1.0` | PG14-18<br>PG14-18 |
+| `pg_search` | `0.25.2` | `0.26.6` | PG15-18；需预加载；MPP JoinScan 已知崩溃风险<br>PG15-18; preload; known MPP JoinScan crash risk |
+| `pg_semver` | `0.41.0` | `0.42.0` | PG14-18<br>PG14-18; imported locally |
+| `pg_stat_ch` | `0.3.6` | `0.4.0` | PG16-18；PG18 离线包的 RPM/DEB 均为 0.4.0<br>PG16–18; both RPM and DEB use 0.4.0 in the PG18 snapshot. |
+| `pg_stat_kcache` | 2.3.1 | 2.3.2 | PGDG 软件包<br>PGDG packages |
+| `pg_stat_monitor` | `2.3.2` | `2.4.0` | PG14-18；需预加载<br>PG14-18; preload |
+| `pg_stat_tcpinfo` | - | `1.1` | PG14-18；PGDG 主供，Pigsty 补充<br>PG14-18; PGDG primary, Pigsty supplement |
+| `pg_statecharts` | - | `0.1.0` | PG14-18；含 pg_statecharts_dev 子扩展<br>PG16-18; includes pg_statecharts_dev |
+| `pg_statkit` | - | `1.1.0` | PG14-17<br>PG14-17 |
+| `pg_statvfs` | - | `1.0` | PG14-18<br>PG14-18 |
+| `pg_statviz` | RPM: 0.9 / 1.2 / DEB: 1.2.1 | `1.2.1` | PG14-18；正式 RPM 从 PGDG 旧版切换至 Pigsty 1.2.1；SQL 版本 1.2；补齐 30 个 RPM<br>PG14-18; Production RPMs switch from older PGDG builds to Pigsty 1.2.1; SQL version 1.2; fills 30 RPM coordinates |
+| `pg_synonym` | - | `1.0.0` | PG15-18；SQL 版本 1.0<br>PG15-18; SQL version 1.0 |
+| `pg_table_range` | - | RPM only: 0.1.2 | PG16-18；范围剪枝<br>PG16-18; range pruning |
+| `pg_task` | `2.1.29` | `3.0.0` | PG14-18；需预加载<br>PG14-18; preload |
+| `pg_textsearch` | `1.4.0` | `1.5.1` | PG17-18；RPM 采用 PGDG；DEB 由 Pigsty 提供<br>PG17-18; RPMs from PGDG; DEBs from Pigsty |
+| `pg_tle` | `1.5.2` | RPM: `1.5.2` / DEB: `1.5.3` | PG18 离线快照保留平台版本差异<br>The PG18 snapshot retains different RPM and DEB versions. |
+| `pg_tokenizer` | `0.1.1` | `1.1.0` | PG14-18；原生 tsvector<br>PG14-18; native tsvector |
+| `pg_tre` | - | `4.6.2` | PG17-18<br>PG17-18 |
+| `pg_trickle` | `0.81.0` | `0.108.3` | PG18；pgrx 0.19.3<br>PG18; pgrx 0.19.3; built, import pending |
+| `pg_try_cast` | - | `1.0.0` | PG16-18；SQL 版本 1.0<br>PG16-18; SQL version 1.0 |
+| `pg_turbovec` | `2.2.2` | `2.15.0` | PG14-18<br>PG14-18 |
+| `pg_utl_smtp` | DEB only: 1.0.0 | DEB only: 2.0.0 | PG14-18；IO::Socket::SSL 依赖<br>PGDG covers EL8/9/10 |
+| `pg_vault_tde` | `1.7.0` | `1.7.2` | PG17-18；EL9/10<br>PG17-18; EL9/10 |
+| `pg_vectorsearch` | - | `0.1.0` | PG18；Alpha<br>PG18; alpha; imported locally |
+| `pg_warren` | - | `0.8.0` | PG14-18；新增扩展<br>PG15-18 |
+| `pgaudit` | RPM only: 1.6.3 / 1.7.1 | RPM only: 1.6.3-1PGSTY / 1.7.1-1PGSTY | PG14/15；统一 pgaudit_$v 包名并兼容 PGDG 旧名；PG16-18 复用 PGDG<br>Pigsty unifies PG14/15 package names; PG16–18 use PGDG packages, with 18.0 for PG18. |
+| `pgbson` | `2.1.0` | `2.2.0` | PG14-18；RPM 包名 postgresbson<br>PG14-18; RPM package postgresbson |
+| `pgdog` | `0.1.57` | `0.1.63` | PostgreSQL 连接池<br>PostgreSQL connection pooler |
+| `pgedge-15` | `15.19-1PGSTY` | `15.19-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3<br>Includes Spock 5.0.13 and LOLOR 1.2.3; imported locally |
+| `pgedge-16` | `16.15-1PGSTY` | `16.15-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3<br>Includes Spock 5.0.13 and LOLOR 1.2.3; imported locally |
+| `pgedge-17` | `17.11-1PGSTY` | `17.11-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3<br>Includes Spock 5.0.13 and LOLOR 1.2.3; imported locally |
+| `pgedge-18` | `18.6-1PGSTY` | `18.6-3PGSTY` | 含 Spock 5.0.13、LOLOR 1.2.3<br>Includes Spock 5.0.13 and LOLOR 1.2.3; imported locally |
+| `pgexporter_ext` | - | `0.2.5` | 新增 DEB 补包；RPM 沿用 PGDG<br>New DEB coverage; RPM continues to use PGDG. |
+| `pgextwlist` | `1.19` | `1.20` | PG14-18；RPM 配方更新；正式包采用 PGDG<br>PG14-18; RPM recipe updated; production packages from PGDG |
+| `pggraph` | `1.2.0` | `1.2.1` | PG14-18；扩展名 graph；修正 DEB SQL 文件验收<br>PG14-18; Extension graph; fix DEB SQL payload checks |
+| `pghydro` | RPM only: 6.6-1PIGSTY | RPM only: 6.6-2PGSTY | PG14-18；PostGIS 3.7；noarch<br>PG14-18; PostGIS 3.7; noarch |
+| `pgmb` | RPM only: 1.0.0-1PIGSTY | RPM only: 1.0.0-2PGSTY | PG14-18；修复 schema 创建与 pgsql_http 依赖<br>PG14-18; fix schema creation and pgsql_http dependency |
+| `pgmnemo` | `0.20.0` | `0.21.0` | PG17-18；pg_dump 会保留语料表和序列<br>PG17-18; preserves corpus tables and sequences in pg_dump |
+| `pgmq` | `1.12.0` | `1.13.1` | PG14-18；纯 SQL<br>PG14-18; SQL-only |
+| `pgmqtt` | `0.5.0` | `0.5.1` | PG14-18；需预加载；CDC 需 logical WAL<br>PG14-18; Preload required; CDC requires logical WAL |
+| `pgrdf` | `0.6.20` | `0.6.40` | PG14-18；pgrx 0.19.3<br>PG14-18; pgrx 0.19.3; built, import pending |
+| `pgroonga` | `4.0.8` | RPM: 4.1.0-4PGSTY.el9 / DEB: 4.1.0 | PG14-18；EL9 修订；EL8/10 以 2PGSTY 重建；Groonga 16.1.5<br>PG14-18; EL9 release; EL8/10 rebuilt at 2PGSTY; Groonga 16.1.5 |
+| `pgrouting` | 4.0.1 | 4.0.2 | PGDG 软件包<br>PGDG packages |
+| `pgs3` | `0.1.1` | `0.1.1` | PG17-18；已有扩展首次正式全量入库；32 主包；alpha<br>PG17-18; First full production packaging of an existing extension; 32 main packages; alpha |
+| `pgsentinel` | `1.5.0` | `1.5.2` | PGDG 软件包；PG14-18<br>PGDG packages |
+| `pgsodium` | 3.1.9 | RPM: 3.1.9 / DEB: 3.1.11 | DEB 升级并重建 libsodium 依赖；PG18 RPM 保持 3.1.9<br>DEB upgraded with matching libsodium; PG18 RPM remains at 3.1.9. |
+| `pgsql_tweaks` | `1.0.5` | `1.1.0` | PG14-18；纯 SQL<br>PG14-18; SQL-only |
+| `pgtde-18` | `18.4` | `18.6` | Percona 18.6.1；pg_tde 2.2.2<br>Percona 18.6.1; pg_tde 2.2.2 |
+| `pgtde-18-contrib` | `18.4` | `18.6` | pg_stat_monitor 2.4.0；vector 0.8.6<br>pg_stat_monitor 2.4.0; vector 0.8.6 |
+| `pgtelemetry` | - | `1.7` | PG14-18；纯 SQL；依赖 pg_stat_statements<br>PG14-18; SQL-only; requires pg_stat_statements |
+| `pgvector` | `0.8.6` | `0.8.7` | PG18 离线包的 RPM/DEB 均采用 PGDG 0.8.7<br>Both RPM and DEB use PGDG 0.8.7 in the PG18 offline snapshot. |
+| `pgvectorscale` | `0.9.1` | `0.9.1` | PG14-18；扩展名 vectorscale；同版本重构建、订正目录旧标签<br>PG14-18; Extension vectorscale; same-version rebuild and correction of stale catalog label |
+| `plpgsql_check` | `2.10.4` | `2.10.16` | PG18 离线发布快照；SQL 版本 2.10<br>PG18 release snapshot; SQL version 2.10. |
+| `plphp` | - | `2.6` | PG14-18；修正嵌入运行库依赖<br>PG14-18; fix embedded runtime dependencies |
+| `plprql` | `18.0.1` | `18.0.2` | PG14-18<br>PG14-18 |
+| `plv8` | `3.2.4` | `3.2.5` | PG14-18；修复 EL10 LTO 构建<br>PG14-18; Fix EL10 LTO builds |
+| `polardb-17` | `17.10.1.0` | `17.11.1.0-2PGSTY` | PG17.11 内核与扩展；使用新版 PolarStore SDK 重建<br>PG17.11 kernel/contrib; rebuilt with updated PolarStore SDK |
+| `polarstore` | `1.2.42-2PGSTY` | `1.2.42-3PGSTY` | 使用 zlog 1.2.20 重建<br>Rebuilt with zlog 1.2.20 |
+| `postgis` | RPM: 3.6.4 / DEB: 3.7.0 | RPM: 3.7.0-1PGSTY / DEB: 3.7.0 | EL8 补包；EL9/10 由 PGDG 主供<br>PostGIS 3.7; Pigsty fills EL8 gaps; EL9/10 use PGDG. The PG18 archives contain one PostGIS branch. |
+| `postgis_tiger_geocoder` | - | RPM: 2025.2-1PGSTY / DEB: 2025.2 | EL8 PG16-18 补包；独立 noarch 包<br>EL8 PG16-18 gap fill; standalone noarch package |
+| `provsql` | `1.12.0` | `1.13.1` | 修复电路大小与取消操作；需预加载<br>Fixes circuit sizes/cancellation; preload required |
+| `psql_bm25s` | `0.4.13` | `0.4.14` | PG17-18<br>PG17-18 |
+| `q3c` | RPM only: 2.0.5 | RPM only: 2.0.6 | PGDG 软件包<br>PGDG packages |
+| `rdf_fdw` | `2.7.0` | `3.1.0` | PG18 离线发布快照；RDF 外部数据访问<br>PG18 release snapshot; RDF foreign data access. |
+| `rdkit` | RPM: 202303.3 / 202503.6 / DEB: 202503.6 | `202609.2` | PG14-18；EL9/10；移除下游升级补丁<br>EL9/10; D13/U24/U26; older OS packages retained |
+| `redis` | `7.2.16` | `7.2.17-1PGSTY` | 含开发包<br>Includes devel package |
+| `repmgr` | RPM only: 5.5.0 | RPM only: 5.5.1 | PGDG 软件包<br>PGDG packages |
+| `session_variable` | `3.5` | `3.6` | PG14-18<br>PG14-18 |
+| `set_user` | 4.2.0 | 4.3.0 | PGDG 软件包<br>PGDG packages |
+| `snowflake` | `2.6.0` | `2.6.0` | PG15-18；随 pgEdge 重构建；订正旧目录 2.5.0 标签<br>PG15-18; Rebuilt with pgEdge; correct stale 2.5.0 catalog label |
+| `spock` | `5.0.11` | `5.0.13` | 随 pgEdge 15-18 更新；需预加载<br>Updated with pgEdge 15-18; preload required |
+| `stannum` | - | `0.1.0` | PG17-18；开发快照<br>PG17-18; development snapshot |
+| `supautils` | `3.4.3` | `4.0.0` | PG18 离线发布快照<br>PG18 release snapshot. |
+| `textsearch_intl` | - | `1.0.1` | PG18 离线包的 RPM/DEB 均为 1.0.1；SQL 版本 1.0<br>Both RPM and DEB use 1.0.1 in the PG18 snapshot; SQL version 1.0. |
+| `timescaledb` | `2.29.1` | `2.31.0` | PG16-18；TSL<br>PG16-18; TSL |
+| `timescaledb_toolkit` | 1.26.0 | 1.27.0 | PG15-18；保留 PG14 旧包<br>PG15-18; older PG14 packages retained |
+| `ulak` | `0.0.2` | `0.2.0` | PG14-18；需预加载<br>PG14-18; preload |
+| `valkey` | `9.1.1` | `9.1.3-1PGSTY` | 安全更新；含开发包<br>Security update; includes devel package |
+| `vchord` | `1.1.1` | `1.3.0-1PGSTY` | PG14-18<br>PG14-18 |
+| `vchord_bm25` | `0.3.0` | `1.1.0` | PG14-18；原生 tsvector<br>PG14-18; native tsvector |
+| `vectorize` | `0.26.2` | `0.27.1` | PG14-18；SQL 0.23.0；多行处理修复<br>PG14-18; SQL 0.23.0; multi-row fix |
+| `vgram` | - | `1.0` | PG14-18<br>PG14-18 |
+| `wal2json` | 2.6 | 2.7 | PGDG 软件包<br>PGDG packages |
+| `wrappers` | `0.6.2` | `0.6.4` | PG18 离线发布快照<br>PG18 release snapshot. |
+| `zlog` | `1.2.18` | `1.2.20` | 联动重建 PolarStore 与 PolarDB<br>Rebuilds PolarStore and PolarDB |
+{.wide .expand}
+
+**INFRA、PIG 与上游仓库更新汇总 / INFRA, PIG and upstream updates**
+
+合并 v4.5.0 之后的 [Infra 变更日志](/docs/repo/infra/log/) 与 [PIG 版本发布](/docs/pig/release/)。`UPSTREAM` 行对应独立的 Docker/Nginx 上游仓库模块；工具链、应用与可选服务按需安装。
+This table consolidates the INFRA and PIG changes since v4.5.0. `UPSTREAM` rows belong to the separate Docker/Nginx repository modules. Toolchains, applications and optional services remain opt-in.
+
+| 仓库 / Repo | 项目 / Package | 版本变化 / Versions | 说明 / Notes |
+|:---|:---|:---|:---|
+| INFRA | `agentsview` | `0.40.1` → `0.47.0` | AI 会话查看器更新<br>Repacked for both architectures |
+| INFRA | `alertmanager` | `0.33.1` → `0.35.0` | 告警管理器升级<br>Repacked for both architectures |
+| INFRA | `barn` | `—` → `1.2.0` | 新增官方原生包并升级至 1.2 稳定版<br>Official native packages |
 | INFRA | `blackbox-exporter` | `0.28.0` → `0.29.1` |  |
-| INFRA | `caddy` | `2.11.4` → `2.11.9` | 含 FastCGI 安全修复 |
-| INFRA | `cargo-pgrx-0192` / `cargo-pgrx-0193` | 新增 `0.19.2` / `0.19.3` | 独立版本槽；EL8 双架构源码构建 |
-| INFRA | `claude` / `claude-code` | `2.1.227` → `2.1.322` | 切换 Anthropic 官方签名原生包 `claude-code`；旧 `claude` 保留在 `2.1.319` |
-| INFRA | `cloudflared` | `2026.7.3` → `2026.10.7` | 裸二进制重打包 |
-| INFRA | `code` | `1.133.0` → `1.146.0` | 官方原生 DEB/RPM；仓库 RPM 副本签名 |
-| INFRA | `code-server` | `4.132.0` → `4.145.2` | 官方原生 DEB/RPM |
-| INFRA | `codex` | `0.147.0` → `0.167.2` | 保留完整上游运行时及原始 bwrap |
-| INFRA | `crush` | `0.88.1` → `0.100.0` | 官方 tarball 合规重打包并保留许可证 |
-| INFRA | `dblab` | `0.47.4` → `0.55.2` |  |
-| INFRA | `duckdb` | `1.5.5` → `2.0.0` | 大版本更新 |
+| INFRA | `caddy` | `2.11.4` → `2.11.9` | 含 FastCGI 安全修复<br>FastCGI security fixes |
+| INFRA | `cargo-pgrx-0192` / `cargo-pgrx-0193` | Added `0.19.2` / `0.19.3` | 独立版本槽；EL8 双架构源码构建<br>Separate version slots; built from source for both EL8 architectures. |
+| INFRA | `claude` / `claude-code` | `2.1.227` → `2.1.322` | 切换 Anthropic 官方签名原生包 `claude-code`；旧 `claude` 保留在 `2.1.319`<br>Switch to the official signed claude-code package; the old claude package remains at 2.1.319. |
+| INFRA | `cloudflared` | `2026.7.3` → `2026.10.7` | 裸二进制重打包<br>Repacked upstream executable. |
+| INFRA | `code` | `1.133.0` → `1.146.0` | 官方原生 DEB/RPM；仓库 RPM 副本签名<br>Official DEB/RPM packages; repository RPM copies are signed. |
+| INFRA | `code-server` | `4.132.0` → `4.145.2` | 官方原生 DEB/RPM<br>Upstream native packages |
+| INFRA | `codex` | `0.147.0` → `0.167.2` | 保留完整上游运行时及原始 bwrap<br>Complete canonical runtime preserved, including bundled bwrap |
+| INFRA | `crush` | `0.88.1` → `0.100.0` | 官方 tarball 合规重打包并保留许可证<br>Repacked official tarball with licenses preserved. |
+| INFRA | `dblab` | `0.47.4` → `0.55.2` | Repacked for both architectures |
+| INFRA | `duckdb` | `1.5.5` → `2.0.0` | 大版本更新<br>Major version update. |
 | INFRA | `etcd` | `3.7.1` → `3.7.3` |  |
 | INFRA | `garage` | `2.3.0` → `2.5.0` |  |
-| INFRA | `golang` | `1.26.5` → `1.27.4` | 官方工具链更新 |
-| INFRA | `grafana` | `13.1.3` → `13.3.1` | 官方原生 DEB/RPM |
-| INFRA | `grafana-infinity-ds` | `3.11.3` → `4.1.6` | 大版本更新；含安全与 gRPC 修复 |
-| INFRA | `grafana-plugins` | `13.0.0` → `13.3.0` | noarch 插件合集；JSON datasource 1.4.4、ECharts 7.3.0 等 |
-| INFRA | `grafana-victorialogs-ds` | `0.31.0` → `0.34.0` |  |
-| INFRA | `grafana-victoriametrics-ds` | `0.25.2` → `1.0.1` | 1.0 正式版；POST/WITH 与安全修复 |
+| INFRA | `golang` | `1.26.5` → `1.27.4` | 官方工具链更新<br>Repacked for both architectures |
+| INFRA | `grafana` | `13.1.3` → `13.3.1` | 官方原生 DEB/RPM<br>Official native packages |
+| INFRA | `grafana-infinity-ds` | `3.11.3` → `4.1.6` | 大版本更新；含安全与 gRPC 修复<br>Security / gRPC fixes |
+| INFRA | `grafana-plugins` | `13.0.0` → `13.3.0` | noarch 插件合集；JSON datasource 1.4.4、ECharts 7.3.0 等<br>Plugin bundle; includes JSON datasource 1.4.4 and ECharts 7.3.0. |
+| INFRA | `grafana-victorialogs-ds` | `0.31.0` → `0.34.0` | Repacked for both architectures |
+| INFRA | `grafana-victoriametrics-ds` | `0.25.2` → `1.0.1` | 1.0 正式版；POST/WITH 与安全修复<br>POST/WITH / security fixes |
 | INFRA | `headscale` | `0.29.3` → `0.29.7` |  |
-| INFRA | `hugo` | `0.164.0` → `0.169.0` | Extended 版本 |
-| INFRA | `ivorysql` | `5.4` → `5.6` | 新增原包配方；DEB `ivorysql-5` / RPM `ivorysql5`；PG 18.6 内核 |
-| INFRA | `jmx-exporter` | `1.6.0` → `1.7.0` | noarch |
+| INFRA | `hugo` | `0.164.0` → `0.169.0` | Extended 版本<br>Extended build. |
+| INFRA | `ivorysql` | `5.4` → `5.6` | 新增原包配方；DEB `ivorysql-5` / RPM `ivorysql5`；PG 18.6 内核<br>New native recipe; DEB ivorysql-5 / RPM ivorysql5; PostgreSQL 18.6 |
+| INFRA | `jmx-exporter` | `1.6.0` → `1.7.0` | noarch<br>Noarch; imported locally |
 | INFRA | `juicefs` | `1.4.1` → `1.4.2` |  |
-| INFRA | `k3s` / `k3s-images` | `1.36.3` → `1.37.2` | 二进制与 air-gap 离线镜像同步（`2PGSTY`） |
-| INFRA | `kafka` | `4.3.1` → `4.4.0` | noarch RPM / all DEB；上游 SHA512 已核验 |
+| INFRA | `k3s` / `k3s-images` | `1.36.3` → `1.37.2` | 二进制与 air-gap 离线镜像同步（`2PGSTY`）<br>Matching binary and air-gap image packages, revision 2PGSTY. |
+| INFRA | `kafka` | `4.3.1` → `4.4.0` | noarch RPM / all DEB；上游 SHA512 已核验<br>Noarch RPM and all DEB; upstream SHA512 verified; imported locally |
 | INFRA | `kafka-exporter` | `1.9.0` → `1.11.0` |  |
-| INFRA | `kes` | `—` → `20261026000000.0.0` | 新增 PGSTY KES 密钥管理服务；保留上游签名 |
-| INFRA | `logcli` / `loki` / `loki-canary` | `3.7.6` → `3.7.9` | Loki 组件同步更新 |
-| INFRA | `maddy` | `0.9.5` → `0.9.7` | DMARC/IMAP 修复 |
-| INFRA | `mcli` | `20260806000000.0.0` → `20261112000000.0.0` | pgsty 原生包；路径 `/usr/local/bin/mcli` |
-| INFRA | `mcp-toolbox` | `1.8.0` → `1.16.0` | CGO 源码构建；glibc 2.28 |
+| INFRA | `kes` | `—` → `20261026000000.0.0` | 新增 PGSTY KES 密钥管理服务；保留上游签名<br>Key management service |
+| INFRA | `logcli` / `loki` / `loki-canary` | `3.7.6` → `3.7.9` | Loki 组件同步更新<br>Loki components updated together. |
+| INFRA | `maddy` | `0.9.5` → `0.9.7` | DMARC/IMAP 修复<br>DMARC/IMAP fixes |
+| INFRA | `mcli` | `20260806000000.0.0` → `20261112000000.0.0` | pgsty 原生包；路径 `/usr/local/bin/mcli`<br>Native pgsty packages; executable at /usr/local/bin/mcli. |
+| INFRA | `mcp-toolbox` | `1.8.0` → `1.16.0` | CGO 源码构建；glibc 2.28<br>CGO; glibc 2.28 |
 | INFRA | `mongodb-exporter` | `0.52.0` → `0.54.0` |  |
-| INFRA | `mtail` | `3.4.7` → `3.4.20` |  |
-| INFRA | `mysqld-exporter` | `0.19.0` → `0.21.0` | 指标类型变更，与新版 MYSQL 规则对齐 |
-| INFRA | `nginx-exporter` | `1.5.1` → `1.5.3` |  |
-| INFRA | `nodejs` | `24.19.0` → `26.13.1` | 升级至 Node.js 26 LTS；RPM epoch 2 |
-| INFRA | `openbao` | `—` → `2.7.2` | 新增官方原生双架构包；支撑 VAULT 模块 |
-| INFRA | `opencode` | `1.18.16` → `1.19.5` | 含 Bun 安全修复（`2PGSTY`） |
-| INFRA | `opentofu` | `—` → `1.13.9` | 新增 IaC 默认工具；包名 `tofu`；含状态持久化修复 |
-| INFRA | `pev2` | `1.23.0` → `1.25.0` | noarch RPM / all DEB |
-| INFRA | `pg-exporter` | `1.4.1` → `1.6.1` | 升级至 v1.6.1；连接治理、失败冷却与 PG19 指标补齐 |
-| INFRA | `pg-hardstorage` | `1.2.1` → `1.7.0` | 静态二进制重打包 |
-| INFRA | `pg-timetable` | `7.0.0` → `7.1.0` |  |
-| INFRA | `pgbackrest-exporter` | `0.24.0` → `0.25.0` | 源码构建 |
-| INFRA | `pgbot` | `—` → `0.9.0` | 新增；beta |
-| INFRA | `pgext` | `—` → `1.7.1` | 新增官方原生包配方 |
-| INFRA | `pggo` | `—` → `0.1.1` | 新增 |
-| INFRA | `pgschema` | `1.12.2` → `1.14.1` | 裸二进制重打包 |
-| INFRA | `pgstream` | `1.3.1` → `1.6.0` | 固定提交源码构建 |
-| INFRA | `pgsync` | `—` → `0.1.1` | 新增；beta |
-| INFRA | `pgterm` | `—` → `0.4.0` | 新增；beta |
-| INFRA | `pi-coding-agent` | `—` → `1.5.2` | 新增；保留完整上游运行时 |
-| INFRA | `pig` | `1.8.0` → `1.11.0` | 支持 Pigsty 4.6.0；内置 625 项扩展目录 |
-| INFRA | `postgrest` | `16.1` → `16.5` | 最低支持 PostgreSQL 14 |
-| INFRA | `prometheus` | `3.13.2` → `3.16.0` | TLS / Remote Write 更新 |
-| INFRA | `promtail` | `3.6.7` → `3.6.11` | 补齐 EOL 制品 |
-| INFRA | `pushgateway` | `1.11.3` → `1.11.4` |  |
-| INFRA | `rainfrog` | `0.4.3` → `0.4.7` |  |
-| INFRA | `rclone` | `1.75.0` → `1.76.0` |  |
-| INFRA | `redis-exporter` | `1.89.0` → `1.97.0` | 支持 Redis 8 KEYSIZES |
-| INFRA | `rust-toolchain` | `1.97.1` → `1.99.1` | 官方签名与双架构 ELF ABI 检查 |
-| INFRA | `rustfs` | `1.0.0-rc.1` → `1.0.5` | 保留仓库软件包，非 MINIO 模块后端 |
-| INFRA | `sabiql` | `1.15.1` → `3.0.3` | 新增 MySQL 支持；需 Oracle MySQL CLI 8.4 |
-| INFRA | `sealos` | `5.0.1` → `5.1.1` | 官方原包；源码采用 Sealos Sustainable Use License |
-| INFRA | `seaweedfs` | `4.41` → `4.53` | 包版本 `4.53.0` |
-| INFRA | `silo` | `20260806000000.0.0` → `20261112000000.0.0` | 正式版原生包（`1PGSTY`），内嵌 Console 2.7.2 |
-| INFRA | `silo-console` | `—` → `2.7.2` | 新增独立控制台原生包，与 Silo 20261112 配套 |
-| INFRA | `sow` | `0.3.0` → `0.7.1` | 旧 0.3/0.4 workspace 升级需显式迁移 |
-| INFRA | `sql-studio` | `0.1.51` → `0.1.53` |  |
-| INFRA | `stalwart` | `0.16.17` → `1.1.0` | 1.x 大版本更新；0.16.x 需迁移 |
-| INFRA | `tailcat` | `—` → `0.7.0` | 官方发布 tarball 构建 |
-| INFRA | `timescaledb-tools` | `0.19.0` → `0.19.1` | tune `0.19.1` + parallel-copy `0.13.2`；Go 1.27.4 源码构建 |
+| INFRA | `mtail` | `3.4.7` → `3.4.20` | Repacked for both architectures |
+| INFRA | `mysqld-exporter` | `0.19.0` → `0.21.0` | 指标类型变更，与新版 MYSQL 规则对齐<br>Metric type changes |
+| INFRA | `nginx-exporter` | `1.5.1` → `1.5.3` | Dual-architecture RPM/DEB built |
+| INFRA | `nodejs` | `24.19.0` → `26.13.1` | 升级至 Node.js 26 LTS；RPM epoch 2<br>Node.js 26 LTS; RPM epoch 2. |
+| INFRA | `openbao` | `—` → `2.7.2` | 新增官方原生双架构包；支撑 VAULT 模块<br>New official packages for both architectures; used by the VAULT module. |
+| INFRA | `opencode` | `1.18.16` → `1.19.5` | 含 Bun 安全修复（`2PGSTY`）<br>Updated to 1.19.5; package revision 2PGSTY includes Bun security fixes. |
+| INFRA | `opentofu` | `—` → `1.13.9` | 新增 IaC 默认工具；包名 `tofu`；含状态持久化修复<br>New default IaC tool, package name tofu; includes state persistence fixes. |
+| INFRA | `pev2` | `1.23.0` → `1.25.0` | noarch RPM / all DEB<br>noarch RPM / all DEB |
+| INFRA | `pg-exporter` | `1.4.1` → `1.6.1` | 升级至 v1.6.1；连接治理、失败冷却与 PG19 指标补齐<br>Connection governance, failure cooldown and additional PostgreSQL 19 metrics. |
+| INFRA | `pg-hardstorage` | `1.2.1` → `1.7.0` | 静态二进制重打包<br>Repacked for both architectures |
+| INFRA | `pg-timetable` | `7.0.0` → `7.1.0` | Dual-architecture RPM/DEB built |
+| INFRA | `pgbackrest-exporter` | `0.24.0` → `0.25.0` | 源码构建<br>Source build |
+| INFRA | `pgbot` | `—` → `0.9.0` | 新增；beta<br>New; beta |
+| INFRA | `pgext` | `—` → `1.7.1` | 新增官方原生包配方<br>Official native packages |
+| INFRA | `pggo` | `—` → `0.1.1` | 新增<br>New |
+| INFRA | `pgschema` | `1.12.2` → `1.14.1` | 裸二进制重打包<br>Repacked for both architectures |
+| INFRA | `pgstream` | `1.3.1` → `1.6.0` | 固定提交源码构建<br>Source build from pinned commit |
+| INFRA | `pgsync` | `—` → `0.1.1` | 新增；beta<br>New; beta |
+| INFRA | `pgterm` | `—` → `0.4.0` | 新增；beta<br>New; beta |
+| INFRA | `pi-coding-agent` | `—` → `1.5.2` | 新增；保留完整上游运行时<br>New package; complete upstream runtime |
+| INFRA | `pig` | `1.8.0` → `1.11.0` | 支持 Pigsty 4.6.0；内置 625 项扩展目录<br>Pigsty 4.6.0 support; embedded catalog contains 625 available extensions. |
+| INFRA | `postgrest` | `16.1` → `16.5` | 最低支持 PostgreSQL 14<br>Requires PostgreSQL 14 or newer. |
+| INFRA | `prometheus` | `3.13.2` → `3.16.0` | TLS / Remote Write 更新<br>TLS / Remote Write changes |
+| INFRA | `promtail` | `3.6.7` → `3.6.11` | 补齐 EOL 制品<br>EOL artifact backfill |
+| INFRA | `pushgateway` | `1.11.3` → `1.11.4` | Both architectures; imported locally |
+| INFRA | `rainfrog` | `0.4.3` → `0.4.7` | Repacked for both architectures |
+| INFRA | `rclone` | `1.75.0` → `1.76.0` | Repacked for both architectures |
+| INFRA | `redis-exporter` | `1.89.0` → `1.97.0` | 支持 Redis 8 KEYSIZES<br>Redis 8 KEYSIZES |
+| INFRA | `rust-toolchain` | `1.97.1` → `1.99.1` | 官方签名与双架构 ELF ABI 检查<br>Upstream signatures and dual-architecture ELF ABI checks passed; imported locally |
+| INFRA | `rustfs` | `1.0.0-rc.1` → `1.0.5` | 保留仓库软件包，非 MINIO 模块后端<br>Available as an optional repository package; not a MINIO module backend. |
+| INFRA | `sabiql` | `1.15.1` → `3.0.3` | 新增 MySQL 支持；需 Oracle MySQL CLI 8.4<br>Repacked for both architectures |
+| INFRA | `sealos` | `5.0.1` → `5.1.1` | 官方原包；源码采用 Sealos Sustainable Use License<br>Official packages; upstream source uses the Sealos Sustainable Use License. |
+| INFRA | `seaweedfs` | `4.41` → `4.53` | 包版本 `4.53.0`<br>Package version: 4.53.0 |
+| INFRA | `silo` | `20260806000000.0.0` → `20261112000000.0.0` | 正式版原生包（`1PGSTY`），内嵌 Console 2.7.2<br>Native release packages, revision 1PGSTY, with Console 2.7.2 embedded. |
+| INFRA | `silo-console` | `—` → `2.7.2` | 新增独立控制台原生包，与 Silo 20261112 配套<br>New standalone console package, paired with Silo 20261112. |
+| INFRA | `sow` | `0.3.0` → `0.7.1` | 旧 0.3/0.4 workspace 升级需显式迁移<br>Existing 0.3/0.4 workspaces require an explicit migration. |
+| INFRA | `sql-studio` | `0.1.51` → `0.1.53` | Dual-architecture RPM/DEB built |
+| INFRA | `stalwart` | `0.16.17` → `1.1.0` | 1.x 大版本更新；0.16.x 需迁移<br>Major update to 1.x; migration required from 0.16.x. |
+| INFRA | `tailcat` | `—` → `0.7.0` | 官方发布 tarball 构建<br>Verified and built dual-architecture RPM/DEB |
+| INFRA | `timescaledb-tools` | `0.19.0` → `0.19.1` | tune `0.19.1` + parallel-copy `0.13.2`；Go 1.27.4 源码构建<br>tune 0.19.1 + parallel-copy 0.13.2; Go 1.27.4 source builds |
 | INFRA | `uv` | `0.12.3` → `0.13.7` |  |
-| INFRA | `v2ray` | `5.52.0` → `5.53.0` |  |
-| INFRA | `vector` | `0.57.0` → `0.61.0` | 官方原生 DEB/RPM |
-| INFRA | `victoria-logs` / `vlogscli` / `vlagent` | `1.52.0` → `1.53.0` | 日志组件同步更新 |
-| INFRA | `victoria-metrics` / `victoria-metrics-cluster` / `vmutils` | `1.149.0` → `1.156.0` | 单机、集群与 vmutils 同步更新 |
-| INFRA | `victoria-traces` | `0.10.0` → `0.13.0` | gRPC TLS 改为可选 |
-| INFRA | `xray` | `26.3.27` → `26.11.9` | 安全与协议更新 |
-| PIG | `v1.8.1` | `v1.8.0` → `v1.8.1` | Go 1.27.1；CLI、仓库与构建安全加固 |
-| PIG | `v1.9.0` | `v1.8.1` → `v1.9.0` | Xray 客户端/服务端；仓库签名公钥；pgrx 0.19.3；目录 600 |
-| PIG | `v1.10.0` – `v1.10.4` | `v1.9.0` → `v1.10.4` | PG 目标与恢复安全、Inventory 保真、分类别名修复；Go 1.27.3 |
-| PIG | `v1.11.0` | `v1.10.4` → `v1.11.0` | 适配 Pigsty v4.6.0；隔离内核分支配置、收紧备份恢复与清理边界；内置 625 项扩展目录 |
+| INFRA | `v2ray` | `5.52.0` → `5.53.0` | Dual-architecture RPM/DEB built |
+| INFRA | `vector` | `0.57.0` → `0.61.0` | 官方原生 DEB/RPM<br>Official native DEB/RPM packages. |
+| INFRA | `victoria-logs` / `vlogscli` / `vlagent` | `1.52.0` → `1.53.0` | 日志组件同步更新<br>Logs components updated together. |
+| INFRA | `victoria-metrics` / `victoria-metrics-cluster` / `vmutils` | `1.149.0` → `1.156.0` | 单机、集群与 vmutils 同步更新<br>Single-node, cluster and utility packages updated together. |
+| INFRA | `victoria-traces` | `0.10.0` → `0.13.0` | gRPC TLS 改为可选<br>gRPC TLS now opt-in |
+| INFRA | `xray` | `26.3.27` → `26.11.9` | 安全与协议更新<br>Repacked for both architectures |
+| PIG | `v1.8.1` | `v1.8.0` → `v1.8.1` | Go 1.27.1；CLI、仓库与构建安全加固<br>Go 1.27.1; CLI, repository and build safety improvements. |
+| PIG | `v1.9.0` | `v1.8.1` → `v1.9.0` | Xray 客户端/服务端；仓库签名公钥；pgrx 0.19.3；目录 600<br>Xray client/server, repository signing keys, pgrx 0.19.3 and a 600-entry catalog. |
+| PIG | `v1.10.0` – `v1.10.4` | `v1.9.0` → `v1.10.4` | PG 目标与恢复安全、Inventory 保真、分类别名修复；Go 1.27.3<br>Safer PG targets and recovery, inventory preservation, category aliases and Go 1.27.3. |
+| PIG | `v1.11.0` | `v1.10.4` → `v1.11.0` | 适配 Pigsty v4.6.0；隔离内核分支配置、收紧备份恢复与清理边界；内置 625 项扩展目录<br>Pigsty 4.6.0 support, kernel-specific configuration isolation, stricter backup/recovery/cleanup boundaries and a 625-entry catalog. |
+| UPSTREAM | `containerd.io` | - → `2.4.2-3` | 官方 RPM/DEB（拆分为独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `docker-buildx-plugin` | - → `0.38.1` | 官方 RPM/DEB（独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `docker-ce` | - → `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `docker-ce-cli` | - → `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `docker-ce-rootless-extras` | - → `29.9.2` | 官方 RPM/DEB（独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `docker-compose-plugin` | - → `5.7.0` | 官方 RPM/DEB（独立 docker 仓库模块）<br>Official packages; separate docker repository module. |
+| UPSTREAM | `nginx` | - → `1.31.8` | 官方 RPM/DEB（拆分为独立 nginx 仓库模块）<br>Official packages; separate nginx repository module. |
+| UPSTREAM | `nginx-module-acme` | - → `1.31.8+0.4.1` | 官方 RPM/DEB（独立 nginx 仓库模块）<br>Official packages; separate nginx repository module. |
 {.wide .expand}
+
+### 离线包、验证与下载 / Offline packages and validation {#v460-offline}
+
+本次提供 **14 个完整 `.tgz` 离线包**，每包小于 **2 GiB**，无需分卷拼接；另有源码包、包清单、离线说明与校验清单。每份离线包内含已索引的本地仓库、`repo_complete` 校验记录及相同的 `pigsty-v4.6.0.tgz` 源码。
+The release provides **14 complete `.tgz` offline archives**, each below **2 GiB**, with no reassembly required. Each contains an indexed local repository, `repo_complete` checksums and the same `pigsty-v4.6.0.tgz` source archive. Source, package manifests, offline notes and checksum files are attached separately.
+
+| 系统 / OS | x86_64（GiB） | ARM64（GiB） | 完整离线部署 / Full offline deployment |
+|:---|---:|---:|:---|
+| EL 9 | 1.917 | 1.775 | 通过 / PASS |
+| EL 10 | 1.942 | 1.795 | 通过 / PASS |
+| Debian 12 | 1.753 | 1.599 | 通过 / PASS |
+| Debian 13 | 1.781 | 1.625 | 通过 / PASS |
+| Ubuntu 22.04 | 1.765 | 1.631 | 通过 / PASS |
+| Ubuntu 24.04 | 1.774 | 1.639 | 通过 / PASS |
+| Ubuntu 26.04 | 1.782 | 1.649 | 通过 / PASS |
+{.wide .expand}
+
+**验证结果 / Validation results**
+
+- **14/14 全新 VM 完整通过**：初始没有 Ansible、Pigsty 源码目录或本地仓库；隔离外网、宿主机代理及其他 VM 服务，每台独立使用原始 `rich` 模板完成引导、配置与部署。正式 Ansible 部署的 `failed`、`unreachable`、`ignored`、`rescued` 均为 **0**。
+- **14/14 fresh-VM installations passed:** no preinstalled Ansible, Pigsty checkout or local repository; external access, host proxies and other guest services were blocked. Every VM independently ran the stock `rich` template. Real Ansible deployments finished with **zero failed, unreachable, ignored or rescued tasks**.
+- PostgreSQL 18 主库、`vector` / `postgis` / `timescaledb` / `pg_wait_sampling`、16 项核心服务、HTTP 健康接口及写入 Silo 的 pgBackRest 全量备份均通过；无误装 PG14、HDFS/Java、OneSparse/GraphBLAS/LAGraph 或重复 PostGIS 分支。
+- Checks passed for the PG18 primary, the four rich extensions, 16 core services, HTTP health endpoints and a full pgBackRest backup to Silo. No unintended PG14, HDFS/Java, OneSparse/GraphBLAS/LAGraph or duplicate PostGIS branch was installed.
+- 所有归档通过 gzip/tar 完整性、归档内文件与包成员、架构、嵌入源码及传输后的 SHA-256 校验；APT/DNF 还通过仅使用本地仓库、空安装状态的依赖闭包检查。EL10 离线包使用与 Rocky 10.2 匹配的 EPEL 10.2 快照。
+- Archive integrity, file/package membership, architecture, embedded source and transferred SHA-256 digests were verified. APT/DNF dependency closure also passed against an empty installed state using only the local repository. EL10 archives use an EPEL 10.2 snapshot matching Rocky 10.2.
+- 冷启动的 Ansible `--check` 仍受尚未生成 CA CSR 文件的限制；该限制不影响实际部署。验证范围是 `rich` 已启用模块，未执行注释中的可选应用示例。
+- Cold-start Ansible `--check` remains limited by the not-yet-generated CA CSR; real deployment passes. Validation covers the enabled rich modules, not commented optional application examples.
+
+**源码与标签 / Source archive and tag**
+
+安装请使用 Release 附件 **`pigsty-v4.6.0.tgz`** 或离线包内嵌的同名源码。它们基于标签提交 `d71d9de86bf63aa4aa2886baeb542af66dbdfba6`，额外包含完整目标集合求解器与重新生成的包分组修复。这些修复尚未提交，标签未移动，因此 GitHub 自动生成的 **Source code (zip/tar.gz)** 不包含这些修复。标签比较链接仅描述已提交部分。
+Use the attached **`pigsty-v4.6.0.tgz`**, or its identical embedded copy, for installation. It is based on tag commit `d71d9de86bf63aa4aa2886baeb542af66dbdfba6` and additionally includes the complete-set dependency solver and regenerated package maps. These fixes remain uncommitted and the tag has not moved, so GitHub's automatic **Source code (zip/tar.gz)** archives do not contain them. The tag comparison covers only committed changes.
+
+源码包 SHA-256 / Source archive SHA-256：
+
+```text
+6b4a54b52c23bb56753d5d7352582a0a5f78339c12535a56ad263c16f6dca21b
+```
+
+下载同一发布页的 `SHA256SUMS`，在离线包所在目录校验：
+Download `SHA256SUMS` from the same release and verify the files in your download directory:
+
+```bash
+sha256sum -c SHA256SUMS --ignore-missing
+```
+
+完整安装步骤参见 [离线安装](/docs/setup/offline/)；精确文件列表与平台差异见 `PACKAGE-MANIFEST.json`、`OFFLINE-NOTES.txt`。
+See the [offline installation guide](https://pigsty.io/docs/setup/offline/) for the installation workflow, and `PACKAGE-MANIFEST.json` / `OFFLINE-NOTES.txt` for exact contents and platform differences.
+
 
 ------
 
