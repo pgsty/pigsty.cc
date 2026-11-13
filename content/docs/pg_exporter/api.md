@@ -57,6 +57,8 @@ pg_exporter_build_info{version="v1.6.1",branch="main",revision="<git-sha>",build
 # ... 更多指标
 ```
 
+`pg_exporter_build_info` 的 `version`、`revision`、`branch`、`builddate`、`goversion`、`goos`、`goarch` 保留真实构建值，用户固定标签不能覆盖它们。非法 `--namespace` 会在启动时被拒绝；数据库或查询级内置样本的标签无效时记录警告并跳过，避免 panic。
+
 #### 响应格式
 
 指标遵循 Prometheus 暴露格式：
