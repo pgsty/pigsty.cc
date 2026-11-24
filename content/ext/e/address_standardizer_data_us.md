@@ -46,30 +46,30 @@ weight: 1506
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7` | {{< pgvers "18,17,16,15,14" >}} | `address_standardizer` | - |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `address_standardizer_$v` | - |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-address-standardizer` | - |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7` | {{< pgvers "19,18,17,16,15" >}} | `address_standardizer` | - |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "19,18,17,16,15" >}} | `address_standardizer_$v` | - |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-address-standardizer` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
 | el9.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | el9.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
 | el10.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| el10.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| d12.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| d12.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| d13.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| d13.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u22.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u22.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u24.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u24.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u26.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
-| u26.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
+| el10.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
+| d12.x86_64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| d12.aarch64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| d13.x86_64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| d13.aarch64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u22.x86_64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u22.aarch64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u24.x86_64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u24.aarch64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u26.x86_64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
+| u26.aarch64 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 | AVAIL PGDG 3.7.0 2 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -96,27 +96,27 @@ pig install address_standardizer;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y address_standardizer -v 19  # PG 19
 pig ext install -y address_standardizer -v 18  # PG 18
 pig ext install -y address_standardizer -v 17  # PG 17
 pig ext install -y address_standardizer -v 16  # PG 16
 pig ext install -y address_standardizer -v 15  # PG 15
-pig ext install -y address_standardizer -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y address_standardizer_19       # PG 19
 dnf install -y address_standardizer_18       # PG 18
 dnf install -y address_standardizer_17       # PG 17
 dnf install -y address_standardizer_16       # PG 16
 dnf install -y address_standardizer_15       # PG 15
-dnf install -y address_standardizer_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-address-standardizer   # PG 19
 apt install -y postgresql-18-address-standardizer   # PG 18
 apt install -y postgresql-17-address-standardizer   # PG 17
 apt install -y postgresql-16-address-standardizer   # PG 16
 apt install -y postgresql-15-address-standardizer   # PG 15
-apt install -y postgresql-14-address-standardizer   # PG 14
 ```
 
 

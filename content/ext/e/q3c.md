@@ -42,20 +42,20 @@ weight: 1540
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `q3c` | - |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `q3c_$v` | - |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-q3c` | - |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "19,18,17,16,15" >}} | `q3c` | - |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "19,18,17,16,15" >}} | `q3c_$v` | - |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.6` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-q3c` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 |
-| el8.aarch64 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 | AVAIL PGDG 2.0.6 6 |
-| el9.x86_64 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 |
-| el9.aarch64 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 |
-| el10.x86_64 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 |
-| el10.aarch64 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 | AVAIL PGDG 2.0.6 10 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 | AVAIL PGDG 2.0.6 7 |
+| el9.x86_64 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 |
+| el9.aarch64 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 |
+| el10.x86_64 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 1 |
+| el10.aarch64 | AVAIL PGDG 2.0.6 1 | AVAIL PGDG 2.0.6 12 | AVAIL PGDG 2.0.6 12 | AVAIL PGDG 2.0.6 12 | AVAIL PGDG 2.0.6 12 |
 | d12.x86_64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
 | d12.aarch64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
 | d13.x86_64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
@@ -66,48 +66,59 @@ weight: 1540
 | u24.aarch64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
 | u26.x86_64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
 | u26.aarch64 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 | AVAIL PGDG 2.0.6 3 |
+@ el9.x86_64 19 q3c_19 q3c_19-2.0.6-2PGDG.rhel9.9.x86_64.rpm pgdg 2.0.6 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/q3c_19-2.0.6-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 q3c_19 q3c_19-2.0.6-2PGDG.rhel9.9.aarch64.rpm pgdg 2.0.6 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/q3c_19-2.0.6-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 q3c_19 q3c_19-2.0.6-2PGDG.rhel10.3.x86_64.rpm pgdg 2.0.6 116.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/q3c_19-2.0.6-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 q3c_19 q3c_19-2.0.6-2PGDG.rhel10.3.aarch64.rpm pgdg 2.0.6 110.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/q3c_19-2.0.6-2PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg12+2_amd64.deb pgdg 2.0.6 134.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 135.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg12+1_amd64.deb
+@ d12.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 137.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg12+2_arm64.deb pgdg 2.0.6 160.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 151.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg12+1_arm64.deb
+@ d12.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 155.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg13+2_amd64.deb pgdg 2.0.6 143.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 143.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg13+1_amd64.deb
+@ d13.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 138.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg13+2_arm64.deb pgdg 2.0.6 166.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 159.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg13+1_arm64.deb
+@ d13.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 156.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg22.04+2_amd64.deb pgdg 2.0.6 135.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 135.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 134.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg22.04+2_arm64.deb pgdg 2.0.6 160.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 160.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 166.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg24.04+2_amd64.deb pgdg 2.0.6 162.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 134.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 154.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg24.04+2_arm64.deb pgdg 2.0.6 157.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg26.04+2_amd64.deb pgdg 2.0.6 147.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 146.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 145.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg26.04+2_arm64.deb pgdg 2.0.6 135.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 160.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 19 postgresql-19-q3c postgresql-19-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-19-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.6-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/q3c_18-2.0.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.6-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/q3c_18-2.0.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.6 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.6-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 160.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 160.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 109.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.2-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel9.x86_64.rpm pgdg 2.0.1 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.6 115.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.6-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 93.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 93.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 93.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 93.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 112.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 112.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 112.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.2-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel9.aarch64.rpm pgdg 2.0.1 105.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.6 116.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.6-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 141.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 153.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.2-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel9.9.x86_64.rpm pgdg 2.0.6 91.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/q3c_18-2.0.6-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel9.9.aarch64.rpm pgdg 2.0.6 88.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/q3c_18-2.0.6-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel10.3.x86_64.rpm pgdg 2.0.6 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/q3c_18-2.0.6-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel10.3.aarch64.rpm pgdg 2.0.6 101.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.6-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 q3c_18 q3c_18-2.0.6-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.6-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.6-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.6-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 87.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.3-2PGDG.rhel10.2.aarch64.rpm
@@ -118,78 +129,55 @@ weight: 1540
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 q3c_18 q3c_18-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 106.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/q3c_18-2.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg12+2_amd64.deb pgdg 2.0.6 134.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 134.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 131.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg12+1_amd64.deb pgdg 2.0.4 156.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg12+2_arm64.deb pgdg 2.0.6 161.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 154.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 163.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg12+1_arm64.deb pgdg 2.0.4 151.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg13+2_amd64.deb pgdg 2.0.6 157.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 148.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg13+1_amd64.deb pgdg 2.0.4 157.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg13+2_arm64.deb pgdg 2.0.6 161.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 132.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 167.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg13+1_arm64.deb pgdg 2.0.4 167.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg22.04+2_amd64.deb pgdg 2.0.6 131.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 156.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 162.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg22.04+1_amd64.deb pgdg 2.0.4 144.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg22.04+2_arm64.deb pgdg 2.0.6 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 149.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 156.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg22.04+1_arm64.deb pgdg 2.0.4 153.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg24.04+2_amd64.deb pgdg 2.0.6 152.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 165.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 133.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg24.04+1_amd64.deb pgdg 2.0.4 146.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg24.04+2_arm64.deb pgdg 2.0.6 152.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 153.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 154.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg24.04+1_arm64.deb pgdg 2.0.4 127.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg26.04+2_amd64.deb pgdg 2.0.6 135.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 134.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 130.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg26.04+1_amd64.deb pgdg 2.0.4 158.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg26.04+2_arm64.deb pgdg 2.0.6 159.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 152.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 154.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-q3c postgresql-18-q3c_2.0.4-1.pgdg26.04+1_arm64.deb pgdg 2.0.4 158.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-18-q3c_2.0.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.6-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/q3c_17-2.0.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 103.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.6-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/q3c_17-2.0.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.6 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.6-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 160.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 136.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 143.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 109.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 136.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.2-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel9.x86_64.rpm pgdg 2.0.1 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.6 88.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.6-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 110.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.2-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel9.aarch64.rpm pgdg 2.0.1 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.6 116.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.6-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.2-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel9.9.x86_64.rpm pgdg 2.0.6 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/q3c_17-2.0.6-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel9.9.aarch64.rpm pgdg 2.0.6 89.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/q3c_17-2.0.6-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel10.3.x86_64.rpm pgdg 2.0.6 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/q3c_17-2.0.6-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel10.3.aarch64.rpm pgdg 2.0.6 101.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.6-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 q3c_17 q3c_17-2.0.6-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.6-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.6-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.6-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 88.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 107.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.3-2PGDG.rhel10.2.aarch64.rpm
@@ -200,78 +188,55 @@ weight: 1540
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 q3c_17 q3c_17-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/q3c_17-2.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg12+2_amd64.deb pgdg 2.0.6 139.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 145.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 147.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg12+1_amd64.deb pgdg 2.0.4 133.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg12+2_arm64.deb pgdg 2.0.6 155.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 143.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 136.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg12+1_arm64.deb pgdg 2.0.4 161.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg13+2_amd64.deb pgdg 2.0.6 143.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg13+1_amd64.deb pgdg 2.0.4 132.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg13+2_arm64.deb pgdg 2.0.6 163.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 146.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 154.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg13+1_arm64.deb pgdg 2.0.4 162.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg22.04+2_amd64.deb pgdg 2.0.6 169.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 174.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 171.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg22.04+1_amd64.deb pgdg 2.0.4 134.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg22.04+2_arm64.deb pgdg 2.0.6 160.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 142.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 159.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg22.04+1_arm64.deb pgdg 2.0.4 165.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg24.04+2_amd64.deb pgdg 2.0.6 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 147.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 133.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg24.04+1_amd64.deb pgdg 2.0.4 131.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg24.04+2_arm64.deb pgdg 2.0.6 157.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 157.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 150.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg24.04+1_arm64.deb pgdg 2.0.4 159.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg26.04+2_amd64.deb pgdg 2.0.6 154.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 163.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 135.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg26.04+1_amd64.deb pgdg 2.0.4 160.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg26.04+2_arm64.deb pgdg 2.0.6 131.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 144.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-q3c postgresql-17-q3c_2.0.4-1.pgdg26.04+1_arm64.deb pgdg 2.0.4 150.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-17-q3c_2.0.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.6-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 108.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 107.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/q3c_16-2.0.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 103.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.6-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/q3c_16-2.0.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.6 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.6-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 148.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 136.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.2-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel9.x86_64.rpm pgdg 2.0.1 103.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.6 88.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.6-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 110.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 103.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.2-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel9.aarch64.rpm pgdg 2.0.1 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.6 116.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.6-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 141.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 160.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 114.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.2-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel9.9.x86_64.rpm pgdg 2.0.6 91.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/q3c_16-2.0.6-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel9.9.aarch64.rpm pgdg 2.0.6 89.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/q3c_16-2.0.6-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel10.3.x86_64.rpm pgdg 2.0.6 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/q3c_16-2.0.6-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel10.3.aarch64.rpm pgdg 2.0.6 101.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.6-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 q3c_16 q3c_16-2.0.6-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.6-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.6-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 101.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.6-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 88.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 107.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.3-2PGDG.rhel10.2.aarch64.rpm
@@ -282,78 +247,55 @@ weight: 1540
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 132.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 q3c_16 q3c_16-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 107.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/q3c_16-2.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg12+2_amd64.deb pgdg 2.0.6 133.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 134.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg12+1_amd64.deb pgdg 2.0.4 130.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg12+2_arm64.deb pgdg 2.0.6 166.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 164.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg12+1_arm64.deb pgdg 2.0.4 151.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg13+2_amd64.deb pgdg 2.0.6 161.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 160.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 139.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg13+1_amd64.deb pgdg 2.0.4 143.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg13+2_arm64.deb pgdg 2.0.6 156.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 156.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 152.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg13+1_arm64.deb pgdg 2.0.4 153.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg22.04+2_amd64.deb pgdg 2.0.6 142.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 161.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 137.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg22.04+1_amd64.deb pgdg 2.0.4 133.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg22.04+2_arm64.deb pgdg 2.0.6 153.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 160.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 157.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg22.04+1_arm64.deb pgdg 2.0.4 154.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg24.04+2_amd64.deb pgdg 2.0.6 142.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 137.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 147.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg24.04+1_amd64.deb pgdg 2.0.4 135.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg24.04+2_arm64.deb pgdg 2.0.6 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 147.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg24.04+1_arm64.deb pgdg 2.0.4 161.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg26.04+2_amd64.deb pgdg 2.0.6 167.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 156.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg26.04+1_amd64.deb pgdg 2.0.4 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg26.04+2_arm64.deb pgdg 2.0.6 163.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 161.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 154.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-q3c postgresql-16-q3c_2.0.4-1.pgdg26.04+1_arm64.deb pgdg 2.0.4 149.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-16-q3c_2.0.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.6-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.3-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/q3c_15-2.0.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.6-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.3-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/q3c_15-2.0.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.6 115.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.6-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 140.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.2-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel9.x86_64.rpm pgdg 2.0.1 109.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.6 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.6-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 95.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 95.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 109.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.2-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel9.aarch64.rpm pgdg 2.0.1 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.6 111.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.6-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.2-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel9.9.x86_64.rpm pgdg 2.0.6 129.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/q3c_15-2.0.6-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel9.9.aarch64.rpm pgdg 2.0.6 126.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/q3c_15-2.0.6-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel10.3.x86_64.rpm pgdg 2.0.6 111.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/q3c_15-2.0.6-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel10.3.aarch64.rpm pgdg 2.0.6 134.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.6-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 q3c_15 q3c_15-2.0.6-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 134.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.6-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.6-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 133.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.6-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 111.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.3-2PGDG.rhel10.2.aarch64.rpm
@@ -364,118 +306,36 @@ weight: 1540
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 113.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 113.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 q3c_15 q3c_15-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 104.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/q3c_15-2.0.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg12+2_amd64.deb pgdg 2.0.6 161.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 132.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 130.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg12+1_amd64.deb pgdg 2.0.4 133.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg12+2_arm64.deb pgdg 2.0.6 143.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 165.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 127.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg12+1_arm64.deb pgdg 2.0.4 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg13+2_amd64.deb pgdg 2.0.6 133.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 152.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 145.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg13+1_amd64.deb pgdg 2.0.4 149.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg13+2_arm64.deb pgdg 2.0.6 166.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 143.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 161.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg13+1_arm64.deb pgdg 2.0.4 130.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg22.04+2_amd64.deb pgdg 2.0.6 162.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 139.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 152.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg22.04+1_amd64.deb pgdg 2.0.4 137.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg22.04+2_arm64.deb pgdg 2.0.6 159.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 159.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 159.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg22.04+1_arm64.deb pgdg 2.0.4 161.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg24.04+2_amd64.deb pgdg 2.0.6 135.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 144.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg24.04+1_amd64.deb pgdg 2.0.4 139.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg24.04+2_arm64.deb pgdg 2.0.6 159.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 158.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 160.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg24.04+1_arm64.deb pgdg 2.0.4 161.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg26.04+2_amd64.deb pgdg 2.0.6 169.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 147.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 154.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg26.04+1_amd64.deb pgdg 2.0.4 148.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg26.04+2_arm64.deb pgdg 2.0.6 167.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 155.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 169.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-q3c postgresql-15-q3c_2.0.4-1.pgdg26.04+1_arm64.deb pgdg 2.0.4 163.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.4-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.6 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.6-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.3-2PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.3 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.2 103.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.2-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel8.x86_64.rpm pgdg 2.0.1 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/q3c_14-2.0.1-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.6 102.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.6-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.3-2PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.2 98.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.2-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel8.aarch64.rpm pgdg 2.0.1 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/q3c_14-2.0.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.6 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.6-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.3 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.3 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.3 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.3-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.2 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.2 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.2 91.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.2-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel9.x86_64.rpm pgdg 2.0.1 109.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/q3c_14-2.0.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.6 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.6-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.3 95.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.3-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.2 108.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.2 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.2-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel9.aarch64.rpm pgdg 2.0.1 103.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/q3c_14-2.0.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.6 111.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.6-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.3 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.3 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.3-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 92.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.6-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.6 109.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.6-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 111.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.5-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-2PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 104.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg12+1_amd64.deb pgdg 2.0.6 161.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg12+1_amd64.deb pgdg 2.0.5 141.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg12+1_amd64.deb pgdg 2.0.4 144.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg12+1_arm64.deb pgdg 2.0.6 166.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg12+1_arm64.deb pgdg 2.0.5 138.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg12+1_arm64.deb pgdg 2.0.4 157.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg13+1_amd64.deb pgdg 2.0.6 147.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg13+1_amd64.deb pgdg 2.0.5 130.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg13+1_amd64.deb pgdg 2.0.4 131.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg13+1_arm64.deb pgdg 2.0.6 139.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg13+1_arm64.deb pgdg 2.0.5 165.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg13+1_arm64.deb pgdg 2.0.4 127.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg22.04+1_amd64.deb pgdg 2.0.6 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg22.04+1_amd64.deb pgdg 2.0.5 164.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg22.04+1_amd64.deb pgdg 2.0.4 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg22.04+1_arm64.deb pgdg 2.0.6 147.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg22.04+1_arm64.deb pgdg 2.0.4 156.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg24.04+1_amd64.deb pgdg 2.0.6 151.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 154.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg24.04+1_amd64.deb pgdg 2.0.4 135.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg24.04+1_arm64.deb pgdg 2.0.6 155.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 130.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg24.04+1_arm64.deb pgdg 2.0.4 151.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg26.04+1_amd64.deb pgdg 2.0.6 161.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 137.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg26.04+1_amd64.deb pgdg 2.0.4 160.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.6-1.pgdg26.04+1_arm64.deb pgdg 2.0.6 161.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.6-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-q3c postgresql-14-q3c_2.0.4-1.pgdg26.04+1_arm64.deb pgdg 2.0.4 151.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-q3c/postgresql-14-q3c_2.0.4-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -502,27 +362,27 @@ pig install q3c;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y q3c -v 19  # PG 19
 pig ext install -y q3c -v 18  # PG 18
 pig ext install -y q3c -v 17  # PG 17
 pig ext install -y q3c -v 16  # PG 16
 pig ext install -y q3c -v 15  # PG 15
-pig ext install -y q3c -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y q3c_19       # PG 19
 dnf install -y q3c_18       # PG 18
 dnf install -y q3c_17       # PG 17
 dnf install -y q3c_16       # PG 16
 dnf install -y q3c_15       # PG 15
-dnf install -y q3c_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-q3c   # PG 19
 apt install -y postgresql-18-q3c   # PG 18
 apt install -y postgresql-17-q3c   # PG 17
 apt install -y postgresql-16-q3c   # PG 16
 apt install -y postgresql-15-q3c   # PG 15
-apt install -y postgresql-14-q3c   # PG 14
 ```
 
 

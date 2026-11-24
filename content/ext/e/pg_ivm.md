@@ -45,30 +45,55 @@ weight: 2840
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "18,17,16,15,14" >}} | `pg_ivm` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "18,17,16,15,14" >}} | `pg_ivm_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-ivm` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "19,18,17,16,15" >}} | `pg_ivm` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "19,18,17,16,15" >}} | `pg_ivm_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.17` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-ivm` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.17 7 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 15 | AVAIL PIGSTY 1.17 19 |
-| el8.aarch64 | AVAIL PIGSTY 1.17 7 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 15 | AVAIL PIGSTY 1.17 15 |
-| el9.x86_64 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 11 | AVAIL PIGSTY 1.17 12 | AVAIL PIGSTY 1.17 17 | AVAIL PIGSTY 1.17 20 |
-| el9.aarch64 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 11 | AVAIL PIGSTY 1.17 12 | AVAIL PIGSTY 1.17 17 | AVAIL PIGSTY 1.17 17 |
-| el10.x86_64 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 |
-| el10.aarch64 | AVAIL PIGSTY 1.17 9 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 | AVAIL PIGSTY 1.17 10 |
-| d12.x86_64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| d12.aarch64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| d13.x86_64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| d13.aarch64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u22.x86_64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u22.aarch64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u24.x86_64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u24.aarch64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u26.x86_64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
-| u26.aarch64 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.17 8 | AVAIL PGDG 1.17 10 | AVAIL PGDG 1.17 11 | AVAIL PGDG 1.17 16 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.17 8 | AVAIL PGDG 1.17 10 | AVAIL PGDG 1.17 11 | AVAIL PGDG 1.17 16 |
+| el9.x86_64 | AVAIL PGDG 1.17 1 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 |
+| el9.aarch64 | AVAIL PGDG 1.17 1 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 |
+| el10.x86_64 | AVAIL PGDG 1.17 1 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 2 |
+| el10.aarch64 | AVAIL PGDG 1.17 1 | AVAIL PGDG 1.17 11 | AVAIL PGDG 1.17 12 | AVAIL PGDG 1.17 12 | AVAIL PGDG 1.17 12 |
+| d12.x86_64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| d12.aarch64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| d13.x86_64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| d13.aarch64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u22.x86_64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u22.aarch64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u24.x86_64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u24.aarch64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u26.x86_64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+| u26.aarch64 | AVAIL PGDG 1.17 2 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 | AVAIL PGDG 1.17 4 |
+@ el9.x86_64 19 pg_ivm_19 pg_ivm_19-1.17-2PGDG.rhel9.9.x86_64.rpm pgdg 1.17 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_ivm_19-1.17-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pg_ivm_19 pg_ivm_19-1.17-2PGDG.rhel9.9.aarch64.rpm pgdg 1.17 52.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_ivm_19-1.17-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pg_ivm_19 pg_ivm_19-1.17-2PGDG.rhel10.3.x86_64.rpm pgdg 1.17 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_ivm_19-1.17-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pg_ivm_19 pg_ivm_19-1.17-2PGDG.rhel10.3.aarch64.rpm pgdg 1.17 54.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_ivm_19-1.17-2PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg12+2_amd64.deb pgdg 1.17 126.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 126.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg12+2_arm64.deb pgdg 1.17 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 122.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg13+2_amd64.deb pgdg 1.17 126.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 126.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg13+2_arm64.deb pgdg 1.17 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb pgdg 1.17 129.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb pgdg 1.17 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb pgdg 1.17 126.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 126.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb pgdg 1.17 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb pgdg 1.17 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 124.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb pgdg 1.17 121.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-pg-ivm postgresql-19-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-19-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.17-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el8.x86_64.rpm pigsty 1.17 138.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ivm_18-1.17-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.17-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel8.10.x86_64.rpm pgdg 1.16 53.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.16-1PGDG.rhel8.10.x86_64.rpm
@@ -76,6 +101,7 @@ weight: 2840
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel8.10.x86_64.rpm pgdg 1.14 50.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.14-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel8.x86_64.rpm pgdg 1.13 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.13-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel8.x86_64.rpm pgdg 1.12 43.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_ivm_18-1.12-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel8.10.aarch64.rpm pgdg 1.17 52.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.17-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el8.aarch64.rpm pigsty 1.17 135.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ivm_18-1.17-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel8.10.aarch64.rpm pgdg 1.17 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.17-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel8.10.aarch64.rpm pgdg 1.16 51.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.16-1PGDG.rhel8.10.aarch64.rpm
@@ -83,33 +109,14 @@ weight: 2840
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel8.10.aarch64.rpm pgdg 1.14 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.14-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel8.aarch64.rpm pgdg 1.13 47.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.13-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel8.aarch64.rpm pgdg 1.12 41.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_ivm_18-1.12-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel9.9.x86_64.rpm pgdg 1.17 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.17-2PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el9.x86_64.rpm pigsty 1.17 140.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ivm_18-1.17-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel9.8.x86_64.rpm pgdg 1.17 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.17-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel9.8.x86_64.rpm pgdg 1.16 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.16-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.15 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.8.x86_64.rpm pgdg 1.14 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.14-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.7.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.14-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.6.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.14-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel9.x86_64.rpm pgdg 1.13 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.13-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel9.x86_64.rpm pgdg 1.12 43.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_ivm_18-1.12-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel9.9.aarch64.rpm pgdg 1.17 52.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.17-2PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el9.aarch64.rpm pigsty 1.17 139.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ivm_18-1.17-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel9.8.aarch64.rpm pgdg 1.17 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.17-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel9.8.aarch64.rpm pgdg 1.16 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.16-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.15 50.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.8.aarch64.rpm pgdg 1.14 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.14-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.7.aarch64.rpm pgdg 1.14 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.14-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel9.6.aarch64.rpm pgdg 1.14 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.14-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel9.aarch64.rpm pgdg 1.13 48.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.13-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel9.aarch64.rpm pgdg 1.12 42.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_ivm_18-1.12-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel10.3.x86_64.rpm pgdg 1.17 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.17-2PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el10.x86_64.rpm pigsty 1.17 142.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ivm_18-1.17-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel10.2.x86_64.rpm pgdg 1.17 54.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.17-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel10.2.x86_64.rpm pgdg 1.16 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.16-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.15 53.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel10.2.x86_64.rpm pgdg 1.14 50.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.14-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel10.1.x86_64.rpm pgdg 1.14 50.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.14-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel10.0.x86_64.rpm pgdg 1.14 51.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.14-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.13-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel10.x86_64.rpm pgdg 1.12 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_ivm_18-1.12-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel10.3.aarch64.rpm pgdg 1.17 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.17-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-2PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.17-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGSTY.el10.aarch64.rpm pigsty 1.17 140.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_18-1.17-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.17-1PGDG.rhel10.2.aarch64.rpm pgdg 1.17 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.17-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.16-1PGDG.rhel10.2.aarch64.rpm pgdg 1.16 53.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.16-1PGDG.rhel10.2.aarch64.rpm
@@ -119,46 +126,47 @@ weight: 2840
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.14-1PGDG.rhel10.0.aarch64.rpm pgdg 1.14 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.14-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.13-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 pg_ivm_18 pg_ivm_18-1.12-1PGDG.rhel10.aarch64.rpm pgdg 1.12 42.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_ivm_18-1.12-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg12+2_amd64.deb pgdg 1.17 126.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 126.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb pigsty 1.17 126.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg12+1_amd64.deb pgdg 1.15 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg12+1_amd64.deb pgdg 1.15 124.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg12+2_arm64.deb pgdg 1.17 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb pigsty 1.17 122.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg12+1_arm64.deb pgdg 1.15 120.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg12+1_arm64.deb pgdg 1.15 121.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg13+2_amd64.deb pgdg 1.17 126.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 126.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~trixie_amd64.deb pigsty 1.17 126.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg13+1_amd64.deb pgdg 1.15 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg13+1_amd64.deb pgdg 1.15 124.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg13+2_arm64.deb pgdg 1.17 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~trixie_arm64.deb pigsty 1.17 122.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg13+1_arm64.deb pgdg 1.15 120.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg13+1_arm64.deb pgdg 1.15 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb pgdg 1.17 129.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 129.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~jammy_amd64.deb pigsty 1.17 138.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb pgdg 1.15 127.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb pgdg 1.15 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb pgdg 1.17 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~jammy_arm64.deb pigsty 1.17 135.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb pgdg 1.15 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb pgdg 1.17 126.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 126.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~noble_amd64.deb pigsty 1.17 131.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb pgdg 1.15 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb pgdg 1.15 124.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb pgdg 1.17 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~noble_arm64.deb pigsty 1.17 130.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb pgdg 1.15 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb pgdg 1.15 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb pgdg 1.17 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 125.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~resolute_amd64.deb pigsty 1.17 130.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb pgdg 1.15 122.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb pgdg 1.15 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb pgdg 1.17 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 121.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.17-1PGSTY~resolute_arm64.deb pigsty 1.17 128.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.17-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb pgdg 1.15 119.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-pg-ivm postgresql-18-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb pgdg 1.15 119.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-18-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.17-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el8.x86_64.rpm pigsty 1.17 137.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ivm_17-1.17-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.17-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel8.10.x86_64.rpm pgdg 1.16 53.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.16-1PGDG.rhel8.10.x86_64.rpm
@@ -168,6 +176,7 @@ weight: 2840
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel8.x86_64.rpm pgdg 1.11 42.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.11-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel8.x86_64.rpm pgdg 1.10 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_ivm_17 pg_ivm_17-1.9-1PGDG.rhel8.x86_64.rpm pgdg 1.9 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_ivm_17-1.9-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel8.10.aarch64.rpm pgdg 1.17 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.17-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el8.aarch64.rpm pigsty 1.17 134.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ivm_17-1.17-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel8.10.aarch64.rpm pgdg 1.17 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.17-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel8.10.aarch64.rpm pgdg 1.16 51.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.16-1PGDG.rhel8.10.aarch64.rpm
@@ -177,38 +186,14 @@ weight: 2840
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel8.aarch64.rpm pgdg 1.11 40.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.11-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel8.aarch64.rpm pgdg 1.10 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_ivm_17 pg_ivm_17-1.9-1PGDG.rhel8.aarch64.rpm pgdg 1.9 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_ivm_17-1.9-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel9.9.x86_64.rpm pgdg 1.17 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.17-2PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el9.x86_64.rpm pigsty 1.17 140.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ivm_17-1.17-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel9.8.x86_64.rpm pgdg 1.17 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.17-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel9.8.x86_64.rpm pgdg 1.16 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.16-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.15 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.8.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.14-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.7.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.14-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.6.x86_64.rpm pgdg 1.14 49.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.14-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.13-1PGDG.rhel9.x86_64.rpm pgdg 1.13 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.13-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel9.x86_64.rpm pgdg 1.11 43.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.11-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel9.x86_64.rpm pgdg 1.10 42.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_ivm_17 pg_ivm_17-1.9-1PGDG.rhel9.x86_64.rpm pgdg 1.9 41.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_ivm_17-1.9-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel9.9.aarch64.rpm pgdg 1.17 52.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.17-2PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el9.aarch64.rpm pigsty 1.17 138.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ivm_17-1.17-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel9.8.aarch64.rpm pgdg 1.17 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.17-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel9.8.aarch64.rpm pgdg 1.16 51.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.16-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.15 50.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.8.aarch64.rpm pgdg 1.14 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.14-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.7.aarch64.rpm pgdg 1.14 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.14-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel9.6.aarch64.rpm pgdg 1.14 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.14-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.13-1PGDG.rhel9.aarch64.rpm pgdg 1.13 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.13-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel9.aarch64.rpm pgdg 1.11 41.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.11-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel9.aarch64.rpm pgdg 1.10 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_ivm_17 pg_ivm_17-1.9-1PGDG.rhel9.aarch64.rpm pgdg 1.9 39.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_ivm_17-1.9-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel10.3.x86_64.rpm pgdg 1.17 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.17-2PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el10.x86_64.rpm pigsty 1.17 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ivm_17-1.17-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel10.2.x86_64.rpm pgdg 1.17 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.17-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel10.2.x86_64.rpm pgdg 1.16 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.16-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.15 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel10.2.x86_64.rpm pgdg 1.14 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.14-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel10.1.x86_64.rpm pgdg 1.14 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.14-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.14-1PGDG.rhel10.0.x86_64.rpm pgdg 1.14 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.14-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.13-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel10.x86_64.rpm pgdg 1.11 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.11-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel10.x86_64.rpm pgdg 1.10 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_ivm_17-1.10-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel10.3.aarch64.rpm pgdg 1.17 54.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.17-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-2PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.17-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGSTY.el10.aarch64.rpm pigsty 1.17 140.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_17-1.17-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.17-1PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.17-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.16-1PGDG.rhel10.2.aarch64.rpm pgdg 1.16 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.16-1PGDG.rhel10.2.aarch64.rpm
@@ -219,46 +204,47 @@ weight: 2840
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.13-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.11-1PGDG.rhel10.aarch64.rpm pgdg 1.11 42.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.11-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_ivm_17 pg_ivm_17-1.10-1PGDG.rhel10.aarch64.rpm pgdg 1.10 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_ivm_17-1.10-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg12+2_amd64.deb pgdg 1.17 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb pigsty 1.17 125.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg12+1_amd64.deb pgdg 1.15 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg12+1_amd64.deb pgdg 1.15 124.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg12+2_arm64.deb pgdg 1.17 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb pigsty 1.17 122.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg12+1_arm64.deb pgdg 1.15 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg12+1_arm64.deb pgdg 1.15 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg13+2_amd64.deb pgdg 1.17 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~trixie_amd64.deb pigsty 1.17 126.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg13+1_amd64.deb pgdg 1.15 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg13+1_amd64.deb pgdg 1.15 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg13+2_arm64.deb pgdg 1.17 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~trixie_arm64.deb pigsty 1.17 121.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg13+1_arm64.deb pgdg 1.15 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg13+1_arm64.deb pgdg 1.15 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb pgdg 1.17 149.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 149.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~jammy_amd64.deb pigsty 1.17 158.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb pgdg 1.15 147.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb pgdg 1.15 148.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb pgdg 1.17 145.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 145.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~jammy_arm64.deb pigsty 1.17 156.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb pgdg 1.15 143.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb pgdg 1.15 144.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb pgdg 1.17 126.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 126.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~noble_amd64.deb pigsty 1.17 131.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb pgdg 1.15 124.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb pgdg 1.15 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~noble_arm64.deb pigsty 1.17 130.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb pgdg 1.15 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb pgdg 1.15 120.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb pgdg 1.17 125.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 124.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~resolute_amd64.deb pigsty 1.17 129.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb pgdg 1.15 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb pgdg 1.15 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb pgdg 1.17 121.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.17-1PGSTY~resolute_arm64.deb pigsty 1.17 127.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.17-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb pgdg 1.15 118.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-pg-ivm postgresql-17-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb pgdg 1.15 119.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-17-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.17-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el8.x86_64.rpm pigsty 1.17 138.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ivm_16-1.17-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.17-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel8.10.x86_64.rpm pgdg 1.16 53.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.16-1PGDG.rhel8.10.x86_64.rpm
@@ -269,6 +255,7 @@ weight: 2840
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel8.x86_64.rpm pgdg 1.10 42.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.8-1PGDG.rhel8.x86_64.rpm pgdg 1.8 39.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.8-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_ivm_16 pg_ivm_16-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_ivm_16-1.7-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel8.10.aarch64.rpm pgdg 1.17 52.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.17-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el8.aarch64.rpm pigsty 1.17 134.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ivm_16-1.17-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel8.10.aarch64.rpm pgdg 1.17 51.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.17-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel8.10.aarch64.rpm pgdg 1.16 51.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.16-1PGDG.rhel8.10.aarch64.rpm
@@ -279,40 +266,14 @@ weight: 2840
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel8.aarch64.rpm pgdg 1.10 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.8-1PGDG.rhel8.aarch64.rpm pgdg 1.8 37.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.8-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_ivm_16 pg_ivm_16-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_ivm_16-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel9.9.x86_64.rpm pgdg 1.17 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.17-2PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el9.x86_64.rpm pigsty 1.17 140.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ivm_16-1.17-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel9.8.x86_64.rpm pgdg 1.17 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.17-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel9.8.x86_64.rpm pgdg 1.16 53.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.16-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.15 52.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.8.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.14-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.7.x86_64.rpm pgdg 1.14 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.14-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.6.x86_64.rpm pgdg 1.14 49.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.14-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.13-1PGDG.rhel9.x86_64.rpm pgdg 1.13 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.13-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.11-1PGDG.rhel9.x86_64.rpm pgdg 1.11 43.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.11-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel9.x86_64.rpm pgdg 1.10 43.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.8 40.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.8-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_ivm_16 pg_ivm_16-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 42.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_ivm_16-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel9.9.aarch64.rpm pgdg 1.17 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.17-2PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el9.aarch64.rpm pigsty 1.17 139.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ivm_16-1.17-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel9.8.aarch64.rpm pgdg 1.17 52.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.17-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel9.8.aarch64.rpm pgdg 1.16 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.16-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.15 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.8.aarch64.rpm pgdg 1.14 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.14-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.7.aarch64.rpm pgdg 1.14 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.14-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel9.6.aarch64.rpm pgdg 1.14 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.14-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.13-1PGDG.rhel9.aarch64.rpm pgdg 1.13 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.13-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.11-1PGDG.rhel9.aarch64.rpm pgdg 1.11 42.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.11-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel9.aarch64.rpm pgdg 1.10 41.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.8 39.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.8-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_ivm_16 pg_ivm_16-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 41.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_ivm_16-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel10.3.x86_64.rpm pgdg 1.17 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.17-2PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el10.x86_64.rpm pigsty 1.17 141.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ivm_16-1.17-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel10.2.x86_64.rpm pgdg 1.17 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.17-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel10.2.x86_64.rpm pgdg 1.16 54.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.16-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.15 53.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel10.2.x86_64.rpm pgdg 1.14 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.14-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel10.1.x86_64.rpm pgdg 1.14 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.14-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.14-1PGDG.rhel10.0.x86_64.rpm pgdg 1.14 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.14-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.13-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.11-1PGDG.rhel10.x86_64.rpm pgdg 1.11 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.11-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel10.x86_64.rpm pgdg 1.10 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_ivm_16-1.10-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel10.3.aarch64.rpm pgdg 1.17 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.17-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-2PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.17-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGSTY.el10.aarch64.rpm pigsty 1.17 140.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_16-1.17-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.17-1PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.17-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.16-1PGDG.rhel10.2.aarch64.rpm pgdg 1.16 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.16-1PGDG.rhel10.2.aarch64.rpm
@@ -323,46 +284,47 @@ weight: 2840
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.13-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.11-1PGDG.rhel10.aarch64.rpm pgdg 1.11 42.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.11-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_ivm_16 pg_ivm_16-1.10-1PGDG.rhel10.aarch64.rpm pgdg 1.10 42.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_ivm_16-1.10-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg12+2_amd64.deb pgdg 1.17 126.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb pigsty 1.17 125.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg12+1_amd64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg12+1_amd64.deb pgdg 1.15 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg12+2_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb pigsty 1.17 122.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg12+1_arm64.deb pgdg 1.15 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg12+1_arm64.deb pgdg 1.15 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg13+2_amd64.deb pgdg 1.17 126.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 126.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~trixie_amd64.deb pigsty 1.17 125.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg13+1_amd64.deb pgdg 1.15 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg13+1_amd64.deb pgdg 1.15 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg13+2_arm64.deb pgdg 1.17 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~trixie_arm64.deb pigsty 1.17 122.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg13+1_arm64.deb pgdg 1.15 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg13+1_arm64.deb pgdg 1.15 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb pgdg 1.17 149.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 149.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~jammy_amd64.deb pigsty 1.17 157.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb pgdg 1.15 146.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb pgdg 1.15 147.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb pgdg 1.17 145.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 144.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~jammy_arm64.deb pigsty 1.17 155.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb pgdg 1.15 142.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb pgdg 1.15 143.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb pgdg 1.17 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 126.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~noble_amd64.deb pigsty 1.17 131.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb pgdg 1.15 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb pgdg 1.17 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~noble_arm64.deb pigsty 1.17 133.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb pgdg 1.15 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb pgdg 1.15 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb pgdg 1.17 125.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 124.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~resolute_amd64.deb pigsty 1.17 130.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb pgdg 1.15 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb pgdg 1.15 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb pgdg 1.17 121.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 120.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.17-1PGSTY~resolute_arm64.deb pigsty 1.17 127.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.17-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb pgdg 1.15 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-pg-ivm postgresql-16-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb pgdg 1.15 119.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-16-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.17-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el8.x86_64.rpm pigsty 1.17 137.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ivm_15-1.17-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel8.10.x86_64.rpm pgdg 1.17 54.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.17-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel8.10.x86_64.rpm pgdg 1.16 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.16-1PGDG.rhel8.10.x86_64.rpm
@@ -378,6 +340,7 @@ weight: 2840
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.5-1.rhel8.x86_64.rpm pgdg 1.5 39.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.5-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.4-1.rhel8.x86_64.rpm pgdg 1.4 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_ivm_15 pg_ivm_15-1.3-1.rhel8.x86_64.rpm pgdg 1.3 37.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_ivm_15-1.3-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel8.10.aarch64.rpm pgdg 1.17 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.17-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el8.aarch64.rpm pigsty 1.17 134.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ivm_15-1.17-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel8.10.aarch64.rpm pgdg 1.17 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.17-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel8.10.aarch64.rpm pgdg 1.16 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.16-1PGDG.rhel8.10.aarch64.rpm
@@ -393,50 +356,14 @@ weight: 2840
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.5-1.rhel8.aarch64.rpm pgdg 1.5 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.5-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.4-1.rhel8.aarch64.rpm pgdg 1.4 36.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_ivm_15 pg_ivm_15-1.3-1.rhel8.aarch64.rpm pgdg 1.3 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_ivm_15-1.3-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel9.9.x86_64.rpm pgdg 1.17 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.17-2PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el9.x86_64.rpm pigsty 1.17 140.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ivm_15-1.17-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel9.8.x86_64.rpm pgdg 1.17 54.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.17-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel9.8.x86_64.rpm pgdg 1.16 53.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.16-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.15 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.8.x86_64.rpm pgdg 1.14 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.14-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.7.x86_64.rpm pgdg 1.14 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.14-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.6.x86_64.rpm pgdg 1.14 50.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.14-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.13-1PGDG.rhel9.x86_64.rpm pgdg 1.13 50.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.13-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.11-1PGDG.rhel9.x86_64.rpm pgdg 1.11 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.11-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.10-1PGDG.rhel9.x86_64.rpm pgdg 1.10 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.8 41.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.8-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.5.1-1.rhel9.x86_64.rpm pgdg 1.5.1 41.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.5.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.5-1.rhel9.x86_64.rpm pgdg 1.5 41.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.5-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.4-1.rhel9.x86_64.rpm pgdg 1.4 40.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.4-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_ivm_15 pg_ivm_15-1.3-1.rhel9.x86_64.rpm pgdg 1.3 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_ivm_15-1.3-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel9.9.aarch64.rpm pgdg 1.17 53.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.17-2PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el9.aarch64.rpm pigsty 1.17 139.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ivm_15-1.17-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel9.8.aarch64.rpm pgdg 1.17 53.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.17-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel9.8.aarch64.rpm pgdg 1.16 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.16-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.15 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.8.aarch64.rpm pgdg 1.14 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.14-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.7.aarch64.rpm pgdg 1.14 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.14-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel9.6.aarch64.rpm pgdg 1.14 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.14-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.13-1PGDG.rhel9.aarch64.rpm pgdg 1.13 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.13-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.11-1PGDG.rhel9.aarch64.rpm pgdg 1.11 42.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.11-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.10-1PGDG.rhel9.aarch64.rpm pgdg 1.10 42.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.8 39.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.8-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 42.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 42.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.6-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.5.1-1.rhel9.aarch64.rpm pgdg 1.5.1 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.5.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.5-1.rhel9.aarch64.rpm pgdg 1.5 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.5-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.4-1.rhel9.aarch64.rpm pgdg 1.4 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.4-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_ivm_15 pg_ivm_15-1.3-1.rhel9.aarch64.rpm pgdg 1.3 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_ivm_15-1.3-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel10.3.x86_64.rpm pgdg 1.17 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.17-2PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el10.x86_64.rpm pigsty 1.17 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ivm_15-1.17-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel10.2.x86_64.rpm pgdg 1.17 55.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.17-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel10.2.x86_64.rpm pgdg 1.16 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.16-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.15 53.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel10.2.x86_64.rpm pgdg 1.14 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.14-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel10.1.x86_64.rpm pgdg 1.14 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.14-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.14-1PGDG.rhel10.0.x86_64.rpm pgdg 1.14 52.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.14-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.13-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.11-1PGDG.rhel10.x86_64.rpm pgdg 1.11 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.11-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pg_ivm_15 pg_ivm_15-1.10-1PGDG.rhel10.x86_64.rpm pgdg 1.10 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_ivm_15-1.10-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel10.3.aarch64.rpm pgdg 1.17 54.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.17-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-2PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.17-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGSTY.el10.aarch64.rpm pigsty 1.17 140.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_15-1.17-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.17-1PGDG.rhel10.2.aarch64.rpm pgdg 1.17 54.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.17-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.16-1PGDG.rhel10.2.aarch64.rpm pgdg 1.16 53.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.16-1PGDG.rhel10.2.aarch64.rpm
@@ -447,177 +374,46 @@ weight: 2840
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.13-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.11-1PGDG.rhel10.aarch64.rpm pgdg 1.11 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.11-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_ivm_15 pg_ivm_15-1.10-1PGDG.rhel10.aarch64.rpm pgdg 1.10 43.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_ivm_15-1.10-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg12+2_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb pigsty 1.17 125.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg12+1_amd64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg12+1_amd64.deb pgdg 1.15 124.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg12+2_arm64.deb pgdg 1.17 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb pigsty 1.17 145.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg12+1_arm64.deb pgdg 1.15 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg12+1_arm64.deb pgdg 1.15 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg13+2_amd64.deb pgdg 1.17 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~trixie_amd64.deb pigsty 1.17 125.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg13+1_amd64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg13+1_amd64.deb pgdg 1.15 124.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg13+2_arm64.deb pgdg 1.17 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~trixie_arm64.deb pigsty 1.17 121.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg13+1_arm64.deb pgdg 1.15 119.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg13+1_arm64.deb pgdg 1.15 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb pgdg 1.17 148.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 148.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~jammy_amd64.deb pigsty 1.17 157.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~jammy_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb pgdg 1.15 146.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb pgdg 1.15 146.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb pgdg 1.17 144.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 144.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~jammy_arm64.deb pigsty 1.17 155.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~jammy_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb pgdg 1.15 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb pgdg 1.15 143.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb pgdg 1.17 125.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 126.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~noble_amd64.deb pigsty 1.17 131.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb pgdg 1.15 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb pgdg 1.15 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb pgdg 1.17 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~noble_arm64.deb pigsty 1.17 130.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb pgdg 1.15 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb pgdg 1.15 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb pgdg 1.17 124.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 124.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~resolute_amd64.deb pigsty 1.17 129.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb pgdg 1.15 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb pgdg 1.15 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb pgdg 1.17 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 121.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.17-1PGSTY~resolute_arm64.deb pigsty 1.17 127.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.17-1PGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb pgdg 1.15 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-pg-ivm postgresql-15-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb pgdg 1.15 119.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-15-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el8.x86_64.rpm pigsty 1.17 229.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ivm_14-1.17-1PGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel8.10.x86_64.rpm pgdg 1.17 82.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.17-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel8.10.x86_64.rpm pgdg 1.16 82.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.16-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel8.10.x86_64.rpm pgdg 1.15 80.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.15-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel8.10.x86_64.rpm pgdg 1.14 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.14-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel8.x86_64.rpm pgdg 1.13 78.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.13-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel8.x86_64.rpm pgdg 1.11 71.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.11-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel8.x86_64.rpm pgdg 1.10 71.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.10-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.8-1PGDG.rhel8.x86_64.rpm pgdg 1.8 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.8-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 71.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.6-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.5.1-1.rhel8.x86_64.rpm pgdg 1.5.1 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.5.1-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.5-1.rhel8.x86_64.rpm pgdg 1.5 69.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.5-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.4-1.rhel8.x86_64.rpm pgdg 1.4 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.4-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.3-1.rhel8.x86_64.rpm pgdg 1.3 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.3-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.2-1.rhel8.x86_64.rpm pgdg 1.2 66.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.2-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.1-1.rhel8.x86_64.rpm pgdg 1.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.1-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.0-.rhel8.x86_64.rpm pgdg 1.0 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.0-.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_ivm_14 pg_ivm_14-1.0-alpha1.rhel8.x86_64.rpm pgdg 1.0 62.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_ivm_14-1.0-alpha1.rhel8.x86_64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el8.aarch64.rpm pigsty 1.17 223.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ivm_14-1.17-1PGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel8.10.aarch64.rpm pgdg 1.17 77.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.17-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel8.10.aarch64.rpm pgdg 1.16 77.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.16-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel8.10.aarch64.rpm pgdg 1.15 76.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.15-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel8.10.aarch64.rpm pgdg 1.14 74.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.14-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel8.aarch64.rpm pgdg 1.13 73.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.13-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel8.aarch64.rpm pgdg 1.11 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.11-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel8.aarch64.rpm pgdg 1.10 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.10-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.8-1PGDG.rhel8.aarch64.rpm pgdg 1.8 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.8-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.7-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.6 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.6-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.5.1-1.rhel8.aarch64.rpm pgdg 1.5.1 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.5.1-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.5-1.rhel8.aarch64.rpm pgdg 1.5 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.5-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.4-1.rhel8.aarch64.rpm pgdg 1.4 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.4-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_ivm_14 pg_ivm_14-1.3-1.rhel8.aarch64.rpm pgdg 1.3 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_ivm_14-1.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el9.x86_64.rpm pigsty 1.17 234.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ivm_14-1.17-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel9.8.x86_64.rpm pgdg 1.17 83.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.17-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel9.8.x86_64.rpm pgdg 1.16 82.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.16-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.15 81.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.8.x86_64.rpm pgdg 1.14 79.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.14-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.7.x86_64.rpm pgdg 1.14 79.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.14-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.6.x86_64.rpm pgdg 1.14 80.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.14-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel9.x86_64.rpm pgdg 1.13 79.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.13-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel9.x86_64.rpm pgdg 1.11 73.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.11-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel9.x86_64.rpm pgdg 1.10 73.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.8 71.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.8-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 74.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 74.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.5.1-1.rhel9.x86_64.rpm pgdg 1.5.1 72.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.5.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.5-1.rhel9.x86_64.rpm pgdg 1.5 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.5-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.4-1.rhel9.x86_64.rpm pgdg 1.4 71.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.4-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.3-1.rhel9.x86_64.rpm pgdg 1.3 71.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.3-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.2-1.rhel9.x86_64.rpm pgdg 1.2 69.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.2-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.1-1.rhel9.x86_64.rpm pgdg 1.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_ivm_14 pg_ivm_14-1.0-.rhel9.x86_64.rpm pgdg 1.0 77.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_ivm_14-1.0-.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el9.aarch64.rpm pigsty 1.17 231.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ivm_14-1.17-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel9.8.aarch64.rpm pgdg 1.17 81.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.17-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel9.8.aarch64.rpm pgdg 1.16 80.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.16-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.15 79.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.8.aarch64.rpm pgdg 1.14 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.14-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.7.aarch64.rpm pgdg 1.14 77.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.14-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel9.6.aarch64.rpm pgdg 1.14 77.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.14-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel9.aarch64.rpm pgdg 1.13 77.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.13-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel9.aarch64.rpm pgdg 1.11 70.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.11-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel9.aarch64.rpm pgdg 1.10 70.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.8 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.8-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 71.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.6-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.5.1-1.rhel9.aarch64.rpm pgdg 1.5.1 69.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.5.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.5-1.rhel9.aarch64.rpm pgdg 1.5 69.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.5-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.4-1.rhel9.aarch64.rpm pgdg 1.4 68.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.4-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_ivm_14 pg_ivm_14-1.3-1.rhel9.aarch64.rpm pgdg 1.3 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_ivm_14-1.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el10.x86_64.rpm pigsty 1.17 235.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ivm_14-1.17-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel10.2.x86_64.rpm pgdg 1.17 84.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.17-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel10.2.x86_64.rpm pgdg 1.16 84.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.16-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.15 83.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.2.x86_64.rpm pgdg 1.14 81.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.14-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.1.x86_64.rpm pgdg 1.14 81.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.14-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.0.x86_64.rpm pgdg 1.14 81.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.14-1PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 80.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.13-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel10.x86_64.rpm pgdg 1.11 74.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.11-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel10.x86_64.rpm pgdg 1.10 74.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.10-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGSTY.el10.aarch64.rpm pigsty 1.17 232.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_14-1.17-1PGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.17-1PGDG.rhel10.2.aarch64.rpm pgdg 1.17 82.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.17-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.16-1PGDG.rhel10.2.aarch64.rpm pgdg 1.16 81.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.16-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.15 81.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.15-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.2.aarch64.rpm pgdg 1.14 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.1.aarch64.rpm pgdg 1.14 78.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.0.aarch64.rpm pgdg 1.14 78.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 79.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.13-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel10.aarch64.rpm pgdg 1.11 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.11-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel10.aarch64.rpm pgdg 1.10 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.10-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg12+1_amd64.deb pgdg 1.17 216.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb pigsty 1.17 216.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~bookworm_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg12+1_amd64.deb pgdg 1.15 214.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg12+1_amd64.deb pgdg 1.15 214.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg12+1_arm64.deb pgdg 1.17 209.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb pigsty 1.17 208.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~bookworm_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg12+1_arm64.deb pgdg 1.15 206.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg12+1_arm64.deb pgdg 1.15 207.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg13+1_amd64.deb pgdg 1.17 216.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~trixie_amd64.deb pigsty 1.17 215.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~trixie_amd64.deb
-@ d13.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg13+1_amd64.deb pgdg 1.15 213.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg13+1_amd64.deb pgdg 1.15 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg13+1_arm64.deb pgdg 1.17 209.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~trixie_arm64.deb pigsty 1.17 208.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~trixie_arm64.deb
-@ d13.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg13+1_arm64.deb pgdg 1.15 207.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg13+1_arm64.deb pgdg 1.15 207.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb pgdg 1.17 247.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~jammy_amd64.deb pigsty 1.17 260.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~jammy_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb pgdg 1.15 244.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb pgdg 1.15 245.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb pgdg 1.17 239.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~jammy_arm64.deb pigsty 1.17 258.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~jammy_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb pgdg 1.15 236.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb pgdg 1.15 237.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb pgdg 1.17 216.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~noble_amd64.deb pigsty 1.17 225.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~noble_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb pgdg 1.15 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb pgdg 1.15 214.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb pgdg 1.17 209.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~noble_arm64.deb pigsty 1.17 222.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~noble_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb pgdg 1.15 207.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb pgdg 1.15 207.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb pgdg 1.17 213.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~resolute_amd64.deb pigsty 1.17 222.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~resolute_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb pgdg 1.15 211.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb pgdg 1.15 211.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb pgdg 1.17 205.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.17-1PGSTY~resolute_arm64.deb pigsty 1.17 218.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.17-1PGSTY~resolute_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb pgdg 1.15 203.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-ivm postgresql-14-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb pgdg 1.15 204.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-ivm/postgresql-14-pg-ivm_1.15-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -644,27 +440,27 @@ pig install pg_ivm;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_ivm -v 19  # PG 19
 pig ext install -y pg_ivm -v 18  # PG 18
 pig ext install -y pg_ivm -v 17  # PG 17
 pig ext install -y pg_ivm -v 16  # PG 16
 pig ext install -y pg_ivm -v 15  # PG 15
-pig ext install -y pg_ivm -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_ivm_19       # PG 19
 dnf install -y pg_ivm_18       # PG 18
 dnf install -y pg_ivm_17       # PG 17
 dnf install -y pg_ivm_16       # PG 16
 dnf install -y pg_ivm_15       # PG 15
-dnf install -y pg_ivm_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-ivm   # PG 19
 apt install -y postgresql-18-pg-ivm   # PG 18
 apt install -y postgresql-17-pg-ivm   # PG 17
 apt install -y postgresql-16-pg-ivm   # PG 16
 apt install -y postgresql-15-pg-ivm   # PG 15
-apt install -y postgresql-14-pg-ivm   # PG 14
 ```
 
 

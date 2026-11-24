@@ -40,18 +40,18 @@ weight: 8670
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.3` | {{< pgvers "18,17,16,15,14" >}} | `informix_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.3` | {{< pgvers "18,17,16,15,14" >}} | `informix_fdw_$v` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.3` | {{< pgvers "18,17,16,15" >}} | `informix_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.3` | {{< pgvers "18,17,16,15" >}} | `informix_fdw_$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 |
 | el8.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
-| el9.x86_64 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 2 | AVAIL PGDG 0.6.3 2 | AVAIL PGDG 0.6.3 2 |
+| el9.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 |
 | el9.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
-| el10.x86_64 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 2 | AVAIL PGDG 0.6.3 2 | AVAIL PGDG 0.6.3 2 |
+| el10.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 |
 | el10.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | d12.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | d12.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
@@ -64,26 +64,17 @@ weight: 8670
 | u26.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | u26.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 @ el8.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-4PGDG.rhel9.x86_64.rpm pgdg 0.6.3 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/informix_fdw_18-0.6.3-4PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-4PGDG.rhel10.x86_64.rpm pgdg 0.6.3 61.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/informix_fdw_18-0.6.3-4PGDG.rhel10.x86_64.rpm
 @ el8.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-4PGDG.rhel9.x86_64.rpm pgdg 0.6.3 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/informix_fdw_17-0.6.3-4PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-4PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/informix_fdw_17-0.6.3-4PGDG.rhel10.x86_64.rpm
 @ el8.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 59.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 60.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-4PGDG.rhel9.x86_64.rpm pgdg 0.6.3 60.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.3-4PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-4PGDG.rhel10.x86_64.rpm pgdg 0.6.3 61.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.3-4PGDG.rhel10.x86_64.rpm
 @ el8.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm
-@ el8.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/14/redhat/rhel-8-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-4PGDG.rhel9.x86_64.rpm pgdg 0.6.3 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.3-4PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-4PGDG.rhel10.x86_64.rpm pgdg 0.6.3 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.3-4PGDG.rhel10.x86_64.rpm
 {{< /pgext_matrix >}}
 
 
@@ -106,7 +97,6 @@ pig ext install -y informix_fdw -v 18  # PG 18
 pig ext install -y informix_fdw -v 17  # PG 17
 pig ext install -y informix_fdw -v 16  # PG 16
 pig ext install -y informix_fdw -v 15  # PG 15
-pig ext install -y informix_fdw -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -114,7 +104,6 @@ dnf install -y informix_fdw_18       # PG 18
 dnf install -y informix_fdw_17       # PG 17
 dnf install -y informix_fdw_16       # PG 16
 dnf install -y informix_fdw_15       # PG 15
-dnf install -y informix_fdw_14       # PG 14
 ```
 
 

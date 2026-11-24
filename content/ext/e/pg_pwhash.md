@@ -40,180 +40,206 @@ weight: 7330
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_pwhash` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_pwhash_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-pwhash` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_pwhash` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_pwhash_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-pwhash` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
-| el8.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
-| el9.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
-| el9.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
-| el10.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
-| el10.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
-| d12.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| d12.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| d13.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| d13.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u22.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u22.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u24.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u24.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u26.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| u26.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 |
+| el9.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el9.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el10.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el10.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 7 | AVAIL PGDG 1.0 7 | AVAIL PGDG 1.0 7 | AVAIL PGDG 1.0 7 |
+| d12.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| d12.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| d13.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| d13.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u22.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u22.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u24.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u24.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u26.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| u26.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+@ el9.x86_64 19 pg_pwhash_19 pg_pwhash_19-1.0-6PGDG.rhel9.9.x86_64.rpm pgdg 1.0 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_pwhash_19-1.0-6PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pg_pwhash_19 pg_pwhash_19-1.0-6PGDG.rhel9.9.aarch64.rpm pgdg 1.0 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_pwhash_19-1.0-6PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pg_pwhash_19 pg_pwhash_19-1.0-6PGDG.rhel10.3.x86_64.rpm pgdg 1.0 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_pwhash_19-1.0-6PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pg_pwhash_19 pg_pwhash_19-1.0-6PGDG.rhel10.3.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_pwhash_19-1.0-6PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg12+4_amd64.deb pgdg 1.0 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg12+4_amd64.deb
+@ d12.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg12+4_arm64.deb pgdg 1.0 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg12+4_arm64.deb
+@ d12.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg13+4_amd64.deb pgdg 1.0 56.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg13+4_amd64.deb
+@ d13.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg13+4_arm64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg13+4_arm64.deb
+@ d13.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb pgdg 1.0 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb
+@ u22.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb
+@ u22.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb
+@ u24.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb pgdg 1.0 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb
+@ u24.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb pgdg 1.0 57.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb
+@ u26.x86_64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb
+@ u26.aarch64 19 postgresql-19-pg-pwhash postgresql-19-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-19-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
+@ el8.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_pwhash_18-1.0-6PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-5PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_pwhash_18-1.0-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_pwhash_18-1.0-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_pwhash_18-1.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_pwhash_18-1.0-6PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-5PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_pwhash_18-1.0-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_pwhash_18-1.0-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_pwhash_18-1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_pwhash_18-1.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_pwhash_18-1.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_pwhash_18-1.0-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_pwhash_18-1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.0 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_pwhash_18-1.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_pwhash_18-1.0-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_pwhash_18-1.0-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_pwhash_18-1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el10.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_pwhash_18-1.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_pwhash_18-1.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_pwhash_18-1.0-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_pwhash_18-1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el9.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel9.9.x86_64.rpm pgdg 1.0 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_pwhash_18-1.0-6PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel9.9.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_pwhash_18-1.0-6PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel10.3.x86_64.rpm pgdg 1.0 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_pwhash_18-1.0-6PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel10.3.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-6PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_pwhash_18 pg_pwhash_18-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_pwhash_18-1.0-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg12+4_amd64.deb pgdg 1.0 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg12+4_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg12+4_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg12+4_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg13+4_amd64.deb pgdg 1.0 56.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg13+4_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg13+4_arm64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg13+4_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb pgdg 1.0 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb pgdg 1.0 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb pgdg 1.0 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 54.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb pgdg 1.0 57.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 56.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb pgdg 1.0 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-pwhash postgresql-18-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-18-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
+@ el8.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_pwhash_17-1.0-6PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-5PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_pwhash_17-1.0-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_pwhash_17-1.0-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_pwhash_17-1.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_pwhash_17-1.0-6PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-5PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_pwhash_17-1.0-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_pwhash_17-1.0-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_pwhash_17-1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_pwhash_17-1.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_pwhash_17-1.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_pwhash_17-1.0-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_pwhash_17-1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.0 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_pwhash_17-1.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_pwhash_17-1.0-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_pwhash_17-1.0-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_pwhash_17-1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el10.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_pwhash_17-1.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_pwhash_17-1.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_pwhash_17-1.0-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_pwhash_17-1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el9.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel9.9.x86_64.rpm pgdg 1.0 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_pwhash_17-1.0-6PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel9.9.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_pwhash_17-1.0-6PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel10.3.x86_64.rpm pgdg 1.0 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_pwhash_17-1.0-6PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel10.3.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-6PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_pwhash_17 pg_pwhash_17-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_pwhash_17-1.0-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg12+4_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg12+4_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg12+4_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg12+4_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg13+4_amd64.deb pgdg 1.0 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg13+4_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg13+4_arm64.deb pgdg 1.0 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg13+4_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb pgdg 1.0 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb pgdg 1.0 57.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb pgdg 1.0 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb pgdg 1.0 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb pgdg 1.0 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-pwhash postgresql-17-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-17-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
+@ el8.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_pwhash_16-1.0-6PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-5PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_pwhash_16-1.0-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_pwhash_16-1.0-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_pwhash_16-1.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_pwhash_16-1.0-6PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-5PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_pwhash_16-1.0-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_pwhash_16-1.0-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_pwhash_16-1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_pwhash_16-1.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_pwhash_16-1.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_pwhash_16-1.0-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_pwhash_16-1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.0 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_pwhash_16-1.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_pwhash_16-1.0-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_pwhash_16-1.0-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_pwhash_16-1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el10.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_pwhash_16-1.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_pwhash_16-1.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_pwhash_16-1.0-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_pwhash_16-1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el9.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel9.9.x86_64.rpm pgdg 1.0 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_pwhash_16-1.0-6PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel9.9.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_pwhash_16-1.0-6PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel10.3.x86_64.rpm pgdg 1.0 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_pwhash_16-1.0-6PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel10.3.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-6PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_pwhash_16 pg_pwhash_16-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_pwhash_16-1.0-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg12+4_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg12+4_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg12+4_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg12+4_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg13+4_amd64.deb pgdg 1.0 56.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg13+4_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg13+4_arm64.deb pgdg 1.0 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg13+4_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb pgdg 1.0 59.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 59.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb pgdg 1.0 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb pgdg 1.0 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb pgdg 1.0 54.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 54.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb pgdg 1.0 55.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-pwhash postgresql-16-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-16-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
+@ el8.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_pwhash_15-1.0-6PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-5PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_pwhash_15-1.0-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_pwhash_15-1.0-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_pwhash_15-1.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_pwhash_15-1.0-6PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-5PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_pwhash_15-1.0-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_pwhash_15-1.0-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_pwhash_15-1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_pwhash_15-1.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_pwhash_15-1.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_pwhash_15-1.0-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_pwhash_15-1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.0 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_pwhash_15-1.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_pwhash_15-1.0-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_pwhash_15-1.0-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_pwhash_15-1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el10.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_pwhash_15-1.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_pwhash_15-1.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_pwhash_15-1.0-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_pwhash_15-1.0-1PGDG.rhel10.0.x86_64.rpm
+@ el9.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel9.9.x86_64.rpm pgdg 1.0 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_pwhash_15-1.0-6PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel9.9.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_pwhash_15-1.0-6PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel10.3.x86_64.rpm pgdg 1.0 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_pwhash_15-1.0-6PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel10.3.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-6PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_pwhash_15 pg_pwhash_15-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_pwhash_15-1.0-1PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg12+4_amd64.deb pgdg 1.0 56.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg12+4_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg12+4_arm64.deb pgdg 1.0 55.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg12+4_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg13+4_amd64.deb pgdg 1.0 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg13+4_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg13+4_arm64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg13+4_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb pgdg 1.0 59.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg22.04+4_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 59.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb pgdg 1.0 58.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg22.04+4_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 58.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb pgdg 1.0 56.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg24.04+4_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb pgdg 1.0 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg24.04+4_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb pgdg 1.0 57.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg26.04+4_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 57.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb pgdg 1.0 56.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg26.04+4_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-pwhash postgresql-15-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-15-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
-@ el8.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel8.10.x86_64.rpm pgdg 1.0 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_pwhash_14-1.0-4PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_pwhash_14-1.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel8.10.aarch64.rpm pgdg 1.0 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_pwhash_14-1.0-4PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_pwhash_14-1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_pwhash_14-1.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_pwhash_14-1.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_pwhash_14-1.0-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_pwhash_14-1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.0 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_pwhash_14-1.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_pwhash_14-1.0-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_pwhash_14-1.0-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_pwhash_14-1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el10.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_pwhash_14-1.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_pwhash_14-1.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_pwhash_14-1.0-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_pwhash_14-1.0-1PGDG.rhel10.0.x86_64.rpm
-@ el10.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_pwhash_14-1.0-4PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_pwhash_14-1.0-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_pwhash_14-1.0-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 pg_pwhash_14 pg_pwhash_14-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_pwhash_14-1.0-1PGDG.rhel10.0.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg12+3_amd64.deb pgdg 1.0 56.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg12+3_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg12+3_arm64.deb pgdg 1.0 55.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg12+3_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg13+3_amd64.deb pgdg 1.0 56.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg13+3_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg13+3_arm64.deb pgdg 1.0 55.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg13+3_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb pgdg 1.0 59.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg22.04+3_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb pgdg 1.0 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg22.04+3_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb pgdg 1.0 56.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg24.04+3_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb pgdg 1.0 55.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg24.04+3_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb pgdg 1.0 57.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg26.04+3_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-pwhash postgresql-14-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb pgdg 1.0 55.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-pwhash/postgresql-14-pg-pwhash_1.0-2.pgdg26.04+3_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -232,27 +258,27 @@ pig install pg_pwhash;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_pwhash -v 19  # PG 19
 pig ext install -y pg_pwhash -v 18  # PG 18
 pig ext install -y pg_pwhash -v 17  # PG 17
 pig ext install -y pg_pwhash -v 16  # PG 16
 pig ext install -y pg_pwhash -v 15  # PG 15
-pig ext install -y pg_pwhash -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_pwhash_19       # PG 19
 dnf install -y pg_pwhash_18       # PG 18
 dnf install -y pg_pwhash_17       # PG 17
 dnf install -y pg_pwhash_16       # PG 16
 dnf install -y pg_pwhash_15       # PG 15
-dnf install -y pg_pwhash_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-pwhash   # PG 19
 apt install -y postgresql-18-pg-pwhash   # PG 18
 apt install -y postgresql-17-pg-pwhash   # PG 17
 apt install -y postgresql-16-pg-pwhash   # PG 16
 apt install -y postgresql-15-pg-pwhash   # PG 15
-apt install -y postgresql-14-pg-pwhash   # PG 14
 ```
 
 

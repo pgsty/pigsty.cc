@@ -42,110 +42,138 @@ weight: 3650
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgsphere` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `pgsphere_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsphere` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.5.2` | {{< pgvers "19,18,17,16,15" >}} | `pgsphere` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.2` | {{< pgvers "19,18,17,16,15" >}} | `pgsphere_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.2` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pgsphere` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | el10.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
-| d12.x86_64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| d12.aarch64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| d13.x86_64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| d13.aarch64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u22.x86_64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u22.aarch64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u24.x86_64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u24.aarch64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u26.x86_64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-| u26.aarch64 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 | AVAIL PGDG 1.5.2 1 |
-@ el8.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 125.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_18-1.5.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el8.aarch64.rpm pigsty 1.5.2 122.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_18-1.5.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 118.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_18-1.5.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 116.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_18-1.5.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 119.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_18-1.5.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 119.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_18-1.5.2-1PIGSTY.el10.aarch64.rpm
+| d12.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| d12.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| d13.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| d13.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u22.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u24.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u24.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u26.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| u26.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+@ el9.x86_64 19 pgsphere_19 pgsphere_19-1.5.2-1PGSTY.el9.x86_64.rpm pigsty 1.5.2 299.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_19-1.5.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pgsphere_19 pgsphere_19-1.5.2-1PGSTY.el9.aarch64.rpm pigsty 1.5.2 299.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_19-1.5.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pgsphere_19 pgsphere_19-1.5.2-1PGSTY.el10.x86_64.rpm pigsty 1.5.2 302.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_19-1.5.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pgsphere_19 pgsphere_19-1.5.2-1PGSTY.el10.aarch64.rpm pigsty 1.5.2 304.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_19-1.5.2-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el8.x86_64.rpm pigsty 1.5.2 293.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_18-1.5.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el8.aarch64.rpm pigsty 1.5.2 290.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_18-1.5.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el9.x86_64.rpm pigsty 1.5.2 299.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_18-1.5.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el9.aarch64.rpm pigsty 1.5.2 299.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_18-1.5.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el10.x86_64.rpm pigsty 1.5.2 302.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_18-1.5.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgsphere_18 pgsphere_18-1.5.2-1PGSTY.el10.aarch64.rpm pigsty 1.5.2 304.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_18-1.5.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg12+2_amd64.deb pgdg 1.5.2 405.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 405.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg12+2_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg13+2_amd64.deb pgdg 1.5.2 405.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 405.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg13+2_arm64.deb pgdg 1.5.2 402.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 402.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb pgdg 1.5.2 413.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 413.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb pgdg 1.5.2 407.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 407.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb pgdg 1.5.2 401.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 401.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb pgdg 1.5.2 403.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 404.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb pgdg 1.5.2 400.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgsphere postgresql-18-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-18-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 125.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_17-1.5.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el8.aarch64.rpm pigsty 1.5.2 122.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_17-1.5.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 118.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_17-1.5.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 116.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_17-1.5.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 119.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_17-1.5.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 119.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_17-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el8.x86_64.rpm pigsty 1.5.2 293.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_17-1.5.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el8.aarch64.rpm pigsty 1.5.2 290.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_17-1.5.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el9.x86_64.rpm pigsty 1.5.2 299.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_17-1.5.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el9.aarch64.rpm pigsty 1.5.2 299.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_17-1.5.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el10.x86_64.rpm pigsty 1.5.2 302.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_17-1.5.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgsphere_17 pgsphere_17-1.5.2-1PGSTY.el10.aarch64.rpm pigsty 1.5.2 304.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_17-1.5.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg12+2_amd64.deb pgdg 1.5.2 404.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 404.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg12+2_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 400.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg13+2_amd64.deb pgdg 1.5.2 405.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 405.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg13+2_arm64.deb pgdg 1.5.2 402.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 402.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb pgdg 1.5.2 434.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 434.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb pgdg 1.5.2 427.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 427.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 406.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb pgdg 1.5.2 401.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 401.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb pgdg 1.5.2 403.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 404.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb pgdg 1.5.2 399.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgsphere postgresql-17-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 400.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-17-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 125.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_16-1.5.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el8.aarch64.rpm pigsty 1.5.2 122.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_16-1.5.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 118.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_16-1.5.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 116.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_16-1.5.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 119.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_16-1.5.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 119.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_16-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el8.x86_64.rpm pigsty 1.5.2 293.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_16-1.5.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el8.aarch64.rpm pigsty 1.5.2 290.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_16-1.5.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el9.x86_64.rpm pigsty 1.5.2 299.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_16-1.5.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el9.aarch64.rpm pigsty 1.5.2 299.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_16-1.5.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el10.x86_64.rpm pigsty 1.5.2 302.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_16-1.5.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgsphere_16 pgsphere_16-1.5.2-1PGSTY.el10.aarch64.rpm pigsty 1.5.2 304.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_16-1.5.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg12+2_amd64.deb pgdg 1.5.2 404.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 404.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg12+2_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 400.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg13+2_amd64.deb pgdg 1.5.2 405.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 405.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg13+2_arm64.deb pgdg 1.5.2 402.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 402.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb pgdg 1.5.2 433.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 433.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb pgdg 1.5.2 427.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 427.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb pgdg 1.5.2 401.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 401.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb pgdg 1.5.2 403.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 405.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb pgdg 1.5.2 399.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgsphere postgresql-16-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 400.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-16-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 127.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_15-1.5.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el8.aarch64.rpm pigsty 1.5.2 124.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_15-1.5.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 114.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_15-1.5.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 114.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_15-1.5.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_15-1.5.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 116.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_15-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el8.x86_64.rpm pigsty 1.5.2 294.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_15-1.5.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el8.aarch64.rpm pigsty 1.5.2 291.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_15-1.5.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el9.x86_64.rpm pigsty 1.5.2 296.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_15-1.5.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el9.aarch64.rpm pigsty 1.5.2 297.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_15-1.5.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el10.x86_64.rpm pigsty 1.5.2 297.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_15-1.5.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgsphere_15 pgsphere_15-1.5.2-1PGSTY.el10.aarch64.rpm pigsty 1.5.2 301.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_15-1.5.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg12+2_amd64.deb pgdg 1.5.2 406.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 405.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg12+2_arm64.deb pgdg 1.5.2 401.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 401.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg13+2_amd64.deb pgdg 1.5.2 406.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 406.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg13+2_arm64.deb pgdg 1.5.2 403.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 403.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb pgdg 1.5.2 434.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 434.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb pgdg 1.5.2 428.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 428.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb pgdg 1.5.2 405.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 404.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb pgdg 1.5.2 402.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 402.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb pgdg 1.5.2 401.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 402.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb pgdg 1.5.2 398.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgsphere postgresql-15-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 399.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-15-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el8.x86_64.rpm pigsty 1.5.2 127.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsphere_14-1.5.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el8.aarch64.rpm pigsty 1.5.2 124.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsphere_14-1.5.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 114.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsphere_14-1.5.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 114.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsphere_14-1.5.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsphere_14-1.5.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgsphere_14 pgsphere_14-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 116.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsphere_14-1.5.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg12+1_amd64.deb pgdg 1.5.2 406.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg12+1_arm64.deb pgdg 1.5.2 400.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg13+1_amd64.deb pgdg 1.5.2 406.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg13+1_arm64.deb pgdg 1.5.2 403.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb pgdg 1.5.2 433.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb pgdg 1.5.2 428.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb pgdg 1.5.2 405.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb pgdg 1.5.2 402.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb pgdg 1.5.2 402.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgsphere postgresql-14-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb pgdg 1.5.2 399.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgsphere/postgresql-14-pgsphere_1.5.2-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +200,27 @@ pig install pgsphere;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgsphere -v 19  # PG 19
 pig ext install -y pgsphere -v 18  # PG 18
 pig ext install -y pgsphere -v 17  # PG 17
 pig ext install -y pgsphere -v 16  # PG 16
 pig ext install -y pgsphere -v 15  # PG 15
-pig ext install -y pgsphere -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgsphere_19       # PG 19
 dnf install -y pgsphere_18       # PG 18
 dnf install -y pgsphere_17       # PG 17
 dnf install -y pgsphere_16       # PG 16
 dnf install -y pgsphere_15       # PG 15
-dnf install -y pgsphere_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgsphere   # PG 19
 apt install -y postgresql-18-pgsphere   # PG 18
 apt install -y postgresql-17-pgsphere   # PG 17
 apt install -y postgresql-16-pgsphere   # PG 16
 apt install -y postgresql-15-pgsphere   # PG 15
-apt install -y postgresql-14-pgsphere   # PG 14
 ```
 
 

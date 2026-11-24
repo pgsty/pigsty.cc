@@ -45,110 +45,94 @@ weight: 5030
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_query_rewrite` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_query_rewrite_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-query-rewrite` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15" >}} | `pg_query_rewrite` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15" >}} | `pg_query_rewrite_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.5` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-query-rewrite` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
-@ el8.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el8.x86_64.rpm pigsty 0.0.5 18.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_18-0.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el8.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_18-0.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el9.x86_64.rpm pigsty 0.0.5 18.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_18-0.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el9.aarch64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_18-0.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el10.x86_64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_18-0.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PIGSTY.el10.aarch64.rpm pigsty 0.0.5 19.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_18-0.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb pigsty 0.0.5 25.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb pigsty 0.0.5 25.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el8.x86_64.rpm pigsty 0.0.5 18.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_17-0.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el8.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_17-0.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el9.x86_64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_17-0.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el9.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_17-0.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el10.x86_64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_17-0.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PIGSTY.el10.aarch64.rpm pigsty 0.0.5 19.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_17-0.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb pigsty 0.0.5 31.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb pigsty 0.0.5 31.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el8.x86_64.rpm pigsty 0.0.5 18.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_16-0.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el8.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_16-0.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el9.x86_64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_16-0.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el9.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_16-0.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el10.x86_64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_16-0.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PIGSTY.el10.aarch64.rpm pigsty 0.0.5 19.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_16-0.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb pigsty 0.0.5 30.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el8.x86_64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_15-0.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el8.aarch64.rpm pigsty 0.0.5 19.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_15-0.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el9.x86_64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_15-0.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el9.aarch64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_15-0.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el10.x86_64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_15-0.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PIGSTY.el10.aarch64.rpm pigsty 0.0.5 19.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_15-0.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el8.x86_64.rpm pigsty 0.0.5 18.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_14-0.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el8.aarch64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_14-0.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el9.x86_64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_14-0.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el9.aarch64.rpm pigsty 0.0.5 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_14-0.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el10.x86_64.rpm pigsty 0.0.5 19.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_14-0.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_query_rewrite_14 pg_query_rewrite_14-0.0.5-1PIGSTY.el10.aarch64.rpm pigsty 0.0.5 19.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_14-0.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb pigsty 0.0.5 23.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb pigsty 0.0.5 23.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb pigsty 0.0.5 23.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb pigsty 0.0.5 23.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb pigsty 0.0.5 28.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb pigsty 0.0.5 28.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb pigsty 0.0.5 24.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb pigsty 0.0.5 24.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb pigsty 0.0.5 24.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-query-rewrite postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb pigsty 0.0.5 24.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-14-pg-query-rewrite_0.0.5-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 | AVAIL PIGSTY 0.0.5 1 |
+@ el8.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el8.x86_64.rpm pigsty 0.0.5 32.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_18-0.0.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el8.aarch64.rpm pigsty 0.0.5 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_18-0.0.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el9.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_18-0.0.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el9.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_18-0.0.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el10.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_18-0.0.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_query_rewrite_18 pg_query_rewrite_18-0.0.5-1PGSTY.el10.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_18-0.0.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb pigsty 0.0.5 24.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb pigsty 0.0.5 25.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb pigsty 0.0.5 25.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-query-rewrite postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-18-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el8.x86_64.rpm pigsty 0.0.5 32.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_17-0.0.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el8.aarch64.rpm pigsty 0.0.5 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_17-0.0.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el9.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_17-0.0.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el9.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_17-0.0.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el10.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_17-0.0.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_query_rewrite_17 pg_query_rewrite_17-0.0.5-1PGSTY.el10.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_17-0.0.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb pigsty 0.0.5 24.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb pigsty 0.0.5 31.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb pigsty 0.0.5 31.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-query-rewrite postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-17-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el8.x86_64.rpm pigsty 0.0.5 32.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_16-0.0.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el8.aarch64.rpm pigsty 0.0.5 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_16-0.0.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el9.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_16-0.0.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el9.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_16-0.0.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el10.x86_64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_16-0.0.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_query_rewrite_16 pg_query_rewrite_16-0.0.5-1PGSTY.el10.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_16-0.0.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb pigsty 0.0.5 24.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb pigsty 0.0.5 24.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb pigsty 0.0.5 25.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-query-rewrite postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-16-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el8.x86_64.rpm pigsty 0.0.5 32.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_query_rewrite_15-0.0.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el8.aarch64.rpm pigsty 0.0.5 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_query_rewrite_15-0.0.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el9.x86_64.rpm pigsty 0.0.5 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_query_rewrite_15-0.0.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el9.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_query_rewrite_15-0.0.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el10.x86_64.rpm pigsty 0.0.5 33.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_query_rewrite_15-0.0.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_query_rewrite_15 pg_query_rewrite_15-0.0.5-1PGSTY.el10.aarch64.rpm pigsty 0.0.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_query_rewrite_15-0.0.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb pigsty 0.0.5 24.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb pigsty 0.0.5 24.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb pigsty 0.0.5 24.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb pigsty 0.0.5 30.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb pigsty 0.0.5 30.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb pigsty 0.0.5 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb pigsty 0.0.5 25.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-query-rewrite postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb pigsty 0.0.5 25.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-query-rewrite/postgresql-15-pg-query-rewrite_0.0.5-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -179,7 +163,6 @@ pig ext install -y pg_query_rewrite -v 18  # PG 18
 pig ext install -y pg_query_rewrite -v 17  # PG 17
 pig ext install -y pg_query_rewrite -v 16  # PG 16
 pig ext install -y pg_query_rewrite -v 15  # PG 15
-pig ext install -y pg_query_rewrite -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -187,7 +170,6 @@ dnf install -y pg_query_rewrite_18       # PG 18
 dnf install -y pg_query_rewrite_17       # PG 17
 dnf install -y pg_query_rewrite_16       # PG 16
 dnf install -y pg_query_rewrite_15       # PG 15
-dnf install -y pg_query_rewrite_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -195,7 +177,6 @@ apt install -y postgresql-18-pg-query-rewrite   # PG 18
 apt install -y postgresql-17-pg-query-rewrite   # PG 17
 apt install -y postgresql-16-pg-query-rewrite   # PG 16
 apt install -y postgresql-15-pg-query-rewrite   # PG 15
-apt install -y postgresql-14-pg-query-rewrite   # PG 14
 ```
 
 

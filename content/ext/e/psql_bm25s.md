@@ -45,61 +45,75 @@ weight: 2220
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "18,17" >}} | `psql_bm25s` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "18,17" >}} | `psql_bm25s_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "18,17" >}} | `postgresql-$v-psql-bm25s` | - |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "19,18,17" >}} | `psql_bm25s` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "19,18,17" >}} | `psql_bm25s_$v` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.14` | {{< pgvers "19,18,17" >}} | `postgresql-$v-psql-bm25s` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el8.x86_64.rpm pigsty 0.4.14 502.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/psql_bm25s_18-0.4.14-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el8.aarch64.rpm pigsty 0.4.14 484.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/psql_bm25s_18-0.4.14-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el9.x86_64.rpm pigsty 0.4.14 500.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/psql_bm25s_18-0.4.14-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el9.aarch64.rpm pigsty 0.4.14 485.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/psql_bm25s_18-0.4.14-1PGSTY.el9.aarch64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | AVAIL PIGSTY 0.4.14 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el9.x86_64 19 psql_bm25s_19 psql_bm25s_19-0.4.14-1PGSTY.el9.x86_64.rpm pigsty 0.4.14 498.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/psql_bm25s_19-0.4.14-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 psql_bm25s_19 psql_bm25s_19-0.4.14-1PGSTY.el9.aarch64.rpm pigsty 0.4.14 484.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/psql_bm25s_19-0.4.14-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 psql_bm25s_19 psql_bm25s_19-0.4.14-1PGSTY.el10.x86_64.rpm pigsty 0.4.14 508.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/psql_bm25s_19-0.4.14-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 psql_bm25s_19 psql_bm25s_19-0.4.14-1PGSTY.el10.aarch64.rpm pigsty 0.4.14 492.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/psql_bm25s_19-0.4.14-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb pigsty 0.4.14 497.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb pigsty 0.4.14 476.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb pigsty 0.4.14 499.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb pigsty 0.4.14 480.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb pigsty 0.4.14 526.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb pigsty 0.4.14 511.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb pigsty 0.4.14 510.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb pigsty 0.4.14 497.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb pigsty 0.4.14 506.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-psql-bm25s postgresql-19-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb pigsty 0.4.14 493.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-19-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el8.x86_64.rpm pigsty 0.4.14 502.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/psql_bm25s_18-0.4.14-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el8.aarch64.rpm pigsty 0.4.14 483.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/psql_bm25s_18-0.4.14-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el9.x86_64.rpm pigsty 0.4.14 498.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/psql_bm25s_18-0.4.14-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el9.aarch64.rpm pigsty 0.4.14 483.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/psql_bm25s_18-0.4.14-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el10.x86_64.rpm pigsty 0.4.14 507.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/psql_bm25s_18-0.4.14-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 psql_bm25s_18 psql_bm25s_18-0.4.14-1PGSTY.el10.aarch64.rpm pigsty 0.4.14 490.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/psql_bm25s_18-0.4.14-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb pigsty 0.4.14 497.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb pigsty 0.4.14 476.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb pigsty 0.4.14 499.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb pigsty 0.4.14 479.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb pigsty 0.4.14 527.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb pigsty 0.4.14 511.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb pigsty 0.4.14 510.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb
+@ d12.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb pigsty 0.4.14 497.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb pigsty 0.4.14 476.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb pigsty 0.4.14 499.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb pigsty 0.4.14 479.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb pigsty 0.4.14 527.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb pigsty 0.4.14 511.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb pigsty 0.4.14 510.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb pigsty 0.4.14 497.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb pigsty 0.4.14 506.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-psql-bm25s postgresql-18-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb pigsty 0.4.14 492.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-18-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el8.x86_64.rpm pigsty 0.4.14 502.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el8.aarch64.rpm pigsty 0.4.14 484.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el9.x86_64.rpm pigsty 0.4.14 500.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el9.aarch64.rpm pigsty 0.4.14 485.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el10.x86_64.rpm pigsty 0.4.14 507.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el10.aarch64.rpm pigsty 0.4.14 490.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb pigsty 0.4.14 497.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb pigsty 0.4.14 475.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb pigsty 0.4.14 499.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb pigsty 0.4.14 479.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb pigsty 0.4.14 553.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb pigsty 0.4.14 538.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb pigsty 0.4.14 510.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb pigsty 0.4.14 497.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb pigsty 0.4.14 506.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb
+@ el8.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el8.x86_64.rpm pigsty 0.4.14 502.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el8.aarch64.rpm pigsty 0.4.14 482.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el9.x86_64.rpm pigsty 0.4.14 498.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el9.aarch64.rpm pigsty 0.4.14 483.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el10.x86_64.rpm pigsty 0.4.14 507.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/psql_bm25s_17-0.4.14-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 psql_bm25s_17 psql_bm25s_17-0.4.14-1PGSTY.el10.aarch64.rpm pigsty 0.4.14 491.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/psql_bm25s_17-0.4.14-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb pigsty 0.4.14 497.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb pigsty 0.4.14 476.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb pigsty 0.4.14 499.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb pigsty 0.4.14 479.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb pigsty 0.4.14 553.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb pigsty 0.4.14 538.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb pigsty 0.4.14 510.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb pigsty 0.4.14 497.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb pigsty 0.4.14 506.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-psql-bm25s postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb pigsty 0.4.14 492.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/psql-bm25s/postgresql-17-psql-bm25s_0.4.14-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
@@ -127,16 +141,19 @@ pig install psql_bm25s;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y psql_bm25s -v 19  # PG 19
 pig ext install -y psql_bm25s -v 18  # PG 18
 pig ext install -y psql_bm25s -v 17  # PG 17
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y psql_bm25s_19       # PG 19
 dnf install -y psql_bm25s_18       # PG 18
 dnf install -y psql_bm25s_17       # PG 17
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-psql-bm25s   # PG 19
 apt install -y postgresql-18-psql-bm25s   # PG 18
 apt install -y postgresql-17-psql-bm25s   # PG 17
 ```

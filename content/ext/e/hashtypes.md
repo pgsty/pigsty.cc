@@ -42,16 +42,16 @@ weight: 3770
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "18,17,16,15,14" >}} | `hashtypes` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "18,17,16,15,14" >}} | `hashtypes_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hashtypes` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "19,18,17,16,15" >}} | `hashtypes` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "19,18,17,16,15" >}} | `hashtypes_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.5` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-hashtypes` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
@@ -66,86 +66,84 @@ weight: 3770
 | u24.aarch64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
-@ el8.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el8.x86_64.rpm pigsty 0.1.5 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_18-0.1.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el8.aarch64.rpm pigsty 0.1.5 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_18-0.1.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el9.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_18-0.1.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el9.aarch64.rpm pigsty 0.1.5 23.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_18-0.1.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el10.x86_64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_18-0.1.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PIGSTY.el10.aarch64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_18-0.1.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb pigsty 0.1.5 35.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb pigsty 0.1.5 34.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el8.x86_64.rpm pigsty 0.1.5 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_17-0.1.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el8.aarch64.rpm pigsty 0.1.5 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_17-0.1.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el9.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_17-0.1.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el9.aarch64.rpm pigsty 0.1.5 23.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_17-0.1.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el10.x86_64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_17-0.1.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PIGSTY.el10.aarch64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_17-0.1.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb pigsty 0.1.5 36.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb pigsty 0.1.5 35.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb pigsty 0.1.5 34.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el8.x86_64.rpm pigsty 0.1.5 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_16-0.1.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el8.aarch64.rpm pigsty 0.1.5 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_16-0.1.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el9.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_16-0.1.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el9.aarch64.rpm pigsty 0.1.5 23.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_16-0.1.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el10.x86_64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_16-0.1.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PIGSTY.el10.aarch64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_16-0.1.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb pigsty 0.1.5 33.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb pigsty 0.1.5 36.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb pigsty 0.1.5 35.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb pigsty 0.1.5 34.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el8.x86_64.rpm pigsty 0.1.5 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_15-0.1.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el8.aarch64.rpm pigsty 0.1.5 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_15-0.1.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el9.x86_64.rpm pigsty 0.1.5 24.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_15-0.1.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el9.aarch64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_15-0.1.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el10.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_15-0.1.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PIGSTY.el10.aarch64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_15-0.1.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb pigsty 0.1.5 36.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb pigsty 0.1.5 36.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb pigsty 0.1.5 34.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el8.x86_64.rpm pigsty 0.1.5 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_14-0.1.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el8.aarch64.rpm pigsty 0.1.5 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_14-0.1.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el9.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_14-0.1.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el9.aarch64.rpm pigsty 0.1.5 24.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_14-0.1.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el10.x86_64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_14-0.1.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 hashtypes_14 hashtypes_14-0.1.5-1PIGSTY.el10.aarch64.rpm pigsty 0.1.5 24.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_14-0.1.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb pigsty 0.1.5 33.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb pigsty 0.1.5 33.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb pigsty 0.1.5 33.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb pigsty 0.1.5 36.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb pigsty 0.1.5 36.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb pigsty 0.1.5 34.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb pigsty 0.1.5 34.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-hashtypes postgresql-14-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-14-hashtypes_0.1.5-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 hashtypes_19 hashtypes_19-0.1.5-1PGSTY.el9.x86_64.rpm pigsty 0.1.5 45.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_19-0.1.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 hashtypes_19 hashtypes_19-0.1.5-1PGSTY.el9.aarch64.rpm pigsty 0.1.5 44.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_19-0.1.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 hashtypes_19 hashtypes_19-0.1.5-1PGSTY.el10.x86_64.rpm pigsty 0.1.5 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_19-0.1.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 hashtypes_19 hashtypes_19-0.1.5-1PGSTY.el10.aarch64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_19-0.1.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb pigsty 0.1.5 35.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb pigsty 0.1.5 35.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~noble_amd64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~noble_arm64.deb pigsty 0.1.5 35.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-hashtypes postgresql-19-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-19-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el8.x86_64.rpm pigsty 0.1.5 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_18-0.1.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el8.aarch64.rpm pigsty 0.1.5 43.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_18-0.1.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el9.x86_64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_18-0.1.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el9.aarch64.rpm pigsty 0.1.5 44.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_18-0.1.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el10.x86_64.rpm pigsty 0.1.5 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_18-0.1.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 hashtypes_18 hashtypes_18-0.1.5-1PGSTY.el10.aarch64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_18-0.1.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb pigsty 0.1.5 33.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb pigsty 0.1.5 35.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb pigsty 0.1.5 35.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~noble_amd64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~noble_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-hashtypes postgresql-18-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-18-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el8.x86_64.rpm pigsty 0.1.5 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_17-0.1.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el8.aarch64.rpm pigsty 0.1.5 43.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_17-0.1.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el9.x86_64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_17-0.1.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el9.aarch64.rpm pigsty 0.1.5 44.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_17-0.1.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el10.x86_64.rpm pigsty 0.1.5 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_17-0.1.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 hashtypes_17 hashtypes_17-0.1.5-1PGSTY.el10.aarch64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_17-0.1.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb pigsty 0.1.5 36.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb pigsty 0.1.5 36.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~noble_amd64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~noble_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-hashtypes postgresql-17-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-17-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el8.x86_64.rpm pigsty 0.1.5 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_16-0.1.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el8.aarch64.rpm pigsty 0.1.5 43.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_16-0.1.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el9.x86_64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_16-0.1.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el9.aarch64.rpm pigsty 0.1.5 44.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_16-0.1.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el10.x86_64.rpm pigsty 0.1.5 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_16-0.1.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 hashtypes_16 hashtypes_16-0.1.5-1PGSTY.el10.aarch64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_16-0.1.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb pigsty 0.1.5 33.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb pigsty 0.1.5 36.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb pigsty 0.1.5 36.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~noble_amd64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~noble_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb pigsty 0.1.5 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-hashtypes postgresql-16-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-16-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el8.x86_64.rpm pigsty 0.1.5 44.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hashtypes_15-0.1.5-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el8.aarch64.rpm pigsty 0.1.5 44.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hashtypes_15-0.1.5-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el9.x86_64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hashtypes_15-0.1.5-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el9.aarch64.rpm pigsty 0.1.5 44.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hashtypes_15-0.1.5-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el10.x86_64.rpm pigsty 0.1.5 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hashtypes_15-0.1.5-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 hashtypes_15 hashtypes_15-0.1.5-1PGSTY.el10.aarch64.rpm pigsty 0.1.5 45.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hashtypes_15-0.1.5-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb pigsty 0.1.5 33.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb pigsty 0.1.5 33.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb pigsty 0.1.5 33.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb pigsty 0.1.5 36.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb pigsty 0.1.5 36.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~noble_amd64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~noble_arm64.deb pigsty 0.1.5 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb pigsty 0.1.5 34.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-hashtypes postgresql-15-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb pigsty 0.1.5 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hashtypes/postgresql-15-hashtypes_0.1.5-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install hashtypes;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y hashtypes -v 19  # PG 19
 pig ext install -y hashtypes -v 18  # PG 18
 pig ext install -y hashtypes -v 17  # PG 17
 pig ext install -y hashtypes -v 16  # PG 16
 pig ext install -y hashtypes -v 15  # PG 15
-pig ext install -y hashtypes -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y hashtypes_19       # PG 19
 dnf install -y hashtypes_18       # PG 18
 dnf install -y hashtypes_17       # PG 17
 dnf install -y hashtypes_16       # PG 16
 dnf install -y hashtypes_15       # PG 15
-dnf install -y hashtypes_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-hashtypes   # PG 19
 apt install -y postgresql-18-hashtypes   # PG 18
 apt install -y postgresql-17-hashtypes   # PG 17
 apt install -y postgresql-16-hashtypes   # PG 16
 apt install -y postgresql-15-hashtypes   # PG 15
-apt install -y postgresql-14-hashtypes   # PG 14
 ```
 
 

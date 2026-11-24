@@ -42,20 +42,20 @@ weight: 9640
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.7` | {{< pgvers "18,17,16,15,14" >}} | `wal2mongo` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.7` | {{< pgvers "18,17,16,15,14" >}} | `wal2mongo_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-wal2mongo` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.7` | {{< pgvers "19,18,17,16,15" >}} | `wal2mongo` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.7` | {{< pgvers "19,18,17,16,15" >}} | `wal2mongo_$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.7` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-wal2mongo` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 1 | AVAIL PGDG 1.0.7 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PGDG 1.0.7 4 | AVAIL PGDG 1.0.7 4 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
@@ -66,98 +66,94 @@ weight: 9640
 | u24.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
-@ el8.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el8.x86_64.rpm pigsty 1.0.7 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2mongo_18-1.0.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el8.aarch64.rpm pigsty 1.0.7 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wal2mongo_18-1.0.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el9.x86_64.rpm pigsty 1.0.7 26.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2mongo_18-1.0.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el9.aarch64.rpm pigsty 1.0.7 25.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2mongo_18-1.0.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el10.x86_64.rpm pigsty 1.0.7 26.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/wal2mongo_18-1.0.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PIGSTY.el10.aarch64.rpm pigsty 1.0.7 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/wal2mongo_18-1.0.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~bookworm_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~trixie_amd64.deb pigsty 1.0.7 34.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~trixie_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~jammy_amd64.deb pigsty 1.0.7 37.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~jammy_arm64.deb pigsty 1.0.7 36.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~noble_amd64.deb pigsty 1.0.7 35.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~noble_arm64.deb pigsty 1.0.7 35.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~resolute_amd64.deb pigsty 1.0.7 35.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-2PIGSTY~resolute_arm64.deb pigsty 1.0.7 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el8.x86_64.rpm pigsty 1.0.7 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2mongo_17-1.0.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el8.aarch64.rpm pigsty 1.0.7 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wal2mongo_17-1.0.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el9.x86_64.rpm pigsty 1.0.7 26.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2mongo_17-1.0.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el9.aarch64.rpm pigsty 1.0.7 26.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2mongo_17-1.0.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el10.x86_64.rpm pigsty 1.0.7 26.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/wal2mongo_17-1.0.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PIGSTY.el10.aarch64.rpm pigsty 1.0.7 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/wal2mongo_17-1.0.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~bookworm_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~trixie_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~trixie_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~jammy_amd64.deb pigsty 1.0.7 39.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~jammy_arm64.deb pigsty 1.0.7 39.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~noble_amd64.deb pigsty 1.0.7 35.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~noble_arm64.deb pigsty 1.0.7 35.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~resolute_amd64.deb pigsty 1.0.7 35.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-2PIGSTY~resolute_arm64.deb pigsty 1.0.7 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-2PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 wal2mongo_19 wal2mongo_19-1.0.7-1PGSTY.el9.x86_64.rpm pigsty 1.0.7 42.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2mongo_19-1.0.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 wal2mongo_19 wal2mongo_19-1.0.7-1PGSTY.el9.aarch64.rpm pigsty 1.0.7 42.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2mongo_19-1.0.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 wal2mongo_19 wal2mongo_19-1.0.7-1PGSTY.el10.x86_64.rpm pigsty 1.0.7 43.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/wal2mongo_19-1.0.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 wal2mongo_19 wal2mongo_19-1.0.7-1PGSTY.el10.aarch64.rpm pigsty 1.0.7 42.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/wal2mongo_19-1.0.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb pigsty 1.0.7 34.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb pigsty 1.0.7 34.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb pigsty 1.0.7 37.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb pigsty 1.0.7 36.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb pigsty 1.0.7 35.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-wal2mongo postgresql-19-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb pigsty 1.0.7 35.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-19-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el8.x86_64.rpm pigsty 1.0.7 41.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2mongo_18-1.0.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el8.aarch64.rpm pigsty 1.0.7 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wal2mongo_18-1.0.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el9.x86_64.rpm pigsty 1.0.7 42.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2mongo_18-1.0.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el9.aarch64.rpm pigsty 1.0.7 42.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2mongo_18-1.0.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el10.x86_64.rpm pigsty 1.0.7 43.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/wal2mongo_18-1.0.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 wal2mongo_18 wal2mongo_18-1.0.7-1PGSTY.el10.aarch64.rpm pigsty 1.0.7 42.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/wal2mongo_18-1.0.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb pigsty 1.0.7 34.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb pigsty 1.0.7 34.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb pigsty 1.0.7 37.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb pigsty 1.0.7 36.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb pigsty 1.0.7 35.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-wal2mongo postgresql-18-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb pigsty 1.0.7 35.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-18-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el8.x86_64.rpm pigsty 1.0.7 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2mongo_17-1.0.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el8.aarch64.rpm pigsty 1.0.7 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wal2mongo_17-1.0.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el9.x86_64.rpm pigsty 1.0.7 42.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wal2mongo_17-1.0.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el9.aarch64.rpm pigsty 1.0.7 42.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/wal2mongo_17-1.0.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el10.x86_64.rpm pigsty 1.0.7 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/wal2mongo_17-1.0.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 wal2mongo_17 wal2mongo_17-1.0.7-1PGSTY.el10.aarch64.rpm pigsty 1.0.7 42.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/wal2mongo_17-1.0.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb pigsty 1.0.7 34.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb pigsty 1.0.7 34.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb pigsty 1.0.7 39.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb pigsty 1.0.7 39.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb pigsty 1.0.7 35.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb pigsty 1.0.7 35.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb pigsty 1.0.7 35.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-wal2mongo postgresql-17-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb pigsty 1.0.7 35.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-17-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel8.10.x86_64.rpm pgdg 1.0.7 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/wal2mongo_16-1.0.7-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-1PGDG.rhel8.x86_64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/wal2mongo_16-1.0.7-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel8.10.aarch64.rpm pgdg 1.0.7 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/wal2mongo_16-1.0.7-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-1PGDG.rhel8.aarch64.rpm pgdg 1.0.7 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/wal2mongo_16-1.0.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/wal2mongo_16-1.0.7-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-1PGDG.rhel9.x86_64.rpm pgdg 1.0.7 20.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/wal2mongo_16-1.0.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.7 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/wal2mongo_16-1.0.7-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-1PGDG.rhel9.aarch64.rpm pgdg 1.0.7 19.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/wal2mongo_16-1.0.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.7 20.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/wal2mongo_16-1.0.7-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-3PGDG.rhel10.x86_64.rpm pgdg 1.0.7 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/wal2mongo_16-1.0.7-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel9.9.x86_64.rpm pgdg 1.0.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/wal2mongo_16-1.0.7-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel9.9.aarch64.rpm pgdg 1.0.7 20.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/wal2mongo_16-1.0.7-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel10.3.x86_64.rpm pgdg 1.0.7 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/wal2mongo_16-1.0.7-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel10.3.aarch64.rpm pgdg 1.0.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2mongo_16-1.0.7-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2mongo_16-1.0.7-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2mongo_16-1.0.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 wal2mongo_16 wal2mongo_16-1.0.7-3PGDG.rhel10.aarch64.rpm pgdg 1.0.7 20.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/wal2mongo_16-1.0.7-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb pigsty 1.0.7 34.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb pigsty 1.0.7 39.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb pigsty 1.0.7 39.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb pigsty 1.0.7 35.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb pigsty 1.0.7 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb pigsty 1.0.7 35.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb pigsty 1.0.7 35.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb pigsty 1.0.7 34.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb pigsty 1.0.7 39.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb pigsty 1.0.7 39.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb pigsty 1.0.7 35.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb pigsty 1.0.7 35.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-wal2mongo postgresql-16-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb pigsty 1.0.7 35.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-16-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel8.10.x86_64.rpm pgdg 1.0.7 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/wal2mongo_15-1.0.7-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-1PGDG.rhel8.x86_64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/wal2mongo_15-1.0.7-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel8.10.aarch64.rpm pgdg 1.0.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/wal2mongo_15-1.0.7-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-1PGDG.rhel8.aarch64.rpm pgdg 1.0.7 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/wal2mongo_15-1.0.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.7 20.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/wal2mongo_15-1.0.7-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-1PGDG.rhel9.x86_64.rpm pgdg 1.0.7 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/wal2mongo_15-1.0.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.7 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/wal2mongo_15-1.0.7-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-1PGDG.rhel9.aarch64.rpm pgdg 1.0.7 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/wal2mongo_15-1.0.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.7 20.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/wal2mongo_15-1.0.7-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-3PGDG.rhel10.x86_64.rpm pgdg 1.0.7 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/wal2mongo_15-1.0.7-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel9.9.x86_64.rpm pgdg 1.0.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/wal2mongo_15-1.0.7-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel9.9.aarch64.rpm pgdg 1.0.7 20.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/wal2mongo_15-1.0.7-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel10.3.x86_64.rpm pgdg 1.0.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/wal2mongo_15-1.0.7-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel10.3.aarch64.rpm pgdg 1.0.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2mongo_15-1.0.7-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2mongo_15-1.0.7-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2mongo_15-1.0.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 wal2mongo_15 wal2mongo_15-1.0.7-3PGDG.rhel10.aarch64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/wal2mongo_15-1.0.7-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb pigsty 1.0.7 33.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb pigsty 1.0.7 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb pigsty 1.0.7 39.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb pigsty 1.0.7 38.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb pigsty 1.0.7 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb pigsty 1.0.7 35.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb pigsty 1.0.7 35.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-1PGDG.rhel8.x86_64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/wal2mongo_14-1.0.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-1PGDG.rhel8.aarch64.rpm pgdg 1.0.7 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/wal2mongo_14-1.0.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.7 20.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/wal2mongo_14-1.0.7-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-1PGDG.rhel9.x86_64.rpm pgdg 1.0.7 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/wal2mongo_14-1.0.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.7 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/wal2mongo_14-1.0.7-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-1PGDG.rhel9.aarch64.rpm pgdg 1.0.7 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/wal2mongo_14-1.0.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.7 20.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2mongo_14-1.0.7-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-3PGDG.rhel10.x86_64.rpm pgdg 1.0.7 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2mongo_14-1.0.7-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2mongo_14-1.0.7-5PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-3PGDG.rhel10.aarch64.rpm pgdg 1.0.7 20.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2mongo_14-1.0.7-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb pigsty 1.0.7 33.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb pigsty 1.0.7 33.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb pigsty 1.0.7 39.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb pigsty 1.0.7 38.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb pigsty 1.0.7 35.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb pigsty 1.0.7 34.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb pigsty 1.0.7 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb pigsty 1.0.7 34.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb pigsty 1.0.7 34.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb pigsty 1.0.7 39.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb pigsty 1.0.7 39.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb pigsty 1.0.7 35.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb pigsty 1.0.7 35.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb pigsty 1.0.7 35.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-wal2mongo postgresql-15-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb pigsty 1.0.7 35.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/w/wal2mongo/postgresql-15-wal2mongo_1.0.7-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -184,27 +180,27 @@ pig install wal2mongo;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y wal2mongo -v 19  # PG 19
 pig ext install -y wal2mongo -v 18  # PG 18
 pig ext install -y wal2mongo -v 17  # PG 17
 pig ext install -y wal2mongo -v 16  # PG 16
 pig ext install -y wal2mongo -v 15  # PG 15
-pig ext install -y wal2mongo -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y wal2mongo_19       # PG 19
 dnf install -y wal2mongo_18       # PG 18
 dnf install -y wal2mongo_17       # PG 17
 dnf install -y wal2mongo_16       # PG 16
 dnf install -y wal2mongo_15       # PG 15
-dnf install -y wal2mongo_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-wal2mongo   # PG 19
 apt install -y postgresql-18-wal2mongo   # PG 18
 apt install -y postgresql-17-wal2mongo   # PG 17
 apt install -y postgresql-16-wal2mongo   # PG 16
 apt install -y postgresql-15-wal2mongo   # PG 15
-apt install -y postgresql-14-wal2mongo   # PG 14
 ```
 
 > 此扩展不需要执行 `CREATE EXTENSION` 语句

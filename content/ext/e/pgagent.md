@@ -40,20 +40,20 @@ weight: 5880
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "18,17,16,15,14" >}} | `pgagent` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "18,17,16,15,14" >}} | `pgagent_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "18,17,16,15,14" >}} | `pgagent` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "19,18,17,16,15" >}} | `pgagent` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "19,18,17,16,15" >}} | `pgagent_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.3` | {{< pgvers "18,17,16,15" >}} | `pgagent` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 3 |
-| el8.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
-| el9.x86_64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 4 |
-| el9.aarch64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 |
-| el10.x86_64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
-| el10.aarch64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 |
+| el9.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| el9.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| el10.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| el10.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 | AVAIL PGDG 4.2.3 4 |
 | d12.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
 | d12.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
 | d13.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
@@ -64,14 +64,31 @@ weight: 5880
 | u24.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
 | u26.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
 | u26.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+@ el9.x86_64 19 pgagent_19 pgagent_19-4.2.3-14PGDG.rhel9.9.x86_64.rpm pgdg 4.2.3 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pgagent_19-4.2.3-14PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pgagent_19 pgagent_19-4.2.3-14PGDG.rhel9.9.aarch64.rpm pgdg 4.2.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pgagent_19-4.2.3-14PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pgagent_19 pgagent_19-4.2.3-14PGDG.rhel10.3.x86_64.rpm pgdg 4.2.3 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pgagent_19-4.2.3-14PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pgagent_19 pgagent_19-4.2.3-14PGDG.rhel10.3.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pgagent_19-4.2.3-14PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 19 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 19 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 19 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 19 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgagent_18-4.2.3-14PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 18 pgagent_18 pgagent_18-4.2.3-13PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgagent_18-4.2.3-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgagent_18-4.2.3-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgagent_18-4.2.3-14PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 18 pgagent_18 pgagent_18-4.2.3-13PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgagent_18-4.2.3-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgagent_18-4.2.3-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgagent_18-4.2.3-9PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel9.x86_64.rpm pgdg 4.2.3 121.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgagent_18-4.2.3-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel9.8.aarch64.rpm pgdg 4.2.3 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgagent_18-4.2.3-9PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel9.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgagent_18-4.2.3-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel10.2.x86_64.rpm pgdg 4.2.3 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgagent_18-4.2.3-9PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgagent_18-4.2.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel9.9.x86_64.rpm pgdg 4.2.3 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgagent_18-4.2.3-14PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel9.9.aarch64.rpm pgdg 4.2.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgagent_18-4.2.3-14PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel10.3.x86_64.rpm pgdg 4.2.3 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgagent_18-4.2.3-14PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-14PGDG.rhel10.3.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-14PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-13PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
@@ -84,18 +101,19 @@ weight: 5880
 @ u24.aarch64 18 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
 @ u26.x86_64 18 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.3-14PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 pgagent_17 pgagent_17-4.2.3-13PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.3-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgagent_17 pgagent_17-4.2.2-5PGDG.rhel8.x86_64.rpm pgdg 4.2.2 133.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.2-5PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgagent_17-4.2.3-14PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 pgagent_17 pgagent_17-4.2.3-13PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgagent_17-4.2.3-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgagent_17-4.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgagent_17 pgagent_17-4.2.2-5PGDG.rhel8.aarch64.rpm pgdg 4.2.2 128.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgagent_17-4.2.2-5PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pgagent_17 pgagent_17-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgagent_17-4.2.3-9PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel9.x86_64.rpm pgdg 4.2.3 121.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgagent_17-4.2.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pgagent_17 pgagent_17-4.2.2-5PGDG.rhel9.x86_64.rpm pgdg 4.2.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgagent_17-4.2.2-5PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pgagent_17 pgagent_17-4.2.3-9PGDG.rhel9.8.aarch64.rpm pgdg 4.2.3 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgagent_17-4.2.3-9PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel9.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgagent_17-4.2.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pgagent_17 pgagent_17-4.2.2-5PGDG.rhel9.aarch64.rpm pgdg 4.2.2 116.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgagent_17-4.2.2-5PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pgagent_17 pgagent_17-4.2.3-9PGDG.rhel10.2.x86_64.rpm pgdg 4.2.3 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgagent_17-4.2.3-9PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgagent_17-4.2.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel9.9.x86_64.rpm pgdg 4.2.3 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgagent_17-4.2.3-14PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel9.9.aarch64.rpm pgdg 4.2.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgagent_17-4.2.3-14PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel10.3.x86_64.rpm pgdg 4.2.3 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgagent_17-4.2.3-14PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-14PGDG.rhel10.3.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-14PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-13PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
@@ -108,18 +126,19 @@ weight: 5880
 @ u24.aarch64 17 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
 @ u26.x86_64 17 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.3-14PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 pgagent_16 pgagent_16-4.2.3-13PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.3-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgagent_16 pgagent_16-4.2.2-3.rhel8.x86_64.rpm pgdg 4.2.2 133.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.2-3.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgagent_16-4.2.3-14PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 pgagent_16 pgagent_16-4.2.3-13PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgagent_16-4.2.3-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgagent_16-4.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgagent_16 pgagent_16-4.2.2-3.rhel8.aarch64.rpm pgdg 4.2.2 127.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgagent_16-4.2.2-3.rhel8.aarch64.rpm
-@ el9.x86_64 16 pgagent_16 pgagent_16-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgagent_16-4.2.3-9PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel9.x86_64.rpm pgdg 4.2.3 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgagent_16-4.2.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pgagent_16 pgagent_16-4.2.2-3.rhel9.x86_64.rpm pgdg 4.2.2 120.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgagent_16-4.2.2-3.rhel9.x86_64.rpm
-@ el9.aarch64 16 pgagent_16 pgagent_16-4.2.3-9PGDG.rhel9.8.aarch64.rpm pgdg 4.2.3 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgagent_16-4.2.3-9PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel9.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgagent_16-4.2.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pgagent_16 pgagent_16-4.2.2-3.rhel9.aarch64.rpm pgdg 4.2.2 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgagent_16-4.2.2-3.rhel9.aarch64.rpm
-@ el10.x86_64 16 pgagent_16 pgagent_16-4.2.3-9PGDG.rhel10.2.x86_64.rpm pgdg 4.2.3 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgagent_16-4.2.3-9PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgagent_16-4.2.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel9.9.x86_64.rpm pgdg 4.2.3 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgagent_16-4.2.3-14PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel9.9.aarch64.rpm pgdg 4.2.3 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgagent_16-4.2.3-14PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel10.3.x86_64.rpm pgdg 4.2.3 127.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgagent_16-4.2.3-14PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-14PGDG.rhel10.3.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-14PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-13PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
@@ -132,18 +151,19 @@ weight: 5880
 @ u24.aarch64 16 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
 @ u26.x86_64 16 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.3-14PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 15 pgagent_15 pgagent_15-4.2.3-13PGDG.rhel8.10.x86_64.rpm pgdg 4.2.3 137.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.3-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgagent_15 pgagent_15-4.2.2-1.rhel8.x86_64.rpm pgdg 4.2.2 133.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.2-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgagent_15-4.2.3-14PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 pgagent_15 pgagent_15-4.2.3-13PGDG.rhel8.10.aarch64.rpm pgdg 4.2.3 131.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgagent_15-4.2.3-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgagent_15-4.2.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgagent_15 pgagent_15-4.2.2-1.rhel8.aarch64.rpm pgdg 4.2.2 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgagent_15-4.2.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pgagent_15 pgagent_15-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgagent_15-4.2.3-9PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel9.x86_64.rpm pgdg 4.2.3 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgagent_15-4.2.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pgagent_15 pgagent_15-4.2.2-1.rhel9.x86_64.rpm pgdg 4.2.2 119.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgagent_15-4.2.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pgagent_15 pgagent_15-4.2.3-9PGDG.rhel9.8.aarch64.rpm pgdg 4.2.3 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgagent_15-4.2.3-9PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel9.aarch64.rpm pgdg 4.2.3 118.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgagent_15-4.2.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pgagent_15 pgagent_15-4.2.2-1.rhel9.aarch64.rpm pgdg 4.2.2 114.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgagent_15-4.2.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pgagent_15 pgagent_15-4.2.3-9PGDG.rhel10.2.x86_64.rpm pgdg 4.2.3 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgagent_15-4.2.3-9PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgagent_15-4.2.3-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel9.9.x86_64.rpm pgdg 4.2.3 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgagent_15-4.2.3-14PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel9.9.aarch64.rpm pgdg 4.2.3 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgagent_15-4.2.3-14PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel10.3.x86_64.rpm pgdg 4.2.3 127.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgagent_15-4.2.3-14PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-14PGDG.rhel10.3.aarch64.rpm pgdg 4.2.3 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-14PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-13PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
@@ -156,32 +176,6 @@ weight: 5880
 @ u24.aarch64 15 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
 @ u26.x86_64 15 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.3-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pgagent_14 pgagent_14-4.2.2-1.rhel8.x86_64.rpm pgdg 4.2.2 133.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.2-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pgagent_14 pgagent_14-4.2.1-1.rhel8.x86_64.rpm pgdg 4.2.1 153.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.1-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgagent_14-4.2.3-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pgagent_14 pgagent_14-4.2.2-1.rhel8.aarch64.rpm pgdg 4.2.2 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgagent_14-4.2.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pgagent_14 pgagent_14-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgagent_14-4.2.3-9PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel9.x86_64.rpm pgdg 4.2.3 122.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgagent_14-4.2.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pgagent_14 pgagent_14-4.2.2-1.rhel9.x86_64.rpm pgdg 4.2.2 119.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgagent_14-4.2.2-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pgagent_14 pgagent_14-4.2.1-1.rhel9.x86_64.rpm pgdg 4.2.1 138.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgagent_14-4.2.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pgagent_14 pgagent_14-4.2.3-9PGDG.rhel9.8.aarch64.rpm pgdg 4.2.3 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgagent_14-4.2.3-9PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel9.aarch64.rpm pgdg 4.2.3 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgagent_14-4.2.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pgagent_14 pgagent_14-4.2.2-1.rhel9.aarch64.rpm pgdg 4.2.2 114.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgagent_14-4.2.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pgagent_14 pgagent_14-4.2.3-9PGDG.rhel10.2.x86_64.rpm pgdg 4.2.3 127.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgagent_14-4.2.3-9PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgagent_14-4.2.3-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgagent_14 pgagent_14-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgagent_14-4.2.3-9PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgagent_14-4.2.3-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
-@ d12.aarch64 14 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
-@ d13.x86_64 14 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
-@ d13.aarch64 14 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
-@ u22.x86_64 14 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -200,27 +194,27 @@ pig install pgagent;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgagent -v 19  # PG 19
 pig ext install -y pgagent -v 18  # PG 18
 pig ext install -y pgagent -v 17  # PG 17
 pig ext install -y pgagent -v 16  # PG 16
 pig ext install -y pgagent -v 15  # PG 15
-pig ext install -y pgagent -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgagent_19       # PG 19
 dnf install -y pgagent_18       # PG 18
 dnf install -y pgagent_17       # PG 17
 dnf install -y pgagent_16       # PG 16
 dnf install -y pgagent_15       # PG 15
-dnf install -y pgagent_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y pgagent   # PG 19
 apt install -y pgagent   # PG 18
 apt install -y pgagent   # PG 17
 apt install -y pgagent   # PG 16
 apt install -y pgagent   # PG 15
-apt install -y pgagent   # PG 14
 ```
 
 

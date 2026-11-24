@@ -44,30 +44,30 @@ weight: 3030
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pllua` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `pllua_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pllua` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15" >}} | `pllua` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.12` | {{< pgvers "18,17,16,15" >}} | `pllua_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pllua` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 4 | AVAIL PIGSTY 2.0.12 3 |
-| el9.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 |
-| el10.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| el10.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| d12.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d12.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d13.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d13.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u22.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u22.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u24.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u24.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u26.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u26.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 4 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 2 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 5 | AVAIL PGDG 2.0.12 5 | AVAIL PGDG 2.0.12 5 |
+| d12.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d12.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d13.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d13.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u22.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u22.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u24.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u24.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u26.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u26.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -98,7 +98,6 @@ pig ext install -y pllua -v 18  # PG 18
 pig ext install -y pllua -v 17  # PG 17
 pig ext install -y pllua -v 16  # PG 16
 pig ext install -y pllua -v 15  # PG 15
-pig ext install -y pllua -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -106,7 +105,6 @@ dnf install -y pllua_18       # PG 18
 dnf install -y pllua_17       # PG 17
 dnf install -y pllua_16       # PG 16
 dnf install -y pllua_15       # PG 15
-dnf install -y pllua_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -114,7 +112,6 @@ apt install -y postgresql-18-pllua   # PG 18
 apt install -y postgresql-17-pllua   # PG 17
 apt install -y postgresql-16-pllua   # PG 16
 apt install -y postgresql-15-pllua   # PG 15
-apt install -y postgresql-14-pllua   # PG 14
 ```
 
 

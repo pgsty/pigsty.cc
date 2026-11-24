@@ -46,16 +46,16 @@ weight: 2110
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgroonga` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgroonga_$v` | `groonga-libs`, `msgpack`, `xxhash-libs` |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgroonga` | `libgroonga0`, `libmsgpackc2 | libmsgpack-c2`, `libxxhash0` |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pgroonga` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pgroonga_$v` | `groonga-libs`, `msgpack`, `xxhash-libs` |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgroonga` | `libgroonga0`, `libmsgpackc2 | libmsgpack-c2`, `libxxhash0` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
@@ -70,86 +70,84 @@ weight: 2110
 | u24.aarch64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 | AVAIL PIGSTY 4.1.0 1 |
-@ el8.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 247.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_18-4.1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 226.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_18-4.1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_18-4.1.0-4PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_18-4.1.0-4PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_18-4.1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 241.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_18-4.1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
+@ el9.x86_64 19 pgroonga_19 pgroonga_19-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 248.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_19-4.1.0-4PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pgroonga_19 pgroonga_19-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_19-4.1.0-4PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pgroonga_19 pgroonga_19-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_19-4.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pgroonga_19 pgroonga_19-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 240.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_19-4.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 163.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 182.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 163.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 197.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 190.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 192.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 185.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 194.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgroonga postgresql-19-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-19-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 247.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_18-4.1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 226.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_18-4.1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_18-4.1.0-4PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 240.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_18-4.1.0-4PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_18-4.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgroonga_18 pgroonga_18-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 241.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_18-4.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 182.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 163.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 182.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 164.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 197.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 190.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 191.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 185.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 194.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 182.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 164.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 197.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 190.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 192.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 186.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 194.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgroonga postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-18-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 247.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_17-4.1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 226.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_17-4.1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_17-4.1.0-4PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_17-4.1.0-4PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_17-4.1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 241.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_17-4.1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 163.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 182.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 164.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 197.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 190.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 191.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 185.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
+@ el8.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 226.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_17-4.1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 247.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_17-4.1.0-4PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 239.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_17-4.1.0-4PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 250.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_17-4.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgroonga_17 pgroonga_17-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 241.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_17-4.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 181.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 163.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 182.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 164.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 197.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 190.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 191.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 185.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 194.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 245.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_16-4.1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 224.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_16-4.1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 245.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_16-4.1.0-4PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_16-4.1.0-4PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 248.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_16-4.1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 238.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_16-4.1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 161.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 180.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 162.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 195.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 188.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
+@ u26.aarch64 17 postgresql-17-pgroonga postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 184.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-17-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 245.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_16-4.1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 224.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_16-4.1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 245.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_16-4.1.0-4PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_16-4.1.0-4PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 248.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_16-4.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgroonga_16 pgroonga_16-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 239.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_16-4.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 161.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 180.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 162.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 195.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 188.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 189.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 183.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 191.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 182.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 245.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_15-4.1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 224.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_15-4.1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 244.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_15-4.1.0-4PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_15-4.1.0-4PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 247.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_15-4.1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 238.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_15-4.1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 161.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 180.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 162.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 194.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 183.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 191.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgroonga postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 182.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-16-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 245.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_15-4.1.0-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 224.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_15-4.1.0-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 244.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_15-4.1.0-4PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 237.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_15-4.1.0-4PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 248.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_15-4.1.0-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgroonga_15 pgroonga_15-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 238.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_15-4.1.0-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 179.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 161.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 180.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 162.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 194.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 187.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 189.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 183.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 191.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
+@ u24.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 189.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 183.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgroonga postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 182.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-15-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-2PGSTY.el8.x86_64.rpm pigsty 4.1.0 227.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_14-4.1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-2PGSTY.el8.aarch64.rpm pigsty 4.1.0 209.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_14-4.1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-4PGSTY.el9.x86_64.rpm pigsty 4.1.0 227.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_14-4.1.0-4PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-4PGSTY.el9.aarch64.rpm pigsty 4.1.0 221.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgroonga_14-4.1.0-4PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgroonga_14 pgroonga_14-4.1.0-2PGSTY.el10.x86_64.rpm pigsty 4.1.0 230.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgroonga_14-4.1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgroonga_14 pgroonga_14-4.1.0-2PGSTY.el10.aarch64.rpm pigsty 4.1.0 222.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgroonga_14-4.1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb pigsty 4.1.0 163.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb pigsty 4.1.0 148.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb pigsty 4.1.0 165.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb pigsty 4.1.0 149.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb pigsty 4.1.0 178.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb pigsty 4.1.0 172.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~noble_amd64.deb pigsty 4.1.0 173.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~noble_arm64.deb pigsty 4.1.0 167.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb pigsty 4.1.0 175.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgroonga postgresql-14-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb pigsty 4.1.0 167.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgroonga/postgresql-14-pgroonga_4.1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -176,27 +174,27 @@ pig install pgroonga;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgroonga -v 19  # PG 19
 pig ext install -y pgroonga -v 18  # PG 18
 pig ext install -y pgroonga -v 17  # PG 17
 pig ext install -y pgroonga -v 16  # PG 16
 pig ext install -y pgroonga -v 15  # PG 15
-pig ext install -y pgroonga -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgroonga_19       # PG 19
 dnf install -y pgroonga_18       # PG 18
 dnf install -y pgroonga_17       # PG 17
 dnf install -y pgroonga_16       # PG 16
 dnf install -y pgroonga_15       # PG 15
-dnf install -y pgroonga_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgroonga   # PG 19
 apt install -y postgresql-18-pgroonga   # PG 18
 apt install -y postgresql-17-pgroonga   # PG 17
 apt install -y postgresql-16-pgroonga   # PG 16
 apt install -y postgresql-15-pgroonga   # PG 15
-apt install -y postgresql-14-pgroonga   # PG 14
 ```
 
 

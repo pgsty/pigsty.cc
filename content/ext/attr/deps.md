@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **135** 个扩展依赖其他扩展，**79** 个扩展被其他扩展所依赖。
+共有 **136** 个扩展依赖其他扩展，**80** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **135** 个扩展需要先安装其他扩展才能使用：
+以下 **136** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -81,6 +81,7 @@ weight: 30
 | [`omni_session`](/ext/e/omni_session) | [`omni_var`](/ext/e/omni_var) [`omni_id`](/ext/e/omni_id) [`omni_web`](/ext/e/omni_web) [`omni_httpd`](/ext/e/omni_httpd) [`omni_polyfill`](/ext/e/omni_polyfill) | Omnigres 会话管理器 |
 | [`omni_test`](/ext/e/omni_test) | [`dblink`](/ext/e/dblink) [`omni_cloudevents`](/ext/e/omni_cloudevents) | Omnigres 测试框架 |
 | [`omni_vfs`](/ext/e/omni_vfs) | [`omni_vfs_types_v1`](/ext/e/omni_vfs_types_v1) [`dblink`](/ext/e/dblink) | Omnigres 虚拟文件系统 |
+| [`pg_stash_advice`](/ext/e/pg_stash_advice) | [`pg_plan_advice`](/ext/e/pg_plan_advice) | 按查询 ID 存储并自动应用执行计划建议 |
 | [`hstore_pllua`](/ext/e/hstore_pllua) | [`hstore`](/ext/e/hstore) [`pllua`](/ext/e/pllua) | Lua 程序语言的Hstore适配扩展 |
 | [`hstore_plluau`](/ext/e/hstore_plluau) | [`hstore`](/ext/e/hstore) [`plluau`](/ext/e/plluau) | Lua 程序语言的Hstore适配扩展（不受信任的） |
 | [`plpgsql_check`](/ext/e/plpgsql_check) | [`plpgsql`](/ext/e/plpgsql) | PL/pgSQL 函数的附加校验、性能分析与诊断工具 |
@@ -152,7 +153,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **79** 个扩展被其他扩展所依赖：
+以下 **80** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -197,6 +198,7 @@ weight: 30
 | [`omni_web`](/ext/e/omni_web) | [`omni_aws`](/ext/e/omni_aws) [`omni_cloudevents`](/ext/e/omni_cloudevents) [`omni_containers`](/ext/e/omni_containers) [`omni_kube`](/ext/e/omni_kube) [`omni_rest`](/ext/e/omni_rest) [`omni_session`](/ext/e/omni_session) | Omnigres Web工具箱 |
 | [`omni_xml`](/ext/e/omni_xml) | [`omni_aws`](/ext/e/omni_aws) | Omnigres XML工具包 |
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omni_kube`](/ext/e/omni_kube) [`omni_schema`](/ext/e/omni_schema) | Omnigres YAML工具包 |
+| [`pg_plan_advice`](/ext/e/pg_plan_advice) | [`pg_stash_advice`](/ext/e/pg_stash_advice) | 使用计划建议描述、复现并约束查询执行计划 |
 | [`pllua`](/ext/e/pllua) | [`hstore_pllua`](/ext/e/hstore_pllua) | Lua 程序语言 |
 | [`plluau`](/ext/e/plluau) | [`hstore_plluau`](/ext/e/hstore_plluau) | Lua 程序语言（不受信任的） |
 | [`plr`](/ext/e/plr) | [`fbsql`](/ext/e/fbsql) | 从数据库中加载R语言解释器并执行R脚本 |

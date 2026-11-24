@@ -42,16 +42,16 @@ weight: 2610
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_liquid` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_liquid_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-liquid` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "19,18,17,16,15" >}} | `pg_liquid` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "19,18,17,16,15" >}} | `pg_liquid_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.7` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-liquid` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
@@ -66,86 +66,84 @@ weight: 2610
 | u24.aarch64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 | AVAIL PIGSTY 0.1.7 1 |
-@ el8.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el8.x86_64.rpm pigsty 0.1.7 64.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_18-0.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el8.aarch64.rpm pigsty 0.1.7 62.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_18-0.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el9.x86_64.rpm pigsty 0.1.7 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_18-0.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el9.aarch64.rpm pigsty 0.1.7 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_18-0.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el10.x86_64.rpm pigsty 0.1.7 65.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_18-0.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PIGSTY.el10.aarch64.rpm pigsty 0.1.7 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_18-0.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb pigsty 0.1.7 383.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb pigsty 0.1.7 378.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb pigsty 0.1.7 383.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb pigsty 0.1.7 378.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb pigsty 0.1.7 429.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb pigsty 0.1.7 427.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb pigsty 0.1.7 407.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb pigsty 0.1.7 402.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb pigsty 0.1.7 399.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb pigsty 0.1.7 399.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el8.x86_64.rpm pigsty 0.1.7 64.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_17-0.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el8.aarch64.rpm pigsty 0.1.7 62.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_17-0.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el9.x86_64.rpm pigsty 0.1.7 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_17-0.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el9.aarch64.rpm pigsty 0.1.7 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_17-0.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el10.x86_64.rpm pigsty 0.1.7 65.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_17-0.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PIGSTY.el10.aarch64.rpm pigsty 0.1.7 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_17-0.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb pigsty 0.1.7 379.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb pigsty 0.1.7 376.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb pigsty 0.1.7 379.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb pigsty 0.1.7 377.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb pigsty 0.1.7 450.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb pigsty 0.1.7 450.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb pigsty 0.1.7 400.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb pigsty 0.1.7 401.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb pigsty 0.1.7 400.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb pigsty 0.1.7 399.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el8.x86_64.rpm pigsty 0.1.7 64.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_16-0.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el8.aarch64.rpm pigsty 0.1.7 62.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_16-0.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el9.x86_64.rpm pigsty 0.1.7 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_16-0.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el9.aarch64.rpm pigsty 0.1.7 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_16-0.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el10.x86_64.rpm pigsty 0.1.7 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_16-0.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PIGSTY.el10.aarch64.rpm pigsty 0.1.7 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_16-0.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb pigsty 0.1.7 372.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb pigsty 0.1.7 368.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb pigsty 0.1.7 372.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb pigsty 0.1.7 368.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb pigsty 0.1.7 437.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb pigsty 0.1.7 436.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb pigsty 0.1.7 393.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb pigsty 0.1.7 391.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb pigsty 0.1.7 391.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb pigsty 0.1.7 388.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el8.x86_64.rpm pigsty 0.1.7 65.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_15-0.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el8.aarch64.rpm pigsty 0.1.7 62.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_15-0.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el9.x86_64.rpm pigsty 0.1.7 64.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_15-0.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el9.aarch64.rpm pigsty 0.1.7 62.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_15-0.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el10.x86_64.rpm pigsty 0.1.7 66.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_15-0.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PIGSTY.el10.aarch64.rpm pigsty 0.1.7 63.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_15-0.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb pigsty 0.1.7 370.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb pigsty 0.1.7 367.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb pigsty 0.1.7 370.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb pigsty 0.1.7 368.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb pigsty 0.1.7 434.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb pigsty 0.1.7 435.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb pigsty 0.1.7 391.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb pigsty 0.1.7 391.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb pigsty 0.1.7 389.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb pigsty 0.1.7 387.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el8.x86_64.rpm pigsty 0.1.7 65.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_14-0.1.7-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el8.aarch64.rpm pigsty 0.1.7 62.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_14-0.1.7-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el9.x86_64.rpm pigsty 0.1.7 64.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_14-0.1.7-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el9.aarch64.rpm pigsty 0.1.7 62.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_14-0.1.7-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el10.x86_64.rpm pigsty 0.1.7 66.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_14-0.1.7-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_liquid_14 pg_liquid_14-0.1.7-1PIGSTY.el10.aarch64.rpm pigsty 0.1.7 63.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_14-0.1.7-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb pigsty 0.1.7 366.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb pigsty 0.1.7 363.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb pigsty 0.1.7 367.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb pigsty 0.1.7 364.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb pigsty 0.1.7 427.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb pigsty 0.1.7 429.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb pigsty 0.1.7 387.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb pigsty 0.1.7 388.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb pigsty 0.1.7 384.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-liquid postgresql-14-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb pigsty 0.1.7 385.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-14-pg-liquid_0.1.7-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pg_liquid_19 pg_liquid_19-0.1.7-1PGSTY.el9.x86_64.rpm pigsty 0.1.7 412.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_19-0.1.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_liquid_19 pg_liquid_19-0.1.7-1PGSTY.el9.aarch64.rpm pigsty 0.1.7 412.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_19-0.1.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_liquid_19 pg_liquid_19-0.1.7-1PGSTY.el10.x86_64.rpm pigsty 0.1.7 401.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_19-0.1.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_liquid_19 pg_liquid_19-0.1.7-1PGSTY.el10.aarch64.rpm pigsty 0.1.7 401.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_19-0.1.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb pigsty 0.1.7 373.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb pigsty 0.1.7 371.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb pigsty 0.1.7 374.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb pigsty 0.1.7 372.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb pigsty 0.1.7 417.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb pigsty 0.1.7 418.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb pigsty 0.1.7 395.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb pigsty 0.1.7 397.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb pigsty 0.1.7 392.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-liquid postgresql-19-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb pigsty 0.1.7 393.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-19-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el8.x86_64.rpm pigsty 0.1.7 396.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_18-0.1.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el8.aarch64.rpm pigsty 0.1.7 409.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_18-0.1.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el9.x86_64.rpm pigsty 0.1.7 420.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_18-0.1.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el9.aarch64.rpm pigsty 0.1.7 421.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_18-0.1.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el10.x86_64.rpm pigsty 0.1.7 410.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_18-0.1.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_liquid_18 pg_liquid_18-0.1.7-1PGSTY.el10.aarch64.rpm pigsty 0.1.7 410.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_18-0.1.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb pigsty 0.1.7 383.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb pigsty 0.1.7 378.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb pigsty 0.1.7 383.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb pigsty 0.1.7 378.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb pigsty 0.1.7 429.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb pigsty 0.1.7 427.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb pigsty 0.1.7 407.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb pigsty 0.1.7 403.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb pigsty 0.1.7 400.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-liquid postgresql-18-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb pigsty 0.1.7 400.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-18-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el8.x86_64.rpm pigsty 0.1.7 396.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_17-0.1.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el8.aarch64.rpm pigsty 0.1.7 410.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_17-0.1.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el9.x86_64.rpm pigsty 0.1.7 420.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_17-0.1.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el9.aarch64.rpm pigsty 0.1.7 422.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_17-0.1.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el10.x86_64.rpm pigsty 0.1.7 410.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_17-0.1.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_liquid_17 pg_liquid_17-0.1.7-1PGSTY.el10.aarch64.rpm pigsty 0.1.7 409.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_17-0.1.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb pigsty 0.1.7 379.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb pigsty 0.1.7 376.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb pigsty 0.1.7 379.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb pigsty 0.1.7 377.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb pigsty 0.1.7 450.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb pigsty 0.1.7 450.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb pigsty 0.1.7 400.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb pigsty 0.1.7 401.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb pigsty 0.1.7 400.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-liquid postgresql-17-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb pigsty 0.1.7 399.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-17-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el8.x86_64.rpm pigsty 0.1.7 384.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_16-0.1.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el8.aarch64.rpm pigsty 0.1.7 398.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_16-0.1.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el9.x86_64.rpm pigsty 0.1.7 409.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_16-0.1.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el9.aarch64.rpm pigsty 0.1.7 409.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_16-0.1.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el10.x86_64.rpm pigsty 0.1.7 399.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_16-0.1.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_liquid_16 pg_liquid_16-0.1.7-1PGSTY.el10.aarch64.rpm pigsty 0.1.7 400.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_16-0.1.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb pigsty 0.1.7 372.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb pigsty 0.1.7 367.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb pigsty 0.1.7 372.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb pigsty 0.1.7 368.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb pigsty 0.1.7 437.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb pigsty 0.1.7 436.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb pigsty 0.1.7 394.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb pigsty 0.1.7 391.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb pigsty 0.1.7 391.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-liquid postgresql-16-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb pigsty 0.1.7 388.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-16-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el8.x86_64.rpm pigsty 0.1.7 383.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_liquid_15-0.1.7-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el8.aarch64.rpm pigsty 0.1.7 398.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_liquid_15-0.1.7-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el9.x86_64.rpm pigsty 0.1.7 408.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_liquid_15-0.1.7-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el9.aarch64.rpm pigsty 0.1.7 410.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_liquid_15-0.1.7-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el10.x86_64.rpm pigsty 0.1.7 400.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_liquid_15-0.1.7-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_liquid_15 pg_liquid_15-0.1.7-1PGSTY.el10.aarch64.rpm pigsty 0.1.7 398.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_liquid_15-0.1.7-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb pigsty 0.1.7 370.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb pigsty 0.1.7 367.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb pigsty 0.1.7 371.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb pigsty 0.1.7 368.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb pigsty 0.1.7 434.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb pigsty 0.1.7 435.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb pigsty 0.1.7 391.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb pigsty 0.1.7 391.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb pigsty 0.1.7 389.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-liquid postgresql-15-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb pigsty 0.1.7 387.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-liquid/postgresql-15-pg-liquid_0.1.7-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install pg_liquid;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_liquid -v 19  # PG 19
 pig ext install -y pg_liquid -v 18  # PG 18
 pig ext install -y pg_liquid -v 17  # PG 17
 pig ext install -y pg_liquid -v 16  # PG 16
 pig ext install -y pg_liquid -v 15  # PG 15
-pig ext install -y pg_liquid -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_liquid_19       # PG 19
 dnf install -y pg_liquid_18       # PG 18
 dnf install -y pg_liquid_17       # PG 17
 dnf install -y pg_liquid_16       # PG 16
 dnf install -y pg_liquid_15       # PG 15
-dnf install -y pg_liquid_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-liquid   # PG 19
 apt install -y postgresql-18-pg-liquid   # PG 18
 apt install -y postgresql-17-pg-liquid   # PG 17
 apt install -y postgresql-16-pg-liquid   # PG 16
 apt install -y postgresql-15-pg-liquid   # PG 15
-apt install -y postgresql-14-pg-liquid   # PG 14
 ```
 
 

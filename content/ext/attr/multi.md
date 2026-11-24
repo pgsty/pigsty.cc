@@ -72,8 +72,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | `--sLd--` | - | MobilityDB 地理空间轨迹数据管理与分析平台 |
-| 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.1` | `----d-r` | - | MobilityDB随机数据生成函数 |
+| 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.2` | `--sLd--` | - | MobilityDB 地理空间轨迹数据管理与分析平台 |
+| 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.2` | `----d-r` | - | MobilityDB随机数据生成函数 |
 {.ext-table .wide .expand}
 
 ## qdgc
@@ -130,14 +130,14 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.6` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
-| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.6` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
-| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.6` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
-| 2563 | [`pg_map`](/ext/e/pg_map) | `3.6` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
-| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.6` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
-| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.6` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
-| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.6` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
-| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.6` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
+| 2560 | [**`pg_lake`**](/ext/e/pg_lake) | `3.7` | `-bsLd--` | `lake` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| 2561 | [`pg_extension_base`](/ext/e/pg_extension_base) | `3.7` | `--sLd--` | `extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| 2562 | [`pg_extension_updater`](/ext/e/pg_extension_updater) | `3.7` | `--sLd--` | `extension_updater` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| 2563 | [`pg_map`](/ext/e/pg_map) | `3.7` | `--s-d--` | `map_type` | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
+| 2564 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | `3.7` | `--sLd--` | `__lake__internal__nsp__` | 用于数据湖查询的查询引擎 |
+| 2565 | [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | `3.7` | `--s-d--` | `lake_iceberg` | PostgreSQL 中的 Iceberg 实现 |
+| 2566 | [`pg_lake_table`](/ext/e/pg_lake_table) | `3.7` | `--sLd--` | `__pg_lake_table_writes` | 数据湖表和 Iceberg 表 |
+| 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.7` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 {.ext-table .wide .expand}
 
 ## pg_statecharts
@@ -336,9 +336,9 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.0` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.0` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.0` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `1.2` | `--sLd--` | `documentdb_api` | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `1.2` | `--sLd--` | `documentdb_core` | 微软DocumentDB的核心API层实现 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `1.2` | `--sLd-r` | `documentdb_extended_rum_catalog` | DocumentDB扩展RUM索引访问方法 |
 {.ext-table .wide .expand}
 
 ## ivorysql

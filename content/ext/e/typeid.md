@@ -42,30 +42,30 @@ weight: 4580
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_typeid` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_typeid_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-typeid` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_typeid` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15" >}} | `pg_typeid_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-typeid` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 |
 @ el8.x86_64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 892.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_18-0.4.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 775.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_18-0.4.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_typeid_18 pg_typeid_18-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 913.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_18-0.4.1-1PGSTY.el9.x86_64.rpm
@@ -130,22 +130,6 @@ weight: 4580
 @ u24.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 717.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 804.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-typeid postgresql-15-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 715.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-15-typeid_0.4.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el8.x86_64.rpm pigsty 0.4.1 875.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_typeid_14-0.4.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el8.aarch64.rpm pigsty 0.4.1 759.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_typeid_14-0.4.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el9.x86_64.rpm pigsty 0.4.1 891.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_typeid_14-0.4.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el9.aarch64.rpm pigsty 0.4.1 812.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_typeid_14-0.4.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el10.x86_64.rpm pigsty 0.4.1 893.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_typeid_14-0.4.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_typeid_14 pg_typeid_14-0.4.1-1PGSTY.el10.aarch64.rpm pigsty 0.4.1 801.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_typeid_14-0.4.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~bookworm_amd64.deb pigsty 0.4.1 731.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~bookworm_arm64.deb pigsty 0.4.1 612.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~trixie_amd64.deb pigsty 0.4.1 732.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~trixie_arm64.deb pigsty 0.4.1 612.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~jammy_amd64.deb pigsty 0.4.1 813.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~jammy_arm64.deb pigsty 0.4.1 724.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~noble_amd64.deb pigsty 0.4.1 807.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~noble_arm64.deb pigsty 0.4.1 715.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~resolute_amd64.deb pigsty 0.4.1 800.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-typeid postgresql-14-typeid_0.4.1-1PGSTY~resolute_arm64.deb pigsty 0.4.1 712.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-typeid/postgresql-14-typeid_0.4.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +156,27 @@ pig install pg_typeid;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_typeid -v 19  # PG 19
 pig ext install -y pg_typeid -v 18  # PG 18
 pig ext install -y pg_typeid -v 17  # PG 17
 pig ext install -y pg_typeid -v 16  # PG 16
 pig ext install -y pg_typeid -v 15  # PG 15
-pig ext install -y pg_typeid -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_typeid_19       # PG 19
 dnf install -y pg_typeid_18       # PG 18
 dnf install -y pg_typeid_17       # PG 17
 dnf install -y pg_typeid_16       # PG 16
 dnf install -y pg_typeid_15       # PG 15
-dnf install -y pg_typeid_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-typeid   # PG 19
 apt install -y postgresql-18-typeid   # PG 18
 apt install -y postgresql-17-typeid   # PG 17
 apt install -y postgresql-16-typeid   # PG 16
 apt install -y postgresql-15-typeid   # PG 15
-apt install -y postgresql-14-typeid   # PG 14
 ```
 
 

@@ -49,149 +49,167 @@ weight: 3020
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pllua` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `pllua_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pllua` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15" >}} | `pllua` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.12` | {{< pgvers "18,17,16,15" >}} | `pllua_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pllua` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 4 | AVAIL PIGSTY 2.0.12 3 |
-| el9.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 |
-| el10.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| el10.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
-| d12.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d12.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d13.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| d13.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u22.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u22.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u24.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u24.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u26.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| u26.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-@ el8.x86_64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el8.x86_64.rpm pigsty 2.0.12 133.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_18-2.0.12-7PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el8.aarch64.rpm pigsty 2.0.12 125.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_18-2.0.12-7PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el9.x86_64.rpm pigsty 2.0.12 128.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_18-2.0.12-7PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el9.aarch64.rpm pigsty 2.0.12 123.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_18-2.0.12-7PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el10.x86_64.rpm pigsty 2.0.12 130.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_18-2.0.12-7PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pllua_18 pllua_18-2.0.12-7PIGSTY.el10.aarch64.rpm pigsty 2.0.12 126.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_18-2.0.12-7PIGSTY.el10.aarch64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 4 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 2 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.12 1 | AVAIL PGDG 2.0.12 5 | AVAIL PGDG 2.0.12 5 | AVAIL PGDG 2.0.12 5 |
+| d12.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d12.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d13.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| d13.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u22.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u22.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u24.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u24.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u26.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| u26.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+@ el8.x86_64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el8.x86_64.rpm pigsty 2.0.12 362.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_18-2.0.12-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el8.aarch64.rpm pigsty 2.0.12 351.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_18-2.0.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el9.x86_64.rpm pigsty 2.0.12 366.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_18-2.0.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el9.aarch64.rpm pigsty 2.0.12 359.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_18-2.0.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el10.x86_64.rpm pigsty 2.0.12 369.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_18-2.0.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pllua_18 pllua_18-2.0.12-1PGSTY.el10.aarch64.rpm pigsty 2.0.12 363.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_18-2.0.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg12+1_amd64.deb pgdg 2.0.12 348.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 347.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg12+1_arm64.deb pgdg 2.0.12 337.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 336.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg13+1_amd64.deb pgdg 2.0.12 349.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 348.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg13+1_arm64.deb pgdg 2.0.12 337.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg13+1_arm64.deb pgdg 2.0.12 336.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg22.04+1_amd64.deb pgdg 2.0.12 356.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg22.04+1_amd64.deb pgdg 2.0.12 354.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg22.04+1_arm64.deb pgdg 2.0.12 343.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 341.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg24.04+1_arm64.deb pgdg 2.0.12 336.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg26.04+1_amd64.deb pgdg 2.0.12 346.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 345.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-8.pgdg26.04+1_arm64.deb pgdg 2.0.12 333.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-8.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 332.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el8.x86_64.rpm pigsty 2.0.12 133.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_17-2.0.12-7PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel8.10.x86_64.rpm pgdg 2.0.12 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pllua_17-2.0.12-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel8.x86_64.rpm pgdg 2.0.12 119.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pllua_17-2.0.12-3PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el8.aarch64.rpm pigsty 2.0.12 125.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_17-2.0.12-7PIGSTY.el8.aarch64.rpm
+@ el8.x86_64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el8.x86_64.rpm pigsty 2.0.12 362.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_17-2.0.12-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel8.10.aarch64.rpm pgdg 2.0.12 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pllua_17-2.0.12-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel8.aarch64.rpm pgdg 2.0.12 110.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pllua_17-2.0.12-3PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el9.x86_64.rpm pigsty 2.0.12 128.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_17-2.0.12-7PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pllua_17 pllua_17-2.0.12-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.12 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pllua_17-2.0.12-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel9.x86_64.rpm pgdg 2.0.12 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pllua_17-2.0.12-3PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el9.aarch64.rpm pigsty 2.0.12 123.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_17-2.0.12-7PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pllua_17 pllua_17-2.0.12-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.12 115.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pllua_17-2.0.12-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel9.aarch64.rpm pgdg 2.0.12 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pllua_17-2.0.12-3PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el10.x86_64.rpm pigsty 2.0.12 130.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_17-2.0.12-7PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pllua_17 pllua_17-2.0.12-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.12 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pllua_17-2.0.12-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pllua_17 pllua_17-2.0.12-4PGDG.rhel10.x86_64.rpm pgdg 2.0.12 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pllua_17-2.0.12-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pllua_17 pllua_17-2.0.12-7PIGSTY.el10.aarch64.rpm pigsty 2.0.12 126.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_17-2.0.12-7PIGSTY.el10.aarch64.rpm
+@ el8.aarch64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el8.aarch64.rpm pigsty 2.0.12 351.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_17-2.0.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel9.9.x86_64.rpm pgdg 2.0.12 121.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pllua_17-2.0.12-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el9.x86_64.rpm pigsty 2.0.12 365.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_17-2.0.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel9.9.aarch64.rpm pgdg 2.0.12 116.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pllua_17-2.0.12-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el9.aarch64.rpm pigsty 2.0.12 359.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_17-2.0.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel10.3.x86_64.rpm pgdg 2.0.12 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pllua_17-2.0.12-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el10.x86_64.rpm pigsty 2.0.12 369.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_17-2.0.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel10.3.aarch64.rpm pgdg 2.0.12 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pllua_17-2.0.12-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pllua_17 pllua_17-2.0.12-10PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 118.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pllua_17-2.0.12-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pllua_17 pllua_17-2.0.12-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pllua_17-2.0.12-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pllua_17 pllua_17-2.0.12-4PGDG.rhel10.aarch64.rpm pgdg 2.0.12 117.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pllua_17-2.0.12-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pllua_17 pllua_17-2.0.12-1PGSTY.el10.aarch64.rpm pigsty 2.0.12 363.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_17-2.0.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg12+1_amd64.deb pgdg 2.0.12 348.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 347.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg12+1_arm64.deb pgdg 2.0.12 336.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 335.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg13+1_amd64.deb pgdg 2.0.12 348.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 347.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg13+1_arm64.deb pgdg 2.0.12 336.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg13+1_arm64.deb pgdg 2.0.12 336.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg22.04+1_amd64.deb pgdg 2.0.12 395.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg22.04+1_amd64.deb pgdg 2.0.12 391.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg22.04+1_arm64.deb pgdg 2.0.12 382.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 379.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg26.04+1_amd64.deb pgdg 2.0.12 345.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 344.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-8.pgdg26.04+1_arm64.deb pgdg 2.0.12 331.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-8.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 331.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el8.x86_64.rpm pigsty 2.0.12 133.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_16-2.0.12-7PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel8.10.x86_64.rpm pgdg 2.0.12 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pllua_16-2.0.12-10PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el8.x86_64.rpm pigsty 2.0.12 362.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_16-2.0.12-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel8.x86_64.rpm pgdg 2.0.12 119.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pllua_16-2.0.12-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el8.aarch64.rpm pigsty 2.0.12 125.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_16-2.0.12-7PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel8.10.aarch64.rpm pgdg 2.0.12 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pllua_16-2.0.12-10PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el8.aarch64.rpm pigsty 2.0.12 351.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_16-2.0.12-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel8.aarch64.rpm pgdg 2.0.12 110.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pllua_16-2.0.12-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el9.x86_64.rpm pigsty 2.0.12 128.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_16-2.0.12-7PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pllua_16 pllua_16-2.0.12-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.12 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pllua_16-2.0.12-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel9.x86_64.rpm pgdg 2.0.12 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pllua_16-2.0.12-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el9.aarch64.rpm pigsty 2.0.12 123.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_16-2.0.12-7PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pllua_16 pllua_16-2.0.12-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.12 115.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pllua_16-2.0.12-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel9.aarch64.rpm pgdg 2.0.12 115.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pllua_16-2.0.12-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el10.x86_64.rpm pigsty 2.0.12 130.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_16-2.0.12-7PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pllua_16 pllua_16-2.0.12-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.12 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pllua_16-2.0.12-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pllua_16 pllua_16-2.0.12-4PGDG.rhel10.x86_64.rpm pgdg 2.0.12 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pllua_16-2.0.12-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pllua_16 pllua_16-2.0.12-7PIGSTY.el10.aarch64.rpm pigsty 2.0.12 126.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_16-2.0.12-7PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel9.9.x86_64.rpm pgdg 2.0.12 121.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pllua_16-2.0.12-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el9.x86_64.rpm pigsty 2.0.12 365.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_16-2.0.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel9.9.aarch64.rpm pgdg 2.0.12 116.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pllua_16-2.0.12-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el9.aarch64.rpm pigsty 2.0.12 359.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_16-2.0.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel10.3.x86_64.rpm pgdg 2.0.12 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pllua_16-2.0.12-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el10.x86_64.rpm pigsty 2.0.12 369.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_16-2.0.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel10.3.aarch64.rpm pgdg 2.0.12 118.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pllua_16-2.0.12-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pllua_16 pllua_16-2.0.12-10PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 118.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pllua_16-2.0.12-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pllua_16 pllua_16-2.0.12-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pllua_16-2.0.12-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pllua_16 pllua_16-2.0.12-4PGDG.rhel10.aarch64.rpm pgdg 2.0.12 117.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pllua_16-2.0.12-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pllua_16 pllua_16-2.0.12-1PGSTY.el10.aarch64.rpm pigsty 2.0.12 363.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_16-2.0.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg12+1_amd64.deb pgdg 2.0.12 347.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 346.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg12+1_arm64.deb pgdg 2.0.12 336.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 335.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg13+1_amd64.deb pgdg 2.0.12 348.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 347.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg13+1_arm64.deb pgdg 2.0.12 336.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg13+1_arm64.deb pgdg 2.0.12 335.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg22.04+1_amd64.deb pgdg 2.0.12 393.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg22.04+1_amd64.deb pgdg 2.0.12 389.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg22.04+1_arm64.deb pgdg 2.0.12 381.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 377.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg26.04+1_amd64.deb pgdg 2.0.12 344.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 344.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-8.pgdg26.04+1_arm64.deb pgdg 2.0.12 332.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-8.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 331.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el8.x86_64.rpm pigsty 2.0.12 136.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_15-2.0.12-7PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel8.10.x86_64.rpm pgdg 2.0.12 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pllua_15-2.0.12-10PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el8.x86_64.rpm pigsty 2.0.12 363.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_15-2.0.12-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pllua_15 pllua_15-2.0.11-1.rhel8.x86_64.rpm pgdg 2.0.11 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pllua_15-2.0.11-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pllua_15 pllua_15-2.0.10-1.rhel8.x86_64.rpm pgdg 2.0.10 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pllua_15-2.0.10-1.rhel8.x86_64.rpm
-@ el8.aarch64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el8.aarch64.rpm pigsty 2.0.12 127.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_15-2.0.12-7PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el9.x86_64.rpm pigsty 2.0.12 132.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_15-2.0.12-7PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pllua_15 pllua_15-2.0.12-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.12 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pllua_15-2.0.12-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pllua_15 pllua_15-2.0.11-1.rhel9.x86_64.rpm pgdg 2.0.11 123.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pllua_15-2.0.11-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pllua_15 pllua_15-2.0.10-1.rhel9.x86_64.rpm pgdg 2.0.10 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pllua_15-2.0.10-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el9.aarch64.rpm pigsty 2.0.12 126.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_15-2.0.12-7PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pllua_15 pllua_15-2.0.12-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.12 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pllua_15-2.0.12-6PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el10.x86_64.rpm pigsty 2.0.12 133.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_15-2.0.12-7PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pllua_15 pllua_15-2.0.12-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.12 125.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pllua_15-2.0.12-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pllua_15 pllua_15-2.0.12-4PGDG.rhel10.x86_64.rpm pgdg 2.0.12 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pllua_15-2.0.12-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pllua_15 pllua_15-2.0.12-7PIGSTY.el10.aarch64.rpm pigsty 2.0.12 128.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_15-2.0.12-7PIGSTY.el10.aarch64.rpm
+@ el8.aarch64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel8.10.aarch64.rpm pgdg 2.0.12 114.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pllua_15-2.0.12-10PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el8.aarch64.rpm pigsty 2.0.12 352.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_15-2.0.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel9.9.x86_64.rpm pgdg 2.0.12 125.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pllua_15-2.0.12-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el9.x86_64.rpm pigsty 2.0.12 368.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_15-2.0.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel9.9.aarch64.rpm pgdg 2.0.12 119.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pllua_15-2.0.12-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el9.aarch64.rpm pigsty 2.0.12 361.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_15-2.0.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel10.3.x86_64.rpm pgdg 2.0.12 127.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pllua_15-2.0.12-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el10.x86_64.rpm pigsty 2.0.12 371.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_15-2.0.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel10.3.aarch64.rpm pgdg 2.0.12 121.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pllua_15-2.0.12-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pllua_15 pllua_15-2.0.12-10PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 121.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pllua_15-2.0.12-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pllua_15 pllua_15-2.0.12-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pllua_15-2.0.12-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pllua_15 pllua_15-2.0.12-4PGDG.rhel10.aarch64.rpm pgdg 2.0.12 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pllua_15-2.0.12-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pllua_15 pllua_15-2.0.12-1PGSTY.el10.aarch64.rpm pigsty 2.0.12 365.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_15-2.0.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg12+1_amd64.deb pgdg 2.0.12 349.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 348.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg12+1_arm64.deb pgdg 2.0.12 337.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 337.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg13+1_amd64.deb pgdg 2.0.12 350.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 349.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg13+1_arm64.deb pgdg 2.0.12 338.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg13+1_arm64.deb pgdg 2.0.12 337.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg22.04+1_amd64.deb pgdg 2.0.12 396.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg22.04+1_amd64.deb pgdg 2.0.12 392.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg22.04+1_arm64.deb pgdg 2.0.12 383.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 380.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg24.04+1_amd64.deb pgdg 2.0.12 349.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg24.04+1_arm64.deb pgdg 2.0.12 338.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 337.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg26.04+1_amd64.deb pgdg 2.0.12 347.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 346.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-8.pgdg26.04+1_arm64.deb pgdg 2.0.12 334.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-8.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 333.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el8.x86_64.rpm pigsty 2.0.12 136.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pllua_14-2.0.12-7PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pllua_14 pllua_14-2.0.11-1.rhel8.x86_64.rpm pgdg 2.0.11 121.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pllua_14-2.0.11-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pllua_14 pllua_14-2.0.10-1.rhel8.x86_64.rpm pgdg 2.0.10 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pllua_14-2.0.10-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el8.aarch64.rpm pigsty 2.0.12 127.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pllua_14-2.0.12-7PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el9.x86_64.rpm pigsty 2.0.12 132.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pllua_14-2.0.12-7PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pllua_14 pllua_14-2.0.12-6PGDG.rhel9.8.x86_64.rpm pgdg 2.0.12 124.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pllua_14-2.0.12-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pllua_14 pllua_14-2.0.11-1.rhel9.x86_64.rpm pgdg 2.0.11 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pllua_14-2.0.11-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el9.aarch64.rpm pigsty 2.0.12 126.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pllua_14-2.0.12-7PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pllua_14 pllua_14-2.0.12-6PGDG.rhel9.8.aarch64.rpm pgdg 2.0.12 118.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pllua_14-2.0.12-6PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el10.x86_64.rpm pigsty 2.0.12 133.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pllua_14-2.0.12-7PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pllua_14 pllua_14-2.0.12-6PGDG.rhel10.2.x86_64.rpm pgdg 2.0.12 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pllua_14-2.0.12-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pllua_14 pllua_14-2.0.12-4PGDG.rhel10.x86_64.rpm pgdg 2.0.12 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pllua_14-2.0.12-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pllua_14 pllua_14-2.0.12-7PIGSTY.el10.aarch64.rpm pigsty 2.0.12 128.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pllua_14-2.0.12-7PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pllua_14 pllua_14-2.0.12-6PGDG.rhel10.2.aarch64.rpm pgdg 2.0.12 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pllua_14-2.0.12-6PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pllua_14 pllua_14-2.0.12-4PGDG.rhel10.aarch64.rpm pgdg 2.0.12 120.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pllua_14-2.0.12-4PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 348.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 336.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 349.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg13+1_arm64.deb pgdg 2.0.12 337.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg22.04+1_amd64.deb pgdg 2.0.12 388.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 375.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 336.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 346.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 333.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -222,7 +240,6 @@ pig ext install -y pllua -v 18  # PG 18
 pig ext install -y pllua -v 17  # PG 17
 pig ext install -y pllua -v 16  # PG 16
 pig ext install -y pllua -v 15  # PG 15
-pig ext install -y pllua -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -230,7 +247,6 @@ dnf install -y pllua_18       # PG 18
 dnf install -y pllua_17       # PG 17
 dnf install -y pllua_16       # PG 16
 dnf install -y pllua_15       # PG 15
-dnf install -y pllua_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -238,7 +254,6 @@ apt install -y postgresql-18-pllua   # PG 18
 apt install -y postgresql-17-pllua   # PG 17
 apt install -y postgresql-16-pllua   # PG 16
 apt install -y postgresql-15-pllua   # PG 15
-apt install -y postgresql-14-pllua   # PG 14
 ```
 
 

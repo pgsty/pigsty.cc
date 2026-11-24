@@ -11,10 +11,10 @@ weight: 1010
     <div class="ext-card__title">timescale/timescaledb-toolkit</div>
     <div class="ext-card__desc">https://github.com/timescale/timescaledb-toolkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/timescaledb-toolkit-1.27.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/timescaledb-toolkit-1.28.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">timescaledb-toolkit-1.27.0.tar.gz</div>
-    <div class="ext-card__desc">timescaledb-toolkit-1.27.0.tar.gz</div>
+    <div class="ext-card__title">timescaledb-toolkit-1.28.0.tar.gz</div>
+    <div class="ext-card__desc">timescaledb-toolkit-1.28.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1010
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`timescaledb_toolkit`**](/ext/e/timescaledb_toolkit) | `1.27.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`timescaledb_toolkit`**](/ext/e/timescaledb_toolkit) | `1.28.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,30 +45,30 @@ weight: 1010
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "15,16,17,18" >}} | `timescaledb_toolkit` | - |
+| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.28.0` | {{< pgvers "16,17,18,19" >}} | `timescaledb_toolkit` | - |
 | [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "18,17,16,15" >}} | `timescaledb-toolkit_$v` | - |
-| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-timescaledb-toolkit` | - |
+| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.27.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-timescaledb-toolkit` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.19.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 | AVAIL PIGSTY 1.27.0 1 |
 @ el8.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el8.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-toolkit_18-1.27.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el8.aarch64.rpm pigsty 1.27.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-toolkit_18-1.27.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 timescaledb-toolkit_18 timescaledb-toolkit_18-1.27.0-1PGSTY.el9.x86_64.rpm pigsty 1.27.0 4.2MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-toolkit_18-1.27.0-1PGSTY.el9.x86_64.rpm
@@ -133,12 +133,6 @@ weight: 1010
 @ u24.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb pigsty 1.27.0 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-timescaledb-toolkit postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb pigsty 1.27.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-toolkit/postgresql-15-timescaledb-toolkit_1.27.0-1PGSTY~resolute_arm64.deb
-@ d12.x86_64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_amd64.deb pigsty 1.19.0 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_arm64.deb pigsty 1.19.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_amd64.deb pigsty 1.19.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_arm64.deb pigsty 1.19.0 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~noble_amd64.deb pigsty 1.19.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-timescaledb-toolkit postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~noble_arm64.deb pigsty 1.19.0 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timescaledb-toolkit/postgresql-14-timescaledb-toolkit_1.19.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -165,24 +159,24 @@ pig install timescaledb_toolkit;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y timescaledb_toolkit -v 19  # PG 19
 pig ext install -y timescaledb_toolkit -v 18  # PG 18
 pig ext install -y timescaledb_toolkit -v 17  # PG 17
 pig ext install -y timescaledb_toolkit -v 16  # PG 16
-pig ext install -y timescaledb_toolkit -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y timescaledb-toolkit_19       # PG 19
 dnf install -y timescaledb-toolkit_18       # PG 18
 dnf install -y timescaledb-toolkit_17       # PG 17
 dnf install -y timescaledb-toolkit_16       # PG 16
-dnf install -y timescaledb-toolkit_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-timescaledb-toolkit   # PG 19
 apt install -y postgresql-18-timescaledb-toolkit   # PG 18
 apt install -y postgresql-17-timescaledb-toolkit   # PG 17
 apt install -y postgresql-16-timescaledb-toolkit   # PG 16
-apt install -y postgresql-15-timescaledb-toolkit   # PG 15
 ```
 
 
@@ -196,16 +190,18 @@ CREATE EXTENSION timescaledb_toolkit;
 
 来源：
 
-- [Documentation index](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/README.md)
-- [README](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/README.md)
-- [Control](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/extension/timescaledb_toolkit.control)
-- [Cargo version](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/extension/Cargo.toml)
-- [Changelog](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/CHANGELOG.md)
-- [Counter aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/counter_agg.md)
-- [Gauge aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/gauge_agg.md)
-- [UddSketch](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/uddsketch.md)
-- [Statistics](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/stats_agg.md)
-- [Timevector pipelines](https://github.com/timescale/timescaledb-toolkit/blob/1.27.0%2Bp2/docs/timeseries_pipeline_elements.md)
+- [Official source](https://github.com/timescale/timescaledb-toolkit/releases/tag/1.28.0)
+
+- [Documentation index](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/README.md)
+- [README](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/README.md)
+- [Control](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/extension/timescaledb_toolkit.control)
+- [Cargo version](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/extension/Cargo.toml)
+- [Changelog](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/CHANGELOG.md)
+- [Counter aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/counter_agg.md)
+- [Gauge aggregates](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/gauge_agg.md)
+- [UddSketch](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/uddsketch.md)
+- [Statistics](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/stats_agg.md)
+- [Timevector pipelines](https://github.com/timescale/timescaledb-toolkit/blob/1.28.0/docs/timeseries_pipeline_elements.md)
 - [1.27.0+p2 release](https://github.com/timescale/timescaledb-toolkit/releases/tag/1.27.0%2Bp2)
 
 TimescaleDB Toolkit 提供了一系列专用于时序数据分析的函数，采用 **两步聚合模式**。大多数函数会先创建中间表示，再通过访问器函数进行查询，从而实现高效复用和多维分析。
@@ -464,3 +460,13 @@ FROM daily_summaries;
 1.24 为 `heartbeat_agg` 添加相等操作符，并修复空频率聚合与统计溢出处理；1.25 稳定了 `gauge_agg`，修复空输入的 t-digest 和若干类型处理问题；1.26 移除 `time_weight` 及其 rollup 的组合、序列化与反序列化支持，保持其非并行聚合边界。
 
 1.27 为 `statssummary1d` 和 `statssummary2d` 添加相等操作符，修复稀疏 HyperLogLog 合并及相同时间戳计数器点的误判重置。它拒绝无效 UTF-8 状态名、超过 1024 字节或括号嵌套超过 256 层的 lambda、不同元素类型的频率聚合合并，以及 `topn` 中类型不匹配的 NULL 参数；还补上流水线 map 的权限检查。
+
+### 版本 1.28.0
+
+1.28.0 为 `timeweightsummary` 增加相等运算符，并修复 `interpolated_delta` 和 `interpolated_rate` 遇到 NULL 计数器摘要时的错误。此版本停止构建和发布 PostgreSQL 15 二进制，源码声明 PostgreSQL 16–18 支持。选择该版本前应先升级 PG15 服务器。已有包支持字段反映独立发布的包，不能据此认定所有坐标均已提供 1.28.0。
+
+安装匹配文件，使用发行版提供的路径更新扩展，并复核依赖 NULL 计数器输入或时间加权摘要相等性的查询：
+
+```sql
+ALTER EXTENSION timescaledb_toolkit UPDATE TO '1.28.0';
+```

@@ -37,190 +37,169 @@ weight: 3070
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15,14" >}} | `plprofiler` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15,14" >}} | `plprofiler_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plprofiler` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15" >}} | `plprofiler` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15" >}} | `plprofiler_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.2.5` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-plprofiler` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el8.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el9.x86_64 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 6 | AVAIL PGDG 4.2.5 6 |
-| el9.aarch64 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 6 | AVAIL PGDG 4.2.5 6 |
-| el10.x86_64 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el10.aarch64 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 3 |
-| d12.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| d12.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| d13.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| d13.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u22.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u22.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u24.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u24.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u26.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
-| u26.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 5 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 3 | AVAIL PGDG 4.2.5 5 |
+| el9.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el9.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el10.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el10.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 6 | AVAIL PGDG 4.2.5 5 | AVAIL PGDG 4.2.5 5 | AVAIL PGDG 4.2.5 5 |
+| d12.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| d12.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| d13.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| d13.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u22.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u22.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u24.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u24.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u26.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+| u26.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
+@ el8.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plprofiler_18-4.2.5-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plprofiler_18-4.2.5-5PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plprofiler_18-4.2.5-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plprofiler_18-4.2.5-5PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.6.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-5PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel9.x86_64.rpm pgdg 4.2.5 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.6.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-5PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel9.aarch64.rpm pgdg 4.2.5 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.0.x86_64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-5PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel9.9.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel9.9.aarch64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel10.3.x86_64.rpm pgdg 4.2.5 7.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel10.3.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-8PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-5PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.0.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-5PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel10.aarch64.rpm pgdg 4.2.5 7.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+2_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg13+2_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg13+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg13+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb pgdg 4.2.5 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb pgdg 4.2.5 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb pgdg 4.2.5 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb pgdg 4.2.5 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb pgdg 4.2.5 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb pgdg 4.2.5 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb pgdg 4.2.5 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plprofiler_17-4.2.5-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plprofiler_17-4.2.5-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel8.x86_64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plprofiler_17-4.2.5-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plprofiler_17-4.2.5-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plprofiler_17-4.2.5-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel8.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plprofiler_17-4.2.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.6.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-5PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel9.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.6.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-5PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel9.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.0.x86_64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-5PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel9.9.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel9.9.aarch64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel10.3.x86_64.rpm pgdg 4.2.5 7.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel10.3.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-8PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-5PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.0.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-5PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+2_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+2_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg13+2_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg13+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg13+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb pgdg 4.2.5 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb pgdg 4.2.5 52.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb pgdg 4.2.5 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb pgdg 4.2.5 51.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb pgdg 4.2.5 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb pgdg 4.2.5 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb pgdg 4.2.5 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb pgdg 4.2.5 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plprofiler_16-4.2.5-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plprofiler_16-4.2.5-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel8.x86_64.rpm pgdg 4.2.4 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plprofiler_16-4.2.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plprofiler_16-4.2.5-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plprofiler_16-4.2.5-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel8.aarch64.rpm pgdg 4.2.4 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plprofiler_16-4.2.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.6.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-5PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel9.x86_64.rpm pgdg 4.2.4 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.6.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-5PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel9.aarch64.rpm pgdg 4.2.4 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.0.x86_64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-5PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel9.9.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel9.9.aarch64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel10.3.x86_64.rpm pgdg 4.2.5 7.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel10.3.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-8PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-5PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.0.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-5PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+2_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+2_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg13+2_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg13+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg13+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb pgdg 4.2.5 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb pgdg 4.2.5 52.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb pgdg 4.2.5 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb pgdg 4.2.5 51.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb pgdg 4.2.5 44.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb pgdg 4.2.5 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb pgdg 4.2.5 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb pgdg 4.2.5 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb pgdg 4.2.5 43.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plprofiler_15-4.2.5-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plprofiler_15-4.2.5-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plprofiler_15-4.2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel8.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plprofiler_15-4.2.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 plprofiler_15 plprofiler_15-4.2-1.rhel8.x86_64.rpm pgdg 4.2 6.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plprofiler_15-4.2-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 8.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.5-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.5-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel8.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel8.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.1-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2-1.rhel8.aarch64.rpm pgdg 4.2 6.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.6.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-5PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel9.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel9.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2-1.rhel9.x86_64.rpm pgdg 4.2 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.6.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-5PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel9.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel9.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2-1.rhel9.aarch64.rpm pgdg 4.2 6.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.0.x86_64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-5PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel9.9.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel9.9.aarch64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel10.3.x86_64.rpm pgdg 4.2.5 7.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel10.3.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-8PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-5PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.0.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-5PGDG.rhel10.0.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+2_amd64.deb pgdg 4.2.5 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+2_arm64.deb pgdg 4.2.5 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg13+2_amd64.deb pgdg 4.2.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg13+2_arm64.deb pgdg 4.2.5 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg13+1_arm64.deb pgdg 4.2.5 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb pgdg 4.2.5 52.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb pgdg 4.2.5 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb pgdg 4.2.5 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb pgdg 4.2.5 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb pgdg 4.2.5 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb pgdg 4.2.5 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb pgdg 4.2.5 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb pgdg 4.2.5 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb pgdg 4.2.5 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb pgdg 4.2.5 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb pgdg 4.2.5 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb pgdg 4.2.5 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plprofiler_14-4.2.5-5PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plprofiler_14-4.2.2-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel8.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plprofiler_14-4.2.1-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 plprofiler_14 plprofiler_14-4.2-1.rhel8.x86_64.rpm pgdg 4.2 6.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plprofiler_14-4.2-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2.5-5PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel8.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2.2-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel8.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2.1-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2-1.rhel8.aarch64.rpm pgdg 4.2 6.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.5-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.6.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.5-5PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel9.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel9.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2-1.rhel9.x86_64.rpm pgdg 4.2 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.5-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.6.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.5-5PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel9.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel9.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2-1.rhel9.aarch64.rpm pgdg 4.2 6.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.0.x86_64.rpm pgdg 4.2.5 7.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-5PGDG.rhel10.0.x86_64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plprofiler_14-4.2.5-5PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plprofiler_14-4.2.5-5PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.0.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plprofiler_14-4.2.5-5PGDG.rhel10.0.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg13+1_arm64.deb pgdg 4.2.5 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb pgdg 4.2.5 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb pgdg 4.2.5 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb pgdg 4.2.5 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb pgdg 4.2.5 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb pgdg 4.2.5 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb pgdg 4.2.5 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -243,7 +222,6 @@ pig ext install -y plprofiler -v 18  # PG 18
 pig ext install -y plprofiler -v 17  # PG 17
 pig ext install -y plprofiler -v 16  # PG 16
 pig ext install -y plprofiler -v 15  # PG 15
-pig ext install -y plprofiler -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -251,7 +229,6 @@ dnf install -y plprofiler_18       # PG 18
 dnf install -y plprofiler_17       # PG 17
 dnf install -y plprofiler_16       # PG 16
 dnf install -y plprofiler_15       # PG 15
-dnf install -y plprofiler_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -259,7 +236,6 @@ apt install -y postgresql-18-plprofiler   # PG 18
 apt install -y postgresql-17-plprofiler   # PG 17
 apt install -y postgresql-16-plprofiler   # PG 16
 apt install -y postgresql-15-plprofiler   # PG 15
-apt install -y postgresql-14-plprofiler   # PG 14
 ```
 
 

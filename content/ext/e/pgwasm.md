@@ -38,37 +38,37 @@ weight: 3150
 {.ext-table .ext-table--rel}
 
 
-> No upstream tag or release; package pins commit 535b5336, ports pgrx 0.18 to 0.19.1, and supports PostgreSQL 14-18. Preloading is optional and enables shared metrics.
+> Pinned snapshot. Optional preload enables shared metrics.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgwasm` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgwasm_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgwasm` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pgwasm` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15" >}} | `pgwasm_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pgwasm` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 @ el8.x86_64 18 pgwasm_18 pgwasm_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 7.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgwasm_18-0.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgwasm_18 pgwasm_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgwasm_18-0.1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgwasm_18 pgwasm_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgwasm_18-0.1.0-1PIGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 3150
 @ u24.aarch64 15 postgresql-15-pgwasm postgresql-15-pgwasm_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgwasm/postgresql-15-pgwasm_0.1.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pgwasm postgresql-15-pgwasm_0.1.0-1PIGSTY~resolute_amd64.deb pigsty 0.1.0 6.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgwasm/postgresql-15-pgwasm_0.1.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgwasm postgresql-15-pgwasm_0.1.0-1PIGSTY~resolute_arm64.deb pigsty 0.1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgwasm/postgresql-15-pgwasm_0.1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 7.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgwasm_14-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgwasm_14-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 7.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgwasm_14-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 6.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgwasm_14-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 7.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgwasm_14-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgwasm_14 pgwasm_14-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 6.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgwasm_14-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 4.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 6.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 4.8MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 6.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 6.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~resolute_amd64.deb pigsty 0.1.0 6.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgwasm postgresql-14-pgwasm_0.1.0-1PIGSTY~resolute_arm64.deb pigsty 0.1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgwasm/postgresql-14-pgwasm_0.1.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install pgwasm;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgwasm -v 19  # PG 19
 pig ext install -y pgwasm -v 18  # PG 18
 pig ext install -y pgwasm -v 17  # PG 17
 pig ext install -y pgwasm -v 16  # PG 16
 pig ext install -y pgwasm -v 15  # PG 15
-pig ext install -y pgwasm -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgwasm_19       # PG 19
 dnf install -y pgwasm_18       # PG 18
 dnf install -y pgwasm_17       # PG 17
 dnf install -y pgwasm_16       # PG 16
 dnf install -y pgwasm_15       # PG 15
-dnf install -y pgwasm_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgwasm   # PG 19
 apt install -y postgresql-18-pgwasm   # PG 18
 apt install -y postgresql-17-pgwasm   # PG 17
 apt install -y postgresql-16-pgwasm   # PG 16
 apt install -y postgresql-15-pgwasm   # PG 15
-apt install -y postgresql-14-pgwasm   # PG 14
 ```
 
 

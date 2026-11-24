@@ -45,20 +45,20 @@ weight: 8520
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.5.2` | {{< pgvers "18,17,16,15,14" >}} | `odbc_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.1` | {{< pgvers "18,17,16,15,14" >}} | `odbc_fdw_$v` | `unixODBC` |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-odbc-fdw` | `libodbc2` |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.5.2` | {{< pgvers "19,18,17,16,15" >}} | `odbc_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.1` | {{< pgvers "19,18,17,16,15" >}} | `odbc_fdw_$v` | `unixODBC` |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-odbc-fdw` | `libodbc2` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 |
-| el8.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 |
-| el9.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
-| el9.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
-| el10.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
-| el10.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el9.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 |
+| el9.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 |
+| el10.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 1 |
+| el10.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 5 | AVAIL PGDG 0.6.1 5 | AVAIL PGDG 0.6.1 5 |
 | d12.x86_64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
@@ -69,126 +69,112 @@ weight: 8520
 | u24.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
+@ el9.x86_64 19 odbc_fdw_19 odbc_fdw_19-0.6.1-4PGDG.rhel9.9.x86_64.rpm pgdg 0.6.1 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/odbc_fdw_19-0.6.1-4PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 odbc_fdw_19 odbc_fdw_19-0.6.1-4PGDG.rhel9.9.aarch64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/odbc_fdw_19-0.6.1-4PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 odbc_fdw_19 odbc_fdw_19-0.6.1-4PGDG.rhel10.3.x86_64.rpm pgdg 0.6.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/odbc_fdw_19-0.6.1-4PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 odbc_fdw_19 odbc_fdw_19-0.6.1-4PGDG.rhel10.3.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/odbc_fdw_19-0.6.1-4PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb pigsty 0.6.1 48.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb pigsty 0.6.1 47.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb pigsty 0.6.1 53.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb pigsty 0.6.1 52.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb pigsty 0.6.1 50.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-odbc-fdw postgresql-19-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-19-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/odbc_fdw_18-0.6.1-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/odbc_fdw_18-0.6.1-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel10.2.x86_64.rpm
+@ el9.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel9.9.x86_64.rpm pgdg 0.6.1 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/odbc_fdw_18-0.6.1-4PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel9.9.aarch64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/odbc_fdw_18-0.6.1-4PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel10.3.x86_64.rpm pgdg 0.6.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/odbc_fdw_18-0.6.1-4PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel10.3.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/odbc_fdw_18-0.6.1-4PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-4PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/odbc_fdw_18-0.6.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel10.2.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb pigsty 0.6.1 48.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb pigsty 0.6.1 47.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb pigsty 0.6.1 53.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 52.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 50.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb pigsty 0.6.1 48.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb pigsty 0.6.1 53.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb pigsty 0.6.1 52.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb pigsty 0.6.1 50.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-odbc-fdw postgresql-18-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-18-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/odbc_fdw_17-0.6.1-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/odbc_fdw_17-0.5.1-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/odbc_fdw_17-0.6.1-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/odbc_fdw_17-0.5.1-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.5.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.5.1-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.5.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.5.1-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.5.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel9.9.x86_64.rpm pgdg 0.6.1 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.6.1-4PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel9.9.aarch64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.6.1-4PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel10.3.x86_64.rpm pgdg 0.6.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.6.1-4PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel10.3.aarch64.rpm pgdg 0.6.1 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.6.1-4PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-4PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.6.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.5.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb pigsty 0.6.1 48.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb pigsty 0.6.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 50.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb pigsty 0.6.1 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb pigsty 0.6.1 48.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb pigsty 0.6.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb pigsty 0.6.1 50.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-odbc-fdw postgresql-17-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb pigsty 0.6.1 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-17-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/odbc_fdw_16-0.6.1-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/odbc_fdw_16-0.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/odbc_fdw_16-0.6.1-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/odbc_fdw_16-0.5.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.5.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.5.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.5.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.5.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.5.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel9.9.x86_64.rpm pgdg 0.6.1 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.6.1-4PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel9.9.aarch64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.6.1-4PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel10.3.x86_64.rpm pgdg 0.6.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.6.1-4PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel10.3.aarch64.rpm pgdg 0.6.1 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.6.1-4PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-4PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.6.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.5.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb pigsty 0.6.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb pigsty 0.6.1 60.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 51.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 50.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb pigsty 0.6.1 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb pigsty 0.6.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb pigsty 0.6.1 49.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb pigsty 0.6.1 47.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb pigsty 0.6.1 60.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb pigsty 0.6.1 51.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb pigsty 0.6.1 50.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb pigsty 0.6.1 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-odbc-fdw postgresql-16-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-16-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/odbc_fdw_15-0.6.1-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/odbc_fdw_15-0.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/odbc_fdw_15-0.6.1-4PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/odbc_fdw_15-0.5.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.5.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.5.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.5.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.5.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.5.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel9.9.x86_64.rpm pgdg 0.6.1 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.6.1-4PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel9.9.aarch64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.6.1-4PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel10.3.x86_64.rpm pgdg 0.6.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.6.1-4PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel10.3.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.6.1-4PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-4PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.6.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.5.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb pigsty 0.6.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb pigsty 0.6.1 49.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb pigsty 0.6.1 47.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb pigsty 0.6.1 59.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 50.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/odbc_fdw_14-0.5.1-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/odbc_fdw_14-0.5.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.5.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.5.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.5.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb pigsty 0.6.1 48.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb pigsty 0.6.1 47.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb pigsty 0.6.1 48.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb pigsty 0.6.1 47.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb pigsty 0.6.1 59.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 58.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 51.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 50.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb pigsty 0.6.1 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-odbc-fdw postgresql-14-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb pigsty 0.6.1 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-14-odbc-fdw_0.6.1-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb pigsty 0.6.1 48.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb pigsty 0.6.1 47.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb pigsty 0.6.1 49.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb pigsty 0.6.1 47.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb pigsty 0.6.1 59.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb pigsty 0.6.1 59.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb pigsty 0.6.1 51.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb pigsty 0.6.1 50.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb pigsty 0.6.1 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-odbc-fdw postgresql-15-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb pigsty 0.6.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/odbc-fdw/postgresql-15-odbc-fdw_0.6.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -215,27 +201,27 @@ pig install odbc_fdw;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y odbc_fdw -v 19  # PG 19
 pig ext install -y odbc_fdw -v 18  # PG 18
 pig ext install -y odbc_fdw -v 17  # PG 17
 pig ext install -y odbc_fdw -v 16  # PG 16
 pig ext install -y odbc_fdw -v 15  # PG 15
-pig ext install -y odbc_fdw -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y odbc_fdw_19       # PG 19
 dnf install -y odbc_fdw_18       # PG 18
 dnf install -y odbc_fdw_17       # PG 17
 dnf install -y odbc_fdw_16       # PG 16
 dnf install -y odbc_fdw_15       # PG 15
-dnf install -y odbc_fdw_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-odbc-fdw   # PG 19
 apt install -y postgresql-18-odbc-fdw   # PG 18
 apt install -y postgresql-17-odbc-fdw   # PG 17
 apt install -y postgresql-16-odbc-fdw   # PG 16
 apt install -y postgresql-15-odbc-fdw   # PG 15
-apt install -y postgresql-14-odbc-fdw   # PG 14
 ```
 
 

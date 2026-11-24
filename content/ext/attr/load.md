@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **135** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **137** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -56,6 +56,8 @@ weight: 10
 | [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
+| [`pg_plan_advice`](/ext/e/pg_plan_advice) | `pg_plan_advice` | 使用计划建议描述、复现并约束查询执行计划 |
+| [`pg_stash_advice`](/ext/e/pg_stash_advice) | `pg_stash_advice` | 按查询 ID 存储并自动应用执行计划建议 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
 | [`pldbgapi`](/ext/e/pldbgapi) | `$libdir/plugin_debugger` | 用于调试 PL/pgSQL 函数的服务器端支持 |
 | [`plprofiler`](/ext/e/plprofiler) | `plprofiler` | 剖析 PL/pgSQL 函数 |

@@ -45,20 +45,20 @@ weight: 3910
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "14,15,16,17,18" >}} | `pgbson` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresbson_$v` | `libbson` |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgbson` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "19,18,17,16,15" >}} | `pgbson` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresbson_$v` | `libbson` |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgbson` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
-| el8.aarch64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
-| el9.x86_64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
-| el9.aarch64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
-| el10.x86_64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
-| el10.aarch64 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 | AVAIL PGDG 2.2.0 3 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 | AVAIL PGDG 2.2.0 4 |
+| el9.x86_64 | AVAIL PGDG 2.2.0 1 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 |
+| el9.aarch64 | AVAIL PGDG 2.2.0 1 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 |
+| el10.x86_64 | AVAIL PGDG 2.2.0 1 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 | AVAIL PGDG 2.2.0 2 |
+| el10.aarch64 | AVAIL PGDG 2.2.0 1 | AVAIL PGDG 2.2.0 5 | AVAIL PGDG 2.2.0 5 | AVAIL PGDG 2.2.0 5 | AVAIL PGDG 2.2.0 5 |
 | d12.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
@@ -69,26 +69,41 @@ weight: 3910
 | u24.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
+@ el9.x86_64 19 postgresbson_19 postgresbson_19-2.2.0-3PGDG.rhel9.9.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/postgresbson_19-2.2.0-3PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 postgresbson_19 postgresbson_19-2.2.0-3PGDG.rhel9.9.aarch64.rpm pgdg 2.2.0 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/postgresbson_19-2.2.0-3PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 postgresbson_19 postgresbson_19-2.2.0-3PGDG.rhel10.3.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/postgresbson_19-2.2.0-3PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 postgresbson_19 postgresbson_19-2.2.0-3PGDG.rhel10.3.aarch64.rpm pgdg 2.2.0 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/postgresbson_19-2.2.0-3PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 46.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 45.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 46.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 45.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 48.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 47.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 47.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgbson postgresql-19-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-19-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresbson_18-2.2.0-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresbson_18-2.2.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresbson_18-2.2.0-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresbson_18-2.2.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresbson_18-2.2.0-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresbson_18-2.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 54.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresbson_18-2.2.0-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresbson_18-2.2.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresbson_18-2.2.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel9.9.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresbson_18-2.2.0-3PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 55.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresbson_18-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresbson_18-2.2.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresbson_18-2.2.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel9.9.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresbson_18-2.2.0-3PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 54.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresbson_18-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresbson_18-2.2.0-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresbson_18-2.2.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel10.3.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresbson_18-2.2.0-3PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 55.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresbson_18-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresbson_18-2.2.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel10.3.aarch64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresbson_18-2.2.0-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-3PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresbson_18-2.2.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-2PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresbson_18-2.2.0-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresbson_18-2.2.0-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 postgresbson_18 postgresbson_18-2.2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresbson_18-2.2.0-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 46.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 48.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~jammy_amd64.deb
@@ -97,21 +112,22 @@ weight: 3910
 @ u24.aarch64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pgbson postgresql-18-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-18-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresbson_17-2.2.0-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresbson_17-2.2.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 54.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresbson_17-2.2.0-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresbson_17-2.2.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresbson_17-2.2.0-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresbson_17-2.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 54.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresbson_17-2.2.0-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresbson_17-2.2.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresbson_17-2.2.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel9.9.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresbson_17-2.2.0-3PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 55.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresbson_17-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresbson_17-2.2.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresbson_17-2.2.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel9.9.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresbson_17-2.2.0-3PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 54.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresbson_17-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresbson_17-2.2.0-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresbson_17-2.2.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel10.3.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresbson_17-2.2.0-3PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 55.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresbson_17-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresbson_17-2.2.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel10.3.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresbson_17-2.2.0-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-3PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresbson_17-2.2.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-2PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresbson_17-2.2.0-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresbson_17-2.2.0-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 postgresbson_17 postgresbson_17-2.2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresbson_17-2.2.0-1PGDG.rhel10.2.aarch64.rpm
@@ -125,21 +141,22 @@ weight: 3910
 @ u24.aarch64 17 postgresql-17-pgbson postgresql-17-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 47.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-17-pgbson_2.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pgbson postgresql-17-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-17-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pgbson postgresql-17-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-17-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresbson_16-2.2.0-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresbson_16-2.2.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 54.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresbson_16-2.2.0-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresbson_16-2.2.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresbson_16-2.2.0-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresbson_16-2.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 54.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresbson_16-2.2.0-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresbson_16-2.2.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresbson_16-2.2.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel9.9.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresbson_16-2.2.0-3PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 55.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresbson_16-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresbson_16-2.2.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresbson_16-2.2.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel9.9.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresbson_16-2.2.0-3PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 54.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresbson_16-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresbson_16-2.2.0-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresbson_16-2.2.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel10.3.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresbson_16-2.2.0-3PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 55.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresbson_16-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresbson_16-2.2.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel10.3.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresbson_16-2.2.0-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-3PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresbson_16-2.2.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-2PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresbson_16-2.2.0-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresbson_16-2.2.0-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 postgresbson_16 postgresbson_16-2.2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresbson_16-2.2.0-1PGDG.rhel10.2.aarch64.rpm
@@ -150,29 +167,30 @@ weight: 3910
 @ u22.x86_64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 48.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 47.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 46.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 47.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pgbson postgresql-16-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-16-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresbson_15-2.2.0-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresbson_15-2.2.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresbson_15-2.2.0-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresbson_15-2.2.0-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresbson_15-2.2.0-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresbson_15-2.2.0-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 53.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresbson_15-2.2.0-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresbson_15-2.2.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresbson_15-2.2.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel9.9.x86_64.rpm pgdg 2.2.0 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresbson_15-2.2.0-3PGDG.rhel9.9.x86_64.rpm
 @ el9.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 55.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresbson_15-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresbson_15-2.2.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresbson_15-2.2.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel9.9.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresbson_15-2.2.0-3PGDG.rhel9.9.aarch64.rpm
 @ el9.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 54.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresbson_15-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresbson_15-2.2.0-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresbson_15-2.2.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel10.3.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresbson_15-2.2.0-3PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 55.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresbson_15-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresbson_15-2.2.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel10.3.aarch64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresbson_15-2.2.0-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-3PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresbson_15-2.2.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-2PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresbson_15-2.2.0-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 54.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresbson_15-2.2.0-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 postgresbson_15 postgresbson_15-2.2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresbson_15-2.2.0-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 45.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 45.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~jammy_amd64.deb
@@ -181,34 +199,6 @@ weight: 3910
 @ u24.aarch64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 46.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgbson postgresql-15-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-15-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgresbson_14-2.2.0-2PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 54.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresbson_14-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgresbson_14-2.2.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresbson_14-2.2.0-2PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 53.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresbson_14-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.2.0 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresbson_14-2.2.0-1PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 37.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresbson_14-2.2.0-2PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 54.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresbson_14-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.2.0 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresbson_14-2.2.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresbson_14-2.2.0-2PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 54.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresbson_14-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.2.0 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresbson_14-2.2.0-1PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresbson_14-2.2.0-2PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 55.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresbson_14-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.2.0 37.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresbson_14-2.2.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-2PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresbson_14-2.2.0-2PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 54.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresbson_14-2.2.0-1PGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 postgresbson_14 postgresbson_14-2.2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.2.0 36.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresbson_14-2.2.0-1PGDG.rhel10.2.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 45.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 45.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 45.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 45.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 49.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 48.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 46.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 47.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgbson postgresql-14-pgbson_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postgresbson/postgresql-14-pgbson_2.2.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -235,27 +225,27 @@ pig install pgbson;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgbson -v 19  # PG 19
 pig ext install -y pgbson -v 18  # PG 18
 pig ext install -y pgbson -v 17  # PG 17
 pig ext install -y pgbson -v 16  # PG 16
 pig ext install -y pgbson -v 15  # PG 15
-pig ext install -y pgbson -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y postgresbson_19       # PG 19
 dnf install -y postgresbson_18       # PG 18
 dnf install -y postgresbson_17       # PG 17
 dnf install -y postgresbson_16       # PG 16
 dnf install -y postgresbson_15       # PG 15
-dnf install -y postgresbson_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgbson   # PG 19
 apt install -y postgresql-18-pgbson   # PG 18
 apt install -y postgresql-17-pgbson   # PG 17
 apt install -y postgresql-16-pgbson   # PG 16
 apt install -y postgresql-15-pgbson   # PG 15
-apt install -y postgresql-14-pgbson   # PG 14
 ```
 
 

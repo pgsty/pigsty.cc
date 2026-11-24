@@ -40,187 +40,222 @@ weight: 9410
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmemcache` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmemcache_$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmemcache` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "19,18,17,16,15" >}} | `pgmemcache` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "19,18,17,16,15" >}} | `pgmemcache_$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.3.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgmemcache` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
-| el8.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PIGSTY 2.3.0 1 | AVAIL PIGSTY 2.3.0 1 |
-| el9.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 1 |
-| el9.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
-| el10.x86_64 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
-| el10.aarch64 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
-| d12.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| d12.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| d13.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| d13.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u22.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u22.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u24.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u24.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u26.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
-| u26.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 |
+| el9.x86_64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
+| el9.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
+| el10.x86_64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
+| el10.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 5 | AVAIL PGDG 2.3.0 5 | AVAIL PGDG 2.3.0 5 | AVAIL PGDG 2.3.0 5 |
+| d12.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| d12.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| d13.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| d13.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u22.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u22.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u24.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u24.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u26.x86_64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+| u26.aarch64 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 | AVAIL PGDG 2.3.0 3 |
+@ el9.x86_64 19 pgmemcache_19 pgmemcache_19-2.3.0-16PGDG.rhel9.9.x86_64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pgmemcache_19-2.3.0-16PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pgmemcache_19 pgmemcache_19-2.3.0-16PGDG.rhel9.9.aarch64.rpm pgdg 2.3.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pgmemcache_19-2.3.0-16PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pgmemcache_19 pgmemcache_19-2.3.0-16PGDG.rhel10.3.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pgmemcache_19-2.3.0-16PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pgmemcache_19 pgmemcache_19-2.3.0-16PGDG.rhel10.3.aarch64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pgmemcache_19-2.3.0-16PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb pgdg 2.3.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb pgdg 2.3.0 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-pgmemcache postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-19-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel8.10.x86_64.rpm pgdg 2.3.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmemcache_18-2.3.0-16PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel8.x86_64.rpm pgdg 2.3.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel8.10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmemcache_18-2.3.0-16PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel8.aarch64.rpm pgdg 2.3.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmemcache_18-2.3.0-11PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm pgdg 2.3.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmemcache_18-2.3.0-11PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel9.aarch64.rpm pgdg 2.3.0 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-15PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-11PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel9.9.x86_64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmemcache_18-2.3.0-16PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel9.9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmemcache_18-2.3.0-16PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel10.3.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmemcache_18-2.3.0-16PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel10.3.aarch64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-16PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-16PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-16PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb pgdg 2.3.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb pgdg 2.3.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb pgdg 2.3.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb pgdg 2.3.0 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb pgdg 2.3.0 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb pgdg 2.3.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel8.10.x86_64.rpm pgdg 2.3.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgmemcache_17-2.3.0-16PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel8.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgmemcache_17-2.3.0-8PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel8.10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmemcache_17-2.3.0-16PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel8.aarch64.rpm pgdg 2.3.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmemcache_17-2.3.0-8PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmemcache_17-2.3.0-11PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmemcache_17-2.3.0-11PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel9.aarch64.rpm pgdg 2.3.0 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmemcache_17-2.3.0-8PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-15PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-11PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel9.9.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmemcache_17-2.3.0-16PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel9.9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmemcache_17-2.3.0-16PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel10.3.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmemcache_17-2.3.0-16PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel10.3.aarch64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-16PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-16PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-16PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmemcache_17-2.3.0-9PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb pgdg 2.3.0 52.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb pgdg 2.3.0 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb pgdg 2.3.0 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel8.10.x86_64.rpm pgdg 2.3.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgmemcache_16-2.3.0-16PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel8.1.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgmemcache_16-2.3.0-6.rhel8.1.x86_64.rpm
+@ el8.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel8.10.aarch64.rpm pgdg 2.3.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmemcache_16-2.3.0-16PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel8.1.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmemcache_16-2.3.0-6.rhel8.1.aarch64.rpm
-@ el9.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmemcache_16-2.3.0-11PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm
-@ el9.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmemcache_16-2.3.0-11PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel9.1.aarch64.rpm pgdg 2.3.0 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmemcache_16-2.3.0-6.rhel9.1.aarch64.rpm
-@ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-15PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-11PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel9.9.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmemcache_16-2.3.0-16PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel9.9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmemcache_16-2.3.0-16PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel10.3.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmemcache_16-2.3.0-16PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel10.3.aarch64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-16PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-16PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-16PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmemcache_16-2.3.0-9PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb pgdg 2.3.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb pgdg 2.3.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb pgdg 2.3.0 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel8.10.x86_64.rpm pgdg 2.3.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgmemcache_15-2.3.0-16PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-5.rhel8.x86_64.rpm pgdg 2.3.0 56.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgmemcache_15-2.3.0-5.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel8.10.aarch64.rpm pgdg 2.3.0 27.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgmemcache_15-2.3.0-16PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-5PIGSTY.el8.aarch64.rpm pigsty 2.3.0 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmemcache_15-2.3.0-5PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-11PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm pgdg 2.3.0 57.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm
-@ el9.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmemcache_15-2.3.0-11PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-15PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-11PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel9.9.x86_64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-16PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel9.9.aarch64.rpm pgdg 2.3.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmemcache_15-2.3.0-16PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel10.3.x86_64.rpm pgdg 2.3.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-16PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel10.3.aarch64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-16PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-16PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-16PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-15PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-11PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmemcache_15 pgmemcache_15-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmemcache_15-2.3.0-9PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb pgdg 2.3.0 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb pgdg 2.3.0 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb pgdg 2.3.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-5.rhel8.x86_64.rpm pgdg 2.3.0 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgmemcache_14-2.3.0-5.rhel8.x86_64.rpm
-@ el8.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-5PIGSTY.el8.aarch64.rpm pigsty 2.3.0 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmemcache_14-2.3.0-5PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel9.8.x86_64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmemcache_14-2.3.0-11PGDG.rhel9.8.x86_64.rpm
-@ el9.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel9.8.aarch64.rpm pgdg 2.3.0 25.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmemcache_14-2.3.0-11PGDG.rhel9.8.aarch64.rpm
-@ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-15PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-15PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel10.2.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-11PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-15PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-15PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-11PGDG.rhel10.2.aarch64.rpm pgdg 2.3.0 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-11PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb pgdg 2.3.0 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb pgdg 2.3.0 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb pgdg 2.3.0 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb pgdg 2.3.0 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb pgdg 2.3.0 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-16.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -247,27 +282,27 @@ pig install pgmemcache;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgmemcache -v 19  # PG 19
 pig ext install -y pgmemcache -v 18  # PG 18
 pig ext install -y pgmemcache -v 17  # PG 17
 pig ext install -y pgmemcache -v 16  # PG 16
 pig ext install -y pgmemcache -v 15  # PG 15
-pig ext install -y pgmemcache -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgmemcache_19       # PG 19
 dnf install -y pgmemcache_18       # PG 18
 dnf install -y pgmemcache_17       # PG 17
 dnf install -y pgmemcache_16       # PG 16
 dnf install -y pgmemcache_15       # PG 15
-dnf install -y pgmemcache_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgmemcache   # PG 19
 apt install -y postgresql-18-pgmemcache   # PG 18
 apt install -y postgresql-17-pgmemcache   # PG 17
 apt install -y postgresql-16-pgmemcache   # PG 16
 apt install -y postgresql-15-pgmemcache   # PG 15
-apt install -y postgresql-14-pgmemcache   # PG 14
 ```
 
 

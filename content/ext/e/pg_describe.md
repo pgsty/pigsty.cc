@@ -45,62 +45,76 @@ weight: 4350
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "17,18" >}} | `pg_describe` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17" >}} | `pg_describe_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17" >}} | `postgresql-$v-pg-describe` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17" >}} | `pg_describe` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17" >}} | `pg_describe_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17" >}} | `postgresql-$v-pg-describe` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 34.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_describe_18-1.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_describe_18-1.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_describe_18-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_describe_18-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_describe_18-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_describe_18-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 37.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 37.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 37.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 36.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 37.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 34.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_describe_17-1.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_describe_17-1.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_describe_17-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_describe_17-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_describe_17-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_describe_17-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 35.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 35.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 40.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 40.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 36.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 37.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el9.x86_64 19 pg_describe_19 pg_describe_19-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_describe_19-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_describe_19 pg_describe_19-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_describe_19-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_describe_19 pg_describe_19-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_describe_19-1.0.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_describe_19 pg_describe_19-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_describe_19-1.0.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 36.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 37.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 37.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 37.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-describe postgresql-19-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-19-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_describe_18-1.0.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_describe_18-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_describe_18-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_describe_18-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_describe_18-1.0.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_describe_18 pg_describe_18-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_describe_18-1.0.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 36.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 37.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 37.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 37.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-describe postgresql-18-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-18-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 41.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_describe_17-1.0.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 41.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_describe_17-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_describe_17-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_describe_17-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 41.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_describe_17-1.0.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_describe_17 pg_describe_17-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 41.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_describe_17-1.0.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 36.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 35.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 40.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 40.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 37.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 37.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-describe postgresql-17-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 37.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-describe/postgresql-17-pg-describe_1.0.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -127,16 +141,19 @@ pig install pg_describe;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_describe -v 19  # PG 19
 pig ext install -y pg_describe -v 18  # PG 18
 pig ext install -y pg_describe -v 17  # PG 17
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_describe_19       # PG 19
 dnf install -y pg_describe_18       # PG 18
 dnf install -y pg_describe_17       # PG 17
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-describe   # PG 19
 apt install -y postgresql-18-pg-describe   # PG 18
 apt install -y postgresql-17-pg-describe   # PG 17
 ```

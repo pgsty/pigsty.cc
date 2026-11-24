@@ -11,10 +11,10 @@ weight: 2940
     <div class="ext-card__title">omnigres/omnigres</div>
     <div class="ext-card__desc">https://github.com/omnigres/omnigres</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20260212.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">omnigres-20260212.tar.gz</div>
-    <div class="ext-card__desc">omnigres-20260212.tar.gz</div>
+    <div class="ext-card__title">omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl</div>
+    <div class="ext-card__desc">omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl</div>
   </a>
 </div>
 
@@ -84,110 +84,94 @@ weight: 2940
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.14` | {{< pgvers "18,17,16,15,14" >}} | `omnigres` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.14` | {{< pgvers "18,17,16,15" >}} | `omnigres` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| el8.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| el9.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 |
-| el9.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 |
-| el10.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| el10.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| d12.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| d12.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| d13.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| d13.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u22.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| u22.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| u24.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u24.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u26.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u26.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-@ el8.x86_64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el8.x86_64.rpm pigsty 20251108 4.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_18-20251108-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el8.aarch64.rpm pigsty 20251108 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_18-20251108-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el9.x86_64.rpm pigsty 20251108 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_18-20251108-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el9.aarch64.rpm pigsty 20251108 2.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_18-20251108-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el10.x86_64.rpm pigsty 20251108 3.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_18-20251108-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 omnigres_18 omnigres_18-20251108-1PIGSTY.el10.aarch64.rpm pigsty 20251108 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_18-20251108-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~bookworm_amd64.deb pigsty 20251108 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~bookworm_arm64.deb pigsty 20251108 2.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~jammy_amd64.deb pigsty 20251108 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~jammy_arm64.deb pigsty 20251108 2.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~noble_arm64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~resolute_amd64.deb pigsty 20251108 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~resolute_arm64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 omnigres_17 omnigres_17-20250120-1PIGSTY.el8.x86_64.rpm pigsty 20250120 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_17-20250120-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 omnigres_17 omnigres_17-20250120-1PIGSTY.el8.aarch64.rpm pigsty 20250120 1.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_17-20250120-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 omnigres_17 omnigres_17-20250507-1PIGSTY.el9.x86_64.rpm pigsty 20250507 2.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_17-20250507-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 omnigres_17 omnigres_17-20250507-1PIGSTY.el9.aarch64.rpm pigsty 20250507 2.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_17-20250507-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 omnigres_17 omnigres_17-20251108-1PIGSTY.el10.x86_64.rpm pigsty 20251108 3.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_17-20251108-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 omnigres_17 omnigres_17-20251108-1PIGSTY.el10.aarch64.rpm pigsty 20251108 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_17-20251108-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20250120-1PIGSTY~bookworm_amd64.deb pigsty 20250120 1.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-17-omnigres_20250120-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20250120-1PIGSTY~bookworm_arm64.deb pigsty 20250120 1.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-17-omnigres_20250120-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20250120-1PIGSTY~jammy_amd64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-17-omnigres_20250120-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20250120-1PIGSTY~jammy_arm64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-17-omnigres_20250120-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~noble_arm64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~resolute_amd64.deb pigsty 20251108 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20251108-1PIGSTY~resolute_arm64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-17-omnigres_20251108-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 omnigres_16 omnigres_16-20250120-1PIGSTY.el8.x86_64.rpm pigsty 20250120 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_16-20250120-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 omnigres_16 omnigres_16-20250120-1PIGSTY.el8.aarch64.rpm pigsty 20250120 1.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_16-20250120-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 omnigres_16 omnigres_16-20250507-1PIGSTY.el9.x86_64.rpm pigsty 20250507 2.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_16-20250507-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 omnigres_16 omnigres_16-20250507-1PIGSTY.el9.aarch64.rpm pigsty 20250507 2.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_16-20250507-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 omnigres_16 omnigres_16-20251108-1PIGSTY.el10.x86_64.rpm pigsty 20251108 3.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_16-20251108-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 omnigres_16 omnigres_16-20251108-1PIGSTY.el10.aarch64.rpm pigsty 20251108 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_16-20251108-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20250120-1PIGSTY~bookworm_amd64.deb pigsty 20250120 1.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-16-omnigres_20250120-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20250120-1PIGSTY~bookworm_arm64.deb pigsty 20250120 1.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-16-omnigres_20250120-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20250120-1PIGSTY~jammy_amd64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-16-omnigres_20250120-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20250120-1PIGSTY~jammy_arm64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-16-omnigres_20250120-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~noble_arm64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~resolute_amd64.deb pigsty 20251108 3.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20251108-1PIGSTY~resolute_arm64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-16-omnigres_20251108-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 omnigres_15 omnigres_15-20250120-1PIGSTY.el8.x86_64.rpm pigsty 20250120 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_15-20250120-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 omnigres_15 omnigres_15-20250120-1PIGSTY.el8.aarch64.rpm pigsty 20250120 1.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_15-20250120-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 omnigres_15 omnigres_15-20250507-1PIGSTY.el9.x86_64.rpm pigsty 20250507 2.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_15-20250507-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 omnigres_15 omnigres_15-20250507-1PIGSTY.el9.aarch64.rpm pigsty 20250507 2.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_15-20250507-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 omnigres_15 omnigres_15-20251108-1PIGSTY.el10.x86_64.rpm pigsty 20251108 3.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_15-20251108-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 omnigres_15 omnigres_15-20251108-1PIGSTY.el10.aarch64.rpm pigsty 20251108 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_15-20251108-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20250120-1PIGSTY~bookworm_amd64.deb pigsty 20250120 1.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-15-omnigres_20250120-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20250120-1PIGSTY~bookworm_arm64.deb pigsty 20250120 1.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-15-omnigres_20250120-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20250120-1PIGSTY~jammy_amd64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-15-omnigres_20250120-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20250120-1PIGSTY~jammy_arm64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-15-omnigres_20250120-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~noble_arm64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~resolute_amd64.deb pigsty 20251108 173.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20251108-1PIGSTY~resolute_arm64.deb pigsty 20251108 119.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-15-omnigres_20251108-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 omnigres_14 omnigres_14-20250120-1PIGSTY.el8.x86_64.rpm pigsty 20250120 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_14-20250120-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 omnigres_14 omnigres_14-20250120-1PIGSTY.el8.aarch64.rpm pigsty 20250120 1.3MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_14-20250120-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 omnigres_14 omnigres_14-20250507-1PIGSTY.el9.x86_64.rpm pigsty 20250507 2.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_14-20250507-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 omnigres_14 omnigres_14-20250507-1PIGSTY.el9.aarch64.rpm pigsty 20250507 2.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_14-20250507-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 omnigres_14 omnigres_14-20251108-1PIGSTY.el10.x86_64.rpm pigsty 20251108 3.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_14-20251108-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 omnigres_14 omnigres_14-20251108-1PIGSTY.el10.aarch64.rpm pigsty 20251108 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_14-20251108-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-omnigres postgresql-14-omnigres_20250120-1PIGSTY~bookworm_amd64.deb pigsty 20250120 1.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-14-omnigres_20250120-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-omnigres postgresql-14-omnigres_20250120-1PIGSTY~bookworm_arm64.deb pigsty 20250120 1.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-14-omnigres_20250120-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-omnigres postgresql-14-omnigres_20250120-1PIGSTY~jammy_amd64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-14-omnigres_20250120-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-omnigres postgresql-14-omnigres_20250120-1PIGSTY~jammy_arm64.deb pigsty 20250120 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-14-omnigres_20250120-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~noble_arm64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~resolute_amd64.deb pigsty 20251108 173.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-omnigres postgresql-14-omnigres_20251108-1PIGSTY~resolute_arm64.deb pigsty 20251108 126.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-14-omnigres_20251108-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+@ el8.x86_64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el8.x86_64.rpm pigsty 20260212 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_18-20260212-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el8.aarch64.rpm pigsty 20260212 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_18-20260212-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el9.x86_64.rpm pigsty 20260212 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_18-20260212-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el9.aarch64.rpm pigsty 20260212 3.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_18-20260212-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el10.x86_64.rpm pigsty 20260212 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_18-20260212-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 omnigres_18 omnigres_18-20260212-1PGSTY.el10.aarch64.rpm pigsty 20260212 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_18-20260212-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~bookworm_amd64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~bookworm_arm64.deb pigsty 20260212 2.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~trixie_amd64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~trixie_arm64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~jammy_amd64.deb pigsty 20260212 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~jammy_arm64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~noble_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~noble_arm64.deb pigsty 20260212 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~resolute_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20260212-1PGSTY~resolute_arm64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-18-omnigres_20260212-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el8.x86_64.rpm pigsty 20260212 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_17-20260212-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el8.aarch64.rpm pigsty 20260212 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_17-20260212-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el9.x86_64.rpm pigsty 20260212 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_17-20260212-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el9.aarch64.rpm pigsty 20260212 3.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_17-20260212-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el10.x86_64.rpm pigsty 20260212 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_17-20260212-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 omnigres_17 omnigres_17-20260212-1PGSTY.el10.aarch64.rpm pigsty 20260212 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_17-20260212-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~bookworm_amd64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~bookworm_arm64.deb pigsty 20260212 2.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~trixie_amd64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~trixie_arm64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~jammy_amd64.deb pigsty 20260212 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~jammy_arm64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~noble_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~noble_arm64.deb pigsty 20260212 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~resolute_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-omnigres postgresql-17-omnigres_20260212-1PGSTY~resolute_arm64.deb pigsty 20260212 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-17-omnigres_20260212-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el8.x86_64.rpm pigsty 20260212 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_16-20260212-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el8.aarch64.rpm pigsty 20260212 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_16-20260212-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el9.x86_64.rpm pigsty 20260212 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_16-20260212-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el9.aarch64.rpm pigsty 20260212 3.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_16-20260212-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el10.x86_64.rpm pigsty 20260212 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_16-20260212-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 omnigres_16 omnigres_16-20260212-1PGSTY.el10.aarch64.rpm pigsty 20260212 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_16-20260212-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~bookworm_amd64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~bookworm_arm64.deb pigsty 20260212 2.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~trixie_amd64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~trixie_arm64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~jammy_amd64.deb pigsty 20260212 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~jammy_arm64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~noble_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~noble_arm64.deb pigsty 20260212 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~resolute_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-omnigres postgresql-16-omnigres_20260212-1PGSTY~resolute_arm64.deb pigsty 20260212 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-16-omnigres_20260212-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el8.x86_64.rpm pigsty 20260212 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/omnigres_15-20260212-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el8.aarch64.rpm pigsty 20260212 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/omnigres_15-20260212-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el9.x86_64.rpm pigsty 20260212 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/omnigres_15-20260212-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el9.aarch64.rpm pigsty 20260212 3.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/omnigres_15-20260212-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el10.x86_64.rpm pigsty 20260212 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/omnigres_15-20260212-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 omnigres_15 omnigres_15-20260212-1PGSTY.el10.aarch64.rpm pigsty 20260212 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/omnigres_15-20260212-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~bookworm_amd64.deb pigsty 20260212 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~bookworm_arm64.deb pigsty 20260212 2.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~trixie_amd64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~trixie_arm64.deb pigsty 20260212 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~jammy_amd64.deb pigsty 20260212 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~jammy_arm64.deb pigsty 20260212 2.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~noble_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~noble_arm64.deb pigsty 20260212 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~resolute_amd64.deb pigsty 20260212 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-omnigres postgresql-15-omnigres_20260212-1PGSTY~resolute_arm64.deb pigsty 20260212 3.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/omnigres/postgresql-15-omnigres_20260212-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -218,7 +202,6 @@ pig ext install -y omnigres -v 18  # PG 18
 pig ext install -y omnigres -v 17  # PG 17
 pig ext install -y omnigres -v 16  # PG 16
 pig ext install -y omnigres -v 15  # PG 15
-pig ext install -y omnigres -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -226,7 +209,6 @@ dnf install -y omnigres_18       # PG 18
 dnf install -y omnigres_17       # PG 17
 dnf install -y omnigres_16       # PG 16
 dnf install -y omnigres_15       # PG 15
-dnf install -y omnigres_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -234,7 +216,6 @@ apt install -y postgresql-18-omnigres   # PG 18
 apt install -y postgresql-17-omnigres   # PG 17
 apt install -y postgresql-16-omnigres   # PG 16
 apt install -y postgresql-15-omnigres   # PG 15
-apt install -y postgresql-14-omnigres   # PG 14
 ```
 
 

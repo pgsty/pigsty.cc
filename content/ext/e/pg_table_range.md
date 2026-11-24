@@ -45,19 +45,19 @@ weight: 2570
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.2` | {{< pgvers "16,17,18" >}} | `pg_table_range` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.2` | {{< pgvers "16,17,18,19" >}} | `pg_table_range` | - |
 | [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.2` | {{< pgvers "16,17,18" >}} | `pg_table_range_$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | AVAIL PIGSTY 0.1.2 1 | N/A PIGSTY - 0 |
 | d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -112,12 +112,14 @@ pig install pg_table_range;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_table_range -v 19  # PG 19
 pig ext install -y pg_table_range -v 18  # PG 18
 pig ext install -y pg_table_range -v 17  # PG 17
 pig ext install -y pg_table_range -v 16  # PG 16
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_table_range_19       # PG 19
 dnf install -y pg_table_range_18       # PG 18
 dnf install -y pg_table_range_17       # PG 17
 dnf install -y pg_table_range_16       # PG 16

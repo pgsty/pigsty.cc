@@ -41,76 +41,90 @@ weight: 5215
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16" >}} | `macavity` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16" >}} | `macavity_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-macavity` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "19,18,17,16" >}} | `macavity` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "19,18,17,16" >}} | `macavity_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "19,18,17,16" >}} | `postgresql-$v-macavity` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_18-0.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_18-0.2.0-1PGSTY.el8.aarch64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 |
+@ el9.x86_64 19 macavity_19 macavity_19-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_19-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 macavity_19 macavity_19-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_19-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 macavity_19 macavity_19-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_19-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 macavity_19 macavity_19-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_19-0.2.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 40.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 40.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 39.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 39.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 39.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-macavity postgresql-19-macavity_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-19-macavity_0.2.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_18-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_18-0.2.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_18-0.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_18-0.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_18-0.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_18-0.2.0-1PGSTY.el10.aarch64.rpm
+@ el9.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_18-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_18-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 macavity_18 macavity_18-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_18-0.2.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~trixie_arm64.deb
+@ d12.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 40.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 40.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 39.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 39.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 39.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 39.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-macavity postgresql-18-macavity_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-18-macavity_0.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_17-0.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_17-0.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_17-0.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_17-0.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_17-0.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_17-0.2.0-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_17-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_17-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_17-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_17-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_17-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 macavity_17 macavity_17-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_17-0.2.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~trixie_amd64.deb
+@ d12.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 44.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 44.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 44.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 39.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~noble_arm64.deb
+@ u24.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 39.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-macavity postgresql-17-macavity_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 39.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-17-macavity_0.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_16-0.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_16-0.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_16-0.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_16-0.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_16-0.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_16-0.2.0-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el8.x86_64.rpm pigsty 0.2.0 47.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/macavity_16-0.2.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el8.aarch64.rpm pigsty 0.2.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/macavity_16-0.2.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el9.x86_64.rpm pigsty 0.2.0 47.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/macavity_16-0.2.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el9.aarch64.rpm pigsty 0.2.0 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/macavity_16-0.2.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el10.x86_64.rpm pigsty 0.2.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/macavity_16-0.2.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 macavity_16 macavity_16-0.2.0-1PGSTY.el10.aarch64.rpm pigsty 0.2.0 47.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/macavity_16-0.2.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~bookworm_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~trixie_amd64.deb
+@ d12.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~bookworm_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~trixie_amd64.deb pigsty 0.2.0 40.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~trixie_arm64.deb pigsty 0.2.0 40.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 44.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~jammy_amd64.deb pigsty 0.2.0 44.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~jammy_arm64.deb pigsty 0.2.0 44.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~noble_amd64.deb pigsty 0.2.0 39.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~noble_arm64.deb pigsty 0.2.0 39.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~resolute_amd64.deb pigsty 0.2.0 39.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-macavity postgresql-16-macavity_0.2.0-1PGSTY~resolute_arm64.deb pigsty 0.2.0 39.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/macavity/postgresql-16-macavity_0.2.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
@@ -139,18 +153,21 @@ pig install macavity;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y macavity -v 19  # PG 19
 pig ext install -y macavity -v 18  # PG 18
 pig ext install -y macavity -v 17  # PG 17
 pig ext install -y macavity -v 16  # PG 16
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y macavity_19       # PG 19
 dnf install -y macavity_18       # PG 18
 dnf install -y macavity_17       # PG 17
 dnf install -y macavity_16       # PG 16
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-macavity   # PG 19
 apt install -y postgresql-18-macavity   # PG 18
 apt install -y postgresql-17-macavity   # PG 17
 apt install -y postgresql-16-macavity   # PG 16

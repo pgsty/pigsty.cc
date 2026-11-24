@@ -45,110 +45,158 @@ weight: 9700
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `mimeo` | `dblink` |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `mimeo_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mimeo` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.5.1` | {{< pgvers "19,18,17,16,15" >}} | `mimeo` | `dblink` |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.1` | {{< pgvers "19,18,17,16,15" >}} | `mimeo_$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-mimeo` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
 | el10.aarch64 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
-| d12.x86_64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| d12.aarch64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| d13.x86_64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| d13.aarch64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u22.x86_64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u22.aarch64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u24.x86_64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u24.aarch64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u26.x86_64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-| u26.aarch64 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 | AVAIL PGDG 1.5.1 1 |
-@ el8.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el8.x86_64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_18-1.5.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el8.aarch64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_18-1.5.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el9.x86_64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_18-1.5.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el9.aarch64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_18-1.5.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el10.x86_64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_18-1.5.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PIGSTY.el10.aarch64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_18-1.5.1-1PIGSTY.el10.aarch64.rpm
+| d12.x86_64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| d12.aarch64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| d13.x86_64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| d13.aarch64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u22.x86_64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u22.aarch64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u24.x86_64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u24.aarch64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u26.x86_64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+| u26.aarch64 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 | AVAIL PGDG 1.5.1 2 |
+@ el9.x86_64 19 mimeo_19 mimeo_19-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_19-1.5.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 19 mimeo_19 mimeo_19-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_19-1.5.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 19 mimeo_19 mimeo_19-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_19-1.5.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 19 mimeo_19 mimeo_19-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_19-1.5.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg12+2_all.deb
+@ d12.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d12.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg12+2_all.deb
+@ d12.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d13.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg13+2_all.deb
+@ d13.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ d13.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg13+2_all.deb
+@ d13.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ u22.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg22.04+2_all.deb
+@ u22.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u22.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg22.04+2_all.deb
+@ u22.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u24.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg24.04+2_all.deb
+@ u24.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u24.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg24.04+2_all.deb
+@ u24.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u26.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg26.04+2_all.deb
+@ u26.x86_64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ u26.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg26.04+2_all.deb
+@ u26.aarch64 19 postgresql-19-mimeo postgresql-19-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-19-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ el8.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_18-1.5.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_18-1.5.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_18-1.5.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_18-1.5.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_18-1.5.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 18 mimeo_18 mimeo_18-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_18-1.5.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d12.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d13.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ d13.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ u22.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u22.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u24.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u24.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.x86_64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.aarch64 18 postgresql-18-mimeo postgresql-18-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-18-mimeo_1.5.1-20.pgdg26.04+1_all.deb
-@ el8.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el8.x86_64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_17-1.5.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el8.aarch64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_17-1.5.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el9.x86_64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_17-1.5.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el9.aarch64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_17-1.5.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el10.x86_64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_17-1.5.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PIGSTY.el10.aarch64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_17-1.5.1-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_17-1.5.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_17-1.5.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_17-1.5.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_17-1.5.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_17-1.5.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 mimeo_17 mimeo_17-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_17-1.5.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d12.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d13.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ d13.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ u22.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u22.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u24.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u24.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u26.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.x86_64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.aarch64 17 postgresql-17-mimeo postgresql-17-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-17-mimeo_1.5.1-20.pgdg26.04+1_all.deb
-@ el8.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el8.x86_64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_16-1.5.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el8.aarch64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_16-1.5.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el9.x86_64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_16-1.5.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el9.aarch64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_16-1.5.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el10.x86_64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_16-1.5.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PIGSTY.el10.aarch64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_16-1.5.1-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_16-1.5.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_16-1.5.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_16-1.5.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_16-1.5.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_16-1.5.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 mimeo_16 mimeo_16-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_16-1.5.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d12.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d13.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ d13.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ u22.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u22.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u24.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u24.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u26.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.x86_64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.aarch64 16 postgresql-16-mimeo postgresql-16-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-16-mimeo_1.5.1-20.pgdg26.04+1_all.deb
-@ el8.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el8.x86_64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_15-1.5.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el8.aarch64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_15-1.5.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el9.x86_64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_15-1.5.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el9.aarch64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_15-1.5.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el10.x86_64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_15-1.5.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PIGSTY.el10.aarch64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_15-1.5.1-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_15-1.5.1-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el8.noarch.rpm pigsty 1.5.1 139.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_15-1.5.1-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_15-1.5.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el9.noarch.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_15-1.5.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_15-1.5.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 15 mimeo_15 mimeo_15-1.5.1-1PGSTY.el10.noarch.rpm pigsty 1.5.1 114.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_15-1.5.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d12.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg12+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg12+2_all.deb
 @ d12.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg12+1_all.deb
+@ d13.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ d13.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg13+2_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg13+2_all.deb
 @ d13.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg13+1_all.deb
+@ u22.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u22.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg22.04+2_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg22.04+2_all.deb
 @ u22.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg22.04+1_all.deb
+@ u24.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u24.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg24.04+2_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg24.04+2_all.deb
 @ u24.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg24.04+1_all.deb
+@ u26.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.x86_64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg26.04+2_all.deb pgdg 1.5.1 107.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg26.04+2_all.deb
 @ u26.aarch64 15 postgresql-15-mimeo postgresql-15-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-15-mimeo_1.5.1-20.pgdg26.04+1_all.deb
-@ el8.x86_64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el8.x86_64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mimeo_14-1.5.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el8.aarch64.rpm pigsty 1.5.1 139.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mimeo_14-1.5.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el9.x86_64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mimeo_14-1.5.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el9.aarch64.rpm pigsty 1.5.1 113.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mimeo_14-1.5.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el10.x86_64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mimeo_14-1.5.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 mimeo_14 mimeo_14-1.5.1-1PIGSTY.el10.aarch64.rpm pigsty 1.5.1 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mimeo_14-1.5.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg12+1_all.deb
-@ d12.aarch64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg12+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg12+1_all.deb
-@ d13.x86_64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg13+1_all.deb
-@ d13.aarch64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg13+1_all.deb pgdg 1.5.1 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg13+1_all.deb
-@ u22.x86_64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg22.04+1_all.deb
-@ u22.aarch64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg22.04+1_all.deb pgdg 1.5.1 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg22.04+1_all.deb
-@ u24.x86_64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg24.04+1_all.deb
-@ u24.aarch64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg24.04+1_all.deb pgdg 1.5.1 107.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg24.04+1_all.deb
-@ u26.x86_64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg26.04+1_all.deb
-@ u26.aarch64 14 postgresql-14-mimeo postgresql-14-mimeo_1.5.1-20.pgdg26.04+1_all.deb pgdg 1.5.1 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/m/mimeo/postgresql-14-mimeo_1.5.1-20.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +223,27 @@ pig install mimeo;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y mimeo -v 19  # PG 19
 pig ext install -y mimeo -v 18  # PG 18
 pig ext install -y mimeo -v 17  # PG 17
 pig ext install -y mimeo -v 16  # PG 16
 pig ext install -y mimeo -v 15  # PG 15
-pig ext install -y mimeo -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y mimeo_19       # PG 19
 dnf install -y mimeo_18       # PG 18
 dnf install -y mimeo_17       # PG 17
 dnf install -y mimeo_16       # PG 16
 dnf install -y mimeo_15       # PG 15
-dnf install -y mimeo_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-mimeo   # PG 19
 apt install -y postgresql-18-mimeo   # PG 18
 apt install -y postgresql-17-mimeo   # PG 17
 apt install -y postgresql-16-mimeo   # PG 16
 apt install -y postgresql-15-mimeo   # PG 15
-apt install -y postgresql-14-mimeo   # PG 14
 ```
 
 

@@ -41,16 +41,16 @@ weight: 2890
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_local_cache` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_local_cache_$v` | `openssl-libs` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-local-cache` | `libssl3 | libssl3t64` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_local_cache` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_local_cache_$v` | `openssl-libs` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-local-cache` | `libssl3 | libssl3t64` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
@@ -65,86 +65,84 @@ weight: 2890
 | u24.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
-@ el8.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 250.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 258.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 256.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 260.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
+@ el9.x86_64 19 pg_local_cache_19 pg_local_cache_19-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 257.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_19-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_local_cache_19 pg_local_cache_19-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 255.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_19-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_local_cache_19 pg_local_cache_19-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 260.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_19-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_local_cache_19 pg_local_cache_19-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_19-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 236.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 237.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 264.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 262.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 247.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-local-cache postgresql-19-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 245.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-19-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 249.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 257.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 255.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 260.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_18-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_local_cache_18 pg_local_cache_18-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_18-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 236.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 237.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 264.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 261.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 247.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 245.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 250.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 258.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 256.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 259.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d13.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 236.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 264.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 262.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 247.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-local-cache postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 245.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-18-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 248.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 257.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 255.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 260.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_17-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_local_cache_17 pg_local_cache_17-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_17-3.1.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 236.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 236.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 283.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 281.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 246.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 244.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 250.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 258.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 256.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 259.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 236.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 236.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 282.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 280.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 251.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 246.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 244.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 256.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 251.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 260.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 258.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 261.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 258.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 243.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 263.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 243.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 237.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 284.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 282.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 252.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 251.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 249.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 247.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 256.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_14-3.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 247.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_14-3.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 260.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_14-3.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 254.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_14-3.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 261.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_14-3.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_local_cache_14 pg_local_cache_14-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 254.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_14-3.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 243.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 234.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 243.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 234.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 280.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 265.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 252.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 246.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 249.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-local-cache postgresql-14-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 243.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-14-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
+@ d13.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 236.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 281.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 247.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-local-cache postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 245.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-17-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 255.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 248.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 257.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 255.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 260.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_16-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_local_cache_16 pg_local_cache_16-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 257.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_16-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 242.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 236.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 242.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 236.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 282.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 280.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 250.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 249.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 247.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-local-cache postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 245.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-16-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 257.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 250.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 259.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 256.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 262.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_local_cache_15-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_local_cache_15 pg_local_cache_15-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 258.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_local_cache_15-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 243.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 238.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 244.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 238.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 285.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 282.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 252.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 251.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 249.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-local-cache postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 247.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-local-cache/postgresql-15-pg-local-cache_3.1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -171,27 +169,27 @@ pig install pg_local_cache;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_local_cache -v 19  # PG 19
 pig ext install -y pg_local_cache -v 18  # PG 18
 pig ext install -y pg_local_cache -v 17  # PG 17
 pig ext install -y pg_local_cache -v 16  # PG 16
 pig ext install -y pg_local_cache -v 15  # PG 15
-pig ext install -y pg_local_cache -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_local_cache_19       # PG 19
 dnf install -y pg_local_cache_18       # PG 18
 dnf install -y pg_local_cache_17       # PG 17
 dnf install -y pg_local_cache_16       # PG 16
 dnf install -y pg_local_cache_15       # PG 15
-dnf install -y pg_local_cache_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-local-cache   # PG 19
 apt install -y postgresql-18-pg-local-cache   # PG 18
 apt install -y postgresql-17-pg-local-cache   # PG 17
 apt install -y postgresql-16-pg-local-cache   # PG 16
 apt install -y postgresql-15-pg-local-cache   # PG 15
-apt install -y postgresql-14-pg-local-cache   # PG 14
 ```
 
 

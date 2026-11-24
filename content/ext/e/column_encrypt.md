@@ -45,16 +45,16 @@ weight: 7030
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `column_encrypt` | `pgcrypto` |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `column_encrypt_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-column-encrypt` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "19,18,17,16,15" >}} | `column_encrypt` | `pgcrypto` |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "19,18,17,16,15" >}} | `column_encrypt_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-column-encrypt` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
@@ -69,86 +69,84 @@ weight: 7030
 | u24.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
-@ el8.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el8.x86_64.rpm pigsty 4.0 55.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_18-4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el8.aarch64.rpm pigsty 4.0 54.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_18-4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el9.x86_64.rpm pigsty 4.0 51.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_18-4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el9.aarch64.rpm pigsty 4.0 51.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_18-4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el10.x86_64.rpm pigsty 4.0 51.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_18-4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PIGSTY.el10.aarch64.rpm pigsty 4.0 51.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_18-4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 61.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 61.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 63.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb pigsty 4.0 62.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el8.x86_64.rpm pigsty 4.0 55.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_17-4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el8.aarch64.rpm pigsty 4.0 54.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_17-4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el9.x86_64.rpm pigsty 4.0 51.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_17-4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el9.aarch64.rpm pigsty 4.0 51.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_17-4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el10.x86_64.rpm pigsty 4.0 51.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_17-4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PIGSTY.el10.aarch64.rpm pigsty 4.0 51.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_17-4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 61.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 61.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 64.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb pigsty 4.0 62.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el8.x86_64.rpm pigsty 4.0 55.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_16-4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el8.aarch64.rpm pigsty 4.0 54.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_16-4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el9.x86_64.rpm pigsty 4.0 51.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_16-4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el9.aarch64.rpm pigsty 4.0 51.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_16-4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el10.x86_64.rpm pigsty 4.0 51.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_16-4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PIGSTY.el10.aarch64.rpm pigsty 4.0 51.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_16-4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 61.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 62.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 61.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 64.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb pigsty 4.0 62.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el8.x86_64.rpm pigsty 4.0 55.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_15-4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el8.aarch64.rpm pigsty 4.0 55.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_15-4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el9.x86_64.rpm pigsty 4.0 51.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_15-4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el9.aarch64.rpm pigsty 4.0 51.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_15-4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el10.x86_64.rpm pigsty 4.0 52.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_15-4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PIGSTY.el10.aarch64.rpm pigsty 4.0 52.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_15-4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 62.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 64.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb pigsty 4.0 62.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el8.x86_64.rpm pigsty 4.0 55.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_14-4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el8.aarch64.rpm pigsty 4.0 55.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_14-4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el9.x86_64.rpm pigsty 4.0 51.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_14-4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el9.aarch64.rpm pigsty 4.0 51.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_14-4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el10.x86_64.rpm pigsty 4.0 52.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_14-4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 column_encrypt_14 column_encrypt_14-4.0-1PIGSTY.el10.aarch64.rpm pigsty 4.0 51.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_14-4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 62.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 64.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 62.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-column-encrypt postgresql-14-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb pigsty 4.0 62.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-14-column-encrypt_4.0-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 column_encrypt_19 column_encrypt_19-4.0-1PGSTY.el9.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_19-4.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 column_encrypt_19 column_encrypt_19-4.0-1PGSTY.el9.aarch64.rpm pigsty 4.0 71.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_19-4.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 column_encrypt_19 column_encrypt_19-4.0-1PGSTY.el10.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_19-4.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 column_encrypt_19 column_encrypt_19-4.0-1PGSTY.el10.aarch64.rpm pigsty 4.0 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_19-4.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb pigsty 4.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~trixie_amd64.deb pigsty 4.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~trixie_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~jammy_amd64.deb pigsty 4.0 63.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~jammy_arm64.deb pigsty 4.0 63.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~noble_amd64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~noble_arm64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-column-encrypt postgresql-19-column-encrypt_4.0-1PGSTY~resolute_arm64.deb pigsty 4.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-19-column-encrypt_4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el8.x86_64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_18-4.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el8.aarch64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_18-4.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el9.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_18-4.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el9.aarch64.rpm pigsty 4.0 71.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_18-4.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el10.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_18-4.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 column_encrypt_18 column_encrypt_18-4.0-1PGSTY.el10.aarch64.rpm pigsty 4.0 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_18-4.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb pigsty 4.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~trixie_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~trixie_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~jammy_amd64.deb pigsty 4.0 63.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~jammy_arm64.deb pigsty 4.0 63.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~noble_amd64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~noble_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-column-encrypt postgresql-18-column-encrypt_4.0-1PGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-18-column-encrypt_4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el8.x86_64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_17-4.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el8.aarch64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_17-4.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el9.x86_64.rpm pigsty 4.0 71.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_17-4.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el9.aarch64.rpm pigsty 4.0 71.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_17-4.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el10.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_17-4.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 column_encrypt_17 column_encrypt_17-4.0-1PGSTY.el10.aarch64.rpm pigsty 4.0 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_17-4.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb pigsty 4.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~trixie_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~trixie_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~jammy_amd64.deb pigsty 4.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~jammy_arm64.deb pigsty 4.0 64.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~noble_amd64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~noble_arm64.deb pigsty 4.0 62.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-column-encrypt postgresql-17-column-encrypt_4.0-1PGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-17-column-encrypt_4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el8.x86_64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_16-4.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el8.aarch64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_16-4.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el9.x86_64.rpm pigsty 4.0 71.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_16-4.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el9.aarch64.rpm pigsty 4.0 71.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_16-4.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el10.x86_64.rpm pigsty 4.0 71.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_16-4.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 column_encrypt_16 column_encrypt_16-4.0-1PGSTY.el10.aarch64.rpm pigsty 4.0 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_16-4.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb pigsty 4.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~trixie_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~trixie_arm64.deb pigsty 4.0 61.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~jammy_amd64.deb pigsty 4.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~jammy_arm64.deb pigsty 4.0 64.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~noble_amd64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~noble_arm64.deb pigsty 4.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~resolute_amd64.deb pigsty 4.0 62.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-column-encrypt postgresql-16-column-encrypt_4.0-1PGSTY~resolute_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-16-column-encrypt_4.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el8.x86_64.rpm pigsty 4.0 73.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/column_encrypt_15-4.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el8.aarch64.rpm pigsty 4.0 73.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/column_encrypt_15-4.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el9.x86_64.rpm pigsty 4.0 71.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/column_encrypt_15-4.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el9.aarch64.rpm pigsty 4.0 71.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/column_encrypt_15-4.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el10.x86_64.rpm pigsty 4.0 71.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/column_encrypt_15-4.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 column_encrypt_15 column_encrypt_15-4.0-1PGSTY.el10.aarch64.rpm pigsty 4.0 70.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/column_encrypt_15-4.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb pigsty 4.0 62.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~trixie_amd64.deb pigsty 4.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~trixie_arm64.deb pigsty 4.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~jammy_amd64.deb pigsty 4.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~jammy_arm64.deb pigsty 4.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~noble_amd64.deb pigsty 4.0 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~noble_arm64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~resolute_amd64.deb pigsty 4.0 63.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-column-encrypt postgresql-15-column-encrypt_4.0-1PGSTY~resolute_arm64.deb pigsty 4.0 62.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/column-encrypt/postgresql-15-column-encrypt_4.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install column_encrypt;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y column_encrypt -v 19  # PG 19
 pig ext install -y column_encrypt -v 18  # PG 18
 pig ext install -y column_encrypt -v 17  # PG 17
 pig ext install -y column_encrypt -v 16  # PG 16
 pig ext install -y column_encrypt -v 15  # PG 15
-pig ext install -y column_encrypt -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y column_encrypt_19       # PG 19
 dnf install -y column_encrypt_18       # PG 18
 dnf install -y column_encrypt_17       # PG 17
 dnf install -y column_encrypt_16       # PG 16
 dnf install -y column_encrypt_15       # PG 15
-dnf install -y column_encrypt_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-column-encrypt   # PG 19
 apt install -y postgresql-18-column-encrypt   # PG 18
 apt install -y postgresql-17-column-encrypt   # PG 17
 apt install -y postgresql-16-column-encrypt   # PG 16
 apt install -y postgresql-15-column-encrypt   # PG 15
-apt install -y postgresql-14-column-encrypt   # PG 14
 ```
 
 

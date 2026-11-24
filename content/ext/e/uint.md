@@ -45,20 +45,20 @@ weight: 3750
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.20260630` | {{< pgvers "18,17,16,15,14" >}} | `pguint` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20260630` | {{< pgvers "18,17,16,15,14" >}} | `pguint_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20260630` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pguint` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.20260630` | {{< pgvers "19,18,17,16,15" >}} | `pguint` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20260630` | {{< pgvers "19,18,17,16,15" >}} | `pguint_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20260630` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pguint` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.20260630 3 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 4 | AVAIL PIGSTY 1.20260630 1 |
-| el8.aarch64 | AVAIL PGDG 1.20260630 3 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 4 | AVAIL PIGSTY 1.20260630 1 |
-| el9.x86_64 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 6 | AVAIL PGDG 1.20260630 5 | AVAIL PIGSTY 1.20260630 1 |
-| el9.aarch64 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 6 | AVAIL PGDG 1.20260630 5 | AVAIL PIGSTY 1.20260630 1 |
-| el10.x86_64 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 5 | AVAIL PIGSTY 1.20260630 1 |
-| el10.aarch64 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 5 | AVAIL PIGSTY 1.20260630 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 6 | AVAIL PGDG 1.20260630 5 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PGDG 1.20260630 4 | AVAIL PGDG 1.20260630 5 | AVAIL PGDG 1.20260630 6 | AVAIL PGDG 1.20260630 5 |
+| el9.x86_64 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 |
+| el9.aarch64 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 |
+| el10.x86_64 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 2 |
+| el10.aarch64 | AVAIL PGDG 1.20260630 2 | AVAIL PGDG 1.20260630 6 | AVAIL PGDG 1.20260630 7 | AVAIL PGDG 1.20260630 7 | AVAIL PGDG 1.20260630 7 |
 | d12.x86_64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
@@ -69,172 +69,155 @@ weight: 3750
 | u24.aarch64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 | AVAIL PIGSTY 1.20260630 1 |
+@ el9.x86_64 19 pguint_19 pguint_19-1.20260630-5PGDG.rhel9.9.x86_64.rpm pgdg 1.20260630 76.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pguint_19-1.20260630-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 19 pguint_19 pguint_19-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_19-1.20260630-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pguint_19 pguint_19-1.20260630-5PGDG.rhel9.9.aarch64.rpm pgdg 1.20260630 71.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pguint_19-1.20260630-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 19 pguint_19 pguint_19-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_19-1.20260630-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pguint_19 pguint_19-1.20260630-5PGDG.rhel10.3.x86_64.rpm pgdg 1.20260630 76.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pguint_19-1.20260630-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 19 pguint_19 pguint_19-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_19-1.20260630-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pguint_19 pguint_19-1.20260630-5PGDG.rhel10.3.aarch64.rpm pgdg 1.20260630 72.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pguint_19-1.20260630-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 19 pguint_19 pguint_19-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_19-1.20260630-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 159.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 160.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 190.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 185.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 178.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 179.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pguint postgresql-19-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 178.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-19-pguint_1.20260630-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pguint_18-1.20260630-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pguint_18-1.20260630-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el8.x86_64.rpm pigsty 1.20260630 184.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_18-1.20260630-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pguint_18-1.20260630-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pguint_18-1.20260630-4PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 178.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_18-1.20260630-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_18-1.20260630-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pguint_18-1.20250815-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel9.8.x86_64.rpm pgdg 1.20260630 76.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20260630-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 193.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_18-1.20260630-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20250815-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel9.8.aarch64.rpm pgdg 1.20260630 71.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20260630-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 188.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_18-1.20260630-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20250815-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel10.2.x86_64.rpm pgdg 1.20260630 76.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20260630-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_18-1.20260630-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20250815-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20250815-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel9.9.x86_64.rpm pgdg 1.20260630 76.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20260630-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_18-1.20260630-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel9.9.aarch64.rpm pgdg 1.20260630 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20260630-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_18-1.20260630-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel10.3.x86_64.rpm pgdg 1.20260630 76.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20260630-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_18-1.20260630-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel10.3.aarch64.rpm pgdg 1.20260630 73.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20260630-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pguint_18 pguint_18-1.20260630-5PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20260630-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pguint_18 pguint_18-1.20260630-4PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20260630-4PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_18-1.20260630-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pguint_18 pguint_18-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_18-1.20260630-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20250815-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 160.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 159.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~trixie_arm64.deb
+@ d12.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 160.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 159.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 190.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 185.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 177.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 179.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 178.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-18-pguint_1.20260630-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20260630-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20260630-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el8.x86_64.rpm pigsty 1.20260630 184.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_17-1.20260630-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20231206-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20260630-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20260630-4PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 178.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_17-1.20260630-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_17-1.20260630-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20231206-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel9.8.x86_64.rpm pgdg 1.20260630 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20260630-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 193.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_17-1.20260630-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20250815-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20231206-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel9.8.aarch64.rpm pgdg 1.20260630 71.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20260630-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 188.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_17-1.20260630-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20250815-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20231206-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel10.2.x86_64.rpm pgdg 1.20260630 77.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20260630-4PGDG.rhel10.2.x86_64.rpm
+@ el9.x86_64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel9.9.x86_64.rpm pgdg 1.20260630 76.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20260630-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_17-1.20260630-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel9.9.aarch64.rpm pgdg 1.20260630 71.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20260630-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_17-1.20260630-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel10.3.x86_64.rpm pgdg 1.20260630 77.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20260630-5PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_17-1.20260630-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20250815-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel10.3.aarch64.rpm pgdg 1.20260630 73.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20260630-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pguint_17 pguint_17-1.20260630-5PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 73.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20260630-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pguint_17 pguint_17-1.20260630-4PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20260630-4PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_17-1.20260630-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pguint_17 pguint_17-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_17-1.20260630-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20250815-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pguint_17 pguint_17-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20231206-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 160.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 162.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 155.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 155.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 193.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 188.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 177.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~noble_arm64.deb
+@ u24.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 177.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 179.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 178.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-17-pguint_1.20260630-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20260630-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20260630-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el8.x86_64.rpm pigsty 1.20260630 184.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_16-1.20260630-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20231206-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20220601-3.rhel8.1.x86_64.rpm pgdg 1.20220601 71.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20220601-3.rhel8.1.x86_64.rpm
+@ el8.aarch64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20260630-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20260630-4PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 178.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_16-1.20260630-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_16-1.20260630-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20231206-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20220601-3.rhel8.1.aarch64.rpm pgdg 1.20220601 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20220601-3.rhel8.1.aarch64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel9.8.x86_64.rpm pgdg 1.20260630 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20260630-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 193.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_16-1.20260630-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20250815-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20231206-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20220601-3.rhel9.1.x86_64.rpm pgdg 1.20220601 74.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20220601-3.rhel9.1.x86_64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel9.8.aarch64.rpm pgdg 1.20260630 71.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20260630-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 188.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_16-1.20260630-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20250815-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20231206-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20220601-3.rhel9.1.aarch64.rpm pgdg 1.20220601 69.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20220601-3.rhel9.1.aarch64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel10.2.x86_64.rpm pgdg 1.20260630 76.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20260630-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_16-1.20260630-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20250815-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 76.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel9.9.x86_64.rpm pgdg 1.20260630 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20260630-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_16-1.20260630-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel9.9.aarch64.rpm pgdg 1.20260630 71.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20260630-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_16-1.20260630-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel10.3.x86_64.rpm pgdg 1.20260630 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20260630-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 193.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_16-1.20260630-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel10.3.aarch64.rpm pgdg 1.20260630 72.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20260630-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pguint_16 pguint_16-1.20260630-5PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20260630-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20260630-4PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20260630-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 189.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_16-1.20260630-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 72.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20250815-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20231206-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 160.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 155.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 162.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 155.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~trixie_arm64.deb
+@ d12.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 160.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 155.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 162.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 193.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 188.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 177.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 175.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 179.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 178.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-16-pguint_1.20260630-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20260630-5PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel8.10.x86_64.rpm pgdg 1.20260630 73.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20260630-4PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el8.x86_64.rpm pigsty 1.20260630 183.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_15-1.20260630-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20231206-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20260630-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel8.10.aarch64.rpm pgdg 1.20260630 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20260630-4PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_15-1.20260630-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_15-1.20260630-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20231206-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel9.8.x86_64.rpm pgdg 1.20260630 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20260630-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_15-1.20260630-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20250815-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20231206-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel9.8.aarch64.rpm pgdg 1.20260630 71.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20260630-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_15-1.20260630-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20250815-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20231206-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel10.2.x86_64.rpm pgdg 1.20260630 76.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20260630-4PGDG.rhel10.2.x86_64.rpm
+@ el9.x86_64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel9.9.x86_64.rpm pgdg 1.20260630 76.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20260630-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_15-1.20260630-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel9.9.aarch64.rpm pgdg 1.20260630 71.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20260630-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_15-1.20260630-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel10.3.x86_64.rpm pgdg 1.20260630 77.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20260630-5PGDG.rhel10.3.x86_64.rpm
 @ el10.x86_64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 192.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_15-1.20260630-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20250815-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel10.3.aarch64.rpm pgdg 1.20260630 72.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20260630-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pguint_15 pguint_15-1.20260630-5PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 73.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20260630-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20260630-4PGDG.rhel10.2.aarch64.rpm pgdg 1.20260630 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20260630-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 188.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_15-1.20260630-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20250815-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20231206-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 161.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 166.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 160.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~trixie_amd64.deb
+@ d12.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 161.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 160.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 192.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 187.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 178.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 176.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 178.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~resolute_amd64.deb
+@ u24.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 176.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 178.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 177.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-15-pguint_1.20260630-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el8.x86_64.rpm pigsty 1.20260630 183.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_14-1.20260630-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el8.aarch64.rpm pigsty 1.20260630 177.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_14-1.20260630-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el9.x86_64.rpm pigsty 1.20260630 192.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_14-1.20260630-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el9.aarch64.rpm pigsty 1.20260630 187.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_14-1.20260630-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el10.x86_64.rpm pigsty 1.20260630 192.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_14-1.20260630-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pguint_14 pguint_14-1.20260630-1PGSTY.el10.aarch64.rpm pigsty 1.20260630 188.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_14-1.20260630-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~bookworm_amd64.deb pigsty 1.20260630 161.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~bookworm_arm64.deb pigsty 1.20260630 156.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~trixie_amd64.deb pigsty 1.20260630 160.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~trixie_arm64.deb pigsty 1.20260630 156.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~jammy_amd64.deb pigsty 1.20260630 192.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~jammy_arm64.deb pigsty 1.20260630 187.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~noble_amd64.deb pigsty 1.20260630 178.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~noble_arm64.deb pigsty 1.20260630 176.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~resolute_amd64.deb pigsty 1.20260630 178.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20260630-1PGSTY~resolute_arm64.deb pigsty 1.20260630 177.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-14-pguint_1.20260630-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -261,27 +244,27 @@ pig install pguint;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pguint -v 19  # PG 19
 pig ext install -y pguint -v 18  # PG 18
 pig ext install -y pguint -v 17  # PG 17
 pig ext install -y pguint -v 16  # PG 16
 pig ext install -y pguint -v 15  # PG 15
-pig ext install -y pguint -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pguint_19       # PG 19
 dnf install -y pguint_18       # PG 18
 dnf install -y pguint_17       # PG 17
 dnf install -y pguint_16       # PG 16
 dnf install -y pguint_15       # PG 15
-dnf install -y pguint_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pguint   # PG 19
 apt install -y postgresql-18-pguint   # PG 18
 apt install -y postgresql-17-pguint   # PG 17
 apt install -y postgresql-16-pguint   # PG 16
 apt install -y postgresql-15-pguint   # PG 15
-apt install -y postgresql-14-pguint   # PG 14
 ```
 
 

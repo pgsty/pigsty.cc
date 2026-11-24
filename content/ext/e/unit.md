@@ -42,154 +42,186 @@ weight: 3550
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "18,17,16,15,14" >}} | `pgunit` | `plpgsql` |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-unit_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-unit` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "19,18,17,16,15" >}} | `pgunit` | `plpgsql` |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-unit_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `7.10` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-unit` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 |
-| el8.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 |
-| el9.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 4 | AVAIL PGDG 7.10 4 |
-| el9.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 4 | AVAIL PGDG 7.10 4 |
-| el10.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
-| el10.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
-| d12.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| d12.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| d13.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| d13.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u22.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u22.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u24.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u24.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u26.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
-| u26.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 4 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 3 | AVAIL PGDG 7.10 4 |
+| el9.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
+| el9.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
+| el10.x86_64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 1 |
+| el10.aarch64 | AVAIL PGDG 7.10 1 | AVAIL PGDG 7.10 4 | AVAIL PGDG 7.10 4 | AVAIL PGDG 7.10 4 | AVAIL PGDG 7.10 4 |
+| d12.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| d12.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| d13.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| d13.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u22.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u22.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u24.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u24.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u26.x86_64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+| u26.aarch64 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 | AVAIL PGDG 7.10 2 |
+@ el9.x86_64 19 postgresql-unit_19 postgresql-unit_19-7.10-10PGDG.rhel9.9.x86_64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/postgresql-unit_19-7.10-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 postgresql-unit_19 postgresql-unit_19-7.10-10PGDG.rhel9.9.aarch64.rpm pgdg 7.10 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/postgresql-unit_19-7.10-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 postgresql-unit_19 postgresql-unit_19-7.10-10PGDG.rhel10.3.x86_64.rpm pgdg 7.10 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/postgresql-unit_19-7.10-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 postgresql-unit_19 postgresql-unit_19-7.10-10PGDG.rhel10.3.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/postgresql-unit_19-7.10-10PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg12+2_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg12+2_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg13+2_amd64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg13+2_arm64.deb pgdg 7.10 157.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg22.04+2_amd64.deb pgdg 7.10 160.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg22.04+2_arm64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 158.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg24.04+2_amd64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg24.04+2_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg26.04+2_amd64.deb pgdg 7.10 156.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 156.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg26.04+2_arm64.deb pgdg 7.10 155.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-unit postgresql-19-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 155.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-19-unit_7.10-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel8.10.x86_64.rpm pgdg 7.10 129.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresql-unit_18-7.10-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel8.x86_64.rpm pgdg 7.10 128.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresql-unit_18-7.10-4PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel8.10.aarch64.rpm pgdg 7.10 128.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresql-unit_18-7.10-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel8.aarch64.rpm pgdg 7.10 127.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresql-unit_18-7.10-4PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-6PGDG.rhel9.8.x86_64.rpm pgdg 7.10 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresql-unit_18-7.10-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel9.x86_64.rpm pgdg 7.10 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresql-unit_18-7.10-4PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-6PGDG.rhel9.8.aarch64.rpm pgdg 7.10 122.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresql-unit_18-7.10-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel9.aarch64.rpm pgdg 7.10 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresql-unit_18-7.10-4PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-6PGDG.rhel10.2.x86_64.rpm pgdg 7.10 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresql-unit_18-7.10-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel10.x86_64.rpm pgdg 7.10 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresql-unit_18-7.10-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel9.9.x86_64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresql-unit_18-7.10-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel9.9.aarch64.rpm pgdg 7.10 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresql-unit_18-7.10-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel10.3.x86_64.rpm pgdg 7.10 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresql-unit_18-7.10-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel10.3.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-unit_18-7.10-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-10PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-unit_18-7.10-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-6PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-unit_18-7.10-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 postgresql-unit_18 postgresql-unit_18-7.10-4PGDG.rhel10.aarch64.rpm pgdg 7.10 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-unit_18-7.10-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg12+2_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg12+2_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg13+2_amd64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 158.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg13+2_arm64.deb pgdg 7.10 157.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg22.04+2_amd64.deb pgdg 7.10 160.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 160.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg22.04+2_arm64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg24.04+2_amd64.deb pgdg 7.10 159.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 158.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg24.04+2_arm64.deb pgdg 7.10 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg26.04+2_amd64.deb pgdg 7.10 156.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 157.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg26.04+2_arm64.deb pgdg 7.10 155.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-unit postgresql-18-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 156.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-18-unit_7.10-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel8.10.x86_64.rpm pgdg 7.10 129.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresql-unit_17-7.10-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-1PGDG.rhel8.x86_64.rpm pgdg 7.10 128.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresql-unit_17-7.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.9-1PGDG.rhel8.x86_64.rpm pgdg 7.9 90.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresql-unit_17-7.9-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel8.10.aarch64.rpm pgdg 7.10 128.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresql-unit_17-7.10-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-1PGDG.rhel8.aarch64.rpm pgdg 7.10 127.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresql-unit_17-7.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.9-1PGDG.rhel8.aarch64.rpm pgdg 7.9 89.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresql-unit_17-7.9-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-6PGDG.rhel9.8.x86_64.rpm pgdg 7.10 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-unit_17-7.10-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-1PGDG.rhel9.x86_64.rpm pgdg 7.10 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-unit_17-7.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.9-1PGDG.rhel9.x86_64.rpm pgdg 7.9 88.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-unit_17-7.9-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-6PGDG.rhel9.8.aarch64.rpm pgdg 7.10 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-unit_17-7.10-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-1PGDG.rhel9.aarch64.rpm pgdg 7.10 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-unit_17-7.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.9-1PGDG.rhel9.aarch64.rpm pgdg 7.9 87.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-unit_17-7.9-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-6PGDG.rhel10.2.x86_64.rpm pgdg 7.10 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresql-unit_17-7.10-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-3PGDG.rhel10.x86_64.rpm pgdg 7.10 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresql-unit_17-7.10-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel9.9.x86_64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-unit_17-7.10-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel9.9.aarch64.rpm pgdg 7.10 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-unit_17-7.10-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel10.3.x86_64.rpm pgdg 7.10 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresql-unit_17-7.10-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel10.3.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-unit_17-7.10-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-10PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-unit_17-7.10-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-6PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-unit_17-7.10-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 postgresql-unit_17 postgresql-unit_17-7.10-3PGDG.rhel10.aarch64.rpm pgdg 7.10 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-unit_17-7.10-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg12+2_amd64.deb pgdg 7.10 158.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg12+2_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg13+2_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg13+2_arm64.deb pgdg 7.10 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg22.04+2_amd64.deb pgdg 7.10 164.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 164.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg22.04+2_arm64.deb pgdg 7.10 162.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 162.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg24.04+2_amd64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg24.04+2_arm64.deb pgdg 7.10 157.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg26.04+2_amd64.deb pgdg 7.10 156.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 158.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg26.04+2_arm64.deb pgdg 7.10 155.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-unit postgresql-17-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 156.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-17-unit_7.10-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel8.10.x86_64.rpm pgdg 7.10 129.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresql-unit_16-7.10-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-1PGDG.rhel8.x86_64.rpm pgdg 7.10 128.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresql-unit_16-7.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.9-1PGDG.rhel8.x86_64.rpm pgdg 7.9 90.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresql-unit_16-7.9-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel8.10.aarch64.rpm pgdg 7.10 128.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresql-unit_16-7.10-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-1PGDG.rhel8.aarch64.rpm pgdg 7.10 127.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresql-unit_16-7.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.9-1PGDG.rhel8.aarch64.rpm pgdg 7.9 89.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresql-unit_16-7.9-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-6PGDG.rhel9.8.x86_64.rpm pgdg 7.10 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-unit_16-7.10-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-1PGDG.rhel9.x86_64.rpm pgdg 7.10 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-unit_16-7.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.9-1PGDG.rhel9.x86_64.rpm pgdg 7.9 88.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-unit_16-7.9-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-6PGDG.rhel9.8.aarch64.rpm pgdg 7.10 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-unit_16-7.10-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-1PGDG.rhel9.aarch64.rpm pgdg 7.10 122.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-unit_16-7.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.9-1PGDG.rhel9.aarch64.rpm pgdg 7.9 87.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-unit_16-7.9-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-6PGDG.rhel10.2.x86_64.rpm pgdg 7.10 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresql-unit_16-7.10-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-3PGDG.rhel10.x86_64.rpm pgdg 7.10 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresql-unit_16-7.10-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel9.9.x86_64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-unit_16-7.10-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel9.9.aarch64.rpm pgdg 7.10 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-unit_16-7.10-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel10.3.x86_64.rpm pgdg 7.10 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresql-unit_16-7.10-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel10.3.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-unit_16-7.10-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-10PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-unit_16-7.10-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-6PGDG.rhel10.2.aarch64.rpm pgdg 7.10 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-unit_16-7.10-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 postgresql-unit_16 postgresql-unit_16-7.10-3PGDG.rhel10.aarch64.rpm pgdg 7.10 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-unit_16-7.10-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg12+2_amd64.deb pgdg 7.10 158.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg12+2_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg13+2_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 158.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg13+2_arm64.deb pgdg 7.10 157.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg22.04+2_amd64.deb pgdg 7.10 164.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 164.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg22.04+2_arm64.deb pgdg 7.10 162.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 162.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg24.04+2_amd64.deb pgdg 7.10 158.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 158.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg24.04+2_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 157.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg26.04+2_amd64.deb pgdg 7.10 156.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 157.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg26.04+2_arm64.deb pgdg 7.10 155.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-unit postgresql-16-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 156.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-16-unit_7.10-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel8.10.x86_64.rpm pgdg 7.10 130.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresql-unit_15-7.10-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-1PGDG.rhel8.x86_64.rpm pgdg 7.10 129.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresql-unit_15-7.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.9-1PGDG.rhel8.x86_64.rpm pgdg 7.9 91.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresql-unit_15-7.9-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.4-1.rhel8.x86_64.rpm pgdg 7.4 134.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresql-unit_15-7.4-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel8.10.aarch64.rpm pgdg 7.10 128.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresql-unit_15-7.10-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-1PGDG.rhel8.aarch64.rpm pgdg 7.10 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresql-unit_15-7.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.9-1PGDG.rhel8.aarch64.rpm pgdg 7.9 89.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresql-unit_15-7.9-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.4-1.rhel8.aarch64.rpm pgdg 7.4 133.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresql-unit_15-7.4-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-6PGDG.rhel9.8.x86_64.rpm pgdg 7.10 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-unit_15-7.10-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-1PGDG.rhel9.x86_64.rpm pgdg 7.10 125.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-unit_15-7.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.9-1PGDG.rhel9.x86_64.rpm pgdg 7.9 90.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-unit_15-7.9-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.4-1.rhel9.x86_64.rpm pgdg 7.4 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-unit_15-7.4-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-6PGDG.rhel9.8.aarch64.rpm pgdg 7.10 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-unit_15-7.10-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-1PGDG.rhel9.aarch64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-unit_15-7.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.9-1PGDG.rhel9.aarch64.rpm pgdg 7.9 89.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-unit_15-7.9-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.4-1.rhel9.aarch64.rpm pgdg 7.4 134.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-unit_15-7.4-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-6PGDG.rhel10.2.x86_64.rpm pgdg 7.10 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresql-unit_15-7.10-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-3PGDG.rhel10.x86_64.rpm pgdg 7.10 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresql-unit_15-7.10-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel9.9.x86_64.rpm pgdg 7.10 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-unit_15-7.10-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel9.9.aarch64.rpm pgdg 7.10 124.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-unit_15-7.10-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel10.3.x86_64.rpm pgdg 7.10 126.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresql-unit_15-7.10-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel10.3.aarch64.rpm pgdg 7.10 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-unit_15-7.10-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-10PGDG.rhel10.2.aarch64.rpm pgdg 7.10 125.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-unit_15-7.10-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-6PGDG.rhel10.2.aarch64.rpm pgdg 7.10 124.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-unit_15-7.10-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 postgresql-unit_15 postgresql-unit_15-7.10-3PGDG.rhel10.aarch64.rpm pgdg 7.10 124.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-unit_15-7.10-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg12+2_amd64.deb pgdg 7.10 159.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 159.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg12+2_arm64.deb pgdg 7.10 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg13+2_amd64.deb pgdg 7.10 159.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 159.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg13+2_arm64.deb pgdg 7.10 158.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg22.04+2_amd64.deb pgdg 7.10 165.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 165.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg22.04+2_arm64.deb pgdg 7.10 163.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 163.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg24.04+2_amd64.deb pgdg 7.10 160.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 159.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg24.04+2_arm64.deb pgdg 7.10 158.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 158.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg26.04+2_amd64.deb pgdg 7.10 158.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 159.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg26.04+2_arm64.deb pgdg 7.10 156.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-unit postgresql-15-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-15-unit_7.10-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.10-1PGDG.rhel8.x86_64.rpm pgdg 7.10 129.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgresql-unit_14-7.10-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.9-1PGDG.rhel8.x86_64.rpm pgdg 7.9 91.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgresql-unit_14-7.9-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.4-1.rhel8.x86_64.rpm pgdg 7.4 134.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgresql-unit_14-7.4-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.10-1PGDG.rhel8.aarch64.rpm pgdg 7.10 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresql-unit_14-7.10-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.9-1PGDG.rhel8.aarch64.rpm pgdg 7.9 90.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresql-unit_14-7.9-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.4-1.rhel8.aarch64.rpm pgdg 7.4 133.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresql-unit_14-7.4-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.10-6PGDG.rhel9.8.x86_64.rpm pgdg 7.10 125.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-unit_14-7.10-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.10-1PGDG.rhel9.x86_64.rpm pgdg 7.10 125.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-unit_14-7.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.9-1PGDG.rhel9.x86_64.rpm pgdg 7.9 90.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-unit_14-7.9-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.4-1.rhel9.x86_64.rpm pgdg 7.4 136.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-unit_14-7.4-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.10-6PGDG.rhel9.8.aarch64.rpm pgdg 7.10 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-unit_14-7.10-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.10-1PGDG.rhel9.aarch64.rpm pgdg 7.10 124.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-unit_14-7.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.9-1PGDG.rhel9.aarch64.rpm pgdg 7.9 89.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-unit_14-7.9-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.4-1.rhel9.aarch64.rpm pgdg 7.4 134.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-unit_14-7.4-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.10-6PGDG.rhel10.2.x86_64.rpm pgdg 7.10 125.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresql-unit_14-7.10-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 postgresql-unit_14 postgresql-unit_14-7.10-3PGDG.rhel10.x86_64.rpm pgdg 7.10 125.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresql-unit_14-7.10-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.10-6PGDG.rhel10.2.aarch64.rpm pgdg 7.10 124.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresql-unit_14-7.10-6PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 postgresql-unit_14 postgresql-unit_14-7.10-3PGDG.rhel10.aarch64.rpm pgdg 7.10 124.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresql-unit_14-7.10-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg12+1_amd64.deb pgdg 7.10 159.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg12+1_arm64.deb pgdg 7.10 157.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg13+1_amd64.deb pgdg 7.10 159.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg13+1_arm64.deb pgdg 7.10 157.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg22.04+1_amd64.deb pgdg 7.10 165.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg22.04+1_arm64.deb pgdg 7.10 163.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg24.04+1_amd64.deb pgdg 7.10 159.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg24.04+1_arm64.deb pgdg 7.10 158.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg26.04+1_amd64.deb pgdg 7.10 159.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-unit postgresql-14-unit_7.10-2.pgdg26.04+1_arm64.deb pgdg 7.10 157.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-unit/postgresql-14-unit_7.10-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -216,27 +248,27 @@ pig install pgunit;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgunit -v 19  # PG 19
 pig ext install -y pgunit -v 18  # PG 18
 pig ext install -y pgunit -v 17  # PG 17
 pig ext install -y pgunit -v 16  # PG 16
 pig ext install -y pgunit -v 15  # PG 15
-pig ext install -y pgunit -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y postgresql-unit_19       # PG 19
 dnf install -y postgresql-unit_18       # PG 18
 dnf install -y postgresql-unit_17       # PG 17
 dnf install -y postgresql-unit_16       # PG 16
 dnf install -y postgresql-unit_15       # PG 15
-dnf install -y postgresql-unit_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-unit   # PG 19
 apt install -y postgresql-18-unit   # PG 18
 apt install -y postgresql-17-unit   # PG 17
 apt install -y postgresql-16-unit   # PG 16
 apt install -y postgresql-15-unit   # PG 15
-apt install -y postgresql-14-unit   # PG 14
 ```
 
 

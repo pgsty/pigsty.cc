@@ -45,78 +45,92 @@ weight: 4705
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16" >}} | `fbsql` | `plr` |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16" >}} | `fbsql_$v` | `plr_$v` |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-fbsql` | `postgresql-$v-plr` |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `fbsql` | `plr` |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `fbsql_$v` | `plr_$v` |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `postgresql-$v-fbsql` | `postgresql-$v-plr` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_18-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_18-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_18-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_18-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_18-0.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_18-0.1.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_17-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_17-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_17-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_17-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_17-0.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_17-0.1.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_16-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_16-0.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_16-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_16-0.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_16-0.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PIGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_16-0.1.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~trixie_all.deb pigsty 0.1.0 14.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PIGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PIGSTY~resolute_all.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+@ el9.x86_64 19 fbsql_19 fbsql_19-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_19-0.1.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 19 fbsql_19 fbsql_19-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_19-0.1.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 19 fbsql_19 fbsql_19-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_19-0.1.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 19 fbsql_19 fbsql_19-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_19-0.1.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-fbsql postgresql-19-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-19-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_18-0.1.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_18-0.1.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_18-0.1.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_18-0.1.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_18-0.1.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 18 fbsql_18 fbsql_18-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_18-0.1.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-fbsql postgresql-18-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-18-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_17-0.1.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_17-0.1.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_17-0.1.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_17-0.1.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_17-0.1.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 fbsql_17 fbsql_17-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_17-0.1.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-fbsql postgresql-17-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-17-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/fbsql_16-0.1.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/fbsql_16-0.1.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/fbsql_16-0.1.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 19.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/fbsql_16-0.1.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/fbsql_16-0.1.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 fbsql_16 fbsql_16-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 19.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/fbsql_16-0.1.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-fbsql postgresql-16-fbsql_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 14.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/fbsql/postgresql-16-fbsql_0.1.0-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -143,18 +157,21 @@ pig install fbsql;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y fbsql -v 19  # PG 19
 pig ext install -y fbsql -v 18  # PG 18
 pig ext install -y fbsql -v 17  # PG 17
 pig ext install -y fbsql -v 16  # PG 16
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y fbsql_19       # PG 19
 dnf install -y fbsql_18       # PG 18
 dnf install -y fbsql_17       # PG 17
 dnf install -y fbsql_16       # PG 16
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-fbsql   # PG 19
 apt install -y postgresql-18-fbsql   # PG 18
 apt install -y postgresql-17-fbsql   # PG 17
 apt install -y postgresql-16-fbsql   # PG 16

@@ -47,30 +47,44 @@ weight: 2695
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "16,17,18" >}} | `pg_statecharts` | `ltree` |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "16,17,18" >}} | `pg_statecharts_$v` | `postgresql$v-contrib` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "16,17,18" >}} | `postgresql-$v-pg-statecharts` | `postgresql-$v` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `pg_statecharts` | `ltree` |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `pg_statecharts_$v` | `postgresql$v-contrib` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16" >}} | `postgresql-$v-pg-statecharts` | `postgresql-$v` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | N/A PIGSTY - 0 |
+@ el9.x86_64 19 pg_statecharts_19 pg_statecharts_19-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 30.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_statecharts_19-0.1.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 19 pg_statecharts_19 pg_statecharts_19-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 30.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_statecharts_19-0.1.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 19 pg_statecharts_19 pg_statecharts_19-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 30.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_statecharts_19-0.1.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 19 pg_statecharts_19 pg_statecharts_19-0.1.0-1PGSTY.el10.noarch.rpm pigsty 0.1.0 30.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_statecharts_19-0.1.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~bookworm_all.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~trixie_all.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 25.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~jammy_all.deb pigsty 0.1.0 25.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~noble_all.deb pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-statecharts postgresql-19-pg-statecharts_0.1.0-1PGSTY~resolute_all.deb pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-statecharts/postgresql-19-pg-statecharts_0.1.0-1PGSTY~resolute_all.deb
 @ el8.x86_64 18 pg_statecharts_18 pg_statecharts_18-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_statecharts_18-0.1.0-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pg_statecharts_18 pg_statecharts_18-0.1.0-1PGSTY.el8.noarch.rpm pigsty 0.1.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_statecharts_18-0.1.0-1PGSTY.el8.noarch.rpm
 @ el9.x86_64 18 pg_statecharts_18 pg_statecharts_18-0.1.0-1PGSTY.el9.noarch.rpm pigsty 0.1.0 30.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_statecharts_18-0.1.0-1PGSTY.el9.noarch.rpm
@@ -145,18 +159,21 @@ pig install pg_statecharts;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_statecharts -v 19  # PG 19
 pig ext install -y pg_statecharts -v 18  # PG 18
 pig ext install -y pg_statecharts -v 17  # PG 17
 pig ext install -y pg_statecharts -v 16  # PG 16
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_statecharts_19       # PG 19
 dnf install -y pg_statecharts_18       # PG 18
 dnf install -y pg_statecharts_17       # PG 17
 dnf install -y pg_statecharts_16       # PG 16
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-statecharts   # PG 19
 apt install -y postgresql-18-pg-statecharts   # PG 18
 apt install -y postgresql-17-pg-statecharts   # PG 17
 apt install -y postgresql-16-pg-statecharts   # PG 16

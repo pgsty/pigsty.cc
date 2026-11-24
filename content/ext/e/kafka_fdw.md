@@ -42,16 +42,16 @@ weight: 8730
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `kafka_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `kafka_fdw_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-kafka-fdw` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "19,18,17,16,15" >}} | `kafka_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "19,18,17,16,15" >}} | `kafka_fdw_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-kafka-fdw` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
@@ -66,86 +66,84 @@ weight: 8730
 | u24.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
-@ el8.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_18-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 33.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_18-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 33.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_18-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_18-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 34.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_18-0.0.3-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 33.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_18-0.0.3-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 79.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb pigsty 0.0.3 76.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb pigsty 0.0.3 79.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb pigsty 0.0.3 77.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb pigsty 0.0.3 84.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb pigsty 0.0.3 83.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 82.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 81.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb pigsty 0.0.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb pigsty 0.0.3 80.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_17-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 33.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_17-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 33.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_17-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_17-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_17-0.0.3-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 33.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_17-0.0.3-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 78.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb pigsty 0.0.3 76.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb pigsty 0.0.3 78.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb pigsty 0.0.3 77.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb pigsty 0.0.3 106.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb pigsty 0.0.3 104.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 80.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb pigsty 0.0.3 81.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb pigsty 0.0.3 80.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 36.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb pigsty 0.0.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb pigsty 0.0.3 84.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb pigsty 0.0.3 82.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb pigsty 0.0.3 112.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb pigsty 0.0.3 110.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 88.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 86.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb pigsty 0.0.3 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb pigsty 0.0.3 86.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 37.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb pigsty 0.0.3 81.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb pigsty 0.0.3 84.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb pigsty 0.0.3 111.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb pigsty 0.0.3 109.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 88.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 87.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb pigsty 0.0.3 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb pigsty 0.0.3 86.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 37.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb pigsty 0.0.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb pigsty 0.0.3 84.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb pigsty 0.0.3 111.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb pigsty 0.0.3 109.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 88.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 86.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb pigsty 0.0.3 87.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb pigsty 0.0.3 86.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 kafka_fdw_19 kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm pigsty 0.0.3 87.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 kafka_fdw_19 kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm pigsty 0.0.3 86.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 kafka_fdw_19 kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm pigsty 0.0.3 88.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 kafka_fdw_19 kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm pigsty 0.0.3 87.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_19-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb pigsty 0.0.3 79.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb pigsty 0.0.3 76.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb pigsty 0.0.3 79.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb pigsty 0.0.3 77.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb pigsty 0.0.3 85.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb pigsty 0.0.3 83.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb pigsty 0.0.3 82.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb pigsty 0.0.3 81.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb pigsty 0.0.3 82.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-kafka-fdw postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb pigsty 0.0.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-19-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm pigsty 0.0.3 86.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm pigsty 0.0.3 84.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm pigsty 0.0.3 87.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm pigsty 0.0.3 86.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm pigsty 0.0.3 88.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 kafka_fdw_18 kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm pigsty 0.0.3 87.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_18-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb pigsty 0.0.3 79.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb pigsty 0.0.3 76.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb pigsty 0.0.3 79.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb pigsty 0.0.3 77.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb pigsty 0.0.3 85.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb pigsty 0.0.3 83.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb pigsty 0.0.3 82.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb pigsty 0.0.3 81.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-kafka-fdw postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb pigsty 0.0.3 80.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-18-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm pigsty 0.0.3 85.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm pigsty 0.0.3 83.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm pigsty 0.0.3 86.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm pigsty 0.0.3 85.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm pigsty 0.0.3 88.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 kafka_fdw_17 kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm pigsty 0.0.3 87.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_17-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb pigsty 0.0.3 79.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb pigsty 0.0.3 76.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb pigsty 0.0.3 79.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb pigsty 0.0.3 77.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb pigsty 0.0.3 106.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb pigsty 0.0.3 104.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb pigsty 0.0.3 82.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb pigsty 0.0.3 81.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb pigsty 0.0.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb pigsty 0.0.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm pigsty 0.0.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm pigsty 0.0.3 89.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm pigsty 0.0.3 93.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm pigsty 0.0.3 92.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm pigsty 0.0.3 94.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm pigsty 0.0.3 93.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_16-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb pigsty 0.0.3 84.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb pigsty 0.0.3 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb pigsty 0.0.3 84.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb pigsty 0.0.3 82.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb pigsty 0.0.3 112.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb pigsty 0.0.3 110.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb pigsty 0.0.3 88.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb pigsty 0.0.3 87.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb pigsty 0.0.3 87.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb pigsty 0.0.3 86.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm pigsty 0.0.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm pigsty 0.0.3 89.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm pigsty 0.0.3 93.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm pigsty 0.0.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm pigsty 0.0.3 94.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm pigsty 0.0.3 93.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_15-0.0.3-2.git20251030.8615082PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb pigsty 0.0.3 84.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb pigsty 0.0.3 84.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb pigsty 0.0.3 82.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb pigsty 0.0.3 112.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb pigsty 0.0.3 110.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb pigsty 0.0.3 88.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb pigsty 0.0.3 87.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb pigsty 0.0.3 87.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb pigsty 0.0.3 86.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3+git20251030.8615082-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install kafka_fdw;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y kafka_fdw -v 19  # PG 19
 pig ext install -y kafka_fdw -v 18  # PG 18
 pig ext install -y kafka_fdw -v 17  # PG 17
 pig ext install -y kafka_fdw -v 16  # PG 16
 pig ext install -y kafka_fdw -v 15  # PG 15
-pig ext install -y kafka_fdw -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y kafka_fdw_19       # PG 19
 dnf install -y kafka_fdw_18       # PG 18
 dnf install -y kafka_fdw_17       # PG 17
 dnf install -y kafka_fdw_16       # PG 16
 dnf install -y kafka_fdw_15       # PG 15
-dnf install -y kafka_fdw_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-kafka-fdw   # PG 19
 apt install -y postgresql-18-kafka-fdw   # PG 18
 apt install -y postgresql-17-kafka-fdw   # PG 17
 apt install -y postgresql-16-kafka-fdw   # PG 16
 apt install -y postgresql-15-kafka-fdw   # PG 15
-apt install -y postgresql-14-kafka-fdw   # PG 14
 ```
 
 

@@ -11,10 +11,10 @@ weight: 1651
     <div class="ext-card__title">MobilityDB/MobilityDB</div>
     <div class="ext-card__desc">https://github.com/MobilityDB/MobilityDB</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/mobilitydb-1.3.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/mobilitydb-1.3.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">mobilitydb-1.3.1.tar.gz</div>
-    <div class="ext-card__desc">mobilitydb-1.3.1.tar.gz</div>
+    <div class="ext-card__title">mobilitydb-1.3.2.tar.gz</div>
+    <div class="ext-card__desc">mobilitydb-1.3.2.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1651
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.1` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -46,30 +46,30 @@ weight: 1651
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `mobilitydb` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis37_$v` |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.2` | {{< pgvers "19,18,17,16,15" >}} | `mobilitydb` | `mobilitydb` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.2` | {{< pgvers "19,18,17,16,15" >}} | `mobilitydb_$v` | `postgis37_$v` |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.2` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 1 |
-| d12.x86_64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| d12.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| d13.x86_64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| d13.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| u22.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 |
-| u22.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 | AVAIL PIGSTY 1.3.1 2 |
-| u24.x86_64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| u24.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| u26.x86_64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
-| u26.aarch64 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 | AVAIL PGDG 1.3.1 4 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| el9.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| d12.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| d13.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| d13.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| u22.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 2 | AVAIL PIGSTY 1.3.2 2 | AVAIL PIGSTY 1.3.2 2 |
+| u22.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 1 | AVAIL PIGSTY 1.3.2 2 | AVAIL PIGSTY 1.3.2 2 | AVAIL PIGSTY 1.3.2 2 |
+| u24.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| u24.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| u26.x86_64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
+| u26.aarch64 | AVAIL PIGSTY 1.3.2 1 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 | AVAIL PGDG 1.3.2 4 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -96,27 +96,27 @@ pig install mobilitydb;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y mobilitydb -v 19  # PG 19
 pig ext install -y mobilitydb -v 18  # PG 18
 pig ext install -y mobilitydb -v 17  # PG 17
 pig ext install -y mobilitydb -v 16  # PG 16
 pig ext install -y mobilitydb -v 15  # PG 15
-pig ext install -y mobilitydb -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y mobilitydb_19       # PG 19
 dnf install -y mobilitydb_18       # PG 18
 dnf install -y mobilitydb_17       # PG 17
 dnf install -y mobilitydb_16       # PG 16
 dnf install -y mobilitydb_15       # PG 15
-dnf install -y mobilitydb_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-mobilitydb   # PG 19
 apt install -y postgresql-18-mobilitydb   # PG 18
 apt install -y postgresql-17-mobilitydb   # PG 17
 apt install -y postgresql-16-mobilitydb   # PG 16
 apt install -y postgresql-15-mobilitydb   # PG 15
-apt install -y postgresql-14-mobilitydb   # PG 14
 ```
 
 

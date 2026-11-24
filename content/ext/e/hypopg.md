@@ -38,20 +38,20 @@ weight: 2790
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "18,17,16,15,14" >}} | `hypopg` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "18,17,16,15,14" >}} | `hypopg_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hypopg` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "19,18,17,16,15" >}} | `hypopg` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "19,18,17,16,15" >}} | `hypopg_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.5` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-hypopg` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.4.5 4 | AVAIL PGDG 1.4.5 4 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 6 |
-| el8.aarch64 | AVAIL PGDG 1.4.5 4 | AVAIL PGDG 1.4.5 4 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 6 |
-| el9.x86_64 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 7 | AVAIL PGDG 1.4.5 7 |
-| el9.aarch64 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 7 | AVAIL PGDG 1.4.5 7 |
-| el10.x86_64 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 |
-| el10.aarch64 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 7 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 5 | AVAIL PGDG 1.4.5 6 | AVAIL PGDG 1.4.5 7 |
+| el9.x86_64 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 |
+| el9.aarch64 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 |
+| el10.x86_64 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 1 |
+| el10.aarch64 | AVAIL PGDG 1.4.5 1 | AVAIL PGDG 1.4.5 7 | AVAIL PGDG 1.4.5 7 | AVAIL PGDG 1.4.5 7 | AVAIL PGDG 1.4.5 7 |
 | d12.x86_64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
 | d12.aarch64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
 | d13.x86_64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
@@ -62,316 +62,246 @@ weight: 2790
 | u24.aarch64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
 | u26.x86_64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
 | u26.aarch64 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 | AVAIL PGDG 1.4.5 3 |
+@ el9.x86_64 19 hypopg_19 hypopg_19-1.4.5-2PGDG.rhel9.9.x86_64.rpm pgdg 1.4.5 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/hypopg_19-1.4.5-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 hypopg_19 hypopg_19-1.4.5-2PGDG.rhel9.9.aarch64.rpm pgdg 1.4.5 35.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/hypopg_19-1.4.5-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 hypopg_19 hypopg_19-1.4.5-2PGDG.rhel10.3.x86_64.rpm pgdg 1.4.5 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/hypopg_19-1.4.5-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 hypopg_19 hypopg_19-1.4.5-2PGDG.rhel10.3.aarch64.rpm pgdg 1.4.5 35.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/hypopg_19-1.4.5-2PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg12+2_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg12+1_amd64.deb
+@ d12.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg12+2_arm64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg12+1_arm64.deb
+@ d12.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg13+2_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg13+1_amd64.deb
+@ d13.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 63.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg13+2_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg13+1_arm64.deb
+@ d13.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb pgdg 1.4.5 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb pgdg 1.4.5 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 64.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb pgdg 1.4.5 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb pgdg 1.4.5 62.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 62.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 61.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 19 postgresql-19-hypopg postgresql-19-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-19-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.5-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.4 34.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel8.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.5-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 35.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.4 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel8.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.5 33.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.4-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel9.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.5 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.4-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel9.aarch64.rpm pgdg 1.4.2 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.5 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.4-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel10.x86_64.rpm pgdg 1.4.2 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.2-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel9.9.x86_64.rpm pgdg 1.4.5 33.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.5-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel9.9.aarch64.rpm pgdg 1.4.5 35.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.5-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel10.3.x86_64.rpm pgdg 1.4.5 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.5-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel10.3.aarch64.rpm pgdg 1.4.5 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.5-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 hypopg_18 hypopg_18-1.4.5-2PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.5-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel10.aarch64.rpm pgdg 1.4.2 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.2-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg12+2_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg12+2_amd64.deb pgdg 1.4.3 57.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg12+2_amd64.deb
+@ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg12+2_arm64.deb pgdg 1.4.5 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg12+2_arm64.deb pgdg 1.4.3 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg12+2_arm64.deb
+@ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg13+2_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 62.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg13+2_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg13+2_amd64.deb
+@ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg13+2_arm64.deb pgdg 1.4.5 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg13+2_arm64.deb pgdg 1.4.3 58.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg13+2_arm64.deb
+@ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb pgdg 1.4.5 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 65.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 64.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb pgdg 1.4.3 59.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb pgdg 1.4.5 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 64.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb pgdg 1.4.3 59.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb pgdg 1.4.5 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb pgdg 1.4.3 57.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb pgdg 1.4.5 62.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb pgdg 1.4.3 56.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb pgdg 1.4.3 57.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb
+@ el8.x86_64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.5-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.4 34.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.1-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.5-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.4 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel8.aarch64.rpm pgdg 1.4.1 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.1-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.5 33.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.4-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.1-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.5 34.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.4-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel9.aarch64.rpm pgdg 1.4.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.1-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.5 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 33.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.4-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel9.9.x86_64.rpm pgdg 1.4.5 34.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.5-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel9.9.aarch64.rpm pgdg 1.4.5 35.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.5-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel10.3.x86_64.rpm pgdg 1.4.5 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.5-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel10.3.aarch64.rpm pgdg 1.4.5 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.5-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 hypopg_17 hypopg_17-1.4.5-2PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.5-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 35.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 31.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg12+2_amd64.deb pgdg 1.4.5 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg12+2_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg12+2_amd64.deb
+@ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg12+2_arm64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg12+2_arm64.deb pgdg 1.4.3 58.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg12+2_arm64.deb
+@ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg13+2_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg13+2_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg13+2_amd64.deb
+@ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg13+2_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg13+2_arm64.deb pgdg 1.4.3 58.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg13+2_arm64.deb
+@ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb pgdg 1.4.5 78.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 78.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 77.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb pgdg 1.4.3 72.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb pgdg 1.4.5 78.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 78.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 77.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb pgdg 1.4.3 72.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb pgdg 1.4.5 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb pgdg 1.4.5 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb pgdg 1.4.3 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb pgdg 1.4.3 57.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb
+@ el8.x86_64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.5-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.4 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.5-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 35.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.4 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.0-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.5 33.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 33.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.4-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 28.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.0-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.5 34.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.4-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel9.aarch64.rpm pgdg 1.4.0 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.0-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.5 34.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 33.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.4-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel9.9.x86_64.rpm pgdg 1.4.5 33.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.5-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel9.9.aarch64.rpm pgdg 1.4.5 35.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.5-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel10.3.x86_64.rpm pgdg 1.4.5 34.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.5-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel10.3.aarch64.rpm pgdg 1.4.5 35.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.5-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 hypopg_16 hypopg_16-1.4.5-2PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 35.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.5-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg12+2_amd64.deb pgdg 1.4.5 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg12+2_amd64.deb pgdg 1.4.3 57.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg12+2_amd64.deb
+@ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg12+2_arm64.deb pgdg 1.4.5 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg12+2_arm64.deb pgdg 1.4.3 58.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg12+2_arm64.deb
+@ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg13+2_amd64.deb pgdg 1.4.5 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg13+2_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg13+2_amd64.deb
+@ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg13+2_arm64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg13+2_arm64.deb pgdg 1.4.3 58.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg13+2_arm64.deb
+@ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb pgdg 1.4.5 78.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 78.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 77.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb pgdg 1.4.3 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb pgdg 1.4.5 78.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 78.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 77.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb pgdg 1.4.3 72.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb pgdg 1.4.3 57.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 63.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 62.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb pgdg 1.4.3 57.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb pgdg 1.4.5 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 62.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 61.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb pgdg 1.4.3 56.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 62.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb pgdg 1.4.3 57.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb
+@ el8.x86_64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.5-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.4 35.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.3.1-1.rhel8.x86_64.rpm pgdg 1.3.1 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.3.1-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.5-2PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.4 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.0-1.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.3.1-1.rhel8.aarch64.rpm pgdg 1.3.1 74.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.3.1-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.5 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 34.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.4-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.0-1.rhel9.x86_64.rpm pgdg 1.4.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.0-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 hypopg_15 hypopg_15-1.3.1-1.rhel9.x86_64.rpm pgdg 1.3.1 75.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.3.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.4-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.0-1.rhel9.aarch64.rpm pgdg 1.4.0 30.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 hypopg_15 hypopg_15-1.3.1-1.rhel9.aarch64.rpm pgdg 1.3.1 76.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.3.1-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.5 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.4-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel9.9.x86_64.rpm pgdg 1.4.5 34.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.5-2PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel9.9.aarch64.rpm pgdg 1.4.5 36.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.5-2PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel10.3.x86_64.rpm pgdg 1.4.5 35.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.5-2PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel10.3.aarch64.rpm pgdg 1.4.5 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.5-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 hypopg_15 hypopg_15-1.4.5-2PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 36.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.5-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg12+2_amd64.deb pgdg 1.4.5 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 64.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg12+2_amd64.deb pgdg 1.4.3 57.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg12+2_amd64.deb
+@ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg12+2_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg12+2_arm64.deb pgdg 1.4.3 58.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg12+2_arm64.deb
+@ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg13+2_amd64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg13+2_amd64.deb pgdg 1.4.3 58.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg13+2_amd64.deb
+@ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg13+2_arm64.deb pgdg 1.4.5 64.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg13+2_arm64.deb pgdg 1.4.3 58.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg13+2_arm64.deb
+@ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb pgdg 1.4.5 78.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 78.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 78.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb pgdg 1.4.3 72.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb
+@ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb pgdg 1.4.5 78.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 78.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 78.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb pgdg 1.4.3 72.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb
+@ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb pgdg 1.4.3 58.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb
+@ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 64.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb pgdg 1.4.3 58.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb
+@ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb pgdg 1.4.5 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 62.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb pgdg 1.4.3 57.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb
+@ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb pgdg 1.4.5 63.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb pgdg 1.4.3 57.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.5 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.5-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.4 35.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.4-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.3-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.1-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.0-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 hypopg_14 hypopg_14-1.3.1-1.rhel8.x86_64.rpm pgdg 1.3.1 74.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.3.1-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.5 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.5-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.4 35.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.4-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.3-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.1-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.0-1.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.0-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 hypopg_14 hypopg_14-1.3.1-1.rhel8.aarch64.rpm pgdg 1.3.1 73.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.3.1-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.5 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.5-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 34.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.4-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.3-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 30.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.0-1.rhel9.x86_64.rpm pgdg 1.4.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.0-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 hypopg_14 hypopg_14-1.3.1-1.rhel9.x86_64.rpm pgdg 1.3.1 74.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.3.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.5 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.5-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 35.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.4-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.3-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 31.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.0-1.rhel9.aarch64.rpm pgdg 1.4.0 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 hypopg_14 hypopg_14-1.3.1-1.rhel9.aarch64.rpm pgdg 1.3.1 75.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.3.1-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.5 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.5-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.4-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.3-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.1-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.5 36.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.5-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.4-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 33.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.3-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.2-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 32.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg12+1_amd64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 63.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg12+2_amd64.deb pgdg 1.4.3 58.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg12+2_amd64.deb
-@ d12.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg12+1_arm64.deb pgdg 1.4.5 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg12+2_arm64.deb pgdg 1.4.3 58.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg12+2_arm64.deb
-@ d13.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg13+1_amd64.deb pgdg 1.4.5 64.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 63.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg13+2_amd64.deb pgdg 1.4.3 58.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg13+2_amd64.deb
-@ d13.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg13+1_arm64.deb pgdg 1.4.5 64.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg13+1_arm64.deb pgdg 1.4.4 63.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg13+2_arm64.deb pgdg 1.4.3 58.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg13+2_arm64.deb
-@ u22.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb pgdg 1.4.5 78.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb pgdg 1.4.4 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb pgdg 1.4.3 71.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg22.04+2_amd64.deb
-@ u22.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb pgdg 1.4.5 77.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb pgdg 1.4.3 71.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg22.04+2_arm64.deb
-@ u24.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb pgdg 1.4.5 63.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb pgdg 1.4.3 58.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg24.04+2_amd64.deb
-@ u24.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb pgdg 1.4.5 64.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 63.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb pgdg 1.4.3 58.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg24.04+2_arm64.deb
-@ u26.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb pgdg 1.4.5 62.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 62.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb pgdg 1.4.3 57.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg26.04+2_amd64.deb
-@ u26.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb pgdg 1.4.5 63.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.5-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 62.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.4-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg26.04+2_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -390,27 +320,27 @@ pig install hypopg;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y hypopg -v 19  # PG 19
 pig ext install -y hypopg -v 18  # PG 18
 pig ext install -y hypopg -v 17  # PG 17
 pig ext install -y hypopg -v 16  # PG 16
 pig ext install -y hypopg -v 15  # PG 15
-pig ext install -y hypopg -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y hypopg_19       # PG 19
 dnf install -y hypopg_18       # PG 18
 dnf install -y hypopg_17       # PG 17
 dnf install -y hypopg_16       # PG 16
 dnf install -y hypopg_15       # PG 15
-dnf install -y hypopg_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-hypopg   # PG 19
 apt install -y postgresql-18-hypopg   # PG 18
 apt install -y postgresql-17-hypopg   # PG 17
 apt install -y postgresql-16-hypopg   # PG 16
 apt install -y postgresql-15-hypopg   # PG 15
-apt install -y postgresql-14-hypopg   # PG 14
 ```
 
 

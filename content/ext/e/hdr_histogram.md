@@ -41,16 +41,16 @@ weight: 4715
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "14,15,16,17,18" >}} | `hdr_histogram` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "14,15,16,17,18" >}} | `hdr_histogram_$v` | `zlib` |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-hdr-histogram` | `zlib1g` |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `hdr_histogram` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `hdr_histogram_$v` | `zlib` |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-hdr-histogram` | `zlib1g` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
@@ -65,10 +65,24 @@ weight: 4715
 | u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+@ el9.x86_64 19 hdr_histogram_19 hdr_histogram_19-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 75.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_19-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 hdr_histogram_19 hdr_histogram_19-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 72.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_19-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 hdr_histogram_19 hdr_histogram_19-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 76.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_19-1.0.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 hdr_histogram_19 hdr_histogram_19-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 72.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_19-1.0.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 71.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 67.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 65.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 68.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 68.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-hdr-histogram postgresql-19-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-19-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 79.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hdr_histogram_18-1.0.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_18-1.0.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 76.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_18-1.0.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 72.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_18-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el8.aarch64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_18-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 75.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_18-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 72.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_18-1.0.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 76.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_18-1.0.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 hdr_histogram_18 hdr_histogram_18-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 72.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_18-1.0.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb
@@ -80,10 +94,10 @@ weight: 4715
 @ u24.x86_64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 68.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 68.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 18 postgresql-18-hdr-histogram postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-18-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 79.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hdr_histogram_17-1.0.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_17-1.0.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 76.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_17-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el8.aarch64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_17-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 75.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_17-1.0.0-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 72.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_17-1.0.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 76.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_17-1.0.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 hdr_histogram_17 hdr_histogram_17-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 72.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_17-1.0.0-1PGSTY.el10.aarch64.rpm
@@ -92,17 +106,17 @@ weight: 4715
 @ d13.x86_64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 67.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 72.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 68.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 68.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 68.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 68.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-hdr-histogram postgresql-17-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-17-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 79.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hdr_histogram_16-1.0.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_16-1.0.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 76.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_16-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el8.aarch64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_16-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 75.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_16-1.0.0-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 72.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_16-1.0.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 76.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_16-1.0.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 72.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_16-1.0.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 hdr_histogram_16 hdr_histogram_16-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 72.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_16-1.0.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 66.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb
@@ -110,17 +124,17 @@ weight: 4715
 @ u22.x86_64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 72.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 68.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 68.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 65.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 68.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-hdr-histogram postgresql-16-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-16-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 79.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hdr_histogram_15-1.0.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_15-1.0.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 82.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_15-1.0.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 79.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_15-1.0.0-1PGSTY.el9.aarch64.rpm
+@ el8.aarch64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 77.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_15-1.0.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 82.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_15-1.0.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 79.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_15-1.0.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 83.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_15-1.0.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 hdr_histogram_15 hdr_histogram_15-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 79.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_15-1.0.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 71.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 71.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 67.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 72.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 68.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 78.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb
@@ -129,22 +143,6 @@ weight: 4715
 @ u24.aarch64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 71.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 75.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-hdr-histogram postgresql-15-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 71.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-15-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el8.x86_64.rpm pigsty 1.0.0 79.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hdr_histogram_14-1.0.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el8.aarch64.rpm pigsty 1.0.0 76.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hdr_histogram_14-1.0.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el9.x86_64.rpm pigsty 1.0.0 82.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hdr_histogram_14-1.0.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el9.aarch64.rpm pigsty 1.0.0 79.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hdr_histogram_14-1.0.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el10.x86_64.rpm pigsty 1.0.0 83.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hdr_histogram_14-1.0.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 hdr_histogram_14 hdr_histogram_14-1.0.0-1PGSTY.el10.aarch64.rpm pigsty 1.0.0 79.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hdr_histogram_14-1.0.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb pigsty 1.0.0 71.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb pigsty 1.0.0 67.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb pigsty 1.0.0 72.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb pigsty 1.0.0 68.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb pigsty 1.0.0 78.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb pigsty 1.0.0 75.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb pigsty 1.0.0 74.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb pigsty 1.0.0 71.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb pigsty 1.0.0 75.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-hdr-histogram postgresql-14-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb pigsty 1.0.0 71.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hdr-histogram/postgresql-14-hdr-histogram_1.0.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -171,27 +169,27 @@ pig install hdr_histogram;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y hdr_histogram -v 19  # PG 19
 pig ext install -y hdr_histogram -v 18  # PG 18
 pig ext install -y hdr_histogram -v 17  # PG 17
 pig ext install -y hdr_histogram -v 16  # PG 16
 pig ext install -y hdr_histogram -v 15  # PG 15
-pig ext install -y hdr_histogram -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y hdr_histogram_19       # PG 19
 dnf install -y hdr_histogram_18       # PG 18
 dnf install -y hdr_histogram_17       # PG 17
 dnf install -y hdr_histogram_16       # PG 16
 dnf install -y hdr_histogram_15       # PG 15
-dnf install -y hdr_histogram_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-hdr-histogram   # PG 19
 apt install -y postgresql-18-hdr-histogram   # PG 18
 apt install -y postgresql-17-hdr-histogram   # PG 17
 apt install -y postgresql-16-hdr-histogram   # PG 16
 apt install -y postgresql-15-hdr-histogram   # PG 15
-apt install -y postgresql-14-hdr-histogram   # PG 14
 ```
 
 

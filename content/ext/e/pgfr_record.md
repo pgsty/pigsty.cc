@@ -47,34 +47,48 @@ weight: 6060
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "18,17,16,15" >}} | `pg_flight_recorder` | `pg_cron` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "18,17,16,15" >}} | `pg_flight_recorder_$v` | `pg_cron_$v` |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-flight-recorder` | `postgresql-$v-cron` |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_flight_recorder` | `pg_cron` |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_flight_recorder_$v` | `pg_cron_$v` |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.32.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-flight-recorder` | `postgresql-$v-cron` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 | AVAIL PIGSTY 2.32.1 1 |
+@ el9.x86_64 19 pg_flight_recorder_19 pg_flight_recorder_19-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_19-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 19 pg_flight_recorder_19 pg_flight_recorder_19-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_19-2.32.1-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 19 pg_flight_recorder_19 pg_flight_recorder_19-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_flight_recorder_19-2.32.1-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 19 pg_flight_recorder_19 pg_flight_recorder_19-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_flight_recorder_19-2.32.1-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb pigsty 2.32.1 92.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb pigsty 2.32.1 92.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~trixie_all.deb pigsty 2.32.1 92.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~trixie_all.deb pigsty 2.32.1 92.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~jammy_all.deb pigsty 2.32.1 94.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~jammy_all.deb pigsty 2.32.1 94.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~noble_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~noble_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-flight-recorder postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-flight-recorder/postgresql-19-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_flight_recorder_18-2.32.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_flight_recorder_18-2.32.1-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_18-2.32.1-1PGSTY.el9.noarch.rpm
 @ el10.x86_64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_flight_recorder_18-2.32.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 pg_flight_recorder_18 pg_flight_recorder_18-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_flight_recorder_18-2.32.1-1PGSTY.el10.noarch.rpm
 @ d12.x86_64 18 postgresql-18-pg-flight-recorder postgresql-18-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb pigsty 2.32.1 92.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-flight-recorder/postgresql-18-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb
@@ -89,8 +103,8 @@ weight: 6060
 @ u26.aarch64 18 postgresql-18-pg-flight-recorder postgresql-18-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-flight-recorder/postgresql-18-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_flight_recorder_17-2.32.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_flight_recorder_17-2.32.1-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_17-2.32.1-1PGSTY.el9.noarch.rpm
 @ el10.x86_64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_flight_recorder_17-2.32.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 pg_flight_recorder_17 pg_flight_recorder_17-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_flight_recorder_17-2.32.1-1PGSTY.el10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pg-flight-recorder postgresql-17-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb pigsty 2.32.1 92.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-flight-recorder/postgresql-17-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb
@@ -121,8 +135,8 @@ weight: 6060
 @ u26.aarch64 16 postgresql-16-pg-flight-recorder postgresql-16-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb pigsty 2.32.1 93.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-flight-recorder/postgresql-16-pg-flight-recorder_2.32.1-1PGSTY~resolute_all.deb
 @ el8.x86_64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_flight_recorder_15-2.32.1-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el8.noarch.rpm pigsty 2.32.1 104.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_flight_recorder_15-2.32.1-1PGSTY.el8.noarch.rpm
-@ el9.x86_64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.x86_64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm pigsty 2.32.1 98.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_flight_recorder_15-2.32.1-1PGSTY.el9.noarch.rpm
 @ el10.x86_64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_flight_recorder_15-2.32.1-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 pg_flight_recorder_15 pg_flight_recorder_15-2.32.1-1PGSTY.el10.noarch.rpm pigsty 2.32.1 98.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_flight_recorder_15-2.32.1-1PGSTY.el10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pg-flight-recorder postgresql-15-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb pigsty 2.32.1 92.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-flight-recorder/postgresql-15-pg-flight-recorder_2.32.1-1PGSTY~bookworm_all.deb
@@ -161,6 +175,7 @@ pig install pg_flight_recorder;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_flight_recorder -v 19  # PG 19
 pig ext install -y pg_flight_recorder -v 18  # PG 18
 pig ext install -y pg_flight_recorder -v 17  # PG 17
 pig ext install -y pg_flight_recorder -v 16  # PG 16
@@ -168,6 +183,7 @@ pig ext install -y pg_flight_recorder -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_flight_recorder_19       # PG 19
 dnf install -y pg_flight_recorder_18       # PG 18
 dnf install -y pg_flight_recorder_17       # PG 17
 dnf install -y pg_flight_recorder_16       # PG 16
@@ -175,6 +191,7 @@ dnf install -y pg_flight_recorder_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-flight-recorder   # PG 19
 apt install -y postgresql-18-pg-flight-recorder   # PG 18
 apt install -y postgresql-17-pg-flight-recorder   # PG 17
 apt install -y postgresql-16-pg-flight-recorder   # PG 16

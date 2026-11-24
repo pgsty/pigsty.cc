@@ -46,20 +46,20 @@ weight: 4300
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.7.1` | {{< pgvers "14,15,16,17,18" >}} | `pg_readme` | `hstore` |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.7.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_readme_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.7.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-readme` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.7.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_readme` | `hstore` |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.7.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_readme_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.7.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-readme` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 |
-| el8.aarch64 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 | AVAIL PGDG 0.7.1 2 |
-| el9.x86_64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
-| el9.aarch64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
-| el10.x86_64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
-| el10.aarch64 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 | AVAIL PGDG 0.7.1 3 |
+| el9.x86_64 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 |
+| el9.aarch64 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 |
+| el10.x86_64 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 1 |
+| el10.aarch64 | AVAIL PGDG 0.7.1 1 | AVAIL PGDG 0.7.1 5 | AVAIL PGDG 0.7.1 5 | AVAIL PGDG 0.7.1 5 | AVAIL PGDG 0.7.1 5 |
 | d12.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
@@ -70,136 +70,116 @@ weight: 4300
 | u24.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+@ el9.x86_64 19 pg_readme_19 pg_readme_19-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_readme_19-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 19 pg_readme_19 pg_readme_19-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_readme_19-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 19 pg_readme_19 pg_readme_19-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_readme_19-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 19 pg_readme_19 pg_readme_19-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_readme_19-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-readme postgresql-19-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-19-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readme_18-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readme_18-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readme_18-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readme_18-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-4PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.1-4PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
+@ d12.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readme_17-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readme_17-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readme_17-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readme_17-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-4PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.1-4PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
+@ d12.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readme_16-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readme_16-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readme_16-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readme_16-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-4PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.1-4PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
+@ d12.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readme_15-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readme_15-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 33.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readme_15-0.7.1-4PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readme_15-0.7.1-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel9.9.noarch.rpm pgdg 0.7.1 32.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.1-4PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel10.3.noarch.rpm pgdg 0.7.1 32.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.1-4PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-4PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.1-4PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ el8.x86_64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readme_14-0.7.1-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel8.10.noarch.rpm pgdg 0.7.1 32.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_readme_14-0.7.1-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readme_14-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.1 31.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readme_14-0.7.1-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 32.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readme_14-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_readme_14 pg_readme_14-0.7.1-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.1 31.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readme_14-0.7.1-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.1-1PIGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.1-1PIGSTY~resolute_all.deb
+@ d12.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~bookworm_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~trixie_all.deb pigsty 0.7.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~jammy_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~noble_all.deb pigsty 0.7.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.1-1PGSTY~resolute_all.deb pigsty 0.7.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.1-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -226,27 +206,27 @@ pig install pg_readme;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_readme -v 19  # PG 19
 pig ext install -y pg_readme -v 18  # PG 18
 pig ext install -y pg_readme -v 17  # PG 17
 pig ext install -y pg_readme -v 16  # PG 16
 pig ext install -y pg_readme -v 15  # PG 15
-pig ext install -y pg_readme -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_readme_19       # PG 19
 dnf install -y pg_readme_18       # PG 18
 dnf install -y pg_readme_17       # PG 17
 dnf install -y pg_readme_16       # PG 16
 dnf install -y pg_readme_15       # PG 15
-dnf install -y pg_readme_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-readme   # PG 19
 apt install -y postgresql-18-pg-readme   # PG 18
 apt install -y postgresql-17-pg-readme   # PG 17
 apt install -y postgresql-16-pg-readme   # PG 16
 apt install -y postgresql-15-pg-readme   # PG 15
-apt install -y postgresql-14-pg-readme   # PG 14
 ```
 
 

@@ -45,16 +45,16 @@ weight: 8770
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16` | {{< pgvers "14,15,16,17,18" >}} | `oai_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16.0` | {{< pgvers "14,15,16,17,18" >}} | `oai_fdw_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16.0` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-oai-fdw` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16` | {{< pgvers "19,18,17,16,15" >}} | `oai_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16.0` | {{< pgvers "19,18,17,16,15" >}} | `oai_fdw_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.16.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-oai-fdw` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
@@ -69,14 +69,28 @@ weight: 8770
 | u24.aarch64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 | AVAIL PIGSTY 1.16.0 1 |
+@ el9.x86_64 19 oai_fdw_19 oai_fdw_19-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_19-1.16.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 oai_fdw_19 oai_fdw_19-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 116.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_19-1.16.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 oai_fdw_19 oai_fdw_19-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_19-1.16.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 oai_fdw_19 oai_fdw_19-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_19-1.16.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 116.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb pigsty 1.16.0 114.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb pigsty 1.16.0 111.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb pigsty 1.16.0 109.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-oai-fdw postgresql-19-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 108.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-19-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el8.x86_64.rpm pigsty 1.16.0 115.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/oai_fdw_18-1.16.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_18-1.16.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_18-1.16.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_18-1.16.0-1PGSTY.el9.aarch64.rpm
+@ el8.aarch64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_18-1.16.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_18-1.16.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_18-1.16.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_18-1.16.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 oai_fdw_18 oai_fdw_18-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_18-1.16.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
+@ d12.x86_64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 116.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
@@ -86,13 +100,13 @@ weight: 8770
 @ u26.x86_64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-oai-fdw postgresql-18-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 108.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-18-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el8.x86_64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/oai_fdw_17-1.16.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_17-1.16.0-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_17-1.16.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_17-1.16.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_17-1.16.0-1PGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_17-1.16.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_17-1.16.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 oai_fdw_17 oai_fdw_17-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_17-1.16.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
+@ d12.x86_64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 104.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 125.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
@@ -102,30 +116,30 @@ weight: 8770
 @ u26.x86_64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-oai-fdw postgresql-17-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 108.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-17-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el8.x86_64.rpm pigsty 1.16.0 115.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/oai_fdw_16-1.16.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_16-1.16.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_16-1.16.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_16-1.16.0-1PGSTY.el9.aarch64.rpm
+@ el8.aarch64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_16-1.16.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_16-1.16.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_16-1.16.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_16-1.16.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 oai_fdw_16 oai_fdw_16-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_16-1.16.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
+@ d12.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 125.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb pigsty 1.16.0 123.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb pigsty 1.16.0 111.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb pigsty 1.16.0 111.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb
+@ u24.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb pigsty 1.16.0 111.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb pigsty 1.16.0 109.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-oai-fdw postgresql-16-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 108.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-16-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el8.x86_64.rpm pigsty 1.16.0 115.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/oai_fdw_15-1.16.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_15-1.16.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_15-1.16.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_15-1.16.0-1PGSTY.el9.aarch64.rpm
+@ el8.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_15-1.16.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_15-1.16.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_15-1.16.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_15-1.16.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_15-1.16.0-1PGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 oai_fdw_15 oai_fdw_15-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_15-1.16.0-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 116.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
+@ d12.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 125.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb pigsty 1.16.0 123.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb
@@ -133,22 +147,6 @@ weight: 8770
 @ u24.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb pigsty 1.16.0 109.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-oai-fdw postgresql-15-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 108.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-15-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el8.x86_64.rpm pigsty 1.16.0 115.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/oai_fdw_14-1.16.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el8.aarch64.rpm pigsty 1.16.0 113.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/oai_fdw_14-1.16.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el9.x86_64.rpm pigsty 1.16.0 117.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/oai_fdw_14-1.16.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el9.aarch64.rpm pigsty 1.16.0 115.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/oai_fdw_14-1.16.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el10.x86_64.rpm pigsty 1.16.0 117.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/oai_fdw_14-1.16.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 oai_fdw_14 oai_fdw_14-1.16.0-1PGSTY.el10.aarch64.rpm pigsty 1.16.0 116.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/oai_fdw_14-1.16.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb pigsty 1.16.0 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb pigsty 1.16.0 107.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb pigsty 1.16.0 104.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb pigsty 1.16.0 125.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb pigsty 1.16.0 123.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb pigsty 1.16.0 111.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb pigsty 1.16.0 109.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb pigsty 1.16.0 109.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-oai-fdw postgresql-14-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb pigsty 1.16.0 107.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oai-fdw/postgresql-14-oai-fdw_1.16.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install oai_fdw;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y oai_fdw -v 19  # PG 19
 pig ext install -y oai_fdw -v 18  # PG 18
 pig ext install -y oai_fdw -v 17  # PG 17
 pig ext install -y oai_fdw -v 16  # PG 16
 pig ext install -y oai_fdw -v 15  # PG 15
-pig ext install -y oai_fdw -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y oai_fdw_19       # PG 19
 dnf install -y oai_fdw_18       # PG 18
 dnf install -y oai_fdw_17       # PG 17
 dnf install -y oai_fdw_16       # PG 16
 dnf install -y oai_fdw_15       # PG 15
-dnf install -y oai_fdw_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-oai-fdw   # PG 19
 apt install -y postgresql-18-oai-fdw   # PG 18
 apt install -y postgresql-17-oai-fdw   # PG 17
 apt install -y postgresql-16-oai-fdw   # PG 16
 apt install -y postgresql-15-oai-fdw   # PG 15
-apt install -y postgresql-14-oai-fdw   # PG 14
 ```
 
 

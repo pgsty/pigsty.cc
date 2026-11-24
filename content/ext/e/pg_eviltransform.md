@@ -11,10 +11,10 @@ weight: 1580
     <div class="ext-card__title">aiyou178/pg_eviltransform</div>
     <div class="ext-card__desc">https://github.com/aiyou178/pg_eviltransform</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_eviltransform-0.0.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_eviltransform-0.0.8.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_eviltransform-0.0.7.tar.gz</div>
-    <div class="ext-card__desc">pg_eviltransform-0.0.7.tar.gz</div>
+    <div class="ext-card__title">pg_eviltransform-0.0.8.tar.gz</div>
+    <div class="ext-card__desc">pg_eviltransform-0.0.8.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1580
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_eviltransform`**](/ext/e/pg_eviltransform) | `0.0.7` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_eviltransform`**](/ext/e/pg_eviltransform) | `0.0.8` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,30 +45,30 @@ weight: 1580
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_eviltransform` | `postgis` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `pg_eviltransform_$v` | `postgis37_$v` |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-eviltransform` | `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.8` | {{< pgvers "19,18,17,16,15" >}} | `pg_eviltransform` | `postgis` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15" >}} | `pg_eviltransform_$v` | `postgis37_$v` |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-eviltransform` | `postgresql-$v-postgis-3` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
 @ el8.x86_64 18 pg_eviltransform_18 pg_eviltransform_18-0.0.7-1PGSTY.el8.x86_64.rpm pigsty 0.0.7 895.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_eviltransform_18-0.0.7-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_eviltransform_18 pg_eviltransform_18-0.0.7-1PGSTY.el8.aarch64.rpm pigsty 0.0.7 767.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_eviltransform_18-0.0.7-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_eviltransform_18 pg_eviltransform_18-0.0.7-1PGSTY.el9.x86_64.rpm pigsty 0.0.7 912.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_eviltransform_18-0.0.7-1PGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 1580
 @ u24.aarch64 15 postgresql-15-eviltransform postgresql-15-eviltransform_0.0.7-1PGSTY~noble_arm64.deb pigsty 0.0.7 709.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-eviltransform/postgresql-15-eviltransform_0.0.7-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-eviltransform postgresql-15-eviltransform_0.0.7-1PGSTY~resolute_amd64.deb pigsty 0.0.7 803.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-eviltransform/postgresql-15-eviltransform_0.0.7-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-eviltransform postgresql-15-eviltransform_0.0.7-1PGSTY~resolute_arm64.deb pigsty 0.0.7 708.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-eviltransform/postgresql-15-eviltransform_0.0.7-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el8.x86_64.rpm pigsty 0.0.7 879.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_eviltransform_14-0.0.7-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el8.aarch64.rpm pigsty 0.0.7 752.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_eviltransform_14-0.0.7-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el9.x86_64.rpm pigsty 0.0.7 895.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_eviltransform_14-0.0.7-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el9.aarch64.rpm pigsty 0.0.7 805.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_eviltransform_14-0.0.7-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el10.x86_64.rpm pigsty 0.0.7 893.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_eviltransform_14-0.0.7-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_eviltransform_14 pg_eviltransform_14-0.0.7-1PGSTY.el10.aarch64.rpm pigsty 0.0.7 793.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_eviltransform_14-0.0.7-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~bookworm_amd64.deb pigsty 0.0.7 733.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~bookworm_arm64.deb pigsty 0.0.7 607.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~trixie_amd64.deb pigsty 0.0.7 734.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~trixie_arm64.deb pigsty 0.0.7 607.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~jammy_amd64.deb pigsty 0.0.7 812.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~jammy_arm64.deb pigsty 0.0.7 715.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~noble_amd64.deb pigsty 0.0.7 807.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~noble_arm64.deb pigsty 0.0.7 708.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~resolute_amd64.deb pigsty 0.0.7 804.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-eviltransform postgresql-14-eviltransform_0.0.7-1PGSTY~resolute_arm64.deb pigsty 0.0.7 706.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-eviltransform/postgresql-14-eviltransform_0.0.7-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install pg_eviltransform;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_eviltransform -v 19  # PG 19
 pig ext install -y pg_eviltransform -v 18  # PG 18
 pig ext install -y pg_eviltransform -v 17  # PG 17
 pig ext install -y pg_eviltransform -v 16  # PG 16
 pig ext install -y pg_eviltransform -v 15  # PG 15
-pig ext install -y pg_eviltransform -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_eviltransform_19       # PG 19
 dnf install -y pg_eviltransform_18       # PG 18
 dnf install -y pg_eviltransform_17       # PG 17
 dnf install -y pg_eviltransform_16       # PG 16
 dnf install -y pg_eviltransform_15       # PG 15
-dnf install -y pg_eviltransform_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-eviltransform   # PG 19
 apt install -y postgresql-18-eviltransform   # PG 18
 apt install -y postgresql-17-eviltransform   # PG 17
 apt install -y postgresql-16-eviltransform   # PG 16
 apt install -y postgresql-15-eviltransform   # PG 15
-apt install -y postgresql-14-eviltransform   # PG 14
 ```
 
 
@@ -208,6 +192,10 @@ CREATE EXTENSION pg_eviltransform CASCADE;  -- 依赖: postgis
 ## 用法
 
 来源：
+
+- [Upstream source](https://github.com/aiyou178/pg_eviltransform/releases/tag/v0.0.8)
+- [Upstream source](https://github.com/aiyou178/pg_eviltransform/blob/v0.0.8/README.md)
+- [Upstream source](https://github.com/aiyou178/pg_eviltransform/blob/v0.0.8/pg_eviltransform--0.0.7--0.0.8.sql)
 
 - [Official v0.0.7 README](https://github.com/aiyou178/pg_eviltransform/blob/v0.0.7/README.md)
 - [v0.0.7 release notes](https://github.com/aiyou178/pg_eviltransform/releases/tag/v0.0.7)
@@ -274,3 +262,13 @@ FROM measurements;
 ### 0.0.7 兼容性
 
 0.0.6 到 0.0.7 的升级 SQL 更新坐标系名称解析函数。上游使用 pgrx 0.19.3，支持 PostgreSQL 14-18 和 PostgreSQL 19 beta4。`ST_JenksBins` 接口不变；软件包与构建元数据同上游发行版分别维护。
+
+### 0.0.8 兼容性与安全
+
+当前 pgrx 0.20.0 二进制与构建头文件至少要求 PostgreSQL 15.20、16.16、17.12 或 18.7。不再支持 PostgreSQL 14，19 RC2 支持仍属实验性。本段取代上面的旧兼容性说明。
+
+无效的非 geometry 转换输入现在返回 SQL 错误，不再导致崩溃；PostGIS 函数与类型解析不再依赖调用方 search_path。安装匹配文件、重新连接，再逐库迁移：
+
+```sql
+ALTER EXTENSION pg_eviltransform UPDATE TO '0.0.8';
+```

@@ -42,138 +42,176 @@ weight: 3900
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `timestamp9` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `timestamp9_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-timestamp9` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "19,18,17,16,15" >}} | `timestamp9` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "19,18,17,16,15" >}} | `timestamp9_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-timestamp9` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.3.0 2 | AVAIL PGDG 1.3.0 2 |
-| el8.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.3.0 2 | AVAIL PGDG 1.3.0 2 |
-| el9.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 |
-| el9.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 |
-| el10.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
-| el10.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
-| d12.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| d12.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| d13.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| d13.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u22.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u22.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u24.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u24.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u26.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u26.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 3 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 3 |
+| el9.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
+| el9.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
+| el10.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
+| el10.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 |
+| d12.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d12.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d13.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d13.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u22.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u22.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u24.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u24.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u26.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u26.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+@ el9.x86_64 19 timestamp9_19 timestamp9_19-1.4.0-7PGDG.rhel9.9.x86_64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/timestamp9_19-1.4.0-7PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 timestamp9_19 timestamp9_19-1.4.0-7PGDG.rhel9.9.aarch64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/timestamp9_19-1.4.0-7PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 timestamp9_19 timestamp9_19-1.4.0-7PGDG.rhel10.3.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/timestamp9_19-1.4.0-7PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 timestamp9_19 timestamp9_19-1.4.0-7PGDG.rhel10.3.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/timestamp9_19-1.4.0-7PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg12+2_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg12+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg13+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg13+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-timestamp9 postgresql-19-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-19-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/timestamp9_18-1.4.0-7PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/timestamp9_18-1.4.0-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/timestamp9_18-1.4.0-7PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/timestamp9_18-1.4.0-3PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/timestamp9_18-1.4.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/timestamp9_18-1.4.0-3PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/timestamp9_18-1.4.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel9.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/timestamp9_18-1.4.0-3PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/timestamp9_18-1.4.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel10.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/timestamp9_18-1.4.0-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel9.9.x86_64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/timestamp9_18-1.4.0-7PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel9.9.aarch64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/timestamp9_18-1.4.0-7PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel10.3.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/timestamp9_18-1.4.0-7PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-7PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/timestamp9_18-1.4.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/timestamp9_18-1.4.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel10.aarch64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/timestamp9_18-1.4.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg12+2_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg12+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg13+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg13+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/timestamp9_17-1.4.0-7PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/timestamp9_17-1.4.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/timestamp9_17-1.4.0-7PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/timestamp9_17-1.4.0-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/timestamp9_17-1.4.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/timestamp9_17-1.4.0-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/timestamp9_17-1.4.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel9.aarch64.rpm pgdg 1.4.0 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/timestamp9_17-1.4.0-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/timestamp9_17-1.4.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-3PGDG.rhel10.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/timestamp9_17-1.4.0-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel9.9.x86_64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/timestamp9_17-1.4.0-7PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel9.9.aarch64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/timestamp9_17-1.4.0-7PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel10.3.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/timestamp9_17-1.4.0-7PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-7PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/timestamp9_17-1.4.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/timestamp9_17-1.4.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-3PGDG.rhel10.aarch64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/timestamp9_17-1.4.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg12+2_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg12+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg13+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg13+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/timestamp9_16-1.4.0-7PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/timestamp9_16-1.4.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/timestamp9_16-1.4.0-7PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/timestamp9_16-1.4.0-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/timestamp9_16-1.4.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/timestamp9_16-1.4.0-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/timestamp9_16-1.4.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel9.aarch64.rpm pgdg 1.4.0 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/timestamp9_16-1.4.0-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/timestamp9_16-1.4.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-3PGDG.rhel10.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/timestamp9_16-1.4.0-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel9.9.x86_64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/timestamp9_16-1.4.0-7PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel9.9.aarch64.rpm pgdg 1.4.0 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/timestamp9_16-1.4.0-7PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel10.3.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/timestamp9_16-1.4.0-7PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-7PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/timestamp9_16-1.4.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/timestamp9_16-1.4.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-3PGDG.rhel10.aarch64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/timestamp9_16-1.4.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg12+2_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg12+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg13+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg13+2_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/timestamp9_15-1.4.0-7PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel8.x86_64.rpm pgdg 1.3.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/timestamp9_15-1.3.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 timestamp9_15 timestamp9_15-1.1.0-1.rhel8.x86_64.rpm pgdg 1.1.0 16.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/timestamp9_15-1.1.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel8.10.aarch64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/timestamp9_15-1.4.0-7PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/timestamp9_15-1.3.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 timestamp9_15 timestamp9_15-1.1.0-1.rhel8.aarch64.rpm pgdg 1.1.0 16.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/timestamp9_15-1.1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/timestamp9_15-1.4.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel9.x86_64.rpm pgdg 1.3.0 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/timestamp9_15-1.3.0-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 timestamp9_15 timestamp9_15-1.1.0-1.rhel9.x86_64.rpm pgdg 1.1.0 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/timestamp9_15-1.1.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/timestamp9_15-1.4.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel9.aarch64.rpm pgdg 1.3.0 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/timestamp9_15-1.3.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 timestamp9_15 timestamp9_15-1.1.0-1.rhel9.aarch64.rpm pgdg 1.1.0 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/timestamp9_15-1.1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/timestamp9_15-1.4.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-3PGDG.rhel10.x86_64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/timestamp9_15-1.4.0-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel9.9.x86_64.rpm pgdg 1.4.0 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/timestamp9_15-1.4.0-7PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel9.9.aarch64.rpm pgdg 1.4.0 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/timestamp9_15-1.4.0-7PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel10.3.x86_64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/timestamp9_15-1.4.0-7PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-7PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/timestamp9_15-1.4.0-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/timestamp9_15-1.4.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 timestamp9_15 timestamp9_15-1.4.0-3PGDG.rhel10.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/timestamp9_15-1.4.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg12+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg12+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg13+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg13+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb pgdg 1.4.0 10.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb pgdg 1.4.0 10.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel8.x86_64.rpm pgdg 1.3.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/timestamp9_14-1.3.0-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 timestamp9_14 timestamp9_14-1.1.0-1.rhel8.x86_64.rpm pgdg 1.1.0 16.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/timestamp9_14-1.1.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 17.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/timestamp9_14-1.3.0-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 timestamp9_14 timestamp9_14-1.1.0-1.rhel8.aarch64.rpm pgdg 1.1.0 16.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/timestamp9_14-1.1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 timestamp9_14 timestamp9_14-1.4.0-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/timestamp9_14-1.4.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel9.x86_64.rpm pgdg 1.3.0 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/timestamp9_14-1.3.0-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 timestamp9_14 timestamp9_14-1.1.0-1.rhel9.x86_64.rpm pgdg 1.1.0 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/timestamp9_14-1.1.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 timestamp9_14 timestamp9_14-1.4.0-4PGDG.rhel9.8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/timestamp9_14-1.4.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel9.aarch64.rpm pgdg 1.3.0 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/timestamp9_14-1.3.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 timestamp9_14 timestamp9_14-1.1.0-1.rhel9.aarch64.rpm pgdg 1.1.0 16.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/timestamp9_14-1.1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 timestamp9_14 timestamp9_14-1.4.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/timestamp9_14-1.4.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 timestamp9_14 timestamp9_14-1.4.0-3PGDG.rhel10.x86_64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/timestamp9_14-1.4.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 timestamp9_14 timestamp9_14-1.4.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/timestamp9_14-1.4.0-4PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 timestamp9_14 timestamp9_14-1.4.0-3PGDG.rhel10.aarch64.rpm pgdg 1.4.0 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/timestamp9_14-1.4.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg12+1_amd64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg12+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg13+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg13+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb pgdg 1.4.0 9.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -200,27 +238,27 @@ pig install timestamp9;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y timestamp9 -v 19  # PG 19
 pig ext install -y timestamp9 -v 18  # PG 18
 pig ext install -y timestamp9 -v 17  # PG 17
 pig ext install -y timestamp9 -v 16  # PG 16
 pig ext install -y timestamp9 -v 15  # PG 15
-pig ext install -y timestamp9 -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y timestamp9_19       # PG 19
 dnf install -y timestamp9_18       # PG 18
 dnf install -y timestamp9_17       # PG 17
 dnf install -y timestamp9_16       # PG 16
 dnf install -y timestamp9_15       # PG 15
-dnf install -y timestamp9_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-timestamp9   # PG 19
 apt install -y postgresql-18-timestamp9   # PG 18
 apt install -y postgresql-17-timestamp9   # PG 17
 apt install -y postgresql-16-timestamp9   # PG 16
 apt install -y postgresql-15-timestamp9   # PG 15
-apt install -y postgresql-14-timestamp9   # PG 14
 ```
 
 

@@ -41,30 +41,30 @@ weight: 9501
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pglogical` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.8` | {{< pgvers "18,17,16,15,14" >}} | `pglogical_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pglogical` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `pglogical` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.8` | {{< pgvers "19,18,17,16,15" >}} | `pglogical_$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.8` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pglogical` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 5 |
-| el8.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| el9.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 | AVAIL PGDG 2.4.8 5 |
-| el9.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 | AVAIL PGDG 2.4.8 4 |
-| el10.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| el10.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| d12.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| d12.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| d13.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| d13.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u22.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u22.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u24.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u24.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u26.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
-| u26.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 |
+| el9.x86_64 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 |
+| el9.aarch64 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 |
+| el10.x86_64 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 1 |
+| el10.aarch64 | AVAIL PGDG 2.4.8 1 | AVAIL PGDG 2.4.8 5 | AVAIL PGDG 2.4.8 5 | AVAIL PGDG 2.4.8 5 | AVAIL PGDG 2.4.8 5 |
+| d12.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d12.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d13.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d13.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u22.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u22.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u24.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u24.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u26.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u26.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
 {{< /pgext_matrix >}}
 
 
@@ -83,27 +83,27 @@ pig install pglogical;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pglogical -v 19  # PG 19
 pig ext install -y pglogical -v 18  # PG 18
 pig ext install -y pglogical -v 17  # PG 17
 pig ext install -y pglogical -v 16  # PG 16
 pig ext install -y pglogical -v 15  # PG 15
-pig ext install -y pglogical -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pglogical_19       # PG 19
 dnf install -y pglogical_18       # PG 18
 dnf install -y pglogical_17       # PG 17
 dnf install -y pglogical_16       # PG 16
 dnf install -y pglogical_15       # PG 15
-dnf install -y pglogical_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pglogical   # PG 19
 apt install -y postgresql-18-pglogical   # PG 18
 apt install -y postgresql-17-pglogical   # PG 17
 apt install -y postgresql-16-pglogical   # PG 16
 apt install -y postgresql-15-pglogical   # PG 15
-apt install -y postgresql-14-pglogical   # PG 14
 ```
 
 

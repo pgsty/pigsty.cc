@@ -45,16 +45,16 @@ weight: 9090
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_projection` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_projection_$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-pg-projection` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_projection` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_projection_$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-projection` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
@@ -69,86 +69,84 @@ weight: 9090
 | u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-@ el8.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_18-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_18-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_18-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_18-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_18-1.0.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_18-1.0.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_17-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_17-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_17-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_17-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_17-1.0.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_17-1.0.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_16-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_16-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_16-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_16-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_16-1.0.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_16-1.0.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_15-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_15-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_15-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_15-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_15-1.0.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_15-1.0.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ el8.x86_64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_14-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_14-1.0.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_14-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el9.noarch.rpm pigsty 1.0.0 9.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_14-1.0.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_14-1.0.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 14 pg_projection_14 pg_projection_14-1.0.0-1PIGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_14-1.0.0-1PIGSTY.el10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-pg-projection postgresql-14-pg-projection_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-14-pg-projection_1.0.0-1PIGSTY~resolute_all.deb
+@ el9.x86_64 19 pg_projection_19 pg_projection_19-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_19-1.0.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 19 pg_projection_19 pg_projection_19-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_19-1.0.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 19 pg_projection_19 pg_projection_19-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_19-1.0.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 19 pg_projection_19 pg_projection_19-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_19-1.0.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-projection postgresql-19-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-19-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_18-1.0.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_18-1.0.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_18-1.0.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_18-1.0.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_18-1.0.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 18 pg_projection_18 pg_projection_18-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_18-1.0.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pg-projection postgresql-18-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-18-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_17-1.0.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_17-1.0.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_17-1.0.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_17-1.0.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_17-1.0.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 17 pg_projection_17 pg_projection_17-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_17-1.0.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pg-projection postgresql-17-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-17-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_16-1.0.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_16-1.0.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_16-1.0.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_16-1.0.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_16-1.0.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 16 pg_projection_16 pg_projection_16-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_16-1.0.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-pg-projection postgresql-16-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-16-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_projection_15-1.0.0-1PGSTY.el8.noarch.rpm
+@ el8.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el8.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_projection_15-1.0.0-1PGSTY.el8.noarch.rpm
+@ el9.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_projection_15-1.0.0-1PGSTY.el9.noarch.rpm
+@ el9.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el9.noarch.rpm pigsty 1.0.0 9.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_projection_15-1.0.0-1PGSTY.el9.noarch.rpm
+@ el10.x86_64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_projection_15-1.0.0-1PGSTY.el10.noarch.rpm
+@ el10.aarch64 15 pg_projection_15 pg_projection_15-1.0.0-1PGSTY.el10.noarch.rpm pigsty 1.0.0 10.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_projection_15-1.0.0-1PGSTY.el10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~bookworm_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~trixie_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~jammy_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~noble_all.deb pigsty 1.0.0 3.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-pg-projection postgresql-15-pg-projection_1.0.0-1PGSTY~resolute_all.deb pigsty 1.0.0 3.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-projection/postgresql-15-pg-projection_1.0.0-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install pg_projection;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_projection -v 19  # PG 19
 pig ext install -y pg_projection -v 18  # PG 18
 pig ext install -y pg_projection -v 17  # PG 17
 pig ext install -y pg_projection -v 16  # PG 16
 pig ext install -y pg_projection -v 15  # PG 15
-pig ext install -y pg_projection -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_projection_19       # PG 19
 dnf install -y pg_projection_18       # PG 18
 dnf install -y pg_projection_17       # PG 17
 dnf install -y pg_projection_16       # PG 16
 dnf install -y pg_projection_15       # PG 15
-dnf install -y pg_projection_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-projection   # PG 19
 apt install -y postgresql-18-pg-projection   # PG 18
 apt install -y postgresql-17-pg-projection   # PG 17
 apt install -y postgresql-16-pg-projection   # PG 16
 apt install -y postgresql-15-pg-projection   # PG 15
-apt install -y postgresql-14-pg-projection   # PG 14
 ```
 
 

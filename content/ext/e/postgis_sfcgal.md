@@ -48,20 +48,20 @@ weight: 1503
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgis` | `postgis` |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgis37_$v` | - |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-postgis-3` | - |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "19,18,17,16,15" >}} | `postgis` | `postgis` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "19,18,17,16,15" >}} | `postgis37_$v` | - |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.7.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-postgis-3` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
-| el9.x86_64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
-| el9.aarch64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
-| el10.x86_64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
-| el10.aarch64 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 | AVAIL PGDG 3.7.0 4 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 | AVAIL PIGSTY 3.7.0 1 |
+| el9.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
+| el9.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
+| el10.x86_64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 1 |
+| el10.aarch64 | AVAIL PGDG 3.7.0 1 | AVAIL PGDG 3.7.0 6 | AVAIL PGDG 3.7.0 6 | AVAIL PGDG 3.7.0 6 | AVAIL PGDG 3.7.0 6 |
 | d12.x86_64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
 | d12.aarch64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
 | d13.x86_64 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 | AVAIL PGDG 3.7.0 3 |
@@ -98,27 +98,27 @@ pig install postgis;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y postgis -v 19  # PG 19
 pig ext install -y postgis -v 18  # PG 18
 pig ext install -y postgis -v 17  # PG 17
 pig ext install -y postgis -v 16  # PG 16
 pig ext install -y postgis -v 15  # PG 15
-pig ext install -y postgis -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y postgis37_19       # PG 19
 dnf install -y postgis37_18       # PG 18
 dnf install -y postgis37_17       # PG 17
 dnf install -y postgis37_16       # PG 16
 dnf install -y postgis37_15       # PG 15
-dnf install -y postgis37_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-postgis-3   # PG 19
 apt install -y postgresql-18-postgis-3   # PG 18
 apt install -y postgresql-17-postgis-3   # PG 17
 apt install -y postgresql-16-postgis-3   # PG 16
 apt install -y postgresql-15-postgis-3   # PG 15
-apt install -y postgresql-14-postgis-3   # PG 14
 ```
 
 

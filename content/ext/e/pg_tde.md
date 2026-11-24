@@ -25,7 +25,7 @@ weight: 7500
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_tde`**](/ext/e/pg_tde) | `2.2.2` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_tde`**](/ext/e/pg_tde) | `2.3.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,37 +38,37 @@ weight: 7500
 {.ext-table .ext-table--rel}
 
 
-> Percona PG18.6 kernel + preload; pkg 2.2.2; SQL 2.2.
+> Percona PG18.6 bundles pg_tde 2.2.2. Preload required.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.2` | {{< pgvers "18" >}} | `pg_tde` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.3.0` | {{< pgvers "19,18" >}} | `pg_tde` | - |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.6` | {{< pgvers "18" >}} | `pgtde-$v` | - |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.6` | {{< pgvers "18" >}} | `pgtde-$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 18.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pgtde-18 pgtde-18-18.6-1PGSTY.el8.x86_64.rpm pigsty 18.6 21.9MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgtde-18-18.6-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgtde-18 pgtde-18-18.6-1PGSTY.el8.aarch64.rpm pigsty 18.6 21.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgtde-18-18.6-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgtde-18 pgtde-18-18.6-1PGSTY.el9.x86_64.rpm pigsty 18.6 20.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgtde-18-18.6-1PGSTY.el9.x86_64.rpm
@@ -111,14 +111,17 @@ pig install pg_tde;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_tde -v 19  # PG 19
 pig ext install -y pg_tde -v 18  # PG 18
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgtde-19       # PG 19
 dnf install -y pgtde-18       # PG 18
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y pgtde-19   # PG 19
 apt install -y pgtde-18   # PG 18
 ```
 
@@ -140,12 +143,12 @@ CREATE EXTENSION pg_tde;
 
 来源：
 
-- [pg_tde 2.2 setup](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/setup.md)
-- [Key-provider and key-management functions](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/functions.md)
-- [pg_tde 2.2.0 release notes](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/release-notes/release-notes-v2.2.0.md)
-- [Transparent data encryption limitations](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/index/tde-limitations.md)
-- [TDE table access method](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/index/table-access-method.md)
-- [WAL encryption](https://github.com/percona/pg_tde/blob/2.2.0/documentation/docs/wal-encryption.md)
+- [pg_tde 2.3 setup](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/setup.md)
+- [Key-provider and key-management functions](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/functions.md)
+- [pg_tde 2.3.0 release notes](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/release-notes/release-notes-v2.3.0.md)
+- [Transparent data encryption limitations](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/index/tde-limitations.md)
+- [TDE table access method](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/index/table-access-method.md)
+- [WAL encryption](https://github.com/percona/pg_tde/blob/2.3.0/documentation/docs/wal-encryption.md)
 
 pg_tde 为 Percona Server for PostgreSQL 提供透明数据加密功能。它通过 tde_heap 访问方法对表数据进行加密，并可以加密 WAL，密钥由文件、HashiCorp Vault 或 KMIP 提供商管理。它并不是可直接用于社区版 PostgreSQL 的即插即用扩展。
 
@@ -159,7 +162,7 @@ pg_tde 为 Percona Server for PostgreSQL 提供透明数据加密功能。它通
 
     CREATE EXTENSION pg_tde;
 
-以超级用户或具有适当权限的数据库所有者身份运行设置。上游 pg_tde 2.2 版本与兼容的 Percona Server for PostgreSQL 17 或 18 版本绑定；2.2.0 发行说明警告称，它不适用于比 17.10 和 18.4 更早版本的 Percona Distribution。
+以超级用户或具有适当权限的数据库所有者身份运行设置。必须使用匹配的 Percona Server 构建。2.3.0 增加 PostgreSQL 19 支持，SQL 扩展版本为 2.3。该版本的 `pg_tde_waldump` 可识别自定义资源管理器及其 `--rmgr` 过滤条件。源码支持不代表已有对应 PostgreSQL 大版本的软件包。
 
 ### 配置密钥提供者
 

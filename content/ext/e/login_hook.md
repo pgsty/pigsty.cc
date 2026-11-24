@@ -42,20 +42,20 @@ weight: 7360
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `login_hook` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `login_hook_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-login-hook` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "19,18,17,16,15" >}} | `login_hook` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "19,18,17,16,15" >}} | `login_hook_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-login-hook` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 6 |
-| el8.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 6 |
-| el9.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 7 | AVAIL PIGSTY 1.9 7 | AVAIL PIGSTY 1.9 7 |
-| el9.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 6 | AVAIL PIGSTY 1.9 7 | AVAIL PIGSTY 1.9 7 | AVAIL PIGSTY 1.9 7 |
-| el10.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 |
-| el10.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 | AVAIL PIGSTY 1.9 5 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 6 | AVAIL PGDG 1.9 7 | AVAIL PGDG 1.9 7 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 6 | AVAIL PGDG 1.9 7 | AVAIL PGDG 1.9 7 |
+| el9.x86_64 | AVAIL PGDG 1.9 2 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 |
+| el9.aarch64 | AVAIL PGDG 1.9 2 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 |
+| el10.x86_64 | AVAIL PGDG 1.9 2 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 | AVAIL PGDG 1.9 2 |
+| el10.aarch64 | AVAIL PGDG 1.9 2 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.9 7 | AVAIL PGDG 1.9 7 | AVAIL PGDG 1.9 7 |
 | d12.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
@@ -66,49 +66,60 @@ weight: 7360
 | u24.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
+@ el9.x86_64 19 login_hook_19 login_hook_19-1.9-2PGDG.rhel9.9.x86_64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/login_hook_19-1.9-2PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 19 login_hook_19 login_hook_19-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_19-1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 login_hook_19 login_hook_19-1.9-2PGDG.rhel9.9.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/login_hook_19-1.9-2PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 19 login_hook_19 login_hook_19-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_19-1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 login_hook_19 login_hook_19-1.9-2PGDG.rhel10.3.x86_64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/login_hook_19-1.9-2PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 19 login_hook_19 login_hook_19-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_19-1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 login_hook_19 login_hook_19-1.9-2PGDG.rhel10.3.aarch64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/login_hook_19-1.9-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 19 login_hook_19 login_hook_19-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_19-1.9-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~bookworm_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~bookworm_arm64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~trixie_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~trixie_arm64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~jammy_amd64.deb pigsty 1.9 28.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~jammy_arm64.deb pigsty 1.9 28.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~noble_amd64.deb pigsty 1.9 28.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 28.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-login-hook postgresql-19-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-19-login-hook_1.9-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el8.x86_64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_18-1.9-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_18-1.9-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_18-1.9-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_18-1.9-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_18-1.9-1PGSTY.el10.x86_64.rpm
+@ el8.aarch64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_18-1.9-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_18-1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_18-1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_18-1.9-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 login_hook_18 login_hook_18-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_18-1.9-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~bookworm_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~bookworm_arm64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~trixie_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~trixie_arm64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~jammy_amd64.deb pigsty 1.9 28.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~jammy_arm64.deb pigsty 1.9 28.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~jammy_arm64.deb
+@ u22.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~jammy_amd64.deb pigsty 1.9 28.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~jammy_arm64.deb pigsty 1.9 28.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~noble_amd64.deb pigsty 1.9 28.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 28.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-18-login-hook_1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel8.10.x86_64.rpm pgdg 1.9 20.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.9-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el8.x86_64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_17-1.9-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.9-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel8.10.x86_64.rpm pgdg 1.8 19.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.8-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.6-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_17-1.9-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel8.10.aarch64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.9-2PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_17-1.9-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.9-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel8.10.aarch64.rpm pgdg 1.8 19.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.8-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 login_hook_17 login_hook_17-1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.6 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.6-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_17-1.9-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9 19.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.9-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel9.8.x86_64.rpm pgdg 1.8 19.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.8-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 login_hook_17 login_hook_17-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_17-1.9-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9 19.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.9-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel9.8.aarch64.rpm pgdg 1.8 19.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.8-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 login_hook_17 login_hook_17-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.6-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_17-1.9-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/login_hook_17-1.9-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel10.2.x86_64.rpm pgdg 1.8 19.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/login_hook_17-1.8-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 login_hook_17 login_hook_17-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/login_hook_17-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 18.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/login_hook_17-1.7-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel9.9.x86_64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/login_hook_17-1.9-2PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_17-1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel9.9.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/login_hook_17-1.9-2PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_17-1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel10.3.x86_64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/login_hook_17-1.9-2PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_17-1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel10.3.aarch64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/login_hook_17-1.9-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 login_hook_17 login_hook_17-1.9-2PGDG.rhel10.2.aarch64.rpm pgdg 1.9 20.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/login_hook_17-1.9-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 login_hook_17 login_hook_17-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_17-1.9-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 login_hook_17 login_hook_17-1.9-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/login_hook_17-1.9-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 login_hook_17 login_hook_17-1.8-3PGDG.rhel10.2.aarch64.rpm pgdg 1.8 19.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/login_hook_17-1.8-3PGDG.rhel10.2.aarch64.rpm
@@ -117,45 +128,36 @@ weight: 7360
 @ d12.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~bookworm_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~bookworm_arm64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~trixie_amd64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~trixie_arm64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~trixie_arm64.deb pigsty 1.9 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~jammy_amd64.deb pigsty 1.9 29.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~jammy_arm64.deb pigsty 1.9 28.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~noble_amd64.deb pigsty 1.9 28.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 28.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-17-login-hook_1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.9-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el8.x86_64.rpm pigsty 1.9 25.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_16-1.9-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.9-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel8.10.x86_64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.8-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.5-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 25.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_16-1.9-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.9-2PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_16-1.9-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.9-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel8.10.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.8-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 login_hook_16 login_hook_16-1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 login_hook_16 login_hook_16-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/login_hook_16-1.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_16-1.9-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9 19.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.9-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel9.8.x86_64.rpm pgdg 1.8 19.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.8-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 login_hook_16 login_hook_16-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_16-1.9-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.9-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel9.8.aarch64.rpm pgdg 1.8 18.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.8-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.6-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 login_hook_16 login_hook_16-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 16.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_16-1.9-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/login_hook_16-1.9-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel10.2.x86_64.rpm pgdg 1.8 19.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/login_hook_16-1.8-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 login_hook_16 login_hook_16-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/login_hook_16-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/login_hook_16-1.7-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_16-1.9-1PGSTY.el10.aarch64.rpm
+@ el9.x86_64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel9.9.x86_64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/login_hook_16-1.9-2PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_16-1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel9.9.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/login_hook_16-1.9-2PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_16-1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel10.3.x86_64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/login_hook_16-1.9-2PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_16-1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel10.3.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/login_hook_16-1.9-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 login_hook_16 login_hook_16-1.9-2PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/login_hook_16-1.9-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 login_hook_16 login_hook_16-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_16-1.9-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 login_hook_16 login_hook_16-1.9-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/login_hook_16-1.9-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 login_hook_16 login_hook_16-1.8-3PGDG.rhel10.2.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/login_hook_16-1.8-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 login_hook_16 login_hook_16-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/login_hook_16-1.7-3PGDG.rhel10.2.aarch64.rpm
@@ -170,37 +172,28 @@ weight: 7360
 @ u24.aarch64 16 postgresql-16-login-hook postgresql-16-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-16-login-hook_1.9-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-login-hook postgresql-16-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 27.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-16-login-hook_1.9-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-login-hook postgresql-16-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-16-login-hook_1.9-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.9-2PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el8.x86_64.rpm pigsty 1.9 25.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_15-1.9-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.9-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel8.10.x86_64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.8-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.5-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 25.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_15-1.9-1PGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.9-2PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_15-1.9-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.9-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel8.10.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.8-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.7-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 login_hook_15 login_hook_15-1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 login_hook_15 login_hook_15-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/login_hook_15-1.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_15-1.9-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9 19.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.9-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel9.8.x86_64.rpm pgdg 1.8 19.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.8-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 login_hook_15 login_hook_15-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_15-1.9-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9 19.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.9-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel9.8.aarch64.rpm pgdg 1.8 18.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.8-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.6-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 login_hook_15 login_hook_15-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 16.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_15-1.9-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/login_hook_15-1.9-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel10.2.x86_64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/login_hook_15-1.8-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 login_hook_15 login_hook_15-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/login_hook_15-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/login_hook_15-1.7-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel9.9.x86_64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/login_hook_15-1.9-2PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_15-1.9-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel9.9.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/login_hook_15-1.9-2PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_15-1.9-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel10.3.x86_64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/login_hook_15-1.9-2PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_15-1.9-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel10.3.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/login_hook_15-1.9-2PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 login_hook_15 login_hook_15-1.9-2PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/login_hook_15-1.9-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 login_hook_15 login_hook_15-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_15-1.9-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 login_hook_15 login_hook_15-1.9-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/login_hook_15-1.9-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 login_hook_15 login_hook_15-1.8-3PGDG.rhel10.2.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/login_hook_15-1.8-3PGDG.rhel10.2.aarch64.rpm
@@ -216,52 +209,6 @@ weight: 7360
 @ u24.aarch64 15 postgresql-15-login-hook postgresql-15-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-15-login-hook_1.9-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-login-hook postgresql-15-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 27.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-15-login-hook_1.9-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-login-hook postgresql-15-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-15-login-hook_1.9-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el8.x86_64.rpm pigsty 1.9 26.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_14-1.9-1PGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9 19.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.9-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel8.10.x86_64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.8-3PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.6-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 login_hook_14 login_hook_14-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.5-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el8.aarch64.rpm pigsty 1.9 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_14-1.9-1PGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/login_hook_14-1.9-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel8.10.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/login_hook_14-1.8-3PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/login_hook_14-1.7-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.6-1PGDG.rhel8.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/login_hook_14-1.6-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 login_hook_14 login_hook_14-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/login_hook_14-1.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el9.x86_64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_14-1.9-1PGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9 19.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.9-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel9.8.x86_64.rpm pgdg 1.8 19.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.8-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.6-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 login_hook_14 login_hook_14-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/login_hook_14-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el9.aarch64.rpm pigsty 1.9 26.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/login_hook_14-1.9-1PGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9 19.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.9-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel9.8.aarch64.rpm pgdg 1.8 18.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.8-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.7-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.6-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 login_hook_14 login_hook_14-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 16.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/login_hook_14-1.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el10.x86_64.rpm pigsty 1.9 26.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/login_hook_14-1.9-1PGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/login_hook_14-1.9-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel10.2.x86_64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/login_hook_14-1.8-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 login_hook_14 login_hook_14-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/login_hook_14-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/login_hook_14-1.7-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 login_hook_14 login_hook_14-1.9-1PGSTY.el10.aarch64.rpm pigsty 1.9 26.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/login_hook_14-1.9-1PGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 login_hook_14 login_hook_14-1.9-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9 19.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/login_hook_14-1.9-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 login_hook_14 login_hook_14-1.8-3PGDG.rhel10.2.aarch64.rpm pgdg 1.8 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/login_hook_14-1.8-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 login_hook_14 login_hook_14-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/login_hook_14-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/login_hook_14-1.7-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~bookworm_amd64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~bookworm_arm64.deb pigsty 1.9 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~trixie_amd64.deb pigsty 1.9 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~trixie_arm64.deb pigsty 1.9 26.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~jammy_amd64.deb pigsty 1.9 29.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~jammy_arm64.deb pigsty 1.9 28.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~noble_amd64.deb pigsty 1.9 28.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~noble_arm64.deb pigsty 1.9 27.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~resolute_amd64.deb pigsty 1.9 28.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.9-1PGSTY~resolute_arm64.deb pigsty 1.9 27.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-14-login-hook_1.9-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -288,27 +235,27 @@ pig install login_hook;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y login_hook -v 19  # PG 19
 pig ext install -y login_hook -v 18  # PG 18
 pig ext install -y login_hook -v 17  # PG 17
 pig ext install -y login_hook -v 16  # PG 16
 pig ext install -y login_hook -v 15  # PG 15
-pig ext install -y login_hook -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y login_hook_19       # PG 19
 dnf install -y login_hook_18       # PG 18
 dnf install -y login_hook_17       # PG 17
 dnf install -y login_hook_16       # PG 16
 dnf install -y login_hook_15       # PG 15
-dnf install -y login_hook_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-login-hook   # PG 19
 apt install -y postgresql-18-login-hook   # PG 18
 apt install -y postgresql-17-login-hook   # PG 17
 apt install -y postgresql-16-login-hook   # PG 16
 apt install -y postgresql-15-login-hook   # PG 15
-apt install -y postgresql-14-login-hook   # PG 14
 ```
 
 

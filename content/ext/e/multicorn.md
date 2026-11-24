@@ -42,20 +42,20 @@ weight: 8510
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `multicorn` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `multicorn2_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-multicorn` | `python3-multicorn` |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.2` | {{< pgvers "19,18,17,16,15" >}} | `multicorn` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.2` | {{< pgvers "18,17,16,15" >}} | `multicorn2_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-multicorn` | `python3-multicorn` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 | AVAIL PGDG 3.2 7 |
-| el8.aarch64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 | AVAIL PGDG 3.2 7 |
-| el9.x86_64 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 7 | AVAIL PGDG 3.2 8 |
-| el9.aarch64 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 7 | AVAIL PGDG 3.2 8 |
-| el10.x86_64 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 |
-| el10.aarch64 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 |
+| el9.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 5 |
 | d12.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
@@ -66,38 +66,36 @@ weight: 8510
 | u24.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | u26.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | u26.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
+@ d12.x86_64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~bookworm_amd64.deb pigsty 3.2 82.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~bookworm_arm64.deb pigsty 3.2 80.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~trixie_amd64.deb pigsty 3.2 83.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~trixie_arm64.deb pigsty 3.2 81.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~jammy_amd64.deb pigsty 3.2 88.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~jammy_arm64.deb pigsty 3.2 87.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~noble_amd64.deb pigsty 3.2 86.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~noble_arm64.deb pigsty 3.2 84.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~resolute_amd64.deb pigsty 3.2 85.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-multicorn postgresql-19-multicorn_3.2-1PGSTY~resolute_arm64.deb pigsty 3.2 84.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-19-multicorn_3.2-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel8.10.x86_64.rpm pgdg 3.2 144.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/multicorn2_18-3.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/multicorn2_18-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel8.x86_64.rpm pgdg 3.1 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/multicorn2_18-3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel8.10.aarch64.rpm pgdg 3.2 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/multicorn2_18-3.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/multicorn2_18-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 133.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/multicorn2_18-3.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel9.8.x86_64.rpm pgdg 3.2 141.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.2-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel9.8.aarch64.rpm pgdg 3.2 140.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.2-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 110.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel10.2.x86_64.rpm pgdg 3.2 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.2-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 133.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 multicorn2_18 multicorn2_18-3.2-10PGDG.rhel10.2.aarch64.rpm pgdg 3.2 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 131.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.1-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 80.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 87.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 86.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 85.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 84.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 84.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 83.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~bookworm_amd64.deb pigsty 3.2 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~bookworm_arm64.deb pigsty 3.2 80.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~trixie_amd64.deb pigsty 3.2 83.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~trixie_arm64.deb pigsty 3.2 81.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~jammy_amd64.deb pigsty 3.2 88.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~jammy_arm64.deb pigsty 3.2 87.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~noble_amd64.deb pigsty 3.2 86.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~noble_arm64.deb pigsty 3.2 85.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~resolute_amd64.deb pigsty 3.2 85.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PGSTY~resolute_arm64.deb pigsty 3.2 84.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 multicorn2_17 multicorn2_17-3.2-10PGDG.rhel8.10.x86_64.rpm pgdg 3.2 144.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/multicorn2_17-3.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/multicorn2_17-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel8.x86_64.rpm pgdg 3.1 135.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/multicorn2_17-3.1-1PGDG.rhel8.x86_64.rpm
@@ -106,36 +104,21 @@ weight: 8510
 @ el8.aarch64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 136.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/multicorn2_17-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 133.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/multicorn2_17-3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/multicorn2_17-3.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.2-10PGDG.rhel9.8.x86_64.rpm pgdg 3.2 141.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.2-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 110.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.2-10PGDG.rhel9.8.aarch64.rpm pgdg 3.2 140.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.2-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 109.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 109.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.2-10PGDG.rhel10.2.x86_64.rpm pgdg 3.2 142.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.2-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 132.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.1-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.2-10PGDG.rhel10.2.aarch64.rpm pgdg 3.2 141.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 132.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 131.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.0-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 80.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 106.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 105.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 83.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 84.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 83.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~bookworm_amd64.deb pigsty 3.2 82.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~bookworm_arm64.deb pigsty 3.2 80.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~trixie_amd64.deb pigsty 3.2 83.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~trixie_arm64.deb pigsty 3.2 81.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~jammy_amd64.deb pigsty 3.2 107.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~jammy_arm64.deb pigsty 3.2 106.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~noble_amd64.deb pigsty 3.2 86.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~noble_arm64.deb pigsty 3.2 84.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~resolute_amd64.deb pigsty 3.2 85.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PGSTY~resolute_arm64.deb pigsty 3.2 84.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 multicorn2_16 multicorn2_16-3.2-10PGDG.rhel8.10.x86_64.rpm pgdg 3.2 144.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/multicorn2_16-3.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 138.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/multicorn2_16-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel8.x86_64.rpm pgdg 3.1 135.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/multicorn2_16-3.1-1PGDG.rhel8.x86_64.rpm
@@ -144,36 +127,21 @@ weight: 8510
 @ el8.aarch64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/multicorn2_16-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 134.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/multicorn2_16-3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 113.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/multicorn2_16-3.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.2-10PGDG.rhel9.8.x86_64.rpm pgdg 3.2 141.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.2-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 110.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.2-10PGDG.rhel9.8.aarch64.rpm pgdg 3.2 140.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.2-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 110.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 109.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.2-10PGDG.rhel10.2.x86_64.rpm pgdg 3.2 142.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.2-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 133.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.1-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 132.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.2-10PGDG.rhel10.2.aarch64.rpm pgdg 3.2 141.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 132.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 131.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.0-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 80.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 106.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 105.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 85.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 84.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 84.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 83.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~bookworm_amd64.deb pigsty 3.2 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~bookworm_arm64.deb pigsty 3.2 80.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~trixie_amd64.deb pigsty 3.2 83.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~trixie_arm64.deb pigsty 3.2 81.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~jammy_amd64.deb pigsty 3.2 107.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~jammy_arm64.deb pigsty 3.2 106.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~noble_amd64.deb pigsty 3.2 86.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~noble_arm64.deb pigsty 3.2 85.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~resolute_amd64.deb pigsty 3.2 85.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PGSTY~resolute_arm64.deb pigsty 3.2 84.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 multicorn2_15 multicorn2_15-3.2-10PGDG.rhel8.10.x86_64.rpm pgdg 3.2 146.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/multicorn2_15-3.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 139.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/multicorn2_15-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel8.x86_64.rpm pgdg 3.1 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/multicorn2_15-3.1-1PGDG.rhel8.x86_64.rpm
@@ -186,90 +154,21 @@ weight: 8510
 @ el8.aarch64 15 multicorn2_15 multicorn2_15-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 114.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/multicorn2_15-3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 multicorn2_15 multicorn2_15-2.4-2.rhel8.aarch64.rpm pgdg 2.4 110.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/multicorn2_15-2.4-2.rhel8.aarch64.rpm
 @ el8.aarch64 15 multicorn2_15 multicorn2_15-2.4-1.rhel8.aarch64.rpm pgdg 2.4 35.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/multicorn2_15-2.4-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.2-10PGDG.rhel9.8.x86_64.rpm pgdg 3.2 145.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.2-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 114.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 114.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.0-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-2.4-2.rhel9.x86_64.rpm pgdg 2.4 109.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-2.4-2.rhel9.x86_64.rpm
-@ el9.x86_64 15 multicorn2_15 multicorn2_15-2.4-1.rhel9.x86_64.rpm pgdg 2.4 37.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-2.4-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.2-10PGDG.rhel9.8.aarch64.rpm pgdg 3.2 143.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.2-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 136.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 136.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 113.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 112.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-2.4-2.rhel9.aarch64.rpm pgdg 2.4 108.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-2.4-2.rhel9.aarch64.rpm
-@ el9.aarch64 15 multicorn2_15 multicorn2_15-2.4-1.rhel9.aarch64.rpm pgdg 2.4 35.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-2.4-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.2-10PGDG.rhel10.2.x86_64.rpm pgdg 3.2 146.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.2-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 139.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 139.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 136.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.1-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 135.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.2-10PGDG.rhel10.2.aarch64.rpm pgdg 3.2 144.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 137.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 137.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 134.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.0-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 80.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 83.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 81.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 108.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 106.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 87.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 86.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 86.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 85.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel8.10.x86_64.rpm pgdg 3.2 146.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-3.2-10PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 139.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-3.2-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel8.x86_64.rpm pgdg 3.1 136.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-3.1-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 115.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-3.0-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-2.4-2.rhel8.x86_64.rpm pgdg 2.4 111.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-2.4-2.rhel8.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-2.4-1.rhel8.x86_64.rpm pgdg 2.4 36.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-2.4-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 multicorn2_14 multicorn2_14-2.3-1.rhel8.x86_64.rpm pgdg 2.3 115.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/multicorn2_14-2.3-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel8.10.aarch64.rpm pgdg 3.2 143.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-3.2-10PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 137.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-3.2-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 135.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-3.1-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 114.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-3.0-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-2.4-2.rhel8.aarch64.rpm pgdg 2.4 110.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-2.4-2.rhel8.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-2.4-1.rhel8.aarch64.rpm pgdg 2.4 35.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-2.4-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 multicorn2_14 multicorn2_14-2.3-1.rhel8.aarch64.rpm pgdg 2.3 113.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-2.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel9.8.x86_64.rpm pgdg 3.2 145.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.2-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 138.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.2-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 114.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 114.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.0-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.4-2.rhel9.x86_64.rpm pgdg 2.4 109.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.4-2.rhel9.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.4-1.rhel9.x86_64.rpm pgdg 2.4 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.4-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.3-1.rhel9.x86_64.rpm pgdg 2.3 114.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.3-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel9.8.aarch64.rpm pgdg 3.2 143.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.2-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 136.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.2-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 136.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 113.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 112.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.4-2.rhel9.aarch64.rpm pgdg 2.4 108.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.4-2.rhel9.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.4-1.rhel9.aarch64.rpm pgdg 2.4 35.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.4-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.3-1.rhel9.aarch64.rpm pgdg 2.3 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel10.2.x86_64.rpm pgdg 3.2 146.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.2-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 139.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.2-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 139.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 136.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.1-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 136.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.0-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.2-10PGDG.rhel10.2.aarch64.rpm pgdg 3.2 144.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.2-10PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 137.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.2-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 137.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.2-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 135.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.1-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 134.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.0-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 80.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 83.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 81.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 108.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 107.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 87.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 86.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~resolute_amd64.deb pigsty 3.2 86.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~resolute_arm64.deb pigsty 3.2 85.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~bookworm_amd64.deb pigsty 3.2 83.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~bookworm_arm64.deb pigsty 3.2 81.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~trixie_amd64.deb pigsty 3.2 84.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~trixie_arm64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~jammy_amd64.deb pigsty 3.2 108.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~jammy_arm64.deb pigsty 3.2 107.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~noble_amd64.deb pigsty 3.2 88.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~noble_arm64.deb pigsty 3.2 87.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~resolute_amd64.deb pigsty 3.2 87.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PGSTY~resolute_arm64.deb pigsty 3.2 86.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -296,27 +195,27 @@ pig install multicorn;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y multicorn -v 19  # PG 19
 pig ext install -y multicorn -v 18  # PG 18
 pig ext install -y multicorn -v 17  # PG 17
 pig ext install -y multicorn -v 16  # PG 16
 pig ext install -y multicorn -v 15  # PG 15
-pig ext install -y multicorn -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y multicorn2_19       # PG 19
 dnf install -y multicorn2_18       # PG 18
 dnf install -y multicorn2_17       # PG 17
 dnf install -y multicorn2_16       # PG 16
 dnf install -y multicorn2_15       # PG 15
-dnf install -y multicorn2_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-multicorn   # PG 19
 apt install -y postgresql-18-multicorn   # PG 18
 apt install -y postgresql-17-multicorn   # PG 17
 apt install -y postgresql-16-multicorn   # PG 16
 apt install -y postgresql-15-multicorn   # PG 15
-apt install -y postgresql-14-multicorn   # PG 14
 ```
 
 

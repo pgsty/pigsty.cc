@@ -45,110 +45,94 @@ weight: 5270
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `online_advisor` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `online_advisor_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-online-advisor` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `online_advisor` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `online_advisor_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-online-advisor` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 21.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 22.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 29.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 32.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 32.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 31.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 21.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 22.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 29.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 29.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 38.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 31.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 21.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 29.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 38.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 37.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 31.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 21.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 29.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 37.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 31.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 online_advisor_14 online_advisor_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 29.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 29.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 37.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 37.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 31.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-online-advisor postgresql-14-online-advisor_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-14-online-advisor_1.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+@ el8.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 38.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_18-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 37.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_18-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 39.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_18-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 38.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_18-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 39.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_18-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 online_advisor_18 online_advisor_18-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 39.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_18-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 29.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 29.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 32.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 32.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 32.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 31.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-online-advisor postgresql-18-online-advisor_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-18-online-advisor_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 38.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_17-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 37.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_17-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 39.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_17-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 38.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_17-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 39.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_17-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 online_advisor_17 online_advisor_17-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 39.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_17-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 29.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 29.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 38.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 37.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 32.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 31.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-online-advisor postgresql-17-online-advisor_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-17-online-advisor_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 38.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_16-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 37.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_16-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_16-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 38.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_16-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 39.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_16-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 online_advisor_16 online_advisor_16-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 39.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_16-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 29.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 30.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 38.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 37.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 32.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-online-advisor postgresql-16-online-advisor_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-16-online-advisor_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 38.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/online_advisor_15-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 37.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/online_advisor_15-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/online_advisor_15-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 38.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/online_advisor_15-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 39.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/online_advisor_15-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 online_advisor_15 online_advisor_15-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 39.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/online_advisor_15-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 29.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 38.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 37.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 31.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-online-advisor postgresql-15-online-advisor_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/online-advisor/postgresql-15-online-advisor_1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -179,7 +163,6 @@ pig ext install -y online_advisor -v 18  # PG 18
 pig ext install -y online_advisor -v 17  # PG 17
 pig ext install -y online_advisor -v 16  # PG 16
 pig ext install -y online_advisor -v 15  # PG 15
-pig ext install -y online_advisor -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -187,7 +170,6 @@ dnf install -y online_advisor_18       # PG 18
 dnf install -y online_advisor_17       # PG 17
 dnf install -y online_advisor_16       # PG 16
 dnf install -y online_advisor_15       # PG 15
-dnf install -y online_advisor_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -195,7 +177,6 @@ apt install -y postgresql-18-online-advisor   # PG 18
 apt install -y postgresql-17-online-advisor   # PG 17
 apt install -y postgresql-16-online-advisor   # PG 16
 apt install -y postgresql-15-online-advisor   # PG 15
-apt install -y postgresql-14-online-advisor   # PG 14
 ```
 
 

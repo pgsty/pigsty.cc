@@ -11,10 +11,10 @@ weight: 5115
     <div class="ext-card__title">VictorNagibator/pg_integrity_checksums</div>
     <div class="ext-card__desc">https://github.com/VictorNagibator/pg_integrity_checksums</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_integrity_checksums-2.2.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_integrity_checksums-2.9.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_integrity_checksums-2.2.0.tar.gz</div>
-    <div class="ext-card__desc">pg_integrity_checksums-2.2.0.tar.gz</div>
+    <div class="ext-card__title">pg_integrity_checksums-2.9.1.tar.gz</div>
+    <div class="ext-card__desc">pg_integrity_checksums-2.9.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 5115
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_integrity_checksums`**](/ext/e/pg_integrity_checksums) | `2.2.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_integrity_checksums`**](/ext/e/pg_integrity_checksums) | `2.9.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,110 +45,108 @@ weight: 5115
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_integrity_checksums` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_integrity_checksums_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2.0` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-pg-integrity-checksums` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.9.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_integrity_checksums` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.9.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_integrity_checksums_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.9.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-integrity-checksums` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 | AVAIL PIGSTY 2.2.0 1 |
-@ el8.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 109.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_18-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 106.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_18-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 113.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_18-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 111.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_18-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 114.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_18-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 112.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_18-2.2.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 100.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 97.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 101.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 97.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 109.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 106.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 105.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 104.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 104.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 101.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 109.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_17-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 106.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_17-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 113.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_17-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 111.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_17-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 114.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_17-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 112.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_17-2.2.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 100.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 97.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 101.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 97.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 116.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 113.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 105.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 104.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 104.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 101.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 110.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_16-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 107.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_16-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 114.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_16-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 112.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_16-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 115.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_16-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 112.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_16-2.2.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 101.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 98.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 101.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 98.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 116.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 114.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 106.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 104.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 104.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 102.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 109.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_15-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 106.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_15-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 113.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_15-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 111.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_15-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 115.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_15-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 112.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_15-2.2.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 100.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 97.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 101.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 97.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 116.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 113.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 105.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 103.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 104.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 102.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el8.x86_64.rpm pigsty 2.2.0 110.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_14-2.2.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el8.aarch64.rpm pigsty 2.2.0 106.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_14-2.2.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el9.x86_64.rpm pigsty 2.2.0 114.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_14-2.2.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el9.aarch64.rpm pigsty 2.2.0 111.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_14-2.2.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el10.x86_64.rpm pigsty 2.2.0 115.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_14-2.2.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_integrity_checksums_14 pg_integrity_checksums_14-2.2.0-1PGSTY.el10.aarch64.rpm pigsty 2.2.0 112.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_14-2.2.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb pigsty 2.2.0 100.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb pigsty 2.2.0 97.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb pigsty 2.2.0 101.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb pigsty 2.2.0 97.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb pigsty 2.2.0 116.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb pigsty 2.2.0 114.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb pigsty 2.2.0 105.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb pigsty 2.2.0 103.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb pigsty 2.2.0 104.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-integrity-checksums postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb pigsty 2.2.0 102.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-14-pg-integrity-checksums_2.2.0-1PGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 | AVAIL PIGSTY 2.9.1 1 |
+@ el9.x86_64 19 pg_integrity_checksums_19 pg_integrity_checksums_19-2.9.1-1PGSTY.el9.x86_64.rpm pigsty 2.9.1 212.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_19-2.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_integrity_checksums_19 pg_integrity_checksums_19-2.9.1-1PGSTY.el9.aarch64.rpm pigsty 2.9.1 208.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_19-2.9.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_integrity_checksums_19 pg_integrity_checksums_19-2.9.1-1PGSTY.el10.x86_64.rpm pigsty 2.9.1 214.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_19-2.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_integrity_checksums_19 pg_integrity_checksums_19-2.9.1-1PGSTY.el10.aarch64.rpm pigsty 2.9.1 213.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_19-2.9.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb pigsty 2.9.1 192.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb pigsty 2.9.1 188.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb pigsty 2.9.1 192.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb pigsty 2.9.1 188.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb pigsty 2.9.1 207.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb pigsty 2.9.1 205.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb pigsty 2.9.1 198.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb pigsty 2.9.1 198.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb pigsty 2.9.1 201.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-integrity-checksums postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb pigsty 2.9.1 200.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-19-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el8.x86_64.rpm pigsty 2.9.1 211.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_18-2.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el8.aarch64.rpm pigsty 2.9.1 205.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_18-2.9.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el9.x86_64.rpm pigsty 2.9.1 212.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_18-2.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el9.aarch64.rpm pigsty 2.9.1 208.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_18-2.9.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el10.x86_64.rpm pigsty 2.9.1 214.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_18-2.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_integrity_checksums_18 pg_integrity_checksums_18-2.9.1-1PGSTY.el10.aarch64.rpm pigsty 2.9.1 212.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_18-2.9.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb pigsty 2.9.1 192.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb pigsty 2.9.1 188.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb pigsty 2.9.1 192.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb pigsty 2.9.1 188.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb pigsty 2.9.1 207.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb pigsty 2.9.1 205.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb pigsty 2.9.1 198.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb pigsty 2.9.1 198.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb pigsty 2.9.1 200.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-integrity-checksums postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb pigsty 2.9.1 200.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-18-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el8.x86_64.rpm pigsty 2.9.1 211.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_17-2.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el8.aarch64.rpm pigsty 2.9.1 205.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_17-2.9.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el9.x86_64.rpm pigsty 2.9.1 209.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_17-2.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el9.aarch64.rpm pigsty 2.9.1 208.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_17-2.9.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el10.x86_64.rpm pigsty 2.9.1 214.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_17-2.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_integrity_checksums_17 pg_integrity_checksums_17-2.9.1-1PGSTY.el10.aarch64.rpm pigsty 2.9.1 212.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_17-2.9.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb pigsty 2.9.1 191.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb pigsty 2.9.1 187.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb pigsty 2.9.1 192.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb pigsty 2.9.1 188.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb pigsty 2.9.1 244.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb pigsty 2.9.1 243.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb pigsty 2.9.1 198.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb pigsty 2.9.1 197.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb pigsty 2.9.1 200.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-integrity-checksums postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb pigsty 2.9.1 200.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-17-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el8.x86_64.rpm pigsty 2.9.1 211.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_16-2.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el8.aarch64.rpm pigsty 2.9.1 206.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_16-2.9.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el9.x86_64.rpm pigsty 2.9.1 210.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_16-2.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el9.aarch64.rpm pigsty 2.9.1 208.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_16-2.9.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el10.x86_64.rpm pigsty 2.9.1 214.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_16-2.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_integrity_checksums_16 pg_integrity_checksums_16-2.9.1-1PGSTY.el10.aarch64.rpm pigsty 2.9.1 213.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_16-2.9.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb pigsty 2.9.1 192.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb pigsty 2.9.1 188.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb pigsty 2.9.1 192.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb pigsty 2.9.1 188.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb pigsty 2.9.1 240.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb pigsty 2.9.1 239.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb pigsty 2.9.1 198.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb pigsty 2.9.1 198.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb pigsty 2.9.1 201.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-integrity-checksums postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb pigsty 2.9.1 201.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-16-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el8.x86_64.rpm pigsty 2.9.1 211.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_integrity_checksums_15-2.9.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el8.aarch64.rpm pigsty 2.9.1 205.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_integrity_checksums_15-2.9.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el9.x86_64.rpm pigsty 2.9.1 211.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_integrity_checksums_15-2.9.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el9.aarch64.rpm pigsty 2.9.1 210.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_integrity_checksums_15-2.9.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el10.x86_64.rpm pigsty 2.9.1 214.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_integrity_checksums_15-2.9.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_integrity_checksums_15 pg_integrity_checksums_15-2.9.1-1PGSTY.el10.aarch64.rpm pigsty 2.9.1 212.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_integrity_checksums_15-2.9.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb pigsty 2.9.1 193.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb pigsty 2.9.1 189.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb pigsty 2.9.1 193.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb pigsty 2.9.1 189.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb pigsty 2.9.1 243.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb pigsty 2.9.1 242.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb pigsty 2.9.1 200.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb pigsty 2.9.1 200.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb pigsty 2.9.1 201.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-integrity-checksums postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb pigsty 2.9.1 201.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-integrity-checksums/postgresql-15-pg-integrity-checksums_2.9.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install pg_integrity_checksums;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_integrity_checksums -v 19  # PG 19
 pig ext install -y pg_integrity_checksums -v 18  # PG 18
 pig ext install -y pg_integrity_checksums -v 17  # PG 17
 pig ext install -y pg_integrity_checksums -v 16  # PG 16
 pig ext install -y pg_integrity_checksums -v 15  # PG 15
-pig ext install -y pg_integrity_checksums -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_integrity_checksums_19       # PG 19
 dnf install -y pg_integrity_checksums_18       # PG 18
 dnf install -y pg_integrity_checksums_17       # PG 17
 dnf install -y pg_integrity_checksums_16       # PG 16
 dnf install -y pg_integrity_checksums_15       # PG 15
-dnf install -y pg_integrity_checksums_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-integrity-checksums   # PG 19
 apt install -y postgresql-18-pg-integrity-checksums   # PG 18
 apt install -y postgresql-17-pg-integrity-checksums   # PG 17
 apt install -y postgresql-16-pg-integrity-checksums   # PG 16
 apt install -y postgresql-15-pg-integrity-checksums   # PG 15
-apt install -y postgresql-14-pg-integrity-checksums   # PG 14
 ```
 
 
@@ -209,13 +207,28 @@ CREATE EXTENSION pg_integrity_checksums;
 
 来源：
 
-- [PGXN 元数据](https://api.pgxn.org/dist/pg_integrity_checksums/2.3.0/META.json)
-- [官方 README](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/README.md)
-- [控制文件](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/pg_integrity_checksums.control)
-- [函数参考](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/docs/functions.md)
-- [运维指南](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/docs/operations.md)
-- [升级 SQL](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/pg_integrity_checksums--2.2.0--2.3.0.sql)
-- [迁移指南](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.3.0/MIGRATION.md)
+- [当前版本资料](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.1/README.md)
+- [当前版本资料](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.1/pg_integrity_checksums.control)
+- [当前版本资料](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.1/Changes)
+- [当前版本资料](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.1/pg_integrity_checksums--2.9.0--2.9.1.sql)
+
+- [2.9.0 Changes](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.0/Changes)
+- [2.8.0 到 2.9.0 SQL](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.0/pg_integrity_checksums--2.8.0--2.9.0.sql)
+- [2.9.0 控制文件](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.0/pg_integrity_checksums.control)
+- [2.9.0 函数参考](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.9.0/docs/functions.md)
+- [当前上游](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/Changes)
+- [当前上游](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/pg_integrity_checksums--2.6.0--2.7.0.sql)
+
+- [PGXN 元数据](https://api.pgxn.org/dist/pg_integrity_checksums/2.7.0/META.json)
+- [官方 README](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/README.md)
+- [控制文件](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/pg_integrity_checksums.control)
+- [函数参考](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/docs/functions.md)
+- [运维指南](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/docs/operations.md)
+- [2.5 到 2.6 升级 SQL](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/pg_integrity_checksums--2.5.0--2.6.0.sql)
+- [2.4 升级 SQL](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/pg_integrity_checksums--2.3.0--2.4.0.sql)
+- [2.5 升级 SQL](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/pg_integrity_checksums--2.4.0--2.5.0.sql)
+- [迁移指南](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/MIGRATION.md)
+- [Upgrade and baseline guide](https://api.pgxn.org/src/pg_integrity_checksums/pg_integrity_checksums-2.7.0/docs/installation.md)
 
 `pg_integrity_checksums` 为 PostgreSQL 页面、单元、元组、表、索引和数据库计算物理及逻辑校验和。此 C 扩展的上游支持 PostgreSQL 12–19，目录中的 Pigsty 软件包覆盖 PostgreSQL 14–18。安装和数据库级扫描需要超级用户。
 
@@ -227,10 +240,9 @@ CREATE EXTENSION pg_integrity_checksums;
 
 ### 2.3.0 版本与页面校验
 
-2.3.0 新增 `pg_page_checksum_status(regclass, integer)`，将页面计算所得的 16 位校验和与已存储的 `pd_checksum` 比较。安装匹配的库和 SQL 文件后，可升级已有的 2.2.0 扩展：
+2.3.0 新增 `pg_page_checksum_status(regclass, integer)`，将页面计算所得的 16 位校验和与已存储的 `pd_checksum` 比较。升级后仍可执行以下检查：
 
 ```sql
-ALTER EXTENSION pg_integrity_checksums UPDATE TO '2.3.0';
 SHOW data_checksums;
 SELECT pg_page_checksum_status('public.orders'::regclass, 0);
 ```
@@ -269,3 +281,31 @@ SELECT pg_database_logical_checksum(false, true);
 ### 权限与维护
 
 关系级函数要求表级 `SELECT` 权限，并拒绝受行级安全策略保护的关系，因为直接存储扫描无法应用 RLS；仅有列级授权并不足够。数据库级函数只允许超级用户执行。`pg_integrity_checksums.workers` 控制并行扫描，`pg_integrity_checksums.strict` 使数据库扫描在关系无法检查时失败，而不是跳过。扩展不要求共享预加载。应保留使用相同算法、兼容结构计算的可信基线，并在比较物理校验和时考虑物理重写的影响。这些校验和不提供密码学认证。
+
+### 2.7.0 升级与基线变化
+
+安装匹配文件，重新连接并执行 SQL 升级：
+
+```sql
+ALTER EXTENSION pg_integrity_checksums UPDATE TO '2.7.0';
+SHOW pg_integrity_checksums.strict;
+```
+
+数据库级逻辑校验和现在纳入带 schema 的关系名，因此即使行内容不变，所有数据库逻辑基线也会改变。修正索引元数据屏蔽后，部分物理索引基线同样改变。应重新计算并审查这些基线；物理校验和仍会受到实际存储变化影响，包括行锁和已回滚的写入。仅凭校验和不同不能认定数据损坏。
+
+元组和单元格校验现在检查 MVCC 可见性，对不可见行返回 NULL。索引表达式在受限上下文中以表所有者身份执行，可串行化扫描会取得必要的冲突锁。页状态检查会对磁盘不匹配进行重试；数据库扫描期间被删除的关系即使在严格模式下也会以 NOTICE 跳过。其他不可读关系仍遵循默认开启的 `pg_integrity_checksums.strict`。这些语义与先前 2.6.0 的屏蔽及基线规则不同。
+
+### 2.9.0 算法、序列与基线
+
+```sql
+ALTER EXTENSION pg_integrity_checksums UPDATE TO '2.9.0';
+```
+
+2.9.0 为通用算法函数新增 `crc32c` 与 `xxh3`，并让 `pg_table_bucket_checksums()` 支持并行 worker。新的序列逻辑校验和会比较序列定义以及 `last_value`、`is_called`；新的关系页面状态函数可一次校验所有页面和 fork。
+
+当 `include_system = false` 时，数据库逻辑与物理校验和现在会像排除 `pg_catalog` 一样排除 `information_schema`。由于 `information_schema` 内容随 PostgreSQL 版本变化，旧版本产生的所有非系统数据库校验和都会因该修正而改变：需要重新计算并替换这些存储基线。表、索引和序列校验值不受此修正影响，CLI 基线此前已排除 `information_schema`。
+
+
+### 2.9.1 扫描变化
+
+在 PostgreSQL 17 及以上，表、索引、bucket 和数据库扫描使用 read stream；PostgreSQL 18 可使用异步 I/O，并行 worker 处理的范围也有所扩大。2.9.1 不改变校验和值。安装匹配库并执行 `ALTER EXTENSION pg_integrity_checksums UPDATE TO '2.9.1'`；此前 2.9.0 排除 information_schema 的变更仍要求替换受影响的非系统数据库基线。

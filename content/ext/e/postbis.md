@@ -45,16 +45,16 @@ weight: 3780
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postbis` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postbis_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-postbis` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postbis` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postbis_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-postbis` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
@@ -69,86 +69,84 @@ weight: 3780
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 postbis_18 postbis_18-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 65.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_18-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 postbis_18 postbis_18-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 61.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_18-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 postbis_18 postbis_18-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_18-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 postbis_18 postbis_18-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 59.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_18-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 postbis_18 postbis_18-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 63.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_18-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 postbis_18 postbis_18-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 60.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_18-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 152.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 147.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 153.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 147.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 162.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 160.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 160.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 160.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 157.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-18-postbis_1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 postbis_17 postbis_17-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 65.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_17-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 postbis_17 postbis_17-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 61.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_17-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 postbis_17 postbis_17-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_17-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 postbis_17 postbis_17-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 59.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_17-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 postbis_17 postbis_17-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 63.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_17-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 postbis_17 postbis_17-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 60.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_17-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 152.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 147.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 153.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 147.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 168.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 167.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 160.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 160.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 157.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-17-postbis_1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 postbis_16 postbis_16-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 65.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_16-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 postbis_16 postbis_16-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 61.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_16-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 postbis_16 postbis_16-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 61.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_16-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 postbis_16 postbis_16-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 59.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_16-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 postbis_16 postbis_16-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 63.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_16-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 postbis_16 postbis_16-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 60.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_16-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 152.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 147.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 153.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 148.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 169.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 166.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 160.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 160.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 157.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-16-postbis_1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 postbis_15 postbis_15-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 66.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_15-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 postbis_15 postbis_15-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 62.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_15-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 postbis_15 postbis_15-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 63.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_15-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 postbis_15 postbis_15-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 61.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_15-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 postbis_15 postbis_15-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_15-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 postbis_15 postbis_15-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 61.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_15-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 153.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 148.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 154.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 149.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 170.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 168.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 161.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 158.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 161.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 158.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-15-postbis_1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 postbis_14 postbis_14-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 66.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_14-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 postbis_14 postbis_14-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_14-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 postbis_14 postbis_14-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 63.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_14-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 postbis_14 postbis_14-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_14-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 postbis_14 postbis_14-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 64.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_14-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 postbis_14 postbis_14-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 61.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_14-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 153.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 148.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 154.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 149.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 170.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 168.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 161.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 158.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 161.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-postbis postgresql-14-postbis_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 158.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-14-postbis_1.0-2PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 postbis_19 postbis_19-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 168.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_19-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 postbis_19 postbis_19-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 166.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_19-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 postbis_19 postbis_19-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 170.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_19-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 postbis_19 postbis_19-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 167.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_19-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 152.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 147.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 153.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 148.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 162.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 161.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 160.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 160.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-postbis postgresql-19-postbis_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 157.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-19-postbis_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 postbis_18 postbis_18-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 166.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_18-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 postbis_18 postbis_18-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 162.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_18-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 postbis_18 postbis_18-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 169.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_18-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 postbis_18 postbis_18-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 166.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_18-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 postbis_18 postbis_18-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 170.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_18-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 postbis_18 postbis_18-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 167.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_18-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 152.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 147.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 153.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 147.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 162.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 160.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 160.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 160.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-postbis postgresql-18-postbis_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 157.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-18-postbis_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 postbis_17 postbis_17-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 166.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_17-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 postbis_17 postbis_17-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 162.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_17-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 postbis_17 postbis_17-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 169.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_17-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 postbis_17 postbis_17-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 166.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_17-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 postbis_17 postbis_17-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 170.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_17-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 postbis_17 postbis_17-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 167.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_17-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 152.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 147.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 153.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 147.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 169.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 167.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 160.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 157.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 160.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-postbis postgresql-17-postbis_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 157.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-17-postbis_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 postbis_16 postbis_16-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 166.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_16-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 postbis_16 postbis_16-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 162.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_16-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 postbis_16 postbis_16-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 169.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_16-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 postbis_16 postbis_16-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 166.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_16-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 postbis_16 postbis_16-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 170.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_16-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 postbis_16 postbis_16-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 167.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_16-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 152.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 147.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 153.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 148.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 169.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 167.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 160.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 160.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-postbis postgresql-16-postbis_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 157.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-16-postbis_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 postbis_15 postbis_15-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 166.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postbis_15-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 postbis_15 postbis_15-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 162.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postbis_15-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 postbis_15 postbis_15-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 170.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postbis_15-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 postbis_15 postbis_15-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 168.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postbis_15-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 postbis_15 postbis_15-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 171.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postbis_15-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 postbis_15 postbis_15-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 168.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postbis_15-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 153.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 148.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 154.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 149.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 170.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 168.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 161.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 158.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 161.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-postbis postgresql-15-postbis_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 158.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/postbis/postgresql-15-postbis_1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install postbis;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y postbis -v 19  # PG 19
 pig ext install -y postbis -v 18  # PG 18
 pig ext install -y postbis -v 17  # PG 17
 pig ext install -y postbis -v 16  # PG 16
 pig ext install -y postbis -v 15  # PG 15
-pig ext install -y postbis -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y postbis_19       # PG 19
 dnf install -y postbis_18       # PG 18
 dnf install -y postbis_17       # PG 17
 dnf install -y postbis_16       # PG 16
 dnf install -y postbis_15       # PG 15
-dnf install -y postbis_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-postbis   # PG 19
 apt install -y postgresql-18-postbis   # PG 18
 apt install -y postgresql-17-postbis   # PG 17
 apt install -y postgresql-16-postbis   # PG 16
 apt install -y postgresql-15-postbis   # PG 15
-apt install -y postgresql-14-postbis   # PG 14
 ```
 
 

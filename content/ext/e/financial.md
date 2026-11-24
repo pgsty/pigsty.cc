@@ -42,16 +42,16 @@ weight: 4840
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_financial` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_financial_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-financial` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_financial` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_financial_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-financial` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
@@ -66,86 +66,84 @@ weight: 4840
 | u24.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
-@ el8.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_18-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 14.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_18-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_18-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_18-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_18-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_18-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb pigsty 1.0.1 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb pigsty 1.0.1 12.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb pigsty 1.0.1 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_17-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 14.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_17-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_17-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_17-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_17-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_17-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb pigsty 1.0.1 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb pigsty 1.0.1 12.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_16-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 14.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_16-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_16-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_16-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_16-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_16-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_15-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 14.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_15-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_15-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_15-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_15-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_15-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_14-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 14.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_14-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_14-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 14.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_14-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 14.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_14-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_financial_14 pg_financial_14-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_14-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb pigsty 1.0.1 12.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-financial postgresql-14-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-14-pg-financial_1.0.1-2PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pg_financial_19 pg_financial_19-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_19-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_financial_19 pg_financial_19-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_19-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_financial_19 pg_financial_19-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_19-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_financial_19 pg_financial_19-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_19-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 13.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-financial postgresql-19-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-19-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_18-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_18-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_18-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_18-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_18-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_financial_18 pg_financial_18-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_18-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 13.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-financial postgresql-18-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-18-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_17-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_17-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_17-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_17-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_17-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_financial_17 pg_financial_17-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_17-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-financial postgresql-17-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-17-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_16-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_16-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_16-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_16-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_16-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_financial_16 pg_financial_16-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_16-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-financial postgresql-16-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-16-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_financial_15-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_financial_15-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_financial_15-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_financial_15-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 21.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_financial_15-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_financial_15 pg_financial_15-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 21.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_financial_15-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 12.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-financial postgresql-15-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-financial/postgresql-15-pg-financial_1.0.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install pg_financial;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_financial -v 19  # PG 19
 pig ext install -y pg_financial -v 18  # PG 18
 pig ext install -y pg_financial -v 17  # PG 17
 pig ext install -y pg_financial -v 16  # PG 16
 pig ext install -y pg_financial -v 15  # PG 15
-pig ext install -y pg_financial -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_financial_19       # PG 19
 dnf install -y pg_financial_18       # PG 18
 dnf install -y pg_financial_17       # PG 17
 dnf install -y pg_financial_16       # PG 16
 dnf install -y pg_financial_15       # PG 15
-dnf install -y pg_financial_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-financial   # PG 19
 apt install -y postgresql-18-pg-financial   # PG 18
 apt install -y postgresql-17-pg-financial   # PG 17
 apt install -y postgresql-16-pg-financial   # PG 16
 apt install -y postgresql-15-pg-financial   # PG 15
-apt install -y postgresql-14-pg-financial   # PG 14
 ```
 
 

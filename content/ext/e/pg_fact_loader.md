@@ -45,62 +45,58 @@ weight: 9820
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_fact_loader` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_fact_loader_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-fact-loader` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_fact_loader` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15" >}} | `pg_fact_loader_$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-fact-loader` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| el8.aarch64 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
-| el9.x86_64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| el9.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| el10.x86_64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
-| el10.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
-| d12.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| el9.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| d12.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
+@ d12.x86_64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb pigsty 2.0.1 40.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb pigsty 2.0.1 40.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-fact-loader postgresql-19-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-19-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
 @ el8.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el10.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel10.noarch.rpm
-@ d12.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~bookworm_amd64.deb pigsty 2.0.1 39.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~bookworm_arm64.deb pigsty 2.0.1 39.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~trixie_amd64.deb pigsty 2.0.1 39.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~trixie_arm64.deb pigsty 2.0.1 39.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~jammy_amd64.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~jammy_arm64.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~noble_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~noble_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb pigsty 2.0.1 39.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb pigsty 2.0.1 40.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb pigsty 2.0.1 40.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pg-fact-loader postgresql-18-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-18-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
 @ el8.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_fact_loader_17-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_fact_loader_17-2.0.1-2PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_fact_loader_17-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_fact_loader_17-2.0.1-2PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_fact_loader_17-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_fact_loader_17-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_fact_loader_17-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_fact_loader_17-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_fact_loader_17-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_fact_loader_17-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el10.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_fact_loader_17-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_fact_loader_17-2.0.1-3PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_fact_loader_17-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_fact_loader_17 pg_fact_loader_17-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_fact_loader_17-2.0.1-3PGDG.rhel10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb
@@ -111,21 +107,13 @@ weight: 9820
 @ u22.aarch64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb pgdg 2.0.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pg-fact-loader postgresql-17-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-17-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
 @ el8.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_fact_loader_16-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_fact_loader_16-2.0.1-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-1PGDG.f42.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_fact_loader_16-2.0.1-1PGDG.f42.noarch.rpm
 @ el8.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_fact_loader_16-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_fact_loader_16-2.0.1-2PGDG.rhel8.noarch.rpm
-@ el9.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_fact_loader_16-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_fact_loader_16-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_fact_loader_16-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_fact_loader_16-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_fact_loader_16-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_fact_loader_16-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el10.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_fact_loader_16-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_fact_loader_16-2.0.1-3PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_fact_loader_16-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_fact_loader_16 pg_fact_loader_16-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_fact_loader_16-2.0.1-3PGDG.rhel10.noarch.rpm
 @ d12.x86_64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb
@@ -136,21 +124,13 @@ weight: 9820
 @ u22.aarch64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb pgdg 2.0.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-pg-fact-loader postgresql-16-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-16-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
 @ el8.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_fact_loader_15-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_fact_loader_15-2.0.1-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-1PGDG.f42.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_fact_loader_15-2.0.1-1PGDG.f42.noarch.rpm
 @ el8.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_fact_loader_15-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_fact_loader_15-2.0.1-2PGDG.rhel8.noarch.rpm
-@ el9.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_fact_loader_15-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_fact_loader_15-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_fact_loader_15-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_fact_loader_15-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_fact_loader_15-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_fact_loader_15-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el10.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_fact_loader_15-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_fact_loader_15-2.0.1-3PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_fact_loader_15-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_fact_loader_15 pg_fact_loader_15-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_fact_loader_15-2.0.1-3PGDG.rhel10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb
@@ -161,33 +141,8 @@ weight: 9820
 @ u22.aarch64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb pgdg 2.0.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_fact_loader_14-2.0.1-2PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-1PGDG.f42.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_fact_loader_14-2.0.1-1PGDG.f42.noarch.rpm
-@ el8.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-2PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_fact_loader_14-2.0.1-2PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel9.8.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm
-@ el10.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg130+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg130+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg130+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg130+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg22.04+1_amd64.deb pgdg 2.0.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb pgdg 2.0.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-pg-fact-loader postgresql-15-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb pigsty 2.0.1 40.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-15-pg-fact-loader_2.0.1-3PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -214,27 +169,27 @@ pig install pg_fact_loader;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_fact_loader -v 19  # PG 19
 pig ext install -y pg_fact_loader -v 18  # PG 18
 pig ext install -y pg_fact_loader -v 17  # PG 17
 pig ext install -y pg_fact_loader -v 16  # PG 16
 pig ext install -y pg_fact_loader -v 15  # PG 15
-pig ext install -y pg_fact_loader -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_fact_loader_19       # PG 19
 dnf install -y pg_fact_loader_18       # PG 18
 dnf install -y pg_fact_loader_17       # PG 17
 dnf install -y pg_fact_loader_16       # PG 16
 dnf install -y pg_fact_loader_15       # PG 15
-dnf install -y pg_fact_loader_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-fact-loader   # PG 19
 apt install -y postgresql-18-pg-fact-loader   # PG 18
 apt install -y postgresql-17-pg-fact-loader   # PG 17
 apt install -y postgresql-16-pg-fact-loader   # PG 16
 apt install -y postgresql-15-pg-fact-loader   # PG 15
-apt install -y postgresql-14-pg-fact-loader   # PG 14
 ```
 
 

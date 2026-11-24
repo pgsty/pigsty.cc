@@ -45,30 +45,30 @@ weight: 9430
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17" >}} | `pgs3` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "19,18,17" >}} | `pgs3` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17" >}} | `pgs3_$v` | - |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17" >}} | `postgresql-$v-pgs3` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pgs3_18 pgs3_18-0.1.1-1PGSTY.el8.x86_64.rpm pigsty 0.1.1 919.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgs3_18-0.1.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgs3_18 pgs3_18-0.1.1-1PGSTY.el8.aarch64.rpm pigsty 0.1.1 740.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgs3_18-0.1.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgs3_18 pgs3_18-0.1.1-1PGSTY.el9.x86_64.rpm pigsty 0.1.1 892.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgs3_18-0.1.1-1PGSTY.el9.x86_64.rpm
@@ -127,16 +127,19 @@ pig install pgs3;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgs3 -v 19  # PG 19
 pig ext install -y pgs3 -v 18  # PG 18
 pig ext install -y pgs3 -v 17  # PG 17
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgs3_19       # PG 19
 dnf install -y pgs3_18       # PG 18
 dnf install -y pgs3_17       # PG 17
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgs3   # PG 19
 apt install -y postgresql-18-pgs3   # PG 18
 apt install -y postgresql-17-pgs3   # PG 17
 ```

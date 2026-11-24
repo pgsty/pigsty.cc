@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">main/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/main/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.26.6.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.27.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.26.6.tar.gz</div>
-    <div class="ext-card__desc">pg_search-0.26.6.tar.gz</div>
+    <div class="ext-card__title">pg_search-0.27.0.tar.gz</div>
+    <div class="ext-card__desc">pg_search-0.27.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_search`**](/ext/e/pg_search) | `0.26.6` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_search`**](/ext/e/pg_search) | `0.27.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,30 +45,30 @@ weight: 2100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.6` | {{< pgvers "18,17,16,15" >}} | `pg_search` | `vector` |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.0` | {{< pgvers "18,17,16,15" >}} | `pg_search` | `vector` |
 | [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.6` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | `pgvector_$v` |
 | [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.26.6` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | `postgresql-$v-pgvector` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 | AVAIL PIGSTY 0.26.6 1 |
 @ el8.x86_64 18 pg_search_18 pg_search_18-0.26.6-1PGSTY.el8.x86_64.rpm pigsty 0.26.6 58.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_18-0.26.6-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_search_18 pg_search_18-0.26.6-1PGSTY.el8.aarch64.rpm pigsty 0.26.6 54.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_18-0.26.6-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_search_18 pg_search_18-0.26.6-1PGSTY.el9.x86_64.rpm pigsty 0.26.6 59.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_18-0.26.6-1PGSTY.el9.x86_64.rpm
@@ -197,6 +197,17 @@ CREATE EXTENSION pg_search CASCADE;  -- 依赖: vector
 
 来源：
 
+- [Official source](https://www.paradedb.com/docs/project/changelog/0.27.0.md)
+- [Official source](https://api.pgxn.org/src/pg_search/pg_search-0.27.0/pg_search/pg_search.control)
+- [Official source](https://api.pgxn.org/src/pg_search/pg_search-0.27.0/Cargo.toml)
+
+- [0.26.8 变更日志](https://www.paradedb.com/docs/project/changelog/0.26.8.md)
+- [pg_search 0.26.8 README](https://api.pgxn.org/src/pg_search/pg_search-0.26.8/pg_search/README.md)
+- [pg_search 0.26.8 控制文件](https://api.pgxn.org/src/pg_search/pg_search-0.26.8/pg_search/pg_search.control)
+- [0.26.7 到 0.26.8 SQL](https://api.pgxn.org/src/pg_search/pg_search-0.26.8/pg_search/sql/pg_search--0.26.7--0.26.8.sql)
+- [Upstream source](https://api.pgxn.org/src/pg_search/pg_search-0.26.7/docs/project/changelog/0.26.7.mdx)
+- [Upstream source](https://api.pgxn.org/src/pg_search/pg_search-0.26.7/pg_search/pg_search.control)
+
 - [0.26.6 changelog](https://github.com/paradedb/paradedb/blob/v0.26.6/docs/project/changelog/0.26.6.mdx)
 - [pg_search 0.26.6 control](https://github.com/paradedb/paradedb/blob/v0.26.6/pg_search/pg_search.control)
 - [pg_search 0.26.6 Cargo.toml](https://github.com/paradedb/paradedb/blob/v0.26.6/pg_search/Cargo.toml)
@@ -222,7 +233,7 @@ CREATE EXTENSION pg_search CASCADE;  -- 依赖: vector
 - [查询向量](https://github.com/paradedb/paradedb/blob/v0.25.11/docs/documentation/vector/querying.mdx)
 - [混合搜索概述](https://github.com/paradedb/paradedb/blob/v0.25.11/docs/documentation/hybrid/overview.mdx)
 
-`pg_search` 0.26.6 为 PostgreSQL 增加 ParadeDB 的全文、结构化、向量和混合搜索索引。版本 0.25 使用 `paradedb` 索引访问方法；旧的 `bm25` 访问方法名称仍保留为兼容别名。该扩展依赖 `vector`，上游支持 PostgreSQL 15-18，且必须通过 `shared_preload_libraries` 加载。
+`pg_search` 0.27.0 为 PostgreSQL 增加 ParadeDB 的全文、结构化、向量和混合搜索索引。版本 0.25 使用 `paradedb` 索引访问方法；旧的 `bm25` 访问方法名称仍保留为兼容别名。该扩展依赖 `vector`，上游支持 PostgreSQL 15-18，且必须通过 `shared_preload_libraries` 加载。
 
 ### 安装并构建索引
 
@@ -343,3 +354,25 @@ LIMIT 20;
 ### 0.26.6 版本
 
 Join Scan 现在支持在 `INNER` 和 `SEMI`（`IN` / `EXISTS`）连接中对向量距离操作符 `<->`、`<=>`、`<#>` 执行 top-K `ORDER BY`。当叶子节点包含可由索引回答的单表过滤条件（包括行级安全策略、等值、`= ANY` 和范围条件）时，合并得分的 top-K 连接也可使用 rank join。本版本修复 Join Scan 选列同时包含 `pdb.score()` 与标量子查询或查询参数时的崩溃，并在未使用 `RankJoinExec` 时通过 `EXPLAIN` 给出警告。升级后应验证计划与 top-K 结果；软件包坐标需与上游版本分别核对。
+
+### 0.26.7 分区与分数
+
+数据倾斜的 partition_by 索引现在使用堆 ctid 回退拆分原本无法再切分的分区，已有索引需 REINDEX 才能获益。若显式把 ctid 加入 partition_by，仍沿用它与其他列竞争的旧行为，不启用该回退。
+
+行级安全过滤现在始终对 pdb.score 贡献 0.0，移除了此前随计划变化的常数，因此报告分数可能改变。合并反压统计全部可见段，并修复单段包含超过 4 GiB 不同字符串值时的构建与合并错误。这些变化不取消早先 0.26 向量格式的索引重建要求。
+
+### 0.26.8 前台合并行为
+
+写入路径成功启动后台合并器后，现在会跳过前台合并。若无法启动后台合并器，仍回退到前台合并。按既有流程安装匹配库、更新 SQL 扩展并执行预加载维护；本版本没有新的索引格式迁移。
+
+### 版本 0.27.0：升级与查询变化
+
+先升级备用节点，再升级主节点。Community 物理副本现在可以继续重放 WAL，但只读副本上使用 ParadeDB 索引的查询会失败。副本提升为主节点，或从备用节点取得的基础备份恢复后，复制来的 ParadeDB 索引须执行 `REINDEX INDEX`。主节点取得的备份不受此限制。旧版备用节点库无法重放新的 ParadeDB WAL 记录。
+
+所有现有向量索引都须重建：0.27.0 使用向量格式 6，拒绝旧格式。将 `vector_fields` 索引选项替换为 `quantization`；显式保存了已删除选项的索引须重新创建。通过 ALTER INDEX 或重建，将 `max_leaf_size` 改为 `target_leaf_size`。量化默认值为 `[1,1]`，零表示禁用。新的默认值 `replication = 2` 将向量额外分配到第二个簇，影响存储及构建工作量；`replication = 1` 可关闭额外分配。
+
+整行的裸搜索现在检索已索引字段，不再隐式指向键字段。字段专用构造器须绑定已索引列，例如 `body @@@ pdb.term('postgres')`，不能使用整行 term 构造器。直接索引 ltree 已弃用；文档建议使用独立 GiST 索引并通过位图求交组合检索。
+
+`paradedb.mpp_queue_size` 现表示字节预算，默认为 8MB；`paradedb.mpp_request_timeout` 已删除。`paradedb.vector_cluster_max_probe` 改为绝对工作预算，默认为 100。`paradedb.max_term_set_size` 默认 262144，超限词项集合会报错。部署前须复核已有配置。
+
+新增 `pdb.expand` 在查询时应用同义词规则，`pdb.explain_score` 返回 JSONB 分数解释。L2 和内积向量的模超过约 6.5e18 时会被拒绝，包括 REINDEX 期间；有限值余弦向量仍被接受。上游预编译二进制要求 PostgreSQL 15.20、16.16、17.12 或 18.7，或同主版本内更高的小版本。这些上游要求并不表示目录中的 RPM/DEB 包已经更新。

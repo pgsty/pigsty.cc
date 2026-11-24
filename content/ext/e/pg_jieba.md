@@ -45,16 +45,16 @@ weight: 2250
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_jieba` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_jieba_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-jieba` | - |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_jieba` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_jieba_$v` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-jieba` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
@@ -69,86 +69,84 @@ weight: 2250
 | u24.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-@ el8.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_18-2.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_18-2.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_18-2.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_18-2.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_18-2.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_18-2.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_17-2.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_17-2.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_17-2.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_17-2.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_17-2.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_17-2.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_16-2.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_16-2.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_16-2.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_16-2.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_16-2.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_16-2.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_15-2.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_15-2.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_15-2.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_15-2.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_15-2.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_15-2.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_14-2.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_14-2.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_14-2.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_14-2.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_14-2.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_jieba_14 pg_jieba_14-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_14-2.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-jieba postgresql-14-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-14-pg-jieba_2.0.1-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pg_jieba_19 pg_jieba_19-2.0.1-2PGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_19-2.0.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_jieba_19 pg_jieba_19-2.0.1-2PGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_19-2.0.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_jieba_19 pg_jieba_19-2.0.1-2PGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_19-2.0.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_jieba_19 pg_jieba_19-2.0.1-2PGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_19-2.0.1-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-jieba postgresql-19-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-19-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_18-2.0.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_18-2.0.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_18-2.0.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_18-2.0.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_18-2.0.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_jieba_18 pg_jieba_18-2.0.1-2PGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_18-2.0.1-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-jieba postgresql-18-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-18-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_17-2.0.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_17-2.0.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_17-2.0.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_17-2.0.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_17-2.0.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_jieba_17 pg_jieba_17-2.0.1-2PGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_17-2.0.1-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-jieba postgresql-17-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-17-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_16-2.0.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_16-2.0.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_16-2.0.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_16-2.0.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_16-2.0.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_jieba_16 pg_jieba_16-2.0.1-2PGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_16-2.0.1-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-jieba postgresql-16-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-16-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el8.x86_64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jieba_15-2.0.1-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el8.aarch64.rpm pigsty 2.0.1 3.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jieba_15-2.0.1-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el9.x86_64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jieba_15-2.0.1-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el9.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_jieba_15-2.0.1-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el10.x86_64.rpm pigsty 2.0.1 3.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_jieba_15-2.0.1-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_jieba_15 pg_jieba_15-2.0.1-2PGSTY.el10.aarch64.rpm pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_jieba_15-2.0.1-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-jieba postgresql-15-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 3.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jieba/postgresql-15-pg-jieba_2.0.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install pg_jieba;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_jieba -v 19  # PG 19
 pig ext install -y pg_jieba -v 18  # PG 18
 pig ext install -y pg_jieba -v 17  # PG 17
 pig ext install -y pg_jieba -v 16  # PG 16
 pig ext install -y pg_jieba -v 15  # PG 15
-pig ext install -y pg_jieba -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_jieba_19       # PG 19
 dnf install -y pg_jieba_18       # PG 18
 dnf install -y pg_jieba_17       # PG 17
 dnf install -y pg_jieba_16       # PG 16
 dnf install -y pg_jieba_15       # PG 15
-dnf install -y pg_jieba_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-jieba   # PG 19
 apt install -y postgresql-18-pg-jieba   # PG 18
 apt install -y postgresql-17-pg-jieba   # PG 17
 apt install -y postgresql-16-pg-jieba   # PG 16
 apt install -y postgresql-15-pg-jieba   # PG 15
-apt install -y postgresql-14-pg-jieba   # PG 14
 ```
 
 

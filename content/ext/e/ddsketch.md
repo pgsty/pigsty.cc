@@ -42,16 +42,16 @@ weight: 4650
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `ddsketch` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `ddsketch_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-ddsketch` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `ddsketch` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `ddsketch_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-ddsketch` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
@@ -66,86 +66,84 @@ weight: 4650
 | u24.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 | AVAIL PIGSTY 1.0.1 1 |
-@ el8.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_18-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_18-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_18-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 32.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_18-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 34.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_18-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_18-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb pigsty 1.0.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb pigsty 1.0.1 64.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb pigsty 1.0.1 65.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 62.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 63.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_17-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_17-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_17-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 32.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_17-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 34.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_17-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_17-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb pigsty 1.0.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb pigsty 1.0.1 69.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb pigsty 1.0.1 69.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 63.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_16-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_16-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_16-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 32.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_16-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 34.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_16-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_16-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb pigsty 1.0.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb pigsty 1.0.1 69.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb pigsty 1.0.1 69.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 63.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_15-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_15-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_15-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_15-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 34.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_15-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_15-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb pigsty 1.0.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb pigsty 1.0.1 60.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb pigsty 1.0.1 69.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb pigsty 1.0.1 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 64.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 63.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el8.x86_64.rpm pigsty 1.0.1 34.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_14-1.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el8.aarch64.rpm pigsty 1.0.1 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_14-1.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el9.x86_64.rpm pigsty 1.0.1 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_14-1.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el9.aarch64.rpm pigsty 1.0.1 32.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_14-1.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el10.x86_64.rpm pigsty 1.0.1 34.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_14-1.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 ddsketch_14 ddsketch_14-1.0.1-1PIGSTY.el10.aarch64.rpm pigsty 1.0.1 33.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_14-1.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb pigsty 1.0.1 60.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb pigsty 1.0.1 69.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb pigsty 1.0.1 69.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 63.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 63.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-ddsketch postgresql-14-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-14-ddsketch_1.0.1-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 ddsketch_19 ddsketch_19-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 71.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_19-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 ddsketch_19 ddsketch_19-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 70.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_19-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 ddsketch_19 ddsketch_19-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 70.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_19-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 ddsketch_19 ddsketch_19-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_19-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 64.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 65.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 64.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 62.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-ddsketch postgresql-19-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 63.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-19-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 68.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_18-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 68.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_18-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 71.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_18-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 70.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_18-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 70.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_18-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 ddsketch_18 ddsketch_18-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 70.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_18-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 64.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 65.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 64.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 63.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-ddsketch postgresql-18-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 63.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-18-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 68.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_17-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 68.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_17-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 71.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_17-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 70.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_17-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 70.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_17-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 ddsketch_17 ddsketch_17-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_17-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 69.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 64.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 63.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-ddsketch postgresql-17-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-17-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 68.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_16-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 68.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_16-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 71.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_16-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 70.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_16-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 70.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_16-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 ddsketch_16 ddsketch_16-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_16-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 69.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 69.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 64.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 63.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-ddsketch postgresql-16-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-16-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el8.x86_64.rpm pigsty 1.0.1 68.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddsketch_15-1.0.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el8.aarch64.rpm pigsty 1.0.1 68.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/ddsketch_15-1.0.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el9.x86_64.rpm pigsty 1.0.1 71.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/ddsketch_15-1.0.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el9.aarch64.rpm pigsty 1.0.1 70.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/ddsketch_15-1.0.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el10.x86_64.rpm pigsty 1.0.1 70.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/ddsketch_15-1.0.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 ddsketch_15 ddsketch_15-1.0.1-1PGSTY.el10.aarch64.rpm pigsty 1.0.1 70.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/ddsketch_15-1.0.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb pigsty 1.0.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb pigsty 1.0.1 60.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb pigsty 1.0.1 60.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb pigsty 1.0.1 69.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb pigsty 1.0.1 69.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~noble_amd64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~noble_arm64.deb pigsty 1.0.1 64.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb pigsty 1.0.1 63.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-ddsketch postgresql-15-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb pigsty 1.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddsketch/postgresql-15-ddsketch_1.0.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install ddsketch;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y ddsketch -v 19  # PG 19
 pig ext install -y ddsketch -v 18  # PG 18
 pig ext install -y ddsketch -v 17  # PG 17
 pig ext install -y ddsketch -v 16  # PG 16
 pig ext install -y ddsketch -v 15  # PG 15
-pig ext install -y ddsketch -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y ddsketch_19       # PG 19
 dnf install -y ddsketch_18       # PG 18
 dnf install -y ddsketch_17       # PG 17
 dnf install -y ddsketch_16       # PG 16
 dnf install -y ddsketch_15       # PG 15
-dnf install -y ddsketch_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-ddsketch   # PG 19
 apt install -y postgresql-18-ddsketch   # PG 18
 apt install -y postgresql-17-ddsketch   # PG 17
 apt install -y postgresql-16-ddsketch   # PG 16
 apt install -y postgresql-15-ddsketch   # PG 15
-apt install -y postgresql-14-ddsketch   # PG 14
 ```
 
 

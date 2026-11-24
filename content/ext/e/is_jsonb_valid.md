@@ -45,16 +45,16 @@ weight: 2765
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "18,17,16,15,14" >}} | `is_jsonb_valid` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "18,17,16,15,14" >}} | `is_jsonb_valid_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-is-jsonb-valid` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "19,18,17,16,15" >}} | `is_jsonb_valid` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "19,18,17,16,15" >}} | `is_jsonb_valid_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.4` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-is-jsonb-valid` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
@@ -69,86 +69,84 @@ weight: 2765
 | u24.aarch64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 | AVAIL PIGSTY 0.1.4 1 |
-@ el8.x86_64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 63.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_18-0.1.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 62.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_18-0.1.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 64.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_18-0.1.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 64.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_18-0.1.4-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 19 is_jsonb_valid_19 is_jsonb_valid_19-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 63.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_19-0.1.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 is_jsonb_valid_19 is_jsonb_valid_19-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 62.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_19-0.1.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 is_jsonb_valid_19 is_jsonb_valid_19-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 65.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_19-0.1.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 is_jsonb_valid_19 is_jsonb_valid_19-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_19-0.1.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 55.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 55.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 55.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-is-jsonb-valid postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-19-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_18-0.1.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 60.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_18-0.1.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 63.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_18-0.1.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 62.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_18-0.1.4-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_18-0.1.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 is_jsonb_valid_18 is_jsonb_valid_18-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_18-0.1.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 49.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 49.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 53.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 52.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 52.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 51.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 62.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 64.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 64.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 49.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 51.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 49.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 59.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 59.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 53.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 52.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 62.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_16-0.1.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 64.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 64.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_16-0.1.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el10.x86_64.rpm
+@ d12.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 55.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 54.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 54.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-is-jsonb-valid postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-18-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 63.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_17-0.1.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 is_jsonb_valid_17 is_jsonb_valid_17-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_17-0.1.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 61.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 54.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-is-jsonb-valid postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-17-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_16-0.1.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 63.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_16-0.1.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_16-0.1.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 is_jsonb_valid_16 is_jsonb_valid_16-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_16-0.1.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 51.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 49.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 51.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 49.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 59.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 59.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 53.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 52.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 62.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_15-0.1.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 64.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 63.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_15-0.1.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el10.x86_64.rpm
+@ d12.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 61.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 54.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-is-jsonb-valid postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-16-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 62.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_15-0.1.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 63.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 62.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_15-0.1.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 65.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_15-0.1.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 is_jsonb_valid_15 is_jsonb_valid_15-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_15-0.1.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 51.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 49.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 50.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 49.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 60.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 59.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 53.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 52.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 52.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el8.x86_64.rpm pigsty 0.1.4 63.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/is_jsonb_valid_14-0.1.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el8.aarch64.rpm pigsty 0.1.4 62.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/is_jsonb_valid_14-0.1.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el9.x86_64.rpm pigsty 0.1.4 64.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/is_jsonb_valid_14-0.1.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el9.aarch64.rpm pigsty 0.1.4 64.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/is_jsonb_valid_14-0.1.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el10.x86_64.rpm pigsty 0.1.4 64.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/is_jsonb_valid_14-0.1.4-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 is_jsonb_valid_14 is_jsonb_valid_14-0.1.4-1PGSTY.el10.aarch64.rpm pigsty 0.1.4 64.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/is_jsonb_valid_14-0.1.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 52.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 61.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 60.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 55.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-is-jsonb-valid postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-14-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb pigsty 0.1.4 52.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb pigsty 0.1.4 52.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb pigsty 0.1.4 51.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb pigsty 0.1.4 61.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb pigsty 0.1.4 60.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb pigsty 0.1.4 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb pigsty 0.1.4 54.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb pigsty 0.1.4 54.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-is-jsonb-valid postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb pigsty 0.1.4 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/is-jsonb-valid/postgresql-15-is-jsonb-valid_0.1.4-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install is_jsonb_valid;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y is_jsonb_valid -v 19  # PG 19
 pig ext install -y is_jsonb_valid -v 18  # PG 18
 pig ext install -y is_jsonb_valid -v 17  # PG 17
 pig ext install -y is_jsonb_valid -v 16  # PG 16
 pig ext install -y is_jsonb_valid -v 15  # PG 15
-pig ext install -y is_jsonb_valid -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y is_jsonb_valid_19       # PG 19
 dnf install -y is_jsonb_valid_18       # PG 18
 dnf install -y is_jsonb_valid_17       # PG 17
 dnf install -y is_jsonb_valid_16       # PG 16
 dnf install -y is_jsonb_valid_15       # PG 15
-dnf install -y is_jsonb_valid_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-is-jsonb-valid   # PG 19
 apt install -y postgresql-18-is-jsonb-valid   # PG 18
 apt install -y postgresql-17-is-jsonb-valid   # PG 17
 apt install -y postgresql-16-is-jsonb-valid   # PG 16
 apt install -y postgresql-15-is-jsonb-valid   # PG 15
-apt install -y postgresql-14-is-jsonb-valid   # PG 14
 ```
 
 

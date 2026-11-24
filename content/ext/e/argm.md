@@ -45,16 +45,16 @@ weight: 4765
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `argm` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `argm_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-argm` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "19,18,17,16,15" >}} | `argm` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "19,18,17,16,15" >}} | `argm_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-argm` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
@@ -69,86 +69,84 @@ weight: 4765
 | u24.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
-@ el8.x86_64 18 argm_18 argm_18-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_18-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 argm_18 argm_18-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_18-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 argm_18 argm_18-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_18-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 argm_18 argm_18-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_18-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 argm_18 argm_18-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_18-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 argm_18 argm_18-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_18-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-18-argm_1.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 argm_17 argm_17-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_17-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 argm_17 argm_17-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_17-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 argm_17 argm_17-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_17-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 argm_17 argm_17-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_17-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 argm_17 argm_17-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_17-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 argm_17 argm_17-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_17-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 21.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-17-argm_1.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 argm_16 argm_16-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_16-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 argm_16 argm_16-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_16-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 argm_16 argm_16-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_16-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 argm_16 argm_16-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_16-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 argm_16 argm_16-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_16-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 argm_16 argm_16-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_16-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 21.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-16-argm_1.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 argm_15 argm_15-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_15-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 argm_15 argm_15-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_15-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 argm_15 argm_15-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_15-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 argm_15 argm_15-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_15-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 argm_15 argm_15-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 18.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_15-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 argm_15 argm_15-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_15-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 19.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 21.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-15-argm_1.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 argm_14 argm_14-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_14-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 argm_14 argm_14-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_14-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 argm_14 argm_14-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_14-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 argm_14 argm_14-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_14-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 argm_14 argm_14-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 18.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_14-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 argm_14 argm_14-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 18.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_14-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 19.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 19.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 21.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-argm postgresql-14-argm_1.1.1-1PIGSTY~resolute_arm64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-14-argm_1.1.1-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 argm_19 argm_19-1.1.1-1PGSTY.el9.x86_64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_19-1.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 argm_19 argm_19-1.1.1-1PGSTY.el9.aarch64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_19-1.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 argm_19 argm_19-1.1.1-1PGSTY.el10.x86_64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_19-1.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 argm_19 argm_19-1.1.1-1PGSTY.el10.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_19-1.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~bookworm_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~bookworm_arm64.deb pigsty 1.1.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~trixie_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~jammy_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~jammy_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~noble_amd64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~noble_arm64.deb pigsty 1.1.1 20.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~resolute_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-argm postgresql-19-argm_1.1.1-1PGSTY~resolute_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-19-argm_1.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 argm_18 argm_18-1.1.1-1PGSTY.el8.x86_64.rpm pigsty 1.1.1 28.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_18-1.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 argm_18 argm_18-1.1.1-1PGSTY.el8.aarch64.rpm pigsty 1.1.1 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_18-1.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 argm_18 argm_18-1.1.1-1PGSTY.el9.x86_64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_18-1.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 argm_18 argm_18-1.1.1-1PGSTY.el9.aarch64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_18-1.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 argm_18 argm_18-1.1.1-1PGSTY.el10.x86_64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_18-1.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 argm_18 argm_18-1.1.1-1PGSTY.el10.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_18-1.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~bookworm_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~bookworm_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~trixie_arm64.deb pigsty 1.1.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~jammy_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~jammy_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~noble_amd64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~noble_arm64.deb pigsty 1.1.1 20.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-argm postgresql-18-argm_1.1.1-1PGSTY~resolute_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-18-argm_1.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 argm_17 argm_17-1.1.1-1PGSTY.el8.x86_64.rpm pigsty 1.1.1 27.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_17-1.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 argm_17 argm_17-1.1.1-1PGSTY.el8.aarch64.rpm pigsty 1.1.1 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_17-1.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 argm_17 argm_17-1.1.1-1PGSTY.el9.x86_64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_17-1.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 argm_17 argm_17-1.1.1-1PGSTY.el9.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_17-1.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 argm_17 argm_17-1.1.1-1PGSTY.el10.x86_64.rpm pigsty 1.1.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_17-1.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 argm_17 argm_17-1.1.1-1PGSTY.el10.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_17-1.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~bookworm_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~bookworm_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~trixie_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~jammy_amd64.deb pigsty 1.1.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~jammy_arm64.deb pigsty 1.1.1 21.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~noble_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~resolute_amd64.deb pigsty 1.1.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-argm postgresql-17-argm_1.1.1-1PGSTY~resolute_arm64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-17-argm_1.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 argm_16 argm_16-1.1.1-1PGSTY.el8.x86_64.rpm pigsty 1.1.1 27.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_16-1.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 argm_16 argm_16-1.1.1-1PGSTY.el8.aarch64.rpm pigsty 1.1.1 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_16-1.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 argm_16 argm_16-1.1.1-1PGSTY.el9.x86_64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_16-1.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 argm_16 argm_16-1.1.1-1PGSTY.el9.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_16-1.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 argm_16 argm_16-1.1.1-1PGSTY.el10.x86_64.rpm pigsty 1.1.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_16-1.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 argm_16 argm_16-1.1.1-1PGSTY.el10.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_16-1.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~bookworm_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~bookworm_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~trixie_arm64.deb pigsty 1.1.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~jammy_amd64.deb pigsty 1.1.1 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~jammy_arm64.deb pigsty 1.1.1 21.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~noble_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~resolute_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-argm postgresql-16-argm_1.1.1-1PGSTY~resolute_arm64.deb pigsty 1.1.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-16-argm_1.1.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 argm_15 argm_15-1.1.1-1PGSTY.el8.x86_64.rpm pigsty 1.1.1 27.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/argm_15-1.1.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 argm_15 argm_15-1.1.1-1PGSTY.el8.aarch64.rpm pigsty 1.1.1 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/argm_15-1.1.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 argm_15 argm_15-1.1.1-1PGSTY.el9.x86_64.rpm pigsty 1.1.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/argm_15-1.1.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 argm_15 argm_15-1.1.1-1PGSTY.el9.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/argm_15-1.1.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 argm_15 argm_15-1.1.1-1PGSTY.el10.x86_64.rpm pigsty 1.1.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/argm_15-1.1.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 argm_15 argm_15-1.1.1-1PGSTY.el10.aarch64.rpm pigsty 1.1.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/argm_15-1.1.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~bookworm_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~bookworm_arm64.deb pigsty 1.1.1 19.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~trixie_amd64.deb pigsty 1.1.1 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~trixie_arm64.deb pigsty 1.1.1 19.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~jammy_amd64.deb pigsty 1.1.1 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~jammy_arm64.deb pigsty 1.1.1 21.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~noble_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~noble_arm64.deb pigsty 1.1.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~resolute_amd64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-argm postgresql-15-argm_1.1.1-1PGSTY~resolute_arm64.deb pigsty 1.1.1 20.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/argm/postgresql-15-argm_1.1.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install argm;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y argm -v 19  # PG 19
 pig ext install -y argm -v 18  # PG 18
 pig ext install -y argm -v 17  # PG 17
 pig ext install -y argm -v 16  # PG 16
 pig ext install -y argm -v 15  # PG 15
-pig ext install -y argm -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y argm_19       # PG 19
 dnf install -y argm_18       # PG 18
 dnf install -y argm_17       # PG 17
 dnf install -y argm_16       # PG 16
 dnf install -y argm_15       # PG 15
-dnf install -y argm_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-argm   # PG 19
 apt install -y postgresql-18-argm   # PG 18
 apt install -y postgresql-17-argm   # PG 17
 apt install -y postgresql-16-argm   # PG 16
 apt install -y postgresql-15-argm   # PG 15
-apt install -y postgresql-14-argm   # PG 14
 ```
 
 

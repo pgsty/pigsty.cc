@@ -11,10 +11,10 @@ weight: 9000
     <div class="ext-card__title">documentdb/documentdb</div>
     <div class="ext-card__desc">https://github.com/documentdb/documentdb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-1.0-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-1.2-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">documentdb-1.0-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
-    <div class="ext-card__desc">documentdb-1.0-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
+    <div class="ext-card__title">documentdb-1.2-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
+    <div class="ext-card__desc">documentdb-1.2-0.tar.gz intelrdfpmath-applied-2.0u3-1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9000
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`documentdb`**](/ext/e/documentdb) | `1.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`documentdb`**](/ext/e/documentdb) | `1.2` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -48,141 +48,155 @@ weight: 9000
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `documentdb` | `documentdb_core`, `pg_cron`, `postgis`, `tsm_system_rows`, `vector` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis37_$v` |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2` | {{< pgvers "19,18,17,16,15" >}} | `documentdb` | `documentdb_core`, `pg_cron`, `postgis`, `tsm_system_rows`, `vector` |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2` | {{< pgvers "19,18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis37_$v` |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 0.117 1 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | AVAIL PGDG 1.0 4 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_18-1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_18-1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_18-1.0-2PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 5.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_18-1.0-2PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_18-1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 documentdb_18 documentdb_18-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_18-1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~bookworm_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| el9.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 |
+| d13.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 |
+| u22.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 1.2 1 | AVAIL PIGSTY 0.117 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.2 1 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 |
+| u26.aarch64 | AVAIL PIGSTY 1.2 1 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 |
+@ el9.x86_64 19 documentdb_19 documentdb_19-1.2-1PGSTY.el9.x86_64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_19-1.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 documentdb_19 documentdb_19-1.2-1PGSTY.el9.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_19-1.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 documentdb_19 documentdb_19-1.2-1PGSTY.el10.x86_64.rpm pigsty 1.2 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_19-1.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 documentdb_19 documentdb_19-1.2-1PGSTY.el10.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_19-1.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~bookworm_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~bookworm_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~trixie_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~trixie_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~jammy_amd64.deb pigsty 1.2 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~jammy_arm64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~noble_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~noble_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~resolute_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-documentdb postgresql-19-documentdb_1.2-1PGSTY~resolute_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-19-documentdb_1.2-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el8.x86_64.rpm pigsty 1.2 6.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_18-1.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el8.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_18-1.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el9.x86_64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_18-1.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el9.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_18-1.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el10.x86_64.rpm pigsty 1.2 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_18-1.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 documentdb_18 documentdb_18-1.2-1PGSTY.el10.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_18-1.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~bookworm_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~bookworm_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-0-1.pgdg13+1_amd64.deb pgdg 1.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.2-0-1.pgdg13+1_amd64.deb
+@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~trixie_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1-1.pgdg13+2_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-0-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~trixie_amd64.deb
-@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-0-1.pgdg13+1_arm64.deb pgdg 1.2 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.2-0-1.pgdg13+1_arm64.deb
+@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~trixie_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1-1.pgdg13+2_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-0-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~trixie_arm64.deb
-@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb
-@ u22.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 5.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~noble_arm64.deb
+@ u22.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~jammy_amd64.deb pigsty 1.2 6.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~jammy_arm64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~noble_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~noble_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb pgdg 1.2 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~resolute_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~resolute_amd64.deb
-@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb pgdg 1.2 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.2-1PGSTY~resolute_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-18-documentdb_1.2-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-18-documentdb_1.0-1PGSTY~resolute_arm64.deb
-@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-documentdb postgresql-18-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-18-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_17-1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_17-1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_17-1.0-2PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 5.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_17-1.0-2PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_17-1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 documentdb_17 documentdb_17-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_17-1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~bookworm_arm64.deb
+@ el8.x86_64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el8.x86_64.rpm pigsty 1.2 6.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_17-1.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el8.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_17-1.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el9.x86_64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_17-1.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el9.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_17-1.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el10.x86_64.rpm pigsty 1.2 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_17-1.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 documentdb_17 documentdb_17-1.2-1PGSTY.el10.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_17-1.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~bookworm_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~bookworm_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-0-1.pgdg13+1_amd64.deb pgdg 1.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.2-0-1.pgdg13+1_amd64.deb
+@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~trixie_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1-1.pgdg13+2_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-0-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~trixie_amd64.deb
-@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-0-1.pgdg13+1_arm64.deb pgdg 1.2 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.2-0-1.pgdg13+1_arm64.deb
+@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~trixie_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1-1.pgdg13+2_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-0-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~trixie_arm64.deb
-@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb
-@ u22.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 6.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 6.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~noble_arm64.deb
+@ u22.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~jammy_amd64.deb pigsty 1.2 6.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~jammy_arm64.deb pigsty 1.2 6.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~noble_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~noble_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb pgdg 1.2 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~resolute_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~resolute_amd64.deb
-@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb pgdg 1.2 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.2-1PGSTY~resolute_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-17-documentdb_1.2-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-17-documentdb_1.0-1PGSTY~resolute_arm64.deb
-@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-documentdb postgresql-17-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-17-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_16-1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_16-1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_16-1.0-2PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_16-1.0-2PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_16-1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 documentdb_16 documentdb_16-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_16-1.0-2PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~bookworm_arm64.deb
+@ el8.x86_64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el8.x86_64.rpm pigsty 1.2 6.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_16-1.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el8.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_16-1.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el9.x86_64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_16-1.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el9.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_16-1.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el10.x86_64.rpm pigsty 1.2 6.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_16-1.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 documentdb_16 documentdb_16-1.2-1PGSTY.el10.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_16-1.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~bookworm_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~bookworm_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-0-1.pgdg13+1_amd64.deb pgdg 1.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.2-0-1.pgdg13+1_amd64.deb
+@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~trixie_amd64.deb pigsty 1.2 5.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1-1.pgdg13+2_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-0-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~trixie_amd64.deb
-@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-0-1.pgdg13+1_arm64.deb pgdg 1.2 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.2-0-1.pgdg13+1_arm64.deb
+@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~trixie_arm64.deb pigsty 1.2 5.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1-1.pgdg13+2_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-0-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 5.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~trixie_arm64.deb
-@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb
-@ u22.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 6.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 6.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~noble_arm64.deb
+@ u22.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~jammy_amd64.deb pigsty 1.2 6.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~jammy_arm64.deb pigsty 1.2 6.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~noble_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~noble_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb pgdg 1.2 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~resolute_amd64.deb pigsty 1.2 5.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~resolute_amd64.deb
-@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb pgdg 1.2 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.2-1PGSTY~resolute_arm64.deb pigsty 1.2 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-16-documentdb_1.2-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-16-documentdb_1.0-1PGSTY~resolute_arm64.deb
-@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-documentdb postgresql-16-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.2MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-16-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el8.x86_64.rpm pigsty 1.0 6.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_15-1.0-2PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el8.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_15-1.0-2PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el9.x86_64.rpm pigsty 1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_15-1.0-2PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el9.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_15-1.0-2PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el10.x86_64.rpm pigsty 1.0 6.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_15-1.0-2PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 documentdb_15 documentdb_15-1.0-2PGSTY.el10.aarch64.rpm pigsty 1.0 5.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_15-1.0-2PGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el8.x86_64.rpm pigsty 1.2 6.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/documentdb_15-1.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el8.aarch64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/documentdb_15-1.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el9.x86_64.rpm pigsty 1.2 6.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/documentdb_15-1.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el9.aarch64.rpm pigsty 1.2 5.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/documentdb_15-1.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el10.x86_64.rpm pigsty 1.2 6.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/documentdb_15-1.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 documentdb_15 documentdb_15-1.2-1PGSTY.el10.aarch64.rpm pigsty 1.2 6.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/documentdb_15-1.2-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~bookworm_amd64.deb pigsty 0.117 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~bookworm_arm64.deb pigsty 0.117 5.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.2-0-1.pgdg13+1_amd64.deb pgdg 1.2 5.7MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.2-0-1.pgdg13+1_amd64.deb
+@ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-1-1.pgdg13+2_amd64.deb pgdg 1.0 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-1-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-0-1.pgdg13+1_amd64.deb pgdg 1.0 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-0-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb pgdg 1.0 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-2.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb pgdg 1.0 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~trixie_amd64.deb pigsty 0.117 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.2-0-1.pgdg13+1_arm64.deb pgdg 1.2 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.2-0-1.pgdg13+1_arm64.deb
+@ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-1-1.pgdg13+2_arm64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-1-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-0-1.pgdg13+1_arm64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-0-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-2.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb pgdg 1.0 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~trixie_arm64.deb pigsty 0.117 5.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~jammy_amd64.deb pigsty 0.117 6.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~jammy_arm64.deb pigsty 0.117 6.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~noble_amd64.deb pigsty 0.117 5.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~noble_arm64.deb pigsty 0.117 5.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb pgdg 1.2 5.6MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.2-0-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-1-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-0-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-2.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb pgdg 1.0 5.5MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~resolute_amd64.deb pigsty 0.117 5.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb pgdg 1.2 5.4MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.2-0-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-1-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0-0-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-2.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb pgdg 1.0 5.3MiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/d/documentdb/postgresql-15-documentdb_1.0~RC1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-documentdb postgresql-15-documentdb_0.117-1PGSTY~resolute_arm64.deb pigsty 0.117 5.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/documentdb/postgresql-15-documentdb_0.117-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
@@ -210,6 +224,7 @@ pig install documentdb;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y documentdb -v 19  # PG 19
 pig ext install -y documentdb -v 18  # PG 18
 pig ext install -y documentdb -v 17  # PG 17
 pig ext install -y documentdb -v 16  # PG 16
@@ -217,6 +232,7 @@ pig ext install -y documentdb -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y documentdb_19       # PG 19
 dnf install -y documentdb_18       # PG 18
 dnf install -y documentdb_17       # PG 17
 dnf install -y documentdb_16       # PG 16
@@ -224,6 +240,7 @@ dnf install -y documentdb_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-documentdb   # PG 19
 apt install -y postgresql-18-documentdb   # PG 18
 apt install -y postgresql-17-documentdb   # PG 17
 apt install -y postgresql-16-documentdb   # PG 16
@@ -253,6 +270,10 @@ CREATE EXTENSION documentdb CASCADE;  -- 依赖: documentdb_core, pg_cron, postg
 - [`documentdb` control file](https://github.com/documentdb/documentdb/blob/v1.0-0/pg_documentdb/documentdb.control)
 - [Official preload helper](https://github.com/documentdb/documentdb/blob/v1.0-0/scripts/preload_libraries.sh)
 - [DocumentDB 1.0 release](https://github.com/documentdb/documentdb/releases/tag/v1.0-0)
+- [DocumentDB 1.2 release](https://github.com/documentdb/documentdb/releases/tag/v1.2-0)
+- [1.2 control](https://github.com/documentdb/documentdb/blob/v1.2-0/pg_documentdb/documentdb.control)
+- [1.1 to 1.2 SQL](https://github.com/documentdb/documentdb/blob/v1.2-0/pg_documentdb/sql/documentdb--1.1-0--1.2-0.sql)
+- [Official upgrade procedure](https://github.com/documentdb/documentdb/blob/v1.2-0/packaging/README.md)
 
 `documentdb` 是 PostgreSQL 的公共 API 扩展，用于 DocumentDB，这是一个基于 PostgreSQL 开源的 MongoDB 兼容文档数据库。它存储 BSON 文档并实现 CRUD、聚合、全文搜索、地理空间和向量工作流。MongoDB 驱动程序需要单独的 DocumentDB 网关；仅安装此扩展不会暴露 Wire-Protocol 监听器，而是 PostgreSQL API。
 
@@ -311,3 +332,9 @@ FROM documentdb_api_catalog.bson_aggregation_find(
 官方 DocumentDB Local 容器默认启用使用情况遥测；原生软件包不受影响。容器中可设置 DOCUMENTDB_USAGE_TELEMETRY=false、NO_ANALYTICS=1 或 DO_NOT_TRACK=1 禁用。
 
 MongoDB 兼容性并不等同于所有 MongoDB 服务器版本。应测试应用实际使用的操作符、索引行为、事务、模式验证、身份验证和驱动行为。请确保 `documentdb`、`documentdb_core`、网关及可选的分布式/索引组件来自同一发行系列。
+
+### DocumentDB 1.2 变化
+
+DocumentDB 1.2 的 SQL 版本为 `1.2-0`。升级前应备份数据目录；不支持将已升级数据退回 1.0。官方 1.2 容器先升级扩展再启动网关，并要求显式提供密码，已有数据卷也不例外。对于接管的 PostgreSQL 实例，应遵循包指南的重启与升级顺序，不要重启或修改无关实例。
+
+只有设置 `documentdb_core.enableCollation = on` 后才启用排序规则，即使显式指定 `simple` 也一样。非唯一排序规则索引还需要 `documentdb.enableCollationWithNonUniqueOrderedIndexes`；唯一索引还需要 `documentdb.enable_collated_unique_indexes` 与 `documentdb.enable_composite_unique_optional_key`。此版本扩展了逐命令、逐更新的排序规则行为，并修复降序唯一索引的空值与缺失值冲突、`$dateTrunc` 的天边界以及重扫 `$densify` 的结果。升级后应复核相关查询和索引语义。

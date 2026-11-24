@@ -42,210 +42,246 @@ weight: 5050
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `pg_dirtyread` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `pg_dirtyread_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-dirtyread` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "19,18,17,16,15" >}} | `pg_dirtyread` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.8` | {{< pgvers "19,18,17,16,15" >}} | `pg_dirtyread_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-dirtyread` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el8.aarch64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el9.x86_64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
-| el9.aarch64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
-| el10.x86_64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
-| el10.aarch64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
-| d12.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| d12.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| d13.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| d13.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u22.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u22.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u24.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u24.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u26.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-| u26.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
-@ el8.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el8.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_18-2.8-1PIGSTY.el8.x86_64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| el9.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
+| el9.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
+| el10.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
+| el10.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 5 | AVAIL PGDG 2.8 5 | AVAIL PGDG 2.8 5 | AVAIL PGDG 2.8 5 |
+| d12.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| d12.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| d13.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| d13.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u22.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u22.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u24.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u24.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u26.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+| u26.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 | AVAIL PGDG 2.8 3 |
+@ el9.x86_64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-5PGDG.rhel9.9.x86_64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_dirtyread_19-2.8-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-1PGSTY.el9.x86_64.rpm pigsty 2.8 28.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_19-2.8-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-5PGDG.rhel9.9.aarch64.rpm pgdg 2.8 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_dirtyread_19-2.8-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-1PGSTY.el9.aarch64.rpm pigsty 2.8 28.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_19-2.8-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-5PGDG.rhel10.3.x86_64.rpm pgdg 2.8 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_dirtyread_19-2.8-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-1PGSTY.el10.x86_64.rpm pigsty 2.8 28.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_19-2.8-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-5PGDG.rhel10.3.aarch64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_dirtyread_19-2.8-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 19 pg_dirtyread_19 pg_dirtyread_19-2.8-1PGSTY.el10.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_19-2.8-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg12+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg12+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg13+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg13+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg22.04+2_amd64.deb pgdg 2.8 22.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 22.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg22.04+2_arm64.deb pgdg 2.8 21.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 21.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg24.04+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg24.04+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg26.04+2_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg26.04+2_arm64.deb pgdg 2.8 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-dirtyread postgresql-19-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-19-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel8.10.x86_64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dirtyread_18-2.8-5PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el8.x86_64.rpm pigsty 2.8 28.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_18-2.8-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel8.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dirtyread_18-2.7-4PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el8.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_18-2.8-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel8.10.aarch64.rpm pgdg 2.8 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dirtyread_18-2.8-5PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el8.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_18-2.8-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_18-2.8-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dirtyread_18-2.7-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel9.x86_64.rpm pgdg 2.7 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dirtyread_18-2.7-4PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_18-2.8-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dirtyread_18-2.7-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel9.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_18-2.8-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dirtyread_18-2.7-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dirtyread_18-2.7-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_18-2.8-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel9.9.x86_64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dirtyread_18-2.8-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el9.x86_64.rpm pigsty 2.8 28.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_18-2.8-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel9.9.aarch64.rpm pgdg 2.8 17.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dirtyread_18-2.8-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el9.aarch64.rpm pigsty 2.8 28.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_18-2.8-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel10.3.x86_64.rpm pgdg 2.8 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dirtyread_18-2.8-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el10.x86_64.rpm pigsty 2.8 28.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_18-2.8-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel10.3.aarch64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.8-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-5PGDG.rhel10.2.aarch64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.8-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PGSTY.el10.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_18-2.8-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.7-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg12+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg13+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg13+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg13+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg13+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg22.04+2_amd64.deb pgdg 2.8 22.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 22.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg22.04+1_amd64.deb pgdg 2.7 22.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg22.04+2_arm64.deb pgdg 2.8 21.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 21.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg22.04+1_arm64.deb pgdg 2.7 21.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg24.04+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg24.04+1_amd64.deb pgdg 2.7 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg24.04+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg24.04+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg26.04+2_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg26.04+1_amd64.deb pgdg 2.7 21.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg26.04+2_arm64.deb pgdg 2.8 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg26.04+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el8.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_17-2.8-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel8.10.x86_64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dirtyread_17-2.8-5PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el8.x86_64.rpm pigsty 2.8 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_17-2.8-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel8.x86_64.rpm pgdg 2.7 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dirtyread_17-2.7-2PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el8.aarch64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_17-2.8-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel8.10.aarch64.rpm pgdg 2.8 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dirtyread_17-2.8-5PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el8.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_17-2.8-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel8.aarch64.rpm pgdg 2.7 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dirtyread_17-2.7-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_17-2.8-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dirtyread_17-2.7-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dirtyread_17-2.7-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_17-2.8-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dirtyread_17-2.7-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel9.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dirtyread_17-2.7-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_17-2.8-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dirtyread_17-2.7-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dirtyread_17-2.7-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_17-2.8-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel9.9.x86_64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dirtyread_17-2.8-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el9.x86_64.rpm pigsty 2.8 28.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_17-2.8-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel9.9.aarch64.rpm pgdg 2.8 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dirtyread_17-2.8-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el9.aarch64.rpm pigsty 2.8 28.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_17-2.8-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel10.3.x86_64.rpm pgdg 2.8 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dirtyread_17-2.8-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el10.x86_64.rpm pigsty 2.8 28.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_17-2.8-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel10.3.aarch64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.8-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-5PGDG.rhel10.2.aarch64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.8-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PGSTY.el10.aarch64.rpm pigsty 2.8 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_17-2.8-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.7-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.7-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+2_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+2_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg12+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg13+2_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg13+1_amd64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg13+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg13+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg22.04+2_amd64.deb pgdg 2.8 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg22.04+1_amd64.deb pgdg 2.7 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg22.04+2_arm64.deb pgdg 2.8 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 25.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg22.04+1_arm64.deb pgdg 2.7 25.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg24.04+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg24.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg24.04+2_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg24.04+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg26.04+2_amd64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg26.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg26.04+2_arm64.deb pgdg 2.8 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg26.04+1_arm64.deb pgdg 2.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el8.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_16-2.8-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel8.10.x86_64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dirtyread_16-2.8-5PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el8.x86_64.rpm pigsty 2.8 27.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_16-2.8-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel8.x86_64.rpm pgdg 2.7 16.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dirtyread_16-2.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el8.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_16-2.8-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel8.10.aarch64.rpm pgdg 2.8 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dirtyread_16-2.8-5PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el8.aarch64.rpm pigsty 2.8 28.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_16-2.8-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dirtyread_16-2.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_16-2.8-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dirtyread_16-2.7-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dirtyread_16-2.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_16-2.8-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dirtyread_16-2.7-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dirtyread_16-2.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_16-2.8-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dirtyread_16-2.7-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dirtyread_16-2.7-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_16-2.8-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel9.9.x86_64.rpm pgdg 2.8 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dirtyread_16-2.8-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el9.x86_64.rpm pigsty 2.8 28.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_16-2.8-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel9.9.aarch64.rpm pgdg 2.8 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dirtyread_16-2.8-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el9.aarch64.rpm pigsty 2.8 28.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_16-2.8-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel10.3.x86_64.rpm pgdg 2.8 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dirtyread_16-2.8-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el10.x86_64.rpm pigsty 2.8 28.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_16-2.8-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel10.3.aarch64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.8-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-5PGDG.rhel10.2.aarch64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.8-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PGSTY.el10.aarch64.rpm pigsty 2.8 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_16-2.8-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.7-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.7-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+2_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+2_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg12+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg13+2_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg13+1_amd64.deb pgdg 2.7 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg13+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg13+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg22.04+2_amd64.deb pgdg 2.8 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg22.04+1_amd64.deb pgdg 2.7 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg22.04+2_arm64.deb pgdg 2.8 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg22.04+1_arm64.deb pgdg 2.7 24.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg24.04+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg24.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg24.04+2_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg24.04+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg26.04+2_amd64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg26.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg26.04+2_arm64.deb pgdg 2.8 20.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg26.04+1_arm64.deb pgdg 2.7 20.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el8.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_15-2.8-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel8.10.x86_64.rpm pgdg 2.8 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dirtyread_15-2.8-5PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el8.x86_64.rpm pigsty 2.8 27.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_15-2.8-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel8.x86_64.rpm pgdg 2.7 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dirtyread_15-2.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el8.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_15-2.8-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel8.10.aarch64.rpm pgdg 2.8 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dirtyread_15-2.8-5PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el8.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_15-2.8-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dirtyread_15-2.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_15-2.8-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dirtyread_15-2.7-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dirtyread_15-2.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_15-2.8-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dirtyread_15-2.7-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dirtyread_15-2.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_15-2.8-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dirtyread_15-2.7-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dirtyread_15-2.7-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_15-2.8-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel9.9.x86_64.rpm pgdg 2.8 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dirtyread_15-2.8-5PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el9.x86_64.rpm pigsty 2.8 28.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_15-2.8-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel9.9.aarch64.rpm pgdg 2.8 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dirtyread_15-2.8-5PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el9.aarch64.rpm pigsty 2.8 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_15-2.8-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel10.3.x86_64.rpm pgdg 2.8 18.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dirtyread_15-2.8-5PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el10.x86_64.rpm pigsty 2.8 28.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_15-2.8-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel10.3.aarch64.rpm pgdg 2.8 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.8-5PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-5PGDG.rhel10.2.aarch64.rpm pgdg 2.8 18.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.8-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PGSTY.el10.aarch64.rpm pigsty 2.8 28.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_15-2.8-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.7-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.7-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg12+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg13+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg13+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg13+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg13+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg22.04+2_amd64.deb pgdg 2.8 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg22.04+1_amd64.deb pgdg 2.7 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg22.04+2_arm64.deb pgdg 2.8 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 25.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg22.04+1_arm64.deb pgdg 2.7 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg24.04+2_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg24.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg24.04+2_arm64.deb pgdg 2.8 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg24.04+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg26.04+2_amd64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg26.04+1_amd64.deb pgdg 2.7 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg26.04+2_arm64.deb pgdg 2.8 20.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg26.04+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el8.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_dirtyread_14-2.8-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel8.x86_64.rpm pgdg 2.7 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dirtyread_14-2.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el8.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dirtyread_14-2.8-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dirtyread_14-2.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_14-2.8-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dirtyread_14-2.7-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dirtyread_14-2.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_14-2.8-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 17.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dirtyread_14-2.7-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dirtyread_14-2.7-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_14-2.8-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dirtyread_14-2.7-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dirtyread_14-2.7-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_14-2.8-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dirtyread_14-2.7-6PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dirtyread_14-2.7-4PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg12+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg13+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg13+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg13+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg13+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg22.04+1_amd64.deb pgdg 2.8 25.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg22.04+1_amd64.deb pgdg 2.7 25.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg22.04+1_arm64.deb pgdg 2.8 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg22.04+1_arm64.deb pgdg 2.7 25.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg24.04+1_amd64.deb pgdg 2.8 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg24.04+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg24.04+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg24.04+1_arm64.deb pgdg 2.7 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg26.04+1_amd64.deb pgdg 2.8 20.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg26.04+1_amd64.deb pgdg 2.7 21.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg26.04+1_arm64.deb pgdg 2.8 20.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg26.04+1_arm64.deb pgdg 2.7 20.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -272,27 +308,27 @@ pig install pg_dirtyread;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_dirtyread -v 19  # PG 19
 pig ext install -y pg_dirtyread -v 18  # PG 18
 pig ext install -y pg_dirtyread -v 17  # PG 17
 pig ext install -y pg_dirtyread -v 16  # PG 16
 pig ext install -y pg_dirtyread -v 15  # PG 15
-pig ext install -y pg_dirtyread -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_dirtyread_19       # PG 19
 dnf install -y pg_dirtyread_18       # PG 18
 dnf install -y pg_dirtyread_17       # PG 17
 dnf install -y pg_dirtyread_16       # PG 16
 dnf install -y pg_dirtyread_15       # PG 15
-dnf install -y pg_dirtyread_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-dirtyread   # PG 19
 apt install -y postgresql-18-dirtyread   # PG 18
 apt install -y postgresql-17-dirtyread   # PG 17
 apt install -y postgresql-16-dirtyread   # PG 16
 apt install -y postgresql-15-dirtyread   # PG 15
-apt install -y postgresql-14-dirtyread   # PG 14
 ```
 
 

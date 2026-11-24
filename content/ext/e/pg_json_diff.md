@@ -45,16 +45,16 @@ weight: 4160
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_json_diff` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_json_diff_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-json-diff` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_json_diff` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_json_diff_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-json-diff` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
@@ -69,86 +69,84 @@ weight: 4160
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_18-1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 298.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_18-1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 313.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_18-1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 307.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_18-1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_18-1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 310.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_18-1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 276.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 269.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 285.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 277.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 291.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 288.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 295.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 291.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 296.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 289.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_17-1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 297.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_17-1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 312.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_17-1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 306.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_17-1.0-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 19 pg_json_diff_19 pg_json_diff_19-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 309.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_19-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_json_diff_19 pg_json_diff_19-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 305.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_19-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_json_diff_19 pg_json_diff_19-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_19-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_json_diff_19 pg_json_diff_19-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 310.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_19-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 280.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 273.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 288.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 280.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 295.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 292.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 298.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 294.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 300.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-json-diff postgresql-19-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-19-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_18-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 296.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_18-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 309.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_18-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 305.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_18-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_18-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_json_diff_18 pg_json_diff_18-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 310.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_18-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 280.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 273.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 288.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 280.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 295.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 292.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 298.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 294.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 300.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-json-diff postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-18-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_17-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 296.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_17-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 309.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_17-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 305.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_17-1.0-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_17-1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 309.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_17-1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 276.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 270.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 285.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 277.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 323.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 321.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 295.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 291.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 296.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 288.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_16-1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 297.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_16-1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 312.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_16-1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 306.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_16-1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_16-1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 309.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_16-1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 277.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 270.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 285.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 277.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 323.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 321.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 295.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 291.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 296.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 288.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 307.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_15-1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 298.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_15-1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 313.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_15-1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 306.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_15-1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_15-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_json_diff_17 pg_json_diff_17-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 309.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_17-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 280.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 274.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 288.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 280.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 327.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 324.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 298.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 295.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 299.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-json-diff postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-17-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 305.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_16-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 295.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_16-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 309.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_16-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 305.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_16-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 318.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_16-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_json_diff_16 pg_json_diff_16-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 309.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_16-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 280.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 273.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 288.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 280.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 327.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 324.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 298.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 295.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 299.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-json-diff postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-16-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 307.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_15-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 297.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_15-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 309.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_15-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 305.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_15-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 319.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_15-1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 pg_json_diff_15 pg_json_diff_15-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 310.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_15-1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 281.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 274.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 289.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 280.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 324.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 321.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 295.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 291.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 296.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 289.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 307.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_json_diff_14-1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 298.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_json_diff_14-1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 313.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_json_diff_14-1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 307.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_json_diff_14-1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 319.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_json_diff_14-1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_json_diff_14 pg_json_diff_14-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 310.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_json_diff_14-1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 284.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 278.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 293.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 284.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 327.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 324.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 299.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 295.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 300.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-json-diff postgresql-14-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-14-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 285.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 278.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 293.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 284.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 327.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 324.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 295.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 299.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-json-diff postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 292.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-json-diff/postgresql-15-pg-json-diff_1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install pg_json_diff;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_json_diff -v 19  # PG 19
 pig ext install -y pg_json_diff -v 18  # PG 18
 pig ext install -y pg_json_diff -v 17  # PG 17
 pig ext install -y pg_json_diff -v 16  # PG 16
 pig ext install -y pg_json_diff -v 15  # PG 15
-pig ext install -y pg_json_diff -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_json_diff_19       # PG 19
 dnf install -y pg_json_diff_18       # PG 18
 dnf install -y pg_json_diff_17       # PG 17
 dnf install -y pg_json_diff_16       # PG 16
 dnf install -y pg_json_diff_15       # PG 15
-dnf install -y pg_json_diff_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-json-diff   # PG 19
 apt install -y postgresql-18-pg-json-diff   # PG 18
 apt install -y postgresql-17-pg-json-diff   # PG 17
 apt install -y postgresql-16-pg-json-diff   # PG 16
 apt install -y postgresql-15-pg-json-diff   # PG 15
-apt install -y postgresql-14-pg-json-diff   # PG 14
 ```
 
 

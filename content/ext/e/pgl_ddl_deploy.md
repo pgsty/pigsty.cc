@@ -37,54 +37,69 @@ weight: 9520
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pgl_ddl_deploy` | `pglogical` |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pgl_ddl_deploy_$v` | `pglogical_$v` |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgl-ddl-deploy` | `postgresql-$v-pglogical` |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "19,18,17,16,15" >}} | `pgl_ddl_deploy` | `pglogical` |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "19,18,17,16,15" >}} | `pgl_ddl_deploy_$v` | `pglogical_$v` |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgl-ddl-deploy` | `postgresql-$v-pglogical` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| el8.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| el9.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| el9.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 |
-| el10.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| el10.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| d12.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 |
+| el9.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 4 | AVAIL PGDG 2.2.1 4 | AVAIL PGDG 2.2.1 4 |
+| d12.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 | AVAIL PIGSTY 2.2.1 1 |
-@ el8.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el8.x86_64.rpm pigsty 2.2.1 51.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el8.aarch64.rpm pigsty 2.2.1 51.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el9.x86_64.rpm pigsty 2.2.1 49.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el9.aarch64.rpm pigsty 2.2.1 49.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el10.x86_64.rpm pigsty 2.2.1 49.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PIGSTY.el10.aarch64.rpm pigsty 2.2.1 49.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgl_ddl_deploy_18-2.2.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~bookworm_amd64.deb pigsty 2.2.1 58.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~bookworm_arm64.deb pigsty 2.2.1 58.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~trixie_amd64.deb pigsty 2.2.1 58.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~trixie_arm64.deb pigsty 2.2.1 59.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~jammy_amd64.deb pigsty 2.2.1 61.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~jammy_arm64.deb pigsty 2.2.1 61.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~noble_amd64.deb pigsty 2.2.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~noble_arm64.deb pigsty 2.2.1 60.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~resolute_amd64.deb pigsty 2.2.1 60.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~resolute_arm64.deb pigsty 2.2.1 60.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-2PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pgl_ddl_deploy_19 pgl_ddl_deploy_19-2.2.1-1PGSTY.el9.x86_64.rpm pigsty 2.2.1 62.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgl_ddl_deploy_19-2.2.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pgl_ddl_deploy_19 pgl_ddl_deploy_19-2.2.1-1PGSTY.el9.aarch64.rpm pigsty 2.2.1 62.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgl_ddl_deploy_19-2.2.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pgl_ddl_deploy_19 pgl_ddl_deploy_19-2.2.1-1PGSTY.el10.x86_64.rpm pigsty 2.2.1 62.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgl_ddl_deploy_19-2.2.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pgl_ddl_deploy_19 pgl_ddl_deploy_19-2.2.1-1PGSTY.el10.aarch64.rpm pigsty 2.2.1 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgl_ddl_deploy_19-2.2.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_amd64.deb pigsty 2.2.1 49.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_arm64.deb pigsty 2.2.1 50.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_amd64.deb pigsty 2.2.1 49.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_arm64.deb pigsty 2.2.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_amd64.deb pigsty 2.2.1 52.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_arm64.deb pigsty 2.2.1 52.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~noble_amd64.deb pigsty 2.2.1 51.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~noble_arm64.deb pigsty 2.2.1 52.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb pigsty 2.2.1 51.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgl-ddl-deploy postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb pigsty 2.2.1 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-19-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el8.x86_64.rpm pigsty 2.2.1 63.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el8.aarch64.rpm pigsty 2.2.1 63.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el9.x86_64.rpm pigsty 2.2.1 62.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el9.aarch64.rpm pigsty 2.2.1 62.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el10.x86_64.rpm pigsty 2.2.1 62.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgl_ddl_deploy_18 pgl_ddl_deploy_18-2.2.1-1PGSTY.el10.aarch64.rpm pigsty 2.2.1 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgl_ddl_deploy_18-2.2.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_amd64.deb pigsty 2.2.1 49.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_arm64.deb pigsty 2.2.1 50.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_amd64.deb pigsty 2.2.1 49.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_arm64.deb pigsty 2.2.1 50.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_amd64.deb pigsty 2.2.1 52.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_arm64.deb pigsty 2.2.1 52.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~noble_amd64.deb pigsty 2.2.1 51.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~noble_arm64.deb pigsty 2.2.1 52.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb pigsty 2.2.1 51.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgl-ddl-deploy postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb pigsty 2.2.1 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-18-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel8.10.x86_64.rpm pgdg 2.2.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel8.10.aarch64.rpm pgdg 2.2.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel9.9.x86_64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel9.9.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.3.x86_64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.3.aarch64.rpm pgdg 2.2.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
@@ -95,20 +110,19 @@ weight: 9520
 @ u22.aarch64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb pgdg 2.2.1 40.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb pgdg 2.2.1 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb pigsty 2.2.1 60.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb pigsty 2.2.1 60.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb pigsty 2.2.1 51.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb pigsty 2.2.1 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel8.10.x86_64.rpm pgdg 2.2.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.x86_64.rpm pgdg 2.2.0 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel8.10.aarch64.rpm pgdg 2.2.1 40.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.2.1 38.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel9.9.x86_64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel9.9.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.3.x86_64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.3.aarch64.rpm pgdg 2.2.1 39.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
@@ -119,19 +133,19 @@ weight: 9520
 @ u22.aarch64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb pgdg 2.2.1 40.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb pgdg 2.2.1 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb pgdg 2.2.1 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb pigsty 2.2.1 60.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb pigsty 2.2.1 60.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb pigsty 2.2.1 51.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb pigsty 2.2.1 51.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel8.10.x86_64.rpm pgdg 2.2.1 40.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.x86_64.rpm pgdg 2.2.0 39.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel8.10.aarch64.rpm pgdg 2.2.1 40.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel9.9.x86_64.rpm pgdg 2.2.1 38.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel9.9.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.3.x86_64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.3.aarch64.rpm pgdg 2.2.1 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
@@ -142,31 +156,8 @@ weight: 9520
 @ u22.aarch64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb pigsty 2.2.1 59.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb pigsty 2.2.1 59.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.x86_64.rpm pgdg 2.2.0 39.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb pgdg 2.2.1 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb pgdg 2.2.1 38.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_arm64.deb pgdg 2.2.1 39.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_amd64.deb pgdg 2.2.1 39.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb pgdg 2.2.1 39.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb pgdg 2.2.1 38.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb pgdg 2.2.1 38.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb pigsty 2.2.1 59.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb pigsty 2.2.1 59.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-1PIGSTY~resolute_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb pigsty 2.2.1 51.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb pigsty 2.2.1 51.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -193,27 +184,27 @@ pig install pgl_ddl_deploy;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgl_ddl_deploy -v 19  # PG 19
 pig ext install -y pgl_ddl_deploy -v 18  # PG 18
 pig ext install -y pgl_ddl_deploy -v 17  # PG 17
 pig ext install -y pgl_ddl_deploy -v 16  # PG 16
 pig ext install -y pgl_ddl_deploy -v 15  # PG 15
-pig ext install -y pgl_ddl_deploy -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgl_ddl_deploy_19       # PG 19
 dnf install -y pgl_ddl_deploy_18       # PG 18
 dnf install -y pgl_ddl_deploy_17       # PG 17
 dnf install -y pgl_ddl_deploy_16       # PG 16
 dnf install -y pgl_ddl_deploy_15       # PG 15
-dnf install -y pgl_ddl_deploy_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgl-ddl-deploy   # PG 19
 apt install -y postgresql-18-pgl-ddl-deploy   # PG 18
 apt install -y postgresql-17-pgl-ddl-deploy   # PG 17
 apt install -y postgresql-16-pgl-ddl-deploy   # PG 16
 apt install -y postgresql-15-pgl-ddl-deploy   # PG 15
-apt install -y postgresql-14-pgl-ddl-deploy   # PG 14
 ```
 
 

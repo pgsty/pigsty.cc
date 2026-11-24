@@ -11,10 +11,10 @@ weight: 3140
     <div class="ext-card__title">commandprompt/plx</div>
     <div class="ext-card__desc">https://github.com/commandprompt/plx</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plx-2.0.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plx-3.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">plx-2.0.1.tar.gz</div>
-    <div class="ext-card__desc">plx-2.0.1.tar.gz</div>
+    <div class="ext-card__title">plx-3.1.0.tar.gz</div>
+    <div class="ext-card__desc">plx-3.1.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 3140
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`plx`**](/ext/e/plx) | `2.0.1` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`plx`**](/ext/e/plx) | `3.1.0` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,110 +45,108 @@ weight: 3140
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `plx` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `plx_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plx` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `plx` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `plx_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-plx` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 | AVAIL PIGSTY 2.0.1 1 |
-@ el8.x86_64 18 plx_18 plx_18-2.0.1-1PGSTY.el8.x86_64.rpm pigsty 2.0.1 316.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_18-2.0.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 plx_18 plx_18-2.0.1-1PGSTY.el8.aarch64.rpm pigsty 2.0.1 311.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_18-2.0.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 plx_18 plx_18-2.0.1-1PGSTY.el9.x86_64.rpm pigsty 2.0.1 333.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_18-2.0.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 plx_18 plx_18-2.0.1-1PGSTY.el9.aarch64.rpm pigsty 2.0.1 329.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_18-2.0.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 plx_18 plx_18-2.0.1-1PGSTY.el10.x86_64.rpm pigsty 2.0.1 338.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_18-2.0.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 plx_18 plx_18-2.0.1-1PGSTY.el10.aarch64.rpm pigsty 2.0.1 331.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_18-2.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 309.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 300.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 310.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 300.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 335.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 330.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 330.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 324.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 325.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-plx postgresql-18-plx_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 319.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-18-plx_2.0.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 plx_17 plx_17-2.0.1-1PGSTY.el8.x86_64.rpm pigsty 2.0.1 316.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_17-2.0.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 plx_17 plx_17-2.0.1-1PGSTY.el8.aarch64.rpm pigsty 2.0.1 311.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_17-2.0.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 plx_17 plx_17-2.0.1-1PGSTY.el9.x86_64.rpm pigsty 2.0.1 332.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_17-2.0.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 plx_17 plx_17-2.0.1-1PGSTY.el9.aarch64.rpm pigsty 2.0.1 329.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_17-2.0.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 plx_17 plx_17-2.0.1-1PGSTY.el10.x86_64.rpm pigsty 2.0.1 338.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_17-2.0.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 plx_17 plx_17-2.0.1-1PGSTY.el10.aarch64.rpm pigsty 2.0.1 331.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_17-2.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 309.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 299.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 310.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 300.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 352.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 346.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 329.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 323.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 325.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-plx postgresql-17-plx_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 319.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-17-plx_2.0.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 plx_16 plx_16-2.0.1-1PGSTY.el8.x86_64.rpm pigsty 2.0.1 316.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_16-2.0.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 plx_16 plx_16-2.0.1-1PGSTY.el8.aarch64.rpm pigsty 2.0.1 311.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_16-2.0.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 plx_16 plx_16-2.0.1-1PGSTY.el9.x86_64.rpm pigsty 2.0.1 332.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_16-2.0.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 plx_16 plx_16-2.0.1-1PGSTY.el9.aarch64.rpm pigsty 2.0.1 329.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_16-2.0.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 plx_16 plx_16-2.0.1-1PGSTY.el10.x86_64.rpm pigsty 2.0.1 338.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_16-2.0.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 plx_16 plx_16-2.0.1-1PGSTY.el10.aarch64.rpm pigsty 2.0.1 331.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_16-2.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 309.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 300.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 310.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 300.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 350.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 344.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 329.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 322.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 325.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-plx postgresql-16-plx_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 319.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-16-plx_2.0.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 plx_15 plx_15-2.0.1-1PGSTY.el8.x86_64.rpm pigsty 2.0.1 315.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_15-2.0.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 plx_15 plx_15-2.0.1-1PGSTY.el8.aarch64.rpm pigsty 2.0.1 311.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_15-2.0.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 plx_15 plx_15-2.0.1-1PGSTY.el9.x86_64.rpm pigsty 2.0.1 326.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_15-2.0.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 plx_15 plx_15-2.0.1-1PGSTY.el9.aarch64.rpm pigsty 2.0.1 324.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_15-2.0.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 plx_15 plx_15-2.0.1-1PGSTY.el10.x86_64.rpm pigsty 2.0.1 330.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_15-2.0.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 plx_15 plx_15-2.0.1-1PGSTY.el10.aarch64.rpm pigsty 2.0.1 326.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_15-2.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 308.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 318.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 309.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 299.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 343.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 340.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 321.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 319.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 318.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-plx postgresql-15-plx_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 315.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-15-plx_2.0.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 plx_14 plx_14-2.0.1-1PGSTY.el8.x86_64.rpm pigsty 2.0.1 315.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_14-2.0.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 plx_14 plx_14-2.0.1-1PGSTY.el8.aarch64.rpm pigsty 2.0.1 311.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_14-2.0.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 plx_14 plx_14-2.0.1-1PGSTY.el9.x86_64.rpm pigsty 2.0.1 326.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_14-2.0.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 plx_14 plx_14-2.0.1-1PGSTY.el9.aarch64.rpm pigsty 2.0.1 323.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_14-2.0.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 plx_14 plx_14-2.0.1-1PGSTY.el10.x86_64.rpm pigsty 2.0.1 330.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_14-2.0.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 plx_14 plx_14-2.0.1-1PGSTY.el10.aarch64.rpm pigsty 2.0.1 326.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_14-2.0.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~bookworm_amd64.deb pigsty 2.0.1 308.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~bookworm_arm64.deb pigsty 2.0.1 298.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~trixie_amd64.deb pigsty 2.0.1 309.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~trixie_arm64.deb pigsty 2.0.1 299.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~jammy_amd64.deb pigsty 2.0.1 343.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~jammy_arm64.deb pigsty 2.0.1 340.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~noble_amd64.deb pigsty 2.0.1 321.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~noble_arm64.deb pigsty 2.0.1 319.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~resolute_amd64.deb pigsty 2.0.1 318.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-plx postgresql-14-plx_2.0.1-1PGSTY~resolute_arm64.deb pigsty 2.0.1 315.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-14-plx_2.0.1-1PGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 | AVAIL PIGSTY 3.1.0 1 |
+@ el9.x86_64 19 plx_19 plx_19-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 888.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_19-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 plx_19 plx_19-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 881.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_19-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 plx_19 plx_19-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 903.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_19-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 plx_19 plx_19-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 893.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_19-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 850.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 826.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 852.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 829.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 913.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 905.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 895.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 888.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 889.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-plx postgresql-19-plx_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 879.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-19-plx_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 plx_18 plx_18-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 868.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_18-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 plx_18 plx_18-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 848.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_18-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 plx_18 plx_18-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 888.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_18-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 plx_18 plx_18-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 881.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_18-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 plx_18 plx_18-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 902.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_18-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 plx_18 plx_18-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 893.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_18-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 851.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 826.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 853.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 829.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 913.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 905.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 895.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 888.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 889.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-plx postgresql-18-plx_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 879.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-18-plx_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 plx_17 plx_17-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 867.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_17-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 plx_17 plx_17-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 848.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_17-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 plx_17 plx_17-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 888.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_17-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 plx_17 plx_17-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 881.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_17-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 plx_17 plx_17-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 902.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_17-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 plx_17 plx_17-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 893.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_17-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 850.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 826.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 852.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 828.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 962.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 954.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 895.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 888.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 889.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-plx postgresql-17-plx_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 879.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-17-plx_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 plx_16 plx_16-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 867.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_16-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 plx_16 plx_16-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 848.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_16-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 plx_16 plx_16-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 887.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_16-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 plx_16 plx_16-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 881.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_16-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 plx_16 plx_16-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 902.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_16-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 plx_16 plx_16-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 893.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_16-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 850.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 825.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 852.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 828.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 961.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 953.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 895.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 887.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 889.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-plx postgresql-16-plx_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 879.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-16-plx_3.1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 plx_15 plx_15-3.1.0-1PGSTY.el8.x86_64.rpm pigsty 3.1.0 867.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plx_15-3.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 plx_15 plx_15-3.1.0-1PGSTY.el8.aarch64.rpm pigsty 3.1.0 848.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plx_15-3.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 plx_15 plx_15-3.1.0-1PGSTY.el9.x86_64.rpm pigsty 3.1.0 882.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plx_15-3.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 plx_15 plx_15-3.1.0-1PGSTY.el9.aarch64.rpm pigsty 3.1.0 876.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plx_15-3.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 plx_15 plx_15-3.1.0-1PGSTY.el10.x86_64.rpm pigsty 3.1.0 896.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plx_15-3.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 plx_15 plx_15-3.1.0-1PGSTY.el10.aarch64.rpm pigsty 3.1.0 888.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plx_15-3.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~bookworm_amd64.deb pigsty 3.1.0 848.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~bookworm_arm64.deb pigsty 3.1.0 824.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~trixie_amd64.deb pigsty 3.1.0 852.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~trixie_arm64.deb pigsty 3.1.0 827.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~jammy_amd64.deb pigsty 3.1.0 957.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~jammy_arm64.deb pigsty 3.1.0 949.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~noble_amd64.deb pigsty 3.1.0 889.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~noble_arm64.deb pigsty 3.1.0 882.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~resolute_amd64.deb pigsty 3.1.0 883.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-plx postgresql-15-plx_3.1.0-1PGSTY~resolute_arm64.deb pigsty 3.1.0 872.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plx/postgresql-15-plx_3.1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install plx;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y plx -v 19  # PG 19
 pig ext install -y plx -v 18  # PG 18
 pig ext install -y plx -v 17  # PG 17
 pig ext install -y plx -v 16  # PG 16
 pig ext install -y plx -v 15  # PG 15
-pig ext install -y plx -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y plx_19       # PG 19
 dnf install -y plx_18       # PG 18
 dnf install -y plx_17       # PG 17
 dnf install -y plx_16       # PG 16
 dnf install -y plx_15       # PG 15
-dnf install -y plx_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-plx   # PG 19
 apt install -y postgresql-18-plx   # PG 18
 apt install -y postgresql-17-plx   # PG 17
 apt install -y postgresql-16-plx   # PG 16
 apt install -y postgresql-15-plx   # PG 15
-apt install -y postgresql-14-plx   # PG 14
 ```
 
 
@@ -209,11 +207,16 @@ CREATE EXTENSION plx;
 
 来源：
 
-- [PGXN plx 2.0.1 README](https://pgxn.org/dist/plx/2.0.1/README.html)
-- [plx 2.0.1 用户指南](https://api.pgxn.org/src/plx/plx-2.0.1/doc/USERGUIDE.md)
-- [plx 2.0.1 兼容性说明](https://api.pgxn.org/src/plx/plx-2.0.1/doc/COMPATIBILITY.md)
-- [plx 2.0.1 变更日志](https://api.pgxn.org/src/plx/plx-2.0.1/CHANGELOG.md)
-- [plx 控制文件](https://api.pgxn.org/src/plx/plx-2.0.1/plx.control)
+- [v3.1.0](https://github.com/commandprompt/plx/releases/tag/v3.1.0)
+- [plxlua.md](https://github.com/commandprompt/plx/blob/v3.1.0/doc/plxlua.md)
+- [plxcsharp.md](https://github.com/commandprompt/plx/blob/v3.1.0/doc/plxcsharp.md)
+- [plx.control](https://github.com/commandprompt/plx/blob/v3.1.0/plx.control)
+
+- [PGXN plx 3.0.0 README](https://pgxn.org/dist/plx/3.0.0/README.html)
+- [plx 3.0.0 用户指南](https://api.pgxn.org/src/plx/plx-3.0.0/doc/USERGUIDE.md)
+- [plx 3.0.0 兼容性说明](https://api.pgxn.org/src/plx/plx-3.0.0/doc/COMPATIBILITY.md)
+- [plx 3.0.0 变更日志](https://api.pgxn.org/src/plx/plx-3.0.0/CHANGELOG.md)
+- [plx 控制文件](https://api.pgxn.org/src/plx/plx-3.0.0/plx.control)
 
 `plx` 提供了熟悉的程序语言方言，当 `CREATE FUNCTION` 执行时会编译为普通的 PL/pgSQL。PostgreSQL 存储并执行生成的 PL/pgSQL，使用其内置的信任处理程序；无需加载 Ruby、PHP、JavaScript、Python、Go、COBOL、Oracle 或 SQL Server 运行时到后端。
 
@@ -301,4 +304,17 @@ $$;
 - 参数和返回类型必须是 PostgreSQL 类型。局部变量的类型推断有限；对于调用和复合表达式需要显式声明类型。
 - SQL 使用三值逻辑和 PostgreSQL 的数值/字符串语义。源语言中的真假性和使用 `+` 进行字符串连接没有被复制。
 - 局部变量被提升到一个 PL/pgSQL 的 `DECLARE` 块中，因此块局部作用域和具有不同类型的重新声明不可用。
-- 发行包 2.0.1 安装扩展版本 2.0.0；2.0.1 只修改 PGXN 打包，没有自己的 SQL 升级。2.0.0 改变 `plxruby`、`plxphp`、`plxjs`、`plxts`、`plxpython3` 与 `plxgo` 的插值行为：NULL 操作数现在会让整个插值字符串变为 NULL，而不是静默转为空字符串。运行 `ALTER EXTENSION plx UPDATE TO '2.0.0'` 后还需重新部署受影响函数，因为扩展升级不会重写 `pg_proc.prosrc` 中既有的生成 PL/pgSQL。
+
+### 3.0.0 升级
+
+安装新库并运行 `ALTER EXTENSION plx UPDATE TO '3.0.0'` 后，用原始方言 DDL 重新创建受影响函数。扩展升级不会重写已有的生成 PL/pgSQL。迁移前保留原始源码，重点检查依赖插值、NULL 处理或异常退出结果的函数。
+
+扩展不再可重定位。安装时选定模式，并在恢复时保持相同模式，否则需重新生成嵌入辅助对象名称的函数。创建方言函数或 DO 块要求对 plpgsql 具有 USAGE 权限。启用函数体检查时，创建过程会验证生成的 PL/pgSQL，拒绝不支持的参数或结果类型以及格式错误的类型声明。
+
+SQL 插值中的值现在绑定为参数；名称使用 `ident()`，有意拼接的 `raw()` SQL 片段须限于可信输入。向字符串追加 NULL 现在传播 NULL；若要视为空字符串，应使用 `coalesce(x, '')`。多数方言现在会在 return、break、continue 时执行 finally/ensure，但查询取消和断言失败仍不在该处理范围内。重新部署函数前应阅读各方言的破坏性变更。
+
+### 3.1.0 的 Lua 与 C# 方言
+
+3.1.0 新增可信方言 `plxlua` 和 `plxcsharp`。Lua 支持块作用域局部变量、数值与查询循环、异常和部分标准库函数；C# 支持类型声明、插值字符串、带过滤条件的异常、switch 表达式以及查询和数组遍历。二者仍转译为 PL/pgSQL，应注意文档列出的语义差异，不会加载 Lua 或 .NET 运行时。已有方言的行为不变。
+
+安装新库并替换仍使用旧库的会话，或者重启服务器，然后由超级用户在各数据库中执行 `ALTER EXTENSION plx UPDATE TO '3.1.0';`。升级添加两种语言及其处理函数，保留已有对象。两种方言都要求对 plpgsql 拥有 USAGE 权限，并将插值值绑定为 SQL 参数。

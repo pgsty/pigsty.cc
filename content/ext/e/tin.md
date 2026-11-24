@@ -51,24 +51,24 @@ weight: 2310
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0.6 1 | AVAIL PIGSTY 1.0.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 lead_18 lead_18-1.0.6-1PGSTY.el8.x86_64.rpm pigsty 1.0.6 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/lead_18-1.0.6-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 lead_18 lead_18-1.0.6-1PGSTY.el8.aarch64.rpm pigsty 1.0.6 2.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/lead_18-1.0.6-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 lead_18 lead_18-1.0.6-1PGSTY.el9.x86_64.rpm pigsty 1.0.6 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/lead_18-1.0.6-1PGSTY.el9.x86_64.rpm

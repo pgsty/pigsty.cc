@@ -45,16 +45,16 @@ weight: 4130
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pgproto` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pgproto_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgproto` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "19,18,17,16,15" >}} | `pgproto` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "19,18,17,16,15" >}} | `pgproto_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgproto` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
@@ -69,86 +69,84 @@ weight: 4130
 | u24.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
-@ el8.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_18-0.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_18-0.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_18-0.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 30.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_18-0.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 31.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_18-0.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_18-0.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_17-0.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_17-0.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_17-0.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 30.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_17-0.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 31.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_17-0.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 30.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_17-0.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 57.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_16-0.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_16-0.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_16-0.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 30.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_16-0.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 31.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_16-0.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 30.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_16-0.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 57.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 32.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_15-0.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_15-0.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_15-0.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 30.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_15-0.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 32.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_15-0.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_15-0.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 52.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 56.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_14-0.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_14-0.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_14-0.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 30.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_14-0.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 32.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_14-0.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgproto_14 pgproto_14-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_14-0.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 57.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgproto postgresql-14-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-14-pgproto_0.5.0-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pgproto_19 pgproto_19-0.5.0-1PGSTY.el9.x86_64.rpm pigsty 0.5.0 64.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_19-0.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pgproto_19 pgproto_19-0.5.0-1PGSTY.el9.aarch64.rpm pigsty 0.5.0 63.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_19-0.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pgproto_19 pgproto_19-0.5.0-1PGSTY.el10.x86_64.rpm pigsty 0.5.0 65.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_19-0.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pgproto_19 pgproto_19-0.5.0-1PGSTY.el10.aarch64.rpm pigsty 0.5.0 63.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_19-0.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb pigsty 0.5.0 52.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~trixie_arm64.deb pigsty 0.5.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~jammy_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~jammy_arm64.deb pigsty 0.5.0 53.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~noble_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~noble_arm64.deb pigsty 0.5.0 53.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~resolute_amd64.deb pigsty 0.5.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgproto postgresql-19-pgproto_0.5.0-1PGSTY~resolute_arm64.deb pigsty 0.5.0 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-19-pgproto_0.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el8.x86_64.rpm pigsty 0.5.0 64.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_18-0.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el8.aarch64.rpm pigsty 0.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_18-0.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el9.x86_64.rpm pigsty 0.5.0 64.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_18-0.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el9.aarch64.rpm pigsty 0.5.0 63.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_18-0.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el10.x86_64.rpm pigsty 0.5.0 65.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_18-0.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgproto_18 pgproto_18-0.5.0-1PGSTY.el10.aarch64.rpm pigsty 0.5.0 63.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_18-0.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb pigsty 0.5.0 52.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~trixie_arm64.deb pigsty 0.5.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~jammy_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~jammy_arm64.deb pigsty 0.5.0 53.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~noble_amd64.deb pigsty 0.5.0 54.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~noble_arm64.deb pigsty 0.5.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~resolute_amd64.deb pigsty 0.5.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgproto postgresql-18-pgproto_0.5.0-1PGSTY~resolute_arm64.deb pigsty 0.5.0 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-18-pgproto_0.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el8.x86_64.rpm pigsty 0.5.0 64.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_17-0.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el8.aarch64.rpm pigsty 0.5.0 62.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_17-0.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el9.x86_64.rpm pigsty 0.5.0 64.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_17-0.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el9.aarch64.rpm pigsty 0.5.0 63.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_17-0.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el10.x86_64.rpm pigsty 0.5.0 65.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_17-0.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgproto_17 pgproto_17-0.5.0-1PGSTY.el10.aarch64.rpm pigsty 0.5.0 63.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_17-0.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb pigsty 0.5.0 52.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb pigsty 0.5.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~trixie_arm64.deb pigsty 0.5.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~jammy_amd64.deb pigsty 0.5.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~jammy_arm64.deb pigsty 0.5.0 56.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~noble_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~noble_arm64.deb pigsty 0.5.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~resolute_amd64.deb pigsty 0.5.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgproto postgresql-17-pgproto_0.5.0-1PGSTY~resolute_arm64.deb pigsty 0.5.0 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-17-pgproto_0.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el8.x86_64.rpm pigsty 0.5.0 64.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_16-0.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el8.aarch64.rpm pigsty 0.5.0 62.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_16-0.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el9.x86_64.rpm pigsty 0.5.0 64.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_16-0.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el9.aarch64.rpm pigsty 0.5.0 63.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_16-0.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el10.x86_64.rpm pigsty 0.5.0 65.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_16-0.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgproto_16 pgproto_16-0.5.0-1PGSTY.el10.aarch64.rpm pigsty 0.5.0 63.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_16-0.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb pigsty 0.5.0 52.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~trixie_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~jammy_amd64.deb pigsty 0.5.0 57.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~jammy_arm64.deb pigsty 0.5.0 56.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~noble_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~noble_arm64.deb pigsty 0.5.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~resolute_amd64.deb pigsty 0.5.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgproto postgresql-16-pgproto_0.5.0-1PGSTY~resolute_arm64.deb pigsty 0.5.0 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-16-pgproto_0.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el8.x86_64.rpm pigsty 0.5.0 64.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_15-0.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el8.aarch64.rpm pigsty 0.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_15-0.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el9.x86_64.rpm pigsty 0.5.0 64.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_15-0.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el9.aarch64.rpm pigsty 0.5.0 63.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgproto_15-0.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el10.x86_64.rpm pigsty 0.5.0 65.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgproto_15-0.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgproto_15 pgproto_15-0.5.0-1PGSTY.el10.aarch64.rpm pigsty 0.5.0 63.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgproto_15-0.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb pigsty 0.5.0 52.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb pigsty 0.5.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~trixie_amd64.deb pigsty 0.5.0 52.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~trixie_arm64.deb pigsty 0.5.0 51.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~jammy_amd64.deb pigsty 0.5.0 57.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~jammy_arm64.deb pigsty 0.5.0 56.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~noble_amd64.deb pigsty 0.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~noble_arm64.deb pigsty 0.5.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~resolute_amd64.deb pigsty 0.5.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgproto postgresql-15-pgproto_0.5.0-1PGSTY~resolute_arm64.deb pigsty 0.5.0 53.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgproto/postgresql-15-pgproto_0.5.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install pgproto;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgproto -v 19  # PG 19
 pig ext install -y pgproto -v 18  # PG 18
 pig ext install -y pgproto -v 17  # PG 17
 pig ext install -y pgproto -v 16  # PG 16
 pig ext install -y pgproto -v 15  # PG 15
-pig ext install -y pgproto -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgproto_19       # PG 19
 dnf install -y pgproto_18       # PG 18
 dnf install -y pgproto_17       # PG 17
 dnf install -y pgproto_16       # PG 16
 dnf install -y pgproto_15       # PG 15
-dnf install -y pgproto_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgproto   # PG 19
 apt install -y postgresql-18-pgproto   # PG 18
 apt install -y postgresql-17-pgproto   # PG 17
 apt install -y postgresql-16-pgproto   # PG 16
 apt install -y postgresql-15-pgproto   # PG 15
-apt install -y postgresql-14-pgproto   # PG 14
 ```
 
 

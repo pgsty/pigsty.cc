@@ -11,10 +11,10 @@ weight: 9440
     <div class="ext-card__title">RayElg/kafgres</div>
     <div class="ext-card__desc">https://github.com/RayElg/kafgres</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafgres-0.3.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/kafgres-0.3.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">kafgres-0.3.2.tar.gz</div>
-    <div class="ext-card__desc">kafgres-0.3.2.tar.gz</div>
+    <div class="ext-card__title">kafgres-0.3.3.tar.gz</div>
+    <div class="ext-card__desc">kafgres-0.3.3.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9440
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`kafgres`**](/ext/e/kafgres) | `0.3.2` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`kafgres`**](/ext/e/kafgres) | `0.3.3` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license elastic20" href="/ext/license#elastic20">Elastic-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -41,30 +41,30 @@ weight: 9440
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.2` | {{< pgvers "16" >}} | `kafgres` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.3` | {{< pgvers "18,17,16,15" >}} | `kafgres` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.2` | {{< pgvers "16" >}} | `kafgres_$v` | - |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.2` | {{< pgvers "16" >}} | `postgresql-$v-kafgres` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.2 1 | MISS PIGSTY - 0 |
 @ el8.x86_64 16 kafgres_16 kafgres_16-0.3.2-1PGSTY.el8.x86_64.rpm pigsty 0.3.2 4.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafgres_16-0.3.2-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 kafgres_16 kafgres_16-0.3.2-1PGSTY.el8.aarch64.rpm pigsty 0.3.2 4.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafgres_16-0.3.2-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 kafgres_16 kafgres_16-0.3.2-1PGSTY.el9.x86_64.rpm pigsty 0.3.2 4.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafgres_16-0.3.2-1PGSTY.el9.x86_64.rpm
@@ -107,15 +107,24 @@ pig install kafgres;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y kafgres -v 18  # PG 18
+pig ext install -y kafgres -v 17  # PG 17
 pig ext install -y kafgres -v 16  # PG 16
+pig ext install -y kafgres -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y kafgres_18       # PG 18
+dnf install -y kafgres_17       # PG 17
 dnf install -y kafgres_16       # PG 16
+dnf install -y kafgres_15       # PG 15
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-18-kafgres   # PG 18
+apt install -y postgresql-17-kafgres   # PG 17
 apt install -y postgresql-16-kafgres   # PG 16
+apt install -y postgresql-15-kafgres   # PG 15
 ```
 
 
@@ -136,6 +145,7 @@ CREATE EXTENSION kafgres;
 
 来源：
 
+- [Current release](https://github.com/RayElg/kafgres/releases/tag/0.3.3)
 - [extension/sql/kafgres--0.2.0--0.3.0.sql](https://github.com/RayElg/kafgres/blob/0f343916988ad0b4b99d3427bd0949e69b5686b3/extension/sql/kafgres--0.2.0--0.3.0.sql)
 - [.github/workflows/ci.yml](https://github.com/RayElg/kafgres/blob/0f343916988ad0b4b99d3427bd0949e69b5686b3/.github/workflows/ci.yml)
 - [README 0.3.2](https://github.com/RayElg/kafgres/blob/0f343916988ad0b4b99d3427bd0949e69b5686b3/README.md)
@@ -150,6 +160,7 @@ CREATE EXTENSION kafgres;
 
 ```ini
 shared_preload_libraries = 'kafgres'
+wal_level = logical
 kafgres.database = 'postgres'
 kafgres.bind_host = '127.0.0.1'
 kafgres.advertised_host = '127.0.0.1'
@@ -194,3 +205,7 @@ ALTER EXTENSION kafgres UPDATE TO '0.3.2';
 ```
 
 0.3.1 到 0.3.2 的 SQL 脚本只推进扩展版本，不改变 SQL 对象。从 0.3.0 升级时还需处理旧事务标记：Sarama 无法解码缺少 EndTransactionMarker 值的旧标记，它们会一直保留到对应分段被保留策略删除；按上游说明选择消费起点或重建主题。
+
+### 0.3.3 配置
+
+0.3.3 发布制品覆盖 PostgreSQL 13–18。官方代理配置要求逻辑 WAL，并设置客户端可达的通告主机。在限制输出插件的构建上，应将 kafgres 加入 output_plugin_libraries 并保留已有项；出现禁止使用插件的错误时可重载配置。共享预加载仍须重启，配置重载不能替代它。

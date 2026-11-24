@@ -45,16 +45,16 @@ weight: 7420
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `libx509pq` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `libx509pq_$v` | `openssl-libs` |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-libx509pq` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "19,18,17,16,15" >}} | `libx509pq` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "19,18,17,16,15" >}} | `libx509pq_$v` | `openssl-libs` |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-libx509pq` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
@@ -69,86 +69,84 @@ weight: 7420
 | u24.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-@ el8.x86_64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_18-1.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_18-1.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_18-1.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_18-1.3-1PGSTY.el9.aarch64.rpm
+@ el9.x86_64 19 libx509pq_19 libx509pq_19-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_19-1.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 libx509pq_19 libx509pq_19-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_19-1.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 libx509pq_19 libx509pq_19-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_19-1.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 libx509pq_19 libx509pq_19-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_19-1.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 81.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 88.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 87.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 85.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-libx509pq postgresql-19-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 84.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-19-libx509pq_1.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_18-1.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_18-1.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_18-1.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_18-1.3-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_18-1.3-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 libx509pq_18 libx509pq_18-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_18-1.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 76.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 75.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 76.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 75.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 83.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 82.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 80.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 80.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 80.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 79.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_17-1.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_17-1.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 93.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_17-1.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_17-1.3-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_17-1.3-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_17-1.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 76.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 75.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 76.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 75.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 97.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 96.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 80.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 79.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_16-1.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_16-1.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 93.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_16-1.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_16-1.3-1PGSTY.el9.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 80.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 87.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 87.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-libx509pq postgresql-18-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 84.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-18-libx509pq_1.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_17-1.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_17-1.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_17-1.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_17-1.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_17-1.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 libx509pq_17 libx509pq_17-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_17-1.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 102.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 101.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-libx509pq postgresql-17-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 84.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-17-libx509pq_1.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_16-1.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_16-1.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_16-1.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_16-1.3-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_16-1.3-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_16-1.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 76.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 75.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 76.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 75.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 96.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 95.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 80.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 80.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 79.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_15-1.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_15-1.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 93.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_15-1.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_15-1.3-1PGSTY.el9.aarch64.rpm
+@ el10.aarch64 16 libx509pq_16 libx509pq_16-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_16-1.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 101.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 100.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 85.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-libx509pq postgresql-16-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 84.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-16-libx509pq_1.3-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_15-1.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_15-1.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 92.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_15-1.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_15-1.3-1PGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_15-1.3-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 libx509pq_15 libx509pq_15-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 93.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_15-1.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 77.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 76.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 76.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 75.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 96.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 96.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 81.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 81.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 80.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 80.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el8.x86_64.rpm pigsty 1.3 92.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/libx509pq_14-1.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el8.aarch64.rpm pigsty 1.3 91.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/libx509pq_14-1.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el9.x86_64.rpm pigsty 1.3 93.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/libx509pq_14-1.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el9.aarch64.rpm pigsty 1.3 92.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/libx509pq_14-1.3-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el10.x86_64.rpm pigsty 1.3 93.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/libx509pq_14-1.3-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 libx509pq_14 libx509pq_14-1.3-1PGSTY.el10.aarch64.rpm pigsty 1.3 92.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/libx509pq_14-1.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 81.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 99.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 98.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 86.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-libx509pq postgresql-14-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 85.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-14-libx509pq_1.3-1PGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~bookworm_amd64.deb pigsty 1.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~bookworm_arm64.deb pigsty 1.3 81.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~trixie_amd64.deb pigsty 1.3 81.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~trixie_arm64.deb pigsty 1.3 80.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~jammy_amd64.deb pigsty 1.3 101.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~jammy_arm64.deb pigsty 1.3 101.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~noble_amd64.deb pigsty 1.3 85.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~noble_arm64.deb pigsty 1.3 86.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~resolute_amd64.deb pigsty 1.3 85.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-libx509pq postgresql-15-libx509pq_1.3-1PGSTY~resolute_arm64.deb pigsty 1.3 85.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/libx/libx509pq/postgresql-15-libx509pq_1.3-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install libx509pq;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y libx509pq -v 19  # PG 19
 pig ext install -y libx509pq -v 18  # PG 18
 pig ext install -y libx509pq -v 17  # PG 17
 pig ext install -y libx509pq -v 16  # PG 16
 pig ext install -y libx509pq -v 15  # PG 15
-pig ext install -y libx509pq -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y libx509pq_19       # PG 19
 dnf install -y libx509pq_18       # PG 18
 dnf install -y libx509pq_17       # PG 17
 dnf install -y libx509pq_16       # PG 16
 dnf install -y libx509pq_15       # PG 15
-dnf install -y libx509pq_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-libx509pq   # PG 19
 apt install -y postgresql-18-libx509pq   # PG 18
 apt install -y postgresql-17-libx509pq   # PG 17
 apt install -y postgresql-16-libx509pq   # PG 16
 apt install -y postgresql-15-libx509pq   # PG 15
-apt install -y postgresql-14-libx509pq   # PG 14
 ```
 
 

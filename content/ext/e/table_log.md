@@ -42,160 +42,208 @@ weight: 5860
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.6.4` | {{< pgvers "18,17,16,15,14" >}} | `table_log` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.4` | {{< pgvers "18,17,16,15,14" >}} | `table_log_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-tablelog` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.6.4` | {{< pgvers "19,18,17,16,15" >}} | `table_log` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.6.4` | {{< pgvers "19,18,17,16,15" >}} | `table_log_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.4` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-tablelog` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
 | el10.aarch64 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 | AVAIL PIGSTY 0.6.4 1 |
-| d12.x86_64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| d12.aarch64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| d13.x86_64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| d13.aarch64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u22.x86_64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u22.aarch64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u24.x86_64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u24.aarch64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u26.x86_64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-| u26.aarch64 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 | AVAIL PGDG 0.6.4 2 |
-@ el8.x86_64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el8.x86_64.rpm pigsty 0.6.4 29.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_18-0.6.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el8.aarch64.rpm pigsty 0.6.4 28.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_18-0.6.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el9.x86_64.rpm pigsty 0.6.4 29.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_18-0.6.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el9.aarch64.rpm pigsty 0.6.4 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_18-0.6.4-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el10.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_18-0.6.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 table_log_18 table_log_18-0.6.4-1PIGSTY.el10.aarch64.rpm pigsty 0.6.4 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_18-0.6.4-1PIGSTY.el10.aarch64.rpm
+| d12.x86_64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| d12.aarch64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| d13.x86_64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| d13.aarch64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u22.x86_64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u22.aarch64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u24.x86_64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u24.aarch64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u26.x86_64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+| u26.aarch64 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 | AVAIL PGDG 0.6.4 3 |
+@ el9.x86_64 19 table_log_19 table_log_19-0.6.4-1PGSTY.el9.x86_64.rpm pigsty 0.6.4 54.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_19-0.6.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 table_log_19 table_log_19-0.6.4-1PGSTY.el9.aarch64.rpm pigsty 0.6.4 52.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_19-0.6.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 table_log_19 table_log_19-0.6.4-1PGSTY.el10.x86_64.rpm pigsty 0.6.4 53.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_19-0.6.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 table_log_19 table_log_19-0.6.4-1PGSTY.el10.aarch64.rpm pigsty 0.6.4 53.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_19-0.6.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+3_amd64.deb
+@ d12.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+3_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+3_arm64.deb
+@ d12.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+3_amd64.deb
+@ d13.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+3_arm64.deb
+@ d13.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb pgdg 0.6.4 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb
+@ u22.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb pgdg 0.6.4 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb
+@ u22.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb
+@ u24.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb
+@ u24.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb
+@ u26.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb
+@ u26.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-tablelog postgresql-19-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-19-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el8.x86_64.rpm pigsty 0.6.4 52.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_18-0.6.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el8.aarch64.rpm pigsty 0.6.4 52.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_18-0.6.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el9.x86_64.rpm pigsty 0.6.4 54.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_18-0.6.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el9.aarch64.rpm pigsty 0.6.4 52.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_18-0.6.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el10.x86_64.rpm pigsty 0.6.4 53.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_18-0.6.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 table_log_18 table_log_18-0.6.4-1PGSTY.el10.aarch64.rpm pigsty 0.6.4 53.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_18-0.6.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+3_amd64.deb pgdg 0.6.4 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+3_amd64.deb
 @ d12.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+3_arm64.deb
 @ d12.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+3_amd64.deb
 @ d13.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+3_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+3_arm64.deb
 @ d13.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb pgdg 0.6.4 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb
 @ u22.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb pgdg 0.6.4 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb
 @ u22.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb
 @ u24.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb
 @ u24.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb
 @ u26.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb
 @ u26.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-tablelog postgresql-18-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-18-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el8.x86_64.rpm pigsty 0.6.4 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_17-0.6.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el8.aarch64.rpm pigsty 0.6.4 28.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_17-0.6.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el9.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_17-0.6.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el9.aarch64.rpm pigsty 0.6.4 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_17-0.6.4-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el10.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_17-0.6.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 table_log_17 table_log_17-0.6.4-1PIGSTY.el10.aarch64.rpm pigsty 0.6.4 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_17-0.6.4-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el8.x86_64.rpm pigsty 0.6.4 52.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_17-0.6.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el8.aarch64.rpm pigsty 0.6.4 51.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_17-0.6.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el9.x86_64.rpm pigsty 0.6.4 54.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_17-0.6.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el9.aarch64.rpm pigsty 0.6.4 52.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_17-0.6.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el10.x86_64.rpm pigsty 0.6.4 53.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_17-0.6.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 table_log_17 table_log_17-0.6.4-1PGSTY.el10.aarch64.rpm pigsty 0.6.4 53.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_17-0.6.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+3_amd64.deb
 @ d12.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+3_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+3_arm64.deb
 @ d12.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+3_amd64.deb
 @ d13.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+3_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+3_arm64.deb
 @ d13.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb pgdg 0.6.4 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb
 @ u22.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb pgdg 0.6.4 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb
 @ u22.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb
 @ u24.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb
 @ u24.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb
 @ u26.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb
 @ u26.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-tablelog postgresql-17-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-17-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el8.x86_64.rpm pigsty 0.6.4 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_16-0.6.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el8.aarch64.rpm pigsty 0.6.4 28.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_16-0.6.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el9.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_16-0.6.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el9.aarch64.rpm pigsty 0.6.4 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_16-0.6.4-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el10.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_16-0.6.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 table_log_16 table_log_16-0.6.4-1PIGSTY.el10.aarch64.rpm pigsty 0.6.4 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_16-0.6.4-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el8.x86_64.rpm pigsty 0.6.4 52.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_16-0.6.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el8.aarch64.rpm pigsty 0.6.4 51.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_16-0.6.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el9.x86_64.rpm pigsty 0.6.4 54.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_16-0.6.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el9.aarch64.rpm pigsty 0.6.4 52.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_16-0.6.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el10.x86_64.rpm pigsty 0.6.4 53.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_16-0.6.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 table_log_16 table_log_16-0.6.4-1PGSTY.el10.aarch64.rpm pigsty 0.6.4 53.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_16-0.6.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+3_amd64.deb
 @ d12.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+3_arm64.deb
 @ d12.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+3_amd64.deb
 @ d13.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+3_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+3_arm64.deb
 @ d13.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb pgdg 0.6.4 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb
 @ u22.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb pgdg 0.6.4 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb
 @ u22.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb
 @ u24.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb
 @ u24.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb
 @ u26.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb
 @ u26.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-tablelog postgresql-16-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-16-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el8.x86_64.rpm pigsty 0.6.4 29.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_15-0.6.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el8.aarch64.rpm pigsty 0.6.4 28.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_15-0.6.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el9.x86_64.rpm pigsty 0.6.4 29.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_15-0.6.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el9.aarch64.rpm pigsty 0.6.4 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_15-0.6.4-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el10.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_15-0.6.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 table_log_15 table_log_15-0.6.4-1PIGSTY.el10.aarch64.rpm pigsty 0.6.4 29.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_15-0.6.4-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el8.x86_64.rpm pigsty 0.6.4 52.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_15-0.6.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el8.aarch64.rpm pigsty 0.6.4 52.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_15-0.6.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el9.x86_64.rpm pigsty 0.6.4 54.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_15-0.6.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el9.aarch64.rpm pigsty 0.6.4 52.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_15-0.6.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el10.x86_64.rpm pigsty 0.6.4 53.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_15-0.6.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 table_log_15 table_log_15-0.6.4-1PGSTY.el10.aarch64.rpm pigsty 0.6.4 53.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_15-0.6.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+3_amd64.deb
 @ d12.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+3_arm64.deb
 @ d12.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+3_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+3_amd64.deb
 @ d13.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+3_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+3_arm64.deb
 @ d13.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb pgdg 0.6.4 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+3_amd64.deb
 @ u22.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb pgdg 0.6.4 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+3_arm64.deb
 @ u22.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+3_amd64.deb
 @ u24.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+3_arm64.deb
 @ u24.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+3_amd64.deb
 @ u26.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+3_arm64.deb
 @ u26.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-tablelog postgresql-15-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-15-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el8.x86_64.rpm pigsty 0.6.4 29.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_log_14-0.6.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el8.aarch64.rpm pigsty 0.6.4 28.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_log_14-0.6.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el9.x86_64.rpm pigsty 0.6.4 29.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/table_log_14-0.6.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el9.aarch64.rpm pigsty 0.6.4 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/table_log_14-0.6.4-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el10.x86_64.rpm pigsty 0.6.4 29.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_log_14-0.6.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 table_log_14 table_log_14-0.6.4-1PIGSTY.el10.aarch64.rpm pigsty 0.6.4 29.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_log_14-0.6.4-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg12+2_amd64.deb pgdg 0.6.4 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg12+2_amd64.deb
-@ d12.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg12+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg12+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg12+2_arm64.deb
-@ d12.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg12+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg13+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg13+2_amd64.deb
-@ d13.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg13+1_amd64.deb pgdg 0.6.4 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg13+2_arm64.deb pgdg 0.6.4 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg13+2_arm64.deb
-@ d13.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg13+1_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb pgdg 0.6.4 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg22.04+2_amd64.deb
-@ u22.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb pgdg 0.6.4 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb pgdg 0.6.4 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg22.04+2_arm64.deb
-@ u22.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb pgdg 0.6.4 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg24.04+2_amd64.deb
-@ u24.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb pgdg 0.6.4 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb pgdg 0.6.4 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg24.04+2_arm64.deb
-@ u24.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb pgdg 0.6.4 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb pgdg 0.6.4 44.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg26.04+2_amd64.deb
-@ u26.x86_64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb pgdg 0.6.4 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb pgdg 0.6.4 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg26.04+2_arm64.deb
-@ u26.aarch64 14 postgresql-14-tablelog postgresql-14-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb pgdg 0.6.4 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/t/tablelog/postgresql-14-tablelog_0.6.4-4.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -222,27 +270,27 @@ pig install table_log;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y table_log -v 19  # PG 19
 pig ext install -y table_log -v 18  # PG 18
 pig ext install -y table_log -v 17  # PG 17
 pig ext install -y table_log -v 16  # PG 16
 pig ext install -y table_log -v 15  # PG 15
-pig ext install -y table_log -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y table_log_19       # PG 19
 dnf install -y table_log_18       # PG 18
 dnf install -y table_log_17       # PG 17
 dnf install -y table_log_16       # PG 16
 dnf install -y table_log_15       # PG 15
-dnf install -y table_log_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-tablelog   # PG 19
 apt install -y postgresql-18-tablelog   # PG 18
 apt install -y postgresql-17-tablelog   # PG 17
 apt install -y postgresql-16-tablelog   # PG 16
 apt install -y postgresql-15-tablelog   # PG 15
-apt install -y postgresql-14-tablelog   # PG 14
 ```
 
 

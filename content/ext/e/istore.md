@@ -45,16 +45,16 @@ weight: 3710
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "18,17,16,15,14" >}} | `istore` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "18,17,16,15,14" >}} | `istore_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-istore` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "19,18,17,16,15" >}} | `istore` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "19,18,17,16,15" >}} | `istore_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.12` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-istore` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
@@ -69,86 +69,84 @@ weight: 3710
 | u24.aarch64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 | AVAIL PIGSTY 0.1.12 1 |
-@ el8.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 129.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_18-0.1.12-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 istore_18 istore_18-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 126.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_18-0.1.12-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 133.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_18-0.1.12-1PGSTY.el9.x86_64.rpm
+@ el9.x86_64 19 istore_19 istore_19-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 133.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_19-0.1.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 istore_19 istore_19-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 131.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_19-0.1.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 istore_19 istore_19-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 134.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_19-0.1.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 istore_19 istore_19-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_19-0.1.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 113.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 110.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 113.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 111.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 125.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 123.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 122.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 121.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 120.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-istore postgresql-19-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 119.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-19-istore_0.1.12-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 129.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_18-0.1.12-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 istore_18 istore_18-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 126.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_18-0.1.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 133.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_18-0.1.12-1PGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 istore_18 istore_18-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 131.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_18-0.1.12-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 133.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_18-0.1.12-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 istore_18 istore_18-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_18-0.1.12-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 109.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 106.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 109.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 106.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 121.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 119.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 118.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 117.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 116.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 115.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~resolute_arm64.deb
+@ el10.x86_64 18 istore_18 istore_18-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 134.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_18-0.1.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 istore_18 istore_18-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_18-0.1.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 113.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 110.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 113.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 111.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 125.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 123.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 122.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 121.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 120.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-istore postgresql-18-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 119.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-18-istore_0.1.12-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 17 istore_17 istore_17-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 128.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_17-0.1.12-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 127.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_17-0.1.12-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 istore_17 istore_17-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 132.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_17-0.1.12-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 131.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_17-0.1.12-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 istore_17 istore_17-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 132.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_17-0.1.12-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_17-0.1.12-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 108.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 105.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 108.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 105.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 129.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 127.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 117.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 116.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 116.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 114.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~resolute_arm64.deb
+@ el8.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 125.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_17-0.1.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 istore_17 istore_17-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 132.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_17-0.1.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 130.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_17-0.1.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 istore_17 istore_17-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 133.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_17-0.1.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 istore_17 istore_17-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_17-0.1.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 112.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 109.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 112.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 109.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 133.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 131.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 121.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 120.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 120.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-istore postgresql-17-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 118.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-17-istore_0.1.12-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 istore_16 istore_16-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 128.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_16-0.1.12-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 127.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_16-0.1.12-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 istore_16 istore_16-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 132.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_16-0.1.12-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 131.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_16-0.1.12-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 istore_16 istore_16-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 132.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_16-0.1.12-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_16-0.1.12-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 108.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 105.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 108.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 105.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 129.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 127.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 117.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 116.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 116.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 114.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~resolute_arm64.deb
+@ el8.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 125.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_16-0.1.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 istore_16 istore_16-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 132.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_16-0.1.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 130.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_16-0.1.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 istore_16 istore_16-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 133.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_16-0.1.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 istore_16 istore_16-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 132.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_16-0.1.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 112.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 109.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 112.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 109.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 133.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 131.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 121.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 120.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 120.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-istore postgresql-16-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 118.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-16-istore_0.1.12-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 istore_15 istore_15-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 128.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_15-0.1.12-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 126.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_15-0.1.12-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 istore_15 istore_15-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 129.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_15-0.1.12-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 128.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_15-0.1.12-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 istore_15 istore_15-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 129.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_15-0.1.12-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 128.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_15-0.1.12-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 107.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 108.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 105.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 126.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 123.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 113.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 112.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 112.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 110.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 istore_14 istore_14-0.1.12-1PGSTY.el8.x86_64.rpm pigsty 0.1.12 128.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/istore_14-0.1.12-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 istore_14 istore_14-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 126.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_14-0.1.12-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 istore_14 istore_14-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 129.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_14-0.1.12-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 istore_14 istore_14-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 128.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_14-0.1.12-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 istore_14 istore_14-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 129.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_14-0.1.12-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 istore_14 istore_14-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 128.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_14-0.1.12-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 111.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 108.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 111.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 109.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 129.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 127.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 117.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 115.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 116.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-istore postgresql-14-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 114.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-14-istore_0.1.12-1PGSTY~resolute_arm64.deb
+@ el8.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el8.aarch64.rpm pigsty 0.1.12 126.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/istore_15-0.1.12-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 istore_15 istore_15-0.1.12-1PGSTY.el9.x86_64.rpm pigsty 0.1.12 129.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/istore_15-0.1.12-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el9.aarch64.rpm pigsty 0.1.12 128.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/istore_15-0.1.12-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 istore_15 istore_15-0.1.12-1PGSTY.el10.x86_64.rpm pigsty 0.1.12 129.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/istore_15-0.1.12-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 istore_15 istore_15-0.1.12-1PGSTY.el10.aarch64.rpm pigsty 0.1.12 129.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/istore_15-0.1.12-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~bookworm_amd64.deb pigsty 0.1.12 112.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~bookworm_arm64.deb pigsty 0.1.12 109.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~trixie_amd64.deb pigsty 0.1.12 112.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~trixie_arm64.deb pigsty 0.1.12 109.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~jammy_amd64.deb pigsty 0.1.12 130.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~jammy_arm64.deb pigsty 0.1.12 127.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~noble_amd64.deb pigsty 0.1.12 117.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~noble_arm64.deb pigsty 0.1.12 116.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~resolute_amd64.deb pigsty 0.1.12 116.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-istore postgresql-15-istore_0.1.12-1PGSTY~resolute_arm64.deb pigsty 0.1.12 114.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/i/istore/postgresql-15-istore_0.1.12-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install istore;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y istore -v 19  # PG 19
 pig ext install -y istore -v 18  # PG 18
 pig ext install -y istore -v 17  # PG 17
 pig ext install -y istore -v 16  # PG 16
 pig ext install -y istore -v 15  # PG 15
-pig ext install -y istore -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y istore_19       # PG 19
 dnf install -y istore_18       # PG 18
 dnf install -y istore_17       # PG 17
 dnf install -y istore_16       # PG 16
 dnf install -y istore_15       # PG 15
-dnf install -y istore_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-istore   # PG 19
 apt install -y postgresql-18-istore   # PG 18
 apt install -y postgresql-17-istore   # PG 17
 apt install -y postgresql-16-istore   # PG 16
 apt install -y postgresql-15-istore   # PG 15
-apt install -y postgresql-14-istore   # PG 14
 ```
 
 

@@ -42,180 +42,218 @@ weight: 3640
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting` | `roaringbitmap` |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfaceting_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgfaceting` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "19,18,17,16,15" >}} | `pgfaceting` | `roaringbitmap` |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "19,18,17,16,15" >}} | `pgfaceting_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.2.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgfaceting` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
-| el8.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
-| el9.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| el9.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| el10.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| el10.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| d12.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| d12.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| d13.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| d13.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u22.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u22.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u24.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u24.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u26.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| u26.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
+| el9.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| el9.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| el10.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| el10.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 4 | AVAIL PGDG 0.2.0 4 | AVAIL PGDG 0.2.0 4 | AVAIL PGDG 0.2.0 4 |
+| d12.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| d12.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| d13.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| d13.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u22.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u22.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u24.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u24.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u26.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+| u26.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 | AVAIL PGDG 0.2.0 3 |
+@ el9.x86_64 19 pgfaceting_19 pgfaceting_19-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pgfaceting_19-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 19 pgfaceting_19 pgfaceting_19-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pgfaceting_19-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 19 pgfaceting_19 pgfaceting_19-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pgfaceting_19-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 19 pgfaceting_19 pgfaceting_19-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pgfaceting_19-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg12+2_all.deb
+@ d12.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg12+1_all.deb
+@ d12.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg12+2_all.deb
+@ d12.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg12+1_all.deb
+@ d13.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg13+2_all.deb
+@ d13.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg13+1_all.deb
+@ d13.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg13+2_all.deb
+@ d13.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg13+1_all.deb
+@ u22.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
+@ u22.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
+@ u22.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
+@ u22.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
+@ u24.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
+@ u24.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
+@ u24.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
+@ u24.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
+@ u26.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
+@ u26.x86_64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
+@ u26.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
+@ u26.aarch64 19 postgresql-19-pgfaceting postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-19-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
+@ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgfaceting_18-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgfaceting_18-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgfaceting_18-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgfaceting_18-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgfaceting_18-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgfaceting_18-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-3PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgfaceting_18-0.2.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgfaceting_18-0.2.0-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d12.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d13.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ d13.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ u22.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u22.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u24.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u24.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgfaceting_17-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgfaceting_17-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfaceting_17-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfaceting_17-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgfaceting_17-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgfaceting_17-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-3PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgfaceting_17-0.2.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgfaceting_17-0.2.0-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d12.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d13.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ d13.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ u22.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u22.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u24.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u24.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgfaceting_16-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgfaceting_16-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfaceting_16-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfaceting_16-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgfaceting_16-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgfaceting_16-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-3PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgfaceting_16-0.2.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgfaceting_16-0.2.0-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d12.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d13.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ d13.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ u22.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u22.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u24.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u24.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfaceting_15-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel8.10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgfaceting_15-0.2.0-3PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel10.noarch.rpm
+@ el9.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfaceting_15-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel9.9.noarch.rpm pgdg 0.2.0 15.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfaceting_15-0.2.0-3PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgfaceting_15-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel10.3.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgfaceting_15-0.2.0-3PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-3PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgfaceting_15-0.2.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgfaceting_15-0.2.0-1PGDG.rhel10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d12.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg12+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg12+2_all.deb
 @ d12.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg12+1_all.deb
 @ d12.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg12+1_all.deb
+@ d13.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ d13.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg13+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg13+2_all.deb
 @ d13.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg13+1_all.deb
 @ d13.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg13+1_all.deb
+@ u22.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u22.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+2_all.deb
 @ u22.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
 @ u22.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
+@ u24.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u24.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+2_all.deb
 @ u24.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+2_all.deb
 @ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
 @ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ el8.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg12+1_all.deb
-@ d12.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb
-@ d12.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg12+1_all.deb
-@ d12.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb
-@ d13.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg13+1_all.deb
-@ d13.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg13+1_all.deb
-@ d13.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg13+1_all.deb
-@ d13.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg13+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg13+1_all.deb
-@ u22.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
-@ u22.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
-@ u22.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg22.04+1_all.deb
-@ u22.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
-@ u24.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
-@ u24.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
-@ u24.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg24.04+1_all.deb
-@ u24.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
-@ u26.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
-@ u26.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
-@ u26.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-6.pgdg26.04+1_all.deb
-@ u26.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -242,27 +280,27 @@ pig install pgfaceting;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgfaceting -v 19  # PG 19
 pig ext install -y pgfaceting -v 18  # PG 18
 pig ext install -y pgfaceting -v 17  # PG 17
 pig ext install -y pgfaceting -v 16  # PG 16
 pig ext install -y pgfaceting -v 15  # PG 15
-pig ext install -y pgfaceting -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgfaceting_19       # PG 19
 dnf install -y pgfaceting_18       # PG 18
 dnf install -y pgfaceting_17       # PG 17
 dnf install -y pgfaceting_16       # PG 16
 dnf install -y pgfaceting_15       # PG 15
-dnf install -y pgfaceting_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgfaceting   # PG 19
 apt install -y postgresql-18-pgfaceting   # PG 18
 apt install -y postgresql-17-pgfaceting   # PG 17
 apt install -y postgresql-16-pgfaceting   # PG 16
 apt install -y postgresql-15-pgfaceting   # PG 15
-apt install -y postgresql-14-pgfaceting   # PG 14
 ```
 
 

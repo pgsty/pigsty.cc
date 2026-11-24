@@ -42,30 +42,30 @@ weight: 1680
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_tzf` | - |
-| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_tzf_$v` | - |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-tzf` | - |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_tzf` | - |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "18,17,16,15" >}} | `pg_tzf_$v` | - |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-tzf` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 | AVAIL PIGSTY 0.3.1 1 |
 @ el8.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.1-1PGSTY.el8.x86_64.rpm pigsty 0.3.1 4.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_18-0.3.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.1-1PGSTY.el8.aarch64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_18-0.3.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.1-1PGSTY.el9.x86_64.rpm pigsty 0.3.1 4.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_18-0.3.1-1PGSTY.el9.x86_64.rpm
@@ -130,22 +130,6 @@ weight: 1680
 @ u24.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.1-1PGSTY~noble_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.3.1-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.1-1PGSTY~resolute_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.1-1PGSTY~resolute_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el8.x86_64.rpm pigsty 0.3.1 4.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_14-0.3.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el8.aarch64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_14-0.3.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el9.x86_64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_14-0.3.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el9.aarch64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_14-0.3.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el10.x86_64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_14-0.3.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.1-1PGSTY.el10.aarch64.rpm pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_14-0.3.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~bookworm_amd64.deb pigsty 0.3.1 3.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~bookworm_arm64.deb pigsty 0.3.1 3.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~trixie_amd64.deb pigsty 0.3.1 3.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~trixie_arm64.deb pigsty 0.3.1 3.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~jammy_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~jammy_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~noble_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~noble_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~resolute_amd64.deb pigsty 0.3.1 3.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.1-1PGSTY~resolute_arm64.deb pigsty 0.3.1 3.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +156,27 @@ pig install pg_tzf;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_tzf -v 19  # PG 19
 pig ext install -y pg_tzf -v 18  # PG 18
 pig ext install -y pg_tzf -v 17  # PG 17
 pig ext install -y pg_tzf -v 16  # PG 16
 pig ext install -y pg_tzf -v 15  # PG 15
-pig ext install -y pg_tzf -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_tzf_19       # PG 19
 dnf install -y pg_tzf_18       # PG 18
 dnf install -y pg_tzf_17       # PG 17
 dnf install -y pg_tzf_16       # PG 16
 dnf install -y pg_tzf_15       # PG 15
-dnf install -y pg_tzf_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-tzf   # PG 19
 apt install -y postgresql-18-tzf   # PG 18
 apt install -y postgresql-17-tzf   # PG 17
 apt install -y postgresql-16-tzf   # PG 16
 apt install -y postgresql-15-tzf   # PG 15
-apt install -y postgresql-14-tzf   # PG 14
 ```
 
 

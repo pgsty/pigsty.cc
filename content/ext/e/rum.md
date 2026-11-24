@@ -45,175 +45,178 @@ weight: 2710
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.3.15` | {{< pgvers "18,17,16,15,14" >}} | `rum` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.15` | {{< pgvers "18,17,16,15,14" >}} | `rum_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.15` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-rum` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.3.15` | {{< pgvers "19,18,17,16,15" >}} | `rum` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.15` | {{< pgvers "19,18,17,16,15" >}} | `rum_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.15` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-rum` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 3 | AVAIL PIGSTY 1.3.15 4 | AVAIL PGDG 1.3.15 3 | AVAIL PGDG 1.3.15 4 |
-| el8.aarch64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 3 | AVAIL PIGSTY 1.3.15 4 | AVAIL PGDG 1.3.15 3 | AVAIL PGDG 1.3.15 3 |
-| el9.x86_64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 4 | AVAIL PIGSTY 1.3.15 5 | AVAIL PGDG 1.3.15 4 | AVAIL PGDG 1.3.15 4 |
-| el9.aarch64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 4 | AVAIL PIGSTY 1.3.15 5 | AVAIL PGDG 1.3.15 4 | AVAIL PGDG 1.3.15 4 |
-| el10.x86_64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 4 | AVAIL PIGSTY 1.3.15 4 | AVAIL PGDG 1.3.15 3 | AVAIL PGDG 1.3.15 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 4 | AVAIL PIGSTY 1.3.15 4 | AVAIL PGDG 1.3.15 3 | AVAIL PGDG 1.3.15 3 |
-| d12.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| d12.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| d13.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| d13.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u22.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u22.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u24.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u24.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u26.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-| u26.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
-@ el8.x86_64 18 rum_18 rum_18-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_18-1.3.15-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 rum_18 rum_18-1.3.15-1PIGSTY.el8.aarch64.rpm pigsty 1.3.15 97.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_18-1.3.15-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 rum_18 rum_18-1.3.15-1PIGSTY.el9.x86_64.rpm pigsty 1.3.15 96.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_18-1.3.15-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 rum_18 rum_18-1.3.15-1PIGSTY.el9.aarch64.rpm pigsty 1.3.15 92.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_18-1.3.15-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 rum_18 rum_18-1.3.15-1PIGSTY.el10.x86_64.rpm pigsty 1.3.15 97.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_18-1.3.15-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 rum_18 rum_18-1.3.15-1PIGSTY.el10.aarch64.rpm pigsty 1.3.15 93.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_18-1.3.15-1PIGSTY.el10.aarch64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 4 | AVAIL PGDG 1.3.15 5 | AVAIL PGDG 1.3.15 4 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 4 | AVAIL PGDG 1.3.15 5 | AVAIL PGDG 1.3.15 4 |
+| el9.x86_64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.3.15 1 | AVAIL PIGSTY 1.3.15 1 | AVAIL PGDG 1.3.15 6 | AVAIL PGDG 1.3.15 6 | AVAIL PGDG 1.3.15 5 |
+| d12.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| d12.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| d13.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| d13.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u22.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u24.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u24.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u26.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+| u26.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 | AVAIL PGDG 1.3.15 2 |
+@ el9.x86_64 19 rum_19 rum_19-1.3.15-1PGSTY.el9.x86_64.rpm pigsty 1.3.15 253.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_19-1.3.15-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 rum_19 rum_19-1.3.15-1PGSTY.el9.aarch64.rpm pigsty 1.3.15 247.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_19-1.3.15-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 rum_19 rum_19-1.3.15-1PGSTY.el10.x86_64.rpm pigsty 1.3.15 255.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_19-1.3.15-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 rum_19 rum_19-1.3.15-1PGSTY.el10.aarch64.rpm pigsty 1.3.15 249.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_19-1.3.15-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 18 rum_18 rum_18-1.3.15-1PGSTY.el8.x86_64.rpm pigsty 1.3.15 251.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_18-1.3.15-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 rum_18 rum_18-1.3.15-1PGSTY.el8.aarch64.rpm pigsty 1.3.15 243.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_18-1.3.15-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 rum_18 rum_18-1.3.15-1PGSTY.el9.x86_64.rpm pigsty 1.3.15 252.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_18-1.3.15-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 rum_18 rum_18-1.3.15-1PGSTY.el9.aarch64.rpm pigsty 1.3.15 246.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_18-1.3.15-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 rum_18 rum_18-1.3.15-1PGSTY.el10.x86_64.rpm pigsty 1.3.15 253.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_18-1.3.15-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 rum_18 rum_18-1.3.15-1PGSTY.el10.aarch64.rpm pigsty 1.3.15 248.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_18-1.3.15-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg12+1_amd64.deb pgdg 1.3.15 233.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg12+1_amd64.deb pgdg 1.3.15 233.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg12+1_arm64.deb pgdg 1.3.15 225.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg12+1_arm64.deb pgdg 1.3.15 225.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg13+1_amd64.deb pgdg 1.3.15 233.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg13+1_amd64.deb pgdg 1.3.15 233.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg13+1_arm64.deb pgdg 1.3.15 226.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg13+1_arm64.deb pgdg 1.3.15 226.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg22.04+1_amd64.deb pgdg 1.3.15 240.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg22.04+1_amd64.deb pgdg 1.3.15 240.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg22.04+1_arm64.deb pgdg 1.3.15 232.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 232.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg24.04+1_amd64.deb pgdg 1.3.15 234.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 234.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-2.pgdg26.04+1_arm64.deb pgdg 1.3.15 223.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 223.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 rum_17 rum_17-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_17-1.3.15-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 rum_17 rum_17-1.3.15-3PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 94.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/rum_17-1.3.15-3PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 rum_17 rum_17-1.3.15-1PGSTY.el8.x86_64.rpm pigsty 1.3.15 252.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_17-1.3.15-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 rum_17 rum_17-1.3.15-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 94.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/rum_17-1.3.15-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 rum_17 rum_17-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 93.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/rum_17-1.3.14-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 rum_17 rum_17-1.3.15-1PIGSTY.el8.aarch64.rpm pigsty 1.3.15 97.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_17-1.3.15-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 rum_17 rum_17-1.3.15-3PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 88.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/rum_17-1.3.15-3PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 rum_17 rum_17-1.3.15-1PGSTY.el8.aarch64.rpm pigsty 1.3.15 243.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_17-1.3.15-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 rum_17 rum_17-1.3.15-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 87.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/rum_17-1.3.15-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 rum_17 rum_17-1.3.14-1PGDG.rhel8.aarch64.rpm pgdg 1.3.14 86.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/rum_17-1.3.14-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 rum_17 rum_17-1.3.15-1PIGSTY.el9.x86_64.rpm pigsty 1.3.15 96.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_17-1.3.15-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 rum_17 rum_17-1.3.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3.15 92.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/rum_17-1.3.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 rum_17 rum_17-1.3.14-4PGDG.rhel9.8.x86_64.rpm pgdg 1.3.14 91.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/rum_17-1.3.14-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 rum_17 rum_17-1.3.14-1PGDG.rhel9.x86_64.rpm pgdg 1.3.14 91.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/rum_17-1.3.14-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 rum_17 rum_17-1.3.15-1PIGSTY.el9.aarch64.rpm pigsty 1.3.15 92.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_17-1.3.15-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 rum_17 rum_17-1.3.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3.15 88.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/rum_17-1.3.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 rum_17 rum_17-1.3.14-4PGDG.rhel9.8.aarch64.rpm pgdg 1.3.14 87.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/rum_17-1.3.14-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 rum_17 rum_17-1.3.14-1PGDG.rhel9.aarch64.rpm pgdg 1.3.14 87.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/rum_17-1.3.14-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 rum_17 rum_17-1.3.15-1PIGSTY.el10.x86_64.rpm pigsty 1.3.15 97.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_17-1.3.15-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 rum_17 rum_17-1.3.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3.15 93.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/rum_17-1.3.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 rum_17 rum_17-1.3.14-4PGDG.rhel10.2.x86_64.rpm pgdg 1.3.14 92.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/rum_17-1.3.14-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 rum_17 rum_17-1.3.14-2PGDG.rhel10.x86_64.rpm pgdg 1.3.14 93.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/rum_17-1.3.14-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 rum_17 rum_17-1.3.15-1PIGSTY.el10.aarch64.rpm pigsty 1.3.15 94.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_17-1.3.15-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 17 rum_17 rum_17-1.3.15-3PGDG.rhel9.9.x86_64.rpm pgdg 1.3.15 93.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/rum_17-1.3.15-3PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 rum_17 rum_17-1.3.15-1PGSTY.el9.x86_64.rpm pigsty 1.3.15 252.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_17-1.3.15-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 rum_17 rum_17-1.3.15-3PGDG.rhel9.9.aarch64.rpm pgdg 1.3.15 89.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/rum_17-1.3.15-3PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 rum_17 rum_17-1.3.15-1PGSTY.el9.aarch64.rpm pigsty 1.3.15 247.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_17-1.3.15-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 rum_17 rum_17-1.3.15-3PGDG.rhel10.3.x86_64.rpm pgdg 1.3.15 94.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/rum_17-1.3.15-3PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 rum_17 rum_17-1.3.15-1PGSTY.el10.x86_64.rpm pigsty 1.3.15 254.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_17-1.3.15-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 rum_17 rum_17-1.3.15-3PGDG.rhel10.3.aarch64.rpm pgdg 1.3.15 89.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rum_17-1.3.15-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 rum_17 rum_17-1.3.15-3PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 89.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rum_17-1.3.15-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 rum_17 rum_17-1.3.15-1PGSTY.el10.aarch64.rpm pigsty 1.3.15 248.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_17-1.3.15-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 rum_17 rum_17-1.3.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 89.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rum_17-1.3.15-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 rum_17 rum_17-1.3.14-4PGDG.rhel10.2.aarch64.rpm pgdg 1.3.14 88.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rum_17-1.3.14-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 rum_17 rum_17-1.3.14-2PGDG.rhel10.aarch64.rpm pgdg 1.3.14 88.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/rum_17-1.3.14-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg12+1_amd64.deb pgdg 1.3.15 234.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg12+1_amd64.deb pgdg 1.3.15 234.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg12+1_arm64.deb pgdg 1.3.15 226.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg12+1_arm64.deb pgdg 1.3.15 225.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg13+1_amd64.deb pgdg 1.3.15 234.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg13+1_amd64.deb pgdg 1.3.15 234.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg13+1_arm64.deb pgdg 1.3.15 227.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg13+1_arm64.deb pgdg 1.3.15 226.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg22.04+1_amd64.deb pgdg 1.3.15 265.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg22.04+1_amd64.deb pgdg 1.3.15 265.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg22.04+1_arm64.deb pgdg 1.3.15 257.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 257.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg24.04+1_amd64.deb pgdg 1.3.15 235.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 235.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg24.04+1_arm64.deb pgdg 1.3.15 227.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 227.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 233.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-2.pgdg26.04+1_arm64.deb pgdg 1.3.15 224.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 224.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 rum_16 rum_16-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_16-1.3.15-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 rum_16 rum_16-1.3.15-3PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 94.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.15-3PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 rum_16 rum_16-1.3.15-1PGSTY.el8.x86_64.rpm pigsty 1.3.15 252.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_16-1.3.15-1PGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 rum_16 rum_16-1.3.15-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 94.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.15-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 rum_16 rum_16-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 93.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 rum_16 rum_16-1.3.13-2.rhel8.1.x86_64.rpm pgdg 1.3.13 92.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.13-2.rhel8.1.x86_64.rpm
-@ el8.aarch64 16 rum_16 rum_16-1.3.15-1PIGSTY.el8.aarch64.rpm pigsty 1.3.15 97.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_16-1.3.15-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 rum_16 rum_16-1.3.15-3PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 88.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/rum_16-1.3.15-3PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 rum_16 rum_16-1.3.15-1PGSTY.el8.aarch64.rpm pigsty 1.3.15 243.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_16-1.3.15-1PGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 rum_16 rum_16-1.3.15-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 87.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/rum_16-1.3.15-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 rum_16 rum_16-1.3.14-1PGDG.rhel8.aarch64.rpm pgdg 1.3.14 86.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/rum_16-1.3.14-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 rum_16 rum_16-1.3.13-2.rhel8.1.aarch64.rpm pgdg 1.3.13 86.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/rum_16-1.3.13-2.rhel8.1.aarch64.rpm
-@ el9.x86_64 16 rum_16 rum_16-1.3.15-1PIGSTY.el9.x86_64.rpm pigsty 1.3.15 96.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_16-1.3.15-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 rum_16 rum_16-1.3.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3.15 92.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rum_16-1.3.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 rum_16 rum_16-1.3.14-4PGDG.rhel9.8.x86_64.rpm pgdg 1.3.14 91.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rum_16-1.3.14-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 rum_16 rum_16-1.3.14-1PGDG.rhel9.x86_64.rpm pgdg 1.3.14 91.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rum_16-1.3.14-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 rum_16 rum_16-1.3.13-2.rhel9.1.x86_64.rpm pgdg 1.3.13 91.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rum_16-1.3.13-2.rhel9.1.x86_64.rpm
-@ el9.aarch64 16 rum_16 rum_16-1.3.15-1PIGSTY.el9.aarch64.rpm pigsty 1.3.15 92.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_16-1.3.15-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 rum_16 rum_16-1.3.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3.15 88.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rum_16-1.3.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 rum_16 rum_16-1.3.14-4PGDG.rhel9.8.aarch64.rpm pgdg 1.3.14 87.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rum_16-1.3.14-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 rum_16 rum_16-1.3.14-1PGDG.rhel9.aarch64.rpm pgdg 1.3.14 87.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rum_16-1.3.14-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 rum_16 rum_16-1.3.13-2.rhel9.1.aarch64.rpm pgdg 1.3.13 87.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rum_16-1.3.13-2.rhel9.1.aarch64.rpm
-@ el10.x86_64 16 rum_16 rum_16-1.3.15-1PIGSTY.el10.x86_64.rpm pigsty 1.3.15 97.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_16-1.3.15-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 rum_16 rum_16-1.3.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3.15 93.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/rum_16-1.3.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 rum_16 rum_16-1.3.14-4PGDG.rhel10.2.x86_64.rpm pgdg 1.3.14 92.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/rum_16-1.3.14-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 rum_16 rum_16-1.3.14-2PGDG.rhel10.x86_64.rpm pgdg 1.3.14 92.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/rum_16-1.3.14-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 rum_16 rum_16-1.3.15-1PIGSTY.el10.aarch64.rpm pigsty 1.3.15 93.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_16-1.3.15-1PIGSTY.el10.aarch64.rpm
+@ el9.x86_64 16 rum_16 rum_16-1.3.15-3PGDG.rhel9.9.x86_64.rpm pgdg 1.3.15 93.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/rum_16-1.3.15-3PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 rum_16 rum_16-1.3.15-1PGSTY.el9.x86_64.rpm pigsty 1.3.15 252.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_16-1.3.15-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 rum_16 rum_16-1.3.15-3PGDG.rhel9.9.aarch64.rpm pgdg 1.3.15 89.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/rum_16-1.3.15-3PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 rum_16 rum_16-1.3.15-1PGSTY.el9.aarch64.rpm pigsty 1.3.15 247.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rum_16-1.3.15-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 rum_16 rum_16-1.3.15-3PGDG.rhel10.3.x86_64.rpm pgdg 1.3.15 94.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/rum_16-1.3.15-3PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 rum_16 rum_16-1.3.15-1PGSTY.el10.x86_64.rpm pigsty 1.3.15 254.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rum_16-1.3.15-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 rum_16 rum_16-1.3.15-3PGDG.rhel10.3.aarch64.rpm pgdg 1.3.15 89.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rum_16-1.3.15-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 rum_16 rum_16-1.3.15-3PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 89.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rum_16-1.3.15-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 rum_16 rum_16-1.3.15-1PGSTY.el10.aarch64.rpm pigsty 1.3.15 248.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rum_16-1.3.15-1PGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 rum_16 rum_16-1.3.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 89.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rum_16-1.3.15-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 rum_16 rum_16-1.3.14-4PGDG.rhel10.2.aarch64.rpm pgdg 1.3.14 88.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rum_16-1.3.14-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 rum_16 rum_16-1.3.14-2PGDG.rhel10.aarch64.rpm pgdg 1.3.14 88.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/rum_16-1.3.14-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg12+1_amd64.deb pgdg 1.3.15 234.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg12+1_amd64.deb pgdg 1.3.15 234.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg12+1_arm64.deb pgdg 1.3.15 225.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg12+1_arm64.deb pgdg 1.3.15 225.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg13+1_amd64.deb pgdg 1.3.15 234.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg13+1_amd64.deb pgdg 1.3.15 234.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg13+1_arm64.deb pgdg 1.3.15 226.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg13+1_arm64.deb pgdg 1.3.15 226.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg22.04+1_amd64.deb pgdg 1.3.15 265.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg22.04+1_amd64.deb pgdg 1.3.15 264.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg22.04+1_arm64.deb pgdg 1.3.15 256.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 256.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg24.04+1_amd64.deb pgdg 1.3.15 235.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 234.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-2.pgdg26.04+1_arm64.deb pgdg 1.3.15 223.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 224.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 rum_15 rum_15-1.3.15-3PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.15-3PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 rum_15 rum_15-1.3.15-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 114.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.15-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 rum_15 rum_15-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 113.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 rum_15 rum_15-1.3.13-1.rhel8.x86_64.rpm pgdg 1.3.13 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.13-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 rum_15 rum_15-1.3.15-3PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/rum_15-1.3.15-3PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 rum_15 rum_15-1.3.15-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 106.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/rum_15-1.3.15-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 rum_15 rum_15-1.3.14-1PGDG.rhel8.aarch64.rpm pgdg 1.3.14 105.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/rum_15-1.3.14-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 rum_15 rum_15-1.3.13-1.rhel8.aarch64.rpm pgdg 1.3.13 105.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/rum_15-1.3.13-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 rum_15 rum_15-1.3.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3.15 111.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rum_15-1.3.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 rum_15 rum_15-1.3.14-4PGDG.rhel9.8.x86_64.rpm pgdg 1.3.14 111.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rum_15-1.3.14-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 rum_15 rum_15-1.3.14-1PGDG.rhel9.x86_64.rpm pgdg 1.3.14 111.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rum_15-1.3.14-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 rum_15 rum_15-1.3.13-1.rhel9.x86_64.rpm pgdg 1.3.13 111.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rum_15-1.3.13-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 rum_15 rum_15-1.3.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3.15 108.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rum_15-1.3.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 rum_15 rum_15-1.3.14-4PGDG.rhel9.8.aarch64.rpm pgdg 1.3.14 106.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rum_15-1.3.14-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 rum_15 rum_15-1.3.14-1PGDG.rhel9.aarch64.rpm pgdg 1.3.14 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rum_15-1.3.14-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 rum_15 rum_15-1.3.13-1.rhel9.aarch64.rpm pgdg 1.3.13 107.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rum_15-1.3.13-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 rum_15 rum_15-1.3.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3.15 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/rum_15-1.3.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 rum_15 rum_15-1.3.14-4PGDG.rhel10.2.x86_64.rpm pgdg 1.3.14 112.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/rum_15-1.3.14-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 rum_15 rum_15-1.3.14-2PGDG.rhel10.x86_64.rpm pgdg 1.3.14 112.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/rum_15-1.3.14-2PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 rum_15 rum_15-1.3.15-3PGDG.rhel9.9.x86_64.rpm pgdg 1.3.15 112.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/rum_15-1.3.15-3PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 rum_15 rum_15-1.3.15-3PGDG.rhel9.9.aarch64.rpm pgdg 1.3.15 108.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/rum_15-1.3.15-3PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 rum_15 rum_15-1.3.15-3PGDG.rhel10.3.x86_64.rpm pgdg 1.3.15 113.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/rum_15-1.3.15-3PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 rum_15 rum_15-1.3.15-3PGDG.rhel10.3.aarch64.rpm pgdg 1.3.15 109.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rum_15-1.3.15-3PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 rum_15 rum_15-1.3.15-3PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 109.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rum_15-1.3.15-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 rum_15 rum_15-1.3.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 108.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rum_15-1.3.15-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 rum_15 rum_15-1.3.14-4PGDG.rhel10.2.aarch64.rpm pgdg 1.3.14 108.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rum_15-1.3.14-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 rum_15 rum_15-1.3.14-2PGDG.rhel10.aarch64.rpm pgdg 1.3.14 108.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/rum_15-1.3.14-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg12+1_amd64.deb pgdg 1.3.15 288.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg12+1_amd64.deb pgdg 1.3.15 288.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg12+1_arm64.deb pgdg 1.3.15 278.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg12+1_arm64.deb pgdg 1.3.15 277.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg13+1_amd64.deb pgdg 1.3.15 288.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg13+1_amd64.deb pgdg 1.3.15 289.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg13+1_arm64.deb pgdg 1.3.15 278.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg13+1_arm64.deb pgdg 1.3.15 278.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg22.04+1_amd64.deb pgdg 1.3.15 327.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg22.04+1_amd64.deb pgdg 1.3.15 327.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg22.04+1_arm64.deb pgdg 1.3.15 316.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 316.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg24.04+1_amd64.deb pgdg 1.3.15 289.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 288.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg24.04+1_arm64.deb pgdg 1.3.15 279.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 279.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg26.04+1_amd64.deb pgdg 1.3.15 287.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 287.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-2.pgdg26.04+1_arm64.deb pgdg 1.3.15 276.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 276.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 rum_14 rum_14-1.3.15-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.15 112.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.15-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 14 rum_14 rum_14-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 111.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.14-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 rum_14 rum_14-1.3.13-1.rhel8.x86_64.rpm pgdg 1.3.13 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.13-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 rum_14 rum_14-1.3.8-1.rhel8.x86_64.rpm pgdg 1.3.8 308.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.8-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 rum_14 rum_14-1.3.15-1PGDG.rhel8.10.aarch64.rpm pgdg 1.3.15 105.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/rum_14-1.3.15-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 14 rum_14 rum_14-1.3.14-1PGDG.rhel8.aarch64.rpm pgdg 1.3.14 104.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/rum_14-1.3.14-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 rum_14 rum_14-1.3.13-1.rhel8.aarch64.rpm pgdg 1.3.13 103.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/rum_14-1.3.13-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 rum_14 rum_14-1.3.15-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3.15 111.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/rum_14-1.3.15-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 rum_14 rum_14-1.3.14-4PGDG.rhel9.8.x86_64.rpm pgdg 1.3.14 111.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/rum_14-1.3.14-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 rum_14 rum_14-1.3.14-1PGDG.rhel9.x86_64.rpm pgdg 1.3.14 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/rum_14-1.3.14-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 rum_14 rum_14-1.3.13-1.rhel9.x86_64.rpm pgdg 1.3.13 111.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/rum_14-1.3.13-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 rum_14 rum_14-1.3.15-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3.15 106.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/rum_14-1.3.15-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 rum_14 rum_14-1.3.14-4PGDG.rhel9.8.aarch64.rpm pgdg 1.3.14 105.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/rum_14-1.3.14-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 rum_14 rum_14-1.3.14-1PGDG.rhel9.aarch64.rpm pgdg 1.3.14 105.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/rum_14-1.3.14-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 rum_14 rum_14-1.3.13-1.rhel9.aarch64.rpm pgdg 1.3.13 105.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/rum_14-1.3.13-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 rum_14 rum_14-1.3.15-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3.15 112.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/rum_14-1.3.15-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 rum_14 rum_14-1.3.14-4PGDG.rhel10.2.x86_64.rpm pgdg 1.3.14 111.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/rum_14-1.3.14-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 rum_14 rum_14-1.3.14-2PGDG.rhel10.x86_64.rpm pgdg 1.3.14 111.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/rum_14-1.3.14-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 rum_14 rum_14-1.3.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3.15 107.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/rum_14-1.3.15-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 rum_14 rum_14-1.3.14-4PGDG.rhel10.2.aarch64.rpm pgdg 1.3.14 106.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/rum_14-1.3.14-4PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 rum_14 rum_14-1.3.14-2PGDG.rhel10.aarch64.rpm pgdg 1.3.14 107.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/rum_14-1.3.14-2PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg12+1_amd64.deb pgdg 1.3.15 287.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg12+1_arm64.deb pgdg 1.3.15 277.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg13+1_amd64.deb pgdg 1.3.15 287.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg13+1_arm64.deb pgdg 1.3.15 277.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg22.04+1_amd64.deb pgdg 1.3.15 324.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 314.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 287.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 277.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 284.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 274.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -240,27 +243,27 @@ pig install rum;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y rum -v 19  # PG 19
 pig ext install -y rum -v 18  # PG 18
 pig ext install -y rum -v 17  # PG 17
 pig ext install -y rum -v 16  # PG 16
 pig ext install -y rum -v 15  # PG 15
-pig ext install -y rum -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y rum_19       # PG 19
 dnf install -y rum_18       # PG 18
 dnf install -y rum_17       # PG 17
 dnf install -y rum_16       # PG 16
 dnf install -y rum_15       # PG 15
-dnf install -y rum_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-rum   # PG 19
 apt install -y postgresql-18-rum   # PG 18
 apt install -y postgresql-17-rum   # PG 17
 apt install -y postgresql-16-rum   # PG 16
 apt install -y postgresql-15-rum   # PG 15
-apt install -y postgresql-14-rum   # PG 14
 ```
 
 

@@ -11,10 +11,10 @@ weight: 2980
     <div class="ext-card__title">https://codeberg.org/gregburd/mentat</div>
     <div class="ext-card__desc">https://codeberg.org/gregburd/mentat</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_mentat-1.20.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_mentat-1.22.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_mentat-1.20.0.tar.gz</div>
-    <div class="ext-card__desc">pg_mentat-1.20.0.tar.gz</div>
+    <div class="ext-card__title">pg_mentat-1.22.0.tar.gz</div>
+    <div class="ext-card__desc">pg_mentat-1.22.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2980
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_mentat`**](/ext/e/pg_mentat) | `1.20.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_mentat`**](/ext/e/pg_mentat) | `1.22.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,30 +45,30 @@ weight: 2980
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_mentat` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_mentat_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-mentat` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.22.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_mentat` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20.0` | {{< pgvers "18,17,16,15" >}} | `pg_mentat_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.20.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-mentat` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 | AVAIL PIGSTY 1.20.0 1 |
 @ el8.x86_64 18 pg_mentat_18 pg_mentat_18-1.20.0-1PGSTY.el8.x86_64.rpm pigsty 1.20.0 2.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mentat_18-1.20.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_mentat_18 pg_mentat_18-1.20.0-1PGSTY.el8.aarch64.rpm pigsty 1.20.0 2.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mentat_18-1.20.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_mentat_18 pg_mentat_18-1.20.0-1PGSTY.el9.x86_64.rpm pigsty 1.20.0 1.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mentat_18-1.20.0-1PGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 2980
 @ u24.aarch64 15 postgresql-15-pg-mentat postgresql-15-pg-mentat_1.20.0-1PGSTY~noble_arm64.deb pigsty 1.20.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mentat/postgresql-15-pg-mentat_1.20.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-mentat postgresql-15-pg-mentat_1.20.0-1PGSTY~resolute_amd64.deb pigsty 1.20.0 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mentat/postgresql-15-pg-mentat_1.20.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-mentat postgresql-15-pg-mentat_1.20.0-1PGSTY~resolute_arm64.deb pigsty 1.20.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mentat/postgresql-15-pg-mentat_1.20.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el8.x86_64.rpm pigsty 1.20.0 2.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mentat_14-1.20.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el8.aarch64.rpm pigsty 1.20.0 2.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mentat_14-1.20.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el9.x86_64.rpm pigsty 1.20.0 1.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mentat_14-1.20.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el9.aarch64.rpm pigsty 1.20.0 2.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_mentat_14-1.20.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el10.x86_64.rpm pigsty 1.20.0 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_mentat_14-1.20.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_mentat_14 pg_mentat_14-1.20.0-1PGSTY.el10.aarch64.rpm pigsty 1.20.0 2.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_mentat_14-1.20.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~bookworm_amd64.deb pigsty 1.20.0 1.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~bookworm_arm64.deb pigsty 1.20.0 2.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~trixie_amd64.deb pigsty 1.20.0 1.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~trixie_arm64.deb pigsty 1.20.0 2.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~jammy_amd64.deb pigsty 1.20.0 1.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~jammy_arm64.deb pigsty 1.20.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~noble_amd64.deb pigsty 1.20.0 1.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~noble_arm64.deb pigsty 1.20.0 2.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~resolute_amd64.deb pigsty 1.20.0 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-mentat postgresql-14-pg-mentat_1.20.0-1PGSTY~resolute_arm64.deb pigsty 1.20.0 2.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mentat/postgresql-14-pg-mentat_1.20.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install pg_mentat;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_mentat -v 19  # PG 19
 pig ext install -y pg_mentat -v 18  # PG 18
 pig ext install -y pg_mentat -v 17  # PG 17
 pig ext install -y pg_mentat -v 16  # PG 16
 pig ext install -y pg_mentat -v 15  # PG 15
-pig ext install -y pg_mentat -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_mentat_19       # PG 19
 dnf install -y pg_mentat_18       # PG 18
 dnf install -y pg_mentat_17       # PG 17
 dnf install -y pg_mentat_16       # PG 16
 dnf install -y pg_mentat_15       # PG 15
-dnf install -y pg_mentat_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-mentat   # PG 19
 apt install -y postgresql-18-pg-mentat   # PG 18
 apt install -y postgresql-17-pg-mentat   # PG 17
 apt install -y postgresql-16-pg-mentat   # PG 16
 apt install -y postgresql-15-pg-mentat   # PG 15
-apt install -y postgresql-14-pg-mentat   # PG 14
 ```
 
 
@@ -209,21 +193,24 @@ CREATE EXTENSION pg_mentat;
 
 来源：
 
-- [v1.20.0 README](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/README.md)
-- [v1.20.0 extension control](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/pg_mentat.control)
-- [v1.20.0 changelog](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/CHANGELOG.md)
-- [v1.9.1 dump repair](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/sql/pg_mentat--1.9.0--1.9.1.sql)
-- [v1.20.0 SQL aliases](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/sql/07_function_aliases.sql)
-- [v1.20.0 history functions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/time_travel.rs)
-- [v1.20.0 excision function](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/excision.rs)
-- [v1.20.0 transaction functions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/transact.rs)
-- [v1.20.0 subscriptions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/subscriptions.rs)
-- [1.18.0 upgrade SQL](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/sql/pg_mentat--1.17.2--1.18.0.sql)
-- [1.18.0 命名存储指南](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/docs/src/multi-tenancy.md)
-- [1.18.0 查询函数](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/query.rs)
-- [1.18.0 pull 函数](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.20.0/crates/pg/pg_mentat/src/functions/pull.rs)
+- [pg_gaps.md](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/docs/src/pg_gaps.md)
+- [pg_mentat--1.21.1--1.22.0.sql](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/sql/pg_mentat--1.21.1--1.22.0.sql)
 
-`pg_mentat` 1.20.0 在 PostgreSQL 内实现与 Datomic 兼容的数据模型和 Datalog 查询引擎。它将不可变事实存储为有类型的 datom，并通过 SQL 函数提供模式事务、Datalog 查询、pull 表达式、时间旅行、事务历史和永久切除功能。它适用于需要这种模型的应用；并非关系表或 SQL 的透明替代品。
+- [v1.22.0 README](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/README.md)
+- [v1.22.0 extension control](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/pg_mentat.control)
+- [v1.22.0 changelog](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/CHANGELOG.md)
+- [v1.9.1 dump repair](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/sql/pg_mentat--1.9.0--1.9.1.sql)
+- [v1.22.0 SQL aliases](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/sql/07_function_aliases.sql)
+- [v1.22.0 history functions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/time_travel.rs)
+- [v1.22.0 excision function](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/excision.rs)
+- [v1.22.0 transaction functions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/transact.rs)
+- [v1.22.0 subscriptions](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/subscriptions.rs)
+- [1.18.0 upgrade SQL](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/sql/pg_mentat--1.17.2--1.18.0.sql)
+- [1.18.0 命名存储指南](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/docs/src/multi-tenancy.md)
+- [1.18.0 查询函数](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/query.rs)
+- [1.18.0 pull 函数](https://api.pgxn.org/src/pg_mentat/pg_mentat-1.22.0/crates/pg/pg_mentat/src/functions/pull.rs)
+
+`pg_mentat` 1.22.0 在 PostgreSQL 内实现与 Datomic 兼容的数据模型和 Datalog 查询引擎。它将不可变事实存储为有类型的 datom，并通过 SQL 函数提供模式事务、Datalog 查询、pull 表达式、时间旅行、事务历史和永久切除功能。它适用于需要这种模型的应用；并非关系表或 SQL 的透明替代品。
 
 ### 安装并定义模式
 
@@ -314,7 +301,7 @@ SELECT public.mentat_excise(ARRAY[1000042]::bigint[], 'default', NULL);
 
 ### 要求与注意事项
 
-- 上游 v1.18.0 的 Cargo 特性覆盖 PostgreSQL 13-19，使用 pgrx 0.19.3。Pigsty 的 1.18.0 软件包面向 PostgreSQL 14-18。
+- 上游 v1.22.0 的 Cargo 特性覆盖 PostgreSQL 13-19，使用 pgrx 0.19.4。Pigsty 的 1.18.0 软件包面向 PostgreSQL 14-18。
 - 该扩展不可重定位，也不要求 `shared_preload_libraries`。
 - 可选的 `mentatd` HTTP/Datomic 线协议守护进程是上游配套程序，不包含在 Pigsty `pg_mentat` 软件包中。仅通过 SQL 使用扩展并不需要它。
 - Datalog 编译、递归 pull、全文属性、订阅和历史记录可能呈现截然不同的成本特征。请使用文档所述的 explain 辅助函数检查生成的 SQL，并在代表性数据上进行基准测试。
@@ -400,3 +387,15 @@ SELECT public.q(
 新库加载后、SQL 升级前，库行为变化就已生效：`"datomic.tx"` 现在标识事务本身，不再指向独立注解实体。应检查事务报告的消费者。命名存储的事务函数现读取自身存储，且不能在事务函数内再次提交事务。当前状态 RLS 还要求为租户角色授予 `mentat.current_<type>` 表权限。
 
 `mentat.moved_idents(store)` 检测旧版本移动过的 ident。实际修复前，先审阅 `mentat.repair_moved_idents(store, dry_run DEFAULT true)` 的预演结果：它可能合并实体历史，会跳过冲突；写入模式要求 READ COMMITTED，且会阻塞存储写入。升级不会自动修复这些旧数据变化。跨越相应历史版本时，上述 1.18.0 命名存储替换及逻辑备份要求仍适用。
+
+### 版本 1.21.1
+
+发行包通过 pgrx 0.19.4 使用 PostgreSQL 复合值安全检查。安装这些包前，先将 PostgreSQL 至少升级到 15.20、16.16、17.12、18.7 或 19.0；在较早次版本上加载可能因未定义的 DatumGetHeapTupleHeader 符号失败。PostgreSQL 14 的源码构建需要已修复的 14.25 头文件。1.21.1 的 Nix 构建也强制使用修复后的头文件；软件包兼容性须与未变化的 SQL API 分别核验。
+
+显式实体 ID 若断言另一实体已占用的唯一值，现在报 `:db.error/unique-conflict`，不再静默忽略。在同一事务中由原持有者释放该值后，可以转移；tempid 的 upsert 行为不变。应检查依赖旧版空操作的调用者。从 1.20.0 到 1.21.1 的 SQL 升级步骤均为空，此前的迁移与备份义务继续适用。
+
+### 1.22.0 的可选概率查询
+
+1.22.0 可在 PostgreSQL 17 及以上版本中与 `pg_gaps` 集成。`mentat.create_gaps_view()` 将当前基数为一的属性映射为文本列，缺失值使用 NULL；它无需安装另一个扩展即可工作，但由于采用调用者权限视图语义，要求 PostgreSQL 15 及以上版本。`mentat.gaps_declare()` 为模型声明属性的取值域与条带。Datalog 函数 `gaps-marginals` 和 `gaps-impute` 分别提供缺失值概率与最可能的补全结果。`mentat.has_pg_gaps()` 检查可用性，`mentat.gaps_column()` 确定属性对应的视图列。
+
+安装匹配的文件后，执行 `ALTER EXTENSION pg_mentat UPDATE TO '1.22.0';` 添加辅助函数。1.21.0 所述的 PostgreSQL 最低小版本要求仍然适用。该可选集成不会使 pg_gaps 成为普通 Datalog 查询的必需依赖。

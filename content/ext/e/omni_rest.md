@@ -11,10 +11,10 @@ weight: 2962
     <div class="ext-card__title">https://docs.omnigres.org/omni_rest/protocols/</div>
     <div class="ext-card__desc">https://docs.omnigres.org/omni_rest/protocols/</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20260212.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">omnigres-20260212.tar.gz</div>
-    <div class="ext-card__desc">omnigres-20260212.tar.gz</div>
+    <div class="ext-card__title">omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl</div>
+    <div class="ext-card__desc">omnigres-20260212.tar.gz wheel-0.45.1-py3-none-any.whl</div>
   </a>
 </div>
 
@@ -81,30 +81,30 @@ weight: 2962
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `omnigres` | `omni_httpd`, `omni_sql`, `omni_web`, `omni_var`, `pgcrypto` |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15" >}} | `omnigres` | `omni_httpd`, `omni_sql`, `omni_web`, `omni_var`, `pgcrypto` |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15" >}} | `omnigres_$v` | `postgresql$v-contrib`, `postgresql$v-plpython3`, `python3-pip` |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `20260212` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-omnigres` | `postgresql-plpython3-$v`, `python3-pip` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| el8.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| el9.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 |
-| el9.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 | AVAIL PIGSTY 20250507 1 |
-| el10.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| el10.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| d12.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| d12.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| d13.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| d13.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u22.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| u22.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
-| u24.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u24.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u26.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
-| u26.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 | AVAIL PIGSTY 20260212 1 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -135,7 +135,6 @@ pig ext install -y omnigres -v 18  # PG 18
 pig ext install -y omnigres -v 17  # PG 17
 pig ext install -y omnigres -v 16  # PG 16
 pig ext install -y omnigres -v 15  # PG 15
-pig ext install -y omnigres -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -143,7 +142,6 @@ dnf install -y omnigres_18       # PG 18
 dnf install -y omnigres_17       # PG 17
 dnf install -y omnigres_16       # PG 16
 dnf install -y omnigres_15       # PG 15
-dnf install -y omnigres_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -151,7 +149,6 @@ apt install -y postgresql-18-omnigres   # PG 18
 apt install -y postgresql-17-omnigres   # PG 17
 apt install -y postgresql-16-omnigres   # PG 16
 apt install -y postgresql-15-omnigres   # PG 15
-apt install -y postgresql-14-omnigres   # PG 14
 ```
 
 

@@ -46,110 +46,94 @@ weight: 2820
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_variables` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_variables_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-variables` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15" >}} | `pg_variables` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15" >}} | `pg_variables_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.5` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-variables` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
-@ el8.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el8.x86_64.rpm pigsty 1.2.5 35.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_18-1.2.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el8.aarch64.rpm pigsty 1.2.5 34.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_18-1.2.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el9.x86_64.rpm pigsty 1.2.5 34.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_18-1.2.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el9.aarch64.rpm pigsty 1.2.5 33.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_18-1.2.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el10.x86_64.rpm pigsty 1.2.5 35.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_18-1.2.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-1PIGSTY.el10.aarch64.rpm pigsty 1.2.5 34.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_18-1.2.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb pigsty 1.2.5 60.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb pigsty 1.2.5 60.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb pigsty 1.2.5 65.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb pigsty 1.2.5 65.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb pigsty 1.2.5 63.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb pigsty 1.2.5 63.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb pigsty 1.2.5 61.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb pigsty 1.2.5 62.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el8.x86_64.rpm pigsty 1.2.5 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_17-1.2.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el8.aarch64.rpm pigsty 1.2.5 33.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_17-1.2.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el9.x86_64.rpm pigsty 1.2.5 34.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_17-1.2.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el9.aarch64.rpm pigsty 1.2.5 33.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_17-1.2.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el10.x86_64.rpm pigsty 1.2.5 35.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_17-1.2.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-1PIGSTY.el10.aarch64.rpm pigsty 1.2.5 34.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_17-1.2.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb pigsty 1.2.5 60.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb pigsty 1.2.5 59.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb pigsty 1.2.5 71.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb pigsty 1.2.5 71.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb pigsty 1.2.5 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb pigsty 1.2.5 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb pigsty 1.2.5 61.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb pigsty 1.2.5 62.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el8.x86_64.rpm pigsty 1.2.5 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_16-1.2.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el8.aarch64.rpm pigsty 1.2.5 34.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_16-1.2.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el9.x86_64.rpm pigsty 1.2.5 34.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_16-1.2.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el9.aarch64.rpm pigsty 1.2.5 33.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_16-1.2.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el10.x86_64.rpm pigsty 1.2.5 35.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_16-1.2.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-1PIGSTY.el10.aarch64.rpm pigsty 1.2.5 34.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_16-1.2.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb pigsty 1.2.5 59.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb pigsty 1.2.5 70.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb pigsty 1.2.5 70.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb pigsty 1.2.5 62.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb pigsty 1.2.5 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb pigsty 1.2.5 61.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb pigsty 1.2.5 62.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el8.x86_64.rpm pigsty 1.2.5 35.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_15-1.2.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el8.aarch64.rpm pigsty 1.2.5 34.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_15-1.2.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el9.x86_64.rpm pigsty 1.2.5 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_15-1.2.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el9.aarch64.rpm pigsty 1.2.5 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_15-1.2.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el10.x86_64.rpm pigsty 1.2.5 35.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_15-1.2.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-1PIGSTY.el10.aarch64.rpm pigsty 1.2.5 34.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_15-1.2.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb pigsty 1.2.5 59.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb pigsty 1.2.5 59.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb pigsty 1.2.5 59.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb pigsty 1.2.5 70.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb pigsty 1.2.5 71.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb pigsty 1.2.5 62.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb pigsty 1.2.5 63.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb pigsty 1.2.5 61.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb pigsty 1.2.5 61.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el8.x86_64.rpm pigsty 1.2.5 35.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_14-1.2.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el8.aarch64.rpm pigsty 1.2.5 34.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_14-1.2.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el9.x86_64.rpm pigsty 1.2.5 35.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_14-1.2.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el9.aarch64.rpm pigsty 1.2.5 34.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_14-1.2.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el10.x86_64.rpm pigsty 1.2.5 35.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_14-1.2.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_variables_14 pg_variables_14-1.2.5-1PIGSTY.el10.aarch64.rpm pigsty 1.2.5 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_14-1.2.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb pigsty 1.2.5 59.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb pigsty 1.2.5 59.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb pigsty 1.2.5 59.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb pigsty 1.2.5 71.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb pigsty 1.2.5 71.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb pigsty 1.2.5 62.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb pigsty 1.2.5 63.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb pigsty 1.2.5 61.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-variables postgresql-14-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb pigsty 1.2.5 62.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-14-pg-variables_1.2.5-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 | AVAIL PIGSTY 1.2.5 1 |
+@ el8.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el8.x86_64.rpm pigsty 1.2.5 70.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_18-1.2.5-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el8.aarch64.rpm pigsty 1.2.5 70.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_18-1.2.5-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el9.x86_64.rpm pigsty 1.2.5 72.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_18-1.2.5-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el9.aarch64.rpm pigsty 1.2.5 71.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_18-1.2.5-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el10.x86_64.rpm pigsty 1.2.5 73.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_18-1.2.5-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_variables_18 pg_variables_18-1.2.5-2PGSTY.el10.aarch64.rpm pigsty 1.2.5 72.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_18-1.2.5-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb pigsty 1.2.5 60.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb pigsty 1.2.5 59.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb pigsty 1.2.5 60.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb pigsty 1.2.5 65.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb pigsty 1.2.5 65.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~noble_amd64.deb pigsty 1.2.5 63.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~noble_arm64.deb pigsty 1.2.5 63.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb pigsty 1.2.5 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-variables postgresql-18-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb pigsty 1.2.5 62.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-18-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el8.x86_64.rpm pigsty 1.2.5 70.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_17-1.2.5-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el8.aarch64.rpm pigsty 1.2.5 70.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_17-1.2.5-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el9.x86_64.rpm pigsty 1.2.5 72.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_17-1.2.5-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el9.aarch64.rpm pigsty 1.2.5 71.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_17-1.2.5-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el10.x86_64.rpm pigsty 1.2.5 72.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_17-1.2.5-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_variables_17 pg_variables_17-1.2.5-2PGSTY.el10.aarch64.rpm pigsty 1.2.5 72.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_17-1.2.5-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb pigsty 1.2.5 60.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb pigsty 1.2.5 60.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb pigsty 1.2.5 71.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb pigsty 1.2.5 71.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~noble_amd64.deb pigsty 1.2.5 63.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~noble_arm64.deb pigsty 1.2.5 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb pigsty 1.2.5 61.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-variables postgresql-17-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb pigsty 1.2.5 62.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-17-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el8.x86_64.rpm pigsty 1.2.5 70.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_16-1.2.5-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el8.aarch64.rpm pigsty 1.2.5 69.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_16-1.2.5-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el9.x86_64.rpm pigsty 1.2.5 72.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_16-1.2.5-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el9.aarch64.rpm pigsty 1.2.5 71.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_16-1.2.5-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el10.x86_64.rpm pigsty 1.2.5 72.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_16-1.2.5-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_variables_16 pg_variables_16-1.2.5-2PGSTY.el10.aarch64.rpm pigsty 1.2.5 72.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_16-1.2.5-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb pigsty 1.2.5 59.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb pigsty 1.2.5 59.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb pigsty 1.2.5 70.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb pigsty 1.2.5 70.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~noble_amd64.deb pigsty 1.2.5 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~noble_arm64.deb pigsty 1.2.5 63.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb pigsty 1.2.5 61.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-variables postgresql-16-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb pigsty 1.2.5 62.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-16-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el8.x86_64.rpm pigsty 1.2.5 70.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_variables_15-1.2.5-2PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el8.aarch64.rpm pigsty 1.2.5 69.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_variables_15-1.2.5-2PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el9.x86_64.rpm pigsty 1.2.5 72.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_variables_15-1.2.5-2PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el9.aarch64.rpm pigsty 1.2.5 71.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_variables_15-1.2.5-2PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el10.x86_64.rpm pigsty 1.2.5 72.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_variables_15-1.2.5-2PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_variables_15 pg_variables_15-1.2.5-2PGSTY.el10.aarch64.rpm pigsty 1.2.5 72.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_variables_15-1.2.5-2PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb pigsty 1.2.5 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb pigsty 1.2.5 59.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb pigsty 1.2.5 59.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb pigsty 1.2.5 59.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb pigsty 1.2.5 70.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb pigsty 1.2.5 71.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~noble_amd64.deb pigsty 1.2.5 62.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~noble_arm64.deb pigsty 1.2.5 63.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb pigsty 1.2.5 61.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-variables postgresql-15-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb pigsty 1.2.5 62.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-variables/postgresql-15-pg-variables_1.2.5-2PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -180,7 +164,6 @@ pig ext install -y pg_variables -v 18  # PG 18
 pig ext install -y pg_variables -v 17  # PG 17
 pig ext install -y pg_variables -v 16  # PG 16
 pig ext install -y pg_variables -v 15  # PG 15
-pig ext install -y pg_variables -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -188,7 +171,6 @@ dnf install -y pg_variables_18       # PG 18
 dnf install -y pg_variables_17       # PG 17
 dnf install -y pg_variables_16       # PG 16
 dnf install -y pg_variables_15       # PG 15
-dnf install -y pg_variables_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -196,7 +178,6 @@ apt install -y postgresql-18-pg-variables   # PG 18
 apt install -y postgresql-17-pg-variables   # PG 17
 apt install -y postgresql-16-pg-variables   # PG 16
 apt install -y postgresql-15-pg-variables   # PG 15
-apt install -y postgresql-14-pg-variables   # PG 14
 ```
 
 

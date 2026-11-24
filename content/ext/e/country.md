@@ -42,16 +42,16 @@ weight: 3660
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_country` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_country_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-country` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "19,18,17,16,15" >}} | `pg_country` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "19,18,17,16,15" >}} | `pg_country_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.4` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-country` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
@@ -66,13 +66,27 @@ weight: 3660
 | u24.aarch64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 | AVAIL PIGSTY 0.0.4 1 |
+@ el9.x86_64 19 pg_country_19 pg_country_19-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_19-0.0.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_country_19 pg_country_19-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_19-0.0.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_country_19 pg_country_19-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_19-0.0.4-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_country_19 pg_country_19-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_19-0.0.4-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 47.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~jammy_amd64.deb pigsty 0.0.4 54.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~jammy_arm64.deb pigsty 0.0.4 55.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~noble_amd64.deb pigsty 0.0.4 51.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-country postgresql-19-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 52.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-19-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_18-0.0.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_18-0.0.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_18-0.0.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 48.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_18-0.0.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_18-0.0.4-1PGSTY.el10.x86_64.rpm
+@ el8.aarch64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 49.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_18-0.0.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_18-0.0.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_18-0.0.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_18-0.0.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 pg_country_18 pg_country_18-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_18-0.0.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 47.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
@@ -82,13 +96,13 @@ weight: 3660
 @ u24.aarch64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-country postgresql-18-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 52.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-18-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_17-0.0.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_17-0.0.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_17-0.0.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 48.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_17-0.0.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_17-0.0.4-1PGSTY.el10.x86_64.rpm
+@ el8.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_17-0.0.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_17-0.0.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_17-0.0.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_17-0.0.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_17-0.0.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 pg_country_17 pg_country_17-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_17-0.0.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
@@ -98,54 +112,38 @@ weight: 3660
 @ u24.aarch64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 52.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-country postgresql-17-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 52.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-17-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_16-0.0.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_16-0.0.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_16-0.0.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 48.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_16-0.0.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_16-0.0.4-1PGSTY.el10.x86_64.rpm
+@ el8.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_16-0.0.4-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_16-0.0.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_16-0.0.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_16-0.0.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_16-0.0.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 pg_country_16 pg_country_16-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_16-0.0.4-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 47.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~jammy_amd64.deb pigsty 0.0.4 56.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~jammy_arm64.deb pigsty 0.0.4 57.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~noble_amd64.deb pigsty 0.0.4 51.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 53.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 52.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-country postgresql-16-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 52.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-16-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_15-0.0.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_15-0.0.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_15-0.0.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 48.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_15-0.0.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_15-0.0.4-1PGSTY.el10.x86_64.rpm
+@ el8.aarch64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_15-0.0.4-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_15-0.0.4-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_15-0.0.4-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_15-0.0.4-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 pg_country_15 pg_country_15-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_15-0.0.4-1PGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 49.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 47.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 48.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~jammy_amd64.deb pigsty 0.0.4 56.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~jammy_arm64.deb pigsty 0.0.4 57.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~noble_amd64.deb pigsty 0.0.4 51.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 52.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-country postgresql-15-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 52.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-15-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el8.x86_64.rpm pigsty 0.0.4 50.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_country_14-0.0.4-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el8.aarch64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_country_14-0.0.4-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el9.x86_64.rpm pigsty 0.0.4 48.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_country_14-0.0.4-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el9.aarch64.rpm pigsty 0.0.4 49.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_country_14-0.0.4-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el10.x86_64.rpm pigsty 0.0.4 48.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_country_14-0.0.4-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_country_14 pg_country_14-0.0.4-1PGSTY.el10.aarch64.rpm pigsty 0.0.4 49.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_country_14-0.0.4-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb pigsty 0.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb pigsty 0.0.4 47.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~trixie_amd64.deb pigsty 0.0.4 46.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~trixie_arm64.deb pigsty 0.0.4 47.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~jammy_amd64.deb pigsty 0.0.4 56.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~jammy_arm64.deb pigsty 0.0.4 57.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~noble_amd64.deb pigsty 0.0.4 51.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~noble_arm64.deb pigsty 0.0.4 52.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~resolute_amd64.deb pigsty 0.0.4 50.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-country postgresql-14-pg-country_0.0.4-1PGSTY~resolute_arm64.deb pigsty 0.0.4 51.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-country/postgresql-14-pg-country_0.0.4-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install pg_country;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_country -v 19  # PG 19
 pig ext install -y pg_country -v 18  # PG 18
 pig ext install -y pg_country -v 17  # PG 17
 pig ext install -y pg_country -v 16  # PG 16
 pig ext install -y pg_country -v 15  # PG 15
-pig ext install -y pg_country -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_country_19       # PG 19
 dnf install -y pg_country_18       # PG 18
 dnf install -y pg_country_17       # PG 17
 dnf install -y pg_country_16       # PG 16
 dnf install -y pg_country_15       # PG 15
-dnf install -y pg_country_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-country   # PG 19
 apt install -y postgresql-18-pg-country   # PG 18
 apt install -y postgresql-17-pg-country   # PG 17
 apt install -y postgresql-16-pg-country   # PG 16
 apt install -y postgresql-15-pg-country   # PG 15
-apt install -y postgresql-14-pg-country   # PG 14
 ```
 
 

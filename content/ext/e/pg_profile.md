@@ -45,20 +45,20 @@ weight: 6000
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.16` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile` | `dblink`, `plpgsql` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile_$v` | `postgresql$v-contrib` |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.16` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-profile` | `postgresql-contrib-$v` |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.16` | {{< pgvers "19,18,17,16,15" >}} | `pg_profile` | `dblink`, `plpgsql` |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16` | {{< pgvers "19,18,17,16,15" >}} | `pg_profile_$v` | `postgresql$v-contrib` |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.16` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-profile` | `postgresql-contrib-$v` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 4.16 5 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 9 | AVAIL PIGSTY 4.16 9 | AVAIL PIGSTY 4.16 9 |
-| el8.aarch64 | AVAIL PIGSTY 4.16 5 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 9 | AVAIL PIGSTY 4.16 9 | AVAIL PIGSTY 4.16 9 |
-| el9.x86_64 | AVAIL PIGSTY 4.16 6 | AVAIL PIGSTY 4.16 8 | AVAIL PIGSTY 4.16 10 | AVAIL PIGSTY 4.16 10 | AVAIL PIGSTY 4.16 10 |
-| el9.aarch64 | AVAIL PIGSTY 4.16 6 | AVAIL PIGSTY 4.16 8 | AVAIL PIGSTY 4.16 10 | AVAIL PIGSTY 4.16 10 | AVAIL PIGSTY 4.16 10 |
-| el10.x86_64 | AVAIL PIGSTY 4.16 6 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 |
-| el10.aarch64 | AVAIL PIGSTY 4.16 6 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 | AVAIL PIGSTY 4.16 7 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.16 6 | AVAIL PGDG 4.16 8 | AVAIL PGDG 4.16 10 | AVAIL PGDG 4.16 10 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.16 6 | AVAIL PGDG 4.16 8 | AVAIL PGDG 4.16 10 | AVAIL PGDG 4.16 10 |
+| el9.x86_64 | AVAIL PGDG 4.16 1 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 |
+| el9.aarch64 | AVAIL PGDG 4.16 1 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 |
+| el10.x86_64 | AVAIL PGDG 4.16 1 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 | AVAIL PGDG 4.16 2 |
+| el10.aarch64 | AVAIL PGDG 4.16 1 | AVAIL PGDG 4.16 8 | AVAIL PGDG 4.16 9 | AVAIL PGDG 4.16 9 | AVAIL PGDG 4.16 9 |
 | d12.x86_64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
 | d12.aarch64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
 | d13.x86_64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
@@ -69,34 +69,40 @@ weight: 6000
 | u24.aarch64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
 | u26.x86_64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
 | u26.aarch64 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 | AVAIL PIGSTY 4.16 1 |
+@ el9.x86_64 19 pg_profile_19 pg_profile_19-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_profile_19-4.16-2PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 19 pg_profile_19 pg_profile_19-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_profile_19-4.16-2PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 19 pg_profile_19 pg_profile_19-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_profile_19-4.16-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 19 pg_profile_19 pg_profile_19-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_profile_19-4.16-2PGDG.rhel10.3.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 199.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 199.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~jammy_all.deb pigsty 4.16 198.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~jammy_all.deb pigsty 4.16 198.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pg-profile postgresql-19-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-19-pg-profile_4.16-1PGSTY~resolute_all.deb
+@ el8.x86_64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_profile_18-4.16-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_profile_18-4.16-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_profile_18-4.16-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_profile_18-4.16-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.16-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_profile_18-4.16-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.16-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pg_profile_18 pg_profile_18-4.16-2PGDG.rhel10.2.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.16-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_profile_18-4.16-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.16-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm
@@ -113,6 +119,7 @@ weight: 6000
 @ u24.aarch64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-18-pg-profile_4.16-1PGSTY~noble_all.deb
 @ u26.x86_64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-18-pg-profile_4.16-1PGSTY~resolute_all.deb
 @ u26.aarch64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-18-pg-profile_4.16-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_profile_17-4.16-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -120,6 +127,7 @@ weight: 6000
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_profile_17-4.16-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -127,29 +135,14 @@ weight: 6000
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_profile_17-4.16-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_profile_17-4.16-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.16-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_profile_17-4.16-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.16-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pg_profile_17 pg_profile_17-4.16-2PGDG.rhel10.2.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.16-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_profile_17-4.16-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.16-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm
@@ -157,8 +150,8 @@ weight: 6000
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb
+@ d12.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 199.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 199.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~bookworm_all.deb
 @ d13.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~trixie_all.deb
 @ d13.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~trixie_all.deb
 @ u22.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~jammy_all.deb pigsty 4.16 198.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~jammy_all.deb
@@ -167,6 +160,7 @@ weight: 6000
 @ u24.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~noble_all.deb
 @ u26.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~resolute_all.deb
 @ u26.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-17-pg-profile_4.16-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_profile_16-4.16-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -176,6 +170,7 @@ weight: 6000
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_profile_16-4.16-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -185,33 +180,14 @@ weight: 6000
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_profile_16-4.16-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_profile_16-4.16-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.16-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_profile_16-4.16-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.16-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pg_profile_16 pg_profile_16-4.16-2PGDG.rhel10.2.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.16-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_profile_16-4.16-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.16-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm
@@ -229,6 +205,7 @@ weight: 6000
 @ u24.aarch64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-16-pg-profile_4.16-1PGSTY~noble_all.deb
 @ u26.x86_64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-16-pg-profile_4.16-1PGSTY~resolute_all.deb
 @ u26.aarch64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-16-pg-profile_4.16-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_profile_15-4.16-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -238,6 +215,7 @@ weight: 6000
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.16-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_profile_15-4.16-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.16-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm
@@ -247,33 +225,14 @@ weight: 6000
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_profile_15-4.16-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel9.9.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.16-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_profile_15-4.16-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.16-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_profile_15-4.16-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel10.3.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.16-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pg_profile_15 pg_profile_15-4.16-2PGDG.rhel10.2.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.16-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_profile_15-4.16-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.16-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm
@@ -291,68 +250,6 @@ weight: 6000
 @ u24.aarch64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-15-pg-profile_4.16-1PGSTY~noble_all.deb
 @ u26.x86_64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-15-pg-profile_4.16-1PGSTY~resolute_all.deb
 @ u26.aarch64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-15-pg-profile_4.16-1PGSTY~resolute_all.deb
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_profile_14-4.16-1PGSTY.el8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.16-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el8.noarch.rpm pigsty 4.16 244.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_profile_14-4.16-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel8.10.noarch.rpm pgdg 4.16 222.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.16-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_profile_14-4.16-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el9.noarch.rpm pigsty 4.16 223.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_profile_14-4.16-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel9.8.noarch.rpm pgdg 4.16 202.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.16-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.8-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_profile_14-4.16-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGSTY.el10.noarch.rpm pigsty 4.16 223.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_profile_14-4.16-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.16-1PGDG.rhel10.2.noarch.rpm pgdg 4.16 203.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.16-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~bookworm_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~trixie_all.deb pigsty 4.16 198.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~jammy_all.deb pigsty 4.16 198.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~jammy_all.deb pigsty 4.16 198.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~noble_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-pg-profile postgresql-14-pg-profile_4.16-1PGSTY~resolute_all.deb pigsty 4.16 197.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-14-pg-profile_4.16-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -379,27 +276,27 @@ pig install pg_profile;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_profile -v 19  # PG 19
 pig ext install -y pg_profile -v 18  # PG 18
 pig ext install -y pg_profile -v 17  # PG 17
 pig ext install -y pg_profile -v 16  # PG 16
 pig ext install -y pg_profile -v 15  # PG 15
-pig ext install -y pg_profile -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_profile_19       # PG 19
 dnf install -y pg_profile_18       # PG 18
 dnf install -y pg_profile_17       # PG 17
 dnf install -y pg_profile_16       # PG 16
 dnf install -y pg_profile_15       # PG 15
-dnf install -y pg_profile_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-profile   # PG 19
 apt install -y postgresql-18-pg-profile   # PG 18
 apt install -y postgresql-17-pg-profile   # PG 17
 apt install -y postgresql-16-pg-profile   # PG 16
 apt install -y postgresql-15-pg-profile   # PG 15
-apt install -y postgresql-14-pg-profile   # PG 14
 ```
 
 

@@ -45,20 +45,20 @@ weight: 1040
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18,17,16,15,14" >}} | `temporal_tables` | - |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18,17,16,15,14" >}} | `temporal_tables_$v` | - |
-| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-temporal-tables` | - |
+| [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "19,18,17,16,15" >}} | `temporal_tables` | - |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "19,18,17,16,15" >}} | `temporal_tables_$v` | - |
+| [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-temporal-tables` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 |
-| el8.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 |
-| el9.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
-| el9.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
-| el10.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
+| el9.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 |
+| el9.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 |
+| el10.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 | AVAIL PGDG 1.2.2 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 5 | AVAIL PGDG 1.2.2 5 | AVAIL PGDG 1.2.2 5 |
 | d12.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
@@ -69,124 +69,115 @@ weight: 1040
 | u24.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
-@ el8.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_18-1.2.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 18.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_18-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_18-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_18-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_18-1.2.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_18-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 24.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 26.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 26.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 25.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 25.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_17-1.2.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_17-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-7PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/temporal_tables_17-1.2.2-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-4PGDG.rhel9.x86_64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/temporal_tables_17-1.2.2-4PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_17-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-7PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 23.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/temporal_tables_17-1.2.2-7PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-4PGDG.rhel9.aarch64.rpm pgdg 1.2.2 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/temporal_tables_17-1.2.2-4PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_17-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-7PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/temporal_tables_17-1.2.2-7PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-5PGDG.rhel10.x86_64.rpm pgdg 1.2.2 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/temporal_tables_17-1.2.2-5PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_17-1.2.2-1PIGSTY.el10.x86_64.rpm
+@ el9.x86_64 19 temporal_tables_19 temporal_tables_19-1.2.2-1PGSTY.el9.x86_64.rpm pigsty 1.2.2 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_19-1.2.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 temporal_tables_19 temporal_tables_19-1.2.2-1PGSTY.el9.aarch64.rpm pigsty 1.2.2 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_19-1.2.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 temporal_tables_19 temporal_tables_19-1.2.2-1PGSTY.el10.x86_64.rpm pigsty 1.2.2 35.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_19-1.2.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 temporal_tables_19 temporal_tables_19-1.2.2-1PGSTY.el10.aarch64.rpm pigsty 1.2.2 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_19-1.2.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb pigsty 1.2.2 25.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb pigsty 1.2.2 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb pigsty 1.2.2 25.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb pigsty 1.2.2 24.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb pigsty 1.2.2 26.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb pigsty 1.2.2 26.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb pigsty 1.2.2 26.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-temporal-tables postgresql-19-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-19-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el8.x86_64.rpm pigsty 1.2.2 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_18-1.2.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el8.aarch64.rpm pigsty 1.2.2 33.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_18-1.2.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el9.x86_64.rpm pigsty 1.2.2 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_18-1.2.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el9.aarch64.rpm pigsty 1.2.2 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_18-1.2.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el10.x86_64.rpm pigsty 1.2.2 35.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_18-1.2.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 temporal_tables_18 temporal_tables_18-1.2.2-1PGSTY.el10.aarch64.rpm pigsty 1.2.2 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_18-1.2.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb pigsty 1.2.2 24.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb pigsty 1.2.2 24.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb pigsty 1.2.2 27.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb pigsty 1.2.2 26.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb pigsty 1.2.2 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb pigsty 1.2.2 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb pigsty 1.2.2 26.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-temporal-tables postgresql-18-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-18-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2.2 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/temporal_tables_17-1.2.2-10PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el8.x86_64.rpm pigsty 1.2.2 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_17-1.2.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/temporal_tables_17-1.2.2-10PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el8.aarch64.rpm pigsty 1.2.2 33.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_17-1.2.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/temporal_tables_17-1.2.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el9.x86_64.rpm pigsty 1.2.2 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_17-1.2.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/temporal_tables_17-1.2.2-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el9.aarch64.rpm pigsty 1.2.2 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_17-1.2.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/temporal_tables_17-1.2.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el10.x86_64.rpm pigsty 1.2.2 35.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_17-1.2.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/temporal_tables_17-1.2.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/temporal_tables_17-1.2.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-7PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/temporal_tables_17-1.2.2-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-5PGDG.rhel10.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/temporal_tables_17-1.2.2-5PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_17-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 31.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 30.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 25.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 25.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 17 temporal_tables_17 temporal_tables_17-1.2.2-1PGSTY.el10.aarch64.rpm pigsty 1.2.2 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_17-1.2.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb pigsty 1.2.2 24.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb pigsty 1.2.2 24.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb pigsty 1.2.2 31.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb pigsty 1.2.2 31.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb pigsty 1.2.2 25.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb pigsty 1.2.2 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-temporal-tables postgresql-17-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-17-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2.2 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/temporal_tables_16-1.2.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-2PGDG.rhel8.x86_64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/temporal_tables_16-1.2.2-2PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_16-1.2.2-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el8.x86_64.rpm pigsty 1.2.2 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_16-1.2.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/temporal_tables_16-1.2.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-2PGDG.rhel8.aarch64.rpm pgdg 1.2.2 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/temporal_tables_16-1.2.2-2PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_16-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-7PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 24.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/temporal_tables_16-1.2.2-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_16-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2.2 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/temporal_tables_16-1.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-7PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 23.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/temporal_tables_16-1.2.2-7PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_16-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2.2 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/temporal_tables_16-1.2.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-7PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/temporal_tables_16-1.2.2-7PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-5PGDG.rhel10.x86_64.rpm pgdg 1.2.2 24.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/temporal_tables_16-1.2.2-5PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_16-1.2.2-1PIGSTY.el10.x86_64.rpm
+@ el8.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el8.aarch64.rpm pigsty 1.2.2 33.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_16-1.2.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/temporal_tables_16-1.2.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el9.x86_64.rpm pigsty 1.2.2 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_16-1.2.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/temporal_tables_16-1.2.2-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el9.aarch64.rpm pigsty 1.2.2 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_16-1.2.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/temporal_tables_16-1.2.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el10.x86_64.rpm pigsty 1.2.2 35.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_16-1.2.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/temporal_tables_16-1.2.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/temporal_tables_16-1.2.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-7PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/temporal_tables_16-1.2.2-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-5PGDG.rhel10.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/temporal_tables_16-1.2.2-5PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_16-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 24.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 31.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 30.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 25.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 25.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 16 temporal_tables_16 temporal_tables_16-1.2.2-1PGSTY.el10.aarch64.rpm pigsty 1.2.2 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_16-1.2.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb pigsty 1.2.2 24.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb pigsty 1.2.2 24.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb pigsty 1.2.2 31.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb pigsty 1.2.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb pigsty 1.2.2 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb pigsty 1.2.2 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb pigsty 1.2.2 26.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-temporal-tables postgresql-16-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-16-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2.2 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/temporal_tables_15-1.2.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-2PGDG.rhel8.x86_64.rpm pgdg 1.2.2 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/temporal_tables_15-1.2.2-2PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_15-1.2.2-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el8.x86_64.rpm pigsty 1.2.2 34.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_15-1.2.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/temporal_tables_15-1.2.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-2PGDG.rhel8.aarch64.rpm pgdg 1.2.2 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/temporal_tables_15-1.2.2-2PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_15-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-7PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/temporal_tables_15-1.2.2-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_15-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2.2 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/temporal_tables_15-1.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-7PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/temporal_tables_15-1.2.2-7PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_15-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2.2 22.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/temporal_tables_15-1.2.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-7PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/temporal_tables_15-1.2.2-7PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-5PGDG.rhel10.x86_64.rpm pgdg 1.2.2 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/temporal_tables_15-1.2.2-5PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_15-1.2.2-1PIGSTY.el10.x86_64.rpm
+@ el8.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el8.aarch64.rpm pigsty 1.2.2 33.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_15-1.2.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/temporal_tables_15-1.2.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el9.x86_64.rpm pigsty 1.2.2 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_15-1.2.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/temporal_tables_15-1.2.2-10PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el9.aarch64.rpm pigsty 1.2.2 34.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_15-1.2.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/temporal_tables_15-1.2.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el10.x86_64.rpm pigsty 1.2.2 35.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_15-1.2.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/temporal_tables_15-1.2.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/temporal_tables_15-1.2.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-7PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/temporal_tables_15-1.2.2-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-5PGDG.rhel10.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/temporal_tables_15-1.2.2-5PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_15-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 24.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 31.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 25.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 26.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 25.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-2PGDG.rhel8.x86_64.rpm pgdg 1.2.2 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/temporal_tables_14-1.2.2-2PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/temporal_tables_14-1.2.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-2PGDG.rhel8.aarch64.rpm pgdg 1.2.2 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/temporal_tables_14-1.2.2-2PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 18.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/temporal_tables_14-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 24.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/temporal_tables_14-1.2.2-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/temporal_tables_14-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2.2 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/temporal_tables_14-1.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/temporal_tables_14-1.2.2-7PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/temporal_tables_14-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2.2 22.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/temporal_tables_14-1.2.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/temporal_tables_14-1.2.2-7PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-5PGDG.rhel10.x86_64.rpm pgdg 1.2.2 24.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/temporal_tables_14-1.2.2-5PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_14-1.2.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/temporal_tables_14-1.2.2-7PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-5PGDG.rhel10.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/temporal_tables_14-1.2.2-5PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_14-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 24.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 24.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 24.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 29.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 28.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 25.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 25.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 15 temporal_tables_15 temporal_tables_15-1.2.2-1PGSTY.el10.aarch64.rpm pigsty 1.2.2 34.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_15-1.2.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb pigsty 1.2.2 24.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb pigsty 1.2.2 24.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb pigsty 1.2.2 24.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb pigsty 1.2.2 24.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb pigsty 1.2.2 31.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb pigsty 1.2.2 30.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb pigsty 1.2.2 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb pigsty 1.2.2 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb pigsty 1.2.2 26.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-temporal-tables postgresql-15-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb pigsty 1.2.2 25.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/temporal-tables/postgresql-15-temporal-tables_1.2.2-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -213,27 +204,27 @@ pig install temporal_tables;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y temporal_tables -v 19  # PG 19
 pig ext install -y temporal_tables -v 18  # PG 18
 pig ext install -y temporal_tables -v 17  # PG 17
 pig ext install -y temporal_tables -v 16  # PG 16
 pig ext install -y temporal_tables -v 15  # PG 15
-pig ext install -y temporal_tables -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y temporal_tables_19       # PG 19
 dnf install -y temporal_tables_18       # PG 18
 dnf install -y temporal_tables_17       # PG 17
 dnf install -y temporal_tables_16       # PG 16
 dnf install -y temporal_tables_15       # PG 15
-dnf install -y temporal_tables_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-temporal-tables   # PG 19
 apt install -y postgresql-18-temporal-tables   # PG 18
 apt install -y postgresql-17-temporal-tables   # PG 17
 apt install -y postgresql-16-temporal-tables   # PG 16
 apt install -y postgresql-15-temporal-tables   # PG 15
-apt install -y postgresql-14-temporal-tables   # PG 14
 ```
 
 

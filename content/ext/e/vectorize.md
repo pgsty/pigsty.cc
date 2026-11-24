@@ -38,37 +38,37 @@ weight: 1830
 {.ext-table .ext-table--rel}
 
 
-> Package 0.27.1; SQL control version 0.23.0. Requires preload with pg_cron; built with pgrx 0.19.2.
+> SQL 0.23.0. Preload with pg_cron.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_vectorize` | `pg_cron`, `pgmq`, `vector` |
-| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_vectorize_$v` | `pgmq_$v`, `pg_cron_$v`, `pgvector_$v` |
-| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-vectorize` | `postgresql-$v-pgmq`, `postgresql-$v-cron`, `postgresql-$v-pgvector` |
+| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "19,18,17,16,15" >}} | `pg_vectorize` | `pg_cron`, `pgmq`, `vector` |
+| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "18,17,16,15" >}} | `pg_vectorize_$v` | `pgmq_$v`, `pg_cron_$v`, `pgvector_$v` |
+| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.27.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-vectorize` | `postgresql-$v-pgmq`, `postgresql-$v-cron`, `postgresql-$v-pgvector` |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 | AVAIL PIGSTY 0.27.1 1 |
 @ el8.x86_64 18 pg_vectorize_18 pg_vectorize_18-0.27.1-1PGSTY.el8.x86_64.rpm pigsty 0.27.1 11.8MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_vectorize_18-0.27.1-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_vectorize_18 pg_vectorize_18-0.27.1-1PGSTY.el8.aarch64.rpm pigsty 0.27.1 10.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_vectorize_18-0.27.1-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_vectorize_18 pg_vectorize_18-0.27.1-1PGSTY.el9.x86_64.rpm pigsty 0.27.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_vectorize_18-0.27.1-1PGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 1830
 @ u24.aarch64 15 postgresql-15-pg-vectorize postgresql-15-pg-vectorize_0.27.1-1PGSTY~noble_arm64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-vectorize/postgresql-15-pg-vectorize_0.27.1-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-vectorize postgresql-15-pg-vectorize_0.27.1-1PGSTY~resolute_amd64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-vectorize/postgresql-15-pg-vectorize_0.27.1-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-vectorize postgresql-15-pg-vectorize_0.27.1-1PGSTY~resolute_arm64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-vectorize/postgresql-15-pg-vectorize_0.27.1-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el8.x86_64.rpm pigsty 0.27.1 11.8MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_vectorize_14-0.27.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el8.aarch64.rpm pigsty 0.27.1 10.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_vectorize_14-0.27.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el9.x86_64.rpm pigsty 0.27.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_vectorize_14-0.27.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el9.aarch64.rpm pigsty 0.27.1 10.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_vectorize_14-0.27.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el10.x86_64.rpm pigsty 0.27.1 11.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_vectorize_14-0.27.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_vectorize_14 pg_vectorize_14-0.27.1-1PGSTY.el10.aarch64.rpm pigsty 0.27.1 10.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_vectorize_14-0.27.1-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~bookworm_amd64.deb pigsty 0.27.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~bookworm_arm64.deb pigsty 0.27.1 9.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~trixie_amd64.deb pigsty 0.27.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~trixie_arm64.deb pigsty 0.27.1 9.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~jammy_amd64.deb pigsty 0.27.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~jammy_arm64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~noble_amd64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~noble_arm64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~resolute_amd64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-vectorize postgresql-14-pg-vectorize_0.27.1-1PGSTY~resolute_arm64.deb pigsty 0.27.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-vectorize/postgresql-14-pg-vectorize_0.27.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install pg_vectorize;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_vectorize -v 19  # PG 19
 pig ext install -y pg_vectorize -v 18  # PG 18
 pig ext install -y pg_vectorize -v 17  # PG 17
 pig ext install -y pg_vectorize -v 16  # PG 16
 pig ext install -y pg_vectorize -v 15  # PG 15
-pig ext install -y pg_vectorize -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_vectorize_19       # PG 19
 dnf install -y pg_vectorize_18       # PG 18
 dnf install -y pg_vectorize_17       # PG 17
 dnf install -y pg_vectorize_16       # PG 16
 dnf install -y pg_vectorize_15       # PG 15
-dnf install -y pg_vectorize_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-vectorize   # PG 19
 apt install -y postgresql-18-pg-vectorize   # PG 18
 apt install -y postgresql-17-pg-vectorize   # PG 17
 apt install -y postgresql-16-pg-vectorize   # PG 16
 apt install -y postgresql-15-pg-vectorize   # PG 15
-apt install -y postgresql-14-pg-vectorize   # PG 14
 ```
 
 

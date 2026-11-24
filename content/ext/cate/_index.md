@@ -14,7 +14,7 @@ sidebar_expanded: true
 | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | 18 | 18 | AI与RAG扩展插件：向量数据库，DiskANN 向量索引，相似度度量函数集，库内机器学习与推理 pgml，等等。 |
 | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | 36 | 26 | 全文检索扩展：ES 替代 pg_search，BM25，中文分词，欧洲语言分词字典 hunspell，模糊检索，2-gram/3-gram 索引。 |
 | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | 27 | 19 | 分析能力扩展：列式存储，DuckDB与外部数据源包装器，Parquet S3，数据冷热分级存储，分布式计算，透明分片，GPU加速 |
-| <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | 84 | 42 | 功能特性扩展：图数据库，Hyperloglog，Rum索引，GraphQL，JsonSchema，Hint，虚拟索引，增量物化视图，消息队列等等 |
+| <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | 86 | 44 | 功能特性扩展：图数据库，Hyperloglog，Rum索引，GraphQL，JsonSchema，Hint，虚拟索引，增量物化视图，消息队列等等 |
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | 43 | 27 | 存储过程语言扩展：使用各种编程语言开发，调试，打包，分发，测试 PostgreSQL 存储过程：Java，Js，Lua，R，SH，PRQL… |
 | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | 47 | 46 | 自定义类型扩展：前缀树，语义版本号，SI单位，位图，无符号整型，高精度数值，有理数，哈希值，IP地址段，球面，RRULE等 |
 | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | 45 | 44 | 实用功能扩展：HTTP请求，GZIP压缩，JWT处理，邮件客户端，正则，字符编码，编码解码，加密解密等实用功能 |

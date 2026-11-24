@@ -41,19 +41,19 @@ weight: 7035
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "17" >}} | `encsearch` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "19,18,17,16,15" >}} | `encsearch` | - |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "17" >}} | `encsearch_$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.x86_64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -96,11 +96,19 @@ pig install encsearch;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y encsearch -v 19  # PG 19
+pig ext install -y encsearch -v 18  # PG 18
 pig ext install -y encsearch -v 17  # PG 17
+pig ext install -y encsearch -v 16  # PG 16
+pig ext install -y encsearch -v 15  # PG 15
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y encsearch_19       # PG 19
+dnf install -y encsearch_18       # PG 18
 dnf install -y encsearch_17       # PG 17
+dnf install -y encsearch_16       # PG 16
+dnf install -y encsearch_15       # PG 15
 ```
 
 

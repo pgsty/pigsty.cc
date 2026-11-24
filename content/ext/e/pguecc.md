@@ -42,16 +42,16 @@ weight: 4460
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_ecdsa` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_ecdsa_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-ecdsa` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_ecdsa` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_ecdsa_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-ecdsa` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
@@ -66,86 +66,84 @@ weight: 4460
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 64.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 63.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 63.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 63.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 68.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 25.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 64.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 63.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 68.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 63.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 65.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 64.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 71.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 68.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 67.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_ecdsa_14 pg_ecdsa_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 63.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 65.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 64.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 71.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 70.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 68.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 67.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-ecdsa postgresql-14-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-14-pg-ecdsa_1.0-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pg_ecdsa_19 pg_ecdsa_19-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 68.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_19-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_ecdsa_19 pg_ecdsa_19-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 67.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_19-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_ecdsa_19 pg_ecdsa_19-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_19-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_ecdsa_19 pg_ecdsa_19-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 68.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_19-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 64.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-ecdsa postgresql-19-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 64.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-19-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_18-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 68.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_18-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 68.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_18-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 67.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_18-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_18-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_ecdsa_18 pg_ecdsa_18-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 68.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_18-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 63.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 65.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-ecdsa postgresql-18-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 64.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-18-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_17-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 68.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_17-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 68.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_17-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 67.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_17-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_17-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_ecdsa_17 pg_ecdsa_17-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 68.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_17-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 68.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-ecdsa postgresql-17-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 64.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-17-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_16-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 68.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_16-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 68.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_16-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 67.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_16-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 69.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_16-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_ecdsa_16 pg_ecdsa_16-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 68.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_16-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 64.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 65.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 68.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-ecdsa postgresql-16-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 64.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-16-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el8.x86_64.rpm pigsty 1.0 69.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ecdsa_15-1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el8.aarch64.rpm pigsty 1.0 68.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ecdsa_15-1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el9.x86_64.rpm pigsty 1.0 70.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ecdsa_15-1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el9.aarch64.rpm pigsty 1.0 69.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ecdsa_15-1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el10.x86_64.rpm pigsty 1.0 71.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ecdsa_15-1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_ecdsa_15 pg_ecdsa_15-1.0-1PGSTY.el10.aarch64.rpm pigsty 1.0 70.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ecdsa_15-1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb pigsty 1.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb pigsty 1.0 64.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb pigsty 1.0 65.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb pigsty 1.0 64.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb pigsty 1.0 71.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb pigsty 1.0 70.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb pigsty 1.0 68.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb pigsty 1.0 67.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb pigsty 1.0 67.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-ecdsa postgresql-15-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb pigsty 1.0 66.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-ecdsa/postgresql-15-pg-ecdsa_1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install pg_ecdsa;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_ecdsa -v 19  # PG 19
 pig ext install -y pg_ecdsa -v 18  # PG 18
 pig ext install -y pg_ecdsa -v 17  # PG 17
 pig ext install -y pg_ecdsa -v 16  # PG 16
 pig ext install -y pg_ecdsa -v 15  # PG 15
-pig ext install -y pg_ecdsa -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_ecdsa_19       # PG 19
 dnf install -y pg_ecdsa_18       # PG 18
 dnf install -y pg_ecdsa_17       # PG 17
 dnf install -y pg_ecdsa_16       # PG 16
 dnf install -y pg_ecdsa_15       # PG 15
-dnf install -y pg_ecdsa_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-ecdsa   # PG 19
 apt install -y postgresql-18-pg-ecdsa   # PG 18
 apt install -y postgresql-17-pg-ecdsa   # PG 17
 apt install -y postgresql-16-pg-ecdsa   # PG 16
 apt install -y postgresql-15-pg-ecdsa   # PG 15
-apt install -y postgresql-14-pg-ecdsa   # PG 14
 ```
 
 

@@ -45,194 +45,258 @@ weight: 5210
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_crash_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-crash` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "19,18,17,16,15" >}} | `pg_crash` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "19,18,17,16,15" >}} | `pg_crash_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pg-crash` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| d12.x86_64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| d12.aarch64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| d13.x86_64 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 |
-| d13.aarch64 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 | AVAIL PGDG 0.3 2 |
-| u22.x86_64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| u22.aarch64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| u24.x86_64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| u24.aarch64 | AVAIL PGDG 0.3 2 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| u26.x86_64 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-| u26.aarch64 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 | AVAIL PIGSTY 1.0 3 |
-@ el8.x86_64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 12.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_18-1.0-1PIGSTY.el10.aarch64.rpm
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 | AVAIL PIGSTY 0.3 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| d12.aarch64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| d13.x86_64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| d13.aarch64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u22.x86_64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u22.aarch64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u24.x86_64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u24.aarch64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u26.x86_64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+| u26.aarch64 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 | AVAIL PIGSTY 0.3 4 |
+@ el9.x86_64 19 pg_crash_19 pg_crash_19-0.3-1PGSTY.el9.x86_64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_19-0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_crash_19 pg_crash_19-0.3-1PGSTY.el9.aarch64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_19-0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_crash_19 pg_crash_19-0.3-1PGSTY.el10.x86_64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_19-0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_crash_19 pg_crash_19-0.3-1PGSTY.el10.aarch64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_19-0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~bookworm_amd64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+3_amd64.deb
+@ d12.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~bookworm_arm64.deb pigsty 0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+3_arm64.deb
+@ d12.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~trixie_amd64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+3_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+3_amd64.deb
+@ d13.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~trixie_arm64.deb pigsty 0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+3_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+3_arm64.deb
+@ d13.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~jammy_amd64.deb pigsty 0.3 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+3_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+3_amd64.deb
+@ u22.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~jammy_arm64.deb pigsty 0.3 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+3_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+3_arm64.deb
+@ u22.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~noble_amd64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~noble_amd64.deb
+@ u24.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+3_amd64.deb
+@ u24.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~noble_arm64.deb pigsty 0.3 13.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~noble_arm64.deb
+@ u24.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+3_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+3_arm64.deb
+@ u24.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~resolute_amd64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+3_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+3_amd64.deb
+@ u26.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-1PGSTY~resolute_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+3_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+3_arm64.deb
+@ u26.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-pg-crash postgresql-19-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-19-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el8.x86_64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_18-0.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el8.aarch64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_18-0.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el9.x86_64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_18-0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el9.aarch64.rpm pigsty 0.3 22.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_18-0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el10.x86_64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_18-0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_crash_18 pg_crash_18-0.3-1PGSTY.el10.aarch64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_18-0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~bookworm_amd64.deb pigsty 0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+3_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+3_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~bookworm_arm64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+3_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+3_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~trixie_amd64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+3_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+3_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~trixie_arm64.deb pigsty 0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+3_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~jammy_amd64.deb pigsty 0.3 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+3_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+3_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~jammy_arm64.deb pigsty 0.3 13.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+3_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+3_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~noble_amd64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~noble_amd64.deb
+@ u24.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+3_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~noble_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~noble_arm64.deb
+@ u24.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+3_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~resolute_amd64.deb pigsty 0.3 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+3_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
+@ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-1PGSTY~resolute_arm64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+3_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb
+@ el8.x86_64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el8.x86_64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_17-0.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el8.aarch64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_17-0.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el9.x86_64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_17-0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el9.aarch64.rpm pigsty 0.3 22.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_17-0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el10.x86_64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_17-0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_crash_17 pg_crash_17-0.3-1PGSTY.el10.aarch64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_17-0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~bookworm_amd64.deb pigsty 0.3 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+3_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+3_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+1_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~bookworm_arm64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+3_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+3_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~trixie_amd64.deb pigsty 0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+3_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+3_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~trixie_arm64.deb pigsty 0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+3_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+3_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg13+1_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~jammy_amd64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+3_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~jammy_arm64.deb pigsty 0.3 13.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+3_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+3_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~noble_amd64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~noble_amd64.deb
+@ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+3_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~noble_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~noble_arm64.deb
+@ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+3_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~resolute_amd64.deb pigsty 0.3 13.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+3_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
+@ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-1PGSTY~resolute_arm64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+3_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 13.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb
+@ el8.x86_64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el8.x86_64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_16-0.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el8.aarch64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_16-0.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el9.x86_64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_16-0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el9.aarch64.rpm pigsty 0.3 22.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_16-0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el10.x86_64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_16-0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_crash_16 pg_crash_16-0.3-1PGSTY.el10.aarch64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_16-0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~bookworm_amd64.deb pigsty 0.3 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+3_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+3_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+1_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~bookworm_arm64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+3_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+3_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~trixie_amd64.deb pigsty 0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+3_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~trixie_arm64.deb pigsty 0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+3_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg13+1_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~jammy_amd64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+3_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~jammy_arm64.deb pigsty 0.3 13.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+3_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+3_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~noble_amd64.deb pigsty 0.3 13.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~noble_amd64.deb
+@ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+3_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~noble_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+3_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~resolute_amd64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+3_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
+@ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-1PGSTY~resolute_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+3_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb
+@ el8.x86_64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el8.x86_64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_15-0.3-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el8.aarch64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_15-0.3-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el9.x86_64.rpm pigsty 0.3 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_15-0.3-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el9.aarch64.rpm pigsty 0.3 22.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_15-0.3-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el10.x86_64.rpm pigsty 0.3 22.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_15-0.3-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_crash_15 pg_crash_15-0.3-1PGSTY.el10.aarch64.rpm pigsty 0.3 22.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_15-0.3-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~bookworm_amd64.deb pigsty 0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~bookworm_amd64.deb
+@ d12.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+3_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+3_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+1_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~bookworm_arm64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+3_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+3_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~trixie_amd64.deb pigsty 0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~trixie_amd64.deb
+@ d13.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+3_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+3_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~trixie_arm64.deb pigsty 0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+3_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg13+1_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~jammy_amd64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~jammy_amd64.deb
+@ u22.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+3_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~jammy_arm64.deb pigsty 0.3 13.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~jammy_arm64.deb
+@ u22.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+3_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+3_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~noble_amd64.deb pigsty 0.3 13.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~noble_amd64.deb
+@ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+3_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+3_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~noble_arm64.deb pigsty 0.3 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~noble_arm64.deb
+@ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+3_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~resolute_amd64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~resolute_amd64.deb
+@ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+3_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+3_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
+@ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-1PGSTY~resolute_arm64.deb pigsty 0.3 13.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-1PGSTY~resolute_arm64.deb
+@ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+3_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+3_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_crash_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_crash_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_crash_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg12+2_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg12+2_amd64.deb
-@ d12.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg12+1_amd64.deb pgdg 0.3 12.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 12.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg12+2_arm64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg12+2_arm64.deb
-@ d12.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg12+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg13+2_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg13+2_amd64.deb
-@ d13.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg13+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg13+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg13+2_arm64.deb
-@ d13.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg13+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg22.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg22.04+2_amd64.deb
-@ u22.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg22.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 13.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~jammy_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg22.04+2_arm64.deb pgdg 0.3 13.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg22.04+2_arm64.deb
-@ u22.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+2_amd64.deb pgdg 0.3 12.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+2_amd64.deb
-@ u24.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~noble_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+2_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+2_arm64.deb
-@ u24.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+2_amd64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+2_amd64.deb
-@ u26.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+2_arm64.deb pgdg 0.3 13.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+2_arm64.deb
-@ u26.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -259,27 +323,27 @@ pig install pg_crash;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_crash -v 19  # PG 19
 pig ext install -y pg_crash -v 18  # PG 18
 pig ext install -y pg_crash -v 17  # PG 17
 pig ext install -y pg_crash -v 16  # PG 16
 pig ext install -y pg_crash -v 15  # PG 15
-pig ext install -y pg_crash -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_crash_19       # PG 19
 dnf install -y pg_crash_18       # PG 18
 dnf install -y pg_crash_17       # PG 17
 dnf install -y pg_crash_16       # PG 16
 dnf install -y pg_crash_15       # PG 15
-dnf install -y pg_crash_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-crash   # PG 19
 apt install -y postgresql-18-pg-crash   # PG 18
 apt install -y postgresql-17-pg-crash   # PG 17
 apt install -y postgresql-16-pg-crash   # PG 16
 apt install -y postgresql-15-pg-crash   # PG 15
-apt install -y postgresql-14-pg-crash   # PG 14
 ```
 
 

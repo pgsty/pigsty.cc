@@ -37,130 +37,154 @@ weight: 2770
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15,14" >}} | `jsquery` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15,14" >}} | `jsquery_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-jsquery` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15" >}} | `jsquery` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15" >}} | `jsquery_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.2` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-jsquery` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el8.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el9.x86_64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
-| el9.aarch64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
-| el10.x86_64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
-| el10.aarch64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
-| d12.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| d12.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| d13.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| d13.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u22.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u22.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u24.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u24.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u26.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| u26.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| el9.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
+| el9.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
+| el10.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
+| el10.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 4 |
+| d12.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| d12.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| d13.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| d13.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u22.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u22.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u24.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u24.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u26.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| u26.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+@ el8.x86_64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/jsquery_18-1.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel8.x86_64.rpm pgdg 1.2 49.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/jsquery_18-1.2-4PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/jsquery_18-1.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel8.aarch64.rpm pgdg 1.2 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/jsquery_18-1.2-4PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/jsquery_18-1.2-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel9.x86_64.rpm pgdg 1.2 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/jsquery_18-1.2-4PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/jsquery_18-1.2-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel9.aarch64.rpm pgdg 1.2 47.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/jsquery_18-1.2-4PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/jsquery_18-1.2-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 50.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/jsquery_18-1.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/jsquery_18-1.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/jsquery_18-1.2-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2 50.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/jsquery_18-1.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 jsquery_18 jsquery_18-1.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+2_amd64.deb pgdg 1.2 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+2_arm64.deb pgdg 1.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg13+2_amd64.deb pgdg 1.2 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg13+2_arm64.deb pgdg 1.2 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg13+1_arm64.deb pgdg 1.2 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg22.04+2_amd64.deb pgdg 1.2 123.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg22.04+1_amd64.deb pgdg 1.2 123.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg22.04+2_arm64.deb pgdg 1.2 120.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg22.04+1_arm64.deb pgdg 1.2 120.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg24.04+2_amd64.deb pgdg 1.2 122.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg24.04+1_amd64.deb pgdg 1.2 122.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg24.04+2_arm64.deb pgdg 1.2 119.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg24.04+1_arm64.deb pgdg 1.2 119.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg26.04+2_amd64.deb pgdg 1.2 121.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg26.04+1_amd64.deb pgdg 1.2 121.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg26.04+2_arm64.deb pgdg 1.2 118.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg26.04+1_arm64.deb pgdg 1.2 118.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/jsquery_17-1.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel8.x86_64.rpm pgdg 1.2 49.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/jsquery_17-1.2-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/jsquery_17-1.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel8.aarch64.rpm pgdg 1.2 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/jsquery_17-1.2-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/jsquery_17-1.2-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel9.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/jsquery_17-1.2-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/jsquery_17-1.2-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel9.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/jsquery_17-1.2-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/jsquery_17-1.2-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 jsquery_17 jsquery_17-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 50.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/jsquery_17-1.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/jsquery_17-1.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/jsquery_17-1.2-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/jsquery_17-1.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 jsquery_17 jsquery_17-1.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2 49.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 jsquery_17 jsquery_17-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+2_amd64.deb pgdg 1.2 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+2_arm64.deb pgdg 1.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg13+2_amd64.deb pgdg 1.2 123.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg13+2_arm64.deb pgdg 1.2 120.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg13+1_arm64.deb pgdg 1.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg22.04+2_amd64.deb pgdg 1.2 131.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg22.04+1_amd64.deb pgdg 1.2 130.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg22.04+2_arm64.deb pgdg 1.2 128.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg22.04+1_arm64.deb pgdg 1.2 127.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg24.04+2_amd64.deb pgdg 1.2 122.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg24.04+1_amd64.deb pgdg 1.2 122.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg24.04+2_arm64.deb pgdg 1.2 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg24.04+1_arm64.deb pgdg 1.2 119.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg26.04+2_amd64.deb pgdg 1.2 121.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg26.04+1_amd64.deb pgdg 1.2 121.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg26.04+2_arm64.deb pgdg 1.2 118.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg26.04+1_arm64.deb pgdg 1.2 118.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/jsquery_16-1.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/jsquery_16-1.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2 47.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/jsquery_16-1.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/jsquery_16-1.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/jsquery_16-1.2-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/jsquery_16-1.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/jsquery_16-1.2-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/jsquery_16-1.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/jsquery_16-1.2-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 jsquery_16 jsquery_16-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 49.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/jsquery_16-1.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/jsquery_16-1.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/jsquery_16-1.2-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2 50.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/jsquery_16-1.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 jsquery_16 jsquery_16-1.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 jsquery_16 jsquery_16-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+2_amd64.deb pgdg 1.2 123.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 122.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+2_arm64.deb pgdg 1.2 120.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 119.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg13+2_amd64.deb pgdg 1.2 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg13+2_arm64.deb pgdg 1.2 120.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg13+1_arm64.deb pgdg 1.2 120.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg22.04+2_amd64.deb pgdg 1.2 130.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg22.04+1_amd64.deb pgdg 1.2 130.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg22.04+2_arm64.deb pgdg 1.2 127.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg22.04+1_arm64.deb pgdg 1.2 127.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg24.04+2_amd64.deb pgdg 1.2 122.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg24.04+1_amd64.deb pgdg 1.2 122.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg24.04+2_arm64.deb pgdg 1.2 119.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg24.04+1_arm64.deb pgdg 1.2 119.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg26.04+2_amd64.deb pgdg 1.2 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg26.04+1_amd64.deb pgdg 1.2 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg26.04+2_arm64.deb pgdg 1.2 117.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg26.04+1_arm64.deb pgdg 1.2 118.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel8.10.x86_64.rpm pgdg 1.2 51.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/jsquery_15-1.2-10PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 50.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/jsquery_15-1.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel8.10.aarch64.rpm pgdg 1.2 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/jsquery_15-1.2-10PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/jsquery_15-1.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/jsquery_15-1.2-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/jsquery_15-1.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/jsquery_15-1.2-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/jsquery_15-1.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/jsquery_15-1.2-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 jsquery_15 jsquery_15-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 52.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/jsquery_15-1.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel9.9.x86_64.rpm pgdg 1.2 52.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/jsquery_15-1.2-10PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel9.9.aarch64.rpm pgdg 1.2 50.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/jsquery_15-1.2-10PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel10.3.x86_64.rpm pgdg 1.2 53.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/jsquery_15-1.2-10PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel10.3.aarch64.rpm pgdg 1.2 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-10PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 jsquery_15 jsquery_15-1.2-10PGDG.rhel10.2.aarch64.rpm pgdg 1.2 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 50.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 jsquery_15 jsquery_15-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+2_amd64.deb pgdg 1.2 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+2_arm64.deb pgdg 1.2 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg13+2_amd64.deb pgdg 1.2 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 124.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg13+2_arm64.deb pgdg 1.2 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg13+1_arm64.deb pgdg 1.2 121.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg22.04+2_amd64.deb pgdg 1.2 132.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg22.04+1_amd64.deb pgdg 1.2 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg22.04+2_arm64.deb pgdg 1.2 129.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg22.04+1_arm64.deb pgdg 1.2 129.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg24.04+2_amd64.deb pgdg 1.2 124.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg24.04+1_amd64.deb pgdg 1.2 124.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg24.04+2_arm64.deb pgdg 1.2 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg24.04+1_arm64.deb pgdg 1.2 121.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg26.04+2_amd64.deb pgdg 1.2 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg26.04+1_amd64.deb pgdg 1.2 123.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg26.04+2_arm64.deb pgdg 1.2 119.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg26.04+1_arm64.deb pgdg 1.2 119.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 50.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/jsquery_14-1.2-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/jsquery_14-1.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 51.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/jsquery_14-1.2-6PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/jsquery_14-1.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 50.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/jsquery_14-1.2-6PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 49.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/jsquery_14-1.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/jsquery_14-1.2-6PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 jsquery_14 jsquery_14-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 52.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/jsquery_14-1.2-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 50.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/jsquery_14-1.2-6PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 jsquery_14 jsquery_14-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/jsquery_14-1.2-4PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 121.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg13+1_arm64.deb pgdg 1.2 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg22.04+1_amd64.deb pgdg 1.2 132.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg22.04+1_arm64.deb pgdg 1.2 129.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg24.04+1_amd64.deb pgdg 1.2 124.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg24.04+1_arm64.deb pgdg 1.2 121.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg26.04+1_amd64.deb pgdg 1.2 123.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg26.04+1_arm64.deb pgdg 1.2 119.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -183,7 +207,6 @@ pig ext install -y jsquery -v 18  # PG 18
 pig ext install -y jsquery -v 17  # PG 17
 pig ext install -y jsquery -v 16  # PG 16
 pig ext install -y jsquery -v 15  # PG 15
-pig ext install -y jsquery -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -191,7 +214,6 @@ dnf install -y jsquery_18       # PG 18
 dnf install -y jsquery_17       # PG 17
 dnf install -y jsquery_16       # PG 16
 dnf install -y jsquery_15       # PG 15
-dnf install -y jsquery_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -199,7 +221,6 @@ apt install -y postgresql-18-jsquery   # PG 18
 apt install -y postgresql-17-jsquery   # PG 17
 apt install -y postgresql-16-jsquery   # PG 16
 apt install -y postgresql-15-jsquery   # PG 15
-apt install -y postgresql-14-jsquery   # PG 14
 ```
 
 

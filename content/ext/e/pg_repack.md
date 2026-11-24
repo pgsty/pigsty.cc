@@ -37,236 +37,248 @@ weight: 5010
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_repack` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_repack_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-repack` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "19,18,17,16,15" >}} | `pg_repack` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "19,18,17,16,15" >}} | `pg_repack_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5.3` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-repack` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 5 |
-| el8.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 |
-| el9.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 5 | AVAIL PGDG 1.5.3 6 |
-| el9.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 5 | AVAIL PGDG 1.5.3 5 |
-| el10.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
-| el10.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
-| d12.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| d12.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| d13.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| d13.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u22.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u22.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u24.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u24.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u26.x86_64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
-| u26.aarch64 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.5.3 2 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 5 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.5.3 5 |
+| el9.x86_64 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 |
+| el9.aarch64 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 |
+| el10.x86_64 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 1 |
+| el10.aarch64 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.5.3 5 | AVAIL PGDG 1.5.3 5 | AVAIL PGDG 1.5.3 5 | AVAIL PGDG 1.5.3 5 |
+| d12.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| d12.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| d13.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| d13.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u22.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u22.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u24.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u24.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u26.x86_64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+| u26.aarch64 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.5.3 3 |
+@ el9.x86_64 19 pg_repack_19 pg_repack_19-1.5.3-9PGDG.rhel9.9.x86_64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pg_repack_19-1.5.3-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pg_repack_19 pg_repack_19-1.5.3-9PGDG.rhel9.9.aarch64.rpm pgdg 1.5.3 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pg_repack_19-1.5.3-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pg_repack_19 pg_repack_19-1.5.3-9PGDG.rhel10.3.x86_64.rpm pgdg 1.5.3 68.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pg_repack_19-1.5.3-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pg_repack_19 pg_repack_19-1.5.3-9PGDG.rhel10.3.aarch64.rpm pgdg 1.5.3 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pg_repack_19-1.5.3-9PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg12+1_amd64.deb pgdg 1.5.3 102.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg12+1_amd64.deb
+@ d12.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg12+1_arm64.deb pgdg 1.5.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg12+1_arm64.deb
+@ d12.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg13+1_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg13+1_amd64.deb
+@ d13.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg13+1_arm64.deb pgdg 1.5.3 100.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg13+1_arm64.deb
+@ d13.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 100.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg22.04+1_amd64.deb pgdg 1.5.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg22.04+1_amd64.deb
+@ u22.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg22.04+1_arm64.deb pgdg 1.5.3 98.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg22.04+1_arm64.deb
+@ u22.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 98.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 98.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg24.04+1_amd64.deb
+@ u24.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg24.04+1_arm64.deb
+@ u24.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-2.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-repack postgresql-19-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-19-repack_1.5.3-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 78.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_repack_18-1.5.3-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 76.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_repack_18-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel8.x86_64.rpm pgdg 1.5.2 75.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_repack_18-1.5.2-5PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel8.10.aarch64.rpm pgdg 1.5.3 77.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_repack_18-1.5.3-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 75.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_repack_18-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel8.aarch64.rpm pgdg 1.5.2 74.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_repack_18-1.5.2-5PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_repack_18-1.5.3-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_repack_18-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel9.x86_64.rpm pgdg 1.5.2 66.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_repack_18-1.5.2-5PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 66.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_repack_18-1.5.3-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 66.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_repack_18-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel9.aarch64.rpm pgdg 1.5.2 65.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_repack_18-1.5.2-5PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_repack_18-1.5.3-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_repack_18-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel10.x86_64.rpm pgdg 1.5.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_repack_18-1.5.2-5PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel9.9.x86_64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_repack_18-1.5.3-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel9.9.aarch64.rpm pgdg 1.5.3 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_repack_18-1.5.3-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel10.3.x86_64.rpm pgdg 1.5.3 68.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_repack_18-1.5.3-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel10.3.aarch64.rpm pgdg 1.5.3 68.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_repack_18-1.5.3-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-9PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_repack_18-1.5.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_repack_18-1.5.3-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_repack_18 pg_repack_18-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 67.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_repack_18-1.5.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 pg_repack_18 pg_repack_18-1.5.2-5PGDG.rhel10.aarch64.rpm pgdg 1.5.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_repack_18-1.5.2-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg12+1_amd64.deb pgdg 1.5.3 102.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 101.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg12+1_arm64.deb pgdg 1.5.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg13+1_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 102.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg13+1_arm64.deb pgdg 1.5.3 100.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 100.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg22.04+1_amd64.deb pgdg 1.5.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 101.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 100.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg22.04+1_arm64.deb pgdg 1.5.3 98.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 98.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 97.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 98.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 96.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-2.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-repack postgresql-18-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-18-repack_1.5.3-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 78.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_repack_17-1.5.3-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 76.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_repack_17-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_repack_17 pg_repack_17-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 75.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_repack_17-1.5.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_repack_17 pg_repack_17-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 74.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_repack_17-1.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel8.10.aarch64.rpm pgdg 1.5.3 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_repack_17-1.5.3-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 75.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_repack_17-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_repack_17 pg_repack_17-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 74.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_repack_17-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_repack_17 pg_repack_17-1.5.1-1PGDG.rhel8.aarch64.rpm pgdg 1.5.1 73.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_repack_17-1.5.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_repack_17-1.5.3-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_repack_17-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_repack_17 pg_repack_17-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 65.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_repack_17-1.5.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_repack_17 pg_repack_17-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 65.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_repack_17-1.5.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 66.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_repack_17-1.5.3-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 66.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_repack_17-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_repack_17 pg_repack_17-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_repack_17-1.5.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_repack_17 pg_repack_17-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 65.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_repack_17-1.5.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 67.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_repack_17-1.5.3-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_repack_17-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pg_repack_17 pg_repack_17-1.5.2-4PGDG.rhel10.x86_64.rpm pgdg 1.5.2 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_repack_17-1.5.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel9.9.x86_64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_repack_17-1.5.3-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel9.9.aarch64.rpm pgdg 1.5.3 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_repack_17-1.5.3-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel10.3.x86_64.rpm pgdg 1.5.3 68.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_repack_17-1.5.3-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel10.3.aarch64.rpm pgdg 1.5.3 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_repack_17-1.5.3-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-9PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 68.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_repack_17-1.5.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_repack_17-1.5.3-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_repack_17 pg_repack_17-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_repack_17-1.5.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_repack_17 pg_repack_17-1.5.2-4PGDG.rhel10.aarch64.rpm pgdg 1.5.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_repack_17-1.5.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg12+1_amd64.deb pgdg 1.5.3 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 101.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg12+1_arm64.deb pgdg 1.5.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg13+1_amd64.deb pgdg 1.5.3 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg13+1_arm64.deb pgdg 1.5.3 100.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 100.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg22.04+1_amd64.deb pgdg 1.5.3 106.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 106.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 106.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg22.04+1_arm64.deb pgdg 1.5.3 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 102.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 96.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 99.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-2.pgdg26.04+1_arm64.deb pgdg 1.5.3 98.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-repack postgresql-17-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-17-repack_1.5.3-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 78.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_repack_16-1.5.3-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 76.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_repack_16-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_repack_16 pg_repack_16-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 75.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_repack_16-1.5.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_repack_16 pg_repack_16-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 79.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_repack_16-1.5.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel8.10.aarch64.rpm pgdg 1.5.3 77.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_repack_16-1.5.3-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 75.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_repack_16-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_repack_16 pg_repack_16-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 74.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_repack_16-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_repack_16 pg_repack_16-1.5.0-1PGDG.rhel8.aarch64.rpm pgdg 1.5.0 79.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_repack_16-1.5.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_repack_16-1.5.3-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_repack_16-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_repack_16 pg_repack_16-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 65.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_repack_16-1.5.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_repack_16 pg_repack_16-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_repack_16-1.5.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 66.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_repack_16-1.5.3-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 66.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_repack_16-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_repack_16 pg_repack_16-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 65.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_repack_16-1.5.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_repack_16 pg_repack_16-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_repack_16-1.5.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_repack_16-1.5.3-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_repack_16-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pg_repack_16 pg_repack_16-1.5.2-4PGDG.rhel10.x86_64.rpm pgdg 1.5.2 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_repack_16-1.5.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel9.9.x86_64.rpm pgdg 1.5.3 67.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_repack_16-1.5.3-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel9.9.aarch64.rpm pgdg 1.5.3 67.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_repack_16-1.5.3-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel10.3.x86_64.rpm pgdg 1.5.3 68.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_repack_16-1.5.3-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel10.3.aarch64.rpm pgdg 1.5.3 68.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_repack_16-1.5.3-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-9PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 68.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_repack_16-1.5.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_repack_16-1.5.3-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_repack_16 pg_repack_16-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 67.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_repack_16-1.5.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_repack_16 pg_repack_16-1.5.2-4PGDG.rhel10.aarch64.rpm pgdg 1.5.2 67.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_repack_16-1.5.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg12+1_amd64.deb pgdg 1.5.3 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 102.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg12+1_arm64.deb pgdg 1.5.3 100.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 100.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg13+1_amd64.deb pgdg 1.5.3 103.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 103.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 102.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg13+1_arm64.deb pgdg 1.5.3 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 101.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg22.04+1_amd64.deb pgdg 1.5.3 106.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 106.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 105.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg22.04+1_arm64.deb pgdg 1.5.3 103.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 102.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg26.04+1_amd64.deb pgdg 1.5.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-2.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-repack postgresql-16-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-16-repack_1.5.3-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel8.10.x86_64.rpm pgdg 1.5.3 78.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_repack_15-1.5.3-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 76.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_repack_15-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_repack_15 pg_repack_15-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 75.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_repack_15-1.5.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_repack_15 pg_repack_15-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 79.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_repack_15-1.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_repack_15 pg_repack_15-1.4.8-1.rhel8.x86_64.rpm pgdg 1.4.8 106.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_repack_15-1.4.8-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel8.10.aarch64.rpm pgdg 1.5.3 77.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_repack_15-1.5.3-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 75.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_repack_15-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_repack_15 pg_repack_15-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_repack_15-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_repack_15 pg_repack_15-1.5.0-1PGDG.rhel8.aarch64.rpm pgdg 1.5.0 79.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_repack_15-1.5.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_repack_15 pg_repack_15-1.4.8-1.rhel8.aarch64.rpm pgdg 1.4.8 106.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_repack_15-1.4.8-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 67.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.5.3-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 67.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 66.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.5.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 68.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.5.0-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.4.8-1.rhel9.x86_64.rpm pgdg 1.4.8 96.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.4.8-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.5.3-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 66.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 65.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.5.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 67.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.5.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.4.8-1.rhel9.aarch64.rpm pgdg 1.4.8 95.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.4.8-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_repack_15-1.5.3-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 68.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_repack_15-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pg_repack_15 pg_repack_15-1.5.2-4PGDG.rhel10.x86_64.rpm pgdg 1.5.2 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_repack_15-1.5.2-4PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel9.9.x86_64.rpm pgdg 1.5.3 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_repack_15-1.5.3-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel9.9.aarch64.rpm pgdg 1.5.3 67.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_repack_15-1.5.3-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel10.3.x86_64.rpm pgdg 1.5.3 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_repack_15-1.5.3-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel10.3.aarch64.rpm pgdg 1.5.3 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_repack_15-1.5.3-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-9PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 69.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_repack_15-1.5.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 68.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_repack_15-1.5.3-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_repack_15 pg_repack_15-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 68.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_repack_15-1.5.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_repack_15 pg_repack_15-1.5.2-4PGDG.rhel10.aarch64.rpm pgdg 1.5.2 67.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_repack_15-1.5.2-4PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg12+1_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 102.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg12+1_arm64.deb pgdg 1.5.3 100.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 100.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg13+1_amd64.deb pgdg 1.5.3 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 103.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 102.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg13+1_arm64.deb pgdg 1.5.3 101.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 101.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg22.04+1_amd64.deb pgdg 1.5.3 106.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 106.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 105.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg22.04+1_arm64.deb pgdg 1.5.3 103.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 103.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 102.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg24.04+1_amd64.deb pgdg 1.5.3 100.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 97.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg26.04+1_amd64.deb pgdg 1.5.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 100.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 99.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-2.pgdg26.04+1_arm64.deb pgdg 1.5.3 98.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-repack postgresql-15-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-15-repack_1.5.3-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 75.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_repack_14-1.5.3-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_repack_14 pg_repack_14-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 73.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_repack_14-1.5.2-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_repack_14 pg_repack_14-1.5.0-1PGDG.rhel8.x86_64.rpm pgdg 1.5.0 78.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_repack_14-1.5.0-1PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_repack_14 pg_repack_14-1.4.8-1.rhel8.x86_64.rpm pgdg 1.4.8 103.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_repack_14-1.4.8-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_repack_14 pg_repack_14-1.4.7-1.rhel8.x86_64.rpm pgdg 1.4.7 103.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_repack_14-1.4.7-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 74.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_repack_14-1.5.3-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_repack_14 pg_repack_14-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 73.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_repack_14-1.5.2-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_repack_14 pg_repack_14-1.5.0-1PGDG.rhel8.aarch64.rpm pgdg 1.5.0 77.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_repack_14-1.5.0-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_repack_14 pg_repack_14-1.4.8-1.rhel8.aarch64.rpm pgdg 1.4.8 103.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_repack_14-1.4.8-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 66.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.5.3-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 66.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 65.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.5.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.5.0-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.4.8-1.rhel9.x86_64.rpm pgdg 1.4.8 94.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.4.8-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_repack_14 pg_repack_14-1.4.7-1.rhel9.x86_64.rpm pgdg 1.4.7 93.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_repack_14-1.4.7-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_repack_14 pg_repack_14-1.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 66.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_repack_14-1.5.3-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 66.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_repack_14-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_repack_14 pg_repack_14-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 65.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_repack_14-1.5.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_repack_14 pg_repack_14-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 67.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_repack_14-1.5.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_repack_14 pg_repack_14-1.4.8-1.rhel9.aarch64.rpm pgdg 1.4.8 93.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_repack_14-1.4.8-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_repack_14 pg_repack_14-1.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_repack_14-1.5.3-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_repack_14-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pg_repack_14 pg_repack_14-1.5.2-4PGDG.rhel10.x86_64.rpm pgdg 1.5.2 66.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_repack_14-1.5.2-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_repack_14 pg_repack_14-1.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 67.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_repack_14-1.5.3-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_repack_14 pg_repack_14-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 67.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_repack_14-1.5.3-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pg_repack_14 pg_repack_14-1.5.2-4PGDG.rhel10.aarch64.rpm pgdg 1.5.2 66.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_repack_14-1.5.2-4PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg12+2_amd64.deb pgdg 1.5.3 102.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg12+2_amd64.deb
-@ d12.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 101.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg12+2_arm64.deb pgdg 1.5.3 100.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg12+2_arm64.deb
-@ d12.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg13+2_amd64.deb pgdg 1.5.3 102.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg13+2_amd64.deb
-@ d13.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 101.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg13+2_arm64.deb pgdg 1.5.3 100.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg13+2_arm64.deb
-@ d13.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg13+1_arm64.deb pgdg 1.5.3 100.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg22.04+2_amd64.deb pgdg 1.5.3 104.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg22.04+2_amd64.deb
-@ u22.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg22.04+1_amd64.deb pgdg 1.5.3 104.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg22.04+2_arm64.deb pgdg 1.5.3 101.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg22.04+2_arm64.deb
-@ u22.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 101.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg24.04+2_amd64.deb pgdg 1.5.3 99.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg24.04+2_amd64.deb
-@ u24.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 99.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg24.04+2_arm64.deb pgdg 1.5.3 97.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg24.04+2_arm64.deb
-@ u24.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 96.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg26.04+2_amd64.deb pgdg 1.5.3 99.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg26.04+2_amd64.deb
-@ u26.x86_64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 98.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg26.04+2_arm64.deb pgdg 1.5.3 97.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg26.04+2_arm64.deb
-@ u26.aarch64 14 postgresql-14-repack postgresql-14-repack_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 97.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pg-repack/postgresql-14-repack_1.5.3-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -285,27 +297,27 @@ pig install pg_repack;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_repack -v 19  # PG 19
 pig ext install -y pg_repack -v 18  # PG 18
 pig ext install -y pg_repack -v 17  # PG 17
 pig ext install -y pg_repack -v 16  # PG 16
 pig ext install -y pg_repack -v 15  # PG 15
-pig ext install -y pg_repack -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_repack_19       # PG 19
 dnf install -y pg_repack_18       # PG 18
 dnf install -y pg_repack_17       # PG 17
 dnf install -y pg_repack_16       # PG 16
 dnf install -y pg_repack_15       # PG 15
-dnf install -y pg_repack_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-repack   # PG 19
 apt install -y postgresql-18-repack   # PG 18
 apt install -y postgresql-17-repack   # PG 17
 apt install -y postgresql-16-repack   # PG 16
 apt install -y postgresql-15-repack   # PG 15
-apt install -y postgresql-14-repack   # PG 14
 ```
 
 

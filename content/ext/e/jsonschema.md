@@ -45,30 +45,30 @@ weight: 2760
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "18,17,16,15,14" >}} | `jsonschema` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "18,17,16,15,14" >}} | `jsonschema_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-jsonschema` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "19,18,17,16,15" >}} | `jsonschema` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "18,17,16,15" >}} | `jsonschema_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.11` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-jsonschema` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 | AVAIL PIGSTY 0.1.11 1 |
 @ el8.x86_64 18 jsonschema_18 jsonschema_18-0.1.11-1PGSTY.el8.x86_64.rpm pigsty 0.1.11 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_18-0.1.11-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 jsonschema_18 jsonschema_18-0.1.11-1PGSTY.el8.aarch64.rpm pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_18-0.1.11-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 jsonschema_18 jsonschema_18-0.1.11-1PGSTY.el9.x86_64.rpm pigsty 0.1.11 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_18-0.1.11-1PGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 2760
 @ u24.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.11-1PGSTY~noble_arm64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.11-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.11-1PGSTY~resolute_amd64.deb pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.11-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.11-1PGSTY~resolute_arm64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.11-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el8.x86_64.rpm pigsty 0.1.11 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_14-0.1.11-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el8.aarch64.rpm pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_14-0.1.11-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el9.x86_64.rpm pigsty 0.1.11 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_14-0.1.11-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el9.aarch64.rpm pigsty 0.1.11 1.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_14-0.1.11-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el10.x86_64.rpm pigsty 0.1.11 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_14-0.1.11-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 jsonschema_14 jsonschema_14-0.1.11-1PGSTY.el10.aarch64.rpm pigsty 0.1.11 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_14-0.1.11-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~bookworm_amd64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~bookworm_arm64.deb pigsty 0.1.11 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~trixie_amd64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~trixie_arm64.deb pigsty 0.1.11 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~jammy_amd64.deb pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~jammy_arm64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~noble_amd64.deb pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~noble_arm64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~resolute_amd64.deb pigsty 0.1.11 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.11-1PGSTY~resolute_arm64.deb pigsty 0.1.11 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.11-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install jsonschema;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y jsonschema -v 19  # PG 19
 pig ext install -y jsonschema -v 18  # PG 18
 pig ext install -y jsonschema -v 17  # PG 17
 pig ext install -y jsonschema -v 16  # PG 16
 pig ext install -y jsonschema -v 15  # PG 15
-pig ext install -y jsonschema -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y jsonschema_19       # PG 19
 dnf install -y jsonschema_18       # PG 18
 dnf install -y jsonschema_17       # PG 17
 dnf install -y jsonschema_16       # PG 16
 dnf install -y jsonschema_15       # PG 15
-dnf install -y jsonschema_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-jsonschema   # PG 19
 apt install -y postgresql-18-jsonschema   # PG 18
 apt install -y postgresql-17-jsonschema   # PG 17
 apt install -y postgresql-16-jsonschema   # PG 16
 apt install -y postgresql-15-jsonschema   # PG 15
-apt install -y postgresql-14-jsonschema   # PG 14
 ```
 
 

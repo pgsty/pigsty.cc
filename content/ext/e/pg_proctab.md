@@ -46,30 +46,30 @@ weight: 6460
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | `pgnodemx` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pgnodemx` | `pgnodemx` |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `pgnodemx_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgnodemx` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
-| el9.x86_64 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 |
-| el9.aarch64 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 |
-| el10.x86_64 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 |
-| el10.aarch64 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 | AVAIL PIGSTY 2.0.1 4 |
-| d12.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| d12.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| d13.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| d13.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u22.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u22.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u24.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u24.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u26.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u26.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| el9.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| el9.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| el10.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| el10.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 6 | AVAIL PGDG 2.0.1 6 | AVAIL PGDG 2.0.1 6 | AVAIL PGDG 2.0.1 6 |
+| d12.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| d12.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| d13.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| d13.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u22.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u22.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u24.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u24.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u26.x86_64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
+| u26.aarch64 | AVAIL PIGSTY 2.0.1 1 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 | AVAIL PGDG 2.0.1 4 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -96,27 +96,27 @@ pig install pgnodemx;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgnodemx -v 19  # PG 19
 pig ext install -y pgnodemx -v 18  # PG 18
 pig ext install -y pgnodemx -v 17  # PG 17
 pig ext install -y pgnodemx -v 16  # PG 16
 pig ext install -y pgnodemx -v 15  # PG 15
-pig ext install -y pgnodemx -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgnodemx_19       # PG 19
 dnf install -y pgnodemx_18       # PG 18
 dnf install -y pgnodemx_17       # PG 17
 dnf install -y pgnodemx_16       # PG 16
 dnf install -y pgnodemx_15       # PG 15
-dnf install -y pgnodemx_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgnodemx   # PG 19
 apt install -y postgresql-18-pgnodemx   # PG 18
 apt install -y postgresql-17-pgnodemx   # PG 17
 apt install -y postgresql-16-pgnodemx   # PG 16
 apt install -y postgresql-15-pgnodemx   # PG 15
-apt install -y postgresql-14-pgnodemx   # PG 14
 ```
 
 

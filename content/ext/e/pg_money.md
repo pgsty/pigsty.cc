@@ -45,30 +45,30 @@ weight: 3690
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_money` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_money_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-money` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_money` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15" >}} | `pg_money_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-money` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 @ el8.x86_64 18 pg_money_18 pg_money_18-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 1017.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_money_18-0.3.0-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_money_18 pg_money_18-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 970.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_money_18-0.3.0-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_money_18 pg_money_18-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_money_18-0.3.0-1PGSTY.el9.x86_64.rpm
@@ -133,22 +133,6 @@ weight: 3690
 @ u24.aarch64 15 postgresql-15-pg-money postgresql-15-pg-money_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 911.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-money/postgresql-15-pg-money_0.3.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-money postgresql-15-pg-money_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 918.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-money/postgresql-15-pg-money_0.3.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-money postgresql-15-pg-money_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 908.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-money/postgresql-15-pg-money_0.3.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el8.x86_64.rpm pigsty 0.3.0 1003.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_money_14-0.3.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el8.aarch64.rpm pigsty 0.3.0 953.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_money_14-0.3.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el9.x86_64.rpm pigsty 0.3.0 1019.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_money_14-0.3.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el9.aarch64.rpm pigsty 0.3.0 1021.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_money_14-0.3.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el10.x86_64.rpm pigsty 0.3.0 1021.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_money_14-0.3.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_money_14 pg_money_14-0.3.0-1PGSTY.el10.aarch64.rpm pigsty 0.3.0 1013.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_money_14-0.3.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~bookworm_amd64.deb pigsty 0.3.0 845.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~bookworm_arm64.deb pigsty 0.3.0 783.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~trixie_amd64.deb pigsty 0.3.0 845.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~trixie_arm64.deb pigsty 0.3.0 784.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~jammy_amd64.deb pigsty 0.3.0 938.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~jammy_arm64.deb pigsty 0.3.0 918.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~noble_amd64.deb pigsty 0.3.0 921.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~noble_arm64.deb pigsty 0.3.0 911.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~resolute_amd64.deb pigsty 0.3.0 919.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-money postgresql-14-pg-money_0.3.0-1PGSTY~resolute_arm64.deb pigsty 0.3.0 908.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-money/postgresql-14-pg-money_0.3.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +159,27 @@ pig install pg_money;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_money -v 19  # PG 19
 pig ext install -y pg_money -v 18  # PG 18
 pig ext install -y pg_money -v 17  # PG 17
 pig ext install -y pg_money -v 16  # PG 16
 pig ext install -y pg_money -v 15  # PG 15
-pig ext install -y pg_money -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_money_19       # PG 19
 dnf install -y pg_money_18       # PG 18
 dnf install -y pg_money_17       # PG 17
 dnf install -y pg_money_16       # PG 16
 dnf install -y pg_money_15       # PG 15
-dnf install -y pg_money_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pg-money   # PG 19
 apt install -y postgresql-18-pg-money   # PG 18
 apt install -y postgresql-17-pg-money   # PG 17
 apt install -y postgresql-16-pg-money   # PG 16
 apt install -y postgresql-15-pg-money   # PG 15
-apt install -y postgresql-14-pg-money   # PG 14
 ```
 
 

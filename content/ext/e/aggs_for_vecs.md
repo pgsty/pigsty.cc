@@ -42,16 +42,16 @@ weight: 4750
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16,15,14" >}} | `aggs_for_vecs` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16,15,14" >}} | `aggs_for_vecs_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-aggs-for-vecs` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "19,18,17,16,15" >}} | `aggs_for_vecs` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "19,18,17,16,15" >}} | `aggs_for_vecs_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-aggs-for-vecs` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
@@ -66,86 +66,84 @@ weight: 4750
 | u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
-@ el8.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_18-1.4.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_18-1.4.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 42.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_18-1.4.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 43.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_18-1.4.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 42.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_18-1.4.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 43.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_18-1.4.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 82.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 81.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 88.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 89.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 84.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 86.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 85.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 87.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_17-1.4.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_17-1.4.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 42.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_17-1.4.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_17-1.4.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 42.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_17-1.4.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_17-1.4.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 81.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 93.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 84.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 86.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 85.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 88.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 43.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_16-1.4.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 43.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_16-1.4.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 42.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_16-1.4.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_16-1.4.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 42.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_16-1.4.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_16-1.4.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 81.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 93.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 85.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 86.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 85.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 88.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_15-1.4.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 43.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_15-1.4.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_15-1.4.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_15-1.4.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 42.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_15-1.4.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_15-1.4.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 82.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 93.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 93.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 85.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 86.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 86.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 88.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 44.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_14-1.4.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 43.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_14-1.4.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 42.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_14-1.4.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_14-1.4.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 42.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_14-1.4.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 aggs_for_vecs_14 aggs_for_vecs_14-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_14-1.4.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 81.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 82.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 93.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 93.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 85.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 86.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 86.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-aggs-for-vecs postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 87.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-14-aggs-for-vecs_1.4.1-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 aggs_for_vecs_19 aggs_for_vecs_19-1.4.1-1PGSTY.el9.x86_64.rpm pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_19-1.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 aggs_for_vecs_19 aggs_for_vecs_19-1.4.1-1PGSTY.el9.aarch64.rpm pigsty 1.4.1 94.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_19-1.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 aggs_for_vecs_19 aggs_for_vecs_19-1.4.1-1PGSTY.el10.x86_64.rpm pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_19-1.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 aggs_for_vecs_19 aggs_for_vecs_19-1.4.1-1PGSTY.el10.aarch64.rpm pigsty 1.4.1 95.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_19-1.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb pigsty 1.4.1 82.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb pigsty 1.4.1 82.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb pigsty 1.4.1 82.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb pigsty 1.4.1 88.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb pigsty 1.4.1 89.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb pigsty 1.4.1 85.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb pigsty 1.4.1 86.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb pigsty 1.4.1 86.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-aggs-for-vecs postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb pigsty 1.4.1 88.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-19-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el8.x86_64.rpm pigsty 1.4.1 93.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_18-1.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el8.aarch64.rpm pigsty 1.4.1 93.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_18-1.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el9.x86_64.rpm pigsty 1.4.1 93.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_18-1.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el9.aarch64.rpm pigsty 1.4.1 94.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_18-1.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el10.x86_64.rpm pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_18-1.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 aggs_for_vecs_18 aggs_for_vecs_18-1.4.1-1PGSTY.el10.aarch64.rpm pigsty 1.4.1 95.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_18-1.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb pigsty 1.4.1 82.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb pigsty 1.4.1 88.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb pigsty 1.4.1 89.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb pigsty 1.4.1 85.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb pigsty 1.4.1 86.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb pigsty 1.4.1 86.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-aggs-for-vecs postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb pigsty 1.4.1 88.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-18-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el8.x86_64.rpm pigsty 1.4.1 93.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_17-1.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el8.aarch64.rpm pigsty 1.4.1 93.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_17-1.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el9.x86_64.rpm pigsty 1.4.1 93.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_17-1.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el9.aarch64.rpm pigsty 1.4.1 94.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_17-1.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el10.x86_64.rpm pigsty 1.4.1 93.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_17-1.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 aggs_for_vecs_17 aggs_for_vecs_17-1.4.1-1PGSTY.el10.aarch64.rpm pigsty 1.4.1 94.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_17-1.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb pigsty 1.4.1 82.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb pigsty 1.4.1 81.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb pigsty 1.4.1 93.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb pigsty 1.4.1 93.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb pigsty 1.4.1 84.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb pigsty 1.4.1 86.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb pigsty 1.4.1 86.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-aggs-for-vecs postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb pigsty 1.4.1 88.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-17-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el8.x86_64.rpm pigsty 1.4.1 93.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_16-1.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el8.aarch64.rpm pigsty 1.4.1 93.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_16-1.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el9.x86_64.rpm pigsty 1.4.1 93.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_16-1.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el9.aarch64.rpm pigsty 1.4.1 94.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_16-1.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el10.x86_64.rpm pigsty 1.4.1 93.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_16-1.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 aggs_for_vecs_16 aggs_for_vecs_16-1.4.1-1PGSTY.el10.aarch64.rpm pigsty 1.4.1 94.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_16-1.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb pigsty 1.4.1 82.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb pigsty 1.4.1 93.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb pigsty 1.4.1 93.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb pigsty 1.4.1 85.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb pigsty 1.4.1 86.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb pigsty 1.4.1 86.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-aggs-for-vecs postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb pigsty 1.4.1 88.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-16-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el8.x86_64.rpm pigsty 1.4.1 93.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_vecs_15-1.4.1-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el8.aarch64.rpm pigsty 1.4.1 93.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_vecs_15-1.4.1-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el9.x86_64.rpm pigsty 1.4.1 93.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_vecs_15-1.4.1-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el9.aarch64.rpm pigsty 1.4.1 94.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/aggs_for_vecs_15-1.4.1-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el10.x86_64.rpm pigsty 1.4.1 94.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/aggs_for_vecs_15-1.4.1-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 aggs_for_vecs_15 aggs_for_vecs_15-1.4.1-1PGSTY.el10.aarch64.rpm pigsty 1.4.1 94.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/aggs_for_vecs_15-1.4.1-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb pigsty 1.4.1 82.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb pigsty 1.4.1 82.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb pigsty 1.4.1 82.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb pigsty 1.4.1 82.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb pigsty 1.4.1 93.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb pigsty 1.4.1 93.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb pigsty 1.4.1 85.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb pigsty 1.4.1 86.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb pigsty 1.4.1 86.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-aggs-for-vecs postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb pigsty 1.4.1 88.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-vecs/postgresql-15-aggs-for-vecs_1.4.1-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +170,27 @@ pig install aggs_for_vecs;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y aggs_for_vecs -v 19  # PG 19
 pig ext install -y aggs_for_vecs -v 18  # PG 18
 pig ext install -y aggs_for_vecs -v 17  # PG 17
 pig ext install -y aggs_for_vecs -v 16  # PG 16
 pig ext install -y aggs_for_vecs -v 15  # PG 15
-pig ext install -y aggs_for_vecs -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y aggs_for_vecs_19       # PG 19
 dnf install -y aggs_for_vecs_18       # PG 18
 dnf install -y aggs_for_vecs_17       # PG 17
 dnf install -y aggs_for_vecs_16       # PG 16
 dnf install -y aggs_for_vecs_15       # PG 15
-dnf install -y aggs_for_vecs_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-aggs-for-vecs   # PG 19
 apt install -y postgresql-18-aggs-for-vecs   # PG 18
 apt install -y postgresql-17-aggs-for-vecs   # PG 17
 apt install -y postgresql-16-aggs-for-vecs   # PG 16
 apt install -y postgresql-15-aggs-for-vecs   # PG 15
-apt install -y postgresql-14-aggs-for-vecs   # PG 14
 ```
 
 

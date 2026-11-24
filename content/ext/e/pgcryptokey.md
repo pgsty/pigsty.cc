@@ -45,20 +45,20 @@ weight: 7320
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.85` | {{< pgvers "18,17,16,15,14" >}} | `pgcryptokey` | `pgcrypto` |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.85` | {{< pgvers "18,17,16,15,14" >}} | `pgcryptokey_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.85` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgcryptokey` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.85` | {{< pgvers "19,18,17,16,15" >}} | `pgcryptokey` | `pgcrypto` |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.85` | {{< pgvers "19,18,17,16,15" >}} | `pgcryptokey_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.85` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgcryptokey` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 |
-| el8.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
-| el10.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
-| el10.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
+| el9.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 |
+| el9.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 |
+| el10.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 | AVAIL PGDG 0.85 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 5 | AVAIL PGDG 0.85 5 | AVAIL PGDG 0.85 5 |
 | d12.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
@@ -69,125 +69,117 @@ weight: 7320
 | u24.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
-@ el8.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el8.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_18-0.85-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el8.aarch64.rpm pigsty 0.85 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_18-0.85-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el9.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_18-0.85-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el9.aarch64.rpm pigsty 0.85 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_18-0.85-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_18-0.85-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_18-0.85-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 pgcryptokey_19 pgcryptokey_19-0.85-1PGSTY.el9.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_19-0.85-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pgcryptokey_19 pgcryptokey_19-0.85-1PGSTY.el9.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_19-0.85-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pgcryptokey_19 pgcryptokey_19-0.85-1PGSTY.el10.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_19-0.85-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pgcryptokey_19 pgcryptokey_19-0.85-1PGSTY.el10.aarch64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_19-0.85-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~noble_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~noble_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgcryptokey postgresql-19-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-19-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el8.x86_64.rpm pigsty 0.85 22.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_18-0.85-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el8.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_18-0.85-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el9.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_18-0.85-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el9.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_18-0.85-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el10.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_18-0.85-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgcryptokey_18 pgcryptokey_18-0.85-1PGSTY.el10.aarch64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_18-0.85-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~noble_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~noble_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgcryptokey postgresql-18-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-18-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel8.10.x86_64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgcryptokey_17-0.85-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-6PGDG.rhel8.x86_64.rpm pgdg 0.85 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgcryptokey_17-0.85-6PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el8.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_17-0.85-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el8.x86_64.rpm pigsty 0.85 21.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_17-0.85-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel8.10.aarch64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgcryptokey_17-0.85-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-6PGDG.rhel8.aarch64.rpm pgdg 0.85 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgcryptokey_17-0.85-6PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el8.aarch64.rpm pigsty 0.85 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_17-0.85-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-10PGDG.rhel9.8.x86_64.rpm pgdg 0.85 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgcryptokey_17-0.85-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-6PGDG.rhel9.x86_64.rpm pgdg 0.85 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgcryptokey_17-0.85-6PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el9.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_17-0.85-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-10PGDG.rhel9.8.aarch64.rpm pgdg 0.85 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgcryptokey_17-0.85-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-6PGDG.rhel9.aarch64.rpm pgdg 0.85 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgcryptokey_17-0.85-6PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el9.aarch64.rpm pigsty 0.85 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_17-0.85-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-10PGDG.rhel10.2.x86_64.rpm pgdg 0.85 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgcryptokey_17-0.85-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-8PGDG.rhel10.x86_64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgcryptokey_17-0.85-8PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_17-0.85-1PIGSTY.el10.x86_64.rpm
+@ el8.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el8.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_17-0.85-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel9.9.x86_64.rpm pgdg 0.85 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgcryptokey_17-0.85-13PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el9.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_17-0.85-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel9.9.aarch64.rpm pgdg 0.85 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgcryptokey_17-0.85-13PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el9.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_17-0.85-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel10.3.x86_64.rpm pgdg 0.85 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgcryptokey_17-0.85-13PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el10.x86_64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_17-0.85-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel10.3.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgcryptokey_17-0.85-13PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-13PGDG.rhel10.2.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgcryptokey_17-0.85-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-10PGDG.rhel10.2.aarch64.rpm pgdg 0.85 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgcryptokey_17-0.85-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-8PGDG.rhel10.aarch64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgcryptokey_17-0.85-8PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_17-0.85-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 17 pgcryptokey_17 pgcryptokey_17-0.85-1PGSTY.el10.aarch64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_17-0.85-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb pigsty 0.85 11.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~noble_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~noble_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgcryptokey postgresql-17-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-17-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel8.10.x86_64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgcryptokey_16-0.85-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-5PGDG.rhel8.x86_64.rpm pgdg 0.85 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgcryptokey_16-0.85-5PGDG.rhel8.x86_64.rpm
-@ el8.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el8.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_16-0.85-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el8.x86_64.rpm pigsty 0.85 21.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_16-0.85-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel8.10.aarch64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgcryptokey_16-0.85-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-5PGDG.rhel8.aarch64.rpm pgdg 0.85 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgcryptokey_16-0.85-5PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el8.aarch64.rpm pigsty 0.85 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_16-0.85-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-10PGDG.rhel9.8.x86_64.rpm pgdg 0.85 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgcryptokey_16-0.85-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-5PGDG.rhel9.x86_64.rpm pgdg 0.85 17.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgcryptokey_16-0.85-5PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el9.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_16-0.85-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-10PGDG.rhel9.8.aarch64.rpm pgdg 0.85 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgcryptokey_16-0.85-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-5PGDG.rhel9.aarch64.rpm pgdg 0.85 17.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgcryptokey_16-0.85-5PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el9.aarch64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_16-0.85-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-10PGDG.rhel10.2.x86_64.rpm pgdg 0.85 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgcryptokey_16-0.85-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-8PGDG.rhel10.x86_64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgcryptokey_16-0.85-8PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_16-0.85-1PIGSTY.el10.x86_64.rpm
+@ el8.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el8.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_16-0.85-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel9.9.x86_64.rpm pgdg 0.85 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgcryptokey_16-0.85-13PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el9.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_16-0.85-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel9.9.aarch64.rpm pgdg 0.85 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgcryptokey_16-0.85-13PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el9.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_16-0.85-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel10.3.x86_64.rpm pgdg 0.85 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgcryptokey_16-0.85-13PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el10.x86_64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_16-0.85-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel10.3.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgcryptokey_16-0.85-13PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-13PGDG.rhel10.2.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgcryptokey_16-0.85-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-10PGDG.rhel10.2.aarch64.rpm pgdg 0.85 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgcryptokey_16-0.85-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-8PGDG.rhel10.aarch64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgcryptokey_16-0.85-8PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_16-0.85-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 16 pgcryptokey_16 pgcryptokey_16-0.85-1PGSTY.el10.aarch64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_16-0.85-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~noble_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~noble_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgcryptokey postgresql-16-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-16-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel8.10.x86_64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgcryptokey_15-0.85-13PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-3.rhel8.x86_64.rpm pgdg 0.85 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgcryptokey_15-0.85-3.rhel8.x86_64.rpm
-@ el8.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el8.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_15-0.85-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el8.x86_64.rpm pigsty 0.85 21.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_15-0.85-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel8.10.aarch64.rpm pgdg 0.85 19.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgcryptokey_15-0.85-13PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-3.rhel8.aarch64.rpm pgdg 0.85 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgcryptokey_15-0.85-3.rhel8.aarch64.rpm
-@ el8.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el8.aarch64.rpm pigsty 0.85 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_15-0.85-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-10PGDG.rhel9.8.x86_64.rpm pgdg 0.85 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgcryptokey_15-0.85-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-3.rhel9.x86_64.rpm pgdg 0.85 22.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgcryptokey_15-0.85-3.rhel9.x86_64.rpm
-@ el9.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el9.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_15-0.85-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-10PGDG.rhel9.8.aarch64.rpm pgdg 0.85 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgcryptokey_15-0.85-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-3.rhel9.aarch64.rpm pgdg 0.85 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgcryptokey_15-0.85-3.rhel9.aarch64.rpm
-@ el9.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el9.aarch64.rpm pigsty 0.85 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_15-0.85-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-10PGDG.rhel10.2.x86_64.rpm pgdg 0.85 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgcryptokey_15-0.85-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-8PGDG.rhel10.x86_64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgcryptokey_15-0.85-8PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_15-0.85-1PIGSTY.el10.x86_64.rpm
+@ el8.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el8.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_15-0.85-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel9.9.x86_64.rpm pgdg 0.85 18.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgcryptokey_15-0.85-13PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el9.x86_64.rpm pigsty 0.85 22.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_15-0.85-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel9.9.aarch64.rpm pgdg 0.85 18.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgcryptokey_15-0.85-13PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el9.aarch64.rpm pigsty 0.85 22.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_15-0.85-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel10.3.x86_64.rpm pgdg 0.85 18.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgcryptokey_15-0.85-13PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el10.x86_64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_15-0.85-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel10.3.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgcryptokey_15-0.85-13PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-13PGDG.rhel10.2.aarch64.rpm pgdg 0.85 18.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgcryptokey_15-0.85-13PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-10PGDG.rhel10.2.aarch64.rpm pgdg 0.85 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgcryptokey_15-0.85-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-8PGDG.rhel10.aarch64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgcryptokey_15-0.85-8PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_15-0.85-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-3.rhel8.x86_64.rpm pgdg 0.85 22.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgcryptokey_14-0.85-3.rhel8.x86_64.rpm
-@ el8.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el8.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcryptokey_14-0.85-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-3.rhel8.aarch64.rpm pgdg 0.85 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgcryptokey_14-0.85-3.rhel8.aarch64.rpm
-@ el8.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el8.aarch64.rpm pigsty 0.85 17.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcryptokey_14-0.85-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel9.8.x86_64.rpm pgdg 0.85 17.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgcryptokey_14-0.85-10PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el9.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcryptokey_14-0.85-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel9.8.aarch64.rpm pgdg 0.85 17.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgcryptokey_14-0.85-10PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-3.rhel9.aarch64.rpm pgdg 0.85 22.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgcryptokey_14-0.85-3.rhel9.aarch64.rpm
-@ el9.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el9.aarch64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcryptokey_14-0.85-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel10.2.x86_64.rpm pgdg 0.85 17.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgcryptokey_14-0.85-10PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-8PGDG.rhel10.x86_64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgcryptokey_14-0.85-8PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_14-0.85-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel10.2.aarch64.rpm pgdg 0.85 17.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgcryptokey_14-0.85-10PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-8PGDG.rhel10.aarch64.rpm pgdg 0.85 17.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgcryptokey_14-0.85-8PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_14-0.85-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~resolute_arm64.deb
+@ el10.aarch64 15 pgcryptokey_15 pgcryptokey_15-0.85-1PGSTY.el10.aarch64.rpm pigsty 0.85 22.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_15-0.85-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb pigsty 0.85 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~noble_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~noble_arm64.deb pigsty 0.85 11.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb pigsty 0.85 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgcryptokey postgresql-15-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb pigsty 0.85 11.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgcryptokey/postgresql-15-pgcryptokey_0.85-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -214,27 +206,27 @@ pig install pgcryptokey;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgcryptokey -v 19  # PG 19
 pig ext install -y pgcryptokey -v 18  # PG 18
 pig ext install -y pgcryptokey -v 17  # PG 17
 pig ext install -y pgcryptokey -v 16  # PG 16
 pig ext install -y pgcryptokey -v 15  # PG 15
-pig ext install -y pgcryptokey -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgcryptokey_19       # PG 19
 dnf install -y pgcryptokey_18       # PG 18
 dnf install -y pgcryptokey_17       # PG 17
 dnf install -y pgcryptokey_16       # PG 16
 dnf install -y pgcryptokey_15       # PG 15
-dnf install -y pgcryptokey_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgcryptokey   # PG 19
 apt install -y postgresql-18-pgcryptokey   # PG 18
 apt install -y postgresql-17-pgcryptokey   # PG 17
 apt install -y postgresql-16-pgcryptokey   # PG 16
 apt install -y postgresql-15-pgcryptokey   # PG 15
-apt install -y postgresql-14-pgcryptokey   # PG 14
 ```
 
 

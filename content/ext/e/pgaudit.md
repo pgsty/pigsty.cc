@@ -11,10 +11,10 @@ weight: 7100
     <div class="ext-card__title">pgaudit/pgaudit</div>
     <div class="ext-card__desc">https://github.com/pgaudit/pgaudit</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgaudit-1.6.3.tar.gz pgaudit-1.7.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgaudit-1.7.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgaudit-1.6.3.tar.gz pgaudit-1.7.1.tar.gz</div>
-    <div class="ext-card__desc">pgaudit-1.6.3.tar.gz pgaudit-1.7.1.tar.gz</div>
+    <div class="ext-card__title">pgaudit-1.7.2.tar.gz</div>
+    <div class="ext-card__desc">pgaudit-1.7.2.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgaudit`**](/ext/e/pgaudit) | `18.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgaudit`**](/ext/e/pgaudit) | `19.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,140 +45,248 @@ weight: 7100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `18.0` | {{< pgvers "18,17,16,15,14" >}} | `pgaudit` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `18.0` | {{< pgvers "18,17,16,15,14" >}} | `pgaudit_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `18.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgaudit` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `19.0` | {{< pgvers "19,18,17,16,15" >}} | `pgaudit` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `19.0` | {{< pgvers "19,18,17,16,15" >}} | `pgaudit_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `19.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgaudit` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| el8.aarch64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| el9.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 3 | AVAIL PGDG 16.1 3 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| el9.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 3 | AVAIL PGDG 16.1 3 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| el10.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| el10.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PIGSTY 1.7.1 1 | AVAIL PIGSTY 1.6.3 1 |
-| d12.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| d12.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| d13.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| d13.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u22.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u22.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u24.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u24.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u26.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
-| u26.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 4 | AVAIL PGDG 16.2 4 | AVAIL PIGSTY 1.7.2 1 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 4 | AVAIL PGDG 16.2 4 | AVAIL PIGSTY 1.7.2 1 |
+| el9.x86_64 | AVAIL PGDG 19.0 1 | AVAIL PGDG 18.1 2 | AVAIL PGDG 17.2 2 | AVAIL PGDG 16.2 2 | AVAIL PIGSTY 1.7.2 1 |
+| el9.aarch64 | AVAIL PGDG 19.0 1 | AVAIL PGDG 18.1 2 | AVAIL PGDG 17.2 2 | AVAIL PGDG 16.2 2 | AVAIL PIGSTY 1.7.2 1 |
+| el10.x86_64 | AVAIL PGDG 19.0 1 | AVAIL PGDG 18.1 2 | AVAIL PGDG 17.2 2 | AVAIL PGDG 16.2 2 | AVAIL PIGSTY 1.7.2 1 |
+| el10.aarch64 | AVAIL PGDG 19.0 1 | AVAIL PGDG 18.1 6 | AVAIL PGDG 17.2 6 | AVAIL PGDG 16.2 6 | AVAIL PIGSTY 1.7.2 1 |
+| d12.x86_64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| d12.aarch64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| d13.x86_64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| d13.aarch64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u22.x86_64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u22.aarch64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u24.x86_64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u24.aarch64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u26.x86_64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+| u26.aarch64 | AVAIL PGDG 19.0 3 | AVAIL PGDG 18.1 3 | AVAIL PGDG 17.2 3 | AVAIL PGDG 16.2 3 | AVAIL PGDG 1.7.2 3 |
+@ el9.x86_64 19 pgaudit_19 pgaudit_19-19.0-1PGDG.rhel9.9.x86_64.rpm pgdg 19.0 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pgaudit_19-19.0-1PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 19 pgaudit_19 pgaudit_19-19.0-1PGDG.rhel9.9.aarch64.rpm pgdg 19.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pgaudit_19-19.0-1PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 19 pgaudit_19 pgaudit_19-19.0-1PGDG.rhel10.3.x86_64.rpm pgdg 19.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pgaudit_19-19.0-1PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 19 pgaudit_19 pgaudit_19-19.0-1PGDG.rhel10.3.aarch64.rpm pgdg 19.0 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pgaudit_19-19.0-1PGDG.rhel10.3.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg12+1_amd64.deb pgdg 19.0 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg12+1_amd64.deb
+@ d12.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg12+2_amd64.deb pgdg 19 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg12+2_amd64.deb
+@ d12.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg12+1_amd64.deb pgdg 19 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg12+1_arm64.deb pgdg 19.0 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg12+1_arm64.deb
+@ d12.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg12+2_arm64.deb pgdg 19 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg12+2_arm64.deb
+@ d12.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg12+1_arm64.deb pgdg 19 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg13+1_amd64.deb pgdg 19.0 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg13+1_amd64.deb
+@ d13.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg13+2_amd64.deb pgdg 19 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg13+2_amd64.deb
+@ d13.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg13+1_amd64.deb pgdg 19 47.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg13+1_arm64.deb pgdg 19.0 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg13+1_arm64.deb
+@ d13.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg13+2_arm64.deb pgdg 19 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg13+2_arm64.deb
+@ d13.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg13+1_arm64.deb pgdg 19 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg22.04+1_amd64.deb pgdg 19.0 49.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg22.04+2_amd64.deb pgdg 19 49.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg22.04+2_amd64.deb
+@ u22.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg22.04+1_amd64.deb pgdg 19 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg22.04+1_arm64.deb pgdg 19.0 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg22.04+2_arm64.deb pgdg 19 48.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg22.04+2_arm64.deb
+@ u22.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg22.04+1_arm64.deb pgdg 19 48.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg24.04+1_amd64.deb pgdg 19.0 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg24.04+2_amd64.deb pgdg 19 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg24.04+2_amd64.deb
+@ u24.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg24.04+1_amd64.deb pgdg 19 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg24.04+1_arm64.deb pgdg 19.0 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg24.04+2_arm64.deb pgdg 19 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg24.04+2_arm64.deb
+@ u24.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg24.04+1_arm64.deb pgdg 19 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg26.04+1_amd64.deb pgdg 19.0 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg26.04+2_amd64.deb pgdg 19 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg26.04+2_amd64.deb
+@ u26.x86_64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg26.04+1_amd64.deb pgdg 19 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19.0-1.pgdg26.04+1_arm64.deb pgdg 19.0 46.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19.0-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg26.04+2_arm64.deb pgdg 19 46.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg26.04+2_arm64.deb
+@ u26.aarch64 19 postgresql-19-pgaudit postgresql-19-pgaudit_19~rc1-1.pgdg26.04+1_arm64.deb pgdg 19 46.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-19/postgresql-19-pgaudit_19~rc1-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel8.10.x86_64.rpm pgdg 18.1 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgaudit_18-18.1-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel8.10.x86_64.rpm pgdg 18.0 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgaudit_18-18.0-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel8.x86_64.rpm pgdg 18.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgaudit_18-18.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel8.10.aarch64.rpm pgdg 18.1 29.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgaudit_18-18.1-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel8.10.aarch64.rpm pgdg 18.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgaudit_18-18.0-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel8.aarch64.rpm pgdg 18.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgaudit_18-18.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pgaudit_18 pgaudit_18-18.0-4PGDG.rhel9.8.x86_64.rpm pgdg 18.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgaudit_18-18.0-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel9.x86_64.rpm pgdg 18.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgaudit_18-18.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pgaudit_18 pgaudit_18-18.0-4PGDG.rhel9.8.aarch64.rpm pgdg 18.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgaudit_18-18.0-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel9.aarch64.rpm pgdg 18.0 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgaudit_18-18.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pgaudit_18 pgaudit_18-18.0-4PGDG.rhel10.2.x86_64.rpm pgdg 18.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgaudit_18-18.0-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel10.x86_64.rpm pgdg 18.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgaudit_18-18.0-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel9.9.x86_64.rpm pgdg 18.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgaudit_18-18.1-1PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel9.9.x86_64.rpm pgdg 18.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgaudit_18-18.0-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel9.9.aarch64.rpm pgdg 18.1 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgaudit_18-18.1-1PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel9.9.aarch64.rpm pgdg 18.0 28.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgaudit_18-18.0-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel10.3.x86_64.rpm pgdg 18.1 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgaudit_18-18.1-1PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel10.3.x86_64.rpm pgdg 18.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgaudit_18-18.0-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel10.3.aarch64.rpm pgdg 18.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.1-1PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pgaudit_18 pgaudit_18-18.1-1PGDG.rhel10.2.aarch64.rpm pgdg 18.1 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.1-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel10.3.aarch64.rpm pgdg 18.0 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.0-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 18 pgaudit_18 pgaudit_18-18.0-9PGDG.rhel10.2.aarch64.rpm pgdg 18.0 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.0-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgaudit_18 pgaudit_18-18.0-4PGDG.rhel10.2.aarch64.rpm pgdg 18.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel10.aarch64.rpm pgdg 18.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgaudit_18-18.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg12+1_amd64.deb pgdg 18.1 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg12+1_amd64.deb
+@ d12.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg12+2_amd64.deb pgdg 18.0 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg12+2_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg12+1_amd64.deb pgdg 18.0 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg12+1_amd64.deb pgdg 18.0 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg12+1_arm64.deb pgdg 18.1 47.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg12+1_arm64.deb
+@ d12.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg12+2_arm64.deb pgdg 18.0 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg12+2_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg12+1_arm64.deb pgdg 18.0 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg12+1_arm64.deb pgdg 18.0 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg13+1_amd64.deb pgdg 18.1 48.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg13+1_amd64.deb
+@ d13.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg13+2_amd64.deb pgdg 18.0 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg13+2_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg13+1_amd64.deb pgdg 18.0 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg13+1_amd64.deb pgdg 18.0 47.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg13+1_arm64.deb pgdg 18.1 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg13+1_arm64.deb
+@ d13.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg13+2_arm64.deb pgdg 18.0 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg13+2_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg13+1_arm64.deb pgdg 18.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg13+1_arm64.deb pgdg 18.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg22.04+1_amd64.deb pgdg 18.1 49.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg22.04+2_amd64.deb pgdg 18.0 48.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg22.04+2_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg22.04+1_amd64.deb pgdg 18.0 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg22.04+1_amd64.deb pgdg 18.0 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg22.04+1_arm64.deb pgdg 18.1 49.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg22.04+2_arm64.deb pgdg 18.0 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg22.04+2_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg22.04+1_arm64.deb pgdg 18.0 48.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg22.04+1_arm64.deb pgdg 18.0 47.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg24.04+1_amd64.deb pgdg 18.1 48.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg24.04+2_amd64.deb pgdg 18.0 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg24.04+2_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg24.04+1_amd64.deb pgdg 18.0 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg24.04+1_amd64.deb pgdg 18.0 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg24.04+1_arm64.deb pgdg 18.1 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg24.04+2_arm64.deb pgdg 18.0 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg24.04+2_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg24.04+1_arm64.deb pgdg 18.0 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg24.04+1_arm64.deb pgdg 18.0 46.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg26.04+1_amd64.deb pgdg 18.1 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg26.04+2_amd64.deb pgdg 18.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg26.04+2_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg26.04+1_amd64.deb pgdg 18.0 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg26.04+1_amd64.deb pgdg 18.0 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.1-1.pgdg26.04+1_arm64.deb pgdg 18.1 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg26.04+2_arm64.deb pgdg 18.0 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg26.04+2_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-3.pgdg26.04+1_arm64.deb pgdg 18.0 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-3.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg26.04+1_arm64.deb pgdg 18.0 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel8.10.x86_64.rpm pgdg 17.2 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.2-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel8.10.x86_64.rpm pgdg 17.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.1-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel8.x86_64.rpm pgdg 17.1 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgaudit_17 pgaudit_17-17.0-1PGDG.rhel8.x86_64.rpm pgdg 17.0 27.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel8.10.aarch64.rpm pgdg 17.2 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgaudit_17-17.2-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel8.10.aarch64.rpm pgdg 17.1 28.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgaudit_17-17.1-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel8.aarch64.rpm pgdg 17.1 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgaudit_17-17.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgaudit_17 pgaudit_17-17.0-1PGDG.rhel8.aarch64.rpm pgdg 17.0 27.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgaudit_17-17.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pgaudit_17 pgaudit_17-17.1-4PGDG.rhel9.8.x86_64.rpm pgdg 17.1 28.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgaudit_17-17.1-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel9.x86_64.rpm pgdg 17.1 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgaudit_17-17.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pgaudit_17 pgaudit_17-17.0-1PGDG.rhel9.x86_64.rpm pgdg 17.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgaudit_17-17.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pgaudit_17 pgaudit_17-17.1-4PGDG.rhel9.8.aarch64.rpm pgdg 17.1 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgaudit_17-17.1-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel9.aarch64.rpm pgdg 17.1 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgaudit_17-17.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pgaudit_17 pgaudit_17-17.0-1PGDG.rhel9.aarch64.rpm pgdg 17.0 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgaudit_17-17.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pgaudit_17 pgaudit_17-17.1-4PGDG.rhel10.2.x86_64.rpm pgdg 17.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgaudit_17-17.1-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel10.x86_64.rpm pgdg 17.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgaudit_17-17.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel9.9.x86_64.rpm pgdg 17.2 30.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgaudit_17-17.2-1PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel9.9.x86_64.rpm pgdg 17.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgaudit_17-17.1-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel9.9.aarch64.rpm pgdg 17.2 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgaudit_17-17.2-1PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel9.9.aarch64.rpm pgdg 17.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgaudit_17-17.1-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel10.3.x86_64.rpm pgdg 17.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgaudit_17-17.2-1PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel10.3.x86_64.rpm pgdg 17.1 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgaudit_17-17.1-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel10.3.aarch64.rpm pgdg 17.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.2-1PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgaudit_17 pgaudit_17-17.2-1PGDG.rhel10.2.aarch64.rpm pgdg 17.2 30.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel10.3.aarch64.rpm pgdg 17.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.1-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 17 pgaudit_17 pgaudit_17-17.1-9PGDG.rhel10.2.aarch64.rpm pgdg 17.1 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.1-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgaudit_17 pgaudit_17-17.1-4PGDG.rhel10.2.aarch64.rpm pgdg 17.1 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel10.aarch64.rpm pgdg 17.1 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgaudit_17-17.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg12+1_amd64.deb pgdg 17.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg12+1_amd64.deb
+@ d12.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg12+2_amd64.deb pgdg 17.1 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg12+2_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg12+1_amd64.deb pgdg 17.1 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg12+1_arm64.deb pgdg 17.2 47.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg12+1_arm64.deb
+@ d12.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg12+2_arm64.deb pgdg 17.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg12+2_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg12+1_arm64.deb pgdg 17.1 45.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg13+1_amd64.deb pgdg 17.2 47.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg13+1_amd64.deb
+@ d13.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg13+2_amd64.deb pgdg 17.1 46.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg13+2_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg13+1_amd64.deb pgdg 17.1 46.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg13+1_arm64.deb pgdg 17.2 47.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg13+1_arm64.deb
+@ d13.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg13+2_arm64.deb pgdg 17.1 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg13+2_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg13+1_arm64.deb pgdg 17.1 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg22.04+1_amd64.deb pgdg 17.2 53.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg22.04+2_amd64.deb pgdg 17.1 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg22.04+1_amd64.deb pgdg 17.1 52.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg22.04+1_arm64.deb pgdg 17.2 53.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg22.04+2_arm64.deb pgdg 17.1 52.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg22.04+1_arm64.deb pgdg 17.1 52.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg24.04+1_amd64.deb pgdg 17.2 47.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+2_amd64.deb pgdg 17.1 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+1_amd64.deb pgdg 17.1 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg24.04+1_arm64.deb pgdg 17.2 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+2_arm64.deb pgdg 17.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+1_arm64.deb pgdg 17.1 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg26.04+1_amd64.deb pgdg 17.2 47.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+2_amd64.deb pgdg 17.1 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+1_amd64.deb pgdg 17.1 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.2-1.pgdg26.04+1_arm64.deb pgdg 17.2 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.2-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+2_arm64.deb pgdg 17.1 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+1_arm64.deb pgdg 17.1 45.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel8.10.x86_64.rpm pgdg 16.2 29.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.2-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel8.10.x86_64.rpm pgdg 16.1 28.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.1-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel8.x86_64.rpm pgdg 16.1 27.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgaudit_16 pgaudit_16-16.0-1PGDG.rhel8.x86_64.rpm pgdg 16.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel8.10.aarch64.rpm pgdg 16.2 29.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgaudit_16-16.2-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel8.10.aarch64.rpm pgdg 16.1 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgaudit_16-16.1-9PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel8.aarch64.rpm pgdg 16.1 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgaudit_16-16.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgaudit_16 pgaudit_16-16.0-1PGDG.rhel8.aarch64.rpm pgdg 16.0 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgaudit_16-16.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pgaudit_16 pgaudit_16-16.1-4PGDG.rhel9.8.x86_64.rpm pgdg 16.1 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgaudit_16-16.1-4PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel9.x86_64.rpm pgdg 16.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgaudit_16-16.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pgaudit_16 pgaudit_16-16.0-1PGDG.rhel9.x86_64.rpm pgdg 16.0 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgaudit_16-16.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pgaudit_16 pgaudit_16-16.1-4PGDG.rhel9.8.aarch64.rpm pgdg 16.1 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgaudit_16-16.1-4PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel9.aarch64.rpm pgdg 16.1 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgaudit_16-16.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pgaudit_16 pgaudit_16-16.0-1PGDG.rhel9.aarch64.rpm pgdg 16.0 26.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgaudit_16-16.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pgaudit_16 pgaudit_16-16.1-4PGDG.rhel10.2.x86_64.rpm pgdg 16.1 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgaudit_16-16.1-4PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel10.x86_64.rpm pgdg 16.1 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgaudit_16-16.1-1PGDG.rhel10.x86_64.rpm
+@ el9.x86_64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel9.9.x86_64.rpm pgdg 16.2 30.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgaudit_16-16.2-1PGDG.rhel9.9.x86_64.rpm
+@ el9.x86_64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel9.9.x86_64.rpm pgdg 16.1 28.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgaudit_16-16.1-9PGDG.rhel9.9.x86_64.rpm
+@ el9.aarch64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel9.9.aarch64.rpm pgdg 16.2 29.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgaudit_16-16.2-1PGDG.rhel9.9.aarch64.rpm
+@ el9.aarch64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel9.9.aarch64.rpm pgdg 16.1 28.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgaudit_16-16.1-9PGDG.rhel9.9.aarch64.rpm
+@ el10.x86_64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel10.3.x86_64.rpm pgdg 16.2 30.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgaudit_16-16.2-1PGDG.rhel10.3.x86_64.rpm
+@ el10.x86_64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel10.3.x86_64.rpm pgdg 16.1 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgaudit_16-16.1-9PGDG.rhel10.3.x86_64.rpm
+@ el10.aarch64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel10.3.aarch64.rpm pgdg 16.2 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.2-1PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgaudit_16 pgaudit_16-16.2-1PGDG.rhel10.2.aarch64.rpm pgdg 16.2 30.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel10.3.aarch64.rpm pgdg 16.1 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.1-9PGDG.rhel10.3.aarch64.rpm
+@ el10.aarch64 16 pgaudit_16 pgaudit_16-16.1-9PGDG.rhel10.2.aarch64.rpm pgdg 16.1 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.1-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgaudit_16 pgaudit_16-16.1-4PGDG.rhel10.2.aarch64.rpm pgdg 16.1 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.1-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel10.aarch64.rpm pgdg 16.1 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgaudit_16-16.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg12+1_amd64.deb pgdg 16.2 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg12+1_amd64.deb
+@ d12.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg12+2_amd64.deb pgdg 16.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg12+2_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg12+1_amd64.deb pgdg 16.1 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg12+1_arm64.deb pgdg 16.2 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg12+1_arm64.deb
+@ d12.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg12+2_arm64.deb pgdg 16.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg12+2_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg12+1_arm64.deb pgdg 16.1 44.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg13+1_amd64.deb pgdg 16.2 46.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg13+1_amd64.deb
+@ d13.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg13+2_amd64.deb pgdg 16.1 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg13+2_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg13+1_amd64.deb pgdg 16.1 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg13+1_arm64.deb pgdg 16.2 46.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg13+1_arm64.deb
+@ d13.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg13+2_arm64.deb pgdg 16.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg13+2_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg13+1_arm64.deb pgdg 16.1 45.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg22.04+1_amd64.deb pgdg 16.2 52.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg22.04+2_amd64.deb pgdg 16.1 51.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg22.04+1_amd64.deb pgdg 16.1 51.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg22.04+1_arm64.deb pgdg 16.2 51.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg22.04+2_arm64.deb pgdg 16.1 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg22.04+1_arm64.deb pgdg 16.1 50.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg24.04+1_amd64.deb pgdg 16.2 46.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+2_amd64.deb pgdg 16.1 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+1_amd64.deb pgdg 16.1 45.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg24.04+1_arm64.deb pgdg 16.2 46.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+2_arm64.deb pgdg 16.1 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+1_arm64.deb pgdg 16.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg26.04+1_amd64.deb pgdg 16.2 46.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+2_amd64.deb pgdg 16.1 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+1_amd64.deb pgdg 16.1 45.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.2-1.pgdg26.04+1_arm64.deb pgdg 16.2 45.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.2-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+2_arm64.deb pgdg 16.1 44.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+1_arm64.deb pgdg 16.1 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el8.x86_64.rpm pigsty 1.7.1 50.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgaudit_15-1.7.1-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el8.aarch64.rpm pigsty 1.7.1 50.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgaudit_15-1.7.1-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el9.x86_64.rpm pigsty 1.7.1 51.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgaudit_15-1.7.1-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el9.aarch64.rpm pigsty 1.7.1 51.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgaudit_15-1.7.1-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el10.x86_64.rpm pigsty 1.7.1 51.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgaudit_15-1.7.1-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgaudit_15 pgaudit_15-1.7.1-1PGSTY.el10.aarch64.rpm pigsty 1.7.1 51.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgaudit_15-1.7.1-1PGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el8.x86_64.rpm pigsty 1.7.2 52.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgaudit_15-1.7.2-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el8.aarch64.rpm pigsty 1.7.2 51.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgaudit_15-1.7.2-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el9.x86_64.rpm pigsty 1.7.2 53.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgaudit_15-1.7.2-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el9.aarch64.rpm pigsty 1.7.2 53.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgaudit_15-1.7.2-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el10.x86_64.rpm pigsty 1.7.2 53.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgaudit_15-1.7.2-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgaudit_15 pgaudit_15-1.7.2-1PGSTY.el10.aarch64.rpm pigsty 1.7.2 53.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgaudit_15-1.7.2-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg12+1_amd64.deb pgdg 1.7.2 45.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg12+1_amd64.deb
+@ d12.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg12+2_amd64.deb pgdg 1.7.1 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg12+2_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg12+1_amd64.deb pgdg 1.7.1 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg12+1_arm64.deb pgdg 1.7.2 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg12+1_arm64.deb
+@ d12.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg12+2_arm64.deb pgdg 1.7.1 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg12+2_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg12+1_arm64.deb pgdg 1.7.1 43.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg13+1_amd64.deb pgdg 1.7.2 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg13+1_amd64.deb
+@ d13.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg13+2_amd64.deb pgdg 1.7.1 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg13+2_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg13+1_amd64.deb pgdg 1.7.1 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg13+1_arm64.deb pgdg 1.7.2 45.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg13+1_arm64.deb
+@ d13.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg13+2_arm64.deb pgdg 1.7.1 43.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg13+2_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg13+1_arm64.deb pgdg 1.7.1 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg22.04+1_amd64.deb pgdg 1.7.2 51.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg22.04+2_amd64.deb pgdg 1.7.1 50.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg22.04+2_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_amd64.deb pgdg 1.7.1 50.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg22.04+1_arm64.deb pgdg 1.7.2 50.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg22.04+2_arm64.deb pgdg 1.7.1 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg22.04+2_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_arm64.deb pgdg 1.7.1 49.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg24.04+1_amd64.deb pgdg 1.7.2 45.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+2_amd64.deb pgdg 1.7.1 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+2_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_amd64.deb pgdg 1.7.1 44.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg24.04+1_arm64.deb pgdg 1.7.2 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+2_arm64.deb pgdg 1.7.1 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+2_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_arm64.deb pgdg 1.7.1 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg26.04+1_amd64.deb pgdg 1.7.2 45.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+2_amd64.deb pgdg 1.7.1 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+2_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_amd64.deb pgdg 1.7.1 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.2-1.pgdg26.04+1_arm64.deb pgdg 1.7.2 44.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.2-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+2_arm64.deb pgdg 1.7.1 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+2_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_arm64.deb pgdg 1.7.1 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el8.x86_64.rpm pigsty 1.6.3 51.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgaudit_14-1.6.3-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el8.aarch64.rpm pigsty 1.6.3 50.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgaudit_14-1.6.3-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el9.x86_64.rpm pigsty 1.6.3 51.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgaudit_14-1.6.3-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el9.aarch64.rpm pigsty 1.6.3 52.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgaudit_14-1.6.3-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el10.x86_64.rpm pigsty 1.6.3 52.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgaudit_14-1.6.3-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgaudit_14 pgaudit_14-1.6.3-1PGSTY.el10.aarch64.rpm pigsty 1.6.3 52.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgaudit_14-1.6.3-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg12+1_amd64.deb pgdg 1.6.3 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg12+1_arm64.deb pgdg 1.6.3 43.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg13+1_amd64.deb pgdg 1.6.3 44.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg13+1_arm64.deb pgdg 1.6.3 43.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_amd64.deb pgdg 1.6.3 49.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_arm64.deb pgdg 1.6.3 48.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_amd64.deb pgdg 1.6.3 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_arm64.deb pgdg 1.6.3 43.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_arm64.deb
-@ u26.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_amd64.deb pgdg 1.6.3 44.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_amd64.deb
-@ u26.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_arm64.deb pgdg 1.6.3 44.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -205,27 +313,27 @@ pig install pgaudit;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgaudit -v 19  # PG 19
 pig ext install -y pgaudit -v 18  # PG 18
 pig ext install -y pgaudit -v 17  # PG 17
 pig ext install -y pgaudit -v 16  # PG 16
 pig ext install -y pgaudit -v 15  # PG 15
-pig ext install -y pgaudit -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgaudit_19       # PG 19
 dnf install -y pgaudit_18       # PG 18
 dnf install -y pgaudit_17       # PG 17
 dnf install -y pgaudit_16       # PG 16
 dnf install -y pgaudit_15       # PG 15
-dnf install -y pgaudit_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgaudit   # PG 19
 apt install -y postgresql-18-pgaudit   # PG 18
 apt install -y postgresql-17-pgaudit   # PG 17
 apt install -y postgresql-16-pgaudit   # PG 16
 apt install -y postgresql-15-pgaudit   # PG 15
-apt install -y postgresql-14-pgaudit   # PG 14
 ```
 
 
@@ -246,11 +354,11 @@ CREATE EXTENSION pgaudit;
 
 来源：
 
-- [pgAudit 18.0 README](https://github.com/pgaudit/pgaudit/blob/18.0/README.md)
-- [PostgreSQL 19 预览版](https://github.com/pgaudit/pgaudit/releases/tag/19rc1)
-- [预览版控制文件](https://github.com/pgaudit/pgaudit/blob/2a7322004a90ebb8cf51d929e3dcf79e791b557e/pgaudit.control)
+- [pgAudit 19.0 README](https://github.com/pgaudit/pgaudit/blob/19.0/README.md)
+- [PostgreSQL 19 发行版](https://github.com/pgaudit/pgaudit/releases/tag/19.0)
+- [发行版控制文件](https://github.com/pgaudit/pgaudit/blob/19.0/pgaudit.control)
 
-`pgaudit` 通过 PostgreSQL 日志记录会话和对象审计事件。应选择匹配服务器的分支：PostgreSQL 18 对应 18.x，17 对应 17.x，16 对应 16.x，15 对应 1.7.x，14 对应 1.6.x。上游 19rc1 是面向 PostgreSQL 19 的预览版，SQL 版本为 19.0；目录中的打包版本仍为稳定的 18.0。
+`pgaudit` 通过 PostgreSQL 日志记录会话和对象事件。应选择匹配服务器的分支：PostgreSQL 19 对应 19.0，18 对应 18.1，17 对应 17.2，16 对应 16.2，15 对应 1.7.2，14 对应 1.6.4。各分支分别针对对应服务器构建，升级 PostgreSQL 不会使旧库自动具备 ABI 兼容性。
 
 ### 启用审计
 
@@ -317,3 +425,7 @@ GRANT SELECT, DELETE
 ### 日志格式
 
 条目为 CSV 格式，包含以下字段：`AUDIT_TYPE`、`STATEMENT_ID`、`SUBSTATEMENT_ID`、`CLASS`、`COMMAND`、`OBJECT_TYPE`、`OBJECT_NAME`、`STATEMENT`、`PARAMETER`。
+
+### 日志边界
+
+审计输出使用尽力而为的 PostgreSQL 日志机制，不具备事务持久性。回滚的语句可能留下记录，已提交事务也不保证具有持久化审计记录。应单独保护和收集日志，不能将其视为事务完整的账本。

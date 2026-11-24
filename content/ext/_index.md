@@ -3,7 +3,7 @@ title: PG 扩展目录
 linkTitle: PG 扩展目录
 icon: fas fa-puzzle-piece
 description: >
-  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、打包、收录并整合了 625 个 PG 生态扩展，供用户开箱即用。
+  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、打包、收录并整合了 627 个 PG 生态扩展，供用户开箱即用。
 weight: 100
 outputs:
   - HTML
@@ -15,7 +15,7 @@ cascade:
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：
 
-- [**已打包扩展目录**](/ext/list)：查阅 [**625 个已打包扩展**](/ext/list) 的详细信息，使用方法，元数据，下载链接与文档
+- [**已打包扩展目录**](/ext/list)：查阅 [**627 个已打包扩展**](/ext/list) 的详细信息，使用方法，元数据，下载链接与文档
 - [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**16 个 Linux 系统**](/ext/os) 上可用
 - [**包管理器**](https://pig.pgsty.com/zh)：使用 [**`pig`**](https://pig.pgsty.com/zh) 命令行工具，屏蔽复杂度与操作系统与架构差异
 
@@ -34,7 +34,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 核心特点
 
-- **数量**：无与伦比的扩展数量：**625 个已打包扩展**，为 PG 扩展生态之最
+- **数量**：无与伦比的扩展数量：**627 个已打包扩展**，为 PG 扩展生态之最
 - **质量**：原生 Linux RPM/DEB 包，完全兼容 PGDG 打包规范
 - **易用**：提供包管理器 [**`pig`**](https://pig.pgsty.com/zh)，屏蔽操作系统与架构差异，开箱即用
 - **兼容**：扩展完全兼容 PGDG 打包规范，可与 PGDG 仓库无缝混用
@@ -46,14 +46,14 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 扩展统计
 
-| **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:------:|:------:|:------:|:------:|:------:|:---:|:------:|:------:|:------:|:------:|:------:|
-| **ALL** | 625 | 147 | 448 | 71 | | 616 | 603 | 585 | 552 | 525 |
-| **EL** | 624 | 144 | 409 | 71 | | 615 | 602 | 584 | 551 | 525 |
-| **Debian** | 618 | 114 | 433 | 71 | | 610 | 596 | 579 | 547 | 523 |
+| **ALL** | 627 | 147 | 448 | 73 | | 515 | 619 | 604 | 586 | 553 |
+| **EL** | 626 | 144 | 409 | 73 | | 449 | 615 | 602 | 586 | 556 |
+| **Debian** | 620 | 114 | 433 | 73 | | 441 | 610 | 596 | 581 | 552 |
 {.ext-table .wide .expand}
 
-> **625** 是已打包扩展总目录口径；EL、Debian/Ubuntu 及各 PostgreSQL 大版本行展示对应平台的实际覆盖数，因此可能少于 625。
+> **627** 是已打包扩展总目录口径；EL、Debian/Ubuntu 及各 PostgreSQL 大版本行展示对应平台的实际覆盖数，因此可能少于 627。
 >
 > 详见：[扩展列表](/ext/list)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)，[归属仓库](/ext/repo)
 
@@ -100,14 +100,14 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 | **系统** | **版本** | **x86_64** | **aarch64** | **PG版本** |
 |:------:|:------:|:----------:|:-----------:|:--------:|
-| `RockyLinux 8` | `8` | [`el8.x86_64`](/ext/os/el8.x86_64) | [`el8.aarch64`](/ext/os/el8.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `RockyLinux 9` | `9` | [`el9.x86_64`](/ext/os/el9.x86_64) | [`el9.aarch64`](/ext/os/el9.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `RockyLinux 10` | `10` | [`el10.x86_64`](/ext/os/el10.x86_64) | [`el10.aarch64`](/ext/os/el10.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `Debian 12` | `12` | [`d12.x86_64`](/ext/os/d12.x86_64) | [`d12.aarch64`](/ext/os/d12.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `Debian 13` | `13` | [`d13.x86_64`](/ext/os/d13.x86_64) | [`d13.aarch64`](/ext/os/d13.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `Ubuntu 22.04` | `22.04` | [`u22.x86_64`](/ext/os/u22.x86_64) | [`u22.aarch64`](/ext/os/u22.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `Ubuntu 24.04` | `24.04` | [`u24.x86_64`](/ext/os/u24.x86_64) | [`u24.aarch64`](/ext/os/u24.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
-| `Ubuntu 26.04` | `26.04` | [`u26.x86_64`](/ext/os/u26.x86_64) | [`u26.aarch64`](/ext/os/u26.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
+| `RockyLinux 8` | `8` | [`el8.x86_64`](/ext/os/el8.x86_64) | [`el8.aarch64`](/ext/os/el8.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `RockyLinux 9` | `9` | [`el9.x86_64`](/ext/os/el9.x86_64) | [`el9.aarch64`](/ext/os/el9.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `RockyLinux 10` | `10` | [`el10.x86_64`](/ext/os/el10.x86_64) | [`el10.aarch64`](/ext/os/el10.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `Debian 12` | `12` | [`d12.x86_64`](/ext/os/d12.x86_64) | [`d12.aarch64`](/ext/os/d12.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `Debian 13` | `13` | [`d13.x86_64`](/ext/os/d13.x86_64) | [`d13.aarch64`](/ext/os/d13.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `Ubuntu 22.04` | `22.04` | [`u22.x86_64`](/ext/os/u22.x86_64) | [`u22.aarch64`](/ext/os/u22.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `Ubuntu 24.04` | `24.04` | [`u24.x86_64`](/ext/os/u24.x86_64) | [`u24.aarch64`](/ext/os/u24.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
+| `Ubuntu 26.04` | `26.04` | [`u26.x86_64`](/ext/os/u26.x86_64) | [`u26.aarch64`](/ext/os/u26.aarch64) | {{< pgvers "19,18,17,16,15" >}} |
 {.ext-table .wide .expand}
 
 > 详见：[操作系统](/ext/os)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)

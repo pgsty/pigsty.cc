@@ -42,30 +42,30 @@ weight: 5920
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15,14" >}} | `pgpool` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15,14" >}} | `pgpool-II-pg$v-extensions` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgpool2` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15" >}} | `pgpool` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15" >}} | `pgpool-II-pg$v-extensions` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.3` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pgpool2` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.7.3 7 | AVAIL PGDG 4.7.3 12 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 21 |
-| el8.aarch64 | AVAIL PGDG 4.7.3 7 | AVAIL PGDG 4.7.3 12 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 17 |
-| el9.x86_64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 19 | AVAIL PGDG 4.7.3 22 | AVAIL PGDG 4.7.3 25 | AVAIL PGDG 4.7.3 27 |
-| el9.aarch64 | AVAIL PGDG 4.7.3 14 | AVAIL PGDG 4.7.3 19 | AVAIL PGDG 4.7.3 22 | AVAIL PGDG 4.7.3 25 | AVAIL PGDG 4.7.3 25 |
-| el10.x86_64 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 |
-| el10.aarch64 | AVAIL PGDG 4.7.3 15 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 | AVAIL PGDG 4.7.3 18 |
-| d12.x86_64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| d12.aarch64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| d13.x86_64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| d13.aarch64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u22.x86_64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u22.aarch64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u24.x86_64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u24.aarch64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u26.x86_64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
-| u26.aarch64 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 8 | AVAIL PGDG 4.7.3 13 | AVAIL PGDG 4.7.3 16 | AVAIL PGDG 4.7.3 19 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 8 | AVAIL PGDG 4.7.3 13 | AVAIL PGDG 4.7.3 16 | AVAIL PGDG 4.7.3 18 |
+| el9.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 |
+| el9.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 |
+| el10.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 | AVAIL PGDG 4.7.3 1 |
+| el10.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 17 | AVAIL PGDG 4.7.3 20 | AVAIL PGDG 4.7.3 20 | AVAIL PGDG 4.7.3 20 |
+| d12.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| d12.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| d13.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| d13.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u22.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u22.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u24.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u24.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u26.x86_64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
+| u26.aarch64 | N/A PGDG - 0 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 | AVAIL PGDG 4.7.3 3 |
 {{< /pgext_matrix >}}
 
 
@@ -88,7 +88,6 @@ pig ext install -y pgpool -v 18  # PG 18
 pig ext install -y pgpool -v 17  # PG 17
 pig ext install -y pgpool -v 16  # PG 16
 pig ext install -y pgpool -v 15  # PG 15
-pig ext install -y pgpool -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
@@ -96,7 +95,6 @@ dnf install -y pgpool-II-pg18-extensions       # PG 18
 dnf install -y pgpool-II-pg17-extensions       # PG 17
 dnf install -y pgpool-II-pg16-extensions       # PG 16
 dnf install -y pgpool-II-pg15-extensions       # PG 15
-dnf install -y pgpool-II-pg14-extensions       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
@@ -104,7 +102,6 @@ apt install -y postgresql-18-pgpool2   # PG 18
 apt install -y postgresql-17-pgpool2   # PG 17
 apt install -y postgresql-16-pgpool2   # PG 16
 apt install -y postgresql-15-pgpool2   # PG 15
-apt install -y postgresql-14-pgpool2   # PG 14
 ```
 
 

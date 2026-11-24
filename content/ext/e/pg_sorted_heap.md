@@ -51,72 +51,72 @@ weight: 2550
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-@ el8.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el8.x86_64.rpm pigsty 0.14.0 216.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_18-0.14.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el8.aarch64.rpm pigsty 0.14.0 200.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_18-0.14.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el9.x86_64.rpm pigsty 0.14.0 208.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_18-0.14.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el9.aarch64.rpm pigsty 0.14.0 199.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_18-0.14.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el10.x86_64.rpm pigsty 0.14.0 213.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_18-0.14.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PIGSTY.el10.aarch64.rpm pigsty 0.14.0 206.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_18-0.14.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb pigsty 0.14.0 724.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb pigsty 0.14.0 711.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb pigsty 0.14.0 726.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb pigsty 0.14.0 715.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb pigsty 0.14.0 758.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb pigsty 0.14.0 754.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb pigsty 0.14.0 744.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb pigsty 0.14.0 741.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb pigsty 0.14.0 746.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb pigsty 0.14.0 736.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el8.x86_64.rpm pigsty 0.14.0 216.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_17-0.14.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el8.aarch64.rpm pigsty 0.14.0 200.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_17-0.14.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el9.x86_64.rpm pigsty 0.14.0 208.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_17-0.14.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el9.aarch64.rpm pigsty 0.14.0 199.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_17-0.14.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el10.x86_64.rpm pigsty 0.14.0 213.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_17-0.14.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PIGSTY.el10.aarch64.rpm pigsty 0.14.0 206.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_17-0.14.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb pigsty 0.14.0 723.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb pigsty 0.14.0 710.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb pigsty 0.14.0 725.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb pigsty 0.14.0 714.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb pigsty 0.14.0 805.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb pigsty 0.14.0 802.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb pigsty 0.14.0 743.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb pigsty 0.14.0 741.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb pigsty 0.14.0 745.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb pigsty 0.14.0 736.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el8.x86_64.rpm pigsty 0.14.0 217.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_16-0.14.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el8.aarch64.rpm pigsty 0.14.0 200.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_16-0.14.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el9.x86_64.rpm pigsty 0.14.0 208.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_16-0.14.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el9.aarch64.rpm pigsty 0.14.0 199.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_16-0.14.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el10.x86_64.rpm pigsty 0.14.0 213.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_16-0.14.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PIGSTY.el10.aarch64.rpm pigsty 0.14.0 206.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_16-0.14.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb pigsty 0.14.0 723.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb pigsty 0.14.0 711.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb pigsty 0.14.0 725.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb pigsty 0.14.0 714.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb pigsty 0.14.0 802.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb pigsty 0.14.0 798.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb pigsty 0.14.0 743.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb pigsty 0.14.0 741.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb pigsty 0.14.0 745.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb pigsty 0.14.0 735.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | AVAIL PIGSTY 0.14.0 1 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el8.x86_64.rpm pigsty 0.14.0 206.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_18-0.14.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el8.aarch64.rpm pigsty 0.14.0 190.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_18-0.14.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el9.x86_64.rpm pigsty 0.14.0 204.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_18-0.14.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el9.aarch64.rpm pigsty 0.14.0 195.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_18-0.14.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el10.x86_64.rpm pigsty 0.14.0 209.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_18-0.14.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_sorted_heap_18 pg_sorted_heap_18-0.14.0-1PGSTY.el10.aarch64.rpm pigsty 0.14.0 202.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_18-0.14.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb pigsty 0.14.0 724.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb pigsty 0.14.0 711.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb pigsty 0.14.0 726.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb pigsty 0.14.0 715.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb pigsty 0.14.0 758.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb pigsty 0.14.0 754.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb pigsty 0.14.0 745.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb pigsty 0.14.0 742.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb pigsty 0.14.0 746.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-sorted-heap postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb pigsty 0.14.0 737.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-18-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el8.x86_64.rpm pigsty 0.14.0 206.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_17-0.14.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el8.aarch64.rpm pigsty 0.14.0 190.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_17-0.14.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el9.x86_64.rpm pigsty 0.14.0 204.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_17-0.14.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el9.aarch64.rpm pigsty 0.14.0 195.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_17-0.14.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el10.x86_64.rpm pigsty 0.14.0 209.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_17-0.14.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_sorted_heap_17 pg_sorted_heap_17-0.14.0-1PGSTY.el10.aarch64.rpm pigsty 0.14.0 202.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_17-0.14.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb pigsty 0.14.0 723.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb pigsty 0.14.0 711.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb pigsty 0.14.0 726.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb pigsty 0.14.0 714.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb pigsty 0.14.0 806.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb pigsty 0.14.0 802.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb pigsty 0.14.0 744.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb pigsty 0.14.0 741.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb pigsty 0.14.0 745.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-sorted-heap postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb pigsty 0.14.0 736.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-17-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el8.x86_64.rpm pigsty 0.14.0 206.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_sorted_heap_16-0.14.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el8.aarch64.rpm pigsty 0.14.0 190.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_sorted_heap_16-0.14.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el9.x86_64.rpm pigsty 0.14.0 204.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_sorted_heap_16-0.14.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el9.aarch64.rpm pigsty 0.14.0 195.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_sorted_heap_16-0.14.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el10.x86_64.rpm pigsty 0.14.0 209.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_sorted_heap_16-0.14.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_sorted_heap_16 pg_sorted_heap_16-0.14.0-1PGSTY.el10.aarch64.rpm pigsty 0.14.0 202.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_sorted_heap_16-0.14.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb pigsty 0.14.0 723.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb pigsty 0.14.0 711.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb pigsty 0.14.0 726.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb pigsty 0.14.0 714.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb pigsty 0.14.0 802.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb pigsty 0.14.0 798.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb pigsty 0.14.0 743.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb pigsty 0.14.0 741.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb pigsty 0.14.0 745.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-sorted-heap postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb pigsty 0.14.0 735.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-sorted-heap/postgresql-16-pg-sorted-heap_0.14.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

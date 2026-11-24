@@ -45,16 +45,16 @@ weight: 4860
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-parray-gin` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "19,18,17,16,15" >}} | `parray_gin` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "19,18,17,16,15" >}} | `parray_gin_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-parray-gin` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
@@ -69,86 +69,84 @@ weight: 4860
 | u24.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 |
-@ el8.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_18-1.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 23.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_18-1.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_18-1.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 22.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_18-1.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_18-1.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_18-1.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 31.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb pigsty 1.5.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb pigsty 1.5.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_17-1.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_17-1.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 23.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_17-1.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 22.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_17-1.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_17-1.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_17-1.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 32.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 32.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_16-1.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_16-1.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_16-1.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 22.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_16-1.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_16-1.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 23.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_16-1.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 32.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 32.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_15-1.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_15-1.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_15-1.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_15-1.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_15-1.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 23.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_15-1.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 30.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 32.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 32.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_14-1.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_14-1.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_14-1.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_14-1.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 24.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_14-1.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 parray_gin_14 parray_gin_14-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_14-1.5.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 29.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 32.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 32.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-parray-gin postgresql-14-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-14-parray-gin_1.5.0-1PIGSTY~resolute_arm64.deb
+@ el9.x86_64 19 parray_gin_19 parray_gin_19-1.5.0-1PGSTY.el9.x86_64.rpm pigsty 1.5.0 41.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_19-1.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 parray_gin_19 parray_gin_19-1.5.0-1PGSTY.el9.aarch64.rpm pigsty 1.5.0 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_19-1.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 parray_gin_19 parray_gin_19-1.5.0-1PGSTY.el10.x86_64.rpm pigsty 1.5.0 41.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_19-1.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 parray_gin_19 parray_gin_19-1.5.0-1PGSTY.el10.aarch64.rpm pigsty 1.5.0 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_19-1.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb pigsty 1.5.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb pigsty 1.5.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb pigsty 1.5.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb pigsty 1.5.0 32.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb pigsty 1.5.0 31.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~noble_amd64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~noble_arm64.deb pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb pigsty 1.5.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-parray-gin postgresql-19-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb pigsty 1.5.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-19-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el8.x86_64.rpm pigsty 1.5.0 40.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_18-1.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el8.aarch64.rpm pigsty 1.5.0 39.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_18-1.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el9.x86_64.rpm pigsty 1.5.0 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_18-1.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el9.aarch64.rpm pigsty 1.5.0 40.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_18-1.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el10.x86_64.rpm pigsty 1.5.0 41.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_18-1.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 parray_gin_18 parray_gin_18-1.5.0-1PGSTY.el10.aarch64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_18-1.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb pigsty 1.5.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~noble_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~noble_arm64.deb pigsty 1.5.0 31.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-parray-gin postgresql-18-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb pigsty 1.5.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-18-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el8.x86_64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_17-1.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el8.aarch64.rpm pigsty 1.5.0 40.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_17-1.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el9.x86_64.rpm pigsty 1.5.0 40.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_17-1.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el9.aarch64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_17-1.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el10.x86_64.rpm pigsty 1.5.0 41.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_17-1.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 parray_gin_17 parray_gin_17-1.5.0-1PGSTY.el10.aarch64.rpm pigsty 1.5.0 40.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_17-1.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb pigsty 1.5.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb pigsty 1.5.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb pigsty 1.5.0 32.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb pigsty 1.5.0 32.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~noble_amd64.deb pigsty 1.5.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~noble_arm64.deb pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-parray-gin postgresql-17-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-17-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el8.x86_64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_16-1.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el8.aarch64.rpm pigsty 1.5.0 40.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_16-1.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el9.x86_64.rpm pigsty 1.5.0 40.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_16-1.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el9.aarch64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_16-1.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el10.x86_64.rpm pigsty 1.5.0 41.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_16-1.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 parray_gin_16 parray_gin_16-1.5.0-1PGSTY.el10.aarch64.rpm pigsty 1.5.0 40.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_16-1.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb pigsty 1.5.0 30.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb pigsty 1.5.0 30.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb pigsty 1.5.0 32.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb pigsty 1.5.0 32.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~noble_amd64.deb pigsty 1.5.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~noble_arm64.deb pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-parray-gin postgresql-16-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-16-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb
+@ el8.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el8.x86_64.rpm pigsty 1.5.0 40.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_15-1.5.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el8.aarch64.rpm pigsty 1.5.0 39.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_15-1.5.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el9.x86_64.rpm pigsty 1.5.0 41.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_15-1.5.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el9.aarch64.rpm pigsty 1.5.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/parray_gin_15-1.5.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el10.x86_64.rpm pigsty 1.5.0 41.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/parray_gin_15-1.5.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 parray_gin_15 parray_gin_15-1.5.0-1PGSTY.el10.aarch64.rpm pigsty 1.5.0 40.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/parray_gin_15-1.5.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb pigsty 1.5.0 30.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb pigsty 1.5.0 30.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb pigsty 1.5.0 30.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb pigsty 1.5.0 32.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb pigsty 1.5.0 32.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~noble_amd64.deb pigsty 1.5.0 31.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~noble_arm64.deb pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb pigsty 1.5.0 31.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-parray-gin postgresql-15-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb pigsty 1.5.0 31.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/parray-gin/postgresql-15-parray-gin_1.5.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -175,27 +173,27 @@ pig install parray_gin;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y parray_gin -v 19  # PG 19
 pig ext install -y parray_gin -v 18  # PG 18
 pig ext install -y parray_gin -v 17  # PG 17
 pig ext install -y parray_gin -v 16  # PG 16
 pig ext install -y parray_gin -v 15  # PG 15
-pig ext install -y parray_gin -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y parray_gin_19       # PG 19
 dnf install -y parray_gin_18       # PG 18
 dnf install -y parray_gin_17       # PG 17
 dnf install -y parray_gin_16       # PG 16
 dnf install -y parray_gin_15       # PG 15
-dnf install -y parray_gin_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-parray-gin   # PG 19
 apt install -y postgresql-18-parray-gin   # PG 18
 apt install -y postgresql-17-parray-gin   # PG 17
 apt install -y postgresql-16-parray-gin   # PG 16
 apt install -y postgresql-15-parray-gin   # PG 15
-apt install -y postgresql-14-parray-gin   # PG 14
 ```
 
 

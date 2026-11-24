@@ -45,20 +45,20 @@ weight: 4210
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgsql_tweaks` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgsql_tweaks_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgsql-tweaks` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pgsql_tweaks` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pgsql_tweaks_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-pgsql-tweaks` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 13 | AVAIL PIGSTY 1.1.0 13 | AVAIL PIGSTY 1.1.0 15 |
-| el8.aarch64 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 13 | AVAIL PIGSTY 1.1.0 13 | AVAIL PIGSTY 1.1.0 13 |
-| el9.x86_64 | AVAIL PIGSTY 1.1.0 8 | AVAIL PIGSTY 1.1.0 14 | AVAIL PIGSTY 1.1.0 16 | AVAIL PIGSTY 1.1.0 16 | AVAIL PIGSTY 1.1.0 17 |
-| el9.aarch64 | AVAIL PIGSTY 1.1.0 8 | AVAIL PIGSTY 1.1.0 14 | AVAIL PIGSTY 1.1.0 16 | AVAIL PIGSTY 1.1.0 16 | AVAIL PIGSTY 1.1.0 16 |
-| el10.x86_64 | AVAIL PIGSTY 1.1.0 8 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 |
-| el10.aarch64 | AVAIL PIGSTY 1.1.0 8 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 | AVAIL PIGSTY 1.1.0 11 |
+| el8.x86_64 | N/A PGDG - 0 | AVAIL PGDG 1.1.0 5 | AVAIL PGDG 1.1.0 11 | AVAIL PGDG 1.1.0 13 | AVAIL PGDG 1.1.0 13 |
+| el8.aarch64 | N/A PGDG - 0 | AVAIL PGDG 1.1.0 5 | AVAIL PGDG 1.1.0 11 | AVAIL PGDG 1.1.0 13 | AVAIL PGDG 1.1.0 13 |
+| el9.x86_64 | AVAIL PGDG 1.1.0 1 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 |
+| el9.aarch64 | AVAIL PGDG 1.1.0 1 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 |
+| el10.x86_64 | AVAIL PGDG 1.1.0 1 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 | AVAIL PGDG 1.1.0 2 |
+| el10.aarch64 | AVAIL PGDG 1.1.0 1 | AVAIL PGDG 1.1.0 9 | AVAIL PGDG 1.1.0 12 | AVAIL PGDG 1.1.0 12 | AVAIL PGDG 1.1.0 12 |
 | d12.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
@@ -69,43 +69,40 @@ weight: 4210
 | u24.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
+@ el9.x86_64 19 pgsql_tweaks_19 pgsql_tweaks_19-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-x86_64/pgsql_tweaks_19-1.1.0-2PGDG.rhel9.9.noarch.rpm
+@ el9.aarch64 19 pgsql_tweaks_19 pgsql_tweaks_19-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-9-aarch64/pgsql_tweaks_19-1.1.0-2PGDG.rhel9.9.noarch.rpm
+@ el10.x86_64 19 pgsql_tweaks_19 pgsql_tweaks_19-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-x86_64/pgsql_tweaks_19-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 19 pgsql_tweaks_19 pgsql_tweaks_19-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/19/redhat/rhel-10-aarch64/pgsql_tweaks_19-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ d12.x86_64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
+@ d12.aarch64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
+@ d13.x86_64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
+@ d13.aarch64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
+@ u22.x86_64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u24.x86_64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
+@ u24.aarch64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
+@ u26.x86_64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
+@ u26.aarch64 19 postgresql-19-pgsql-tweaks postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-19-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_tweaks_18-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_18-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_tweaks_18-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_18-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsql_tweaks_18-1.0.2-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_tweaks_18-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_18-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_tweaks_18-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_18-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_tweaks_18-1.0.2-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_18-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_18-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_tweaks_18-1.0.2-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_18-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_18-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_tweaks_18-1.0.2-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.1.0-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_18-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_18-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_tweaks_18-1.0.2-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_18-1.1.0-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_18-1.0.5-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 18 pgsql_tweaks_18 pgsql_tweaks_18-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_tweaks_18-1.0.3-1PGDG.rhel10.0.noarch.rpm
@@ -115,15 +112,15 @@ weight: 4210
 @ d12.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
 @ d13.x86_64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
 @ d13.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u22.x86_64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
 @ u24.x86_64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u24.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u26.x86_64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
 @ u26.aarch64 18 postgresql-18-pgsql-tweaks postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-18-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_17-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_17-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -132,9 +129,9 @@ weight: 4210
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.7-1PGDG.rhel8.noarch.rpm pgdg 0.10.7 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-0.10.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.6-1PGDG.rhel8.noarch.rpm pgdg 0.10.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-0.10.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_tweaks_17-0.10.3-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_17-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_17-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -143,48 +140,16 @@ weight: 4210
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.7-1PGDG.rhel8.noarch.rpm pgdg 0.10.7 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-0.10.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.6-1PGDG.rhel8.noarch.rpm pgdg 0.10.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-0.10.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_tweaks_17-0.10.3-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_17-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_17-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_tweaks_17-0.10.3-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_17-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_17-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_tweaks_17-0.10.3-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.1.0-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_17-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_17-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.2-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.0-1PGDG.rhel10.noarch.rpm pgdg 1.0.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-1.0.0-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.3-1PGDG.rhel10.noarch.rpm pgdg 0.11.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-0.11.3-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 17 pgsql_tweaks_17 pgsql_tweaks_17-0.11.0-1PGDG.rhel10.noarch.rpm pgdg 0.11.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_tweaks_17-0.11.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_17-1.1.0-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_17-1.0.5-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 17 pgsql_tweaks_17 pgsql_tweaks_17-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_tweaks_17-1.0.3-1PGDG.rhel10.0.noarch.rpm
@@ -197,15 +162,15 @@ weight: 4210
 @ d12.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
 @ d13.x86_64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
 @ d13.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u22.x86_64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
 @ u24.x86_64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u24.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u26.x86_64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
 @ u26.aarch64 17 postgresql-17-pgsql-tweaks postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-17-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_16-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_16-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -216,9 +181,9 @@ weight: 4210
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-0.10.3-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm
 @ el8.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm pgdg 0.10.1 23.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm
+@ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_16-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_16-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -229,52 +194,16 @@ weight: 4210
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-0.10.3-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm
 @ el8.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm pgdg 0.10.1 23.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm
+@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_16-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_16-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm pgdg 0.10.1 23.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm
+@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_16-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_16-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm pgdg 0.10.1 22.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_tweaks_16-0.10.1-2.rhel7.noarch.rpm
+@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.1.0-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_16-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_16-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.2-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.0-1PGDG.rhel10.noarch.rpm pgdg 1.0.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-1.0.0-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.3-1PGDG.rhel10.noarch.rpm pgdg 0.11.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-0.11.3-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 16 pgsql_tweaks_16 pgsql_tweaks_16-0.11.0-1PGDG.rhel10.noarch.rpm pgdg 0.11.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_tweaks_16-0.11.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_16-1.1.0-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_16-1.0.5-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 16 pgsql_tweaks_16 pgsql_tweaks_16-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_tweaks_16-1.0.3-1PGDG.rhel10.0.noarch.rpm
@@ -293,9 +222,9 @@ weight: 4210
 @ u24.aarch64 16 postgresql-16-pgsql-tweaks postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u26.x86_64 16 postgresql-16-pgsql-tweaks postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
 @ u26.aarch64 16 postgresql-16-pgsql-tweaks postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-16-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
+@ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_15-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_15-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -306,9 +235,9 @@ weight: 4210
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-0.10.3-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm
 @ el8.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.0-1.rhel7.noarch.rpm pgdg 0.10.0 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_tweaks_15-0.10.0-1.rhel7.noarch.rpm
+@ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-1.1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_15-1.1.0-1PGSTY.el8.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_15-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-1.0.2-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-1.0.0-1PGDG.rhel8.noarch.rpm
@@ -319,52 +248,16 @@ weight: 4210
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-0.10.3-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm
 @ el8.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.1-1.rhel7.noarch.rpm pgdg 0.10.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_tweaks_15-0.10.1-1.rhel7.noarch.rpm
+@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_15-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_15-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.0-1.rhel7.noarch.rpm pgdg 0.10.0 22.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_tweaks_15-0.10.0-1.rhel7.noarch.rpm
+@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel9.9.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.1.0-2PGDG.rhel9.9.noarch.rpm
 @ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_15-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_15-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.10.1-1.rhel7.noarch.rpm pgdg 0.10.1 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_tweaks_15-0.10.1-1.rhel7.noarch.rpm
+@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.1.0-2PGDG.rhel10.3.noarch.rpm
 @ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_15-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_15-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.2-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.0-1PGDG.rhel10.noarch.rpm pgdg 1.0.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-1.0.0-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.3-1PGDG.rhel10.noarch.rpm pgdg 0.11.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-0.11.3-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 15 pgsql_tweaks_15 pgsql_tweaks_15-0.11.0-1PGDG.rhel10.noarch.rpm pgdg 0.11.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_tweaks_15-0.11.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel10.3.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.1.0-2PGDG.rhel10.3.noarch.rpm
+@ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.1.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_15-1.1.0-1PGSTY.el10.noarch.rpm
 @ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_15-1.0.5-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 15 pgsql_tweaks_15 pgsql_tweaks_15-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_tweaks_15-1.0.3-1PGDG.rhel10.0.noarch.rpm
@@ -383,99 +276,6 @@ weight: 4210
 @ u24.aarch64 15 postgresql-15-pgsql-tweaks postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
 @ u26.x86_64 15 postgresql-15-pgsql-tweaks postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
 @ u26.aarch64 15 postgresql-15-pgsql-tweaks postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-15-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_14-1.1.0-1PGSTY.el8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_tweaks_14-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel8.10.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-1.0.2-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-1.0.0-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel8.noarch.rpm pgdg 0.11.3 27.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.11.3-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel8.noarch.rpm pgdg 0.11.0 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.11.0-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.7-1PGDG.rhel8.noarch.rpm pgdg 0.10.7 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.10.7-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.6-1PGDG.rhel8.noarch.rpm pgdg 0.10.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.10.6-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.10.3-1PGDG.rhel8.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.0-1.rhel7.noarch.rpm pgdg 0.10.0 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.10.0-1.rhel7.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.9.1-1.rhel7.noarch.rpm pgdg 0.9.1 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.9.1-1.rhel7.noarch.rpm
-@ el8.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.8.0-1.rhel7.noarch.rpm pgdg 0.8.0 22.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_tweaks_14-0.8.0-1.rhel7.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el8.noarch.rpm pigsty 1.1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_14-1.1.0-1PGSTY.el8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.1.0 29.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-1.1.0-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 29.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_tweaks_14-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel8.10.noarch.rpm pgdg 1.0.3 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel8.10.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel8.noarch.rpm pgdg 1.0.2 29.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-1.0.2-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 29.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-1.0.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel8.noarch.rpm pgdg 0.11.3 27.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.11.3-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel8.noarch.rpm pgdg 0.11.0 26.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.11.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.7-1PGDG.rhel8.noarch.rpm pgdg 0.10.7 24.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.10.7-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.6-1PGDG.rhel8.noarch.rpm pgdg 0.10.6 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.10.6-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.3-1PGDG.rhel8.noarch.rpm pgdg 0.10.3 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.10.3-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el8.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.1-1.rhel7.noarch.rpm pgdg 0.10.1 23.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_tweaks_14-0.10.1-1.rhel7.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_14-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_tweaks_14-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 24.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.0-1.rhel7.noarch.rpm pgdg 0.10.0 22.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.10.0-1.rhel7.noarch.rpm
-@ el9.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.9.1-1.rhel7.noarch.rpm pgdg 0.9.1 22.4KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_tweaks_14-0.9.1-1.rhel7.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el9.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_14-1.1.0-1PGSTY.el9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel9.8.noarch.rpm pgdg 1.1.0 28.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.1.0-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_tweaks_14-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.7.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.7.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel9.6.noarch.rpm pgdg 1.0.3 27.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel9.6.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel9.8.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.2-1PGDG.rhel9.8.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel9.noarch.rpm pgdg 1.0.2 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.2-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-1.0.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel9.noarch.rpm pgdg 0.11.3 26.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.11.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel9.noarch.rpm pgdg 0.11.0 25.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.11.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.7-1PGDG.rhel9.noarch.rpm pgdg 0.10.7 23.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.10.7-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.6-1PGDG.rhel9.noarch.rpm pgdg 0.10.6 23.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.10.6-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.3-1PGDG.rhel9.noarch.rpm pgdg 0.10.3 23.0KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.10.3-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm pgdg 0.10.2 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.10.2-1PGDG.rhel7.noarch.rpm
-@ el9.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.10.1-1.rhel7.noarch.rpm pgdg 0.10.1 22.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_tweaks_14-0.10.1-1.rhel7.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_14-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_tweaks_14-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.8KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.3KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.2-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel10.noarch.rpm pgdg 1.0.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-1.0.0-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel10.noarch.rpm pgdg 0.11.3 26.6KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-0.11.3-1PGDG.rhel10.noarch.rpm
-@ el10.x86_64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel10.noarch.rpm pgdg 0.11.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_tweaks_14-0.11.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGSTY.el10.noarch.rpm pigsty 1.1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_14-1.1.0-1PGSTY.el10.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.1.0-1PGDG.rhel10.2.noarch.rpm pgdg 1.1.0 28.1KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.1.0-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 28.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_tweaks_14-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.1.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.1.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.3-1PGDG.rhel10.0.noarch.rpm pgdg 1.0.3 27.7KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.3-1PGDG.rhel10.0.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel10.2.noarch.rpm pgdg 1.0.2 27.9KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.2-1PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.2-1PGDG.rhel10.noarch.rpm pgdg 1.0.2 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.2-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-1.0.0-1PGDG.rhel10.noarch.rpm pgdg 1.0.0 28.2KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-1.0.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.3-1PGDG.rhel10.noarch.rpm pgdg 0.11.3 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-0.11.3-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgsql_tweaks_14 pgsql_tweaks_14-0.11.0-1PGDG.rhel10.noarch.rpm pgdg 0.11.0 26.5KiB https://mirrors.cloud.tencent.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_tweaks_14-0.11.0-1PGDG.rhel10.noarch.rpm
-@ d12.x86_64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
-@ d12.aarch64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~bookworm_all.deb
-@ d13.x86_64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
-@ d13.aarch64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb pigsty 1.1.0 20.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~trixie_all.deb
-@ u22.x86_64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
-@ u22.aarch64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb pigsty 1.1.0 20.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~jammy_all.deb
-@ u24.x86_64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
-@ u24.aarch64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~noble_all.deb
-@ u26.x86_64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
-@ u26.aarch64 14 postgresql-14-pgsql-tweaks postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb pigsty 1.1.0 21.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-tweaks/postgresql-14-pgsql-tweaks_1.1.0-1PGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -502,27 +302,27 @@ pig install pgsql_tweaks;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pgsql_tweaks -v 19  # PG 19
 pig ext install -y pgsql_tweaks -v 18  # PG 18
 pig ext install -y pgsql_tweaks -v 17  # PG 17
 pig ext install -y pgsql_tweaks -v 16  # PG 16
 pig ext install -y pgsql_tweaks -v 15  # PG 15
-pig ext install -y pgsql_tweaks -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pgsql_tweaks_19       # PG 19
 dnf install -y pgsql_tweaks_18       # PG 18
 dnf install -y pgsql_tweaks_17       # PG 17
 dnf install -y pgsql_tweaks_16       # PG 16
 dnf install -y pgsql_tweaks_15       # PG 15
-dnf install -y pgsql_tweaks_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pgsql-tweaks   # PG 19
 apt install -y postgresql-18-pgsql-tweaks   # PG 18
 apt install -y postgresql-17-pgsql-tweaks   # PG 17
 apt install -y postgresql-16-pgsql-tweaks   # PG 16
 apt install -y postgresql-15-pgsql-tweaks   # PG 15
-apt install -y postgresql-14-pgsql-tweaks   # PG 14
 ```
 
 

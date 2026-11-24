@@ -11,10 +11,10 @@ weight: 3590
     <div class="ext-card__title">frectonz/pglite-fusion</div>
     <div class="ext-card__desc">https://github.com/frectonz/pglite-fusion</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pglite-fusion-0.0.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pglite-fusion-0.0.8.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pglite-fusion-0.0.7.tar.gz</div>
-    <div class="ext-card__desc">pglite-fusion-0.0.7.tar.gz</div>
+    <div class="ext-card__title">pglite-fusion-0.0.8.tar.gz</div>
+    <div class="ext-card__desc">pglite-fusion-0.0.8.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 3590
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pglite_fusion`**](/ext/e/pglite_fusion) | `0.0.7` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pglite_fusion`**](/ext/e/pglite_fusion) | `0.0.8` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table .wide .expand}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,30 +42,30 @@ weight: 3590
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `pglite_fusion` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `pglite_fusion_$v` | - |
-| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pglite-fusion` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.8` | {{< pgvers "19,18,17,16,15" >}} | `pglite_fusion` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15" >}} | `pglite_fusion_$v` | - |
+| [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.7` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pglite-fusion` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el9.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el9.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el10.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d12.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d12.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d13.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| d13.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u22.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 | AVAIL PIGSTY 0.0.7 1 |
 @ el8.x86_64 18 pglite_fusion_18 pglite_fusion_18-0.0.7-1PGSTY.el8.x86_64.rpm pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_18-0.0.7-1PGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pglite_fusion_18 pglite_fusion_18-0.0.7-1PGSTY.el8.aarch64.rpm pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_18-0.0.7-1PGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pglite_fusion_18 pglite_fusion_18-0.0.7-1PGSTY.el9.x86_64.rpm pigsty 0.0.7 1.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_18-0.0.7-1PGSTY.el9.x86_64.rpm
@@ -130,22 +130,6 @@ weight: 3590
 @ u24.aarch64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.7-1PGSTY~noble_arm64.deb pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.7-1PGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.7-1PGSTY~resolute_amd64.deb pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.7-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.7-1PGSTY~resolute_arm64.deb pigsty 0.0.7 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.7-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el8.x86_64.rpm pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_14-0.0.7-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el8.aarch64.rpm pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_14-0.0.7-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el9.x86_64.rpm pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_14-0.0.7-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el9.aarch64.rpm pigsty 0.0.7 1.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglite_fusion_14-0.0.7-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el10.x86_64.rpm pigsty 0.0.7 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglite_fusion_14-0.0.7-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pglite_fusion_14 pglite_fusion_14-0.0.7-1PGSTY.el10.aarch64.rpm pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglite_fusion_14-0.0.7-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~bookworm_amd64.deb pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~bookworm_arm64.deb pigsty 0.0.7 1.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~trixie_amd64.deb pigsty 0.0.7 1.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~trixie_arm64.deb pigsty 0.0.7 1.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~jammy_amd64.deb pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~jammy_arm64.deb pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~noble_amd64.deb pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~noble_arm64.deb pigsty 0.0.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~resolute_amd64.deb pigsty 0.0.7 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.7-1PGSTY~resolute_arm64.deb pigsty 0.0.7 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.7-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -172,27 +156,27 @@ pig install pglite_fusion;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pglite_fusion -v 19  # PG 19
 pig ext install -y pglite_fusion -v 18  # PG 18
 pig ext install -y pglite_fusion -v 17  # PG 17
 pig ext install -y pglite_fusion -v 16  # PG 16
 pig ext install -y pglite_fusion -v 15  # PG 15
-pig ext install -y pglite_fusion -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pglite_fusion_19       # PG 19
 dnf install -y pglite_fusion_18       # PG 18
 dnf install -y pglite_fusion_17       # PG 17
 dnf install -y pglite_fusion_16       # PG 16
 dnf install -y pglite_fusion_15       # PG 15
-dnf install -y pglite_fusion_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-pglite-fusion   # PG 19
 apt install -y postgresql-18-pglite-fusion   # PG 18
 apt install -y postgresql-17-pglite-fusion   # PG 17
 apt install -y postgresql-16-pglite-fusion   # PG 16
 apt install -y postgresql-15-pglite-fusion   # PG 15
-apt install -y postgresql-14-pglite-fusion   # PG 14
 ```
 
 

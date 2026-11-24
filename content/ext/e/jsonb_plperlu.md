@@ -38,7 +38,7 @@ weight: 3272
 
 ## 版本
 
-| **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:------:|:------:|:------:|:------:|:------:|
 | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> | <span class="ext-badge ext-badge--avail">1.0</span> |
 {.ext-table .wide .expand}

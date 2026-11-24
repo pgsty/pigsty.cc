@@ -41,16 +41,16 @@ weight: 4480
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_opencc` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "14,15,16,17,18" >}} | `pg_opencc_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-opencc` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_opencc` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16,15" >}} | `pg_opencc_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "19,18,17,16,15" >}} | `postgresql-$v-opencc` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
@@ -65,86 +65,84 @@ weight: 4480
 | u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
+@ el9.x86_64 19 pg_opencc_19 pg_opencc_19-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_19-0.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 19 pg_opencc_19 pg_opencc_19-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 781.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_19-0.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 19 pg_opencc_19 pg_opencc_19-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 812.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_19-0.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 19 pg_opencc_19 pg_opencc_19-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_19-0.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 783.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 748.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 763.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 774.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~jammy_amd64.deb
+@ u22.aarch64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 764.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 763.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 752.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 769.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 19 postgresql-19-opencc postgresql-19-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-19-opencc_0.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_18-0.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_18-0.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 799.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_18-0.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 782.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_18-0.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_18-0.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_18-0.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~trixie_amd64.deb
+@ el8.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_18-0.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_18-0.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 781.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_18-0.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_18-0.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_opencc_18 pg_opencc_18-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_18-0.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 783.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 774.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 753.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~noble_arm64.deb
+@ u24.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 764.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 753.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 770.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-opencc postgresql-18-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-18-opencc_0.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_17-0.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_17-0.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_17-0.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 782.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_17-0.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_17-0.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_17-0.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
+@ el8.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_17-0.1.0-1PGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_17-0.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_17-0.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 780.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_17-0.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_17-0.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_opencc_17 pg_opencc_17-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_17-0.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 778.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 763.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 753.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 769.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~resolute_arm64.deb
+@ u22.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 754.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 770.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-opencc postgresql-17-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 762.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-17-opencc_0.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_16-0.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_16-0.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_16-0.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 782.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_16-0.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_16-0.1.0-1PGSTY.el10.x86_64.rpm
+@ el8.aarch64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_16-0.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_16-0.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 781.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_16-0.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_16-0.1.0-1PGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 pg_opencc_16 pg_opencc_16-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_16-0.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 778.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~jammy_amd64.deb
+@ d12.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 783.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 778.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~jammy_amd64.deb
 @ u22.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 763.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 753.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 769.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~resolute_arm64.deb
+@ u24.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 754.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 770.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-opencc postgresql-16-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 762.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-16-opencc_0.1.0-1PGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_15-0.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_15-0.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 799.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_15-0.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 782.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_15-0.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_15-0.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_15-0.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 752.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~trixie_arm64.deb
+@ el8.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_15-0.1.0-1PGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_15-0.1.0-1PGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 780.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_15-0.1.0-1PGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_15-0.1.0-1PGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_opencc_15 pg_opencc_15-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_15-0.1.0-1PGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 783.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~trixie_arm64.deb
 @ u22.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 778.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 763.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~noble_amd64.deb
+@ u22.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 764.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 754.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 769.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el8.x86_64.rpm pigsty 0.1.0 890.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_opencc_14-0.1.0-1PGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el8.aarch64.rpm pigsty 0.1.0 850.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_opencc_14-0.1.0-1PGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el9.x86_64.rpm pigsty 0.1.0 798.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_opencc_14-0.1.0-1PGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el9.aarch64.rpm pigsty 0.1.0 782.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_opencc_14-0.1.0-1PGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el10.x86_64.rpm pigsty 0.1.0 813.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_opencc_14-0.1.0-1PGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_opencc_14 pg_opencc_14-0.1.0-1PGSTY.el10.aarch64.rpm pigsty 0.1.0 790.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_opencc_14-0.1.0-1PGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~bookworm_amd64.deb pigsty 0.1.0 784.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~bookworm_arm64.deb pigsty 0.1.0 749.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~trixie_amd64.deb pigsty 0.1.0 802.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~trixie_arm64.deb pigsty 0.1.0 764.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~jammy_amd64.deb pigsty 0.1.0 778.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~jammy_arm64.deb pigsty 0.1.0 767.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~noble_amd64.deb pigsty 0.1.0 763.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~noble_arm64.deb pigsty 0.1.0 753.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 769.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-opencc postgresql-14-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 761.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-14-opencc_0.1.0-1PGSTY~resolute_arm64.deb
+@ u26.x86_64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~resolute_amd64.deb pigsty 0.1.0 770.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-opencc postgresql-15-opencc_0.1.0-1PGSTY~resolute_arm64.deb pigsty 0.1.0 762.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-opencc/postgresql-15-opencc_0.1.0-1PGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -171,27 +169,27 @@ pig install pg_opencc;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
+pig ext install -y pg_opencc -v 19  # PG 19
 pig ext install -y pg_opencc -v 18  # PG 18
 pig ext install -y pg_opencc -v 17  # PG 17
 pig ext install -y pg_opencc -v 16  # PG 16
 pig ext install -y pg_opencc -v 15  # PG 15
-pig ext install -y pg_opencc -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
+dnf install -y pg_opencc_19       # PG 19
 dnf install -y pg_opencc_18       # PG 18
 dnf install -y pg_opencc_17       # PG 17
 dnf install -y pg_opencc_16       # PG 16
 dnf install -y pg_opencc_15       # PG 15
-dnf install -y pg_opencc_14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
+apt install -y postgresql-19-opencc   # PG 19
 apt install -y postgresql-18-opencc   # PG 18
 apt install -y postgresql-17-opencc   # PG 17
 apt install -y postgresql-16-opencc   # PG 16
 apt install -y postgresql-15-opencc   # PG 15
-apt install -y postgresql-14-opencc   # PG 14
 ```
 
 

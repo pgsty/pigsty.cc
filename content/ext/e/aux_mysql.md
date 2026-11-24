@@ -45,46 +45,30 @@ weight: 9420
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5` | {{< pgvers "14" >}} | `openhalo` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "14" >}} | `openhalodb-$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "14" >}} | `openhalodb-$v` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5` | - | `openhalo` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | - | `openhalodb-$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | - | `openhalodb-$v` | - |
 {.ext-table .wide .expand}
 
 {{< pgext_matrix >}}
-| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+| **OS / PG** | **PG19** | **PG18** | **PG17** | **PG16** | **PG15** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 10.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/openhalodb-14-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/openhalodb-14-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 9.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/openhalodb-14-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 9.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/openhalodb-14-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 10.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/openhalodb-14-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/openhalodb-14-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 8.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 8.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 8.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 8.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 9.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 9.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 9.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~resolute_amd64.deb pigsty 1.0 9.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 openhalodb-14 openhalodb-14_1.0-2PIGSTY~resolute_arm64.deb pigsty 1.0 9.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/openhalodb/openhalodb-14_1.0-2PIGSTY~resolute_arm64.deb
+| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -111,15 +95,12 @@ pig install openhalo;          # 当前活跃 PG 版本安装
 ```
 
 ```bash {tab="pig" value="pig"}
-pig ext install -y openhalo -v 14  # PG 14
 ```
 
 ```bash {tab="dnf" value="dnf"}
-dnf install -y openhalodb-14       # PG 14
 ```
 
 ```bash {tab="apt" value="apt"}
-apt install -y openhalodb-14   # PG 14
 ```
 
 
