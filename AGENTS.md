@@ -4,10 +4,14 @@
 
 ## OINK build baseline
 
-As of 2026-11-07, this site uses OINK v1.5.1, Hugo Extended 0.168.0, and Go 1.27.3.
-Keep CI and local builds on this baseline. Do not enable `--panicOnWarning`
-or `HUGO_PANICONWARNING`; keep warnings visible and review them. The upstream
-LibSass deprecation warning is accepted. No external Sass compiler is required.
+`go.mod` owns the Go toolchain minimum and the published OINK `v1.6.0` pin.
+Use the installed Hugo and review build warnings. Keep `--panicOnWarning` and
+`HUGO_PANICONWARNING` disabled. Site styles are plain CSS: the homepage loads
+the theme's `chrome` and `search` stylesheets via `partial "css/bundle.html"`
+plus `assets/css/landing-appearance.css`, `assets/css/landing-search.css`,
+`assets/css/project.css`, and `assets/css/project/navbar.css`; the
+documentation shell loads `assets/css/project.css` and
+`assets/css/project/navbar.css`.
 
 ## Git 内容与大文件规则
 

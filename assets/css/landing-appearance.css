@@ -1,0 +1,99 @@
+/* Theme rules whose values came from the site's Sass variables. Where a rule
+   ends in :where(:not(...)), a later theme rule of equal specificity already
+   overrode the value for those selectors; the suffix keeps it that way. */
+
+:root {
+  --bs-primary: #2f6793;
+  --bs-warning: #ffa269;
+  --bs-danger: #de372c;
+  --bs-primary-rgb: 47, 103, 147;
+  --bs-warning-rgb: 255, 162, 105;
+  --bs-danger-rgb: 222, 55, 44;
+  --bs-primary-text-emphasis: #13293b;
+  --bs-warning-text-emphasis: #66412a;
+  --bs-danger-text-emphasis: #591612;
+  --bs-primary-bg-subtle: #d5e1e9;
+  --bs-warning-bg-subtle: #ffece1;
+  --bs-danger-bg-subtle: #f8d7d5;
+  --bs-primary-border-subtle: #acc2d4;
+  --bs-warning-border-subtle: #ffdac3;
+  --bs-danger-border-subtle: #f2afab;
+}
+
+:root:where(:not([data-bs-theme="dark"])) {
+  --bs-form-invalid-color: #de372c;
+  --bs-form-invalid-border-color: #de372c;
+}
+
+[data-bs-theme="light"] {
+  --bs-primary: #2f6793;
+  --bs-warning: #ffa269;
+  --bs-danger: #de372c;
+  --bs-primary-rgb: 47, 103, 147;
+  --bs-warning-rgb: 255, 162, 105;
+  --bs-danger-rgb: 222, 55, 44;
+  --bs-primary-text-emphasis: #13293b;
+  --bs-warning-text-emphasis: #66412a;
+  --bs-danger-text-emphasis: #591612;
+  --bs-primary-bg-subtle: #d5e1e9;
+  --bs-warning-bg-subtle: #ffece1;
+  --bs-danger-bg-subtle: #f8d7d5;
+  --bs-primary-border-subtle: #acc2d4;
+  --bs-warning-border-subtle: #ffdac3;
+  --bs-danger-border-subtle: #f2afab;
+  --bs-form-invalid-color: #de372c;
+  --bs-form-invalid-border-color: #de372c;
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary-text-emphasis: #82a4be;
+  --bs-warning-text-emphasis: #ffc7a5;
+  --bs-danger-text-emphasis: #eb8780;
+  --bs-primary-bg-subtle: #09151d;
+  --bs-warning-bg-subtle: #332015;
+  --bs-danger-bg-subtle: #2c0b09;
+  --bs-primary-border-subtle: #1c3e58;
+  --bs-warning-border-subtle: #99613f;
+  --bs-danger-border-subtle: #85211a;
+}
+
+/* Bridge the existing landing components to the published OINK palettes. */
+html[data-td-preset][data-bs-theme] {
+  --bg: var(--bs-body-bg);
+  --bg-soft: var(--bs-secondary-bg);
+  --bg-elev: var(--td-brand-elev);
+  --bg-elev-2: var(--bs-tertiary-bg);
+  --ink: var(--bs-body-color);
+  --ink-soft: var(--bs-secondary-color);
+  --ink-mute: var(--bs-tertiary-color);
+  --pg: var(--bs-link-color);
+  --pg-strong: var(--bs-link-hover-color);
+  --line: var(--bs-border-color);
+  --line-strong: var(--td-brand-line-strong);
+  --header-bg: var(--td-brand-header-bg);
+  --font-body: var(--td-body-font-family);
+  --font-head: var(--td-heading-font-family);
+  --font-display: var(--td-display-font-family);
+  --font-mono: var(--td-code-font-family);
+  --copper: var(--td-brand-copper);
+  --copper-dim: var(--td-brand-copper-dim);
+  --silk: var(--td-brand-silk);
+  --shadow-sm: var(--td-brand-shadow-sm);
+  --shadow-md: var(--td-brand-shadow-md);
+  --shadow-lg: var(--td-shell-shadow-lg);
+}
+
+html[data-td-preset='ink'], html[data-td-preset='terminal'] {
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+html[data-td-preset='terminal'] {
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+}

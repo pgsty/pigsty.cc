@@ -81,17 +81,27 @@
     (resources.Get "third_party/Font-Awesome/css/solid.css")
     (resources.Get "third_party/Font-Awesome/css/regular.css")
     (resources.Get "third_party/Font-Awesome/css/brands.css")
-    | resources.Concat "scss/fontawesome.css" | minify | fingerprint }}
+    | resources.Concat "css/fontawesome.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $fontAwesome.RelPermalink }}" integrity="{{ $fontAwesome.Data.Integrity }}" crossorigin="anonymous">
 
   <!-- Landing Page CSS（指纹化：改动后 URL 变化，避免 CDN / 浏览器缓存旧样式） -->
   {{ $landingCss := resources.Get "css/landing-v3.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}">
-  {{ $appearanceCss := resources.Get "scss/landing-appearance.scss" | toCSS | minify | fingerprint }}
+  {{/* OINK 的 chrome 样式表（导航栏、外观菜单与四套配色），
+       加上本站的品牌色差异、首页令牌桥接和导航分组样式。
+       发布在 css/ 下，样式内的 ../webfonts 相对路径才能解析。 */}}
+  {{ $appearanceCss := slice
+    (partial "css/bundle.html" "chrome")
+    (resources.Get "css/landing-appearance.css")
+    (resources.Get "css/project/navbar.css")
+    | resources.Concat "css/home-appearance.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $appearanceCss.RelPermalink }}" integrity="{{ $appearanceCss.Data.Integrity }}">
   {{ $localSearch := partial "shell/search-enabled.html" . }}
   {{ if $localSearch }}
-  {{ $searchCss := resources.Get "scss/landing-search.scss" | toCSS | minify | fingerprint }}
+  {{ $searchCss := slice
+    (resources.Get "css/landing-search.css")
+    (partial "css/bundle.html" "search")
+    | resources.Concat "css/home-search.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $searchCss.RelPermalink }}" integrity="{{ $searchCss.Data.Integrity }}">
   {{ end }}
 
@@ -1197,10 +1207,6 @@
     </div>
   </footer>
 
-{{ if $localSearch }}
-{{ $lunr := resources.Get "js/third_party/lunr.min.js" | fingerprint }}
-<script src="{{ $lunr.RelPermalink }}" integrity="{{ $lunr.Data.Integrity }}" crossorigin="anonymous"></script>
-{{ end }}
 {{ partial "scripts.html" . }}
 {{ $landingJs := resources.Get "js/landing-v3.js" | minify | fingerprint }}
 <script src="{{ $landingJs.RelPermalink }}" integrity="{{ $landingJs.Data.Integrity }}"></script>
